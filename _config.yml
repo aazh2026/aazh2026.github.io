@@ -39,6 +39,7 @@ theme:
 # Build settings
 markdown: kramdown
 highlighter: rouge
+future: true  # 允许渲染未来日期的文章
 kramdown:
   input: GFM
   syntax_highlighter: rouge
