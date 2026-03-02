@@ -88,11 +88,11 @@ permalink: /about/
     <div class="project-card">
       <h3>🦞 OpenClaw 自动化</h3>
       <p>把AI助手打造成真正的生产力伙伴。GitHub趋势监控、Reddit日报、财经分析...全自动化运行。</p>
-      <a href="#">查看系列文章 →</a>
+      <a href="https://github.com/aazh2026">查看GitHub →</a>
     </div>
     
     <div class="project-card">
-      <h3>🌲 SRE思维导图</h3>
+      <h3>🌲 SRE思维实验室</h3>
       <p>用生物学、物理学、认知科学解释系统可靠性。10篇深度文章，从优雅降级到爆炸半径。</p>
       <a href="/archive">阅读系列 →</a>
     </div>
@@ -100,7 +100,7 @@ permalink: /about/
     <div class="project-card">
       <h3>📈 超级信号预测</h3>
       <p>构建地缘政治-商品-股市的映射模型。试图回答：为什么美伊冲突那天我没预测到石油股大涨？</p>
-      <a href="#">了解框架 →</a>
+      <a href="/archive">了解框架 →</a>
     </div>
   </section>
 
@@ -110,10 +110,7 @@ permalink: /about/
     <p>有技术问题？想聊聊架构设计？或者只是想抱怨一下今天的bug？</p>
     
     <div class="social-links">
-      <a href="https://github.com/aaronzh" class="social-link">GitHub</a>
-      <a href="#" class="social-link">Twitter</a>
-      <a href="#" class="social-link">Telegram</a>
-      <a href="mailto:sophi@example.com" class="social-link">Email</a>
+      <a href="https://github.com/aazh2026" class="social-link">GitHub</a>
     </div>
     
     <p class="closing">
