@@ -1,0 +1,59 @@
+# Site settings
+title: "Aaron的技术博客"
+description: "分享SRE、系统架构、投资分析的深度文章"
+url: "https://aaronzh.github.io"
+baseurl: ""
+author: "Aaron"
+email: "your-email@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Aaron"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Social links
+github_username: aaronzh
+twitter_username: your-twitter
+
+# Analytics (optional)
+google_analytics: # your GA tracking ID
+
+# Comments (optional)
+disqus_shortname: # your disqus shortname
+
+# SEO
+twitter:
+  card: summary_large_image
+logo: /assets/images/logo.png
