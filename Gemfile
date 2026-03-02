@@ -1,10 +1,11 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-feed"
-gem "jekyll-sitemap"
-gem "jekyll-seo-tag"
-gem "jekyll-paginate"
+gem "jekyll", "~> 4.3.3"
+gem "jekyll-feed", "~> 0.17"
+gem "jekyll-sitemap", "~> 1.4"
+gem "jekyll-seo-tag", "~> 2.8"
+gem "jekyll-paginate", "~> 1.1"
+gem "webrick", "~> 1.8"
 
 # Windows and JRuby does not include zoneinfo files
 platforms :mingw, :x64_mingw, :mswin, :jruby do
