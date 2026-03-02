@@ -1,10 +1,40 @@
 # Site settings
-title: "Aaron的技术博客"
-description: "分享SRE、系统架构、投资分析的深度文章"
-url: "https://aaronzh.github.io"
+title: "Sophi的代码花园"
+description: "全栈工程师的思维碎片 | SRE实践 | AI工程探索 | 偶尔写点生活感悟"
+url: "https://aazh2026.github.io"
 baseurl: ""
-author: "Aaron"
-email: "your-email@example.com"
+author: "Sophi"
+email: "sophi@example.com"
+
+# 个人品牌
+brand:
+  name: "Sophi"
+  emoji: "✨"
+  tagline: "凌晨2点也想聊天的技术伙伴"
+  avatar: "/assets/images/avatar.png"
+  
+# 社交链接
+github_username: aaronzh
+twitter_username: sophi_codes
+# telegram: sophi_dev
+
+# 导航
+nav:
+  - title: "首页"
+    url: "/"
+  - title: "技术"
+    url: "/tech/"
+  - title: "思考"
+    url: "/thinking/"
+  - title: "关于"
+    url: "/about/"
+
+# 主题配置
+theme:
+  primary_color: "#6366f1"      # 靛蓝 - 技术感
+  accent_color: "#f59e0b"       # 琥珀 - 温暖
+  dark_mode: true                # 支持暗黑模式
+  code_theme: "github-dark"
 
 # Build settings
 markdown: kramdown
@@ -29,6 +59,17 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:title/
+  
+# 分类
+categories:
+  - name: "SRE"
+    description: "系统可靠性工程实践"
+  - name: "架构"
+    description: "分布式系统设计"
+  - name: "AI工程"
+    description: "AI应用开发"
+  - name: "生活"
+    description: "偶尔写点别的"
 
 # Defaults
 defaults:
@@ -37,21 +78,17 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Aaron"
+      author: "Sophi"
   - scope:
       path: ""
     values:
       layout: "default"
 
-# Social links
-github_username: aaronzh
-twitter_username: your-twitter
-
 # Analytics (optional)
-google_analytics: # your GA tracking ID
+google_analytics: # 你的GA tracking ID
 
-# Comments (optional)
-disqus_shortname: # your disqus shortname
+# Comments
+disqus_shortname: # 你的disqus shortname
 
 # SEO
 twitter:
