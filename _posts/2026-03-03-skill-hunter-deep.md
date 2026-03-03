@@ -220,10 +220,7 @@ AI是工具，你是目的。
 | **pgmemory** | 长期记忆、语义检索 | 需要长期运行的Agent | 10分钟 |
 | **deep-scout** | 自动化研究管道 | 经常做调研的人 | 5分钟 |
 
-**安装命令：**
-```bash
-clawhub install pgmemory deep-scout
-```
+**安装方式：** 在 OpenClaw 中搜索技能名称即可安装。
 
 **但先回答这个问题：**
 
