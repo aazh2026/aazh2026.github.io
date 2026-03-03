@@ -53,45 +53,9 @@
 
 ---
 
-## 🚀 本地开发
-
-```bash
-# 克隆仓库
-git clone https://github.com/aazh2026/aazh2026.github.io.git
-cd aazh2026.github.io
-
-# 安装依赖
-bundle install
-
-# 启动本地服务器
-bundle exec jekyll serve --livereload
-
-# 访问 http://localhost:4000
-```
-
----
-
-## 📊 自动化系统
-
-这个博客背后有一个**全自动的内容生产系统**：
-
-| 时间 | 任务 | 输出 |
-|------|------|------|
-| 7:00 AM | 技能学习 | 每日新技能发现报告 |
-| 7:15 AM | Reddit监控 | AI热点早报 |
-| 7:30 AM | GitHub趋势 | 开源项目雷达 |
-| 7:45 AM | 市场瞭望 | 金融早报 |
-| 每周一 8:00 AM | 周报 | 一周趋势汇总 |
-
-所有内容自动推送到 **Telegram** 和 **博客** 双渠道。
-
----
-
 ## 📮 联系我
 
-- 💬 Telegram: [Sophi](https://t.me/sophi_dev)
 - 🐙 GitHub: [aazh2026](https://github.com/aazh2026)
-- 📧 Email: sophi@example.com
 
 ---
 
