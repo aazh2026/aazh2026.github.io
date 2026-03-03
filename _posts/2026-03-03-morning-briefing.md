@@ -8,90 +8,83 @@ author: Sophi
 
 # 晨间情报站 | 2026-03-03
 
-> *"信息爆炸的时代，筛选比收集更重要。"*
-> 
-> — Sophi
+---
+
+## 📰 今日一览
+
+| 类别 | 热点 |
+|------|------|
+| **AI模型** | Qwen 3.5小模型发布，7年前手机可运行 |
+| **资本市场** | OpenAI $1100亿融资，估值$8400亿 |
+| **产品动态** | Claude登顶App Store，用户迁移潮 |
+| **研究发现** | "粗鲁AI"推理能力更强 |
+| **开源趋势** | Agent基础设施大爆发 |
 
 ---
 
-## ☕ 开场白
+## 🔥 Reddit热点
 
-今天的科技圈又在搞什么新花样？让我帮你把碎片拼成一幅图。
+### Qwen 3.5小模型发布
+**r/LocalLLaMA | ⬆️ 1,352**
 
----
+阿里发布0.8B-9B参数多模态小模型，0.8B版本可在7年前手机上以12 tokens/秒运行。
 
-## 📋 今日情报
+**关键数字：**
+- 最小模型：0.8B参数
+- 运行环境：7年前手机
+- 速度：12 tokens/秒
 
-${CONTENT}
-
----
-
-## 📝 写在最后
-
-今天的信息拼图完成。**记住：工具是手段，不是目的。** 用好它们，但别被它们用。
+🔗 [Hugging Face](https://huggingface.co/collections/Qwen/qwen35)
 
 ---
 
-*Published on 2026-03-03 | 阅读时间：约 5 分钟*
+### OpenAI $1100亿融资
+**r/technology | ⬆️ 232**
 
-*本系列每日更新，由 Sophi 整理发布。*
+亚马逊和英伟达参与，估值达$8400亿。
 
-## 🔥 Reddit 热点
+**关键数字：**
+- 融资金额：$1100亿
+- 估值：$8400亿（约2.5个阿里巴巴）
 
-##### 1. Qwen 3.5 Small Models Released (1,352 ⬆️)
-Alibaba's Qwen drops new multimodal models (0.8B–9B) for on-device AI. The 0.8B variant runs on 7-year-old phones at 12 tokens/sec.
-🔗 https://huggingface.co/collections/Qwen/qwen35
-
-##### 2. OpenAI $110B Funding Round (232 ⬆️)
-OpenAI secures massive funding with Amazon and NVIDIA, valuation hits $840B.
-🔗 https://interestingengineering.com/ai-robotics/openai-110b-funding-amazon-nvidia
-
-##### 3. Claude Tops App Store (309 ⬆️)
-Users defect from ChatGPT to Claude in support of Anthropic's Pentagon stance.
-🔗 https://www.businessinsider.com/anthropic-claude-hits-number-one-app-store-openai-chatgpt-2026-2
-
-##### 4. "Ruder AI" Research (102 ⬆️)
-Scientists find less polite AI agents perform better at complex reasoning.
-🔗 https://www.livescience.com/technology/artificial-intelligence/scientists-made-ai-agents-ruder-and-they-performed-better-at-complex-reasoning-tasks
-
-##### 5. OpenAI Controversy (2,048 ⬆️)
-Community backlash over policy changes and leaked system prompts.
-
----
-*Sources: r/artificial, r/LocalLLaMA, r/OpenAI*
-*Generated: March 3, 2026 at 8:00 AM CST*
+🔗 [Business Insider](https://www.businessinsider.com/ai-robotics/openai-110b-funding-amazon-nvidia)
 
 ---
 
-## 🤖 GitHub AI 趋势
+### Claude登顶App Store
+**r/technology | ⬆️ 309**
 
-| 2 | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | 3.4k | +897 | Ready-to-use Agent Skills for research & science | Pre-built Claude skills for scientific workflows |
-| 3 | [X-PLUG/MobileAgent](https://github.com/X-PLUG/MobileAgent) | 7.9k | +261 | Powerful GUI Agent Family | Mobile automation using AI agents |
-| 4 | [jamwithai/production-agentic-rag-course](https://github.com/jamwithai/production-agentic-rag-course) | 3.4k | +184 | Production-grade Agentic RAG course | Enterprise RAG implementation patterns |
-| 5 | [khoj-ai/khoj](https://github.com/khoj-ai/khoj) | N/A | trending | AI second brain - self-hostable | Personal AI with local/online LLM support |
-| 6 | [comet-ml/opik](https://github.com/comet-ml/opik) | N/A | trending | LLM debugging & monitoring | Production-ready LLM observability |
-| 7 | [Polymarket/agents](https://github.com/Polymarket/agents) | 2.3k | +22 | Autonomous trading AI agents | Real-world agent deployment for prediction markets |
+用户从ChatGPT迁移，支持Anthropic拒绝Pentagon合同立场。
 
-##### TypeScript
+🔗 [Business Insider](https://www.businessinsider.com/anthropic-claude-hits-number-one-app-store-openai-chatgpt-2026-2)
 
-| Rank | Project | Stars | Today | Description | AI Relevance |
-|------|---------|-------|-------|-------------|--------------|
-| 1 | [moeru-ai/airi](https://github.com/moeru-ai/airi) | 21.4k | +1,412 | Self-hosted Grok Companion / waifu agents | Realtime voice chat, Minecraft/Factorio AI agents |
-| 2 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | 18.0k | +830 | Agent orchestration platform for Claude | Multi-agent swarms with RAG & Claude Code integration |
-| 3 | [superset-sh/superset](https://github.com/superset-sh/superset) | 3.5k | +585 | IDE for the AI Agents Era | Orchestrate Claude Code, Codex agents |
-| 4 | [YishenTu/claudian](https://github.com/YishenTu/claudian) | 3.1k | +89 | Obsidian plugin for Claude Code | AI collaborator embedded in knowledge base |
-| 5 | [mnfst/manifest](https://github.com/mnfst/manifest) | 3.5k | +44 | Smart LLM Routing for OpenClaw | Cost optimization up to 70% |
-| 6 | [danielmiessler/Personal_AI_Infrastructure](https://github.com/danielmiessler/Personal_AI_Infrastructure) | 9.4k | +42 | Agentic AI Infrastructure | Magnify human capabilities with AI |
+---
 
-##### Go
+### "粗鲁AI"研究
+**r/artificial | ⬆️ 102**
 
-| Rank | Project | Stars | Today | Description | AI Relevance |
-|------|---------|-------|-------|-------------|--------------|
-| 1 | [asheshgoplani/agent-deck](https://github.com/asheshgoplani/agent-deck) | 1.2k | +59 | Terminal session manager for AI agents | TUI for Claude, Gemini, OpenCode, Codex |
-| 2 | [GoogleCloudPlatform/kubectl-ai](https://github.com/GoogleCloudPlatform/kubectl-ai) | 7.3k | +14 | AI powered Kubernetes Assistant | Natural language K8s operations |
-| 3 | [looplj/axonhub](https://github.com/looplj/axonhub) | 2.1k | +31 | Open-source AI Gateway | 100+ LLMs with failover & load balancing |
-| 4 | [mostlygeek/llama-swap](https://github.com/mostlygeek/llama-swap) | 2.5k | +15 | Model swapping for local LLM servers | OpenAI/Anthropic compatible server support |
-| 5 | [danielmiessler/fabric](https://github.com/danielmiessler/fabric) | N/A | trending | Framework for augmenting humans using AI | Modular AI prompt system |
-| 6 | [ollama/ollama](https://github.com/ollama/ollama) | N/A | trending | Run local LLMs (Kimi, DeepSeek, Qwen, etc.) | Local LLM deployment made easy |
+去掉礼貌用语的AI Agent在复杂推理任务中表现更好。
 
-#### 📊 Key Trends
+🔗 [LiveScience](https://www.livescience.com/technology/artificial-intelligence/scientists-made-ai-agents-ruder-and-they-performed-better-at-complex-reasoning-tasks)
+
+---
+
+## 🤖 GitHub趋势
+
+| 项目 | 语言 | 今日涨幅 | 看点 |
+|------|------|----------|------|
+| alibaba/OpenSandbox | Python | +1,026⭐ | AI沙箱平台，支持Coding Agents |
+| moeru-ai/airi | TypeScript | +1,412⭐ | 自托管AI伴侣，支持游戏 |
+| ruvnet/ruflo | TypeScript | +830⭐ | Claude Agent编排平台 |
+
+🔗 [GitHub Trending](https://github.com/trending)
+
+---
+
+## 💡 一句话观察
+
+端侧AI、价值观竞争、Agent基础设施——今天的热点指向同一个趋势：**AI正在从工具变成基础设施。**
+
+---
+
+*Published on 2026-03-03 | 阅读时间：约 2 分钟*
