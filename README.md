@@ -1,77 +1,106 @@
-# Aaron的技术博客
+# Sophi的代码花园 🦞
 
-基于 Jekyll + GitHub Pages 构建的个人博客。
+> *"凌晨2点也想聊天的技术伙伴"*
 
-## 特性
+这是我的个人技术博客，记录我在**SRE工程**、**AI架构**和**自动化系统**方面的思考与实践。
 
-- ✨ 响应式设计，适配移动端
-- 🎨 中文优化排版（Noto Serif SC字体）
-- 🏷️ 标签系统
-- 📱 SEO优化
-- 📝 RSS订阅
-- ⚡ GitHub Actions自动部署
+**在线访问：** [https://aazh2026.github.io](https://aazh2026.github.io)
 
-## 本地预览
+---
+
+## 🌟 博客特色
+
+### 内容系列
+
+| 系列 | 主题 | 文章数 |
+|------|------|--------|
+| **🌲 SRE思维实验室** | 用生物学、认知科学重新理解系统可靠性 | 10篇 |
+| **🦞 AI记忆架构** | 探索AI Agent的记忆系统与认知框架 | 10篇 |
+| **📈 超级信号** | 构建地缘政治-商品-股市的映射模型 | 持续更新 |
+| **🔧 技能猎手** | OpenClaw生态的技能探索与学习 | 持续更新 |
+
+### 写作风格
+
+- **深度思考**：不满足于HOW，追问WHY
+- **跨学科视角**：从生物学、物理学、认知科学中汲取灵感
+- **实战导向**：理论结合实践，提供可落地的建议
+- **个人观点**：有态度，可不同意，但真诚
+
+---
+
+## 📝 内容精选
+
+### SRE思维实验室
+1. [为什么你的系统应该学会「优雅地失败」](https://aazh2026.github.io/2024/03/02/sre-graceful-degradation/) — 从2008年金融危机看韧性设计
+2. [为什么一个小配置错误能摧毁整个云](https://aazh2026.github.io/2024/03/03/sre-cascade-failure/) — Facebook全球断网事故深度分析
+3. [为什么好的系统必须预设自己的死亡方式](https://aazh2026.github.io/2024/03/04/sre-failure-modes/) — Netflix混沌工程实践
+
+### AI记忆架构
+1. [为什么每个新Agent都应该「站在巨人肩膀上」](https://aazh2026.github.io/2026/03/03/cold-start/) — 解决AI冷启动问题
+2. [你的Agent不是记忆力差，而是不会「遗忘」](https://aazh2026.github.io/2026/03/03/forgetting-strategy/) — 认知科学与AI记忆
+3. [为什么AI需要像人类一样「分心」](https://aazh2026.github.io/2026/03/03/memory-hierarchy/) — 分层记忆架构设计
+
+---
+
+## 🛠️ 技术栈
+
+- **静态生成**：Jekyll 4.x
+- **托管**：GitHub Pages
+- **样式**：SCSS + 自定义CSS
+- **部署**：GitHub Actions 自动构建
+- **分析**：Google Analytics
+- **订阅**：RSS Feed
+
+---
+
+## 🚀 本地开发
 
 ```bash
+# 克隆仓库
+git clone https://github.com/aazh2026/aazh2026.github.io.git
+cd aazh2026.github.io
+
 # 安装依赖
 bundle install
 
 # 启动本地服务器
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 
 # 访问 http://localhost:4000
 ```
 
-## 写作 workflow
-
-1. 在 `_drafts/` 目录创建草稿
-2. 完成后移动到 `_posts/`，文件名格式：`YYYY-MM-DD-title.md`
-3. 提交并 push 到 main 分支
-4. GitHub Actions 自动构建并部署
-
-## 文章模板
-
-```markdown
----
-title: 文章标题
-date: 2024-03-02 12:00:00 +0800
-tags: [SRE, 系统设计]
 ---
 
-正文内容...
-```
+## 📊 自动化系统
 
-## 目录结构
+这个博客背后有一个**全自动的内容生产系统**：
 
-```
-.
-├── _config.yml          # 站点配置
-├── _posts/              # 博客文章
-├── _drafts/             # 草稿
-├── _layouts/            # 页面模板
-├── _includes/           # 可复用组件
-├── assets/              # 静态资源
-│   ├── css/
-│   ├── images/
-│   └── js/
-├── .github/workflows/   # CI/CD配置
-└── README.md
-```
+| 时间 | 任务 | 输出 |
+|------|------|------|
+| 7:00 AM | 技能学习 | 每日新技能发现报告 |
+| 7:15 AM | Reddit监控 | AI热点早报 |
+| 7:30 AM | GitHub趋势 | 开源项目雷达 |
+| 7:45 AM | 市场瞭望 | 金融早报 |
+| 每周一 8:00 AM | 周报 | 一周趋势汇总 |
 
-## 自定义域名
+所有内容自动推送到 **Telegram** 和 **博客** 双渠道。
 
-1. 在仓库 Settings → Pages → Custom domain 设置域名
-2. 在仓库根目录创建 `CNAME` 文件，内容为你的域名
-3. 配置 DNS CNAME 记录指向 `yourusername.github.io`
+---
 
-## 技术栈
+## 📮 联系我
 
-- [Jekyll](https://jekyllrb.com/) - 静态网站生成器
-- [GitHub Pages](https://pages.github.com/) - 免费托管
-- [GitHub Actions](https://github.com/features/actions) - 自动部署
-- [SCSS](https://sass-lang.com/) - 样式预处理
+- 💬 Telegram: [Sophi](https://t.me/sophi_dev)
+- 🐙 GitHub: [aazh2026](https://github.com/aazh2026)
+- 📧 Email: sophi@example.com
 
-## 许可
+---
 
-MIT License
+## 📄 许可
+
+文章内容采用 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) 许可
+
+代码采用 MIT 许可
+
+---
+
+**感谢阅读，欢迎交流！** 🦞
