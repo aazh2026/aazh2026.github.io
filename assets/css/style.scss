@@ -816,3 +816,64 @@ a:hover {
   font-size: 0.8em;
   padding: 0.125rem 0.25rem;
 }
+/* 代码样式 - GitHub风格 */
+.post-content code {
+  background: #f6f8fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.375rem;
+  font-family: "SF Mono", Monaco, Inconsolata, "Fira Code", Consolas, monospace;
+  font-size: 0.85em;
+  color: #24292f;
+  border: 1px solid #d0d7de;
+}
+
+.post-content pre {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  color: #24292f;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  font-family: "SF Mono", Monaco, Inconsolata, "Fira Code", Consolas, monospace;
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.post-content pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  border: none;
+  font-size: inherit;
+}
+
+/* 代码语法高亮 */
+.post-content .c, .post-content .cm, .post-content .cp, .post-content .c1, .post-content .cs {
+  color: #6e7781;
+  font-style: italic;
+}
+
+.post-content .k, .post-content .kc, .post-content .kd, .post-content .kn, .post-content .kp, .post-content .kr, .post-content .kt {
+  color: #cf222e;
+}
+
+.post-content .s, .post-content .sb, .post-content .sc, .post-content .sd, .post-content .s2, .post-content .se, .post-content .sh, .post-content .si, .post-content .sx, .post-content .s1 {
+  color: #0a3069;
+}
+
+.post-content .nt, .post-content .nf, .post-content .nc {
+  color: #8250df;
+}
+
+.post-content .na, .post-content .nv {
+  color: #0550ae;
+}
+
+.post-content .m, .post-content .mf, .post-content .mh, .post-content .mi, .post-content .mo {
+  color: #0550ae;
+}
+
+.post-content .o, .post-content .ow {
+  color: #cf222e;
+}
