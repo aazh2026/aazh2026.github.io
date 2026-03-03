@@ -194,6 +194,23 @@ Facebook的DNS服务器（负责把 facebook.com 翻译成 IP 地址）运行在
 
 **这就是级联故障教会我们的生存智慧。**
 
+## 📚 参考链接与延伸阅读
+
+### 经典故障案例分析
+- [Facebook BGP Outage - Cloudflare Blog](https://blog.cloudflare.com/october-2021-facebook-outage/) — 技术视角深度解析Facebook故障
+- [AWS S3 Outage Postmortem](https://aws.amazon.com/message/41926/) — AWS官方故障复盘报告
+- [2003 Northeast Blackout - Wikipedia](https://en.wikipedia.org/wiki/Northeast_blackout_of_2003) — 美加大停电详细记录
+
+### 技术防护
+- [Circuit Breaker Pattern](https://microservices.io/patterns/reliability/circuit-breaker.html) — 微服务架构中的熔断器模式
+- [Bulkhead Pattern](https://docs.microsoft.com/en-us/azure/architecture/patterns/bulkhead) — 舱壁隔离模式详解
+- [Rate Limiting Strategies](https://cloud.google.com/architecture/rate-limiting-strategies-techniques) — Google Cloud限流策略指南
+
+### 理论与研究
+- [Chaos Engineering - Principles of Chaos](http://principlesofchaos.org/) — 混沌工程原则
+- [Cascading Failures in Distributed Systems](https://arxiv.org/abs/1705.04748) — 学术论文：分布式系统级联故障研究
+- [Designing Data-Intensive Applications](https://dataintensive.net/) — Martin Kleppmann的数据系统经典著作
+
 ---
 
 *Published on 2024-03-03 | 深度阅读时间：约 12 分钟*

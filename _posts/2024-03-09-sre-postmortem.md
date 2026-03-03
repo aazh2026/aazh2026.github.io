@@ -128,6 +128,24 @@ Google SRE 提倡「Blameless Postmortem」（无指责复盘）。
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 故障复盘方法论
+- [Google SRE - Postmortem](https://sre.google/sre-book/postmortem-culture/) — Google故障复盘文化
+- [Etsy Blameless Postmortem](https://codeascraft.com/2012/05/22/blameless-postmortems/) — Etsy无指责复盘
+- [Netflix Postmortem Template](https://netflixtechblog.com/fault-tolerance-in-a-high-volume-distributed-system-91ab4faae74a) — Netflix故障复盘模板
+
+### 组织学习
+- [The Field Guide to Understanding Human Error](https://www.amazon.com/Field-Guide-Understanding-Human-Error/dp/0754648267) — Sidney Dekker人为因素分析
+- [Just Culture](https://www.amazon.com/Just-Culture-Balancing-Safety-Accountability/dp/1409440602) — 公正文化
+- [Team Topologies](https://teamtopologies.com/) — 团队拓扑与组织设计
+
+### 工具与模板
+- [Postmortem Templates](https://github.com/dastergon/postmortem-templates) — 复盘模板集合
+- [PagerDuty Postmortem Guide](https://www.pagerduty.com/resources/learn/post-mortem-incident-report/) — PagerDuty复盘指南
+
+---
+
 *Published on 2024-03-09 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #08 —— 组织学习与故障文化*

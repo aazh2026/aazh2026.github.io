@@ -128,6 +128,24 @@ CPU > 80% → 告警
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 告警设计
+- [Google SRE - Alerting](https://sre.google/sre-book/monitoring-distributed-systems/#alerting) — Google告警设计原则
+- [PagerDuty Alerting Best Practices](https://www.pagerduty.com/resources/learn/alerting-best-practices/) — PagerDuty告警最佳实践
+- [Alertmanager - Prometheus](https://prometheus.io/docs/alerting/latest/alertmanager/) — Prometheus告警管理
+
+### 信号检测理论
+- [Signal Detection Theory](https://en.wikipedia.org/wiki/Signal_detection_theory) — 信号检测理论
+- [Reducing Alert Fatigue](https://www.infoq.com/articles/reduce-alert-fatigue/) — 减少告警疲劳策略
+- [On-Call at GitHub](https://github.blog/2021-03-03-on-call-at-github/) — GitHub值班实践
+
+### 实践案例
+- [Etsy Alerting Philosophy](https://codeascraft.com/2014/06/06/etsy-monitoring-and-graphing/) — Etsy监控与告警理念
+- [Netflix Actionable Alerts](https://netflixtechblog.com/alerting-at-netflix-5fd44093b3ce) — Netflix可行动告警
+
+---
+
 *Published on 2024-03-08 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #07 —— 告警设计与信号检测*

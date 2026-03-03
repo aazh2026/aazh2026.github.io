@@ -130,6 +130,24 @@ series: SRE思维实验室
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 可观测性实践
+- [Google SRE Book - Monitoring](https://sre.google/sre-book/monitoring-distributed-systems/) — Google监控分布式系统指南
+- [The Three Pillars of Observability](https://www.oreilly.com/library/view/distributed-systems-observability/9781492033434/ch04.html) — 可观测性三大支柱
+- [Prometheus Monitoring](https://prometheus.io/docs/practices/) — Prometheus最佳实践
+
+### 采样与优化
+- [Adaptive Sampling](https://www.jaegertracing.io/docs/1.30/sampling/) — Jaeger自适应采样
+- [Distributed Tracing](https://opentracing.io/) — 分布式追踪标准
+- [StatsD Metrics](https://github.com/statsd/statsd) — 指标收集工具
+
+### 理论
+- [Heisenberg Uncertainty Principle](https://en.wikipedia.org/wiki/Uncertainty_principle) — 海森堡不确定性原理
+- [Observer Effect](https://en.wikipedia.org/wiki/Observer_effect_(physics)) — 观察者效应
+
+---
+
 *Published on 2024-03-07 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #06 —— 可观测性与度量哲学*

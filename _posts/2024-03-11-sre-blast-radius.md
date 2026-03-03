@@ -139,6 +139,25 @@ series: SRE思维实验室
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 故障隔离
+- [Bulkhead Pattern - Microsoft](https://docs.microsoft.com/en-us/azure/architecture/patterns/bulkhead) — 舱壁隔离模式
+- [AWS Cell-Based Architecture](https://aws.amazon.com/builders-library/cell-based-architecture/) — AWS Cell架构
+- [Netflix Regional Failover](https://netflixtechblog.com/active-active-for-multi-regional-resiliency-c47719f5925a) — Netflix多区域故障转移
+
+### 微服务与架构
+- [The Twelve-Factor App](https://12factor.net/) — 十二要素应用
+- [Microservices Patterns](https://microservices.io/patterns/) — 微服务模式大全
+- [Service Mesh](https://istio.io/latest/docs/concepts/what-is-istio/) — Istio服务网格
+
+### 容灾设计
+- [Disaster Recovery on AWS](https://aws.amazon.com/disaster-recovery/) — AWS灾备解决方案
+- [Azure Resiliency](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/) — Azure弹性设计
+- [Chaos Engineering](http://principlesofchaos.org/) — 混沌工程原则
+
+---
+
 *Published on 2024-03-11 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #10 —— 故障隔离与架构设计*

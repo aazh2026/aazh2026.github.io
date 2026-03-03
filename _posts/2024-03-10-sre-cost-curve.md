@@ -131,6 +131,24 @@ series: SRE思维实验室
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 可用性与成本
+- [Google SRE - Error Budgets](https://sre.google/sre-book/error-budgets/) — Google错误预算模型
+- [AWS Availability Targets](https://aws.amazon.com/blogs/mt/defining-availability-targets/) — AWS可用性目标定义
+- [Azure SLA](https://azure.microsoft.com/en-us/support/legal/sla/) — Azure服务等级协议
+
+### 成本优化
+- [Cloud Cost Optimization](https://aws.amazon.com/aws-cost-management/) — AWS成本管理
+- [FinOps Foundation](https://www.finops.org/) — FinOps云成本管理框架
+- [The Cost of Reliability](https://landing.google.com/sre/books/) — Google可靠性成本分析
+
+### 经济学视角
+- [The Economics of Availability](https://www.usenix.org/system/files/conference/nsdi15/nsdi15-paper-veeraraghavan.pdf) — 可用性经济学论文
+- [Beyond the Twelve-Factor App](https://content.pivotal.io/ebooks/beyond-the-twelve-factor-app) — 云原生应用设计
+
+---
+
 *Published on 2024-03-10 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #09 —— 成本效益与可用性权衡*

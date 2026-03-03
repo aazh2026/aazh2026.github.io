@@ -134,6 +134,24 @@ v1.5（过渡版本）：
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 数据迁移策略
+- [Stripe's Approach to Data Migrations](https://stripe.com/blog/online-migrations) — Stripe在线迁移实践
+- [Evolutionary Database Design](https://martinfowler.com/articles/evodb.html) — Martin Fowler演进式数据库设计
+- [Refactoring Databases](https://databaserefactoring.com/) — 数据库重构模式
+
+### 版本控制与兼容性
+- [Making Sense of Semantic Versioning](https://semver.org/) — 语义化版本规范
+- [Backward Compatibility Guidelines](https://cloud.google.com/apis/design/compatibility) — Google API兼容性指南
+- [Postel's Law](https://en.wikipedia.org/wiki/Robustness_principle) — 健壮性原则
+
+### 部署模式
+- [Blue-Green Deployment](https://martinfowler.com/bliki/BlueGreenDeployment.html) — 蓝绿部署详解
+- [Feature Toggles](https://martinfowler.com/articles/feature-toggles.html) — 功能开关模式
+
+---
+
 *Published on 2024-03-06 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #05 —— 数据一致性与版本控制*

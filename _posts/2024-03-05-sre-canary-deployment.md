@@ -127,6 +127,24 @@ series: SRE思维实验室
 
 ---
 
+## 📚 参考链接与延伸阅读
+
+### 灰度发布实践
+- [Spinnaker - Netflix CD Platform](https://spinnaker.io/) — Netflix开源的持续交付平台
+- [Flagger - Kubernetes Canary](https://flagger.app/) — K8s自动金丝雀发布工具
+- [LaunchDarkly - Feature Management](https://launchdarkly.com/) — 功能开关管理平台
+
+### 发布策略
+- [Continuous Delivery - Jez Humble](https://continuousdelivery.com/) — 持续交付权威资源
+- [Accelerate - Nicole Forsgren](https://itrevolution.com/book/accelerate/) — DevOps研究与实践
+- [Trunk Based Development](https://trunkbaseddevelopment.com/) — 主干开发模式
+
+### 案例分析
+- [Google Release Engineering](https://landing.google.com/sre/books/) — Google发布工程实践
+- [Etsy Deploy Culture](https://codeascraft.com/2015/11/24/deployment-culture-etsy/) — Etsy的部署文化
+
+---
+
 *Published on 2024-03-05 | 深度阅读时间：约 5 分钟*
 
 *SRE思维实验室系列 #04 —— 发布策略与风险控制*

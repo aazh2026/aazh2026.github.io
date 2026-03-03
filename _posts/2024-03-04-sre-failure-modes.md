@@ -190,6 +190,22 @@ Netflix的混沌工程运动：
 
 **这就是向死而生的智慧。**
 
+## 📚 参考链接与延伸阅读
+
+### Chaos Engineering 实践
+- [Chaos Monkey - Netflix](https://netflix.github.io/chaosmonkey/) — Netflix混沌猴子官方文档
+- [Chaos Engineering Book](https://www.oreilly.com/library/view/chaos-engineering/9781491983950/) — O'Reilly混沌工程权威指南
+- [Gremlin - Chaos Engineering Platform](https://www.gremlin.com/) — 企业级混沌工程平台
+
+### 失败设计案例
+- [Etsy Kill Switch](https://codeascraft.com/2014/07/15/etsy-kill-switch/) — Etsy的紧急开关设计
+- [Google DiRT (Disaster Recovery Testing)](https://cloud.google.com/blog/products/gcp/introducing-diRt-google-disaster-recovery-testing) — Google灾难恢复测试
+- [Game Days at Amazon](https://aws.amazon.com/builders-library/using-gamedays-to-practice-resilience/) — AWS的Game Day实践
+
+### 理论与框架
+- [Antifragile - Nassim Taleb](https://www.penguinrandomhouse.com/books/176226/antifragile-by-nassim-nicholas-taleb/) — 反脆弱性理论
+- [Drift into Failure - Sidney Dekker](https://www.amazon.com/Drift-into-Failure-Accidents-Organizational/dp/0754675233) — 事故调查经典著作
+
 ---
 
 *Published on 2024-03-04 | 深度阅读时间：约 10 分钟*

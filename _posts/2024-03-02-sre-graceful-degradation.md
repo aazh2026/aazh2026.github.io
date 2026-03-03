@@ -181,6 +181,22 @@ series: SRE思维实验室
 - [Google SRE Book - Handling Overload](https://sre.google/sre-book/handling-overload/) — Google的优雅降级实践
 - [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) — 云架构的可靠性设计
 
+## 📚 参考链接与延伸阅读
+
+### 经典案例
+- [Netflix Chaos Engineering](https://netflix.github.io/chaosmonkey/) — Netflix如何通过随机故障提升系统韧性
+- [Google SRE Book - Handling Overload](https://sre.google/sre-book/handling-overload/) — Google的优雅降级实践
+- [AWS Well-Architected Reliability Pillar](https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/welcome.html) — 云架构可靠性设计指南
+
+### 技术实现
+- [Hystrix - Netflix的熔断器实现](https://github.com/Netflix/Hystrix) — 开源熔断器框架
+- [Resilience4j](https://github.com/resilience4j/resilience4j) — 现代化的容错库
+- [Envoy Circuit Breaker](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking) — 服务网格中的熔断实现
+
+### 学术与理论
+- [Circuit Breaker Pattern - Martin Fowler](https://martinfowler.com/bliki/CircuitBreaker.html) — 熔断器模式详解
+- [Release It! - Michael Nygard](https://pragprog.com/titles/mnee2/release-it-second-edition/) — 软件系统稳定性经典著作
+
 ---
 
 *Published on 2024-03-02 | 深度阅读时间：约 10 分钟*
