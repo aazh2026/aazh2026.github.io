@@ -771,3 +771,48 @@ a:hover {
     font-size: 1.75rem;
   }
 }
+/* 表格样式 */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+  background: var(--bg-primary);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+}
+
+.post-content table thead {
+  background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border);
+}
+
+.post-content table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.post-content table td {
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+}
+
+.post-content table tbody tr:hover {
+  background: var(--bg-secondary);
+}
+
+.post-content table tbody tr:last-child td {
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* 表格中的代码 */
+.post-content table code {
+  font-size: 0.8em;
+  padding: 0.125rem 0.25rem;
+}
