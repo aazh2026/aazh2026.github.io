@@ -487,10 +487,124 @@ a:hover {
 }
 
 /* 关于页面 */
-.about-page {
+.about-page,
+.archive,
+.tags-page {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* 归档页面 */
+.archive h1,
+.tags-page h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.archive-year {
+  margin-bottom: 2rem;
+}
+
+.archive-year h2 {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.archive .post-list,
+.tags-page .post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.archive .post-list li,
+.tags-page .post-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.archive .post-date,
+.tags-page .post-date {
+  color: var(--text-light);
+  font-size: 0.875rem;
+  min-width: 5rem;
+}
+
+.archive .post-list a,
+.tags-page .post-list a {
+  color: var(--text-primary);
+  font-weight: 500;
+  flex: 1;
+}
+
+.archive .post-list a:hover,
+.tags-page .post-list a:hover {
+  color: var(--primary);
+}
+
+.archive .post-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.archive .post-tags .tag {
+  background: var(--bg-secondary);
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* 标签页面 */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 1rem;
+}
+
+.tag-link {
+  background: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.tag-link:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.tag-section {
+  margin-bottom: 2rem;
+}
+
+.tag-section h2 {
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  border-left: 4px solid var(--accent);
 }
 
 .about-header {
