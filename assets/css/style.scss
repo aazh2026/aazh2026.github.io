@@ -460,20 +460,88 @@ a:hover {
   border-radius: 0.25rem;
   font-family: var(--font-mono);
   font-size: 0.875em;
+  color: var(--primary);
 }
 
 .post-content pre {
-  background: var(--bg-dark);
-  color: var(--bg-primary);
+  background: #f8f9fa;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
   padding: 1.5rem;
   border-radius: 0.5rem;
   overflow-x: auto;
   margin: 1.5rem 0;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 .post-content pre code {
   background: transparent;
   padding: 0;
+  color: inherit;
+}
+
+/* 代码语法高亮 */
+.post-content pre .highlight {
+  background: #f8f9fa;
+}
+
+.post-content pre .c,
+.post-content pre .cm,
+.post-content pre .cp,
+.post-content pre .c1,
+.post-content pre .cs {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.post-content pre .k,
+.post-content pre .kc,
+.post-content pre .kd,
+.post-content pre .kn,
+.post-content pre .kp,
+.post-content pre .kr,
+.post-content pre .kt {
+  color: #d73a49;
+  font-weight: 600;
+}
+
+.post-content pre .s,
+.post-content pre .sb,
+.post-content pre .sc,
+.post-content pre .sd,
+.post-content pre .s2,
+.post-content pre .se,
+.post-content pre .sh,
+.post-content pre .si,
+.post-content pre .sx,
+.post-content pre .s1 {
+  color: #032f62;
+}
+
+.post-content pre .nt,
+.post-content pre .nf,
+.post-content pre .nc {
+  color: #6f42c1;
+}
+
+.post-content pre .na,
+.post-content pre .nv {
+  color: #005cc5;
+}
+
+.post-content pre .m,
+.post-content pre .mf,
+.post-content pre .mh,
+.post-content pre .mi,
+.post-content pre .mo {
+  color: #005cc5;
+}
+
+.post-content pre .o,
+.post-content pre .ow {
+  color: #d73a49;
 }
 
 .post-content ul,
