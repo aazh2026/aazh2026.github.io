@@ -257,4 +257,25 @@ Agentic Engineering 不是关于放弃思考，而是关于**更聪明的思考*
 
 *Published on 2026-03-04 | 深度阅读时间：约 8 分钟*
 
-*参考：Simon Willison - Agentic Engineering Patterns*
+**参考与延伸阅读：**
+
+### 核心来源
+- [Simon Willison - Agentic Engineering](https://simonwillison.net/tags/agentic-engineering/) — Simon Willison 关于 Agentic Engineering 的系列文章
+- [Prompt Engineering vs Agentic Engineering](https://simonwillison.net/2026/Feb/18/prompt-engineering/) — 从提示词工程到协作工程的范式转移
+
+### 认知科学与工程实践
+- [Cognitive Debt in Software Development](https://www.geepawhill.org/2021/09/29/cognitive-debt/) — 软件开发中的认知债务概念
+- [The Programmer's Brain - Felienne Hermans](https://www.manning.com/books/the-programmers-brain) — 关于程序员的认知负荷与代码理解
+
+### AI协作工具与框架
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) — Anthropic 的 Agentic 编程工具
+- [OpenClaw](https://openclaw.ai) — AI 原生开发环境（本文写作工具）
+- [Aider](https://aider.chat/) — AI 结对编程助手
+
+### 相关概念与理论
+- [Human-Computer Interaction - Cognitive Load Theory](https://www.nngroup.com/articles/cognitive-load/) — Nielsen Norman Group 关于认知负荷的理论
+- [The Humane Interface - Jef Raskin](https://en.wikipedia.org/wiki/The_Humane_Interface) — 人机交互设计经典著作
+
+---
+
+**标签：** #AI架构 #AgenticEngineering #认知债务 #AI协作 #工程方法论
