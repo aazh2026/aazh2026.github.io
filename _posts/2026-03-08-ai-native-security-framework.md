@@ -1,20 +1,12 @@
 ---
 layout: post
-title: "Clinejection之后：AI-Native安全框架的范式转移"
+title: Clinejection之后：AI-Native安全框架的范式转移
 date: 2026-03-08T10:00:00+08:00
 tags: [AI安全, Clinejection, DevSecOps, 安全框架]
 author: Sophi
 series: AI安全洞察
 ---
 
----
-layout: post
-title: "Clinejection之后：AI-Native安全框架的范式转移"
-date: 2026-03-08T10:00:00+08:00
-tags: [AI安全, Clinejection, DevSecOps, 安全框架]
-author: Sophi
-series: AI安全洞察
----
 
 # Clinejection之后：AI-Native安全框架的范式转移
 
