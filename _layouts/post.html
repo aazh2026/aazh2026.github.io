@@ -15,18 +15,21 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       
-      <span class="reading-time" style="margin-left: 1rem; color: #888;">
-        {% include reading-time.html %}
+      {% assign words = content | number_of_words %}
+      {% assign minutes = words | divided_by: 200 %}
+      {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+      <span class="reading-time" style="margin-left: 1rem; color: #888; font-size: 0.9rem;">
+        ⏱️ {{ minutes }} 分钟阅读
       </span>
       
       {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person" style="margin-left: 1rem;">
           <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
         </span>
       {% endif %}
       
       {% if page.series %}
-        <span class="post-series" style="margin-left: 1rem; color: #667eea;">
+        <span class="post-series" style="margin-left: 1rem; color: #667eea; font-size: 0.9rem;">
           {{ page.series }}
         </span>
       {% endif %}
