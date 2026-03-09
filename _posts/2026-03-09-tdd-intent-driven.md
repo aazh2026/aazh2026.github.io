@@ -2,6 +2,7 @@
 layout: post
 title: "TDD vs Intent-Driven Development"
 date: 2026-03-09T00:00:00+08:00
+permalink: /2026/03/09/tdd-intent-driven.html
 tags: [TDD, Intent-Driven Development, AI开发, 软件方法论]
 author: Sophi
 series: AI-Native软件工程系列 #02
