@@ -25,7 +25,7 @@ layout: default
       </time>
       
       <span class="reading-time" style="margin-left: 1rem; color: #888;">
-        {% include reading-time.html %}
+        {% include reading-time-enhanced.html %}
       </span>
       
       {% if page.author %}
@@ -56,8 +56,8 @@ layout: default
     {{ content }}
   </div>
 
-  <!-- 系列导航 -->
-  {% include series-nav.html %}
+  <!-- 增强系列导航 -->
+  {% include series-post-nav.html %}
 
   <!-- 社交分享 -->
   {% include share-buttons.html %}
@@ -71,11 +71,14 @@ layout: default
   <!-- 代码复制按钮 -->
   {% include code-copy.html %}
 
-  <!-- 图片懒加载 -->
-  {% include lazy-load.html %}
+  <!-- 图片点击放大 -->
+  {% include lightbox.html %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
 <!-- 深色模式 + 返回顶部 -->
 {% include dark-mode.html %}
+
+<!-- 打印样式 -->
+{% include print-styles.html %}
