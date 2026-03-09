@@ -10,6 +10,7 @@ layout: default
     <h1 style="font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700;">
       {{ site.title }}
     </h1>
+    
     <p style="font-size: 1.25rem; opacity: 0.9; max-width: 600px; margin: 0 auto 2rem;">
       {{ site.description | default: "探索AI如何重新定义软件工程" }}
     </p>
@@ -38,15 +39,16 @@ layout: default
       <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap;">
         <div style="flex: 1; min-width: 250px;">
           <h3 style="margin-top: 0; color: #333;">
-            {{ site.data.series.aise.name }}
+            AI-Native软件工程
           </h3>
+          
           <p style="color: #666; line-height: 1.6;">
-            {{ site.data.series.aise.description }}
+            探索AI如何重新定义软件工程的边界
           </p>
           
           <div style="margin: 1.5rem 0;">
             <span style="background: #667eea; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.875rem;">
-              {{ site.data.series.aise.total }} 篇文章
+              27 篇文章
             </span>
             <span style="margin-left: 0.5rem; color: #888; font-size: 0.875rem;">
               持续更新中
@@ -64,15 +66,31 @@ layout: default
             热门文章
           </h4>
           <ul style="list-style: none; padding: 0; margin: 0;">
-            {% for article in site.data.series.aise.articles limit:5 %}
-              {% if article.id >= 10 %}
-              <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e9ecef;">
-                <a href="{{ article.url }}" style="text-decoration: none; color: #333; font-size: 0.9rem;">
-                  <strong>#{{ article.id }}</strong> {{ article.title }}
-                </a>
-              </li>
-              {% endif %}
-            {% endfor %}
+            <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e9ecef;">
+              <a href="/aise-manifesto/" style="text-decoration: none; color: #333; font-size: 0.9rem;">
+                <strong>#26</strong> AI-Native软件工程宣言
+              </a>
+            </li>
+            <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e9ecef;">
+              <a href="/knowledge-assetization/" style="text-decoration: none; color: #333; font-size: 0.9rem;">
+                <strong>#10</strong> 为什么你的代码正在变成负债？
+              </a>
+            </li>
+            <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e9ecef;">
+              <a href="/death-of-code-reviews/" style="text-decoration: none; color: #333; font-size: 0.9rem;">
+                <strong>#11</strong> 为什么代码评审正在死亡？
+              </a>
+            </li>
+            <li style="margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e9ecef;">
+              <a href="/10x-multiplier/" style="text-decoration: none; color: #333; font-size: 0.9rem;">
+                <strong>#14</strong> 10x工程师已死，10x乘数当立？
+              </a>
+            </li>
+            <li style="margin-bottom: 0;">
+              <a href="/agent-swarm/" style="text-decoration: none; color: #333; font-size: 0.9rem;">
+                <strong>#16</strong> 为什么单个AI Agent不够用了？
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -149,7 +167,8 @@ layout: default
     <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;">
       {% assign sorted_tags = site.tags | sort %}
       {% for tag in sorted_tags limit:20 %}
-        <a href="/tags/#{{ tag[0] | slugify }}" 
+        {% assign tag_slug = tag[0] | slugify %}
+        <a href="/tags/#{{ tag_slug }}" 
            style="background: white; color: #667eea; padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; font-size: 0.9rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: all 0.2s;"
            onmouseover="this.style.background='#667eea'; this.style.color='white'" 
            onmouseout="this.style.background='white'; this.style.color='#667eea'">
