@@ -1,0 +1,41 @@
+<!-- Giscus 评论系统 -->
+{% if page.comments != false %}
+<div class="giscus-wrapper" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #eee;">
+  <h3 style="margin-bottom: 1rem;">💬 评论</h3>
+  
+  <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+    <p style="margin: 0; color: #666; font-size: 0.9rem;">
+      💡 <strong>使用 GitHub 账号登录</strong> 即可参与讨论
+    </p>
+  </div>
+  
+  <script src="https://giscus.app/client.js"
+          data-repo="aazh2026/aazh2026.github.io"
+          data-repo-id="R_kgDOON5mCw"
+          data-category="General"
+          data-category-id="DIC_kwDOON5mC84Co1xU"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="zh-CN"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+
+<style>
+  [data-theme="dark"] .giscus-wrapper {
+    border-top-color: #333;
+  }
+  [data-theme="dark"] .giscus-wrapper > div {
+    background: #16213e;
+  }
+  [data-theme="dark"] .giscus-wrapper p {
+    color: #b0b0b0;
+  }
+</style>
+{% endif %}
