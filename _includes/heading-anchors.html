@@ -1,0 +1,47 @@
+<!-- 标题锚点链接 -->
+<script>
+(function() {
+  // 为所有 h2, h3 标题添加锚点链接
+  document.querySelectorAll('.post-content h2, .post-content h3, .e-content h2, .e-content h3').forEach(function(heading) {
+    if (!heading.id) return;
+    
+    // 添加链接图标
+    var linkIcon = document.createElement('a');
+    linkIcon.href = '#' + heading.id;
+    linkIcon.innerHTML = ' 🔗';
+    linkIcon.style.cssText = 
+      'opacity: 0; margin-left: 0.5rem; text-decoration: none; font-size: 0.8em; cursor: pointer; transition: opacity 0.2s;';
+    linkIcon.title = '复制链接';
+    
+    // 点击复制链接
+    linkIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      var url = window.location.origin + window.location.pathname + '#' + heading.id;
+      navigator.clipboard.writeText(url).then(function() {
+        // 显示提示
+        var toast = document.createElement('div');
+        toast.textContent = '链接已复制!';
+        toast.style.cssText = 
+          'position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);' +
+          'background: #333; color: white; padding: 0.5rem 1rem; border-radius: 4px;' +
+          'z-index: 10000; font-size: 0.9rem;';
+        document.body.appendChild(toast);
+        setTimeout(function() { toast.remove(); }, 2000);
+      });
+    });
+    
+    heading.appendChild(linkIcon);
+    
+    // 悬停显示链接图标
+    heading.addEventListener('mouseenter', function() {
+      linkIcon.style.opacity = '0.5';
+    });
+    heading.addEventListener('mouseleave', function() {
+      linkIcon.style.opacity = '0';
+    });
+    linkIcon.addEventListener('mouseenter', function() {
+      linkIcon.style.opacity = '1';
+    });
+  });
+})();
+</script>
