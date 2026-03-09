@@ -1,0 +1,108 @@
+<!-- 深色模式切换 -->
+<div id="theme-toggle" 
+     style="position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; background: #667eea; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 1000; transition: transform 0.2s;"
+     onclick="toggleTheme()"
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'">
+  <span id="theme-icon" style="font-size: 1.5rem;">🌙</span>
+</div>
+
+<style>
+  /* 深色模式样式 */
+  body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .site-header,
+  body.dark-mode .site-footer {
+    background-color: #2d2d2d;
+    border-color: #404040;
+  }
+  
+  body.dark-mode .post-content,
+  body.dark-mode article {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6 {
+    color: #f0f0f0;
+  }
+  
+  body.dark-mode a {
+    color: #8ab4f8;
+  }
+  
+  body.dark-mode code {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode pre {
+    background-color: #2d2d2d;
+  }
+  
+  body.dark-mode blockquote {
+    border-left-color: #667eea;
+    background-color: #2d2d2d;
+  }
+  
+  body.dark-mode table {
+    background-color: #2d2d2d;
+  }
+  
+  body.dark-mode th,
+  body.dark-mode td {
+    border-color: #404040;
+  }
+  
+  body.dark-mode .related-posts,
+  body.dark-mode .series-nav {
+    background-color: #2d2d2d !important;
+  }
+  
+  body.dark-mode #theme-toggle {
+    background: #764ba2;
+  }
+</style>
+
+<script>
+  // 深色模式切换
+  (function() {
+    // 检查本地存储
+    var isDarkMode = localStorage.getItem('dark-mode') === 'true';
+    
+    // 检查系统偏好
+    if (localStorage.getItem('dark-mode') === null) {
+      isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    
+    // 应用主题
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+      document.getElementById('theme-icon').textContent = '☀️';
+    }
+    
+    // 切换函数
+    window.toggleTheme = function() {
+      var body = document.body;
+      var icon = document.getElementById('theme-icon');
+      
+      if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('dark-mode', 'false');
+        icon.textContent = '🌙';
+      } else {
+        body.classList.add('dark-mode');
+        localStorage.setItem('dark-mode', 'true');
+        icon.textContent = '☀️';
+      }
+    };
+  })();
+</script>
