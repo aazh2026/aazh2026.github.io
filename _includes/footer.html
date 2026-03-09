@@ -1,35 +1,11 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
+<footer class="site-footer">
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list"
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
+    <div style="text-align: center; padding: 2rem 0;">
+      <p>&copy; 2026 {{ site.author | default: site.title | escape }} | 
+        <a href="https://github.com/aazh2026">GitHub</a> | 
+        <a href="/feed.xml">RSS</a>
+      </p>
+      <p style="font-size: 0.875rem; color: #888;">Powered by Jekyll & GitHub Pages</p>
     </div>
-
   </div>
-
 </footer>
