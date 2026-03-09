@@ -1,58 +1,33 @@
-<!-- 代码块复制按钮 -->
+<!-- 代码复制按钮 -->
 <script>
 (function() {
-  // 为所有代码块添加复制按钮
-  document.querySelectorAll('pre > code, .highlight pre').forEach(function(codeBlock) {
+  document.querySelectorAll('pre > code').forEach(function(codeBlock) {
     var pre = codeBlock.parentElement;
     
-    // 创建复制按钮容器
-    var wrapper = document.createElement('div');
-    wrapper.style.cssText = 'position: relative;';
-    
-    // 创建复制按钮
     var button = document.createElement('button');
     button.innerHTML = '📋';
     button.title = '复制代码';
     button.style.cssText = 
-      'position: absolute;' +
-      'top: 8px;' +
-      'right: 8px;' +
-      'padding: 6px 10px;' +
-      'background: rgba(255,255,255,0.9);' +
-      'border: 1px solid #ddd;' +
-      'border-radius: 4px;' +
-      'cursor: pointer;' +
-      'font-size: 14px;' +
-      'opacity: 0;' +
-      'transition: opacity 0.2s, background 0.2s;' +
-      'z-index: 10;';
+      'position: absolute; top: 8px; right: 8px; padding: 6px 10px; ' +
+      'background: rgba(255,255,255,0.9); border: 1px solid #ddd; ' +
+      'border-radius: 4px; cursor: pointer; font-size: 14px; ' +
+      'opacity: 0; transition: opacity 0.2s; z-index: 10;';
     
-    // 鼠标悬停显示按钮
     pre.style.position = 'relative';
-    pre.addEventListener('mouseenter', function() {
-      button.style.opacity = '1';
-    });
-    pre.addEventListener('mouseleave', function() {
-      if (button.dataset.copied !== 'true') {
-        button.style.opacity = '0';
-      }
-    });
-    button.addEventListener('mouseenter', function() {
-      button.style.opacity = '1';
+    pre.appendChild(button);
+    
+    pre.addEventListener('mouseenter', function() { button.style.opacity = '1'; });
+    pre.addEventListener('mouseleave', function() { 
+      if (button.dataset.copied !== 'true') button.style.opacity = '0'; 
     });
     
-    // 复制功能
     button.addEventListener('click', function(e) {
       e.preventDefault();
-      var code = codeBlock.textContent;
-      
-      navigator.clipboard.writeText(code).then(function() {
+      navigator.clipboard.writeText(codeBlock.textContent).then(function() {
         button.innerHTML = '✅';
         button.title = '已复制!';
         button.style.background = '#d4edda';
         button.dataset.copied = 'true';
-        button.style.opacity = '1';
-        
         setTimeout(function() {
           button.innerHTML = '📋';
           button.title = '复制代码';
@@ -60,37 +35,8 @@
           button.dataset.copied = 'false';
           button.style.opacity = '0';
         }, 2000);
-      }).catch(function(err) {
-        console.error('复制失败:', err);
-        button.innerHTML = '❌';
-        setTimeout(function() {
-          button.innerHTML = '📋';
-        }, 2000);
       });
     });
-    
-    pre.appendChild(button);
   });
 })();
 </script>
-
-<style>
-  /* 代码块样式优化 */
-  pre {
-    position: relative;
-    overflow: visible !important;
-  }
-  
-  pre > code {
-    display: block;
-    padding: 1rem;
-    overflow-x: auto;
-  }
-  
-  /* 移动端：始终显示复制按钮 */
-  @media (max-width: 768px) {
-    pre button {
-      opacity: 1 !important;
-    }
-  }
-</style>
