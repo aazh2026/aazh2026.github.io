@@ -1,0 +1,45 @@
+<!-- 邮件订阅表单 -->
+<div class="newsletter-subscribe" style="margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; text-align: center; color: white;">
+  <h3 style="margin-top: 0; font-size: 1.5rem;">📧 订阅更新</h3>
+  
+  <p style="opacity: 0.9; margin-bottom: 1.5rem;">
+    每周精选 AI-Native 软件工程文章，直接发送到您的邮箱
+  </p>
+  
+  <!-- 使用 Buttondown 或 ConvertKit 等邮件服务 -->
+  <form action="https://buttondown.email/api/emails/embed-subscribe/aise" 
+        method="post" 
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.email/aise', 'popupwindow')"
+        style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto; flex-wrap: wrap; justify-content: center;">
+    
+    <input type="email" 
+           name="email" 
+           placeholder="your@email.com" 
+           required
+           style="flex: 1; min-width: 200px; padding: 0.75rem 1rem; border: none; border-radius: 6px; font-size: 1rem;"
+    >
+    
+    <button type="submit" 
+            style="padding: 0.75rem 1.5rem; background: #333; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; font-weight: 500;"
+    >
+      订阅
+    </button>
+  </form>
+  
+  <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem; margin-bottom: 0;">
+    🔒 无垃圾邮件，随时退订
+  </p>
+</div>
+
+<style>
+  @media (max-width: 480px) {
+    .newsletter-subscribe form {
+      flex-direction: column;
+    }
+    .newsletter-subscribe input,
+    .newsletter-subscribe button {
+      width: 100%;
+    }
+  }
+</style>
