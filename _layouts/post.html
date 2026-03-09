@@ -9,6 +9,12 @@ layout: default
   <!-- 文章目录 (桌面端) -->
   {% include toc.html %}
 
+  <!-- 面包屑导航 -->
+  {% include breadcrumb.html %}
+
+  <!-- 系列进度条 -->
+  {% include series-progress.html %}
+
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     
@@ -59,14 +65,17 @@ layout: default
   <!-- 相关文章 -->
   {% include related-posts.html %}
 
-  <!-- 评论系统 -->
-  {% include comments.html %}
+  <!-- Giscus评论系统 -->
+  {% include comments-giscus.html %}
 
   <!-- 代码复制按钮 -->
   {% include code-copy.html %}
 
+  <!-- 图片懒加载 -->
+  {% include lazy-load.html %}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<!-- 深色模式 -->
+<!-- 深色模式 + 返回顶部 -->
 {% include dark-mode.html %}
