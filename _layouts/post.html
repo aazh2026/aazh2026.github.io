@@ -15,6 +15,10 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       
+      <span class="reading-time" style="margin-left: 1rem; color: #888;">
+        {% include reading-time.html %}
+      </span>
+      
       {% if page.author %}
         <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
