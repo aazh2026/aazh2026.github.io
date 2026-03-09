@@ -1,0 +1,58 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  
+  <!-- 首页 -->
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>1.00</priority>
+  </url>
+  
+  <!-- AISE系列页面 -->
+  <url>
+    <loc>{{ site.url }}/aise-series/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- AISE宣言 -->
+  <url>
+    <loc>{{ site.url }}/aise-manifesto/</loc>
+    <lastmod>2026-03-09T00:00:00+08:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+  
+  <!-- 标签云 -->
+  <url>
+    <loc>{{ site.url }}/tags/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <priority>0.80</priority>
+  </url>
+  
+  <!-- 所有文章 -->
+  {% for post in site.posts %}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+    <priority>{% if post.series %}0.80{% else %}0.60{% endif %}</priority>
+  </url>
+  {% endfor %}
+  
+  <!-- 所有页面 -->
+  {% for page in site.pages %}
+    {% if page.layout and page.url != '/404.html' and page.url != '/feed.xml' %}
+    <url>
+      <loc>{{ site.url }}{{ page.url }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      <priority>0.50</priority>
+    </url>
+    {% endif %}
+  {% endfor %}
+  
+</urlset>
