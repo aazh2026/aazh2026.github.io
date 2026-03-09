@@ -1,0 +1,121 @@
+<!-- 文章目录 (Table of Contents) -->
+<div id="toc-wrapper" style="position: fixed; right: 20px; top: 100px; width: 220px; max-height: calc(100vh - 150px); overflow-y: auto; background: #f8f9fa; border-radius: 8px; padding: 1rem; z-index: 100; display: none;">
+  <div style="font-weight: 600; margin-bottom: 0.75rem; color: #333;">📑 目录</div>
+  <nav id="toc">
+    <!-- TOC 内容将通过 JavaScript 生成 -->
+  </nav>
+</div>
+
+<script>
+(function() {
+  // 只在桌面端显示 TOC
+  if (window.innerWidth < 1200) return;
+  
+  var content = document.querySelector('.post-content');
+  if (!content) return;
+  
+  // 获取所有 h2, h3 标题
+  var headings = content.querySelectorAll('h2, h3');
+  if (headings.length < 3) return; // 标题太少不显示 TOC
+  
+  var toc = document.getElementById('toc');
+  var tocWrapper = document.getElementById('toc-wrapper');
+  
+  // 生成 TOC HTML
+  var tocHtml = '<ul style="list-style: none; margin: 0; padding: 0;">';
+  
+  headings.forEach(function(heading, index) {
+    // 给每个标题添加锚点 ID
+    var id = 'heading-' + index;
+    heading.id = id;
+    
+    var level = heading.tagName === 'H2' ? 0 : 1;
+    var style = level === 0 
+      ? 'font-weight: 500; margin: 0.5rem 0;' 
+      : 'padding-left: 1rem; font-size: 0.9rem; margin: 0.25rem 0;';
+    
+    tocHtml += '<li style="' + style + '">' +
+      '<a href="#' + id + '" style="color: #666; text-decoration: none; display: block; padding: 0.25rem 0; transition: color 0.2s;" data-target="' + id + '">' +
+        heading.textContent +
+      '</a>' +
+    '</li>';
+  });
+  
+  tocHtml += '</ul>';
+  toc.innerHTML = tocHtml;
+  tocWrapper.style.display = 'block';
+  
+  // 平滑滚动
+  toc.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.getElementById(this.getAttribute('data-target'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // 更新 URL hash
+        history.pushState(null, null, '#' + this.getAttribute('data-target'));
+      }
+    });
+  });
+  
+  // 当前章节高亮
+  var tocLinks = toc.querySelectorAll('a');
+  var observerOptions = {
+    root: null,
+    rootMargin: '-100px 0px -60% 0px',
+    threshold: 0
+  };
+  
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var id = entry.target.id;
+        tocLinks.forEach(function(link) {
+          if (link.getAttribute('data-target') === id) {
+            link.style.color = '#667eea';
+            link.style.fontWeight = '500';
+          } else {
+            link.style.color = '#666';
+            link.style.fontWeight = 'normal';
+          }
+        });
+      }
+    });
+  }, observerOptions);
+  
+  headings.forEach(function(heading) {
+    observer.observe(heading);
+  });
+})();
+</script>
+
+<style>
+  /* 响应式：小屏幕隐藏 TOC */
+  @media (max-width: 1200px) {
+    #toc-wrapper {
+      display: none !important;
+    }
+    .post-content {
+      max-width: 100%;
+    }
+  }
+  
+  /* 为 TOC 留出空间 */
+  @media (min-width: 1200px) {
+    .post-content {
+      max-width: calc(100% - 260px);
+    }
+  }
+  
+  /* TOC 滚动条样式 */
+  #toc-wrapper::-webkit-scrollbar {
+    width: 4px;
+  }
+  #toc-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  #toc-wrapper::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 2px;
+  }
+</style>
