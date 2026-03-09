@@ -1,0 +1,68 @@
+<!-- 系列文章进度条 -->
+{% if page.series and page.series_order %}
+{% assign total_posts = 27 %}
+{% assign current = page.series_order %}
+{% assign percentage = current | times: 100 | divided_by: total_posts %}
+
+<div class="series-progress" style="background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+    <span style="font-weight: 600; color: #667eea;">
+      📚 {{ page.series }}
+    </span>
+    <span style="font-size: 0.9rem; color: #666;">
+      第 {{ current }} / {{ total_posts }} 篇
+    </span>
+  </div>
+  
+  <!-- 进度条 -->
+  <div style="background: #e0e0e0; border-radius: 10px; height: 8px; overflow: hidden;">
+    <div style="background: linear-gradient(90deg, #667eea, #764ba2); 
+                height: 100%; 
+                width: {{ percentage }}%; 
+                border-radius: 10px;
+                transition: width 0.5s ease;">
+    </div>
+  </div>
+  
+  <!-- 导航按钮 -->
+  <div style="display: flex; justify-content: space-between; margin-top: 0.75rem;">
+    {% if current > 1 %}
+      <a href="{{ page.previous_in_series | default: '#' }}" 
+         style="color: #667eea; text-decoration: none; font-size: 0.9rem;"
+      >
+        ← 上一篇
+      </a>
+    {% else %}
+      <span style="color: #ccc; font-size: 0.9rem;">← 上一篇</span>
+    {% endif %}
+    
+    <a href="/aise-series/" 
+       style="color: #667eea; text-decoration: none; font-size: 0.9rem; font-weight: 500;"
+    >
+      系列目录
+    </a>
+    
+    {% if current < total_posts %}
+      <a href="{{ page.next_in_series | default: '#' }}" 
+         style="color: #667eea; text-decoration: none; font-size: 0.9rem;"
+      >
+        下一篇 →
+      </a>
+    {% else %}
+      <span style="color: #ccc; font-size: 0.9rem;">下一篇 →</span>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  [data-theme="dark"] .series-progress {
+    background: #16213e;
+  }
+  [data-theme="dark"] .series-progress span {
+    color: #b0b0b0;
+  }
+  [data-theme="dark"] .series-progress span:first-child {
+    color: #7b8cde;
+  }
+</style>
+{% endif %}
