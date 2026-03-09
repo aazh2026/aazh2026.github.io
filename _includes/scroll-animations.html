@@ -1,0 +1,41 @@
+<!-- 滚动动画效果 -->
+<script>
+(function() {
+  // 滚动显示动画
+  var observerOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
+  };
+  
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, observerOptions);
+  
+  // 为所有 section 添加动画
+  document.querySelectorAll('.home section, .post-list li, .series-card').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+  });
+})();
+</script>
+
+<style>
+  /* 减少动画偏好 */
+  @media (prefers-reduced-motion: reduce) {
+    .home section,
+    .post-list li,
+    .series-card {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+</style>
