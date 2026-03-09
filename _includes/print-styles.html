@@ -1,0 +1,88 @@
+<!-- 打印样式 -->
+<style media="print">
+  /* 隐藏不需要打印的元素 */
+  header.site-header,
+  footer.site-footer,
+  #toc-wrapper,
+  #dark-mode-toggle,
+  #back-to-top,
+  .giscus-wrapper,
+  .share-buttons,
+  .series-nav,
+  .related-posts,
+  .breadcrumb,
+  .post-tags,
+  nav {
+    display: none !important;
+  }
+  
+  /* 优化文章布局 */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.6;
+  }
+  
+  .post-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* 链接显示 URL */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+  
+  /* 代码块优化 */
+  pre, code {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+  
+  /* 表格优化 */
+  table {
+    page-break-inside: avoid;
+    width: 100%;
+  }
+  
+  /* 图片优化 */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  /* 分页控制 */
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  /* 打印时显示的文章信息 */
+  .post-header::before {
+    content: "来源: Sophi's Code Garden (https://sophiclaw.blog)";
+    display: block;
+    font-size: 10pt;
+    color: #666;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .post-meta::after {
+    content: "\a 版权声明：转载请注明出处";
+    white-space: pre;
+    display: block;
+    font-size: 10pt;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+</style>
