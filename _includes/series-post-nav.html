@@ -1,0 +1,83 @@
+{% comment %}
+  增强系列导航 - 显示系列中的上一篇和下一篇
+{% endcomment %}
+
+{% if page.series %}
+<div class="series-post-nav" style="margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+  
+  {% assign series_posts = site.posts | where: "series", page.series | sort: "date" | reverse %}
+  {% assign current_index = 0 %}
+  {% assign prev_post = nil %}
+  {% assign next_post = nil %}
+  
+  {% for post in series_posts %}
+    {% if post.url == page.url %}
+      {% assign current_index = forloop.index %}
+      {% assign prev_post = series_posts[forloop.index] %}
+      {% if forloop.index > 1 %}
+        {% assign prev_idx = forloop.index | minus: 2 %}
+        {% assign next_post = series_posts[prev_idx] %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  
+  <div style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 1rem; align-items: center;">
+    
+    {% if prev_post %}
+    <a href="{{ prev_post.url | relative_url }}" 
+       style="text-decoration: none; color: inherit; padding: 0.75rem; border-radius: 6px; background: white; border: 1px solid #e0e0e0; transition: all 0.2s;"
+    >
+      <div style="font-size: 0.8rem; color: #888; margin-bottom: 0.25rem;">← 上一篇</div>
+      <div style="font-weight: 500; color: #333; font-size: 0.95rem;">{{ prev_post.title }}</div>
+    </a>
+    {% else %}
+    <div style="padding: 0.75rem; color: #ccc; font-size: 0.9rem;">
+      这是系列第一篇
+    </div>
+    {% endif %}
+    
+    <div style="text-align: center;">
+      <a href="/aise-series/" 
+         style="display: inline-flex; align-items: center; gap: 0.5rem;
+                padding: 0.5rem 1rem; background: #667eea; color: white;
+                border-radius: 20px; text-decoration: none; font-size: 0.85rem;"
+      >
+        📚 系列目录
+      </a>
+    </div>
+    
+    {% if next_post %}
+    <a href="{{ next_post.url | relative_url }}" 
+       style="text-decoration: none; color: inherit; padding: 0.75rem; border-radius: 6px; background: white; border: 1px solid #e0e0e0; text-align: right; transition: all 0.2s;"
+    >
+      <div style="font-size: 0.8rem; color: #888; margin-bottom: 0.25rem;">下一篇 →</div>
+      <div style="font-weight: 500; color: #333; font-size: 0.95rem;">{{ next_post.title }}</div>
+    </a>
+    {% else %}
+    <div style="padding: 0.75rem; color: #ccc; font-size: 0.9rem; text-align: right;">
+      这是系列最后一篇
+    </div>
+    {% endif %}
+  </div>
+  
+</div>
+
+<style>
+  .series-post-nav a:hover {
+    border-color: #667eea !important;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+  }
+  
+  [data-theme="dark"] .series-post-nav {
+    background: #16213e;
+  }
+  [data-theme="dark"] .series-post-nav a {
+    background: #1a1a2e;
+    border-color: #333;
+  }
+  [data-theme="dark"] .series-post-nav a div:last-child {
+    color: #eaeaea;
+  }
+</style>
+
+{% endif %}
