@@ -1,12 +1,196 @@
 <header class="site-header" role="banner">
   <div class="wrapper">
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <!-- 左侧：Logo/标题 -->
+    <a class="site-brand" rel="author" href="{{ "/" | relative_url }}">
+      <span class="site-title">{{ site.title | escape }}</span>
+    </a>
+    
+    <!-- 中间：导航菜单 -->
     <nav class="site-nav">
-      <a href="/">首页</a>
-      <a href="/archive">归档</a>
-      <a href="/tags">标签</a>
-      <a href="/aise-series">AISE系列</a>
-      <a href="/about/">关于</a>
+      <a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">首页</a>
+      <a href="/archive" class="nav-link{% if page.url contains 'archive' %} active{% endif %}">归档</a>
+      <a href="/tags" class="nav-link{% if page.url contains 'tags' %} active{% endif %}">标签</a>
+      <a href="/aise-series" class="nav-link{% if page.url contains 'aise' %} active{% endif %}">AISE系列</a>
+      <a href="/about/" class="nav-link{% if page.url contains 'about' %} active{% endif %}">关于</a>
     </nav>
+    
+    <!-- 右侧：工具栏 -->
+    <div class="nav-tools">
+      <button class="theme-toggle" id="nav-theme-toggle" title="切换深色模式">🌙</button>
+    </div>
   </div>
 </header>
+
+<!-- 导航栏样式 -->
+<style>
+  /* 固定导航栏 */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* 滚动时增加阴影 */
+  .site-header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 深色模式适配 */
+  [data-theme="dark"] .site-header {
+    background: rgba(26, 26, 46, 0.95);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  [data-theme="dark"] .site-header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 布局优化 */
+  .site-header .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.75rem 1rem;
+  }
+  
+  /* 品牌区域 */
+  .site-brand {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.25rem;
+    white-space: nowrap;
+  }
+  
+  [data-theme="dark"] .site-brand {
+    color: #eaeaea;
+  }
+  
+  /* 导航菜单 */
+  .site-nav {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-link:hover {
+    color: #667eea;
+  }
+  
+  /* 当前页面高亮 */
+  .nav-link.active {
+    color: #667eea;
+    font-weight: 600;
+    border-bottom-color: #667eea;
+  }
+  
+  [data-theme="dark"] .nav-link {
+    color: #b0b0b0;
+  }
+  
+  [data-theme="dark"] .nav-link:hover,
+  [data-theme="dark"] .nav-link.active {
+    color: #7b8cde;
+  }
+  
+  [data-theme="dark"] .nav-link.active {
+    border-bottom-color: #7b8cde;
+  }
+  
+  /* 工具栏 */
+  .nav-tools {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+  }
+  
+  .theme-toggle:hover {
+    background: rgba(102, 126, 234, 0.1);
+  }
+  
+  /* 响应式：小屏幕 */
+  @media (max-width: 768px) {
+    .site-header .wrapper {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .site-brand {
+      font-size: 1.1rem;
+    }
+    
+    .site-nav {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      gap: 1rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    [data-theme="dark"] .site-nav {
+      border-top-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-link {
+      font-size: 0.9rem;
+      padding: 0.4rem 0;
+    }
+  }
+</style>
+
+<!-- 滚动时添加阴影的脚本 -->
+<script>
+(function() {
+  var header = document.querySelector('.site-header');
+  if (!header) return;
+  
+  function updateHeader() {
+    if (window.pageYOffset > 10) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  updateHeader();
+  
+  // 导航栏主题切换同步
+  var navToggle = document.getElementById('nav-theme-toggle');
+  var bodyToggle = document.getElementById('dark-mode-toggle');
+  
+  if (navToggle && bodyToggle) {
+    navToggle.addEventListener('click', function() {
+      bodyToggle.click();
+    });
+  }
+})();
+</script>
