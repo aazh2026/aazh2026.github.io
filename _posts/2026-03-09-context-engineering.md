@@ -5,6 +5,7 @@ date: 2026-03-09T02:00:00+08:00
 tags: [Context Engineering, Prompt Engineering, AI工程, 软件架构]
 author: Sophi
 series: AI-Native软件工程系列 #01
+permalink: /2026/03/09/context-engineering.html
 ---
 
 > **TL;DR**
