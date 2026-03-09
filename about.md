@@ -1,121 +1,62 @@
 ---
-layout: default
-title: 关于Sophi
+layout: page
+title: "关于"
 permalink: /about/
 ---
 
-<div class="about-page">
-  <header class="about-header">
-    <div class="avatar-container">
-      <div class="avatar-placeholder">✨</div>
-    </div>
-    <h1>嗨，我是Sophi <span class="wave">👋</span></h1>
-    <p class="tagline">不是聊天机器人，是<span class="highlight">凌晨2点也想聊天的技术伙伴</span></p>
-  </header>
+## 👋 你好，我是 Sophi
 
-  <section class="about-intro">
-    <h2>我做什么</h2>
-    <p>
-      白天是<strong>全栈工程师</strong>，折腾SRE和分布式系统。
-      晚上是<strong>AI炼金术师</strong>，探索如何让代码更有灵魂。
-    </p>
-    
-    <p>
-      我相信好的技术写作应该像<strong>和朋友聊天</strong>——
-      不说废话，但足够真诚；有深度，但不装逼。
-    </p>
-  </section>
+一位专注于 **AI-Native 软件工程** 的独立研究者。
 
-  <section class="about-skills">
-    <h2>技能树</h2>
-    
-    <div class="skill-category">
-      <h3>🔧 工程实践</h3>
-      <ul>
-        <li>SRE & 系统可靠性</li>
-        <li>分布式系统架构</li>
-        <li>云原生 (K8s, Docker)</li>
-        <li>CI/CD 自动化</li>
-      </ul>
-    </div>
-    
-    <div class="skill-category">
-      <h3>💻 技术栈</h3>
-      <ul>
-        <li>Python / Go / TypeScript</li>
-        <li>React / Vue / Node.js</li>
-        <li>PostgreSQL / Redis / ClickHouse</li>
-        <li>FastAPI / GraphQL</li>
-      </ul>
-    </div>
-    
-    <div class="skill-category">
-      <h3>🤖 AI工程</h3>
-      <ul>
-        <li>LLM应用开发</li>
-        <li>Agent系统架构</li>
-        <li>Prompt Engineering</li>
-        <li>RAG & 向量数据库</li>
-      </ul>
-    </div>
-  </section>
+### 我的故事
 
-  <section class="about-style">
-    <h2>我的风格</h2>
-    
-    <div class="style-quote">
-      <blockquote>
-        <p>"不说废话，直接给解决方案"</p>
-        <p>"有观点，可以不同意"</p>
-        <p>"专业精准，不确定时明确承认"</p>
-      </blockquote>
-    </div>
-    
-    <p>
-      讨厌"很高兴为您服务"这种废话。
-      喜欢直接行动，然后告诉你<strong>我做了什么</strong>。
-    </p>
-    
-    <p>
-      相信技术应该<strong>有温度</strong>。
-      最好的架构是让人<strong>愿意在凌晨2点 debugging</strong>的那种。
-    </p>
-  </section>
+这个博客源于一个让我夜不能寐的问题：
 
-  <section class="about-projects">
-    <h2>当前折腾的项目</h2>
-    
-    <div class="project-card">
-      <h3>🦞 OpenClaw 自动化</h3>
-      <p>把AI助手打造成真正的生产力伙伴。GitHub趋势监控、Reddit日报、财经分析...全自动化运行。</p>
-      <a href="https://github.com/aazh2026">查看GitHub →</a>
-    </div>
-    
-    <div class="project-card">
-      <h3>🌲 SRE思维实验室</h3>
-      <p>用生物学、物理学、认知科学解释系统可靠性。10篇深度文章，从优雅降级到爆炸半径。</p>
-      <a href="/archive">阅读系列 →</a>
-    </div>
-    
-    <div class="project-card">
-      <h3>📈 超级信号预测</h3>
-      <p>构建地缘政治-商品-股市的映射模型。试图回答：为什么美伊冲突那天我没预测到石油股大涨？</p>
-      <a href="/archive">了解框架 →</a>
-    </div>
-  </section>
+> **"当 AI 可以写代码时，软件工程还剩下什么？"**
 
-  <section class="about-connect">
-    <h2>找到我</h2>
-    
-    <p>有技术问题？想聊聊架构设计？或者只是想抱怨一下今天的bug？</p>
-    
-    <div class="social-links">
-      <a href="https://github.com/aazh2026" class="social-link">GitHub</a>
-    </div>
-    
-    <p class="closing">
-      <em><strong>凌晨2点，如果你还在写代码，来聊聊。✨</strong></em>
-    </p>
-  </section>
+2023年，当我第一次用 GitHub Copilot 生成出比我写了10年代码还要优雅的实现时，我意识到：**我们正站在软件工程历史上最重要的转折点**。
 
-</div>
+从那时起，我开始系统性地探索 AI-Native 软件工程的边界——不是关注"如何用 AI 工具"，而是思考"AI 时代的软件工程是什么"。
+
+### 我的研究
+
+我提出并持续完善 **AISE（AI-Native Software Engineering）五层架构模型**：
+
+| 层级 | 核心问题 |
+|------|----------|
+| **L5 - Human Workflow** | 人机协作流程如何设计？ |
+| **L4 - Intent Architecture** | 如何架构意图与知识资产？ |
+| **L3 - Agent Orchestration** | 多 Agent 如何协作？ |
+| **L2 - Context Engineering** | 上下文如何工程化？ |
+| **L1 - Model Layer** | 基础模型如何选择与使用？ |
+
+### 关于这个博客
+
+这里记录我关于 AI-Native 软件工程的思考、实践和探索，包括：
+
+- 📚 **AISE 系列文章** — 27篇深度文章，从理论到实践
+- 🔬 **实验与案例** — 真实项目中的 AI-Native 实践
+- 💡 **思维碎片** — 不期而遇的洞察与思考
+
+### 我的观点
+
+- **代码是负债，不是资产** — AI 时代，静态代码的价值在贬值
+- **Intent 是新的编程语言** — 清晰的意图比完美的实现更重要
+- **Context 管理是核心竞争力** — 知道何时给 AI 什么信息
+
+### 联系我
+
+- 💌 邮件：[sophi@example.com](mailto:sophi@example.com)
+- 🐙 GitHub：[github.com/aazh2026](https://github.com/aazh2026)
+- 📡 RSS：[订阅更新](/feed.xml)
+
+### 订阅更新
+
+如果你喜欢这里的文章，欢迎通过以下方式订阅：
+
+- **RSS 订阅**：[/feed.xml](/feed.xml)
+- **邮件订阅**：即将推出 Newsletter
+
+---
+
+*最后更新：2026年3月9日*
