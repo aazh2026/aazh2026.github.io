@@ -1,69 +1,97 @@
-<!-- SEO Meta Tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Open Graph / Social Media Meta Tags -->
+{% assign page_title = page.title | default: site.title %}
+{% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 %}
+{% assign page_url = page.url | absolute_url %}
+{% assign page_image = page.image | default: '/assets/images/og-default.png' | absolute_url %}
 
-<!-- Primary Meta Tags -->
-<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<meta name="title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% elsif page.tags %}{{ page.tags | join: ', ' }}{% else %}AI-Native, 软件工程, AI编程, 技术博客{% endif %}">
-<meta name="author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author | default: 'Sophi' }}{% endif %}">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.url }}{{ page.url }}{% endif %}">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-<meta property="og:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/og-default.png{% endif %}">
+<!-- 基础 OG 标签 -->
+<meta property="og:title" content="{{ page_title }}">
+<meta property="og:description" content="{{ page_description }}">
+<meta property="og:url" content="{{ page_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:locale" content="zh_CN">
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="{{ site.url }}{{ page.url }}">
-<meta property="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-<meta property="twitter:image" content="{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/og-default.png{% endif %}">
-
-<!-- Article Specific (for blog posts) -->
-{% if page.layout == 'post' %}
-<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
-<meta property="article:author" content="{% if page.author %}{{ page.author }}{% else %}{{ site.author | default: 'Sophi' }}{% endif %}">
-<meta property="article:section" content="{% if page.categories %}{{ page.categories | first }}{% else %}Technology{% endif %}">
-{% if page.tags %}
-{% for tag in page.tags %}
-<meta property="article:tag" content="{{ tag }}">
-{% endfor %}
-{% endif %}
+{% if page.date %}
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  {% if page.tags %}
+    {% for tag in page.tags %}
+      <meta property="article:tag" content="{{ tag }}">
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <meta property="og:type" content="website">
 {% endif %}
 
-<!-- Structured Data (JSON-LD) -->
+<meta property="og:image" content="{{ page_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:image" content="{{ page_image }}"
+
+<!-- 作者信息 -->
+<meta name="author" content="{{ page.author | default: 'Sophi' }}">
+<meta name="twitter:creator" content="@sophiclaw">
+
+<!-- 其他 SEO 标签 -->
+<link rel="canonical" href="{{ page_url }}">
+<meta name="description" content="{{ page_description }}">
+
+{% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | join: ',' }}">
+{% elsif page.tags %}
+  <meta name="keywords" content="{{ page.tags | join: ',' }}">
+{% endif %}
+
+<!-- JSON-LD 结构化数据 -->
+{% if page.date %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "{% if page.layout == 'post' %}BlogPosting{% else %}WebSite{% endif %}",
-  "headline": "{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}",
-  "description": "{% if page.description %}{{ page.description | escape }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 | escape }}{% else %}{{ site.description | escape }}{% endif %}",
-  "url": "{{ site.url }}{{ page.url }}",
-  "datePublished": "{% if page.date %}{{ page.date | date_to_xmlschema }}{% endif %}",
-  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% elsif page.date %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  "@type": "BlogPosting",
+  "headline": "{{ page_title }}",
+  "description": "{{ page_description }}",
+  "url": "{{ page_url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  {% if page.last_modified_at %}
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
+  {% endif %}
   "author": {
     "@type": "Person",
-    "name": "{% if page.author %}{{ page.author }}{% else %}{{ site.author | default: 'Sophi' }}{% endif %}"
+    "name": "{{ page.author | default: 'Sophi' }}"
   },
   "publisher": {
     "@type": "Organization",
     "name": "{{ site.title }}",
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ site.url }}/assets/images/logo.png"
+      "url": "{{ '/assets/images/logo.png' | absolute_url }}"
     }
   },
-  "image": "{% if page.image %}{{ site.url }}{{ page.image }}{% else %}{{ site.url }}/assets/images/og-default.png{% endif %}"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page_url }}"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ page_image }}",
+    "width": 1200,
+    "height": 630
+  }
 }
 </script>
-
-<!-- RSS Feed -->
-<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "url": "{{ site.url }}"
+}
+</script>
+{% endif %}
