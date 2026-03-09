@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: \"zh-CN\" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
 
   {%- include head.html -%}
 
@@ -14,12 +14,6 @@
     </main>
 
     {%- include footer.html -%}
-
-    <!-- 全局图片懒加载 -->
-    {%- include lazy-load.html -%}
-
-    <!-- 滚动动画 -->
-    {%- include scroll-animations.html -%}
 
   </body>
 
