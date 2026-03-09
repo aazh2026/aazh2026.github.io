@@ -1,0 +1,72 @@
+{% comment %}
+  增强版阅读时间组件
+  包含：字数统计、预计阅读时间、剩余阅读时间
+{% endcomment %}
+
+{% assign content = include.content | default: page.content %}
+{% assign words = content | strip_html | split: ' ' | size %}
+{% assign chinese_chars = content | strip_html | replace: ' ', '' | size %}
+
+{% comment %}估算中文字符数{% endcomment %}
+{% assign chinese_count = chinese_chars | minus: words %}
+{% if chinese_count < 0 %}{% assign chinese_count = 0 %}{% endif %}
+
+{% comment %}总字数（中文 + 英文单词）{% endcomment %}
+{% assign total_chars = chinese_count | plus: words %}
+
+{% comment %}计算阅读时间{% endcomment %}
+{% assign chinese_time = chinese_count | divided_by: 300.0 | ceil %}
+{% assign english_time = words | divided_by: 200.0 | ceil %}
+{% assign total_time = chinese_time | plus: english_time %}
+{% if total_time < 1 %}{% assign total_time = 1 %}{% endif %}
+
+<span class="reading-time-stats" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+  <span title="预计阅读时间">
+    ⏱️ {{ total_time }} 分钟
+  </span>
+  
+  <span style="color: #ccc;">|</span>
+  
+  <span title="字数统计" style="color: #888;">
+    📝 {{ total_chars }} 字
+  </span>
+  
+  <span id="reading-progress-container" style="display: none;">
+    <span style="color: #ccc;">|</span>
+    <span id="reading-remaining" title="剩余阅读时间" style="color: #667eea;"></span>
+  </span>
+</span>
+
+<script>
+(function() {
+  var container = document.getElementById('reading-progress-container');
+  var remainingEl = document.getElementById('reading-remaining');
+  
+  if (!container || !remainingEl) return;
+  
+  var totalTime = {{ total_time }};
+  
+  function updateReadingProgress() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var progress = scrollHeight > 0 ? scrollTop / scrollHeight : 0;
+    
+    var remainingTime = Math.ceil(totalTime * (1 - progress));
+    
+    if (progress > 0.05) {
+      container.style.display = 'inline-flex';
+      remainingEl.textContent = '还剩 ' + remainingTime + ' 分钟';
+    } else {
+      container.style.display = 'none';
+    }
+    
+    // 读完了
+    if (progress >= 0.95) {
+      remainingEl.textContent = '即将读完';
+    }
+  }
+  
+  window.addEventListener('scroll', updateReadingProgress, { passive: true });
+  updateReadingProgress();
+})();
+</script>
