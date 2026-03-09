@@ -1,55 +1,20 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
-  <!-- SEO -->
-  {% seo %}
-  
-  <!-- Feed -->
-  {% feed_meta %}
-  
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="{{ '/assets/images/favicon.ico' | relative_url }}">
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DBLJ6HTZL5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-DBLJ6HTZL5');
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrapper">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-      <nav class="site-nav">
-        <a href="{{ '/' | relative_url }}">首页</a>
-        <a href="{{ '/archive' | relative_url }}">归档</a>
-        <a href="{{ '/tags' | relative_url }}">标签</a>
-        <a href="{{ '/about' | relative_url }}">关于</a>
-      </nav>
-    </div>
-  </header>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  <main class="page-content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
+  {%- include head.html -%}
 
-  <footer class="site-footer">
-    <div class="wrapper">
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">GitHub Pages</a>.</p>
-    </div>
-  </footer>
-</body>
+  <body>
+
+    {%- include header.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+  </body>
+
 </html>
