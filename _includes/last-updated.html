@@ -1,0 +1,31 @@
+<!-- 文章最后更新时间 -->
+{% if page.last_modified_at or page.date %}
+<div class="last-updated" style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; font-size: 0.9rem; color: #666;">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.5rem;">
+    <circle cx="12" cy="12" r="10"></circle>
+    <polyline points="12 6 12 12 16 14"></polyline>
+  </svg>
+  
+  {% if page.last_modified_at %}
+    <strong>最后更新：</strong> {{ page.last_modified_at | date: "%Y-%m-%d %H:%M" }}
+    <span style="color: #ccc; margin: 0 0.5rem;">|</span>
+    <span>首次发布：{{ page.date | date: "%Y-%m-%d" }}</span>
+  {% else %}
+    <strong>发布时间：</strong> {{ page.date | date: "%Y-%m-%d" }}
+  {% endif %}
+  
+  {% if page.history %}
+  <span style="color: #ccc; margin: 0 0.5rem;">|</span>
+  <a href="{{ page.history }}" style="color: #667eea; text-decoration: none;">
+    查看修改历史
+  </a>
+  {% endif %}
+</div>
+
+<style>
+  [data-theme="dark"] .last-updated {
+    background: #16213e;
+    color: #b0b0b0;
+  }
+</style>
+{% endif %}
