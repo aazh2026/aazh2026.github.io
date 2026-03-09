@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aazh2026.github.io/sitemap.xml
+
+# 禁止爬取的页面
+Disallow: /assets/
+
+# 爬虫延迟
+Crawl-delay: 10
