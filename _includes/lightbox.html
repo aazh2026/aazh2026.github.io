@@ -1,0 +1,74 @@
+<!-- 图片点击放大 (Lightbox) -->
+<div id="lightbox" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; cursor: zoom-out;">
+  <img id="lightbox-img" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 90%; max-height: 90%; object-fit: contain; cursor: default;">
+  <button id="lightbox-close" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 30px; cursor: pointer;">&times;</button>
+  <div id="lightbox-caption" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: white; text-align: center; max-width: 80%;"></div>
+</div>
+
+<script>
+(function() {
+  var lightbox = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightbox-img');
+  var lightboxClose = document.getElementById('lightbox-close');
+  var lightboxCaption = document.getElementById('lightbox-caption');
+  
+  // 为文章内所有图片添加点击事件
+  document.querySelectorAll('.post-content img, .e-content img').forEach(function(img) {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', function(e) {
+      e.preventDefault();
+      lightboxImg.src = this.src;
+      lightboxCaption.textContent = this.alt || '';
+      lightbox.style.display = 'block';
+      document.body.style.overflow = 'hidden'; // 禁止背景滚动
+    });
+  });
+  
+  // 关闭 Lightbox
+  function closeLightbox() {
+    lightbox.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox || e.target === lightboxImg) {
+      closeLightbox();
+    }
+  });
+  
+  lightboxClose.addEventListener('click', closeLightbox);
+  
+  // ESC 键关闭
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.style.display === 'block') {
+      closeLightbox();
+    }
+  });
+})();
+</script>
+
+<style>
+  /* Lightbox 动画 */
+  #lightbox {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  #lightbox[style*="display: block"] {
+    opacity: 1;
+  }
+  #lightbox-img {
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: transform 0.3s ease;
+  }
+  #lightbox[style*="display: block"] #lightbox-img {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  /* 图片悬停效果 */
+  .post-content img {
+    transition: transform 0.2s ease;
+  }
+  .post-content img:hover {
+    transform: scale(1.02);
+  }
+</style>
