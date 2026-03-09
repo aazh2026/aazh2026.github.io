@@ -1,0 +1,119 @@
+---
+layout: default
+permalink: /404.html
+title: "页面未找到"
+---
+
+<div style="text-align: center; padding: 4rem 2rem;">
+  <div style="font-size: 6rem; margin-bottom: 1rem;">🔍</div>
+  
+  <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #667eea;">404</h1>
+  
+  <h2 style="margin-bottom: 1.5rem;">页面未找到</h2>
+  
+  <p style="color: #666; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+    抱歉，你访问的页面不存在或已被移动。
+    <br>
+    试试搜索或浏览以下推荐内容？
+  </p>
+
+  <!-- 快速搜索 -->
+  <div style="max-width: 400px; margin: 0 auto 2rem;">
+    <input type="text" 
+           id="search-404" 
+           placeholder="搜索文章..." 
+           style="width: 100%; padding: 0.75rem; border: 2px solid #667eea; border-radius: 8px; font-size: 1rem;"
+    >
+    <div id="search-404-results" 
+         style="display: none; margin-top: 0.5rem; text-align: left; background: #f8f9fa; border-radius: 8px; overflow: hidden;"
+    ></div>
+  </div>
+
+  <!-- 快捷导航 -->
+  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
+    <a href="/" 
+       style="background: #667eea; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
+    >
+      🏠 返回首页
+    </a>
+    
+    <a href="/aise-series/" 
+       style="background: #f0f0f0; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
+    >
+      📚 浏览AISE系列
+    </a>
+    
+    <a href="/archive" 
+       style="background: #f0f0f0; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
+    >
+      🗂️ 文章归档
+    </a>
+  </div>
+
+  <!-- 推荐阅读 -->
+  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
+    <h3 style="margin-top: 0;">🔥 热门文章</h3>
+    <ul style="text-align: left;">
+      <li><a href="/aise-manifesto/">AI-Native软件工程宣言</a></li>
+      <li><a href="/2026/03/08/context-engineering-importance.html">Context Engineering: 五层架构模型</a></li>
+      <li><a href="/2026/03/09/knowledge-assetization.html">为什么你的代码正在变成负债？</a></li>
+      <li><a href="/2026/03/09/death-of-code-reviews.html">为什么代码评审正在死亡？</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+// 404页面搜索功能
+(function() {
+  var searchInput = document.getElementById('search-404');
+  var searchResults = document.getElementById('search-404-results');
+  
+  // 文章数据（简化版）
+  var posts = [
+    { title: "Context Engineering: 五层架构模型", url: "/2026/03/08/context-engineering-importance.html" },
+    { title: "TDD vs Intent-Driven Development", url: "/2026/03/08/tdd-vs-intent-driven.html" },
+    { title: "Intent Complexity Metrics", url: "/2026/03/08/intent-complexity-metrics.html" },
+    { title: "Executable PRD: 可执行规格说明", url: "/2026/03/08/executable-prd.html" },
+    { title: "S-curve Adoption: 三层演化模型", url: "/2026/03/08/ai-adoption-s-curve.html" },
+    { title: "大规模AI治理", url: "/2026/03/08/large-scale-ai-governance.html" },
+    { title: "全链路可追溯性", url: "/2026/03/08/traceability-auto-tracking.html" },
+    { title: "人-AI SLA: 协作契约框架", url: "/2026/03/08/human-ai-sla.html" },
+    { title: "为什么你的代码正在变成负债？", url: "/2026/03/09/knowledge-assetization.html" },
+    { title: "为什么代码评审正在死亡？", url: "/2026/03/09/death-of-code-reviews.html" },
+    { title: "AI-Native软件工程宣言", url: "/aise-manifesto/" },
+    { title: "AISE系列导航", url: "/aise-series/" }
+  ];
+  
+  searchInput.addEventListener('input', function(e) {
+    var query = e.target.value.toLowerCase().trim();
+    
+    if (query.length < 2) {
+      searchResults.style.display = 'none';
+      return;
+    }
+    
+    var results = posts.filter(function(post) {
+      return post.title.toLowerCase().includes(query);
+    }).slice(0, 5);
+    
+    if (results.length === 0) {
+      searchResults.innerHTML = '<div style="padding: 1rem; color: #666;">没有找到相关文章</div>';
+    } else {
+      searchResults.innerHTML = results.map(function(post) {
+        return '<a href="' + post.url + '" style="display: block; padding: 0.75rem; border-bottom: 1px solid #eee; text-decoration: none; color: #333;">' +
+          post.title +
+        '</a>';
+      }).join('');
+    }
+    
+    searchResults.style.display = 'block';
+  });
+  
+  // 点击外部关闭搜索结果
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('#search-404')) {
+      searchResults.style.display = 'none';
+    }
+  });
+})();
+</script>
