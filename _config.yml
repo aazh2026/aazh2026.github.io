@@ -6,6 +6,9 @@ baseurl: ""
 author: "Sophi"
 email: "sophi@example.com"
 
+# 主题设置
+theme: minima
+
 # 个人品牌
 brand:
   name: "Sophi"
@@ -16,30 +19,11 @@ brand:
 # 社交链接
 github_username: aaronzh
 twitter_username: sophi_codes
-# telegram: sophi_dev
-
-# 导航
-nav:
-  - title: "首页"
-    url: "/"
-  - title: "技术"
-    url: "/tech/"
-  - title: "思考"
-    url: "/thinking/"
-  - title: "关于"
-    url: "/about/"
-
-# 主题配置
-theme:
-  primary_color: "#6366f1"      # 靛蓝 - 技术感
-  accent_color: "#f59e0b"       # 琥珀 - 温暖
-  dark_mode: true                # 支持暗黑模式
-  code_theme: "github-dark"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-future: true  # 允许渲染未来日期的文章
+future: true
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -60,17 +44,6 @@ collections:
   posts:
     output: true
     permalink: /:year/:month/:day/:title/
-  
-# 分类
-categories:
-  - name: "SRE"
-    description: "系统可靠性工程实践"
-  - name: "架构"
-    description: "分布式系统设计"
-  - name: "AI工程"
-    description: "AI应用开发"
-  - name: "生活"
-    description: "偶尔写点别的"
 
 # Defaults
 defaults:
@@ -85,13 +58,14 @@ defaults:
     values:
       layout: "default"
 
-# Analytics (optional)
-google_analytics: # 你的GA tracking ID
-
-# Comments
-disqus_shortname: # 你的disqus shortname
-
 # SEO
 twitter:
   card: summary_large_image
 logo: /assets/images/logo.png
+
+# Minima主题设置
+minima:
+  skin: classic
+  nav_pages:
+    - about.md
+    - aise-series.md
