@@ -1,0 +1,44 @@
+<!-- 阅读完成庆祝 -->
+<div id="reading-complete" style="display: none; position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border-radius: 50px; box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4); z-index: 9999; font-size: 1rem; font-weight: 500;">
+  🎉 恭喜读完全文！
+</div>
+
+<script>
+(function() {
+  var completeEl = document.getElementById('reading-complete');
+  var hasShown = false;
+  
+  function checkReadingComplete() {
+    if (hasShown) return;
+    
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    
+    // 滚动到 95% 以上视为读完
+    if (scrollHeight > 0 && scrollTop / scrollHeight >= 0.95) {
+      hasShown = true;
+      completeEl.style.display = 'block';
+      completeEl.style.opacity = '0';
+      completeEl.style.transform = 'translateX(-50%) translateY(20px)';
+      
+      // 动画显示
+      setTimeout(function() {
+        completeEl.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        completeEl.style.opacity = '1';
+        completeEl.style.transform = 'translateX(-50%) translateY(0)';
+      }, 10);
+      
+      // 3秒后自动消失
+      setTimeout(function() {
+        completeEl.style.opacity = '0';
+        completeEl.style.transform = 'translateX(-50%) translateY(-20px)';
+        setTimeout(function() {
+          completeEl.style.display = 'none';
+        }, 500);
+      }, 3000);
+    }
+  }
+  
+  window.addEventListener('scroll', checkReadingComplete, { passive: true });
+})();
+</script>
