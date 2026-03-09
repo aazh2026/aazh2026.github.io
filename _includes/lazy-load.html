@@ -1,0 +1,76 @@
+<!-- 图片懒加载 -->
+<script>
+(function() {
+  // 懒加载所有图片
+  var images = document.querySelectorAll('img:not([loading])');
+  
+  images.forEach(function(img) {
+    // 添加 loading="lazy" 属性
+    img.setAttribute('loading', 'lazy');
+    
+    // 添加占位符样式
+    img.style.backgroundColor = '#f0f0f0';
+    img.style.transition = 'opacity 0.3s';
+    
+    // 图片加载完成后淡入
+    img.addEventListener('load', function() {
+      this.style.backgroundColor = 'transparent';
+    });
+    
+    // 如果图片已经缓存，手动触发
+    if (img.complete) {
+      img.style.backgroundColor = 'transparent';
+    }
+  });
+  
+  // 为不支持原生懒加载的浏览器提供 polyfill
+  if ('loading' in HTMLImageElement.prototype) {
+    // 浏览器支持原生懒加载
+    return;
+  }
+  
+  // 使用 Intersection Observer 作为 fallback
+  var imageObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var img = entry.target;
+        img.src = img.dataset.src || img.src;
+        img.removeAttribute('data-src');
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: '50px 0px'
+  });
+  
+  // 观察所有带 data-src 的图片
+  document.querySelectorAll('img[data-src]').forEach(function(img) {
+    imageObserver.observe(img);
+  });
+})();
+</script>
+
+<style>
+  /* 图片加载前的占位样式 */
+  img[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+  }
+  
+  @keyframes loading-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* 图片加载完成后移除动画 */
+  img[loading="lazy"][src]:not([src=""]) {
+    animation: none;
+    background: none;
+  }
+  
+  [data-theme="dark"] img[loading="lazy"] {
+    background: linear-gradient(90deg, #16213e 25%, #1a1a2e 50%, #16213e 75%);
+    background-size: 200% 100%;
+  }
+</style>
