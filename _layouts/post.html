@@ -6,6 +6,9 @@ layout: default
   <!-- 阅读进度条 -->
   {% include reading-progress.html %}
 
+  <!-- 文章目录 (桌面端) -->
+  {% include toc.html %}
+
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     
@@ -15,21 +18,18 @@ layout: default
         {{ page.date | date: date_format }}
       </time>
       
-      {% assign words = content | number_of_words %}
-      {% assign minutes = words | divided_by: 200 %}
-      {% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
-      <span class="reading-time" style="margin-left: 1rem; color: #888; font-size: 0.9rem;">
-        ⏱️ {{ minutes }} 分钟阅读
+      <span class="reading-time" style="margin-left: 1rem; color: #888;">
+        {% include reading-time.html %}
       </span>
       
       {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person" style="margin-left: 1rem;">
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
         </span>
       {% endif %}
       
       {% if page.series %}
-        <span class="post-series" style="margin-left: 1rem; color: #667eea; font-size: 0.9rem;">
+        <span class="post-series" style="margin-left: 1rem; color: #667eea;">
           {{ page.series }}
         </span>
       {% endif %}
@@ -61,6 +61,9 @@ layout: default
 
   <!-- 评论系统 -->
   {% include comments.html %}
+
+  <!-- 代码复制按钮 -->
+  {% include code-copy.html %}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
