@@ -1,0 +1,67 @@
+<!-- 全局页面宽度优化 -->
+<style>
+  /* 首页内容区域 */
+  .home {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  
+  /* About页面 */
+  .page-content .wrapper > *:not(.post) {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 归档页面 */
+  .page-content h1,
+  .page-content h2,
+  .page-content ul,
+  .page-content p {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 标签页面 */
+  .tag-cloud,
+  .tag-list {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* AISE系列页面 */
+  .series-content,
+  .series-list {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 通用页面内容 */
+  main.page-content .wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* 响应式：小屏幕时全宽 */
+  @media (max-width: 768px) {
+    .home,
+    .page-content .wrapper > *:not(.post),
+    .page-content h1,
+    .page-content h2,
+    .page-content ul,
+    .page-content p,
+    .tag-cloud,
+    .tag-list,
+    .series-content,
+    .series-list,
+    main.page-content .wrapper {
+      max-width: 100%;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>
