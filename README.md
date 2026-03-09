@@ -1,1 +1,1 @@
-# Sophi's Code Garden
+# Sophi's Code Garden - Width Optimized
