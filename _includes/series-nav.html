@@ -1,0 +1,53 @@
+<!-- 系列文章导航 -->
+{% if page.series contains "AI-Native软件工程" %}
+{% assign series_data = site.data.series.aise %}
+{% assign current_id = page.series_id | default: 0 %}
+{% assign prev_article = nil %}
+{% assign next_article = nil %}
+
+{% for article in series_data.articles %}
+  {% if article.id == current_id | minus: 1 %}
+    {% assign prev_article = article %}
+  {% endif %}
+  {% if article.id == current_id | plus: 1 %}
+    {% assign next_article = article %}
+  {% endif %}
+{% endfor %}
+
+<div class="series-nav" style="margin: 2rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff;">
+  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+    <span style="font-weight: bold; color: #007bff;">
+      📚 {{ series_data.name }}
+    </span>
+    <span style="font-size: 0.9rem; color: #6c757d;">
+      第 {{ current_id }} / {{ series_data.total }} 篇
+    </span>
+  </div>
+  
+  <div class="progress-bar" style="width: 100%; height: 4px; background: #e9ecef; border-radius: 2px; margin-bottom: 1rem;">
+    <div style="width: {{ current_id | times: 100 | divided_by: series_data.total }}%; height: 100%; background: #007bff; border-radius: 2px;"></div>
+  </div>
+  
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    {% if prev_article %}
+    <a href="{{ prev_article.url }}" style="text-decoration: none; color: #007bff; font-size: 0.9rem;">
+      ← {{ prev_article.title | truncate: 20 }}
+    </a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    
+    <a href="/aise-series/" style="text-decoration: none; color: #6c757d; font-size: 0.85rem; padding: 0.25rem 0.75rem; border: 1px solid #dee2e6; border-radius: 4px;">
+      系列目录
+    </a>
+    
+    {% if next_article %}
+    <a href="{{ next_article.url }}" style="text-decoration: none; color: #007bff; font-size: 0.9rem;">
+      {{ next_article.title | truncate: 20 }} →
+    </a>
+    {% else %}
+    <span></span>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
