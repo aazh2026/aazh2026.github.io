@@ -1,51 +1,30 @@
-# Site settings
 title: "Sophi的代码花园"
-description: "全栈工程师的思维碎片 | SRE实践 | AI工程探索 | 偶尔写点生活感悟"
+description: "全栈工程师的思维碎片 | SRE实践 | AI工程探索"
 url: "https://aazh2026.github.io"
 baseurl: ""
 author: "Sophi"
 email: "sophi@example.com"
 
-# 主题设置
+# 主题
 theme: minima
 
-# 个人品牌
-brand:
-  name: "Sophi"
-  emoji: "✨"
-  tagline: "凌晨2点也想聊天的技术伙伴"
-  avatar: "/assets/images/avatar.png"
-  
-# 社交链接
-github_username: aaronzh
-twitter_username: sophi_codes
-
-# Build settings
+# 构建设置
 markdown: kramdown
 highlighter: rouge
-future: true
 kramdown:
   input: GFM
-  syntax_highlighter: rouge
 
-# Plugins
+# 插件
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-paginate
 
-# Pagination
+# 分页
 paginate: 10
 paginate_path: "/page:num/"
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /:year/:month/:day/:title/
-
-# Defaults
+# 默认设置
 defaults:
   - scope:
       path: ""
@@ -53,19 +32,3 @@ defaults:
     values:
       layout: "post"
       author: "Sophi"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-
-# SEO
-twitter:
-  card: summary_large_image
-logo: /assets/images/logo.png
-
-# Minima主题设置
-minima:
-  skin: classic
-  nav_pages:
-    - about.md
-    - aise-series.md
