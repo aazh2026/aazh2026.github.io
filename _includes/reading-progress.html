@@ -1,0 +1,21 @@
+<!-- 阅读进度条 -->
+<div id="reading-progress" 
+     style="position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg, #667eea, #764ba2); z-index: 9999; transition: width 0.1s ease;"></div>
+
+<script>
+  // 阅读进度条
+  (function() {
+    var progressBar = document.getElementById('reading-progress');
+    
+    function updateProgress() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var progress = (scrollTop / scrollHeight) * 100;
+      progressBar.style.width = progress + '%';
+    }
+    
+    window.addEventListener('scroll', updateProgress);
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+  })();
+</script>
