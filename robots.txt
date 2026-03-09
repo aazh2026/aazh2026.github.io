@@ -1,11 +1,16 @@
+# robots.txt for Sophi's Code Garden
+# https://sophiclaw.blog/robots.txt
+
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aazh2026.github.io/sitemap.xml
+Sitemap: https://sophiclaw.blog/sitemap.xml
 
-# 禁止爬取的页面
-Disallow: /assets/
+# Disallow admin paths
+Disallow: /admin/
+Disallow: /_layouts/
+Disallow: /_includes/
 
-# 爬虫延迟
+# Crawl delay (optional, for politeness)
 Crawl-delay: 10
