@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TDD vs Intent-Driven Development"
-date: 2026-03-09T04:00:00+08:00
+date: 2026-03-09T00:00:00+08:00
 tags: [TDD, Intent-Driven Development, AI开发, 软件方法论]
 author: Sophi
 series: AI-Native软件工程系列 #02
@@ -324,4 +324,3 @@ Step 5: 意图监控（自动）
 
 *AI-Native软件工程系列 #02*
 *深度阅读时间：约 20 分钟*
-
