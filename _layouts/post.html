@@ -56,6 +56,9 @@ layout: default
     {{ content }}
   </div>
 
+  <!-- 最后更新时间 -->
+  {% include last-updated.html %}
+
   <!-- 增强系列导航 -->
   {% include series-post-nav.html %}
 
@@ -64,6 +67,9 @@ layout: default
 
   <!-- 相关文章 -->
   {% include related-posts.html %}
+
+  <!-- 邮件订阅 -->
+  {% include newsletter.html %}
 
   <!-- Giscus评论系统 -->
   {% include comments-giscus.html %}
@@ -74,11 +80,17 @@ layout: default
   <!-- 图片点击放大 -->
   {% include lightbox.html %}
 
+  <!-- 标题锚点链接 -->
+  {% include heading-anchors.html %}
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
 <!-- 深色模式 + 返回顶部 -->
 {% include dark-mode.html %}
+
+<!-- 阅读完成庆祝 -->
+{% include reading-complete.html %}
 
 <!-- 打印样式 -->
 {% include print-styles.html %}
