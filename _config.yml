@@ -27,6 +27,9 @@ plugins:
 paginate: 10
 paginate_path: "/page:num/"
 
+# 显示未来日期的文章
+future: true
+
 # 默认设置
 defaults:
   - scope:
