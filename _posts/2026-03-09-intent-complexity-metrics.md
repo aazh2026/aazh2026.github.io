@@ -2,6 +2,7 @@
 layout: post
 title: "AI时代的软件工程指标：LOC已死，Intent Complexity当立"
 date: 2026-03-09T00:00:00+08:00
+permalink: /2026/03/09/intent-complexity-metrics.html
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: Sophi
 series: AI-Native软件工程系列 #03
@@ -329,6 +330,10 @@ Intent Complexity不是为了创造一个新的数字游戏。
 ### 复杂度度量
 - **Cyclomatic Complexity**: 传统代码复杂度度量
 - **Cognitive Complexity**: 认知复杂度（更贴近人类理解）
+
+### AI与研发效能
+- **AI-Assisted Development Metrics**: 如何度量AI辅助开发
+- **Human-AI Collaboration**: 人机协作的效率评估
 
 ---
 
