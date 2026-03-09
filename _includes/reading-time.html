@@ -1,0 +1,25 @@
+{% comment %}
+  阅读时间计算器
+  基于文章字数估算阅读时间
+  中文：约 300 字/分钟
+  英文：约 200 词/分钟
+{% endcomment %}
+
+{% assign content = include.content | default: page.content %}
+{% assign words = content | strip_html | split: ' ' | size %}
+{% assign chinese_chars = content | strip_html | replace: ' ', '' | size %}
+
+{% comment %}估算中文字符数（总字符减去英文单词）{% endcomment %}
+{% assign chinese_count = chinese_chars | minus: words %}
+{% if chinese_count < 0 %}{% assign chinese_count = 0 %}{% endif %}
+
+{% comment %}计算阅读时间（分钟）{% endcomment %}
+{% assign chinese_time = chinese_count | divided_by: 300.0 | ceil %}
+{% assign english_time = words | divided_by: 200.0 | ceil %}
+{% assign total_time = chinese_time | plus: english_time %}
+
+{% if total_time < 1 %}{% assign total_time = 1 %}{% endif %}
+
+<span class="reading-time" title="预计阅读时间">
+  ⏱️ {{ total_time }} 分钟阅读
+</span>
