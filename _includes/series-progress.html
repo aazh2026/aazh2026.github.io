@@ -1,8 +1,16 @@
-<!-- 系列文章进度条 -->
-{% if page.series and page.series_order %}
-{% assign total_posts = 27 %}
-{% assign current = page.series_order %}
-{% assign percentage = current | times: 100 | divided_by: total_posts %}
+<!-- 系列文章进度条 (简化版，不需要 series_order) -->
+{% if page.series %}
+{% assign series_posts = site.posts | where: "series", page.series | sort: "date" | reverse %}
+{% assign total_posts = series_posts | size %}
+{% assign current_index = 0 %}
+
+{% for post in series_posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index %}
+  {% endif %}
+{% endfor %}
+
+{% assign percentage = current_index | times: 100 | divided_by: total_posts %}
 
 <div class="series-progress" style="background: #f8f9fa; border-radius: 8px; padding: 1rem; margin-bottom: 1.5rem;">
   <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
@@ -10,7 +18,7 @@
       📚 {{ page.series }}
     </span>
     <span style="font-size: 0.9rem; color: #666;">
-      第 {{ current }} / {{ total_posts }} 篇
+      第 {{ current_index }} / {{ total_posts }} 篇
     </span>
   </div>
   
@@ -24,33 +32,12 @@
     </div>
   </div>
   
-  <!-- 导航按钮 -->
-  <div style="display: flex; justify-content: space-between; margin-top: 0.75rem;">
-    {% if current > 1 %}
-      <a href="{{ page.previous_in_series | default: '#' }}" 
-         style="color: #667eea; text-decoration: none; font-size: 0.9rem;"
-      >
-        ← 上一篇
-      </a>
-    {% else %}
-      <span style="color: #ccc; font-size: 0.9rem;">← 上一篇</span>
-    {% endif %}
-    
+  <div style="text-align: center; margin-top: 0.75rem;">
     <a href="/aise-series/" 
-       style="color: #667eea; text-decoration: none; font-size: 0.9rem; font-weight: 500;"
+       style="color: #667eea; text-decoration: none; font-size: 0.9rem;"
     >
-      系列目录
+      查看完整系列 →
     </a>
-    
-    {% if current < total_posts %}
-      <a href="{{ page.next_in_series | default: '#' }}" 
-         style="color: #667eea; text-decoration: none; font-size: 0.9rem;"
-      >
-        下一篇 →
-      </a>
-    {% else %}
-      <span style="color: #ccc; font-size: 0.9rem;">下一篇 →</span>
-    {% endif %}
   </div>
 </div>
 
@@ -65,4 +52,5 @@
     color: #7b8cde;
   }
 </style>
+
 {% endif %}
