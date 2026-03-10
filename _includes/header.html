@@ -271,9 +271,10 @@
   }
 </style>
 
-<!-- 移动端菜单切换脚本 -->
+<!-- 移动端菜单切换脚本 + 主题切换 -->
 <script>
 (function() {
+  // 移动端菜单切换
   var menuToggle = document.getElementById('mobile-menu-toggle');
   var siteNav = document.getElementById('site-nav');
   
@@ -308,13 +309,34 @@
     updateHeader();
   }
   
-  // 导航栏主题切换同步
+  // 主题切换功能（独立实现，不依赖其他组件）
   var navToggle = document.getElementById('nav-theme-toggle');
-  var bodyToggle = document.getElementById('dark-mode-toggle');
+  var html = document.documentElement;
   
-  if (navToggle && bodyToggle) {
+  if (navToggle) {
+    // 初始化：检查本地存储的主题
+    var savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      html.setAttribute('data-theme', savedTheme);
+      navToggle.innerHTML = savedTheme === 'dark' ? '☀️' : '🌙';
+      navToggle.title = savedTheme === 'dark' ? '切换浅色模式' : '切换深色模式';
+    }
+    
+    // 点击切换主题
     navToggle.addEventListener('click', function() {
-      bodyToggle.click();
+      var current = html.getAttribute('data-theme');
+      var newTheme = current === 'dark' ? 'light' : 'dark';
+      
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      navToggle.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
+      navToggle.title = newTheme === 'dark' ? '切换浅色模式' : '切换深色模式';
+      
+      // 同步更新其他主题切换按钮（如果存在）
+      var otherToggles = document.querySelectorAll('#dark-mode-toggle');
+      otherToggles.forEach(function(toggle) {
+        toggle.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
+      });
     });
   }
 })();

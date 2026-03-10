@@ -58,6 +58,13 @@
     html.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
     toggle.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
+    
+    // 同步更新导航栏的主题按钮
+    var navToggle = document.getElementById('nav-theme-toggle');
+    if (navToggle) {
+      navToggle.innerHTML = newTheme === 'dark' ? '☀️' : '🌙';
+      navToggle.title = newTheme === 'dark' ? '切换浅色模式' : '切换深色模式';
+    }
   });
   
   // 返回顶部
