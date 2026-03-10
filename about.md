@@ -18,9 +18,13 @@ permalink: /about/
 
 从那时起，我开始系统性地探索 AI-Native 软件工程的边界——不是关注"如何用 AI 工具"，而是思考"AI 时代的软件工程是什么"。
 
-### 我的研究
+---
 
-我提出并持续完善 **AISE（AI-Native Software Engineering）五层架构模型**：
+## 📚 我的研究
+
+### 1. AISE（AI-Native Software Engineering）
+
+我提出并持续完善 **AISE 五层架构模型**：
 
 | 层级 | 核心问题 |
 |------|----------|
@@ -30,21 +34,64 @@ permalink: /about/
 | **L2 - Context Engineering** | 上下文如何工程化？ |
 | **L1 - Model Layer** | 基础模型如何选择与使用？ |
 
-### 关于这个博客
+**[📖 AISE 系列（27篇文章）](/aise-series/)**
+
+### 2. Agent OS
+
+2025-2026年，我完成了 **Agent OS 系列** —— 一套从 SaaS 到 Agent OS 的完整迁移指南：
+
+> **核心判断**：未来软件的主形态不是 SaaS，而是 **Agent OS（智能体操作系统）**
+
+**[🦞 Agent OS 系列（10篇文章，已完结）](/agent-os-series/)**
+
+系列涵盖：
+- 概念与愿景：范式转移、商业价值、交互设计
+- 技术架构：五层架构、记忆系统、Multi-Agent 协作
+- 实践案例：CRM 的 Agent 化重构
+- 组织变革：AI Digital Employee、人机协作模式
+- 商业模式：Agent Economy、计价革命
+
+**系列统计**：
+- 总字数：~123,000 字
+- 代码示例：50+ 个
+- 阅读时间：10-12 小时
+
+---
+
+## 🎯 核心观点
+
+### AISE 时代
+
+- **代码是负债，不是资产** —— AI 时代，静态代码的价值在贬值
+- **Intent 是新的编程语言** —— 清晰的意图比完美的实现更重要
+- **Context 管理是核心竞争力** —— 知道何时给 AI 什么信息
+
+### Agent OS 时代
+
+- **未来的软件不是你想点击什么，而是 Agent 知道你需要什么**
+- **当软件从"工具"变成"员工"，计价方式将从 $50/月 变成 Salary**
+- **每一个 SaaS 产品都值得用 Agent 重新做一遍**
+
+---
+
+## 📝 关于这个博客
 
 这里记录我关于 AI-Native 软件工程的思考、实践和探索，包括：
 
-- 📚 **AISE 系列文章** — 27篇深度文章，从理论到实践
+- 📚 **AISE 系列** — 27篇深度文章，从理论到实践
+- 🦞 **Agent OS 系列** — 10篇系统指南，从 SaaS 到 Agent OS
 - 🔬 **实验与案例** — 真实项目中的 AI-Native 实践
 - 💡 **思维碎片** — 不期而遇的洞察与思考
 
-### 我的观点
+**Hal Stack** — 本博客是 Hal Stack（AI-Native 软件工程方法论）的一部分：
+- 🦞 **Agent OS**：Agent 操作系统架构
+- 🧠 **AISE**：AI-Native 软件工程
+- 📊 **Metrics**：AI 时代的效能度量
+- 🔒 **Governance**：AI 治理与合规
 
-- **代码是负债，不是资产** — AI 时代，静态代码的价值在贬值
-- **Intent 是新的编程语言** — 清晰的意图比完美的实现更重要
-- **Context 管理是核心竞争力** — 知道何时给 AI 什么信息
+---
 
-### 联系我
+## 📬 联系我
 
 - 💌 邮件：[sophi@example.com](mailto:sophi@example.com)
 - 🐙 GitHub：[github.com/aazh2026](https://github.com/aazh2026)
@@ -52,11 +99,17 @@ permalink: /about/
 
 ### 订阅更新
 
-如果你喜欢这里的文章，欢迎通过以下方式订阅：
-
 - **RSS 订阅**：[/feed.xml](/feed.xml)
-- **邮件订阅**：即将推出 Newsletter
+- **Newsletter**：即将推出
 
 ---
 
-*最后更新：2026年3月9日*
+## 🙏 致谢
+
+感谢所有阅读、分享、讨论这些文章的读者。你们的反馈是我持续写作的动力。
+
+特别感谢 AI 社区的开源贡献者 —— LangChain、LlamaIndex、AutoGPT 等项目为 Agent OS 的实现提供了坚实基础。
+
+---
+
+*最后更新：2026年3月10日*
