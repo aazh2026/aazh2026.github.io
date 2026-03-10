@@ -13,7 +13,7 @@ layout: post
 title: "文章标题"           # 简洁有力，带问号或数字更佳
 date: 2026-03-09T00:00:00+08:00
 tags: [AI-Native软件工程, 标签1, 标签2]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #XX  # 系列编号
 ---
 ```

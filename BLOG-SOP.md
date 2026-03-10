@@ -31,7 +31,7 @@ layout: post
 title: "标题要有吸引力，带问号或数字更佳"
 date: 2026-XX-XXT00:00:00+08:00  # 注意：用00:00:00避免时间问题
 tags: [AI-Native软件工程, 标签1, 标签2]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #XX
 ---
 

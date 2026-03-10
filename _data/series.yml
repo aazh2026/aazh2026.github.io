@@ -4,7 +4,7 @@
 agent-os:
   name: "Agent OS 系列"
   description: "从 SaaS 到 Agent OS：探索 AI-Native 软件工程的完整指南"
-  author: "Sophi"
+  author: "Aaron"
   total: 10
   articles:
     - id: 1
@@ -67,7 +67,7 @@ agent-os:
 aise:
   name: "AI-Native软件工程"
   description: "探索AI如何重新定义软件工程的边界"
-  author: "Sophi"
+  author: "Aaron"
   total: 27
   articles:
     - id: 1

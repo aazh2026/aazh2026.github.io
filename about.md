@@ -8,7 +8,7 @@ permalink: /about/
 
 **Post-Code Engineering** —— 探索 AI-Native 软件工程的边界。
 
-我是 **Sophi**，一位专注于 AI-Native 软件工程的独立研究者。
+我是 **Aaron**，一位专注于 AI-Native 软件工程的独立研究者。
 
 ### 这个名字的含义
 

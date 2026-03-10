@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native软件工程宣言"
 date: 2026-03-09T12:00:00+08:00
 tags: [AI-Native软件工程, 宣言, 理论体系]
-author: Sophi
+author: Aaron
 series: "AI-Native软件工程系列 #26"
 series_id: 26
 description: "AISE的核心理论与五层架构。AI正在从根本上改变软件工程的本质。"
