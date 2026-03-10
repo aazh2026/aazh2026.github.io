@@ -3,7 +3,7 @@ layout: post
 title: "RAG-DD：企业私有知识库与代码生成的实时融合"
 date: 2026-03-13T16:00:00+08:00
 tags: [AI-Native软件工程, RAG-DD, 知识库, 代码生成]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #50
 ---
 

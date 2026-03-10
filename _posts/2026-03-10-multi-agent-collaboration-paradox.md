@@ -3,7 +3,7 @@ layout: post
 title: "Multi-Agent系统的协作悖论：为什么更多Agent不等于更好效果"
 date: 2026-03-10T16:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, 系统架构, 协作成本]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #30
 ---
 

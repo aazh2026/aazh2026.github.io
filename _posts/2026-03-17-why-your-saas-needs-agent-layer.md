@@ -3,7 +3,7 @@ layout: post
 title: "为什么你的 SaaS 产品需要 Agent 层？"
 date: 2026-03-17T10:00:00+08:00
 tags: [AI, Agent, SaaS, Product-Strategy, Architecture]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -373,7 +373,7 @@ Agent 每天自动：
 ---
 
 *Agent OS 系列 - 第 2 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-03-17*
 *阅读时间：约 10 分钟*

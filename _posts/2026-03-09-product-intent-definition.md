@@ -4,7 +4,7 @@ title: "Product Intent：AI 时代的意图定义"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/product-intent-definition.html
 tags: [Product Intent, AI产品, 意图驱动, 产品定义, AI-Native]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #01
 ---
 

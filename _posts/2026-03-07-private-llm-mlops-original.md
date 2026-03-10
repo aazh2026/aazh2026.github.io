@@ -3,7 +3,7 @@ layout: post
 title: "私有代码LLM的MLOps实战：从模型训练到生产部署的完整Pipeline"
 date: 2026-03-07T10:00:00+08:00
 tags: [MLOps, LLM, 私有模型, 代码生成, CI/CD, 模型训练]
-author: Sophi
+author: Aaron
 ---
 
 # 私有代码LLM的MLOps实战：从模型训练到生产部署的完整Pipeline

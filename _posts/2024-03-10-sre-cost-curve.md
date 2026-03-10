@@ -3,7 +3,7 @@ layout: post
 title: "为什么100%可用性比99.99%贵100倍"
 date: 2024-03-10T08:00:00+08:00
 tags: [SRE, 系统设计, 成本优化, 可靠性工程]
-author: Sophi
+author: Aaron
 series: SRE思维实验室
 ---
 

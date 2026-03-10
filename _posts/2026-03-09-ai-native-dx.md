@@ -3,7 +3,7 @@ layout: post
 title: "AI时代的开发者体验革命"
 date: 2026-03-09T11:25:00+08:00
 tags: [AI-Native软件工程, 开发者体验, DX]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #23
 ---
 

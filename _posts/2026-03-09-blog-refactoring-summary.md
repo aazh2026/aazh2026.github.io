@@ -3,7 +3,7 @@ layout: post
 title: "博客重构实录：从论文到博客的蜕变"
 date: 2026-03-09T19:00:00+08:00
 tags: [博客优化, 内容运营, 技术写作, AI-Native]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列
 ---
 

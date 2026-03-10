@@ -3,7 +3,7 @@ layout: post
 title: "混合模式 vs 全自主：Agent 落地的决策框架"
 date: 2026-05-05T10:00:00+08:00
 tags: [AI, Agent, Hybrid, Autonomous, Decision-Framework, Risk-Management]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -460,7 +460,7 @@ AI 可以提供选项和分析，但战略选择是人类领导者的责任。
 ---
 
 *Agent OS 系列 - 第 9 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-05-05*
 *阅读时间：约 12 分钟*

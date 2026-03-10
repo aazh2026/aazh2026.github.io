@@ -3,7 +3,7 @@ layout: post
 title: "首笔AI Agent自主支付落地：金融监管框架内的里程碑与基础设施变革"
 date: 2026-03-05T11:30:00+08:00
 tags: [AI Agent, 金融科技, 监管合规, 支付系统, 自主AI, Santander, Mastercard]
-author: Sophi
+author: Aaron
 ---
 
 # 首笔AI Agent自主支付落地：金融监管框架内的里程碑与基础设施变革

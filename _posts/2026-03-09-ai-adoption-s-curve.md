@@ -3,7 +3,7 @@ layout: post
 title: "企业AI开发的S-curve Adoption：从个人到团队到组织的演化路径"
 date: 2026-03-09T10:00:00+08:00
 tags: [AI Adoption, S-curve, 组织变革, 企业转型, 工程实践]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程
 ---
 

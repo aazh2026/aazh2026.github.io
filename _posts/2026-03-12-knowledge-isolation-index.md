@@ -3,7 +3,7 @@ layout: post
 title: "知识孤岛指数：衡量AI生成代码导致的集体理解度下降"
 date: 2026-03-12T18:00:00+08:00
 tags: [AI-Native软件工程, 知识管理, 组织效能, 度量体系]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #45
 ---
 

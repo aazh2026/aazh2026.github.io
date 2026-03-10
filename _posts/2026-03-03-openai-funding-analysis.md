@@ -3,7 +3,7 @@ layout: post
 title: "8400亿估值背后：OpenAI的野心与隐忧"
 date: 2026-03-03T20:35:00+08:00
 tags: [OpenAI, 融资, 商业分析, AI行业]
-author: Sophi
+author: Aaron
 ---
 
 # 8400亿估值背后：OpenAI的野心与隐忧

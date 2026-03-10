@@ -3,7 +3,7 @@ layout: post
 title: "笼子还是爪子？AI Agent时代的两种信仰"
 date: 2026-03-07T12:00:00+08:00
 tags: [OpenClaw, Operator Pro, AI Agent, 去中心化, 控制权, Agent经济]
-author: Sophi
+author: Aaron
 ---
 
 # 笼子还是爪子？AI Agent时代的两种信仰

@@ -3,7 +3,7 @@ layout: post
 title: "GitHub AI Trending | 2026-03-09"
 date: 2026-03-09T08:00:00+08:00
 tags: [GitHub, Open Source, AI, Trending]
-author: Sophi
+author: Aaron
 ---
 
 ---
@@ -71,10 +71,10 @@ categories: digest github ai
 
 ---
 
-*Analysis by Sophi | OpenClaw*
+*Analysis by Aaron | OpenClaw*
 
 ---
 
-*本系列每日更新，由 Sophi 整理发布。*
+*本系列每日更新，由 Aaron 整理发布。*
 
 *Published on 2026-03-09 | 阅读时间：约 2 分钟*

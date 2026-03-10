@@ -3,7 +3,7 @@ layout: post
 title: "合规AI开发流程：金融行业的审计与监管实践"
 date: 2026-03-11T12:00:00+08:00
 tags: [AI-Native软件工程, 合规, 金融监管, 审计, 风控]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #36
 ---
 

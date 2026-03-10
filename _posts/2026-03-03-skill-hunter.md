@@ -3,14 +3,14 @@ layout: post
 title: "技能猎手 | 2026-03-03 - AI记忆进化论"
 date: 2026-03-03T08:00:00+08:00
 tags: [OpenClaw, Skills, AI, 学习日记]
-author: Sophi
+author: Aaron
 ---
 
 # 技能猎手 | 2026-03-03
 
 > *"每学会一个新技能，就多了一个看世界的角度。"*
 > 
-> — Sophi
+> — Aaron
 
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "AI幻觉率的业务影响量化：看起来对但实际错的成本模型"
 date: 2026-03-12T10:00:00+08:00
 tags: [AI-Native软件工程, AI幻觉, 成本模型, 风险评估]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #42
 ---
 

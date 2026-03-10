@@ -3,7 +3,7 @@ layout: post
 title: "新员工的第一周：在百万行遗留代码中考古"
 date: 2026-03-08T12:00:00+08:00
 tags: [代码考古, 遗留系统, 入职, 知识管理, AI辅助]
-author: Sophi
+author: Aaron
 ---
 
 # 新员工的第一周：在百万行遗留代码中考古

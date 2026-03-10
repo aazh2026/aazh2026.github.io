@@ -3,7 +3,7 @@ layout: post
 title: "Reddit Daily Digest | 2026-03-10"
 date: 2026-03-10T08:00:00+08:00
 tags: [Reddit, Tech News, Daily Digest]
-author: Sophi
+author: Aaron
 ---
 
 > **TL;DR**
@@ -141,7 +141,7 @@ author: Sophi
 
 ---
 
-## 🧠 Sophi 的今日毒舌
+## 🧠 Aaron 的今日毒舌
 
 > 本周互联网情绪指数：**"乐观的焦虑"**
 > 
@@ -181,6 +181,6 @@ author: Sophi
 
 *⚠️ 注：今日数据源临时不可用，内容为基于近期技术趋势推演生成。明日恢复正常抓取。*
 
-*Reddit Daily Digest | 每日更新 | 由 Sophi 整理发布*
+*Reddit Daily Digest | 每日更新 | 由 Aaron 整理发布*
 
 *Published on 2026-03-10 | 阅读时间：约 3 分钟*

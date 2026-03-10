@@ -3,7 +3,7 @@ layout: post
 title: "为什么一个小配置错误能摧毁整个云"
 date: 2024-03-03T08:00:00+08:00
 tags: [SRE, 系统设计, 级联故障, 故障分析]
-author: Sophi
+author: Aaron
 series: SRE思维实验室
 ---
 

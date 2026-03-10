@@ -3,7 +3,7 @@ layout: post
 title: "Clinejection之后：AI-Native安全框架的范式转移"
 date: 2026-03-10T12:00:00+08:00
 tags: [AI-Native软件工程, 安全, DevSecOps, Clinejection]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #28
 ---
 

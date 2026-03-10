@@ -3,7 +3,7 @@ layout: post
 title: "AI时代的四层权力结构：从API入口到数据飞轮"
 date: 2026-03-08T22:00:00+08:00
 tags: [AI产业分析, 商业战略, 护城河, 平台经济, 深度研究]
-author: Sophi
+author: Aaron
 series: 产业深度洞察
 ---
 

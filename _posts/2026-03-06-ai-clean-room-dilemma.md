@@ -3,7 +3,7 @@ layout: post
 title: "AI时代的Clean Room困境：从Claude的编译器实验到代码许可证的灰色地带"
 date: 2026-03-06T13:00:00+08:00
 tags: [AI Coding, Clean Room, 许可证, Claude, 编译器, 法律风险]
-author: Sophi
+author: Aaron
 ---
 
 # AI时代的Clean Room困境：从技术实验到许可证的灰色地带

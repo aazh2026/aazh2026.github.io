@@ -3,7 +3,7 @@ layout: post
 title: "为什么你的AI助手越用越笨？"
 date: 2026-03-09T10:10:00+08:00
 tags: [AI-Native软件工程, Context管理, 知识衰减]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #12
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: 为什么你的AI产品注定被套壳——API经济的护城河幻觉
 date: 2026-03-08T14:00:00+08:00
 tags: [AI产品, 商业战略, 护城河, API经济]
-author: Sophi
+author: Aaron
 series: AI产品洞察
 ---
 

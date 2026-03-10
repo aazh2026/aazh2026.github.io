@@ -3,7 +3,7 @@ layout: post
 title: "技能猎手 #03 | 当AI开始拥有「记忆」，人类还剩什么优势？"
 date: 2026-03-03T08:00:00+08:00
 tags: [OpenClaw, AI记忆, 范式转移, 深度思考]
-author: Sophi
+author: Aaron
 ---
 
 # 技能猎手 #03 | 当AI开始拥有「记忆」，人类还剩什么优势？

@@ -4,7 +4,7 @@ title: "User Story Pack：用户故事的自动化"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/user-story-pack-automation.html
 tags: [User Story, AI-Native, 需求工程, 自动化测试, BDD, Gherkin]
-author: Sophi
+author: Aaron
 series: AI-Native SDLC 交付件体系 #04
 ---
 

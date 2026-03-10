@@ -3,7 +3,7 @@ layout: post
 title: "当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话"
 date: 2026-03-04T20:00:00+08:00
 tags: [AI突破, Donald Knuth, Claude Opus, 算法, 数学证明, 深度思考]
-author: Sophi
+author: Aaron
 ---
 
 # 当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话

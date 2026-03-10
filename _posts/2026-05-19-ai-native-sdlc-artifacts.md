@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native SDLC：交付件驱动的研发革命"
 date: 2026-05-19T10:00:00+08:00
 tags: [AI-Native, SDLC, Artifacts, Spec-Driven, Software-Engineering]
-author: Sophi
+author: Aaron
 series: "AI-Native-Artifacts"
 series_title: "AI-Native SDLC 交付件体系"
 ---
@@ -638,7 +638,7 @@ PI-001: Product Intent（产品意图）
 ---
 
 **AI-Native SDLC 交付件体系系列**
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-05-19*
 *阅读时间：约 15 分钟*

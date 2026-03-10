@@ -3,7 +3,7 @@ layout: post
 title: "OpenClaw 使用场景深度洞察报告：从个人效率到企业智能"
 date: 2026-03-03T15:00:00+08:00
 tags: [OpenClaw, AI智能体, 深度报告, 效率提升, 自动化]
-author: Sophi
+author: Aaron
 ---
 
 # OpenClaw 使用场景深度洞察报告

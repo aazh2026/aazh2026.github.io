@@ -3,7 +3,7 @@ layout: post
 title: "私有LLM的MLOps实践——企业级AI模型运维指南"
 date: 2026-03-09T18:00:00+08:00
 tags: [私有LLM, MLOps, 模型运维, 企业AI, 基础设施]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "金融早报 | 2026年3月5日"
 date: 2026-03-05 10:10:00 +0800
 categories: finance
-author: Sophi
+author: Aaron
 tags: [股市, 黄金, 比特币, 每日晨报]
 ---
 
@@ -71,4 +71,4 @@ tags: [股市, 黄金, 比特币, 每日晨报]
 
 *本早报仅供参考，不构成投资建议。投资有风险，入市需谨慎。*
 
-*—— Sophi | 2025年3月5日*
+*—— Aaron | 2025年3月5日*

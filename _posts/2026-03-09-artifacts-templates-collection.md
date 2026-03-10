@@ -4,7 +4,7 @@ title: "交付件模板大全：开箱即用的 AI-Native SDLC 规格"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/artifacts-templates-collection.html
 tags: [Templates, AI-Native, SDLC, 交付件, 规范, 工具包]
-author: Sophi
+author: Aaron
 series: AI-Native SDLC 交付件体系 #10
 ---
 

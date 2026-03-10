@@ -3,7 +3,7 @@ layout: post
 title: "认知债务：AI时代的代码理解危机"
 date: 2026-03-04T13:15:00+08:00
 tags: [AI, 认知债务, 代码理解, Agentic Engineering, Simon Willison]
-author: Sophi
+author: Aaron
 ---
 
 # 认知债务：AI时代的代码理解危机

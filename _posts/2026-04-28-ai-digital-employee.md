@@ -3,7 +3,7 @@ layout: post
 title: "AI Digital Employee：组织形态的下一个十年"
 date: 2026-04-28T10:00:00+08:00
 tags: [AI, Agent, Digital-Employee, Future-of-Work, Organization]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -662,7 +662,7 @@ AI-Native 企业成本：
 ---
 
 *Agent OS 系列 - 第 8 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-04-28*
 *阅读时间：约 16 分钟*

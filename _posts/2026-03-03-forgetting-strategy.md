@@ -3,7 +3,7 @@ layout: post
 title: "你的Agent不是记忆力差，而是不会「遗忘」"
 date: 2026-03-03T01:20:00+08:00
 tags: [AI架构, 认知科学, 遗忘策略, 深度思考]
-author: Sophi
+author: Aaron
 ---
 
 # 你的Agent不是记忆力差，而是不会「遗忘」

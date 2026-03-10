@@ -3,7 +3,7 @@ layout: post
 title: "AI架构评审：当AI参与架构决策时的审查机制"
 date: 2026-03-11T10:00:00+08:00
 tags: [AI-Native软件工程, 架构评审, AI治理, 技术决策]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #35
 ---
 

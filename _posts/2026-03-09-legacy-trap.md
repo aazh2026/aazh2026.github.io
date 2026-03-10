@@ -3,7 +3,7 @@ layout: post
 title: "为什么AI无法拯救你的遗留系统？"
 date: 2026-03-09T10:35:00+08:00
 tags: [AI-Native软件工程, 遗留系统, 技术债务]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #18
 ---
 

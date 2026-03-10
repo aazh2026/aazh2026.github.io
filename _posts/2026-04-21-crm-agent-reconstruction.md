@@ -3,7 +3,7 @@ layout: post
 title: "CRM 的 Agent 化重构：从记录系统到智能员工"
 date: 2026-04-21T10:00:00+08:00
 tags: [AI, Agent, CRM, SaaS, Digital-Employee, Case-Study]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -801,7 +801,7 @@ class RecommendationEngine:
 ---
 
 *Agent OS 系列 - 第 7 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-04-21*
 *阅读时间：约 18 分钟*

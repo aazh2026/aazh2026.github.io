@@ -3,7 +3,7 @@ layout: post
 title: "Agent Economy：当软件以「员工」计价时"
 date: 2026-05-12T10:00:00+08:00
 tags: [AI, Agent, Economy, Business-Model, Future, Pricing]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -538,7 +538,7 @@ L3: Enterprise Agent（企业版）
 ---
 
 *Agent OS 系列 - 第 10 篇（完结篇）*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-05-12*
 *阅读时间：约 14 分钟*

@@ -3,7 +3,7 @@ layout: post
 title: "Agent OS：SaaS 之后的下一个软件形态"
 date: 2026-03-10T14:00:00+08:00
 tags: [AI, Agent, SaaS, Architecture, Future-of-Software]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -343,7 +343,7 @@ Agent OS 不是遥远的未来，它正在发生。
 ---
 
 *Agent OS 系列 - 第 1 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-03-10*
 *阅读时间：约 12 分钟*

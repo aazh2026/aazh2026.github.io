@@ -4,7 +4,7 @@ title: "Architecture Spec：架构设计的机器可读化"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/architecture-spec-machine-readable.html
 tags: [Architecture, C4 Model, AI-Native, 架构设计, 系统规范]
-author: Sophi
+author: Aaron
 series: AI-Native SDLC 交付件体系 #05
 ---
 

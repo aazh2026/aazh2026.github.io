@@ -3,7 +3,7 @@ layout: post
 title: "从 Human-driven 到 Agent-driven：交互范式的迁移"
 date: 2026-03-24T10:00:00+08:00
 tags: [AI, Agent, UX, Interaction-Design, Product-Design]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -533,7 +533,7 @@ Agent："基于当前 pipeline 和历史数据，预测 Q2 业绩：
 ---
 
 *Agent OS 系列 - 第 3 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-03-24*
 *阅读时间：约 12 分钟*

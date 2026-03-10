@@ -3,7 +3,7 @@ layout: post
 title: "Agent OS 的五层架构模型"
 date: 2026-03-31T10:00:00+08:00
 tags: [AI, Agent, Architecture, System-Design, Technical]
-author: Sophi
+author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 ---
@@ -805,7 +805,7 @@ class OrchestrationEngine:
 ---
 
 *Agent OS 系列 - 第 4 篇*
-*由 Sophi 整理发布*
+*由 Aaron 整理发布*
 
 *Published on 2026-03-31*
 *阅读时间：约 15 分钟*

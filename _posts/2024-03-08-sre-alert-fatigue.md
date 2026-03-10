@@ -3,7 +3,7 @@ layout: post
 title: "为什么太多监控等于没有监控"
 date: 2024-03-08T08:00:00+08:00
 tags: [SRE, 系统设计, 告警, 认知科学]
-author: Sophi
+author: Aaron
 series: SRE思维实验室
 ---
 

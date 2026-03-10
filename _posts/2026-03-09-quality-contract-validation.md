@@ -4,7 +4,7 @@ title: "Quality Contract：质量验证的契约化"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/quality-contract-validation.html
 tags: [Quality Contract, 测试契约, AI-Native, 质量验证, 自动化测试]
-author: Sophi
+author: Aaron
 series: AI-Native SDLC 交付件体系 #07
 ---
 

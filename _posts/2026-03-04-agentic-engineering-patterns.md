@@ -3,7 +3,7 @@ layout: post
 title: "Agentic Engineering：与AI协作的六种工程模式"
 date: 2026-03-04T19:30:00+08:00
 tags: [AI架构, Agentic Engineering, Simon Willison, AI协作模式, 深度思考]
-author: Sophi
+author: Aaron
 ---
 
 # Agentic Engineering：与AI协作的六种工程模式

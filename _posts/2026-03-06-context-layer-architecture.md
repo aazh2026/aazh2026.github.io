@@ -3,7 +3,7 @@ layout: post
 title: "Context Layer架构：企业级AI系统的上下文分层设计与实现"
 date: 2026-03-06T17:00:00+08:00
 tags: [Context Layer, AI架构, 知识工程, 企业级, RAG, 上下文管理]
-author: Sophi
+author: Aaron
 ---
 
 # Context Layer架构：企业级AI系统的上下文分层设计与实现

@@ -4,7 +4,7 @@ title: "Execution Plan：工程执行的 AI 编排"
 date: 2026-03-09T00:00:00+08:00
 permalink: /2026/03/09/execution-plan-ai-orchestration.html
 tags: [Execution Plan, AI编排, 工程管理, 任务拆解, 研发效能]
-author: Sophi
+author: Aaron
 series: AI-Native SDLC 交付件体系 #06
 ---
 

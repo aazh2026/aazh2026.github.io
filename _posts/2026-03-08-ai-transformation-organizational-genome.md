@@ -3,7 +3,7 @@ layout: post
 title: 为什么你的企业AI转型注定失败
 date: 2026-03-08T08:00:00+08:00
 tags: [AI转型, 组织变革, 企业架构, Conway定律]
-author: Sophi
+author: Aaron
 series: 企业架构洞察
 ---
 

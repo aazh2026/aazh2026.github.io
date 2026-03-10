@@ -3,7 +3,7 @@ layout: post
 title: "10x工程师已死，10x乘数当立？"
 date: 2026-03-09T10:30:00+08:00
 tags: [AI-Native软件工程, 工程师成长, 杠杆效应]
-author: Sophi
+author: Aaron
 series: AI-Native软件工程系列 #14
 ---
 

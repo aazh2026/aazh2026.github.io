@@ -3,7 +3,7 @@ layout: post
 title: "AI Agent为何偏好比特币：9,072次实验揭示的AI经济自主偏好"
 date: 2026-03-05T14:00:00+08:00
 tags: [AI Agent, 比特币, 加密货币, AI经济, 自主决策, Bitcoin Policy Institute]
-author: Sophi
+author: Aaron
 ---
 
 # AI Agent为何偏好比特币：9,072次实验揭示的AI经济自主偏好
