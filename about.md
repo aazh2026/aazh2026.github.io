@@ -4,9 +4,25 @@ title: "关于"
 permalink: /about/
 ---
 
-## 👋 你好，我是 Sophi
+## 👋 你好，欢迎来到 Post-Code Engineering
 
-一位专注于 **AI-Native 软件工程** 的独立研究者。
+**Post-Code Engineering** —— 探索 AI-Native 软件工程的边界。
+
+我是 **Sophi**，一位专注于 AI-Native 软件工程的独立研究者。
+
+### 这个名字的含义
+
+**Post-Code** 不是"没有代码"，而是"超越代码"。
+
+当 AI 可以生成、理解、重构代码时，软件工程的核心竞争力正在从"写代码的能力"转向：
+
+- **意图表达** —— 清晰定义"要什么"比"怎么写"更重要
+- **架构思维** —— 设计系统的组合方式而非实现细节
+- **Context 管理** —— 知道何时给 AI 什么信息
+
+> 我们正从 **Code-Centric** 时代进入 **Intent-Centric** 时代。
+
+---
 
 ### 我的故事
 
@@ -80,6 +96,7 @@ permalink: /about/
 
 - 📚 **AISE 系列** — 27篇深度文章，从理论到实践
 - 🦞 **Agent OS 系列** — 10篇系统指南，从 SaaS 到 Agent OS
+- 📡 **Daily Signal** — 每日情报简报，Reddit/GitHub/市场动态
 - 🔬 **实验与案例** — 真实项目中的 AI-Native 实践
 - 💡 **思维碎片** — 不期而遇的洞察与思考
 

@@ -1,12 +1,24 @@
-# 🦞 Sophi's Code Garden
+# Post-Code Engineering
 
-**全栈工程师的思维碎片 | SRE实践 | AI工程探索**
+**AI-Native软件工程 | 从代码到意图 | 探索后代码时代的工程范式**
 
 🔗 **博客地址**：https://aazh2026.github.io
 
 ---
 
 ## 📚 内容概览
+
+### 📡 Daily Signal | 每日信号
+
+每日情报简报，从信息洪流中提取有价值的信号：
+
+- 🔥 **Reddit 热点** — 开发者社区的真实声音
+- ⭐ **GitHub Trending** — 开源世界的技术风向标
+- 📈 **市场动向** — 科技投资与商业战略信号
+
+**[→ 查看今日情报](https://aazh2026.github.io/daily-signal/)**
+
+---
 
 ### 🦞 Agent OS 系列（10篇，已完结）
 
@@ -45,6 +57,18 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 🎯 核心理念
 
+### Post-Code 的含义
+
+**Post-Code** 不是"没有代码"，而是"超越代码"。
+
+当 AI 可以生成、理解、重构代码时，软件工程的核心竞争力正在从"写代码的能力"转向：
+
+- **意图表达** —— 清晰定义"要什么"比"怎么写"更重要
+- **架构思维** —— 设计系统的组合方式而非实现细节
+- **Context 管理** —— 知道何时给 AI 什么信息
+
+> 我们正从 **Code-Centric** 时代进入 **Intent-Centric** 时代。
+
 ### Hal Stack
 
 本博客是 **Hal Stack**（AI-Native 软件工程方法论）的一部分：
@@ -60,9 +84,9 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 📝 最新文章
 
+- [Daily Signal | 2026-03-10](https://aazh2026.github.io/2026/03/10/reddit-digest.html)
 - [Agent OS：SaaS 之后的下一个软件形态](https://aazh2026.github.io/2026/03/10/agent-os-future-of-software.html)
 - [Agent OS 的五层架构模型](https://aazh2026.github.io/2026/03/31/agent-os-five-layer-architecture.html)
-- [Agent 的记忆系统设计](https://aazh2026.github.io/2026/04/07/agent-memory-system-design.html)
 - [CRM 的 Agent 化重构](https://aazh2026.github.io/2026/04/21/crm-agent-reconstruction.html)
 - [Agent Economy](https://aazh2026.github.io/2026/05/12/agent-economy.html)
 
