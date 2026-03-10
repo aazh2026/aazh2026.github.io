@@ -620,19 +620,20 @@ PI-001: Product Intent（产品意图）
 
 ---
 
-## 📚 本系列预告
+## 📚 本系列文章
 
-| 篇号 | 标题 | 核心内容 |
-|------|------|----------|
-| 02 | **Product Intent：AI 时代的意图定义** | 第一层交付件的详细模板和实践 |
-| 03 | **PRD 的重生：从文档到可执行规范** | PRD 的 AI-Readable 改造指南 |
-| 04 | **User Story Pack：用户故事的自动化** | 用户故事的结构化和测试生成 |
-| 05 | **Architecture Spec：架构设计的机器可读化** | C4 Model 和 API 规范的最佳实践 |
-| 06 | **Execution Plan：工程执行的 AI 编排** | 任务拆解、估算、跟踪的自动化 |
-| 07 | **Quality Contract：质量验证的契约化** | 测试即契约、验收标准的自动生成 |
-| 08 | **Operations Runbook：运维的自动化手册** | 部署、监控、故障处理的规范驱动 |
-| 09 | **Traceability：全链路可追溯实践** | 从需求到代码的完整追踪实现 |
-| 10 | **交付件模板大全：开箱即用** | 所有交付件的完整模板集合 |
+| 篇号 | 标题 | 链接 | 状态 |
+|------|------|------|------|
+| 01 | **Product Intent：AI 时代的意图定义** | [/2026/03/09/product-intent-definition.html](/2026/03/09/product-intent-definition.html) | ✅ 已发布 |
+| 02 | **TDD vs Intent-Driven Development** | [/2026/03/09/tdd-intent-driven.html](/2026/03/09/tdd-intent-driven.html) | ✅ 已发布 |
+| 03 | **Intent Complexity：AI时代的软件工程指标** | [/2026/03/09/intent-complexity-metrics.html](/2026/03/09/intent-complexity-metrics.html) | ✅ 已发布 |
+| 04 | **User Story Pack：用户故事的自动化** | [/2026/03/09/user-story-pack-automation.html](/2026/03/09/user-story-pack-automation.html) | ✅ 已发布 |
+| 05 | **Architecture Spec：架构设计的机器可读化** | [/2026/03/09/architecture-spec-machine-readable.html](/2026/03/09/architecture-spec-machine-readable.html) | ✅ 已发布 |
+| 06 | **Execution Plan：工程执行的 AI 编排** | [/2026/03/09/execution-plan-ai-orchestration.html](/2026/03/09/execution-plan-ai-orchestration.html) | ✅ 已发布 |
+| 07 | **Quality Contract：质量验证的契约化** | [/2026/03/09/quality-contract-validation.html](/2026/03/09/quality-contract-validation.html) | ✅ 已发布 |
+| 08 | **Operations Runbook：运维的自动化手册** | [/2026/03/09/operations-runbook-automation.html](/2026/03/09/operations-runbook-automation.html) | ✅ 已发布 |
+| 09 | **Traceability：需求到代码到测试的自动追踪** | [/2026/03/09/traceability-auto-tracking.html](/2026/03/09/traceability-auto-tracking.html) | ✅ 已发布 |
+| 10 | **交付件模板大全：开箱即用** | [/2026/03/09/artifacts-templates-collection.html](/2026/03/09/artifacts-templates-collection.html) | ✅ 已发布 |
 
 ---
 
@@ -641,5 +642,3 @@ PI-001: Product Intent（产品意图）
 
 *Published on 2026-05-19*
 *阅读时间：约 15 分钟*
-
-*下一篇预告：《Product Intent：AI 时代的意图定义》*
