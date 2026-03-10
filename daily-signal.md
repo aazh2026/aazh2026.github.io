@@ -41,13 +41,59 @@ permalink: /daily-signal/
 
 ### 2026年3月
 
-| 日期 | 标题 | Reddit | GitHub | Market |
-|------|------|--------|--------|--------|
-| 03-10 | [Daily Signal | 2026-03-10](/daily-signal-2026-03-10/) | AI 安全治理、Agent 协作新标准 | AI 安全工具、多 Agent 框架 | 科技股波动、AI 投资热度 |
-| 03-09 | [Daily Signal | 2026-03-09](/daily-signal-2026-03-09/) | Claude 3.7 评测、AI 编程瓶颈 | 代码审查工具、LLM 应用框架 | OpenAI 融资影响、AI 估值 |
-| 03-08 | [Daily Signal | 2026-03-08](/daily-signal-2026-03-08/) | AI 四层权力结构讨论 | AI Native 安全工具 | API 经济护城河 |
-| 03-07 | [Daily Signal | 2026-03-07](/daily-signal-2026-03-07/) | OpenClaw vs Operator Pro 对比 | 知识库即代码工具 | 私有 LLM MLOps 趋势 |
-| 03-06 | [Daily Signal | 2026-03-06](/daily-signal-2026-03-06/) | GPT-5.4 传言、AI 清洁室困境 | Agent 共识框架、上下文层架构 | 金融合规 AI 需求 |
+| 日期 | Reddit 情报站 | GitHub 趋势 | 市场简报 |
+|------|---------------|-------------|----------|
+| **03-10** | [Reddit Daily Digest](/2026/03/10/reddit-digest.html) | [GitHub AI Trending](/2026/03/10/github-trending.html) | [Financial Morning Brief](/2026/03/10/financial-digest.html) |
+| **03-09** | [Reddit Daily Digest](/2026/03/09/reddit-digest.html) | [GitHub AI Trending](/2026/03/09/github-trending.html) | — |
+| **03-08** | [Reddit Daily Digest](/2026/03/08/reddit-digest.html) | [GitHub AI Trending](/2026/03/08/github-trending.html) | [Financial Morning Brief](/2026/03/08/financial-digest.html) |
+| **03-07** | [Reddit Daily Digest](/2026/03/07/reddit-digest.html) | [GitHub AI Trending](/2026/03/07/github-trending.html) | [Financial Morning Brief](/2026/03/07/financial-digest.html) |
+| **03-06** | [Reddit Daily Digest](/2026/03/06/reddit-digest.html) | [GitHub AI Trending](/2026/03/06/github-trending.html) | [Financial Morning Brief](/2026/03/06/financial-digest.html) |
+| **03-05** | — | — | [Financial Morning Brief](/2026/03/05/financial-daily.html) |
+| **03-04** | [Reddit Daily Digest](/2026/03/04/reddit-digest.html) | — | [Financial Morning Brief](/2026/03/04/financial-digest.html) |
+| **03-03** | [Reddit Daily Digest](/2026/03/03/reddit-digest.html) | [GitHub AI Trending](/2026/03/03/github-trending.html) | [Financial Morning Brief](/2026/03/03/financial-digest.html) |
+
+---
+
+## 历史归档
+
+### 🔥 Reddit 情报站
+
+每日精选 Reddit 技术社区的核心讨论，覆盖 r/LocalLLaMA、r/MachineLearning、r/OpenAI 等高价值板块。
+
+**最近更新：**
+- [2026-03-10 Reddit Daily Digest](/2026/03/10/reddit-digest.html) — Grok 3 开源、AI 公务员试点、边缘计算民主化
+- [2026-03-09 Reddit Daily Digest](/2026/03/09/reddit-digest.html) — Claude 3.7 评测、Cursor 效率争议
+- [2026-03-08 Reddit Daily Digest](/2026/03/08/reddit-digest.html) — AI 四层权力结构讨论
+- [2026-03-07 Reddit Daily Digest](/2026/03/07/reddit-digest.html) — OpenClaw vs Operator Pro 对比
+- [2026-03-06 Reddit Daily Digest](/2026/03/06/reddit-digest.html) — GPT-5.4 传言、AI 清洁室困境
+
+[查看全部 Reddit 情报 →](/tags/#Reddit)
+
+### ⭐ GitHub Trending
+
+每日追踪 GitHub AI 相关项目趋势，发现开源世界的技术风向标。
+
+**最近更新：**
+- [2026-03-10 GitHub AI Trending](/2026/03/10/github-trending.html) — 多模态 Agent 爆发、边缘推理革命
+- [2026-03-09 GitHub AI Trending](/2026/03/09/github-trending.html) — AI 代码审查工具、LLM 应用框架
+- [2026-03-08 GitHub AI Trending](/2026/03/08/github-trending.html) — AI Native 安全工具
+- [2026-03-07 GitHub AI Trending](/2026/03/07/github-trending.html) — 知识库即代码工具
+- [2026-03-06 GitHub AI Trending](/2026/03/06/github-trending.html) — Agent 共识框架、上下文层架构
+
+[查看全部 GitHub 趋势 →](/tags/#GitHub)
+
+### 📈 市场简报
+
+每日市场情报摘要，覆盖油价、股市、楼市与宏观经济动态。
+
+**最近更新：**
+- [2026-03-10 Financial Morning Brief](/2026/03/10/financial-digest.html) — 油价过山车、中国楼市政策发力
+- [2026-03-08 Financial Morning Brief](/2026/03/08/financial-digest.html) — 全球市场动态
+- [2026-03-07 Financial Morning Brief](/2026/03/07/financial-digest.html) — 科技投资与 AI 估值
+- [2026-03-06 Financial Morning Brief](/2026/03/06/financial-digest.html) — 金融合规 AI 需求
+- [2026-03-05 Financial Morning Brief](/2026/03/05/financial-daily.html) — 市场趋势分析
+
+[查看全部市场简报 →](/tags/#Finance)
 
 ---
 
