@@ -1,4 +1,69 @@
 # AI-Native软件工程系列数据
+
+# Agent OS 系列
+agent-os:
+  name: "Agent OS 系列"
+  description: "从 SaaS 到 Agent OS：探索 AI-Native 软件工程的完整指南"
+  author: "Sophi"
+  total: 10
+  articles:
+    - id: 1
+      title: "Agent OS：SaaS 之后的下一个软件形态"
+      url: "/2026/03/10/agent-os-future-of-software.html"
+      date: "2026-03-10"
+      description: "核心判断：未来软件的主形态是 Agent OS"
+    - id: 2
+      title: "为什么你的 SaaS 产品需要 Agent 层？"
+      url: "/2026/03/17/why-your-saas-needs-agent-layer.html"
+      date: "2026-03-17"
+      description: "不做 Agent 层的风险 vs 做 Agent 层的收益"
+    - id: 3
+      title: "从 Human-driven 到 Agent-driven"
+      url: "/2026/03/24/human-driven-to-agent-driven.html"
+      date: "2026-03-24"
+      description: "交互范式的三次革命：CLI → GUI → NLI"
+    - id: 4
+      title: "Agent OS 的五层架构模型"
+      url: "/2026/03/31/agent-os-five-layer-architecture.html"
+      date: "2026-03-31"
+      description: "Tools → Memory → Runtime → Orchestration → Interface"
+    - id: 5
+      title: "Agent 的记忆系统设计"
+      url: "/2026/04/07/agent-memory-system-design.html"
+      date: "2026-04-07"
+      description: "Working / Short-term / Long-term Memory 分层设计"
+    - id: 6
+      title: "Multi-Agent 协作"
+      url: "/2026/04/14/multi-agent-collaboration.html"
+      date: "2026-04-14"
+      description: "Supervisor-Workers、Peer-to-Peer、Hierarchical 三种模式"
+    - id: 7
+      title: "CRM 的 Agent 化重构"
+      url: "/2026/04/21/crm-agent-reconstruction.html"
+      date: "2026-04-21"
+      description: "从传统 CRM 到 AI CRM 的完整实战案例"
+    - id: 8
+      title: "AI Digital Employee"
+      url: "/2026/04/28/ai-digital-employee.html"
+      date: "2026-04-28"
+      description: "从工具到员工：AI 员工的招聘、管理、考核体系"
+    - id: 9
+      title: "混合模式 vs 全自主"
+      url: "/2026/05/05/hybrid-vs-autonomous.html"
+      date: "2026-05-05"
+      description: "四维度决策框架：风险、数据、容错、监管"
+    - id: 10
+      title: "Agent Economy"
+      url: "/2026/05/12/agent-economy.html"
+      date: "2026-05-12"
+      description: "计价模式革命：从 $50/seat 到 $500-5000/月的 AI 员工薪资"
+    - id: index
+      title: "Agent OS 系列导航"
+      url: "/agent-os-series/"
+      date: "2026-05-12"
+      description: "完整系列文章索引"
+      is_index: true
+
 aise:
   name: "AI-Native软件工程"
   description: "探索AI如何重新定义软件工程的边界"
