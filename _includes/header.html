@@ -5,8 +5,13 @@
       <span class="site-title">{{ site.title | escape }}</span>
     </a>
     
+    <!-- 移动端菜单按钮 -->
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="切换菜单">
+      <span class="hamburger"></span>
+    </button>
+    
     <!-- 中间：导航菜单 -->
-    <nav class="site-nav">
+    <nav class="site-nav" id="site-nav">
       <a href="/" class="nav-link{% if page.url == '/' %} active{% endif %}">首页</a>
       <a href="/archive" class="nav-link{% if page.url contains 'archive' %} active{% endif %}">归档</a>
       <a href="/tags" class="nav-link{% if page.url contains 'tags' %} active{% endif %}">标签</a>
@@ -60,6 +65,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0.75rem 1rem;
+    position: relative;
   }
   
   /* 品牌区域 */
@@ -69,6 +75,7 @@
     font-weight: 600;
     font-size: 1.25rem;
     white-space: nowrap;
+    flex-shrink: 0;
   }
   
   [data-theme="dark"] .site-brand {
@@ -121,6 +128,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    flex-shrink: 0;
   }
   
   .theme-toggle {
@@ -137,53 +145,168 @@
     background: rgba(102, 126, 234, 0.1);
   }
   
+  /* 移动端菜单按钮 - 默认隐藏 */
+  .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background: #333;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger::before {
+    top: -7px;
+  }
+  
+  .hamburger::after {
+    top: 7px;
+  }
+  
+  /* 汉堡菜单动画 */
+  .mobile-menu-toggle.active .hamburger {
+    background: transparent;
+  }
+  
+  .mobile-menu-toggle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  
+  .mobile-menu-toggle.active .hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  
+  [data-theme="dark"] .hamburger,
+  [data-theme="dark"] .hamburger::before,
+  [data-theme="dark"] .hamburger::after {
+    background: #eaeaea;
+  }
+  
+  [data-theme="dark"] .mobile-menu-toggle.active .hamburger {
+    background: transparent;
+  }
+  
   /* 响应式：小屏幕 */
-  @media (max-width: 768px) {
-    .site-header .wrapper {
-      flex-wrap: wrap;
-      gap: 0.5rem;
+  @media (max-width: 900px) {
+    .mobile-menu-toggle {
+      display: block;
+      order: 2;
     }
     
     .site-brand {
       font-size: 1.1rem;
+      order: 1;
+    }
+    
+    .nav-tools {
+      order: 3;
     }
     
     .site-nav {
-      order: 3;
-      width: 100%;
-      justify-content: center;
-      gap: 1rem;
-      padding-top: 0.5rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.98);
+      padding: 1rem;
+      gap: 0;
       border-top: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      z-index: 999;
     }
     
     [data-theme="dark"] .site-nav {
+      background: rgba(26, 26, 46, 0.98);
       border-top-color: rgba(255, 255, 255, 0.1);
     }
     
+    .site-nav.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
     .nav-link {
-      font-size: 0.9rem;
-      padding: 0.4rem 0;
+      padding: 0.75rem 0;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    
+    .nav-link:last-child {
+      border-bottom: none;
+    }
+    
+    .nav-link.active {
+      border-bottom-color: transparent;
+      background: rgba(102, 126, 234, 0.1);
+      border-radius: 4px;
     }
   }
 </style>
 
-<!-- 滚动时添加阴影的脚本 -->
+<!-- 移动端菜单切换脚本 -->
 <script>
 (function() {
-  var header = document.querySelector('.site-header');
-  if (!header) return;
+  var menuToggle = document.getElementById('mobile-menu-toggle');
+  var siteNav = document.getElementById('site-nav');
   
-  function updateHeader() {
-    if (window.pageYOffset > 10) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
+  if (menuToggle && siteNav) {
+    menuToggle.addEventListener('click', function() {
+      menuToggle.classList.toggle('active');
+      siteNav.classList.toggle('active');
+    });
+    
+    // 点击导航链接后关闭菜单
+    var navLinks = siteNav.querySelectorAll('.nav-link');
+    navLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        siteNav.classList.remove('active');
+      });
+    });
   }
   
-  window.addEventListener('scroll', updateHeader, { passive: true });
-  updateHeader();
+  // 滚动时添加阴影
+  var header = document.querySelector('.site-header');
+  if (header) {
+    function updateHeader() {
+      if (window.pageYOffset > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+    
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  }
   
   // 导航栏主题切换同步
   var navToggle = document.getElementById('nav-theme-toggle');
