@@ -110,7 +110,6 @@ permalink: /about/
 
 ## 📬 联系我
 
-- 💌 邮件：[sophi@example.com](mailto:sophi@example.com)
 - 🐙 GitHub：[github.com/aazh2026](https://github.com/aazh2026)
 - 📡 RSS：[订阅更新](/feed.xml)
 
