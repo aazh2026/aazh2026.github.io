@@ -12,10 +12,10 @@ permalink: /aise-series/
 
 ## 📊 系列概览
 
-**总文章数**：48篇  
+**总文章数**：58篇  
 **覆盖领域**：理论基础、开发实践、安全治理、度量评估、组织建设  
 **更新状态**：持续更新中  
-**最后更新**：2026-03-13
+**最后更新**：2026-03-20
 
 ---
 
@@ -111,6 +111,21 @@ permalink: /aise-series/
 | - | [Prompt Library企业级管理](/2026/03/11/prompt-library-enterprise-management.html) | 部门共享与版本控制 |
 | - | [私有LLM的MLOps实践](/2026/03/09/private-llm-mlops.html) | 企业级AI模型运维 |
 
+### 第九部分：Agentic Engineering底层逻辑 (#49-58)
+
+| # | 文章 | 核心观点 |
+|---|------|---------|
+| 49 | [TDD的死亡与重生：AI时代测试先行的本质转变](/2026/03/11/tdd-death-and-rebirth.html) | 测试从验证正确性转向约束意图表达 |
+| 50 | [SDD 2.0：用户故事的Prompt工程化重构](/2026/03/12/sdd-20-prompt-engineering.html) | 上下文-约束-验收标准三元组 |
+| 51 | [DDD meets LLM：领域模型与Embedding空间的拓扑映射](/2026/03/13/ddd-meets-llm.html) | 限界上下文映射到向量空间的语义结构 |
+| 52 | [BDD语义化升级：Gherkin到形式化规格的自动转换](/2026/03/14/bdd-formal-specification.html) | 行为驱动开发的形式化pipeline设计 |
+| 53 | [PDD：Prompt作为第一等制品](/2026/03/15/pdd-prompt-as-artifact.html) | Prompt的版本控制、Code Review、CI/CD流程设计 |
+| 54 | [CDD：上下文工程即核心竞争力](/2026/03/16/cdd-context-driven-development.html) | Context as Code的实践标准与管理体系 |
+| 55 | [CI/CD的AI注入点：12个LLM验证卡点设计](/2026/03/17/cicd-ai-injection-points.html) | 在代码提交、构建、测试、部署各阶段插入AI验证 |
+| 56 | [事件驱动架构一致性：消息Schema的AI生成与版本检查](/2026/03/18/eda-schema-consistency.html) | Kafka/RabbitMQ的Schema兼容性自动管理 |
+| 57 | [服务间集成的契约测试自动化：Pact与AI生成测试桩](/2026/03/19/contract-testing-automation.html) | 契约测试的混合策略设计 |
+| 58 | [分布式代码审查的AI增强：跨团队PR语义摘要与冲突预警](/2026/03/20/distributed-code-review-ai.html) | 知识传递自动化与审查效率提升 |
+
 ---
 
 ## 🗺️ 知识体系图
@@ -120,7 +135,8 @@ AISE理论体系
 ├── 基础层
 │   ├── Context Engineering
 │   ├── Intent-Driven Development
-│   └── Executable PRD
+│   ├── Executable PRD
+│   └── Agentic Engineering底层逻辑
 ├── 治理层
 │   ├── 大规模AI治理
 │   ├── 全链路可追溯性
@@ -128,7 +144,8 @@ AISE理论体系
 ├── 实践层
 │   ├── 成本与效率
 │   ├── 安全与合规
-│   └── 质量与度量
+│   ├── 质量与度量
+│   └── 工程实践
 └── 组织层
     ├── 人才培养
     ├── 团队协作
@@ -144,4 +161,4 @@ AISE理论体系
 ---
 
 *本系列持续更新中，欢迎关注最新文章*  
-*最后更新: 2026-03-13*
+*最后更新: 2026-03-20*
