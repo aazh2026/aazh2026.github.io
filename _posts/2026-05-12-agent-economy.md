@@ -6,6 +6,9 @@ tags: [AI, Agent, Economy, Business-Model, Future, Pricing]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/05/12/agent-economy.html
 ---
 
 *"当 AI 员工成为劳动力市场的一部分，经济学将被重新定义。"

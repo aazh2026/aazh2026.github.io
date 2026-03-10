@@ -5,6 +5,9 @@ date: 2024-03-09T08:00:00+08:00
 tags: [SRE, 系统设计, 故障复盘, 组织学习]
 author: Aaron
 series: SRE思维实验室
+
+redirect_from:
+  - /2024/03/09/sre-postmortem.html
 ---
 
 # 为什么故障复盘不能追求「政治正确」

@@ -5,6 +5,9 @@ date: 2026-03-11T18:00:00+08:00
 tags: [AI-Native软件工程, 领域术语, 知识治理, 代码规范]
 author: Aaron
 series: AI-Native软件工程系列 #39
+
+redirect_from:
+  - /2026/03/11/domain-terminology-governance.html
 ---
 
 > **TL;DR**> > 术语不一致是AI代码生成质量的头号杀手：> 1. **术语鸿沟** — 业务说"客户"，代码写"User"，AI无所适从

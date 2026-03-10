@@ -6,6 +6,9 @@ permalink: /2026/03/09/intent-complexity-metrics.html
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: Aaron
 series: AI-Native软件工程系列 #03
+
+redirect_from:
+  - /2026/03/09/intent-complexity-metrics.html
 ---
 
 > *「2024年，一个团队被CEO质问：为什么AI辅助后，代码产出增加了300%，但系统稳定性反而下降了？他们查看了所有传统的研发指标——代码行数、提交频率、测试覆盖率——都显示团队在"高效"工作。但真相是：他们测量了错误的东西。在AI时代，代码量不再是价值的度量，意图复杂度才是。」*

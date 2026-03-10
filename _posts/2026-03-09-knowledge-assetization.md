@@ -5,6 +5,9 @@ date: 2026-03-09T09:50:00+08:00
 tags: [AI-Native软件工程, 知识资产化, 架构演进]
 author: Aaron
 series: AI-Native软件工程系列 #10
+
+redirect_from:
+  - /2026/03/09/knowledge-assetization.html
 ---
 
 > **TL;DR**

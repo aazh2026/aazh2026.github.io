@@ -5,6 +5,9 @@ date: 2026-03-08T23:00:00+08:00
 tags: [AI安全, Prompt工程, 逆向工程, 技术深度, 方法论]
 author: Aaron
 series: AI安全洞察
+
+redirect_from:
+  - /2026/03/08/prompt-reverse-engineering-technical.html
 ---
 
 # Prompt逆向工程的技术本质：从输出推断系统的完整方法论

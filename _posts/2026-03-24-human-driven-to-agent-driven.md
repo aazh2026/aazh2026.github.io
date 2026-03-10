@@ -6,6 +6,9 @@ tags: [AI, Agent, UX, Interaction-Design, Product-Design]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/03/24/human-driven-to-agent-driven.html
 ---
 
 *"最好的界面是没有界面。"*

@@ -5,6 +5,9 @@ date: 2026-03-09T12:00:00+08:00
 tags: [AI治理, 微服务, 大规模团队, 工程实践, 组织管理]
 author: Aaron
 series: AI-Native软件工程
+
+redirect_from:
+  - /2026/03/09/large-scale-ai-governance.html
 ---
 
 # 200人微服务团队如何使用AI而不混乱——大规模AI工程治理实践

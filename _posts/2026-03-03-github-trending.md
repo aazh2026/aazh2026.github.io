@@ -4,6 +4,9 @@ title: "GitHub趋势雷达 | 2026-03-03"
 date: 2026-03-03T07:30:00+08:00
 tags: [GitHub, 开源, AI趋势]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/github-trending.html
 ---
 
 # GitHub趋势雷达 | 2026-03-03

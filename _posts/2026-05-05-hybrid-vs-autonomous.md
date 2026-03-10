@@ -6,6 +6,9 @@ tags: [AI, Agent, Hybrid, Autonomous, Decision-Framework, Risk-Management]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/05/05/hybrid-vs-autonomous.html
 ---
 
 *"完全的自主是理想，渐进的道路是现实。"

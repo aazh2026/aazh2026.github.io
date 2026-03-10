@@ -5,6 +5,9 @@ date: 2026-03-09T11:00:00+08:00
 tags: [AI-Native软件工程, 测试策略, 软件质量]
 author: Aaron
 series: AI-Native软件工程系列 #17
+
+redirect_from:
+  - /2026/03/09/stop-writing-unit-tests.html
 ---
 
 *"2024年，某SaaS公司做了一个大胆的实验：停止要求开发者写单元测试，转而使用AI生成测试。三个月后，测试覆盖率从78%提升到94%，bug逃逸率下降了40%，开发速度提升了25%。最意外的发现是：开发者更快乐了。"

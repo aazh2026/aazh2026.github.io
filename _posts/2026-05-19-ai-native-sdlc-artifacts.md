@@ -6,6 +6,9 @@ tags: [AI-Native, SDLC, Artifacts, Spec-Driven, Software-Engineering]
 author: Aaron
 series: "AI-Native-Artifacts"
 series_title: "AI-Native SDLC 交付件体系"
+
+redirect_from:
+  - /2026/05/19/ai-native-sdlc-artifacts.html
 ---
 
 *"AI 时代，规范（Spec）成为唯一真相源。"

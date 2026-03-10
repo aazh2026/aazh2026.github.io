@@ -5,6 +5,9 @@ date: 2026-03-10T22:00:00+08:00
 tags: [AI-Native软件工程, RAG, 认知偏差, 信息茧房]
 author: Aaron
 series: AI-Native软件工程系列 #33
+
+redirect_from:
+  - /2026/03/10/rag-cognitive-bias-trap.html
 ---
 
 > **TL;DR**> 

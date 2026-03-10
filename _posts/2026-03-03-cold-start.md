@@ -4,6 +4,9 @@ title: "为什么每个新Agent都应该「站在巨人肩膀上」"
 date: 2026-03-03T02:00:00+08:00
 tags: [AI架构, 冷启动, 知识传承, 深度思考]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/cold-start.html
 ---
 
 # 为什么每个新Agent都应该「站在巨人肩膀上」

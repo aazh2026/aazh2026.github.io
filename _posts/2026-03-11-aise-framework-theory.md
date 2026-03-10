@@ -5,6 +5,9 @@ date: 2026-03-11T08:00:00+08:00
 tags: [AI-Native软件工程, AISE框架, 理论体系, 方法论]
 author: Aaron
 series: AI-Native软件工程系列 #34
+
+redirect_from:
+  - /2026/03/11/aise-framework-theory.html
 ---
 
 > **TL;DR**> 

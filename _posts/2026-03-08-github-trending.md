@@ -4,6 +4,9 @@ title: "GitHub 趋势雷达 | 2026-03-08"
 date: 2026-03-08T09:15:00+08:00
 tags: [GitHub, 开源, AI趋势, Agent框架, 群体智能]
 author: Aaron
+
+redirect_from:
+  - /2026/03/08/github-trending.html
 ---
 
 # GitHub 趋势雷达 | 2026-03-08

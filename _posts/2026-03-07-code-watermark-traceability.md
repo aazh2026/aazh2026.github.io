@@ -4,6 +4,9 @@ title: "当AI开始写代码，谁拥有这段代码的指纹？"
 date: 2026-03-07T11:00:00+08:00
 tags: [AI代码, 数字水印, 知识产权, 代码溯源, 企业合规]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/code-watermark-traceability.html
 ---
 
 # 当AI开始写代码，谁拥有这段代码的指纹？

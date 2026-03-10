@@ -4,6 +4,9 @@ title: "知识库即代码：把架构决策装进Git的时光机"
 date: 2026-03-07T22:00:00+08:00
 tags: [KBaaC, 知识管理, ADR, Git, 架构决策, 文档工程]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/knowledge-base-as-code.html
 ---
 
 # 知识库即代码：把架构决策装进Git的时光机

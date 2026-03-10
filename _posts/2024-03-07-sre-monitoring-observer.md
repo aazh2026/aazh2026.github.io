@@ -5,6 +5,9 @@ date: 2024-03-07T08:00:00+08:00
 tags: [SRE, 系统设计, 监控, 可观测性]
 author: Aaron
 series: SRE思维实验室
+
+redirect_from:
+  - /2024/03/07/sre-monitoring-observer.html
 ---
 
 # 为什么监控指标本身会改变被监控的系统

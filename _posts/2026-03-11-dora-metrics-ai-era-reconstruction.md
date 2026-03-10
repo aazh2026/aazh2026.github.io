@@ -5,6 +5,9 @@ date: 2026-03-11T20:00:00+08:00
 tags: [AI-Native软件工程, DORA, 效能度量, 基准线]
 author: Aaron
 series: AI-Native软件工程系列 #40
+
+redirect_from:
+  - /2026/03/11/dora-metrics-ai-era-reconstruction.html
 ---
 
 > **TL;DR**> 

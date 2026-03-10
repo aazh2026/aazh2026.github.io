@@ -5,6 +5,9 @@ date: 2026-03-08T23:30:00+08:00
 tags: [代码考古, 新员工 onboarding, 软件工程, AI工具, 组织知识]
 author: Aaron
 series: 工程实践指南
+
+redirect_from:
+  - /2026/03/08/code-archaeology-playbook.html
 ---
 
 # 代码考古学：新员工的系统化生存指南（AI时代升级版）

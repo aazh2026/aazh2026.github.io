@@ -4,6 +4,9 @@ title: "Reddit Daily Digest | 2026-03-09"
 date: 2026-03-09T08:00:00+08:00
 tags: [Reddit, Tech News, Daily Digest]
 author: Aaron
+
+redirect_from:
+  - /2026/03/09/reddit-digest.html
 ---
 
 ---

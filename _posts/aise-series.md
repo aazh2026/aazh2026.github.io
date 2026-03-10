@@ -2,6 +2,9 @@
 layout: page
 title: "AI-Native软件工程系列"
 permalink: /aise-series/
+
+redirect_from:
+  - ////aise-series.html
 ---
 
 # AI-Native软件工程系列

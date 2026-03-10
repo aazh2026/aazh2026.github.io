@@ -5,6 +5,9 @@ date: 2026-03-10T12:00:00+08:00
 tags: [AI-Native软件工程, 安全, DevSecOps, Clinejection]
 author: Aaron
 series: AI-Native软件工程系列 #28
+
+redirect_from:
+  - /2026/03/10/clinejection-ai-native-security.html
 ---
 
 > **TL;DR**

@@ -4,6 +4,9 @@ title: "晨间情报站 | 2026-03-03"
 date: 2026-03-03T08:00:00+08:00
 tags: [每日简报, AI情报, 科技趋势]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/morning-briefing.html
 ---
 
 # 晨间情报站 | 2026-03-03

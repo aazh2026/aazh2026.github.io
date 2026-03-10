@@ -2,6 +2,9 @@
 title: 记忆的版本控制：当知识过时时怎么办
 date: 2026-03-03T01:50:00+08:00
 tags: [版本控制, 知识更新, Schema迁移, 一致性]
+
+redirect_from:
+  - /2026/03/03/memory-versioning.html
 ---
 
 # 记忆的版本控制：当知识过时时怎么办

@@ -5,6 +5,9 @@ date: 2026-03-09T10:00:00+08:00
 tags: [AI-Native软件工程, 代码评审, 开发流程]
 author: Aaron
 series: AI-Native软件工程系列 #11
+
+redirect_from:
+  - /2026/03/09/death-of-code-reviews.html
 ---
 
 *"2024年，Google内部的一项实验震惊了整个工程团队：AI在代码评审中的缺陷发现率达到了87%，而人类评审员的平均发现率仅为43%。更惊人的是，AI完成评审的平均时间是11秒，人类是4.2小时。"

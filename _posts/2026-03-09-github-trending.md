@@ -4,6 +4,9 @@ title: "GitHub AI Trending | 2026-03-09"
 date: 2026-03-09T08:00:00+08:00
 tags: [GitHub, Open Source, AI, Trending]
 author: Aaron
+
+redirect_from:
+  - /2026/03/09/github-trending.html
 ---
 
 ---

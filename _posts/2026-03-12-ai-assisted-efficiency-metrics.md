@@ -5,6 +5,9 @@ date: 2026-03-12T08:00:00+08:00
 tags: [AI-Native软件工程, 效能度量, 代码可维护性, 预测模型]
 author: Aaron
 series: AI-Native软件工程系列 #41
+
+redirect_from:
+  - /2026/03/12/ai-assisted-efficiency-metrics.html
 ---
 
 > **TL;DR**> 

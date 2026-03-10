@@ -5,6 +5,9 @@ date: 2024-03-11T08:00:00+08:00
 tags: [SRE, 系统设计, 微服务, 故障隔离]
 author: Aaron
 series: SRE思维实验室
+
+redirect_from:
+  - /2024/03/11/sre-blast-radius.html
 ---
 
 # 如何通过架构设计将故障限制在局部

@@ -5,6 +5,9 @@ date: 2026-03-09T14:00:00+08:00
 tags: [可追溯性, 需求工程, AI测试, 全链路, 软件工程]
 author: Aaron
 series: AI-Native软件工程
+
+redirect_from:
+  - /2026/03/09/traceability-auto-tracking.html
 ---
 
 # 需求到代码到测试的自动追踪——AI时代的全链路可追溯性

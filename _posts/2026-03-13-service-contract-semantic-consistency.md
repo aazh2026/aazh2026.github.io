@@ -5,6 +5,9 @@ date: 2026-03-13T20:00:00+08:00
 tags: [AI-Native软件工程, 微服务, 服务契约, 分布式系统]
 author: Aaron
 series: AI-Native软件工程系列 #52
+
+redirect_from:
+  - /2026/03/13/service-contract-semantic-consistency.html
 ---
 
 > **TL;DR**

@@ -5,6 +5,9 @@ date: 2026-03-11T10:00:00+08:00
 tags: [AI-Native软件工程, 架构评审, AI治理, 技术决策]
 author: Aaron
 series: AI-Native软件工程系列 #35
+
+redirect_from:
+  - /2026/03/11/ai-architecture-review.html
 ---
 
 > **TL;DR**> 

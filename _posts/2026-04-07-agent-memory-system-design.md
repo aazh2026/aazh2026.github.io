@@ -6,6 +6,9 @@ tags: [AI, Agent, Memory-System, Vector-DB, Knowledge-Graph]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/04/07/agent-memory-system-design.html
 ---
 
 *"Agent 的智能不在于模型有多大，而在于它记得多少、记得多准、记得多久。"*

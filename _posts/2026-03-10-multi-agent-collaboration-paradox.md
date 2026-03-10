@@ -5,6 +5,9 @@ date: 2026-03-10T16:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, 系统架构, 协作成本]
 author: Aaron
 series: AI-Native软件工程系列 #30
+
+redirect_from:
+  - /2026/03/10/multi-agent-collaboration-paradox.html
 ---
 
 > **TL;DR**

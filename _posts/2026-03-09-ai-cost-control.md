@@ -5,6 +5,9 @@ date: 2026-03-09T10:55:00+08:00
 tags: [AI-Native软件工程, 成本控制, 成本优化]
 author: Aaron
 series: AI-Native软件工程系列 #20
+
+redirect_from:
+  - /2026/03/09/ai-cost-control.html
 ---
 
 *"2024年Q2，某SaaS公司的财务总监在审阅云账单时惊呆了：AI相关的费用从上季度的12万美元暴涨到89万美元，而用户量只增长了30%。这不是增长，是失控。"

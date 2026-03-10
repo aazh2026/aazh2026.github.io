@@ -6,6 +6,9 @@ permalink: /2026/03/09/artifacts-templates-collection.html
 tags: [Templates, AI-Native, SDLC, 交付件, 规范, 工具包]
 author: Aaron
 series: AI-Native SDLC 交付件体系 #10
+
+redirect_from:
+  - /2026/03/09/artifacts-templates-collection.html
 ---
 
 > *「2024年，一位技术负责人看着团队各自编写的需求文档叹气：'为什么同样的功能，每个人写的格式都不一样？'不是大家不专业，而是缺少统一的标准。在AI时代，交付件模板不仅是格式规范，更是与AI协作的接口协议——结构越标准，AI理解越准确。」*

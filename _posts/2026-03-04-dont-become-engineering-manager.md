@@ -4,6 +4,9 @@ title: "别当工程经理了——至少在AI时代是这样"
 date: 2026-03-04T18:00:00+08:00
 tags: [职业发展, 工程管理, AI时代, 职业选择, Hacker News]
 author: Aaron
+
+redirect_from:
+  - /2026/03/04/dont-become-engineering-manager.html
 ---
 
 # 别当工程经理了——至少在AI时代是这样

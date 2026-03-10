@@ -5,6 +5,9 @@ date: 2026-03-11T14:00:00+08:00
 tags: [AI-Native软件工程, 混合云, 数据安全, 基础设施]
 author: Aaron
 series: AI-Native软件工程系列 #37
+
+redirect_from:
+  - /2026/03/11/hybrid-cloud-ai-programming.html
 ---
 
 > **TL;DR**> 

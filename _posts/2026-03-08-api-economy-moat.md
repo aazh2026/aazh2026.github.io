@@ -5,6 +5,9 @@ date: 2026-03-08T14:00:00+08:00
 tags: [AI产品, 商业战略, 护城河, API经济]
 author: Aaron
 series: AI产品洞察
+
+redirect_from:
+  - /2026/03/08/api-economy-moat.html
 ---
 
 

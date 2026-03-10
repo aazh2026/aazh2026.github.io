@@ -4,6 +4,9 @@ title: "GitHub 趋势雷达 | 2026-03-07"
 date: 2026-03-07T08:00:00+08:00
 tags: [GitHub, 开源, AI趋势, Agent编排, 边缘计算]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/github-trending.html
 ---
 
 # GitHub 趋势雷达 | 2026-03-07

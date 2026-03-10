@@ -17,11 +17,15 @@ highlighter: rouge
 kramdown:
   input: GFM
 
+# 永久链接格式 - 移除日期
+permalink: /:title/
+
 # 插件
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 # 分页
 paginate: 10

@@ -6,6 +6,9 @@ tags: [AI, Agent, SaaS, Architecture, Future-of-Software]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/03/10/agent-os-future-of-software.html
 ---
 
 *"未来的软件不是你想点击什么，而是 Agent 知道你需要什么。"*

@@ -5,6 +5,9 @@ date: 2026-03-12T14:00:00+08:00
 tags: [AI-Native软件工程, 人才培养, Prompt工程, 组织能力]
 author: Aaron
 series: AI-Native软件工程系列 #43
+
+redirect_from:
+  - /2026/03/12/prompt-engineering-ladder.html
 ---
 
 > **TL;DR**

@@ -5,6 +5,9 @@ date: 2024-03-06T08:00:00+08:00
 tags: [SRE, 系统设计, 数据迁移, 回滚策略]
 author: Aaron
 series: SRE思维实验室
+
+redirect_from:
+  - /2024/03/06/sre-rollback-paradox.html
 ---
 
 # 当代码回滚遇上数据迁移：如何逆转时间？

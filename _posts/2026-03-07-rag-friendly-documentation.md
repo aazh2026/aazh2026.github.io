@@ -4,6 +4,9 @@ title: "写给AI看的文档：RAG时代的写作新范式"
 date: 2026-03-07T20:00:00+08:00
 tags: [RAG, 文档工程, 知识管理, LLM, 写作范式]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/rag-friendly-documentation.html
 ---
 
 # 写给AI看的文档：RAG时代的写作新范式

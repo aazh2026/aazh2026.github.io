@@ -5,6 +5,9 @@ date: 2026-03-09T10:50:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, 系统设计]
 author: Aaron
 series: AI-Native软件工程系列 #16
+
+redirect_from:
+  - /2026/03/09/agent-swarm.html
 ---
 
 *"2024年末，OpenAI的研究团队展示了一个令人震惊的实验：8个专业化的AI Agent协作，在2小时内完成了一个通常需要团队一周才能完成的软件项目。这不是8个Agent的简单叠加，而是一种全新的协作范式——Agent Swarm（智能体集群）。"

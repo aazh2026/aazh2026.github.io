@@ -5,6 +5,9 @@ date: 2026-03-12T10:00:00+08:00
 tags: [AI-Native软件工程, AI幻觉, 成本模型, 风险评估]
 author: Aaron
 series: AI-Native软件工程系列 #42
+
+redirect_from:
+  - /2026/03/12/ai-hallucination-business-cost-model.html
 ---
 
 > **TL;DR**> 

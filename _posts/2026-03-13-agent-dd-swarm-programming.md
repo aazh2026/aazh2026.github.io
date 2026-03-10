@@ -5,6 +5,9 @@ date: 2026-03-13T18:00:00+08:00
 tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
 author: Aaron
 series: AI-Native软件工程系列 #51
+
+redirect_from:
+  - /2026/03/13/agent-dd-swarm-programming.html
 ---
 
 > **TL;DR**

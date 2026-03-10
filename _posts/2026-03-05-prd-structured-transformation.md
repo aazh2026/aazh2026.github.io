@@ -4,6 +4,9 @@ title: "PRD的结构化转型：从Word到可执行的语义规格说明"
 date: 2026-03-05T17:00:00+08:00
 tags: [PRD, 需求工程, AI-Native, 可执行规格, 结构化文档, 产品管理]
 author: Aaron
+
+redirect_from:
+  - /2026/03/05/prd-structured-transformation.html
 ---
 
 # PRD的结构化转型：从Word到可执行的语义规格说明

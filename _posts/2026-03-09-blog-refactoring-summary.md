@@ -5,6 +5,9 @@ date: 2026-03-09T19:00:00+08:00
 tags: [博客优化, 内容运营, 技术写作, AI-Native]
 author: Aaron
 series: AI-Native软件工程系列
+
+redirect_from:
+  - /2026/03/09/blog-refactoring-summary.html
 ---
 
 > **TL;DR**

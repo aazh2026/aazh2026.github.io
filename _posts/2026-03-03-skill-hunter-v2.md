@@ -4,6 +4,9 @@ title: "技能猎手 #03 | 让你的AI告别「金鱼记忆」"
 date: 2026-03-03T08:00:00+08:00
 tags: [OpenClaw, Skills, AI记忆, 效率工具]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/skill-hunter-v2.html
 ---
 
 # 技能猎手 #03 | 让你的AI告别「金鱼记忆」

@@ -5,6 +5,9 @@ date: 2026-03-11T12:00:00+08:00
 tags: [AI-Native软件工程, 合规, 金融监管, 审计, 风控]
 author: Aaron
 series: AI-Native软件工程系列 #36
+
+redirect_from:
+  - /2026/03/11/compliant-ai-development-financial.html
 ---
 
 > **TL;DR**> > 金融行业AI开发面临严格的合规要求：> 1. **可解释性** — 监管要求AI决策必须可解释、可审计

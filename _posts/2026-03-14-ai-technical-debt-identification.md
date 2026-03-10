@@ -5,6 +5,9 @@ date: 2026-03-14T10:00:00+08:00
 tags: [AI-Native软件工程, 技术债务, 代码质量, 度量体系]
 author: Aaron
 series: AI-Native软件工程系列 #54
+
+redirect_from:
+  - /2026/03/14/ai-technical-debt-identification.html
 ---
 
 > **TL;DR**

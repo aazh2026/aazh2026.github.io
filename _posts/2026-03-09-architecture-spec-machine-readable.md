@@ -6,6 +6,9 @@ permalink: /2026/03/09/architecture-spec-machine-readable.html
 tags: [Architecture, C4 Model, AI-Native, 架构设计, 系统规范]
 author: Aaron
 series: AI-Native SDLC 交付件体系 #05
+
+redirect_from:
+  - /2026/03/09/architecture-spec-machine-readable.html
 ---
 
 > *「2024年，一位架构师画了一张完美的架构图——微服务拆分、消息队列、缓存策略，应有尽有。三个月后，新加入的工程师发现代码里的架构和图上的架构'好像不太一样'。不是图错了，而是图是'给人看的'，不是'给机器执行的'。在AI时代，架构设计需要从画图进化为可验证、可生成、可追溯的规格说明。」*

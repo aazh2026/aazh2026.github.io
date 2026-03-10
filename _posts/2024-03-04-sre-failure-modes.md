@@ -5,6 +5,9 @@ date: 2024-03-04T08:00:00+08:00
 tags: [SRE, 系统设计, 混沌工程, 故障演练]
 author: Aaron
 series: SRE思维实验室
+
+redirect_from:
+  - /2024/03/04/sre-failure-modes.html
 ---
 
 # 为什么好的系统必须预设自己的死亡方式

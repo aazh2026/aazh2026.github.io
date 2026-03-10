@@ -5,6 +5,9 @@ date: 2026-03-10T20:00:00+08:00
 tags: [AI-Native软件工程, 模型崩溃, 合成数据, AI安全]
 author: Aaron
 series: AI-Native软件工程系列 #32
+
+redirect_from:
+  - /2026/03/10/model-collapse-synthetic-data-death-spiral.html
 ---
 
 > **TL;DR**> 

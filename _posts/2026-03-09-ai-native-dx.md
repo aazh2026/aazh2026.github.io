@@ -5,6 +5,9 @@ date: 2026-03-09T11:25:00+08:00
 tags: [AI-Native软件工程, 开发者体验, DX]
 author: Aaron
 series: AI-Native软件工程系列 #23
+
+redirect_from:
+  - /2026/03/09/ai-native-dx.html
 ---
 
 *"2024年，某开发者工具公司做了一个实验：对比传统IDE和AI-Native IDE对开发者生产力的影响。结果令人震惊——使用AI-Native IDE的开发者不仅编码速度提升了40%，更重要的是，他们报告的工作满意度提升了60%。这不是工具的升级，是体验的重塑。"

@@ -5,6 +5,9 @@ date: 2026-03-13T16:00:00+08:00
 tags: [AI-Native软件工程, RAG-DD, 知识库, 代码生成]
 author: Aaron
 series: AI-Native软件工程系列 #50
+
+redirect_from:
+  - /2026/03/13/rag-dd-retrieval-augmented-generation.html
 ---
 
 > **TL;DR**

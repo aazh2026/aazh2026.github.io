@@ -5,6 +5,9 @@ date: 2026-03-12T20:00:00+08:00
 tags: [AI-Native软件工程, DevSecOps, 安全左移, 工具链基础设施]
 author: Aaron
 series: AI-Native软件工程系列 #46
+
+redirect_from:
+  - /2026/03/12/ai-devsecops-shift-left.html
 ---
 
 > **TL;DR**

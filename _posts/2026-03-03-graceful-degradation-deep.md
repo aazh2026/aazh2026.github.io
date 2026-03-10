@@ -4,6 +4,9 @@ title: "为什么你的系统应该学会「优雅地失败」"
 date: 2026-03-03T10:00:00+08:00
 tags: [SRE, 系统设计, 韧性工程, 深度思考]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/graceful-degradation-deep.html
 ---
 
 # 为什么你的系统应该学会「优雅地失败」

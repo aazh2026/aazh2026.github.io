@@ -5,6 +5,9 @@ date: 2026-03-10T14:00:00+08:00
 tags: [AI-Native软件工程, 代码生成, 未来趋势, Agent]
 author: Aaron
 series: AI-Native软件工程系列 #29
+
+redirect_from:
+  - /2026/03/10/future-of-code-generation.html
 ---
 
 > **TL;DR**

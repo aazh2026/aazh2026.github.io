@@ -4,6 +4,9 @@ title: "组织记忆的外化：从专家大脑到向量数据库的隐性知识
 date: 2026-03-07T11:00:00+08:00
 tags: [知识管理, 组织记忆, 隐性知识, 向量数据库, RAG, 专家经验]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/organizational-memory-externalization-original.html
 ---
 
 # 组织记忆的外化：从专家大脑到向量数据库的隐性知识提取方法论

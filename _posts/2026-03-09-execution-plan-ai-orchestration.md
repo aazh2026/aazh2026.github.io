@@ -6,6 +6,9 @@ permalink: /2026/03/09/execution-plan-ai-orchestration.html
 tags: [Execution Plan, AI编排, 工程管理, 任务拆解, 研发效能]
 author: Aaron
 series: AI-Native SDLC 交付件体系 #06
+
+redirect_from:
+  - /2026/03/09/execution-plan-ai-orchestration.html
 ---
 
 > *「2024年，一个技术主管盯着满墙的任务看板发愁：'为什么每个迭代的任务都完不成？'不是工程师不努力，而是任务拆解不合理——史诗拆成故事，故事拆成任务，全靠经验直觉。在AI时代，Execution Plan 让任务拆解从'艺术'变成'科学'，AI 可以基于 Product Intent 和 Architecture Spec 自动生成最优的执行计划。」*

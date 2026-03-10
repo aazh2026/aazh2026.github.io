@@ -4,6 +4,9 @@ title: "训练AI只是5%的工作，MLOps才是决定成败的95%"
 date: 2026-03-07T12:30:00+08:00
 tags: [MLOps, LLM, 私有模型, 代码生成, 持续训练]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/private-llm-mlops-pipeline.html
 ---
 
 # 训练AI只是5%的工作，MLOps才是决定成败的95%

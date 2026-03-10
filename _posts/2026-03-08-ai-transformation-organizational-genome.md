@@ -5,6 +5,9 @@ date: 2026-03-08T08:00:00+08:00
 tags: [AI转型, 组织变革, 企业架构, Conway定律]
 author: Aaron
 series: 企业架构洞察
+
+redirect_from:
+  - /2026/03/08/ai-transformation-organizational-genome.html
 ---
 
 

@@ -4,6 +4,9 @@ title: "新员工的第一周：在百万行遗留代码中考古"
 date: 2026-03-08T12:00:00+08:00
 tags: [代码考古, 遗留系统, 入职, 知识管理, AI辅助]
 author: Aaron
+
+redirect_from:
+  - /2026/03/08/code-archaeology-new-employee.html
 ---
 
 # 新员工的第一周：在百万行遗留代码中考古

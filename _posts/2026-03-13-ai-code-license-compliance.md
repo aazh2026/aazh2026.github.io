@@ -5,6 +5,9 @@ date: 2026-03-13T10:00:00+08:00
 tags: [AI-Native软件工程, License合规, SCA, 知识产权]
 author: Aaron
 series: AI-Native软件工程系列 #48
+
+redirect_from:
+  - /2026/03/13/ai-code-license-compliance.html
 ---
 
 > **TL;DR**> 

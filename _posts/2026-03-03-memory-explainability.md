@@ -2,6 +2,9 @@
 title: 可解释的记忆：Agent如何解释"我为什么记得这个"
 date: 2026-03-03T01:40:00+08:00
 tags: [可解释AI, 记忆归因, RAG, 可信度]
+
+redirect_from:
+  - /2026/03/03/memory-explainability.html
 ---
 
 # 可解释的记忆：Agent如何解释"我为什么记得这个"

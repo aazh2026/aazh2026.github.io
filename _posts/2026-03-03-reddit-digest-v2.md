@@ -4,6 +4,9 @@ title: "Reddit 早报 | 2026-03-03"
 date: 2026-03-03T07:15:00+08:00
 tags: [Reddit, 早报, AI]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/reddit-digest-v2.html
 ---
 
 # Reddit 早报 | 2026-03-03

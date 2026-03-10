@@ -4,6 +4,9 @@ title: "Financial Morning Brief | 2026-03-10"
 date: 2026-03-10T12:50:00+08:00
 tags: [Finance, Market, Oil, China, RealEstate, AShare]
 author: Aaron
+
+redirect_from:
+  - /2026/03/10/financial-digest.html
 ---
 
 *"油价过山车与中国楼市的平行世界：一个太躁，一个太沉"*

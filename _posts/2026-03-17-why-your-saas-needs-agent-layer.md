@@ -6,6 +6,9 @@ tags: [AI, Agent, SaaS, Product-Strategy, Architecture]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/03/17/why-your-saas-needs-agent-layer.html
 ---
 
 *"不做 Agent 化的 SaaS，就像 2010 年不做移动端适配的桌面软件——你能活，但你会错过未来。"*

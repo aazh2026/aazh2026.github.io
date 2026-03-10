@@ -4,6 +4,9 @@ title: "Reddit 情报站 | 2026-03-06"
 date: 2026-03-06T08:00:00+08:00
 tags: [Reddit, 每日情报, 科技新闻, AI趋势]
 author: Aaron
+
+redirect_from:
+  - /2026/03/06/reddit-digest.html
 ---
 
 # Reddit 情报站 | 2026-03-06

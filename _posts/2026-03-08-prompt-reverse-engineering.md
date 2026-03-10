@@ -5,6 +5,9 @@ date: 2026-03-08T12:00:00+08:00
 tags: [AI安全, Prompt工程, 反向工程, 提示词保护]
 author: Aaron
 series: AI安全洞察
+
+redirect_from:
+  - /2026/03/08/prompt-reverse-engineering.html
 ---
 
 

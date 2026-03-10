@@ -5,6 +5,9 @@ date: 2026-03-12T16:00:00+08:00
 tags: [AI-Native软件工程, 导师制, 人才培养, 个性化学习]
 author: Aaron
 series: AI-Native软件工程系列 #44
+
+redirect_from:
+  - /2026/03/12/ai-assisted-mentorship.html
 ---
 
 > **TL;DR**> 

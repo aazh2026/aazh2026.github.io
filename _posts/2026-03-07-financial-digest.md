@@ -4,6 +4,9 @@ title: "市场瞭望台 | 2026-03-07"
 date: 2026-03-07T08:00:00+08:00
 tags: [金融, 市场, 投资, 每周小结]
 author: Aaron
+
+redirect_from:
+  - /2026/03/07/financial-digest.html
 ---
 
 # 市场瞭望台 | 2026-03-07

@@ -5,6 +5,9 @@ date: 2026-03-11T16:00:00+08:00
 tags: [AI-Native软件工程, Prompt管理, 知识共享, 企业治理]
 author: Aaron
 series: AI-Native软件工程系列 #38
+
+redirect_from:
+  - /2026/03/11/prompt-library-enterprise-management.html
 ---
 
 > **TL;DR**> 

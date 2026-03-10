@@ -5,6 +5,9 @@ date: 2026-03-09T10:10:00+08:00
 tags: [AI-Native软件工程, Context管理, 知识衰减]
 author: Aaron
 series: AI-Native软件工程系列 #12
+
+redirect_from:
+  - /2026/03/09/context-rot.html
 ---
 
 *"2024年6月，某SaaS公司的开发团队发现了一个奇怪的现象：他们的AI编程助手在月初时表现出色，到了月底却频频给出离谱建议。经过排查，问题出在Context上——项目相关的Context已经『腐烂』，AI正在基于过时的假设生成代码。"

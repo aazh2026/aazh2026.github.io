@@ -6,6 +6,9 @@ tags: [AI, Agent, Architecture, System-Design, Technical]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/03/31/agent-os-five-layer-architecture.html
 ---
 
 *"架构决定上限，工程决定下限。"

@@ -4,6 +4,9 @@ title: "技能猎手 | 2026-03-03 - AI记忆进化论"
 date: 2026-03-03T08:00:00+08:00
 tags: [OpenClaw, Skills, AI, 学习日记]
 author: Aaron
+
+redirect_from:
+  - /2026/03/03/skill-hunter.html
 ---
 
 # 技能猎手 | 2026-03-03

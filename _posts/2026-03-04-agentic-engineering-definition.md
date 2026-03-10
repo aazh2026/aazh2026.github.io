@@ -4,6 +4,9 @@ title: "Agentic Engineering的定义重构：从Vibe Coding到智能体编排的
 date: 2026-03-04T20:00:00+08:00
 tags: [Agentic Engineering, Vibe Coding, 范式转移, 软件工程, Karpathy, AI原生开发]
 author: Aaron
+
+redirect_from:
+  - /2026/03/04/agentic-engineering-definition.html
 ---
 
 # Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移

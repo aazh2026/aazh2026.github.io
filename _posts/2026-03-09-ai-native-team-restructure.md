@@ -5,6 +5,9 @@ date: 2026-03-09T10:20:00+08:00
 tags: [AI-Native软件工程, 组织架构, 团队管理]
 author: Aaron
 series: AI-Native软件工程系列 #13
+
+redirect_from:
+  - /2026/03/09/ai-native-team-restructure.html
 ---
 
 *"2024年，某科技巨头进行了一场备受争议的组织变革：裁减了30%的'传统开发工程师'，同时新增了一个名为'Intent架构师'的全新职级。CEO在内部信中说：'我们不是裁员，是重新定义什么是工程师。'"

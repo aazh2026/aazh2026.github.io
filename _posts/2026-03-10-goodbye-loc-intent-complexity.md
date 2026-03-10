@@ -5,6 +5,9 @@ date: 2026-03-10T18:00:00+08:00
 tags: [AI-Native软件工程, 度量体系, 效能评估, 意图复杂度]
 author: Aaron
 series: AI-Native软件工程系列 #31
+
+redirect_from:
+  - /2026/03/10/goodbye-loc-intent-complexity.html
 ---
 
 > **TL;DR**

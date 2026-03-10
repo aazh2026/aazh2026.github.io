@@ -6,6 +6,9 @@ tags: [AI, Agent, Digital-Employee, Future-of-Work, Organization]
 author: Aaron
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
+
+redirect_from:
+  - /2026/04/28/ai-digital-employee.html
 ---
 
 *"当 AI 员工成为常态，管理的艺术将重新被定义。"*
