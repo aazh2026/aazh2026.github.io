@@ -5,6 +5,7 @@ date: 2026-03-09T08:00:00+08:00
 tags: [Reddit, Tech News, Daily Digest]
 author: Aaron
 
+permalink: /2026/03/09/reddit-digest/
 redirect_from:
   - /2026/03/09/reddit-digest.html
 ---

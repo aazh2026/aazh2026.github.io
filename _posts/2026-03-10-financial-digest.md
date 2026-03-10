@@ -5,6 +5,7 @@ date: 2026-03-10T12:50:00+08:00
 tags: [Finance, Market, Oil, China, RealEstate, AShare]
 author: Aaron
 
+permalink: /2026/03/10/financial-digest/
 redirect_from:
   - /2026/03/10/financial-digest.html
 ---

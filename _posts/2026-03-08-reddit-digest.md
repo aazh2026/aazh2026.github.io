@@ -5,6 +5,7 @@ date: 2026-03-08T08:00:00+08:00
 tags: [Reddit, 每日情报, AI趋势, 周日漫游]
 author: Aaron
 
+permalink: /2026/03/08/reddit-digest/
 redirect_from:
   - /2026/03/08/reddit-digest.html
 ---
