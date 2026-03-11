@@ -9,118 +9,125 @@ redirect_from:
   - /2026/03/11/github-trending.html
 ---
 
-> **TL;DR**> 
-003e 今日核心趋势：
-> 1. **AI 编程助手开源** — 多个开源 Cursor/ Copilot 替代品涌现
-> 2. **本地 LLM 工具链** — 边缘推理和本地部署工具持续火热
-> 3. **AI Agent 框架** — 多 Agent 协作系统成为新热点
+> **TL;DR**
+> 
+> 今日核心趋势：
+> 1. **Plane** — 开源项目管理工具，Jira/Linear 替代品，今日 +45 ⭐
+> 2. **Filestash** — 通用文件管理平台，今日 +78 ⭐
+> 3. **jj** — 兼容 Git 的简单强大版本控制工具，今日 +138 ⭐
 
 ---
 
 ## 📋 本文结构
 
-1. [Executive Summary](#executive-summary)
-2. [Top 3 Technical Movements](#top-3-technical-movements)
-3. [Emerging Patterns](#emerging-patterns)
-4. [Ecosystem Notes](#ecosystem-notes)
-5. [Closing Thoughts](#closing-thoughts)
+1. [Top Trending Projects](#top-trending-projects)
+2. [AI & ML Highlights](#ai--ml-highlights)
+3. [Developer Tools](#developer-tools)
 
 ---
 
-## Executive Summary
+## Top Trending Projects
 
-今日 GitHub AI 生态呈现**"开源替代"**趋势——随着闭源 AI 工具价格攀升，开发者社区正在积极构建开源替代品。从代码编辑器到 AI Agent，从模型推理到数据处理，开源方案正在快速追赶。
+### 1. Plane — 开源项目管理平台
+🔗 [GitHub](https://github.com/makeplane/plane)
 
----
+- **今日 +45 ⭐** | 总计 46,442 ⭐ | TypeScript
+- 🔥 开源 Jira、Linear、Monday、ClickUp 替代品
+- 现代化项目管理，支持任务、冲刺、文档和问题跟踪
 
-## Top 3 Technical Movements
-
-### 1. AI 编程助手开源化
-*Project Focus*: 开源替代 Cursor / Copilot
-
-**Continue** — 开源 AI 代码助手
-- 🔗 [GitHub](https://github.com/continuedev/continue)
-- **本周 +1,800 ⭐** | 总计 12,000+ ⭐ | TypeScript
-- 支持多种 LLM，可本地部署
-
-**Aider** — 终端 AI 编程助手
-- 🔗 [GitHub](https://github.com/paul-gauthier/aider)
-- **本周 +1,200 ⭐** | Python
-- 命令行工具，支持多文件编辑
-
-> 💡 **Key Insight**> 
-003e 当闭源工具涨价时，开源就是最好的抗议。开发者正在用行动投票。
+> 💡 **Key Insight**
+> 
+> 开源正在吞噬项目管理工具市场。当 Linear 估值数十亿时，开源替代品正在默默积累用户。
 
 ---
 
-### 2. 本地 LLM 推理优化
-*Project Focus*: 消费级硬件上的模型推理
+### 2. Filestash — 文件管理平台
+🔗 [GitHub](https://github.com/mickael-kerjean/filestash)
 
-**llama.cpp** — 持续优化
-- 🔗 [GitHub](https://github.com/ggerganov/llama.cpp)
-- **本周 +900 ⭐** | C/C++
-- 新增多模态支持
+- **今日 +78 ⭐** | 总计 13,849 ⭐ | Go
+- 📁 通用数据访问层（无需 FUSE）
+- 支持多种存储后端
 
-**Ollama** — 本地模型管理
-- 🔗 [GitHub](https://github.com/ollama/ollama)
-- **本周 +800 ⭐** | Go
-- 简化本地模型运行
-
-> 💡 **Key Insight**> 
-003e 本地 AI 正在从"极客玩具"变成"生产工具"。隐私、成本、可控性是三大驱动力。
+> 💡 **Key Insight**
+> 
+> 文件管理的中台化趋势。统一接口管理分散在各个云端的文件。
 
 ---
 
-### 3. AI Agent 编排框架
-*Project Focus*: 多 Agent 协作系统
+### 3. jj — Git 兼容的简单版本控制
+🔗 [GitHub](https://github.com/jj-vcs/jj)
 
-**AutoGen** — 微软开源
-- 🔗 [GitHub](https://github.com/microsoft/autogen)
-- **本周 +700 ⭐** | Python
-- 多 Agent 对话框架
+- **今日 +138 ⭐** | 总计 26,598 ⭐ | Rust
+- 既简单又有力的 Git 兼容 VCS
+- 解决了 Git 的历史包袱问题
 
-**CrewAI** — 新框架崛起
-- 🔗 [GitHub](https://github.com/joaomdmoura/crewai)
-- **本周 +600 ⭐** | Python
-- 角色扮演的 Agent 团队
-
-> 💡 **Key Insight**> 
-003e Multi-Agent 不是未来，是现在。单一模型有局限，多个 Agent 协作才能解决复杂问题。
+> 💡 **Key Insight**
+> 
+> Git 的设计已经 20 年了，也许该有新的版本控制范式了。jj 保留了 Git 的生态系统，但提供更现代的体验。
 
 ---
 
-## Emerging Patterns
+## AI & ML Highlights
 
-### 模式 1: 开源 vs 闭源博弈
-随着 OpenAI、Anthropic 等公司提高 API 价格，开源社区反应迅速。Llama、Mistral、Qwen 等开源模型质量提升，加上 llama.cpp、vLLM 等推理优化工具，让本地部署变得可行。
+### Milvus — 云原生向量数据库
+🔗 [GitHub](https://github.com/milvus-io/milvus)
 
-### 模式 2: AI 开发工具链成熟
-从代码生成到测试，从文档到部署，AI 正在渗入开发全流程。今天的趋势显示，开发者不只想用 AI 写代码，还想用 AI 管理整个软件生命周期。
+- 高性能向量数据库，专为可扩展的向量 ANN 搜索构建
+- RAG（检索增强生成）应用的基础设施
+
+### CloudNativePG — Kubernetes 上的 PostgreSQL
+🔗 [GitHub](https://github.com/cloudnative-pg/cloudnative-pg)
+
+- **今日 +18 ⭐** | 总计 8,185 ⭐ | Go
+- 在 Kubernetes 环境中无缝管理 PostgreSQL
+- 覆盖从部署到维护的整个生命周期
 
 ---
 
-## Ecosystem Notes
+## Developer Tools
 
-**语言分布**：
-- Python 依然是 AI 首选 (55%)
-- TypeScript 在前端/工具类项目占比上升 (30%)
-- Go/Rust 在基础设施项目活跃 (15%)
+### n8n — 工作流自动化平台
+🔗 [GitHub](https://github.com/n8n-io/n8n)
 
-**地域信号**：
-- 中国：Qwen、DeepSeek 持续更新
-- 美国：OpenAI、Anthropic 闭源领先
-- 欧洲：Mistral、Hugging Face 开源推动
+- Fair-code 工作流自动化平台，原生 AI 能力
+- 400+ 集成，可视化构建 + 自定义代码
+- 支持自托管或云端
+
+### Flow.Launcher — Windows 快速启动器
+🔗 [GitHub](https://github.com/Flow-Launcher/Flow.Launcher)
+
+- **今日 +19 ⭐** | 总计 14,134 ⭐ | C#
+- 快速文件搜索和应用启动
+- 社区插件生态丰富
+
+### Syft — SBOM 生成工具
+🔗 [GitHub](https://github.com/anchore/syft)
+
+- **今日 +11 ⭐** | 总计 8,484 ⭐ | Go
+- 从容器镜像和文件系统生成软件物料清单
+- 供应链安全的重要工具
+
+---
+
+## Today's Trending Languages
+
+| 语言 | 热门项目 | 趋势 |
+|------|----------|------|
+| TypeScript | Plane | 项目管理工具 |
+| Go | Filestash, CloudNativePG, Syft | 基础设施 |
+| Rust | jj | 开发工具 |
+| C# | Flow.Launcher | 桌面应用 |
 
 ---
 
 ## Closing Thoughts
 
 今天的 GitHub 告诉我们：
-1. **开源不会消失** — 闭源涨价越快，开源追赶越快
-2. **本地 AI 是趋势** — 云 API 不是唯一选择
-3. **Agent 是下一代接口** — 从 chat 到 agent，交互范式在进化
+1. **开源工具正在挑战商业巨头** — Plane 对 Jira，jj 对 Git
+2. **开发者体验是核心** — 更好的 UX 是开源项目成功的关键
+3. **基础设施持续火热** — 向量数据库、云原生工具受到关注
 
-> "最好的开源项目，往往诞生于对闭源产品的不满。"
+> "最好的开源项目，解决的是开发者每天面对的真实痛点。"
 
 ---
 
