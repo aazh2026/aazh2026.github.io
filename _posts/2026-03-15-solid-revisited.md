@@ -386,6 +386,7 @@ class SupportAgent:
         """  # 硬编码，修改需要改代码
 
 # ✅ 遵循 OCP-P - 模板化 + 可扩展
+{% raw %}
 from jinja2 import Template
 
 class PromptTemplate:
@@ -437,6 +438,7 @@ async def create_agent_with_behavior(behavior_profile: str):
     """根据配置动态加载 Prompt 模板"""
     template = await load_template(f"behaviors/{behavior_profile}.j2")
     return SupportAgent(prompt_template=template)
+{% endraw %}
 ```
 
 ### 6.3 L - Literal Adherence Principle (忠实表达原则)
@@ -982,7 +984,7 @@ class AgentResponse:
 class PromptTemplate:
     """可扩展的提示模板基类"""
     
-    BASE_TEMPLATE = """You are a {{ role }} assistant.
+    BASE_TEMPLATE = """{% raw %}You are a {{ role }} assistant.
     
 Current Time: {{ current_time }}
 Session ID: {{ session_id }}
@@ -1451,6 +1453,7 @@ async def main():
 if __name__ == "__main__":
     import asyncio
     asyncio.run(main())
+{% endraw %}
 ```
 
 ### 7.4 新 SOLID 原则应用总结

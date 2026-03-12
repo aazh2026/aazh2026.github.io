@@ -564,6 +564,7 @@ AI 可用性测试代理:
 
 **AI 生成代码**（简化示例）：
 
+{% raw %}
 ```tsx
 // AI 生成的 React 组件
 import { useState } from 'react';
@@ -645,6 +646,7 @@ function Avatar({ src, alt }: { src: string; alt: string }) {
   );
 }
 ```
+{% endraw %}
 
 **生成的配套文件**：
 - ✅ TypeScript 类型定义
