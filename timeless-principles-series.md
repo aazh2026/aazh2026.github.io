@@ -41,7 +41,7 @@ permalink: /timeless-principles-series/
       
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; transition: box-shadow 0.2s;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/conways-law-20.html" style="color: #2c3e50; text-decoration: none;">康威定律 2.0：AI 时代的组织架构</a>
+          <a href="/conways-law-20/" style="color: #2c3e50; text-decoration: none;">康威定律 2.0：AI 时代的组织架构</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">当AI Agent成为组织的新成员，团队拓扑与系统架构的映射关系如何演变？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -52,7 +52,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/software-complexity.html" style="color: #2c3e50; text-decoration: none;">软件复杂性的本质：与 AI 共舞</a>
+          <a href="/software-complexity/" style="color: #2c3e50; text-decoration: none;">软件复杂性的本质：与 AI 共舞</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">Fred Brooks的"没有银弹"在AI时代的回响：AI消除了偶然复杂度，但是否引入了新的本质复杂度？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -63,7 +63,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/abstraction-layers.html" style="color: #2c3e50; text-decoration: none;">抽象层级的艺术：从机器码到自然语言</a>
+          <a href="/abstraction-layers/" style="color: #2c3e50; text-decoration: none;">抽象层级的艺术：从机器码到自然语言</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">编程语言的70年抽象演进史：从机器码到汇编到高级语言，再到自然语言作为终极抽象层。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -81,7 +81,7 @@ permalink: /timeless-principles-series/
       
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/solid-revisited.html" style="color: #2c3e50; text-decoration: none;">SOLID 原则的 AI 时代重构：从面向对象到 Agent 协作</a>
+          <a href="/solid-revisited/" style="color: #2c3e50; text-decoration: none;">SOLID 原则的 AI 时代重构：从面向对象到 Agent 协作</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">面向对象时代的SOLID原则如何演变为AI-Native时代的新SOLID：SCP、OCP-P、LAP、ISP、DIP。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -92,7 +92,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/single-responsibility.html" style="color: #2c3e50; text-decoration: none;">单一职责的升维：从类到 Agent</a>
+          <a href="/single-responsibility/" style="color: #2c3e50; text-decoration: none;">单一职责的升维：从类到 Agent</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">SRP从"一个类一个职责"升维到"一个Agent一个职责"，如何在AI时代设计单一职责的Agent？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -103,7 +103,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/interface-segregation.html" style="color: #2c3e50; text-decoration: none;">接口隔离：人类与 AI 的契约设计</a>
+          <a href="/interface-segregation/" style="color: #2c3e50; text-decoration: none;">接口隔离：人类与 AI 的契约设计</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">从API接口到Intent接口：设计人类与AI之间的清晰契约。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -121,7 +121,7 @@ permalink: /timeless-principles-series/
       
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/feedback-loop-acceleration.html" style="color: #2c3e50; text-decoration: none;">反馈循环的加速：从月到分钟的工程进化</a>
+          <a href="/feedback-loop-acceleration/" style="color: #2c3e50; text-decoration: none;">反馈循环的加速：从月到分钟的工程进化</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">从瀑布时代的月级反馈到AI-Native时代的分钟级反馈：反馈循环的演进史。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -132,7 +132,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/simple-vs-easy.html" style="color: #2c3e50; text-decoration: none;">简单 vs 容易：AI 时代的权衡艺术</a>
+          <a href="/simple-vs-easy/" style="color: #2c3e50; text-decoration: none;">简单 vs 容易：AI 时代的权衡艺术</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">Rich Hickey的经典区分在AI时代的回响：AI让"容易"触手可及，却让"简单"更难实现。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -143,7 +143,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/composition-over-inheritance.html" style="color: #2c3e50; text-decoration: none;">组合优于继承：Agent 协作中的设计智慧</a>
+          <a href="/composition-over-inheritance/" style="color: #2c3e50; text-decoration: none;">组合优于继承：Agent 协作中的设计智慧</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">从类组合到Agent编排：为什么组合在AI时代更加重要？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -154,7 +154,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/layered-architecture.html" style="color: #2c3e50; text-decoration: none;">分层的艺术：从 OSI 七层到 Agent OS 五层</a>
+          <a href="/layered-architecture/" style="color: #2c3e50; text-decoration: none;">分层的艺术：从 OSI 七层到 Agent OS 五层</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">分层架构的永恒价值：从OSI七层到TCP/IP，再到Agent OS的五层架构。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -172,7 +172,7 @@ permalink: /timeless-principles-series/
       
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/unix-philosophy-ai-era.html" style="color: #2c3e50; text-decoration: none;">Unix 哲学在 AI 时代的回响：Agent 设计哲学</a>
+          <a href="/unix-philosophy-ai-era/" style="color: #2c3e50; text-decoration: none;">Unix 哲学在 AI 时代的回响：Agent 设计哲学</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">"小即是美"、"只做一件事"、"文本流接口"——Unix哲学如何指导Agent设计？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -183,7 +183,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/lean-thinking-ai.html" style="color: #2c3e50; text-decoration: none;">精益思想的 AI 增强：从消除浪费到自动化改进</a>
+          <a href="/lean-thinking-ai/" style="color: #2c3e50; text-decoration: none;">精益思想的 AI 增强：从消除浪费到自动化改进</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">AI驱动的精益实践：自动识别浪费、持续改进流水线、价值流优化。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -194,7 +194,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/no-silver-bullet-ai.html" style="color: #2c3e50; text-decoration: none;">没有银弹的终结？AI 是否是软件工程的银弹</a>
+          <a href="/no-silver-bullet-ai/" style="color: #2c3e50; text-decoration: none;">没有银弹的终结？AI 是否是软件工程的银弹</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">Fred Brooks的经典论断在AI时代的检验：AI是银弹吗？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -205,7 +205,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/worse-is-better-revisited.html" style="color: #2c3e50; text-decoration: none;">Worse is Better 的重新审视：AI 时代的好与坏</a>
+          <a href="/worse-is-better-revisited/" style="color: #2c3e50; text-decoration: none;">Worse is Better 的重新审视：AI 时代的好与坏</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">Richard Gabriel的经典论述：AI时代，"好代码"vs"快代码"如何权衡？</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -216,7 +216,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/systems-thinking-emergence.html" style="color: #2c3e50; text-decoration: none;">系统思维与涌现性：Multi-Agent 系统的整体大于部分之和</a>
+          <a href="/systems-thinking-emergence/" style="color: #2c3e50; text-decoration: none;">系统思维与涌现性：Multi-Agent 系统的整体大于部分之和</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">系统思维在AI时代的应用：涌现性、反馈回路、Multi-Agent系统的复杂性。</p>
         <div style="font-size: 0.85rem; color: #999;">
@@ -227,7 +227,7 @@ permalink: /timeless-principles-series/
 
       <article style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem;">
         <h3 style="margin: 0 0 0.5rem 0;">
-          <a href="/2026/03/15/elegant-engineering.html" style="color: #2c3e50; text-decoration: none;">优雅工程：代码美学在 AI 时代的意义</a>
+          <a href="/elegant-engineering/" style="color: #2c3e50; text-decoration: none;">优雅工程：代码美学在 AI 时代的意义</a>
         </h3>
         <p style="color: #666; margin: 0.5rem 0;">代码美学的永恒价值：AI生成代码的审美问题，以及如何在AI时代追求优雅。</p>
         <div style="font-size: 0.85rem; color: #999;">
