@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "分层的艺术：从 OSI 七层到 Agent OS 五层"
 date: 2026-03-15 10:00:00 +0800
 categories: [Architecture, AI]

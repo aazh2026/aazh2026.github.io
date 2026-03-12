@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "单一职责的升维：从类到 Agent"
 date: 2026-03-15 09:00:00 +0800
 categories: [Agent Design, Software Architecture]

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "系统思维与涌现性：Multi-Agent 系统的整体大于部分之和"
 date: 2026-03-15
 tags: ["系统思维", "Multi-Agent", "涌现性", "复杂系统", "系统设计"]
