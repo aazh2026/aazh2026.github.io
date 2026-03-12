@@ -1,0 +1,20 @@
+name: Validate Frontmatter
+
+on:
+  push:
+    paths:
+      - '_posts/**'
+  pull_request:
+    paths:
+      - '_posts/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Validate Frontmatter
+        run: |
+          chmod +x validate-frontmatter.sh
+          ./validate-frontmatter.sh
