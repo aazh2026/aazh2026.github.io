@@ -42,10 +42,3 @@ defaults:
     values:
       layout: "post"
       author: "Aaron"
-  # Daily Signal 文章保留日期格式
-  - scope:
-      path: ""
-      type: "posts"
-      tags: ["Reddit", "GitHub", "Finance", "Daily"]
-    values:
-      permalink: /:year/:month/:day/:title/
