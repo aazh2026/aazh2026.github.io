@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "分层的艺术：从 OSI 七层到 Agent OS 五层"
-permalink: /layered-architecture/date: 2026-03-15 10:00:00 +0800
+permalink: /layered-architecture/
+date: 2026-03-15 10:00:00 +0800
 categories: [Architecture, AI]
 tags: [agent-os, layered-architecture, system-design, mental-models]
 series: "Agent OS"

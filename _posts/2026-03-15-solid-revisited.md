@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "SOLID 原则的 AI 时代重构：从面向对象到 Agent 协作"
-permalink: /solid-revisited/date: 2026-03-15 09:00:00 +0800
+permalink: /solid-revisited/
+date: 2026-03-15 09:00:00 +0800
 categories: [ai-native, architecture, design-patterns]
 tags: [solid, agent, ai-native, system-design, software-architecture]
 series: ai-native-dev-guide

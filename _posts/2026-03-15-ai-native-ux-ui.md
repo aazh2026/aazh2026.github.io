@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "AI-Native UX/UI 设计：当AI成为设计师的搭档"
-permalink: /ai-native-ux-ui/date: 2026-03-15T09:00:00+08:00
+permalink: /ai-native-ux-ui/
+date: 2026-03-15T09:00:00+08:00
 tags: [AI-Native软件工程, UX/UI设计, 设计系统, 用户研究, AI设计工具]
 author: Aaron
 series: AI-Native软件工程系列

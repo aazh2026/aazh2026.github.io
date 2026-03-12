@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "系统思维与涌现性：Multi-Agent 系统的整体大于部分之和"
-permalink: /systems-thinking-emergence/date: 2026-03-15
+permalink: /systems-thinking-emergence/
+date: 2026-03-15
 tags: ["系统思维", "Multi-Agent", "涌现性", "复杂系统", "系统设计"]
 author: Charlie
 description: "从系统思维的角度理解 Multi-Agent 系统，探讨涌现性的本质，以及如何设计涌现友好的智能系统"

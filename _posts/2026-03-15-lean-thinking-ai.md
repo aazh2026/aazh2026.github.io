@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "精益思想的 AI 增强：从消除浪费到自动化改进"
-permalink: /lean-thinking-ai/date: 2026-03-15 10:00:00 +0800
+permalink: /lean-thinking-ai/
+date: 2026-03-15 10:00:00 +0800
 categories: [AI-Native, 工程实践, 精益]
 tags: [lean, ai, waste-elimination, continuous-improvement, value-stream]
 series: AI-Native软件工程
