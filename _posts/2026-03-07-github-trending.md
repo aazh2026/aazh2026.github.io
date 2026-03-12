@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "GitHub 趋势雷达 | 2026-03-07"
-permalink: /2026/03/07/github-trending/tags: [GitHub, 开源, AI趋势, Agent编排, 边缘计算]
+permalink: /2026/03/07/github-trending/
+tags: [GitHub, 开源, AI趋势, Agent编排, 边缘计算]
 author: Aaron
 
 redirect_from:

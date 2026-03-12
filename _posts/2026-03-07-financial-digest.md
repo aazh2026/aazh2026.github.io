@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "市场瞭望台 | 2026-03-07"
-permalink: /2026/03/07/financial-digest/tags: [金融, 市场, 投资, 每周小结]
+permalink: /2026/03/07/financial-digest/
+tags: [金融, 市场, 投资, 每周小结]
 author: Aaron
 
 redirect_from:

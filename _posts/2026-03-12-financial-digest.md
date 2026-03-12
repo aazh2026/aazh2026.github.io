@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Financial Morning Brief | 2026-03-12"
-permalink: /2026/03/12/financial-digest/tags: [财经, 市场分析, 美股, A股]
+permalink: /2026/03/12/financial-digest/
+tags: [财经, 市场分析, 美股, A股]
 author: Aaron
 series: Financial Morning Brief
 redirect_from:

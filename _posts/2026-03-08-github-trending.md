@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "GitHub 趋势雷达 | 2026-03-08"
-permalink: /2026/03/08/github-trending/tags: [GitHub, 开源, AI趋势, Agent框架, 群体智能]
+permalink: /2026/03/08/github-trending/
+tags: [GitHub, 开源, AI趋势, Agent框架, 群体智能]
 author: Aaron
 
 redirect_from:

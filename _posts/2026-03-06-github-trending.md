@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "GitHub 趋势雷达 | 2026-03-06"
-permalink: /2026/03/06/github-trending/tags: [GitHub, 开源, AI趋势, 技术雷达]
+permalink: /2026/03/06/github-trending/
+tags: [GitHub, 开源, AI趋势, 技术雷达]
 author: Aaron
 
 redirect_from:

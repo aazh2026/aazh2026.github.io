@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Reddit 情报站 | 2026-03-08"
-permalink: /2026/03/08/reddit-digest/tags: [Reddit, 每日情报, AI趋势, 周日漫游]
+permalink: /2026/03/08/reddit-digest/
+tags: [Reddit, 每日情报, AI趋势, 周日漫游]
 author: Aaron
 
 redirect_from:
