@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/08/sre-postmortem.html
+  - /sre-postmortem/
 ---
 
 # 为什么故障复盘不能追求「政治正确」

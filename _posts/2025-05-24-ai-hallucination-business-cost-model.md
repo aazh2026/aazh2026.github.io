@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #42
 
 redirect_from:
-  - /2026/03/12/ai-hallucination-business-cost-model.html
+  - /ai-hallucination-business-cost-model/
 ---
 
 > **TL;DR**> 
@@ -451,9 +451,9 @@ def calculate_risk_adjusted_roi(investment, returns, hallucination_costs, confid
 - Responsible AI Practices
 
 **本系列相关**
-- [AI幻觉治理：生产环境的三层防御体系](/2026/03/09/ai-hallucination-governance.html) (#21)
-- [RAG系统的认知偏差陷阱](/2026/03/10/rag-cognitive-bias-trap.html) (#33)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
+- [AI幻觉治理：生产环境的三层防御体系](/ai-hallucination-governance/) (#21)
+- [RAG系统的认知偏差陷阱](/rag-cognitive-bias-trap/) (#33)
+- [AISE框架](/aise-framework-theory/) (#34)
 
 ---
 

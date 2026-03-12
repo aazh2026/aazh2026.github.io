@@ -7,7 +7,7 @@ series: aise
 series_title: "AI-Native软件工程"
 series_order: 20
 redirect_from:
-  - /2026/03/15/ai-cost-optimization.html
+  - /ai-cost-optimization/
 ---
 
 # AI成本优化方法论：从粗放使用到精打细算
@@ -1210,10 +1210,10 @@ AI成本优化不是一次性的项目，而是持续的能力建设。
 
 ## 系列关联阅读
 
-- [Context Engineering: 五层架构模型](/2026/03/09/context-engineering.html) - 从上下文管理角度理解Token优化
-- [为什么你的AI助手越用越笨？](/2026/03/09/context-rot.html) - Context衰减与治理策略
-- [为什么你的代码正在变成负债？](/2026/03/09/knowledge-assetization.html) - 知识资产化与成本控制
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html) - AI-Native软件的成本模型演进
+- [Context Engineering: 五层架构模型](/context-engineering/) - 从上下文管理角度理解Token优化
+- [为什么你的AI助手越用越笨？](/context-rot/) - Context衰减与治理策略
+- [为什么你的代码正在变成负债？](/knowledge-assetization/) - 知识资产化与成本控制
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/) - AI-Native软件的成本模型演进
 
 **系列导航：** [AI-Native软件工程系列](/aise-series/)
 

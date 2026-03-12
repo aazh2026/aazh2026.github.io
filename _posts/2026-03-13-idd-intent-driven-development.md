@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #49
 
 redirect_from:
-  - /2026/03/13/idd-intent-driven-development.html
+  - /idd-intent-driven-development/
 ---
 
 > **TL;DR**
@@ -338,9 +338,9 @@ AI生成代码只是开始，审查判断才是质量保证的关键。
 ## 📚 延伸阅读
 
 **本系列相关**
-- [TDD vs Intent-Driven Development](/2026/03/09/tdd-intent-driven.html) (#2)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
-- [Prompt Engineering梯队建设](/2026/03/12/prompt-engineering-ladder.html) (#43)
+- [TDD vs Intent-Driven Development](/tdd-intent-driven/) (#2)
+- [AISE框架](/aise-framework-theory/) (#34)
+- [Prompt Engineering梯队建设](/prompt-engineering-ladder/) (#43)
 
 **外部资源**
 - Intent-Driven Development Manifesto

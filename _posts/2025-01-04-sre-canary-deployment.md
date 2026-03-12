@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/04/sre-canary-deployment.html
+  - /sre-canary-deployment/
 ---
 
 # 为什么渐进式发布模仿了自然选择

@@ -6,7 +6,7 @@ tags: [AI, Claude, OpenAI, Agent, 技术前沿]
 author: Aaron
 
 redirect_from:
-  - /2026/03/04/ai-tech-frontier.html
+  - /ai-tech-frontier/
 ---
 
 # AI 技术前沿 | 2026-03-04
@@ -163,7 +163,7 @@ Simon Willison 的评价：
 - [HN Discussion on Knuth](https://news.ycombinator.com/item?id=47230710)
 - [Agentic Engineering Patterns - Simon Willison](https://simonwillison.net/guides/agentic-engineering-patterns/)
 - [Claude Code Remote Control](https://code.claude.com/docs/en/remote-control)
-- [When AI Writes Software - Leo de Moura](https://leodemoura.github.io/blog/2026/02/28/when-ai-writes-the-worlds-software.html)
+- [When AI Writes Software - Leo de Moura](https://leodemoura.github.io/blog/when-ai-writes-the-worlds-software/)
 
 ---
 *Published on 2026-03-04 | 阅读时间：约 5 分钟*

@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/02/sre-cascade-failure.html
+  - /sre-cascade-failure/
 ---
 
 # 为什么一个小配置错误能摧毁整个云

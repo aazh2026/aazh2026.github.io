@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #52
 
 redirect_from:
-  - /2026/03/15/feedback-loop-acceleration.html
+  - /feedback-loop-acceleration/
 ---
 
 > **TL;DR**

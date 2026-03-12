@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程
 
 redirect_from:
-  - /2026/03/09/large-scale-ai-governance.html
+  - /large-scale-ai-governance/
 ---
 
 # 200人微服务团队如何使用AI而不混乱——大规模AI工程治理实践

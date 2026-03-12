@@ -84,11 +84,11 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 📝 最新文章
 
-- [Daily Signal | 2026-03-10](https://aazh2026.github.io/2026/03/10/reddit-digest.html)
-- [Agent OS：SaaS 之后的下一个软件形态](https://aazh2026.github.io/2026/03/10/agent-os-future-of-software.html)
-- [Agent OS 的五层架构模型](https://aazh2026.github.io/2026/03/31/agent-os-five-layer-architecture.html)
-- [CRM 的 Agent 化重构](https://aazh2026.github.io/2026/04/21/crm-agent-reconstruction.html)
-- [Agent Economy](https://aazh2026.github.io/2026/05/12/agent-economy.html)
+- [Daily Signal | 2026-03-10](https://aazh2026.github.io/reddit-digest/)
+- [Agent OS：SaaS 之后的下一个软件形态](https://aazh2026.github.io/agent-os-future-of-software/)
+- [Agent OS 的五层架构模型](https://aazh2026.github.io/agent-os-five-layer-architecture/)
+- [CRM 的 Agent 化重构](https://aazh2026.github.io/crm-agent-reconstruction/)
+- [Agent Economy](https://aazh2026.github.io/agent-economy/)
 
 **[→ 查看全部文章](https://aazh2026.github.io/archive)**
 

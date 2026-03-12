@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #51
 
 redirect_from:
-  - /2026/03/13/agent-dd-swarm-programming.html
+  - /agent-dd-swarm-programming/
 ---
 
 > **TL;DR**
@@ -583,9 +583,9 @@ class ArbitrationResolver:
 ## 📚 延伸阅读
 
 **本系列相关**
-- [Multi-Agent系统的协作悖论](/2026/03/10/multi-agent-collaboration-paradox.html) (#30)
-- [IDD：Intent-Driven Development](/2026/03/13/idd-intent-driven-development.html) (#49)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
+- [Multi-Agent系统的协作悖论](/multi-agent-collaboration-paradox/) (#30)
+- [IDD：Intent-Driven Development](/idd-intent-driven-development/) (#49)
+- [AISE框架](/aise-framework-theory/) (#34)
 
 **Swarm Intelligence**
 - Swarm Intelligence: Principles and Applications

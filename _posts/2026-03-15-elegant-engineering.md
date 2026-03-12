@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #64
 
 redirect_from:
-  - /2026/03/15/elegant-engineering.html
+  - /elegant-engineering/
 ---
 
 > **TL;DR**
@@ -632,8 +632,8 @@ AI 可以帮你写代码，但**无法替代你做出审美判断**。
 ---
 
 *延伸阅读：*
-- [Worse is Better 的重新审视](https://aazh2026.github.io/2026/03/15/worse-is-better-revisited.html)
-- [没有银弹的终结](https://aazh2026.github.io/2026/03/15/no-silver-bullet-ai.html)
-- [精益思维在 AI 软件开发中的应用](https://aazh2026.github.io/2026/03/15/lean-thinking-ai.html)
+- [Worse is Better 的重新审视](https://aazh2026.github.io/worse-is-better-revisited/)
+- [没有银弹的终结](https://aazh2026.github.io/no-silver-bullet-ai/)
+- [精益思维在 AI 软件开发中的应用](https://aazh2026.github.io/lean-thinking-ai/)
 
 *系列索引：* [AI-Native 软件工程系列](https://aazh2026.github.io/aise-series/)

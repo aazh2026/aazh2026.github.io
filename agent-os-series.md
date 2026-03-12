@@ -39,26 +39,26 @@ Agent OS 是软件工程的下一代范式。
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 1 | [Agent OS：软件的未来形态](/2026/03/10/agent-os-future-of-software.html) | 从 SaaS 到 Agent OS 的范式转移 |
-| 2 | [为什么你的 SaaS 需要 Agent Layer？](/2026/03/17/why-your-saas-needs-agent-layer.html) | SaaS 与 Agent 的融合架构 |
-| 3 | [从 Human-Driven 到 Agent-Driven](/2026/03/24/human-driven-to-agent-driven.html) | 工作流的自主化演进 |
+| 1 | [Agent OS：软件的未来形态](/agent-os-future-of-software/) | 从 SaaS 到 Agent OS 的范式转移 |
+| 2 | [为什么你的 SaaS 需要 Agent Layer？](/why-your-saas-needs-agent-layer/) | SaaS 与 Agent 的融合架构 |
+| 3 | [从 Human-Driven 到 Agent-Driven](/human-driven-to-agent-driven/) | 工作流的自主化演进 |
 
 ### 第二部分：架构设计 (#4-6)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 4 | [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html) | Tools → Memory → Runtime → Orchestration → Interface |
-| 5 | [Agent 的记忆系统设计](/2026/04/07/agent-memory-system-design.html) | 从短期记忆到长期记忆的完整架构 |
-| 6 | [Multi-Agent 协作：从单兵作战到智能组织](/2026/04/14/multi-agent-collaboration.html) | Supervisor、P2P、Hierarchical 三种协作模式 |
+| 4 | [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/) | Tools → Memory → Runtime → Orchestration → Interface |
+| 5 | [Agent 的记忆系统设计](/agent-memory-system-design/) | 从短期记忆到长期记忆的完整架构 |
+| 6 | [Multi-Agent 协作：从单兵作战到智能组织](/multi-agent-collaboration/) | Supervisor、P2P、Hierarchical 三种协作模式 |
 
 ### 第三部分：实战与演进 (#7-10)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 7 | [CRM Agent 重构实战](/2026/04/21/crm-agent-reconstruction.html) | 从传统 CRM 到自主 Agent 的迁移案例 |
-| 8 | [AI 数字员工](/2026/04/28/ai-digital-employee.html) | Agent 作为企业员工的组织变革 |
-| 9 | [混合 vs 自主：Agent 的自主度光谱](/2026/05/05/hybrid-vs-autonomous.html) | 人机协作的边界设计 |
-| 10 | [Agent 经济](/2026/05/12/agent-economy.html) | Agent 时代的商业模式与价值分配 |
+| 7 | [CRM Agent 重构实战](/crm-agent-reconstruction/) | 从传统 CRM 到自主 Agent 的迁移案例 |
+| 8 | [AI 数字员工](/ai-digital-employee/) | Agent 作为企业员工的组织变革 |
+| 9 | [混合 vs 自主：Agent 的自主度光谱](/hybrid-vs-autonomous/) | 人机协作的边界设计 |
+| 10 | [Agent 经济](/agent-economy/) | Agent 时代的商业模式与价值分配 |
 
 ---
 

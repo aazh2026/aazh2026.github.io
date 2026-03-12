@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #48
 
 redirect_from:
-  - /2026/03/12/agent-driven-debugging.html
+  - /agent-driven-debugging/
 ---
 
 > **TL;DR**

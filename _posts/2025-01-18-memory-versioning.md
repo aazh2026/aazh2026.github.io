@@ -4,7 +4,7 @@ date: 2025-01-18T01:50:00+08:00
 tags: [版本控制, 知识更新, Schema迁移, 一致性]
 
 redirect_from:
-  - /2026/03/03/memory-versioning.html
+  - /memory-versioning/
 ---
 
 # 记忆的版本控制：当知识过时时怎么办

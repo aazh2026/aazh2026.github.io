@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程
 
 redirect_from:
-  - /2026/03/09/executable-prd.html
+  - /executable-prd/
 ---
 
 # AI时代PRD长什么样？——从文档到Executable Specification

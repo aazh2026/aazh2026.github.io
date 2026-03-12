@@ -6,7 +6,7 @@ tags: [AI架构, 记忆系统, 类脑计算, 深度思考]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/memory-hierarchy.html
+  - /memory-hierarchy/
 ---
 
 # 为什么AI需要像人类一样「分心」

@@ -5,10 +5,10 @@ date: 2025-04-09T02:00:00+08:00
 tags: [Context Engineering, Prompt Engineering, AI工程, 软件架构]
 author: Aaron
 series: AI-Native软件工程系列 #01
-permalink: /posts/2025/04/09/context-engineering.html/
+permalink: /posts/context-engineering//
 
 redirect_from:
-  - /2026/03/09/context-engineering.html
+  - /context-engineering/
 ---
 
 > **TL;DR**

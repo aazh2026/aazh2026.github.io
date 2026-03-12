@@ -6,7 +6,7 @@ tags: [OpenClaw, AI Agent, 开源, 认知架构, 技术突破]
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/openclaw-v20-transparent-brain.html
+  - /openclaw-v20-transparent-brain/
 ---
 
 # OpenClaw v2.0：当开源Agent开始解剖自己的大脑
