@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Reddit Daily Digest | 2026年3月12日"
-date: 2026-03-12T18:00:00+08:00
-tags: [Reddit, 每日摘要, 科技资讯]
+permalink: /2026/03/12/reddit-digest/tags: [Reddit, 每日摘要, 科技资讯]
 author: Aaron
 series: Reddit Daily Digest
 redirect_from:

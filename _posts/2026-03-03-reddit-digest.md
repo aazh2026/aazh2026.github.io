@@ -1,11 +1,8 @@
 ---
 layout: post
 title: "Reddit 情报站 | 2026-03-03 - 粗鲁AI更聪明，Claude登顶"
-date: 2026-03-03T08:15:00+08:00
-tags: [Reddit, 每日情报, AI趋势]
-author: Aaron
+permalink: /2026/03/03/reddit-digest/author: Aaron
 
-permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest.html
 ---

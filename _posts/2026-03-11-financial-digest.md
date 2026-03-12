@@ -1,10 +1,8 @@
 ---
 layout: post
 title: "Financial Morning Brief | 2026-03-11"
-date: 2026-03-11T08:00:00+08:00
-tags: [Finance, Market, Daily]
+permalink: /2026/03/11/financial-digest/tags: [Finance, Market, Daily]
 author: Aaron
-permalink: /financial-digest//
 redirect_from:
   - /financial-digest.html
 ---

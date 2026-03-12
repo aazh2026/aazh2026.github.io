@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "GitHub AI Trending | 2026-03-09"
-date: 2026-03-09T08:00:00+08:00
-tags: [GitHub, Open Source, AI, Trending]
+permalink: /2026/03/09/github-trending/tags: [GitHub, Open Source, AI, Trending]
 author: Aaron
 
 redirect_from:
@@ -12,8 +11,7 @@ redirect_from:
 ---
 layout: post
 title: "GitHub AI Trending Daily - March 9, 2026"
-date: 2026-03-09 07:38:00 +0800
-categories: digest github ai
+permalink: /2026/03/09/github-trending/categories: digest github ai
 ---
 
 ### 📊 GitHub AI Trending Daily | March 9, 2026

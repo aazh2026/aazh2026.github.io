@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "AI-Native Engineering Daily | 2026-03-12 Top 5 Insights"
-date: 2026-03-12T18:00:00+08:00
-tags: [AI-Native, Engineering, Daily]
+permalink: /2026/03/12/ai-native-daily/tags: [AI-Native, Engineering, Daily]
 author: Aaron
 series: AI-Native Engineering Daily
 redirect_from:

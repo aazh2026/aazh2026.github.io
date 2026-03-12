@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Reddit 热榜 | 2026-03-04"
-date: 2026-03-04T08:40:00+08:00
-tags: [AI, Reddit, 科技, 每日热榜]
+permalink: /2026/03/04/reddit-digest/tags: [AI, Reddit, 科技, 每日热榜]
 author: Aaron
 
-permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest.html
 ---

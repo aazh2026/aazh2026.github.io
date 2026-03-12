@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Reddit Daily Digest | 2026-03-10"
-date: 2026-03-10T08:00:00+08:00
-tags: [Reddit, Tech News, Daily Digest]
+permalink: /2026/03/10/reddit-digest/tags: [Reddit, Tech News, Daily Digest]
 author: Aaron
 
-permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest.html
 ---

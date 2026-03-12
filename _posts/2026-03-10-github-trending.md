@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "GitHub AI Trending Daily | 2026-03-10"
-date: 2026-03-10T08:00:00+08:00
-tags: [GitHub, Open Source, AI, Trending]
+permalink: /2026/03/10/github-trending/tags: [GitHub, Open Source, AI, Trending]
 author: Aaron
 
 redirect_from:

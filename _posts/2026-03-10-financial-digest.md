@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "Financial Morning Brief | 2026-03-10"
-date: 2026-03-10T12:50:00+08:00
-tags: [Finance, Market, Oil, China, RealEstate, AShare]
+permalink: /2026/03/10/financial-digest/tags: [Finance, Market, Oil, China, RealEstate, AShare]
 author: Aaron
 
-permalink: /financial-digest//
 redirect_from:
   - /financial-digest.html
 ---
