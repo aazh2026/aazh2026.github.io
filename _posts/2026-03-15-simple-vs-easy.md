@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "简单 vs 容易：AI 时代的权衡艺术"
-date: 2026-03-15 08:00:00 +0800
+permalink: /simple-vs-easy/date: 2026-03-15 08:00:00 +0800
 categories: [哲学, AI, 软件工程]
 tags: [简单性, Rich Hickey, Clojure, AI编程, 认知负载]
 ---
