@@ -5,7 +5,7 @@ date: 2026-03-03T07:45:00+08:00
 tags: [金融, 市场, 每日瞭望]
 author: Aaron
 
-permalink: /2026/03/03/financial-digest/
+permalink: /financial-digest//
 redirect_from:
   - /financial-digest.html
 ---

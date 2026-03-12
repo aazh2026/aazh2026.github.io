@@ -135,7 +135,7 @@ Google SRE 提倡「Blameless Postmortem」（无指责复盘）。
 
 ### 故障复盘方法论
 - [Google SRE - Postmortem](https://sre.google/sre-book/postmortem-culture/) — Google故障复盘文化
-- [Etsy Blameless Postmortem](https://codeascraft.com/2025/01/08/blameless-postmortems/) — Etsy无指责复盘
+- [Etsy Blameless Postmortem](https://codeascraft.com/blameless-postmortems//) — Etsy无指责复盘
 - [Netflix Postmortem Template](https://netflixtechblog.com/fault-tolerance-in-a-high-volume-distributed-system-91ab4faae74a) — Netflix故障复盘模板
 
 ### 组织学习

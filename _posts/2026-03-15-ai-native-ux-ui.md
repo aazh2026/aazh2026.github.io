@@ -901,12 +901,12 @@ AI 可以生成完美的像素，但它不能：
 
 ## 系列关联阅读
 
-- [AI-Native 软件工程：从意图到实现的范式革命](https://codewithcharlie.dev/2026/03/10/ai-native-software-engineering.html) — 系列总览
-- [IDD: Intent-Driven Development 实践指南](https://codewithcharlie.dev/2026/03/13/idd-intent-driven-development.html) — 意图驱动开发方法论
-- [AI-Native Code Review：代码审查的智能化革命](https://codewithcharlie.dev/2026/03/13/ai-native-code-review.html) — 智能化代码审查
-- [Context Engineering：为大模型构建高效上下文](https://codewithcharlie.dev/2026/03/13/context-engineering.html) — 上下文工程最佳实践
-- [从 ADR 到 AIDR：AI-Native 架构决策记录](https://codewithcharlie.dev/2026/03/14/adr-to-aidr.html) — 架构决策的智能化演进
-- [AI-Native 数据工程：从数据流水线到智能数据网格](https://codewithcharlie.dev/2026/03/15/ai-native-data-engineering.html) — 数据工程的 AI 化转型
+- [AI-Native 软件工程：从意图到实现的范式革命](https://codewithcharlie.dev/ai-native-software-engineering/) — 系列总览
+- [IDD: Intent-Driven Development 实践指南](https://codewithcharlie.dev/idd-intent-driven-development/) — 意图驱动开发方法论
+- [AI-Native Code Review：代码审查的智能化革命](https://codewithcharlie.dev/ai-native-code-review/) — 智能化代码审查
+- [Context Engineering：为大模型构建高效上下文](https://codewithcharlie.dev/context-engineering/) — 上下文工程最佳实践
+- [从 ADR 到 AIDR：AI-Native 架构决策记录](https://codewithcharlie.dev/adr-to-aidr/) — 架构决策的智能化演进
+- [AI-Native 数据工程：从数据流水线到智能数据网格](https://codewithcharlie.dev/ai-native-data-engineering/) — 数据工程的 AI 化转型
 
 ---
 

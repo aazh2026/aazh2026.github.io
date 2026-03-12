@@ -267,7 +267,7 @@ Agentic Engineering 不是关于放弃思考，而是关于**更聪明的思考*
 - [Prompt Engineering vs Agentic Engineering](https://simonwillison.net/2026/Feb/18/prompt-engineering/) — 从提示词工程到协作工程的范式转移
 
 ### 认知科学与工程实践
-- [Cognitive Debt in Software Development](https://www.geepawhill.org/2021/09/29/cognitive-debt/) — 软件开发中的认知债务概念
+- [Cognitive Debt in Software Development](https://www.geepawhill.org/cognitive-debt//) — 软件开发中的认知债务概念
 - [The Programmer's Brain - Felienne Hermans](https://www.manning.com/books/the-programmers-brain) — 关于程序员的认知负荷与代码理解
 
 ### AI协作工具与框架

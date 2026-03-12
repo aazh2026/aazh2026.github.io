@@ -5,7 +5,7 @@ date: 2026-03-07T08:00:00+08:00
 tags: [金融, 市场, 投资, 每周小结]
 author: Aaron
 
-permalink: /2026/03/07/financial-digest/
+permalink: /financial-digest//
 redirect_from:
   - /financial-digest.html
 ---

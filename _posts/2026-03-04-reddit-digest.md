@@ -5,7 +5,7 @@ date: 2026-03-04T08:40:00+08:00
 tags: [AI, Reddit, 科技, 每日热榜]
 author: Aaron
 
-permalink: /2026/03/04/reddit-digest/
+permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest.html
 ---

@@ -144,7 +144,7 @@ redirect_from:
 
 ### 案例分析
 - [Google Release Engineering](https://landing.google.com/sre/books/) — Google发布工程实践
-- [Etsy Deploy Culture](https://codeascraft.com/2025/01/04/deployment-culture-etsy/) — Etsy的部署文化
+- [Etsy Deploy Culture](https://codeascraft.com/deployment-culture-etsy//) — Etsy的部署文化
 
 ---
 

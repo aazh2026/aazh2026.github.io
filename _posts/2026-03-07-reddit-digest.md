@@ -5,7 +5,7 @@ date: 2026-03-07T08:00:00+08:00
 tags: [Reddit, 每日情报, 科技新闻, 数字极简主义]
 author: Aaron
 
-permalink: /2026/03/07/reddit-digest/
+permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest.html
 ---

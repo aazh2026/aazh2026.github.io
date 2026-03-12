@@ -144,7 +144,7 @@ CPU > 80% → 告警
 - [On-Call at GitHub](https://github.blog/2021-03-03-on-call-at-github/) — GitHub值班实践
 
 ### 实践案例
-- [Etsy Alerting Philosophy](https://codeascraft.com/2025/01/07/etsy-monitoring-and-graphing/) — Etsy监控与告警理念
+- [Etsy Alerting Philosophy](https://codeascraft.com/etsy-monitoring-and-graphing//) — Etsy监控与告警理念
 - [Netflix Actionable Alerts](https://netflixtechblog.com/alerting-at-netflix-5fd44093b3ce) — Netflix可行动告警
 
 ---

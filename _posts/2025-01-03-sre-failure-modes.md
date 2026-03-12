@@ -201,7 +201,7 @@ Netflix的混沌工程运动：
 - [Gremlin - Chaos Engineering Platform](https://www.gremlin.com/) — 企业级混沌工程平台
 
 ### 失败设计案例
-- [Etsy Kill Switch](https://codeascraft.com/2025/01/03/etsy-kill-switch/) — Etsy的紧急开关设计
+- [Etsy Kill Switch](https://codeascraft.com/etsy-kill-switch//) — Etsy的紧急开关设计
 - [Google DiRT (Disaster Recovery Testing)](https://cloud.google.com/blog/products/gcp/introducing-diRt-google-disaster-recovery-testing) — Google灾难恢复测试
 - [Game Days at Amazon](https://aws.amazon.com/builders-library/using-gamedays-to-practice-resilience/) — AWS的Game Day实践
 

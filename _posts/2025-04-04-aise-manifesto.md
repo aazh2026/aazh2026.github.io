@@ -5,7 +5,7 @@ date: 2025-04-04T12:00:00+08:00
 tags: [AI-Native软件工程, 宣言, 理论体系]
 author: Aaron
 series: AI-Native软件工程系列
-permalink: /posts/2025/04/04//
+permalink: /posts///
 
 redirect_from:
   - /aise-manifesto.html

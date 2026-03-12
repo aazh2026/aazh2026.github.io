@@ -935,8 +935,8 @@ if __name__ == "__main__":
 **系列文章：** [Agent 操作系统系列](/series/agent-os)
 
 **相关阅读：**
-- [Agent 的自治边界：何时该停止，何时该求助](/2026/03/10/agent-autonomy-boundaries)
-- [Workflow vs Agent：自动化工作流与自主代理的设计哲学](/2026/03/11/workflow-vs-agent)
+- [Agent 的自治边界：何时该停止，何时该求助](/agent-autonomy-boundaries/)
+- [Workflow vs Agent：自动化工作流与自主代理的设计哲学](/workflow-vs-agent/)
 
 ---
 

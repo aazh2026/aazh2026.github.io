@@ -5,7 +5,7 @@ date: 2026-03-06T08:00:00+08:00
 tags: [Reddit, 每日情报, 科技新闻, AI趋势]
 author: Aaron
 
-permalink: /2026/03/06/reddit-digest/
+permalink: /reddit-digest//
 redirect_from:
   - /reddit-digest/
 ---

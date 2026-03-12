@@ -314,7 +314,7 @@ RAG-Friendly文档不是只给AI看，而是**同时服务两种读者**：
 
 - [RAG Best Practices - LangChain](https://python.langchain.com/docs/use_cases/question_answering/)
 - [Chunking Strategies for LLM Applications - Pinecone](https://www.pinecone.io/learn/chunking-strategies/)
-- [Building LLM Applications for Production - Chip Huyen](https://huyenchip.com/2023/04/11/llm-engineering.html)
+- [Building LLM Applications for Production - Chip Huyen](https://huyenchip.com/llm-engineering/)
 - [The Art of Readable Code - Dustin Boswell](https://)
 
 ---

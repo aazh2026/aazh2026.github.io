@@ -172,7 +172,7 @@ Liquid Warning: Unexpected character \ in "{{ page.lang | default: ... }}
 
 **根因**：
 - 文件名：`2026-03-09-context-engineering.md`
-- 链接URL：`/2026/03/08/context-engineering-importance.html`
+- 链接URL：`/context-engineering-importance/`
 - 不匹配！
 
 **解决**：统一文件名和 `_data/series.yml` 中的链接

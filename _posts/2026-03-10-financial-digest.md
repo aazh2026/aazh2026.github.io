@@ -5,7 +5,7 @@ date: 2026-03-10T12:50:00+08:00
 tags: [Finance, Market, Oil, China, RealEstate, AShare]
 author: Aaron
 
-permalink: /2026/03/10/financial-digest/
+permalink: /financial-digest//
 redirect_from:
   - /financial-digest.html
 ---
@@ -55,7 +55,7 @@ redirect_from:
 > "我认为战争已经基本结束，差不多完了。他们没有海军，没有通讯，也没有空军。"
 
 **原文链接：**
-- 🔗 [CNBC: Trump claims war is "very complete, pretty much"](https://www.cnbc.com/2026/03/09/trump-iran-war-end.html)
+- 🔗 [CNBC: Trump claims war is "very complete, pretty much"](https://www.cnbc.com/trump-iran-war-end/)
 - 🔗 [Reddit 讨论: Oil futures dropping rapidly](https://www.reddit.com/r/investing/comments/1rpac2b/oil_futures_dropping_rapidly_after_trump_claims/)
 
 💡 **Key Insight**
@@ -280,7 +280,7 @@ JPMorgan 的 Andrew Tyler 发布研究报告警告：
 
 **今日核心报道**
 
-- 🔗 [CNBC: Trump claims war is "very complete, pretty much"](https://www.cnbc.com/2026/03/09/trump-iran-war-end.html)
+- 🔗 [CNBC: Trump claims war is "very complete, pretty much"](https://www.cnbc.com/trump-iran-war-end/)
 - 🔗 [Reuters: Saudi Aramco reducing output at two oilfields](https://www.reuters.com/business/energy/saudi-aramco-reducing-output-two-oilfields-two-sources-say-2026-03-09/)
 - 🔗 [BeInCrypto: JPMorgan Oil Shock Analysis](https://beincrypto.com/jpmorgan-sp500-oil-shock-warning/)
 

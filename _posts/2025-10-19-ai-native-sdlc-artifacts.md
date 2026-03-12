@@ -627,16 +627,16 @@ PI-001: Product Intent（产品意图）
 
 | 篇号 | 标题 | 链接 | 状态 |
 |------|------|------|------|
-| 01 | **Product Intent：AI 时代的意图定义** | [/2026/03/09/product-intent-definition.html](/product-intent-definition/) | ✅ 已发布 |
-| 02 | **TDD vs Intent-Driven Development** | [/2026/03/09/tdd-intent-driven.html](/tdd-intent-driven/) | ✅ 已发布 |
-| 03 | **Intent Complexity：AI时代的软件工程指标** | [/2026/03/09/intent-complexity-metrics.html](/intent-complexity-metrics/) | ✅ 已发布 |
-| 04 | **User Story Pack：用户故事的自动化** | [/2026/03/09/user-story-pack-automation.html](/user-story-pack-automation/) | ✅ 已发布 |
-| 05 | **Architecture Spec：架构设计的机器可读化** | [/2026/03/09/architecture-spec-machine-readable.html](/architecture-spec-machine-readable/) | ✅ 已发布 |
-| 06 | **Execution Plan：工程执行的 AI 编排** | [/2026/03/09/execution-plan-ai-orchestration.html](/execution-plan-ai-orchestration/) | ✅ 已发布 |
-| 07 | **Quality Contract：质量验证的契约化** | [/2026/03/09/quality-contract-validation.html](/quality-contract-validation/) | ✅ 已发布 |
-| 08 | **Operations Runbook：运维的自动化手册** | [/2026/03/09/operations-runbook-automation.html](/operations-runbook-automation/) | ✅ 已发布 |
-| 09 | **Traceability：需求到代码到测试的自动追踪** | [/2026/03/09/traceability-auto-tracking.html](/traceability-auto-tracking/) | ✅ 已发布 |
-| 10 | **交付件模板大全：开箱即用** | [/2026/03/09/artifacts-templates-collection.html](/artifacts-templates-collection/) | ✅ 已发布 |
+| 01 | **Product Intent：AI 时代的意图定义** | [/product-intent-definition/](/product-intent-definition/) | ✅ 已发布 |
+| 02 | **TDD vs Intent-Driven Development** | [/tdd-intent-driven/](/tdd-intent-driven/) | ✅ 已发布 |
+| 03 | **Intent Complexity：AI时代的软件工程指标** | [/intent-complexity-metrics/](/intent-complexity-metrics/) | ✅ 已发布 |
+| 04 | **User Story Pack：用户故事的自动化** | [/user-story-pack-automation/](/user-story-pack-automation/) | ✅ 已发布 |
+| 05 | **Architecture Spec：架构设计的机器可读化** | [/architecture-spec-machine-readable/](/architecture-spec-machine-readable/) | ✅ 已发布 |
+| 06 | **Execution Plan：工程执行的 AI 编排** | [/execution-plan-ai-orchestration/](/execution-plan-ai-orchestration/) | ✅ 已发布 |
+| 07 | **Quality Contract：质量验证的契约化** | [/quality-contract-validation/](/quality-contract-validation/) | ✅ 已发布 |
+| 08 | **Operations Runbook：运维的自动化手册** | [/operations-runbook-automation/](/operations-runbook-automation/) | ✅ 已发布 |
+| 09 | **Traceability：需求到代码到测试的自动追踪** | [/traceability-auto-tracking/](/traceability-auto-tracking/) | ✅ 已发布 |
+| 10 | **交付件模板大全：开箱即用** | [/artifacts-templates-collection/](/artifacts-templates-collection/) | ✅ 已发布 |
 
 ---
 
