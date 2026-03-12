@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列
 
 redirect_from:
-  - /2026/03/09/blog-refactoring-summary.html
+  - /blog-refactoring-summary.html
 ---
 
 > **TL;DR**
@@ -298,7 +298,7 @@ title: "生产环境幻觉治理：当AI开始'胡说八道'"
 **本博客重构相关**
 - [写作指南](/WRITING-GUIDE.md) — 博客写作规范
 - [文章模板](/_templates/article-template.md) — 可复用模板
-- [重构示例](/2026/03/09/knowledge-assetization.html) — 优化后的文章
+- [重构示例](/knowledge-assetization/) — 优化后的文章
 
 **外部参考**
 - [On Writing Well](https://www.amazon.com/Writing-Well-30th-Anniversary-Nonfiction/dp/0060891548) — 写作经典

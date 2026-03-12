@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #38
 
 redirect_from:
-  - /2026/03/11/prompt-library-enterprise-management.html
+  - /prompt-library-enterprise-management.html
 ---
 
 > **TL;DR**> 
@@ -666,9 +666,9 @@ test_suites:
 ## 📚 延伸阅读
 
 **本系列相关**
-- [AISE框架：AI-Native软件工程理论体系](/2026/03/11/aise-framework-theory.html) (#34)
-- [Prompt Library治理](/2026/03/09/prompt-library-governance.html) (#9)
-- [知识资产化：为什么你的代码正在变成负债？](/2026/03/09/knowledge-assetization.html) (#10)
+- [AISE框架：AI-Native软件工程理论体系](/aise-framework-theory/) (#34)
+- [Prompt Library治理](/prompt-library-governance/) (#9)
+- [知识资产化：为什么你的代码正在变成负债？](/knowledge-assetization/) (#10)
 
 **Prompt工程最佳实践**
 - OpenAI Prompt Engineering Guide

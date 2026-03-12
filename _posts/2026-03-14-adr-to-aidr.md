@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #53
 
 redirect_from:
-  - /2026/03/14/adr-to-aidr.html
+  - /adr-to-aidr.html
 ---
 
 > **TL;DR**

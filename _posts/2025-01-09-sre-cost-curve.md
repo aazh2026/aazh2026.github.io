@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/09/sre-cost-curve.html
+  - /sre-cost-curve.html
 ---
 
 # 为什么100%可用性比99.99%贵100倍

@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #22
 
 redirect_from:
-  - /2026/03/09/death-of-api-docs.html
+  - /death-of-api-docs.html
 ---
 
 *"2024年，某开发者在使用一个新API时发现了一个奇怪的现象：官方文档已经一年没更新了，但API却一直在演进。更奇怪的是，他通过与AI对话，反而能获取到最新、最准确的API使用方式。"

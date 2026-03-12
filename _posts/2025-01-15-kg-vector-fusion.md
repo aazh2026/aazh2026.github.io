@@ -4,7 +4,7 @@ date: 2025-01-15T01:30:00+08:00
 tags: [知识图谱, 向量检索, RAG, 混合架构]
 
 redirect_from:
-  - /2026/03/03/kg-vector-fusion.html
+  - /kg-vector-fusion.html
 ---
 
 # 知识图谱与向量检索：为什么1+1>3

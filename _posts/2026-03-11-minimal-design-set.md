@@ -6,7 +6,7 @@ tags: [AI-Native, SDLC, 软件工程, 详细设计, 实践]
 author: Aaron
 series: AI-Native SDLC 实践
 redirect_from:
-  - /2026/03/11/minimal-design-set.html
+  - /minimal-design-set.html
 ---
 
 # 4个文件搞定详细设计：最小上下文集合实践

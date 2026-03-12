@@ -6,7 +6,7 @@ tags: [GitHub, Open Source, AI, Trending]
 author: Aaron
 
 redirect_from:
-  - /2026/03/10/github-trending.html
+  - /github-trending.html
 ---
 
 > **TL;DR**
@@ -213,7 +213,7 @@ redirect_from:
 - [ai-content-provenance](https://github.com) *(链接待补充)*
 
 **本系列相关**
-- [GitHub AI Trending - 2026-03-09](/2026/03/09/github-trending.html)
+- [GitHub AI Trending - 2026-03-09](/github-trending/)
 
 **学术参考**
 - 《On-device LLM Survey 2026》: 边缘推理的最新进展

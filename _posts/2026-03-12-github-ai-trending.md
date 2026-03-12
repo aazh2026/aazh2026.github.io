@@ -6,7 +6,7 @@ tags: [GitHub, AI, Trending, 开源]
 author: Aaron
 series: GitHub AI Trending
 redirect_from:
-  - /2026/03/12/github-ai-trending.html
+  - /github-ai-trending.html
 ---
 
 📊 **GitHub AI Trending Daily | 2026年3月12日 星期四**

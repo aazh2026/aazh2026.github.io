@@ -6,7 +6,7 @@ tags: [Reddit, 每日摘要, 科技资讯]
 author: Aaron
 series: Reddit Daily Digest
 redirect_from:
-  - /2026/03/12/reddit-digest.html
+  - /reddit-digest.html
 ---
 
 🌀 **Reddit Daily Digest | 2026年3月12日 星期四**

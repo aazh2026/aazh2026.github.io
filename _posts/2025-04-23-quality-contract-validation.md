@@ -8,7 +8,7 @@ author: Aaron
 series: AI-Native SDLC 交付件体系 #07
 
 redirect_from:
-  - /2026/03/09/quality-contract-validation.html
+  - /quality-contract-validation.html
 ---
 
 > *「2024年，一个测试工程师在上线前夜发现了关键Bug。追溯后发现：这个场景在产品需求里有描述，开发说"实现了"，测试用例里却没有覆盖。不是谁的错，是质量验证的链条断裂了。在AI时代，Quality Contract 让质量从"事后检查"变成"事前契约"——需求定义时，就同时定义了如何验证。」*

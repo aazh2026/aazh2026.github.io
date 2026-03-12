@@ -6,7 +6,7 @@ tags: [MLOps, LLM, 私有模型, 代码生成, CI/CD, 模型训练]
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/private-llm-mlops-original.html
+  - /private-llm-mlops-original.html
 ---
 
 # 私有代码LLM的MLOps实战：从模型训练到生产部署的完整Pipeline

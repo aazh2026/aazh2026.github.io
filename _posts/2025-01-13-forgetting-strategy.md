@@ -6,7 +6,7 @@ tags: [AI架构, 认知科学, 遗忘策略, 深度思考]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/forgetting-strategy.html
+  - /forgetting-strategy.html
 ---
 
 # 你的Agent不是记忆力差，而是不会「遗忘」

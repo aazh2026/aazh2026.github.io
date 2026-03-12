@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #52
 
 redirect_from:
-  - /2026/03/13/service-contract-semantic-consistency.html
+  - /service-contract-semantic-consistency.html
 ---
 
 > **TL;DR**
@@ -521,8 +521,8 @@ class {new_contract.service_name}Adapter:
 
 **本系列相关**
 - [API网关的智能编排](#) (#53, 待发布)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
-- [Clinejection安全框架](/2026/03/10/clinejection-ai-native-security.html) (#28)
+- [AISE框架](/aise-framework-theory/) (#34)
+- [Clinejection安全框架](/clinejection-ai-native-security/) (#28)
 
 **契约管理**
 - API Versioning Best Practices

@@ -6,7 +6,7 @@ tags: [ServiceNow, AI Agent, 企业软件, 治理框架, 自动化工作流, AI�
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/servicenow-autonomous-workforce.html
+  - /servicenow-autonomous-workforce.html
 ---
 
 # ServiceNow Autonomous Workforce：企业级AI的"控制塔"模式与治理新范式

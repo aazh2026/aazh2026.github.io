@@ -7,7 +7,7 @@ author: Aaron
 series: AI产品洞察
 
 redirect_from:
-  - /2026/03/08/api-economy-moat.html
+  - /api-economy-moat.html
 ---
 
 

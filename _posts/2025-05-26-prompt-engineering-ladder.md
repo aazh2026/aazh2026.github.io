@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #43
 
 redirect_from:
-  - /2026/03/12/prompt-engineering-ladder.html
+  - /prompt-engineering-ladder.html
 ---
 
 > **TL;DR**
@@ -445,9 +445,9 @@ Prompt技术专家 / 管理者
 - 《Learning Organizations》(Peter Senge)
 
 **本系列相关**
-- [AISE框架：AI-Native软件工程理论体系](/2026/03/11/aise-framework-theory.html) (#34)
+- [AISE框架：AI-Native软件工程理论体系](/aise-framework-theory/) (#34)
 - [AI辅助的导师制](#) (#44, 待发布)
-- [知识资产化](/2026/03/09/knowledge-assetization.html) (#10)
+- [知识资产化](/knowledge-assetization/) (#10)
 
 **Prompt工程资源**
 - OpenAI Prompt Engineering Guide

@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #63
 
 redirect_from:
-  - /2026/03/15/worse-is-better-revisited.html
+  - /worse-is-better-revisited.html
 ---
 
 > **TL;DR**

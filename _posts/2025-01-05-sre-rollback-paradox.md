@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/05/sre-rollback-paradox.html
+  - /sre-rollback-paradox.html
 ---
 
 # 当代码回滚遇上数据迁移：如何逆转时间？

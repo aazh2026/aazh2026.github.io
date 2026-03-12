@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/07/sre-alert-fatigue.html
+  - /sre-alert-fatigue.html
 ---
 
 # 为什么太多监控等于没有监控

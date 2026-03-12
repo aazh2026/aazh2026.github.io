@@ -7,7 +7,7 @@ author: Aaron
 series: 产业深度洞察
 
 redirect_from:
-  - /2026/03/08/ai-four-layer-power-structure.html
+  - /ai-four-layer-power-structure.html
 ---
 
 # AI时代的四层权力结构：从API入口到数据飞轮

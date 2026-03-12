@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #44
 
 redirect_from:
-  - /2026/03/12/ai-assisted-mentorship.html
+  - /ai-assisted-mentorship.html
 ---
 
 > **TL;DR**> 
@@ -491,8 +491,8 @@ AI处理规模化、个性化的基础指导，人类导师专注于高价值的
 - Adaptive Learning Systems
 
 **本系列相关**
-- [Prompt Engineering梯队建设](/2026/03/12/prompt-engineering-ladder.html) (#43)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
+- [Prompt Engineering梯队建设](/prompt-engineering-ladder/) (#43)
+- [AISE框架](/aise-framework-theory/) (#34)
 
 **AI教育应用**
 - Intelligent Tutoring Systems

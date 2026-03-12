@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/05/12/agent-economy.html
+  - /agent-economy.html
 ---
 
 *"当 AI 员工成为劳动力市场的一部分，经济学将被重新定义。"
@@ -528,9 +528,9 @@ L3: Enterprise Agent（企业版）
 
 **本系列文章**
 
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html)
-- [AI Digital Employee](/2026/04/28/ai-digital-employee.html)
-- [混合模式 vs 全自主](/2026/05/05/hybrid-vs-autonomous.html)
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/)
+- [AI Digital Employee](/ai-digital-employee/)
+- [混合模式 vs 全自主](/hybrid-vs-autonomous/)
 
 **外部资源**
 

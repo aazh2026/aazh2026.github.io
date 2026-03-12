@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程
 
 redirect_from:
-  - /2026/03/09/traceability-auto-tracking.html
+  - /traceability-auto-tracking.html
 ---
 
 # 需求到代码到测试的自动追踪——AI时代的全链路可追溯性

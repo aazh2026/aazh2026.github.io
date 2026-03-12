@@ -6,7 +6,7 @@ tags: [财经, 市场分析, 美股, A股]
 author: Aaron
 series: Financial Morning Brief
 redirect_from:
-  - /2026/03/12/financial-digest.html
+  - /financial-digest.html
 ---
 
 # 💰 Financial Morning Brief | 2026-03-12

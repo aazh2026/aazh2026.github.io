@@ -6,7 +6,7 @@ tags: [OpenAI, 融资, 商业分析, AI行业]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/openai-funding-analysis.html
+  - /openai-funding-analysis.html
 ---
 
 # 8400亿估值背后：OpenAI的野心与隐忧

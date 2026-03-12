@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #45
 
 redirect_from:
-  - /2026/03/12/knowledge-isolation-index.html
+  - /knowledge-isolation-index.html
 ---
 
 > **TL;DR**

@@ -6,7 +6,7 @@ tags: [agency-agents, 多Agent协作, Agent编排, 角色架构, Agentic Enginee
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/agency-agents-analysis.html
+  - /agency-agents-analysis.html
 ---
 
 # agency-agents深度解析：多Agent协作架构如何从概念走向落地

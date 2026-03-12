@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #53
 
 redirect_from:
-  - /2026/03/14/api-gateway-intelligent-orchestration.html
+  - /api-gateway-intelligent-orchestration.html
 ---
 
 > **TL;DR**
@@ -591,9 +591,9 @@ class HomepageBFF:
 ## 📚 延伸阅读
 
 **本系列相关**
-- [服务契约的语义一致性](/2026/03/13/service-contract-semantic-consistency.html) (#52)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
-- [API文档已死，自解释系统当立？](/2026/03/09/death-of-api-docs.html) (#22)
+- [服务契约的语义一致性](/service-contract-semantic-consistency/) (#52)
+- [AISE框架](/aise-framework-theory/) (#34)
+- [API文档已死，自解释系统当立？](/death-of-api-docs/) (#22)
 
 **BFF模式**
 - Backend for Frontend pattern (Sam Newman)

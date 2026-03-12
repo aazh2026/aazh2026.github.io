@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #56
 
 redirect_from:
-  - /2026/03/14/observability-evolution.html
+  - /observability-evolution.html
 ---
 
 > **TL;DR**

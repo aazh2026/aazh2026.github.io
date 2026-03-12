@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #50
 
 redirect_from:
-  - /2026/03/13/rag-dd-retrieval-augmented-generation.html
+  - /rag-dd-retrieval-augmented-generation.html
 ---
 
 > **TL;DR**
@@ -536,9 +536,9 @@ RAG-DD让AI能使用企业积累的知识，知识库的价值被放大。
 ## 📚 延伸阅读
 
 **本系列相关**
-- [IDD：Intent-Driven Development](/2026/03/13/idd-intent-driven-development.html) (#49)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
-- [Prompt Library企业级管理](/2026/03/11/prompt-library-enterprise-management.html) (#38)
+- [IDD：Intent-Driven Development](/idd-intent-driven-development/) (#49)
+- [AISE框架](/aise-framework-theory/) (#34)
+- [Prompt Library企业级管理](/prompt-library-enterprise-management/) (#38)
 
 **RAG相关**
 - Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks

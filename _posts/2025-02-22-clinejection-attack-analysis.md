@@ -6,7 +6,7 @@ tags: [Clinejection, Prompt Injection, AI安全, 供应链攻击, GitHub Actions
 author: Aaron
 
 redirect_from:
-  - /2026/03/06/clinejection-attack-analysis.html
+  - /clinejection-attack-analysis.html
 ---
 
 # Clinejection攻击深度剖析：当AI Issue Triager成为供应链攻击的新入口

@@ -6,7 +6,7 @@ tags: [AI突破, Donald Knuth, Claude Opus, 算法, 数学证明, 深度思考]
 author: Aaron
 
 redirect_from:
-  - /2026/03/04/knuth-claude-opus.html
+  - /knuth-claude-opus.html
 ---
 
 # 当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话

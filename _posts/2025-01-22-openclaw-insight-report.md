@@ -6,7 +6,7 @@ tags: [OpenClaw, AI智能体, 深度报告, 效率提升, 自动化]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/openclaw-insight-report.html
+  - /openclaw-insight-report.html
 ---
 
 # OpenClaw 使用场景深度洞察报告

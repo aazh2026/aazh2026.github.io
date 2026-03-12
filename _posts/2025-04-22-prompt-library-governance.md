@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程
 
 redirect_from:
-  - /2026/03/09/prompt-library-governance.html
+  - /prompt-library-governance.html
 ---
 
 # Prompt Library治理：当企业拥有1000个Prompt时该怎么办

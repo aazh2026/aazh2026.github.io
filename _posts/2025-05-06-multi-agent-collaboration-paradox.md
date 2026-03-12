@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #30
 
 redirect_from:
-  - /2026/03/10/multi-agent-collaboration-paradox.html
+  - /multi-agent-collaboration-paradox.html
 ---
 
 > **TL;DR**
@@ -477,7 +477,7 @@ N* = √(2 × 1000 / 50) = √40 ≈ 6.3
 - 企业级Multi-Agent客服系统的性能优化实践
 
 **本系列相关**
-- [为什么单个AI Agent不够用了？](/2026/03/09/agent-swarm.html) (第16篇)
+- [为什么单个AI Agent不够用了？](/agent-swarm/) (第16篇)
 - [Agent-DD：多Agent协作的Swarm Programming模式](#) *(待撰写)*
 
 **学术参考**

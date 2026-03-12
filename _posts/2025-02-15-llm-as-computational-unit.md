@@ -6,7 +6,7 @@ tags: [LLM, 神经网络, 计算单元, Software 3.0, 机器码, 编程范式, A
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/llm-as-computational-unit.html
+  - /llm-as-computational-unit.html
 ---
 
 # LLM作为通用计算单元的可行性：神经网络权重正在变成新的机器码？

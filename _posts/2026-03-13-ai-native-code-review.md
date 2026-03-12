@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #46
 
 redirect_from:
-  - /2026/03/13/ai-native-code-review.html
+  - /ai-native-code-review.html
 ---
 
 > **TL;DR**

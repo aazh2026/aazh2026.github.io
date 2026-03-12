@@ -6,7 +6,7 @@ tags: [架构师, 职业发展, AI时代, 能力模型, Context设计, 技术领
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/architect-new-capability-model.html
+  - /architect-new-capability-model.html
 ---
 
 # AI时代架构师的新能力模型：从画图决策到设计Context

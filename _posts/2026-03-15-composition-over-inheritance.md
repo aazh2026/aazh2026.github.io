@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/03/15/composition-over-inheritance.html
+  - /composition-over-inheritance.html
 ---
 
 *"在软件设计中，继承是白盒复用，组合是黑盒复用。白盒让你看到太多你不该关心的细节，黑盒让你只关注你需要的接口。"*
@@ -1244,9 +1244,9 @@ if __name__ == "__main__":
 
 **本系列文章**
 
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
-- [Multi-Agent 协作](/2026/04/14/multi-agent-collaboration.html)
-- [从 Human-driven 到 Agent-driven](/2026/03/24/human-driven-to-agent-driven.html)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
+- [Multi-Agent 协作](/multi-agent-collaboration/)
+- [从 Human-driven 到 Agent-driven](/human-driven-to-agent-driven/)
 
 **经典参考**
 

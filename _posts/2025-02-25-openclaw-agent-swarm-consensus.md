@@ -6,7 +6,7 @@ tags: [OpenClaw, AI Agent, 开源, Agent编排, Swarm共识, 去中心化]
 author: Aaron
 
 redirect_from:
-  - /2026/03/06/openclaw-agent-swarm-consensus.html
+  - /openclaw-agent-swarm-consensus.html
 ---
 
 # OpenClaw：当AI Agent开始像创业公司一样思考

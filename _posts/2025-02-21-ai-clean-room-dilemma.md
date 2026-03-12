@@ -6,7 +6,7 @@ tags: [AI Coding, Clean Room, 许可证, Claude, 编译器, 法律风险]
 author: Aaron
 
 redirect_from:
-  - /2026/03/06/ai-clean-room-dilemma.html
+  - /ai-clean-room-dilemma.html
 ---
 
 # AI时代的Clean Room困境：从技术实验到许可证的灰色地带

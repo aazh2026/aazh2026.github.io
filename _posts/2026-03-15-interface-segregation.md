@@ -5,7 +5,7 @@ date: 2026-03-15T10:00:00+08:00
 tags: [接口隔离, SOLID, Intent-Driven, AI-Native, 软件工程]
 
 redirect_from:
-  - /2026/03/15/interface-segregation.html
+  - /interface-segregation.html
 ---
 
 # 接口隔离：人类与 AI 的契约设计
@@ -876,7 +876,7 @@ contract:
 
 ---
 
-*本文是 Agent OS 系列的第 4 篇。系列索引：[Agent OS: 重新思考 AI 时代的开发范式](/2026/03/10/agent-os-intro.html)*
+*本文是 Agent OS 系列的第 4 篇。系列索引：[Agent OS: 重新思考 AI 时代的开发范式](/agent-os-intro/)*
 
 ---
 

@@ -7,7 +7,7 @@ author: Aaron
 
 permalink: /2026/03/04/reddit-digest/
 redirect_from:
-  - /2026/03/04/reddit-digest.html
+  - /reddit-digest.html
 ---
 
 # Reddit 热榜 | 2026-03-04

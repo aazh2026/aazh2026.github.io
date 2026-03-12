@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列
 
 redirect_from:
-  - /2026/03/15/ai-native-data-engineering.html
+  - /ai-native-data-engineering.html
 ---
 
 > **TL;DR**

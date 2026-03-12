@@ -4,7 +4,7 @@ date: 2025-01-25T01:55:00+08:00
 tags: [成本优化, 语义缓存, RAG, 向量检索]
 
 redirect_from:
-  - /2026/03/03/semantic-caching.html
+  - /semantic-caching.html
 ---
 
 # 语义缓存的经济学：如何用记忆节省90%的API成本

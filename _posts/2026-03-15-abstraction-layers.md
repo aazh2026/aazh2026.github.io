@@ -1155,7 +1155,7 @@ void* numa_alloc_log_buffer(int node) {
 ---
 
 **系列文章**
-- 上一篇：[Agent OS：AI时代的人机协作范式](/2026/03/10/agent-os/)
+- 上一篇：[Agent OS：AI时代的人机协作范式](/agent-os/)
 - 下一篇：[待续...]
 
 *本文发表于 2026-03-15*

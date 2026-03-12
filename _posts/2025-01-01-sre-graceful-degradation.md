@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/01/sre-graceful-degradation.html
+  - /sre-graceful-degradation.html
 ---
 
 # 为什么你的系统应该学会「优雅地失败」

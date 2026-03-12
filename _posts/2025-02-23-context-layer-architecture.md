@@ -6,7 +6,7 @@ tags: [Context Layer, AI架构, 知识工程, 企业级, RAG, 上下文管理]
 author: Aaron
 
 redirect_from:
-  - /2026/03/06/context-layer-architecture.html
+  - /context-layer-architecture.html
 ---
 
 # Context Layer架构：企业级AI系统的上下文分层设计与实现

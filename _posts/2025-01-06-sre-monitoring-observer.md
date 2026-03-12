@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/06/sre-monitoring-observer.html
+  - /sre-monitoring-observer.html
 ---
 
 # 为什么监控指标本身会改变被监控的系统

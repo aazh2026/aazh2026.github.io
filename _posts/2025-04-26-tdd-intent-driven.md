@@ -8,7 +8,7 @@ author: Aaron
 series: AI-Native软件工程系列 #02
 
 redirect_from:
-  - /2026/03/09/tdd-intent-driven.html
+  - /tdd-intent-driven.html
 ---
 
 > **TL;DR**

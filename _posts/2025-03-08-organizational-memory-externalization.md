@@ -6,7 +6,7 @@ tags: [知识管理, 组织记忆, 隐性知识, 专家经验, AI时代]
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/organizational-memory-externalization.html
+  - /organizational-memory-externalization.html
 ---
 
 # 当专家退休时，公司失去的不是一个人，而是一部活历史

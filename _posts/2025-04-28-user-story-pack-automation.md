@@ -8,7 +8,7 @@ author: Aaron
 series: AI-Native SDLC 交付件体系 #04
 
 redirect_from:
-  - /2026/03/09/user-story-pack-automation.html
+  - /user-story-pack-automation.html
 ---
 
 > *「2024年，一位敏捷教练崩溃地说：'我们的用户故事写得很标准——As a... I want... So that...，但开发出来的功能总是和需求有偏差。'问题不在于格式，而在于用户故事是'给人读的'，而不是'给机器执行的'。在AI时代，用户故事需要从自然语言描述进化为可自动验证的规格说明。」*

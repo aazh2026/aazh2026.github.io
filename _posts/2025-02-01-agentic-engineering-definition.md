@@ -6,7 +6,7 @@ tags: [Agentic Engineering, Vibe Coding, 范式转移, 软件工程, Karpathy, A
 author: Aaron
 
 redirect_from:
-  - /2026/03/04/agentic-engineering-definition.html
+  - /agentic-engineering-definition.html
 ---
 
 # Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移

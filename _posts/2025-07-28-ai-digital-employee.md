@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/04/28/ai-digital-employee.html
+  - /ai-digital-employee.html
 ---
 
 *"当 AI 员工成为常态，管理的艺术将重新被定义。"*
@@ -651,10 +651,10 @@ AI-Native 企业成本：
 
 **本系列文章**
 
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html)
-- [为什么你的 SaaS 产品需要 Agent 层？](/2026/03/17/why-your-saas-needs-agent-layer.html)
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
-- [CRM 的 Agent 化重构](/2026/04/21/crm-agent-reconstruction.html)
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/)
+- [为什么你的 SaaS 产品需要 Agent 层？](/why-your-saas-needs-agent-layer/)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
+- [CRM 的 Agent 化重构](/crm-agent-reconstruction/)
 
 **外部资源**
 

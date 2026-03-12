@@ -6,7 +6,7 @@ tags: [GitHub, Open Source, AI, Trending]
 author: Aaron
 permalink: /2026/03/11/github-trending/
 redirect_from:
-  - /2026/03/11/github-trending.html
+  - /github-trending.html
 ---
 
 > **TL;DR**

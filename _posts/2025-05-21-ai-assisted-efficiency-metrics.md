@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #41
 
 redirect_from:
-  - /2026/03/12/ai-assisted-efficiency-metrics.html
+  - /ai-assisted-efficiency-metrics.html
 ---
 
 > **TL;DR**> 
@@ -580,9 +580,9 @@ AI让写代码变得简单，但好的架构让改代码变得简单。后者更
 - 《Software Design X-Rays》(Adam Tornhill)
 
 **本系列相关**
-- [告别代码行数：AI时代的'意图复杂度'度量标准](/2026/03/10/goodbye-loc-intent-complexity.html) (#31)
-- [DORA指标在AI时代的重构](/2026/03/11/dora-metrics-ai-era-reconstruction.html) (#40)
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
+- [告别代码行数：AI时代的'意图复杂度'度量标准](/goodbye-loc-intent-complexity/) (#31)
+- [DORA指标在AI时代的重构](/dora-metrics-ai-era-reconstruction/) (#40)
+- [AISE框架](/aise-framework-theory/) (#34)
 
 **AI度量研究**
 - AI-Augmented Software Engineering Metrics

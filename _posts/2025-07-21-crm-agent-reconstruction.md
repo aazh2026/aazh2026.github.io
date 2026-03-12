@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/04/21/crm-agent-reconstruction.html
+  - /crm-agent-reconstruction.html
 ---
 
 *"最好的 CRM 不是记录客户信息，而是主动帮你赢得客户。"*
@@ -789,11 +789,11 @@ class RecommendationEngine:
 
 **本系列文章**
 
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html)
-- [为什么你的 SaaS 产品需要 Agent 层？](/2026/03/17/why-your-saas-needs-agent-layer.html)
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
-- [Agent 的记忆系统设计](/2026/04/07/agent-memory-system-design.html)
-- [Multi-Agent 协作](/2026/04/14/multi-agent-collaboration.html)
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/)
+- [为什么你的 SaaS 产品需要 Agent 层？](/why-your-saas-needs-agent-layer/)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
+- [Agent 的记忆系统设计](/agent-memory-system-design/)
+- [Multi-Agent 协作](/multi-agent-collaboration/)
 
 **外部资源**
 

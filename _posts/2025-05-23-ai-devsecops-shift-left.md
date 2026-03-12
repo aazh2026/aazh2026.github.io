@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #46
 
 redirect_from:
-  - /2026/03/12/ai-devsecops-shift-left.html
+  - /ai-devsecops-shift-left.html
 ---
 
 > **TL;DR**

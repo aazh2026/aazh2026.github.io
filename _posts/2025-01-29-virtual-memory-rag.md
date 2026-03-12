@@ -4,7 +4,7 @@ date: 2025-01-29T00:35:00+08:00
 tags: [RAG, 上下文窗口, 内存管理, LLM优化]
 
 redirect_from:
-  - /2026/03/03/virtual-memory-rag.html
+  - /virtual-memory-rag.html
 ---
 
 # 上下文窗口的"虚拟内存"化：当RAG成为分页机制

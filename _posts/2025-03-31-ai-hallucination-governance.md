@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #21
 
 redirect_from:
-  - /2026/03/09/ai-hallucination-governance.html
+  - /ai-hallucination-governance.html
 ---
 
 *"2024年3月，某医疗AI系统给患者提供了一个错误的药物剂量建议。幸运的是，护士在用药前发现了这个错误。事后调查发现，AI在处理一个罕见的药物相互作用时'幻觉'了一个不存在的研究结论。这不是AI的第一次幻觉，只是第一次被发现。"

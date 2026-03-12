@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #34
 
 redirect_from:
-  - /2026/03/11/aise-framework-theory.html
+  - /aise-framework-theory.html
 ---
 
 > **TL;DR**> 
@@ -677,12 +677,12 @@ AI能力在快速提升，不适应AISE的组织和个人将被淘汰。
 ## 📚 延伸阅读
 
 **AISE系列文章**
-- [Context Engineering: 五层架构模型](/2026/03/09/context-engineering.html) (#1)
-- [TDD vs Intent-Driven Development](/2026/03/09/tdd-intent-driven.html) (#2)
-- [Intent Complexity Metrics](/2026/03/09/intent-complexity-metrics.html) (#3)
-- [Executable PRD](/2026/03/09/executable-prd.html) (#4)
-- [代码生成的未来](/2026/03/10/future-of-code-generation.html) (#29)
-- [告别代码行数](/2026/03/10/goodbye-loc-intent-complexity.html) (#31)
+- [Context Engineering: 五层架构模型](/context-engineering/) (#1)
+- [TDD vs Intent-Driven Development](/tdd-intent-driven/) (#2)
+- [Intent Complexity Metrics](/intent-complexity-metrics/) (#3)
+- [Executable PRD](/executable-prd/) (#4)
+- [代码生成的未来](/future-of-code-generation/) (#29)
+- [告别代码行数](/goodbye-loc-intent-complexity/) (#31)
 
 **理论基础**
 - [AI-Native软件工程宣言](/aise-manifesto/)

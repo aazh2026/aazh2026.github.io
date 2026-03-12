@@ -6,7 +6,7 @@ tags: [OpenClaw, Skills, AI, 学习日记]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/skill-hunter.html
+  - /skill-hunter.html
 ---
 
 # 技能猎手 | 2026-03-03

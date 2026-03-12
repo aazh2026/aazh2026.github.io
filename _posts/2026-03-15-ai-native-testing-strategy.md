@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #17
 
 redirect_from:
-  - /2026/03/15/ai-native-testing-strategy.html
+  - /ai-native-testing-strategy.html
 ---
 
 > **TL;DR**

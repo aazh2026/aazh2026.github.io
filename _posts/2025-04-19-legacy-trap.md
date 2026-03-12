@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #18
 
 redirect_from:
-  - /2026/03/09/legacy-trap.html
+  - /legacy-trap.html
 ---
 
 *"2024年初，某银行花费了1800万美元，用AI'重写'了他们的核心交易系统。9个月后，新系统上线，性能提升了40%，但业务逻辑错误率上升了300%。问题不在于AI，而在于他们试图用AI解决一个根本不是技术的问题。"

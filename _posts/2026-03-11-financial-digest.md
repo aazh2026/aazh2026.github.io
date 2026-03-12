@@ -6,7 +6,7 @@ tags: [Finance, Market, Daily]
 author: Aaron
 permalink: /2026/03/11/financial-digest/
 redirect_from:
-  - /2026/03/11/financial-digest.html
+  - /financial-digest.html
 ---
 
 *"周三的市场：等待通胀数据的忐忑，就像等待考试成绩的学生。"*

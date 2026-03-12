@@ -8,7 +8,7 @@ series: AI-Native软件工程系列
 permalink: /posts/2025/04/04//
 
 redirect_from:
-  - /2026/03/09/aise-manifesto.html
+  - /aise-manifesto.html
 ---
 
 *"我们正站在软件工程的第三次革命的边缘。第一次革命是高级编程语言的发明，第二次是开源运动，第三次是AI-Native软件工程。"

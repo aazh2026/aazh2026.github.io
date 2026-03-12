@@ -6,7 +6,7 @@ tags: [AI-Native, SDLC, 软件工程, 详细设计]
 author: Aaron
 series: AI-Native SDLC 实践
 redirect_from:
-  - /2026/03/11/ai-native-detailed-design.html
+  - /ai-native-detailed-design.html
 ---
 
 # AI-Native 详细设计：从文档到可执行上下文

@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #19
 
 redirect_from:
-  - /2026/03/09/ai-native-architecture-patterns.html
+  - /ai-native-architecture-patterns.html
 ---
 
 *"2024年，某独角兽公司的新产品上线三个月后，工程师们发现他们精心设计的微服务架构正在成为一个负担。不是微服务不好，而是他们试图用面向人类开发者的架构模式，去支撑一个主要由AI生成代码的系统。"

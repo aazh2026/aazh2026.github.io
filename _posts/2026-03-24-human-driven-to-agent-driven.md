@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/03/24/human-driven-to-agent-driven.html
+  - /human-driven-to-agent-driven.html
 ---
 
 *"最好的界面是没有界面。"*
@@ -523,9 +523,9 @@ Agent："基于当前 pipeline 和历史数据，预测 Q2 业绩：
 
 **本系列文章**
 
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html)
-- [为什么你的 SaaS 产品需要 Agent 层？](/2026/03/17/why-your-saas-needs-agent-layer.html)
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/)
+- [为什么你的 SaaS 产品需要 Agent 层？](/why-your-saas-needs-agent-layer/)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
 
 **外部资源**
 

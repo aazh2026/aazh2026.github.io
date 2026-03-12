@@ -6,7 +6,7 @@ tags: [OpenAI, ChatGPT, AI行业, 用户流失, 竞争格局, 行业分析]
 author: Aaron
 
 redirect_from:
-  - /2026/03/04/chatgpt-user-exodus.html
+  - /chatgpt-user-exodus.html
 ---
 
 # ChatGPT用户流失潮：AI行业的拐点已至？

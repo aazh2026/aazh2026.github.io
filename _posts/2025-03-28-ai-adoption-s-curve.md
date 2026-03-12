@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程
 
 redirect_from:
-  - /2026/03/09/ai-adoption-s-curve.html
+  - /ai-adoption-s-curve.html
 ---
 
 # 企业AI开发的S-curve Adoption：从个人到团队到组织的演化路径

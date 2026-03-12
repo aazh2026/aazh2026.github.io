@@ -6,7 +6,7 @@ tags: [AI, 认知债务, 代码理解, Agentic Engineering, Simon Willison]
 author: Aaron
 
 redirect_from:
-  - /2026/03/04/cognitive-debt.html
+  - /cognitive-debt.html
 ---
 
 # 认知债务：AI时代的代码理解危机

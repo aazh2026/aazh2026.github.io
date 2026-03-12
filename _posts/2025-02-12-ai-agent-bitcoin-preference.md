@@ -6,7 +6,7 @@ tags: [AI Agent, 比特币, 加密货币, AI经济, 自主决策, Bitcoin Policy
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/ai-agent-bitcoin-preference.html
+  - /ai-agent-bitcoin-preference.html
 ---
 
 # AI Agent为何偏好比特币：9,072次实验揭示的AI经济自主偏好

@@ -7,7 +7,7 @@ author: Aaron
 series: AI工程洞察
 
 redirect_from:
-  - /2026/03/09/codebase-intelligence.html
+  - /codebase-intelligence.html
 ---
 
 # Codebase Intelligence：当代码库成为可推理的知识系统

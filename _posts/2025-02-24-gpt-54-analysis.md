@@ -6,7 +6,7 @@ tags: [GPT-5.4, OpenAI, 编码能力, AI模型, 上下文窗口, 产品分析]
 author: Aaron
 
 redirect_from:
-  - /2026/03/06/gpt-54-analysis.html
+  - /gpt-54-analysis.html
 ---
 
 # GPT-5.4发布：当通用模型开始超越专用模型，编码能力的范式正在转移

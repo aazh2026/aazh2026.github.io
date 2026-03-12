@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #31
 
 redirect_from:
-  - /2026/03/10/goodbye-loc-intent-complexity.html
+  - /goodbye-loc-intent-complexity.html
 ---
 
 > **TL;DR**
@@ -532,8 +532,8 @@ IMR = 修改的代码行数 / 总代码行数
 - 《重构》：改善既有代码的设计
 
 **本系列相关**
-- [Intent Complexity Metrics](/2026/03/09/intent-complexity-metrics.html) (第3篇)
-- [为什么你的代码正在变成负债？](/2026/03/09/knowledge-assetization.html) (第10篇)
+- [Intent Complexity Metrics](/intent-complexity-metrics/) (第3篇)
+- [为什么你的代码正在变成负债？](/knowledge-assetization/) (第10篇)
 - [DORA指标在AI时代的重构](#) *(待撰写)*
 
 **业界实践**

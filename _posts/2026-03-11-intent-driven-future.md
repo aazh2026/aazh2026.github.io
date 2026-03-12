@@ -6,7 +6,7 @@ tags: [AI-Native, SDLC, Intent-Driven, 未来趋势]
 author: Aaron
 series: AI-Native SDLC 实践
 redirect_from:
-  - /2026/03/11/intent-driven-future.html
+  - /intent-driven-future.html
 ---
 
 # 详细设计会消失吗？Intent-Driven 开发的未来

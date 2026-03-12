@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #14
 
 redirect_from:
-  - /2026/03/09/10x-multiplier.html
+  - /10x-multiplier.html
 ---
 
 *"2024年的硅谷，一个有趣的现象正在发生：那些被称为'10x工程师'的超级程序员，在AI工具面前的优势正在消失。但与此同时，一种新型的'乘数工程师'正在崛起——他们的产出不是以代码行数衡量，而是以团队杠杆倍数衡量。"

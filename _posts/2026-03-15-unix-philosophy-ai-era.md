@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #50
 
 redirect_from:
-  - /2026/03/15/unix-philosophy-ai-era.html
+  - /unix-philosophy-ai-era.html
 ---
 
 > *"Do one thing and do it well."* —— Unix 哲学

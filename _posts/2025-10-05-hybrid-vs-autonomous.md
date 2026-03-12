@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/05/05/hybrid-vs-autonomous.html
+  - /hybrid-vs-autonomous.html
 ---
 
 *"完全的自主是理想，渐进的道路是现实。"
@@ -450,9 +450,9 @@ AI 可以提供选项和分析，但战略选择是人类领导者的责任。
 
 **本系列文章**
 
-- [Agent OS：SaaS 之后的下一个软件形态](/2026/03/10/agent-os-future-of-software.html)
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
-- [AI Digital Employee](/2026/04/28/ai-digital-employee.html)
+- [Agent OS：SaaS 之后的下一个软件形态](/agent-os-future-of-software/)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
+- [AI Digital Employee](/ai-digital-employee/)
 
 **外部资源**
 

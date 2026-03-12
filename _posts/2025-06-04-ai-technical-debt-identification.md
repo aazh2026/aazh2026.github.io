@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #54
 
 redirect_from:
-  - /2026/03/14/ai-technical-debt-identification.html
+  - /ai-technical-debt-identification.html
 ---
 
 > **TL;DR**
@@ -433,9 +433,9 @@ jobs:
 - 《Clean Code》(Robert C. Martin)
 
 **本系列相关**
-- [AISE框架](/2026/03/11/aise-framework-theory.html) (#34)
-- [DORA指标重构](/2026/03/11/dora-metrics-ai-era-reconstruction.html) (#40)
-- [代码可维护性预测](/2026/03/12/ai-assisted-efficiency-metrics.html) (#41)
+- [AISE框架](/aise-framework-theory/) (#34)
+- [DORA指标重构](/dora-metrics-ai-era-reconstruction/) (#40)
+- [代码可维护性预测](/ai-assisted-efficiency-metrics/) (#41)
 
 ---
 

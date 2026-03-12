@@ -6,7 +6,7 @@ tags: [AI代码, 数字水印, 知识产权, 代码溯源, 企业合规]
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/code-watermark-traceability.html
+  - /code-watermark-traceability.html
 ---
 
 # 当AI开始写代码，谁拥有这段代码的指纹？

@@ -6,7 +6,7 @@ tags: [OpenClaw, Operator Pro, AI Agent, Agent经济, 架构对比, 去中心化
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/openclaw-vs-operator-pro-original.html
+  - /openclaw-vs-operator-pro-original.html
 ---
 
 # OpenClaw 3.0 vs Operator Pro：Agent经济的主流之争与架构哲学对决

@@ -6,7 +6,7 @@ tags: [AI Agent, 金融科技, 监管合规, 支付系统, 自主AI, Santander, 
 author: Aaron
 
 redirect_from:
-  - /2026/03/05/ai-agent-first-payment.html
+  - /ai-agent-first-payment.html
 ---
 
 # 首笔AI Agent自主支付落地：金融监管框架内的里程碑与基础设施变革

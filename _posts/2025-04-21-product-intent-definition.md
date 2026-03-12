@@ -8,7 +8,7 @@ author: Aaron
 series: AI-Native软件工程系列 #01
 
 redirect_from:
-  - /2026/03/09/product-intent-definition.html
+  - /product-intent-definition.html
 ---
 
 > *「2024年，一个产品经理和工程师坐下来讨论新功能。产品经理说：'我们需要一个智能推荐系统'。三个月后，工程师交付了一个'精准'的推荐算法——推荐的是用户已经买过的商品。这不是技术失败，这是意图失败。在AI时代，定义'做什么'比'怎么做'重要十倍，而Product Intent就是连接两者的桥梁。」*

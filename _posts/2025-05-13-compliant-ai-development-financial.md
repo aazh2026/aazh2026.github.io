@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #36
 
 redirect_from:
-  - /2026/03/11/compliant-ai-development-financial.html
+  - /compliant-ai-development-financial.html
 ---
 
 > **TL;DR**> > 金融行业AI开发面临严格的合规要求：> 1. **可解释性** — 监管要求AI决策必须可解释、可审计
@@ -675,9 +675,9 @@ def generalize_age(age):
 - MAS FEAT Principles
 
 **本系列相关**
-- [AISE框架：AI-Native软件工程理论体系](/2026/03/11/aise-framework-theory.html) (#34)
-- [大规模AI治理：三大支柱框架](/2026/03/09/large-scale-ai-governance.html) (#6)
-- [AI架构评审](/2026/03/11/ai-architecture-review.html) (#35)
+- [AISE框架：AI-Native软件工程理论体系](/aise-framework-theory/) (#34)
+- [大规模AI治理：三大支柱框架](/large-scale-ai-governance/) (#6)
+- [AI架构评审](/ai-architecture-review/) (#35)
 
 **技术实践**
 - Google AI Principles and Practices

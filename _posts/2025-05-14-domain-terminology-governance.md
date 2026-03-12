@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #39
 
 redirect_from:
-  - /2026/03/11/domain-terminology-governance.html
+  - /domain-terminology-governance.html
 ---
 
 > **TL;DR**> > 术语不一致是AI代码生成质量的头号杀手：> 1. **术语鸿沟** — 业务说"客户"，代码写"User"，AI无所适从
@@ -680,9 +680,9 @@ AI不懂业务，但它可以理解映射。术语表就是这个映射。
 ## 📚 延伸阅读
 
 **本系列相关**
-- [AISE框架：AI-Native软件工程理论体系](/2026/03/11/aise-framework-theory.html) (#34)
-- [Prompt Library的企业级管理](/2026/03/11/prompt-library-enterprise-management.html) (#38)
-- [知识资产化](/2026/03/09/knowledge-assetization.html) (#10)
+- [AISE框架：AI-Native软件工程理论体系](/aise-framework-theory/) (#34)
+- [Prompt Library的企业级管理](/prompt-library-enterprise-management/) (#38)
+- [知识资产化](/knowledge-assetization/) (#10)
 
 **领域驱动设计（DDD）**
 - 《Domain-Driven Design》(Eric Evans)

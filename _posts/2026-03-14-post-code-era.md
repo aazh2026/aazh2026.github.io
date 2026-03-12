@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #62
 
 redirect_from:
-  - /2026/03/14/post-code-era.html
+  - /post-code-era.html
 ---
 
 > **TL;DR**

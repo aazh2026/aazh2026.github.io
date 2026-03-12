@@ -7,7 +7,7 @@ author: Aaron
 
 permalink: /2026/03/04/financial-digest/
 redirect_from:
-  - /2026/03/04/financial-digest.html
+  - /financial-digest.html
 ---
 
 # 市场瞭望台 | 2026-03-04

@@ -7,7 +7,7 @@ author: Aaron
 series: 企业架构洞察
 
 redirect_from:
-  - /2026/03/08/ai-transformation-organizational-genome.html
+  - /ai-transformation-organizational-genome.html
 ---
 
 

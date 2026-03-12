@@ -4,7 +4,7 @@ date: 2025-01-24T01:45:00+08:00
 tags: [安全, 隐私, 机密计算, 数据隔离]
 
 redirect_from:
-  - /2026/03/03/secure-memory.html
+  - /secure-memory.html
 ---
 
 # 敏感记忆的保险箱：当Agent记住你的秘密

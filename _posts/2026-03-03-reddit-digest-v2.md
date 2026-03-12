@@ -7,7 +7,7 @@ author: Aaron
 
 permalink: /2026/03/03/reddit-digest-v2/
 redirect_from:
-  - /2026/03/03/reddit-digest-v2.html
+  - /reddit-digest-v2.html
 ---
 
 # Reddit 早报 | 2026-03-03

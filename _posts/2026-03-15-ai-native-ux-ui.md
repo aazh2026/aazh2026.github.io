@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列
 
 redirect_from:
-  - /2026/03/15/ai-native-ux-ui.html
+  - /ai-native-ux-ui.html
 ---
 
 > **TL;DR**

@@ -6,7 +6,7 @@ tags: [每日简报, AI情报, 科技趋势]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/morning-briefing.html
+  - /morning-briefing.html
 ---
 
 # 晨间情报站 | 2026-03-03

@@ -8,7 +8,7 @@ series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
-  - /2026/03/10/agent-os-future-of-software.html
+  - /agent-os-future-of-software.html
 ---
 
 *"未来的软件不是你想点击什么，而是 Agent 知道你需要什么。"*
@@ -327,9 +327,9 @@ Agent OS 不是遥远的未来，它正在发生。
 
 **本系列文章**
 
-- [为什么你的 SaaS 产品需要 Agent 层？](/2026/03/17/why-your-saas-needs-agent-layer.html)
-- [从 Human-driven 到 Agent-driven：交互范式的迁移](/2026/03/24/human-driven-to-agent-driven.html)
-- [Agent OS 的五层架构模型](/2026/03/31/agent-os-five-layer-architecture.html)
+- [为什么你的 SaaS 产品需要 Agent 层？](/why-your-saas-needs-agent-layer/)
+- [从 Human-driven 到 Agent-driven：交互范式的迁移](/human-driven-to-agent-driven/)
+- [Agent OS 的五层架构模型](/agent-os-five-layer-architecture/)
 
 **外部资源**
 

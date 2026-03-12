@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #48
 
 redirect_from:
-  - /2026/03/13/ai-code-license-compliance.html
+  - /ai-code-license-compliance.html
 ---
 
 > **TL;DR**> 

@@ -7,7 +7,7 @@ author: Aaron
 tags: [股市, 黄金, 比特币, 每日晨报]
 
 redirect_from:
-  - /2026/03/05/financial-daily.html
+  - /financial-daily.html
 ---
 
 # 金融早报 | 2026年3月5日

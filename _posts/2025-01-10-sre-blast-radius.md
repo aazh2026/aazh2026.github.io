@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/10/sre-blast-radius.html
+  - /sre-blast-radius.html
 ---
 
 # 如何通过架构设计将故障限制在局部

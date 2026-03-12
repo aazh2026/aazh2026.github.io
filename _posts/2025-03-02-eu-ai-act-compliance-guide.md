@@ -6,7 +6,7 @@ tags: [EU AI Act, 合规, 监管, AI法规, 开发者指南, 技术清单]
 author: Aaron
 
 redirect_from:
-  - /2026/03/07/eu-ai-act-compliance-guide.html
+  - /eu-ai-act-compliance-guide.html
 ---
 
 # EU AI Act合规指南：高风险AI系统的技术要求与实施清单

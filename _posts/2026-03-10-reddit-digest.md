@@ -7,7 +7,7 @@ author: Aaron
 
 permalink: /2026/03/10/reddit-digest/
 redirect_from:
-  - /2026/03/10/reddit-digest.html
+  - /reddit-digest.html
 ---
 
 > **TL;DR**
@@ -175,7 +175,7 @@ redirect_from:
 - AI 在政府服务中的应用教训
 
 **本系列相关**
-- [Reddit Daily Digest - 2026-03-09](/2026/03/09/reddit-digest.html)
+- [Reddit Daily Digest - 2026-03-09](/reddit-digest/)
 
 **相关讨论**
 - r/LocalLLaMA：本地大模型部署实践

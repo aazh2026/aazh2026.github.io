@@ -7,7 +7,7 @@ author: Aaron
 
 permalink: /2026/03/10/financial-digest/
 redirect_from:
-  - /2026/03/10/financial-digest.html
+  - /financial-digest.html
 ---
 
 *"油价过山车与中国楼市的平行世界：一个太躁，一个太沉"*
@@ -292,8 +292,8 @@ JPMorgan 的 Andrew Tyler 发布研究报告警告：
 
 **楼市专题**
 
-- [中国楼市政策追踪 - 2026-03-09](/2026/03/09/china-real-estate-policy.html)
-- [两会房地产政策解读](/2026/03/05/two-sessions-real-estate.html)
+- [中国楼市政策追踪 - 2026-03-09](/china-real-estate-policy/)
+- [两会房地产政策解读](/two-sessions-real-estate/)
 
 **实时数据**
 

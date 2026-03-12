@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #47
 
 redirect_from:
-  - /2026/03/13/tdd-vs-ai-first.html
+  - /tdd-vs-ai-first.html
 ---
 
 > **TL;DR**

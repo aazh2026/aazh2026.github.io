@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #32
 
 redirect_from:
-  - /2026/03/10/model-collapse-synthetic-data-death-spiral.html
+  - /model-collapse-synthetic-data-death-spiral.html
 ---
 
 > **TL;DR**> 
@@ -542,8 +542,8 @@ class AdaptiveTraining:
 - "Origins and Evolution of Data Poisoning" (Goldblum et al., 2022)
 
 **本系列相关**
-- [Clinejection之后：AI-Native安全框架](/2026/03/10/clinejection-ai-native-security.html) (AISE#28)
-- [为什么你的AI助手越用越笨？](/2026/03/09/context-rot.html) (第12篇)
+- [Clinejection之后：AI-Native安全框架](/clinejection-ai-native-security/) (AISE#28)
+- [为什么你的AI助手越用越笨？](/context-rot/) (第12篇)
 
 **行业实践**
 - OpenAI的数据过滤策略

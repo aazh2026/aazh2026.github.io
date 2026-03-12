@@ -6,7 +6,7 @@ tags: [OpenClaw, Skills, AI记忆, 效率工具]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/skill-hunter-v2.html
+  - /skill-hunter-v2.html
 ---
 
 # 技能猎手 #03 | 让你的AI告别「金鱼记忆」

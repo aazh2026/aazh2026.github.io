@@ -6,7 +6,7 @@ tags: [OpenClaw, AI记忆, 范式转移, 深度思考]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/skill-hunter-deep.html
+  - /skill-hunter-deep.html
 ---
 
 # 技能猎手 #03 | 当AI开始拥有「记忆」，人类还剩什么优势？

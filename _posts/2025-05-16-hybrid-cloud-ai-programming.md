@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #37
 
 redirect_from:
-  - /2026/03/11/hybrid-cloud-ai-programming.html
+  - /hybrid-cloud-ai-programming.html
 ---
 
 > **TL;DR**> 
@@ -601,9 +601,9 @@ user_preferences:
 ## 📚 延伸阅读
 
 **本系列相关**
-- [AISE框架：AI-Native软件工程理论体系](/2026/03/11/aise-framework-theory.html) (#34)
-- [大规模AI治理：三大支柱框架](/2026/03/09/large-scale-ai-governance.html) (#6)
-- [合规AI开发流程](/2026/03/11/compliant-ai-development-financial.html) (#36)
+- [AISE框架：AI-Native软件工程理论体系](/aise-framework-theory/) (#34)
+- [大规模AI治理：三大支柱框架](/large-scale-ai-governance/) (#6)
+- [合规AI开发流程](/compliant-ai-development-financial/) (#36)
 
 **技术参考**
 - 零信任架构（Zero Trust Architecture）

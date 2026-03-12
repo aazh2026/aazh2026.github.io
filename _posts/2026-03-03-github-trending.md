@@ -6,7 +6,7 @@ tags: [GitHub, 开源, AI趋势]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/github-trending.html
+  - /github-trending.html
 ---
 
 # GitHub趋势雷达 | 2026-03-03

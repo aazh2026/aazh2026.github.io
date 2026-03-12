@@ -6,7 +6,7 @@ tags: [AI伦理, OpenAI, 深度分析, 技术哲学]
 author: Aaron
 
 redirect_from:
-  - /2026/03/03/openai-military-ethics.html
+  - /openai-military-ethics.html
 ---
 
 # 当 OpenAI 拥抱军工：技术伦理的边界在哪里？

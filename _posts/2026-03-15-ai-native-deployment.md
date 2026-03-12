@@ -8,7 +8,7 @@ series: AI-Native软件工程系列 #20
 permalink: /2026/03/15/ai-native-deployment.html
 
 redirect_from:
-  - /2026/03/15/ai-native-deployment.html
+  - /ai-native-deployment.html
 ---
 
 > **TL;DR**
@@ -1104,13 +1104,13 @@ AI-Native部署不是关于技术，而是关于**信任**。
 ## 📚 系列关联阅读
 
 **AI-Native软件工程系列**
-- [#01 Context Engineering比Prompt Engineering更重要](/2026/03/09/context-engineering.html)
-- [#19 为什么传统架构模式正在失效？](/2026/03/09/ai-native-architecture-patterns.html)
-- [#20 AI-Native 部署与发布：智能交付流水线](/2026/03/15/ai-native-deployment.html) ← 当前文章
+- [#01 Context Engineering比Prompt Engineering更重要](/context-engineering/)
+- [#19 为什么传统架构模式正在失效？](/ai-native-architecture-patterns/)
+- [#20 AI-Native 部署与发布：智能交付流水线](/ai-native-deployment/) ← 当前文章
 
 **Agent OS 系列**
-- [Agent OS：软件的未来形态](/2026/03/10/agent-os-future-of-software.html)
-- [为什么你的 SaaS 需要 Agent Layer？](/2026/03/17/why-your-saas-needs-agent-layer.html)
+- [Agent OS：软件的未来形态](/agent-os-future-of-software/)
+- [为什么你的 SaaS 需要 Agent Layer？](/why-your-saas-needs-agent-layer/)
 
 ---
 

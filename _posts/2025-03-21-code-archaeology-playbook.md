@@ -7,7 +7,7 @@ author: Aaron
 series: 工程实践指南
 
 redirect_from:
-  - /2026/03/08/code-archaeology-playbook.html
+  - /code-archaeology-playbook.html
 ---
 
 # 代码考古学：新员工的系统化生存指南（AI时代升级版）

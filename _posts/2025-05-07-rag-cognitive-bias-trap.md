@@ -7,7 +7,7 @@ author: Aaron
 series: AI-Native软件工程系列 #33
 
 redirect_from:
-  - /2026/03/10/rag-cognitive-bias-trap.html
+  - /rag-cognitive-bias-trap.html
 ---
 
 > **TL;DR**> 
@@ -626,8 +626,8 @@ RAG生成回答
 - "Weapons of Math Destruction" (Cathy O'Neil, 2016)
 
 **本系列相关**
-- [生产环境幻觉治理](/2026/03/09/ai-hallucination-governance.html) (AISE#21)
-- [为什么你的AI助手越用越笨？](/2026/03/09/context-rot.html) (第12篇)
+- [生产环境幻觉治理](/ai-hallucination-governance/) (AISE#21)
+- [为什么你的AI助手越用越笨？](/context-rot/) (第12篇)
 
 **技术实践**
 - Google的多样化搜索结果算法

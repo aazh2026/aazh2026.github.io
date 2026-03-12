@@ -7,7 +7,7 @@ author: Aaron
 series: AI安全洞察
 
 redirect_from:
-  - /2026/03/08/ai-native-security-framework.html
+  - /ai-native-security-framework.html
 ---
 
 

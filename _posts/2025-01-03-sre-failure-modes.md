@@ -7,7 +7,7 @@ author: Aaron
 series: SRE思维实验室
 
 redirect_from:
-  - /2025/01/03/sre-failure-modes.html
+  - /sre-failure-modes.html
 ---
 
 # 为什么好的系统必须预设自己的死亡方式

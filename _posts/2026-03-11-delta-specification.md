@@ -6,7 +6,7 @@ tags: [AI-Native, SDLC, 增量开发, 需求管理]
 author: Aaron
 series: AI-Native SDLC 实践
 redirect_from:
-  - /2026/03/11/delta-specification.html
+  - /delta-specification.html
 ---
 
 # 增量需求不再头疼：Delta Specification 工作流

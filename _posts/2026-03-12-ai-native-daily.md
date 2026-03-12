@@ -6,7 +6,7 @@ tags: [AI-Native, Engineering, Daily]
 author: Aaron
 series: AI-Native Engineering Daily
 redirect_from:
-  - /2026/03/12/ai-native-daily.html
+  - /ai-native-daily.html
 ---
 
 ## 引言

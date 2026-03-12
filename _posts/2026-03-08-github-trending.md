@@ -6,7 +6,7 @@ tags: [GitHub, 开源, AI趋势, Agent框架, 群体智能]
 author: Aaron
 
 redirect_from:
-  - /2026/03/08/github-trending.html
+  - /github-trending.html
 ---
 
 # GitHub 趋势雷达 | 2026-03-08

@@ -6,7 +6,7 @@ tags: [AI-Native, 工程实践, Agentic AI, Replit, Simon Willison]
 author: Aaron
 series: AI-Native Engineering Weekly
 redirect_from:
-  - /2026/03/11/ai-native-weekly-top5.html
+  - /ai-native-weekly-top5.html
 ---
 
 # AI-Native Engineering Weekly | 本周精选
