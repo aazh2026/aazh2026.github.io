@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 没有银弹的终结？AI 是否是软件工程的银弹
-permalink: /no-silver-bullet-ai/
 date: 2026-03-15
 tags: [AI, 软件工程, 复杂性, 人月神话, 认知科学]
 description: 深入探讨Fred Brooks的"没有银弹"论断在AI时代的适用性，分析AI能解决什么、不能解决什么，以及它引入的新认知复杂度。

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: AI成本优化方法论：从粗放使用到精打细算
-permalink: /ai-cost-optimization/
 date: 2026-03-15T09:00:00+08:00
 tags: [AI成本, Token优化, 成本监控, 智能路由, 模型选择]
 series: aise

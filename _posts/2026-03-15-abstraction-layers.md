@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "抽象层级的艺术：从机器码到自然语言"
-permalink: /abstraction-layers/
 date: 2026-03-15 10:00:00 +0800
 categories: [编程, 架构, AI]
 tags: [abstraction, programming-languages, ai, software-engineering]

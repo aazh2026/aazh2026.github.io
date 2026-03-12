@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 接口隔离：人类与 AI 的契约设计
-permalink: /interface-segregation/
 date: 2026-03-15T10:00:00+08:00
 tags: [接口隔离, SOLID, Intent-Driven, AI-Native, 软件工程]
 
