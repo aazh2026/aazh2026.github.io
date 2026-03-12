@@ -39,26 +39,26 @@ permalink: /memory-engineering-series/
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 1 | [为什么AI需要像人类一样「分心」](/2026/03/03/memory-hierarchy.html) | 记忆的层次结构：工作记忆、情节记忆、语义记忆的分层处理 |
-| 2 | [上下文窗口的"虚拟内存"化](/2026/03/03/virtual-memory-rag.html) | 用操作系统的虚拟内存思想优化RAG系统 |
-| 3 | [知识图谱与向量检索：为什么1+1>3](/2026/03/03/kg-vector-fusion.html) | 向量检索的联想能力 + 知识图谱的推理能力 |
-| 4 | [Agent的记忆系统设计](/2026/04/07/agent-memory-system-design.html) | Working → Short-term → Long-term Memory 的完整架构 |
+| 1 | [为什么AI需要像人类一样「分心」](/memory-hierarchy/) | 记忆的层次结构：工作记忆、情节记忆、语义记忆的分层处理 |
+| 2 | [上下文窗口的"虚拟内存"化](/virtual-memory-rag/) | 用操作系统的虚拟内存思想优化RAG系统 |
+| 3 | [知识图谱与向量检索：为什么1+1>3](/kg-vector-fusion/) | 向量检索的联想能力 + 知识图谱的推理能力 |
+| 4 | [Agent的记忆系统设计](/agent-memory-system-design/) | Working → Short-term → Long-term Memory 的完整架构 |
 
 ### 第二部分：记忆治理 (#5-7)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 5 | [可解释的记忆：Agent如何解释"我为什么记得这个"](/2026/03/03/memory-explainability.html) | 记忆归因与可信度：让用户理解AI的记忆依据 |
-| 6 | [记忆的版本控制：当知识过时时怎么办](/2026/03/03/memory-versioning.html) | 知识的时效性管理与Schema迁移 |
-| 7 | [敏感记忆的保险箱](/2026/03/03/secure-memory.html) | 机密计算、数据隔离、隐私保护的工程实践 |
+| 5 | [可解释的记忆：Agent如何解释"我为什么记得这个"](/memory-explainability/) | 记忆归因与可信度：让用户理解AI的记忆依据 |
+| 6 | [记忆的版本控制：当知识过时时怎么办](/memory-versioning/) | 知识的时效性管理与Schema迁移 |
+| 7 | [敏感记忆的保险箱](/secure-memory/) | 机密计算、数据隔离、隐私保护的工程实践 |
 
 ### 第三部分：组织记忆 (#8-10)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 8 | [为什么你的代码正在变成负债？](/2026/03/09/knowledge-assetization.html) | 知识资产化：代码是负债，知识才是资产 |
-| 9 | [当专家退休时，公司失去的不是一个人，而是一部活历史](/2026/03/07/organizational-memory-externalization.html) | 组织记忆外化：从隐性知识到可传承的资产 |
-| 10 | [知识孤岛指数](/2026/03/12/knowledge-isolation-index.html) | 衡量集体理解度下降的预警指标 |
+| 8 | [为什么你的代码正在变成负债？](/knowledge-assetization/) | 知识资产化：代码是负债，知识才是资产 |
+| 9 | [当专家退休时，公司失去的不是一个人，而是一部活历史](/organizational-memory-externalization/) | 组织记忆外化：从隐性知识到可传承的资产 |
+| 10 | [知识孤岛指数](/knowledge-isolation-index/) | 衡量集体理解度下降的预警指标 |
 
 ---
 

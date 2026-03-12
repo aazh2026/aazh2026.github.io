@@ -41,24 +41,24 @@ AI正在重新定义安全的边界。
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 1 | [Clinejection攻击深度剖析](/2026/03/06/clinejection-attack-analysis.html) | GitHub Issue中的Prompt注入攻击向量 |
-| 2 | [Clinejection之后：AI-Native安全框架](/2026/03/08/ai-native-security-framework.html) | 从城堡模型到零信任的范式转移 |
-| 3 | [AI-Native安全框架：三环防护模型](/2026/03/10/clinejection-ai-native-security.html) | 感知-决策-执行的AI-Native安全新范式 |
+| 1 | [Clinejection攻击深度剖析](/clinejection-attack-analysis/) | GitHub Issue中的Prompt注入攻击向量 |
+| 2 | [Clinejection之后：AI-Native安全框架](/ai-native-security-framework/) | 从城堡模型到零信任的范式转移 |
+| 3 | [AI-Native安全框架：三环防护模型](/clinejection-ai-native-security/) | 感知-决策-执行的AI-Native安全新范式 |
 
 ### 第二部分：代码治理 (#4-5)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 4 | [当AI开始写代码，谁拥有这段代码的指纹？](/2026/03/07/code-watermark-traceability.html) | 代码水印、溯源与知识产权 |
-| 5 | [生成代码的License合规：SCA对AI代码的溯源与风险标记](/2026/03/13/ai-code-license-compliance.html) | AI代码的License传染风险与SCA增强 |
+| 4 | [当AI开始写代码，谁拥有这段代码的指纹？](/code-watermark-traceability/) | 代码水印、溯源与知识产权 |
+| 5 | [生成代码的License合规：SCA对AI代码的溯源与风险标记](/ai-code-license-compliance/) | AI代码的License传染风险与SCA增强 |
 
 ### 第三部分：安全左移 (#6-8)
 
 | # | 文章 | 核心观点 |
 |---|------|---------|
-| 6 | [AI辅助的DevSecOps：在生成阶段注入安全策略](/2026/03/12/ai-devsecops-shift-left.html) | 生成即安全：AI在代码生成时自动遵循安全规范 |
-| 7 | [安全左移的AI实现：需求分析阶段的隐私合规风险识别](/2026/03/13/privacy-compliance-ai-shift-left.html) | 需求阶段识别GDPR/个保法风险 |
-| 8 | [敏感记忆的保险箱：当Agent记住你的秘密](/2026/03/03/secure-memory.html) | 机密计算、数据隔离、隐私保护的工程实践 |
+| 6 | [AI辅助的DevSecOps：在生成阶段注入安全策略](/ai-devsecops-shift-left/) | 生成即安全：AI在代码生成时自动遵循安全规范 |
+| 7 | [安全左移的AI实现：需求分析阶段的隐私合规风险识别](/privacy-compliance-ai-shift-left/) | 需求阶段识别GDPR/个保法风险 |
+| 8 | [敏感记忆的保险箱：当Agent记住你的秘密](/secure-memory/) | 机密计算、数据隔离、隐私保护的工程实践 |
 
 ---
 
