@@ -43,6 +43,7 @@ permalink: /daily-signal/
 
 | 日期 | Reddit 情报站 | GitHub 趋势 | 市场简报 |
 |------|---------------|-------------|----------|
+| **03-14** | [Reddit Daily Digest](/2026/03/14/reddit-digest/) | [GitHub AI Trending](/2026/03/14/github-ai-trending/) | [Financial Morning Brief](/2026/03/14/financial-digest/) |
 | **03-13** | [Reddit Daily Digest](/2026/03/13/reddit-digest/) | [GitHub AI Trending](/2026/03/13/github-ai-trending/) | [Financial Morning Brief](/2026/03/13/financial-digest/) |
 | **03-12** | [Reddit Daily Digest](/2026/03/12/reddit-digest/) | [GitHub AI Trending](/2026/03/12/github-ai-trending/) | [Financial Morning Brief](/2026/03/12/financial-digest/) |
 | **03-11** | [Reddit Daily Digest](/2026/03/11/reddit-digest/) | [GitHub AI Trending](/2026/03/11/github-trending/) | [Financial Morning Brief](/2026/03/11/financial-digest/) |
@@ -64,8 +65,10 @@ permalink: /daily-signal/
 每日精选 Reddit 技术社区的核心讨论，覆盖 r/LocalLLaMA、r/MachineLearning、r/OpenAI 等高价值板块。
 
 **最近更新：**
-- [2026-03-11 Reddit Daily Digest](/2026/03/11/reddit-digest/) — 今日 Reddit 热点
-- [2026-03-10 Reddit Daily Digest](/2026/03/10/reddit-digest/) — Grok 3 开源、AI 公务员试点、边缘计算民主化
+- [2026-03-14 Reddit Daily Digest](/2026/03/14/reddit-digest/) — DOGE 数据泄露、Sam Altman 承认 AI 摧毁劳动平衡
+- [2026-03-13 Reddit Daily Digest](/2026/03/13/reddit-digest/) — 今日 Reddit 热点
+- [2026-03-12 Reddit Daily Digest](/2026/03/12/reddit-digest/) — AI 代码生成工具讨论
+- [2026-03-11 Reddit Daily Digest](/2026/03/11/reddit-digest/) — Grok 3 开源、AI 公务员试点、边缘计算民主化
 - [2026-03-09 Reddit Daily Digest](/2026/03/09/reddit-digest/) — Claude 3.7 评测、Cursor 效率争议
 - [2026-03-08 Reddit Daily Digest](/2026/03/08/reddit-digest/) — AI 四层权力结构讨论
 - [2026-03-07 Reddit Daily Digest](/2026/03/07/reddit-digest/) — OpenClaw vs Operator Pro 对比
@@ -77,8 +80,9 @@ permalink: /daily-signal/
 每日追踪 GitHub AI 相关项目趋势，发现开源世界的技术风向标。
 
 **最近更新：**
-- [2026-03-11 GitHub AI Trending](/2026/03/11/github-trending/) — 今日 GitHub 趋势
-- [2026-03-10 GitHub AI Trending](/2026/03/10/github-trending/) — 多模态 Agent 爆发、边缘推理革命
+- [2026-03-14 GitHub AI Trending](/2026/03/14/github-ai-trending/) — 今日 GitHub 趋势
+- [2026-03-13 GitHub AI Trending](/2026/03/13/github-ai-trending/) — 今日 GitHub 趋势
+- [2026-03-12 GitHub AI Trending](/2026/03/12/github-ai-trending/) — 多模态 Agent 爆发、边缘推理革命
 - [2026-03-09 GitHub AI Trending](/2026/03/09/github-trending/) — AI 代码审查工具、LLM 应用框架
 - [2026-03-08 GitHub AI Trending](/2026/03/08/github-trending/) — AI Native 安全工具
 - [2026-03-07 GitHub AI Trending](/2026/03/07/github-trending/) — 知识库即代码工具
@@ -90,8 +94,10 @@ permalink: /daily-signal/
 每日市场情报摘要，覆盖油价、股市、楼市与宏观经济动态。
 
 **最近更新：**
-- [2026-03-11 Financial Morning Brief](/2026/03/11/financial-digest/) — 今日市场简报
-- [2026-03-10 Financial Morning Brief](/2026/03/10/financial-digest/) — 油价过山车、中国楼市政策发力
+- [2026-03-14 Financial Morning Brief](/2026/03/14/financial-digest/) — 今日市场简报
+- [2026-03-13 Financial Morning Brief](/2026/03/13/financial-digest/) — 今日市场简报
+- [2026-03-12 Financial Morning Brief](/2026/03/12/financial-digest/) — 油价过山车、中国楼市政策发力
+- [2026-03-11 Financial Morning Brief](/2026/03/11/financial-digest/) — 油价过山车、中国楼市政策发力
 - [2026-03-08 Financial Morning Brief](/2026/03/08/financial-digest/) — 全球市场动态
 - [2026-03-07 Financial Morning Brief](/2026/03/07/financial-digest/) — 科技投资与 AI 估值
 - [2026-03-06 Financial Morning Brief](/2026/03/06/financial-digest/) — 金融合规 AI 需求
