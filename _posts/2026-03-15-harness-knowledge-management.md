@@ -2,7 +2,6 @@
 layout: post
 title: "地图而非百科全书：Harness 工程的知识管理革命"
 date: 2026-03-15T14:00:00+08:00
-permalink: /2026/03/15/harness-knowledge-management/
 tags: [AI-Native, Harness Engineering, Knowledge Management, Agent]
 author: Aaron
 series: AI-Native Engineering

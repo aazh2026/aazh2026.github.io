@@ -2,7 +2,6 @@
 layout: post
 title: "知识必须入库：Harness 工程的社会学维度"
 date: 2026-03-15T15:30:00+08:00
-permalink: /2026/03/15/knowledge-must-be-in-repo/
 tags: [AI-Native, Harness Engineering, Knowledge Management, Organization, Team Culture]
 author: Aaron
 series: AI-Native Engineering

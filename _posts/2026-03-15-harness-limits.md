@@ -2,7 +2,6 @@
 layout: post
 title: "「无手写代码」的极限：Harness 工程的边界探索"
 date: 2026-03-15T16:00:00+08:00
-permalink: /2026/03/15/harness-limits/
 tags: [AI-Native, Harness Engineering, Limits, Agent, Reality Check]
 author: Aaron
 series: AI-Native Engineering
