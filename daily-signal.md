@@ -43,6 +43,7 @@ permalink: /daily-signal/
 
 | 日期 | Reddit 情报站 | GitHub 趋势 | 市场简报 |
 |------|---------------|-------------|----------|
+| **03-16** | [Reddit Daily Digest](/2026/03/16/reddit-digest/) | [GitHub AI Trending](/2026/03/16/github-ai-trending/) | [Financial Morning Brief](/2026/03/16/financial-digest/) |
 | **03-15** | [Reddit Daily Digest](/2026/03/15/reddit-digest/) | [GitHub AI Trending](/2026/03/15/github-ai-trending/) | [Financial Morning Brief](/2026/03/15/financial-digest/) |
 | **03-14** | [Reddit Daily Digest](/2026/03/14/reddit-digest/) | [GitHub AI Trending](/2026/03/14/github-ai-trending/) | [Financial Morning Brief](/2026/03/14/financial-digest/) |
 | **03-13** | [Reddit Daily Digest](/2026/03/13/reddit-digest/) | [GitHub AI Trending](/2026/03/13/github-ai-trending/) | [Financial Morning Brief](/2026/03/13/financial-digest/) |
