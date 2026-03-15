@@ -632,8 +632,8 @@ AI 可以帮你写代码，但**无法替代你做出审美判断**。
 ---
 
 *延伸阅读：*
-- [Worse is Better 的重新审视](https://aazh2026.github.io/worse-is-better-revisited/)
-- [没有银弹的终结](https://aazh2026.github.io/no-silver-bullet-ai/)
-- [精益思维在 AI 软件开发中的应用](https://aazh2026.github.io/lean-thinking-ai/)
+- [Worse is Better 的重新审视](https://postcodeengineering.com/worse-is-better-revisited/)
+- [没有银弹的终结](https://postcodeengineering.com/no-silver-bullet-ai/)
+- [精益思维在 AI 软件开发中的应用](https://postcodeengineering.com/lean-thinking-ai/)
 
-*系列索引：* [AI-Native 软件工程系列](https://aazh2026.github.io/aise-series/)
+*系列索引：* [AI-Native 软件工程系列](https://postcodeengineering.com/aise-series/)

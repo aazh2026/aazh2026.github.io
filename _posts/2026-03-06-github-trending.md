@@ -98,7 +98,7 @@ redirect_from:
 - "Swarm Consensus"架构引发热议
 
 **相关阅读**：
-- [OpenClaw深度解析](https://aazh2026.github.io/openclaw-agent-swarm-consensus//)
+- [OpenClaw深度解析](https://postcodeengineering.com/openclaw-agent-swarm-consensus//)
 - [GitHub Repository](https://github.com/openclaw)
 
 ---
