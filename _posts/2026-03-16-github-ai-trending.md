@@ -10,7 +10,7 @@ redirect_from:
   - /github-ai-trending.html
 ---
 
-# GitHub AI Trending Daily | 2026年3月16日 星期一
+# 📊 GitHub AI Trending Daily | 2026年3月16日 星期一
 
 *每日追踪 GitHub 上最具活力的 AI 与机器学习开源项目*
 
