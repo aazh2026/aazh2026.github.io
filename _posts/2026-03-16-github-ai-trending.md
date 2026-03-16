@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "GitHub AI Trending Daily | 2026年3月16日 星期一"
-date: 2026-03-16 08:15:00 +0800
-category: DailySignal
+date: 2026-03-16T08:15:00+08:00
+permalink: /2026/03/16/github-ai-trending/
 tags: [GitHub, AI, DailySignal, 开源项目]
 series: GitHub AI Trending
+author: Aaron
+redirect_from:
+  - /github-ai-trending.html
 ---
 
 # GitHub AI Trending Daily | 2026年3月16日 星期一

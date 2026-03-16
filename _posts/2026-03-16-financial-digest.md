@@ -1,9 +1,12 @@
 ---
 layout: post
 title: "Financial Morning Brief | 2026年3月16日 星期一"
-date: 2026-03-16 08:30:00 +0800
-category: DailySignal
+date: 2026-03-16T08:30:00+08:00
+permalink: /2026/03/16/financial-digest/
 tags: [Finance, Market, DailySignal, 投资简报]
+author: Aaron
+redirect_from:
+  - /financial-digest.html
 ---
 
 # Financial Morning Brief | 2026年3月16日 星期一
