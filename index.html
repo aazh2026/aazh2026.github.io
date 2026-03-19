@@ -2,162 +2,652 @@
 layout: default
 ---
 
-<div class="home">
+{% comment %}
+  首页优化版 - 信息流重构
+  结构：Hero + Daily Signal 速览 + AI-Native Weekly + 文章列表
+{% endcomment %}
+
+<div class="home-optimized">
   
-  <!-- Hero Section -->
-  <section style="padding: 6rem 1rem 3rem; text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; margin: 0 -1.5rem 2rem -1.5rem; min-height: auto;">
-    <h1 style="font-size: clamp(1.5rem, 5vw, 2.5rem); margin: 0 auto 1rem; font-weight: 700; line-height: 1.3; max-width: 90%; word-wrap: break-word;">Aaron的博客</h1>
+  {% comment %} ===== Hero Section：最新深度文章 ===== {% endcomment %}
+  {% assign latest_deep_post = site.posts | where_exp: "post", "post.tags contains 'AI-Native'" | first %}
+  {% unless latest_deep_post %}
+    {% assign latest_deep_post = site.posts.first %}
+  {% endunless %}
+  
+  <section class="hero-section">
+    <div class="hero-badge">最新深度</div>
+    <h1 class="hero-title">
+      <a href="{{ latest_deep_post.url | relative_url }}">{{ latest_deep_post.title }}</a>
+    </h1>
     
-    <p style="font-size: clamp(0.95rem, 3vw, 1.1rem); opacity: 0.9; max-width: 600px; margin: 0 auto 1.5rem; padding: 0 1rem; line-height: 1.5;">
-      AI-Native软件工程 | 从代码到意图
+    <p class="hero-excerpt">
+      {% if latest_deep_post.excerpt %}
+        {{ latest_deep_post.excerpt | strip_html | truncate: 150 }}
+      {% else %}
+        {{ latest_deep_post.content | strip_html | truncate: 150 }}
+      {% endif %}
     </p>
     
-    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; padding: 0 0.5rem; max-width: 100%;">
-      <a href="/daily-signal/" 
-         style="background: white; color: #667eea; padding: 0.5rem 0.875rem; border-radius: 4px; text-decoration: none; font-weight: 500; font-size: 0.85rem; white-space: nowrap;">
-        📡 Daily Signal
-      </a>
-      <a href="/aise-series/" 
-         style="background: rgba(255,255,255,0.2); color: white; padding: 0.5rem 0.875rem; border-radius: 4px; text-decoration: none; font-weight: 500; border: 2px solid white; font-size: 0.85rem; white-space: nowrap;">
-        AISE系列
-      </a>
-      <a href="/agent-os-series/" 
-         style="background: transparent; color: white; padding: 0.5rem 0.875rem; border-radius: 4px; text-decoration: none; font-weight: 500; border: 2px solid rgba(255,255,255,0.5); font-size: 0.85rem; white-space: nowrap;">
-        🦞 Agent OS
-      </a>
-      <a href="/memory-engineering-series/" 
-         style="background: transparent; color: white; padding: 0.5rem 0.875rem; border-radius: 4px; text-decoration: none; font-weight: 500; border: 2px solid rgba(255,255,255,0.5); font-size: 0.85rem; white-space: nowrap;">
-        🧠 记忆工程
-      </a>
-      <a href="/ai-native-security-series/" 
-         style="background: transparent; color: white; padding: 0.5rem 0.875rem; border-radius: 4px; text-decoration: none; font-weight: 500; border: 2px solid rgba(255,255,255,0.5); font-size: 0.85rem; white-space: nowrap;">
-        🔒 AI安全
-      </a>
+    <div class="hero-meta">
+      <span class="hero-date">{{ latest_deep_post.date | date: "%Y年%m月%d日" }}</span>
+      <span class="hero-reading-time">{% include reading-time.html content=latest_deep_post.content %}</span>
+      {% if latest_deep_post.series %}
+      <span class="hero-series">{{ latest_deep_post.series }}</span>
+      {% endif %}
+    </div>
+    
+    <a href="{{ latest_deep_post.url | relative_url }}" class="hero-cta">
+      阅读全文 →
+    </a>
+  </section>
+
+  {% comment %} ===== Daily Signal 速览（3栏卡片） ===== {% endcomment %}
+  {% assign reddit_posts = site.posts | where_exp: "post", "post.tags contains 'Reddit'" | limit: 1 %}
+  {% assign github_posts = site.posts | where_exp: "post", "post.tags contains 'GitHub'" | limit: 1 %}
+  {% assign finance_posts = site.posts | where_exp: "post", "post.tags contains 'Finance'" | limit: 1 %}
+  
+  <section class="daily-signal-section">
+    <div class="section-header">
+      <h2>📡 Daily Signal</h2>
+      <a href="/daily-signal/" class="view-all-link">查看全部 →</a>
+    </div>
+    
+    <div class="signal-cards">
+      
+      {% comment %} Reddit Digest {% endcomment %}
+      <div class="signal-card reddit-card">
+        <div class="signal-icon">🔥</div>
+        <h3>Reddit Daily</h3>
+        {% for post in reddit_posts %}
+          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "Reddit Daily Digest | ", "" }}</a>
+          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
+        {% endfor %}
+        <a href="/tags/#Reddit" class="signal-link">浏览历史 →</a>
+      </div>
+      
+      {% comment %} GitHub Trending {% endcomment %}
+      <div class="signal-card github-card">
+        <div class="signal-icon">⭐</div>
+        <h3>GitHub Trending</h3>
+        {% for post in github_posts %}
+          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "GitHub AI Trending Daily | ", "" }}</a>
+          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
+        {% endfor %}
+        <a href="/tags/#GitHub" class="signal-link">浏览历史 →</a>
+      </div>
+      
+      {% comment %} Financial Brief {% endcomment %}
+      <div class="signal-card finance-card">
+        <div class="signal-icon">📈</div>
+        <h3>市场简报</h3>
+        {% for post in finance_posts %}
+          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "Financial Morning Brief | ", "" }}</a>
+          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
+        {% endfor %}
+        <a href="/tags/#Finance" class="signal-link">浏览历史 →</a>
+      </div>
+      
     </div>
   </section>
 
-  <!-- 站内搜索 -->
-  <section style="margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-    <h3 style="text-align: center; margin-bottom: 1rem;">🔍 搜索文章</h3>
-    {% include site-search.html %}
-  </section>
-
-  <!-- Featured Series -->
-  <section style="margin-bottom: 3rem;">
-    <h2 style="text-align: center; margin-bottom: 1.5rem;">📚 精选系列</h2>
+  {% comment %} ===== AI-Native Weekly ===== {% endcomment %}
+  {% assign weekly_posts = site.posts | where_exp: "post", "post.title contains 'AI-Native' and post.title contains 'Weekly'" | limit: 1 %}
+  
+  {% if weekly_posts.size > 0 %}
+  <section class="weekly-section">
+    <div class="weekly-badge">每周精选</div>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-      <!-- Daily Signal -->
-      <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">📡 Daily Signal | 每日信号</h3>
-        <p>从信息洪流中提取有价值的信号。每日精选 Reddit 热点、GitHub 趋势、市场动向。</p>
-        <p>
-          <span style="background: #e94560; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">每日更新</span>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">三大板块</span>
-        </p>
-        <a href="/daily-signal/" style="color: #e94560; font-weight: 500;">查看今日情报 →</a>
+    {% for post in weekly_posts %}
+    <div class="weekly-content">
+      <h2>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </h2>
+      
+      <p class="weekly-excerpt">
+        {% if post.excerpt %}
+          {{ post.excerpt | strip_html | truncate: 120 }}
+        {% else %}
+          {{ post.content | strip_html | truncate: 120 }}
+        {% endif %}
+      </p>
+      
+      <div class="weekly-meta">
+        <span class="weekly-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
+        <span class="weekly-tag">🔥 本周 Top 5</span>
       </div>
+    </div>
+    {% endfor %}
+    
+    <a href="/tags/#AI-Native" class="weekly-cta">浏览往期 →</a>
+  </section>
+  {% endif %}
 
-      <!-- AISE Series -->
-      <div style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">AI-Native软件工程</h3>
-        <p>探索AI如何重新定义软件工程的边界</p>
-        <p>
-          <span style="background: #667eea; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">58 篇文章</span>
-        </p>
-        <a href="/aise-series/" style="color: #667eea;">查看完整系列 →</a>
-      </div>
+  {% comment %} ===== 系列专题入口 ===== {% endcomment %}
+  <section class="series-section">
+    <h2 class="section-title">📚 系列专题</h2>
+    
+    <div class="series-grid">
       
-      <!-- Agent OS Series -->
-      <div style="background: #f8f9fa; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">🦞 Agent OS 系列</h3>
-        <p>从 SaaS 到 Agent OS：探索 AI-Native 软件工程的完整指南</p>
-        <p>
-          <span style="background: #e74c3c; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">10 篇文章</span>
-          <span style="background: #27ae60; color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">完结</span>
-        </p>
-        <a href="/agent-os-series/" style="color: #e74c3c;">查看完整系列 →</a>
-      </div>
+      <a href="/agent-os-series/" class="series-card">
+        <div class="series-icon">🦞</div>
+        <h3>Agent OS</h3>
+        <span class="series-count">10 篇 · 完结</span>
+      </a>
       
-      <!-- Memory Engineering Series -->
-      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">🧠 记忆工程系列</h3>
-        <p>从个体Agent到组织知识：AI-Native时代的记忆管理</p>
-        <p>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">10 篇文章</span>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">更新中</span>
-        </p>
-        <a href="/memory-engineering-series/" style="color: #ffd700; font-weight: 500;">查看完整系列 →</a>
-      </div>
+      <a href="/memory-engineering-series/" class="series-card">
+        <div class="series-icon">🧠</div>
+        <h3>记忆工程</h3>
+        <span class="series-count">10 篇 · 更新中</span>
+      </a>
       
-      <!-- AI-Native Security Series -->
-      <div style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">🔒 AI-Native 安全系列</h3>
-        <p>从边界防御到内生安全：AI时代的安全范式转移</p>
-        <p>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">8 篇文章</span>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">更新中</span>
-        </p>
-        <a href="/ai-native-security-series/" style="color: #ffd700; font-weight: 500;">查看完整系列 →</a>
-      </div>
+      <a href="/ai-native-security-series/" class="series-card">
+        <div class="series-icon">🔒</div>
+        <h3>AI-Native 安全</h3>
+        <span class="series-count">8 篇 · 更新中</span>
+      </a>
       
-      <!-- Timeless Principles Series -->
-      <div style="background: linear-gradient(135deg, #2c3e50 0%, #4a6741 100%); color: white; border-radius: 8px; padding: 1.5rem;">
-        <h3 style="margin-top: 0;">⏳ 穿越周期系列</h3>
-        <p>经典软件工程原则在AI时代的重构与演进</p>
-        <p>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem;">14 篇文章</span>
-          <span style="background: rgba(255,255,255,0.2); color: white; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.85rem; margin-left: 0.5rem;">完结</span>
-        </p>
-        <a href="/timeless-principles-series/" style="color: #ffd700; font-weight: 500;">查看完整系列 →</a>
-      </div>
+      <a href="/aise-series/" class="series-card">
+        <div class="series-icon">🤖</div>
+        <h3>AISE 系列</h3>
+        <span class="series-count">58 篇 · 更新中</span>
+      </a>
+      
     </div>
   </section>
 
-  <!-- Latest Posts -->
-  <section style="margin-bottom: 3rem;">
-    <h2>📝 最新文章</h2>
+  {% comment %} ===== 最新文章列表 ===== {% endcomment %}
+  <section class="latest-posts-section">
+    <div class="section-header">
+      <h2>📝 最新文章</h2>
+      <a href="/archive/" class="view-all-link">查看全部 →</a>
+    </div>
     
-    <ul class="post-list">
-      {% for post in site.posts limit:5 %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <h3 style="margin: 0.25rem 0;">
-          <a href="{{ post.url | relative_url }}" style="text-decoration: none;">{{ post.title }}</a>
+    <ul class="latest-posts-list">
+      {% for post in site.posts limit: 8 %}
+      <li class="post-item">
+        <div class="post-meta-line">
+          <span class="post-date">{{ post.date | date: "%m-%d" }}</span>
+          {% if post.series %}
+          <span class="post-series-tag">{{ post.series }}</span>
+          {% endif %}
+        </div>
+        
+        <h3 class="post-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h3>
+        
         {% if post.description %}
-        <p style="color: #666; margin: 0.25rem 0; font-size: 0.9rem;">{{ post.description | truncate: 100 }}</p>
+        <p class="post-desc">{{ post.description | truncate: 80 }}</p>
         {% endif %}
       </li>
       {% endfor %}
     </ul>
-    
-    <p style="text-align: center;"><a href="/archive">查看全部文章 →</a></p>
   </section>
 
-  <!-- Tags -->
-  <section style="margin-bottom: 3rem;">
-    <h2 style="text-align: center;">🏷️ 热门标签</h2>
+  {% comment %} ===== 标签云 ===== {% endcomment %}
+  <section class="tags-section">
+    <h2 class="section-title">🏷️ 热门标签</h2>
     
-    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+    <div class="tags-cloud">
       {% assign sorted_tags = site.tags | sort %}
-      {% for tag in sorted_tags limit:15 %}
-      <a href="/tags/#{{ tag[0] | slugify }}" 
-         style="background: #f0f0f0; color: #666; padding: 0.3rem 0.8rem; border-radius: 15px; text-decoration: none; font-size: 0.85rem;">
-        {{ tag[0] }} ({{ tag[1].size }})
+      {% for tag in sorted_tags limit: 20 %}
+      <a href="/tags/#{{ tag[0] | slugify }}" class="tag-link">
+        {{ tag[0] }}
+        <span class="tag-count">{{ tag[1].size }}</span>
       </a>
       {% endfor %}
     </div>
     
-    <p style="text-align: center; margin-top: 1rem;"><a href="/tags">查看全部标签 →</a></p>
-  </section>
-
-  <!-- About -->
-  <section style="text-align: center; padding: 2rem; background: #f8f9fa; border-radius: 8px;">
-    <h2>👋 关于 Post-Code Engineering</h2>
-    <p>探索 AI-Native 软件工程的边界。</p>
-    <p><strong>Post-Code</strong> 不是"没有代码"，而是"超越代码"。</p>
-    <p>当 AI 可以写代码时，软件工程还剩下什么？</p>
+    <p class="tags-more">
+      <a href="/tags/">查看全部 {{ site.tags.size }} 个标签 →</a>
+    </p>
   </section>
 
 </div>
+
+{% comment %} ===== 首页专用样式 ===== {% endcomment %}
+<style>
+  /* ========== 整体容器 ========== */
+  .home-optimized {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+  }
+
+  /* ========== Hero Section ========== */
+  .hero-section {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+    margin: 2rem 0 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 60%;
+    height: 200%;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    line-height: 1.3;
+  }
+  
+  .hero-title a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero-title a:hover {
+    text-decoration: underline;
+  }
+  
+  .hero-excerpt {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .hero-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .hero-series {
+    background: rgba(255,255,255,0.2);
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .hero-cta {
+    display: inline-block;
+    background: white;
+    color: var(--primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  /* ========== Daily Signal Section ========== */
+  .daily-signal-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-header h2 {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+  
+  .view-all-link {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+  
+  .view-all-link:hover {
+    color: var(--primary);
+  }
+  
+  .signal-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  
+  .signal-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+  
+  .signal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+  }
+  
+  .signal-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .signal-card h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 0.75rem;
+  }
+  
+  .signal-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+  
+  .signal-title:hover {
+    color: var(--primary);
+  }
+  
+  .signal-date {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+  
+  .signal-link {
+    font-size: 0.8125rem;
+    color: var(--primary);
+    text-decoration: none;
+  }
+  
+  .signal-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .signal-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* ========== Weekly Section ========== */
+  .weekly-section {
+    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+    border: 1px solid #d8b4fe;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  [data-theme="dark"] .weekly-section {
+    background: linear-gradient(135deg, #581c87 0%, #3b0764 100%);
+    border-color: #7c3aed;
+  }
+  
+  .weekly-badge {
+    display: inline-block;
+    background: #9333ea;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .weekly-content h2 {
+    font-size: 1.5rem;
+    margin: 0 0 0.75rem;
+  }
+  
+  .weekly-content h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  
+  [data-theme="dark"] .weekly-content h2 a {
+    color: white;
+  }
+  
+  .weekly-content h2 a:hover {
+    color: var(--primary);
+  }
+  
+  .weekly-excerpt {
+    color: var(--text-secondary);
+    margin: 0 0 1rem;
+    line-height: 1.6;
+  }
+  
+  [data-theme="dark"] .weekly-excerpt {
+    color: #d8b4fe;
+  }
+  
+  .weekly-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .weekly-tag {
+    background: #9333ea;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+  }
+  
+  .weekly-cta {
+    display: inline-block;
+    background: #9333ea;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .weekly-cta:hover {
+    background: #7c3aed;
+  }
+
+  /* ========== Series Section ========== */
+  .series-section {
+    margin-bottom: 3rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .series-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .series-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .series-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary);
+  }
+  
+  .series-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .series-card h3 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+  }
+  
+  .series-count {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  @media (max-width: 768px) {
+    .series-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ========== Latest Posts Section ========== */
+  .latest-posts-section {
+    margin-bottom: 3rem;
+  }
+  
+  .latest-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .post-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  
+  .post-item:last-child {
+    border-bottom: none;
+  }
+  
+  .post-meta-line {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-date {
+    font-size: 0.75rem;
+    color: var(--text-light);
+  }
+  
+  .post-series-tag {
+    font-size: 0.6875rem;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  
+  .post-item .post-title {
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem;
+    font-weight: 600;
+  }
+  
+  .post-item .post-title a {
+    color: var(--text-primary);
+    text-decoration: none;
+  }
+  
+  .post-item .post-title a:hover {
+    color: var(--primary);
+  }
+  
+  .post-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ========== Tags Section ========== */
+  .tags-section {
+    margin-bottom: 3rem;
+  }
+  
+  .tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tag-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.375rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.8125rem;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.15s ease;
+  }
+  
+  .tag-link:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+  }
+  
+  .tag-count {
+    font-size: 0.6875rem;
+    opacity: 0.7;
+  }
+  
+  .tags-more {
+    text-align: center;
+    margin: 0;
+  }
+  
+  .tags-more a {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+</style>

@@ -1,22 +1,80 @@
-<!-- 阅读进度条 -->
-<div id="reading-progress" 
-     style="position: fixed; top: 0; left: 0; width: 0%; height: 3px; 
-            background: linear-gradient(90deg, #667eea, #764ba2); 
-            z-index: 9999; transition: width 0.1s;"></div>
+{% comment %}
+  阅读进度条 - 固定在顶部，显示当前阅读进度
+{% endcomment %}
+
+<div class="reading-progress-container" aria-hidden="true">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<style>
+  /* 进度条容器 */
+  .reading-progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: transparent;
+    z-index: 1001;
+  }
+  
+  /* 进度条 */
+  .reading-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  }
+  
+  /* 深色模式下发光效果 */
+  [data-theme="dark"] .reading-progress-bar {
+    box-shadow: 0 0 15px rgba(129, 140, 248, 0.6);
+  }
+</style>
 
 <script>
 (function() {
-  var progressBar = document.getElementById('reading-progress');
-  
-  function updateProgress() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
-    progressBar.style.width = progress + '%';
+  function initReadingProgress() {
+    var progressBar = document.getElementById('reading-progress');
+    var article = document.querySelector('.post-content') || document.querySelector('article');
+    
+    if (!progressBar || !article) return;
+    
+    function updateProgress() {
+      var scrollTop = window.pageYOffset;
+      var docHeight = article.offsetHeight;
+      var winHeight = window.innerHeight;
+      
+      // 计算阅读进度
+      var scrollPercent = scrollTop / (docHeight - winHeight);
+      scrollPercent = Math.max(0, Math.min(1, scrollPercent)); // 限制在 0-1 之间
+      
+      progressBar.style.width = (scrollPercent * 100) + '%';
+    }
+    
+    // 使用 requestAnimationFrame 优化性能
+    var ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(function() {
+          updateProgress();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    
+    window.addEventListener('scroll', onScroll, { passive: true });
+    
+    // 初始状态
+    updateProgress();
   }
   
-  window.addEventListener('scroll', updateProgress, { passive: true });
-  window.addEventListener('resize', updateProgress);
-  updateProgress();
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initReadingProgress);
+  } else {
+    initReadingProgress();
+  }
 })();
 </script>
