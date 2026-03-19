@@ -57,38 +57,6 @@ layout: default
     </a>
   </section>
 
-  {% comment %} ===== AI-Native Weekly ===== {% endcomment %}
-  {% assign weekly_posts = site.posts | where_exp: "post", "post.title contains 'AI-Native' and post.title contains 'Weekly'" | limit: 1 %}
-
-  {% if weekly_posts.size > 0 %}
-  <section class="weekly-section">
-    <div class="weekly-badge">每周精选</div>
-
-    {% for post in weekly_posts %}
-    <div class="weekly-content">
-      <h2>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </h2>
-
-      <p class="weekly-excerpt">
-        {% if post.excerpt %}
-          {{ post.excerpt | strip_html | truncate: 120 }}
-        {% else %}
-          {{ post.content | strip_html | truncate: 120 }}
-        {% endif %}
-      </p>
-
-      <div class="weekly-meta">
-        <span class="weekly-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
-        <span class="weekly-tag">🔥 本周 Top 5</span>
-      </div>
-    </div>
-    {% endfor %}
-
-    <a href="/tags/#AI-Native" class="weekly-cta">浏览往期 →</a>
-  </section>
-  {% endif %}
-
   {% comment %} ===== 系列专题入口 ===== {% endcomment %}
   <section class="series-section">
     <h2 class="section-title">📚 系列专题</h2>
@@ -338,83 +306,6 @@ layout: default
 
   .view-all-link:hover {
     color: var(--primary);
-  }
-
-  /* ========== Weekly Section ========== */
-  .weekly-section {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 0.25rem;
-    padding: 1.25rem;
-    margin-bottom: 2rem;
-  }
-
-  .weekly-badge {
-    display: inline-block;
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 0.2rem 0.6rem;
-    border-radius: 0.25rem;
-    font-size: 0.6875rem;
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .weekly-content h2 {
-    font-size: 1.125rem;
-    margin: 0 0 0.5rem;
-  }
-
-  .weekly-content h2 a {
-    color: var(--text-primary);
-    text-decoration: none;
-  }
-
-  .weekly-content h2 a:hover {
-    color: var(--primary);
-  }
-
-  .weekly-excerpt {
-    color: var(--text-secondary);
-    margin: 0 0 0.75rem;
-    line-height: 1.5;
-    font-size: 0.9375rem;
-  }
-
-  .weekly-meta {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .weekly-tag {
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    color: var(--text-light);
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.25rem;
-    font-size: 0.6875rem;
-  }
-
-  .weekly-cta {
-    display: inline-block;
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    padding: 0.4rem 0.875rem;
-    border-radius: 0.25rem;
-    font-size: 0.8125rem;
-    font-weight: 500;
-    text-decoration: none;
-  }
-
-  .weekly-cta:hover {
-    border-color: var(--text-secondary);
-    color: var(--text-primary);
   }
 
   /* ========== Series Section ========== */
