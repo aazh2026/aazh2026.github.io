@@ -8,19 +8,34 @@ layout: default
 {% endcomment %}
 
 <div class="home-optimized">
-  
+
+  {% comment %} ===== Brand Hero：品牌展示区 ===== {% endcomment %}
+  <section class="brand-hero">
+    <div class="brand-logo">
+      <span class="brand-icon">◈</span>
+    </div>
+    <h1 class="brand-title">
+      <span class="brand-line1">POST-CODE</span>
+      <span class="brand-line2">ENGINEERING</span>
+    </h1>
+    <p class="brand-tagline">
+      AI-Native 软件工程实验室
+    </p>
+    <div class="brand-divider"></div>
+  </section>
+
   {% comment %} ===== Hero Section：最新深度文章 ===== {% endcomment %}
   {% assign latest_deep_post = site.posts | where_exp: "post", "post.tags contains 'AI-Native'" | first %}
   {% unless latest_deep_post %}
     {% assign latest_deep_post = site.posts.first %}
   {% endunless %}
-  
+
   <section class="hero-section">
     <div class="hero-badge">最新深度</div>
     <h1 class="hero-title">
       <a href="{{ latest_deep_post.url | relative_url }}">{{ latest_deep_post.title }}</a>
     </h1>
-    
+
     <p class="hero-excerpt">
       {% if latest_deep_post.excerpt %}
         {{ latest_deep_post.excerpt | strip_html | truncate: 150 }}
@@ -28,7 +43,7 @@ layout: default
         {{ latest_deep_post.content | strip_html | truncate: 150 }}
       {% endif %}
     </p>
-    
+
     <div class="hero-meta">
       <span class="hero-date">{{ latest_deep_post.date | date: "%Y年%m月%d日" }}</span>
       <span class="hero-reading-time">{% include reading-time.html content=latest_deep_post.content %}</span>
@@ -36,7 +51,7 @@ layout: default
       <span class="hero-series">{{ latest_deep_post.series }}</span>
       {% endif %}
     </div>
-    
+
     <a href="{{ latest_deep_post.url | relative_url }}" class="hero-cta">
       阅读全文 →
     </a>
@@ -44,17 +59,17 @@ layout: default
 
   {% comment %} ===== AI-Native Weekly ===== {% endcomment %}
   {% assign weekly_posts = site.posts | where_exp: "post", "post.title contains 'AI-Native' and post.title contains 'Weekly'" | limit: 1 %}
-  
+
   {% if weekly_posts.size > 0 %}
   <section class="weekly-section">
     <div class="weekly-badge">每周精选</div>
-    
+
     {% for post in weekly_posts %}
     <div class="weekly-content">
       <h2>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       </h2>
-      
+
       <p class="weekly-excerpt">
         {% if post.excerpt %}
           {{ post.excerpt | strip_html | truncate: 120 }}
@@ -62,14 +77,14 @@ layout: default
           {{ post.content | strip_html | truncate: 120 }}
         {% endif %}
       </p>
-      
+
       <div class="weekly-meta">
         <span class="weekly-date">{{ post.date | date: "%Y年%m月%d日" }}</span>
         <span class="weekly-tag">🔥 本周 Top 5</span>
       </div>
     </div>
     {% endfor %}
-    
+
     <a href="/tags/#AI-Native" class="weekly-cta">浏览往期 →</a>
   </section>
   {% endif %}
@@ -77,33 +92,33 @@ layout: default
   {% comment %} ===== 系列专题入口 ===== {% endcomment %}
   <section class="series-section">
     <h2 class="section-title">📚 系列专题</h2>
-    
+
     <div class="series-grid">
-      
+
       <a href="/agent-os-series/" class="series-card">
         <div class="series-icon">🦞</div>
         <h3>Agent OS</h3>
         <span class="series-count">10 篇 · 完结</span>
       </a>
-      
+
       <a href="/memory-engineering-series/" class="series-card">
         <div class="series-icon">🧠</div>
         <h3>记忆工程</h3>
         <span class="series-count">10 篇 · 更新中</span>
       </a>
-      
+
       <a href="/ai-native-security-series/" class="series-card">
         <div class="series-icon">🔒</div>
         <h3>AI-Native 安全</h3>
         <span class="series-count">8 篇 · 更新中</span>
       </a>
-      
+
       <a href="/aise-series/" class="series-card">
         <div class="series-icon">🤖</div>
         <h3>AISE 系列</h3>
         <span class="series-count">58 篇 · 更新中</span>
       </a>
-      
+
     </div>
   </section>
 
@@ -113,7 +128,7 @@ layout: default
       <h2>📝 最新文章</h2>
       <a href="/archive/" class="view-all-link">查看全部 →</a>
     </div>
-    
+
     <ul class="latest-posts-list">
       {% for post in site.posts limit: 8 %}
       <li class="post-item">
@@ -123,11 +138,11 @@ layout: default
           <span class="post-series-tag">{{ post.series }}</span>
           {% endif %}
         </div>
-        
+
         <h3 class="post-title">
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </h3>
-        
+
         {% if post.description %}
         <p class="post-desc">{{ post.description | truncate: 80 }}</p>
         {% endif %}
@@ -139,7 +154,7 @@ layout: default
   {% comment %} ===== 标签云 ===== {% endcomment %}
   <section class="tags-section">
     <h2 class="section-title">🏷️ 热门标签</h2>
-    
+
     <div class="tags-cloud">
       {% assign sorted_tags = site.tags | sort %}
       {% for tag in sorted_tags limit: 20 %}
@@ -149,7 +164,7 @@ layout: default
       </a>
       {% endfor %}
     </div>
-    
+
     <p class="tags-more">
       <a href="/tags/">查看全部 {{ site.tags.size }} 个标签 →</a>
     </p>
@@ -166,6 +181,59 @@ layout: default
     padding: 0 1rem 2rem;
   }
 
+  /* ========== Brand Hero ========== */
+  .brand-hero {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .brand-logo {
+    margin-bottom: 1rem;
+  }
+  
+  .brand-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .brand-title {
+    margin: 0 0 0.75rem;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+  }
+  
+  .brand-line1 {
+    display: block;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--text-primary);
+  }
+  
+  .brand-line2 {
+    display: block;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    color: var(--primary);
+  }
+  
+  .brand-tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0 0 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  
+  .brand-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+
   /* ========== Hero Section ========== */
   .hero-section {
     background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
@@ -176,7 +244,7 @@ layout: default
     position: relative;
     overflow: hidden;
   }
-  
+
   .hero-section::before {
     content: '';
     position: absolute;
@@ -187,7 +255,7 @@ layout: default
     background: radial-gradient(ellipse, rgba(255,255,255,0.1) 0%, transparent 70%);
     pointer-events: none;
   }
-  
+
   .hero-badge {
     display: inline-block;
     background: rgba(255,255,255,0.2);
@@ -200,7 +268,7 @@ layout: default
     margin-bottom: 0.75rem;
     color: white;
   }
-  
+
   .hero-title {
     font-size: 1.5rem;
     font-weight: 700;
@@ -208,16 +276,16 @@ layout: default
     line-height: 1.3;
     color: white;
   }
-  
+
   .hero-title a {
     color: white;
     text-decoration: none;
   }
-  
+
   .hero-title a:hover {
     text-decoration: underline;
   }
-  
+
   .hero-excerpt {
     font-size: 0.9375rem;
     opacity: 0.9;
@@ -225,7 +293,7 @@ layout: default
     line-height: 1.6;
     color: white;
   }
-  
+
   .hero-meta {
     display: flex;
     gap: 1rem;
@@ -235,14 +303,14 @@ layout: default
     flex-wrap: wrap;
     color: white;
   }
-  
+
   .hero-series {
     background: rgba(255,255,255,0.2);
     padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
     color: white;
   }
-  
+
   .hero-cta {
     display: inline-block;
     background: white;
@@ -254,7 +322,7 @@ layout: default
     text-decoration: none;
     transition: all 0.2s ease;
   }
-  
+
   .hero-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -269,18 +337,18 @@ layout: default
     align-items: center;
     margin-bottom: 1rem;
   }
-  
+
   .section-header h2 {
     margin: 0;
     font-size: 1.125rem;
   }
-  
+
   .view-all-link {
     font-size: 0.875rem;
     color: var(--text-secondary);
     text-decoration: none;
   }
-  
+
   .view-all-link:hover {
     color: var(--primary);
   }
@@ -293,11 +361,11 @@ layout: default
     padding: 1.25rem;
     margin-bottom: 1.5rem;
   }
-  
+
   [data-theme="dark"] .weekly-section {
     border-color: #7c3aed;
   }
-  
+
   .weekly-badge {
     display: inline-block;
     background: #9333ea;
@@ -308,43 +376,43 @@ layout: default
     font-weight: 600;
     margin-bottom: 0.75rem;
   }
-  
+
   .weekly-content h2 {
     font-size: 1.25rem;
     margin: 0 0 0.5rem;
   }
-  
+
   .weekly-content h2 a {
     color: var(--text-primary);
     text-decoration: none;
   }
-  
+
   [data-theme="dark"] .weekly-content h2 a {
     color: white;
   }
-  
+
   .weekly-content h2 a:hover {
     color: var(--primary);
   }
-  
+
   .weekly-excerpt {
     color: var(--text-secondary);
     margin: 0 0 0.75rem;
     line-height: 1.5;
     font-size: 0.9375rem;
   }
-  
+
   [data-theme="dark"] .weekly-excerpt {
     color: #d8b4fe;
   }
-  
+
   .weekly-meta {
     display: flex;
     gap: 0.75rem;
     align-items: center;
     margin-bottom: 1rem;
   }
-  
+
   .weekly-tag {
     background: #9333ea;
     color: white;
@@ -352,7 +420,7 @@ layout: default
     border-radius: 0.25rem;
     font-size: 0.6875rem;
   }
-  
+
   .weekly-cta {
     display: inline-block;
     background: #9333ea;
@@ -363,7 +431,7 @@ layout: default
     font-weight: 500;
     text-decoration: none;
   }
-  
+
   .weekly-cta:hover {
     background: #7c3aed;
   }
@@ -372,18 +440,18 @@ layout: default
   .series-section {
     margin-bottom: 1.5rem;
   }
-  
+
   .section-title {
     font-size: 1.125rem;
     margin-bottom: 1rem;
   }
-  
+
   .series-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0.75rem;
   }
-  
+
   .series-card {
     background: var(--bg-primary);
     border: 1px solid var(--border);
@@ -393,28 +461,28 @@ layout: default
     text-decoration: none;
     transition: all 0.15s ease;
   }
-  
+
   .series-card:hover {
     border-color: var(--primary);
     background: var(--bg-secondary);
   }
-  
+
   .series-icon {
     font-size: 2rem;
     margin-bottom: 0.25rem;
   }
-  
+
   .series-card h3 {
     font-size: 0.9375rem;
     color: var(--text-primary);
     margin: 0 0 0.25rem;
   }
-  
+
   .series-count {
     font-size: 0.6875rem;
     color: var(--text-light);
   }
-  
+
   @media (max-width: 768px) {
     .series-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -425,34 +493,34 @@ layout: default
   .latest-posts-section {
     margin-bottom: 1.5rem;
   }
-  
+
   .latest-posts-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .post-item {
     padding: 0.875rem 0;
     border-bottom: 1px solid var(--border-light);
   }
-  
+
   .post-item:last-child {
     border-bottom: none;
   }
-  
+
   .post-meta-line {
     display: flex;
     gap: 0.5rem;
     align-items: center;
     margin-bottom: 0.375rem;
   }
-  
+
   .post-date {
     font-size: 0.6875rem;
     color: var(--text-light);
   }
-  
+
   .post-series-tag {
     font-size: 0.625rem;
     background: var(--bg-secondary);
@@ -462,22 +530,22 @@ layout: default
     text-transform: uppercase;
     letter-spacing: 0.02em;
   }
-  
+
   .post-item .post-title {
     font-size: 1rem;
     margin: 0 0 0.375rem;
     font-weight: 600;
   }
-  
+
   .post-item .post-title a {
     color: var(--text-primary);
     text-decoration: none;
   }
-  
+
   .post-item .post-title a:hover {
     color: var(--primary);
   }
-  
+
   .post-desc {
     font-size: 0.8125rem;
     color: var(--text-secondary);
@@ -489,14 +557,14 @@ layout: default
   .tags-section {
     margin-bottom: 1.5rem;
   }
-  
+
   .tags-cloud {
     display: flex;
     flex-wrap: wrap;
     gap: 0.375rem;
     margin-bottom: 0.75rem;
   }
-  
+
   .tag-link {
     display: inline-flex;
     align-items: center;
@@ -510,23 +578,23 @@ layout: default
     border: 1px solid var(--border);
     transition: all 0.15s ease;
   }
-  
+
   .tag-link:hover {
     background: var(--bg-secondary);
     border-color: var(--primary);
     color: var(--primary);
   }
-  
+
   .tag-count {
     font-size: 0.625rem;
     opacity: 0.7;
   }
-  
+
   .tags-more {
     text-align: center;
     margin: 0;
   }
-  
+
   .tags-more a {
     color: var(--text-secondary);
     font-size: 0.8125rem;

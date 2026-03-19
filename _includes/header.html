@@ -2,7 +2,8 @@
   <div class="wrapper">
     <!-- 左侧：Logo/标题 -->
     <a class="site-brand" rel="author" href="{{ "/" | relative_url }}">
-      <span class="site-title">{{ site.title | escape }}</span>
+      <span class="site-brand-icon">◈</span>
+      <span class="site-brand-text">P-CODE</span>
     </a>
     
     <!-- 移动端菜单按钮 -->
@@ -68,11 +69,29 @@
   /* 品牌区域 */
   .site-brand {
     text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 1.25rem;
+    color: var(--text-primary);
+    font-weight: 800;
+    font-size: 1.125rem;
     white-space: nowrap;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    letter-spacing: -0.02em;
+  }
+  
+  .site-brand:hover {
+    color: var(--primary);
+  }
+  
+  .site-brand-icon {
+    color: var(--primary);
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+  
+  .site-brand-text {
+    font-weight: 800;
   }
   
   [data-theme="dark"] .site-brand {
