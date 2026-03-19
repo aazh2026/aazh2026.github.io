@@ -42,55 +42,6 @@ layout: default
     </a>
   </section>
 
-  {% comment %} ===== Daily Signal 速览（3栏卡片） ===== {% endcomment %}
-  {% assign reddit_posts = site.posts | where_exp: "post", "post.tags contains 'Reddit'" | limit: 1 %}
-  {% assign github_posts = site.posts | where_exp: "post", "post.tags contains 'GitHub'" | limit: 1 %}
-  {% assign finance_posts = site.posts | where_exp: "post", "post.tags contains 'Finance'" | limit: 1 %}
-  
-  <section class="daily-signal-section">
-    <div class="section-header">
-      <h2>📡 Daily Signal</h2>
-      <a href="/daily-signal/" class="view-all-link">查看全部 →</a>
-    </div>
-    
-    <div class="signal-cards">
-      
-      {% comment %} Reddit Digest {% endcomment %}
-      <div class="signal-card reddit-card">
-        <div class="signal-icon">🔥</div>
-        <h3>Reddit Daily</h3>
-        {% for post in reddit_posts %}
-          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "Reddit Daily Digest | ", "" }}</a>
-          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
-        {% endfor %}
-        <a href="/tags/#Reddit" class="signal-link">浏览历史 →</a>
-      </div>
-      
-      {% comment %} GitHub Trending {% endcomment %}
-      <div class="signal-card github-card">
-        <div class="signal-icon">⭐</div>
-        <h3>GitHub Trending</h3>
-        {% for post in github_posts %}
-          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "GitHub AI Trending Daily | ", "" }}</a>
-          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
-        {% endfor %}
-        <a href="/tags/#GitHub" class="signal-link">浏览历史 →</a>
-      </div>
-      
-      {% comment %} Financial Brief {% endcomment %}
-      <div class="signal-card finance-card">
-        <div class="signal-icon">📈</div>
-        <h3>市场简报</h3>
-        {% for post in finance_posts %}
-          <a href="{{ post.url | relative_url }}" class="signal-title">{{ post.title | replace: "Financial Morning Brief | ", "" }}</a>
-          <span class="signal-date">{{ post.date | date: "%m月%d日" }}</span>
-        {% endfor %}
-        <a href="/tags/#Finance" class="signal-link">浏览历史 →</a>
-      </div>
-      
-    </div>
-  </section>
-
   {% comment %} ===== AI-Native Weekly ===== {% endcomment %}
   {% assign weekly_posts = site.posts | where_exp: "post", "post.title contains 'AI-Native' and post.title contains 'Weekly'" | limit: 1 %}
   
@@ -217,7 +168,7 @@ layout: default
 
   /* ========== Hero Section ========== */
   .hero-section {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
     color: white;
     padding: 2rem 1.5rem;
     border-radius: 1rem;
@@ -247,6 +198,7 @@ layout: default
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.75rem;
+    color: white;
   }
   
   .hero-title {
@@ -254,6 +206,7 @@ layout: default
     font-weight: 700;
     margin: 0 0 0.75rem;
     line-height: 1.3;
+    color: white;
   }
   
   .hero-title a {
@@ -270,6 +223,7 @@ layout: default
     opacity: 0.9;
     margin: 0 0 1rem;
     line-height: 1.6;
+    color: white;
   }
   
   .hero-meta {
@@ -279,18 +233,20 @@ layout: default
     opacity: 0.8;
     margin-bottom: 1rem;
     flex-wrap: wrap;
+    color: white;
   }
   
   .hero-series {
     background: rgba(255,255,255,0.2);
     padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
+    color: white;
   }
   
   .hero-cta {
     display: inline-block;
     background: white;
-    color: var(--primary);
+    color: #6366f1;
     padding: 0.625rem 1.25rem;
     border-radius: 0.5rem;
     font-weight: 600;
@@ -302,13 +258,11 @@ layout: default
   .hero-cta:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    background: white;
+    color: #4f46e5;
   }
 
-  /* ========== Daily Signal Section ========== */
-  .daily-signal-section {
-    margin-bottom: 2rem;
-  }
-  
+  /* ========== Weekly Section ========== */
   .section-header {
     display: flex;
     justify-content: space-between;
@@ -329,85 +283,6 @@ layout: default
   
   .view-all-link:hover {
     color: var(--primary);
-  }
-  
-  .signal-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .signal-card {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    transition: all 0.2s ease;
-  }
-  
-  .signal-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
-    border-color: var(--primary);
-  }
-  
-  .signal-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-  }
-  
-  .signal-card h3 {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin: 0 0 0.5rem;
-  }
-  
-  .signal-title {
-    display: block;
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-decoration: none;
-    margin-bottom: 0.25rem;
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .signal-title:hover {
-    color: var(--primary);
-  }
-  
-  .signal-date {
-    display: block;
-    font-size: 0.6875rem;
-    color: var(--text-light);
-    margin-bottom: 0.5rem;
-  }
-  
-  .signal-link {
-    font-size: 0.75rem;
-    color: var(--primary);
-    text-decoration: none;
-  }
-  
-  .signal-link:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    .signal-cards {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
-    }
-    
-    .signal-card {
-      padding: 0.875rem;
-    }
   }
 
   /* ========== Weekly Section ========== */
