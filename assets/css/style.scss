@@ -86,10 +86,14 @@ body {
   background: var(--bg-primary);
 }
 
-/* 链接样式 */
+/* 引入 Merriweather 衬线字体 */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+/* 链接样式 - 传统下划线 */
 a {
   color: var(--primary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
   transition: all 0.2s ease;
 }
 
@@ -97,36 +101,77 @@ a:hover {
   color: var(--primary-dark);
 }
 
-/* 按钮 */
+/* 导航链接无下划线 */
+.site-nav a,
+.post-title a,
+.hero-title a,
+.series-card,
+.signal-card a,
+.tag-link,
+.view-all-link {
+  text-decoration: none;
+}
+
+/* 文章正文使用衬线字体 */
+.post-content {
+  font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+/* 文章正文链接 */
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* 代码保持等宽字体 */
+.post-content code,
+.post-content pre {
+  font-family: var(--font-mono);
+}
+
+/* 标题保持无衬线 */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-family: var(--font-sans);
+}
+
+/* 按钮 - 扁平化 */
 .btn-primary,
 .btn-secondary {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 0.625rem 1.25rem;
   font-weight: 500;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .btn-primary {
   background: var(--primary);
   color: white;
+  border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
   background: var(--primary-dark);
+  border-color: var(--primary-dark);
   color: white;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow);
 }
 
 .btn-secondary {
-  background: var(--bg-secondary);
+  background: transparent;
   color: var(--text-primary);
   border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background: var(--border-light);
+  background: var(--bg-secondary);
+  border-color: var(--text-secondary);
 }
 
 /* 导航 */
@@ -434,11 +479,11 @@ a:hover {
   font-size: 1.125rem;
 }
 
-/* 文章页面 */
+/* 文章页面 - 收窄宽度 */
 .post {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1.5rem;
 }
 
 .post-header {
@@ -448,10 +493,11 @@ a:hover {
 }
 
 .post-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.25;
+  font-family: var(--font-sans);
 }
 
 .post-meta {
@@ -460,6 +506,7 @@ a:hover {
   flex-wrap: wrap;
   color: var(--text-secondary);
   font-size: 0.875rem;
+  font-family: var(--font-sans);
 }
 
 .post-content {

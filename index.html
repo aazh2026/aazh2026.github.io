@@ -287,16 +287,14 @@ layout: default
 
   /* ========== Weekly Section ========== */
   .weekly-section {
-    background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+    background: var(--bg-primary);
     border: 1px solid #d8b4fe;
-    border-radius: 0.75rem;
+    border-radius: 0.25rem;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
-    position: relative;
   }
   
   [data-theme="dark"] .weekly-section {
-    background: linear-gradient(135deg, #581c87 0%, #3b0764 100%);
     border-color: #7c3aed;
   }
   
@@ -387,19 +385,18 @@ layout: default
   }
   
   .series-card {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     border: 1px solid var(--border);
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease;
   }
   
   .series-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
     border-color: var(--primary);
+    background: var(--bg-secondary);
   }
   
   .series-icon {
@@ -504,10 +501,10 @@ layout: default
     display: inline-flex;
     align-items: center;
     gap: 0.25rem;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     color: var(--text-secondary);
     padding: 0.25rem 0.625rem;
-    border-radius: 1rem;
+    border-radius: 0.25rem;
     font-size: 0.75rem;
     text-decoration: none;
     border: 1px solid var(--border);
@@ -515,10 +512,9 @@ layout: default
   }
   
   .tag-link:hover {
-    background: var(--primary);
-    color: white;
+    background: var(--bg-secondary);
     border-color: var(--primary);
-    transform: translateY(-1px);
+    color: var(--primary);
   }
   
   .tag-count {
