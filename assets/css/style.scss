@@ -29,9 +29,47 @@
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   
+  /* 代码背景 */
+  --code-bg: #f6f8fa;
+  --code-border: #d0d7de;
+  --code-text: #24292f;
+  
   /* 字体 */
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "SF Mono", Monaco, Inconsolata, "Fira Code", monospace;
+}
+
+/* 夜间模式 */
+[data-theme="dark"] {
+  /* 主色调 - 保持品牌色但调整亮度 */
+  --primary: #818cf8;      /* 更亮的靛蓝 */
+  --primary-dark: #6366f1;
+  --accent: #fbbf24;       /* 保持琥珀 */
+  --accent-light: #fcd34d;
+  
+  /* 文字颜色 - 反转 */
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-light: #9ca3af;
+  
+  /* 背景 - 深色 */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-dark: #020617;
+  
+  /* 边框 */
+  --border: #334155;
+  --border-light: #1e293b;
+  
+  /* 阴影 - 更柔和 */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  
+  /* 代码背景 - GitHub Dark */
+  --code-bg: #161b22;
+  --code-border: #30363d;
+  --code-text: #c9d1d9;
 }
 
 /* 基础重置 */
@@ -818,19 +856,20 @@ a:hover {
 }
 /* 代码样式 - GitHub风格 */
 .post-content code {
-  background: #f6f8fa;
+  background: var(--code-bg);
   padding: 0.2rem 0.4rem;
   border-radius: 0.375rem;
   font-family: "SF Mono", Monaco, Inconsolata, "Fira Code", Consolas, monospace;
   font-size: 0.85em;
-  color: #24292f;
-  border: 1px solid #d0d7de;
+  color: var(--code-text);
+  border: 1px solid var(--code-border);
+  transition: all 0.2s ease;
 }
 
 .post-content pre {
-  background: #f6f8fa;
-  border: 1px solid #d0d7de;
-  color: #24292f;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  color: var(--code-text);
   padding: 1rem 1.25rem;
   border-radius: 0.5rem;
   overflow-x: auto;
@@ -838,6 +877,40 @@ a:hover {
   font-family: "SF Mono", Monaco, Inconsolata, "Fira Code", Consolas, monospace;
   font-size: 0.85rem;
   line-height: 1.65;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+/* 代码块复制按钮 */
+.post-content pre .copy-code-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.post-content pre:hover .copy-code-btn {
+  opacity: 1;
+}
+
+.post-content pre .copy-code-btn:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.post-content pre .copy-code-btn.copied {
+  background: #22c55e;
+  color: white;
+  border-color: #22c55e;
 }
 
 .post-content pre code {
@@ -848,34 +921,135 @@ a:hover {
   font-size: inherit;
 }
 
-/* 代码语法高亮 */
-.post-content .c, .post-content .cm, .post-content .cp, .post-content .c1, .post-content .cs {
+/* 代码语言标识 */
+.post-content pre::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding: 0.25rem 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 0.25rem 0.25rem;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* 代码语法高亮 - 亮色模式 */
+:root .post-content .c,
+:root .post-content .cm,
+:root .post-content .cp,
+:root .post-content .c1,
+:root .post-content .cs {
   color: #6e7781;
   font-style: italic;
 }
 
-.post-content .k, .post-content .kc, .post-content .kd, .post-content .kn, .post-content .kp, .post-content .kr, .post-content .kt {
+:root .post-content .k,
+:root .post-content .kc,
+:root .post-content .kd,
+:root .post-content .kn,
+:root .post-content .kp,
+:root .post-content .kr,
+:root .post-content .kt {
   color: #cf222e;
 }
 
-.post-content .s, .post-content .sb, .post-content .sc, .post-content .sd, .post-content .s2, .post-content .se, .post-content .sh, .post-content .si, .post-content .sx, .post-content .s1 {
+:root .post-content .s,
+:root .post-content .sb,
+:root .post-content .sc,
+:root .post-content .sd,
+:root .post-content .s2,
+:root .post-content .se,
+:root .post-content .sh,
+:root .post-content .si,
+:root .post-content .sx,
+:root .post-content .s1 {
   color: #0a3069;
 }
 
-.post-content .nt, .post-content .nf, .post-content .nc {
+:root .post-content .nt,
+:root .post-content .nf,
+:root .post-content .nc {
   color: #8250df;
 }
 
-.post-content .na, .post-content .nv {
+:root .post-content .na,
+:root .post-content .nv {
   color: #0550ae;
 }
 
-.post-content .m, .post-content .mf, .post-content .mh, .post-content .mi, .post-content .mo {
+:root .post-content .m,
+:root .post-content .mf,
+:root .post-content .mh,
+:root .post-content .mi,
+:root .post-content .mo {
   color: #0550ae;
 }
 
-.post-content .o, .post-content .ow {
+:root .post-content .o,
+:root .post-content .ow {
   color: #cf222e;
+}
+
+/* 代码语法高亮 - 深色模式 */
+[data-theme="dark"] .post-content .c,
+[data-theme="dark"] .post-content .cm,
+[data-theme="dark"] .post-content .cp,
+[data-theme="dark"] .post-content .c1,
+[data-theme="dark"] .post-content .cs {
+  color: #8b949e;
+  font-style: italic;
+}
+
+[data-theme="dark"] .post-content .k,
+[data-theme="dark"] .post-content .kc,
+[data-theme="dark"] .post-content .kd,
+[data-theme="dark"] .post-content .kn,
+[data-theme="dark"] .post-content .kp,
+[data-theme="dark"] .post-content .kr,
+[data-theme="dark"] .post-content .kt {
+  color: #ff7b72;
+}
+
+[data-theme="dark"] .post-content .s,
+[data-theme="dark"] .post-content .sb,
+[data-theme="dark"] .post-content .sc,
+[data-theme="dark"] .post-content .sd,
+[data-theme="dark"] .post-content .s2,
+[data-theme="dark"] .post-content .se,
+[data-theme="dark"] .post-content .sh,
+[data-theme="dark"] .post-content .si,
+[data-theme="dark"] .post-content .sx,
+[data-theme="dark"] .post-content .s1 {
+  color: #a5d6ff;
+}
+
+[data-theme="dark"] .post-content .nt,
+[data-theme="dark"] .post-content .nf,
+[data-theme="dark"] .post-content .nc {
+  color: #d2a8ff;
+}
+
+[data-theme="dark"] .post-content .na,
+[data-theme="dark"] .post-content .nv {
+  color: #79c0ff;
+}
+
+[data-theme="dark"] .post-content .m,
+[data-theme="dark"] .post-content .mf,
+[data-theme="dark"] .post-content .mh,
+[data-theme="dark"] .post-content .mi,
+[data-theme="dark"] .post-content .mo {
+  color: #79c0ff;
+}
+
+[data-theme="dark"] .post-content .o,
+[data-theme="dark"] .post-content .ow {
+  color: #ff7b72;
 }
 
 

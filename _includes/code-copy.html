@@ -1,42 +1,114 @@
-<!-- 代码复制按钮 -->
+{% comment %}
+  代码复制功能 - 为所有代码块添加复制按钮
+{% endcomment %}
+
 <script>
 (function() {
-  document.querySelectorAll('pre > code').forEach(function(codeBlock) {
-    var pre = codeBlock.parentElement;
+  function initCodeCopy() {
+    var codeBlocks = document.querySelectorAll('.post-content pre, .highlight pre');
     
-    var button = document.createElement('button');
-    button.innerHTML = '📋';
-    button.title = '复制代码';
-    button.style.cssText = 
-      'position: absolute; top: 8px; right: 8px; padding: 6px 10px; ' +
-      'background: rgba(255,255,255,0.9); border: 1px solid #ddd; ' +
-      'border-radius: 4px; cursor: pointer; font-size: 14px; ' +
-      'opacity: 0; transition: opacity 0.2s; z-index: 10;';
-    
-    pre.style.position = 'relative';
-    pre.appendChild(button);
-    
-    pre.addEventListener('mouseenter', function() { button.style.opacity = '1'; });
-    pre.addEventListener('mouseleave', function() { 
-      if (button.dataset.copied !== 'true') button.style.opacity = '0'; 
-    });
-    
-    button.addEventListener('click', function(e) {
-      e.preventDefault();
-      navigator.clipboard.writeText(codeBlock.textContent).then(function() {
-        button.innerHTML = '✅';
-        button.title = '已复制!';
-        button.style.background = '#d4edda';
-        button.dataset.copied = 'true';
-        setTimeout(function() {
-          button.innerHTML = '📋';
-          button.title = '复制代码';
-          button.style.background = 'rgba(255,255,255,0.9)';
-          button.dataset.copied = 'false';
-          button.style.opacity = '0';
-        }, 2000);
+    codeBlocks.forEach(function(pre) {
+      // 跳过已处理的代码块
+      if (pre.querySelector('.copy-code-btn')) return;
+      
+      // 获取代码内容
+      var code = pre.querySelector('code');
+      if (!code) return;
+      
+      // 检测语言
+      var language = '';
+      var classList = code.className.split(' ');
+      for (var i = 0; i < classList.length; i++) {
+        if (classList[i].startsWith('language-')) {
+          language = classList[i].replace('language-', '');
+          break;
+        }
+      }
+      
+      // 如果没有从 class 获取到，尝试从父元素获取
+      if (!language && pre.className) {
+        var preClasses = pre.className.split(' ');
+        for (var j = 0; j < preClasses.length; j++) {
+          if (preClasses[j].startsWith('language-')) {
+            language = preClasses[j].replace('language-', '');
+            break;
+          }
+        }
+      }
+      
+      // 设置语言属性
+      if (language) {
+        pre.setAttribute('data-language', language);
+      }
+      
+      // 创建复制按钮
+      var btn = document.createElement('button');
+      btn.className = 'copy-code-btn';
+      btn.textContent = '复制';
+      btn.setAttribute('title', '复制代码');
+      btn.setAttribute('aria-label', '复制代码');
+      
+      // 复制功能
+      btn.addEventListener('click', function() {
+        var text = code.textContent;
+        
+        // 使用 Clipboard API
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(text).then(function() {
+            showCopied(btn);
+          }).catch(function() {
+            fallbackCopy(text, btn);
+          });
+        } else {
+          fallbackCopy(text, btn);
+        }
       });
+      
+      pre.appendChild(btn);
     });
-  });
+  }
+  
+  // 复制成功反馈
+  function showCopied(btn) {
+    var originalText = btn.textContent;
+    btn.textContent = '已复制!';
+    btn.classList.add('copied');
+    
+    setTimeout(function() {
+      btn.textContent = originalText;
+      btn.classList.remove('copied');
+    }, 2000);
+  }
+  
+  // 降级复制方案
+  function fallbackCopy(text, btn) {
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    
+    textarea.select();
+    
+    try {
+      document.execCommand('copy');
+      showCopied(btn);
+    } catch (err) {
+      console.error('复制失败:', err);
+      btn.textContent = '失败';
+      setTimeout(function() {
+        btn.textContent = '复制';
+      }, 2000);
+    }
+    
+    document.body.removeChild(textarea);
+  }
+  
+  // 初始化
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCodeCopy);
+  } else {
+    initCodeCopy();
+  }
 })();
 </script>
