@@ -641,7 +641,7 @@ PI-001: Product Intent（产品意图）
 ---
 
 **AI-Native SDLC 交付件体系系列**
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-05-19*
 *阅读时间：约 15 分钟*

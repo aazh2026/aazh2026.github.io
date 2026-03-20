@@ -808,7 +808,7 @@ class OrchestrationEngine:
 ---
 
 *Agent OS 系列 - 第 4 篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-03-31*
 *阅读时间：约 15 分钟*

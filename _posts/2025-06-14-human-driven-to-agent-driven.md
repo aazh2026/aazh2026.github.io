@@ -536,7 +536,7 @@ Agent："基于当前 pipeline 和历史数据，预测 Q2 业绩：
 ---
 
 *Agent OS 系列 - 第 3 篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-03-24*
 *阅读时间：约 12 分钟*

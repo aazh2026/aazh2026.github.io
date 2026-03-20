@@ -541,7 +541,7 @@ L3: Enterprise Agent（企业版）
 ---
 
 *Agent OS 系列 - 第 10 篇（完结篇）*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-05-12*
 *阅读时间：约 14 分钟*

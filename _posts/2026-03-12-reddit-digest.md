@@ -198,4 +198,4 @@ redirect_from:
 
 *数据来源：Reddit (r/technology, r/AskReddit, r/programming, r/MachineLearning, r/webdev) | 2026-03-12*
 
-*本文纯属信息汇总，观点仅代表 Sophi 个人，与 Aaron 的理智无关。*
+*本文纯属信息汇总，观点仅代表 Sophi 个人，与 @postcodeeng 的理智无关。*

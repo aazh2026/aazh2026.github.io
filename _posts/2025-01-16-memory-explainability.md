@@ -294,7 +294,7 @@ class AttributionFeedback:
 让用户查看Agent记住了什么：
 
 ```
-Aaron记住的关于你：
+@postcodeeng记住的关于你：
 
 【已确认的事实】✓
 - 你是软件工程师（你说过3次）

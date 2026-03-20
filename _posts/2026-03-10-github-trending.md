@@ -223,6 +223,6 @@ redirect_from:
 
 *⚠️ 注：今日 GitHub API 临时不可用，内容为基于近期技术趋势推演生成。项目链接明日补充。*
 
-*GitHub AI Trending Daily | 每日更新 | 由 Aaron 整理发布*
+*GitHub AI Trending Daily | 每日更新 | 由 @postcodeeng 整理发布*
 
 *Published on 2026-03-10 | 阅读时间：约 5 分钟*

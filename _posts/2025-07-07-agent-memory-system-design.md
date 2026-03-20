@@ -44,14 +44,14 @@ redirect_from:
 想象一下和一个"金鱼型"Agent 对话：
 
 ```
-User: 我叫 Aaron，是做 CRM SaaS 的。
-Agent: 很高兴认识你，Aaron！有什么我可以帮你的？
+User: 我叫 @postcodeeng，是做 CRM SaaS 的。
+Agent: 很高兴认识你，@postcodeeng！有什么我可以帮你的？
 
 User: 我想了解一下 Agent OS 的架构。
 Agent: 当然可以！不过请问您叫什么名字，在哪个行业？
 
-User: ...我刚说过我叫 Aaron，做 CRM SaaS。
-Agent: 哦，抱歉！那么 Aaron，你对 Agent OS 的哪方面感兴趣？
+User: ...我刚说过我叫 @postcodeeng，做 CRM SaaS。
+Agent: 哦，抱歉！那么 @postcodeeng，你对 Agent OS 的哪方面感兴趣？
 
 User: 我之前问你推荐过记忆系统的设计方案。
 Agent: 抱歉，我不记得我们之前聊过这个...
@@ -568,7 +568,7 @@ Vector DB 擅长语义相似性检索，但不擅长**关系推理**。
 
 **示例问题：**
 
-"谁是 Aaron 的经理的经理？"
+"谁是 @postcodeeng 的经理的经理？"
 
 - Vector DB：无法理解"经理的经理"这种关系链
 - Knowledge Graph：可以轻松遍历关系网络
@@ -888,7 +888,7 @@ class PrivacyAwareMemory:
 ---
 
 *Agent OS 系列 - 第 5 篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-04-07*
 *阅读时间：约 18 分钟*

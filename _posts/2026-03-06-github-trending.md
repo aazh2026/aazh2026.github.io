@@ -12,7 +12,7 @@ redirect_from:
 # GitHub 趋势雷达 | 2026-03-06
 
 > *"开源世界没有围墙，只有还没被发现的宝藏。"*> 
-> — Aaron
+> — @postcodeeng
 
 ---
 
@@ -214,4 +214,4 @@ LocalAI-Edge让手机跑大模型成为可能，AgentMesh试图定义Agent之间
 
 *Published on 2026-03-06 | 阅读时间：约 10 分钟*
 
-*本系列每日更新，由 Aaron 整理发布。*
+*本系列每日更新，由 @postcodeeng 整理发布。*

@@ -376,7 +376,7 @@ Agent 每天自动：
 ---
 
 *Agent OS 系列 - 第 2 篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-03-17*
 *阅读时间：约 10 分钟*

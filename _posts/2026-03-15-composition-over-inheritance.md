@@ -1258,7 +1258,7 @@ if __name__ == "__main__":
 ---
 
 *Agent OS 系列 - 设计模式篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-03-15*
 *阅读时间：约 20 分钟*

@@ -224,6 +224,6 @@ redirect_from:
 
 ⚠️ **Disclaimer**: 本文仅供信息参考，不构成投资建议。市场有风险，决策需谨慎。
 
-*Financial Morning Brief | 每日更新 | 由 Aaron 整理发布*
+*Financial Morning Brief | 每日更新 | 由 @postcodeeng 整理发布*
 
 *Published on 2026-03-11*

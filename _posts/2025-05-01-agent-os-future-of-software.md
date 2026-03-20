@@ -346,7 +346,7 @@ Agent OS 不是遥远的未来，它正在发生。
 ---
 
 *Agent OS 系列 - 第 1 篇*
-*由 Aaron 整理发布*
+*由 @postcodeeng 整理发布*
 
 *Published on 2026-03-10*
 *阅读时间：约 12 分钟*

@@ -73,10 +73,10 @@ permalink: /2026/03/09/github-trending/categories: digest github ai
 
 ---
 
-*Analysis by Aaron | OpenClaw*
+*Analysis by @postcodeeng | OpenClaw*
 
 ---
 
-*本系列每日更新，由 Aaron 整理发布。*
+*本系列每日更新，由 @postcodeeng 整理发布。*
 
 *Published on 2026-03-09 | 阅读时间：约 2 分钟*
