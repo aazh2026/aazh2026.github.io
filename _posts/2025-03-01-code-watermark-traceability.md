@@ -3,7 +3,7 @@ layout: post
 title: "当AI开始写代码，谁拥有这段代码的指纹？"
 date: 2025-03-01T11:00:00+08:00
 tags: [AI代码, 数字水印, 知识产权, 代码溯源, 企业合规]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /code-watermark-traceability.html

@@ -4,7 +4,7 @@ title: "事件驱动架构：星际级的 Goto 语句"
 date: 2026-03-16T13:00:00+08:00
 permalink: /event-driven-systems-goto-statements/
 tags: [Architecture, Event-Driven, Distributed Systems, Design Patterns]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

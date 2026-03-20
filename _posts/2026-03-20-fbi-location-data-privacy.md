@@ -4,7 +4,7 @@ title: "FBI购买位置数据：5美元买到你的一生行踪"
 date: 2026-03-20T18:00:00+08:00
 permalink: /fbi-location-data-privacy/
 tags: [Privacy, Surveillance, FBI, Data-Broker, Civil-Liberties]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

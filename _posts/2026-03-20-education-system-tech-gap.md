@@ -4,7 +4,7 @@ title: "教育系统滞后技术二十年：当WebSocket被老师否决"
 date: 2026-03-20T21:00:00+08:00
 permalink: /education-system-tech-gap/
 tags: [Education, Web-Development, WebSocket, TCP, PHP, Systemic-Issue]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

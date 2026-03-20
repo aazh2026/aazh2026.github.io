@@ -3,7 +3,7 @@ layout: post
 title: "AI时代架构师的新能力模型：从画图决策到设计Context"
 date: 2025-02-14T17:30:00+08:00
 tags: [架构师, 职业发展, AI时代, 能力模型, Context设计, 技术领导力]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /architect-new-capability-model.html

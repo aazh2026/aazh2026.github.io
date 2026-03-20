@@ -4,7 +4,7 @@ title: "AI时代的软件工程指标：LOC已死，Intent Complexity当立"
 date: 2025-04-16T00:00:00+08:00
 permalink: /posts/intent-complexity-metrics//
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #03
 
 redirect_from:

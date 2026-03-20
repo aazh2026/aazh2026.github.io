@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native 系统的可观测性进化：从日志到意图追踪"
 date: 2026-03-14T14:00:00+08:00
 tags: [AI-Native软件工程, 可观测性, Observability, 意图追踪, 监控]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #56
 
 redirect_from:

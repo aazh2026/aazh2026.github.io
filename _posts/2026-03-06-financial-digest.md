@@ -3,7 +3,7 @@ layout: post
 title: "市场瞭望台 | 2026-03-06"
 permalink: /2026/03/06/financial-digest/
 tags: [金融, 市场, 投资, AI概念股, 每日晨报]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /financial-digest.html

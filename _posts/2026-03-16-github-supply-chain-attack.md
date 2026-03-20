@@ -4,7 +4,7 @@ title: "GitHub 供应链攻击的暗流：当 'pip install' 成为俄罗斯轮�
 date: 2026-03-16T12:00:00+08:00
 permalink: /github-supply-chain-typosquatting-attack/
 tags: [Security, Supply Chain, GitHub, Malware, Typosquatting]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Security
 ---
 

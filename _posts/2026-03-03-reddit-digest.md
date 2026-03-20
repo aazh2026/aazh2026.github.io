@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reddit 情报站 | 2026-03-03 - 粗鲁AI更聪明，Claude登顶"
-permalink: /2026/03/03/reddit-digest/author: Aaron
+permalink: /2026/03/03/reddit-digest/author: "@postcodeeng"
 
 redirect_from:
   - /reddit-digest.html

@@ -4,7 +4,7 @@ title: "从模型到 Agent：OpenAI 的 Runtime 架构揭秘"
 date: 2026-03-17T17:00:00+08:00
 permalink: /openai-agent-runtime-architecture/
 tags: [AI-Native, Agent, Runtime, OpenAI, Architecture]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

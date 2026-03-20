@@ -3,7 +3,7 @@ layout: post
 title: "如何通过架构设计将故障限制在局部"
 date: 2025-01-10T02:00:00+08:00
 tags: [SRE, 系统设计, 微服务, 故障隔离]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

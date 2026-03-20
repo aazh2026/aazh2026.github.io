@@ -4,7 +4,7 @@ title: "Reddit Daily Digest | 2026年3月19日 星期四"
 date: 2026-03-19T08:00:00+08:00
 permalink: /2026/03/19/reddit-digest/
 tags: [Reddit, Tech News, Daily Digest]
-author: Aaron
+author: "@postcodeeng"
 redirect_from:
   - /reddit-digest.html
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "为什么单个AI Agent不够用了？"
 date: 2025-03-27T10:50:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, 系统设计]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #16
 
 redirect_from:

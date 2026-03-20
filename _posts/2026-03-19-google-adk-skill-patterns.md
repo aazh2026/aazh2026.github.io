@@ -4,7 +4,7 @@ title: "Google ADK 五大 Skill 模式解读：AI Agent 内容设计的工程化
 date: 2026-03-19T15:00:00+08:00
 permalink: /google-adk-skill-patterns/
 tags: [AI-Native, Google, ADK, Skill, Agent, Context-Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

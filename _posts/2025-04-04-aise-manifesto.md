@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native软件工程宣言"
 date: 2025-04-04T12:00:00+08:00
 tags: [AI-Native软件工程, 宣言, 理论体系]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列
 permalink: /posts///
 

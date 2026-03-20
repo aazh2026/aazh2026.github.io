@@ -3,7 +3,7 @@ layout: post
 title: "Clinejection攻击深度剖析：当AI Issue Triager成为供应链攻击的新入口"
 date: 2025-02-22T16:00:00+08:00
 tags: [Clinejection, Prompt Injection, AI安全, 供应链攻击, GitHub Actions, 安全漏洞]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /clinejection-attack-analysis.html

@@ -3,7 +3,7 @@ layout: post
 title: 你的Prompt正在被反向工程——AI系统的提示词泄露与防御
 date: 2025-03-23T12:00:00+08:00
 tags: [AI安全, Prompt工程, 反向工程, 提示词保护]
-author: Aaron
+author: "@postcodeeng"
 series: AI安全洞察
 
 redirect_from:

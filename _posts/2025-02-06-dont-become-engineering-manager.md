@@ -3,7 +3,7 @@ layout: post
 title: "别当工程经理了——至少在AI时代是这样"
 date: 2025-02-06T18:00:00+08:00
 tags: [职业发展, 工程管理, AI时代, 职业选择, Hacker News]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /dont-become-engineering-manager.html

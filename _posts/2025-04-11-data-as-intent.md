@@ -3,7 +3,7 @@ layout: post
 title: "数据即Intent：当数据成为新的编程语言"
 date: 2025-04-11T11:35:00+08:00
 tags: [AI-Native软件工程, 数据工程, 数据质量]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #24
 
 redirect_from:

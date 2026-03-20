@@ -3,7 +3,7 @@ layout: post
 title: "PDD：Prompt作为第一等制品"
 date: 2025-06-07T00:00:00+08:00
 tags: [AI-Native软件工程, PDD, Prompt工程, 版本控制, Code Review]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #5
 ---
 

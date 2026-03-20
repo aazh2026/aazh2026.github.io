@@ -3,7 +3,7 @@ layout: post
 title: "告别代码行数：AI时代的'意图复杂度'度量标准"
 date: 2025-05-04T18:00:00+08:00
 tags: [AI-Native软件工程, 度量体系, 效能评估, 意图复杂度]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #31
 
 redirect_from:

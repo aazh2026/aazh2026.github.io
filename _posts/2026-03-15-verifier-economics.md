@@ -3,7 +3,7 @@ layout: post
 title: "验证器经济学：为什么评判比生成更有价值"
 date: 2026-03-15T14:30:00+08:00
 tags: [AI-Native, Harness Engineering, Verification, P-vs-NP, Agent]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

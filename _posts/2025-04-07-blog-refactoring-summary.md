@@ -3,7 +3,7 @@ layout: post
 title: "博客重构实录：从论文到博客的蜕变"
 date: 2025-04-07T19:00:00+08:00
 tags: [博客优化, 内容运营, 技术写作, AI-Native]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列
 
 redirect_from:

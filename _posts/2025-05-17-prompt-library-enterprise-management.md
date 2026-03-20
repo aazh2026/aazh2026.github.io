@@ -3,7 +3,7 @@ layout: post
 title: "Prompt Library的企业级管理：部门共享与版本控制"
 date: 2025-05-17T16:00:00+08:00
 tags: [AI-Native软件工程, Prompt管理, 知识共享, 企业治理]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #38
 
 redirect_from:

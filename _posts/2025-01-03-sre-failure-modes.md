@@ -3,7 +3,7 @@ layout: post
 title: "为什么好的系统必须预设自己的死亡方式"
 date: 2025-01-03T02:00:00+08:00
 tags: [SRE, 系统设计, 混沌工程, 故障演练]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

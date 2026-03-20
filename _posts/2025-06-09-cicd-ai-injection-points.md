@@ -3,7 +3,7 @@ layout: post
 title: "CI/CD的AI注入点：12个LLM验证卡点设计"
 date: 2025-06-09T00:00:00+08:00
 tags: [AI-Native软件工程, CI/CD, DevOps, LLM, 自动化验证]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #7
 ---
 

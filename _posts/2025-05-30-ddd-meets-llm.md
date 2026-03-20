@@ -3,7 +3,7 @@ layout: post
 title: "DDD meets LLM：领域模型与Embedding空间的拓扑映射"
 date: 2025-05-30T00:00:00+08:00
 tags: [AI-Native软件工程, DDD, 领域模型, Embedding, 向量空间]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #3
 ---
 

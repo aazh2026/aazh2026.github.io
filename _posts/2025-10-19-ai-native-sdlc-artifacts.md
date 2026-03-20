@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native SDLC：交付件驱动的研发革命"
 date: 2025-10-19T10:00:00+08:00
 tags: [AI-Native, SDLC, Artifacts, Spec-Driven, Software-Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: "AI-Native-Artifacts"
 series_title: "AI-Native SDLC 交付件体系"
 

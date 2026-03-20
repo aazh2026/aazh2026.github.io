@@ -3,7 +3,7 @@ layout: post
 title: "当专家退休时，公司失去的不是一个人，而是一部活历史"
 date: 2025-03-08T11:30:00+08:00
 tags: [知识管理, 组织记忆, 隐性知识, 专家经验, AI时代]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /organizational-memory-externalization.html

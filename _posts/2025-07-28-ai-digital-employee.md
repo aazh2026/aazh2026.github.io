@@ -3,7 +3,7 @@ layout: post
 title: "AI Digital Employee：组织形态的下一个十年"
 date: 2025-07-28T10:00:00+08:00
 tags: [AI, Agent, Digital-Employee, Future-of-Work, Organization]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

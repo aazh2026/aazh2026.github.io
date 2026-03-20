@@ -3,7 +3,7 @@ layout: post
 title: "事件驱动架构一致性：消息Schema的AI生成与版本检查"
 date: 2026-03-18T00:00:00+08:00
 tags: [AI-Native软件工程, 事件驱动, EDA, Schema管理, 消息系统]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #8
 ---
 

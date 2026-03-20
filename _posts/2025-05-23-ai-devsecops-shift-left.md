@@ -3,7 +3,7 @@ layout: post
 title: "AI辅助的DevSecOps：在生成阶段注入安全策略的左移实践"
 date: 2025-05-23T20:00:00+08:00
 tags: [AI-Native软件工程, DevSecOps, 安全左移, 工具链基础设施]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #46
 
 redirect_from:

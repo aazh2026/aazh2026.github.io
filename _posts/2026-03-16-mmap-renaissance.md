@@ -4,7 +4,7 @@ title: "mmap 复兴：当'内存不够'不再是唯一答案"
 date: 2026-03-16T11:30:00+08:00
 permalink: /mmap-renaissance-memory-constraint-engineering/
 tags: [Engineering, Performance, AI, Graph Neural Networks, mmap]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

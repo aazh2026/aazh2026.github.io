@@ -4,7 +4,7 @@ title: "GitHub AI Trending Daily | 2026年3月19日 星期四"
 date: 2026-03-19T08:15:00+08:00
 permalink: /2026/03/19/github-ai-trending/
 tags: [GitHub, AI, Trending, Open Source]
-author: Aaron
+author: "@postcodeeng"
 series: GitHub AI Trending
 redirect_from:
   - /github-ai-trending.html

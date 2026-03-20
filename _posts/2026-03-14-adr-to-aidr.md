@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native 架构决策记录：从 ADR 到 AIDR"
 date: 2026-03-14T10:00:00+08:00
 tags: [AI-Native软件工程, 架构, ADR, AIDR, 决策记录]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #53
 
 redirect_from:

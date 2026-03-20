@@ -3,7 +3,7 @@ layout: post
 title: "为什么监控指标本身会改变被监控的系统"
 date: 2025-01-06T02:00:00+08:00
 tags: [SRE, 系统设计, 监控, 可观测性]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

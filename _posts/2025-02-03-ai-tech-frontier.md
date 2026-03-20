@@ -3,7 +3,7 @@ layout: post
 title: "AI 技术前沿 | 2026-03-04"
 date: 2025-02-03T10:50:00+08:00
 tags: [AI, Claude, OpenAI, Agent, 技术前沿]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /ai-tech-frontier/

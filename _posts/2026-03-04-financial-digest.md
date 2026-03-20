@@ -3,7 +3,7 @@ layout: post
 title: "市场瞭望台 | 2026-03-04"
 permalink: /2026/03/04/financial-digest/
 tags: [金融, 市场, 每日瞭望]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /financial-digest.html

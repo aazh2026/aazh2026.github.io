@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native 详细设计：从文档到可执行上下文"
 date: 2026-03-11T08:00:00+08:00
 tags: [AI-Native, SDLC, 软件工程, 详细设计]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native SDLC 实践
 redirect_from:
   - /ai-native-detailed-design.html

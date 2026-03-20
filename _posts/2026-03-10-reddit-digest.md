@@ -3,7 +3,7 @@ layout: post
 title: "Reddit Daily Digest | 2026-03-10"
 permalink: /2026/03/10/reddit-digest/
 tags: [Reddit, Tech News, Daily Digest]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /reddit-digest.html

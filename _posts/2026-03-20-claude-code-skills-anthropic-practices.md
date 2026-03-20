@@ -4,7 +4,7 @@ title: "Claude Code Skills 实战指南：Anthropic 的 9 种 Skill 类型与最
 date: 2026-03-20T22:00:00+08:00
 permalink: /claude-code-skills-anthropic-practices/
 tags: [AI-Native, Claude-Code, Skill, Anthropic, Best-Practices]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

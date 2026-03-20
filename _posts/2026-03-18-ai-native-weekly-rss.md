@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Engineering Weekly | 2026年03月18日 精选"
 date: 2026-03-18T10:00:00+08:00
 tags: [AI-Native, Engineering, OpenAI, Replit, LangChain, Simon Willison]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering Weekly
 redirect_from:
   - /ai-native-weekly.html

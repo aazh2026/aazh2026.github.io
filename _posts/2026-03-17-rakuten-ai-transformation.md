@@ -4,7 +4,7 @@ title: "Rakuten 的 AI 转型：MTTR 降低 50% 的真实路径"
 date: 2026-03-17T19:00:00+08:00
 permalink: /rakuten-ai-transformation-mttr-50-percent/
 tags: [AI-Native, Enterprise, Case Study, Rakuten, Codex]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

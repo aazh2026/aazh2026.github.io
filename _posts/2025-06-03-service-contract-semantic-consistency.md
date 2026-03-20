@@ -3,7 +3,7 @@ layout: post
 title: "服务契约的语义一致性：接口契约漂移检测与自动修复"
 date: 2025-06-03T20:00:00+08:00
 tags: [AI-Native软件工程, 微服务, 服务契约, 分布式系统]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #52
 
 redirect_from:

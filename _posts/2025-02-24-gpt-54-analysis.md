@@ -3,7 +3,7 @@ layout: post
 title: "GPT-5.4发布：当通用模型开始超越专用模型，编码能力的范式正在转移"
 date: 2025-02-24T13:30:00+08:00
 tags: [GPT-5.4, OpenAI, 编码能力, AI模型, 上下文窗口, 产品分析]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /gpt-54-analysis.html

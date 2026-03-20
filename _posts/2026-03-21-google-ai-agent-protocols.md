@@ -4,7 +4,7 @@ title: "Google 的 6 大 AI Agent 协议：互操作性是未来"
 date: 2026-03-21T00:00:00+08:00
 permalink: /google-ai-agent-protocols-interoperability/
 tags: [AI-Native, Google, Agent, Protocol, MCP, A2A, Interoperability]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

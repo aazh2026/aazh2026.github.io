@@ -3,7 +3,7 @@ layout: post
 title: "并行 Agent 的协调机制：去中心化协作的工程挑战"
 date: 2026-03-15T15:00:00+08:00
 tags: [AI-Native, Harness Engineering, Multi-Agent, Distributed Systems, Coordination]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

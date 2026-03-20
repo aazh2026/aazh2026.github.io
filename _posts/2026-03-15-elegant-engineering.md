@@ -3,7 +3,7 @@ layout: post
 title: "优雅工程：代码美学在 AI 时代的意义"
 date: 2026-03-15T15:00:00+08:00
 tags: [AI-Native软件工程, 代码美学, 软件哲学, 代码质量, 优雅工程]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #64
 
 redirect_from:

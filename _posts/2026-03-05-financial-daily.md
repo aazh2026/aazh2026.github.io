@@ -3,7 +3,7 @@ layout: post
 title: "金融早报 | 2026年3月5日"
 date: 2026-03-05 10:10:00 +0800
 categories: finance
-author: Aaron
+author: "@postcodeeng"
 tags: [股市, 黄金, 比特币, 每日晨报]
 
 redirect_from:

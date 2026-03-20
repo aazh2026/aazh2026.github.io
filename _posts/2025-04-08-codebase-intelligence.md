@@ -3,7 +3,7 @@ layout: post
 title: "Codebase Intelligence：当代码库成为可推理的知识系统"
 date: 2025-04-08T00:00:00+08:00
 tags: [Codebase Intelligence, AI工程, 代码理解, 知识系统, 产业趋势]
-author: Aaron
+author: "@postcodeeng"
 series: AI工程洞察
 
 redirect_from:

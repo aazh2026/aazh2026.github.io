@@ -3,7 +3,7 @@ layout: post
 title: "Agent Economy：当软件以「员工」计价时"
 date: 2025-10-12T10:00:00+08:00
 tags: [AI, Agent, Economy, Business-Model, Future, Pricing]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

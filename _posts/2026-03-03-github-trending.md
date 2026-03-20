@@ -3,7 +3,7 @@ layout: post
 title: "GitHub趋势雷达 | 2026-03-03"
 permalink: /2026/03/03/github-trending/
 tags: [GitHub, 开源, AI趋势]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /github-trending.html

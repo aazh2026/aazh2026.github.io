@@ -4,7 +4,7 @@ title: "Prompt 注入防御：Agent 安全的分层架构实践"
 date: 2026-03-17T18:00:00+08:00
 permalink: /prompt-injection-defense-agent-security/
 tags: [AI-Native, Security, Prompt Injection, Agent, OpenAI]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

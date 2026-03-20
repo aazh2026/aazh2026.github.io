@@ -4,7 +4,7 @@ title: "Firefox 149 的 AI 窗口：浏览器大战进入智能时代"
 date: 2026-03-20T16:00:00+08:00
 permalink: /firefox-149-ai-windows/
 tags: [AI-Native, Browser, Firefox, Mozilla, AI-Integration]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

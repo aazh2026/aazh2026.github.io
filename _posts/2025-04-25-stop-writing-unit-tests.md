@@ -3,7 +3,7 @@ layout: post
 title: "为什么该停止写单元测试了？"
 date: 2025-04-25T11:00:00+08:00
 tags: [AI-Native软件工程, 测试策略, 软件质量]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #17
 
 redirect_from:

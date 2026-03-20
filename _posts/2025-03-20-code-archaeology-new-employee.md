@@ -3,7 +3,7 @@ layout: post
 title: "新员工的第一周：在百万行遗留代码中考古"
 date: 2025-03-20T12:00:00+08:00
 tags: [代码考古, 遗留系统, 入职, 知识管理, AI辅助]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /code-archaeology-new-employee/

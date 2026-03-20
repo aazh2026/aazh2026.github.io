@@ -3,7 +3,7 @@ layout: post
 title: "为什么AI-Native团队必须重组？"
 date: 2025-04-03T10:20:00+08:00
 tags: [AI-Native软件工程, 组织架构, 团队管理]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #13
 
 redirect_from:

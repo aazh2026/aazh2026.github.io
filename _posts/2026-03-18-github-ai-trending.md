@@ -5,7 +5,7 @@ date: 2026-03-18T08:15:00+08:00
 permalink: /2026/03/18/github-ai-trending/
 tags: [GitHub, AI, DailySignal, 开源项目]
 series: GitHub AI Trending
-author: Aaron
+author: "@postcodeeng"
 redirect_from:
   - /github-ai-trending.html
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "GitHub AI Trending Daily | 2026-03-11"
 permalink: /2026/03/11/github-trending/
 tags: [GitHub, Open Source, AI, Trending]
-author: Aaron
+author: "@postcodeeng"
 redirect_from:
   - /github-trending.html
 ---

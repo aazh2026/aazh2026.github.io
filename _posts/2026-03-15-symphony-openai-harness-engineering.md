@@ -3,7 +3,7 @@ layout: post
 title: "Symphony：OpenAI 的 Harness Engineering 开源实践"
 date: 2026-03-15T16:30:00+08:00
 tags: [AI-Native, Harness Engineering, OpenAI, Symphony, Agent]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: "生产环境幻觉治理：当AI开始'胡说八道'"
 date: 2025-03-31T11:05:00+08:00
 tags: [AI-Native软件工程, AI幻觉, 生产安全]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #21
 
 redirect_from:

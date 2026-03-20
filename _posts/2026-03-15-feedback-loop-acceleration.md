@@ -3,7 +3,7 @@ layout: post
 title: "反馈循环的加速：从月到分钟的工程进化"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 反馈循环, DevOps, 实时反馈, 工程效能]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #52
 
 redirect_from:

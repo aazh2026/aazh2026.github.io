@@ -3,7 +3,7 @@ layout: post
 title: "Agent OS：SaaS 之后的下一个软件形态"
 date: 2025-05-01T14:00:00+08:00
 tags: [AI, Agent, SaaS, Architecture, Future-of-Software]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

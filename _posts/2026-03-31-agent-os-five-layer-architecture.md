@@ -3,7 +3,7 @@ layout: post
 title: "Agent OS 的五层架构模型"
 date: 2026-03-31T10:00:00+08:00
 tags: [AI, Agent, Architecture, System-Design, Technical]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

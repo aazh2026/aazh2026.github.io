@@ -4,7 +4,7 @@ title: "Context Engineering 解读：让 AI 看到该看到的东西"
 date: 2026-03-18T19:00:00+08:00
 permalink: /context-engineering-coding-agents-martin-fowler/
 tags: [AI-Native, Context, Agent, Martin-Fowler, Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

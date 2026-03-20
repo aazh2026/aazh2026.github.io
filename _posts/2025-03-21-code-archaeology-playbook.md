@@ -3,7 +3,7 @@ layout: post
 title: "代码考古学：新员工的系统化生存指南（AI时代升级版）"
 date: 2025-03-21T23:30:00+08:00
 tags: [代码考古, 新员工 onboarding, 软件工程, AI工具, 组织知识]
-author: Aaron
+author: "@postcodeeng"
 series: 工程实践指南
 
 redirect_from:

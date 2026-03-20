@@ -3,7 +3,7 @@ layout: post
 title: "OpenClaw v2.0：当开源Agent开始解剖自己的大脑"
 date: 2025-03-04T19:00:00+08:00
 tags: [OpenClaw, AI Agent, 开源, 认知架构, 技术突破]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /openclaw-v20-transparent-brain/

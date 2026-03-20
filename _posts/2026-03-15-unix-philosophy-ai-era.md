@@ -3,7 +3,7 @@ layout: post
 title: "Unix 哲学在 AI 时代的回响：Agent 设计哲学"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, Unix哲学, Agent设计, 系统架构]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #50
 
 redirect_from:

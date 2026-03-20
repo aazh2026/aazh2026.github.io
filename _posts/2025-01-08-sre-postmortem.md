@@ -3,7 +3,7 @@ layout: post
 title: "为什么故障复盘不能追求「政治正确」"
 date: 2025-01-08T02:00:00+08:00
 tags: [SRE, 系统设计, 故障复盘, 组织学习]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

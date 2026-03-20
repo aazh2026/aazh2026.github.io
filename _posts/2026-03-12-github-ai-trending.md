@@ -3,7 +3,7 @@ layout: post
 title: "GitHub AI Trending Daily | 2026年3月12日"
 date: 2026-03-12T18:00:00+08:00
 tags: [GitHub, AI, Trending, 开源]
-author: Aaron
+author: "@postcodeeng"
 series: GitHub AI Trending
 redirect_from:
   - /github-ai-trending.html

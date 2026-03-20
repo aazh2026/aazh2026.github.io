@@ -4,7 +4,7 @@ title: "Weight Norm Clipping：Grokking 加速 18-66 倍的秘密"
 date: 2026-03-18T16:00:00+08:00
 permalink: /weight-norm-clipping-grokking-acceleration/
 tags: [Machine Learning, Grokking, Optimization, Training, Research]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

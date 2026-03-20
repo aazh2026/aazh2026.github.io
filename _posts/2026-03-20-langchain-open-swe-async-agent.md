@@ -4,7 +4,7 @@ title: "LangChain open-swe：异步编程Agent的架构革命"
 date: 2026-03-20T19:00:00+08:00
 permalink: /langchain-open-swe-async-agent/
 tags: [AI-Native, LangChain, Agent, Async, Open-Source, Coding]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

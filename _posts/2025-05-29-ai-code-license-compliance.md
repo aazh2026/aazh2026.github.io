@@ -3,7 +3,7 @@ layout: post
 title: "生成代码的License合规：SCA对AI代码的溯源与风险标记"
 date: 2025-05-29T10:00:00+08:00
 tags: [AI-Native软件工程, License合规, SCA, 知识产权]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #48
 
 redirect_from:

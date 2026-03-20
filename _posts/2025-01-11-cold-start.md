@@ -3,7 +3,7 @@ layout: post
 title: "为什么每个新Agent都应该「站在巨人肩膀上」"
 date: 2025-01-11T02:00:00+08:00
 tags: [AI架构, 冷启动, 知识传承, 深度思考]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /cold-start/

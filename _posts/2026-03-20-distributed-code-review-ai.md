@@ -3,7 +3,7 @@ layout: post
 title: "分布式代码审查的AI增强：跨团队PR语义摘要与冲突预警"
 date: 2026-03-20T00:00:00+08:00
 tags: [AI-Native软件工程, Code Review, 分布式团队, PR管理, 知识传递]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #10
 ---
 

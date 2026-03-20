@@ -3,7 +3,7 @@ layout: post
 title: "8400亿估值背后：OpenAI的野心与隐忧"
 date: 2025-01-20T20:35:00+08:00
 tags: [OpenAI, 融资, 商业分析, AI行业]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /openai-funding-analysis.html

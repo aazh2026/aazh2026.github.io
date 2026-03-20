@@ -3,7 +3,7 @@ layout: post
 title: "TDD的死亡与重生：AI时代测试先行的本质转变"
 date: 2025-05-18T00:00:00+08:00
 tags: [AI-Native软件工程, TDD, 测试策略, AI-DD]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #1
 ---
 

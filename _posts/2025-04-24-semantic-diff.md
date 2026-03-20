@@ -3,7 +3,7 @@ layout: post
 title: "为什么文本级别的代码对比已经过时？"
 date: 2025-04-24T10:40:00+08:00
 tags: [AI-Native软件工程, 代码审查, 语义分析]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #15
 
 redirect_from:

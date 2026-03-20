@@ -4,7 +4,7 @@ title: "Martin Fowler：如何设计有效的 LLM 软件工程评估系统"
 date: 2026-03-20T23:00:00+08:00
 permalink: /martin-fowler-effective-llm-evals/
 tags: [AI-Native, Evaluation, LLM, Martin-Fowler, Metrics]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

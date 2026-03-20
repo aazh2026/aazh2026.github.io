@@ -3,7 +3,7 @@ layout: post
 title: "GitHub AI Trending Daily | 2026年3月13日"
 date: 2026-03-13T08:00:00+08:00
 tags: [GitHub, AI, DailySignal, 开源项目]
-author: Aaron
+author: "@postcodeeng"
 series: GitHub AI Trending
 permalink: /2026/03/13/github-ai-trending/
 ---

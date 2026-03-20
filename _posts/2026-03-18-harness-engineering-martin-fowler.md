@@ -4,7 +4,7 @@ title: "Harness Engineering 解读：让 AI Agent 可控的工程实践"
 date: 2026-03-18T18:00:00+08:00
 permalink: /harness-engineering-martin-fowler/
 tags: [AI-Native, Agent, Harness, Martin-Fowler, Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

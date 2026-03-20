@@ -3,7 +3,7 @@ layout: post
 title: "混合模式 vs 全自主：Agent 落地的决策框架"
 date: 2025-10-05T10:00:00+08:00
 tags: [AI, Agent, Hybrid, Autonomous, Decision-Framework, Risk-Management]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

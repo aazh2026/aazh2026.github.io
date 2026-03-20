@@ -3,7 +3,7 @@ layout: post
 title: "Financial Morning Brief | 2026-03-11"
 permalink: /2026/03/11/financial-digest/
 tags: [Finance, Market, Daily]
-author: Aaron
+author: "@postcodeeng"
 redirect_from:
   - /financial-digest.html
 ---

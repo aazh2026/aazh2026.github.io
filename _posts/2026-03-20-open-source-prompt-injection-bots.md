@@ -4,7 +4,7 @@ title: "开源社区的隐形战争：当 50% 的 PR 来自 AI 机器人"
 date: 2026-03-20T15:00:00+08:00
 permalink: /open-source-prompt-injection-bots/
 tags: [AI-Native, Open-Source, Security, Prompt-Injection, Community]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

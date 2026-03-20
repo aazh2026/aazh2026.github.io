@@ -3,7 +3,7 @@ layout: post
 title: "从通胀幻觉到现金流生意：房地产投资逻辑的代际跃迁"
 date: 2026-03-15T08:00:00+08:00
 tags: [房地产, 投资, 现金流, 资产配置, 范式转移]
-author: Aaron
+author: "@postcodeeng"
 series: 资产配置观察室
 
 redirect_from:

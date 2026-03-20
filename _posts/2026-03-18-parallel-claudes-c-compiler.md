@@ -4,7 +4,7 @@ title: "16 个 Claude 并行编写 C 编译器：多 Agent 协作的新纪元"
 date: 2026-03-18T20:00:00+08:00
 permalink: /parallel-claudes-c-compiler/
 tags: [AI-Native, Multi-Agent, Anthropic, Compiler, Parallel]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

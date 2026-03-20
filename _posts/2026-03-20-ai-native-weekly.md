@@ -4,7 +4,7 @@ title: "AI-Native Engineering Weekly | 2026年03月20日 精选"
 date: 2026-03-20T10:00:00+08:00
 permalink: /2026/03/20/ai-native-weekly/
 tags: [AI-Native, Engineering, Weekly, Agent-Teams, Compiler]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering Weekly
 redirect_from:
   - /ai-native-weekly.html

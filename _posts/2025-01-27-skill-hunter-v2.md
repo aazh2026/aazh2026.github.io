@@ -3,7 +3,7 @@ layout: post
 title: "技能猎手 #03 | 让你的AI告别「金鱼记忆」"
 date: 2025-01-27T08:00:00+08:00
 tags: [OpenClaw, Skills, AI记忆, 效率工具]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /skill-hunter-v2.html

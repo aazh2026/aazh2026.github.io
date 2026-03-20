@@ -4,7 +4,7 @@ title: "阿里 OpenSandbox：AI Agent 的安全沙箱化之路"
 date: 2026-03-20T17:00:00+08:00
 permalink: /alibaba-opensandbox-ai-agent-security/
 tags: [AI-Native, Security, Sandbox, Alibaba, Agent, Cloud-Native]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

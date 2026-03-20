@@ -3,7 +3,7 @@ layout: post
 title: "为什么你的系统应该学会「优雅地失败」"
 date: 2025-01-14T10:00:00+08:00
 tags: [SRE, 系统设计, 韧性工程, 深度思考]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /graceful-degradation-deep.html

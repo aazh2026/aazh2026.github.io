@@ -3,7 +3,7 @@ layout: post
 title: "测试驱动开发已死？TDD vs AI-First 调试"
 date: 2026-03-13T14:00:00+08:00
 tags: [AI-Native软件工程, TDD, 测试, AI-First]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #47
 
 redirect_from:

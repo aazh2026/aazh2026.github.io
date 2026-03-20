@@ -3,7 +3,7 @@ layout: post
 title: "为什么Context Engineering比Prompt Engineering更重要"
 date: 2025-04-09T02:00:00+08:00
 tags: [Context Engineering, Prompt Engineering, AI工程, 软件架构]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #01
 permalink: /posts/context-engineering//
 

@@ -4,7 +4,7 @@ title: "AI 正在摧毁互联网，而失业研究忽视了这一点"
 date: 2026-03-18T15:00:00+08:00
 permalink: /ai-destroying-internet-ignored-by-job-research/
 tags: [AI, Internet, Information, Society, Media]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

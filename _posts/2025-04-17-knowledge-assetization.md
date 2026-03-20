@@ -3,7 +3,7 @@ layout: post
 title: "为什么你的代码正在变成负债？"
 date: 2025-04-17T09:50:00+08:00
 tags: [AI-Native软件工程, 知识资产化, 架构演进]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #10
 
 redirect_from:

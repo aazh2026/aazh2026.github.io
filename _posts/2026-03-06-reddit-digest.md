@@ -3,7 +3,7 @@ layout: post
 title: "Reddit 情报站 | 2026-03-06"
 permalink: /2026/03/06/reddit-digest/
 tags: [Reddit, 每日情报, 科技新闻, AI趋势]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /reddit-digest/

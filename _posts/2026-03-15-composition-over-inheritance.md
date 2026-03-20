@@ -3,7 +3,7 @@ layout: post
 title: "组合优于继承：Agent 协作中的设计智慧"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI, Agent, Design-Patterns, Software-Architecture, Technical]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

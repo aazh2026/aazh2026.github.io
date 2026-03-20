@@ -3,7 +3,7 @@ layout: post
 title: "为什么渐进式发布模仿了自然选择"
 date: 2025-01-04T02:00:00+08:00
 tags: [SRE, 系统设计, 发布策略, 灰度发布]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title: "EU AI Act合规指南：高风险AI系统的技术要求与实施清单"
 date: 2025-03-02T21:00:00+08:00
 tags: [EU AI Act, 合规, 监管, AI法规, 开发者指南, 技术清单]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /eu-ai-act-compliance-guide.html

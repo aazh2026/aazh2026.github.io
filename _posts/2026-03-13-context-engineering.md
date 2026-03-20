@@ -3,7 +3,7 @@ layout: post
 title: "Context 工程：AI-Native 开发的核心能力"
 date: 2026-03-13T18:00:00+08:00
 tags: [AI-Native软件工程, Context工程, Prompt工程, AI协作]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #49
 
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title: "当代码回滚遇上数据迁移：如何逆转时间？"
 date: 2025-01-05T02:00:00+08:00
 tags: [SRE, 系统设计, 数据迁移, 回滚策略]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

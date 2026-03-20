@@ -3,7 +3,7 @@ layout: post
 title: "为什么你的系统应该学会「优雅地失败」"
 date: 2025-01-01T02:00:00+08:00
 tags: [SRE, 系统设计, 韧性工程, 故障处理]
-author: Aaron
+author: "@postcodeeng"
 series: SRE思维实验室
 
 redirect_from:

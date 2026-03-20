@@ -3,7 +3,7 @@ layout: post
 title: "从 Human-driven 到 Agent-driven：交互范式的迁移"
 date: 2026-03-24T10:00:00+08:00
 tags: [AI, Agent, UX, Interaction-Design, Product-Design]
-author: Aaron
+author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"
 

@@ -3,7 +3,7 @@ layout: post
 title: "Agent-DD：多Agent协作的Swarm Programming模式"
 date: 2025-05-28T18:00:00+08:00
 tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #51
 
 redirect_from:

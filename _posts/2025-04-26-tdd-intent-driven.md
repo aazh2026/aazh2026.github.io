@@ -3,7 +3,7 @@ layout: post
 title: "TDD vs Intent-Driven Development"
 date: 2025-04-26T00:00:00+08:00
 tags: [TDD, Intent-Driven Development, AI开发, 软件方法论]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #02
 
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title: "SDD 2.0：用户故事的Prompt工程化重构"
 date: 2026-03-12T00:00:00+08:00
 tags: [AI-Native软件工程, 用户故事, Prompt工程, 需求工程]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #2
 ---
 

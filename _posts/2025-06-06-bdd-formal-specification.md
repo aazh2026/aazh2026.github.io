@@ -3,7 +3,7 @@ layout: post
 title: "BDD语义化升级：Gherkin到形式化规格的自动转换"
 date: 2025-06-06T00:00:00+08:00
 tags: [AI-Native软件工程, BDD, Gherkin, 形式化规格, 规格即代码]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #4
 ---
 

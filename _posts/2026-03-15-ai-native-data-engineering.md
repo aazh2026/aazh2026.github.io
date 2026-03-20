@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native 数据工程：从数据流水线到智能数据网格"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 数据工程, 数据流水线, 向量数据库, 特征工程]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列
 
 redirect_from:

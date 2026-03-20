@@ -3,7 +3,7 @@ layout: post
 title: "当 OpenAI 拥抱军工：技术伦理的边界在哪里？"
 date: 2025-01-21T17:30:00+08:00
 tags: [AI伦理, OpenAI, 深度分析, 技术哲学]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /openai-military-ethics.html

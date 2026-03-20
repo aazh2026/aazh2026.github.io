@@ -3,7 +3,7 @@ layout: post
 title: "4个文件搞定详细设计：最小上下文集合实践"
 date: 2026-03-11T08:30:00+08:00
 tags: [AI-Native, SDLC, 软件工程, 详细设计, 实践]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native SDLC 实践
 redirect_from:
   - /minimal-design-set.html

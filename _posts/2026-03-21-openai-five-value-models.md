@@ -4,7 +4,7 @@ title: "OpenAI 五大 AI 价值模型：从试点到商业重塑的完整路径"
 date: 2026-03-21T03:00:00+08:00
 permalink: /openai-five-ai-value-models/
 tags: [AI-Native, OpenAI, Business, Strategy, Transformation]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

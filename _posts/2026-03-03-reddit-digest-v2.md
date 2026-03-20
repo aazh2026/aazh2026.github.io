@@ -3,7 +3,7 @@ layout: post
 title: "Reddit 早报 | 2026-03-03"
 date: 2026-03-03T07:15:00+08:00
 tags: [Reddit, 早报, AI]
-author: Aaron
+author: "@postcodeeng"
 
 permalink: /reddit-digest-v2//
 redirect_from:

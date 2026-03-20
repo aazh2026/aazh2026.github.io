@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Engineering Daily | 2026-03-13 Top 3 Insights"
 date: 2026-03-13T08:00:00+08:00
 tags: [AI-Native, Engineering, Daily]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering Daily
 permalink: /2026/03/13/ai-native-daily/
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Code Review：从人工审查到 Agent 陪审团"
 date: 2026-03-13T10:00:00+08:00
 tags: [AI-Native软件工程, Code Review, Agent, 代码审查]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #46
 
 redirect_from:

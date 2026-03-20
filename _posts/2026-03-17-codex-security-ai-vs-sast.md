@@ -4,7 +4,7 @@ title: "AI-Native 安全：为什么 Codex 抛弃了 SAST 报告"
 date: 2026-03-17T16:00:00+08:00
 permalink: /codex-security-ai-vs-sast/
 tags: [AI-Native, Security, SAST, Codex, OpenAI]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

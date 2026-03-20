@@ -3,7 +3,7 @@ layout: post
 title: "AI辅助的导师制：基于代码审查历史的个性化AI导师"
 date: 2025-05-22T16:00:00+08:00
 tags: [AI-Native软件工程, 导师制, 人才培养, 个性化学习]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #44
 
 redirect_from:

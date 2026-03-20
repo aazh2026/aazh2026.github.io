@@ -3,7 +3,7 @@ layout: post
 title: "安全左移的AI实现：需求分析阶段的隐私合规风险识别"
 date: 2025-06-01T08:00:00+08:00
 tags: [AI-Native软件工程, 隐私合规, GDPR, 安全左移]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #47
 
 redirect_from:

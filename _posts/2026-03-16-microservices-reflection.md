@@ -4,7 +4,7 @@ title: "微服务反思：从'两个披萨'回到'一个仓库'"
 date: 2026-03-16T15:00:00+08:00
 permalink: /microservices-monolith-reconsideration/
 tags: [Architecture, Microservices, Monolith, Team Structure, Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

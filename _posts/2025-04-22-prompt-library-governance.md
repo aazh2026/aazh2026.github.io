@@ -3,7 +3,7 @@ layout: post
 title: "Prompt Library治理：当企业拥有1000个Prompt时该怎么办"
 date: 2025-04-22T18:00:00+08:00
 tags: [Prompt治理, AI工程, 知识管理, 企业实践, 规范化]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程
 
 redirect_from:

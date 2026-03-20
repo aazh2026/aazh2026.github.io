@@ -4,7 +4,7 @@ title: "Harness Engineering 实战：Everything Claude Code 的系统化约束�
 date: 2026-03-19T16:00:00+08:00
 permalink: /everything-claude-code-harness-engineering/
 tags: [AI-Native, Harness-Engineering, Claude-Code, System-Design]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 

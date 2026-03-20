@@ -3,7 +3,7 @@ layout: post
 title: "AI-Native Engineering Weekly | 2026-03-11 精选"
 date: 2026-03-11T10:00:00+08:00
 tags: [AI-Native, 工程实践, Agentic AI, Replit, Simon Willison]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native Engineering Weekly
 redirect_from:
   - /ai-native-weekly-top5.html

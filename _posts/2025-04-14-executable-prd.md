@@ -3,7 +3,7 @@ layout: post
 title: "AI时代PRD长什么样？——从文档到Executable Specification"
 date: 2025-04-14T08:00:00+08:00
 tags: [Executable PRD, 需求工程, AI-Native, 产品文档, 范式转移]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程
 
 redirect_from:

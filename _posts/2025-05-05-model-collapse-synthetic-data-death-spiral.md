@@ -3,7 +3,7 @@ layout: post
 title: "模型崩溃与合成数据的死亡螺旋：AI正在慢性中毒"
 date: 2025-05-05T20:00:00+08:00
 tags: [AI-Native软件工程, 模型崩溃, 合成数据, AI安全]
-author: Aaron
+author: "@postcodeeng"
 series: AI-Native软件工程系列 #32
 
 redirect_from:

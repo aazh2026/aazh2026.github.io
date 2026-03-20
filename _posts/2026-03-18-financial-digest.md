@@ -4,7 +4,7 @@ title: "Financial Morning Brief | 2026年3月18日 星期三"
 date: 2026-03-18T08:30:00+08:00
 permalink: /2026/03/18/financial-digest/
 tags: [Finance, Market, Daily]
-author: Aaron
+author: "@postcodeeng"
 redirect_from:
   - /financial-digest.html
 ---

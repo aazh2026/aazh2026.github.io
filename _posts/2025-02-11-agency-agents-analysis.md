@@ -3,7 +3,7 @@ layout: post
 title: "agency-agents深度解析：多Agent协作架构如何从概念走向落地"
 date: 2025-02-11T11:00:00+08:00
 tags: [agency-agents, 多Agent协作, Agent编排, 角色架构, Agentic Engineering, 架构设计]
-author: Aaron
+author: "@postcodeeng"
 
 redirect_from:
   - /agency-agents-analysis.html
