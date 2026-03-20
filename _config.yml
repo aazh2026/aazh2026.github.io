@@ -2,7 +2,7 @@ title: "Post-Code Engineering"
 description: "AI-Native软件工程 | 从代码到意图 | 探索后代码时代的工程范式"
 url: "https://postcodeengineering.com"
 baseurl: ""
-author: "Aaron"
+author: "@postcodeeng"
 email: "sophi@example.com"
 
 # Google Analytics 4
@@ -41,4 +41,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "Aaron"
+      author: "@postcodeeng"
