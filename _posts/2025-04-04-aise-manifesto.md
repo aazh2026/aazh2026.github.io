@@ -78,23 +78,27 @@ AI不是在替代"写代码"这个动作，而是在重新定义"什么是软件
 
 我提出AI-Native软件工程的五层架构模型：
 
-```
-┌─────────────────────────────────────┐
-│  Layer 5: Human Workflow            │
-│  人机协作流程设计                     │
-├─────────────────────────────────────┤
-│  Layer 4: Intent Architecture       │
-│  意图架构与知识资产管理                │
-├─────────────────────────────────────┤
-│  Layer 3: Agent Orchestration       │
-│  多Agent协作与调度                    │
-├─────────────────────────────────────┤
-│  Layer 2: Context Engineering       │
-│  上下文工程                           │
-├─────────────────────────────────────┤
-│  Layer 1: Model Layer               │
-│  基础模型与工具链                      │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph AISE["AISE五层架构"]
+        L5["Layer 5: Human Workflow\n人机协作流程设计"]
+        L4["Layer 4: Intent Architecture\n意图架构与知识资产管理"]
+        L3["Layer 3: Agent Orchestration\n多Agent协作与调度"]
+        L2["Layer 2: Context Engineering\n上下文工程"]
+        L1["Layer 1: Model Layer\n基础模型与工具链"]
+    end
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style AISE fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c
+    style L3 fill:#dbeafe,stroke:#2563eb
+    style L2 fill:#bfdbfe,stroke:#3b82f6
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### Layer 1: Model Layer

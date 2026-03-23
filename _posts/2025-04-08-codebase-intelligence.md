@@ -121,23 +121,27 @@ promotion-rules.getBlackFridayDiscount()
 
 基于对现有系统的分析，我提出Codebase Intelligence的**五层架构模型**。
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 5: Reasoning Layer 推理层                              │
-│ 能力：问答、推理、建议、生成                                 │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 4: Knowledge Graph 知识图谱层                          │
-│ 能力：实体关系、业务规则、架构映射                           │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 3: Semantic Index 语义索引层                           │
-│ 能力：语义搜索、向量检索、相似度匹配                         │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: Code Parsing 代码解析层                             │
-│ 能力：AST、符号表、依赖图、调用图                            │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Code Ingestion 代码采集层                           │
-│ 能力：Git、PR、Issue、文档、运行时数据                       │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph CI["Codebase Intelligence 五层架构"]
+        L5["Layer 5: Reasoning Layer 推理层\n能力：问答、推理、建议、生成"]
+        L4["Layer 4: Knowledge Graph 知识图谱层\n能力：实体关系、业务规则、架构映射"]
+        L3["Layer 3: Semantic Index 语义索引层\n能力：语义搜索、向量检索、相似度匹配"]
+        L2["Layer 2: Code Parsing 代码解析层\n能力：AST、符号表、依赖图、调用图"]
+        L1["Layer 1: Code Ingestion 代码采集层\n能力：Git、PR、Issue、文档、运行时数据"]
+    end
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style CI fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c
+    style L3 fill:#dbeafe,stroke:#2563eb
+    style L2 fill:#bfdbfe,stroke:#3b82f6
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### Layer 1: Code Ingestion 代码采集层

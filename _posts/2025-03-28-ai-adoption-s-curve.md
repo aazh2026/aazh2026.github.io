@@ -99,17 +99,21 @@ redirect_from:
 
 企业AI adoption不是一条S-curve，是**三层嵌套的S-curve**：
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 3: Organizational Adoption 组织层（2-5年）            │
-│ 整个组织的AI能力成熟度                                        │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: Team Adoption 团队层（6-18个月）                   │
-│ 团队的AI协作模式和工作流程                                    │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Individual Adoption 个人层（1-6个月）              │
-│ 个人工程师的AI工具使用能力                                    │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Adoption["AI Adoption 三层嵌套S-curve"]
+        L3["Layer 3: Organizational Adoption 组织层（2-5年）\n整个组织的AI能力成熟度"]
+        L2["Layer 2: Team Adoption 团队层（6-18个月）\n团队的AI协作模式和工作流程"]
+        L1["Layer 1: Individual Adoption 个人层（1-6个月）\n个人工程师的AI工具使用能力"]
+    end
+    
+    L3 --> L2
+    L2 --> L1
+    
+    style Adoption fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **关键洞察**：
