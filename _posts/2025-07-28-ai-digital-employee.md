@@ -371,32 +371,65 @@ class AIEmployeeDevelopment:
 
 **传统金字塔：**
 
-```
-        CEO
-         |
-    ┌────┼────┐
-    VP   VP   VP
-    |    |    |
-  Manager  Manager  Manager
-    |        |        |
-  Staff    Staff    Staff
+```mermaid
+flowchart TB
+    CEO["CEO"]
+    VP1["VP"]
+    VP2["VP"]
+    VP3["VP"]
+    M1["Manager"]
+    M2["Manager"]
+    M3["Manager"]
+    S1["Staff"]
+    S2["Staff"]
+    S3["Staff"]
+    
+    CEO --> VP1
+    CEO --> VP2
+    CEO --> VP3
+    VP1 --> M1
+    VP2 --> M2
+    VP3 --> M3
+    M1 --> S1
+    M2 --> S2
+    M3 --> S3
+    
+    style CEO fill:#fef3c7,stroke:#d97706
+    style VP1 fill:#fed7aa,stroke:#ea580c
+    style VP2 fill:#fed7aa,stroke:#ea580c
+    style VP3 fill:#fed7aa,stroke:#ea580c
 ```
 
 **AI-Enhanced 网络：**
 
-```
-              CEO
-               |
-        ┌──────┴──────┐
-        |             |
-   Human VP       AI Strategy Advisor
-        |             |
-   ┌────┴────┐   ┌────┴────┐
-   |         |   |         |
-Human     AI    Human     AI
-Manager  Manager Manager  Analyst
-   |        |      |        |
-Staff + AI Workers (混合团队)
+```mermaid
+flowchart TB
+    CEO["CEO"]
+    HVP["Human VP"]
+    AIAdvisor["AI Strategy Advisor"]
+    HM1["Human Manager"]
+    AIM["AI Manager"]
+    HM2["Human Manager"]
+    AIAnalyst["AI Analyst"]
+    Team1["Staff + AI Workers"]
+    Team2["Staff + AI Workers"]
+    
+    CEO --> HVP
+    CEO --> AIAdvisor
+    HVP --> HM1
+    HVP --> AIM
+    AIAdvisor --> HM2
+    AIAdvisor --> AIAnalyst
+    HM1 --> Team1
+    AIM --> Team1
+    HM2 --> Team2
+    AIAnalyst --> Team2
+    
+    style CEO fill:#fef3c7,stroke:#d97706
+    style HVP fill:#fed7aa,stroke:#ea580c
+    style AIAdvisor fill:#dbeafe,stroke:#2563eb
+    style AIM fill:#bfdbfe,stroke:#3b82f6
+    style AIAnalyst fill:#bfdbfe,stroke:#3b82f6
 ```
 
 **关键变化：**

@@ -160,17 +160,21 @@ class TestMyAgent(unittest.TestCase):
 
 ### Agent 组合的三层模型
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Layer 3: 能力组合 (Capability Composition)             │
-│  思考、推理、规划、反思等认知能力的组合                  │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: 行为组合 (Behavior Composition)               │
-│  工具使用、API 调用、数据处理的组合                      │
-├─────────────────────────────────────────────────────────┤
-│  Layer 1: 记忆组合 (Memory Composition)                 │
-│  短期记忆、长期记忆、知识图谱的组合                      │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    L3["Layer 3: 能力组合 (Capability Composition)
+    思考、推理、规划、反思等认知能力的组合"]
+    L2["Layer 2: 行为组合 (Behavior Composition)
+    工具使用、API 调用、数据处理的组合"]
+    L1["Layer 1: 记忆组合 (Memory Composition)
+    短期记忆、长期记忆、知识图谱的组合"]
+    
+    L3 --> L2
+    L2 --> L1
+    
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 为什么 Agent 更需要组合
