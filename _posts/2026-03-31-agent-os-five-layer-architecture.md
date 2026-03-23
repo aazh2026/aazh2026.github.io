@@ -71,30 +71,44 @@ redirect_from:
 
 ## 五层架构全景图
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Layer 5: Interface Layer                               │
-│  用户交互层：自然语言接口、命令行、轻量 GUI              │
-├─────────────────────────────────────────────────────────┤
-│  Layer 4: Orchestration Layer                           │
-│  编排层：多 Agent 协作、工作流管理、任务调度             │
-├─────────────────────────────────────────────────────────┤
-│  Layer 3: Agent Runtime Layer                           │
-│  运行时层：推理循环、工具调用、错误处理                  │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: Memory & State Layer                          │
-│  记忆层：短期记忆、长期记忆、知识图谱、状态管理          │
-├─────────────────────────────────────────────────────────┤
-│  Layer 1: Tools & Connectors Layer                      │
-│  工具层：API 连接、数据读写、外部系统交互                │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    L5["Layer 5: Interface Layer<br/>用户交互层：自然语言接口、命令行、轻量 GUI"]
+    L4["Layer 4: Orchestration Layer<br/>编排层：多 Agent 协作、工作流管理、任务调度"]
+    L3["Layer 3: Agent Runtime Layer<br/>运行时层：推理循环、工具调用、错误处理"]
+    L2["Layer 2: Memory & State Layer<br/>记忆层：短期记忆、长期记忆、知识图谱、状态管理"]
+    L1["Layer 1: Tools & Connectors Layer<br/>工具层：API 连接、数据读写、外部系统交互"]
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L3 --> L1
+    L2 --> L1
+    
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **数据流向：**
 
-```
-User Input → Interface → Orchestration → Runtime → Memory ↔ Tools
-                                              ↑___________|
+```mermaid
+flowchart LR
+    User["User Input"] --> Interface["Interface"]
+    Interface --> Orchestration["Orchestration"]
+    Orchestration --> Runtime["Runtime"]
+    Runtime --> Memory["Memory"]
+    Runtime --> Tools["Tools"]
+    Memory <--> Tools
+    
+    style User fill:#f8fafc,stroke:#64748b
+    style Interface fill:#fef3c7,stroke:#d97706
+    style Orchestration fill:#fed7aa,stroke:#ea580c
+    style Runtime fill:#dbeafe,stroke:#2563eb
+    style Memory fill:#bfdbfe,stroke:#3b82f6
+    style Tools fill:#d1fae5,stroke:#059669
 ```
 
 ---
@@ -195,34 +209,21 @@ class SalesforceConnector(BaseConnector):
 
 ### 记忆类型
 
-```
-┌─────────────────────────────────────────────┐
-│           Memory Hierarchy                  │
-├─────────────────────────────────────────────┤
-│  Working Memory (工作记忆)                   │
-│  • 当前对话上下文                            │
-│  • 活跃任务状态                              │
-│  • 临时变量                                  │
-│  生命周期：会话级                            │
-├─────────────────────────────────────────────┤
-│  Short-term Memory (短期记忆)                │
-│  • 近期对话历史                              │
-│  • 最近执行的操作                            │
-│  • 临时学习的内容                            │
-│  生命周期：小时-天级                         │
-├─────────────────────────────────────────────┤
-│  Long-term Memory (长期记忆)                 │
-│  • 用户偏好                                  │
-│  • 业务规则                                  │
-│  • 历史成功案例                              │
-│  生命周期：永久                              │
-├─────────────────────────────────────────────┤
-│  Knowledge Graph (知识图谱)                  │
-│  • 实体关系                                  │
-│  • 业务概念                                  │
-│  • 组织信息                                  │
-│  生命周期：永久                              │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    WM["Working Memory (工作记忆)<br/>• 当前对话上下文<br/>• 活跃任务状态<br/>• 临时变量<br/>生命周期：会话级"]
+    STM["Short-term Memory (短期记忆)<br/>• 近期对话历史<br/>• 最近执行的操作<br/>• 临时学习的内容<br/>生命周期：小时-天级"]
+    LTM["Long-term Memory (长期记忆)<br/>• 用户偏好<br/>• 业务规则<br/>• 历史成功案例<br/>生命周期：永久"]
+    KG["Knowledge Graph (知识图谱)<br/>• 实体关系<br/>• 业务概念<br/>• 组织信息<br/>生命周期：永久"]
+    
+    WM --> STM
+    STM --> LTM
+    LTM --> KG
+    
+    style WM fill:#fef3c7,stroke:#d97706
+    style STM fill:#fed7aa,stroke:#ea580c
+    style LTM fill:#dbeafe,stroke:#2563eb
+    style KG fill:#d1fae5,stroke:#059669
 ```
 
 ### 实现方案
@@ -527,49 +528,73 @@ class ReflectionCapability:
 
 **模式 1：主管-工作者（Supervisor-Workers）**
 
-```
-┌─────────────────┐
-│   Supervisor    │  负责：任务分解、分配、汇总
-│     Agent       │
-└────────┬────────┘
-         │
-    ┌────┼────┬────────┐
-    ↓    ↓    ↓        ↓
-┌─────┐┌─────┐┌─────┐┌─────┐
-│Work ││Work ││Work ││Work │
-│er 1 ││er 2 ││er 3 ││er 4 │
-└─────┘└─────┘└─────┘└─────┘
+```mermaid
+flowchart TB
+    Supervisor["Supervisor Agent<br/>负责：任务分解、分配、汇总"]
+    
+    W1["Worker 1"]
+    W2["Worker 2"]
+    W3["Worker 3"]
+    W4["Worker 4"]
+    
+    Supervisor --> W1
+    Supervisor --> W2
+    Supervisor --> W3
+    Supervisor --> W4
+    
+    style Supervisor fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style W1 fill:#dbeafe,stroke:#2563eb
+    style W2 fill:#dbeafe,stroke:#2563eb
+    style W3 fill:#dbeafe,stroke:#2563eb
+    style W4 fill:#dbeafe,stroke:#2563eb
 ```
 
 **模式 2：平等协作（Peer-to-Peer）**
 
-```
-┌─────┐ ←→ ┌─────┐
-│Agent│    │Agent│
-│  A  │ ←→ │  B  │
-└──┬──┘    └──┬──┘
-   ↕          ↕
-┌──┴──┐    ┌──┴──┐
-│Agent│ ←→ │Agent│
-│  C  │    │  D  │
-└─────┘    └─────┘
+```mermaid
+flowchart TB
+    AgentA["Agent A"]
+    AgentB["Agent B"]
+    AgentC["Agent C"]
+    AgentD["Agent D"]
+    
+    AgentA <--> AgentB
+    AgentA <--> AgentC
+    AgentB <--> AgentD
+    AgentC <--> AgentD
+    
+    style AgentA fill:#dbeafe,stroke:#2563eb
+    style AgentB fill:#dbeafe,stroke:#2563eb
+    style AgentC fill:#dbeafe,stroke:#2563eb
+    style AgentD fill:#dbeafe,stroke:#2563eb
 ```
 
 **模式 3：层级结构（Hierarchy）**
 
-```
-        ┌─────────┐
-        │  CEO    │
-        │ Agent   │
-        └────┬────┘
-       ┌─────┼─────┐
-       ↓     ↓     ↓
-    ┌────┐┌────┐┌────┐
-    │VP 1││VP 2││VP 3│
-    └──┬─┘└──┬─┘└──┬─┘
-    ┌──┴──┐  │  ┌──┴──┐
-    │Team │  │  │Team │
-    └─────┘  │  └─────┘
+```mermaid
+flowchart TB
+    CEO["CEO Agent"]
+    
+    VP1["VP 1"]
+    VP2["VP 2"]
+    VP3["VP 3"]
+    
+    Team1["Team"]
+    Team2["Team"]
+    
+    CEO --> VP1
+    CEO --> VP2
+    CEO --> VP3
+    
+    VP1 --> Team1
+    VP3 --> Team2
+    
+    style CEO fill:#fef3c7,stroke:#d97706,stroke-width:3px
+    style VP1 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style VP2 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style VP3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style Team1 fill:#dbeafe,stroke:#2563eb
+    style Team2 fill:#dbeafe,stroke:#2563eb
 ```
 
 ### 实现方案
