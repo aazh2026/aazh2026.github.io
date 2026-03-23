@@ -84,19 +84,17 @@ Code Review发现：
 
 ### 治理的三大支柱
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ AI工程治理三大支柱                                           │
-├─────────────────────────────────────────────────────────────┤
-│ 1. 标准化（Standardization）                                 │
-│    - 工具标准、Prompt标准、代码标准                          │
-├─────────────────────────────────────────────────────────────┤
-│ 2. 可追溯（Traceability）                                    │
-│    - 代码溯源、决策记录、变更追踪                            │
-├─────────────────────────────────────────────────────────────┤
-│ 3. 自动化（Automation）                                      │
-│    - 自动审查、自动验证、自动文档                            │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Pillars["AI工程治理三大支柱"]
+        S1["1. 标准化 Standardization<br/>- 工具标准、Prompt标准、代码标准"]
+        S2["2. 可追溯 Traceability<br/>- 代码溯源、决策记录、变更追踪"]
+        S3["3. 自动化 Automation<br/>- 自动审查、自动验证、自动文档"]
+    end
+    
+    style S1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style S2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style S3 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 支柱1：标准化
@@ -432,23 +430,20 @@ AI文档自动生成
 
 ### 三层治理架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ AI Governance Board（AI治理委员会）                          │
-│ - 制定AI战略和政策                                           │
-│ - 审批AI工具采购                                             │
-│ - 监督AI治理执行                                             │
-├─────────────────────────────────────────────────────────────┤
-│ AI Center of Excellence（AI卓越中心）                        │
-│ - 维护AI工具和标准                                           │
-│ - 培训和支持                                                 │
-│ - 最佳实践推广                                               │
-├─────────────────────────────────────────────────────────────┤
-│ Team AI Champions（团队AI大使）                              │
-│ - 团队内部推广                                               │
-│ - 问题反馈                                                   │
-│ - 经验分享                                                   │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Governance["三层治理架构"]
+        Board["AI Governance Board<br/>AI治理委员会<br/>- 制定AI战略和政策<br/>- 审批AI工具采购<br/>- 监督AI治理执行"]
+        CoE["AI Center of Excellence<br/>AI卓越中心<br/>- 维护AI工具和标准<br/>- 培训和支持<br/>- 最佳实践推广"]
+        Champions["Team AI Champions<br/>团队AI大使<br/>- 团队内部推广<br/>- 问题反馈<br/>- 经验分享"]
+    end
+    
+    Board --> CoE
+    CoE --> Champions
+    
+    style Board fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style CoE fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style Champions fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### AI Center of Excellence（AI CoE）
