@@ -351,17 +351,24 @@ O(N) = 协调开销（随N增长）
 
 **层次化Multi-Agent架构**：
 
-```
-┌─────────────────────────────────────┐
-│        协调层（1个协调者Agent）        │
-│   负责任务分解、结果聚合、冲突解决      │
-├─────────────────────────────────────┤
-│        执行层（3-5个专业Agent）        │
-│   每个Agent负责特定子任务              │
-├─────────────────────────────────────┤
-│        工具层（外部API/服务）          │
-│   数据库、搜索引擎、计算资源等          │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph MultiAgent["三层Agent架构"]
+        L1["协调层（1个协调者Agent）
+        负责任务分解、结果聚合、冲突解决"]
+        L2["执行层（3-5个专业Agent）
+        每个Agent负责特定子任务"]
+        L3["工具层（外部API/服务）
+        数据库、搜索引擎、计算资源等"]
+    end
+    
+    L1 --> L2
+    L2 --> L3
+    
+    style MultiAgent fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L3 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **关键设计点**：

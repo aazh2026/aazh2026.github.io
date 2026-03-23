@@ -456,18 +456,27 @@ IMR = 修改的代码行数 / 总代码行数
 
 ### AI-Native效能度量金字塔
 
-```
-                    ┌─────────────┐
-                    │   业务价值   │  （收入、用户满意度）
-                    ├─────────────┤
-                    │   意图达成   │  （需求完成度、意图保真度）
-                    ├─────────────┤
-                    │  修改能力   │  （意图修改率、重构成本）
-                    ├─────────────┤
-                    │  交付效率   │  （部署频率、前置时间）
-                    ├─────────────┤
-                    │  意图复杂度 │  （ICQ四维度）
-                    └─────────────┘
+```mermaid
+flowchart TB
+    subgraph Metrics["AI-Native度量体系金字塔"]
+        M1["业务价值\n（收入、用户满意度）"]
+        M2["意图达成\n（需求完成度、意图保真度）"]
+        M3["修改能力\n（意图修改率、重构成本）"]
+        M4["交付效率\n（部署频率、前置时间）"]
+        M5["意图复杂度\n（ICQ四维度）"]
+    end
+    
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+    M4 --> M5
+    
+    style Metrics fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style M1 fill:#fef3c7,stroke:#d97706,stroke-width:3px
+    style M2 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style M3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style M4 fill:#bfdbfe,stroke:#3b82f6
+    style M5 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 指标体系对比
