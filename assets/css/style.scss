@@ -516,24 +516,36 @@ a:hover {
   line-height: 1.5;
 }
 
-.post-content h2 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary);
-  padding-bottom: 0.25rem;
-  border-bottom: 2px solid var(--primary);
+/* 文章正文样式 - 高优先级覆盖 */
+.post-content h2,
+.post-content h3,
+.post .post-content h2,
+.post .post-content h3 {
+  font-family: var(--font-sans) !important;
 }
 
-.post-content h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-  border-left: 3px solid var(--accent);
-  padding-left: 0.5rem;
+.post-content h2,
+.post .post-content h2 {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--primary) !important;
+  padding-bottom: 0.25rem !important;
+  border-bottom: 2px solid var(--primary) !important;
+  line-height: 1.5 !important;
+}
+
+.post-content h3,
+.post .post-content h3 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.25rem !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--accent) !important;
+  border-left: 3px solid var(--accent) !important;
+  padding-left: 0.5rem !important;
+  line-height: 1.5 !important;
 }
 
 .post-content p {
