@@ -97,28 +97,35 @@ OpenAI的API看似是护城河，实际上可能是"最脆弱的业务模式"。
 
 基于对数十家AI公司和平台企业的深度研究，我提出"AI时代四层权力结构"模型。
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 4: Application Layer 应用层                            │
-│ • ChatGPT, Jasper, CopyAI                                   │
-│ • 特征：最易被替代，差异化最小                                │
-│ • 护城河：无                                                │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 3: Agent Runtime 代理运行时层                          │
-│ • LangChain, AutoGPT, OpenClaw                              │
-│ • 特征：新兴战场，标准未定型                                  │
-│ • 护城河：生态锁定（早期）                                   │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: Action APIs 行动API层                              │
-│ • Stripe, Twilio, Salesforce API                            │
-│ • 特征：AI的执行接口，价值被低估                              │
-│ • 护城河：数据网络 + 执行深度                                │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Data & Infrastructure 数据与基础设施层               │
-│ • Snowflake, Databricks, Cloudflare                         │
-│ • 特征：终极护城河，不可替代                                  │
-│ • 护城河：数据飞轮 + 规模效应                                │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Power["AI时代四层权力结构"]
+        L4["Layer 4: Application Layer 应用层
+        • ChatGPT, Jasper, CopyAI
+        • 特征：最易被替代，差异化最小
+        • 护城河：无"]
+        
+        L3["Layer 3: Agent Runtime 代理运行时层
+        • LangChain, AutoGPT, OpenClaw
+        • 特征：新兴战场，标准未定型
+        • 护城河：生态锁定（早期）"]
+        
+        L2["Layer 2: Action APIs 行动API层
+        • Stripe, Twilio, Salesforce API
+        • 特征：AI的执行接口，价值被低估
+        • 护城河：数据网络 + 执行深度"]
+        
+        L1["Layer 1: Data & Infrastructure 数据与基础设施层
+        • Snowflake, Databricks, Cloudflare
+        • 特征：终极护城河，不可替代
+        • 护城河：数据飞轮 + 规模效应"]
+    end
+    
+    style Power fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L4 fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### Layer 4: Application Layer 应用层
