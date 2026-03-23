@@ -677,42 +677,24 @@ AI 领域的对应：
 
 ### Unix 风格的 Agent 工具链
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Agent 工具链全景                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  User Input                                                 │
-│       │                                                     │
-│       ▼                                                     │
-│  ┌─────────────┐    Intent 解析（类似 shell 解析命令）       │
-│  │ IntentParser│ ──→ 将自然语言转为结构化 Intent             │
-│  └─────────────┘                                            │
-│       │                                                     │
-│       ▼                                                     │
-│  ┌─────────────┐    路由（类似 shell 的 which）              │
-│  │   Router    │ ──→ 根据 Intent 选择 Agent                 │
-│  └─────────────┘                                            │
-│       │                                                     │
-│       ▼                                                     │
-│  ┌─────────────┐    执行（类似 fork/exec）                   │
-│  │  Executor   │ ──→ 运行选定的 Agent                       │
-│  └─────────────┘                                            │
-│       │                                                     │
-│       ▼                                                     │
-│  ┌─────────────┐    管道（类似 pipe）                        │
-│  │   Pipeline  │ ──→ 连接多个 Agent                         │
-│  └─────────────┘                                            │
-│       │                                                     │
-│       ▼                                                     │
-│  ┌─────────────┐    格式化（类似 printf）                    │
-│  │   Formatter │ ──→ 结果格式化输出                         │
-│  └─────────────┘                                            │
-│       │                                                     │
-│       ▼                                                     │
-│  User Output                                                │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    UserInput["User Input"] --> IntentParser
+    
+    subgraph Chain["Agent 工具链全景"]
+        IntentParser["IntentParser"] -->|"Intent 解析（类似 shell 解析命令）\n将自然语言转为结构化 Intent"| Router
+        Router["Router"] -->|"路由（类似 shell 的 which）\n根据 Intent 选择 Agent"| Executor
+        Executor["Executor"] -->|"执行（类似 fork/exec）\n运行选定的 Agent"| Pipeline
+        Pipeline["Pipeline"] -->|"管道（类似 pipe）\n连接多个 Agent"| Formatter
+        Formatter["Formatter"] -->|"格式化（类似 printf）\n结果格式化输出"| UserOutput
+    end
+    
+    style Chain fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style IntentParser fill:#fef3c7,stroke:#d97706
+    style Router fill:#fed7aa,stroke:#ea580c
+    style Executor fill:#dbeafe,stroke:#2563eb
+    style Pipeline fill:#bfdbfe,stroke:#3b82f6
+    style Formatter fill:#d1fae5,stroke:#059669
 ```
 
 ### 最佳实践清单

@@ -360,22 +360,21 @@ with open('input.log') as infile, open('errors.log', 'w') as outfile:
 
 程序员的认知资源是有限的。抽象层级直接影响认知负荷：
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  高抽象层级                                              │
-│  ─────────────────                                       │
-│  "过滤错误日志"  ← 领域概念                               │
-│       ↓                                                  │
-│  [Python] open().writelines(...)  ← 标准库抽象           │
-│       ↓                                                  │
-│  [C] FILE*, fopen, fgets, strstr  ← 系统调用封装         │
-│       ↓                                                  │
-│  [内核] read(), write(), 缓冲区管理  ← 操作系统抽象        │
-│       ↓                                                  │
-│  [硬件] 磁盘控制器，DMA，中断  ← 物理世界                  │
-│  ─────────────────                                       │
-│  低抽象层级                                              │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Abstraction["抽象层级与认知负荷"]
+        H["高抽象层级\n'过滤错误日志' ← 领域概念"] --> P["[Python] open().writelines(...) ← 标准库抽象"]
+        P --> C["[C] FILE*, fopen, fgets, strstr ← 系统调用封装"]
+        C --> K["[内核] read(), write(), 缓冲区管理 ← 操作系统抽象"]
+        K --> HW["[硬件] 磁盘控制器，DMA，中断 ← 物理世界"]
+    end
+    
+    style Abstraction fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style H fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style P fill:#fed7aa,stroke:#ea580c
+    style C fill:#dbeafe,stroke:#2563eb
+    style K fill:#bfdbfe,stroke:#3b82f6
+    style HW fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **核心洞见**：优秀的程序员知道何时在正确的层级工作。写业务逻辑时，应该想着"过滤错误"，而不是"操作文件描述符"。
