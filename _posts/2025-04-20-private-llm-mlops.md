@@ -103,23 +103,36 @@ LLM快速发展：
 
 ### 整体架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 5: Model Serving 模型服务层                            │
-│ - 模型推理服务、API网关、负载均衡                             │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 4: Model Management 模型管理层                         │
-│ - 模型版本、模型注册、模型评估                                │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 3: Training & Fine-tuning 训练微调层                   │
-│ - 预训练、微调、RLHF、评估                                    │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: Data Management 数据管理层                          │
-│ - 数据收集、数据处理、数据版本                                │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Infrastructure 基础设施层                           │
-│ - GPU集群、存储、网络、安全                                   │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph MLOps["Private LLM MLOps 五层架构"]
+        L5["Layer 5: Model Serving 模型服务层
+        - 模型推理服务、API网关、负载均衡"]
+        
+        L4["Layer 4: Model Management 模型管理层
+        - 模型版本、模型注册、模型评估"]
+        
+        L3["Layer 3: Training & Fine-tuning 训练微调层
+        - 预训练、微调、RLHF、评估"]
+        
+        L2["Layer 2: Data Management 数据管理层
+        - 数据收集、数据处理、数据版本"]
+        
+        L1["Layer 1: Infrastructure 基础设施层
+        - GPU集群、存储、网络、安全"]
+    end
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style MLOps fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c
+    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ---

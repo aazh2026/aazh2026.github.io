@@ -143,24 +143,35 @@ AI需要更结构化的形态：
 
 ### 🏗️ Knowledge Asset Stack
 
-```
-┌─────────────────────────────────────┐
-│  L4: Context Patterns               │
-│  项目结构、领域术语、约束条件          │
-│  → AI加载时自动应用                   │
-├─────────────────────────────────────┤
-│  L3: Intent Templates               │
-│  PRD模板、User Story、验收标准        │
-│  → AI生成代码的输入规范               │
-├─────────────────────────────────────┤
-│  L2: Verification Heuristics        │
-│  测试策略、质量门禁、边界检查          │
-│  → AI自检和人工审查依据               │
-├─────────────────────────────────────┤
-│  L1: Failure Modes                  │
-│  已知陷阱、常见错误、故障案例          │
-│  → AI生成时的"负面清单"              │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph KA["知识资产化四层模型"]
+        L4["L4: Context Patterns
+        项目结构、领域术语、约束条件
+        → AI加载时自动应用"]
+        
+        L3["L3: Intent Templates
+        PRD模板、User Story、验收标准
+        → AI生成代码的输入规范"]
+        
+        L2["L2: Verification Heuristics
+        测试策略、质量门禁、边界检查
+        → AI自检和人工审查依据"]
+        
+        L1["L1: Failure Modes
+        已知陷阱、常见错误、故障案例
+        → AI生成时的'负面清单'"]
+    end
+    
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style KA fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L4 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fed7aa,stroke:#ea580c
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 🚀 转型路线图
