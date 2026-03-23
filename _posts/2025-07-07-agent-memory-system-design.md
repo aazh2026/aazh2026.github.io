@@ -86,29 +86,18 @@ Agent: 抱歉，我不记得我们之前聊过这个...
 
 Agent 的记忆系统设计可以借鉴这个分层：
 
-```
-┌─────────────────────────────────────────────┐
-│  Working Memory (工作记忆)                   │
-│  • 当前对话上下文                            │
-│  • 活跃任务状态                              │
-│  • 临时变量和中间结果                        │
-│  容量：有限（类似 7±2 原则）                 │
-│  持续时间：秒到分钟                          │
-├─────────────────────────────────────────────┤
-│  Short-term Memory (短期记忆)                │
-│  • 近期对话历史                              │
-│  • 最近执行的任务                            │
-│  • 临时学习的内容                            │
-│  容量：较大                                  │
-│  持续时间：小时到天                          │
-├─────────────────────────────────────────────┤
-│  Long-term Memory (长期记忆)                 │
-│  • 用户画像和偏好                            │
-│  • 业务规则和知识                            │
-│  • 成功案例和模式                            │
-│  容量：几乎无限                              │
-│  持续时间：永久                              │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    WM["Working Memory (工作记忆)<br/>• 当前对话上下文<br/>• 活跃任务状态<br/>• 临时变量和中间结果<br/>容量：有限（类似 7±2 原则）<br/>持续时间：秒到分钟"]
+    STM["Short-term Memory (短期记忆)<br/>• 近期对话历史<br/>• 最近执行的任务<br/>• 临时学习的内容<br/>容量：较大<br/>持续时间：小时到天"]
+    LTM["Long-term Memory (长期记忆)<br/>• 用户画像和偏好<br/>• 业务规则和知识<br/>• 成功案例和模式<br/>容量：几乎无限<br/>持续时间：永久"]
+    
+    WM --> STM
+    STM --> LTM
+    
+    style WM fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style STM fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style LTM fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ---
@@ -699,22 +688,25 @@ class AgentKnowledgeGraph:
 
 ### 整体架构
 
-```
-┌─────────────────────────────────────────────────────┐
-│                  Agent Memory System                 │
-├─────────────────────────────────────────────────────┤
-│  Working Memory          Short-term Memory           │
-│  (In-Memory)             (Vector DB)                 │
-│  • ContextWindow         • Semantic retrieval        │
-│  • EntityTracker         • Temporal decay            │
-│  • Summarizer            • Importance scoring        │
-├─────────────────────────────────────────────────────┤
-│  Long-term Memory          Knowledge Graph           │
-│  (Relational DB)           (Graph DB)                │
-│  • User profiles           • Entity relationships    │
-│  • Business rules          • Inference queries       │
-│  • Case studies            • Path finding            │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph MMS["Agent Memory System"]
+        subgraph Top[""]
+            WM["Working Memory<br/>(In-Memory)<br/>• ContextWindow<br/>• EntityTracker<br/>• Summarizer"]
+            STM["Short-term Memory<br/>(Vector DB)<br/>• Semantic retrieval<br/>• Temporal decay<br/>• Importance scoring"]
+        end
+        
+        subgraph Bottom[""]
+            LTM["Long-term Memory<br/>(Relational DB)<br/>• User profiles<br/>• Business rules<br/>• Case studies"]
+            KG["Knowledge Graph<br/>(Graph DB)<br/>• Entity relationships<br/>• Inference queries<br/>• Path finding"]
+        end
+    end
+    
+    style MMS fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style WM fill:#fef3c7,stroke:#d97706
+    style STM fill:#dbeafe,stroke:#2563eb
+    style LTM fill:#d1fae5,stroke:#059669
+    style KG fill:#fce7f3,stroke:#db2777
 ```
 
 ### 关键设计决策
