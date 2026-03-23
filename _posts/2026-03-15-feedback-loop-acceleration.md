@@ -42,17 +42,17 @@ redirect_from:
 
 在系统动力学中，**反馈循环 (Feedback Loop)** 是系统自我调节的核心机制。一个完整的反馈循环包含四个环节：
 
-```
-┌─────────────────────────────────────────────────────┐
-│                  反馈循环的四要素                     │
-│                                                      │
-│    行动 (Action) ───────→ 结果 (Outcome)             │
-│         ↑                      │                     │
-│         └──────────┬───────────┘                     │
-│                    ↓                                 │
-│            感知 (Sense) ←── 反馈 (Feedback)          │
-│                                                      │
-└─────────────────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    Action["行动 Action"] --> Outcome["结果 Outcome"]
+    Outcome --> Sense["感知 Sense"]
+    Sense --> Feedback["反馈 Feedback"]
+    Feedback --> Action
+    
+    style Action fill:#dbeafe,stroke:#2563eb
+    style Outcome fill:#fef3c7,stroke:#d97706
+    style Sense fill:#d1fae5,stroke:#059669
+    style Feedback fill:#fed7aa,stroke:#ea580c
 ```
 
 **关键洞察**：反馈循环的速度决定了系统适应环境的速度。
@@ -354,29 +354,21 @@ def test_calculate_discount():
 
 **智能审查流程**：
 
-```
-PR提交
-   │
-   ▼
-┌─────────────────────────────────────┐
-│  AI预审 (30秒内完成)                 │
-│  - 安全扫描                         │
-│  - 性能检查                         │
-│  - 规范合规                         │
-│  - 测试覆盖                         │
-└─────────────────────────────────────┘
-   │
-   ├──→ 🔴 严重问题 → 自动阻止合并 + 建议修复
-   │
-   ├──→ 🟡 警告 → 标记供人工关注
-   │
-   └──→ 🟢 通过 → 进入人工审查队列
-                │
-                ▼
-        人类审查者关注：
-        - 架构设计合理性
-        - 业务逻辑正确性
-        - 创新性解决方案
+```mermaid
+flowchart TD
+    PR["PR提交"] --> AIPre["AI预审 (30秒内完成)<br/>- 安全扫描<br/>- 性能检查<br/>- 规范合规<br/>- 测试覆盖"]
+    
+    AIPre -->|"🔴 严重问题"| Block["自动阻止合并 + 建议修复"]
+    AIPre -->|"🟡 警告"| Mark["标记供人工关注"]
+    AIPre -->|"🟢 通过"| Human["进入人工审查队列"]
+    
+    Human --> Review["人类审查者关注:<br/>- 架构设计合理性<br/>- 业务逻辑正确性<br/>- 创新性解决方案"]
+    
+    style AIPre fill:#dbeafe,stroke:#2563eb
+    style Block fill:#fee2e2,stroke:#dc2626
+    style Mark fill:#fef3c7,stroke:#d97706
+    style Human fill:#d1fae5,stroke:#059669
+    style Review fill:#fef3c7,stroke:#d97706,stroke-width:2px
 ```
 
 **关键洞察**：AI处理"可模式化"的审查，人类专注"需要判断"的审查。
@@ -466,21 +458,23 @@ PR提交
 
 一个有效的实时反馈系统需要三个核心要素：
 
-```
-┌─────────────────────────────────────────────────────────┐
-│              实时反馈系统三要素                            │
-│                                                          │
-│         Intent-Driven     Context-Rich    Action-Ready   │
-│         (意图驱动)        (上下文丰富)     (行动就绪)     │
-│              ▲                ▲               ▲          │
-│              └────────────────┼───────────────┘          │
-│                               │                          │
-│                    ┌──────────┴──────────┐               │
-│                    │   实时反馈引擎       │               │
-│                    │  (Real-Time Engine) │               │
-│                    └─────────────────────┘               │
-│                                                          │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph RealTime["实时反馈系统三要素"]
+        Engine["实时反馈引擎 Real-Time Engine"]
+        Intent["Intent-Driven 意图驱动"]
+        Context["Context-Rich 上下文丰富"]
+        Action["Action-Ready 行动就绪"]
+    end
+    
+    Intent --> Engine
+    Context --> Engine
+    Action --> Engine
+    
+    style Engine fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style Intent fill:#fef3c7,stroke:#d97706
+    style Context fill:#d1fae5,stroke:#059669
+    style Action fill:#fed7aa,stroke:#ea580c
 ```
 
 ### 要素一：Intent-Driven（意图驱动）

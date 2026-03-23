@@ -41,55 +41,51 @@ redirect_from:
 
 ### 私有代码LLM MLOps架构图
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Data Pipeline                             │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │ Code Repo   │→ │ Data        │→ │ Training    │             │
-│  │ Scanner     │   │ Processor   │   │ Dataset     │             │
-│  │ (GitHub/GitLab)│  │ (Cleaning)  │   │ Generator   │             │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                    Model Training Pipeline                       │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │ Base Model  │→ │ Fine-tuning │→ │ Model       │             │
-│  │ (StarCoder/ │   │ (LoRA/QLoRA)│   │ Registry    │             │
-│  │  CodeLlama) │   │             │   │ (MLflow/    │             │
-│  └─────────────┘  └─────────────┘   │  W&B)        │             │
-│                                     └─────────────┘             │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                      Evaluation Pipeline                         │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │ Benchmark   │  │ Human       │  │ A/B Test    │             │
-│  │ Suite       │  │ Evaluation  │  │ Framework   │             │
-│  │ (HumanEval/ │   │ (Code Review)│   │ (Shadow     │             │
-│  │  MBPP)      │   │             │   │  Deployment)│             │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                     Deployment Pipeline                          │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │ Model       │→ │ Canary      │→ │ Production  │             │
-│  │ Packaging   │   │ Deployment  │   │ Rollout     │             │
-│  │ (Triton/    │   │ (5% traffic)│   │ (100%       │             │
-│  │  vLLM)      │   │             │   │  traffic)   │             │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-└─────────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────────┐
-│                     Monitoring & Feedback                        │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐             │
-│  │ Performance │  │ Error       │  │ Feedback    │             │
-│  │ Metrics     │  │ Analysis    │  │ Loop        │             │
-│  │ (Latency/   │   │ (Buggy Code │   │ (Retraining │             │
-│  │  Throughput)│   │  Detection) │   │  Trigger)   │             │
-│  └─────────────┘  └─────────────┘  └─────────────┘             │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph DataPipeline["Data Pipeline"]
+        Scanner["Code Repo Scanner<br/>GitHub/GitLab"]
+        Processor["Data Processor<br/>Cleaning"]
+        DatasetGen["Training Dataset<br/>Generator"]
+        Scanner --> Processor --> DatasetGen
+    end
+    
+    subgraph TrainingPipeline["Model Training Pipeline"]
+        BaseModel["Base Model<br/>StarCoder/CodeLlama"]
+        Finetune["Fine-tuning<br/>LoRA/QLoRA"]
+        Registry["Model Registry<br/>MLflow/W&B"]
+        BaseModel --> Finetune --> Registry
+    end
+    
+    subgraph EvalPipeline["Evaluation Pipeline"]
+        Benchmark["Benchmark Suite<br/>HumanEval/MBPP"]
+        HumanEval["Human Evaluation<br/>Code Review"]
+        ABTest["A/B Test Framework<br/>Shadow Deployment"]
+    end
+    
+    subgraph DeployPipeline["Deployment Pipeline"]
+        Packaging["Model Packaging<br/>Triton/vLLM"]
+        Canary["Canary Deployment<br/>5% traffic"]
+        Prod["Production Rollout<br/>100% traffic"]
+        Packaging --> Canary --> Prod
+    end
+    
+    subgraph Monitoring["Monitoring & Feedback"]
+        Metrics["Performance Metrics<br/>Latency/Throughput"]
+        ErrorAnalysis["Error Analysis<br/>Buggy Code Detection"]
+        FeedbackLoop["Feedback Loop<br/>Retraining Trigger"]
+    end
+    
+    DataPipeline --> TrainingPipeline
+    TrainingPipeline --> EvalPipeline
+    EvalPipeline --> DeployPipeline
+    DeployPipeline --> Monitoring
+    
+    style DataPipeline fill:#dbeafe,stroke:#2563eb
+    style TrainingPipeline fill:#fef3c7,stroke:#d97706
+    style EvalPipeline fill:#d1fae5,stroke:#059669
+    style DeployPipeline fill:#fed7aa,stroke:#ea580c
+    style Monitoring fill:#fce7f3,stroke:#db2777
 ```
 
 ### 核心组件说明
