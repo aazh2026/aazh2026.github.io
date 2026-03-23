@@ -180,20 +180,28 @@ AI方式：
 
 ### AI驱动的可追溯性架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 4: Traceability Analytics 追溯分析层                   │
-│ 功能：影响分析、覆盖率分析、合规报告                          │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 3: AI Association Engine AI关联引擎层                  │
-│ 功能：语义匹配、模式识别、自动关联                            │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: Unified Model 统一模型层                            │
-│ 功能：需求模型、代码模型、测试模型的统一表示                  │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Data Integration 数据整合层                         │
-│ 功能：整合Jira/GitHub/TestRail等系统数据                      │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Traceability["自动追踪四层架构"]
+        L4["Layer 4: Traceability Analytics 追溯分析层
+        功能：影响分析、覆盖率分析、合规报告"]
+        L3["Layer 3: AI Association Engine AI关联引擎层
+        功能：语义匹配、模式识别、自动关联"]
+        L2["Layer 2: Unified Model 统一模型层
+        功能：需求模型、代码模型、测试模型的统一表示"]
+        L1["Layer 1: Data Integration 数据整合层
+        功能：整合Jira/GitHub/TestRail等系统数据"]
+    end
+    
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style Traceability fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L4 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fed7aa,stroke:#ea580c
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ---
