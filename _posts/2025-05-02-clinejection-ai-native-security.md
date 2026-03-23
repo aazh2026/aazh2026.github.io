@@ -299,20 +299,29 @@ AI："好的，我可以添加索引。请执行：ALTER TABLE..."
 
 基于Clinejection攻击的分析，我提出**AI-Native安全三环防护模型**：
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    🔴 第三环：执行验证层                      │
-│                   (Execution Verification)                  │
-│                     最后防线，行为审计                        │
-├─────────────────────────────────────────────────────────────┤
-│                    🟡 第二环：决策控制层                      │
-│                   (Decision Control)                        │
-│                   意图理解，风险评估                          │
-├─────────────────────────────────────────────────────────────┤
-│                    🟢 第一环：感知监测层                      │
-│                   (Perception Monitoring)                   │
-│                   输入分析，上下文评估                        │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Security["AI-Native安全三环防护模型"]
+        L3["🔴 第三环：执行验证层
+        (Execution Verification)
+        最后防线，行为审计"]
+        
+        L2["🟡 第二环：决策控制层
+        (Decision Control)
+        意图理解，风险评估"]
+        
+        L1["🟢 第一环：感知监测层
+        (Perception Monitoring)
+        输入分析，上下文评估"]
+    end
+    
+    L1 --> L2
+    L2 --> L3
+    
+    style Security fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style L2 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fee2e2,stroke:#dc2626,stroke-width:2px
 ```
 
 ### 第一环：感知监测层 (Perception Monitoring)
