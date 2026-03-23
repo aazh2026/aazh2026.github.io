@@ -518,12 +518,12 @@ a:hover {
 
 .post-content h2 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   color: var(--primary);
   padding-bottom: 0.25rem;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 2px solid var(--primary);
 }
 
 .post-content h3 {
@@ -532,6 +532,8 @@ a:hover {
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
   color: var(--accent);
+  border-left: 3px solid var(--accent);
+  padding-left: 0.5rem;
 }
 
 .post-content p {
