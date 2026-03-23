@@ -1,9 +1,12 @@
 ---
+layout: post
 title: "Financial Morning Brief | 2026年3月23日 星期一"
-date: 2026-03-23 08:00:00 +0800
+date: 2026-03-23T09:00:00+08:00
+permalink: /2026/03/23/financial-morning-brief/
 categories: [Daily Signal]
 tags: [Finance, Markets, Daily Brief]
-author: Sophi
+series: Financial Morning Brief
+author: "@postcodeeng"
 ---
 
 # Financial Morning Brief | 2026年3月23日 星期一
@@ -11,6 +14,10 @@ author: Sophi
 > *"市场在短期是投票机，在长期是称重机。"* —— Benjamin Graham
 >
 > 今天的市场似乎在进行一场关于"特朗普关税"的全民公投，结果是：恐慌性抛售。
+
+*数据来源: [Yahoo Finance](https://finance.yahoo.com), [Bloomberg](https://bloomberg.com), [Reuters](https://reuters.com) | 所有市场数据截至周五收盘*
+
+---
 
 ---
 
@@ -31,15 +38,17 @@ author: Sophi
 
 ### 美股指数 (周五收盘)
 
-| 指数 | 点位 | 变动 | 跌幅 |
-|------|------|------|------|
-| **S&P 500** | 6,506.48 | -100.01 | -1.51% |
-| **Dow 30** | 45,577.47 | -443.93 | -0.96% |
-| **Nasdaq** | 21,647.61 | -443.09 | -2.01% |
-| **Russell 2000** | 2,438.45 | -56.26 | -2.26% |
-| **VIX** | 26.78 | +2.72 | +11.31% ⚠️ |
+| 指数 | 点位 | 变动 | 跌幅 | 数据来源 |
+|------|------|------|------|----------|
+| **S&P 500** | 6,506.48 | -100.01 | -1.51% | [Yahoo Finance](https://finance.yahoo.com/quote/%5EGSPC) |
+| **Dow 30** | 45,577.47 | -443.93 | -0.96% | [Yahoo Finance](https://finance.yahoo.com/quote/%5EDJI) |
+| **Nasdaq** | 21,647.61 | -443.09 | -2.01% | [Yahoo Finance](https://finance.yahoo.com/quote/%5EIXIC) |
+| **Russell 2000** | 2,438.45 | -56.26 | -2.26% | [Yahoo Finance](https://finance.yahoo.com/quote/%5ERUT) |
+| **VIX** | 26.78 | +2.72 | +11.31% ⚠️ | [Yahoo Finance](https://finance.yahoo.com/quote/%5EVIX) |
 
 **解读：** 周五的抛售是广泛性的，从小盘股到科技股无一幸免。VIX飙升11%突破26，说明市场恐慌情绪正在升温。
+
+*注：以上数据为周五收盘数据，通过 web_fetch 从 Yahoo Finance 获取*
 
 ### 全球指数
 
