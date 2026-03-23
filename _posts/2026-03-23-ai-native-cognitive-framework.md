@@ -32,20 +32,29 @@ series: AI-Native Engineering
 
 ### 三层认知模型
 
-```
-┌─────────────────────────────────────┐
-│  L3: 范式层 (Paradigm)              │
-│  如何重新思考软件的本质              │
-│  "代码是负债，意图是资产"            │
-├─────────────────────────────────────┤
-│  L2: 工作流层 (Workflow)             │
-│  如何重构开发流程                    │
-│  "需求→设计→编码→测试→部署"         │
-├─────────────────────────────────────┤
-│  L1: 工具层 (Tool)                   │
-│  用什么工具写代码                    │
-│  Cursor / Claude / Copilot           │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph L3["L3: 范式层 (Paradigm)"]
+        L3_desc["如何重新思考软件的本质"]
+        L3_quote["\"代码是负债，意图是资产\""]
+    end
+    
+    subgraph L2["L2: 工作流层 (Workflow)"]
+        L2_desc["如何重构开发流程"]
+        L2_flow["需求→设计→编码→测试→部署"]
+    end
+    
+    subgraph L1["L1: 工具层 (Tool)"]
+        L1_desc["用什么工具写代码"]
+        L1_tools["Cursor / Claude / Copilot"]
+    end
+    
+    L3 --> L2
+    L2 --> L1
+    
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 失败模式的根因
