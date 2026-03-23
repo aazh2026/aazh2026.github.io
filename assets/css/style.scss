@@ -494,11 +494,12 @@ a:hover {
 }
 
 .post-title {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.3;
   font-family: var(--font-sans);
+  color: var(--text-primary);
 }
 
 .post-meta {
@@ -516,19 +517,21 @@ a:hover {
 }
 
 .post-content h2 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color: var(--primary);
   padding-bottom: 0.25rem;
   border-bottom: 1px solid var(--border-light);
 }
 
 .post-content h3 {
-  font-size: 1.0625rem;
+  font-size: 1rem;
+  font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color: var(--accent);
 }
 
 .post-content p {
