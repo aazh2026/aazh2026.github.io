@@ -174,23 +174,32 @@ AI：   生成方案 → 执行实现 → 质量检查 → 监控运维
 
 AISE将软件工程活动划分为五个层次：
 
-```
-┌─────────────────────────────────────────┐
-│  第5层：度量层（Metrics）                 │
-│  意图复杂度、效能度量、质量指标            │
-├─────────────────────────────────────────┤
-│  第4层：治理层（Governance）              │
-│  AI治理、安全合规、伦理审查               │
-├─────────────────────────────────────────┤
-│  第3层：开发层（Development）             │
-│  AI辅助编码、生成、验证                  │
-├─────────────────────────────────────────┤
-│  第2层：需求层（Requirements）            │
-│  意图工程、可执行PRD、Prompt设计         │
-├─────────────────────────────────────────┤
-│  第1层：理论层（Theory）                  │
-│  核心概念、原则、模式                    │
-└─────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph AISE["AISE五层架构"]
+        L5["第5层：度量层（Metrics）
+        意图复杂度、效能度量、质量指标"]
+        L4["第4层：治理层（Governance）
+        AI治理、安全合规、伦理审查"]
+        L3["第3层：开发层（Development）
+        AI辅助编码、生成、验证"]
+        L2["第2层：需求层（Requirements）
+        意图工程、可执行PRD、Prompt设计"]
+        L1["第1层：理论层（Theory）
+        核心概念、原则、模式"]
+    end
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style AISE fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c
+    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 第1层：理论层（Theory）
