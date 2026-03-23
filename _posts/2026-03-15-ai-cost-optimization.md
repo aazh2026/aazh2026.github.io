@@ -109,17 +109,40 @@ AI应用产生大量数据需要存储：
 
 一个典型的AI客服系统月成本构成：
 
-```
-总成本: $10,000
-├── Token成本: $7,000 (70%)
-│   ├── 输入: $2,000
-│   └── 输出: $5,000
-├── 存储成本: $1,500 (15%)
-│   ├── 向量数据库: $800
-│   └── 对话历史: $700
-└── 其他: $1,500 (15%)
-    ├── 推理服务托管: $1,000
-    └── 日志监控: $500
+```mermaid
+flowchart TB
+    Total["总成本: $10,000"]
+    
+    Token["Token成本: $7,000 (70%)"]
+    Storage["存储成本: $1,500 (15%)"]
+    Other["其他: $1,500 (15%)"]
+    
+    Input["输入: $2,000"]
+    Output["输出: $5,000"]
+    
+    Vector["向量数据库: $800"]
+    History["对话历史: $700"]
+    
+    Hosting["推理服务托管: $1,000"]
+    Log["日志监控: $500"]
+    
+    Total --> Token
+    Total --> Storage
+    Total --> Other
+    
+    Token --> Input
+    Token --> Output
+    
+    Storage --> Vector
+    Storage --> History
+    
+    Other --> Hosting
+    Other --> Log
+    
+    style Total fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style Token fill:#fee2e2,stroke:#dc2626,stroke-width:2px
+    style Storage fill:#dbeafe,stroke:#2563eb
+    style Other fill:#d1fae5,stroke:#059669
 ```
 
 **优化优先级：Token成本 > 存储成本 > 推理成本**
