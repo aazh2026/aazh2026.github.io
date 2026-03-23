@@ -273,31 +273,70 @@ class AnalysisIntent:
 
 ### 5.3 核心转变总结
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    范式转移全景图                             │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   传统 SOLID                    新 SOLID (AI-Native)        │
-│   ────────────                  ───────────────────         │
-│                                                             │
-│   Class  ←──────────────────→  Agent                        │
-│   │                             │                           │
-│   ├── Encapsulation      →     ├── Context Management       │
-│   ├── Method             →     ├── Intent + Tool Calling    │
-│   └── State (fields)     →     └── Memory + Working Context │
-│                                                             │
-│   Interface  ←──────────────→  Capability Contract          │
-│   │                             │                           │
-│   ├── Static typing      →     ├── Dynamic capability desc  │
-│   ├── Compile-time check →     └── Runtime validation       │
-│                                                             │
-│   Inheritance ←─────────────→  Composition + Prompting      │
-│   │                             │                           │
-│   ├── Is-a relationship  →     ├── Has-capability pattern   │
-│   └── Method override    →     └── Prompt template override │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Paradigm["范式转移全景图"]
+        subgraph Traditional["传统 SOLID"]
+            Class["Class"]
+            Encap["Encapsulation"]
+            Method["Method"]
+            State["State (fields)"]
+            Class --> Encap
+            Class --> Method
+            Class --> State
+        end
+        
+        subgraph New["新 SOLID (AI-Native)"]
+            Agent["Agent"]
+            Context["Context Management"]
+            Intent["Intent + Tool Calling"]
+            Memory["Memory + Working Context"]
+            Agent --> Context
+            Agent --> Intent
+            Agent --> Memory
+        end
+        
+        Class <---> Agent
+    end
+    
+    subgraph Interface["Interface 转变"]
+        Interface1["Interface"]
+        Static["Static typing"]
+        Compile["Compile-time check"]
+        Interface1 --> Static
+        Interface1 --> Compile
+        
+        Contract["Capability Contract"]
+        Dynamic["Dynamic capability desc"]
+        Runtime["Runtime validation"]
+        Contract --> Dynamic
+        Contract --> Runtime
+        
+        Interface1 <---> Contract
+    end
+    
+    subgraph Inheritance["Inheritance 转变"]
+        Inherit["Inheritance"]
+        IsA["Is-a relationship"]
+        Override["Method override"]
+        Inherit --> IsA
+        Inherit --> Override
+        
+        Composition["Composition + Prompting"]
+        HasCap["Has-capability pattern"]
+        Prompt["Prompt template override"]
+        Composition --> HasCap
+        Composition --> Prompt
+        
+        Inherit <---> Composition
+    end
+    
+    style Class fill:#dbeafe,stroke:#2563eb
+    style Agent fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style Interface1 fill:#dbeafe,stroke:#2563eb
+    style Contract fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style Inherit fill:#dbeafe,stroke:#2563eb
+    style Composition fill:#fef3c7,stroke:#d97706,stroke-width:2px
 ```
 
 ---
@@ -838,44 +877,39 @@ agent_v3 = BusinessAnalystAgent(
 
 ### 7.2 系统设计
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        智能客服系统架构                          │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌──────────────┐                                               │
-│  │   Client     │                                               │
-│  └──────┬───────┘                                               │
-│         │ query                                                 │
-│         ▼                                                       │
-│  ┌─────────────────────────────────┐                           │
-│  │      IntentRouter               │  ← ISP: 意图隔离原则        │
-│  │  (Intent Segregation Principle) │                           │
-│  └──────────┬──────────────────────┘                           │
-│             │ intent                                              │
-│             ▼                                                   │
-│     ┌───────┴───────┐                                           │
-│     │               │                                           │
-│     ▼               ▼                                           │
-│ ┌─────────┐   ┌──────────┐                                     │
-│ │ Order   │   │ Support  │                                     │
-│ │ Agent   │   │ Agent    │                                     │
-│ │(SCP)    │   │(SCP)     │  ← SCP: 单一能力原则                 │
-│ └────┬────┘   └────┬─────┘                                     │
-│      │             │                                            │
-│      ▼             ▼                                            │
-│ ┌────────────────────────┐                                     │
-│ │   Capability Layer     │                                     │
-│ │  (DIP - 依赖抽象)       │                                    │
-│ ├────────────────────────┤                                     │
-│ │  LLM │ Tools │ Memory  │                                     │
-│ └────────────────────────┘                                     │
-│                                                                 │
-│  ┌─────────────────────────────────┐                           │
-│  │     Prompt Template System      │  ← OCP-P: 提示工程开闭原则  │
-│  └─────────────────────────────────┘                           │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph System["智能客服系统架构"]
+        Client["Client"]
+        Router["IntentRouter<br/>Intent Segregation Principle"]:::isp
+        
+        subgraph Agents["Agents (SCP - 单一能力原则)"]
+            OrderAgent["Order Agent"]
+            SupportAgent["Support Agent"]
+        end
+        
+        subgraph Capability["Capability Layer<br/>DIP - 依赖抽象"]
+            LLM["LLM"]
+            Tools["Tools"]
+            Memory["Memory"]
+        end
+        
+        PromptSystem["Prompt Template System<br/>OCP-P: 提示工程开闭原则"]:::ocpp
+    end
+    
+    Client -->|query| Router
+    Router -->|intent| OrderAgent
+    Router -->|intent| SupportAgent
+    OrderAgent --> Capability
+    SupportAgent --> Capability
+    
+    PromptSystem -.-> OrderAgent
+    PromptSystem -.-> SupportAgent
+    
+    classDef isp fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    classDef scp fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    classDef dip fill:#d1fae5,stroke:#059669,stroke-width:2px
+    classDef ocpp fill:#fed7aa,stroke:#ea580c,stroke-width:2px
 ```
 
 ### 7.3 完整代码实现
