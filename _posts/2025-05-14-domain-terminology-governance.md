@@ -110,20 +110,27 @@ AI困惑：
 
 ### 三层术语架构
 
-```
-┌─────────────────────────────────────────────┐
-│  业务层（Business Language）                  │
-│  - 业务专家使用的自然语言                      │
-│  - 示例：客户、订单、支付、退款                │
-├─────────────────────────────────────────────┤
-│  映射层（Mapping Layer）                      │
-│  - 业务术语与代码命名的对应关系                │
-│  - 示例：客户 → Customer                     │
-├─────────────────────────────────────────────┤
-│  代码层（Code Language）                      │
-│  - 代码中的命名（类、方法、变量）              │
-│  - 示例：Customer、Order、PaymentService     │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Terminology["三层术语架构"]
+        L3["业务层（Business Language）
+        - 业务专家使用的自然语言
+        - 示例：客户、订单、支付、退款"]
+        L2["映射层（Mapping Layer）
+        - 业务术语与代码命名的对应关系
+        - 示例：客户 → Customer"]
+        L1["代码层（Code Language）
+        - 代码中的命名（类、方法、变量）
+        - 示例：Customer、Order、PaymentService"]
+    end
+    
+    L3 --> L2
+    L2 --> L1
+    
+    style Terminology fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 术语治理原则
