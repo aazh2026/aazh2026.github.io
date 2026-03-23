@@ -196,32 +196,30 @@ class KnowledgeBaseIndexer:
 
 ### 系统架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                        RAG-DD Pipeline                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  开发者输入意图                                               │
-│       ↓                                                      │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │
-│  │ 意图解析    │ → │ 知识检索    │ → │ 上下文融合  │     │
-│  │ Intent      │    │ Retrieval   │    │ Fusion      │     │
-│  │ Parser      │    │ Engine      │    │ Engine      │     │
-│  └─────────────┘    └─────────────┘    └─────────────┘     │
-│       ↓                    ↓                    ↓           │
-│  提取关键实体        检索相关规范          组装完整Prompt    │
-│  识别需求类型        获取架构模式          注入业务规则      │
-│                                                              │
-│       ↓                                                      │
-│  ┌─────────────┐                                            │
-│  │ 代码生成    │                                            │
-│  │ AI Code     │                                            │
-│  │ Generation  │                                            │
-│  └─────────────┘                                            │
-│       ↓                                                      │
-│  符合企业标准的代码                                           │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph RAGDD["RAG-DD Pipeline"]
+        Input["开发者输入意图"]
+        IP["意图解析\nIntent Parser\n提取关键实体\n识别需求类型"]
+        RE["知识检索\nRetrieval Engine\n检索相关规范\n获取架构模式"]
+        FE["上下文融合\nFusion Engine\n组装完整Prompt\n注入业务规则"]
+        CG["代码生成\nAI Code Generation"]
+        Output["符合企业标准的代码"]
+    end
+    
+    Input --> IP
+    IP --> RE
+    RE --> FE
+    FE --> CG
+    CG --> Output
+    
+    style RAGDD fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style Input fill:#f8fafc,stroke:#64748b
+    style IP fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style RE fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style FE fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style CG fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style Output fill:#f8fafc,stroke:#64748b
 ```
 
 ### 核心组件

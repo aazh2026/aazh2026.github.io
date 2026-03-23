@@ -487,27 +487,27 @@ class ArbitrationResolver:
 
 ### 技术架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                  Agent-DD Platform                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                              │
-│  Agent Registry          Task Queue         Shared State    │
-│  ┌──────────┐           ┌──────────┐       ┌──────────┐    │
-│  │Architect │           │ Pending  │       │ Code     │    │
-│  │Developer │           │ Running  │       │ Design   │    │
-│  │Tester    │           │ Completed│       │ Issues   │    │
-│  │Reviewer  │           │ Failed   │       │ Metrics  │    │
-│  └──────────┘           └──────────┘       └──────────┘    │
-│                                                              │
-│  Communication Bus          Monitoring                      │
-│  ┌────────────────┐        ┌────────────────┐               │
-│  │ Message Queue  │        │ Performance    │               │
-│  │ Event Stream   │        │ Quality        │               │
-│  │ State Sync     │        │ Conflict Rate  │               │
-│  └────────────────┘        └────────────────┘               │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Platform["Agent-DD Platform"]
+        Registry["Agent Registry
+        Architect/Developer/Tester/Reviewer"]
+        Queue["Task Queue
+        Pending/Running/Completed/Failed"]
+        State["Shared State
+        Code/Design/Issues/Metrics"]
+        Comm["Communication Bus
+        Message Queue/Event Stream/State Sync"]
+        Monitor["Monitoring
+        Performance/Quality/Conflict Rate"]
+    end
+    
+    style Platform fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style Registry fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style Queue fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style State fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style Comm fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style Monitor fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 实施步骤

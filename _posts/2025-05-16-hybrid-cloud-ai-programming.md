@@ -353,26 +353,42 @@ class LocalGeneration:
 
 ### 整体架构图
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     开发者IDE                                │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
-│  │ 代码编辑器   │  │ AI助手插件   │  │ 安全扫描器   │        │
-│  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘        │
-└─────────┼────────────────┼────────────────┼───────────────┘
-          │                │                │
-          └────────────────┴────────────────┘
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
-│   本地AI服务     │ │   智能路由器     │ │   云端AI服务     │
-│                 │ │                 │ │                 │
-│ • 本地LLM       │ │ • 敏感度分级     │ │ • GPT-4/Claude  │
-│ • 代码分析器    │ │ • 路由决策       │ │ • 大规模模型    │
-│ • 安全扫描器    │ │ • 负载均衡       │ │ • 知识库检索    │
-└─────────────────┘ └─────────────────┘ └─────────────────┘
+```mermaid
+flowchart TB
+    subgraph IDE["开发者IDE"]
+        Editor["代码编辑器"]
+        AIPlugin["AI助手插件"]
+        Security["安全扫描器"]
+    end
+    
+    Local["本地AI服务
+    • 本地LLM
+    • 代码分析器
+    • 安全扫描器"]
+    
+    Router["智能路由器
+    • 敏感度分级
+    • 路由决策
+    • 负载均衡"]
+    
+    Cloud["云端AI服务
+    • GPT-4/Claude
+    • 大规模模型
+    • 知识库检索"]
+    
+    Editor --> Router
+    AIPlugin --> Router
+    Security --> Router
+    Router --> Local
+    Router --> Cloud
+    
+    style IDE fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style Editor fill:#dbeafe,stroke:#2563eb
+    style AIPlugin fill:#fef3c7,stroke:#d97706
+    style Security fill:#fee2e2,stroke:#dc2626
+    style Local fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style Router fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style Cloud fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
 ```
 
 ### 部署架构

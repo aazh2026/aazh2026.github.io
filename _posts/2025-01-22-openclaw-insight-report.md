@@ -31,23 +31,37 @@ redirect_from:
 
 ### 1.1 四层架构模型
 
+```mermaid
+flowchart TB
+    L4["模型层 (Model Layer)
+    ← Kimi/GPT/Claude 等大模型
+    - 推理能力
+    - 上下文理解"]
+    L3["技能层 (Skill Layer)
+    ← 13,000+ Skills
+    - 工具调用 (GitHub/Notion/Slack)
+    - 领域能力 (SEO/数据分析/编程)
+    - 自动化脚本"]
+    L2["执行层 (Execution Layer)
+    ← Cron/Agent/Workflow
+    - 定时任务
+    - 多步骤编排
+    - 异常处理"]
+    L1["记忆层 (Memory Layer)
+    ← 短期/长期记忆
+    - 上下文保持
+    - 用户偏好学习
+    - 跨会话知识召回"]
+    
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style L4 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
-┌─────────────────────────────────────┐
-│  模型层 (Model Layer)               │  ← Kimi/GPT/Claude 等大模型
-│  - 推理能力                         │
-│  - 上下文理解                       │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────▼──────────────────────┐
-│  技能层 (Skill Layer)               │  ← 13,000+ Skills
-│  - 工具调用 (GitHub/Notion/Slack)   │
-│  - 领域能力 (SEO/数据分析/编程)     │
-│  - 自动化脚本                       │
-└──────────────┬──────────────────────┘
-               │
-┌──────────────▼──────────────────────┐
-│  执行层 (Execution Layer)           │  ← Cron/Agent/Workflow
-│  - 定时任务                         │
 │  - 多步骤编排                       │
 │  - 异常处理                         │
 └──────────────┬──────────────────────┘
