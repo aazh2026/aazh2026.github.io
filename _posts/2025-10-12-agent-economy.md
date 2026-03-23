@@ -16,13 +16,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **计价革命**：从 $50/seat 的 SaaS 到 $500-5000/月的 AI 员工薪资
-- **市场形态**：Agent Marketplace、Agent as a Service、垂直 Agent 生态
-- **价值重构**：从「拥有软件」到「雇佣智能」，从「工具成本」到「人力投资」
-- **新职业**：Agent Trainer、Agent Manager、AI 经纪人
-- **预测**：2030 年全球 Agent 经济规模达 $1T
+> **TL;DR**
+>
+> Agent Economy 代表着计价模式的革命：从 $50/seat 的 SaaS 转向 $500-5000/月的 AI 员工薪资。市场形态包括 Agent Marketplace、Agent as a Service、垂直 Agent 生态。价值逻辑从「拥有软件」转向「雇佣智能」，从「工具成本」转向「人力投资」。新职业如 Agent Trainer、Agent Manager、AI 经纪人将涌现。预测 2030 年全球 Agent 经济规模达 $1T。
 
 ---
 

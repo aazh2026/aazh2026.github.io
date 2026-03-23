@@ -15,12 +15,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **记忆的三个层次**：Working Memory（秒-分钟级）、Short-term Memory（小时-天级）、Long-term Memory（永久）
-- **技术选型**：Vector DB 用于语义检索、Graph DB 用于关系推理、传统数据库用于结构化数据
-- **关键挑战**：遗忘与保留的平衡、多模态记忆融合、隐私与安全的边界
-- **实战方案**：从简单的上下文窗口到企业级记忆系统的演进路径
+> **TL;DR**
+>
+> Agent 的智能不在于模型有多大，而在于它记得多少、记得多准、记得多久。记忆系统分为三个层次：Working Memory（秒-分钟级）、Short-term Memory（小时-天级）、Long-term Memory（永久）。技术选型上，Vector DB 用于语义检索，Graph DB 用于关系推理，传统数据库用于结构化数据。核心挑战是遗忘与保留的平衡。
 
 ---
 

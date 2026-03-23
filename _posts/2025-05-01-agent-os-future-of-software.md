@@ -15,13 +15,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **核心判断**：未来软件的主形态可能不是 SaaS，而是 **Agent OS（智能体操作系统）**
-- **范式转移**：从 **Human-driven**（人操作软件）到 **Agent-driven**（Agent 代理操作软件）
-- **架构变革**：User → UI → Business Logic → Database  →  User → Agent → Workflow Engine → Software Tools
-- **对 CRM/SaaS 从业者的影响**：每一个 SaaS 产品都值得用 Agent 重新做一遍
-- **时间窗口**：未来 3-5 年是 Agent OS 的奠基期，现在入局正是时候
+> **TL;DR**
+>
+> 未来软件的主形态可能不是 SaaS，而是 **Agent OS（智能体操作系统）**。从 Human-driven 到 Agent-driven 的范式转移正在发生：用户不再直接操作软件界面，而是通过 Agent 代理完成任务。这意味着每一个 SaaS 产品都值得用 Agent 重新做一遍，未来 3-5 年是 Agent OS 的奠基期。
 
 ---
 

@@ -15,12 +15,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **不做 Agent 层的 3 个风险**：被 Agent 原生产品颠覆、客户流失到更智能的竞品、估值模型过时
-- **做 Agent 层的 4 个收益**：ARPU 提升 2-3x、留存率大幅提升、进入新市场、建立更深的技术壁垒
-- **Agent 层的 3 个切入点**：Copilot 模式、Workflow Automation、Autonomous Agent
-- **落地路径**：从高频场景开始，6-12 个月见效果
+> **TL;DR**
+>
+> 不做 Agent 化的 SaaS 面临三重风险：被 Agent 原生产品颠覆、客户流失到更智能的竞品、估值模型过时。做 Agent 层带来四重收益：ARPU 提升 2-3x、留存率大幅提升、进入新市场、建立更深的技术壁垒。三个切入点：Copilot 模式、Workflow Automation、Autonomous Agent。建议从高频场景开始，6-12 个月可见效果。
 
 ---
 

@@ -15,13 +15,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **Multi-Agent 的优势**：任务并行、专业分工、容错冗余、可扩展性
-- **三种协作模式**：Supervisor-Workers（主管-工作者）、Peer-to-Peer（对等协作）、Hierarchical（层级组织）
-- **核心挑战**：通信协议、任务分配、冲突解决、一致性保证
-- **实战模式**：Map-Reduce、Debate、Voting、Pipeline
-- **组织隐喻**：从"智能体"到"数字组织"
+> **TL;DR**
+>
+> Multi-Agent 系统通过任务并行、专业分工、容错冗余实现规模化智能。三种核心协作模式：Supervisor-Workers（主管-工作者）、Peer-to-Peer（对等协作）、Hierarchical（层级组织）。核心挑战在于通信协议设计、任务分配策略、冲突解决机制和一致性保证。实战模式包括 Map-Reduce、Debate、Voting、Pipeline 等。
 
 ---
 

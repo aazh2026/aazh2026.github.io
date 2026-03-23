@@ -16,13 +16,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **核心判断**：AI 时代软件研发的最大变化，不是流程阶段的变化，而是**关键交付件（Artifacts）的变化**
-- **三大特征**：机器可读（Machine-Readable）、结构化（Structured）、全链路可追溯（Traceable）
-- **核心理念**：从"文档记录"到"规范驱动"，Spec 成为代码、测试、文档的唯一真相源
-- **六层交付件体系**：Intent → Product → Architecture → Execution → Quality → Operations
-- **实施路径**：从 PRD 改造开始，逐步构建完整的交付件体系
+> **TL;DR**
+>
+> AI 时代软件研发的最大变化是**关键交付件（Artifacts）的变化**：从"文档记录"转向"规范驱动"，Spec 成为代码、测试、文档的唯一真相源。AI-Native 交付件具备三大特征：机器可读（Machine-Readable）、结构化（Structured）、全链路可追溯（Traceable）。六层交付件体系（Intent → Product → Architecture → Execution → Quality → Operations）构成了完整的研发规范框架。
 
 ---
 
