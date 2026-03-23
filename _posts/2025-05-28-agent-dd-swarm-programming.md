@@ -105,28 +105,29 @@ Agent：好的，我生成代码...
 
 ### Swarm Programming架构
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    Swarm Programming                         │
-│                                                              │
-│   ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐       │
-│   │Architect│  │DevAgent │  │TestAgent│  │ReviewAg │       │
-│   │  (架构) │  │ (开发)  │  │ (测试)  │  │ (审查)  │       │
-│   └────┬────┘  └────┬────┘  └────┬────┘  └────┬────┘       │
-│        │            │            │            │             │
-│        └────────────┴────────────┴────────────┘             │
-│                     │                                        │
-│              ┌──────┴──────┐                                │
-│              │ Coordinator │  ← 协调Agent                   │
-│              │  (协调者)   │                                │
-│              └──────┬──────┘                                │
-│                     │                                        │
-│              ┌──────┴──────┐                                │
-│              │ Shared State │  ← 共享状态                   │
-│              │   (共享状态)  │                                │
-│              └─────────────┘                                │
-│                                                              │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Agents["Agent集群"]
+        A["Architect<br/>架构"]
+        B["DevAgent<br/>开发"]
+        C["TestAgent<br/>测试"]
+        D["ReviewAgent<br/>审查"]
+    end
+    
+    A --> Coordinator
+    B --> Coordinator
+    C --> Coordinator
+    D --> Coordinator
+    
+    Coordinator["Coordinator<br/>协调Agent"] --> SharedState
+    SharedState["Shared State<br/>共享状态"]
+    
+    style A fill:#dbeafe,stroke:#2563eb
+    style B fill:#dbeafe,stroke:#2563eb
+    style C fill:#dbeafe,stroke:#2563eb
+    style D fill:#dbeafe,stroke:#2563eb
+    style Coordinator fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style SharedState fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 工作流程

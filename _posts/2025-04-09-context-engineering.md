@@ -88,23 +88,24 @@ redirect_from:
 
 ### Context的五层金字塔
 
-```
-        ┌─────────────────────────────┐
-        │  L5: Organizational Context │
-        │     企业文化、战略目标       │
-        ├─────────────────────────────┤
-        │  L4: Domain Context         │
-        │     行业知识、业务规则       │
-        ├─────────────────────────────┤
-        │  L3: System Context         │
-        │     数据Schema、API接口      │
-        ├─────────────────────────────┤
-        │  L2: Session Context        │
-        │     对话历史、用户意图       │
-        ├─────────────────────────────┤
-        │  L1: Task Context           │
-        │     当前任务要求            │
-        └─────────────────────────────┘
+```mermaid
+flowchart TB
+    L5["L5: Organizational Context<br/>企业文化、战略目标"]
+    L4["L4: Domain Context<br/>行业知识、业务规则"]
+    L3["L3: System Context<br/>数据Schema、API接口"]
+    L2["L2: Session Context<br/>对话历史、用户意图"]
+    L1["L1: Task Context<br/>当前任务要求"]
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L2 --> L1
+    
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **Prompt Engineering** → 主要处理 **L1**
@@ -160,23 +161,24 @@ Context太多，超出LLM窗口：
 
 ### 🏗️ 五层技术架构
 
-```
-┌─────────────────────────────────────────────┐
-│  Layer 5: Context Delivery 上下文交付层      │
-│  → 将筛选后的上下文注入Prompt                 │
-├─────────────────────────────────────────────┤
-│  Layer 4: Context Retrieval 上下文检索层     │
-│  → 基于语义和规则检索相关上下文               │
-├─────────────────────────────────────────────┤
-│  Layer 3: Context Indexing 上下文索引层      │
-│  → 构建可检索的上下文索引                     │
-├─────────────────────────────────────────────┤
-│  Layer 2: Context Integration 上下文整合层   │
-│  → 从多源系统整合上下文数据                   │
-├─────────────────────────────────────────────┤
-│  Layer 1: Context Sources 上下文源层         │
-│  → 连接企业数据源（DB、文档、知识库）         │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    L5["Layer 5: Context Delivery 上下文交付层<br/>→ 将筛选后的上下文注入Prompt"]
+    L4["Layer 4: Context Retrieval 上下文检索层<br/>→ 基于语义和规则检索相关上下文"]
+    L3["Layer 3: Context Indexing 上下文索引层<br/>→ 构建可检索的上下文索引"]
+    L2["Layer 2: Context Integration 上下文整合层<br/>→ 从多源系统整合上下文数据"]
+    L1["Layer 1: Context Sources 上下文源层<br/>→ 连接企业数据源（DB、文档、知识库）"]
+    
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> L5
+    
+    style L1 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style L3 fill:#93c5fd,stroke:#60a5fa,stroke-width:2px
+    style L4 fill:#60a5fa,stroke:#3b82f6,stroke-width:2px
+    style L5 fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
 ```
 
 ### Layer 1-2: 数据整合
