@@ -145,10 +145,23 @@ GitHub拥有：
 
 ### 2. 工作流整合
 
-```
-Issue → Branch → Commit → PR → Review → Merge → Deploy
-   ↑                                              ↓
-   └──────────── AI Agent 介入点 ────────────────┘
+```mermaid
+flowchart LR
+    A[Issue] --> B[Branch]
+    B --> C[Commit]
+    C --> D[PR]
+    D --> E[Review]
+    E --> F[Merge]
+    F --> G[Deploy]
+    G -.-> A
+    
+    style A fill:#dbeafe,stroke:#2563eb
+    style B fill:#dbeafe,stroke:#2563eb
+    style C fill:#dbeafe,stroke:#2563eb
+    style D fill:#dbeafe,stroke:#2563eb
+    style E fill:#dbeafe,stroke:#2563eb
+    style F fill:#dbeafe,stroke:#2563eb
+    style G fill:#d1fae5,stroke:#059669
 ```
 
 GitHub Agent可以介入任何环节。

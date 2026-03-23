@@ -31,20 +31,29 @@ series: AI-Native Engineering
 
 ### 三层平台认知
 
-```
-┌─────────────────────────────────────┐
-│  L3: 基础设施层                      │
-│  "没有它，业务无法运转"              │
-│  例：AWS, GitHub                     │
-├─────────────────────────────────────┤
-│  L2: 工作流层                        │
-│  "有了它，效率显著提升"              │
-│  例：Vercel, Figma                   │
-├─────────────────────────────────────┤
-│  L1: 工具层                          │
-│  "用它比不用好"                      │
-│  例：各种SaaS工具                    │
-└─────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph L3["L3: 基础设施层"]
+        L3_desc["\"没有它，业务无法运转\""]
+        L3_examples["AWS, GitHub"]
+    end
+    
+    subgraph L2["L2: 工作流层"]
+        L2_desc["\"有了它，效率显著提升\""]
+        L2_examples["Vercel, Figma"]
+    end
+    
+    subgraph L1["L1: 工具层"]
+        L1_desc["\"用它比不用好\""]
+        L1_examples["各种SaaS工具"]
+    end
+    
+    L3 --> L2
+    L2 --> L1
+    
+    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### 认知错位的代价
