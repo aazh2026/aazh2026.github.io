@@ -7,21 +7,9 @@ tags: [solid, agent, ai-native, system-design, software-architecture]
 series: ai-native-dev-guide
 ---
 
-## TL;DR
-
-传统 SOLID 原则诞生于 2000 年的面向对象编程时代，旨在解决类级别设计的耦合问题。但在 AI-Native 时代，软件系统的核心单元已从**类(Class)**演变为**Agent**——具有自主决策能力、上下文感知和工具调用能力的智能实体。
-
-本文提出**新 SOLID 原则**，将设计哲学从"对象协作"升维到"Agent 协作"：
-
-| 维度 | 传统 SOLID | 新 SOLID (AI-Native) |
-|------|-----------|---------------------|
-| 设计单元 | Class | Agent |
-| 交互方式 | Method Call | Intent + Tool Calling |
-| 扩展机制 | Inheritance/Polymorphism | Composition + Prompt Engineering |
-| 依赖管理 | Interface/Abstract Class | Capability Contract |
-| 状态管理 | Encapsulated Fields | Context + Memory |
-
-**核心洞察**：Agent 不是更好的类，而是完全不同的抽象层次。我们需要一套全新的设计原则来驾驭这种转变。
+> **TL;DR**
+>
+> 传统SOLID原则诞生于面向对象编程时代，旨在解决类级别设计的耦合问题。在AI-Native时代，软件系统的核心单元已从类(Class)演变为Agent——具有自主决策能力、上下文感知和工具调用能力的智能实体。本文提出新SOLID原则，将设计哲学从"对象协作"升维到"Agent协作"。核心洞察：Agent不是更好的类，而是完全不同的抽象层次，需要一套全新的设计原则来驾驭这种转变。
 
 ---
 
