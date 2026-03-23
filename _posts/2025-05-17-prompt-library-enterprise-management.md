@@ -319,28 +319,29 @@ access_control:
 
 **Prompt市场（Internal Marketplace）**：
 
-```
-┌─────────────────────────────────────────────┐
-│           Prompt Registry                   │
-├─────────────────────────────────────────────┤
-│  🔍 搜索：code review python                │
-├─────────────────────────────────────────────┤
-│  热门Prompt                                  │
-│  1. ⭐ Code Review Pro (v2.1) - 4.8★       │
-│     后端团队 · 1.2k次使用 · 92%好评        │
-│                                             │
-│  2. ⭐ API Design Assistant (v1.5) - 4.6★  │
-│     架构组 · 890次使用 · 88%好评           │
-├─────────────────────────────────────────────┤
-│  我的部门 (后端)                             │
-│  • Django Model Generator                   │
-│  • FastAPI CRUD Scaffolder                  │
-│  • SQL Optimization Helper                  │
-├─────────────────────────────────────────────┤
-│  企业标准                                    │
-│  • Security Review Checklist                │
-│  • Performance Optimization Guide           │
-└─────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Registry["Prompt Registry"]
+        Search["🔍 搜索：code review python"]
+        Popular["热门Prompt
+        1. ⭐ Code Review Pro (v2.1) - 4.8★
+        后端团队 · 1.2k次使用 · 92%好评
+        2. ⭐ API Design Assistant (v1.5) - 4.6★
+        架构组 · 890次使用 · 88%好评"]
+        Dept["我的部门 (后端)
+        • Django Model Generator
+        • FastAPI CRUD Scaffolder
+        • SQL Optimization Helper"]
+        Standard["企业标准
+        • Security Review Checklist
+        • Performance Optimization Guide"]
+    end
+    
+    style Registry fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style Search fill:#dbeafe,stroke:#2563eb
+    style Popular fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style Dept fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style Standard fill:#fed7aa,stroke:#ea580c,stroke-width:2px
 ```
 
 **发现算法**：

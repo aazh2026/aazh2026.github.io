@@ -45,26 +45,32 @@ redirect_from:
 
 基于业界最佳实践和AI工具的辅助，我提出**代码考古六步法**。
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│ Step 1: 遗址勘探 (Site Survey)                                   │
-│ 目标：建立系统整体认知                                           │
-├─────────────────────────────────────────────────────────────────┤
-│ Step 2: 地层分析 (Stratigraphy)                                  │
-│ 目标：理解代码演化历史                                           │
-├─────────────────────────────────────────────────────────────────┤
-│ Step 3: 文物识别 (Artifact Identification)                       │
-│ 目标：定位关键模块和逻辑                                         │
-├─────────────────────────────────────────────────────────────────┤
-│ Step 4: 挖掘验证 (Excavation & Validation)                      │
-│ 目标：深度理解核心流程                                           │
-├─────────────────────────────────────────────────────────────────┤
-│ Step 5: 重建模型 (Model Reconstruction)                          │
-│ 目标：构建系统心智模型                                           │
-├─────────────────────────────────────────────────────────────────┤
-│ Step 6: 知识沉淀 (Knowledge Documentation)                       │
-│ 目标：将个人理解转化为组织知识                                   │
-└─────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph SixSteps["代码考古六步法"]
+        S1["Step 1: 遗址勘探 (Site Survey)
+        目标：建立系统整体认知"]
+        S2["Step 2: 地层分析 (Stratigraphy)
+        目标：理解代码演化历史"]
+        S3["Step 3: 文物识别 (Artifact Identification)
+        目标：定位关键模块和逻辑"]
+        S4["Step 4: 挖掘验证 (Excavation & Validation)
+        目标：深度理解核心流程"]
+        S5["Step 5: 重建模型 (Model Reconstruction)
+        目标：构建系统心智模型"]
+        S6["Step 6: 知识沉淀 (Knowledge Documentation)
+        目标：将个人理解转化为组织知识"]
+    end
+    
+    S1 --> S2 --> S3 --> S4 --> S5 --> S6
+    
+    style SixSteps fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style S1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style S2 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style S3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style S4 fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style S5 fill:#d1fae5,stroke:#059669,stroke-width:2px
+    style S6 fill:#a7f3d0,stroke:#10b981,stroke-width:2px
 ```
 
 ### Step 1: 遗址勘探 (Site Survey) —— 建立系统整体认知

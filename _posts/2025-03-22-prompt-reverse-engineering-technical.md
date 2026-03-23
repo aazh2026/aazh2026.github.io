@@ -110,20 +110,26 @@ redirect_from:
 
 基于以上案例和行业实践，我提出**RPE（Reverse Prompt Engineering）四层方法论**。
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ Layer 4: Workflow Reconstruction 工作流重建层                │
-│ 目标：理解Agent系统的完整架构                                 │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 3: Tool Schema Inference 工具模式推断层                │
-│ 目标：重建Tool Definition和调用逻辑                          │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 2: System Prompt Extraction 系统Prompt提取层            │
-│ 目标：提取核心System Prompt                                  │
-├─────────────────────────────────────────────────────────────┤
-│ Layer 1: Behavior Analysis 行为分析层                        │
-│ 目标：从输入输出映射推断约束和模式                            │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Layers["Prompt逆向工程四层架构"]
+        L4["Layer 4: Workflow Reconstruction 工作流重建层
+        目标：理解Agent系统的完整架构"]
+        L3["Layer 3: Tool Schema Inference 工具模式推断层
+        目标：重建Tool Definition和调用逻辑"]
+        L2["Layer 2: System Prompt Extraction 系统Prompt提取层
+        目标：提取核心System Prompt"]
+        L1["Layer 1: Behavior Analysis 行为分析层
+        目标：从输入输出映射推断约束和模式"]
+    end
+    
+    L4 --> L3 --> L2 --> L1
+    
+    style Layers fill:#f8fafc,stroke:#64748b,stroke-width:2px
+    style L4 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 ### Layer 1: Behavior Analysis 行为分析层
