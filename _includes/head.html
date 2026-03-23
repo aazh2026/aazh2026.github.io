@@ -39,4 +39,41 @@
   
   <!-- 自定义样式 - 覆盖 minima 主题 -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  
+  <!-- Mermaid.js 图表支持 -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    (function() {
+      // 等待页面完全加载
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initMermaid);
+      } else {
+        initMermaid();
+      }
+      
+      function initMermaid() {
+        // 找到所有 mermaid 代码块并转换
+        var mermaidBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
+        mermaidBlocks.forEach(function(block) {
+          var pre = block.parentElement;
+          var mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = block.textContent;
+          pre.parentElement.replaceChild(mermaidDiv, pre);
+        });
+        
+        // 初始化 Mermaid
+        mermaid.initialize({
+          startOnLoad: true,
+          theme: 'default',
+          securityLevel: 'loose',
+          flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true,
+            curve: 'basis'
+          }
+        });
+      }
+    })();
+  </script>
 </head>
