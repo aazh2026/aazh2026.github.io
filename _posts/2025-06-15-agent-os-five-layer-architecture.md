@@ -16,13 +16,9 @@ redirect_from:
 
 ---
 
-## TL;DR
-
-- **Agent OS 五层架构**：Tools → Memory → Runtime → Orchestration → Interface
-- **每一层的职责**：从连接外部世界到与用户交互的完整链条
-- **关键设计决策**：每一层的技术选型和权衡
-- **实现路径**：从 MVP 到生产级的演进路线
-- **常见陷阱**：数据一致性、延迟、安全等核心挑战
+> **TL;DR**
+>
+> Agent OS 的五层架构（Tools → Memory → Runtime → Orchestration → Interface）提供了一个可落地的工程框架。每一层有明确职责边界：Tools 连接外部世界，Memory 存储知识经验，Runtime 负责推理行动，Orchestration 管理协作调度，Interface 处理人机交互。关键洞察：好的架构决定上限，扎实的工程实现决定下限。
 
 ---
 
