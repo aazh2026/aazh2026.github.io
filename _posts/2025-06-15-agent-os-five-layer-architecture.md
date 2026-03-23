@@ -71,30 +71,44 @@ redirect_from:
 
 ## 五层架构全景图
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  Layer 5: Interface Layer                               │
-│  用户交互层：自然语言接口、命令行、轻量 GUI              │
-├─────────────────────────────────────────────────────────┤
-│  Layer 4: Orchestration Layer                           │
-│  编排层：多 Agent 协作、工作流管理、任务调度             │
-├─────────────────────────────────────────────────────────┤
-│  Layer 3: Agent Runtime Layer                           │
-│  运行时层：推理循环、工具调用、错误处理                  │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: Memory & State Layer                          │
-│  记忆层：短期记忆、长期记忆、知识图谱、状态管理          │
-├─────────────────────────────────────────────────────────┤
-│  Layer 1: Tools & Connectors Layer                      │
-│  工具层：API 连接、数据读写、外部系统交互                │
-└─────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    L5["Layer 5: Interface Layer<br/>用户交互层：自然语言接口、命令行、轻量 GUI"]
+    L4["Layer 4: Orchestration Layer<br/>编排层：多 Agent 协作、工作流管理、任务调度"]
+    L3["Layer 3: Agent Runtime Layer<br/>运行时层：推理循环、工具调用、错误处理"]
+    L2["Layer 2: Memory & State Layer<br/>记忆层：短期记忆、长期记忆、知识图谱、状态管理"]
+    L1["Layer 1: Tools & Connectors Layer<br/>工具层：API 连接、数据读写、外部系统交互"]
+    
+    L5 --> L4
+    L4 --> L3
+    L3 --> L2
+    L3 --> L1
+    L2 --> L1
+    
+    style L5 fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    style L4 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
+    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
+    style L2 fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
+    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
 ```
 
 **数据流向：**
 
-```
-User Input → Interface → Orchestration → Runtime → Memory ↔ Tools
-                                              ↑___________|
+```mermaid
+flowchart LR
+    User[User Input] --> Interface[Interface]
+    Interface --> Orchestration[Orchestration]
+    Orchestration --> Runtime[Runtime]
+    Runtime --> Memory[Memory]
+    Runtime --> Tools[Tools]
+    Memory <--> Tools
+    
+    style User fill:#f8fafc,stroke:#64748b
+    style Interface fill:#fef3c7,stroke:#d97706
+    style Orchestration fill:#fed7aa,stroke:#ea580c
+    style Runtime fill:#dbeafe,stroke:#2563eb
+    style Memory fill:#bfdbfe,stroke:#3b82f6
+    style Tools fill:#d1fae5,stroke:#059669
 ```
 
 ---
