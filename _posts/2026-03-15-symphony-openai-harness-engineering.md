@@ -7,11 +7,9 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-## TL;DR
-
-> **Symphony 不是代码补全工具，而是 Harness Engineering 的开源实现。它把工程师从"盯着 AI 写代码"解放出来，转变为"定义任务、审批结果"的管理者。9 天 9.1K Star 的背后，是对软件工程分工逻辑的重新定义。**
-
-OpenAI 开源的 Symphony 框架，将 Harness Engineering 的理论转化为可落地的协议：隔离运行机制确保任务级并发安全，"工作证明"机制让验证自动化，SPEC.md 驱动的设计让实现语言无关。但关键前提不变：你的代码库必须先做好 Harness Engineering，否则 Agent 提交的"工作证明"毫无参考价值。
+> **TL;DR**
+>
+> Symphony不是代码补全工具，而是Harness Engineering的开源实现。它把工程师从"盯着AI写代码"解放出来，转变为"定义任务、审批结果"的管理者。9天9.1K Star的背后，是对软件工程分工逻辑的重新定义。OpenAI开源的Symphony框架，将Harness Engineering的理论转化为可落地的协议：隔离运行机制确保任务级并发安全，"工作证明"机制让验证自动化，SPEC.md驱动的设计让实现语言无关。但关键前提不变：你的代码库必须先做好 Harness Engineering，否则 Agent 提交的"工作证明"毫无参考价值。
 
 ---
 

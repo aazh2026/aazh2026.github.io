@@ -7,11 +7,9 @@ tags: [SRP, Agent Architecture, Design Patterns, Modular AI]
 series: agent-os
 ---
 
-## TL;DR
-
-> **一个类只有一个变化原因，一个 Agent 只有一个职责。**
-
-单一职责原则（SRP）是面向对象设计的基石，但在 AI Agent 时代，它的边界被重新定义了。本文将 SRP 从"类"升维到"Agent"，揭示为什么一个混乱的 Agent 比混乱的类更难维护，并提供可落地的设计原则与代码示例。
+> **TL;DR**
+>
+> 一个类只有一个变化原因，一个Agent只有一个职责。单一职责原则（SRP）是面向对象设计的基石，但在AI Agent时代，它的边界被重新定义了。本文将SRP从"类"升维到"Agent"，揭示为什么一个混乱的Agent比混乱的类更难维护，并提供可落地的设计原则与代码示例。
 
 ---
 
