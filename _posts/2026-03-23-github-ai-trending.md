@@ -1,22 +1,26 @@
 ---
+layout: post
 title: "GitHub AI Trending Daily | 2026年3月23日 星期一"
-date: 2026-03-23 07:30:00 +0800
+date: 2026-03-23T08:30:00+08:00
+permalink: /2026/03/23/github-ai-trending/
 categories: [Daily Signal]
 tags: [GitHub, AI, DailySignal, 开源项目]
 series: GitHub AI Trending
-author: Sophi
+author: "@postcodeeng"
 ---
 
 # GitHub AI Trending Daily | 2026年3月23日 星期一
 
 **Executive Summary:** 今天的GitHub Trending像是一场AI代理（Agent）革命的预演——从自动化浏览器操作到金融交易框架，从本地深度研究到多代理协作系统。如果说2023年是大模型元年，2026年正在变成"Agent元年"。Python生态继续主导AI工具链，JavaScript则在代理界面和可视化方面发力，Rust则在高性能基础设施中扮演关键角色。
 
+*数据来源: [GitHub Trending](https://github.com/trending) | 通过 web_fetch 获取*
+
 ---
 
 ## Top 5 Technical Movements
 
-### 1. **everything-claude-code** (JavaScript | +3,735 ⭐ today)
-**affaan-m/everything-claude-code**
+### 1. **[everything-claude-code](https://github.com/affaan-m/everything-claude-code)** (JavaScript | +3,735 ⭐ today)
+**作者**: [affaan-m](https://github.com/affaan-m)
 
 这是目前增长最快的项目。它提供了一个完整的Claude Code性能优化系统，包括技能、本能、记忆、安全和研究优先开发。支持Claude Code、Codex、Opencode、Cursor等多种代理工具。
 
@@ -24,8 +28,8 @@ author: Sophi
 
 ---
 
-### 2. **deer-flow** (Python | +1,508 ⭐ today)
-**bytedance/deer-flow**
+### 2. **[deer-flow](https://github.com/bytedance/deer-flow)** (Python | +1,508 ⭐ today)
+**作者**: [bytedance](https://github.com/bytedance)
 
 字节跳动开源的SuperAgent框架，可以研究、编码和创作。通过沙盒、记忆、工具、技能和子代理来处理从几分钟到几小时不等的任务。
 
@@ -33,8 +37,8 @@ author: Sophi
 
 ---
 
-### 3. **TradingAgents** (Python | +1,108 ⭐ today)
-**TauricResearch/TradingAgents**
+### 3. **[TradingAgents](https://github.com/TauricResearch/TradingAgents)** (Python | +1,108 ⭐ today)
+**作者**: [TauricResearch](https://github.com/TauricResearch)
 
 一个多代理LLM金融交易框架。不是简单的预测模型，而是一个由多个专业代理组成的协作系统——研究代理、风险评估代理、执行代理等。
 
@@ -42,8 +46,8 @@ author: Sophi
 
 ---
 
-### 4. **MoneyPrinterV2** (Python | +1,772 ⭐ today)
-**FujiwaraChoki/MoneyPrinterV2**
+### 4. **[MoneyPrinterV2](https://github.com/FujiwaraChoki/MoneyPrinterV2)** (Python | +1,772 ⭐ today)
+**作者**: [FujiwaraChoki](https://github.com/FujiwaraChoki)
 
 "Automate the process of making money online." 这个描述本身就是2026年AI创业浪潮的缩影。具体实现包括自动内容生成、社交媒体管理和流量变现。
 
