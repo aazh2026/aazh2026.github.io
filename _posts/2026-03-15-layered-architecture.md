@@ -54,17 +54,30 @@ Agent OS 的五层架构：
 
 1970年代，ISO 推出了开放系统互连（OSI）参考模型，将网络通信抽象为七个层次：
 
-```
-┌─────────────────────────────────────────────────┐
-│  第7层  │  应用层 (Application)                  │ ← HTTP, FTP, SMTP
-│  第6层  │  表示层 (Presentation)                 │ ← 加密、压缩、编码
-│  第5层  │  会话层 (Session)                      │ ← 连接管理、同步点
-│  第4层  │  传输层 (Transport)                    │ ← TCP, UDP
-│  第3层  │  网络层 (Network)                      │ ← IP, 路由
-│  第2层  │  数据链路层 (Data Link)                │ ← MAC, 帧
-│  第1层  │  物理层 (Physical)                     │ ← 比特流、电缆
-└─────────────────────────────────────────────────┘
-         ↓ 每一层只为上一层提供服务
+```mermaid
+flowchart TB
+    L7["第7层: 应用层 Application<br/>HTTP, FTP, SMTP"]
+    L6["第6层: 表示层 Presentation<br/>加密、压缩、编码"]
+    L5["第5层: 会话层 Session<br/>连接管理、同步点"]
+    L4["第4层: 传输层 Transport<br/>TCP, UDP"]
+    L3["第3层: 网络层 Network<br/>IP, 路由"]
+    L2["第2层: 数据链路层 Data Link<br/>MAC, 帧"]
+    L1["第1层: 物理层 Physical<br/>比特流、电缆"]
+    
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+    L4 --> L5
+    L5 --> L6
+    L6 --> L7
+    
+    style L7 fill:#fef3c7,stroke:#d97706
+    style L6 fill:#fed7aa,stroke:#ea580c
+    style L5 fill:#fdba74,stroke:#f97316
+    style L4 fill:#dbeafe,stroke:#2563eb
+    style L3 fill:#bfdbfe,stroke:#3b82f6
+    style L2 fill:#93c5fd,stroke:#60a5fa
+    style L1 fill:#d1fae5,stroke:#059669
 ```
 
 **核心原则**：
@@ -78,16 +91,21 @@ Agent OS 的五层架构：
 
 TCP/IP 协议栈用四层模型取代了 OSI 的七层：
 
-```
-┌─────────────────────────────────────────────────┐
-│  应用层      │  HTTP, FTP, DNS, SSH...           │
-├─────────────────────────────────────────────────┤
-│  传输层      │  TCP, UDP                         │
-├─────────────────────────────────────────────────┤
-│  网络层      │  IP, ICMP, 路由协议                │
-├─────────────────────────────────────────────────┤
-│  网络接口层   │  Ethernet, WiFi, 物理设备          │
-└─────────────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    App["应用层<br/>HTTP, FTP, DNS, SSH..."]
+    Trans["传输层<br/>TCP, UDP"]
+    Net["网络层<br/>IP, ICMP, 路由协议"]
+    Link["网络接口层<br/>Ethernet, WiFi, 物理设备"]
+    
+    Link --> Net
+    Net --> Trans
+    Trans --> App
+    
+    style App fill:#fef3c7,stroke:#d97706
+    style Trans fill:#dbeafe,stroke:#2563eb
+    style Net fill:#bfdbfe,stroke:#3b82f6
+    style Link fill:#d1fae5,stroke:#059669
 ```
 
 **关键简化**：
@@ -101,18 +119,21 @@ TCP/IP 协议栈用四层模型取代了 OSI 的七层：
 
 #### MVC（Model-View-Controller）
 
-```
-    ┌─────────┐     用户操作      ┌─────────┐
-    │  View   │ ───────────────→ │Controller│
-    │ (视图)   │                  │ (控制器) │
-    └─────────┘ ←─────────────── └────┬────┘
-         ↑                            │
-         │      数据变化通知           │ 数据操作
-         └────────────────────────────┘
-                   ┌─────────┐
-                   │  Model  │
-                   │ (模型)   │
-                   └─────────┘
+```mermaid
+flowchart TB
+    subgraph MVC["MVC架构"]
+        View["View (视图)"]
+        Controller["Controller (控制器)"]
+        Model["Model (模型)"]
+    end
+    
+    View -->|"用户操作"| Controller
+    Controller -->|"数据操作"| Model
+    Model -->|"数据变化通知"| View
+    
+    style View fill:#dbeafe,stroke:#2563eb
+    style Controller fill:#fef3c7,stroke:#d97706
+    style Model fill:#d1fae5,stroke:#059669
 ```
 
 MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得 UI 可以独立变化而不影响业务逻辑。
@@ -121,31 +142,42 @@ MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得
 
 企业应用中最经典的分层：
 
-```
-┌─────────────────────────────────────────┐
-│     表示层 (Presentation Layer)          │
-│    REST API / Web / Mobile UI           │
-├─────────────────────────────────────────┤
-│     业务层 (Business Logic Layer)        │
-│    Domain Services / Use Cases          │
-├─────────────────────────────────────────┤
-│     数据层 (Data Access Layer)           │
-│    Repository / ORM / Database          │
-└─────────────────────────────────────────┘
+```mermaid
+flowchart TB
+    Pres["表示层 Presentation Layer<br/>REST API / Web / Mobile UI"]
+    Biz["业务层 Business Logic Layer<br/>Domain Services / Use Cases"]
+    Data["数据层 Data Access Layer<br/>Repository / ORM / Database"]
+    
+    Pres --> Biz
+    Biz --> Data
+    
+    style Pres fill:#fef3c7,stroke:#d97706
+    style Biz fill:#dbeafe,stroke:#2563eb
+    style Data fill:#d1fae5,stroke:#059669
 ```
 
 #### 微服务的分层
 
 微服务本身也是一种分层——**按业务领域垂直分层**：
 
-```
-        ┌──────────┐ ┌──────────┐ ┌──────────┐
-        │ 用户服务  │ │ 订单服务  │ │ 库存服务  │
-        └────┬─────┘ └────┬─────┘ └────┬─────┘
-             │            │            │
-        ┌────┴────────────┴────────────┴────┐
-        │         服务编排层 (API Gateway)     │
-        └────────────────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph Services["业务服务层"]
+        UserSvc["用户服务"]
+        OrderSvc["订单服务"]
+        StockSvc["库存服务"]
+    end
+    
+    Gateway["服务编排层 API Gateway"]
+    
+    UserSvc --> Gateway
+    OrderSvc --> Gateway
+    StockSvc --> Gateway
+    
+    style UserSvc fill:#dbeafe,stroke:#2563eb
+    style OrderSvc fill:#dbeafe,stroke:#2563eb
+    style StockSvc fill:#dbeafe,stroke:#2563eb
+    style Gateway fill:#fef3c7,stroke:#d97706,stroke-width:2px
 ```
 
 ---
