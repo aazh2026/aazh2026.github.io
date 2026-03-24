@@ -560,7 +560,6 @@ AIDR 让架构从"画在纸上的设计"变成"活在系统中的决策"。
 
 **系列关联阅读**：
 - [#46 AI-Native Code Review：从人工审查到 Agent 陪审团]({% post_url 2026-03-13-ai-native-code-review %})
-- [#49 Context 工程：AI-Native 开发的核心能力]({% post_url 2026-03-13-context-engineering %})
 - [#56 AI-Native 系统的可观测性进化](预告)
 
 **下一篇预告**：#56 AI-Native 系统的可观测性进化：从日志到意图追踪
