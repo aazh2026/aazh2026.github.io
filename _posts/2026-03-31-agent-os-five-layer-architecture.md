@@ -333,20 +333,42 @@ class KnowledgeGraph:
         """, id=entity.id, name=entity.name, type=entity.type)
     
     def add_relation(self, from_id: str, relation: str, to_id: str):
-        """添加关系"""
-        self.graph.run("""
-            MATCH (a:Entity {id: $from_id})
-            MATCH (b:Entity {id: $to_id})
-            MERGE (a)-[r:$relation]->(b)
-        """, from_id=from_id, to_id=to_id, relation=relation)
+        """添加关系
+        
+        注意：Cypher 不支持参数化关系类型，需要使用字符串拼接或 APOC
+        """
+        # 方法 1：使用字符串拼接（注意防范注入）
+        query = f"""
+            MATCH (a:Entity {{id: $from_id}})
+            MATCH (b:Entity {{id: $to_id}})
+            MERGE (a)-[r:{relation}]->(b)
+        """
+        self.graph.run(query, from_id=from_id, to_id=to_id)
+        
+        # 方法 2：使用 APOC（如果可用）
+        # self.graph.run("""
+        #     MATCH (a:Entity {id: $from_id})
+        #     MATCH (b:Entity {id: $to_id})
+        #     CALL apoc.merge.relationship(a, $relation, {}, {}, b) YIELD rel
+        #     RETURN rel
+        # """, from_id=from_id, to_id=to_id, relation=relation)
     
     def query(self, start_entity: str, relation_type: str, depth: int = 2):
-        """查询关系"""
-        return self.graph.run("""
-            MATCH path = (start:Entity {id: $start})-[:$relation*1..$depth]-(related)
+        """查询关系
+        
+        注意：Cypher 不支持参数化可变长度关系，需要使用字符串拼接
+        """
+        query = f"""
+            MATCH path = (start:Entity {{id: $start}})-[:{relation_type}*1..{depth}]-(related)
             RETURN related, path
-        """, start=start_entity, relation=relation_type, depth=depth)
+        """
+        return self.graph.run(query, start=start_entity)
 ```
+
+> ⚠️ **重要提示**：上述代码中的字符串拼接存在 Cypher 注入风险。生产环境应该：
+> 1. 对 `relation` 参数进行白名单验证（只允许预定义的关系类型）
+> 2. 或使用 APOC 库的 `apoc.merge.relationship` 和 `apoc.path.expandConfig`
+> 3. 参考 [Neo4j 官方安全指南](https://neo4j.com/docs/cypher-manual/current/security/)
 
 ### 关键技术决策
 
@@ -522,6 +544,8 @@ class ReflectionCapability:
 
 ### 多 Agent 架构模式
 
+> 📌 **选择指南**：三种模式各有适用场景，关键决策因素是任务复杂度、Agent 专业化程度和通信频率。
+
 **模式 1：主管-工作者（Supervisor-Workers）**
 
 ```mermaid
@@ -545,6 +569,21 @@ flowchart TB
     style W4 fill:#dbeafe,stroke:#2563eb
 ```
 
+**适用场景**：
+- 任务可以清晰分解为独立子任务
+- 需要中心节点进行质量控制
+- Worker Agent 之间不需要频繁通信
+
+**示例**：内容生成流水线（研究员 → 写手 → 编辑 → 发布员）
+
+**优缺点**：
+- ✅ 结构清晰，易于监控
+- ✅ 单点故障风险可控（Supervisor 可以重启）
+- ❌ Supervisor 可能成为瓶颈
+- ❌ Worker 间通信需通过 Supervisor 转发
+
+---
+
 **模式 2：平等协作（Peer-to-Peer）**
 
 ```mermaid
@@ -564,6 +603,21 @@ flowchart TB
     style AgentC fill:#dbeafe,stroke:#2563eb
     style AgentD fill:#dbeafe,stroke:#2563eb
 ```
+
+**适用场景**：
+- Agent 需要频繁协商和信息交换
+- 没有明显的任务分解结构
+- 各 Agent 地位平等（如专家会诊）
+
+**示例**：多领域专家协作诊断（安全专家 + 性能专家 + 业务专家共同分析系统问题）
+
+**优缺点**：
+- ✅ 通信效率高（直接对话）
+- ✅ 适合复杂协商场景
+- ❌ 结构复杂，难以调试
+- ❌ 可能出现循环依赖或死锁
+
+---
 
 **模式 3：层级结构（Hierarchy）**
 
@@ -591,6 +645,47 @@ flowchart TB
     style VP3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
     style Team1 fill:#dbeafe,stroke:#2563eb
     style Team2 fill:#dbeafe,stroke:#2563eb
+```
+
+**适用场景**：
+- 组织架构本身具有层级特性
+- 需要多级决策和汇总
+- 任务规模大，需要分层管理
+
+**示例**：企业级自动化（战略层 → 部门层 → 执行层）
+
+**优缺点**：
+- ✅ 符合人类组织直觉
+- ✅ 可扩展性强（每层可以横向扩展）
+- ❌ 延迟较高（需要层层上报）
+- ❌ 信息可能在传递中失真
+
+---
+
+**决策矩阵**
+
+| 场景特征 | 推荐模式 | 理由 |
+|----------|----------|------|
+| 任务可分解为独立子任务 | **Supervisor-Workers** | 结构清晰，易于监控 |
+| Agent 需要频繁协商 | **Peer-to-Peer** | 直接通信，效率高 |
+| 模拟企业组织架构 | **Hierarchy** | 符合直觉，可扩展 |
+| 简单并行处理 | **Supervisor-Workers** | 实现简单，易于调试 |
+| 复杂问题多专家会诊 | **Peer-to-Peer** | 平等协商，集思广益 |
+| 跨部门大型企业流程 | **Hierarchy** | 分层管理，责任清晰 |
+
+**混合使用**
+
+实际系统中 often 需要混合使用多种模式：
+
+```
+Hierarchy（顶层）
+    └── CEO Agent
+        ├── VP1（Supervisor-Workers）
+        │       └── 管理 3 个 Worker Agent
+        ├── VP2（Peer-to-Peer）
+        │       └── 与 2 个平级 Agent 协作
+        └── VP3（Hierarchy）
+                └── 继续向下分层
 ```
 
 ### 实现方案
@@ -712,6 +807,183 @@ class OrchestrationEngine:
 
 在现有 SaaS 界面中添加 AI 助手按钮，点击后弹出对话窗口。
 
+### 关键工程实现
+
+**1. 流式输出（Streaming）**
+
+Agent 的思考过程和输出应该实时展示给用户，而不是等全部完成：
+
+```python
+from fastapi import FastAPI
+from fastapi.responses import StreamingResponse
+import asyncio
+
+app = FastAPI()
+
+@app.post("/chat")
+async def chat_stream(message: str):
+    async def event_generator():
+        # 发送 Agent 的思考过程
+        async for thought in agent.think_stream(message):
+            yield f"data: {json.dumps({'type': 'thought', 'content': thought})}\n\n"
+        
+        # 发送工具调用
+        yield f"data: {json.dumps({'type': 'action', 'tool': 'search_leads', 'status': 'started'})}\n\n"
+        result = await agent.execute_action()
+        yield f"data: {json.dumps({'type': 'action', 'tool': 'search_leads', 'status': 'completed', 'result': result})}\n\n"
+        
+        # 发送最终结果
+        yield f"data: {json.dumps({'type': 'final', 'content': result.summary})}\n\n"
+    
+    return StreamingResponse(
+        event_generator(),
+        media_type="text/event-stream"
+    )
+```
+
+**前端实现（SSE）：**
+
+```javascript
+const eventSource = new EventSource('/chat?message=...');
+
+eventSource.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    
+    switch(data.type) {
+        case 'thought':
+            showThinkingBubble(data.content);
+            break;
+        case 'action':
+            updateActionStatus(data.tool, data.status);
+            break;
+        case 'final':
+            displayFinalResult(data.content);
+            eventSource.close();
+            break;
+    }
+};
+```
+
+**2. 中途打断（Interruption）**
+
+用户应该能随时停止 Agent 的执行：
+
+```python
+class InterruptibleAgent:
+    def __init__(self):
+        self.cancel_token = asyncio.Event()
+    
+    async def run(self, task: str) -> Result:
+        for step in self.plan_steps(task):
+            # 检查是否被取消
+            if self.cancel_token.is_set():
+                return Result(
+                    status="CANCELLED",
+                    partial_results=self.collect_partial_results()
+                )
+            
+            await self.execute_step(step)
+    
+    def cancel(self):
+        """用户点击停止按钮时调用"""
+        self.cancel_token.set()
+```
+
+**API 设计：**
+
+```python
+@app.post("/chat/{session_id}/cancel")
+async def cancel_agent(session_id: str):
+    agent = get_agent(session_id)
+    agent.cancel()
+    return {"status": "cancelled"}
+```
+
+**3. 多模态输出**
+
+Agent 的输出不应该只有文本：
+
+```python
+class MultiModalResponse:
+    def __init__(self):
+        self.blocks = []
+    
+    def add_text(self, text: str):
+        self.blocks.append({"type": "text", "content": text})
+    
+    def add_table(self, headers: List[str], rows: List[List]):
+        self.blocks.append({
+            "type": "table",
+            "headers": headers,
+            "rows": rows
+        })
+    
+    def add_chart(self, chart_type: str, data: dict):
+        self.blocks.append({
+            "type": "chart",
+            "chart_type": chart_type,  # line, bar, pie
+            "data": data
+        })
+    
+    def add_code(self, code: str, language: str):
+        self.blocks.append({
+            "type": "code",
+            "language": language,
+            "content": code
+        })
+    
+    def add_actions(self, actions: List[Action]):
+        """添加可点击的操作按钮"""
+        self.blocks.append({
+            "type": "actions",
+            "actions": [
+                {"label": a.label, "action_id": a.id, "params": a.params}
+                for a in actions
+            ]
+        })
+```
+
+**前端渲染：**
+
+```jsx
+function MessageBlock({ block }) {
+    switch(block.type) {
+        case 'text':
+            return <Markdown content={block.content} />;
+        case 'table':
+            return <DataTable headers={block.headers} rows={block.rows} />;
+        case 'chart':
+            return <Chart type={block.chart_type} data={block.data} />;
+        case 'code':
+            return <CodeBlock code={block.content} language={block.language} />;
+        case 'actions':
+            return <ActionButtons actions={block.actions} onAction={handleAction} />;
+    }
+}
+```
+
+**4. 人工介入点（Human-in-the-loop）**
+
+关键决策点必须让用户确认：
+
+```python
+class AgentWithApproval:
+    async def execute_high_risk_action(self, action: Action) -> Result:
+        # 发送审批请求到界面
+        approval_request = await self.request_approval(
+            action=action,
+            context=self.get_current_context(),
+            timeout=300  # 5分钟超时
+        )
+        
+        if approval_request.status == "APPROVED":
+            return await self.execute(action)
+        elif approval_request.status == "REJECTED":
+            return Result(status="REJECTED", reason=approval_request.reason)
+        else:  # TIMEOUT
+            return Result(status="TIMEOUT", fallback_action=self.get_safe_fallback())
+```
+
 ### 关键设计原则
 
 **1. 渐进式披露**
@@ -719,16 +991,46 @@ class OrchestrationEngine:
 - 可展开查看详细过程
 - 保留手动调整入口
 
-**2. 多模态输出**
-- 文本：自然语言解释
-- 表格：结构化数据
-- 图表：趋势和分布
-- 卡片：实体信息
-
-**3. 实时反馈**
-- 显示 Agent 正在思考
-- 展示执行进度
+**2. 实时反馈**
+- 显示 Agent 正在思考（打字机效果）
+- 展示执行进度（进度条或步骤指示器）
 - 允许中途取消
+
+**3. 容错设计**
+- Agent 失败时提供重试选项
+- 显示失败原因（技术细节可折叠）
+- 提供人工接管的快捷入口
+
+---
+
+## 与现有框架的关系
+
+Agent OS 的五层架构与现有框架的关系：
+
+| 框架 | 定位 | 与 Agent OS 的关系 |
+|------|------|-------------------|
+| **LangChain** | 开发框架 | LangChain 提供 Layer 1-3 的组件（Tools、Memory、Runtime），Agent OS 提供更完整的分层架构和 Layer 4-5 的参考实现 |
+| **AutoGen** | 多 Agent 框架 | AutoGen 专注于 Layer 4（Orchestration），Agent OS 的编排层可以借鉴其 Conversation Patterns |
+| **CrewAI** | 角色扮演框架 | CrewAI 提供基于角色的 Agent 团队（Layer 4 的一种实现），Agent OS 提供更通用的编排抽象 |
+| **LlamaIndex** | 数据检索框架 | LlamaIndex 专注于 Layer 2（Memory 的检索部分），Agent OS 将其作为 Memory 层的一个组件 |
+
+### 如何选择
+
+**使用现有框架（推荐大多数团队）：**
+- 快速原型开发
+- 团队没有专门的 Agent 平台团队
+- 需要社区支持和生态
+
+**自建 Agent OS（适合大型团队）：**
+- 需要深度定制每一层
+- 有专门的 Agent 平台团队
+- 业务场景与现有框架假设不匹配
+
+**渐进式策略（最务实）：**
+1. 先用 LangChain / AutoGen 搭建 MVP
+2. 在使用过程中识别框架的局限性
+3. 逐步替换有局限的层（通常是 Memory 和 Interface）
+4. 最终形成自己的 Agent OS
 
 ---
 
@@ -747,8 +1049,8 @@ class OrchestrationEngine:
 
 **关键指标：**
 - 能完成 3-5 个核心场景
-- 响应时间 < 10s
-- 准确率 > 70%
+- 端到端响应时间 < 10s
+- 任务成功率（用户认为结果可用）> 70%
 
 ### Phase 2: 产品化（3-6 个月）
 
@@ -762,9 +1064,9 @@ class OrchestrationEngine:
 
 **关键指标：**
 - 覆盖 80% 核心场景
-- 响应时间 < 5s
-- 准确率 > 85%
-- 用户满意度 > 4/5
+- 端到端响应时间 < 5s
+- 任务成功率 > 85%
+- 用户满意度（1-5 分）> 4 分
 
 ### Phase 3: 生产级（6-12 个月）
 
@@ -778,9 +1080,11 @@ class OrchestrationEngine:
 
 **关键指标：**
 - 可用性 99.9%
-- 响应时间 < 3s
-- 准确率 > 90%
-- 支持 1000+ 并发
+- 端到端响应时间 P95 < 3s
+- 任务成功率 > 90%
+- 支持 1000+ 并发会话
+
+> 💡 **关于"任务成功率"的定义**：指用户提交任务后，Agent 生成的结果被用户接受（无需重大修改即可使用）的比例。不同于传统的"准确率"，因为 Agent 任务往往没有唯一正确答案。
 
 ---
 
