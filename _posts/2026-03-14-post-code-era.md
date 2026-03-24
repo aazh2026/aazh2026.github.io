@@ -497,7 +497,6 @@ Level 3: 领域专家 (Domain Expert)
 
 **系列关联阅读**：
 - [#46 AI-Native Code Review：从人工审查到 Agent 陪审团]({% post_url 2026-03-13-ai-native-code-review %})
-- [#49 Context 工程：AI-Native 开发的核心能力]({% post_url 2026-03-13-context-engineering %})
 - [#53 AI-Native 架构决策记录：从 ADR 到 AIDR]({% post_url 2026-03-14-adr-to-aidr %})
 
 **写在系列末尾**：
