@@ -590,7 +590,6 @@ AI-Native 数据工程追求的是：
 ---
 
 **系列关联阅读**：
-- [#49 Context 工程：AI-Native 开发的核心能力]({% post_url 2026-03-13-context-engineering %})
 - [#53 AI-Native 架构决策记录：从 ADR 到 AIDR]({% post_url 2026-03-14-adr-to-aidr %})
 - [#56 AI-Native 系统的可观测性进化]({% post_url 2026-03-14-observability-evolution %})
 
