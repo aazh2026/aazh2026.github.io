@@ -5,7 +5,10 @@ date: 2026-05-06T00:00:00+08:00
 tags: [AI-Native软件工程, Cost-Model, Context-Engineering, Agent, Architecture]
 author: Aaron
 series: AI-Native Engineering
+featured-image: /assets/images/cover-context-inflation.png
 ---
+
+![Cover](/assets/images/cover-context-inflation.png)
 
 > **TL;DR**
 >
