@@ -171,7 +171,7 @@ Then do three things:
 
 ---
 
-### Paul Graham 视角
+### 延伸思考
 
 这篇文章最有价值的洞见只有一句话：
 
