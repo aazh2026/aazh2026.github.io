@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AI Agent 复杂度棘轮：为什么 90% 测试覆盖率是必选项"
-date: 2026-05-12T00:00:00+08:00
+date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Testing, Software-Engineering, Claude-Code]
 author: Aaron
 series: AI-Native Engineering

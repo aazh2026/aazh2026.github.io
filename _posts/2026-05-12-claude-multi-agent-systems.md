@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Claude Multi-Agent 系统：从零到跑通 4-Agent 内容团队的完整指南"
-date: 2026-05-12T00:00:00+08:00
+date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, Claude, Content-Workflow, Automation]
 author: Aaron
 series: AI-Native Engineering

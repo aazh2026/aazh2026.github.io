@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "构建每天自动变聪明的 Obsidian 知识库：一位独立开发者的系统"
-date: 2026-05-12T00:00:00+08:00
+date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, Knowledge-Management, Obsidian, Claude, Productivity]
 author: Aaron
 series: AI-Native Engineering
