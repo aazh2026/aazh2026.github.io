@@ -727,8 +727,95 @@ section {
   line-height: 1.7;
 }
 
+/* ==================== Page Layout ==================== */
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 60px 32px 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page-header {
+  padding-bottom: 32px;
+  border-bottom: 1.5px solid var(--g300);
+  margin-bottom: 48px;
+}
+
+.page-title,
+.page-header .page-title {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.018em;
+  margin: 0 0 24px;
+  max-width: none;
+  color: var(--slate);
+}
+
+.page-content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--g700);
+}
+
+.page-content h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 40px 0 16px;
+  color: var(--slate);
+}
+
+.page-content h3 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 16px;
+  margin: 28px 0 12px;
+  color: var(--slate);
+}
+
+.page-content p {
+  margin: 0 0 16px;
+}
+
+.page-content table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: 1.5px solid var(--g300);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.page-content table th {
+  padding: 10px 16px;
+  text-align: left;
+  font-weight: 600;
+  background: var(--g100);
+  border-bottom: 1.5px solid var(--g300);
+}
+
+.page-content table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--g200);
+}
+
+.page-content table tr:last-child td { border-bottom: none; }
+
+.page-content ul,
+.page-content ol {
+  margin: 0 0 20px 24px;
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
 /* ==================== Footer ==================== */
-footer {
   margin-top: 100px;
   border-top: 1.5px solid var(--g300);
   padding: 36px 32px;
