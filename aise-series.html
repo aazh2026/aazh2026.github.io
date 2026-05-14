@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Native软件工程系列 (AISE) | Post-Code Engineering</title>
+  <style>
+    :root {
+      --bg: #FAF9F5;
+      --paper: #FFFFFF;
+      --text: #141413;
+      --accent: #D97757;
+      --accent-light: #F5E6DF;
+      --muted: #87867F;
+      --border: #E6E3DA;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --section-1: #788C5D;
+      --section-2: #D97757;
+      --section-3: #5B8DB8;
+      --section-4: #9B7BB8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* Header */
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--paper); border-bottom: 1.5px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1120px; margin: 0 auto; padding: 0 2rem; height: 56px; }
+    .site-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); }
+    .site-brand:hover { color: var(--accent); }
+    .site-brand-icon { color: var(--accent); font-size: 1.3rem; line-height: 1; }
+    .site-brand-text { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+    .site-nav { display: flex; gap: 2rem; align-items: center; }
+    .nav-link { text-decoration: none; color: var(--muted); font-size: 14px; transition: color 120ms; white-space: nowrap; }
+    .nav-link:hover { color: var(--text); }
+    .nav-link.active { color: var(--accent); font-weight: 600; }
+    .mobile-menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger { display: block; width: 22px; height: 2px; background: var(--text); position: relative; }
+    .hamburger::before, .hamburger::after { content: ''; position: absolute; width: 22px; height: 2px; background: var(--text); transition: all 0.3s; }
+    .hamburger::before { top: -7px; }
+    .hamburger::after { top: 7px; }
+    .mobile-menu-toggle.active .hamburger { background: transparent; }
+    .mobile-menu-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
+    .mobile-menu-toggle.active .hamburger::after { transform: rotate(-45deg); top: 0; }
+
+    /* Main */
+    .main { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    /* Hero */
+    .hero { text-align: center; margin-bottom: 3rem; }
+    .hero h1 { font-family: var(--serif); font-size: 2.5rem; font-weight: 500; color: var(--text); margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+    .hero .subtitle { font-size: 1.1rem; color: var(--muted); max-width: 560px; margin: 0 auto 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+    .hero-tag { background: var(--accent-light); color: var(--accent); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 13px; font-weight: 500; }
+
+    /* Stats Row */
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+    .stat { background: var(--paper); padding: 1.5rem 1rem; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 0.25rem; }
+
+    /* Quick Nav */
+    .quick-nav { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; }
+    .quick-nav h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .quick-nav-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem; list-style: none; }
+    .quick-nav-list a { display: block; padding: 0.6rem 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); font-size: 13px; text-align: center; transition: all 120ms; }
+    .quick-nav-list a:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+    .quick-nav-list .num { font-weight: 600; color: var(--accent); }
+
+    /* Section */
+    .section { margin-bottom: 2.5rem; }
+    .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+    .section-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .section-header h2 { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+    .section-header .section-count { margin-left: auto; font-size: 13px; color: var(--muted); background: var(--bg); padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); }
+
+    /* Article Table */
+    .article-table { width: 100%; border-collapse: collapse; }
+    .article-table th { text-align: left; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+    .article-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .article-table tr:last-child td { border-bottom: none; }
+    .article-table tr:hover td { background: var(--accent-light); }
+    .article-num { font-weight: 600; color: var(--accent); font-size: 13px; width: 32px; }
+    .article-table a { color: var(--text); text-decoration: none; font-weight: 500; line-height: 1.4; display: block; }
+    .article-table a:hover { color: var(--accent); }
+    .article-desc { font-size: 13px; color: var(--muted); margin-top: 0.25rem; line-height: 1.4; }
+
+    /* Knowledge Map */
+    .knowledge-map { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 2rem; margin: 3rem 0; }
+    .knowledge-map h2 { font-family: var(--serif); font-size: 1.25rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .map-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .map-layer { background: var(--bg); border-radius: 10px; padding: 1rem; border: 1px solid var(--border); }
+    .map-layer-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+    .map-layer[data-layer="foundation"] .map-layer-title { color: var(--section-1); }
+    .map-layer[data-layer="governance"] .map-layer-title { color: var(--section-2); }
+    .map-layer[data-layer="practice"] .map-layer-title { color: var(--section-3); }
+    .map-layer[data-layer="org"] .map-layer-title { color: var(--section-4); }
+    .map-items { display: flex; flex-direction: column; gap: 0.4rem; }
+    .map-item { font-size: 12px; color: var(--text); padding-left: 0.75rem; border-left: 2px solid var(--border); }
+    .map-layer[data-layer="foundation"] .map-item { border-color: var(--section-1); }
+    .map-layer[data-layer="governance"] .map-item { border-color: var(--section-2); }
+    .map-layer[data-layer="practice"] .map-item { border-color: var(--section-3); }
+    .map-layer[data-layer="org"] .map-item { border-color: var(--section-4); }
+
+    /* Author Card */
+    .author-card { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.25rem; margin-top: 3rem; }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+    .author-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .author-info p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .author-links { margin-left: auto; display: flex; gap: 1rem; }
+    .author-links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .author-links a:hover { text-decoration: underline; }
+    .footer-update { text-align: center; margin-top: 2rem; font-size: 13px; color: var(--muted); }
+    .section-divider { height: 1px; background: var(--border); margin: 3rem 0; }
+
+    @media (max-width: 768px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .quick-nav-list { grid-template-columns: repeat(3, 1fr); }
+      .map-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 1.85rem; }
+      .author-card { flex-direction: column; text-align: center; }
+      .author-links { margin-left: 0; }
+    }
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .quick-nav-list { grid-template-columns: repeat(2, 1fr); }
+      .map-grid { grid-template-columns: 1fr; }
+      .site-nav { display: none; }
+      .mobile-menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="/">
+        <span class="site-brand-icon">◈</span>
+        <span class="site-brand-text">Post-Code Engineering</span>
+      </a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="切换菜单">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/" class="nav-link">首页</a>
+        <a href="/archive" class="nav-link">归档</a>
+        <a href="/tags" class="nav-link">标签</a>
+        <a href="/subscribe/" class="nav-link">订阅</a>
+        <a href="/about/" class="nav-link">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="hero">
+      <h1>AI-Native软件工程系列</h1>
+      <p class="subtitle">探索AI如何重新定义软件工程的边界 —— 从理论到实践，从代码到组织</p>
+      <div class="hero-tags">
+        <span class="hero-tag">AISE</span>
+        <span class="hero-tag">Context Engineering</span>
+        <span class="hero-tag">Intent-Driven</span>
+        <span class="hero-tag">Agent OS</span>
+        <span class="hero-tag">AI Governance</span>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">63</div><div class="stat-label">篇文章</div></div>
+      <div class="stat"><div class="stat-num">10</div><div class="stat-label">个部分</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">覆盖领域</div></div>
+      <div class="stat"><div class="stat-num">2026</div><div class="stat-label">持续更新</div></div>
+    </div>
+
+    <nav class="quick-nav">
+      <h2>快速跳转</h2>
+      <ul class="quick-nav-list">
+        <li><a href="#p1"><span class="num">#1-9</span><br>理论基础</a></li>
+        <li><a href="#p2"><span class="num">#10-19</span><br>"为什么"系列</a></li>
+        <li><a href="#p3"><span class="num">#20-27</span><br>成本与治理</a></li>
+        <li><a href="#p4"><span class="num">#28-36</span><br>前沿技术</a></li>
+        <li><a href="#p5"><span class="num">#37-48</span><br>安全合规</a></li>
+        <li><a href="#p6"><span class="num">#40-42</span><br>度量评估</a></li>
+        <li><a href="#p7"><span class="num">#43-45</span><br>团队组织</a></li>
+        <li><a href="#p9"><span class="num">#49-58</span><br>Agentic底层</a></li>
+        <li><a href="#p10"><span class="num">#59-63</span><br>软件哲学</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section 1 -->
+    <section class="section" id="p1">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E8F0E0; color: var(--section-1);">📐</div>
+        <h2>第一部分：理论基础</h2>
+        <span class="section-count">9篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">01</td><td><a href="/context-engineering/">Context Engineering: 五层架构模型</a></td><td class="article-desc">AI改变了上下文管理的复杂度层级</td></tr>
+          <tr><td class="article-num">02</td><td><a href="/tdd-intent-driven/">TDD vs Intent-Driven Development</a></td><td class="article-desc">从测试驱动到意图驱动的范式转移</td></tr>
+          <tr><td class="article-num">03</td><td><a href="/intent-complexity-metrics/">Intent Complexity Metrics</a></td><td class="article-desc">度量意图复杂性的新方法</td></tr>
+          <tr><td class="article-num">04</td><td><a href="/executable-prd/">Executable PRD: 可执行规格说明</a></td><td class="article-desc">PRD不再是文档，而是可执行的意图表达</td></tr>
+          <tr><td class="article-num">05</td><td><a href="/ai-adoption-s-curve/">S-curve Adoption: 三层演化模型</a></td><td class="article-desc">AI采用是S曲线的三次跃迁</td></tr>
+          <tr><td class="article-num">06</td><td><a href="/large-scale-ai-governance/">大规模AI治理：三大支柱框架</a></td><td class="article-desc">Context、Prompt、人机协作治理</td></tr>
+          <tr><td class="article-num">07</td><td><a href="/traceability-auto-tracking/">全链路可追溯性</a></td><td class="article-desc">四层架构实现端到端可追溯</td></tr>
+          <tr><td class="article-num">08</td><td><a href="/human-ai-sla/">人-AI SLA: 协作契约框架</a></td><td class="article-desc">定义人机协作的服务水平协议</td></tr>
+          <tr><td class="article-num">09</td><td><a href="/prompt-library-governance/">Prompt Library治理</a></td><td class="article-desc">五维度Prompt资产管理</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section" id="p2">
+      <div class="section-header">
+        <div class="section-icon" style="background: #F5E6DF; color: var(--section-2);">❓</div>
+        <h2>第二部分："为什么"系列</h2>
+        <span class="section-count">10篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">10</td><td><a href="/knowledge-assetization/">为什么你的代码正在变成负债？</a></td><td class="article-desc">知识才是真正的资产</td></tr>
+          <tr><td class="article-num">11</td><td><a href="/death-of-code-reviews/">为什么代码评审正在死亡？</a></td><td class="article-desc">人类评审的认知天花板</td></tr>
+          <tr><td class="article-num">12</td><td><a href="/context-rot/">为什么你的AI助手越用越笨？</a></td><td class="article-desc">Context衰减与四层防线</td></tr>
+          <tr><td class="article-num">13</td><td><a href="/ai-native-team-restructure/">为什么AI-Native团队必须重组？</a></td><td class="article-desc">从技能持有到Intent架构师</td></tr>
+          <tr><td class="article-num">14</td><td><a href="/10x-multiplier/">10x工程师已死，10x乘数当立？</a></td><td class="article-desc">从个人杠杆到系统杠杆</td></tr>
+          <tr><td class="article-num">15</td><td><a href="/semantic-diff/">为什么文本级别的代码对比已经过时？</a></td><td class="article-desc">从文本diff到语义diff</td></tr>
+          <tr><td class="article-num">16</td><td><a href="/agent-swarm/">为什么单个AI Agent不够用了？</a></td><td class="article-desc">Agent Swarm的五层架构</td></tr>
+          <tr><td class="article-num">17</td><td><a href="/stop-writing-unit-tests/">为什么该停止写单元测试了？</a></td><td class="article-desc">三层融合测试模型</td></tr>
+          <tr><td class="article-num">18</td><td><a href="/legacy-trap/">为什么AI无法拯救你的遗留系统？</a></td><td class="article-desc">三层债务陷阱</td></tr>
+          <tr><td class="article-num">19</td><td><a href="/ai-native-architecture-patterns/">为什么传统架构模式正在失效？</a></td><td class="article-desc">六大战术模式</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="section" id="p3">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E0ECF5; color: var(--section-3);">💰</div>
+        <h2>第三部分：成本与治理</h2>
+        <span class="section-count">8篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">20</td><td><a href="/ai-cost-control/">你的AI账单为什么失控了？</a></td><td class="article-desc">四层成本模型与控制策略</td></tr>
+          <tr><td class="article-num">21</td><td><a href="/ai-hallucination-governance/">生产环境幻觉治理</a></td><td class="article-desc">三层防御体系应对AI幻觉</td></tr>
+          <tr><td class="article-num">22</td><td><a href="/death-of-api-docs/">API文档已死，自解释系统当立？</a></td><td class="article-desc">四层自解释架构</td></tr>
+          <tr><td class="article-num">23</td><td><a href="/ai-native-dx/">AI时代的开发者体验革命</a></td><td class="article-desc">五维DX模型</td></tr>
+          <tr><td class="article-num">24</td><td><a href="/data-as-intent/">数据即Intent</a></td><td class="article-desc">数据-模型-应用的飞轮效应</td></tr>
+          <tr><td class="article-num">25</td><td><a href="/ai-ethics/">AI编码的伦理困境</a></td><td class="article-desc">三层伦理治理框架</td></tr>
+          <tr><td class="article-num">26</td><td><a href="/aise-manifesto/">AI-Native软件工程宣言</a></td><td class="article-desc">AISE的核心理论与五层架构</td></tr>
+          <tr><td class="article-num">27</td><td><a href="/intent-complexity-metrics/">AI时代的软件工程指标：LOC已死</a></td><td class="article-desc">Intent Complexity取代代码行数</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section" id="p4">
+      <div class="section-header">
+        <div class="section-icon" style="background: #EDE5F5; color: var(--section-4);">🚀</div>
+        <h2>第四部分：前沿技术</h2>
+        <span class="section-count">9篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">28</td><td><a href="/clinejection-ai-native-security/">Clinejection安全框架</a></td><td class="article-desc">AI-Native安全的范式转移</td></tr>
+          <tr><td class="article-num">29</td><td><a href="/future-of-code-generation/">代码生成的未来</a></td><td class="article-desc">从Copilot到Agent到全自动</td></tr>
+          <tr><td class="article-num">30</td><td><a href="/multi-agent-collaboration-paradox/">Multi-Agent协作悖论</a></td><td class="article-desc">更多Agent≠更好效果</td></tr>
+          <tr><td class="article-num">31</td><td><a href="/goodbye-loc-intent-complexity/">告别代码行数</a></td><td class="article-desc">意图复杂度度量标准</td></tr>
+          <tr><td class="article-num">32</td><td><a href="/model-collapse-synthetic-data-death-spiral/">模型崩溃与死亡螺旋</a></td><td class="article-desc">AI正在慢性中毒</td></tr>
+          <tr><td class="article-num">33</td><td><a href="/rag-cognitive-bias-trap/">RAG认知偏差陷阱</a></td><td class="article-desc">当AI开始确认偏误</td></tr>
+          <tr><td class="article-num">34</td><td><a href="/aise-framework-theory/">AISE框架理论体系</a></td><td class="article-desc">完整理论体系阐述</td></tr>
+          <tr><td class="article-num">35</td><td><a href="/ai-architecture-review/">AI架构评审</a></td><td class="article-desc">AI参与架构决策的审查机制</td></tr>
+          <tr><td class="article-num">36</td><td><a href="/codebase-intelligence/">Codebase Intelligence</a></td><td class="article-desc">代码库成为可推理的知识系统</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Knowledge Map -->
+    <div class="knowledge-map">
+      <h2>🗺️ 知识体系图</h2>
+      <div class="map-grid">
+        <div class="map-layer" data-layer="foundation">
+          <div class="map-layer-title">基础层</div>
+          <div class="map-items">
+            <div class="map-item">Context Engineering</div>
+            <div class="map-item">Intent-Driven Development</div>
+            <div class="map-item">Executable PRD</div>
+            <div class="map-item">Agentic Engineering底层逻辑</div>
+          </div>
+        </div>
+        <div class="map-layer" data-layer="governance">
+          <div class="map-layer-title">治理层</div>
+          <div class="map-items">
+            <div class="map-item">大规模AI治理</div>
+            <div class="map-item">全链路可追溯性</div>
+            <div class="map-item">Prompt Library治理</div>
+            <div class="map-item">安全与合规</div>
+          </div>
+        </div>
+        <div class="map-layer" data-layer="practice">
+          <div class="map-layer-title">实践层</div>
+          <div class="map-items">
+            <div class="map-item">成本与效率</div>
+            <div class="map-item">质量与度量</div>
+            <div class="map-item">工程实践</div>
+            <div class="map-item">前沿技术</div>
+          </div>
+        </div>
+        <div class="map-layer" data-layer="org">
+          <div class="map-layer-title">组织层</div>
+          <div class="map-items">
+            <div class="map-item">人才培养</div>
+            <div class="map-item">团队协作</div>
+            <div class="map-item">知识管理</div>
+            <div class="map-item">组织变革</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- Section 5 -->
+    <section class="section" id="p5">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E8F0E0; color: var(--section-1);">🔒</div>
+        <h2>第五部分：安全与合规</h2>
+        <span class="section-count">6篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">37</td><td><a href="/compliant-ai-development-financial/">合规AI开发流程</a></td><td class="article-desc">金融行业的审计与监管实践</td></tr>
+          <tr><td class="article-num">38</td><td><a href="/hybrid-cloud-ai-programming/">混合云AI编程架构</a></td><td class="article-desc">敏感代码本地生成</td></tr>
+          <tr><td class="article-num">39</td><td><a href="/domain-terminology-governance/">领域术语统一治理</a></td><td class="article-desc">业务术语与代码命名对齐</td></tr>
+          <tr><td class="article-num">46</td><td><a href="/ai-devsecops-shift-left/">AI辅助的DevSecOps</a></td><td class="article-desc">生成阶段注入安全策略</td></tr>
+          <tr><td class="article-num">47</td><td><a href="/privacy-compliance-ai-shift-left/">隐私合规风险识别</a></td><td class="article-desc">需求阶段的GDPR/个保法检查</td></tr>
+          <tr><td class="article-num">48</td><td><a href="/ai-code-license-compliance/">License合规与SCA</a></td><td class="article-desc">AI代码的溯源与风险标记</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 6 -->
+    <section class="section" id="p6">
+      <div class="section-header">
+        <div class="section-icon" style="background: #F5E6DF; color: var(--section-2);">📊</div>
+        <h2>第六部分：度量与评估</h2>
+        <span class="section-count">3篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">40</td><td><a href="/dora-metrics-ai-era-reconstruction/">DORA指标重构</a></td><td class="article-desc">4大指标的AI时代新解释</td></tr>
+          <tr><td class="article-num">41</td><td><a href="/ai-assisted-efficiency-metrics/">AI辅助的效能度量</a></td><td class="article-desc">从写得多快到改得多快</td></tr>
+          <tr><td class="article-num">42</td><td><a href="/ai-hallucination-business-cost-model/">幻觉业务成本模型</a></td><td class="article-desc">看起来对但实际错的成本</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 7 -->
+    <section class="section" id="p7">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E0ECF5; color: var(--section-3);">👥</div>
+        <h2>第七部分：团队与组织</h2>
+        <span class="section-count">3篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">43</td><td><a href="/prompt-engineering-ladder/">Prompt Engineering梯队建设</a></td><td class="article-desc">初中高级开发者的分层培养</td></tr>
+          <tr><td class="article-num">44</td><td><a href="/ai-assisted-mentorship/">AI辅助的导师制</a></td><td class="article-desc">基于代码审查历史的个性化导师</td></tr>
+          <tr><td class="article-num">45</td><td><a href="/knowledge-isolation-index/">知识孤岛指数</a></td><td class="article-desc">衡量集体理解度下降</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Author Card -->
+    <div class="author-card">
+      <div class="author-avatar">👤</div>
+      <div class="author-info">
+        <h3>Aaron Zhang</h3>
+        <p>专注于AI-Native软件工程的独立研究者，致力于探索AI如何重新定义软件开发的边界。</p>
+      </div>
+      <div class="author-links">
+        <a href="https://github.com/aazh2026">GitHub ↗</a>
+        <a href="/feed.xml">RSS ↗</a>
+      </div>
+    </div>
+
+    <p class="footer-update">本系列持续更新中 · 最后更新：2026-03-15</p>
+  </main>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('mobile-menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    })();
+  </script>
+</body>
+</html>
