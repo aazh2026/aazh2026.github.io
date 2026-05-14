@@ -1,65 +1,78 @@
 ---
 layout: default
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <!-- 阅读进度条 -->
-  {% include reading-progress.html %}
+  <!-- 导航 -->
+  <nav class="post-nav">
+    <a href="{{ '/' | relative_url }}" class="back-link">← 首页</a>
+  </nav>
 
-  <!-- 文章目录 (TOC) -->
-  {% include toc.html %}
-
-  <!-- 面包屑导航 -->
-  {% include breadcrumb.html %}
-
-  <!-- 阅读宽度优化 -->
-  {% include reading-width.html %}
-
+  <!-- 文章头部 -->
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     
     <div class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+      <time class="date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%Y-%m-%d" }}
       </time>
       
-      <span class="reading-time" style="margin-left: 1rem; color: #888;">
-        {% include reading-time.html %}
-      </span>
-      
       {% if page.author %}
-        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span class="p-author h-card" itemprop="name">{{ page.author }}</span>
-        </span>
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        {{ page.author }}
+      </span>
       {% endif %}
     </div>
+
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
   </header>
 
+  <!-- 文章正文 -->
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  <!-- 社交分享卡片生成器 -->
-  {% include share-card.html %}
-
-  <!-- 社交分享按钮 -->
-  {% include share-buttons.html %}
-
-  <!-- 相关文章 -->
-  {% include related-posts.html %}
-
-  <!-- Giscus评论 -->
-  {% include comments-giscus.html %}
+  <!-- 页脚信息 -->
+  <footer class="post-footer">
+    <div class="post-actions">
+      <span>如果这篇文章对你有用，可以分享给朋友。</span>
+    </div>
+    
+    {% if page.series %}
+    <div class="series-nav">
+      <a href="{{ '/archive' | relative_url }}#series">← 查看更多文章</a>
+    </div>
+    {% endif %}
+  </footer>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 
-<!-- 深色模式 + 返回顶部 -->
-{% include dark-mode.html %}
+<!-- 深色模式切换 -->
+<button class="theme-toggle" aria-label="切换深色模式" onclick="toggleTheme()">
+  🌙
+</button>
 
-<!-- 代码复制按钮 -->
-{% include code-copy.html %}
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
 
-<!-- 图片点击放大 -->
-{% include lightbox.html %}
+// 初始化主题
+(function() {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const theme = saved || (prefersDark ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', theme);
+})();
+</script>
