@@ -7,42 +7,27 @@ permalink: /tags/
 <div class="tags-page">
   <h1>🏷️ 标签云</h1>
   
-  <!-- 收集所有标签 -->
-  {% capture tags_string %}{% for post in site.posts %}{% for tag in post.tags %}{{ tag }},{% endfor %}{% endfor %}{% endcapture %}
-  {% assign all_tags = tags_string | split: ',' | sort %}
+  {% assign sorted_tags = site.tags | sort %}
   
-  <div class="tag-cloud">
-    {% assign previous_tag = '' %}
-    {% for tag in all_tags %}
-      {% if tag != '' %}
-        {% unless tag == previous_tag %}
-          <a href="#{{ tag }}" class="tag-link">#{{ tag }}</a>
-        {% endunless %}
-        {% assign previous_tag = tag %}
-      {% endif %}
+  <div class="tag-cloud-page">
+    {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}" class="tag">#{{ tag[0] }}</a>
     {% endfor %}
   </div>
   
-  <hr>
+  <hr style="margin: 48px 0; border: none; border-top: 1.5px solid var(--g200);">
   
-  <!-- 按标签显示文章 -->
-  {% assign previous_tag = '' %}
-  {% for tag in all_tags %}
-    {% if tag != '' and tag != previous_tag %}
-      <section id="{{ tag }}" class="tag-section">
-        <h2>#{{ tag }}</h2>
-        <ul class="post-list">
-          {% for post in site.posts %}
-            {% if post.tags contains tag %}
-              <li>
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </section>
-      {% assign previous_tag = tag %}
-    {% endif %}
+  {% for tag in sorted_tags %}
+  <section id="{{ tag[0] | slugify }}" class="tag-section" style="margin-bottom: 40px;">
+    <h2 style="font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 16px; color: var(--clay);">#{{ tag[0] }}</h2>
+    <ul class="archive-list">
+      {% for post in tag[1] %}
+      <li>
+        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
   {% endfor %}
 </div>
