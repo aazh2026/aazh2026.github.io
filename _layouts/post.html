@@ -1,93 +1,142 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <!-- 返回链接 -->
+<article class="post-wrap">
+  
+  <!-- 返回导航 -->
   <nav class="post-nav">
-    <a href="{{ '/' | relative_url }}" class="back-link">← 返回首页</a>
+    <a href="{{ '/' | relative_url }}">← 返回首页</a>
   </nav>
 
-  <div class="post-wrap">
-    <!-- 文章头部 -->
-    <header class="post-header">
-      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-      
-      <div class="post-meta">
-        <time class="date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {{ page.date | date: "%Y-%m-%d" }}
-        </time>
-        
-        {% if page.author %}
-        <span class="separator">/</span>
-        <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          {{ page.author }}
-        </span>
-        {% endif %}
-      </div>
-
-      {% if page.tags %}
-      <div class="post-tags">
-        {% for tag in page.tags %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
+  <!-- 文章头部 -->
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    
+    <div class="post-meta">
+      <time>{{ page.date | date: "%Y-%m-%d" }}</time>
+      {% if page.author %}
+      <span class="separator">/</span>
+      <span>{{ page.author }}</span>
       {% endif %}
-    </header>
-
-    <!-- 文章正文 -->
-    <div class="post-content e-content" itemprop="articleBody">
-      {{ content }}
     </div>
 
-    <!-- 文章底部 -->
-    <footer class="post-footer">
-      <div class="post-actions">
-        <a href="{{ '/' | relative_url }}">← 查看更多文章</a>
-      </div>
-    </footer>
+    {% if page.tags %}
+    <div class="post-tags">
+      {% for tag in page.tags %}
+      <a href="/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <!-- 文章正文 -->
+  <div class="post-content">
+    {{ content }}
   </div>
+
+  <!-- 文章底部 -->
+  <footer class="post-footer">
+    <a href="{{ '/' | relative_url }}">← 查看更多文章</a>
+  </footer>
 
 </article>
 
 <style>
-  .post {
+  .post-wrap {
     max-width: 720px;
     margin: 0 auto;
-    padding: var(--spacing-3xl) var(--spacing-md);
+    padding: 80px 32px 100px;
   }
-  
+
   .post-nav {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 32px;
   }
-  
-  .back-link {
-    font-size: 0.875rem;
+  .post-nav a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--g500);
+    text-decoration: none;
+  }
+  .post-nav a:hover {
+    color: var(--clay);
+  }
+
+  .post-header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1.5px solid var(--g300);
+  }
+
+  .post-title {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 12px;
     color: var(--g500);
   }
-  
-  .post-header {
-    margin-bottom: var(--spacing-2xl);
+  .post-meta .separator {
+    color: var(--g300);
   }
-  
-  .post-title {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: clamp(1.75rem, 4vw, 2.5rem);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin: 0 0 var(--spacing-md);
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
   }
-  
+  .post-tags .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    background: var(--paper);
+    border: 1.5px solid var(--g300);
+    border-radius: 999px;
+    color: var(--g700);
+    text-decoration: none;
+    transition: all 120ms;
+  }
+  .post-tags .tag:hover {
+    border-color: var(--slate);
+    color: var(--slate);
+  }
+
   .post-footer {
-    margin-top: var(--spacing-2xl);
-    padding-top: var(--spacing-xl);
+    margin-top: 60px;
+    padding-top: 32px;
     border-top: 1.5px solid var(--g300);
+  }
+  .post-footer a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--g500);
+    text-decoration: none;
+  }
+  .post-footer a:hover {
+    color: var(--clay);
+  }
+
+  @media (max-width: 640px) {
+    .post-wrap {
+      padding: 48px 20px 60px;
+    }
+    .post-title {
+      font-size: 26px;
+    }
   }
 </style>
 
 <script>
-// 深色模式
 (function() {
   const saved = localStorage.getItem('theme');
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

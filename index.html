@@ -2,33 +2,24 @@
 layout: default
 ---
 
-<div class="home">
+<div class="wrap">
 
-  <!-- ==================== Hero Section ==================== -->
+  <!-- ==================== Masthead ==================== -->
   <header class="masthead">
     <div class="hero-grid">
-      <div class="hero-content">
+      <div>
         <div class="eyebrow">Post-Code Engineering Lab</div>
-        <h1 class="hero-title">探索后代码时代<br><em>的工程范式</em></h1>
-        <p class="hero-tagline">
-          AI-Native 软件工程 · 意图优先 · 系统性思考<br>
-          记录正在发生的变化
+        <h1>探索后代码时代<br><em>的工程范式</em></h1>
+        <p class="intro">
+          AI-Native 软件工程实验室 · 记录正在发生的变化<br>
+          从代码到意图，从工具到基础设施
         </p>
         
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-number">{{ site.posts.size }}</span>
-            <span class="stat-label">篇文章</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">{{ site.tags.size }}</span>
-            <span class="stat-label">个标签</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">4</span>
-            <span class="stat-label">个系列</span>
-          </div>
-        </div>
+        <nav class="toc">
+          <a href="#series">系列专题 <span class="n">4</span></a>
+          <a href="#latest">最新文章 <span class="n">8</span></a>
+          <a href="#tags">标签云 <span class="n">{{ site.tags.size }}</span></a>
+        </nav>
       </div>
       
       <div class="hero-fig" aria-hidden="true">
@@ -37,6 +28,7 @@ layout: default
           <span class="l w90"></span><span class="l w75"></span><span class="l w82"></span>
           <span class="l w60"></span><span class="l w90"></span><span class="l w70"></span>
           <span class="l w82"></span><span class="l w50"></span><span class="l w75"></span>
+          <span class="l w45"></span><span class="l w55"></span>
         </div>
         <div class="pane html">
           <span class="tag">.html</span>
@@ -49,437 +41,256 @@ layout: default
     </div>
   </header>
 
-  <!-- ==================== 系列专题 ==================== -->
-  <section class="featured-series">
-    <h2 class="section-title">系列专题</h2>
-
-    <div class="series-grid">
-      <a href="/agent-os-series/" class="series-card">
-        <div class="series-icon">🦞</div>
-        <h3>Agent OS</h3>
-        <span class="series-count">10 篇 · 完结</span>
-      </a>
-
-      <a href="/memory-engineering-series/" class="series-card">
-        <div class="series-icon">🧠</div>
-        <h3>记忆工程</h3>
-        <span class="series-count">10 篇 · 更新中</span>
-      </a>
-
-      <a href="/ai-native-security-series/" class="series-card">
-        <div class="series-icon">🔒</div>
-        <h3>AI-Native 安全</h3>
-        <span class="series-count">8 篇 · 更新中</span>
-      </a>
-
-      <a href="/aise-series/" class="series-card">
-        <div class="series-icon">🤖</div>
-        <h3>AISE 系列</h3>
-        <span class="series-count">58 篇 · 更新中</span>
-      </a>
+  <!-- ==================== Stats ==================== -->
+  <section class="stats-row">
+    <div class="stat-item">
+      <span class="stat-num">{{ site.posts.size }}</span>
+      <span class="stat-label">篇文章</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">{{ site.tags.size }}</span>
+      <span class="stat-label">个标签</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">4</span>
+      <span class="stat-label">个系列</span>
     </div>
   </section>
 
-  <!-- ==================== 最新文章 ==================== -->
-  <section class="latest-posts-section">
-    <div class="section-header">
-      <h2>最新文章</h2>
-      <a href="/archive/" class="view-all-link">查看全部 →</a>
+  <!-- ==================== Series Section ==================== -->
+  <section id="series">
+    <div class="sec-head">
+      <span class="idx">01</span>
+      <h2>系列专题</h2>
     </div>
 
-    <ul class="posts-list">
-      {% for post in site.posts limit: 8 %}
-      <li class="post-item">
-        <div class="post-meta">
-          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-          {% if post.series %}
-          <span class="post-series-tag">{{ post.series }}</span>
-          {% endif %}
+    <div class="grid">
+      <a href="/agent-os-series/" class="card">
+        <div class="thumb">
+          <svg viewBox="0 0 120 80">
+            <rect class="wh" x="30" y="8" width="60" height="40" rx="6"/>
+            <rect class="oa" x="10" y="55" width="30" height="20" rx="4"/>
+            <rect class="oa" x="80" y="55" width="30" height="20" rx="4"/>
+            <line class="ln" x1="45" y1="48" x2="25" y2="55"/>
+            <line class="ln" x1="75" y1="48" x2="95" y2="55"/>
+            <circle class="cl" cx="60" cy="28" r="8"/>
+          </svg>
         </div>
-        <h3 class="post-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </h3>
-        {% if post.description %}
-        <p class="excerpt">{{ post.description | truncate: 100 }}</p>
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
+        <div class="body">
+          <div class="card-title">Agent OS</div>
+          <div class="desc">操作系统时代的 Agent 设计、架构与实现</div>
+          <div class="file"><span>10 篇 · 完结</span><span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="/memory-engineering-series/" class="card">
+        <div class="thumb">
+          <svg viewBox="0 0 120 80">
+            <rect class="oa" x="20" y="15" width="35" height="50" rx="4"/>
+            <rect class="wh" x="65" y="15" width="35" height="50" rx="4"/>
+            <line class="ln" x1="30" y1="30" x2="45" y2="30"/>
+            <line class="ln" x1="30" y1="40" x2="50" y2="40"/>
+            <line class="ln" x1="75" y1="30" x2="90" y2="30"/>
+            <line class="lc" x1="75" y1="40" x2="95" y2="40"/>
+            <line class="lc" x1="55" y1="40" x2="65" y2="40"/>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="card-title">记忆工程</div>
+          <div class="desc">构建 AI 记忆系统的理论与实践</div>
+          <div class="file"><span>10 篇 · 更新中</span><span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="/ai-native-security-series/" class="card">
+        <div class="thumb">
+          <svg viewBox="0 0 120 80">
+            <path class="sl" d="M60 12 L95 25 L95 50 L60 68 L25 50 L25 25 Z"/>
+            <path class="wh" d="M55 35 L50 42 L55 50 L60 45 L65 50 L70 42 L65 35 L60 40 Z"/>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="card-title">AI-Native 安全</div>
+          <div class="desc">AI 时代的安全挑战与防御策略</div>
+          <div class="file"><span>8 篇 · 更新中</span><span class="arrow">→</span></div>
+        </div>
+      </a>
+
+      <a href="/aise-series/" class="card">
+        <div class="thumb">
+          <svg viewBox="0 0 120 80">
+            <rect class="wh" x="15" y="10" width="40" height="30" rx="4"/>
+            <rect class="oa" x="65" y="10" width="40" height="30" rx="4"/>
+            <rect class="oa" x="15" y="45" width="40" height="30" rx="4"/>
+            <rect class="wh" x="65" y="45" width="40" height="30" rx="4"/>
+            <circle class="cl" cx="35" cy="25" r="6"/>
+            <circle class="ol" cx="85" cy="25" r="6"/>
+            <circle class="fl" cx="35" cy="60" r="6"/>
+            <circle class="sl" cx="85" cy="60" r="6"/>
+          </svg>
+        </div>
+        <div class="body">
+          <div class="card-title">AISE 系列</div>
+          <div class="desc">AI-Native 软件工程的全方位探索</div>
+          <div class="file"><span>58 篇 · 更新中</span><span class="arrow">→</span></div>
+        </div>
+      </a>
+    </div>
   </section>
 
-  <!-- ==================== 标签云 ==================== -->
-  <section class="tags-section">
-    <h2 class="section-title">热门标签</h2>
+  <!-- ==================== Latest Posts Section ==================== -->
+  <section id="latest">
+    <div class="sec-head">
+      <span class="idx">02</span>
+      <h2>最新文章</h2>
+      <span class="count">{{ site.posts.size }} 篇</span>
+    </div>
+
+    <div class="posts-list">
+      {% for post in site.posts limit: 10 %}
+      <a href="{{ post.url | relative_url }}" class="post-row">
+        <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <span class="post-title">{{ post.title }}</span>
+        <span class="arrow">→</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="view-all">
+      <a href="/archive/" class="btn-secondary">查看全部文章 →</a>
+    </div>
+  </section>
+
+  <!-- ==================== Tags Section ==================== -->
+  <section id="tags">
+    <div class="sec-head">
+      <span class="idx">03</span>
+      <h2>标签云</h2>
+    </div>
 
     <div class="tag-cloud">
       {% assign sorted_tags = site.tags | sort %}
-      {% for tag in sorted_tags limit: 20 %}
-      <a href="/tags/#{{ tag[0] | slugify }}" class="tag">
-        {{ tag[0] }}
-      </a>
+      {% for tag in sorted_tags %}
+      <a href="/tags/#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
       {% endfor %}
     </div>
-
-    <p class="tags-more">
-      <a href="/tags/">查看全部 {{ site.tags.size }} 个标签 →</a>
-    </p>
   </section>
 
 </div>
 
 <style>
-  .home {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 32px 100px;
-  }
-
-  /* ==================== Hero ==================== */
-  .masthead {
-    padding: 80px 0 60px;
-    border-bottom: 1.5px solid var(--g300);
-    margin-bottom: 12px;
-  }
-
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 48px;
-    align-items: end;
-  }
-
-  @media (max-width: 880px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
-    .hero-fig {
-      display: none;
-    }
-  }
-
-  .eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--g500);
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .eyebrow::before {
-    content: "";
-    width: 20px;
-    height: 1.5px;
-    background: var(--clay);
-  }
-
-  .hero-title {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: clamp(2rem, 5vw, 3rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin: 0 0 16px;
-    color: var(--slate);
-  }
-
-  .hero-title em {
-    font-style: italic;
-    color: var(--clay);
-  }
-
-  .hero-tagline {
-    font-size: 1rem;
-    color: var(--g700);
-    margin: 0 0 32px;
-    line-height: 1.7;
-  }
-
-  .hero-stats {
+  /* Stats Row */
+  .stats-row {
     display: flex;
     gap: 40px;
-    padding-top: 28px;
-    border-top: 1px solid var(--border-light);
+    padding: 32px 0;
+    border-bottom: 1px solid var(--g200);
+    margin-bottom: 0;
   }
-
-  .stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 600;
+  .stat-item {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: 32px;
+    font-weight: 500;
     color: var(--slate);
-    font-family: var(--font-serif);
   }
-
   .stat-label {
-    font-size: 0.75rem;
+    font-size: 14px;
     color: var(--g500);
   }
 
-  /* ==================== Hero Figure ==================== */
-  .hero-fig {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    align-items: end;
-  }
-
-  .pane {
-    border-radius: 10px;
-    border: 1.5px solid var(--g300);
-    background: var(--paper);
-    padding: 14px;
-    aspect-ratio: 4/5;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    position: relative;
-  }
-
-  .pane.md {
-    background: var(--g100);
-    transform: rotate(-2deg) translateY(4px);
-  }
-
-  .pane.html {
-    transform: rotate(1.5deg);
-    border-color: var(--slate);
-    box-shadow: 0 10px 28px rgba(26, 26, 26, 0.08);
-  }
-
-  .tag {
-    position: absolute;
-    top: -9px;
-    left: 12px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--ivory);
-    padding: 2px 7px;
-    border: 1.5px solid var(--g300);
-    border-radius: 6px;
-    color: var(--g500);
-  }
-
-  .pane.html .tag {
-    border-color: var(--slate);
-    color: var(--slate);
-  }
-
-  .l {
-    height: 5px;
-    border-radius: 3px;
-    background: var(--g300);
-  }
-
-  .l.w90 { width: 90%; }
-  .l.w75 { width: 75%; }
-  .l.w60 { width: 60%; }
-  .l.w82 { width: 82%; }
-  .l.w70 { width: 70%; }
-  .l.w50 { width: 50%; }
-
-  .pane.html .l {
-    background: var(--g200);
-  }
-
-  .pane.html .blk {
-    border-radius: 5px;
-    flex: 1;
-    background: linear-gradient(135deg, var(--oat), #ECE1CF);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .pane.html .blk::after {
-    content: "";
-    position: absolute;
-    left: 18%;
-    right: 18%;
-    top: 28%;
-    height: 40%;
-    border: 2px solid var(--clay);
-    border-radius: 50%;
-    opacity: 0.7;
-  }
-
-  .pane.html .row {
-    display: flex;
-    gap: 5px;
-    align-items: flex-end;
-  }
-
-  .bar {
-    flex: 1;
-    border-radius: 3px 3px 0 0;
-  }
-
-  .bar.b1 { height: 12px; background: var(--olive); }
-  .bar.b2 { height: 24px; background: var(--clay); }
-  .bar.b3 { height: 16px; background: var(--oat); }
-  .bar.b4 { height: 28px; background: var(--slate); }
-
-  /* ==================== Series Section ==================== */
-  .featured-series {
-    margin: 48px 0;
-  }
-
-  .section-title {
-    font-family: var(--font-serif);
-    font-weight: 500;
-    font-size: 1.375rem;
-    margin-bottom: 20px;
-    color: var(--slate);
-  }
-
-  .series-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
-  }
-
-  .series-card {
-    background: var(--paper);
-    border: 1.5px solid var(--g300);
-    border-radius: 12px;
-    padding: 20px;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 150ms, box-shadow 150ms, border-color 150ms;
-  }
-
-  .series-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.08);
-    border-color: var(--slate);
-  }
-
-  .series-icon {
-    font-size: 2rem;
-    margin-bottom: 8px;
-  }
-
-  .series-card h3 {
-    font-family: var(--font-serif);
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-
-  .series-count {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    color: var(--g500);
-  }
-
-  /* ==================== Latest Posts Section ==================== */
-  .latest-posts-section {
-    background: var(--paper);
-    border: 1.5px solid var(--g300);
-    border-radius: 14px;
-    padding: 28px;
-    margin-bottom: 48px;
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-
-  .section-header h2 {
-    font-family: var(--font-serif);
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 0;
-  }
-
-  .view-all-link {
-    font-size: 0.875rem;
-    color: var(--g700);
-  }
-
+  /* Posts List */
   .posts-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-left: 50px;
+  }
+  @media (max-width: 640px) {
+    .posts-list { margin-left: 0; }
   }
 
-  .post-item {
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border-light);
-  }
-
-  .post-item:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-  }
-
-  .post-item .post-meta {
+  .post-row {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 6px;
-  }
-
-  .post-date {
-    font-family: var(--font-mono);
-    font-size: 0.6875rem;
-    color: var(--g500);
-  }
-
-  .post-series-tag {
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    background: var(--g100);
-    color: var(--g700);
-    padding: 2px 8px;
-    border-radius: 999px;
-  }
-
-  .post-item .post-title {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 0 0 4px;
-  }
-
-  .post-item .post-title a {
-    color: var(--slate);
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--g200);
     text-decoration: none;
+    color: var(--slate);
+    transition: all 120ms;
   }
-
-  .post-item .post-title a:hover {
+  .post-row:hover {
     color: var(--clay);
   }
-
-  .post-item .excerpt {
-    font-size: 0.875rem;
-    color: var(--g700);
-    margin: 0;
-    line-height: 1.5;
+  .post-row:hover .arrow {
+    transform: translateX(3px);
+    color: var(--clay);
+  }
+  .post-row:last-child {
+    border-bottom: none;
+  }
+  .post-row .post-date {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--g500);
+    flex-shrink: 0;
+    width: 90px;
+  }
+  .post-row .post-title {
+    font-size: 15px;
+    font-weight: 500;
+    flex: 1;
+  }
+  .post-row .arrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--g300);
+    transition: transform 150ms ease, color 150ms ease;
   }
 
-  /* ==================== Tags Section ==================== */
-  .tags-section {
-    margin-bottom: 48px;
+  /* View All Button */
+  .view-all {
+    margin-top: 28px;
+    margin-left: 50px;
+  }
+  @media (max-width: 640px) {
+    .view-all { margin-left: 0; }
   }
 
+  .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--slate);
+    background: var(--paper);
+    border: 1.5px solid var(--g300);
+    border-radius: 999px;
+    text-decoration: none;
+    transition: all 150ms;
+  }
+  .btn-secondary:hover {
+    border-color: var(--slate);
+    color: var(--slate);
+  }
+
+  /* Tag Cloud */
   .tag-cloud {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 640px) {
+    .tag-cloud { margin-left: 0; }
   }
 
   .tag-cloud .tag {
-    display: inline-block;
+    font-size: 13px;
     padding: 6px 14px;
-    font-size: 0.8125rem;
     background: var(--paper);
     border: 1.5px solid var(--g300);
     border-radius: 999px;
@@ -487,51 +298,8 @@ layout: default
     text-decoration: none;
     transition: all 120ms;
   }
-
   .tag-cloud .tag:hover {
-    background: var(--slate);
-    color: var(--paper);
     border-color: var(--slate);
-  }
-
-  .tags-more {
-    text-align: center;
-    margin: 0;
-  }
-
-  .tags-more a {
-    color: var(--g500);
-    font-size: 0.875rem;
-  }
-
-  /* ==================== Responsive ==================== */
-  @media (max-width: 768px) {
-    .home {
-      padding: 0 20px 60px;
-    }
-
-    .masthead {
-      padding: 48px 0 40px;
-    }
-
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-title {
-      font-size: 1.75rem;
-    }
-
-    .hero-stats {
-      gap: 24px;
-    }
-
-    .stat-number {
-      font-size: 1.5rem;
-    }
-
-    .series-grid {
-      grid-template-columns: 1fr;
-    }
+    color: var(--slate);
   }
 </style>
