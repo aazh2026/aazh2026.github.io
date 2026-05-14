@@ -1,16 +1,8 @@
 ---
-layout: default
+layout: page
 title: 关于
 permalink: /about/
 ---
-
-<article class="page">
-
-  <header class="page-header">
-    <h1 class="page-title">关于</h1>
-  </header>
-
-  <div class="page-content">
 
 ## 👋 你好，我是 @postcodeeng
 
@@ -146,7 +138,3 @@ flowchart TB
 ---
 
 *最后更新：2026年3月23日*
-
-  </div>
-
-</article>
