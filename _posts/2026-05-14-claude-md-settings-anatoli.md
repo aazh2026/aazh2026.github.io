@@ -1,148 +1,156 @@
-# The 21 CLAUDE.md Settings That Actually Matter
+---
+layout: post
+title: "21 条 CLAUDE.md 设置，真正有用的是这些"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Claude, AI使用技巧]
+author: "@postcodeeng"
+---
 
-*From a tweet by @AnatoliKopadze · 3M views · 8.3K bookmarks*
+# 21 条 CLAUDE.md 设置，真正有用的是这些
+
+*来源：@AnatoliKopadze · 3M 阅读 · 8.3K 收藏*
 
 ---
 
-A single `CLAUDE.md` file hit #1 on GitHub Trending with 82,000 stars and 7,800 forks. Most people using Claude have never heard of it. The ones who have do not know what to put in it.
+一个 `CLAUDE.md` 文件在 GitHub Trending 上登顶，收获 82,000 颗星和 7,800 个 fork。大多数用 Claude 的人从来没听说过它。听说过的人不知道里面该写什么。
 
-That gap is costing people hours every single week.
+这个差距每周都在浪费你几个小时。
 
-Every time you open a new Claude session, it starts with zero memory. It does not know your name, your work, your preferences, or how you like things done. You spend the first few minutes re-explaining everything, or you do not, and Claude gives you something that does not fit how you actually work. `CLAUDE.md` fixes this permanently.
+每次打开新的 Claude 对话，它从零开始。它不知道你叫什么、做什么、你的偏好、你喜欢怎么做。你花前几分钟重新解释一切——或者不解释，然后 Claude 给你的东西不符合你实际的工作方式。`CLAUDE.md` 永久解决这个问题。
 
-This is not a developer tool. Writers use it to lock in their voice so Claude never sounds like someone else. Marketers use it to define their audience so Claude stops writing generic copy. Researchers use it to set how they want information structured. Business owners use it to give Claude the full context of their company.
-
----
-
-## How Claude Talks to You
-
-### 1. Kill the filler
-
-Claude's default is to open every response with "Great question!", "Of course!", "Certainly!", "Absolutely!" — phrases that add nothing and waste your time. One instruction eliminates it permanently.
-
-> Never open responses with filler phrases like "Great question!", "Of course!", "Certainly!", "Absolutely!", "Sure!", or similar warmups. Start every response with the actual answer. No preamble, no acknowledgment of the question.
-
-### 2. Show options before acting
-
-Claude picks one approach and runs with it by default. You ask it to rewrite a paragraph and it changes the entire tone of the piece. Now you are correcting something you did not ask to change.
-
-> Before any significant task, Claude shows you 2-3 ways it could approach the work. You choose the direction that fits. What follows is what you actually wanted.
-
-### 3. Be honest when you do not know
-
-Claude will give you a confident, detailed, completely wrong answer before it admits uncertainty. It fills gaps with plausible-sounding information that feels true but is not.
-
-> If you are uncertain about any fact, statistic, date, quote, or piece of information, say so explicitly before including it. "I'm not certain about this" is always better than presenting a guess as a fact.
-
-### 4. Match length to what is actually needed
-
-Ask Claude a simple question and it writes four paragraphs. Ask it something complex and it gives you a skeleton that looks complete but is not.
-
-> Simple questions get direct, short answers. Complex tasks get full, detailed responses. Never compress or summarize work that requires real depth. Never pad responses with restatements of the question.
+这不是开发者的工具。作家用它锁定自己的文风，让 Claude 永远不写出别人的味道。营销人员用它定义受众，让 Claude 不再写千篇一律的文案。研究人员用它设定信息结构。创业者用它给 Claude 完整公司背景。
 
 ---
 
-## How Claude Behaves
+## Claude 怎么跟你说话
 
-### 5. Ask before making big changes
+### 1. 砍掉废话
 
-You ask Claude to fix one paragraph and it rewrites the entire document. You ask it to shorten something and it removes sections you needed.
+Claude 默认每条回复都以"好问题！""当然！""的确！""完全正确！"开头——这些词什么都没加，还浪费你时间。一条指令永久消除它。
 
-> Before making any change that significantly alters content I have already created — rewriting sections, removing paragraphs, restructuring the flow, changing tone — stop completely. Describe exactly what you are about to change and why. Wait for my confirmation before proceeding. "I think this would be better" is not permission to change it.
+> 不要用"好问题！""当然！""的确！""完全正确！""没问题！"或者类似的开场白来开始回复。直接给出答案。不要铺垫，不要回应问题本身。
 
-### 6. Stay focused on what was asked
+### 2. 行动前先给选项
 
-Ask Claude to fix one thing and it will "improve" five others while it is in there.
+Claude 默认会选一个方法直接执行。你让它改一段话，它把全文基调都改了。现在你在纠正一个你根本没要求改的东西。
 
-> Only change what I specifically asked you to change. Do not rewrite, rephrase, restructure, or "improve" anything I did not ask about. If something else looks worth addressing, mention it at the end of your response. Do not touch it unless I explicitly ask.
+> 在做任何重要任务之前，Claude 给你 2-3 种可能的做法。你选方向，然后 Claude 按你选的方向执行。
 
-### 7. Always tell me what you changed
+### 3. 不知道就说不知道
 
-You finish a task and are left scanning the output trying to figure out what is different.
+Claude 会给你一个自信、详细、但完全错误的答案，而不是先承认不确定。它用听起来很真的信息填补空白。
 
-> After completing any editing or writing task, always end with a brief summary: what was changed, what was left untouched, what needs my attention.
+> 如果你对任何事实、统计、日期、引用或信息不确定，在包含它之前明确说出来。"我不确定这个"永远比把猜测当事实呈现要好。
 
-### 8. Never act on my behalf without asking
+### 4. 回答长度匹配任务复杂度
 
-As AI tools become more connected — to your email, calendar, social accounts — the risk of Claude taking an action you did not fully intend grows.
+问一个简单问题，它给你写四段。问一个复杂问题，它给你一个看起来完整但其实不是的骨架。
 
-> Never send, post, publish, share, or schedule anything on my behalf without my explicit confirmation in the current message. "You mentioned wanting to do this" is not confirmation. I must say yes in the current message.
-
----
-
-## Your Context
-
-### 9. Tell Claude who you are
-
-Claude does not know if you are an expert or a beginner, a founder or a freelancer.
-
-> About me: Name, Role, Background, Strong in (topics you know well), Still learning (areas where you need more context). Adjust the depth of every response to match this background.
-
-### 10. Give Claude your project context
-
-Every session starts with Claude knowing nothing about what you are working on.
-
-> What I am working on: Project description, Goal, Audience, Tone, What to avoid. Apply this context to every task.
-
-### 11. Define your writing style
-
-> My writing style: [specific words you use or avoid, sentence length preference, paragraph vs list preference, tone]
+> 简单问题得到简短直接的答案。复杂任务得到完整详尽的回复。不要压缩需要深度的内容，也不要用重复问题或总结句填充回复。
 
 ---
 
-## Memory and Continuity
+## Claude 的行为规范
 
-### 12. Use MEMORY.md for important decisions
+### 5. 做大事之前先问
 
-> At the end of each session, summarize key decisions and context in MEMORY.md. At the start of each session, read MEMORY.md first.
+你让它改一段，它把整个文档重写了。你让它缩短，它把你需要的内容删了。
 
-### 13. End sessions with a summary
+> 在做任何重大改变——重写章节、删除段落、重构流程、改变基调——之前，停下来。准确描述你打算改什么、为什么改。等我确认后再执行。"我觉得这样会更好"不是许可。
 
-> End every session by summarizing: where we left off, what the next step is, any decisions made.
+### 6. 保持专注在要求的事情上
 
-### 14. Track errors and failures
+你让 Claude 改一件事，它顺手"优化"了五个别的地方。
 
-> After any approach that fails, record what was tried and why it did not work in ERRORS.md. Check this file before attempting similar approaches.
+> 只改我明确要求改的地方。不要重写、改写、重构、或"改进"我没提到的东西。如果有别的看起来值得处理，在回复末尾提出来。除非我明确要求，不要动它。
 
-### 15. Lock in facts that never change
+### 7. 总是告诉我改了什么
 
-> The following facts about my work are always true and should inform all responses: [list of fixed constraints]
+任务完成，你对着输出扫描，试图搞清楚哪里不一样。
 
----
+> 完成任何编辑或写作任务后，总是以简短总结收尾：改了哪里、没动哪里、什么需要我注意。
 
-## Developer Settings (Level Up)
+### 8. 不经询问不为本人行动
 
-### 16. Only touch directly relevant files
+随着 AI 工具越来越互联——连接你的邮件、日历、社交账号——Claude 执行你未完全意图的行动的风险在增长。
 
-> Only modify files that are directly related to the task. Do not refactor, reformat, or touch other files, even if you notice issues in them.
-
-### 17. Confirm before destructive actions
-
-> Before deleting files, removing code, or overwriting existing implementations, stop and wait for explicit confirmation.
-
-### 18. Production deployments are hard stops
-
-> Never make changes to production environments, databases, or live systems without explicit confirmation in the current message.
-
-### 19. Lock technology choices
-
-> Do not suggest or implement technologies, frameworks, or approaches not already in use in this project.
-
-### 20. Report file changes
-
-> After completing any task, list all files that were created or modified.
-
-### 21. Karpathy's 4 rules (the most important)
-
-From Andrej Karpathy's viral rules for LLM coding:
-
-> - If uncertain about requirements or approach, ask
-> - Default to the simplest solution
-> - Do not modify code unrelated to the task
-> - Flag anything you are uncertain about
-
-These four rules, by themselves, raised coding accuracy from 65% to 94%.
+> 不要替我发送、发布、分享、预约任何东西，除非我明确确认。"你之前说想做这个"不是确认。我必须在当前消息里说 yes。
 
 ---
 
-*The gap between someone who has set up CLAUDE.md and someone who has not is the gap between starting every conversation with a stranger and starting with a colleague who already knows how you work.*
+## 你的上下文
+
+### 9. 告诉 Claude 你是谁
+
+Claude 不知道你是专家还是新手、创始人还是自由职业者。
+
+> 关于我：姓名、角色、背景、擅长（你很懂的主题）、仍在学（你需要更多上下文的主题）。根据这个背景调整每条回复的深度。
+
+### 10. 给 Claude 你的项目上下文
+
+每个会话 Claude 都不知道你在做什么。
+
+> 我在做什么：项目描述、目标、受众、语气、要避免什么。将这个上下文应用到每个任务。
+
+### 11. 定义你的写作风格
+
+> 我的写作风格：[你具体用或避免的词、句子长度偏好、段落还是列表偏好、语气]
+
+---
+
+## 记忆和连续性
+
+### 12. 用 MEMORY.md 记录重要决定
+
+> 在每个会话结束时，在 MEMORY.md 中总结关键决定和上下文。在每个会话开始时，先读 MEMORY.md。
+
+### 13. 以总结结束会话
+
+> 以总结结束每个会话：我们停在哪里、下一步是什么、做了什么决定。
+
+### 14. 记录错误和失败
+
+> 任何失败的方法，在 ERRORS.md 中记录尝试了什么、为什么不行。在尝试类似方法前先查这个文件。
+
+### 15. 锁定永不改变的事实
+
+> 以下关于我工作的实事始终为真，应应用到所有回复中：[固定约束列表]
+
+---
+
+## 开发者设置（升级用）
+
+### 16. 只改直接相关的文件
+
+> 只修改与任务直接相关的文件。不要重构、格式化、或碰其他文件，即使你注意到它们有问题。
+
+### 17. 破坏性操作前先确认
+
+> 在删除文件、删除代码、或覆盖现有实现之前，停下来等明确确认。
+
+### 18. 生产部署是硬停止
+
+> 不要在当前消息中没有明确确认的情况下对生产环境、数据库或在线系统做改动。
+
+### 19. 锁定技术选择
+
+> 不要建议或实现项目中还未使用的技术、框架或方法。
+
+### 20. 报告文件变更
+
+> 完成任何任务后，列出所有创建或修改的文件。
+
+### 21. Karpathy 四规则（最重要的）
+
+来自 Andrej Karpathy 的病毒式传播的 LLM 编码规则：
+
+> - 对需求或方法不确定时，先问
+> - 默认用最简单的解决方案
+> - 不要修改与任务无关的代码
+> - 标记任何你不确定的地方
+
+这四条规则本身将编码准确率从 65% 提高到了 94%。
+
+---
+
+*设置了 CLAUDE.md 的人和没设置的人之间的差距，是从每次和陌生人对话开始和每次和一个已经知道你怎样工作的同事对话开始之间的差距。*

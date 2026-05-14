@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Codex Goals 三法则：让 AI 连续跑几天"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Codex, AI使用技巧, 提示词工程]
+author: "@postcodeeng"
+---
+
 # Codex Goals 三法则：让 AI 连续跑几天
 
 *来源：@ChrisHayduk · 165K 阅读 · 2.5K 收藏*

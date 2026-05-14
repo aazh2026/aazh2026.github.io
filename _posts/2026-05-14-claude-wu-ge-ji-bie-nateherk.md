@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Claude 五个 Level：为什么大多数人卡在 Level 1"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Claude, AI使用技巧, 生产力]
+author: "@postcodeeng"
+---
+
 # Claude 五个 Level：为什么大多数人卡在 Level 1
 
 *来源：@nateherk · 27K 阅读 · 422 收藏*

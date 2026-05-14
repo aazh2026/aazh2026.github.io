@@ -1,65 +1,73 @@
-# The Three Rules for Running Codex for Days at a Time
+---
+layout: post
+title: "Codex Goals 三法则：让 AI 连续跑几天"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Codex, AI使用技巧, 提示词工程]
+author: "@postcodeeng"
+---
 
-*From a tweet by @ChrisHayduk · 165K views · 2.5K bookmarks*
+# Codex Goals 三法则：让 AI 连续跑几天
+
+*来源：@ChrisHayduk · 165K 阅读 · 2.5K 收藏*
 
 ---
 
-Perceptive Codex users have noticed that the `/goal` command is now available — just start your prompt with `/goal`, and Codex loops continuously until it achieves your goal.
+细心的 Codex 用户注意到 `/goal` 命令现在已经可以在 Codex App 里用了——只要在提示词前加 `/goal`，Codex 会循环执行直到达成目标。
 
-But using it effectively requires thinking about prompting differently than you may be used to.
-
----
-
-## The Core Loop
-
-Goal mode is a loop: the agent executes some actions, scores those actions, checks if the score satisfies the goal, and then continues or terminates.
-
-The critical piece is step 3 — checking if the score satisfies the goal. **With a vague, qualitative goal, the loop's end state is underspecified.** How can the agent know when it has achieved "make my code better"? What state is "better enough"?
-
-Two failure modes emerge with underspecified goals. In some cases, the model gives up early after working for only a few minutes. In other cases, the model never stops, making changes that flail about blindly.
+但要真正用好它，需要用和你习惯略为不同的方式思考 prompts。
 
 ---
 
-## Rule 1: Specify a Clear, Quantitative Goal
+## 核心循环
 
-A better goal than "make my code better" would be:
+Goal mode 本质上是一个循环：agent 执行动作、打分、检查分数是否满足目标、继续或终止。
 
-> "Reduce the runtime of the code contained in `specific_file` by 20% without causing any regressions in existing unit tests and integration tests."
+关键在第三步——检查分数是否满足目标。**模糊的、定性的目标，循环的终止状态是未定义的。** 你怎么让 agent 知道"让代码更好"什么时候算完成？什么状态算"够好"？
 
-The agent now has a clear, quantitative goal and clear constraints. The loop has a determinable end state.
-
-**When the goal is qualitative, turn it into quantitative.** In one case, converting a NeurIPS paper to ICML format became: work through a 200-item checklist of formatting rules. Codex just needed to think "I am done when I have checked off 200/200." Even though each rule was vague in isolation, Codex could reason about when each rule was complete better than it could reason about "make this paper formatted correctly."
+模糊目标有两种失败模式。一种是模型几分钟就放弃。另一种是模型永远不停，漫无目的地乱改。
 
 ---
 
-## Rule 2: Make the Feedback Loop Tight
+## 法则一：给一个清晰的量化目标
 
-In order for your agent to evaluate its actions against your goal, it needs a mechanism to test its changes. **The faster you can run this test, the faster the model gets feedback on its progress.**
+比"让代码更好"更好的目标是：
 
-The author runs protein structure model architecture searches. He used NanoFold — a small but well-sampled dataset — instead of the full training setup. This reduced scoring runtime from **days to minutes**.
+> "把 `specific_file` 里代码的运行时间降低 20%，且不引发任何现有单元测试和集成测试的回归。"
 
-Find any way to speed up this feedback loop without compromising the quality of the score. Use smaller model sizes. Use subsampled data. Use faster test harnesses. The constraint is not accuracy — it is iteration speed.
+Agent 现在有了一个清晰的量化目标和明确的约束。循环有了可确定的终止状态。
 
----
-
-## Rule 3: Give the Agent Markdown Files to Think In
-
-Codex can run continuously for days. Even with the compaction capabilities built into Codex, it is hard for the model to maintain a coherent thread over such a long timescale.
-
-Rather than force the model to maintain all context in memory, expose markdown files for it to write to. The author uses three:
-
-**PLAN.md** — captures the high-level plan the agent intends to follow. You can seed this with initial ideas.
-
-**EXPERIMENTS.md** — where the agent tracks each experiment: title, brief description, result. This is the most important file. It lets both you and the agent review previous attempts and why they did or did not work.
-
-**EXPERIMENT_NOTES.md** — the agent's scratchpad. Chronologically-ordered real-time thoughts as it executes. This file lets you audit the agent's thought process and nudge it back if it goes off track.
+**当目标是定性的，把它转化成定量的。** 有一个案例是把 NeurIPS 论文转成 ICML 格式，变成：执行一份 200 条格式规则的检查清单。Codex 只需要想"当 200/200 都打勾时就完成了"。即使每条规则本身是模糊的，Codex 也能比判断"让这篇论文格式正确"更好地判断每条规则何时完成。
 
 ---
 
-## The Whole Playbook
+## 法则二：反馈循环要够紧
 
-Set up a clear, measurable goal. Keep the feedback loop tight. Give the agent markdown files to think in.
+Agent 评估动作和目标之间的一致性，需要一个测试机制。**测试跑得越快，模型得到反馈越快。**
 
-With those three pieces in place, Codex will happily grind for hours — or even days — on your hardest problems.
+作者做蛋白质结构模型架构搜索。用 NanoFold——一个小型但采样良好的数据集——替代完整训练集。把评分运行时间从**几天**压到**几分钟**。
 
-The bottleneck is never the AI. It is whether you gave the loop a clear end state, a fast feedback mechanism, and a way to persist its thinking across sessions.
+找到任何能加速反馈循环的方式，同时不损害评分质量。用更小的模型。用抽样数据。用更快的测试框架。瓶颈不是准确性，是迭代速度。
+
+---
+
+## 法则三：给 Agent Markdown 文件来思考
+
+Codex 可以连续跑好几天。即使有内置的压缩能力，模型在这么长的时间跨度里保持连贯的思路还是很难。
+
+与其强迫模型把所有上下文都记在脑子里，不如暴露 markdown 文件让它写。三个文件：
+
+**PLAN.md** — 捕捉 agent 在朝向目标移动时的高层计划。你可以用初始想法来播种它。
+
+**EXPERIMENTS.md** — agent 追踪每次实验细节的地方：标题、简单描述、结果。这是三个文件里最重要的。它让你和 agent 都能回顾之前的尝试，以及为什么它们成功或失败。
+
+**EXPERIMENT_NOTES.md** — agent 的 scratchpad。按时间顺序记录执行时的实时想法。这个文件让你能审查 agent 的思维过程，在需要时把它拉回另一个方向。
+
+---
+
+## 完整玩法
+
+设置一个清晰的、可测量的目标。保持反馈循环紧。给 agent markdown 文件来思考。
+
+这三块到位了，Codex 会开心地为你的最难问题跑上几个小时——甚至几天。
+
+瓶颈从来不是 AI。是看你有没有给循环一个清晰的终止状态、一个快的反馈机制、和一个跨会话持久化思考的方式。

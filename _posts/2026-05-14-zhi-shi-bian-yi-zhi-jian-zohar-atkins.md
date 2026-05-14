@@ -1,3 +1,11 @@
+---
+layout: post
+title: "知识便宜时，洞见才是一切"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI哲学, Jevons悖论, 知识管理]
+author: "@postcodeeng"
+---
+
 # 知识便宜时，洞见才是一切
 
 *将 Jevons 悖论应用于 Torah 学习 — 来源：@ZoharAtkins · 701K 阅读 · 2.8K 收藏*

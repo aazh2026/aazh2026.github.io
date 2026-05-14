@@ -1,87 +1,95 @@
+---
+layout: post
+title: "Claude 的五个 Level：为什么大多数人是 Level 1"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Claude, AI使用技巧, 生产力]
+author: "@postcodeeng"
+---
+
 # Claude 的五个 Level：为什么大多数人是 Level 1
 
-*From a tweet by @nateherk · 27K views · 422 bookmarks*
+*来源：@nateherk · 27K 阅读 · 422 收藏*
 
 ---
 
-There is a gap between two people using the same AI model, paying the same subscription, and getting completely different returns on their time. The gap is not effort. It is architecture.
+两个人用同一个 AI 模型、付同样的订阅费，却得到完全不同的回报。差距不在努力，而在架构。
 
-After 400+ hours inside Claude across Chat, Cowork, and Code, **@nateherk** mapped out five distinct levels of engagement with AI. Each level unlocks a different category of work and a different ceiling on what you can charge for your time.
-
----
-
-## Level 1: The Search Bar
-
-Open Claude. Ask a question. Get an answer. Close the tab.
-
-Maybe ask it to help write an email. Maybe a quick script. Maybe an explanation of something you read. That is level 1. Save maybe 30 minutes a day on small things.
-
-The upgrade most people miss: paste screenshots. Claude reads images. Half the people stuck here type out what a screenshot shows in two seconds when they could have just pasted it.
-
-**Why people stall here:** They do not realize Claude can hold context across conversations, organize work into projects, or plug into the tools they use every day. They keep treating it like a search bar that returns paragraphs.
-
-**Cheat code to Level 2:** Create your first project. Pick something you keep coming back to — your business, a side hustle, recurring work. Drop in a few reference docs. Write a quick system prompt about who you are. Now every chat in that project starts pre-loaded with context.
+在 Chat、Cowork 和 Code 三个场景里累计超过 400 小时之后，**@nateherk** 绘制出了与 AI 交互的五个层级。每一层解锁不同类别的工作，以及对你时间定价的不同天花板。
 
 ---
 
-## Level 2: The Memory Machine
+## Level 1: 搜索引擎
 
-Projects are the spine of this level. Everything else feeds into a project or builds on top of it.
+打开 Claude。问一个问题。得到答案。关掉标签页。
 
-You open a fresh chat next Tuesday inside your project and ask: "What was the thing we decided about the Q2 launch last week?" Claude pulls it up. It cites the conversation. It picks up right where you left off. Six features define this level:
+也许让它帮忙写封邮件。也许一段快速脚本。也许解释读到的某个东西。这就是 Level 1。每天在小事情上省下大约 30 分钟。
 
-**Memory and past chat search.** Claude remembers your role, your preferences, decisions you made weeks ago. Memory works on every plan. Past chat search is paid. Combined with your project's knowledge base, this kills the "starting from zero every time" problem.
+大多数人错过的升级：粘贴截图。Claude 能读图片。在这里卡住的人有一半花两秒钟把截图内容敲出来，而他们本来可以直接粘贴。
 
-**Connectors.** Slack, Google Drive, Gmail, GitHub, Notion, Calendar. Over 50 of them. Click the plus button, sign in with OAuth. Now Claude can summarize Slack threads from last week, pull the latest spec doc from Drive, or check your calendar without you pasting anything.
+**为什么人们在这里卡住：** 他们不知道 Claude 可以跨对话保持上下文、把工作组织成项目，或者接入他们每天使用的工具。他们一直把它当成了一个返回段落的搜索引擎。
 
-**File creation.** Claude can now create real Excel spreadsheets with working formulas, PowerPoint decks, Word docs, and PDFs straight from chat. Not artifacts you preview. Actual files you can download and send to a client. Free users have this too. This is when chat stops being a brainstorming tool and starts being a deliverable tool.
-
-**Artifacts with persistent storage.** Artifacts now save data between sessions, can call Claude's API directly, and you can publish them with a public link. A non-coder can build a customer feedback tracker, save it, send the link to their team, and have a working tool by launch. No custom development. Just a conversation.
-
-**Inline visuals.** When a chart or diagram explains something better than text, Claude builds one inside the conversation. Click it, swap the chart type, add variables and update live. Free on every plan.
-
-**Native Office add-ons.** Claude lives inside Excel, PowerPoint, and Word as native add-ons. As of April 2026, all three share context across apps. You can analyze data in Excel, switch to PowerPoint, and Claude builds the deck using that same analysis.
-
-**Free vs paid at Level 2:** Memory, file creation, and inline visuals work for everyone. Past chat search, persistent artifacts, and the Office add-ons are Pro and up.
-
-**Cheat code to Level 3:** Stop trying to make chat do everything. Open Claude Desktop and click the cowork tab.
+**通关到 Level 2 的 cheat code：** 创建你的第一个项目。选一个你持续回归的东西——你的业务、一个副业、循环性的工作。丢几个参考文档进去。写一个简短的系统 prompt 说明你是谁。现在该项目里的每个对话都会预加载这些上下文。
 
 ---
 
-## Level 3: The Coworker
+## Level 2: 记忆机器
 
-If you have ever thought "I wish Claude could just go do this on my computer," you are ready.
+Project 是这个层级的主干。其他一切要么围绕项目展开，要么在项目之上构建。
 
-You point at your downloads folder — three months of PDFs, screenshots, old invoices, random chaos. You tell it once: "Go into the downloads folder, sort everything by type, rename consistently, write me a summary." Go make coffee. Come back. Done. That is a legit coworker.
+周二你在项目里打开一个新的对话问："上周我们关于 Q2 发布的那个决定是什么？"Claude 调出来，引用对话内容，从上次停下的地方继续。以下六个功能定义这个层级：
 
-Five features define this level:
+**记忆和历史对话搜索。** Claude 记得你的角色、你的偏好、你几周前做的决定。Memory 在每个计划里都生效。历史对话搜索是付费功能。与你的项目知识库结合，彻底解决了"每次从零开始"的问题。
 
-**File system access.** Cowork runs code in an isolated virtual machine but with real read and write access to whatever folders you grant it. What you give permission to, it can completely own.
+**连接器。** Slack、Google Drive、Gmail、GitHub、Notion、日历。超过 50 个。点击加号，用 OAuth 登录。现在 Claude 可以总结上周的 Slack 对话、从 Drive 拉取最新的规格文档，或者直接查看你的日历而无需你粘贴任何内容。
 
-**Skills.** Skills are reusable workflows defined as a simple markdown file. Build a skill once — like "weekly client reporting" — and you never have to explain it again. Over 100 skills are already published. Build once, run anywhere.
+**文件创建。** Claude 现在可以直接在对话里创建真正的 Excel 电子表格（带工作公式）、PowerPoint 演示文稿、Word 文档和 PDF。不是你预览的 artifact，而是你可以下载并发送给客户的真实文件。免费用户也有这个功能。这就是对话从头脑风暴工具变成交付工具的时刻。
 
-**Scheduled tasks.** Type `/schedule` and Claude saves the task to run on a cadence. Daily stand-ups at 8am. Weekly competitor briefs. Monthly reports.
+**带持久存储的 Artifacts。** Artifacts 现在可以在会话之间保存数据，可以直接调用 Claude 的 API，而且你可以用公开链接发布它们。不写代码的人可以构建一个客户反馈追踪器、保存它、把链接发给团队，在上线前就得到一个可用的工具。无需定制开发。一个对话就够。
 
-**Mobile control.** Pair your phone with your desktop using dispatch. Send tasks from anywhere. Cowork runs on your desktop while you are away and pings you when it is done.
+**内联视觉。** 当图表或图示比文字更能解释清楚时，Claude 在对话内直接构建。点击它、切换图表类型、添加变量并实时更新。所有方案都免费。
 
-**Claude Design.** Separate Anthropic Labs product, included with your Pro plan. Describe a prototype, slide deck, landing page, or one-pager in plain English. Claude builds it and designs it.
+**原生 Office 插件。** Claude 作为原生插件存在于 Excel、PowerPoint 和 Word 中。截至 2026 年 4 月，三者共享跨应用的上下文。你可以在 Excel 分析数据，切换到 PowerPoint，Claude 用同样的分析帮你构建演示文稿。
 
-**Cheat code to Level 4:** Claude Code. Parallel sessions. Plan mode. Sub-agents.
+**Level 2 的免费与付费：** Memory、文件创建、内联视觉对所有人都可用。历史对话搜索、持久 artifacts、原生 Office 插件是 Pro 及以上方案的功能。
 
----
-
-## Level 4: The Engineer
-
-Claude Code with parallel sessions. `claude.md`, plan mode, sub-agents, worktrees, MCP, verification loops, custom slash commands. This is where $5K to $15K freelance work becomes possible because the AI does the execution and you do the direction.
+**通关到 Level 3 的 cheat code：** 停止尝试让聊天做所有事情。打开 Claude Desktop，点击 cowork 标签页。
 
 ---
 
-## Level 5: The Operating System
+## Level 3: 同事
 
-Cloud routines, hooks, channels, headless mode, Agent SDK, remote control, autodream, task budgets, agent teams.
+如果你曾经想过"真希望 Claude 能直接在我的电脑上跑这件事"，你准备好了。
 
-The stall is not technical. It is trust.
+你指向下载文件夹——三个月的 PDF、截图、旧发票、乱糟糟的一堆。你告诉它一次："进入下载文件夹，按类型整理所有内容、一致地重命名、给我写一份摘要。"去喝咖啡。回来。完成了。这是一个正经同事。
+
+五个功能定义这个层级：
+
+**文件系统访问。** Cowork 在隔离的虚拟机里跑代码，但对你授予权限的文件夹有真正的读写权限。你给什么权限，它就能完全掌控什么。
+
+**Skills。** Skills 是定义为简单 markdown 文件的可复用工作流。构建一次——比如"每周客户报告"——然后永远不用再解释。已有超过 100 个 skills 发布。构建一次，随处运行。
+
+**定时任务。** 输入 `/schedule`，Claude 保存任务按设定周期运行。每天 8 点的站会。每周竞品简报。每月报告。
+
+**手机控制。** 用 dispatch 将手机与桌面配对。随时随地发送任务。你不在时 Cowork 在你的桌面运行，完成后给你发消息。
+
+**Claude Design。** 独立的 Anthropic Labs 产品，包含在 Pro 方案中。用 plain English 描述一个原型、幻灯片、着陆页或单页文件。Claude 构建并设计它。
+
+**通关到 Level 4 的 cheat code：** Claude Code。Parallel sessions。Plan mode。Sub-agents。
 
 ---
 
-*Most people are stuck at Level 1 through 3. The ones who make it to Level 4 and 5 did not get there by being smarter. They got there by being willing to hand off more.*
+## Level 4: 工程师
+
+Claude Code 加并行会话。`claude.md`、plan mode、sub-agents、worktrees、MCP、验证循环、自定义斜杠命令。这就是月入 $5K 到 $15K 的自由职业工作变得可能的地方——AI 做执行，你做方向。
+
+---
+
+## Level 5: 操作系统
+
+云端路由、hooks、channels、headless 模式、Agent SDK、远程控制、autodream、任务预算、agent 团队。
+
+卡住不在技术。在信任。
+
+---
+
+*大多数人在 Level 1 到 3 之间卡住。到达 Level 4 和 5 的人不是更聪明。是更愿意放手。*

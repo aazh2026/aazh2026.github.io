@@ -1,3 +1,11 @@
+---
+layout: post
+title: "21 条 CLAUDE.md 设置，真正有用的是这些"
+date: 2026-05-14T08:00:00+08:00
+tags: [AI效率, Claude, AI使用技巧]
+author: "@postcodeeng"
+---
+
 # 21 条 CLAUDE.md 设置，真正有用的是这些
 
 *来源：@AnatoliKopadze · 3M 阅读 · 8.3K 收藏*
