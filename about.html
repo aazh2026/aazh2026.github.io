@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 | Post-Code Engineering</title>
+  <style>
+    :root {
+      --bg: #FAF9F5;
+      --paper: #FFFFFF;
+      --text: #141413;
+      --accent: #D97757;
+      --accent-light: #F5E6DF;
+      --muted: #87867F;
+      --border: #E6E3DA;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --section-1: #788C5D;
+      --section-2: #D97757;
+      --section-3: #5B8DB8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--paper); border-bottom: 1.5px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1120px; margin: 0 auto; padding: 0 2rem; height: 56px; }
+    .site-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); }
+    .site-brand:hover { color: var(--accent); }
+    .site-brand-icon { color: var(--accent); font-size: 1.3rem; line-height: 1; }
+    .site-brand-text { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+    .site-nav { display: flex; gap: 2rem; align-items: center; }
+    .nav-link { text-decoration: none; color: var(--muted); font-size: 14px; transition: color 120ms; white-space: nowrap; }
+    .nav-link:hover { color: var(--text); }
+    .nav-link.active { color: var(--accent); font-weight: 600; }
+    .mobile-menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger { display: block; width: 22px; height: 2px; background: var(--text); position: relative; }
+    .hamburger::before, .hamburger::after { content: ''; position: absolute; width: 22px; height: 2px; background: var(--text); transition: all 0.3s; }
+    .hamburger::before { top: -7px; }
+    .hamburger::after { top: 7px; }
+    .mobile-menu-toggle.active .hamburger { background: transparent; }
+    .mobile-menu-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
+    .mobile-menu-toggle.active .hamburger::after { transform: rotate(-45deg); top: 0; }
+
+    .main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    /* Page Header */
+    .page-header { margin-bottom: 2.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid var(--border); }
+    .page-title { font-family: var(--serif); font-size: 2.2rem; font-weight: 500; color: var(--text); letter-spacing: -0.02em; }
+
+    /* Sections */
+    .section { margin-bottom: 2.5rem; }
+    .section h2 { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    .section h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.75rem; }
+    .section p { font-size: 15px; color: var(--text); line-height: 1.7; margin-bottom: 1rem; }
+    .section ul, .section ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .section li { font-size: 15px; line-height: 1.7; margin-bottom: 0.25rem; }
+    .section a { color: var(--accent); text-decoration: none; }
+    .section a:hover { text-decoration: underline; }
+    .section strong { font-weight: 600; }
+    .section hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+
+    /* Blockquote */
+    blockquote { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 1.5rem 0; border-radius: 0 8px 8px 0; }
+    blockquote p { margin: 0; color: var(--text); font-style: italic; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    th { text-align: left; font-weight: 600; padding: 0.75rem 1rem; background: var(--bg); border-bottom: 2px solid var(--border); }
+    td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--border); }
+    tr:last-child td { border-bottom: none; }
+
+    /* Code */
+    code { background: var(--bg); padding: 0.1em 0.35em; border-radius: 4px; font-family: var(--sans); font-size: 0.9em; }
+    pre { background: var(--text); color: var(--bg); padding: 1rem 1.25rem; border-radius: 8px; overflow-x: auto; margin: 1.5rem 0; font-size: 13px; line-height: 1.5; }
+    pre code { background: none; padding: 0; color: inherit; }
+
+    /* Mermaid placeholder */
+    .mermaid-diagram { background: var(--bg); border: 1.5px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center; margin: 1.5rem 0; color: var(--muted); font-size: 14px; }
+    .mermaid-diagram::before { content: '⬡'; font-size: 2rem; display: block; margin-bottom: 0.5rem; color: var(--accent); }
+
+    /* Cards */
+    .series-links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .series-card { background: var(--paper); border: 1.5px solid var(--border); border-radius: 10px; padding: 1.25rem; transition: all 120ms; }
+    .series-card:hover { border-color: var(--accent); }
+    .series-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 0.5rem; color: var(--text); }
+    .series-card h3 a { color: inherit; text-decoration: none; }
+    .series-card h3 a:hover { color: var(--accent); }
+    .series-card p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.5; }
+    .series-card .tag { display: inline-block; background: var(--accent-light); color: var(--accent); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 11px; font-weight: 600; margin-bottom: 0.5rem; }
+
+    /* Author Card */
+    .author-card { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.25rem; margin-top: 3rem; }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; color: var(--accent); }
+    .author-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .author-info p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .author-links { margin-left: auto; display: flex; gap: 1rem; }
+    .author-links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .author-links a:hover { text-decoration: underline; }
+
+    .footer-update { text-align: center; margin-top: 2rem; font-size: 13px; color: var(--muted); }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 1.85rem; }
+      .author-card { flex-direction: column; text-align: center; }
+      .author-links { margin-left: 0; }
+      .series-links { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .site-nav { display: none; }
+      .mobile-menu-toggle { display: block; }
+      .page-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="/">
+        <span class="site-brand-icon">◈</span>
+        <span class="site-brand-text">Post-Code Engineering</span>
+      </a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="切换菜单">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/" class="nav-link">首页</a>
+        <a href="/aise-series.html" class="nav-link">AISE系列</a>
+        <a href="/agent-os-series.html" class="nav-link">Agent OS</a>
+        <a href="/archive" class="nav-link">归档</a>
+        <a href="/about/" class="nav-link active">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <header class="page-header">
+      <h1 class="page-title">关于</h1>
+    </header>
+
+    <section class="section">
+      <h2>👋 你好，我是 @postcodeeng</h2>
+      <blockquote>
+        <p><strong>探索 AI-Native 软件工程的边界</strong></p>
+      </blockquote>
+      <p>我是一名独立研究者，专注于 <strong>AISE（AI-Native Software Engineering）</strong> 和 <strong>Agent OS</strong> 架构设计。</p>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>🎯 Post-Code 的含义</h2>
+      <p><strong>Post-Code</strong> 不是"没有代码"，而是<strong>超越代码</strong>。</p>
+      <p>当 AI 可以生成、理解、重构代码时，软件工程的核心竞争力正在转移：</p>
+      <table>
+        <thead>
+          <tr><th>从</th><th>到</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>写代码的能力</td><td>定义意图的能力</td></tr>
+          <tr><td>实现细节</td><td>架构设计</td></tr>
+          <tr><td>语法正确</td><td>语义清晰</td></tr>
+          <tr><td>代码行数</td><td>Context 质量</td></tr>
+        </tbody>
+      </table>
+      <p>我们正从 <strong>Code-Centric</strong> 时代进入 <strong>Intent-Centric</strong> 时代。</p>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>📚 系列专题</h2>
+      <div class="series-links">
+        <div class="series-card">
+          <span class="tag">AISE</span>
+          <h3><a href="/aise-series.html">AI-Native 软件工程系列</a></h3>
+          <p>63篇深度文章，从理论到实践，系统阐述 AI-Native 软件工程的方法论。</p>
+        </div>
+        <div class="series-card">
+          <span class="tag">Agent OS</span>
+          <h3><a href="/agent-os-series.html">Agent OS 系列</a></h3>
+          <p>10篇系统指南，探索从 SaaS 到 Agent OS 的完整迁移路径。</p>
+        </div>
+        <div class="series-card">
+          <span class="tag">安全</span>
+          <h3><a href="/ai-native-security-series.html">AI-Native 安全系列</a></h3>
+          <p>8篇文章，从 Prompt 注入到 License 合规，系统讲解 AI 安全。</p>
+        </div>
+        <div class="series-card">
+          <span class="tag">记忆</span>
+          <h3><a href="/memory-engineering-series.html">记忆系统工程系列</a></h3>
+          <p>10篇文章，从向量检索到组织知识管理，探索 AI 记忆的工程实践。</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>💡 核心观点</h2>
+      <h3>AISE 时代</h3>
+      <ul>
+        <li><strong>代码是负债，Intent 是资产</strong></li>
+        <li><strong>清晰的意图比完美的实现更重要</strong></li>
+        <li><strong>Context 管理是核心竞争力</strong></li>
+      </ul>
+      <h3>Agent OS 时代</h3>
+      <ul>
+        <li><strong>未来的软件不是你想点击什么，而是 Agent 知道你需要什么</strong></li>
+        <li><strong>当软件从"工具"变成"员工"，计价方式将从 $50/月 变成 Salary</strong></li>
+        <li><strong>每一个 SaaS 产品都值得用 Agent 重新做一遍</strong></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>🛠️ Hal Stack</h2>
+      <p>本博客是 <strong>Hal Stack</strong>（AI-Native 软件工程方法论）的一部分：</p>
+      <table>
+        <thead>
+          <tr><th>组件</th><th>描述</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🦞 Agent OS</td><td>Agent 操作系统架构</td></tr>
+          <tr><td>🧠 AISE</td><td>AI-Native 软件工程</td></tr>
+          <tr><td>📊 Metrics</td><td>AI 时代的效能度量</td></tr>
+          <tr><td>🔒 Governance</td><td>AI 治理与合规</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>📬 联系我</h2>
+      <ul>
+        <li>🐙 <strong>GitHub</strong>: <a href="https://github.com/aazh2026">github.com/aazh2026</a></li>
+        <li>📡 <strong>RSS</strong>: <a href="/feed.xml">postcodeengineering.com/feed.xml</a></li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="section">
+      <h2>🙏 致谢</h2>
+      <p>感谢所有阅读、分享、讨论的读者。你们的反馈是我持续写作的动力。</p>
+      <p>特别感谢 AI 社区的开源贡献者 —— LangChain、LlamaIndex、AutoGPT 等项目为 Agent OS 的实现提供了坚实基础。</p>
+    </section>
+
+    <!-- Author Card -->
+    <div class="author-card">
+      <div class="author-avatar">◈</div>
+      <div class="author-info">
+        <h3>@postcodeeng</h3>
+        <p>专注于 AI-Native 软件工程的独立研究者。</p>
+      </div>
+      <div class="author-links">
+        <a href="https://github.com/aazh2026">GitHub ↗</a>
+        <a href="/feed.xml">RSS ↗</a>
+      </div>
+    </div>
+
+    <p class="footer-update">最后更新：2026年3月23日</p>
+  </main>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('mobile-menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    })();
+  </script>
+</body>
+</html>
