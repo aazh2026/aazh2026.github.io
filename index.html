@@ -169,7 +169,7 @@ layout: default
     </div>
 
     <div class="tag-cloud">
-      {% assign sorted_tags = site.tags | sort %}
+      {% assign sorted_tags = site.tags | sort: '1' | reverse | slice: 0, 30 %}
       {% for tag in sorted_tags %}
       <a href="/tags/#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
       {% endfor %}
