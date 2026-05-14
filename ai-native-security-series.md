@@ -4,179 +4,32 @@ title: "AI-Native 安全系列"
 permalink: /ai-native-security-series/
 ---
 
-# AI-Native 安全系列
+<script>
+window.location.href = '/ai-native-security-series.html';
+</script>
 
-*从边界防御到内生安全：AI时代的安全范式转移*
+<noscript>
+<p>正在跳转到新版专题页：<a href="/ai-native-security-series.html">AI-Native安全系列</a></p>
+</noscript>
 
----
+<style>
+  .redirect-box {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: var(--paper);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    font-family: system-ui, sans-serif;
+  }
+  .redirect-box h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .redirect-box p { color: #666; margin-bottom: 1.5rem; }
+  .redirect-box a { color: #D97757; font-weight: 600; }
+</style>
 
-## 📊 系列概览
-
-**总文章数**：8篇  
-**覆盖领域**：Prompt注入防御、安全框架、代码溯源、DevSecOps、隐私合规、License合规  
-**更新状态**：持续更新中  
-**最后更新**：2026-03-13
-
----
-
-## 🎯 系列简介
-
-AI正在重新定义安全的边界。
-
-传统的安全模型假设"边界内可信，边界外不可信"，但在AI-Native架构中，最危险的攻击可能来自最合法的交互——一个精心构造的Prompt就能让AI执行恶意操作。
-
-这个系列探讨AI-Native安全的独特挑战：Prompt注入攻击、AI生成代码的安全治理、从边界防御到行为验证的范式转移。
-
-**核心问题：**
-- 传统安全模型在AI时代为什么失效？
-- 如何防御Prompt注入和Clinejection攻击？
-- AI生成代码的License和知识产权风险如何管理？
-- 安全左移如何在AI生成阶段实现？
-
----
-
-## 📚 文章目录
-
-### 第一部分：攻击与威胁 (#1-3)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 1 | [Clinejection攻击深度剖析](/clinejection-attack-analysis/) | GitHub Issue中的Prompt注入攻击向量 |
-| 2 | [Clinejection之后：AI-Native安全框架](/ai-native-security-framework/) | 从城堡模型到零信任的范式转移 |
-| 3 | [AI-Native安全框架：三环防护模型](/clinejection-ai-native-security/) | 感知-决策-执行的AI-Native安全新范式 |
-
-### 第二部分：代码治理 (#4-5)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 4 | [当AI开始写代码，谁拥有这段代码的指纹？](/code-watermark-traceability/) | 代码水印、溯源与知识产权 |
-| 5 | [生成代码的License合规：SCA对AI代码的溯源与风险标记](/ai-code-license-compliance/) | AI代码的License传染风险与SCA增强 |
-
-### 第三部分：安全左移 (#6-8)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 6 | [AI辅助的DevSecOps：在生成阶段注入安全策略](/ai-devsecops-shift-left/) | 生成即安全：AI在代码生成时自动遵循安全规范 |
-| 7 | [安全左移的AI实现：需求分析阶段的隐私合规风险识别](/privacy-compliance-ai-shift-left/) | 需求阶段识别GDPR/个保法风险 |
-| 8 | [敏感记忆的保险箱：当Agent记住你的秘密](/secure-memory/) | 机密计算、数据隔离、隐私保护的工程实践 |
-
----
-
-## 🗺️ 知识体系图
-
-```
-AI-Native 安全
-├── 威胁层（Threats）
-│   ├── Prompt注入攻击
-│   ├── Clinejection攻击
-│   ├── 供应链攻击
-│   └── 模型投毒
-├── 防御层（Defense）
-│   ├── 输入验证与过滤
-│   ├── 行为监控与审计
-│   ├── 沙箱与隔离
-│   └── 零信任架构
-├── 治理层（Governance）
-│   ├── 代码溯源与水印
-│   ├── License合规
-│   ├── 知识产权管理
-│   └── 安全策略即代码
-└── 合规层（Compliance）
-    ├── 隐私保护（GDPR/个保法）
-    ├── 安全左移
-    ├── DevSecOps
-    └── 敏感数据保护
-```
-
----
-
-## 🎯 核心洞察
-
-### 1. 安全范式的三次转移
-
-| 时代 | 安全模型 | 核心假设 | 失效原因 |
-|------|---------|----------|----------|
-| **城堡时代** | 边界防御 | 墙内可信，墙外不可信 | 内部威胁、APT |
-| **零信任时代** | 永不信任，始终验证 | 每个请求都验证 | AI的不可解释性 |
-| **AI-Native时代** | 行为验证 | 验证AI的行为而非输入 | Prompt注入绕过输入验证 |
-
-### 2. AI-Native安全的核心挑战
-
-**挑战1：输入即代码**
-- 传统：代码和数据是分离的
-- AI时代：自然语言Prompt就是可执行代码
-- 后果：无法区分"正常请求"和"恶意注入"
-
-**挑战2：生成不可预测**
-- AI生成代码的行为难以完全控制
-- 同样的Prompt可能产生不同的输出
-- 传统静态分析工具失效
-
-**挑战3：归因困难**
-- AI生成的代码融合了训练数据中的模式
-- 难以追溯具体来源
-- License和知识产权风险
-
-### 3. 三环防护模型
-
-```
-┌─────────────────────────────────────────┐
-│  外环：输入感知（Perception）            │
-│  - Prompt异常检测                        │
-│  - 意图分类与风险评分                     │
-│  - 实时威胁情报                           │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  中环：决策验证（Decision）              │
-│  - AI行为监控                            │
-│  - 执行前审批                            │
-│  - 沙箱测试                              │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  内环：执行审计（Execution）             │
-│  - 操作日志记录                          │
-│  - 影响范围追踪                          │
-│  - 快速回滚机制                          │
-└─────────────────────────────────────────┘
-```
-
----
-
-## 🎯 适合读者
-
-- **安全架构师**：理解AI-Native安全的范式转移
-- **DevSecOps工程师**：实施AI时代的安全左移
-- **合规专家**：处理AI生成代码的License和隐私问题
-- **技术负责人**：建立AI系统的安全防护体系
-
----
-
-## 🔄 与其他系列的关系
-
-```
-AISE 理论体系
-    ↓ 基础理论
-AI-Native 安全系列
-    ↓ 安全实践
-Agent OS 系列 → 记忆安全、沙箱隔离
-    ↓ 系统实现
-AISE 工程实践系列
-```
-
-- **AISE 理论基础** → 理解 AI-Native 软件工程的基本原则
-- **AI-Native 安全系列** → 掌握 AI 系统的安全防护方法
-- **Agent OS 系列** → 学习 Agent 系统的安全架构设计
-- **记忆工程系列** → 了解敏感数据的保护与隔离
-
----
-
-## 📝 关于作者
-
-**Aaron** 专注于AI-Native安全与合规，探索AI时代的安全防护新范式。
-
----
-
-*本系列持续更新中，欢迎关注最新文章*  
-*最后更新: 2026-03-13*
+<div class="redirect-box">
+  <h1>AI-Native 安全系列</h1>
+  <p>新版专题页已上线，包含更丰富的交互和视觉设计</p>
+  <p><a href="/ai-native-security-series.html">点击访问新版 →</a></p>
+</div>

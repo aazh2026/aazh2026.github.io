@@ -4,151 +4,32 @@ title: "记忆系统工程系列"
 permalink: /memory-engineering-series/
 ---
 
-# 记忆系统工程系列
+<script>
+window.location.href = '/memory-engineering-series.html';
+</script>
 
-*从个体Agent到组织知识：AI-Native时代的记忆管理*
+<noscript>
+<p>正在跳转到新版专题页：<a href="/memory-engineering-series.html">记忆系统工程系列</a></p>
+</noscript>
 
----
+<style>
+  .redirect-box {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: var(--paper);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    font-family: system-ui, sans-serif;
+  }
+  .redirect-box h1 { font-size: 1.5rem; margin-bottom: 1rem; }
+  .redirect-box p { color: #666; margin-bottom: 1.5rem; }
+  .redirect-box a { color: #D97757; font-weight: 600; }
+</style>
 
-## 📊 系列概览
-
-**总文章数**：10篇  
-**覆盖领域**：记忆架构、知识管理、安全隐私、组织记忆、可解释性  
-**更新状态**：持续更新中  
-**最后更新**：2026-04-07
-
----
-
-## 🎯 系列简介
-
-记忆是智能的核心。
-
-从人类大脑的三层记忆（工作记忆、短期记忆、长期记忆），到Agent系统的向量数据库与知识图谱，再到组织的集体知识管理——记忆系统工程探索如何让AI记住、如何记得准、如何记得安全、如何让知识在组织中流动。
-
-**核心问题：**
-- Agent需要什么样的记忆系统？如何设计层次结构？
-- 知识如何表示？向量检索与知识图谱如何融合？
-- 敏感信息如何保护？隐私与功能的平衡在哪里？
-- 组织的知识如何外化？如何避免"专家一走，知识流失"？
-
----
-
-## 📚 文章目录
-
-### 第一部分：记忆架构 (#1-4)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 1 | [为什么AI需要像人类一样「分心」](/memory-hierarchy/) | 记忆的层次结构：工作记忆、情节记忆、语义记忆的分层处理 |
-| 2 | [上下文窗口的"虚拟内存"化](/virtual-memory-rag/) | 用操作系统的虚拟内存思想优化RAG系统 |
-| 3 | [知识图谱与向量检索：为什么1+1>3](/kg-vector-fusion/) | 向量检索的联想能力 + 知识图谱的推理能力 |
-| 4 | [Agent的记忆系统设计](/agent-memory-system-design/) | Working → Short-term → Long-term Memory 的完整架构 |
-
-### 第二部分：记忆治理 (#5-7)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 5 | [可解释的记忆：Agent如何解释"我为什么记得这个"](/memory-explainability/) | 记忆归因与可信度：让用户理解AI的记忆依据 |
-| 6 | [记忆的版本控制：当知识过时时怎么办](/memory-versioning/) | 知识的时效性管理与Schema迁移 |
-| 7 | [敏感记忆的保险箱](/secure-memory/) | 机密计算、数据隔离、隐私保护的工程实践 |
-
-### 第三部分：组织记忆 (#8-10)
-
-| # | 文章 | 核心观点 |
-|---|------|---------|
-| 8 | [为什么你的代码正在变成负债？](/knowledge-assetization/) | 知识资产化：代码是负债，知识才是资产 |
-| 9 | [当专家退休时，公司失去的不是一个人，而是一部活历史](/organizational-memory-externalization/) | 组织记忆外化：从隐性知识到可传承的资产 |
-| 10 | [知识孤岛指数](/knowledge-isolation-index/) | 衡量集体理解度下降的预警指标 |
-
----
-
-## 🗺️ 知识体系图
-
-```
-记忆系统工程
-├── 个体记忆层（Agent Memory）
-│   ├── 工作记忆（Working Memory）
-│   ├── 短期记忆（Short-term Memory）
-│   ├── 长期记忆（Long-term Memory）
-│   └── 记忆检索与融合
-├── 知识表示层（Knowledge Representation）
-│   ├── 向量记忆（语义检索）
-│   ├── 符号记忆（知识图谱）
-│   └── 混合架构（Vector + Graph）
-├── 记忆治理层（Memory Governance）
-│   ├── 可解释性（Explainability）
-│   ├── 版本控制（Versioning）
-│   ├── 安全与隐私（Security & Privacy）
-│   └── 遗忘策略（Forgetting）
-└── 组织记忆层（Organizational Memory）
-    ├── 知识资产化（Assetization）
-    ├── 外化与编码（Externalization）
-    ├── 传播与共享（Sharing）
-    └── 沉淀与复用（Reuse）
-```
-
----
-
-## 🎯 适合读者
-
-- **AI系统架构师**：设计生产级的Agent记忆系统
-- **知识管理专家**：探索AI时代的组织知识管理
-- **安全工程师**：解决敏感数据在AI系统中的保护问题
-- **技术负责人**：构建可持续演进的组织知识资产
-
----
-
-## 🔄 与其他系列的关系
-
-```
-AISE 理论体系
-    ↓ 基础理论
-Agent OS 系列 → 记忆系统作为Agent的核心组件
-    ↓ 工程实现
-记忆系统工程系列
-    ↓ 组织应用
-AISE 治理系列 → 知识管理与组织建设
-```
-
-- **AISE 理论基础** → 理解 AI-Native 软件工程的基本原则
-- **Agent OS 系列** → 学习记忆系统在Agent架构中的位置
-- **记忆系统工程系列** → 深入记忆的工程实现与治理
-
----
-
-## 💡 核心洞察
-
-### 1. 记忆的三个层次
-
-| 层次 | 时间尺度 | 存储介质 | 特点 |
-|------|---------|----------|------|
-| **工作记忆** | 秒-分钟级 | 上下文窗口 | 快速访问、容量有限 |
-| **短期记忆** | 小时-天级 | 向量数据库 | 语义检索、近似匹配 |
-| **长期记忆** | 永久 | 知识图谱 + 文档 | 结构化、可推理 |
-
-### 2. 向量 vs 图谱
-
-| 维度 | 向量检索 | 知识图谱 |
-|------|---------|----------|
-| 优势 | 语义联想、容错性强 | 逻辑推理、精确关系 |
-| 劣势 | 黑盒、无法解释 | 构建成本高、扩展性差 |
-| 适用 | 开放域检索、相似匹配 | 结构化知识、因果推理 |
-
-**最佳实践：混合架构**
-
-### 3. 组织记忆的三个阶段
-
-1. **外化**（Externalization）：隐性知识 → 显性知识
-2. **组合**（Combination）：碎片化知识 → 系统化知识
-3. **内化**（Internalization）：组织知识 → 个人能力
-
----
-
-## 📝 关于作者
-
-**Aaron** 专注于AI记忆系统与组织知识管理，探索如何让知识在人与AI之间高效流动。
-
----
-
-*本系列持续更新中，欢迎关注最新文章*  
-*最后更新: 2026-04-07*
+<div class="redirect-box">
+  <h1>记忆系统工程系列</h1>
+  <p>新版专题页已上线，包含更丰富的交互和视觉设计</p>
+  <p><a href="/memory-engineering-series.html">点击访问新版 →</a></p>
+</div>

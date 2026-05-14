@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-Native 安全系列 | Post-Code Engineering</title>
+  <style>
+    :root {
+      --bg: #FAF9F5;
+      --paper: #FFFFFF;
+      --text: #141413;
+      --accent: #D97757;
+      --accent-light: #F5E6DF;
+      --muted: #87867F;
+      --border: #E6E3DA;
+      --serif: ui-serif, Georgia, "Times New Roman", serif;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --section-1: #788C5D;
+      --section-2: #D97757;
+      --section-3: #5B8DB8;
+      --section-4: #9B7BB8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--sans); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--paper); border-bottom: 1.5px solid var(--border); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1120px; margin: 0 auto; padding: 0 2rem; height: 56px; }
+    .site-brand { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--text); }
+    .site-brand:hover { color: var(--accent); }
+    .site-brand-icon { color: var(--accent); font-size: 1.3rem; line-height: 1; }
+    .site-brand-text { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+    .site-nav { display: flex; gap: 2rem; align-items: center; }
+    .nav-link { text-decoration: none; color: var(--muted); font-size: 14px; transition: color 120ms; white-space: nowrap; }
+    .nav-link:hover { color: var(--text); }
+    .nav-link.active { color: var(--accent); font-weight: 600; }
+    .mobile-menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+    .hamburger { display: block; width: 22px; height: 2px; background: var(--text); position: relative; }
+    .hamburger::before, .hamburger::after { content: ''; position: absolute; width: 22px; height: 2px; background: var(--text); transition: all 0.3s; }
+    .hamburger::before { top: -7px; }
+    .hamburger::after { top: 7px; }
+    .mobile-menu-toggle.active .hamburger { background: transparent; }
+    .mobile-menu-toggle.active .hamburger::before { transform: rotate(45deg); top: 0; }
+    .mobile-menu-toggle.active .hamburger::after { transform: rotate(-45deg); top: 0; }
+
+    .main { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 6rem; }
+
+    .hero { text-align: center; margin-bottom: 3rem; }
+    .hero h1 { font-family: var(--serif); font-size: 2.5rem; font-weight: 500; color: var(--text); margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+    .hero .subtitle { font-size: 1.1rem; color: var(--muted); max-width: 560px; margin: 0 auto 2rem; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; }
+    .hero-tag { background: var(--accent-light); color: var(--accent); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 13px; font-weight: 500; }
+
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1.5px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 3rem; }
+    .stat { background: var(--paper); padding: 1.5rem 1rem; text-align: center; }
+    .stat-num { font-family: var(--serif); font-size: 2rem; font-weight: 500; color: var(--accent); }
+    .stat-label { font-size: 13px; color: var(--muted); margin-top: 0.25rem; }
+
+    .quick-nav { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 3rem; }
+    .quick-nav h2 { font-size: 14px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1rem; }
+    .quick-nav-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; list-style: none; }
+    .quick-nav-list a { display: block; padding: 0.6rem 0.75rem; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; text-decoration: none; color: var(--text); font-size: 13px; text-align: center; transition: all 120ms; }
+    .quick-nav-list a:hover { background: var(--accent-light); border-color: var(--accent); color: var(--accent); }
+    .quick-nav-list .num { font-weight: 600; color: var(--accent); }
+
+    .section { margin-bottom: 2.5rem; }
+    .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--border); }
+    .section-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+    .section-header h2 { font-family: var(--serif); font-size: 1.35rem; font-weight: 500; }
+    .section-header .section-count { margin-left: auto; font-size: 13px; color: var(--muted); background: var(--bg); padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid var(--border); }
+
+    .article-table { width: 100%; border-collapse: collapse; }
+    .article-table th { text-align: left; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--border); }
+    .article-table td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .article-table tr:last-child td { border-bottom: none; }
+    .article-table tr:hover td { background: var(--accent-light); }
+    .article-num { font-weight: 600; color: var(--accent); font-size: 13px; width: 32px; }
+    .article-table a { color: var(--text); text-decoration: none; font-weight: 500; line-height: 1.4; display: block; }
+    .article-table a:hover { color: var(--accent); }
+    .article-desc { font-size: 13px; color: var(--muted); margin-top: 0.25rem; line-height: 1.4; }
+
+    .intro-box { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 3rem; }
+    .intro-box h2 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 0.75rem; }
+    .intro-box p { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 1rem; }
+    .intro-box ul { font-size: 14px; color: var(--text); padding-left: 1.25rem; line-height: 1.8; }
+
+    .insight-box { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .insight-box h2 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 1rem; }
+    .insight-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .insight-table th { background: var(--bg); text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .insight-table td { padding: 0.75rem; border-bottom: 1px solid var(--border); }
+    .insight-table tr:last-child td { border-bottom: none; }
+
+    .reader-box { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .reader-box h2 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 1rem; }
+    .reader-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .reader-item { background: var(--bg); border-radius: 8px; padding: 1rem; text-align: center; }
+    .reader-item .icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .reader-item .role { font-size: 13px; font-weight: 600; margin-bottom: 0.25rem; }
+    .reader-item .desc { font-size: 11px; color: var(--muted); }
+
+    .author-card { background: var(--paper); border: 1.5px solid var(--border); border-radius: 12px; padding: 1.5rem 2rem; display: flex; align-items: center; gap: 1.25rem; margin-top: 3rem; }
+    .author-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--accent-light); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; color: var(--accent); }
+    .author-info h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .author-info p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+    .author-links { margin-left: auto; display: flex; gap: 1rem; }
+    .author-links a { color: var(--accent); text-decoration: none; font-size: 14px; font-weight: 500; }
+    .author-links a:hover { text-decoration: underline; }
+    .footer-update { text-align: center; margin-top: 2rem; font-size: 13px; color: var(--muted); }
+
+    @media (max-width: 768px) {
+      .stats-row { grid-template-columns: repeat(2, 1fr); }
+      .quick-nav-list { grid-template-columns: repeat(2, 1fr); }
+      .reader-list { grid-template-columns: repeat(2, 1fr); }
+      .hero h1 { font-size: 1.85rem; }
+      .author-card { flex-direction: column; text-align: center; }
+      .author-links { margin-left: 0; }
+    }
+    @media (max-width: 480px) {
+      .stats-row { grid-template-columns: 1fr 1fr; }
+      .quick-nav-list { grid-template-columns: repeat(2, 1fr); }
+      .site-nav { display: none; }
+      .mobile-menu-toggle { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="/">
+        <span class="site-brand-icon">◈</span>
+        <span class="site-brand-text">Post-Code Engineering</span>
+      </a>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="切换菜单">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="/" class="nav-link">首页</a>
+        <a href="/aise-series.html" class="nav-link">AISE系列</a>
+        <a href="/agent-os-series.html" class="nav-link">Agent OS</a>
+        <a href="/archive" class="nav-link">归档</a>
+        <a href="/about/" class="nav-link">关于</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="hero">
+      <h1>AI-Native 安全系列</h1>
+      <p class="subtitle">从边界防御到内生安全：AI时代的安全范式转移</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Prompt注入</span>
+        <span class="hero-tag">Clinejection</span>
+        <span class="hero-tag">DevSecOps</span>
+        <span class="hero-tag">License合规</span>
+        <span class="hero-tag">隐私保护</span>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="stat-num">8</div><div class="stat-label">篇文章</div></div>
+      <div class="stat"><div class="stat-num">3</div><div class="stat-label">个部分</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">覆盖领域</div></div>
+      <div class="stat"><div class="stat-num">2026</div><div class="stat-label">持续更新</div></div>
+    </div>
+
+    <nav class="quick-nav">
+      <h2>快速跳转</h2>
+      <ul class="quick-nav-list">
+        <li><a href="#p1"><span class="num">#1-3</span><br>攻击与威胁</a></li>
+        <li><a href="#p2"><span class="num">#4-5</span><br>代码治理</a></li>
+        <li><a href="#p3"><span class="num">#6-8</span><br>安全左移</a></li>
+        <li><a href="#insights"><span class="num">💡</span><br>核心洞察</a></li>
+      </ul>
+    </nav>
+
+    <!-- Intro Box -->
+    <div class="intro-box">
+      <h2>🎯 系列简介</h2>
+      <p>AI正在重新定义安全的边界。传统的安全模型假设"边界内可信，边界外不可信"，但在AI-Native架构中，最危险的攻击可能来自最合法的交互——一个精心构造的Prompt就能让AI执行恶意操作。</p>
+      <ul>
+        <li>传统安全模型在AI时代为什么失效？</li>
+        <li>如何防御Prompt注入和Clinejection攻击？</li>
+        <li>AI生成代码的License和知识产权风险如何管理？</li>
+        <li>安全左移如何在AI生成阶段实现？</li>
+      </ul>
+    </div>
+
+    <!-- Section 1: 攻击与威胁 -->
+    <section class="section" id="p1">
+      <div class="section-header">
+        <div class="section-icon" style="background: #F5E6DF; color: var(--accent);">⚔️</div>
+        <h2>第一部分：攻击与威胁</h2>
+        <span class="section-count">3篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">01</td><td><a href="/clinejection-attack-analysis/">Clinejection攻击深度剖析</a></td><td class="article-desc">GitHub Issue中的Prompt注入攻击向量</td></tr>
+          <tr><td class="article-num">02</td><td><a href="/ai-native-security-framework/">Clinejection之后：AI-Native安全框架</a></td><td class="article-desc">从城堡模型到零信任的范式转移</td></tr>
+          <tr><td class="article-num">03</td><td><a href="/clinejection-ai-native-security/">AI-Native安全框架：三环防护模型</a></td><td class="article-desc">感知-决策-执行的AI-Native安全新范式</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 2: 代码治理 -->
+    <section class="section" id="p2">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E8F0E0; color: var(--section-1);">📜</div>
+        <h2>第二部分：代码治理</h2>
+        <span class="section-count">2篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">04</td><td><a href="/code-watermark-traceability/">当AI开始写代码，谁拥有这段代码的指纹？</a></td><td class="article-desc">代码水印、溯源与知识产权</td></tr>
+          <tr><td class="article-num">05</td><td><a href="/ai-code-license-compliance/">生成代码的License合规：SCA对AI代码的溯源与风险标记</a></td><td class="article-desc">AI代码的License传染风险与SCA增强</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Section 3: 安全左移 -->
+    <section class="section" id="p3">
+      <div class="section-header">
+        <div class="section-icon" style="background: #E0ECF5; color: var(--section-3);">🛡️</div>
+        <h2>第三部分：安全左移</h2>
+        <span class="section-count">3篇</span>
+      </div>
+      <table class="article-table">
+        <thead><tr><th>#</th><th>文章</th><th>核心观点</th></tr></thead>
+        <tbody>
+          <tr><td class="article-num">06</td><td><a href="/ai-devsecops-shift-left/">AI辅助的DevSecOps：在生成阶段注入安全策略</a></td><td class="article-desc">生成即安全：AI在代码生成时自动遵循安全规范</td></tr>
+          <tr><td class="article-num">07</td><td><a href="/privacy-compliance-ai-shift-left/">安全左移的AI实现：需求分析阶段的隐私合规风险识别</a></td><td class="article-desc">需求阶段识别GDPR/个保法风险</td></tr>
+          <tr><td class="article-num">08</td><td><a href="/secure-memory/">敏感记忆的保险箱：当Agent记住你的秘密</a></td><td class="article-desc">机密计算、数据隔离、隐私保护的工程实践</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Insight Box -->
+    <div class="insight-box" id="insights">
+      <h2>💡 核心洞察：安全范式的三次转移</h2>
+      <table class="insight-table">
+        <thead>
+          <tr><th>时代</th><th>安全模型</th><th>核心假设</th><th>失效原因</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>城堡时代</strong></td>
+            <td>边界防御</td>
+            <td>墙内可信，墙外不可信</td>
+            <td>内部威胁、APT</td>
+          </tr>
+          <tr>
+            <td><strong>零信任时代</strong></td>
+            <td>永不信任，始终验证</td>
+            <td>每个请求都验证</td>
+            <td>AI的不可解释性</td>
+          </tr>
+          <tr>
+            <td><strong>AI-Native时代</strong></td>
+            <td>行为验证</td>
+            <td>验证AI的行为而非输入</td>
+            <td>Prompt注入绕过输入验证</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Reader Box -->
+    <div class="reader-box">
+      <h2>🎯 适合读者</h2>
+      <div class="reader-list">
+        <div class="reader-item">
+          <div class="icon">🏛️</div>
+          <div class="role">安全架构师</div>
+          <div class="desc">理解AI-Native安全的范式转移</div>
+        </div>
+        <div class="reader-item">
+          <div class="icon">🛡️</div>
+          <div class="role">DevSecOps工程师</div>
+          <div class="desc">实施AI时代的安全左移</div>
+        </div>
+        <div class="reader-item">
+          <div class="icon">⚖️</div>
+          <div class="role">合规专家</div>
+          <div class="desc">处理AI生成代码的License问题</div>
+        </div>
+        <div class="reader-item">
+          <div class="icon">👔</div>
+          <div class="role">技术负责人</div>
+          <div class="desc">建立AI系统的安全防护体系</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Series Relations -->
+    <div class="intro-box" style="margin-top: 2rem;">
+      <h2>🔄 与其他系列的关系</h2>
+      <p><strong>AISE 理论基础</strong> → 理解 AI-Native 软件工程的基本原则</p>
+      <p><strong>AI-Native 安全系列</strong> → 掌握 AI 系统的安全防护方法</p>
+      <p><strong>Agent OS 系列</strong> → 学习 Agent 系统的安全架构设计</p>
+    </div>
+
+    <!-- Author Card -->
+    <div class="author-card">
+      <div class="author-avatar">◈</div>
+      <div class="author-info">
+        <h3>@postcodeeng</h3>
+        <p>专注于AI-Native安全与合规，探索AI时代的安全防护新范式。</p>
+      </div>
+      <div class="author-links">
+        <a href="https://github.com/aazh2026">GitHub ↗</a>
+        <a href="/feed.xml">RSS ↗</a>
+      </div>
+    </div>
+
+    <p class="footer-update">本系列持续更新中 · 最后更新：2026-03-13</p>
+  </main>
+
+  <script>
+    (function() {
+      var toggle = document.getElementById('mobile-menu-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function() {
+        toggle.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+    })();
+  </script>
+</body>
+</html>
