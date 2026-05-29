@@ -1,6 +1,7 @@
 ---
-title: "当 AI 编程走向"确定性"：Dynamic Workflows 与 Agent Harness 的殊途同归"
+title: "当 AI 编程走向\"确定性\"：Dynamic Workflows 与 Agent Harness 的殊途同归"
 date: 2026-05-29
+layout: post
 tags:
   - AI编程
   - Agent
