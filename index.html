@@ -150,7 +150,12 @@ layout: default
       {% for post in site.posts limit: 10 %}
       <a href="{{ post.url | relative_url }}" class="post-row">
         <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-        <span class="post-title">{{ post.title }}</span>
+        <span class="post-info">
+          <span class="post-title">{{ post.title }}</span>
+          {% if post.excerpt %}
+          <span class="post-excerpt">{{ post.excerpt | strip_html | truncate: 60 }}</span>
+          {% endif %}
+        </span>
         <span class="arrow">→</span>
       </a>
       {% endfor %}
@@ -219,6 +224,23 @@ layout: default
     text-decoration: none;
     color: var(--slate);
     transition: all 120ms;
+  }
+
+  .post-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .post-excerpt {
+    font-size: 0.85em;
+    color: var(--g500);
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .post-row:hover {
     color: var(--clay);
