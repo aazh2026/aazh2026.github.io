@@ -7,8 +7,6 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-# AI 编程代理的工程纪律：agent-skills 的反直觉设计
-
 "这很简单，不需要写 Spec。"
 
 "写完代码再补测试。"
