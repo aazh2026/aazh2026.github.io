@@ -1,0 +1,56 @@
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Prompt Engineering 能力阶梯 -->
+  <rect width="560" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Prompt Engineering 能力阶梯</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/05/26</text>
+
+  <!-- Ladder steps (bottom to top = beginner to advanced) -->
+
+  <!-- Step 1: 初级 - 使用者 -->
+  <rect x="40" y="210" width="480" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="210" width="480" height="20" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="60" y="225" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Level 1</text>
+  <text x="130" y="225" font-size="13" fill="#141413" font-weight="600">初级 · Prompt 使用者</text>
+  <text x="60" y="246" font-size="10" fill="#141413">掌握基础 prompt 技巧，能有效使用 AI 辅助工作</text>
+  <text x="60" y="258" font-size="9.5" fill="#87867F">Few-shot · Chain-of-thought · 角色设定</text>
+  <!-- Step number badge -->
+  <circle cx="500" cy="236" r="16" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="500" y="241" text-anchor="middle" font-size="12" fill="#D97757" font-weight="700">1</text>
+
+  <!-- Step 2: 中级 - 设计者 -->
+  <rect x="70" y="150" width="420" height="52" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="70" y="150" width="420" height="20" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="90" y="165" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Level 2</text>
+  <text x="160" y="165" font-size="13" fill="#141413" font-weight="600">中级 · Prompt 设计者</text>
+  <text x="90" y="186" font-size="10" fill="#141413">能设计复杂 prompt 架构，构建 prompt 工作流</text>
+  <text x="90" y="198" font-size="9.5" fill="#87867F">Prompt 模板化 · 输出格式控制 · 错误处理</text>
+  <circle cx="470" cy="176" r="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="470" y="181" text-anchor="middle" font-size="12" fill="#2563EB" font-weight="700">2</text>
+
+  <!-- Step 3: 高级 - 架构师 -->
+  <rect x="100" y="90" width="360" height="52" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="100" y="90" width="360" height="20" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="120" y="105" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Level 3</text>
+  <text x="190" y="105" font-size="13" fill="#141413" font-weight="600">高级 · Prompt 架构师</text>
+  <text x="120" y="126" font-size="10" fill="#141413">设计组织级 prompt 体系，构建 AI-Native 开发规范</text>
+  <text x="120" y="138" font-size="9.5" fill="#87867F">Prompt 库治理 · 评测体系 · 安全与合规</text>
+  <circle cx="440" cy="116" r="16" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="440" y="121" text-anchor="middle" font-size="12" fill="#059669" font-weight="700">3</text>
+
+  <!-- Vertical line connecting steps (ladder rail) -->
+  <line x1="56" y1="236" x2="56" y2="116" stroke="#D1CFC5" stroke-width="2"/>
+  <line x1="504" y1="236" x2="456" y2="116" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- Arrow pointing up -->
+  <polygon points="280,62 274,74 286,74" fill="#D97757"/>
+  <text x="280" y="58" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">能力晋升方向</text>
+
+  <!-- Key skills per level (right side) -->
+  <text x="500" y="65" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">使用者</text>
+  <text x="500" y="76" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">↓</text>
+  <text x="470" y="65" text-anchor="middle" font-size="8.5" fill="#2563EB" font-family="ui-monospace, monospace">设计者</text>
+  <text x="470" y="76" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">↓</text>
+  <text x="440" y="65" text-anchor="middle" font-size="8.5" fill="#059669" font-family="ui-monospace, monospace">架构师</text>
+</svg>

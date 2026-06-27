@@ -34,6 +34,8 @@ redirect_from:
 
 ## 为什么需要Prompt Engineering梯队
 
+<object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%"></object>
+
 ### 现实挑战
 
 **挑战1：Prompt能力参差不齐**
