@@ -193,6 +193,7 @@ evolution_path:
 
 ---
 
+<object data="/assets/images/2025-02-14-architect-01-pi-model.svg" type="image/svg+xml" width="100%"></object>
 ## 能力模型的重构：从T型到π型
 
 传统架构师的能力模型是**T型**：
