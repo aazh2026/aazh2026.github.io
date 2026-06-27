@@ -1,0 +1,27 @@
+<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agent-First: Agent → Human (escalation) -->
+  <rect width="560" height="140" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 主导型：Agent 自主运行，人类监督</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- Agent (left, larger) -->
+  <rect x="30" y="50" width="240" height="70" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="2"/>
+  <rect x="30" y="50" width="240" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="150" y="64" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent（自主运行）</text>
+  <text x="50" y="84" font-size="9" fill="#141413">• 自动监测客户健康度</text>
+  <text x="50" y="98" font-size="9" fill="#141413">• 主动发起客户沟通</text>
+  <text x="50" y="112" font-size="9" fill="#141413">• 升级复杂问题给人类</text>
+
+  <!-- Arrow Agent → Human -->
+  <line x1="270" y1="85" x2="310" y2="85" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="310,81 318,85 310,89" fill="#D1CFC5"/>
+  <text x="292" y="78" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">升级</text>
+
+  <!-- Human (right, smaller) -->
+  <rect x="318" y="60" width="200" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="318" y="60" width="200" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="418" y="74" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Human（监督角色）</text>
+  <text x="338" y="92" font-size="9" fill="#141413">处理 escalations · 策略制定 · 关系维护</text>
+
+  <text x="280" y="128" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">Agent 自主运行，人类只介入复杂问题</text>
+</svg>

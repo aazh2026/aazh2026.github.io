@@ -1,0 +1,40 @@
+<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agent-Augmented: PM→Dev→Ops pipeline -->
+  <rect width="560" height="140" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 增强型：PM → Dev → Ops 流水线</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- PM (human) -->
+  <rect x="30" y="50" width="130" height="70" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="30" y="50" width="130" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="95" y="64" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">PM（人类）</text>
+  <text x="95" y="84" text-anchor="middle" font-size="8.5" fill="#141413">需求分析 Agent</text>
+  <text x="95" y="97" text-anchor="middle" font-size="8.5" fill="#141413">竞品监控 Agent</text>
+  <text x="95" y="110" text-anchor="middle" font-size="8" fill="#87867F">制定决策</text>
+
+  <!-- Arrow PM→Dev -->
+  <line x1="160" y1="85" x2="186" y2="85" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="186,81 194,85 186,89" fill="#D1CFC5"/>
+
+  <!-- Dev (human) -->
+  <rect x="194" y="50" width="130" height="70" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="194" y="50" width="130" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="259" y="64" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Dev（人类）</text>
+  <text x="259" y="84" text-anchor="middle" font-size="8.5" fill="#141413">代码生成 Agent</text>
+  <text x="259" y="97" text-anchor="middle" font-size="8.5" fill="#141413">测试 Agent</text>
+  <text x="259" y="110" text-anchor="middle" font-size="8" fill="#87867F">执行实现</text>
+
+  <!-- Arrow Dev→Ops -->
+  <line x1="324" y1="85" x2="350" y2="85" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="350,81 358,85 350,89" fill="#D1CFC5"/>
+
+  <!-- Ops (human) -->
+  <rect x="358" y="50" width="130" height="70" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="358" y="50" width="130" height="18" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="423" y="64" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Ops（人类）</text>
+  <text x="423" y="84" text-anchor="middle" font-size="8.5" fill="#141413">监控 Agent</text>
+  <text x="423" y="97" text-anchor="middle" font-size="8.5" fill="#141413">自动修复 Agent</text>
+  <text x="423" y="110" text-anchor="middle" font-size="8" fill="#87867F">负责部署</text>
+
+  <text x="280" y="128" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">人类主导决策，Agent 辅助执行，形成流水线协作</text>
+</svg>

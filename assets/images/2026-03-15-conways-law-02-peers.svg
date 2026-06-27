@@ -1,0 +1,46 @@
+<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Dev/Ops/QA/PM 平等协作模式 -->
+  <rect width="560" height="140" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">DevOps Agent 平等协作模式</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- Four agents in a row -->
+  <rect x="30" y="50" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="30" y="50" width="110" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="85" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Dev Agent</text>
+  <text x="85" y="80" text-anchor="middle" font-size="8.5" fill="#141413">代码开发</text>
+  <text x="85" y="94" text-anchor="middle" font-size="8" fill="#87867F">CI/CD 集成</text>
+
+  <rect x="160" y="50" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="160" y="50" width="110" height="16" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="215" y="63" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Ops Agent</text>
+  <text x="215" y="80" text-anchor="middle" font-size="8.5" fill="#141413">运维部署</text>
+  <text x="215" y="94" text-anchor="middle" font-size="8" fill="#87867F">监控 · 扩缩容</text>
+
+  <rect x="290" y="50" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="290" y="50" width="110" height="16" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="345" y="63" text-anchor="middle" font-size="9" fill="#7C3AED" font-family="ui-monospace, monospace" font-weight="600">QA Agent</text>
+  <text x="345" y="80" text-anchor="middle" font-size="8.5" fill="#141413">质量保障</text>
+  <text x="345" y="94" text-anchor="middle" font-size="8" fill="#87867F">测试 · 回归</text>
+
+  <rect x="420" y="50" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="420" y="50" width="110" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="475" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">PM Agent</text>
+  <text x="475" y="80" text-anchor="middle" font-size="8.5" fill="#141413">产品管理</text>
+  <text x="475" y="94" text-anchor="middle" font-size="8" fill="#87867F">需求 · 优先级</text>
+
+  <!-- Bi-directional arrows between agents -->
+  <line x1="140" y1="80" x2="160" y2="80" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="270" y1="80" x2="290" y2="80" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="400" y1="80" x2="420" y2="80" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Bidirectional arrows -->
+  <polygon points="140,76 148,80 140,84" fill="#D1CFC5"/>
+  <polygon points="160,76 152,80 160,84" fill="#D1CFC5"/>
+  <polygon points="270,76 278,80 270,84" fill="#D1CFC5"/>
+  <polygon points="290,76 282,80 290,84" fill="#D1CFC5"/>
+  <polygon points="400,76 408,80 400,84" fill="#D1CFC5"/>
+  <polygon points="420,76 412,80 420,84" fill="#D1CFC5"/>
+
+  <text x="280" y="120" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">平等协作，无中心节点，按需双向通信</text>
+</svg>

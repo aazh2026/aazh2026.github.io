@@ -1,0 +1,60 @@
+<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 人机成对协作：PM层 + Dev层 -->
+  <rect width="560" height="180" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">人机成对协作：PM层 + 开发层</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- PM Layer subgraph -->
+  <rect x="30" y="50" width="240" height="90" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="150" y="66" text-anchor="middle" font-size="10" fill="#87867F" font-weight="600">产品经理层</text>
+
+  <!-- PM Agent -->
+  <rect x="50" y="78" width="100" height="50" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="50" y="78" width="100" height="16" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="100" y="91" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">PM Agent</text>
+  <text x="100" y="108" text-anchor="middle" font-size="8.5" fill="#141413">数据收集</text>
+  <text x="100" y="120" text-anchor="middle" font-size="8.5" fill="#141413">竞品分析</text>
+
+  <!-- Bidirectional arrow between PM Agent and PM Human -->
+  <line x1="150" y1="103" x2="170" y2="103" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="150,99 156,103 150,107" fill="#D1CFC5"/>
+  <polygon points="170,99 164,103 170,107" fill="#D1CFC5"/>
+
+  <!-- PM Human -->
+  <rect x="170" y="78" width="90" height="50" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="170" y="78" width="90" height="16" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="215" y="91" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">PM（人类）</text>
+  <text x="215" y="108" text-anchor="middle" font-size="8.5" fill="#141413">制定决策</text>
+  <text x="215" y="120" text-anchor="middle" font-size="8.5" fill="#141413">验收确认</text>
+
+  <!-- Arrow PM layer → Dev layer -->
+  <line x1="150" y1="140" x2="400" y2="140" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="150,136 156,140 150,144" fill="#D1CFC5"/>
+  <polygon points="400,136 394,140 400,144" fill="#D1CFC5"/>
+  <text x="275" y="136" text-anchor="middle" font-size="8.5" fill="#87867F">协作通信</text>
+
+  <!-- Dev Layer subgraph -->
+  <rect x="290" y="50" width="240" height="90" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="410" y="66" text-anchor="middle" font-size="10" fill="#87867F" font-weight="600">开发层</text>
+
+  <!-- Dev Agent -->
+  <rect x="310" y="78" width="100" height="50" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="310" y="78" width="100" height="16" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="360" y="91" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Dev Agent</text>
+  <text x="360" y="108" text-anchor="middle" font-size="8.5" fill="#141413">代码生成</text>
+  <text x="360" y="120" text-anchor="middle" font-size="8.5" fill="#141413">测试生成</text>
+
+  <!-- Bidirectional arrow between Dev Agent and Dev Human -->
+  <line x1="410" y1="103" x2="430" y2="103" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="410,99 416,103 410,107" fill="#D1CFC5"/>
+  <polygon points="430,99 424,103 430,107" fill="#D1CFC5"/>
+
+  <!-- Dev Human -->
+  <rect x="430" y="78" width="90" height="50" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="430" y="78" width="90" height="16" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="475" y="91" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Dev（人类）</text>
+  <text x="475" y="108" text-anchor="middle" font-size="8.5" fill="#141413">Code Review</text>
+  <text x="475" y="120" text-anchor="middle" font-size="8.5" fill="#141413">架构决策</text>
+
+  <text x="280" y="172" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">Agent ↔ Human 成对协作，Agent 承担执行，Human 负责决策</text>
+</svg>
