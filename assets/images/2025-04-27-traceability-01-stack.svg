@@ -1,0 +1,54 @@
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 可追溯性自动追踪四层架构 -->
+  <rect width="560" height="240" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">可追溯性自动追踪四层架构</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/27</text>
+
+  <!-- Layer 4: Traceability Analytics (top) -->
+  <rect x="40" y="50" width="480" height="46" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L4 · Traceability Analytics</text>
+  <text x="260" y="65" font-size="12" fill="#141413" font-weight="600">追溯分析层</text>
+  <text x="60" y="84" font-size="10" fill="#87867F">影响分析 · 覆盖率分析 · 合规报告</text>
+  <rect x="490" y="60" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="73" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L4</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="96" x2="280" y2="106" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,106 280,114 284,96" fill="#D1CFC5"/>
+
+  <!-- Layer 3: AI Association Engine -->
+  <rect x="40" y="114" width="480" height="44" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="40" y="114" width="480" height="18" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="60" y="129" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">L3 · AI Association Engine</text>
+  <text x="260" y="129" font-size="12" fill="#141413" font-weight="600">AI 关联引擎层</text>
+  <text x="60" y="148" font-size="10" fill="#87867F">语义匹配 · 模式识别 · 自动关联</text>
+  <rect x="490" y="124" width="18" height="18" rx="9" fill="#EA580C"/>
+  <text x="499" y="137" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="158" x2="280" y2="168" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,168 280,176 284,158" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Unified Model -->
+  <rect x="40" y="176" width="480" height="36" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="176" width="480" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="60" y="190" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L2 · Unified Model</text>
+  <text x="200" y="190" font-size="12" fill="#141413" font-weight="600">统一模型层</text>
+  <text x="60" y="206" font-size="10" fill="#87867F">需求模型 · 代码模型 · 测试模型的统一表示</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="212" x2="280" y2="220" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,220 280,228 284,220" fill="#D1CFC5"/>
+
+  <!-- Layer 1: Data Integration (bottom) -->
+  <rect x="40" y="228" width="480" height="14" rx="4" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="60" y="239" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1 · Data Integration</text>
+  <text x="200" y="239" font-size="9" fill="#141413" font-weight="600">数据整合层</text>
+  <text x="320" y="239" font-size="9" fill="#87867F">Jira · GitHub · TestRail</text>
+
+  <!-- Note -->
+  <text x="280" y="248" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">L4 → L3 → L2 → L1：上层分析依赖下层数据，四层协同实现全自动可追溯性追踪</text>
+</svg>
