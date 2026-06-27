@@ -95,22 +95,7 @@ AI输出质量 = f(模型能力, 上下文质量, Prompt质量)
 
 ### 上下文的生命周期
 
-```mermaid
-flowchart TB
-    S1["1. 采集 Harvest<br/>- 从代码、文档、数据库中提取上下文<br/>- 人工录入业务知识<br/>- 连接外部系统获取实时数据"]
-    S2["2. 加工 Process<br/>- 清洗和格式化<br/>- 去重和冲突解决<br/>- 摘要和索引"]
-    S3["3. 存储 Store<br/>- 版本控制<br/>- 分层组织<br/>- 权限管理"]
-    S4["4. 配送 Deliver<br/>- 根据任务动态组装上下文<br/>- 注入到AI会话<br/>- 监控token使用"]
-    S5["5. 反馈 Feedback<br/>- 收集AI输出质量数据<br/>- 识别上下文缺陷<br/>- 持续优化"]
-    
-    S1 --> S2 --> S3 --> S4 --> S5
-    
-    style S1 fill:#fef3c7,stroke:#d97706
-    style S2 fill:#fed7aa,stroke:#ea580c
-    style S3 fill:#fdba74,stroke:#f97316
-    style S4 fill:#dbeafe,stroke:#2563eb
-    style S5 fill:#d1fae5,stroke:#059669
-```
+<object data="/assets/images/2025-06-08-cdd-01-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 ### 上下文即代码（CaC）
 

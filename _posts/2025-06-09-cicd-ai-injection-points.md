@@ -36,21 +36,7 @@ series: AI-Native软件工程系列 #7
 
 ### 传统CI/CD的局限
 
-```mermaid
-flowchart TB
-    A["开发者提交代码"] --> B["静态分析\nLint/SAST\n✓ 语法检查\n✓ 代码规范"]
-    B --> C["单元测试\nUnit Tests\n✓ 函数正确性"]
-    C --> D["集成测试\nIntegration\n✓ 模块协作"]
-    D --> E["人工Code Review\n⚠️ 耗时、主观、不一致"]
-    E --> F["部署上线"]
-    
-    style A fill:#f8fafc,stroke:#64748b
-    style B fill:#d1fae5,stroke:#059669
-    style C fill:#d1fae5,stroke:#059669
-    style D fill:#d1fae5,stroke:#059669
-    style E fill:#fef3c7,stroke:#d97706
-    style F fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 **问题：CR成为瓶颈，且无法发现意图偏离**
 

@@ -83,19 +83,7 @@ Agent: 抱歉，我不记得我们之前聊过这个...
 
 Agent 的记忆系统设计可以借鉴这个分层：
 
-```mermaid
-flowchart TB
-    WM["Working Memory (工作记忆)<br/>• 当前对话上下文<br/>• 活跃任务状态<br/>• 临时变量和中间结果<br/>容量：有限（类似 7±2 原则）<br/>持续时间：秒到分钟"]
-    STM["Short-term Memory (短期记忆)<br/>• 近期对话历史<br/>• 最近执行的任务<br/>• 临时学习的内容<br/>容量：较大<br/>持续时间：小时到天"]
-    LTM["Long-term Memory (长期记忆)<br/>• 用户画像和偏好<br/>• 业务规则和知识<br/>• 成功案例和模式<br/>容量：几乎无限<br/>持续时间：永久"]
-    
-    WM --> STM
-    STM --> LTM
-    
-    style WM fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style STM fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style LTM fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-07-07-agent-memory-01-tiers.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

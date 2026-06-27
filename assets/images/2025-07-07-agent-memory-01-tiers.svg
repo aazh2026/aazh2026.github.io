@@ -1,0 +1,41 @@
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agent Memory System: WM → STM → LTM -->
+  <rect width="560" height="200" fill="#FAF9F5"/>
+
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 记忆系统：三层记忆架构</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/07/07</text>
+
+  <!-- WM: Working Memory (top, smallest, fastest) -->
+  <rect x="40" y="50" width="480" height="48" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Working Memory · 工作记忆</text>
+  <text x="280" y="65" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">当前对话上下文 · 活跃任务状态 · 临时变量</text>
+  <text x="60" y="84" font-size="10" fill="#87867F">容量：最小 · 速度：最快 · 持久性：会话级</text>
+  <rect x="490" y="60" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="73" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">WM</text>
+
+  <!-- Arrow WM→STM -->
+  <line x1="280" y1="98" x2="280" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,108 280,116 284,98" fill="#D1CFC5"/>
+
+  <!-- STM: Short-term Memory (middle) -->
+  <rect x="40" y="116" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="116" width="480" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="60" y="131" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Short-term Memory · 短期记忆</text>
+  <text x="60" y="146" font-size="10" fill="#87867F">近期对话历史 · 最近执行的任务 · 临时知识</text>
+  <rect x="490" y="126" width="18" height="14" rx="9" fill="#2563EB"/>
+  <text x="499" y="137" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">STM</text>
+
+  <!-- Arrow STM→LTM -->
+  <line x1="280" y1="154" x2="280" y2="164" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,164 280,172 284,154" fill="#D1CFC5"/>
+
+  <!-- LTM: Long-term Memory (bottom, largest, slowest) -->
+  <rect x="40" y="172" width="480" height="20" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="60" y="186" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Long-term Memory · 长期记忆</text>
+  <text x="240" y="186" font-size="10" fill="#141413">用户画像 · 业务规则 · 成功案例 · 偏好设置</text>
+  <text x="440" y="186" font-size="9" fill="#87867F">容量：无限 · 持久性：永久</text>
+
+  <!-- Note -->
+  <text x="280" y="200" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">WM → STM：信息压缩 · STM → LTM：知识沉淀 · 三层协同构成完整记忆系统</text>
+</svg>
