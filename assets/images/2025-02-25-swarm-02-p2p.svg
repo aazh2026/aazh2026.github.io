@@ -1,0 +1,42 @@
+<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agent Swarm P2P Network -->
+  <rect width="560" height="140" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent Swarm：P2P 网络架构</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/02/25</text>
+
+  <!-- Four agents in 2×2 grid -->
+  <!-- A (top-left) -->
+  <rect x="80" y="54" width="100" height="50" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="80" y="54" width="100" height="14" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="130" y="67" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent A</text>
+  <text x="130" y="86" text-anchor="middle" font-size="9" fill="#141413">自主通信</text>
+
+  <!-- B (top-right) -->
+  <rect x="380" y="54" width="100" height="50" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="380" y="54" width="100" height="14" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="430" y="67" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent B</text>
+  <text x="430" y="86" text-anchor="middle" font-size="9" fill="#141413">直接协商</text>
+
+  <!-- C (bottom-left) -->
+  <rect x="80" y="114" width="100" height="22" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="80" y="114" width="100" height="14" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="130" y="126" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Agent C</text>
+  <text x="130" y="138" text-anchor="middle" font-size="9" fill="#141413">协商任务</text>
+
+  <!-- D (bottom-right) -->
+  <rect x="380" y="114" width="100" height="22" rx="5" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="380" y="114" width="100" height="14" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="430" y="126" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Agent D</text>
+  <text x="430" y="138" text-anchor="middle" font-size="9" fill="#141413">轻量级账本</text>
+
+  <!-- P2P connection lines -->
+  <line x1="180" y1="79" x2="380" y2="79" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="130" y1="104" x2="130" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="430" y1="104" x2="430" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="180" y1="104" x2="380" y2="104" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="80" y1="79" x2="80" y2="104" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="480" y1="79" x2="480" y2="104" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="180" y1="104" x2="380" y2="114" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="280" y="128" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">无中心节点 · 直接通信 · 轻量级账本协商</text>
+</svg>
