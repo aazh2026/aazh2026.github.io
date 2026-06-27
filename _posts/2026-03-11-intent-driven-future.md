@@ -35,6 +35,8 @@ Intent-Driven Development（意图驱动开发）
 
 ## 传统 vs Intent-Driven
 
+<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ### 传统详细设计
 
 ```
@@ -162,6 +164,8 @@ LLM 的本质是**模式匹配**。
 **设计文档不是写出来的，是"示例驱动"生成的。**
 
 ## 什么场景适合 Intent-Driven？
+
+<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%"></object>
 
 | 场景 | 适合度 | 原因 |
 |------|--------|------|
