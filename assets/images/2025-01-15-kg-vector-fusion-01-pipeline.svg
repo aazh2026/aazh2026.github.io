@@ -1,0 +1,96 @@
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 知识图谱 + 向量融合架构 -->
+  <rect width="560" height="240" fill="#FAF9F5"/>
+
+  <text x="280" y="18" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">知识图谱 + 向量检索融合架构</text>
+  <text x="280" y="34" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/01/15</text>
+
+  <!-- Step 1: User Query -->
+  <rect x="30" y="58" width="80" height="36" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="30" y="58" width="80" height="14" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="70" y="70" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Step 1</text>
+  <text x="70" y="86" text-anchor="middle" font-size="9" fill="#141413">用户查询</text>
+  <rect x="102" y="70" width="12" height="12" rx="6" fill="#D97757"/>
+  <text x="108" y="79" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="110" y1="76" x2="126" y2="76" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="126,72 134,76 126,80" fill="#D1CFC5"/>
+
+  <!-- Step 2: Query Understanding -->
+  <rect x="134" y="58" width="80" height="36" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="134" y="58" width="80" height="14" rx="5" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="174" y="70" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Step 2</text>
+  <text x="174" y="86" text-anchor="middle" font-size="8.5" fill="#141413">查询理解</text>
+  <rect x="206" y="70" width="12" height="12" rx="6" fill="#EA580C"/>
+  <text x="212" y="79" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+
+  <!-- Arrow 2→3 (fork) -->
+  <line x1="214" y1="76" x2="230" y2="76" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="230,72 238,76 230,80" fill="#D1CFC5"/>
+
+  <!-- Step 3: Vector Retrieval (left branch) -->
+  <rect x="238" y="46" width="80" height="44" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="238" y="46" width="80" height="14" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="278" y="58" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Step 3A</text>
+  <text x="278" y="72" text-anchor="middle" font-size="8.5" fill="#141413">向量检索</text>
+  <text x="278" y="84" text-anchor="middle" font-size="8" fill="#87867F">Top-K 文本块</text>
+  <rect x="310" y="58" width="12" height="12" rx="6" fill="#2563EB"/>
+  <text x="316" y="67" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">3A</text>
+
+  <!-- Step 3: KG Query (right branch) -->
+  <rect x="238" y="104" width="80" height="44" rx="5" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="238" y="104" width="80" height="14" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="278" y="116" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Step 3B</text>
+  <text x="278" y="130" text-anchor="middle" font-size="8.5" fill="#141413">图谱查询</text>
+  <text x="278" y="142" text-anchor="middle" font-size="8" fill="#87867F">关系遍历</text>
+  <rect x="310" y="116" width="12" height="12" rx="6" fill="#059669"/>
+  <text x="316" y="125" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">3B</text>
+
+  <!-- Arrow 2 → 3A and 2 → 3B -->
+  <line x1="214" y1="70" x2="238" y2="60" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="214" y1="82" x2="238" y2="138" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Arrow 3A and 3B → 4 -->
+  <line x1="318" y1="68" x2="336" y2="90" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="318" y1="126" x2="336" y2="108" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Step 4: Entity Linking (center) -->
+  <rect x="336" y="82" width="80" height="40" rx="5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="336" y="82" width="80" height="14" rx="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="376" y="94" text-anchor="middle" font-size="9" fill="#7C3AED" font-family="ui-monospace, monospace" font-weight="600">Step 4</text>
+  <text x="376" y="108" text-anchor="middle" font-size="8.5" fill="#141413">实体链接</text>
+  <text x="376" y="120" text-anchor="middle" font-size="8" fill="#87867F">桥梁建设</text>
+  <rect x="408" y="94" width="12" height="12" rx="6" fill="#7C3AED"/>
+  <text x="414" y="103" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
+
+  <!-- Arrow 4 → 5 -->
+  <line x1="420" y1="102" x2="436" y2="102" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="436,98 444,102 436,106" fill="#D1CFC5"/>
+
+  <!-- Step 5: Knowledge Fusion -->
+  <rect x="444" y="82" width="80" height="40" rx="5" fill="#FFFFFF" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="444" y="82" width="80" height="14" rx="5" fill="#FDBA74" stroke="#F97316" stroke-width="1"/>
+  <text x="484" y="94" text-anchor="middle" font-size="9" fill="#F97316" font-family="ui-monospace, monospace" font-weight="600">Step 5</text>
+  <text x="484" y="108" text-anchor="middle" font-size="8.5" fill="#141413">知识融合</text>
+  <text x="484" y="120" text-anchor="middle" font-size="8" fill="#87867F">合并结果</text>
+  <rect x="516" y="94" width="12" height="12" rx="6" fill="#F97316"/>
+  <text x="522" y="103" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">5</text>
+
+  <!-- Arrow 5 → 6 (down) -->
+  <line x1="484" y1="122" x2="484" y2="138" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="480,138 484,146 488,138" fill="#D1CFC5"/>
+
+  <!-- Step 6: 生成回答 -->
+  <rect x="444" y="146" width="80" height="32" rx="5" fill="#FFFFFF" stroke="#DC2626" stroke-width="1.5"/>
+  <rect x="444" y="146" width="80" height="14" rx="5" fill="#FEE2E2" stroke="#DC2626" stroke-width="1"/>
+  <text x="484" y="158" text-anchor="middle" font-size="9" fill="#DC2626" font-family="ui-monospace, monospace" font-weight="600">Step 6</text>
+  <text x="484" y="172" text-anchor="middle" font-size="8.5" fill="#141413">推理生成</text>
+
+  <!-- Note -->
+  <text x="280" y="210" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">向量检索感性联想 · 知识图谱理性逻辑 · 融合后既准确又完整</text>
+
+  <!-- Branch labels -->
+  <text x="278" y="42" text-anchor="middle" font-size="7.5" fill="#2563EB" font-family="ui-monospace, monospace">感性</text>
+  <text x="278" y="152" text-anchor="middle" font-size="7.5" fill="#059669" font-family="ui-monospace, monospace">理性</text>
+</svg>

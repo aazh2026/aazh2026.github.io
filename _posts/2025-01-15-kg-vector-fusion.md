@@ -73,22 +73,7 @@ redirect_from:
 
 ### 2.1 架构概览
 
-```
-用户查询
-    ↓
-[查询理解] → 抽取实体和意图
-    ↓
-[向量检索] → 召回相关文本块（Top-K）
-    ↓
-[实体链接] → 将文本中的实体映射到图谱
-    ↓
-[图谱查询] → 基于实体做关系遍历
-    ↓
-[知识融合] → 合并向量结果和图谱结果
-    ↓
-[推理生成] → 基于融合后的知识生成回答
-```
-
+<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 ### 2.2 实体链接：桥梁的建设
 
 核心问题：向量检索到的文本中的"Python"，如何对应到知识图谱中的"Python_(programming_language)"节点？
