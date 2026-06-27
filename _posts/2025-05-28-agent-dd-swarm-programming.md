@@ -105,30 +105,7 @@ Agent：好的，我生成代码...
 
 ### Swarm Programming架构
 
-```mermaid
-flowchart TB
-    subgraph Agents["Agent集群"]
-        A["Architect<br/>架构"]
-        B["DevAgent<br/>开发"]
-        C["TestAgent<br/>测试"]
-        D["ReviewAgent<br/>审查"]
-    end
-    
-    A --> Coordinator
-    B --> Coordinator
-    C --> Coordinator
-    D --> Coordinator
-    
-    Coordinator["Coordinator<br/>协调Agent"] --> SharedState
-    SharedState["Shared State<br/>共享状态"]
-    
-    style A fill:#dbeafe,stroke:#2563eb
-    style B fill:#dbeafe,stroke:#2563eb
-    style C fill:#dbeafe,stroke:#2563eb
-    style D fill:#dbeafe,stroke:#2563eb
-    style Coordinator fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style SharedState fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-05-28-agent-dd-swarm-01-cluster.svg" type="image/svg+xml" width="100%"></object>
 
 ### 工作流程
 
@@ -487,28 +464,7 @@ class ArbitrationResolver:
 
 ### 技术架构
 
-```mermaid
-flowchart TB
-    subgraph Platform["Agent-DD Platform"]
-        Registry["Agent Registry
-        Architect/Developer/Tester/Reviewer"]
-        Queue["Task Queue
-        Pending/Running/Completed/Failed"]
-        State["Shared State
-        Code/Design/Issues/Metrics"]
-        Comm["Communication Bus
-        Message Queue/Event Stream/State Sync"]
-        Monitor["Monitoring
-        Performance/Quality/Conflict Rate"]
-    end
-    
-    style Platform fill:#f8fafc,stroke:#64748b,stroke-width:2px
-    style Registry fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Queue fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style State fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style Comm fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
-    style Monitor fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-05-28-agent-dd-swarm-02-platform.svg" type="image/svg+xml" width="100%"></object>
 
 ### 实施步骤
 
