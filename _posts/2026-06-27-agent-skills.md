@@ -17,7 +17,7 @@ series: AI-Native Engineering
 
 他的开源项目 [agent-skills](https://github.com/addyosmani/agent-skills)（MIT license）是一套给 AI 编程代理使用的工程技能库，24 个技能，覆盖从"确定做什么"到"生产上线"的全流程。但它的真正价值不是那 24 个技能，而是它揭示的那个底层事实：**软件工程本质上是一套对抗人类自我欺骗倾向的系统化方法。** agent-skills 把这套方法编码成了代理可以执行的工作流。
 
-> **TL;DR** — agent-skills 是 Google 工程总监 Addy Osmani 开源的一套 24 技能库，核心机制是反借口表格（rationalization table）和三层渐进披露（Progressive Disclosure）。本文重点：① 三个核心元规则 ② Spec / TDD / Beyoncé Rule 的设计逻辑 ③ SKILL.md 五种内容模式 ④ Google 工程文化如何渗入 skill 设计 ⑤ 24 技能全览表。
+> **TL;DR** — agent-skills 是 Google 工程总监 Addy Osmani 的开源技能库（MIT），24 个技能，核心是"反借口表格"：把人类在压力下自我欺骗的借口写成条目，对应写出为什么那是错的。配合三层渐进披露（L1 ~100 token 注册 → L2 命中加载 → L3 按需拉取），实现 90% context 省流。
 
 ## 技能即反借口
 
@@ -134,6 +134,8 @@ Osmani 的 agent-skills 和 Google Cloud Tech 的 Lavi Nigam、Shubham Saboo 在
 
 在 GitHub 仓库 [lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk) 里，Lavi Nigam 提供了 5 种 Skill 内容设计模式的可运行实现，每种都有完整的 `SKILL.md` 样例和 Python 代码：
 
+<object data="/assets/images/2026-06-27-agent-skills-02-patterns.svg" type="image/svg+xml" width="100%"></object>
+
 **1. Tool Wrapper——让 Agent 秒变某库领域专家**
 
 痛点：Agent 调 SDK 永远写出过时用法，参数顺序乱。
@@ -218,20 +220,6 @@ agent-skills 的 24 个技能分为 6 个阶段：
 | | `observability-and-instrumentation` | 结构化日志，RED 指标，OpenTelemetry 追踪 |
 | | `shipping-and-launch` | 发布前检查清单，Feature Flag 生命周期，rollback 程序 |
 
-## 结尾
-
-agent-skills 里的每一个技能，都内置了三个共同机制：
-
-**反借口表格**：记录"这一步人类/AI 会找什么借口跳过，以及为什么那是错的"。这是把工程纪律编码成可执行步骤的核心设计。
-
-**验证非协商**：每步都有明确的退出证据要求。"看起来对"不够；必须有证据。
-
-**渐进披露**：`using-agent-skills` 做路由，每个 skill 只在需要时才加载完整指令。
-
-Osmani 在项目 README 里说了一句话值得放在结尾：**"AI coding agents default to the shortest path — which often means skipping specs, tests, security reviews, and the practices that make software reliable."**
-
-技能的作用，就是强制代理不走那条最短路径。
-
 ## 参考来源
 
 - Addy Osmani, [*agent-skills*](https://github.com/addyosmani/agent-skills)（MIT license）, GitHub
@@ -240,5 +228,3 @@ Osmani 在项目 README 里说了一句话值得放在结尾：**"AI coding agen
 - Sydney Runkle, "[The Art of Loop Engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)", langchain.com, June 16, 2026
 - Laws of Uk government Desktop Notation ('Hyrum's Law'), Cabinet Office, 2022
 - Henrik Warne, "[The Code Simplification Rule: 500 Lines](https://henrikwarne.com/2023/01/01/the-code-simplification-rule-500-lines/)", henrikwarne.com, January 2023
-
-> 仓库：[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)（MIT license）；五种模式对应到 ADK 实现：[lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk)。

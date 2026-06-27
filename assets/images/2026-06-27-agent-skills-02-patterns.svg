@@ -1,0 +1,72 @@
+<svg viewBox="0 0 640 160" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 五种 SKILL.md 设计模式流程 -->
+  <!-- Blog colors: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5, g500 #87867F -->
+
+  <rect width="640" height="160" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">SKILL.md 五种内容设计模式</text>
+
+  <!-- 1: Tool Wrapper -->
+  <rect x="12" y="34" width="112" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="68" y="54" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">① Tool Wrapper</text>
+  <text x="68" y="72" text-anchor="middle" font-size="10" fill="#141413">监听关键词</text>
+  <text x="68" y="86" text-anchor="middle" font-size="9.5" fill="#141413">加载 conventions</text>
+  <text x="68" y="100" text-anchor="middle" font-size="9" fill="#87867F">→ 最高优先级规则</text>
+  <text x="68" y="116" text-anchor="middle" font-size="8.5" fill="#87867F">例: api-expert</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="124" y1="79" x2="142" y2="79" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="142,75 136,79 142,83" fill="#D1CFC5"/>
+
+  <!-- 2: Generator -->
+  <rect x="148" y="34" width="112" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="204" y="54" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">② Generator</text>
+  <text x="204" y="72" text-anchor="middle" font-size="10" fill="#141413">模板 + 变量</text>
+  <text x="204" y="86" text-anchor="middle" font-size="9.5" fill="#141413">读模板 → 填变量</text>
+  <text x="204" y="100" text-anchor="middle" font-size="9" fill="#87867F">→ 格式确定输出</text>
+  <text x="204" y="116" text-anchor="middle" font-size="8.5" fill="#87867F">例: report-generator</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="260" y1="79" x2="278" y2="79" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="278,75 272,79 278,83" fill="#D1CFC5"/>
+
+  <!-- 3: Reviewer -->
+  <rect x="284" y="34" width="112" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="340" y="54" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">③ Reviewer</text>
+  <text x="340" y="72" text-anchor="middle" font-size="10" fill="#141413">checklist 分级</text>
+  <text x="340" y="86" text-anchor="middle" font-size="9.5" fill="#141413">逐条输出结论</text>
+  <text x="340" y="100" text-anchor="middle" font-size="9" fill="#87867F">→ 结构化报告</text>
+  <text x="340" y="116" text-anchor="middle" font-size="8.5" fill="#87867F">例: code-reviewer</text>
+
+  <!-- Arrow 3→4 (curved up) -->
+  <path d="M 396 60 C 414 60, 414 44, 430 44" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+  <polygon points="430,40 424,44 430,48" fill="#D1CFC5"/>
+
+  <!-- 4: Inversion (top, right of center) -->
+  <rect x="426" y="34" width="112" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="482" y="54" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">④ Inversion</text>
+  <text x="482" y="72" text-anchor="middle" font-size="10" fill="#141413">先反问后动手</text>
+  <text x="482" y="86" text-anchor="middle" font-size="9.5" fill="#141413">硬闸门规则</text>
+  <text x="482" y="100" text-anchor="middle" font-size="9" fill="#87867F">→ 三阶段访谈</text>
+  <text x="482" y="116" text-anchor="middle" font-size="8.5" fill="#87867F">例: project-planner</text>
+
+  <!-- Arrow 4→5 (down) -->
+  <path d="M 482 124 C 482 138, 482 138, 482 140" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+  <polygon points="478,140 482,147 486,140" fill="#D1CFC5"/>
+
+  <!-- Arrow Inversion → Generator (common combo, curved) -->
+  <path d="M 426 79 C 406 79, 406 138, 270 138 C 240 138, 240 115, 260 115" stroke="#D97757" stroke-width="1.2" fill="none" stroke-dasharray="4,3"/>
+  <text x="352" y="134" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">Inversion→Generator</text>
+
+  <!-- 5: Pipeline -->
+  <rect x="516" y="34" width="112" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="572" y="54" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">⑤ Pipeline</text>
+  <text x="572" y="72" text-anchor="middle" font-size="10" fill="#141413">多步串行</text>
+  <text x="572" y="86" text-anchor="middle" font-size="9.5" fill="#141413">硬门禁检查点</text>
+  <text x="572" y="100" text-anchor="middle" font-size="9" fill="#87867F">→ 环环相扣</text>
+  <text x="572" y="116" text-anchor="middle" font-size="8.5" fill="#87867F">例: doc-pipeline</text>
+
+  <!-- Common combo label -->
+  <text x="320" y="154" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">实线: 串行依赖　虚线: 常见组合</text>
+</svg>
