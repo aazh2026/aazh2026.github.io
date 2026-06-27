@@ -124,11 +124,7 @@ Osmani 的 agent-skills 和 Google Cloud Tech 的 Lavi Nigam、Shubham Saboo 在
 
 答案是**渐进式披露**（Progressive Disclosure），在 ADK 的 `SkillToolset` 体系里实现为三个层级：
 
-| 层级 | 内容 | 何时加载 | token 成本 |
-|---|---|---|---|
-| L1 | `SKILL.md` frontmatter（name + description） | 启动时全部注册 | ~100/技能 |
-| L2 | `SKILL.md` 正文 | Agent 判断命中后才 load | 数千 |
-| L3 | `references/`、`assets/`、`scripts/` | 指令执行到那一步再拉 | 按需 |
+<object data="/assets/images/2026-06-27-agent-skills-01-disclosure.svg" type="image/svg+xml" width="100%"></object>
 
 `SkillToolset` 自动给你三个工具：`list_skills`（L1）、`load_skill`（L2）、`load_skill_resource`（L3）。10 个 skill 的 agent，基线 `context window` 从"万级 token 单体 prompt"压到"千级 L1 元数据"——大约 **90% 省流**。
 

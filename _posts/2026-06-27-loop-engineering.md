@@ -114,6 +114,8 @@ Cobus Greyling 的仓库收录了 7 个完整的 Loop 模式，每个都有 toke
 
 工作循环：Thought → Action → Observation → ... → Final Answer
 
+<object data="/assets/images/2026-06-27-loop-engineering-03-react.svg" type="image/svg+xml" width="100%"></object>
+
 关键发现：在 ALFWorld 和 WebShop 两个交互式决策基准上，ReAct 优于当时的 imitation learning 和 reinforcement learning 方法，绝对值提升 **+34%** 和 **+10%**，只用了 1-2 个 in-context examples。
 
 ReAct 是 Loop Engineering 的理论祖先。ReAct 解决"单步推理+行动"的局部问题；Loop Engineering 要解决"整条流水线如何持续运转"的全链路问题。

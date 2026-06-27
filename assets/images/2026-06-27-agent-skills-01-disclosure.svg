@@ -1,0 +1,61 @@
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- SKILL.md 三层渐进披露 -->
+  <!-- Blog colors: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5, g500 #87867F -->
+
+  <rect width="640" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">SKILL.md 三层渐进式披露</text>
+  <text x="320" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">SkillToolset · Lavi Nigam · build-with-adk</text>
+
+  <!-- Layer 3 (bottom, largest, L3) -->
+  <rect x="60" y="180" width="520" height="110" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="60" y="180" width="520" height="110" rx="8" fill="#F0EEE6" fill-opacity="0.5"/>
+  <text x="80" y="206" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">L3</text>
+  <text x="104" y="206" font-size="13" fill="#141413" font-weight="600">references/ · assets/ · scripts/</text>
+  <text x="80" y="226" font-size="10.5" fill="#141413">技能正文引用资源：团队规范、模板文件、辅助脚本</text>
+  <text x="80" y="244" font-size="10" fill="#87867F">触发时机：Agent 执行到该步骤时按需拉取</text>
+  <rect x="480" y="214" width="84" height="22" rx="11" fill="#E3DACC"/>
+  <text x="522" y="229" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">按需加载</text>
+
+  <!-- Arrow L3→L2 -->
+  <line x1="320" y1="172" x2="320" y2="158" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="316,158 320,150 324,158" fill="#D1CFC5"/>
+  <text x="328" y="165" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">需要时</text>
+
+  <!-- Layer 2 (middle, L2) -->
+  <rect x="100" y="92" width="440" height="62" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="120" y="116" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">L2</text>
+  <text x="144" y="116" font-size="13" fill="#141413" font-weight="600">SKILL.md 正文</text>
+  <text x="120" y="136" font-size="10.5" fill="#141413">完整技能指令：工作流步骤、反借口表格、验收标准</text>
+  <rect x="410" y="106" width="114" height="22" rx="11" fill="#E3DACC"/>
+  <text x="467" y="121" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">命中后加载</text>
+
+  <!-- Arrow L2→L1 -->
+  <line x1="320" y1="84" x2="320" y2="70" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="316,70 320,62 324,70" fill="#D97757"/>
+  <text x="328" y="78" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">判断命中</text>
+
+  <!-- Layer 1 (top, smallest, L1) -->
+  <rect x="160" y="54" width="320" height="14" rx="7" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="320" y="64" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">L1 · SKILL.md frontmatter（name + description）</text>
+  <rect x="320" y="39" width="60" height="13" rx="6.5" fill="#D97757"/>
+  <text x="350" y="49" text-anchor="middle" font-size="8.5" fill="#FFFFFF" font-family="ui-monospace, monospace">~100 token</text>
+
+  <!-- Right side: token saving callout -->
+  <rect x="494" y="54" width="120" height="54" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="554" y="74" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace" font-weight="600">省流效果</text>
+  <text x="554" y="91" text-anchor="middle" font-size="16" fill="#141413" font-weight="700">≈90%</text>
+  <text x="554" y="103" text-anchor="middle" font-size="9" fill="#87867F">10技能基线 context</text>
+
+  <!-- Bottom: tool trio -->
+  <rect x="60" y="302" width="520" height="14" rx="4" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="100" y="312" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">SkillToolset 提供工具：</text>
+  <text x="268" y="312" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">list_skills</text>
+  <text x="356" y="312" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">load_skill</text>
+  <text x="444" y="312" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">load_skill_resource</text>
+
+  <!-- Left side: right arrow pointing down indicating sequential loading -->
+  <text x="60" y="70" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">启动时</text>
+  <text x="60" y="96" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">全部注册</text>
+</svg>
