@@ -1,0 +1,35 @@
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 业务服务层：User/Order/Stock → API Gateway -->
+  <rect width="560" height="160" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">业务服务层：微服务架构</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- Three service boxes -->
+  <rect x="60" y="56" width="130" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="60" y="56" width="130" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="125" y="70" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">UserSvc</text>
+  <text x="125" y="90" text-anchor="middle" font-size="9" fill="#141413">用户服务</text>
+  <text x="125" y="106" text-anchor="middle" font-size="8.5" fill="#87867F">用户管理 · 权限</text>
+
+  <rect x="215" y="56" width="130" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="215" y="56" width="130" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="280" y="70" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">OrderSvc</text>
+  <text x="280" y="90" text-anchor="middle" font-size="9" fill="#141413">订单服务</text>
+  <text x="280" y="106" text-anchor="middle" font-size="8.5" fill="#87867F">订单管理 · 状态</text>
+
+  <rect x="370" y="56" width="130" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="370" y="56" width="130" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="435" y="70" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">StockSvc</text>
+  <text x="435" y="90" text-anchor="middle" font-size="9" fill="#141413">库存服务</text>
+  <text x="435" y="106" text-anchor="middle" font-size="8.5" fill="#87867F">库存管理 · 锁定</text>
+
+  <!-- Arrows to Gateway -->
+  <line x1="125" y1="116" x2="280" y2="136" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="280" y1="116" x2="280" y2="136" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="435" y1="116" x2="280" y2="136" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- API Gateway -->
+  <rect x="160" y="136" width="240" height="20" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="160" y="136" width="240" height="14" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="280" y="149" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">API Gateway · 服务编排层</text>
+</svg>

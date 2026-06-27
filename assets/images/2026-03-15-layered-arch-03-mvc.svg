@@ -1,0 +1,42 @@
+<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- MVC 架构 -->
+  <rect width="560" height="160" fill="#FAF9F5"/>
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">MVC 架构：Model-View-Controller</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- Model -->
+  <rect x="40" y="50" width="140" height="80" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="40" y="50" width="140" height="18" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="110" y="64" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Model</text>
+  <text x="110" y="86" text-anchor="middle" font-size="9.5" fill="#141413">数据和业务逻辑</text>
+  <text x="110" y="102" text-anchor="middle" font-size="9" fill="#87867F">数据验证</text>
+  <text x="110" y="116" text-anchor="middle" font-size="9" fill="#87867F">数据库交互</text>
+
+  <!-- Controller -->
+  <rect x="210" y="50" width="140" height="80" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="210" y="50" width="140" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="280" y="64" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Controller</text>
+  <text x="280" y="86" text-anchor="middle" font-size="9.5" fill="#141413">处理用户输入</text>
+  <text x="280" y="102" text-anchor="middle" font-size="9" fill="#87867F">调用 Model</text>
+  <text x="280" y="116" text-anchor="middle" font-size="9" fill="#87867F">选择 View</text>
+
+  <!-- View -->
+  <rect x="380" y="50" width="140" height="80" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="380" y="50" width="140" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="450" y="64" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">View</text>
+  <text x="450" y="86" text-anchor="middle" font-size="9.5" fill="#141413">用户界面展示</text>
+  <text x="450" y="102" text-anchor="middle" font-size="9" fill="#87867F">接收 Model 数据</text>
+  <text x="450" y="116" text-anchor="middle" font-size="9" fill="#87867F">渲染 UI</text>
+
+  <!-- Arrows -->
+  <line x1="180" y1="90" x2="208" y2="90" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="208,86 216,90 208,94" fill="#D1CFC5"/>
+  <line x1="352" y1="90" x2="378" y2="90" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="378,86 370,90 378,94" fill="#D1CFC5"/>
+
+  <!-- Bidirectional Model↔View -->
+  <line x1="280" y1="130" x2="110" y2="130" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="280" y1="130" x2="450" y2="130" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <text x="280" y="148" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">Model ↔ View：数据驱动的被动更新</text>
+</svg>
