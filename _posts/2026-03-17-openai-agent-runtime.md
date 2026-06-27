@@ -69,26 +69,7 @@ series: AI-Native Engineering
 
 OpenAI 的 Agent Runtime 采用**三层架构**：
 
-```
-┌─────────────────────────────────────────┐
-│           Agent Runtime Stack           │
-├─────────────────────────────────────────┤
-│  Layer 3: Hosted Containers             │
-│  - 隔离执行环境                          │
-│  - 资源限制与监控                        │
-│  - 快速启动/销毁                         │
-├─────────────────────────────────────────┤
-│  Layer 2: Shell Tool                    │
-│  - 命令执行接口                          │
-│  - 文件系统操作                          │
-│  - 输出捕获与流式传输                     │
-├─────────────────────────────────────────┤
-│  Layer 1: Responses API                 │
-│  - 结构化输出                            │
-│  - 工具调用协议                          │
-│  - 状态与会话管理                         │
-└─────────────────────────────────────────┘
-```
+<object data="/assets/images/2026-03-17-openai-agent-runtime-01-stack.svg" type="image/svg+xml" width="100%"></object>
 
 ### 设计哲学
 
