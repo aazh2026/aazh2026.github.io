@@ -171,22 +171,7 @@ class SalesforceConnector(BaseConnector):
 
 ### 记忆类型
 
-```mermaid
-flowchart TB
-    WM["Working Memory (工作记忆)<br/>• 当前对话上下文<br/>• 活跃任务状态<br/>• 临时变量<br/>生命周期：会话级"]
-    STM["Short-term Memory (短期记忆)<br/>• 近期对话历史<br/>• 最近执行的操作<br/>• 临时学习的内容<br/>生命周期：小时-天级"]
-    LTM["Long-term Memory (长期记忆)<br/>• 用户偏好<br/>• 业务规则<br/>• 历史成功案例<br/>生命周期：永久"]
-    KG["Knowledge Graph (知识图谱)<br/>• 实体关系<br/>• 业务概念<br/>• 组织信息<br/>生命周期：永久"]
-    
-    WM --> STM
-    STM --> LTM
-    LTM --> KG
-    
-    style WM fill:#fef3c7,stroke:#d97706
-    style STM fill:#fed7aa,stroke:#ea580c
-    style LTM fill:#dbeafe,stroke:#2563eb
-    style KG fill:#d1fae5,stroke:#059669
-```
+<object data="/assets/images/2026-03-31-agent-os-03-memory.svg" type="image/svg+xml" width="100%"></object>
 
 ### 实现方案
 
