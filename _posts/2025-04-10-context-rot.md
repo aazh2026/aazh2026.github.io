@@ -86,6 +86,8 @@ redirect_from:
 
 ## 四、反直觉洞察：Context Rot的三层危害
 
+<object data="/assets/images/2025-04-10-context-rot-01-harms.svg" type="image/svg+xml" width="100%"></object>
+
 ### 第一层：显性的错误建议
 
 这是最明显的症状。AI基于过时的Context给出错误的代码建议、错误的技术选型、错误的实现方案。
