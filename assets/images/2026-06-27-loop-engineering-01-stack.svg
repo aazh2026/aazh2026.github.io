@@ -1,0 +1,58 @@
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, sans-serif">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#1a1a2e">Loop Engineering 四层堆叠</text>
+  <text x="300" y="50" text-anchor="middle" font-size="11" fill="#888">Sydney Runkle · langchain.com · 2026/06/16</text>
+
+  <!-- Level 4 -->
+  <rect x="40" y="68" width="520" height="72" rx="6" fill="#1e3a5f" filter="url(#shadow)"/>
+  <text x="60" y="93" font-size="13" font-weight="700" fill="#ffffff">Level 4 · Hill Climbing Loop</text>
+  <text x="60" y="112" font-size="11" fill="#a8c8e8">trace 分析 → harness 配置改进</text>
+  <text x="60" y="128" font-size="11" fill="#7ab3de">LangChain 原语：LangSmith Engine</text>
+  <rect x="440" y="85" width="104" height="36" rx="4" fill="#2d5a8a"/>
+  <text x="492" y="107" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">自动化改进</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="140" x2="300" y2="158" stroke="#c0c0c0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <polygon points="300,162 295,154 305,154" fill="#c0c0c0"/>
+
+  <!-- Level 3 -->
+  <rect x="40" y="164" width="520" height="72" rx="6" fill="#2d5a8a" filter="url(#shadow)"/>
+  <text x="60" y="189" font-size="13" font-weight="700" fill="#ffffff">Level 3 · Event-driven Loop</text>
+  <text x="60" y="208" font-size="11" fill="#a8c8e8">事件触发，agent 在后台持续运行</text>
+  <text x="60" y="224" font-size="11" fill="#7ab3de">LangChain 原语：LangSmith Deployment / Fleet channels</text>
+  <rect x="440" y="181" width="104" height="36" rx="4" fill="#3d7ab8"/>
+  <text x="492" y="203" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">自动化规模化</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="236" x2="300" y2="254" stroke="#c0c0c0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <polygon points="300,258 295,250 305,250" fill="#c0c0c0"/>
+
+  <!-- Level 2 -->
+  <rect x="40" y="260" width="520" height="72" rx="6" fill="#4a90d9" filter="url(#shadow)"/>
+  <text x="60" y="285" font-size="13" font-weight="700" fill="#ffffff">Level 2 · Verification Loop</text>
+  <text x="60" y="304" font-size="11" fill="#dceeff">grader 按 rubric 打分，失败则带反馈重试</text>
+  <text x="60" y="320" font-size="11" fill="#b8d8f8">LangChain 原语：RubricMiddleware / after_agent hook</text>
+  <rect x="440" y="277" width="104" height="36" rx="4" fill="#5da0e9"/>
+  <text x="492" y="299" text-anchor="middle" font-size="11" fill="#fff" font-weight="600">质量与正确性</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="332" x2="300" y2="350" stroke="#c0c0c0" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <polygon points="300,354 295,346 305,346" fill="#c0c0c0"/>
+
+  <!-- Level 1 -->
+  <rect x="40" y="356" width="520" height="56" rx="6" fill="#6aaae8" filter="url(#shadow)"/>
+  <text x="60" y="377" font-size="13" font-weight="700" fill="#ffffff">Level 1 · Agent Loop</text>
+  <text x="60" y="395" font-size="11" fill="#dceeff">模型 + 工具，循环调用直到任务完成</text>
+  <text x="340" y="395" font-size="11" fill="#b8d8f8">LangChain 原语：create_agent + 任意模型</text>
+
+  <!-- Feedback arrow: Level 4 → Level 1 -->
+  <path d="M 560 100 C 580 100, 580 400, 560 384" stroke="#f0c040" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="560,384 554,376 566,376" fill="#f0c040"/>
+  <text x="575" y="245" font-size="10" fill="#c8a030" font-weight="600">反馈改进</text>
+</svg>

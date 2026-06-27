@@ -70,7 +70,7 @@ Osmani 给了概念框架；Sydney Runkle 在 LangChain 官方博客上把它落
 | **3. Event-driven Loop** | 事件触发 Agent 运行，实时更新真实系统 | 自动化工作规模化 | LangSmith Deployment（cron/webhook）或 Fleet channels |
 | **4. Hill Climbing Loop** | 生产轨迹喂给分析 Agent，持续改进 harness 配置 | harness 改进 | LangSmith Engine |
 
-<object data="/images/2026-06-27-loop-engineering-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-01-stack.svg" type="image/svg+xml" width="100%"></object>
 
 **第一层（Agent Loop）** 是最基础的：模型加工具，在循环里调用直到任务完成。LangChain 的 `create_agent` 给的就是这个能力——选模型、插工具，Loop 就转起来了。
 
