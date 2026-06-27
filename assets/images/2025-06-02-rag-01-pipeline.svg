@@ -1,0 +1,74 @@
+<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- RAG-DD Pipeline -->
+  <rect width="560" height="180" fill="#FAF9F5"/>
+
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">RAG-DD Pipeline：意图驱动代码生成</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/06/02</text>
+
+  <!-- Input -->
+  <rect x="40" y="70" width="70" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="40" y="70" width="70" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="75" y="82" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Input</text>
+  <text x="75" y="98" text-anchor="middle" font-size="9" fill="#141413">开发者</text>
+  <text x="75" y="110" text-anchor="middle" font-size="9" fill="#141413">输入意图</text>
+  <rect x="102" y="88" width="12" height="12" rx="6" fill="#D97757"/>
+  <text x="108" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">0</text>
+
+  <!-- Arrow 0→1 -->
+  <line x1="110" y1="95" x2="128" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="128,91 136,95 128,99" fill="#D1CFC5"/>
+
+  <!-- IP: Intent Parser -->
+  <rect x="136" y="60" width="80" height="70" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="136" y="60" width="80" height="16" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="176" y="72" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">IP · Intent Parser</text>
+  <text x="176" y="90" text-anchor="middle" font-size="9" fill="#141413">意图解析</text>
+  <text x="176" y="103" text-anchor="middle" font-size="8.5" fill="#87867F">提取关键实体</text>
+  <text x="176" y="115" text-anchor="middle" font-size="8.5" fill="#87867F">识别需求类型</text>
+  <rect x="208" y="78" width="12" height="12" rx="6" fill="#EA580C"/>
+  <text x="214" y="87" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="216" y1="95" x2="234" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="234,91 242,95 234,99" fill="#D1CFC5"/>
+
+  <!-- RE: Retrieval Engine -->
+  <rect x="242" y="60" width="80" height="70" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="242" y="60" width="80" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="282" y="72" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">RE · Retrieval Engine</text>
+  <text x="282" y="90" text-anchor="middle" font-size="9" fill="#141413">知识检索</text>
+  <text x="282" y="103" text-anchor="middle" font-size="8.5" fill="#87867F">检索相关规范</text>
+  <text x="282" y="115" text-anchor="middle" font-size="8.5" fill="#87867F">获取架构模式</text>
+  <rect x="314" y="78" width="12" height="12" rx="6" fill="#2563EB"/>
+  <text x="320" y="87" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="322" y1="95" x2="340" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,91 348,95 340,99" fill="#D1CFC5"/>
+
+  <!-- FE: Fusion Engine -->
+  <rect x="348" y="60" width="80" height="70" rx="6" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="348" y="60" width="80" height="16" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="388" y="72" text-anchor="middle" font-size="9" fill="#7C3AED" font-family="ui-monospace, monospace" font-weight="600">FE · Fusion Engine</text>
+  <text x="388" y="90" text-anchor="middle" font-size="9" fill="#141413">上下文融合</text>
+  <text x="388" y="103" text-anchor="middle" font-size="8.5" fill="#87867F">组装完整Prompt</text>
+  <text x="388" y="115" text-anchor="middle" font-size="8.5" fill="#87867F">注入业务规则</text>
+  <rect x="420" y="78" width="12" height="12" rx="6" fill="#7C3AED"/>
+  <text x="426" y="87" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="428" y1="95" x2="446" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="446,91 454,95 446,99" fill="#D1CFC5"/>
+
+  <!-- CG: Code Generation -->
+  <rect x="454" y="70" width="70" height="50" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="454" y="70" width="70" height="16" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="489" y="82" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">CG · Code Gen</text>
+  <text x="489" y="98" text-anchor="middle" font-size="9" fill="#141413">AI代码生成</text>
+  <text x="489" y="110" text-anchor="middle" font-size="9" fill="#141413">输出</text>
+  <rect x="516" y="88" width="12" height="12" rx="6" fill="#059669"/>
+  <text x="522" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
+
+  <!-- Output note -->
+  <text x="280" y="170" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">符合企业标准的代码 → 人机协作验收</text>
+</svg>
