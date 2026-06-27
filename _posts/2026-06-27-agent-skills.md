@@ -1,3 +1,12 @@
+---
+layout: post
+title: "AI 编程代理的工程纪律：agent-skills 的反直觉设计"
+date: 2026-06-27T10:00:00+08:00
+tags: [AI-Native软件工程, agent-skills, 工程纪律, ADK, Skill设计]
+author: "@postcodeeng"
+series: AI-Native Engineering
+---
+
 # AI 编程代理的工程纪律：agent-skills 的反直觉设计
 
 "这很简单，不需要写 Spec。"

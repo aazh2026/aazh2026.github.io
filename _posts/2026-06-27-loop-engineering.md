@@ -1,3 +1,12 @@
+---
+layout: post
+title: "Loop Engineering：把"你"从流程里抽出来"
+date: 2026-06-27T10:00:00+08:00
+tags: [AI-Native软件工程, Loop Engineering, Agent, 工程效能]
+author: "@postcodeeng"
+series: AI-Native Engineering
+---
+
 # Loop Engineering：把"你"从流程里抽出来
 
 2026年6月7日，Peter Steinberger（OpenClaw 创始人、OpenAI 开发者）在 X 上发了一条帖子，24小时内获得了超过五百万次浏览：
