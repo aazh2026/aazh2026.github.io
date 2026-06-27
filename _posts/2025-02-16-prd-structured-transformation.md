@@ -186,32 +186,7 @@ def get_order_history(user_id: str, pagination: Pagination):
 
 将上述四个支柱简化，就是**CCC模型**（Triple-C Model）：
 
-```mermaid
-flowchart TB
-    subgraph CCC["PRD as Code - CCC模型"]
-        C1["Context (在什么环境下)
-        • 用户角色
-        • 业务规则
-        • 系统边界
-        • 依赖关系"]
-        
-        C2["Constraints (边界是什么)
-        • 性能约束
-        • 安全约束
-        • 兼容性约束
-        • 合规约束"]
-        
-        C3["Criteria (怎样算完成)
-        • Given-When
-        • Then断言
-        • 可自动化测试
-        • 可追溯"]
-    end
-    
-    style CCC fill:#f8fafc,stroke:#64748b,stroke-width:2px
-    style C1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style C2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style C3 fill:#d1fae5,stroke:#059669,stroke-width:2px
+<object data="/assets/images/2025-02-16-prd-ccc-model.svg" type="image/svg+xml" width="100%"></object>
 ```
 
 CCC模型是一个**思维框架**，不强制特定格式。你可以用YAML、JSON、TOML、甚至纯文本（带结构化标记）来实现。关键是**思考方式**的转变：从"描述功能"到"定义规格"。
