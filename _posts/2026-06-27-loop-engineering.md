@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Loop Engineering：把"你"从流程里抽出来"
+title: 'Loop Engineering：把"你"从流程里抽出来'
 date: 2026-06-27T10:00:00+08:00
 tags: [AI-Native软件工程, Loop Engineering, Agent, 工程效能]
 author: "@postcodeeng"
