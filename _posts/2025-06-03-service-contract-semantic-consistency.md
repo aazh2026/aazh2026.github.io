@@ -294,39 +294,7 @@ class AISemanticAnalyzer:
 
 ### 契约管理架构
 
-```mermaid
-flowchart TB
-    subgraph ContractSystem["AI契约管理系统"]
-        RC["契约注册中心
-        服务契约存储/版本管理/元数据管理"]
-        IA["影响分析引擎
-        依赖图谱分析/影响范围预测/风险评估"]
-        DD["漂移检测引擎
-        - 语法检测
-        - 语义分析
-        - 兼容性评估"]
-        AN["告警通知
-        - 团队通知
-        - 阻断发布
-        - 升级指南"]
-        AF["自动修复引擎
-        - 代码更新
-        - 测试生成
-        - 文档更新"]
-    end
-    
-    RC --> DD
-    IA --> DD
-    DD --> AN
-    DD --> AF
-    
-    style ContractSystem fill:#f8fafc,stroke:#64748b,stroke-width:2px
-    style RC fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style IA fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style DD fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style AN fill:#bfdbfe,stroke:#3b82f6
-    style AF fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-06-03-contract-01-system.svg" type="image/svg+xml" width="100%"></object>
 
 ### 漂移检测流程
 
