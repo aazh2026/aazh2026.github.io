@@ -90,6 +90,8 @@ redirect_from:
 
 ## 四、反直觉洞察：三种AI-Native评审形态
 
+<object data="/assets/images/2025-04-13-death-of-code-reviews-01-forms.svg" type="image/svg+xml" width="100%"></object>
+
 代码评审不会消失，它会**重生**——变成三种全新的形态。
 
 ### 形态一：Pre-commit AI审查（事前预防）
