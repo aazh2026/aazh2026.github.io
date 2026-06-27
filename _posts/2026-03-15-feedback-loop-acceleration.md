@@ -117,6 +117,8 @@ AI-Native方式 (10分钟/迭代):
 
 ## 历史演进：从月到分钟的压缩之旅
 
+<object data="/assets/images/2026-03-15-feedback-loop-01-timeline.svg" type="image/svg+xml" width="100%"></object>
+
 ### 阶段一：瀑布时代（1950s-1990s）
 
 **反馈周期：3-6个月**

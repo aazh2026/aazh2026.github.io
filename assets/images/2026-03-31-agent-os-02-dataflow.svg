@@ -1,0 +1,82 @@
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agent OS 数据流向图 -->
+  <rect width="560" height="200" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent OS · 数据流向</text>
+
+  <!-- User node -->
+  <circle cx="56" cy="100" r="28" fill="#F8FAFC" stroke="#64748B" stroke-width="1.5"/>
+  <text x="56" y="96" text-anchor="middle" font-size="10" fill="#64748B" font-weight="600">User</text>
+  <text x="56" y="110" text-anchor="middle" font-size="9" fill="#64748B">用户输入</text>
+
+  <!-- Arrow User → Interface -->
+  <line x1="84" y1="100" x2="120" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="120,96 114,100 120,104" fill="#D1CFC5"/>
+  <text x="102" y="94" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">L5</text>
+
+  <!-- Interface node -->
+  <rect x="126" y="74" width="76" height="52" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="164" y="94" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">Interface</text>
+  <text x="164" y="108" text-anchor="middle" font-size="9" fill="#87867F">L5 · 自然语言</text>
+  <text x="164" y="120" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">CLI / GUI</text>
+
+  <!-- Arrow Interface → Orchestration -->
+  <line x1="202" y1="100" x2="238" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="238,96 232,100 238,104" fill="#D1CFC5"/>
+  <text x="220" y="94" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">L4</text>
+
+  <!-- Orchestration node -->
+  <rect x="244" y="74" width="76" height="52" rx="8" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="282" y="94" text-anchor="middle" font-size="10" fill="#EA580C" font-weight="600">Orchestration</text>
+  <text x="282" y="108" text-anchor="middle" font-size="9" fill="#87867F">L4 · 任务调度</text>
+  <text x="282" y="120" text-anchor="middle" font-size="8.5" fill="#EA580C" font-family="ui-monospace, monospace">多 Agent</text>
+
+  <!-- Arrow Orchestration → Runtime -->
+  <line x1="320" y1="100" x2="356" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="356,96 350,100 356,104" fill="#D1CFC5"/>
+  <text x="338" y="94" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Runtime node -->
+  <rect x="362" y="74" width="76" height="52" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="400" y="94" text-anchor="middle" font-size="10" fill="#2563EB" font-weight="600">Runtime</text>
+  <text x="400" y="108" text-anchor="middle" font-size="9" fill="#87867F">L3 · 推理循环</text>
+  <text x="400" y="120" text-anchor="middle" font-size="8.5" fill="#2563EB" font-family="ui-monospace, monospace">工具调用</text>
+
+  <!-- Arrow Runtime → Memory (up) -->
+  <line x1="400" y1="74" x2="400" y2="50" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="396,50 400,42 404,50" fill="#D1CFC5"/>
+  <text x="408" y="62" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Memory node (above Runtime) -->
+  <rect x="362" y="26" width="76" height="24" rx="6" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="400" y="42" text-anchor="middle" font-size="9.5" fill="#3B82F6" font-weight="600">Memory</text>
+
+  <!-- Arrow Runtime → Tools (down) -->
+  <line x1="400" y1="126" x2="400" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="396,150 400,158 404,150" fill="#D1CFC5"/>
+  <text x="408" y="142" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">L1</text>
+
+  <!-- Tools node (below Runtime) -->
+  <rect x="362" y="150" width="76" height="24" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="400" y="166" text-anchor="middle" font-size="9.5" fill="#059669" font-weight="600">Tools</text>
+
+  <!-- Bidirectional arrow Memory ↔ Tools -->
+  <line x1="362" y1="38" x2="320" y2="100" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="320" y1="100" x2="362" y2="162" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Legend -->
+  <rect x="36" y="172" width="8" height="8" rx="2" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="50" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">L5</text>
+  <rect x="76" y="172" width="8" height="8" rx="2" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="90" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">L4</text>
+  <rect x="116" y="172" width="8" height="8" rx="2" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="130" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">L3</text>
+  <rect x="156" y="172" width="8" height="8" rx="2" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="170" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">L2</text>
+  <rect x="196" y="172" width="8" height="8" rx="2" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="210" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">L1</text>
+  <line x1="236" y1="176" x2="264" y2="176" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="264,172 258,176 264,180" fill="#D1CFC5"/>
+  <text x="270" y="180" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">调用</text>
+</svg>
