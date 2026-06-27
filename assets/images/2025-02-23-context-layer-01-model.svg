@@ -1,0 +1,46 @@
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Context Layer 三层模型 -->
+  <rect width="560" height="260" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">企业级 AI Context Layer 三层模型</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/02/23</text>
+
+  <!-- Layer 3: Business Context (top, broadest) -->
+  <rect x="40" y="50" width="480" height="60" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="50" width="480" height="24" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="60" y="67" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L3 · Business Context</text>
+  <text x="200" y="67" font-size="11" fill="#141413" font-weight="600">业务上下文层</text>
+  <text x="60" y="88" font-size="10" fill="#87867F">领域模型 · 业务规则 · 术语表 · 合规要求</text>
+  <rect x="490" y="62" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="75" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="110" x2="280" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,120 280,128 284,120" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Technical Context (middle) -->
+  <rect x="40" y="128" width="480" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="128" width="480" height="24" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="60" y="145" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L2 · Technical Context</text>
+  <text x="200" y="145" font-size="11" fill="#141413" font-weight="600">技术上下文层</text>
+  <text x="60" y="166" font-size="10" fill="#87867F">架构决策 · 技术栈 · API 契约 · 基础设施</text>
+  <rect x="490" y="140" width="18" height="18" rx="9" fill="#2563EB"/>
+  <text x="499" y="153" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="188" x2="280" y2="198" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,198 280,206 284,198" fill="#D1CFC5"/>
+
+  <!-- Layer 1: Project Context (bottom) -->
+  <rect x="40" y="206" width="480" height="44" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="40" y="206" width="480" height="22" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="60" y="221" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1 · Project Context</text>
+  <text x="200" y="221" font-size="11" fill="#141413" font-weight="600">项目上下文层</text>
+  <text x="60" y="238" font-size="10" fill="#87867F">代码规范 · 团队规则 · 近期变更 · 上下文边界</text>
+  <rect x="490" y="218" width="18" height="18" rx="9" fill="#059669"/>
+  <text x="499" y="231" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
+
+  <!-- Note -->
+  <text x="280" y="256" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">三层自上而下抽象递增，L3 最稳定，L1 最动态；AI Agent 按需从对应层级获取上下文</text>
+</svg>
