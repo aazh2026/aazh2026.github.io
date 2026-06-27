@@ -1,0 +1,62 @@
+<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- AISE 五层架构 -->
+  <rect width="560" height="260" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native 软件工程五层架构</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">AISE Manifesto · postcodeengineering.com · 2025/04/04</text>
+
+  <!-- Layer 5: Human Workflow (top) -->
+  <rect x="40" y="50" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L5</text>
+  <text x="84" y="65" font-size="12" fill="#141413" font-weight="600">Human Workflow · 人机协作流程设计</text>
+  <rect x="490" y="58" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="71" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L5</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="88" x2="280" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,96 280,104 284,96" fill="#D1CFC5"/>
+
+  <!-- Layer 4: Intent Architecture -->
+  <rect x="40" y="104" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="40" y="104" width="480" height="18" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="60" y="119" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">L4</text>
+  <text x="84" y="119" font-size="12" fill="#141413" font-weight="600">Intent Architecture · 意图架构与知识资产管理</text>
+  <rect x="490" y="112" width="18" height="18" rx="9" fill="#EA580C"/>
+  <text x="499" y="125" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L4</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="142" x2="280" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,150 280,158 284,150" fill="#D1CFC5"/>
+
+  <!-- Layer 3: Agent Orchestration -->
+  <rect x="40" y="158" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="158" width="480" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="60" y="173" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L3</text>
+  <text x="84" y="173" font-size="12" fill="#141413" font-weight="600">Agent Orchestration · 多 Agent 协作与调度</text>
+  <rect x="490" y="166" width="18" height="18" rx="9" fill="#2563EB"/>
+  <text x="499" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="196" x2="280" y2="204" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,204 280,212 284,204" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Context Engineering -->
+  <rect x="40" y="212" width="480" height="22" rx="5" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="60" y="226" font-size="10" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">L2</text>
+  <text x="84" y="226" font-size="11" fill="#141413" font-weight="600">Context Engineering · 上下文工程</text>
+  <rect x="490" y="216" width="18" height="14" rx="7" fill="#3B82F6"/>
+  <text x="499" y="227" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="234" x2="280" y2="242" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,242 280,250 284,242" fill="#D1CFC5"/>
+
+  <!-- Layer 1: Model Layer (bottom) -->
+  <rect x="40" y="250" width="480" height="12" rx="4" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="60" y="260" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1 · Model Layer</text>
+  <text x="200" y="260" font-size="9" fill="#87867F">基础模型与工具链</text>
+  <rect x="490" y="253" width="18" height="12" rx="6" fill="#059669"/>
+  <text x="499" y="262" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
+</svg>
