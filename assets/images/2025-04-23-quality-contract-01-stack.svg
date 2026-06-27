@@ -1,0 +1,55 @@
+<svg viewBox="0 0 560 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Quality Contract 四层契约体系 -->
+  <rect width="560" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Quality Contract · 四层契约体系</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/23</text>
+
+  <!-- Layer 4: Compliance (top) -->
+  <rect x="40" y="50" width="480" height="52" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.8"/>
+  <text x="60" y="72" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Layer 4</text>
+  <text x="110" y="72" font-size="13" fill="#141413" font-weight="600">Compliance Contract · 合规契约</text>
+  <text x="60" y="90" font-size="10" fill="#87867F">GDPR · SOC2 · 行业监管 · 法律合规</text>
+  <rect x="490" y="64" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="77" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L4</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="102" x2="280" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,114 280,122 284,114" fill="#D1CFC5"/>
+
+  <!-- Layer 3: Security -->
+  <rect x="40" y="122" width="480" height="52" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="60" y="144" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Layer 3</text>
+  <text x="110" y="144" font-size="13" fill="#141413" font-weight="600">Security Contract · 安全契约</text>
+  <text x="60" y="162" font-size="10" fill="#87867F">OWASP Top 10 · 渗透测试 · 漏洞扫描 · 权限验证</text>
+  <rect x="490" y="136" width="18" height="18" rx="9" fill="#EA580C"/>
+  <text x="499" y="149" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="174" x2="280" y2="186" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,186 280,194 284,186" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Performance -->
+  <rect x="40" y="194" width="480" height="52" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="60" y="216" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Layer 2</text>
+  <text x="110" y="216" font-size="13" fill="#141413" font-weight="600">Performance Contract · 性能契约</text>
+  <text x="60" y="234" font-size="10" fill="#87867F">响应时间 · 吞吐量 · 资源占用 · 扩展性基准</text>
+  <rect x="490" y="208" width="18" height="18" rx="9" fill="#2563EB"/>
+  <text x="499" y="221" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="246" x2="280" y2="258" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,258 280,266 284,258" fill="#D1CFC5"/>
+
+  <!-- Layer 1: Functional -->
+  <rect x="40" y="266" width="480" height="28" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <text x="60" y="283" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Layer 1</text>
+  <text x="110" y="283" font-size="11" fill="#141413" font-weight="600">Functional Contract · 功能契约</text>
+  <text x="340" y="283" font-size="10" fill="#87867F">输入输出正确性 · 业务规则 · API 契约</text>
+  <rect x="490" y="272" width="18" height="18" rx="9" fill="#059669"/>
+  <text x="499" y="285" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
+
+  <!-- Note -->
+  <text x="280" y="296" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">每层契约独立验证，失败则阻止进入上层——契约即测试</text>
+</svg>
