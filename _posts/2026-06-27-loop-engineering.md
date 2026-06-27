@@ -61,6 +61,8 @@ Osmani 给了概念框架；Sydney Runkle 在 LangChain 官方博客上把它落
 | **3. Event-driven Loop** | 事件触发 Agent 运行，实时更新真实系统 | 自动化工作规模化 | LangSmith Deployment（cron/webhook）或 Fleet channels |
 | **4. Hill Climbing Loop** | 生产轨迹喂给分析 Agent，持续改进 harness 配置 | harness 改进 | LangSmith Engine |
 
+<object data="/images/2026-06-27-loop-engineering-01-stack.svg" type="image/svg+xml" width="100%"></object>
+
 **第一层（Agent Loop）** 是最基础的：模型加工具，在循环里调用直到任务完成。LangChain 的 `create_agent` 给的就是这个能力——选模型、插工具，Loop 就转起来了。
 
 **第二层（Verification Loop）** 是关键的加质量机制：Agent 输出后，由一个独立的 grader 按 rubric 检查，失败则带反馈重试。Runkle 强调："自动化 grader 可以检查链接是否可访问；但只有人能注意到面向对象的框架对目标受众来说是不对的。" grader 可以是确定性的（如正则检查），也可以是 agentic 的（LLM as a judge）。成本代价是增加延迟和单次运行成本——但当质量比速度重要时，这是值得的，而大多数生产场景恰恰如此。
