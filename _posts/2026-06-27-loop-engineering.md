@@ -39,6 +39,8 @@ Osmani 提出的通用 Loop 架构，所有编码循环——无论单 Agent 还
 
 Osmani 把 Loop 系统拆成五个结构性组件，外加一个跨会话记忆层：
 
+<object data="/assets/images/2026-06-27-loop-engineering-04-components.svg" type="image/svg+xml" width="100%"></object>
+
 **1. 自动化（Automations）——心跳**
 
 让 Loop 真正成为"循环"的部分。在 Codex App 里，Automations tab 让你选择项目、prompt、频率、环境，产出自动进入 Triage 收件箱。Claude Code 用 `/loop` 做定时任务，用 `/goal` 做目标驱动——后者持续运行直到停止条件成立，每轮结束后由**独立的评估模型**判断是否完成，而不是干活的那个模型自己判断。
