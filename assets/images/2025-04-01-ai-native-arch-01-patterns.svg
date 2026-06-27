@@ -1,0 +1,66 @@
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- AI-Native Architecture 六大战术模式 -->
+  <rect width="560" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native 架构六大战术模式</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/01</text>
+
+  <!-- Center: AI-Native Core -->
+  <circle cx="280" cy="160" r="40" fill="#FEF3C7" stroke="#D97757" stroke-width="2"/>
+  <text x="280" y="156" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600" font-family="ui-monospace, monospace">AI-Native</text>
+  <text x="280" y="170" text-anchor="middle" font-size="9" fill="#87867F">Architecture</text>
+
+  <!-- 6 pattern nodes arranged in a hexagon -->
+
+  <!-- P1: Intent Router (top) -->
+  <rect x="210" y="26" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="280" y="44" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">模式一</text>
+  <text x="280" y="58" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Intent Router</text>
+  <text x="280" y="66" text-anchor="middle" font-size="8.5" fill="#87867F">意图路由</text>
+  <line x1="280" y1="70" x2="280" y2="116" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="276,116 280,124 284,116" fill="#D97757"/>
+
+  <!-- P2: Context Cache (top-right) -->
+  <rect x="370" y="72" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="440" y="90" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">模式二</text>
+  <text x="440" y="104" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Context Cache</text>
+  <text x="440" y="112" text-anchor="middle" font-size="8.5" fill="#87867F">上下文缓存</text>
+  <line x1="370" y1="94" x2="322" y2="128" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="322,128 318,120 326,124" fill="#2563EB"/>
+
+  <!-- P3: Model Gateway (bottom-right) -->
+  <rect x="370" y="176" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="440" y="194" text-anchor="middle" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">模式三</text>
+  <text x="440" y="208" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Model Gateway</text>
+  <text x="440" y="216" text-anchor="middle" font-size="8.5" fill="#87867F">模型网关</text>
+  <line x1="370" y1="198" x2="322" y2="188" stroke="#EA580C" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="322,188 318,196 326,192" fill="#EA580C"/>
+
+  <!-- P4: Feedback Loop (bottom) -->
+  <rect x="210" y="212" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <text x="280" y="230" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">模式四</text>
+  <text x="280" y="244" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Feedback Loop</text>
+  <text x="280" y="252" text-anchor="middle" font-size="8.5" fill="#87867F">反馈循环</text>
+  <line x1="280" y1="212" x2="280" y2="200" stroke="#059669" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="276,200 280,192 284,200" fill="#059669"/>
+
+  <!-- P5: A/B Agent (bottom-left) -->
+  <rect x="50" y="176" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="120" y="194" text-anchor="middle" font-size="10" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">模式五</text>
+  <text x="120" y="208" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">A/B Agent</text>
+  <text x="120" y="216" text-anchor="middle" font-size="8.5" fill="#87867F">A/B 智能体</text>
+  <line x1="190" y1="198" x2="238" y2="188" stroke="#3B82F6" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="238,188 242,196 234,192" fill="#3B82F6"/>
+
+  <!-- P6: Human-in-the-Loop (top-left) -->
+  <rect x="50" y="72" width="140" height="44" rx="8" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <text x="120" y="90" text-anchor="middle" font-size="10" fill="#7C3AED" font-family="ui-monospace, monospace" font-weight="600">模式六</text>
+  <text x="120" y="104" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Human-in-the-Loop</text>
+  <text x="120" y="112" text-anchor="middle" font-size="8.5" fill="#87867F">人在回路</text>
+  <line x1="190" y1="94" x2="238" y2="128" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="238,128 234,120 242,124" fill="#7C3AED"/>
+
+  <!-- Key note -->
+  <text x="280" y="272" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">六种模式可独立使用，也可组合部署，核心围绕 AI-Native 架构展开</text>
+</svg>

@@ -84,6 +84,8 @@ redirect_from:
 
 ## 四、反直觉洞察：六大战术模式
 
+<object data="/assets/images/2025-04-01-ai-native-arch-01-patterns.svg" type="image/svg+xml" width="100%"></object>
+
 我提出六个面向AI-Native架构的战术模式：
 
 ### 模式一：Intent Router（意图路由器）
