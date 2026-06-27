@@ -70,18 +70,7 @@ if cosine_similarity(query_embedding, cached_embedding) > 0.95:
 ## 二、语义缓存的工作原理
 
 ### 2.1 架构概览
-
-```
-用户查询
-    ↓
-[嵌入模型] → query_embedding
-    ↓
-[向量检索] → 在缓存中找相似查询
-    ↓
-相似度 > threshold?
-    ├── 是 → 返回缓存答案（节省API调用）
-    └── 否 → 调用LLM → 存入缓存 → 返回答案
-```
+<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 2.2 缓存键的设计
 
