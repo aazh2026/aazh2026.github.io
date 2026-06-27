@@ -60,6 +60,8 @@ series: AI-Native Engineering
 
 ## 三、复杂度棘轮
 
+<object data="/assets/images/2026-05-12-complexity-ratchet-01-ratchet.svg" type="image/svg+xml" width="100%"></object>
+
 Garry Tan 把这个机制叫做"复杂度棘轮"：
 
 **每一轮 AI 编码，agent 向代码库添加三样东西：测试 + 文档 + 评估结果。**
