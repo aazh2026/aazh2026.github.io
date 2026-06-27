@@ -107,6 +107,8 @@ assert result == a + b  # tautology，永远通过
 
 ## 三、Intent-Driven Development：新范式
 
+<object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ### 从TDD到IDD
 
 | 维度 | TDD | IDD |

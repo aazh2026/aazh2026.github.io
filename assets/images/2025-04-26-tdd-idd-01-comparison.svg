@@ -1,0 +1,57 @@
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- TDD vs IDD 对比 -->
+  <rect width="560" height="240" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">TDD → IDD：开发范式的转变</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/26</text>
+
+  <!-- Arrow: TDD → IDD -->
+  <line x1="195" y1="120" x2="345" y2="120" stroke="#D97757" stroke-width="2"/>
+  <polygon points="345,116 339,120 345,124" fill="#D97757"/>
+  <text x="270" y="114" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">AI 时代</text>
+  <text x="270" y="132" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">范式转移</text>
+
+  <!-- LEFT: TDD -->
+  <rect x="20" y="58" width="170" height="162" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="20" y="58" width="170" height="28" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="105" y="77" text-anchor="middle" font-size="12" fill="#87867F" font-weight="600">TDD</text>
+  <text x="105" y="96" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">测试驱动开发</text>
+  <text x="105" y="110" text-anchor="middle" font-size="9" fill="#87867F">Test-Driven Development</text>
+  <line x1="40" y1="120" x2="170" y2="120" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- TDD rows -->
+  <text x="35" y="134" font-size="9" fill="#87867F">关注点</text>
+  <text x="35" y="146" font-size="9.5" fill="#141413">代码行为是否符合预期</text>
+  <line x1="40" y1="154" x2="170" y2="154" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <text x="35" y="168" font-size="9" fill="#87867F">驱动源</text>
+  <text x="35" y="180" font-size="9.5" fill="#141413">测试用例</text>
+  <line x1="40" y1="188" x2="170" y2="188" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <text x="35" y="202" font-size="9" fill="#87867F">测试编写</text>
+  <text x="35" y="214" font-size="9.5" fill="#141413">人工编写</text>
+
+  <!-- RIGHT: IDD -->
+  <rect x="370" y="58" width="170" height="162" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="370" y="58" width="170" height="28" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="455" y="77" text-anchor="middle" font-size="12" fill="#D97757" font-weight="600">IDD</text>
+  <text x="455" y="96" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">意图驱动开发</text>
+  <text x="455" y="110" text-anchor="middle" font-size="9" fill="#87867F">Intent-Driven Development</text>
+  <line x1="390" y1="120" x2="520" y2="120" stroke="#D97757" stroke-width="1"/>
+
+  <!-- IDD rows -->
+  <text x="385" y="134" font-size="9" fill="#D97757">关注点</text>
+  <text x="385" y="146" font-size="9.5" fill="#141413">代码是否准确表达业务意图</text>
+  <line x1="390" y1="154" x2="520" y2="154" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <text x="385" y="168" font-size="9" fill="#D97757">驱动源</text>
+  <text x="385" y="180" font-size="9.5" fill="#141413">业务意图文档</text>
+  <line x1="390" y1="188" x2="520" y2="188" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <text x="385" y="202" font-size="9" fill="#D97757">测试编写</text>
+  <text x="385" y="214" font-size="9.5" fill="#141413">AI 生成 + 人工审查</text>
+
+  <!-- Bottom note -->
+  <text x="280" y="232" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">TDD 问"代码对不对"；IDD 问"代码是否表达了正确的业务意图"</text>
+</svg>
