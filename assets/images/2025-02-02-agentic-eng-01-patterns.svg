@@ -1,0 +1,69 @@
+<svg viewBox="0 0 560 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Agentic Engineering 六种协作模式 -->
+  <rect width="560" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agentic Engineering 六种协作模式</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/02/02</text>
+
+  <!-- Center: Human-AI collaboration -->
+  <circle cx="280" cy="155" r="28" fill="#FEF3C7" stroke="#D97757" stroke-width="2"/>
+  <text x="280" y="150" text-anchor="middle" font-size="8.5" fill="#D97757" font-weight="600">Human + AI</text>
+  <text x="280" y="162" text-anchor="middle" font-size="7.5" fill="#87867F">协作伙伴</text>
+
+  <!-- Pattern 1: Interactive Explanation (top) -->
+  <rect x="220" y="46" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="220" y="46" width="120" height="14" rx="5" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="280" y="57" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">P1 · 交互式解释</text>
+  <text x="280" y="71" text-anchor="middle" font-size="8" fill="#141413">Interactive Explanation</text>
+  <line x1="280" y1="84" x2="295" y2="120" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Pattern 2: Skill Hoarding (top-right) -->
+  <rect x="370" y="80" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="370" y="80" width="120" height="14" rx="5" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="430" y="91" text-anchor="middle" font-size="8.5" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">P2 · 囤积技能</text>
+  <text x="430" y="105" text-anchor="middle" font-size="8" fill="#141413">Skill Hoarding</text>
+  <line x1="370" y1="105" x2="320" y2="135" stroke="#EA580C" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Pattern 3: Boundary Probing (bottom-right) -->
+  <rect x="370" y="182" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="370" y="182" width="120" height="14" rx="5" fill="#FDBA74" stroke="#F97316" stroke-width="1"/>
+  <text x="430" y="193" text-anchor="middle" font-size="8.5" fill="#F97316" font-family="ui-monospace, monospace" font-weight="600">P3 · 边界探索</text>
+  <text x="430" y="207" text-anchor="middle" font-size="8" fill="#141413">Boundary Probing</text>
+  <line x1="370" y1="195" x2="320" y2="175" stroke="#F97316" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Pattern 4: Incremental Validation (bottom) -->
+  <rect x="220" y="218" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="220" y="218" width="120" height="14" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="280" y="229" text-anchor="middle" font-size="8.5" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">P4 · 增量验证</text>
+  <text x="280" y="243" text-anchor="middle" font-size="8" fill="#141413">Incremental Validation</text>
+  <line x1="280" y1="218" x2="265" y2="185" stroke="#2563EB" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Pattern 5: Intent Layering (bottom-left) -->
+  <rect x="70" y="182" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="70" y="182" width="120" height="14" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="130" y="193" text-anchor="middle" font-size="8.5" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">P5 · 意图分层</text>
+  <text x="130" y="207" text-anchor="middle" font-size="8" fill="#141413">Intent Layering</text>
+  <line x1="190" y1="195" x2="240" y2="175" stroke="#059669" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Pattern 6: Metacognitive Monitoring (top-left) -->
+  <rect x="70" y="80" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#7C3AED" stroke-width="1.5"/>
+  <rect x="70" y="80" width="120" height="14" rx="5" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1"/>
+  <text x="130" y="91" text-anchor="middle" font-size="8.5" fill="#7C3AED" font-family="ui-monospace, monospace" font-weight="600">P6 · 元认知监控</text>
+  <text x="130" y="105" text-anchor="middle" font-size="8" fill="#141413">Metacognitive Monitoring</text>
+  <line x1="190" y1="105" x2="240" y2="135" stroke="#7C3AED" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- P number badges -->
+  <circle cx="340" cy="58" r="8" fill="#D97757"/>
+  <text x="340" y="61" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P1</text>
+  <circle cx="490" cy="92" r="8" fill="#EA580C"/>
+  <text x="490" y="95" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P2</text>
+  <circle cx="490" cy="194" r="8" fill="#F97316"/>
+  <text x="490" y="197" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P3</text>
+  <circle cx="340" cy="242" r="8" fill="#2563EB"/>
+  <text x="340" y="245" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P4</text>
+  <circle cx="70" cy="194" r="8" fill="#059669"/>
+  <text x="70" y="197" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P5</text>
+  <circle cx="70" cy="92" r="8" fill="#7C3AED"/>
+  <text x="70" y="95" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">P6</text>
+</svg>
