@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- AI 架构评审四阶段流程 -->
+  <rect width="560" height="220" fill="#FAF9F5"/>
+
+  <text x="280" y="18" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 架构评审四阶段流程</text>
+  <text x="280" y="34" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/05/11</text>
+
+  <!-- S1: AI生成架构方案 -->
+  <rect x="40" y="50" width="110" height="90" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
+  <rect x="40" y="50" width="110" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="95" y="64" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">S1 · AI生成方案</text>
+  <text x="95" y="84" text-anchor="middle" font-size="9" fill="#141413">输入：需求 + 约束</text>
+  <text x="95" y="97" text-anchor="middle" font-size="9" fill="#141413">输出：多个候选</text>
+  <text x="95" y="110" text-anchor="middle" font-size="9" fill="#141413">架构方案</text>
+  <text x="95" y="130" text-anchor="middle" font-size="8.5" fill="#87867F">AI 生成</text>
+  <rect x="142" y="88" width="14" height="14" rx="7" fill="#2563EB"/>
+  <text x="149" y="99" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">S1</text>
+
+  <!-- Arrow S1→S2 -->
+  <line x1="150" y1="95" x2="172" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="172,91 180,95 172,99" fill="#D1CFC5"/>
+
+  <!-- S2: 自动化预评审 -->
+  <rect x="180" y="50" width="140" height="90" rx="6" fill="#FFFFFF" stroke="#3B82F6" stroke-width="1.5"/>
+  <rect x="180" y="50" width="140" height="18" rx="6" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1"/>
+  <text x="250" y="64" text-anchor="middle" font-size="10" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">S2 · 自动化预评审</text>
+  <text x="250" y="84" text-anchor="middle" font-size="9" fill="#141413">合规性检查 · 安全扫描</text>
+  <text x="250" y="97" text-anchor="middle" font-size="9" fill="#141413">性能预测 · 成本估算</text>
+  <text x="250" y="110" text-anchor="middle" font-size="9" fill="#141413">AI特性评估</text>
+  <text x="250" y="130" text-anchor="middle" font-size="8.5" fill="#87867F">自动化检查</text>
+  <rect x="312" y="88" width="14" height="14" rx="7" fill="#3B82F6"/>
+  <text x="319" y="99" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">S2</text>
+
+  <!-- Arrow S2→S3 -->
+  <line x1="320" y1="95" x2="342" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="342,91 350,95 342,99" fill="#D1CFC5"/>
+
+  <!-- S3: 人工审查 -->
+  <rect x="350" y="50" width="110" height="90" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="350" y="50" width="110" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="405" y="64" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">S3 · 人工审查</text>
+  <text x="405" y="84" text-anchor="middle" font-size="9" fill="#141413">评审AI评估报告</text>
+  <text x="405" y="97" text-anchor="middle" font-size="9" fill="#141413">关注AI标记风险点</text>
+  <text x="405" y="110" text-anchor="middle" font-size="9" fill="#141413">评估长期影响</text>
+  <text x="405" y="130" text-anchor="middle" font-size="8.5" fill="#87867F">人工判断</text>
+  <rect x="452" y="88" width="14" height="14" rx="7" fill="#D97757"/>
+  <text x="459" y="99" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">S3</text>
+
+  <!-- Arrow S3→S4 -->
+  <line x1="460" y1="95" x2="482" y2="95" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="482,91 490,95 482,99" fill="#D1CFC5"/>
+
+  <!-- S4: 决策与反馈 -->
+  <rect x="410" y="150" width="110" height="60" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+  <rect x="410" y="150" width="110" height="18" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="465" y="164" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">S4 · 决策与反馈</text>
+  <text x="465" y="182" text-anchor="middle" font-size="9" fill="#141413">批准/拒绝/要求修改</text>
+  <text x="465" y="196" text-anchor="middle" font-size="9" fill="#141413">反馈给AI系统</text>
+  <rect x="512" y="174" width="14" height="14" rx="7" fill="#059669"/>
+  <text x="519" y="185" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">S4</text>
+
+  <!-- S3→S4 diagonal arrow -->
+  <line x1="430" y1="140" x2="430" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="426,150 430,158 434,150" fill="#D1CFC5"/>
+
+  <!-- Feedback loop: S4→S1 -->
+  <path d="M 410 180 Q 20 180 95 140" stroke="#D1CFC5" stroke-width="1" fill="none" stroke-dasharray="4,3"/>
+  <polygon points="95,140 90,146 100,146" fill="#D1CFC5"/>
+  <text x="60" y="196" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">反馈给AI</text>
+  <text x="60" y="206" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">持续学习</text>
+</svg>
