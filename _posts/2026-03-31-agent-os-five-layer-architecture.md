@@ -499,26 +499,7 @@ class ReflectionCapability:
 
 **模式 1：主管-工作者（Supervisor-Workers）**
 
-```mermaid
-flowchart TB
-    Supervisor["Supervisor Agent<br/>负责：任务分解、分配、汇总"]
-    
-    W1["Worker 1"]
-    W2["Worker 2"]
-    W3["Worker 3"]
-    W4["Worker 4"]
-    
-    Supervisor --> W1
-    Supervisor --> W2
-    Supervisor --> W3
-    Supervisor --> W4
-    
-    style Supervisor fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style W1 fill:#dbeafe,stroke:#2563eb
-    style W2 fill:#dbeafe,stroke:#2563eb
-    style W3 fill:#dbeafe,stroke:#2563eb
-    style W4 fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2026-03-31-agent-os-04-supervisor.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景**：
 - 任务可以清晰分解为独立子任务
@@ -537,23 +518,7 @@ flowchart TB
 
 **模式 2：平等协作（Peer-to-Peer）**
 
-```mermaid
-flowchart TB
-    AgentA["Agent A"]
-    AgentB["Agent B"]
-    AgentC["Agent C"]
-    AgentD["Agent D"]
-    
-    AgentA <--> AgentB
-    AgentA <--> AgentC
-    AgentB <--> AgentD
-    AgentC <--> AgentD
-    
-    style AgentA fill:#dbeafe,stroke:#2563eb
-    style AgentB fill:#dbeafe,stroke:#2563eb
-    style AgentC fill:#dbeafe,stroke:#2563eb
-    style AgentD fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2026-03-31-agent-os-05-p2p.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景**：
 - Agent 需要频繁协商和信息交换
@@ -572,31 +537,7 @@ flowchart TB
 
 **模式 3：层级结构（Hierarchy）**
 
-```mermaid
-flowchart TB
-    CEO["CEO Agent"]
-    
-    VP1["VP 1"]
-    VP2["VP 2"]
-    VP3["VP 3"]
-    
-    Team1["Team"]
-    Team2["Team"]
-    
-    CEO --> VP1
-    CEO --> VP2
-    CEO --> VP3
-    
-    VP1 --> Team1
-    VP3 --> Team2
-    
-    style CEO fill:#fef3c7,stroke:#d97706,stroke-width:3px
-    style VP1 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style VP2 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style VP3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style Team1 fill:#dbeafe,stroke:#2563eb
-    style Team2 fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2026-03-31-agent-os-06-hierarchy.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景**：
 - 组织架构本身具有层级特性
