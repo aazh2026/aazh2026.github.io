@@ -42,18 +42,7 @@ redirect_from:
 
 在系统动力学中，**反馈循环 (Feedback Loop)** 是系统自我调节的核心机制。一个完整的反馈循环包含四个环节：
 
-```mermaid
-flowchart LR
-    Action["行动 Action"] --> Outcome["结果 Outcome"]
-    Outcome --> Sense["感知 Sense"]
-    Sense --> Feedback["反馈 Feedback"]
-    Feedback --> Action
-    
-    style Action fill:#dbeafe,stroke:#2563eb
-    style Outcome fill:#fef3c7,stroke:#d97706
-    style Sense fill:#d1fae5,stroke:#059669
-    style Feedback fill:#fed7aa,stroke:#ea580c
-```
+<object data="/assets/images/2026-03-15-feedback-loop-02-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：反馈循环的速度决定了系统适应环境的速度。
 
