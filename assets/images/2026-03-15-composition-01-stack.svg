@@ -1,0 +1,41 @@
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 能力组合三层架构 -->
+  <rect width="560" height="200" fill="#FAF9F5"/>
+
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 能力组合三层架构</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- L3: Capability Composition (top) -->
+  <rect x="40" y="50" width="480" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L3 · 能力组合</text>
+  <text x="200" y="65" font-size="12" fill="#141413" font-weight="600">Capability Composition</text>
+  <text x="60" y="84" font-size="10.5" fill="#141413">思考、推理、规划、反思等认知能力的组合</text>
+  <rect x="490" y="60" width="18" height="18" rx="9" fill="#D97757"/>
+  <text x="499" y="73" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="102" x2="280" y2="112" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,112 280,120 284,102" fill="#D1CFC5"/>
+
+  <!-- L2: Behavior Composition (middle) -->
+  <rect x="40" y="120" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="40" y="120" width="480" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="60" y="135" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L2 · 行为组合</text>
+  <text x="200" y="135" font-size="12" fill="#141413" font-weight="600">Behavior Composition</text>
+  <text x="60" y="152" font-size="10" fill="#87867F">工具使用、API 调用、数据处理的组合</text>
+  <rect x="490" y="130" width="18" height="14" rx="9" fill="#2563EB"/>
+  <text x="499" y="141" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Arrow -->
+  <line x1="280" y1="158" x2="280" y2="168" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="276,168 280,176 284,158" fill="#D1CFC5"/>
+
+  <!-- L1: Memory Composition (bottom) -->
+  <rect x="40" y="176" width="480" height="18" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="60" y="188" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1 · 记忆组合</text>
+  <text x="200" y="188" font-size="12" fill="#141413" font-weight="600">Memory Composition</text>
+  <text x="400" y="188" font-size="10" fill="#87867F">短期记忆 · 长期记忆 · 知识图谱</text>
+
+  <text x="280" y="200" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">L3 → L2 → L1：上层能力依赖下层组合，高层组合调用低层组合</text>
+</svg>

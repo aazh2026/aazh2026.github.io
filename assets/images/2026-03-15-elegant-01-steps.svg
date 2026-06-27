@@ -1,0 +1,80 @@
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- 优雅工程五步法 -->
+  <rect width="560" height="220" fill="#FAF9F5"/>
+
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">优雅工程五步法</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- S1: 意图表达 -->
+  <rect x="30" y="58" width="90" height="90" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="30" y="58" width="90" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="75" y="71" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">S1 · 意图表达</text>
+  <text x="75" y="92" text-anchor="middle" font-size="8.5" fill="#141413">精确的自然语言</text>
+  <text x="75" y="105" text-anchor="middle" font-size="8" fill="#87867F">描述需求</text>
+  <text x="75" y="118" text-anchor="middle" font-size="8" fill="#87867F">「实现函数，接收</text>
+  <text x="75" y="130" text-anchor="middle" font-size="8" fill="#87867F">订单列表，返回</text>
+  <text x="75" y="142" text-anchor="middle" font-size="8" fill="#87867F">按状态分组统计」</text>
+  <rect x="112" y="88" width="12" height="12" rx="6" fill="#D97757"/>
+  <text x="118" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="120" y1="100" x2="138" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="138,96 146,100 138,104" fill="#D1CFC5"/>
+
+  <!-- S2: AI生成初稿 -->
+  <rect x="146" y="58" width="90" height="90" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="146" y="58" width="90" height="16" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
+  <text x="191" y="71" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">S2 · AI生成初稿</text>
+  <text x="191" y="92" text-anchor="middle" font-size="8.5" fill="#141413">让 AI 生成</text>
+  <text x="191" y="105" text-anchor="middle" font-size="8" fill="#141413">多个实现方案</text>
+  <text x="191" y="118" text-anchor="middle" font-size="8" fill="#87867F">比较不同方案</text>
+  <text x="191" y="131" text-anchor="middle" font-size="8" fill="#87867F">的优劣</text>
+  <rect x="228" y="88" width="12" height="12" rx="6" fill="#EA580C"/>
+  <text x="234" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="236" y1="100" x2="254" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="254,96 262,100 254,104" fill="#D1CFC5"/>
+
+  <!-- S3: 结构审查 -->
+  <rect x="262" y="58" width="90" height="90" rx="6" fill="#FFFFFF" stroke="#F97316" stroke-width="1.5"/>
+  <rect x="262" y="58" width="90" height="16" rx="6" fill="#FDBA74" stroke="#F97316" stroke-width="1"/>
+  <text x="307" y="71" text-anchor="middle" font-size="9" fill="#F97316" font-family="ui-monospace, monospace" font-weight="600">S3 · 结构审查</text>
+  <text x="307" y="92" text-anchor="middle" font-size="8.5" fill="#141413">检查设计合理性</text>
+  <text x="307" y="105" text-anchor="middle" font-size="8" fill="#141413">验证边界条件</text>
+  <text x="307" y="118" text-anchor="middle" font-size="8" fill="#141413">确认错误处理</text>
+  <text x="307" y="131" text-anchor="middle" font-size="8" fill="#87867F">策略</text>
+  <rect x="344" y="88" width="12" height="12" rx="6" fill="#F97316"/>
+  <text x="350" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="352" y1="100" x2="370" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="370,96 378,100 370,104" fill="#D1CFC5"/>
+
+  <!-- S4: 美学打磨 -->
+  <rect x="378" y="58" width="90" height="90" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="378" y="58" width="90" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="423" y="71" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">S4 · 美学打磨</text>
+  <text x="423" y="92" text-anchor="middle" font-size="8.5" fill="#141413">统一命名风格</text>
+  <text x="423" y="105" text-anchor="middle" font-size="8" fill="#141413">简化复杂表达式</text>
+  <text x="423" y="118" text-anchor="middle" font-size="8" fill="#141413">删除冗余代码</text>
+  <rect x="460" y="88" width="12" height="12" rx="6" fill="#2563EB"/>
+  <text x="466" y="97" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
+
+  <!-- Arrow 4→5 (diagonal down) -->
+  <line x1="423" y1="148" x2="423" y2="164" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="419,164 423,172 427,164" fill="#D1CFC5"/>
+
+  <!-- S5: 验证与迭代 (bottom center) -->
+  <rect x="378" y="172" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
+  <rect x="378" y="172" width="90" height="14" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="423" y="184" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">S5 · 验证与迭代</text>
+  <text x="423" y="200" text-anchor="middle" font-size="8" fill="#141413">测试验证正确性</text>
+  <rect x="460" y="180" width="12" height="12" rx="6" fill="#059669"/>
+  <text x="466" y="189" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">5</text>
+
+  <!-- Feedback: S5 → S2 -->
+  <path d="M 378 192 Q 20 192 191 100" stroke="#D1CFC5" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+  <polygon points="191,100 197,96 197,104" fill="#D1CFC5"/>
+  <text x="280" y="210" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">迭代优化 ←</text>
+</svg>
