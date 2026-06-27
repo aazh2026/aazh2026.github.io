@@ -1,0 +1,57 @@
+<svg viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Carlini 发现的三个 Harness 限制 -->
+  <rect width="640" height="220" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="18" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Carlini 发现的三个 Harness 限制</text>
+  <text x="320" y="34" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Nicholas Carlini · 2026/03/15 · postcodeengineering.com</text>
+
+  <!-- Three columns -->
+
+  <!-- Limitation 1: Context Window Pollution -->
+  <rect x="20" y="50" width="186" height="150" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="20" y="50" width="186" height="28" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="113" y="68" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">限制 1</text>
+  <text x="113" y="96" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">上下文窗口污染</text>
+  <text x="113" y="114" text-anchor="middle" font-size="9.5" fill="#87867F">测试输出挤占</text>
+  <text x="113" y="128" text-anchor="middle" font-size="9.5" fill="#87867F">Agent 思考空间</text>
+  <!-- Symptom code -->
+  <rect x="30" y="138" width="166" height="52" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="38" y="152" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Agent: 5000行测试输出...</text>
+  <text x="38" y="163" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">Agent: context window full</text>
+  <text x="38" y="174" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">Agent: 任务是什么来着？</text>
+  <text x="113" y="190" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">→ SUMMARY: N/M passed</text>
+
+  <!-- Limitation 2: Time Blindness -->
+  <rect x="226" y="50" width="186" height="150" rx="8" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
+  <rect x="226" y="50" width="186" height="28" rx="8" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="319" y="68" text-anchor="middle" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">限制 2</text>
+  <text x="319" y="96" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">时间盲症</text>
+  <text x="319" y="114" text-anchor="middle" font-size="9.5" fill="#87867F">无法理解时间流逝</text>
+  <text x="319" y="128" text-anchor="middle" font-size="9.5" fill="#87867F">无法推理因果顺序</text>
+  <!-- Visual: timeline with gaps -->
+  <line x1="240" y1="155" x2="400" y2="155" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="248" y="147" width="20" height="16" rx="3" fill="#EA580C" opacity="0.4"/>
+  <rect x="280" y="147" width="20" height="16" rx="3" fill="#EA580C" opacity="0.4"/>
+  <rect x="312" y="147" width="20" height="16" rx="3" fill="#EA580C" opacity="0.4"/>
+  <rect x="344" y="147" width="20" height="16" rx="3" fill="#EA580C" opacity="0.4"/>
+  <rect x="376" y="147" width="20" height="16" rx="3" fill="#EA580C" opacity="0.4"/>
+  <text x="248" y="176" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">t=0</text>
+  <text x="376" y="176" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">t=n</text>
+  <text x="319" y="188" text-anchor="middle" font-size="8.5" fill="#EA580C" font-family="ui-monospace, monospace">因果链推理失效</text>
+
+  <!-- Limitation 3: Self-Destruction -->
+  <rect x="432" y="50" width="188" height="150" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <rect x="432" y="50" width="188" height="28" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="526" y="68" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">限制 3</text>
+  <text x="526" y="96" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">自我毁灭</text>
+  <text x="526" y="114" text-anchor="middle" font-size="9.5" fill="#87867F">修复过程本身</text>
+  <text x="526" y="128" text-anchor="middle" font-size="9.5" fill="#87867F">破坏待修复的问题</text>
+  <!-- Loop diagram -->
+  <path d="M 460 162 C 480 148, 500 148, 520 162 C 540 176, 560 176, 580 162" stroke="#2563EB" stroke-width="1.5" fill="none"/>
+  <polygon points="580,162 574,156 574,168" fill="#2563EB"/>
+  <text x="526" y="186" text-anchor="middle" font-size="8.5" fill="#2563EB" font-family="ui-monospace, monospace">修复 → 新 bug → 再修</text>
+
+  <!-- Bottom note -->
+  <text x="320" y="210" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">这三个限制不是 Harness 设计的失败，而是 LLM 作为测试执行者的根本性约束</text>
+</svg>
