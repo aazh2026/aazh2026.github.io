@@ -229,4 +229,13 @@ Osmani 在项目 README 里说了一句话值得放在结尾：**"AI coding agen
 
 技能的作用，就是强制代理不走那条最短路径。
 
+## 参考来源
+
+- Addy Osmani, [*agent-skills*](https://github.com/addyosmani/agent-skills)（MIT license）, GitHub
+- Lavi Nigam, [*lavinigam-gcp/build-with-adk*](https://github.com/lavinigam-gcp/build-with-adk) — 5 种 SKILL.md 设计模式的 ADK 可运行实现
+- Addy Osmani, "[Loop Engineering](https://addyosmani.com/blog/loop-engineering/)", addyosmani.com, June 7, 2026
+- Sydney Runkle, "[The Art of Loop Engineering](https://www.langchain.com/blog/the-art-of-loop-engineering)", langchain.com, June 16, 2026
+- Laws of Uk government Desktop Notation ('Hyrum's Law'), Cabinet Office, 2022
+- Henrik Warne, "[The Code Simplification Rule: 500 Lines](https://henrikwarne.com/2023/01/01/the-code-simplification-rule-500-lines/)", henrikwarne.com, January 2023
+
 > 仓库：[addyosmani/agent-skills](https://github.com/addyosmani/agent-skills)（MIT license）；五种模式对应到 ADK 实现：[lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk)。
