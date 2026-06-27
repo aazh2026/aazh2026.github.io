@@ -172,6 +172,8 @@ AI：   生成方案 → 执行实现 → 质量检查 → 监控运维
 
 ## AISE五层架构
 
+<object data="/assets/images/2025-05-12-aise-framework-01-layers.svg" type="image/svg+xml" width="100%"></object>
+
 AISE将软件工程活动划分为五个层次：
 
 ```mermaid
