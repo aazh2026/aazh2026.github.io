@@ -29,6 +29,14 @@ Osmani 的原文定义值得完整引用：
 
 关键不是"更快的自动化"，而是**人从执行链里被替换出来**。你设计系统，系统替你跑腿。
 
+## 通用工作流：五阶段循环
+
+Osmani 提出的通用 Loop 架构，所有编码循环——无论单 Agent 还是多 Agent——都遵循完全相同的五阶段，直到满足可验证的停止条件：
+
+<object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg" type="image/svg+xml" width="100%"></object>
+
+**停止条件**是整个循环的核心：必须是可验证的证据，不是"看起来对了"。test pass / build clean / reviewer sign-off——没有证据就不算完成。这条原则 Osmani 自己在项目 README 里说得最狠：**"AI coding agents default to the shortest path — which often means skipping specs, tests, security reviews, and the practices that make software reliable."** 技能的作用，就是强制代理不走那条最短路径。
+
 ## Osmani 的六块积木
 
 Osmani 把 Loop 系统拆成五个结构性组件，外加一个跨会话记忆层：
