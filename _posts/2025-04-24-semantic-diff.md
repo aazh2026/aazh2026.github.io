@@ -101,6 +101,8 @@ result = database.query(f"SELECT * FROM users WHERE id = {user_id}")
 
 ## 四、反直觉洞察：语义Diff的三层能力
 
+<object data="/assets/images/2025-04-24-semantic-diff-01-layers.svg" type="image/svg+xml" width="100%"></object>
+
 语义Diff（Semantic Diff）不是简单的工具升级，是范式的转变。
 
 ### 第一层：AST-level Diff（语法树级别对比）

@@ -1,0 +1,52 @@
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Semantic Diff 三层能力 -->
+  <rect width="560" height="240" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">语义 Diff 三层能力</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/24</text>
+
+  <!-- Left: text diff (problem) -->
+  <rect x="20" y="54" width="150" height="162" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="20" y="54" width="150" height="28" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="95" y="73" text-anchor="middle" font-size="10" fill="#87867F" font-weight="600">传统 Text Diff</text>
+  <text x="95" y="96" text-anchor="middle" font-size="10" fill="#87867F">- 语义变更</text>
+  <text x="95" y="110" text-anchor="middle" font-size="10" fill="#87867F">- 重构 = 全删重写</text>
+  <text x="95" y="124" text-anchor="middle" font-size="10" fill="#87867F">- 变量名改 = 全变</text>
+  <text x="95" y="138" text-anchor="middle" font-size="10" fill="#87867F">- 注释改 = 变更</text>
+  <text x="95" y="160" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">只看到字，不懂意</text>
+
+  <!-- Arrow: text diff → semantic diff -->
+  <line x1="175" y1="135" x2="205" y2="135" stroke="#D97757" stroke-width="2"/>
+  <polygon points="205,131 199,135 205,139" fill="#D97757"/>
+  <text x="190" y="128" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">演进</text>
+
+  <!-- Right: semantic diff three layers -->
+  <rect x="210" y="54" width="330" height="162" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="375" y="74" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">语义 Diff 三层能力</text>
+
+  <!-- Layer 1 -->
+  <rect x="226" y="88" width="298" height="40" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
+  <text x="242" y="106" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L1</text>
+  <text x="262" y="106" font-size="11" fill="#141413" font-weight="600">AST-level Diff</text>
+  <text x="242" y="120" font-size="9.5" fill="#87867F">语法树级别对比：变量重命名=无变更，重构=语义等价</text>
+
+  <!-- Layer 2 -->
+  <rect x="226" y="134" width="298" height="40" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
+  <text x="242" y="152" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L2</text>
+  <text x="262" y="152" font-size="11" fill="#141413" font-weight="600">Intent Delta Analysis</text>
+  <text x="242" y="166" font-size="9.5" fill="#87867F">意图差异分析：变更是否改变了业务规则的语义</text>
+
+  <!-- Layer 3 -->
+  <rect x="226" y="180" width="298" height="30" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
+  <text x="242" y="196" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L3</text>
+  <text x="262" y="196" font-size="11" fill="#141413" font-weight="600">Impact Graph Analysis</text>
+  <text x="400" y="196" font-size="9.5" fill="#87867F">影响图分析</text>
+
+  <!-- Capability label -->
+  <text x="95" y="196" font-size="8.5" fill="#87867F" text-anchor="middle">字面层</text>
+  <text x="375" y="196" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace" text-anchor="middle">语义层</text>
+  <line x1="95" y1="198" x2="95" y2="204" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="375" y1="198" x2="375" y2="204" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="95" y1="201" x2="375" y2="201" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>
