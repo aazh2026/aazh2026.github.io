@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Encyclopedia vs Map Thinking -->
+  <rect width="560" height="240" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">知识管理：百科全书模式 vs 地图思维</text>
+  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
+
+  <!-- Arrow: encyclopedia → map thinking -->
+  <line x1="195" y1="120" x2="345" y2="120" stroke="#D97757" stroke-width="2"/>
+  <polygon points="345,116 339,120 345,124" fill="#D97757"/>
+  <text x="270" y="114" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">范式转移</text>
+  <text x="270" y="132" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">↓</text>
+
+  <!-- LEFT: Encyclopedia Mode -->
+  <rect x="20" y="52" width="170" height="170" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="20" y="52" width="170" height="28" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="105" y="71" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">百科全书模式</text>
+  <text x="105" y="88" text-anchor="middle" font-size="9" fill="#87867F">把所有知识堆在一起</text>
+  <line x1="30" y1="96" x2="180" y2="96" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Sin 1 -->
+  <text x="30" y="114" font-size="9" fill="#D97757" font-weight="600">罪1</text>
+  <text x="50" y="114" font-size="9.5" fill="#141413">上下文拥挤</text>
+  <text x="30" y="126" font-size="9" fill="#87867F">Agent 空间被挤压</text>
+
+  <!-- Sin 2 -->
+  <text x="30" y="144" font-size="9" fill="#D97757" font-weight="600">罪2</text>
+  <text x="50" y="144" font-size="9.5" fill="#141413">无优先级</text>
+  <text x="30" y="156" font-size="9" fill="#87867F">什么都重要=都不重要</text>
+
+  <!-- Sin 3 -->
+  <text x="30" y="174" font-size="9" fill="#D97757" font-weight="600">罪3</text>
+  <text x="50" y="174" font-size="9.5" fill="#141413">文档腐烂</text>
+  <text x="30" y="186" font-size="9" fill="#87867F">规则墓地·无维护</text>
+
+  <!-- Sin 4 -->
+  <text x="30" y="204" font-size="9" fill="#D97757" font-weight="600">罪4</text>
+  <text x="50" y="204" font-size="9.5" fill="#141413">无法机械化验证</text>
+  <text x="30" y="216" font-size="9" fill="#87867F">漂移不可避免</text>
+
+  <!-- RIGHT: Map Thinking -->
+  <rect x="370" y="52" width="170" height="170" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
+  <rect x="370" y="52" width="170" height="28" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
+  <text x="455" y="71" text-anchor="middle" font-size="11" fill="#059669" font-weight="600">地图思维</text>
+  <text x="455" y="88" text-anchor="middle" font-size="9" fill="#87867F">小入口 · 渐进披露</text>
+  <line x1="380" y1="96" x2="530" y2="96" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+  <!-- Feature 1 -->
+  <text x="380" y="114" font-size="9" fill="#059669" font-weight="600">✓</text>
+  <text x="394" y="114" font-size="9.5" fill="#141413">小且稳定的入口</text>
+  <text x="380" y="126" font-size="9" fill="#87867F">不一次性加载所有</text>
+
+  <!-- Feature 2 -->
+  <text x="380" y="144" font-size="9" fill="#059669" font-weight="600">✓</text>
+  <text x="394" y="144" font-size="9.5" fill="#141413">渐进式披露</text>
+  <text x="380" y="156" font-size="9" fill="#87867F">下一步去哪里看</text>
+
+  <!-- Feature 3 -->
+  <text x="380" y="174" font-size="9" fill="#059669" font-weight="600">✓</text>
+  <text x="394" y="174" font-size="9.5" fill="#141413">机械化验证</text>
+  <text x="380" y="186" font-size="9" fill="#87867F">覆盖率·新鲜度·归属</text>
+
+  <!-- Feature 4 -->
+  <text x="380" y="204" font-size="9" fill="#059669" font-weight="600">✓</text>
+  <text x="394" y="204" font-size="9.5" fill="#141413">文档园丁 Agent</text>
+  <text x="380" y="216" font-size="9" fill="#87867F">知识自我维护</text>
+
+  <!-- Bottom quote -->
+  <text x="280" y="234" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">"把 AGENTS.md 当作地图，而不是百科全书"</text>
+</svg>
