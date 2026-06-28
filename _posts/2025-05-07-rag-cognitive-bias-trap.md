@@ -391,6 +391,8 @@ RAG回答：
 
 ## 防御策略：对抗偏见的RAG架构
 
+<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-02-defense.svg" type="image/svg+xml" width="100%"></object>
+
 ### 策略1：主动寻找反对观点
 
 **核心思想**：不是检索支持答案的内容，而是主动寻找不同观点。

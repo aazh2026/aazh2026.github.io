@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img">
+  <title>RAG偏见防御策略</title>
+  <desc>对抗RAG确认偏误的五大防御策略</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
+      .text-secondary { fill: #87867F; font-family: system-ui, sans-serif; }
+      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; font-weight: 600; }
+      .text-olive { fill: #788C5D; font-family: system-ui, sans-serif; }
+      .border { stroke: #D1CFC5; stroke-width: 1; fill: none; }
+      .card { fill: #E3DACC; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="320" class="bg"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" class="text-main" font-size="18" font-weight="600">对抗RAG偏见的五大防御策略</text>
+
+  <!-- Strategy cards -->
+  <!-- Row 1 -->
+  <g transform="translate(0, 55)">
+    <!-- Card 1 -->
+    <g transform="translate(50, 0)">
+      <rect width="130" height="110" rx="8" class="card"/>
+      <rect width="130" height="110" rx="8" class="border"/>
+      <rect width="130" height="28" rx="8" fill="#788C5D" opacity="0.2"/>
+      <rect y="20" width="130" height="8" fill="#E3DACC"/>
+      <text x="65" y="19" text-anchor="middle" class="text-olive" font-size="11" font-weight="600">策略1</text>
+      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">主动寻找</text>
+      <text x="65" y="63" text-anchor="middle" class="text-main" font-size="11" font-weight="500">反对观点</text>
+      <line x1="20" y1="78" x2="110" y2="78" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="65" y="93" text-anchor="middle" class="text-secondary" font-size="9">检索对立查询</text>
+      <text x="65" y="106" text-anchor="middle" class="text-secondary" font-size="9">探索相反视角</text>
+    </g>
+
+    <!-- Card 2 -->
+    <g transform="translate(195, 0)">
+      <rect width="130" height="110" rx="8" class="card"/>
+      <rect width="130" height="110" rx="8" class="border"/>
+      <rect width="130" height="28" rx="8" fill="#788C5D" opacity="0.2"/>
+      <rect y="20" width="130" height="8" fill="#E3DACC"/>
+      <text x="65" y="19" text-anchor="middle" class="text-olive" font-size="11" font-weight="600">策略2</text>
+      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">多源</text>
+      <text x="65" y="63" text-anchor="middle" class="text-main" font-size="11" font-weight="500">交叉验证</text>
+      <line x1="20" y1="78" x2="110" y2="78" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="65" y="93" text-anchor="middle" class="text-secondary" font-size="9">多独立来源</text>
+      <text x="65" y="106" text-anchor="middle" class="text-secondary" font-size="9">验证声明一致性</text>
+    </g>
+
+    <!-- Card 3 -->
+    <g transform="translate(340, 0)">
+      <rect width="130" height="110" rx="8" class="card"/>
+      <rect width="130" height="110" rx="8" class="border"/>
+      <rect width="130" height="28" rx="8" fill="#D97757" opacity="0.2"/>
+      <rect y="20" width="130" height="8" fill="#E3DACC"/>
+      <text x="65" y="19" text-anchor="middle" class="text-accent" font-size="11" font-weight="600">策略3</text>
+      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">透明度设计</text>
+      <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">公开检索过程</text>
+      <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">展示观点分布</text>
+      <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">标注来源可信度</text>
+    </g>
+
+    <!-- Card 4 -->
+    <g transform="translate(485, 0)">
+      <rect width="130" height="110" rx="8" class="card"/>
+      <rect width="130" height="110" rx="8" class="border"/>
+      <rect width="130" height="28" rx="8" fill="#D97757" opacity="0.2"/>
+      <rect y="20" width="130" height="8" fill="#E3DACC"/>
+      <text x="65" y="19" text-anchor="middle" class="text-accent" font-size="11" font-weight="600">策略4</text>
+      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">不确定性表达</text>
+      <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">不知道时</text>
+      <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">承认不知道</text>
+      <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">优于自信错误</text>
+    </g>
+  </g>
+
+  <!-- Row 2: Strategy 5 (centered) -->
+  <g transform="translate(275, 175)">
+    <rect width="130" height="110" rx="8" class="card"/>
+    <rect width="130" height="110" rx="8" class="border"/>
+    <rect width="130" height="28" rx="8" fill="#141413" opacity="0.1"/>
+    <rect y="20" width="130" height="8" fill="#E3DACC"/>
+    <text x="65" y="19" text-anchor="middle" class="text-main" font-size="11" font-weight="600">策略5</text>
+    <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">人机协作验证</text>
+    <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">关键信息</text>
+    <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">人工审核</text>
+    <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">高风险场景必检</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="340" y="305" text-anchor="middle" class="text-secondary" font-size="10">技术本身是中立的，但技术的设计和使用方式决定了它的影响</text>
+</svg>

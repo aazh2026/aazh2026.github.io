@@ -82,6 +82,8 @@ redirect_from:
 
 **2024年，AI生成测试**：AI可以基于代码自动生成测试，基于变更自动更新测试。
 
+<object data="/assets/images/2025-04-25-stop-writing-unit-tests-01-evolution.svg" type="image/svg+xml" width="100%"></object>
+
 | 时代 | 测试方式 | 编写者 | 维护成本 | 覆盖率 |
 |------|---------|--------|---------|--------|
 | 手工时代 | 人工运行 | 人 | 高 | 低 |
@@ -187,6 +189,8 @@ class Account:
 - 运行时验证：关键路径的不变量检查
 
 ### 新的测试金字塔
+
+<object data="/assets/images/2025-04-25-stop-writing-unit-tests-02-pyramid.svg" type="image/svg+xml" width="100%"></object>
 
 **传统金字塔**：
 ```

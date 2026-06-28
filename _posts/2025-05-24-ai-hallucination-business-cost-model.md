@@ -98,6 +98,8 @@ redirect_from:
 
 **总成本 = 直接成本 + 间接成本 + 风险成本**
 
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%"></object>
+
 #### 直接成本（Direct Costs）
 
 | 成本项 | 计算方式 | 示例 |
@@ -260,6 +262,8 @@ def calculate_risk_adjusted_roi(investment, returns, hallucination_costs, confid
 ---
 
 ## 风险分层与容忍度
+
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%"></object>
 
 ### 风险分层模型
 

@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .slate-text { fill: #141413; font-family: system-ui, sans-serif; }
+      .clay { fill: #D97757; }
+      .olive { fill: #788C5D; }
+      .oat { fill: #E3DACC; }
+      .g300 { fill: #D1CFC5; }
+      .g500 { fill: #87867F; }
+      .section-label { fill: #87867F; font-family: system-ui, sans-serif; font-size: 11px; }
+      .artifact-name { fill: #141413; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
+      .artifact-desc { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; }
+      .delta-label { fill: #D97757; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; }
+      .green-label { fill: #788C5D; font-family: system-ui, sans-serif; font-size: 10px; font-weight: 600; }
+      .code-text { fill: #141413; font-family: monospace; font-size: 10px; }
+    </style>
+  </defs>
+
+  <rect width="720" height="500" class="bg"/>
+
+  <!-- Title -->
+  <text x="24" y="32" class="slate-text" font-size="16" font-weight="700">Agent-Driven Debugging：三层模型</text>
+  <line x1="24" y1="42" x2="696" y2="42" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Top: 75/25 Principle -->
+  <g transform="translate(24, 56)">
+    <text x="0" y="0" class="section-label">核心原则：75/25 法则</text>
+    <rect x="0" y="12" width="672" height="64" rx="8" fill="#E3DACC"/>
+
+    <!-- AI 75% -->
+    <g transform="translate(16, 24)">
+      <rect width="504" height="40" rx="6" fill="#D97757"/>
+      <text x="12" y="18" fill="white" font-family="system-ui" font-size="11" font-weight="600">75%</text>
+      <text x="60" y="18" fill="white" font-family="system-ui" font-size="11">信息处理交给 Agent</text>
+      <text x="12" y="32" class="artifact-desc" fill="rgba(255,255,255,0.8)">日志检索 · 代码定位 · 相似案例 · 模式匹配</text>
+    </g>
+
+    <!-- Human 25% -->
+    <g transform="translate(528, 24)">
+      <rect width="128" height="40" rx="6" fill="#788C5D"/>
+      <text x="12" y="18" fill="white" font-family="system-ui" font-size="11" font-weight="600">25%</text>
+      <text x="60" y="18" fill="white" font-family="system-ui" font-size="11">人类决策</text>
+      <text x="12" y="32" class="artifact-desc" fill="rgba(255,255,255,0.8)">假设验证 · 修复决策</text>
+    </g>
+  </g>
+
+  <!-- Three Layers -->
+  <g transform="translate(24, 150)">
+    <text x="0" y="0" class="section-label">三层模型</text>
+
+    <!-- Layer 1: Personal -->
+    <g transform="translate(0, 14)">
+      <rect width="672" height="100" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+
+      <!-- Left: Layer number -->
+      <rect x="12" y="12" width="40" height="40" rx="6" fill="#D97757"/>
+      <text x="32" y="38" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="700">1</text>
+
+      <!-- Title -->
+      <text x="64" y="30" class="artifact-name" font-size="14">个人诊断助手</text>
+      <text x="64" y="46" class="artifact-desc">Personal Diagnostic Agent</text>
+      <text x="64" y="62" class="green-label">每个开发者专属 · 解决信息过载</text>
+
+      <!-- Capabilities -->
+      <g transform="translate(64, 72)">
+        <rect width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="50" y="14" text-anchor="middle" class="artifact-desc">日志分析</text>
+
+        <rect x="108" y="0" width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="158" y="14" text-anchor="middle" class="artifact-desc">代码理解</text>
+
+        <rect x="216" y="0" width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="266" y="14" text-anchor="middle" class="artifact-desc">知识检索</text>
+
+        <rect x="324" y="0" width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="374" y="14" text-anchor="middle" class="artifact-desc">假设生成</text>
+      </g>
+    </g>
+
+    <!-- Layer 2: Team -->
+    <g transform="translate(0, 126)">
+      <rect width="672" height="100" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+
+      <rect x="12" y="12" width="40" height="40" rx="6" fill="#D97757"/>
+      <text x="32" y="38" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="700">2</text>
+
+      <text x="64" y="30" class="artifact-name" font-size="14">团队诊断中心</text>
+      <text x="64" y="46" class="artifact-desc">Team Diagnostic Hub</text>
+      <text x="64" y="62" class="green-label">团队共享 · 沉淀调试知识 · 放大团队能力</text>
+
+      <g transform="translate(64, 72)">
+        <rect width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="50" y="14" text-anchor="middle" class="artifact-desc">错误知识库</text>
+
+        <rect x="108" y="0" width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="158" y="14" text-anchor="middle" class="artifact-desc">模式识别</text>
+
+        <rect x="216" y="0" width="100" height="20" rx="4" fill="#E3DACC"/>
+        <text x="266" y="14" text-anchor="middle" class="artifact-desc">根因分析</text>
+
+        <rect x="324" y="0" width="120" height="20" rx="4" fill="#E3DACC"/>
+        <text x="384" y="14" text-anchor="middle" class="artifact-desc">影响评估</text>
+      </g>
+    </g>
+
+    <!-- Layer 3: Organization -->
+    <g transform="translate(0, 238)">
+      <rect width="672" height="100" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+
+      <rect x="12" y="12" width="40" height="40" rx="6" fill="#D97757"/>
+      <text x="32" y="38" text-anchor="middle" fill="white" font-family="system-ui" font-size="16" font-weight="700">3</text>
+
+      <text x="64" y="30" class="artifact-name" font-size="14">组织诊断智能</text>
+      <text x="64" y="46" class="artifact-desc">Organizational Diagnostic Intelligence</text>
+      <text x="64" y="62" class="green-label">系统健康监测 · 主动预防 · 从救火到预警</text>
+
+      <g transform="translate(64, 72)">
+        <rect width="120" height="20" rx="4" fill="#E3DACC"/>
+        <text x="60" y="14" text-anchor="middle" class="artifact-desc">预测性诊断</text>
+
+        <rect x="128" y="0" width="160" height="20" rx="4" fill="#E3DACC"/>
+        <text x="208" y="14" text-anchor="middle" class="artifact-desc">系统性根因分析</text>
+
+        <rect x="296" y="0" width="120" height="20" rx="4" fill="#E3DACC"/>
+        <text x="356" y="14" text-anchor="middle" class="artifact-desc">知识资产化</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom: Role transformation -->
+  <g transform="translate(24, 360)">
+    <text x="0" y="0" class="section-label">角色转变：从猎人到驯兽师</text>
+
+    <g transform="translate(0, 14)">
+      <!-- Traditional -->
+      <rect width="300" height="110" rx="8" class="artifact-box"/>
+      <text x="16" y="24" class="delta-label">传统调试</text>
+      <text x="16" y="42" class="artifact-name" font-size="12">猎人 (Hunter)</text>
+      <text x="16" y="60" class="artifact-desc">独自追踪细节</text>
+      <text x="16" y="74" class="artifact-desc">依赖个人经验</text>
+      <text x="16" y="88" class="artifact-desc">线性、手动</text>
+      <rect x="16" y="96" width="268" height="8" rx="4" fill="#87867F"/>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(320, 56)">
+      <path d="M0,0 L60,0 L55,-8 L76,0 L55,8 Z" fill="#D97757"/>
+      <text x="38" y="28" text-anchor="middle" class="delta-label" font-size="10">范式转移</text>
+    </g>
+
+    <!-- Agent-Driven -->
+    <g transform="translate(396, 14)">
+      <rect width="300" height="110" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+      <text x="16" y="24" class="green-label">Agent-Driven Debugging</text>
+      <text x="16" y="42" class="artifact-name" font-size="12">驯兽师 (Handler)</text>
+      <text x="16" y="60" class="artifact-desc">定义目标 + 提供线索</text>
+      <text x="16" y="74" class="artifact-desc">人机协作 · 系统杠杆</text>
+      <text x="16" y="88" class="artifact-desc">主动、系统性</text>
+      <rect x="16" y="96" width="268" height="8" rx="4" fill="#D97757"/>
+    </g>
+  </g>
+</svg>

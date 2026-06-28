@@ -84,6 +84,8 @@ redirect_from:
 
 ## AI驱动的安全左移
 
+<object data="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" type="image/svg+xml" width="100%"></object>
+
 ### 什么是"终极左移"
 
 **传统左移**：

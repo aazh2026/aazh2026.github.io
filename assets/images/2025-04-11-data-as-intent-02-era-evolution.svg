@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-primary { fill: #141413; font-size: 13px; font-weight: 600; }
+      .text-secondary { fill: #87867F; font-size: 11px; }
+    </style>
+  </defs>
+  <rect width="800" height="460" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="36" class="text-primary" font-size="15px">AI系统演化史：从特征工程到数据工程</text>
+  <text x="40" y="52" class="text-secondary">Evolution of AI Systems: From Feature Engineering to Data Engineering</text>
+
+  <!-- 4 era cards in a horizontal flow -->
+  <!-- Each card: year range, era name, core work, key skill, output -->
+
+  <!-- Card 1: Feature Engineering 2010s -->
+  <rect x="40" y="80" width="170" height="320" rx="12" fill="#141413"/>
+  <rect x="40" y="80" width="170" height="36" rx="12" fill="#D97757"/>
+  <rect x="40" y="100" width="170" height="16" fill="#D97757"/>
+  <text x="125" y="104" fill="#FAF9F5" font-size="14px" font-weight="700" text-anchor="middle">2010s</text>
+  <text x="125" y="140" fill="#FAF9F5" font-size="13px" font-weight="700" text-anchor="middle">特征工程时代</text>
+  <text x="125" y="156" fill="#87867F" font-size="10px" text-anchor="middle">Feature Engineering</text>
+
+  <line x1="60" y1="172" x2="190" y2="172" stroke="#2a2a2a" stroke-width="1"/>
+
+  <text x="60" y="194" fill="#87867F" font-size="10px">核心工作</text>
+  <text x="60" y="210" fill="#E3DACC" font-size="11px" font-weight="600">特征设计</text>
+
+  <text x="60" y="236" fill="#87867F" font-size="10px">关键技能</text>
+  <text x="60" y="252" fill="#E3DACC" font-size="11px" font-weight="600">领域知识</text>
+
+  <text x="60" y="278" fill="#87867F" font-size="10px">产出物</text>
+  <text x="60" y="294" fill="#E3DACC" font-size="11px" font-weight="600">特征集</text>
+
+  <text x="60" y="330" fill="#87867F" font-size="10px">特点</text>
+  <text x="60" y="348" fill="#87867F" font-size="10px">手工设计特征</text>
+  <text x="60" y="362" fill="#87867F" font-size="10px">简单模型（LR/DT）</text>
+  <text x="60" y="376" fill="#87867F" font-size="10px">可解释性强</text>
+
+  <!-- Arrow 1→2 -->
+  <text x="215" y="240" fill="#D97757" font-size="18px" font-weight="bold">→</text>
+
+  <!-- Card 2: Model Engineering 2015s -->
+  <rect x="225" y="80" width="170" height="320" rx="12" fill="#141413"/>
+  <rect x="225" y="80" width="170" height="36" rx="12" fill="#788C5D"/>
+  <rect x="225" y="100" width="170" height="16" fill="#788C5D"/>
+  <text x="310" y="104" fill="#FAF9F5" font-size="14px" font-weight="700" text-anchor="middle">2015s</text>
+  <text x="310" y="140" fill="#FAF9F5" font-size="13px" font-weight="700" text-anchor="middle">模型工程时代</text>
+  <text x="310" y="156" fill="#87867F" font-size="10px" text-anchor="middle">Model Engineering</text>
+
+  <line x1="245" y1="172" x2="375" y2="172" stroke="#2a2a2a" stroke-width="1"/>
+
+  <text x="245" y="194" fill="#87867F" font-size="10px">核心工作</text>
+  <text x="245" y="210" fill="#E3DACC" font-size="11px" font-weight="600">架构设计</text>
+
+  <text x="245" y="236" fill="#87867F" font-size="10px">关键技能</text>
+  <text x="245" y="252" fill="#E3DACC" font-size="11px" font-weight="600">ML/DL</text>
+
+  <text x="245" y="278" fill="#87867F" font-size="10px">产出物</text>
+  <text x="245" y="294" fill="#E3DACC" font-size="11px" font-weight="600">模型</text>
+
+  <text x="245" y="330" fill="#87867F" font-size="10px">特点</text>
+  <text x="245" y="348" fill="#87867F" font-size="10px">深度学习兴起</text>
+  <text x="245" y="362" fill="#87867F" font-size="10px">特征自动学习</text>
+  <text x="245" y="376" fill="#87867F" font-size="10px">工程师设计架构</text>
+
+  <!-- Arrow 2→3 -->
+  <text x="400" y="240" fill="#D97757" font-size="18px" font-weight="bold">→</text>
+
+  <!-- Card 3: LLM Era 2020s -->
+  <rect x="410" y="80" width="170" height="320" rx="12" fill="#141413"/>
+  <rect x="410" y="80" width="170" height="36" rx="12" fill="#87867F"/>
+  <rect x="410" y="100" width="170" height="16" fill="#87867F"/>
+  <text x="495" y="104" fill="#FAF9F5" font-size="14px" font-weight="700" text-anchor="middle">2020s</text>
+  <text x="495" y="140" fill="#FAF9F5" font-size="13px" font-weight="700" text-anchor="middle">大模型时代</text>
+  <text x="495" y="156" fill="#87867F" font-size="10px" text-anchor="middle">LLM Era</text>
+
+  <line x1="430" y1="172" x2="560" y2="172" stroke="#2a2a2a" stroke-width="1"/>
+
+  <text x="430" y="194" fill="#87867F" font-size="10px">核心工作</text>
+  <text x="430" y="210" fill="#E3DACC" font-size="11px" font-weight="600">Prompt工程</text>
+
+  <text x="430" y="236" fill="#87867F" font-size="10px">关键技能</text>
+  <text x="430" y="252" fill="#E3DACC" font-size="11px" font-weight="600">语言理解</text>
+
+  <text x="430" y="278" fill="#87867F" font-size="10px">产出物</text>
+  <text x="430" y="294" fill="#E3DACC" font-size="11px" font-weight="600">Prompt</text>
+
+  <text x="430" y="330" fill="#87867F" font-size="10px">特点</text>
+  <text x="430" y="348" fill="#87867F" font-size="10px">预训练+微调</text>
+  <text x="430" y="362" fill="#87867F" font-size="10px">RAG设计</text>
+  <text x="430" y="376" fill="#87867F" font-size="10px">不再从头训练</text>
+
+  <!-- Arrow 3→4 -->
+  <text x="585" y="240" fill="#D97757" font-size="18px" font-weight="bold">→</text>
+
+  <!-- Card 4: Data Engineering 2024+ (highlighted) -->
+  <rect x="595" y="80" width="170" height="320" rx="12" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="595" y="80" width="170" height="36" rx="12" fill="#141413"/>
+  <rect x="595" y="100" width="170" height="16" fill="#141413"/>
+  <text x="680" y="104" fill="#D97757" font-size="14px" font-weight="700" text-anchor="middle">2024+</text>
+  <text x="680" y="140" fill="#FAF9F5" font-size="13px" font-weight="700" text-anchor="middle">数据工程时代</text>
+  <text x="680" y="156" fill="#E3DACC" font-size="10px" text-anchor="middle">Data Engineering</text>
+
+  <line x1="615" y1="172" x2="745" y2="172" stroke="#FAF9F5" stroke-width="1" stroke-opacity="0.3"/>
+
+  <text x="615" y="194" fill="#FAF9F5" font-size="10px" fill-opacity="0.7">核心工作</text>
+  <text x="615" y="210" fill="#FAF9F5" font-size="11px" font-weight="700">数据准备</text>
+
+  <text x="615" y="236" fill="#FAF9F5" font-size="10px" fill-opacity="0.7">关键技能</text>
+  <text x="615" y="252" fill="#FAF9F5" font-size="11px" font-weight="700">数据质量</text>
+
+  <text x="615" y="278" fill="#FAF9F5" font-size="10px" fill-opacity="0.7">产出物</text>
+  <text x="615" y="294" fill="#FAF9F5" font-size="11px" font-weight="700">数据集</text>
+
+  <text x="615" y="330" fill="#FAF9F5" font-size="10px" fill-opacity="0.7">特点</text>
+  <text x="615" y="348" fill="#FAF9F5" font-size="10px">大模型能力已很强</text>
+  <text x="615" y="362" fill="#FAF9F5" font-size="10px">瓶颈在于数据质量</text>
+  <text x="615" y="376" fill="#E3DACC" font-size="10px" font-weight="600">数据即Intent</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="40" y="420" width="720" height="30" rx="6" fill="#E3DACC"/>
+  <text x="60" y="440" fill="#141413" font-size="11px">每一次AI技术跃迁，都重新定义了"什么是核心竞争力"</text>
+  <text x="430" y="440" fill="#D97757" font-size="11px" font-weight="600">AI-Native时代：核心竞争力 = 准备高质量数据的能力</text>
+</svg>

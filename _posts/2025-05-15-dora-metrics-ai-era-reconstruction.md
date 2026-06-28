@@ -151,6 +151,8 @@ AI时代问题：
 
 ## 重构后的4大指标
 
+<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ### 新指标1：意图交付频率（Intent Delivery Frequency）
 
 **定义**：单位时间内成功交付的意图变更数量。

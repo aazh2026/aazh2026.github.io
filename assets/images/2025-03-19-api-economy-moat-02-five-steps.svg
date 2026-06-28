@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="AI产品护城河构建五步法">
+  <title>AI产品护城河构建五步法</title>
+  <desc>从垂直场景选择到品牌信任建立的五步护城河构建框架</desc>
+
+  <defs>
+    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    </marker>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="400" fill="#FAF9F5"/>
+  <rect x="0" y="0" width="800" height="50" fill="#141413"/>
+  <text x="400" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FAF9F5" text-anchor="middle" letter-spacing="1">AI 产品护城河构建五步法</text>
+
+  <!-- Step 1 -->
+  <g transform="translate(20, 70)">
+    <rect width="144" height="280" rx="10" fill="#E3DACC" filter="url(#shadow2)"/>
+    <rect width="144" height="44" rx="10" fill="#D97757"/>
+    <rect width="144" height="22" y="22" fill="#D97757"/>
+    <text x="72" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">第一步</text>
+    <text x="72" y="88" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#D97757" text-anchor="middle">01</text>
+    <text x="72" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413" text-anchor="middle">选择垂直</text>
+    <line x1="24" y1="124" x2="120" y2="124" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="142" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">放弃通用</text>
+    <text x="72" y="158" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">深耕垂直场景</text>
+    <text x="72" y="180" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">→ 市场越小</text>
+    <text x="72" y="196" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">→ 壁垒越深</text>
+    <rect x="20" y="210" width="104" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="72" y="226" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">错误</text>
+    <text x="72" y="238" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">AI写作工具</text>
+    <text x="72" y="252" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" text-anchor="middle">✓ 房产律师助手</text>
+  </g>
+
+  <!-- Arrow 1-2 -->
+  <path d="M174 210 L194 210" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowR)"/>
+
+  <!-- Step 2 -->
+  <g transform="translate(196, 70)">
+    <rect width="144" height="280" rx="10" fill="#E3DACC" filter="url(#shadow2)"/>
+    <rect width="144" height="44" rx="10" fill="#D97757"/>
+    <rect width="144" height="22" y="22" fill="#D97757"/>
+    <text x="72" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">第二步</text>
+    <text x="72" y="88" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#D97757" text-anchor="middle">02</text>
+    <text x="72" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413" text-anchor="middle">积累数据</text>
+    <line x1="24" y1="124" x2="120" y2="124" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="142" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">API 提供能力</text>
+    <text x="72" y="158" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">数据构建壁垒</text>
+    <!-- Data growth chart -->
+    <rect x="24" y="172" width="96" height="60" rx="4" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <polyline points="30,220 46,215 62,205 78,188 94,165" stroke="#788C5D" stroke-width="2" fill="none"/>
+    <polyline points="30,220 46,218 62,212 78,200 94,185" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+    <text x="72" y="244" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">专有数据 → 指数壁垒</text>
+  </g>
+
+  <!-- Arrow 2-3 -->
+  <path d="M350 210 L370 210" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowR)"/>
+
+  <!-- Step 3 -->
+  <g transform="translate(372, 70)">
+    <rect width="144" height="280" rx="10" fill="#E3DACC" filter="url(#shadow2)"/>
+    <rect width="144" height="44" rx="10" fill="#D97757"/>
+    <rect width="144" height="22" y="22" fill="#D97757"/>
+    <text x="72" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">第三步</text>
+    <text x="72" y="88" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#D97757" text-anchor="middle">03</text>
+    <text x="72" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413" text-anchor="middle">深度嵌入</text>
+    <line x1="24" y1="124" x2="120" y2="124" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="142" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">嵌入工作流</text>
+    <text x="72" y="158" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">难以被替换</text>
+    <!-- Integration nodes -->
+    <rect x="28" y="172" width="88" height="60" rx="4" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <circle cx="48" cy="196" r="8" fill="#D97757" opacity="0.8"/>
+    <circle cx="72" cy="184" r="8" fill="#788C5D" opacity="0.8"/>
+    <circle cx="96" cy="200" r="8" fill="#87867F" opacity="0.6"/>
+    <line x1="56" y1="196" x2="64" y2="188" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="80" y1="188" x2="88" y2="196" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="54" y1="202" x2="90" y2="202" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="244" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">CRM + ERP + IDE 集成</text>
+  </g>
+
+  <!-- Arrow 3-4 -->
+  <path d="M526 210 L546 210" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowR)"/>
+
+  <!-- Step 4 -->
+  <g transform="translate(548, 70)">
+    <rect width="144" height="280" rx="10" fill="#E3DACC" filter="url(#shadow2)"/>
+    <rect width="144" height="44" rx="10" fill="#D97757"/>
+    <rect width="144" height="22" y="22" fill="#D97757"/>
+    <text x="72" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">第四步</text>
+    <text x="72" y="88" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#D97757" text-anchor="middle">04</text>
+    <text x="72" y="112" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413" text-anchor="middle">构建社区</text>
+    <line x1="24" y1="124" x2="120" y2="124" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="142" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">产品可被复制</text>
+    <text x="72" y="158" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">社区难以复制</text>
+    <!-- Network effect diagram -->
+    <rect x="24" y="172" width="96" height="60" rx="4" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <circle cx="48" cy="196" r="7" fill="#D97757"/>
+    <circle cx="72" cy="182" r="7" fill="#D97757"/>
+    <circle cx="96" cy="196" r="7" fill="#D97757"/>
+    <circle cx="60" cy="210" r="7" fill="#788C5D"/>
+    <circle cx="84" cy="210" r="7" fill="#788C5D"/>
+    <line x1="55" y1="195" x2="65" y2="185" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="79" y1="185" x2="89" y2="195" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="54" y1="202" x2="78" y2="202" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="62" y1="208" x2="78" y2="208" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="72" y="244" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">网络效应闭环</text>
+  </g>
+
+  <!-- Arrow 4-5 -->
+  <path d="M702 210 L722 210" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowR)"/>
+
+  <!-- Step 5 -->
+  <g transform="translate(724, 70)">
+    <rect width="56" height="280" rx="10" fill="#E3DACC" filter="url(#shadow2)"/>
+    <rect width="56" height="44" rx="10" fill="#788C5D"/>
+    <rect width="56" height="22" y="22" fill="#788C5D"/>
+    <text x="28" y="28" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">第五步</text>
+    <text x="28" y="88" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#788C5D" text-anchor="middle">05</text>
+    <text x="28" y="112" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">品牌</text>
+    <text x="28" y="124" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">信任</text>
+    <line x1="10" y1="132" x2="46" y2="132" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="28" y="150" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">关键场景</text>
+    <text x="28" y="162" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">信任是</text>
+    <text x="28" y="174" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">终极护城河</text>
+  </g>
+
+  <!-- Bottom key -->
+  <rect x="20" y="360" width="760" height="30" rx="6" fill="#E3DACC"/>
+  <text x="40" y="379" font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+    <tspan font-weight="600" fill="#D97757">核心逻辑：</tspan>
+    <tspan>垂直场景 → 专有数据 → 工作流嵌入 → 社区网络 → 品牌信任</tspan>
+  </text>
+</svg>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .slate-text { fill: #141413; font-family: system-ui, sans-serif; }
+      .clay { fill: #D97757; }
+      .olive { fill: #788C5D; }
+      .oat { fill: #E3DACC; }
+      .g300 { fill: #D1CFC5; }
+      .g500 { fill: #87867F; }
+      .artifact-box { fill: #FAF9F5; stroke: #D1CFC5; stroke-width: 1.5; }
+      .artifact-box-clay { fill: #FAF9F5; stroke: #D97757; stroke-width: 2; }
+      .section-label { fill: #87867F; font-family: system-ui, sans-serif; font-size: 11px; }
+      .artifact-name { fill: #141413; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
+      .artifact-desc { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; }
+      .code-text { fill: #141413; font-family: monospace; font-size: 11px; }
+      .delta-label { fill: #D97757; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; }
+      .green-label { fill: #788C5D; font-family: system-ui, sans-serif; font-size: 10px; font-weight: 600; }
+      .bad-text { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; text-decoration: line-through; }
+    </style>
+  </defs>
+
+  <rect width="720" height="500" class="bg"/>
+
+  <!-- Title -->
+  <text x="24" y="32" class="slate-text" font-size="16" font-weight="700">最小设计集合：4 个文件驱动 AI 代码生成</text>
+  <line x1="24" y1="42" x2="696" y2="42" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Left: 4 required artifacts -->
+  <g transform="translate(24, 58)">
+    <text x="0" y="0" class="section-label">必须保留的 4 个 Artifacts</text>
+
+    <!-- Intent -->
+    <g transform="translate(0, 14)">
+      <rect width="280" height="72" rx="6" class="artifact-box-clay"/>
+      <rect x="8" y="8" width="36" height="36" rx="4" fill="#D97757"/>
+      <text x="26" y="34" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">1</text>
+      <text x="56" y="24" class="artifact-name">intent.md</text>
+      <text x="56" y="40" class="artifact-desc">意图 · 目标 · 成功指标</text>
+      <text x="56" y="56" class="delta-label">AI 软件工程的北极星</text>
+      <text x="240" y="54" class="section-label">必须</text>
+    </g>
+
+    <!-- Domain -->
+    <g transform="translate(0, 96)">
+      <rect width="280" height="72" rx="6" class="artifact-box"/>
+      <rect x="8" y="8" width="36" height="36" rx="4" fill="#788C5D"/>
+      <text x="26" y="34" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">2</text>
+      <text x="56" y="24" class="artifact-name">domain.md</text>
+      <text x="56" y="40" class="artifact-desc">Entity · Field · Rules</text>
+      <text x="56" y="56" class="green-label">划定 AI 的业务边界</text>
+      <text x="240" y="54" class="section-label">必须</text>
+    </g>
+
+    <!-- API -->
+    <g transform="translate(0, 178)">
+      <rect width="280" height="72" rx="6" class="artifact-box"/>
+      <rect x="8" y="8" width="36" height="36" rx="4" fill="#788C5D"/>
+      <text x="26" y="34" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">3</text>
+      <text x="56" y="24" class="artifact-name">api.yaml</text>
+      <text x="56" y="40" class="artifact-desc">OpenAPI / JSON Schema</text>
+      <text x="56" y="56" class="green-label">结构化 · AI 可直接执行</text>
+      <text x="240" y="54" class="section-label">强烈建议</text>
+    </g>
+
+    <!-- Constraints -->
+    <g transform="translate(0, 260)">
+      <rect width="280" height="72" rx="6" class="artifact-box"/>
+      <rect x="8" y="8" width="36" height="36" rx="4" fill="#D97757"/>
+      <text x="26" y="34" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">4</text>
+      <text x="56" y="24" class="artifact-name">constraints.md</text>
+      <text x="56" y="40" class="artifact-desc">性能 · 安全 · 一致性</text>
+      <text x="56" y="56" class="delta-label">明确 AI 必须遵守的边界</text>
+      <text x="240" y="54" class="section-label">必须</text>
+    </g>
+
+    <!-- Result label -->
+    <rect x="0" y="344" width="280" height="28" rx="6" fill="#D97757"/>
+    <text x="140" y="363" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">足以驱动：代码 + 测试 + PR Review</text>
+  </g>
+
+  <!-- Right: What can be deleted -->
+  <g transform="translate(324, 58)">
+    <text x="0" y="0" class="section-label">可以删除的传统 Artifacts</text>
+    <rect x="0" y="14" width="372" height="358" rx="8" class="artifact-box"/>
+
+    <!-- Item 1: Sequence Diagram -->
+    <g transform="translate(16, 30)">
+      <rect width="16" height="16" rx="3" fill="#87867F"/>
+      <text x="24" y="13" class="artifact-name" font-size="12">Sequence Diagram（时序图）</text>
+      <text x="16" y="32" class="artifact-desc">传统：Puml 图</text>
+      <text x="16" y="46" class="bad-text">→ AI 解析图形能力弱</text>
+      <text x="16" y="60" class="bad-text">→ 维护成本高</text>
+      <text x="16" y="74" class="bad-text">→ 容易过期</text>
+      <text x="16" y="88" fill="#788C5D" font-family="system-ui" font-size="10">✅ 用文字场景描述替代</text>
+    </g>
+
+    <line x1="16" y1="126" x2="356" y2="126" stroke="#D1CFC5" stroke-width="1"/>
+
+    <!-- Item 2: Behavior Spec -->
+    <g transform="translate(16, 136)">
+      <rect width="16" height="16" rx="3" fill="#87867F"/>
+      <text x="24" y="13" class="artifact-name" font-size="12">Behavior Spec（行为规格）</text>
+      <text x="16" y="32" class="artifact-desc">传统：Given/When/Then 文档</text>
+      <text x="16" y="46" class="bad-text">→ 测试用例可直接表达</text>
+      <text x="16" y="60" class="artifact-desc">AI 更喜欢具体例子</text>
+      <text x="16" y="74" fill="#788C5D" font-family="system-ui" font-size="10">✅ 删掉，用测试用例替代</text>
+    </g>
+
+    <line x1="16" y1="222" x2="356" y2="222" stroke="#D1CFC5" stroke-width="1"/>
+
+    <!-- Item 3: Architecture Doc -->
+    <g transform="translate(16, 232)">
+      <rect width="16" height="16" rx="3" fill="#87867F"/>
+      <text x="24" y="13" class="artifact-name" font-size="12">Architecture Doc（架构文档）</text>
+      <text x="16" y="32" class="artifact-desc">传统：10+ 页架构设计</text>
+      <text x="16" y="46" class="bad-text">→ 如果 Repo 结构已存在</text>
+      <text x="16" y="60" class="artifact-desc">AI 通常已能理解</text>
+      <text x="16" y="74" fill="#788C5D" font-family="system-ui" font-size="10">✅ 用一个 tech.md（4行）替代</text>
+    </g>
+
+    <line x1="16" y1="318" x2="356" y2="318" stroke="#D1CFC5" stroke-width="1"/>
+
+    <!-- Item 4: Evaluation Spec -->
+    <g transform="translate(16, 328)">
+      <rect width="16" height="16" rx="3" fill="#87867F"/>
+      <text x="24" y="13" class="artifact-name" font-size="12">Evaluation Spec（评估规格）</text>
+      <text x="16" y="32" class="artifact-desc">传统：独立的评估文档</text>
+      <text x="16" y="46" class="artifact-desc">有 API Contract + Domain Model</text>
+      <text x="16" y="60" fill="#788C5D" font-family="system-ui" font-size="10">✅ AI 可直接生成测试，删掉</text>
+    </g>
+  </g>
+
+  <!-- Bottom: AI format preference -->
+  <g transform="translate(24, 432)">
+    <text x="0" y="0" class="section-label">AI 最喜欢的格式 vs 最不喜欢的</text>
+
+    <g transform="translate(0, 12)">
+      <rect width="120" height="36" rx="6" fill="#788C5D"/>
+      <text x="60" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">Markdown ✅</text>
+    </g>
+    <g transform="translate(128, 12)">
+      <rect width="80" height="36" rx="6" fill="#788C5D"/>
+      <text x="40" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">YAML ✅</text>
+    </g>
+    <g transform="translate(216, 12)">
+      <rect width="80" height="36" rx="6" fill="#788C5D"/>
+      <text x="40" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">SQL ✅</text>
+    </g>
+
+    <g transform="translate(316, 12)">
+      <rect width="80" height="36" rx="6" fill="#87867F"/>
+      <text x="40" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">PDF ❌</text>
+    </g>
+    <g transform="translate(404, 12)">
+      <rect width="80" height="36" rx="6" fill="#87867F"/>
+      <text x="40" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">PPT ❌</text>
+    </g>
+    <g transform="translate(492, 12)">
+      <rect width="120" height="36" rx="6" fill="#87867F"/>
+      <text x="60" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="11" font-weight="600">图片/Diagram ❌</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-primary { fill: #141413; font-size: 13px; font-weight: 600; }
+      .text-secondary { fill: #87867F; font-size: 11px; }
+      .border { stroke: #D1CFC5; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+  <rect width="800" height="480" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="36" class="text-primary" font-size="15px">AI 应用风险评估矩阵</text>
+  <text x="40" y="52" class="text-secondary">Risk Assessment Matrix for AI Applications</text>
+
+  <!-- Grid area: 520,100 to 520+300=820, 100+300=400, adjusted to fit 800 width -->
+  <!-- Matrix grid: 3x3, cells 100x100 each, origin at x=160, y=100 -->
+  <!-- x: 错误后果 (Consequence) Low→Medium→High (left to right) -->
+  <!-- y: 错误可发现性 (Detectability) High→Medium→Low (top to bottom) -->
+  <!-- Cell color: based on risk level -->
+
+  <!-- Axis labels -->
+  <text x="310" y="90" fill="#141413" font-size="12px" font-weight="700" text-anchor="middle">错误后果 →</text>
+  <text x="90" y="250" fill="#141413" font-size="12px" font-weight="700" text-anchor="middle" transform="rotate(-90, 90, 250)">错误可发现性 →</text>
+
+  <!-- Axis ticks -->
+  <text x="160" y="420" fill="#87867F" font-size="11px" text-anchor="middle">低</text>
+  <text x="260" y="420" fill="#87867F" font-size="11px" text-anchor="middle">中</text>
+  <text x="360" y="420" fill="#87867F" font-size="11px" text-anchor="middle">高</text>
+  <text x="120" y="110" fill="#87867F" font-size="11px" text-anchor="middle">易</text>
+  <text x="120" y="210" fill="#87867F" font-size="11px" text-anchor="middle">中</text>
+  <text x="120" y="310" fill="#87867F" font-size="11px" text-anchor="middle">难</text>
+
+  <!-- Grid lines -->
+  <line x1="160" y1="100" x2="160" y2="400" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="260" y1="100" x2="260" y2="400" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="360" y1="100" x2="360" y2="400" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="160" y1="100" x2="360" y2="100" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="160" y1="200" x2="360" y2="200" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="160" y1="300" x2="360" y2="300" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="160" y1="400" x2="360" y2="400" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 1: Easy detectability (top) -->
+  <!-- Cell (Easy, Low) = Low risk -->
+  <rect x="161" y="101" width="99" height="99" fill="#E3DACC"/>
+  <text x="210" y="155" fill="#87867F" font-size="28px" font-weight="700" text-anchor="middle">低</text>
+  <text x="210" y="175" fill="#87867F" font-size="11px" text-anchor="middle">用户体验差</text>
+  <!-- Cell (Easy, Medium) = Low risk -->
+  <rect x="261" y="101" width="99" height="99" fill="#E3DACC"/>
+  <text x="310" y="155" fill="#87867F" font-size="28px" font-weight="700" text-anchor="middle">低</text>
+  <text x="310" y="175" fill="#87867F" font-size="11px" text-anchor="middle">用户体验差</text>
+  <!-- Cell (Easy, High) = Medium risk -->
+  <rect x="361" y="101" width="99" height="99" fill="#D97757" fill-opacity="0.25"/>
+  <text x="410" y="155" fill="#D97757" font-size="28px" font-weight="700" text-anchor="middle">中</text>
+  <text x="410" y="175" fill="#D97757" font-size="11px" text-anchor="middle">经济损失</text>
+
+  <!-- Row 2: Medium detectability (middle) -->
+  <!-- Cell (Medium, Low) = Low risk -->
+  <rect x="161" y="201" width="99" height="99" fill="#E3DACC"/>
+  <text x="210" y="255" fill="#87867F" font-size="28px" font-weight="700" text-anchor="middle">低</text>
+  <text x="210" y="275" fill="#87867F" font-size="11px" text-anchor="middle">用户体验差</text>
+  <!-- Cell (Medium, Medium) = Medium risk -->
+  <rect x="261" y="201" width="99" height="99" fill="#D97757" fill-opacity="0.25"/>
+  <text x="310" y="255" fill="#D97757" font-size="28px" font-weight="700" text-anchor="middle">中</text>
+  <text x="310" y="275" fill="#D97757" font-size="11px" text-anchor="middle">经济损失</text>
+  <!-- Cell (Medium, High) = High risk -->
+  <rect x="361" y="201" width="99" height="99" fill="#D97757" fill-opacity="0.75"/>
+  <text x="410" y="255" fill="#FAF9F5" font-size="28px" font-weight="700" text-anchor="middle">高</text>
+  <text x="410" y="275" fill="#FAF9F5" font-size="11px" text-anchor="middle">人身安全</text>
+
+  <!-- Row 3: Hard detectability (bottom) -->
+  <!-- Cell (Hard, Low) = Low risk -->
+  <rect x="161" y="301" width="99" height="99" fill="#E3DACC"/>
+  <text x="210" y="355" fill="#87867F" font-size="28px" font-weight="700" text-anchor="middle">低</text>
+  <text x="210" y="375" fill="#87867F" font-size="11px" text-anchor="middle">用户体验差</text>
+  <!-- Cell (Hard, Medium) = High risk -->
+  <rect x="261" y="301" width="99" height="99" fill="#D97757" fill-opacity="0.75"/>
+  <text x="310" y="355" fill="#FAF9F5" font-size="28px" font-weight="700" text-anchor="middle">高</text>
+  <text x="310" y="375" fill="#FAF9F5" font-size="11px" text-anchor="middle">人身安全</text>
+  <!-- Cell (Hard, High) = High risk -->
+  <rect x="361" y="301" width="99" height="99" fill="#141413"/>
+  <text x="410" y="355" fill="#D97757" font-size="22px" font-weight="700" text-anchor="middle">极高</text>
+  <text x="410" y="375" fill="#87867F" font-size="11px" text-anchor="middle">灾难性</text>
+
+  <!-- Right panel: Application tier recommendations -->
+  <rect x="500" y="90" width="260" height="340" rx="12" fill="#141413"/>
+
+  <text x="520" y="122" fill="#FAF9F5" font-size="14px" font-weight="700">应用分级 &amp; 防御策略</text>
+  <line x1="520" y1="134" x2="740" y2="134" stroke="#D97757" stroke-width="2"/>
+
+  <!-- High risk -->
+  <rect x="520" y="148" width="220" height="70" rx="8" fill="#D97757"/>
+  <text x="540" y="172" fill="#FAF9F5" font-size="13px" font-weight="700">高风险 · 医疗/法律/金融</text>
+  <text x="540" y="192" fill="#FAF9F5" font-size="11px">三层防御全部启用</text>
+  <text x="540" y="208" fill="#FAF9F5" font-size="11px">人在回路强制</text>
+
+  <!-- Medium risk -->
+  <rect x="520" y="228" width="220" height="70" rx="8" fill="#D1CFC5"/>
+  <text x="540" y="252" fill="#141413" font-size="13px" font-weight="700">中风险 · 客服/内容推荐</text>
+  <text x="540" y="272" fill="#141413" font-size="11px">重点在检测层</text>
+  <text x="540" y="288" fill="#141413" font-size="11px">抽样人工审核</text>
+
+  <!-- Low risk -->
+  <rect x="520" y="308" width="220" height="70" rx="8" fill="#788C5D" fill-opacity="0.4"/>
+  <text x="540" y="332" fill="#E3DACC" font-size="13px" font-weight="700">低风险 · 创意/娱乐</text>
+  <text x="540" y="352" fill="#E3DACC" font-size="11px">预防层为主</text>
+  <text x="540" y="368" fill="#E3DACC" font-size="11px">允许一定幻觉率</text>
+
+  <!-- Metrics table at bottom right -->
+  <text x="500" y="446" fill="#87867F" font-size="10px">监控指标：幻觉率 &lt;1%(高)/&lt;5%(中) | 检测率 &gt;90% | 误报率 &lt;10%</text>
+
+  <!-- Legend -->
+  <rect x="40" y="446" width="16" height="16" fill="#E3DACC"/>
+  <text x="62" y="458" fill="#87867F" font-size="11px">低风险</text>
+  <rect x="110" y="446" width="16" height="16" fill="#D97757" fill-opacity="0.3"/>
+  <text x="132" y="458" fill="#87867F" font-size="11px">中风险</text>
+  <rect x="190" y="446" width="16" height="16" fill="#D97757" fill-opacity="0.75"/>
+  <text x="212" y="458" fill="#87867F" font-size="11px">高风险</text>
+  <rect x="270" y="446" width="16" height="16" fill="#141413"/>
+  <text x="292" y="458" fill="#87867F" font-size="11px">极高风险</text>
+</svg>

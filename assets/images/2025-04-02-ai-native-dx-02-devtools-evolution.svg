@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-primary { fill: #141413; font-size: 13px; font-weight: 600; }
+      .text-secondary { fill: #87867F; font-size: 11px; }
+      .text-light { fill: #FAF9F5; font-size: 12px; font-weight: 600; }
+    </style>
+  </defs>
+  <rect width="800" height="480" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="36" class="text-primary" font-size="15px">开发者工具演化史</text>
+  <text x="40" y="52" class="text-secondary">Evolution of Developer Tools: 1970s → AI-Native Era</text>
+
+  <!-- Timeline arrow -->
+  <line x1="60" y1="240" x2="760" y2="240" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="760,240 748,234 748,246" fill="#D1CFC5"/>
+
+  <!-- Timeline entries: 5 eras -->
+  <!-- Era 1: 命令行 1970s -->
+  <circle cx="100" cy="240" r="10" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="50" y="270" width="100" height="150" rx="10" fill="#141413"/>
+  <text x="100" y="295" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">1970s</text>
+  <text x="100" y="312" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">命令行时代</text>
+  <text x="100" y="330" fill="#E3DACC" font-size="10px" text-anchor="middle">Command Line</text>
+  <line x1="100" y1="345" x2="100" y2="355" stroke="#87867F" stroke-width="0.8"/>
+  <text x="100" y="368" fill="#87867F" font-size="10px" text-anchor="middle">文本命令交互</text>
+  <text x="100" y="382" fill="#87867F" font-size="10px" text-anchor="middle">学习曲线陡峭</text>
+  <text x="100" y="396" fill="#87867F" font-size="10px" text-anchor="middle">记忆负担重</text>
+  <text x="100" y="412" fill="#E3DACC" font-size="10px" font-weight="600" text-anchor="middle">核心：精确控制</text>
+
+  <!-- Era 2: GUI 1980s -->
+  <circle cx="250" cy="240" r="10" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="200" y="270" width="100" height="150" rx="10" fill="#141413"/>
+  <text x="250" y="295" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">1980s</text>
+  <text x="250" y="312" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">GUI时代</text>
+  <text x="250" y="330" fill="#E3DACC" font-size="10px" text-anchor="middle">Graphical UI</text>
+  <line x1="250" y1="345" x2="250" y2="355" stroke="#87867F" stroke-width="0.8"/>
+  <text x="250" y="368" fill="#87867F" font-size="10px" text-anchor="middle">图形界面</text>
+  <text x="250" y="382" fill="#87867F" font-size="10px" text-anchor="middle">可视化操作</text>
+  <text x="250" y="396" fill="#87867F" font-size="10px" text-anchor="middle">大量点击导航</text>
+  <text x="250" y="412" fill="#E3DACC" font-size="10px" font-weight="600" text-anchor="middle">核心：直观操作</text>
+
+  <!-- Era 3: IDE 1990s -->
+  <circle cx="400" cy="240" r="10" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="350" y="270" width="100" height="150" rx="10" fill="#141413"/>
+  <text x="400" y="295" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">1990s</text>
+  <text x="400" y="312" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">IDE时代</text>
+  <text x="400" y="330" fill="#E3DACC" font-size="10px" text-anchor="middle">Integrated Dev Env</text>
+  <line x1="400" y1="345" x2="400" y2="355" stroke="#87867F" stroke-width="0.8"/>
+  <text x="400" y="368" fill="#87867F" font-size="10px" text-anchor="middle">编辑+编译+调试</text>
+  <text x="400" y="382" fill="#87867F" font-size="10px" text-anchor="middle">上下文保持</text>
+  <text x="400" y="396" fill="#87867F" font-size="10px" text-anchor="middle">复杂性增加</text>
+  <text x="400" y="412" fill="#E3DACC" font-size="10px" font-weight="600" text-anchor="middle">核心：集成环境</text>
+
+  <!-- Era 4: 云工具 2000s -->
+  <circle cx="550" cy="240" r="10" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="500" y="270" width="100" height="150" rx="10" fill="#141413"/>
+  <text x="550" y="295" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">2000s</text>
+  <text x="550" y="312" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">云工具时代</text>
+  <text x="550" y="330" fill="#E3DACC" font-size="10px" text-anchor="middle">Cloud Tools</text>
+  <line x1="550" y1="345" x2="550" y2="355" stroke="#87867F" stroke-width="0.8"/>
+  <text x="550" y="368" fill="#87867F" font-size="10px" text-anchor="middle">浏览器开发</text>
+  <text x="550" y="382" fill="#87867F" font-size="10px" text-anchor="middle">协作便利</text>
+  <text x="550" y="396" fill="#87867F" font-size="10px" text-anchor="middle">延迟+依赖</text>
+  <text x="550" y="412" fill="#E3DACC" font-size="10px" font-weight="600" text-anchor="middle">核心：协作便利</text>
+
+  <!-- Era 5: AI-Native 2024 -->
+  <circle cx="700" cy="240" r="14" fill="#D97757" stroke="#141413" stroke-width="2"/>
+  <rect x="650" y="80" width="100" height="150" rx="10" fill="#D97757"/>
+  <text x="700" y="105" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">2024+</text>
+  <text x="700" y="122" fill="#FAF9F5" font-size="11px" font-weight="600" text-anchor="middle">AI-Native时代</text>
+  <text x="700" y="140" fill="#FAF9F5" font-size="10px" text-anchor="middle">Natural Language + Code</text>
+  <line x1="700" y1="155" x2="700" y2="170" stroke="#FAF9F5" stroke-width="0.8" opacity="0.5"/>
+  <text x="700" y="183" fill="#141413" font-size="10px" text-anchor="middle">自然语言协作</text>
+  <text x="700" y="197" fill="#141413" font-size="10px" text-anchor="middle">AI处理实现细节</text>
+  <text x="700" y="211" fill="#141413" font-size="10px" font-weight="600" text-anchor="middle">核心：意图表达</text>
+
+  <!-- Connector line from Era 5 box to timeline -->
+  <line x1="700" y1="230" x2="700" y2="226" stroke="#D97757" stroke-width="1.5"/>
+
+  <!-- Key insight at bottom -->
+  <rect x="40" y="440" width="720" height="30" rx="6" fill="#E3DACC"/>
+  <text x="60" y="460" fill="#141413" font-size="11px">历史在押韵：每一次工具革命都在降低"操作"的难度，但提升了"思考"的重要性。</text>
+  <text x="520" y="460" fill="#D97757" font-size="11px" font-weight="600">AI-Native让写代码变简单，但让"想清楚要什么"变得更重要。</text>
+</svg>

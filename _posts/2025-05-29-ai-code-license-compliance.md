@@ -98,6 +98,8 @@ def complex_algorithm(data):
 
 ## SCA工具的现状与局限
 
+<object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%"></object>
+
 ### 传统SCA如何工作
 
 ```

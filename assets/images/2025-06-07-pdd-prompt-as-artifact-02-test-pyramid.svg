@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .title { fill: #141413; font-size: 20px; font-weight: 700; }
+      .subtitle { fill: #87867F; font-size: 12px; }
+      .label { fill: #141413; font-size: 13px; font-weight: 600; }
+      .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }
+      .desc { fill: #87867F; font-size: 11px; }
+      .desc-white { fill: rgba(255,255,255,0.85); font-size: 11px; }
+      .white { fill: #ffffff; }
+      .accent-clay { fill: #D97757; }
+      .accent-olive { fill: #788C5D; }
+      .accent-g300 { fill: #D1CFC5; }
+      .accent-g500 { fill: #87867F; }
+      .accent-oat { fill: #E3DACC; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="440" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="38" class="title">Prompt 测试金字塔与制品对比</text>
+  <text x="40" y="58" class="subtitle">单元测试单个 Prompt 质量 → 契约测试格式契约 → 集成测试完整功能</text>
+
+  <!-- ===== LEFT: Prompt Test Pyramid ===== -->
+  <text x="40" y="90" class="label">Prompt 测试金字塔</text>
+
+  <!-- Pyramid -->
+  <!-- Top: Integration Test -->
+  <polygon points="195,108 315,108 295,188 215,188" fill="#D97757"/>
+  <polygon points="195,108 315,108 295,188 215,188" fill="none" stroke="#D97757" stroke-width="1"/>
+  <text x="255" y="145" text-anchor="middle" class="label-sm white">集成测试</text>
+  <text x="255" y="163" text-anchor="middle" class="desc-white">Prompt + 上下文 → 完整功能</text>
+
+  <!-- Middle: Contract Test -->
+  <polygon points="175,190 335,190 310,270 200,270" fill="#E3DACC"/>
+  <polygon points="175,190 335,190 310,270 200,270" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="255" y="225" text-anchor="middle" class="label-sm">契约测试</text>
+  <text x="255" y="243" text-anchor="middle" class="desc">Prompt 输出格式验证</text>
+
+  <!-- Bottom: Unit Test -->
+  <polygon points="195,272 315,272 285,352 225,352" fill="#788C5D"/>
+  <text x="255" y="305" text-anchor="middle" class="label-sm white">单元测试</text>
+  <text x="255" y="323" text-anchor="middle" class="desc-white">单个 Prompt 输出质量</text>
+  <text x="255" y="340" text-anchor="middle" class="desc-white">成功率 > 80%</text>
+
+  <!-- Coverage labels -->
+  <text x="330" y="148" text-anchor="end" class="accent-g500" font-size="10">少量</text>
+  <text x="330" y="228" text-anchor="end" class="accent-g500" font-size="10">中量</text>
+  <text x="330" y="310" text-anchor="end" class="accent-g500" font-size="10">大量</text>
+
+  <!-- Pyramid axis -->
+  <text x="160" y="230" class="desc" transform="rotate(-90, 160, 230)">测试覆盖量</text>
+
+  <!-- ===== RIGHT: Artifact Comparison Table ===== -->
+  <text x="370" y="90" class="label">源代码 vs Prompt 制品特征对比</text>
+
+  <!-- Table header -->
+  <rect x="370" y="108" width="390" height="28" rx="6" fill="#141413"/>
+  <text x="386" y="126" class="label-sm white">制品特征</text>
+  <text x="510" y="126" class="label-sm white">源代码</text>
+  <text x="610" y="126" class="label-sm white">Prompt</text>
+
+  <!-- Row 1: Version Control -->
+  <rect x="370" y="140" width="390" height="32" rx="0" fill="#E3DACC"/>
+  <rect x="370" y="140" width="390" height="32" rx="6" fill="#E3DACC"/>
+  <rect x="370" y="140" width="390" height="32" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="161" class="label-sm">版本控制</text>
+  <text x="530" y="161" text-anchor="middle" class="desc">✓ Git commit/diff</text>
+  <text x="650" y="161" text-anchor="middle" class="desc">✓ Git commit/diff</text>
+
+  <!-- Row 2: Code Review -->
+  <rect x="370" y="174" width="390" height="32" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="195" class="label-sm">Code Review</text>
+  <text x="530" y="195" text-anchor="middle" class="desc">人工审查代码逻辑</text>
+  <text x="650" y="195" text-anchor="middle" class="desc">审查 Prompt 约束和验收标准</text>
+
+  <!-- Row 3: Testable -->
+  <rect x="370" y="208" width="390" height="32" rx="6" fill="#E3DACC"/>
+  <rect x="370" y="208" width="390" height="32" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="229" class="label-sm">可测试</text>
+  <text x="530" y="229" text-anchor="middle" class="desc">单元测试 + 集成测试</text>
+  <text x="650" y="229" text-anchor="middle" class="desc">输出验证 + 回归测试</text>
+
+  <!-- Row 4: Reusable -->
+  <rect x="370" y="242" width="390" height="32" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="263" class="label-sm">可复用</text>
+  <text x="530" y="263" text-anchor="middle" class="desc">函数 / 模块复用</text>
+  <text x="650" y="263" text-anchor="middle" class="desc">模板复用 / Prompt 库</text>
+
+  <!-- Row 5: Best Practices -->
+  <rect x="370" y="276" width="390" height="32" rx="6" fill="#E3DACC"/>
+  <rect x="370" y="276" width="390" height="32" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="297" class="label-sm">最佳实践</text>
+  <text x="530" y="297" text-anchor="middle" class="desc">设计模式 / 重构</text>
+  <text x="650" y="297" text-anchor="middle" class="desc">Prompt 工程指南</text>
+
+  <!-- Row 6: CI/CD -->
+  <rect x="370" y="310" width="390" height="32" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="386" y="331" class="label-sm">CI/CD</text>
+  <text x="530" y="331" text-anchor="middle" class="desc">Build → Test → Deploy</text>
+  <text x="650" y="331" text-anchor="middle" class="desc">Lint → Validate → Publish</text>
+
+  <!-- Row 7: Asset -->
+  <rect x="370" y="344" width="390" height="32" rx="6" fill="#D97757"/>
+  <text x="386" y="365" class="label-sm white">组织资产</text>
+  <text x="530" y="365" text-anchor="middle" class="desc-white">代码库</text>
+  <text x="650" y="365" text-anchor="middle" class="desc-white">Prompt 库（核心竞争力）</text>
+
+  <!-- ===== BOTTOM: Key Insight ===== -->
+  <rect x="370" y="384" width="390" height="40" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="386" y="402" class="label-sm accent-olive">💡 关键洞察</text>
+  <text x="386" y="418" class="desc">Review Prompt 比 Review 代码更高效 — 改 Prompt 一分钟，改代码可能需要一小时</text>
+
+  <!-- Footer -->
+  <text x="40" y="428" class="desc">Prompt 是意图的表达，代码是意图的实现 — 管理好 Prompt 就管理好了软件开发的源头</text>
+  <text x="700" y="428" class="desc">AI-Native 软件工程系列 #5</text>
+</svg>

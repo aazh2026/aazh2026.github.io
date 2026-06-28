@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img">
+  <title>测试技术演化史</title>
+  <desc>从1970年代手工测试到2024年AI生成测试的演进时间线</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
+      .text-secondary { fill: #87867F; font-family: system-ui, sans-serif; }
+      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; font-weight: 600; }
+      .border { stroke: #D1CFC5; stroke-width: 1; fill: none; }
+      .era-bg { fill: #E3DACC; }
+      .arrow { stroke: #87867F; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" class="bg"/>
+
+  <!-- Title -->
+  <text x="400" y="35" text-anchor="middle" class="text-main" font-size="18" font-weight="600">测试技术的演化史</text>
+
+  <!-- Timeline base line -->
+  <line x1="60" y1="200" x2="740" y2="200" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- Era 1: 1970s -->
+  <g transform="translate(100, 0)">
+    <circle cx="0" cy="200" r="8" fill="#D97757"/>
+    <rect x="-55" y="90" width="110" height="70" rx="6" class="era-bg"/>
+    <text x="0" y="115" text-anchor="middle" class="text-accent" font-size="14">1970s</text>
+    <text x="0" y="135" text-anchor="middle" class="text-main" font-size="12">手工测试</text>
+    <text x="0" y="152" text-anchor="middle" class="text-secondary" font-size="10">人工运行，低覆盖率</text>
+  </g>
+
+  <!-- Era 2: 1990s -->
+  <g transform="translate(230, 0)">
+    <circle cx="0" cy="200" r="8" fill="#D97757"/>
+    <rect x="-55" y="90" width="110" height="70" rx="6" class="era-bg"/>
+    <text x="0" y="115" text-anchor="middle" class="text-accent" font-size="14">1990s</text>
+    <text x="0" y="135" text-anchor="middle" class="text-main" font-size="12">自动化测试</text>
+    <text x="0" y="152" text-anchor="middle" class="text-secondary" font-size="10">xUnit框架，中覆盖率</text>
+  </g>
+
+  <!-- Era 3: 2000s -->
+  <g transform="translate(360, 0)">
+    <circle cx="0" cy="200" r="8" fill="#D97757"/>
+    <rect x="-55" y="90" width="110" height="70" rx="6" class="era-bg"/>
+    <text x="0" y="115" text-anchor="middle" class="text-accent" font-size="14">2000s</text>
+    <text x="0" y="135" text-anchor="middle" class="text-main" font-size="12">TDD时代</text>
+    <text x="0" y="152" text-anchor="middle" class="text-secondary" font-size="10">先测试后代码</text>
+  </g>
+
+  <!-- Era 4: 2010s -->
+  <g transform="translate(490, 0)">
+    <circle cx="0" cy="200" r="8" fill="#D97757"/>
+    <rect x="-55" y="90" width="110" height="70" rx="6" class="era-bg"/>
+    <text x="0" y="115" text-anchor="middle" class="text-accent" font-size="14">2010s</text>
+    <text x="0" y="135" text-anchor="middle" class="text-main" font-size="12">平台时代</text>
+    <text x="0" y="152" text-anchor="middle" class="text-secondary" font-size="10">Selenium/Appium</text>
+  </g>
+
+  <!-- Era 5: 2024 -->
+  <g transform="translate(620, 0)">
+    <circle cx="0" cy="200" r="10" fill="#788C5D"/>
+    <rect x="-60" y="90" width="120" height="70" rx="6" fill="#788C5D" opacity="0.15"/>
+    <rect x="-60" y="90" width="120" height="70" rx="6" class="border"/>
+    <text x="0" y="115" text-anchor="middle" class="text-accent" font-size="14" fill="#788C5D">2024</text>
+    <text x="0" y="135" text-anchor="middle" class="text-main" font-size="12" font-weight="600">AI生成测试</text>
+    <text x="0" y="152" text-anchor="middle" class="text-secondary" font-size="10">自动维护，高覆盖</text>
+  </g>
+
+  <!-- Bottom labels -->
+  <text x="400" y="280" text-anchor="middle" class="text-secondary" font-size="11">每一次跃迁都让测试更高效、更可靠</text>
+  <text x="400" y="300" text-anchor="middle" class="text-accent" font-size="13" font-weight="500">AI生成测试是下一次跃迁</text>
+
+  <!-- Efficiency indicators -->
+  <g transform="translate(0, 320)">
+    <rect x="80" y="0" width="100" height="50" rx="4" fill="#E3DACC" opacity="0.5"/>
+    <text x="130" y="20" text-anchor="middle" class="text-secondary" font-size="10">维护成本</text>
+    <text x="130" y="38" text-anchor="middle" class="text-main" font-size="12">高 → 低</text>
+
+    <rect x="220" y="0" width="100" height="50" rx="4" fill="#E3DACC" opacity="0.5"/>
+    <text x="270" y="20" text-anchor="middle" class="text-secondary" font-size="10">覆盖率</text>
+    <text x="270" y="38" text-anchor="middle" class="text-main" font-size="12">低 → 高</text>
+
+    <rect x="360" y="0" width="100" height="50" rx="4" fill="#E3DACC" opacity="0.5"/>
+    <text x="410" y="20" text-anchor="middle" class="text-secondary" font-size="10">编写者</text>
+    <text x="410" y="38" text-anchor="middle" class="text-main" font-size="12">人 → AI</text>
+
+    <rect x="500" y="0" width="100" height="50" rx="4" fill="#E3DACC" opacity="0.5"/>
+    <text x="550" y="20" text-anchor="middle" class="text-secondary" font-size="10">测试方式</text>
+    <text x="550" y="38" text-anchor="middle" class="text-main" font-size="12">手工 → 自动</text>
+  </g>
+</svg>

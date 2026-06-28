@@ -19,6 +19,8 @@ redirect_from:
 > 
 > 关键洞察：未来的工程师不是不写代码，而是写"生成代码的代码"。
 
+<object data="/assets/images/2025-05-03-future-of-code-generation-01-phases.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 📋 本文结构

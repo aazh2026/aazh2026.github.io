@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .title { fill: #141413; font-size: 20px; font-weight: 700; }
+      .subtitle { fill: #87867F; font-size: 12px; }
+      .label { fill: #141413; font-size: 13px; font-weight: 600; }
+      .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }
+      .desc { fill: #87867F; font-size: 11px; }
+      .desc-white { fill: rgba(255,255,255,0.85); font-size: 11px; }
+      .white { fill: #ffffff; }
+      .accent-clay { fill: #D97757; }
+      .accent-olive { fill: #788C5D; }
+      .accent-g300 { fill: #D1CFC5; }
+      .accent-g500 { fill: #87867F; }
+      .accent-oat { fill: #E3DACC; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="38" class="title">隐私合规成本曲线：越早发现，越低成本</text>
+  <text x="40" y="58" class="subtitle">合规问题发现阶段 vs 修复成本 — 需求阶段识别可节省 90% 以上</text>
+
+  <!-- ===== LEFT: Bar Chart by Phase ===== -->
+  <text x="40" y="90" class="label">各阶段发现合规问题的修复成本</text>
+
+  <!-- Y-axis labels -->
+  <text x="38" y="130" text-anchor="end" class="desc">$1M+</text>
+  <text x="38" y="210" text-anchor="end" class="desc">$500K</text>
+  <text x="38" y="290" text-anchor="end" class="desc">$100K</text>
+  <text x="38" y="370" text-anchor="end" class="desc">$50K</text>
+  <text x="38" y="420" text-anchor="end" class="desc">$10K</text>
+
+  <!-- Grid lines -->
+  <line x1="50" y1="127" x2="380" y2="127" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="50" y1="207" x2="380" y2="207" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="50" y1="287" x2="380" y2="287" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="50" y1="367" x2="380" y2="367" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="50" y1="417" x2="380" y2="417" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Bars -->
+  <!-- Phase 1: 需求阶段 $1K -->
+  <rect x="70" y="413" width="50" height="4" fill="#788C5D" rx="2"/>
+  <text x="95" y="437" text-anchor="middle" class="desc">需求</text>
+  <text x="95" y="449" text-anchor="middle" class="desc">$1K</text>
+
+  <!-- Phase 2: 设计阶段 $10K -->
+  <rect x="135" y="407" width="50" height="10" fill="#788C5D" rx="2"/>
+  <text x="160" y="437" text-anchor="middle" class="desc">设计</text>
+  <text x="160" y="449" text-anchor="middle" class="desc">$10K</text>
+
+  <!-- Phase 3: 开发阶段 $50K -->
+  <rect x="200" y="377" width="50" height="40" fill="#E3DACC" rx="2"/>
+  <rect x="200" y="377" width="50" height="40" fill="none" stroke="#D1CFC5" stroke-width="1" rx="2"/>
+  <text x="225" y="437" text-anchor="middle" class="desc">开发</text>
+  <text x="225" y="449" text-anchor="middle" class="desc">$50K</text>
+
+  <!-- Phase 4: 测试阶段 $100K -->
+  <rect x="265" y="297" width="50" height="120" fill="#E3DACC" rx="2"/>
+  <rect x="265" y="297" width="50" height="120" fill="none" stroke="#D1CFC5" stroke-width="1" rx="2"/>
+  <text x="290" y="437" text-anchor="middle" class="desc">测试</text>
+  <text x="290" y="449" text-anchor="middle" class="desc">$100K</text>
+
+  <!-- Phase 5: 上线前 $500K -->
+  <rect x="330" y="197" width="50" height="220" fill="#D97757" rx="2"/>
+  <text x="355" y="437" text-anchor="middle" class="desc">上线前</text>
+  <text x="355" y="449" text-anchor="middle" class="desc">$500K+</text>
+
+  <!-- X-axis line -->
+  <line x1="50" y1="422" x2="380" y2="422" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- 90% savings arrow annotation -->
+  <path d="M 90 410 C 120 360, 300 300, 355 220" stroke="#788C5D" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
+  <text x="200" y="335" class="label-sm" fill="#788C5D">节省 90%+ 成本</text>
+  <polygon points="355,220 350,228 360,228" fill="#788C5D"/>
+
+  <!-- ===== RIGHT: Shift-Left Flow ===== -->
+  <text x="420" y="90" class="label">AI 驱动的合规左移</text>
+  <text x="420" y="106" class="desc">需求阶段 → 设计 → 开发 → 测试 → 上线（发现晚）</text>
+
+  <!-- Traditional flow (crossed out) -->
+  <rect x="420" y="120" width="340" height="50" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="436" y="140" class="desc">传统流程：上线前才做合规审查</text>
+  <text x="436" y="158" class="desc">→ 发现不合规，大规模返工</text>
+
+  <!-- Arrow down -->
+  <text x="590" y="188" text-anchor="middle" class="accent-clay" font-size="18">↓</text>
+
+  <!-- AI Shift-Left flow -->
+  <rect x="420" y="196" width="340" height="200" rx="8" fill="#E3DACC"/>
+  <rect x="420" y="196" width="340" height="200" rx="8" fill="none" stroke="#788C5D" stroke-width="2"/>
+  <text x="436" y="218" class="label-sm accent-olive">AI 驱动的合规左移 ✦</text>
+  <text x="436" y="234" class="desc">需求文档 → AI 自动分析 → 早期预警</text>
+
+  <!-- Flow blocks -->
+  <rect x="436" y="248" width="88" height="50" rx="6" fill="#788C5D"/>
+  <text x="480" y="270" text-anchor="middle" class="label-sm white">需求分析</text>
+  <text x="480" y="286" text-anchor="middle" class="desc-white">PRD → AI 提取</text>
+
+  <line x1="524" y1="273" x2="542" y2="273" stroke="#788C5D" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <rect x="550" y="248" width="88" height="50" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="594" y="270" text-anchor="middle" class="label-sm">GDPR/个保法</text>
+  <text x="594" y="286" text-anchor="middle" class="desc">自动 Checklist</text>
+
+  <line x1="638" y1="273" x2="656" y2="273" stroke="#788C5D" stroke-width="1.5"/>
+
+  <rect x="664" y="248" width="80" height="50" rx="6" fill="#D97757"/>
+  <text x="704" y="270" text-anchor="middle" class="label-sm white">风险报告</text>
+  <text x="704" y="286" text-anchor="middle" class="desc-white">高/中/低</text>
+
+  <!-- Output list -->
+  <rect x="436" y="308" width="308" height="76" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="450" y="328" class="label-sm">AI 识别的合规风险：</text>
+  <text x="450" y="344" class="desc">• RISK-001 敏感数据收集（身份证）→ HIGH</text>
+  <text x="450" y="358" class="desc">• RISK-002 数据跨境传输（美国）→ CRITICAL</text>
+  <text x="450" y="372" class="desc">• RISK-003 目的外使用（实名→营销）→ MEDIUM</text>
+
+  <!-- Bottom: Regulations table -->
+  <text x="420" y="415" class="label">多法规支持</text>
+  <rect x="420" y="430" width="110" height="52" rx="6" fill="#D97757"/>
+  <text x="475" y="448" text-anchor="middle" class="label-sm white">GDPR</text>
+  <text x="475" y="462" text-anchor="middle" class="desc-white">欧盟 · 数据主体权</text>
+  <text x="475" y="476" text-anchor="middle" class="desc-white">DPO · 高额罚款</text>
+
+  <rect x="538" y="430" width="110" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="593" y="448" text-anchor="middle" class="label-sm">个保法</text>
+  <text x="593" y="462" text-anchor="middle" class="desc">中国 · 告知-同意</text>
+  <text x="593" y="476" text-anchor="middle" class="desc">数据本地化</text>
+
+  <rect x="656" y="430" width="104" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="708" y="448" text-anchor="middle" class="label-sm">CCPA</text>
+  <text x="708" y="462" text-anchor="middle" class="desc">加州 · 消费者权</text>
+  <text x="708" y="476" text-anchor="middle" class="desc">知情权、删除权</text>
+
+  <!-- Footer -->
+  <text x="40" y="490" class="desc">合规是设计出来的，不是检查出来的 — AI 让合规知识民主化</text>
+  <text x="700" y="490" class="desc">AI-Native 软件工程系列 #47</text>
+
+  <defs>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#788C5D"/>
+    </marker>
+  </defs>
+</svg>

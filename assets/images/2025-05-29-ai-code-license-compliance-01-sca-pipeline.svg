@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .title { fill: #141413; font-size: 20px; font-weight: 700; }
+      .subtitle { fill: #87867F; font-size: 12px; }
+      .label { fill: #141413; font-size: 13px; font-weight: 600; }
+      .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }
+      .desc { fill: #87867F; font-size: 11px; }
+      .desc-white { fill: rgba(255,255,255,0.85); font-size: 11px; }
+      .white { fill: #ffffff; }
+      .accent-clay { fill: #D97757; }
+      .accent-olive { fill: #788C5D; }
+      .accent-g300 { fill: #D1CFC5; }
+      .accent-g500 { fill: #87867F; }
+      .accent-oat { fill: #E3DACC; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" class="bg"/>
+
+  <!-- Title -->
+  <text x="40" y="38" class="title">AI 增强 SCA 流程：代码溯源与风险标记</text>
+  <text x="40" y="58" class="subtitle">传统 SCA 依赖 manifest，AI-SCA 直接分析代码并标记 License 风险</text>
+
+  <!-- ===== LEFT: Traditional SCA vs AI SCA comparison ===== -->
+  <text x="40" y="90" class="label">传统 SCA vs AI 增强 SCA</text>
+
+  <!-- Traditional SCA -->
+  <rect x="40" y="104" width="330" height="100" rx="8" fill="#E3DACC"/>
+  <rect x="40" y="104" width="330" height="100" rx="8" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="56" y="124" class="label-sm">传统 SCA</text>
+  <text x="56" y="140" class="desc">依赖 manifest 文件 · 精确匹配 · 已知组件</text>
+
+  <rect x="56" y="150" width="60" height="44" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="86" y="170" text-anchor="middle" class="desc">代码</text>
+  <text x="86" y="186" text-anchor="middle" class="desc">输入</text>
+
+  <line x1="116" y1="172" x2="140" y2="172" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="140" y="150" width="80" height="44" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="180" y="170" text-anchor="middle" class="desc">依赖分析</text>
+  <text x="180" y="186" text-anchor="middle" class="desc">manifest</text>
+
+  <line x1="220" y1="172" x2="244" y2="172" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="244" y="150" width="80" height="44" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="284" y="170" text-anchor="middle" class="desc">License</text>
+  <text x="284" y="186" text-anchor="middle" class="desc">数据库</text>
+
+  <!-- AI Enhanced SCA -->
+  <rect x="40" y="218" width="330" height="130" rx="8" fill="#E3DACC"/>
+  <rect x="40" y="218" width="330" height="130" rx="8" fill="none" stroke="#D97757" stroke-width="2"/>
+  <text x="56" y="238" class="label-sm accent-clay">AI 增强 SCA ✦</text>
+  <text x="56" y="254" class="desc">直接分析代码 · 模糊相似度检测 · AI 生成代码溯源</text>
+
+  <rect x="56" y="264" width="70" height="52" rx="6" fill="#D97757"/>
+  <text x="91" y="285" text-anchor="middle" class="label-sm white">AI 生成</text>
+  <text x="91" y="301" text-anchor="middle" class="label-sm white">代码</text>
+
+  <line x1="126" y1="290" x2="150" y2="290" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="150" y="264" width="76" height="52" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="188" y="283" text-anchor="middle" class="desc">代码指纹</text>
+  <text x="188" y="297" text-anchor="middle" class="desc">AST+语义</text>
+  <text x="188" y="311" text-anchor="middle" class="desc">特征提取</text>
+
+  <line x1="226" y1="290" x2="250" y2="290" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="250" y="264" width="76" height="52" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="288" y="283" text-anchor="middle" class="desc">开源代码</text>
+  <text x="288" y="297" text-anchor="middle" class="desc">指纹库</text>
+  <text x="288" y="311" text-anchor="middle" class="desc">相似度比对</text>
+
+  <!-- ===== RIGHT: License Risk Tiers ===== -->
+  <text x="410" y="90" class="label">License 风险等级</text>
+
+  <!-- Risk table -->
+  <rect x="410" y="108" width="350" height="28" rx="6" fill="#141413"/>
+  <text x="425" y="126" class="label-sm white">License</text>
+  <text x="510" y="126" class="label-sm white">类型</text>
+  <text x="585" y="126" class="label-sm white">风险</text>
+  <text x="665" y="126" class="label-sm white">主要义务</text>
+
+  <!-- Row: AGPL -->
+  <rect x="410" y="140" width="350" height="44" rx="0" fill="#D97757"/>
+  <rect x="410" y="140" width="350" height="44" rx="6" fill="#D97757"/>
+  <text x="425" y="162" class="label-sm white">AGPL</text>
+  <text x="510" y="158" class="desc-white">超强 Copyleft</text>
+  <text x="585" y="162" class="label-sm white">🔴 极高</text>
+  <text x="665" y="162" class="desc-white">网络使用也开源</text>
+
+  <!-- Row: GPL -->
+  <rect x="410" y="186" width="350" height="44" rx="0" fill="#E3DACC"/>
+  <rect x="410" y="186" width="350" height="44" rx="0" fill="#E3DACC"/>
+  <rect x="410" y="186" width="350" height="44" rx="6" fill="#E3DACC"/>
+  <rect x="410" y="186" width="350" height="44" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="425" y="208" class="label-sm">GPL v2/v3</text>
+  <text x="510" y="204" class="desc">强 Copyleft</text>
+  <text x="585" y="208" class="label-sm accent-clay">🔴 高</text>
+  <text x="665" y="208" class="desc">衍生作品需开源</text>
+
+  <!-- Row: LGPL -->
+  <rect x="410" y="232" width="350" height="44" rx="0" fill="#E3DACC"/>
+  <rect x="410" y="232" width="350" height="44" rx="0" fill="#E3DACC"/>
+  <rect x="410" y="232" width="350" height="44" rx="6" fill="#E3DACC"/>
+  <rect x="410" y="232" width="350" height="44" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="425" y="254" class="label-sm">LGPL</text>
+  <text x="510" y="250" class="desc">弱 Copyleft</text>
+  <text x="585" y="254" class="label-sm" fill="#E3A000">🟡 中</text>
+  <text x="665" y="254" class="desc">修改需开源</text>
+
+  <!-- Row: MIT/Apache -->
+  <rect x="410" y="278" width="350" height="44" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="425" y="300" class="label-sm">MIT / Apache 2.0 / BSD</text>
+  <text x="510" y="296" class="desc">宽松</text>
+  <text x="585" y="300" class="label-sm" fill="#788C5D">🟢 低</text>
+  <text x="665" y="300" class="desc">保留版权声明</text>
+
+  <!-- ===== BOTTOM: Tracer Flow ===== -->
+  <text x="40" y="370" class="label">AI 代码溯源流程</text>
+
+  <!-- Flow steps -->
+  <rect x="40" y="384" width="170" height="80" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="56" y="406" class="label-sm">Step 1：生成代码指纹</text>
+  <text x="56" y="424" class="desc">AST 特征提取</text>
+  <text x="56" y="440" class="desc">N-gram 签名</text>
+  <text x="56" y="456" class="desc">语义哈希</text>
+
+  <line x1="210" y1="424" x2="240" y2="424" stroke="#D97757" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <rect x="250" y="384" width="170" height="80" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="266" y="406" class="label-sm">Step 2：比对开源指纹库</text>
+  <text x="266" y="424" class="desc">GitHub 公开代码</text>
+  <text x="266" y="440" class="desc">相似度 &gt; 70% 标记</text>
+  <text x="266" y="456" class="desc">识别潜在来源</text>
+
+  <line x1="420" y1="424" x2="450" y2="424" stroke="#D97757" stroke-width="2"/>
+
+  <rect x="460" y="384" width="170" height="80" rx="8" fill="#D97757"/>
+  <text x="476" y="406" class="label-sm white">Step 3：风险评估</text>
+  <text x="476" y="424" class="desc-white">GPL/AGPL → CRITICAL</text>
+  <text x="476" y="440" class="desc-white">相似度 &gt; 90% → HIGH</text>
+  <text x="476" y="456" class="desc-white">触发 IDE 告警 + CI 阻断</text>
+
+  <!-- Footer -->
+  <text x="40" y="490" class="desc">AI 生成的代码可能携带开源代码的 License 基因，预防胜于治疗</text>
+  <text x="680" y="490" class="desc">AI-Native 软件工程系列 #48</text>
+
+  <!-- Arrow marker definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    </marker>
+  </defs>
+</svg>

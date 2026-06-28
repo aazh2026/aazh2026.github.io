@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-label="代码地层学视图">
+  <title>代码考古学：代码库的地层结构</title>
+  <desc>将遗留代码库比作考古地层，每一层代表一个历史时期的决策和约束</desc>
+
+  <defs>
+    <marker id="arrowUp" markerWidth="8" markerHeight="8" refX="3" refY="1" orient="auto">
+      <path d="M0,3 L6,0 L6,6 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="440" fill="#FAF9F5"/>
+  <rect x="0" y="0" width="800" height="50" fill="#141413"/>
+  <text x="400" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FAF9F5" text-anchor="middle" letter-spacing="1">代码地层学：读懂遗留代码的历史</text>
+
+  <!-- Left: geological layers metaphor -->
+  <g transform="translate(24, 62)">
+    <text x="0" y="12" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">考古学视角</text>
+
+    <!-- Surface / modern -->
+    <rect x="0" y="20" width="200" height="30" rx="4" fill="#E3DACC"/>
+    <text x="100" y="39" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">🌱 表土层（2024-2026）</text>
+
+    <!-- 2023 -->
+    <rect x="0" y="52" width="200" height="30" rx="0" fill="#D1CFC5"/>
+    <rect x="0" y="52" width="200" height="30" rx="4" fill="none" stroke="#87867F" stroke-width="1"/>
+    <text x="100" y="71" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">📦 2023：紧急补丁</text>
+
+    <!-- 2021 -->
+    <rect x="0" y="84" width="200" height="30" rx="0" fill="#D1CFC5"/>
+    <rect x="0" y="84" width="200" height="30" rx="4" fill="none" stroke="#87867F" stroke-width="1"/>
+    <text x="100" y="103" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">🦠 2021：COVID 应急代码</text>
+
+    <!-- 2019 -->
+    <rect x="0" y="116" width="200" height="30" rx="0" fill="#D1CFC5"/>
+    <rect x="0" y="116" width="200" height="30" rx="4" fill="none" stroke="#87867F" stroke-width="1"/>
+    <text x="100" y="135" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">⚡ 2019：性能优化（引入了 bug）</text>
+
+    <!-- 2018 -->
+    <rect x="0" y="148" width="200" height="30" rx="0" fill="#D1CFC5"/>
+    <rect x="0" y="148" width="200" height="30" rx="4" fill="none" stroke="#87867F" stroke-width="1"/>
+    <text x="100" y="167" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">🔧 2018：网关抽象层</text>
+
+    <!-- 2017 -->
+    <rect x="0" y="180" width="200" height="30" rx="0" fill="#D1CFC5"/>
+    <rect x="0" y="180" width="200" height="30" rx="4" fill="none" stroke="#87867F" stroke-width="1"/>
+    <text x="100" y="199" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">💾 2017：多币种支持（硬编码汇率）</text>
+
+    <!-- 2016 -->
+    <rect x="0" y="212" width="200" height="30" rx="4" fill="#87867F"/>
+    <text x="100" y="231" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="middle">🏛️ 2016：核心支付引擎（张工、李工）</text>
+
+    <!-- Arrow -->
+    <path d="M210 130 L230 130" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowUp)"/>
+  </g>
+
+  <!-- Center: key insight -->
+  <g transform="translate(245, 62)">
+    <rect x="0" y="0" width="260" height="260" rx="10" fill="#E3DACC" filter="url(#shadow)"/>
+    <text x="130" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#D97757" text-anchor="middle">💡 考古学家的洞察</text>
+    <line x1="20" y1="40" x2="240" y2="40" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="20" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#141413">每一层代码都记录着：</text>
+    <text x="20" y="84" font-family="system-ui, sans-serif" font-size="11" fill="#141413">• 当时的业务压力</text>
+    <text x="20" y="100" font-family="system-ui, sans-serif" font-size="11" fill="#141413">• 当时的技术约束</text>
+    <text x="20" y="116" font-family="system-ui, sans-serif" font-size="11" fill="#141413">• 当时的人员配置</text>
+    <text x="20" y="132" font-family="system-ui, sans-serif" font-size="11" fill="#141413">• 当时的认知水平</text>
+    <line x1="20" y1="146" x2="240" y2="146" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="20" y="166" font-family="system-ui, sans-serif" font-size="11" fill="#141413" font-weight="600">"代码不是乱写的"</text>
+    <text x="20" y="182" font-family="system-ui, sans-serif" font-size="11" fill="#141413">每一行看似愚蠢的设计</text>
+    <text x="20" y="198" font-family="system-ui, sans-serif" font-size="11" fill="#141413">在当时都是最优解</text>
+    <line x1="20" y1="212" x2="240" y2="212" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="20" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">责怪前人"写得烂"是公平的</text>
+    <text x="20" y="248" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">但也是无用的</text>
+  </g>
+
+  <!-- Right: decision dependency chain -->
+  <g transform="translate(520, 62)">
+    <text x="0" y="12" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">决策依赖链</text>
+
+    <!-- Chain nodes -->
+    <rect x="0" y="24" width="260" height="40" rx="6" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="10" y="42" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">2016 单体架构</text>
+    <text x="10" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Spring 3.x + MySQL</text>
+
+    <path d="M130 64 L130 76" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowUp)"/>
+
+    <rect x="0" y="78" width="260" height="40" rx="6" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="10" y="96" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">2017 多币种 + 缓存优化</text>
+    <text x="10" y="110" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">硬编码汇率 · 简化事务</text>
+
+    <path d="M130 118 L130 130" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowUp)"/>
+
+    <rect x="0" y="132" width="260" height="40" rx="6" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="10" y="150" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">2018 网关抽象 vs 精度修复</text>
+    <text x="10" y="164" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">双轨运行 · 复杂度翻倍</text>
+
+    <path d="M130 172 L130 184" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowUp)"/>
+
+    <rect x="0" y="186" width="260" height="40" rx="6" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="10" y="204" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">2019 回退逻辑（解决冲突）</text>
+    <text x="10" y="218" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">微妙的平衡</text>
+
+    <path d="M130 226 L130 238" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowUp)"/>
+
+    <rect x="0" y="240" width="260" height="40" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-dasharray="4,2" stroke="#D97757"/>
+    <text x="10" y="258" font-family="system-ui, sans-serif" font-size="10" fill="#D97757" font-weight="600">2023 紧急补丁 → 打破平衡</text>
+    <text x="10" y="272" font-family="system-ui, sans-serif" font-size="9" fill="#D97757">Bug 根源在这里</text>
+  </g>
+
+  <!-- Knowledge island box -->
+  <rect x="24" y="340" width="752" height="80" rx="8" fill="#E3DACC"/>
+  <text x="44" y="362" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#D97757">⚠️ 知识孤岛检测</text>
+  <text x="44" y="382" font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+    <tspan font-weight="600">王工（已离职）</tspan>持有 PaymentGateway.java 87% 的知识
+  </text>
+  <text x="44" y="398" font-family="system-ui, sans-serif" font-size="11" fill="#141413">当人员离开时，组织记忆随之流失。代码考古学是组织记忆的外化。</text>
+  <text x="44" y="414" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">"CodeArchaeologist" 工具将隐性知识转化为显性知识，为未来的考古学家留下线索。</text>
+</svg>
