@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="AI系统成本结构四象限模型">
+  <title>AI 系统成本结构四象限模型</title>
+  <desc>高频/低频 × 复杂度高/低 = 四种优化策略：缓存优化、架构重构、模型降级、预计算</desc>
+
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg4)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">AI 系统成本结构四象限模型</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#87867F">频率 × 复杂度 → 四种优化策略 · 成本降低 60-90%</text>
+
+  <!-- Quadrant grid: 2x2, origin at (200, 430), width 480, height 340 -->
+  <!-- Top-left: Q1 - 高频低复杂度 -->
+  <rect x="100" y="110" width="295" height="195" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="3" rx="10"/>
+  <rect x="100" y="110" width="295" height="38" fill="#788C5D" rx="10 10 0 0"/>
+  <text x="247" y="136" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">Q1 · 高频 × 低复杂度</text>
+  <text x="247" y="170" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#5E7347">缓存优化</text>
+  <text x="247" y="190" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">Semantic Caching</text>
+  <text x="247" y="206" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">Response Caching</text>
+  <text x="247" y="222" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">智能预取</text>
+  <line x1="115" y1="232" x2="380" y2="232" stroke="#788C5D" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="247" y="250" text-anchor="middle" font-family="monospace" font-size="11" fill="#5E7347" font-weight="bold">成本降低 60-80%</text>
+  <text x="247" y="268" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">案例：客服 Agent</text>
+  <text x="247" y="282" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">$0.05 → $0.01/次</text>
+  <text x="247" y="296" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">缓存命中率 &gt;70%</text>
+
+  <!-- Top-right: Q2 - 高频高复杂度 -->
+  <rect x="405" y="110" width="295" height="195" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="3" rx="10"/>
+  <rect x="405" y="110" width="295" height="38" fill="#D97757" rx="10 10 0 0"/>
+  <text x="552" y="136" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">Q2 · 高频 × 高复杂度</text>
+  <text x="552" y="170" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#B85A3F">架构重构</text>
+  <text x="552" y="190" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">任务分解 (CoT)</text>
+  <text x="552" y="206" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">异步处理</text>
+  <text x="552" y="222" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">预计算 + 增量更新</text>
+  <line x1="420" y1="232" x2="685" y2="232" stroke="#D97757" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="552" y="250" text-anchor="middle" font-family="monospace" font-size="11" fill="#B85A3F" font-weight="bold">成本降低 40-60%</text>
+  <text x="552" y="268" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">案例：金融分析 Agent</text>
+  <text x="552" y="282" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">$10 → $4/报告</text>
+  <text x="552" y="296" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">延迟降低 50%</text>
+
+  <!-- Bottom-left: Q3 - 低频低复杂度 -->
+  <rect x="100" y="315" width="295" height="195" fill="#87867F" fill-opacity="0.15" stroke="#87867F" stroke-width="3" rx="10"/>
+  <rect x="100" y="315" width="295" height="38" fill="#87867F" rx="10 10 0 0"/>
+  <text x="247" y="341" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">Q3 · 低频 × 低复杂度</text>
+  <text x="247" y="375" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#6A6860">模型降级</text>
+  <text x="247" y="395" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">智能路由（用小模型）</text>
+  <text x="247" y="411" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">边缘计算</text>
+  <text x="247" y="427" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">批处理聚合</text>
+  <line x1="115" y1="437" x2="380" y2="437" stroke="#87867F" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="247" y="455" text-anchor="middle" font-family="monospace" font-size="11" fill="#6A6860" font-weight="bold">成本降低 70-90%</text>
+  <text x="247" y="473" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">案例：内部工具 Agent</text>
+  <text x="247" y="490" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">80% GPT-3.5 + 20% GPT-4</text>
+
+  <!-- Bottom-right: Q4 - 低频高复杂度 -->
+  <rect x="405" y="315" width="295" height="195" fill="#141413" fill-opacity="0.10" stroke="#141413" stroke-width="3" rx="10"/>
+  <rect x="405" y="315" width="295" height="38" fill="#141413" rx="10 10 0 0"/>
+  <text x="552" y="341" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">Q4 · 低频 × 高复杂度</text>
+  <text x="552" y="375" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#141413">预计算</text>
+  <text x="552" y="395" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">离线预生成</text>
+  <text x="552" y="411" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">增量更新</text>
+  <text x="552" y="427" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">人机协作</text>
+  <line x1="420" y1="437" x2="685" y2="437" stroke="#141413" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="552" y="455" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413" font-weight="bold">成本降低 50-70%</text>
+  <text x="552" y="473" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">案例：市场研报生成</text>
+  <text x="552" y="490" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">$50 → $15/报告</text>
+
+  <!-- Axis labels -->
+  <!-- Y-axis: Frequency (top = high) -->
+  <text x="60" y="205" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413" font-weight="bold" transform="rotate(-90, 60, 205)">高频 ↑</text>
+  <text x="730" y="205" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413" font-weight="bold" transform="rotate(90, 730, 205)">低频 ↓</text>
+  <line x1="85" y1="115" x2="85" y2="505" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="715" y1="115" x2="715" y2="505" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- X-axis: Complexity (right = high) -->
+  <text x="400" y="100" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413" font-weight="bold">← 低复杂度 | 高复杂度 →</text>
+  <line x1="100" y1="515" x2="700" y2="515" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Arrow in center -->
+  <line x1="247" y1="430" x2="405" y2="305" stroke="#D97757" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="330" y="370" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">架构</text>
+  <text x="330" y="382" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">越复杂</text>
+  <text x="330" y="394" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">→ 成本</text>
+  <text x="330" y="406" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">越高</text>
+
+  <!-- Footer note -->
+  <text x="400" y="505" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">核心洞察：80% 的成本浪费来自结构性错配 —— 优化架构比砍价更重要</text>
+
+</svg>

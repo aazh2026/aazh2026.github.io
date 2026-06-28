@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="100%">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <marker id="arrow2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#788C5D"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="440" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="40" y="38" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">自我改进软件：5 Prompt 覆盖完整生命周期</text>
+  <text x="40" y="58" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">Ashpreet Bedi 的 Auto-Improving Agent Platform — 递归改进循环</text>
+
+  <!-- 5 nodes in a horizontal cycle -->
+  <!-- Center of cycle approximately (400, 210) -->
+  <!-- Radius ~160 -->
+
+  <!-- Node positions (starting from top, going clockwise) -->
+  <!-- Top: Create (12 o'clock) -->
+  <!-- Top-right: Improve (2 o'clock) -->
+  <!-- Bottom-right: Extend (4 o'clock) -->
+  <!-- Bottom-left: Hill Climb (8 o'clock) -->
+  <!-- Top-left: Review (10 o'clock) -->
+
+  <!-- Create -->
+  <circle cx="400" cy="80" r="50" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="400" y="73" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#788C5D" text-anchor="middle">Create</text>
+  <text x="400" y="91" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">从 prompt</text>
+  <text x="400" y="106" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">到可运行 Agent</text>
+
+  <!-- Improve -->
+  <circle cx="565" cy="160" r="50" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="565" y="153" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#D97757" text-anchor="middle">Improve</text>
+  <text x="565" y="171" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">对抗性测试</text>
+  <text x="565" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">发现失败→修复</text>
+
+  <!-- Extend -->
+  <circle cx="500" cy="310" r="50" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="500" y="303" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#D97757" text-anchor="middle">Extend</text>
+  <text x="500" y="321" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">添加新能力</text>
+  <text x="500" y="336" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">小步验证增量</text>
+
+  <!-- Hill Climb -->
+  <circle cx="300" cy="310" r="50" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="300" y="303" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#D97757" text-anchor="middle">Hill Climb</text>
+  <text x="300" y="321" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">运行评估套件</text>
+  <text x="300" y="336" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">诊断→修复范围问题</text>
+
+  <!-- Review -->
+  <circle cx="235" cy="160" r="50" fill="#87867F" fill-opacity="0.15" stroke="#87867F" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="235" y="153" font-family="system-ui, sans-serif" font-size="14" font-weight="800" fill="#87867F" text-anchor="middle">Review</text>
+  <text x="235" y="171" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">文档/代码/配置</text>
+  <text x="235" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">自动修复漂移</text>
+
+  <!-- Arrows: Create → Improve -->
+  <path d="M 430 115 Q 480 130 540 140" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Improve → Extend -->
+  <path d="M 565 212 Q 560 260 530 290" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Extend → Hill Climb (bottom) -->
+  <path d="M 450 320 L 350 320" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Hill Climb → Review -->
+  <path d="M 265 280 Q 240 230 250 190" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Review → Create (top-left) -->
+  <path d="M 275 125 Q 320 80 370 80" fill="none" stroke="#87867F" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+  <!-- Key loop label: Improve ↔ Hill Climb (the core recursive loop) -->
+  <rect x="395" y="235" width="130" height="36" rx="18" fill="#141413" filter="url(#shadow)"/>
+  <text x="460" y="252" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">核心递归循环</text>
+  <text x="460" y="267" font-family="system-ui, sans-serif" font-size="10" fill="#D1CFC5" text-anchor="middle">Improve → Hill Climb → …</text>
+
+  <!-- Side panel: 3 design principles -->
+  <rect x="40" y="95" width="175" height="120" rx="10" fill="#141413" filter="url(#shadow)"/>
+  <text x="127" y="118" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">让 auto-improvement</text>
+  <text x="127" y="134" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">成为可能的三个设计</text>
+  <text x="57" y="155" font-family="system-ui, sans-serif" font-size="10" fill="#D1CFC5">① API 暴露一切</text>
+  <text x="57" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#D1CFC5">② 数据集中（Postgres）</text>
+  <text x="57" y="185" font-family="system-ui, sans-serif" font-size="10" fill="#D1CFC5">③ Logs over everything</text>
+  <text x="57" y="203" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#FAF9F5">→ 测试循环 ≈ 5 秒</text>
+
+  <!-- Side panel: outcome -->
+  <rect x="585" y="95" width="175" height="120" rx="10" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
+  <text x="672" y="118" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#788C5D" text-anchor="middle">平台吃自己的狗粮</text>
+  <text x="672" y="137" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">Ashpreet Bedi：</text>
+  <text x="672" y="154" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">"Agent platforms are the</text>
+  <text x="672" y="169" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">first category where the</text>
+  <text x="672" y="184" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">loop improves the platform</text>
+  <text x="672" y="201" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">that hosts the loop"</text>
+
+  <!-- Bottom timeline: 5-10 min from prompt to agent -->
+  <rect x="40" y="380" width="720" height="50" rx="8" fill="#E3DACC" fill-opacity="0.5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="60" y="400" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#141413">从 prompt 到可运行 agent：5-10 分钟</text>
+  <text x="60" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">问几个问题 → MCP 搜索 docs → 生成文件 → 注册 → 重启容器 → smoke test</text>
+  <text x="740" y="410" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" font-weight="700" text-anchor="end">Ashpreet Bedi</text>
+</svg>
