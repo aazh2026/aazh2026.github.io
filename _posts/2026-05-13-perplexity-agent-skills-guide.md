@@ -17,6 +17,8 @@ series: AI-Native软件工程系列
 
 ---
 
+<object data="/assets/images/assets/images/2026-05-13-perplexity-agent-skills-guide-01-context-cost.svg" type="image/svg+xml" width="100%"></object>
+
 ## 📋 本文结构
 
 1. [Zen of Python vs Zen of Skills](#zen-of-python-vs-zen-of-skills) — 至少一半的 Python 智慧在 Skills 写作里是错的

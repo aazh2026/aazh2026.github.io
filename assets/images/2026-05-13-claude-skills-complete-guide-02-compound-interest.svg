@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="860" height="380" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">Skill 库的复利效应：积累 vs 消耗</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">10 Skills × 30分钟/周 = 6.5 个完整工作周 / 年 — 真正的资产是系统，不是信息</text>
+
+  <!-- Left: The Math -->
+  <rect x="30" y="76" width="360" height="240" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
+  <text x="210" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">核心数学</text>
+
+  <!-- Equation blocks -->
+  <rect x="50" y="114" width="320" height="34" fill="#E3DACC" rx="8"/>
+  <text x="210" y="137" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">1 Skill × 30 分钟/周 = 26 小时/年</text>
+
+  <rect x="50" y="158" width="320" height="34" fill="#E3DACC" rx="8"/>
+  <text x="210" y="181" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">10 Skills × 30 分钟/周 = 260 小时/年</text>
+
+  <!-- Equals box -->
+  <rect x="50" y="204" width="320" height="44" fill="#D97757" rx="8"/>
+  <text x="210" y="227" text-anchor="middle" font-size="15" font-weight="800" fill="#FAF9F5">= 6.5 个完整工作周 / 年</text>
+
+  <!-- Weekly time -->
+  <text x="210" y="268" text-anchor="middle" font-size="11" fill="#141413">52 周 × 5 工作日 × 8 小时 = 2080 小时/年</text>
+  <text x="210" y="286" text-anchor="middle" font-size="10" fill="#87867F">260 小时 ≈ 6.5 周 ≈ 32.5 个工作日</text>
+
+  <!-- Two paths -->
+  <rect x="50" y="300" width="140" height="24" fill="#D1CFC5" rx="6"/>
+  <text x="120" y="316" text-anchor="middle" font-size="10" fill="#141413">每天重复输入</text>
+
+  <text x="210" y="316" text-anchor="middle" font-size="10" fill="#87867F">vs</text>
+
+  <rect x="240" y="300" width="130" height="24" fill="#788C5D" rx="6"/>
+  <text x="305" y="316" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">构建 Skill 库</text>
+
+  <!-- Right: Two paths comparison -->
+  <rect x="410" y="76" width="200" height="150" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
+  <rect x="410" y="76" width="200" height="28" fill="#D1CFC5" rx="10"/>
+  <rect x="410" y="94" width="200" height="10" fill="#D1CFC5"/>
+  <text x="510" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">❌ 不构建 Skill 库</text>
+
+  <line x1="410" y1="114" x2="610" y2="114" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="510" y="136" text-anchor="middle" font-size="10" fill="#141413">每天手动输入相同指令</text>
+  <text x="510" y="154" text-anchor="middle" font-size="10" fill="#87867F">每次对话 = 从零开始</text>
+  <text x="510" y="172" text-anchor="middle" font-size="10" fill="#87867F">没有积累</text>
+  <text x="510" y="190" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">Year 1 = 0 资产</text>
+  <text x="510" y="206" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">Year 2 = 0 资产</text>
+  <text x="510" y="222" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">Year N = 0 资产</text>
+
+  <rect x="630" y="76" width="200" height="150" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
+  <rect x="630" y="76" width="200" height="28" fill="#788C5D" rx="10"/>
+  <rect x="630" y="94" width="200" height="10" fill="#788C5D"/>
+  <text x="730" y="94" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">✅ 构建 Skill 库</text>
+
+  <line x1="630" y1="114" x2="830" y2="114" stroke="#E3DACC" stroke-width="1"/>
+  <text x="730" y="136" text-anchor="middle" font-size="10" fill="#141413">每个 Skill 可积累、可优化</text>
+  <text x="730" y="154" text-anchor="middle" font-size="10" fill="#87867F">每月优化输出质量</text>
+  <text x="730" y="172" text-anchor="middle" font-size="10" fill="#87867F">Skill 可跨项目复用</text>
+  <text x="730" y="190" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">Year 1 = 10 Skills</text>
+  <text x="730" y="206" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">Year 2 = 20 Skills</text>
+  <text x="730" y="222" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">Year N = N×10 Skills</text>
+
+  <!-- Bottom: The key insight -->
+  <rect x="410" y="236" width="420" height="80" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="410" y="236" width="420" height="28" fill="#D97757" rx="10"/>
+  <rect x="410" y="254" width="420" height="10" fill="#D97757"/>
+  <text x="620" y="254" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">核心洞察 ⭐</text>
+
+  <text x="620" y="280" text-anchor="middle" font-size="10" fill="#141413">60 天内：</text>
+  <text x="620" y="296" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">不建 Skill 库 → 每天重复消耗</text>
+  <text x="620" y="312" text-anchor="middle" font-size="10" fill="#87867F">vs</text>
+  <text x="620" y="304" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">建 Skill 库 → 运行完全不同的 operation</text>
+
+  <!-- Compound growth visual -->
+  <rect x="30" y="336" width="800" height="36" fill="#141413" rx="8"/>
+  <text x="430" y="358" text-anchor="middle" font-size="12" fill="#FAF9F5" font-weight="600">积累不是信息，是系统。真正的复利是你外化的判断力。</text>
+  <text x="790" y="358" text-anchor="end" font-size="10" fill="#D97757" font-weight="700">Skillify · Harness · Mission — 同一条主线</text>
+</svg>

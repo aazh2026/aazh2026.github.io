@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAF9F5"/>
+      <stop offset="100%" style="stop-color:#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow5" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="420" fill="url(#bg5)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#141413">AI 垃圾代码的典型症状</text>
+  <text x="450" y="60" text-anchor="middle" font-size="12" fill="#87867F">资深开发者如何通过 cleanup 赚钱</text>
+
+  <!-- Symptom 1: Over-engineering -->
+  <g transform="translate(40, 85)" filter="url(#shadow5)">
+    <rect width="260" height="160" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <rect width="260" height="32" fill="#D97757" rx="8" ry="0"/>
+    <rect y="24" width="260" height="8" fill="#D97757"/>
+    <text x="130" y="21" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">症状 1: 过度工程化</text>
+
+    <text x="15" y="55" font-size="10" fill="#141413">AI 生成 50 行</text>
+    <text x="15" y="70" font-size="10" fill="#141413">实际只需要 3 行</text>
+    <text x="15" y="90" font-size="10" fill="#87867F">引入不必要的依赖：</text>
+    <text x="15" y="105" font-size="10" fill="#87867F">Redis、Metrics、Logger</text>
+    <text x="15" y="120" font-size="10" fill="#87867F">难以测试，难以维护</text>
+
+    <text x="15" y="145" font-size="10" fill="#788C5D" font-weight="600">修复：简化为一行 db.query()</text>
+  </g>
+
+  <!-- Symptom 2: Concurrency -->
+  <g transform="translate(320, 85)" filter="url(#shadow5)">
+    <rect width="260" height="160" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <rect width="260" height="32" fill="#D97757" rx="8" ry="0"/>
+    <rect y="24" width="260" height="8" fill="#D97757"/>
+    <text x="130" y="21" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">症状 2: 并发问题</text>
+
+    <text x="15" y="55" font-size="10" fill="#141413">AI 不理解并发</text>
+    <text x="15" y="70" font-size="10" fill="#141413">竞态条件普遍存在</text>
+    <text x="15" y="90" font-size="10" fill="#D97757">if (stock &gt; 0) {</text>
+    <text x="15" y="103" font-size="10" fill="#D97757">  stock -= 1;  // 两个请求</text>
+    <text x="15" y="116" font-size="10" fill="#D97757">  // 同时通过检查！</text>
+    <text x="15" y="145" font-size="10" fill="#788C5D" font-weight="600">修复：数据库事务锁</text>
+  </g>
+
+  <!-- Symptom 3: N+1 -->
+  <g transform="translate(600, 85)" filter="url(#shadow5)">
+    <rect width="260" height="160" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <rect width="260" height="32" fill="#D97757" rx="8" ry="0"/>
+    <rect y="24" width="260" height="8" fill="#D97757"/>
+    <text x="130" y="21" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">症状 3: N+1 查询</text>
+
+    <text x="15" y="55" font-size="10" fill="#141413">循环内查询数据库</text>
+    <text x="15" y="70" font-size="10" fill="#D97757">for user in users:</text>
+    <text x="15" y="83" font-size="10" fill="#D97757">  orders = db.query...</text>
+    <text x="15" y="101" font-size="10" fill="#87867F">100 个用户 = 101 次查询</text>
+    <text x="15" y="116" font-size="10" fill="#87867F">数据库 CPU 持续 90%+</text>
+    <text x="15" y="145" font-size="10" fill="#788C5D" font-weight="600">修复：JOIN 或 eager loading</text>
+  </g>
+
+  <!-- Economics section -->
+  <g transform="translate(40, 265)" filter="url(#shadow5)">
+    <rect width="820" height="135" fill="#FAF9F5" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+
+    <text x="20" y="30" font-size="14" font-weight="700" fill="#141413">Cleanup 经济学</text>
+
+    <!-- Cost table -->
+    <rect x="20" y="45" width="180" height="80" fill="#D97757" fill-opacity="0.08" rx="4"/>
+    <text x="110" y="62" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">AI + 初级开发者</text>
+    <text x="110" y="80" text-anchor="middle" font-size="10" fill="#141413">$50K/月</text>
+    <text x="110" y="98" text-anchor="middle" font-size="10" fill="#87867F">快速生成，慢速修复</text>
+    <text x="110" y="113" text-anchor="middle" font-size="10" fill="#D97757">最终账单：$750K+</text>
+
+    <!-- Plus -->
+    <text x="215" y="90" font-size="20" font-weight="300" fill="#87867F">+</text>
+
+    <!-- Cleanup -->
+    <rect x="235" y="45" width="180" height="80" fill="#788C5D" fill-opacity="0.1" rx="4"/>
+    <text x="325" y="62" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">资深开发者 Cleanup</text>
+    <text x="325" y="80" text-anchor="middle" font-size="10" fill="#141413">$300-500/小时</text>
+    <text x="325" y="98" text-anchor="middle" font-size="10" fill="#87867F">架构诊断、重构、性能调优</text>
+    <text x="325" y="113" text-anchor="middle" font-size="10" fill="#788C5D">项目制 $50K-200K</text>
+
+    <!-- VS -->
+    <text x="430" y="90" font-size="20" font-weight="300" fill="#87867F">VS</text>
+
+    <!-- Right way -->
+    <rect x="455" y="45" width="220" height="80" fill="#141413" fill-opacity="0.05" rx="4"/>
+    <text x="565" y="62" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">一开始就做对</text>
+    <text x="565" y="80" text-anchor="middle" font-size="10" fill="#141413">资深开发者 + AI 辅助</text>
+    <text x="565" y="98" text-anchor="middle" font-size="10" fill="#87867F">$80K/月 × 6 = $480K</text>
+    <text x="565" y="113" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">质量达标，无需 cleanup</text>
+
+    <!-- ROI -->
+    <rect x="695" y="45" width="145" height="80" fill="#788C5D" fill-opacity="0.15" rx="4"/>
+    <text x="767" y="62" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">真实 ROI</text>
+    <text x="767" y="82" text-anchor="middle" font-size="10" fill="#141413">页面加载 8s→0.5s</text>
+    <text x="767" y="98" text-anchor="middle" font-size="10" fill="#141413">转化率 +40%</text>
+    <text x="767" y="113" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">客户挽回 $2M+ ARR</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="405" text-anchor="middle" font-size="10" fill="#87867F">AI 降低了写出能跑代码的门槛，但提高了写出好代码的门槛 — 为修复问题的人创造巨大机会</text>
+</svg>

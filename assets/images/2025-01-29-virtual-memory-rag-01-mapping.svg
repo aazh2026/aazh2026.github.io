@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="860" height="440" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">虚拟内存 → RAG 分页机制：核心概念映射</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">操作系统经典架构 → LLM 上下文窗口优化 — 虚拟内存是计算机科学最伟大的工程成就之一</text>
+
+  <!-- Column headers -->
+  <rect x="30" y="72" width="250" height="30" fill="#788C5D" rx="8"/>
+  <text x="155" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">操作系统 (Virtual Memory)</text>
+
+  <rect x="310" y="72" width="100" height="30" fill="#D1CFC5" rx="8"/>
+  <text x="360" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">→</text>
+
+  <rect x="440" y="72" width="390" height="30" fill="#D97757" rx="8"/>
+  <text x="635" y="91" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">LLM / RAG 系统 (上下文窗口)</text>
+
+  <!-- Mapping rows -->
+
+  <!-- Row 1 -->
+  <rect x="30" y="114" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">物理内存（RAM）</text>
+  <rect x="310" y="114" width="100" height="34" fill="#FAF9F5" rx="0"/>
+  <line x1="340" y1="118" x2="400" y2="118" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="320" y1="118" x2="320" y2="148" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="400" y1="118" x2="400" y2="148" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="320" y1="148" x2="400" y2="148" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="360" y="140" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="114" width="390" height="34" fill="#D97757" opacity="0.15" rx="6" stroke="#D97757" stroke-width="1.5"/>
+  <text x="635" y="136" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">上下文窗口（Context Window）</text>
+
+  <!-- Row 2 -->
+  <rect x="30" y="156" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="178" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">磁盘 / SSD</text>
+  <rect x="310" y="156" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="178" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="156" width="390" height="34" fill="#788C5D" opacity="0.15" rx="6" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="635" y="178" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">向量数据库（Vector Store）</text>
+
+  <!-- Row 3 -->
+  <rect x="30" y="198" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="220" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">页表（Page Table）</text>
+  <rect x="310" y="198" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="220" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="198" width="390" height="34" fill="#87867F" opacity="0.12" rx="6" stroke="#87867F" stroke-width="1.5"/>
+  <text x="635" y="220" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">上下文映射表（Context Map）</text>
+
+  <!-- Row 4 -->
+  <rect x="30" y="240" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="262" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">页错误（Page Fault）</text>
+  <rect x="310" y="240" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="262" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="240" width="390" height="34" fill="#87867F" opacity="0.12" rx="6" stroke="#87867F" stroke-width="1.5"/>
+  <text x="635" y="262" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">检索触发（Retrieval Trigger）</text>
+
+  <!-- Row 5 -->
+  <rect x="30" y="282" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="304" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">页面置换算法（LRU/LFU）</text>
+  <rect x="310" y="282" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="304" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="282" width="390" height="34" fill="#87867F" opacity="0.12" rx="6" stroke="#87867F" stroke-width="1.5"/>
+  <text x="635" y="304" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">上下文淘汰策略（LRU / LFU）</text>
+
+  <!-- Row 6 -->
+  <rect x="30" y="324" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="346" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">工作集（Working Set）</text>
+  <rect x="310" y="324" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="346" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="324" width="390" height="34" fill="#788C5D" opacity="0.15" rx="6" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="635" y="346" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">活跃上下文（Active Context）</text>
+
+  <!-- Row 7 -->
+  <rect x="30" y="366" width="250" height="34" fill="#E3DACC" rx="6"/>
+  <text x="155" y="388" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">局部性原理（Locality）</text>
+  <rect x="310" y="366" width="100" height="34" fill="#FAF9F5"/>
+  <text x="360" y="388" text-anchor="middle" font-size="13" fill="#87867F">→</text>
+  <rect x="440" y="366" width="390" height="34" fill="#E3DACC" rx="6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="635" y="388" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">预取（Prefetching） + 相邻段落加载</text>
+</svg>

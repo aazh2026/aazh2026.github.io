@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%"></object>
+
 ## 产品速览：GPT-5.4的核心规格
 
 2026年3月5日，OpenAI quietly 发布了GPT-5.4系列模型，没有盛大的发布会，只有技术博客和社区讨论。但这可能是一次被低估的重要发布。

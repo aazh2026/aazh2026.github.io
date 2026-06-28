@@ -22,6 +22,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ## 📋 本文结构
 
 1. [TDD 的辉煌与疲惫](#tdd-的辉煌与疲惫)

@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-02-22-clinejection-attack-analysis-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
+
 ## 事件概览：一次精心设计的供应链攻击
 
 ### 攻击时间线
@@ -34,6 +36,8 @@ redirect_from:
 ## 攻击链复盘：五步沦陷
 
 让我们详细拆解这个攻击是如何一步步实现的。
+
+<object data="/assets/images/2025-02-22-clinejection-attack-analysis-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
 
 ### Step 1: 侦察与目标选择
 
