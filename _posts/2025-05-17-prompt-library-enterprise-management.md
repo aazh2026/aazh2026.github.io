@@ -99,25 +99,9 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 
 **原则1：Prompt存储在Git中**
 
-```
-prompts/
-├── README.md                 # Prompt库说明
-├── CONTRIBUTING.md           # 贡献指南
-├── .prompt-lint.yml         # Prompt质量规则
-├── common/                   # 通用Prompt
-│   ├── code-review/
-│   │   ├── v1.0.0.prompt    # 版本化存储
-│   │   ├── v1.1.0.prompt
-│   │   └── latest.prompt → v1.1.0.prompt  # 软链接
-│   └── unit-test/
-├── backend/                  # 后端团队Prompt
-│   └── api-design/
-├── frontend/                 # 前端团队Prompt
-│   └── component-gen/
-└── deprecated/               # 废弃Prompt
-    └── README.md             # 废弃原因说明
-```
+<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
+**原则2：语义化版本**
 **原则2：语义化版本**
 
 ```

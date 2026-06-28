@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420">
+  <style>
+    .bg { fill: #FAF9F5; }
+    .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
+    .border-dark { stroke: #87867F; stroke-width: 1.5; fill: none; }
+    .box-planner { fill: #D97757; }
+    .box-executor { fill: #E3DACC; }
+    .box-critic { fill: #E3DACC; }
+    .box-memory { fill: #E3DACC; }
+    .box-tool { fill: #788C5D; }
+    .box-generic { fill: #E3DACC; }
+    .text-white { fill: #FAF9F5; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
+    .text-dark { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
+    .text-label { fill: #87867F; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 11px; }
+    .text-dark-small { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 500; }
+    .text-heading { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 700; }
+    .text-clay { fill: #D97757; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
+    .arrow { stroke: #D1CFC5; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-dark { stroke: #87867F; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead-dark); }
+    .arrow-clay { stroke: #D97757; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead-clay); }
+    .divider { stroke: #D1CFC5; stroke-width: 1; }
+    .cell-label { fill: #87867F; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 10px; }
+    .cell-value { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 600; }
+    .cell-value-clay { fill: #D97757; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 600; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
+    </marker>
+    <marker id="arrowhead-dark" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
+    </marker>
+    <marker id="arrowhead-clay" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    </marker>
+  </defs>
+  <rect class="bg" width="680" height="420" rx="8"/>
+
+  <text x="340" y="35" text-anchor="middle" class="text-heading">Prompt层级逆向难度矩阵</text>
+  <rect x="50" y="55" width="200" height="35" fill="#D1CFC5" rx="0"/>
+  <text x="150.0" y="77" text-anchor="middle" class="text-dark-small" style="font-weight:700">Prompt层级</text>
+  <rect x="250" y="55" width="100" height="35" fill="#D1CFC5" rx="0"/>
+  <text x="300.0" y="77" text-anchor="middle" class="text-dark-small" style="font-weight:700">逆向难度</text>
+  <rect x="350" y="55" width="160" height="35" fill="#D1CFC5" rx="0"/>
+  <text x="430.0" y="77" text-anchor="middle" class="text-dark-small" style="font-weight:700">典型方法</text>
+  <line x1="50" y1="90" x2="510" y2="90" class="divider"/>
+  <rect x="50" y="90" width="460" height="52" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="0.5"/>
+  <text x="62" y="118" class="text-dark-small">User Prompt（用户输入）</text>
+  <text x="330" y="118" text-anchor="middle" class="cell-value-clay">⭐ 极易</text>
+  <text x="362" y="118" class="text-dark-small">直接观察</text>
+  <line x1="50" y1="142" x2="510" y2="142" class="divider"/>
+  <rect x="50" y="142" width="460" height="52" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="0.5"/>
+  <text x="62" y="170" class="text-dark-small">System Prompt（系统指令）</text>
+  <text x="330" y="170" text-anchor="middle" class="cell-value-clay">⭐⭐⭐ 中等</text>
+  <text x="362" y="170" class="text-dark-small">Layer 1-2</text>
+  <line x1="50" y1="194" x2="510" y2="194" class="divider"/>
+  <rect x="50" y="194" width="460" height="52" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="0.5"/>
+  <text x="62" y="222" class="text-dark-small">Tool Definition（工具定义）</text>
+  <text x="330" y="222" text-anchor="middle" class="cell-value-clay">⭐⭐⭐⭐ 困难</text>
+  <text x="362" y="222" class="text-dark-small">Layer 3</text>
+  <line x1="50" y1="246" x2="510" y2="246" class="divider"/>
+  <rect x="50" y="246" width="460" height="52" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="0.5"/>
+  <text x="62" y="274" class="text-dark-small">Agent Workflow（代理工作流）</text>
+  <text x="330" y="274" text-anchor="middle" class="cell-value-clay">⭐⭐⭐⭐⭐ 极难</text>
+  <text x="362" y="274" class="text-dark-small">Layer 4</text>
+  <line x1="50" y1="298" x2="510" y2="298" class="divider"/>
+  <rect x="50" y="298" width="460" height="52" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="0.5"/>
+  <text x="62" y="326" class="text-dark-small">State &amp; Memory（状态与记忆）</text>
+  <text x="330" y="326" text-anchor="middle" class="cell-value-clay">⭐⭐⭐⭐⭐ 极难</text>
+  <text x="362" y="326" class="text-dark-small">需要长期观察</text>
+  <line x1="50" y1="350" x2="510" y2="350" class="divider"/>
+  <line x1="250" y1="55" x2="250" y2="350" class="divider"/>
+  <line x1="350" y1="55" x2="350" y2="350" class="divider"/>
+  <rect x="50" y="55" width="460" height="295" class="border" rx="0"/>
+</svg>
