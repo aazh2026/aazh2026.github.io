@@ -917,41 +917,7 @@ metrics:
 
 ### 7.4 架构模式：AI-Native交付流水线
 
-```
-┌────────────────────────────────────────────────────────────────┐
-│                      AI-Native Delivery Pipeline                │
-├────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐    │
-│  │  Build   │ → │  Test    │ → │ AI Judge │ → │ Package  │    │
-│  └──────────┘   └──────────┘   └──────────┘   └──────────┘    │
-│       │              │              │              │           │
-│       ▼              ▼              ▼              ▼           │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │           Intelligent Deployment Decision               │   │
-│  │  • Timing optimization  • Risk assessment  • Resource   │   │
-│  └─────────────────────────┬──────────────────────────────┘   │
-│                            ▼                                   │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │              Intelligent Canary Release                 │   │
-│  │  • Dynamic traffic allocation  • Multi-dimensional      │   │
-│  │    anomaly detection  • AI-driven promotion             │   │
-│  └─────────────────────────┬──────────────────────────────┘   │
-│                            ▼                                   │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │              Continuous Risk Monitoring                 │   │
-│  │  • Real-time metrics  • Drift detection  • Predictive   │   │
-│  │    failure detection                                    │   │
-│  └─────────────────────────┬──────────────────────────────┘   │
-│                            ▼                                   │
-│  ┌────────────────────────────────────────────────────────┐   │
-│  │              Intelligent Rollback (if needed)           │   │
-│  │  • Impact assessment  • Graduated rollback  • Safe      │   │
-│  │    state transition                                     │   │
-│  └────────────────────────────────────────────────────────┘   │
-│                                                                 │
-└────────────────────────────────────────────────────────────────┘
-```
+<object data="/assets/images/2026-03-15-ai-native-deployment-03-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 560" width="620" height="560" role="img" aria-label="Rakuten AI 工具链集成架构">
+  <title>Rakuten AI 工具链集成架构</title>
+  <desc>Rakuten AI 工具链集成架构图，展示从 IDE 层、代码审查层、CI/CD 层到运维层的完整 AI 增强开发流程</desc>
+
+  <style>
+    .bg { fill: #FAF9F5; }
+    .border { stroke: #D1CFC5; stroke-width: 1.5; fill: #FAF9F5; }
+    .header-bg { fill: #D97757; }
+    .header-text { fill: #FAF9F5; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; }
+    .layer-bg { fill: #E3DACC; }
+    .label { fill: #141413; font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 600; }
+    .item { fill: #141413; font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; }
+    .sub { fill: #87867F; font-family: system-ui, -apple-system, sans-serif; font-size: 11px; }
+  </style>
+
+  <!-- Outer border -->
+  <rect class="bg" width="620" height="560" rx="10"/>
+  <rect class="border" x="1" y="1" width="618" height="558" rx="10"/>
+
+  <!-- Header -->
+  <path d="M 10 10 L 610 10 L 610 40 L 10 40 Z" fill="#D97757" rx="0"/>
+  <rect x="1" y="1" width="618" height="38" rx="9.5" fill="#D97757"/>
+  <text x="310" y="29" text-anchor="middle" class="header-text">Rakuten AI 工具链</text>
+
+  <!-- Layer 1: IDE -->
+  <g transform="translate(10, 50)">
+    <rect x="0" y="0" width="600" height="105" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <rect x="0" y="0" width="600" height="105" fill="#E3DACC" opacity="0.5"/>
+    <rect x="2" y="2" width="120" height="22" rx="3" fill="#788C5D" opacity="0.85"/>
+    <text x="62" y="17" text-anchor="middle" fill="#FAF9F5" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">IDE 层</text>
+    <text x="135" y="17" class="label">Cursor / VS Code + AI 插件</text>
+    <text x="15" y="45" class="item">• 代码补全</text>
+    <text x="15" y="65" class="item">• 代码生成</text>
+    <text x="15" y="85" class="item">• Inline 聊天</text>
+    <line x1="600" y1="0" x2="600" y2="105" stroke="#D1CFC5" stroke-width="1"/>
+  </g>
+
+  <!-- Layer 2: 代码审查 -->
+  <g transform="translate(10, 157)">
+    <rect x="0" y="0" width="600" height="105" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <rect x="0" y="0" width="600" height="105" fill="#E3DACC" opacity="0.5"/>
+    <rect x="2" y="2" width="130" height="22" rx="3" fill="#788C5D" opacity="0.85"/>
+    <text x="67" y="17" text-anchor="middle" fill="#FAF9F5" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">代码审查层</text>
+    <text x="145" y="17" class="label">AI 预审查</text>
+    <text x="15" y="45" class="item">• 自动检查常见错误</text>
+    <text x="15" y="65" class="item">• 风格一致性检查</text>
+    <text x="15" y="85" class="item">• 安全漏洞扫描</text>
+    <line x1="600" y1="0" x2="600" y2="105" stroke="#D1CFC5" stroke-width="1"/>
+  </g>
+
+  <!-- Layer 3: CI/CD -->
+  <g transform="translate(10, 264)">
+    <rect x="0" y="0" width="600" height="105" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <rect x="0" y="0" width="600" height="105" fill="#E3DACC" opacity="0.5"/>
+    <rect x="2" y="2" width="100" height="22" rx="3" fill="#788C5D" opacity="0.85"/>
+    <text x="52" y="17" text-anchor="middle" fill="#FAF9F5" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">CI/CD 层</text>
+    <text x="115" y="17" class="label">AI 增强流水线</text>
+    <text x="15" y="45" class="item">• 自动化测试生成</text>
+    <text x="15" y="65" class="item">• 智能回归测试</text>
+    <text x="15" y="85" class="item">• 部署影响分析</text>
+    <line x1="600" y1="0" x2="600" y2="105" stroke="#D1CFC5" stroke-width="1"/>
+  </g>
+
+  <!-- Layer 4: 运维 -->
+  <g transform="translate(10, 371)">
+    <rect x="0" y="0" width="600" height="105" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <rect x="0" y="0" width="600" height="105" fill="#E3DACC" opacity="0.5"/>
+    <rect x="2" y="2" width="80" height="22" rx="3" fill="#788C5D" opacity="0.85"/>
+    <text x="42" y="17" text-anchor="middle" fill="#FAF9F5" font-family="system-ui, -apple-system, sans-serif" font-size="11.5" font-weight="600">运维层</text>
+    <text x="95" y="17" class="label">AI 辅助监控</text>
+    <text x="15" y="45" class="item">• 异常检测</text>
+    <text x="15" y="65" class="item">• 根因分析</text>
+    <text x="15" y="85" class="item">• 自动修复建议</text>
+  </g>
+
+  <!-- Outer border overlay for clean edges -->
+  <rect x="1" y="1" width="618" height="558" rx="9.5" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+</svg>

@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 620" role="img" aria-label="AI-Native 可观测性系统架构图">
+  <title>AI-Native 可观测性系统架构图</title>
+  <desc>展示从应用层到存储层的意图追踪架构，包括 AI 服务、Intent Tracer SDK、收集器、存储层和分析可视化层</desc>
+
+  <defs>
+    <!-- Card background -->
+    <linearGradient id="gradCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F5F4F0"/>
+    </linearGradient>
+    <!-- SDK box gradient -->
+    <linearGradient id="gradSdk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8F5E9"/>
+      <stop offset="100%" stop-color="#C8E6C9"/>
+    </linearGradient>
+    <!-- Storage gradient -->
+    <linearGradient id="gradStorage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF3E0"/>
+      <stop offset="100%" stop-color="#FFE0B2"/>
+    </linearGradient>
+    <!-- Analysis gradient -->
+    <linearGradient id="gradAnalysis" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E3F2FD"/>
+      <stop offset="100%" stop-color="#BBDEFB"/>
+    </linearGradient>
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+    <filter id="shadowSm" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#141413" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="620" fill="#FAF9F5"/>
+
+  <!-- ===================== LAYER 1: 应用层 (AI Services) ===================== -->
+
+  <!-- Layer label left -->
+  <rect x="16" y="24" width="8" height="148" rx="4" fill="#D97757"/>
+  <text x="32" y="76" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#D97757" letter-spacing="0.5">应用层</text>
+  <text x="32" y="92" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F">AI Services</text>
+
+  <!-- Outer container -->
+  <rect x="56" y="20" width="648" height="156" rx="12" fill="url(#gradCard)" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="76" y="46" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#141413">应用层 (AI Services)</text>
+
+  <!-- Three service cards -->
+  <!-- Card 1: 推荐服务 -->
+  <rect x="88" y="64" width="168" height="96" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="88" y="64" width="168" height="32" rx="10" fill="#D97757" fill-opacity="0.08"/>
+  <rect x="88" y="88" width="168" height="8" fill="#D97757" fill-opacity="0.08"/>
+  <text x="172" y="83" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">推荐服务</text>
+  <text x="172" y="108" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Recommendation Service</text>
+  <line x1="104" y1="120" x2="240" y2="120" stroke="#E3DACC" stroke-width="1"/>
+  <text x="172" y="136" font-family="'SF Mono', 'Fira Code', monospace" font-size="9" fill="#87867F" text-anchor="middle">getRecommendations()</text>
+  <!-- Connector dot -->
+  <circle cx="172" cy="160" r="4" fill="#D97757"/>
+
+  <!-- Card 2: 客服Bot -->
+  <rect x="276" y="64" width="168" height="96" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="276" y="64" width="168" height="32" rx="10" fill="#D97757" fill-opacity="0.08"/>
+  <rect x="276" y="88" width="168" height="8" fill="#D97757" fill-opacity="0.08"/>
+  <text x="360" y="83" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">客服 Bot</text>
+  <text x="360" y="108" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Customer Service Bot</text>
+  <line x1="292" y1="120" x2="428" y2="120" stroke="#E3DACC" stroke-width="1"/>
+  <text x="360" y="136" font-family="'SF Mono', 'Fira Code', monospace" font-size="9" fill="#87867F" text-anchor="middle">chat(prompt)</text>
+  <!-- Connector dot -->
+  <circle cx="360" cy="160" r="4" fill="#D97757"/>
+
+  <!-- Card 3: 代码助手 -->
+  <rect x="464" y="64" width="168" height="96" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="464" y="64" width="168" height="32" rx="10" fill="#D97757" fill-opacity="0.08"/>
+  <rect x="464" y="88" width="168" height="8" fill="#D97757" fill-opacity="0.08"/>
+  <text x="548" y="83" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">代码助手</text>
+  <text x="548" y="108" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Code Assistant</text>
+  <line x1="480" y1="120" x2="616" y2="120" stroke="#E3DACC" stroke-width="1"/>
+  <text x="548" y="136" font-family="'SF Mono', 'Fira Code', monospace" font-size="9" fill="#87867F" text-anchor="middle">generateCode()</text>
+  <!-- Connector dot -->
+  <circle cx="548" cy="160" r="4" fill="#D97757"/>
+
+  <!-- Vertical lines from three cards merging -->
+  <line x1="172" y1="160" x2="172" y2="188" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="360" y1="160" x2="360" y2="188" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="548" y1="160" x2="548" y2="188" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Merge to center -->
+  <line x1="172" y1="188" x2="548" y2="188" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="360" y1="188" x2="360" y2="204" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- ===================== LAYER 2: Intent Tracer SDK ===================== -->
+
+  <!-- Layer label left -->
+  <rect x="16" y="196" width="8" height="80" rx="4" fill="#788C5D"/>
+  <text x="32" y="224" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#788C5D" letter-spacing="0.5">SDK 层</text>
+  <text x="32" y="240" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F">Intent Tracer</text>
+
+  <!-- SDK box -->
+  <rect x="56" y="204" width="608" height="64" rx="10" fill="url(#gradSdk)" stroke="#788C5D" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="360" y="228" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">Intent Tracer SDK</text>
+  <text x="360" y="248" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#546E3A" text-anchor="middle">统一意图追踪 · 上下文记录 · 决策归因</text>
+  <!-- Connector dot below -->
+  <circle cx="360" cy="268" r="4" fill="#788C5D"/>
+
+  <!-- ===================== LAYER 3: 意图追踪收集器 ===================== -->
+
+  <!-- Layer label left -->
+  <rect x="16" y="288" width="8" height="72" rx="4" fill="#B87358"/>
+  <text x="32" y="312" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#B87358" letter-spacing="0.5">收集层</text>
+  <text x="32" y="328" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F">Collector</text>
+
+  <!-- Collector box -->
+  <rect x="200" y="284" width="320" height="56" rx="10" fill="url(#gradCard)" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="360" y="308" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">意图追踪收集器</text>
+  <text x="360" y="328" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" fill="#87867F" text-anchor="middle">Intent Trace Collector</text>
+  <!-- Connector dots -->
+  <circle cx="360" cy="268" r="4" fill="#788C5D"/>
+  <line x1="360" y1="268" x2="360" y2="284" stroke="#D1CFC5" stroke-width="1.5"/>
+  <circle cx="360" cy="340" r="4" fill="#B87358"/>
+
+  <!-- ===================== LAYER 4: 存储层 ===================== -->
+
+  <!-- Layer label left -->
+  <rect x="16" y="356" width="8" height="120" rx="4" fill="#8B7355"/>
+  <text x="32" y="400" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#8B7355" letter-spacing="0.5">存储层</text>
+  <text x="32" y="416" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F">Storage</text>
+
+  <!-- Storage outer container -->
+  <rect x="56" y="356" width="608" height="120" rx="12" fill="url(#gradStorage)" stroke="#C8A878" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="76" y="380" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#141413">存储层 (Hot / Warm / Cold)</text>
+
+  <!-- Hot card -->
+  <rect x="88" y="392" width="160" height="68" rx="8" fill="#FFFFFF" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="88" y="392" width="160" height="24" rx="8" fill="#D97757" fill-opacity="0.12"/>
+  <rect x="88" y="408" width="160" height="8" fill="#D97757" fill-opacity="0.12"/>
+  <text x="168" y="407" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#B85C38" text-anchor="middle">🔥 热数据</text>
+  <text x="168" y="424" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">最近 24 小时</text>
+  <text x="168" y="438" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">In-memory + SSD</text>
+  <text x="168" y="452" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#B85C38" text-anchor="middle">实时监控 · 告警</text>
+
+  <!-- Warm card -->
+  <rect x="280" y="392" width="160" height="68" rx="8" fill="#FFFFFF" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="280" y="392" width="160" height="24" rx="8" fill="#788C5D" fill-opacity="0.12"/>
+  <rect x="280" y="408" width="160" height="8" fill="#788C5D" fill-opacity="0.12"/>
+  <text x="360" y="407" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#546E3A" text-anchor="middle">🌡️ 温数据</text>
+  <text x="360" y="424" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">最近 30 天</text>
+  <text x="360" y="438" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Elasticsearch</text>
+  <text x="360" y="452" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#546E3A" text-anchor="middle">查询分析 · 排查</text>
+
+  <!-- Cold card -->
+  <rect x="472" y="392" width="160" height="68" rx="8" fill="#FFFFFF" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <rect x="472" y="392" width="160" height="24" rx="8" fill="#5C7FA3" fill-opacity="0.12"/>
+  <rect x="472" y="408" width="160" height="8" fill="#5C7FA3" fill-opacity="0.12"/>
+  <text x="552" y="407" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#3D6080" text-anchor="middle">❄️ 冷数据</text>
+  <text x="552" y="424" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">历史归档</text>
+  <text x="552" y="438" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Object Storage (S3)</text>
+  <text x="552" y="452" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#3D6080" text-anchor="middle">长期分析 · 训练</text>
+
+  <!-- Connector dot below storage -->
+  <circle cx="360" cy="476" r="4" fill="#8B7355"/>
+
+  <!-- ===================== LAYER 5: 分析与可视化 ===================== -->
+
+  <!-- Layer label left -->
+  <rect x="16" y="492" width="8" height="100" rx="4" fill="#5C7FA3"/>
+  <text x="32" y="528" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#5C7FA3" letter-spacing="0.5">分析层</text>
+  <text x="32" y="544" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F">Analysis</text>
+
+  <!-- Analysis outer container -->
+  <rect x="56" y="492" width="608" height="104" rx="12" fill="url(#gradAnalysis)" stroke="#90B8D4" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="76" y="516" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#141413">分析与可视化</text>
+
+  <!-- Three analysis cards -->
+  <!-- Card 1: 仪表板 -->
+  <rect x="88" y="528" width="168" height="52" rx="8" fill="#FFFFFF" stroke="#90B8D4" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="172" y="548" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">📊 仪表板</text>
+  <text x="172" y="564" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Dashboard</text>
+  <text x="172" y="578" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#5C7FA3" text-anchor="middle">实时意图流 · 热力图</text>
+
+  <!-- Card 2: 告警 -->
+  <rect x="276" y="528" width="168" height="52" rx="8" fill="#FFFFFF" stroke="#90B8D4" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="360" y="548" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">🔔 告警系统</text>
+  <text x="360" y="564" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Alerting</text>
+  <text x="360" y="578" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#5C7FA3" text-anchor="middle">意图失败 · 漂移检测</text>
+
+  <!-- Card 3: 查询 -->
+  <rect x="464" y="528" width="168" height="52" rx="8" fill="#FFFFFF" stroke="#90B8D4" stroke-width="1.5" filter="url(#shadowSm)"/>
+  <text x="548" y="548" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#141413" text-anchor="middle">🔍 查询分析</text>
+  <text x="548" y="564" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Query &amp; Analytics</text>
+  <text x="548" y="578" font-family="'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="9" fill="#5C7FA3" text-anchor="middle">决策归因 · 根因分析</text>
+
+  <!-- Arrow connecting collector to storage -->
+  <line x1="360" y1="340" x2="360" y2="356" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Arrow connecting storage to analysis -->
+  <line x1="360" y1="476" x2="360" y2="492" stroke="#D1CFC5" stroke-width="1.5"/>
+
+</svg>
