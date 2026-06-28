@@ -58,6 +58,8 @@ redirect_from:
 
 ## 私有代码LLM的六个Pipeline
 
+<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-01-six-pipelines.svg" type="image/svg+xml" width="100%"></object>
+
 ### 1. 数据管道（Data Pipeline）
 
 **挑战**：公司代码库每天都在变，如何持续获取高质量训练数据？

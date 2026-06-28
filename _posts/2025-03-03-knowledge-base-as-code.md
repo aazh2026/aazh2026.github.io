@@ -210,6 +210,8 @@ docs/runbooks/
 
 ### ADR的状态流转
 
+<object data="/assets/images/2025-03-03-knowledge-base-as-code-01-adr-lifecycle.svg" type="image/svg+xml" width="100%"></object>
+
 ```
 提议（Proposed）
     ↓

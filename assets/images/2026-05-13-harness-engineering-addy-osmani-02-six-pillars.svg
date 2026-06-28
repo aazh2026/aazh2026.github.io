@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 420" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="860" height="420" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">Harness 六层基础构件：从行为倒推设计</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">Addy Osmani — 每个组件对应一个具体行为，没有行为就没有组件</text>
+
+  <!-- 6 pillars in 3x2 grid -->
+  <!-- Row 1 -->
+
+  <!-- Pillar 1: Filesystem & Git -->
+  <rect x="30" y="78" width="255" height="140" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
+  <rect x="30" y="78" width="255" height="30" fill="#788C5D" rx="10"/>
+  <rect x="30" y="98" width="255" height="10" fill="#788C5D"/>
+  <text x="157" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">1. 文件系统 &amp; Git</text>
+  <text x="157" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">持久状态</text>
+  <text x="157" y="146" text-anchor="middle" font-size="10" fill="#87867F">工作区 · 中间结果 offload</text>
+  <text x="157" y="163" text-anchor="middle" font-size="10" fill="#87867F">版本控制 · 分支实验 · 回滚</text>
+  <rect x="80" y="178" width="155" height="22" fill="#E3DACC" rx="5"/>
+  <text x="157" y="193" text-anchor="middle" font-size="10" fill="#141413">Filesystem = 工作区</text>
+
+  <!-- Pillar 2: Bash -->
+  <rect x="302" y="78" width="255" height="140" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="302" y="78" width="255" height="30" fill="#D97757" rx="10"/>
+  <rect x="302" y="98" width="255" height="10" fill="#D97757"/>
+  <text x="430" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">2. Bash &amp; 代码执行</text>
+  <text x="430" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">通用工具</text>
+  <text x="430" y="146" text-anchor="middle" font-size="10" fill="#87867F">ReAct loop: Reason → Act → Observe</text>
+  <text x="430" y="163" text-anchor="middle" font-size="10" fill="#87867F">按需构建，而非预建所有工具</text>
+  <rect x="340" y="178" width="180" height="22" fill="#E3DACC" rx="5"/>
+  <text x="430" y="193" text-anchor="middle" font-size="10" fill="#141413">Bash = 按需构建工具</text>
+
+  <!-- Pillar 3: Sandboxes -->
+  <rect x="574" y="78" width="255" height="140" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
+  <rect x="574" y="78" width="255" height="30" fill="#788C5D" rx="10"/>
+  <rect x="574" y="98" width="255" height="10" fill="#788C5D"/>
+  <text x="702" y="98" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">3. Sandboxes &amp; 默认工具</text>
+  <text x="702" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">安全隔离环境</text>
+  <text x="702" y="146" text-anchor="middle" font-size="10" fill="#87867F">预装运行时 · 测试 CLI</text>
+  <text x="702" y="163" text-anchor="middle" font-size="10" fill="#87867F">Headless browsers · 强默认</text>
+  <rect x="615" y="178" width="175" height="22" fill="#E3DACC" rx="5"/>
+  <text x="702" y="193" text-anchor="middle" font-size="10" fill="#141413">安全执行环境</text>
+
+  <!-- Row 2 -->
+
+  <!-- Pillar 4: Memory -->
+  <rect x="30" y="232" width="255" height="140" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="30" y="232" width="255" height="30" fill="#D97757" rx="10"/>
+  <rect x="30" y="252" width="255" height="10" fill="#D97757"/>
+  <text x="157" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">4. 内存 &amp; 搜索</text>
+  <text x="157" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">持续学习</text>
+  <text x="157" y="300" text-anchor="middle" font-size="10" fill="#87867F">AGENTS.md 跨 session 注入知识</text>
+  <text x="157" y="317" text-anchor="middle" font-size="10" fill="#87867F">Web search / MCP 实时信息</text>
+  <rect x="60" y="332" width="195" height="22" fill="#E3DACC" rx="5"/>
+  <text x="157" y="347" text-anchor="middle" font-size="10" fill="#141413">Session 间知识持久化</text>
+
+  <!-- Pillar 5: Context Rot -->
+  <rect x="302" y="232" width="255" height="140" fill="none" stroke="#D1CFC5" stroke-width="2" rx="10"/>
+  <rect x="302" y="232" width="255" height="30" fill="#87867F" rx="10"/>
+  <rect x="302" y="252" width="255" height="10" fill="#87867F"/>
+  <text x="430" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">5. 对抗 Context Rot</text>
+  <text x="430" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">上下文窗口稀缺管理</text>
+  <text x="430" y="300" text-anchor="middle" font-size="10" fill="#87867F">Compaction · Tool-call offloading</text>
+  <text x="430" y="317" text-anchor="middle" font-size="10" fill="#87867F">Progressive disclosure</text>
+  <rect x="322" y="332" width="215" height="22" fill="#E3DACC" rx="5"/>
+  <text x="430" y="347" text-anchor="middle" font-size="10" fill="#141413">窗口填满 → 推理退化</text>
+
+  <!-- Pillar 6: Long-time execution -->
+  <rect x="574" y="232" width="255" height="140" fill="none" stroke="#D1CFC5" stroke-width="2" rx="10"/>
+  <rect x="574" y="232" width="255" height="30" fill="#87867F" rx="10"/>
+  <rect x="574" y="252" width="255" height="10" fill="#87867F"/>
+  <text x="702" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">6. 长时执行</text>
+  <text x="702" y="280" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">对抗 early stopping</text>
+  <text x="702" y="300" text-anchor="middle" font-size="10" fill="#87867F">Loops · Planning · Splits</text>
+  <text x="702" y="317" text-anchor="middle" font-size="10" fill="#87867F">Gen + Eval 分离防 self-bias</text>
+  <rect x="605" y="332" width="193" height="22" fill="#E3DACC" rx="5"/>
+  <text x="702" y="347" text-anchor="middle" font-size="10" fill="#141413">强制继续 vs 模型退出</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="30" y="388" width="800" height="26" fill="#141413" rx="6"/>
+  <text x="430" y="406" text-anchor="middle" font-size="11" fill="#FAF9F5">Harness Engineering = discipline，不是 one-size-fits-all framework</text>
+  <text x="770" y="406" text-anchor="end" font-size="10" fill="#D97757" font-weight="700">竞争在地基</text>
+</svg>

@@ -81,6 +81,8 @@ Python、Ruby、JavaScript... 表达力更强，语法更简洁。
 
 **规律**：每一代新语言都在提高抽象层级，让程序员更关注"解决什么问题"，而非"如何操作机器"。
 
+<object data="/assets/images/2026-03-14-post-code-era-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ### 但故事还没结束
 
 2023 年，GPT-4 的发布标志着一个新时代的开始。

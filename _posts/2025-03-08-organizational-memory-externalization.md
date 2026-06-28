@@ -71,6 +71,8 @@ redirect_from:
 **关键洞察**：
 显性知识告诉你"怎么做"，隐性知识告诉你"什么时候做、为什么做、什么时候不该做"。
 
+<object data="/assets/images/2025-03-08-organizational-memory-externalization-01-iceberg.svg" type="image/svg+xml" width="100%"></object>
+
 在企业里，显性知识只占10%，隐性知识占90%。但企业管理系统往往只管理那10%。
 
 ---

@@ -63,6 +63,8 @@ Hickey 用一句话点破了程序员的集体幻觉：
 
 ## 2. 简单性 vs 容易性的对比分析
 
+<object data="/assets/images/2026-03-15-simple-vs-easy-01-quadrant.svg" type="image/svg+xml" width="100%"></object>
+
 让我们用三个维度来深入理解这个区别：
 
 ### 2.1 心智负担 (Mental Burden)

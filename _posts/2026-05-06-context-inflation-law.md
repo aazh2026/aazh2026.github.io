@@ -92,6 +92,8 @@ series: AI-Native Engineering
 
 ## 三、成本结构解析
 
+<object data="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" type="image/svg+xml" width="100%"></object>
+
 ### 你的钱到底花在哪了？
 
 让我们拆解一个典型 Agent 请求的成本构成：

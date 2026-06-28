@@ -50,6 +50,8 @@ redirect_from:
 
 ### 1.2 不同等级的处理策略
 
+<object data="/assets/images/2025-01-24-secure-memory-01-sensitivity-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ```python
 class SensitivityLevel:
     L1_CRITICAL = "critical"      # 永不存储，或仅内存中短暂存在

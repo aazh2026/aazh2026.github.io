@@ -161,6 +161,8 @@ AI转型正在重复这个模式。
 
 ## 五、实战：企业AI成熟度的五个阶段
 
+<object data="/assets/images/2026-03-18-ai-transformation-organizational-genome-01-maturity-stages.svg" type="image/svg+xml" width="100%"></object>
+
 基于对数百家企业AI转型的观察和复盘，我总结了一个「企业AI成熟度模型」。这不是技术成熟度，是组织准备度。
 
 ### 阶段一：工具实验（Tool Experimentation）

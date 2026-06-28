@@ -11,90 +11,74 @@
   <text x="24" y="36" font-size="15" font-weight="700" fill="#141413">RAG 工作原理：文档如何被 AI 读取</text>
   <text x="24" y="54" font-size="10" fill="#87867F">How RAG Systems Read Documents: Chunking &amp; Retrieval</text>
 
-  <!-- === LEFT SECTION: Document === -->
-  <rect x="24" y="75" width="170" height="240" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="109" y="95" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">原始文档</text>
-  <text x="109" y="110" font-size="9" fill="#87867F" text-anchor="middle">Original Document</text>
+  <!-- LEFT: Original Document -->
+  <rect x="24" y="75" width="160" height="240" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="104" y="95" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">原始文档</text>
+  <text x="104" y="110" font-size="9" fill="#87867F" text-anchor="middle">Original Document</text>
+  <rect x="38" y="122" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="133" width="120" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="144" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="155" width="100" height="6" fill="#D1CFC5" rx="2"/>
+  <line x1="38" y1="168" x2="170" y2="168" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="40" y="180" font-size="8" fill="#D97757">切分点</text>
+  <rect x="38" y="188" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="199" width="120" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="210" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="221" width="90" height="6" fill="#D1CFC5" rx="2"/>
+  <line x1="38" y1="234" x2="170" y2="234" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="40" y="246" font-size="8" fill="#D97757">切分点</text>
+  <rect x="38" y="254" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="265" width="115" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="276" width="132" height="6" fill="#D1CFC5" rx="2"/>
+  <rect x="38" y="287" width="80" height="6" fill="#D1CFC5" rx="2"/>
 
-  <!-- Document lines simulating content -->
-  <rect x="38" y="122" width="142" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="134" width="130" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="146" width="142" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="158" width="110" height="7" fill="#D1CFC5" rx="2"/>
-  <!-- Cut line -->
-  <line x1="38" y1="172" x2="182" y2="172" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="40" y="185" font-size="8" fill="#D97757">切分点 ❌</text>
-  <!-- Continue -->
-  <rect x="38" y="192" width="142" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="204" width="130" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="216" width="120" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="228" width="142" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="240" width="90" height="7" fill="#D1CFC5" rx="2"/>
-  <!-- Cut line 2 -->
-  <line x1="38" y1="254" x2="182" y2="254" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="40" y="267" font-size="8" fill="#D97757">切分点 ❌</text>
-  <rect x="38" y="274" width="142" height="7" fill="#D1CFC5" rx="2"/>
-  <rect x="38" y="286" width="125" height="7" fill="#D1CFC5" rx="2"/>
+  <!-- Arrow: Doc to Chunking -->
+  <line x1="184" y1="195" x2="205" y2="195" stroke="#788C5D" stroke-width="2.5"/>
+  <polygon points="205,191 212,195 205,199" fill="#788C5D"/>
+  <text x="194" y="186" font-size="8.5" fill="#788C5D" text-anchor="middle">切分</text>
 
-  <!-- Arrow: Document to Chunking -->
-  <line x1="194" y1="195" x2="214" y2="195" stroke="#788C5D" stroke-width="2.5"/>
-  <polygon points="214,191 221,195 214,199" fill="#788C5D"/>
-  <text x="204" y="185" font-size="8.5" fill="#788C5D" text-anchor="middle">切分</text>
-
-  <!-- === MIDDLE SECTION: Chunks === -->
-  <rect x="222" y="75" width="150" height="240" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="297" y="95" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">语义分块</text>
-  <text x="297" y="110" font-size="9" fill="#87867F" text-anchor="middle">Semantic Chunks</text>
-
-  <!-- Chunk 1 -->
-  <rect x="232" y="124" width="130" height="36" fill="#D97757" opacity="0.75" rx="5"/>
-  <text x="297" y="138" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 1</text>
-  <text x="297" y="150" font-size="8" fill="#E3DACC" text-anchor="middle">512 tokens</text>
-
-  <!-- Chunk 2 -->
-  <rect x="232" y="168" width="130" height="36" fill="#D97757" opacity="0.75" rx="5"/>
-  <text x="297" y="182" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 2</text>
-  <text x="297" y="194" font-size="8" fill="#E3DACC" text-anchor="middle">512 tokens</text>
-
-  <!-- Chunk 3 -->
-  <rect x="232" y="212" width="130" height="36" fill="#D97757" opacity="0.75" rx="5"/>
-  <text x="297" y="226" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 3</text>
-  <text x="297" y="238" font-size="8" fill="#E3DACC" text-anchor="middle">512 tokens</text>
-
-  <!-- Chunk 4 -->
-  <rect x="232" y="256" width="130" height="36" fill="#D97757" opacity="0.75" rx="5"/>
-  <text x="297" y="270" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk N...</text>
-  <text x="297" y="282" font-size="8" fill="#E3DACC" text-anchor="middle">512 tokens</text>
+  <!-- MIDDLE: Semantic Chunks -->
+  <rect x="212" y="75" width="148" height="240" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="286" y="95" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">语义分块</text>
+  <text x="286" y="110" font-size="9" fill="#87867F" text-anchor="middle">Semantic Chunks</text>
+  <rect x="222" y="126" width="128" height="34" fill="#D97757" opacity="0.75" rx="5"/>
+  <text x="286" y="138" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 1 · 512 tokens</text>
+  <rect x="222" y="166" width="128" height="34" fill="#D97757" opacity="0.75" rx="5"/>
+  <text x="286" y="178" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 2 · 512 tokens</text>
+  <rect x="222" y="206" width="128" height="34" fill="#D97757" opacity="0.75" rx="5"/>
+  <text x="286" y="218" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk 3 · 512 tokens</text>
+  <rect x="222" y="246" width="128" height="34" fill="#D97757" opacity="0.75" rx="5"/>
+  <text x="286" y="258" font-size="9" fill="#FAF9F5" text-anchor="middle">Chunk N · 512 tokens</text>
 
   <!-- Arrow: Chunks to Vector DB -->
-  <line x1="372" y1="195" x2="392" y2="195" stroke="#788C5D" stroke-width="2.5"/>
-  <polygon points="392,191 399,195 392,199" fill="#788C5D"/>
-  <text x="382" y="185" font-size="8.5" fill="#788C5D" text-anchor="middle">向量化</text>
+  <line x1="360" y1="195" x2="381" y2="195" stroke="#788C5D" stroke-width="2.5"/>
+  <polygon points="381,191 388,195 381,199" fill="#788C5D"/>
+  <text x="370" y="186" font-size="8.5" fill="#788C5D" text-anchor="middle">向量化</text>
 
-  <!-- === RIGHT SECTION: Vector DB === -->
-  <rect x="400" y="75" width="196" height="155" fill="#141413" rx="8"/>
-  <text x="498" y="95" font-size="10" font-weight="700" fill="#FAF9F5" text-anchor="middle">向量数据库</text>
-  <text x="498" y="110" font-size="9" fill="#87867F" text-anchor="middle">Vector Database</text>
+  <!-- RIGHT TOP: Vector DB -->
+  <rect x="388" y="75" width="208" height="150" fill="#141413" rx="8"/>
+  <text x="492" y="95" font-size="10" font-weight="700" fill="#FAF9F5" text-anchor="middle">向量数据库</text>
+  <text x="492" y="110" font-size="9" fill="#87867F" text-anchor="middle">Vector Database</text>
+  <text x="404" y="132" font-size="8" fill="#D1CFC5">Chunk 1 → [0.12, -0.34, 0.87, ...]</text>
+  <text x="404" y="148" font-size="8" fill="#D1CFC5">Chunk 2 → [0.45, 0.21, -0.09, ...]</text>
+  <text x="404" y="164" font-size="8" fill="#D1CFC5">Chunk 3 → [-0.67, 0.43, 0.12, ...]</text>
+  <text x="404" y="180" font-size="8" fill="#D1CFC5">Chunk N → [0.33, -0.78, 0.56, ...]</text>
+  <text x="404" y="200" font-size="8" fill="#788C5D">语义相似度检索</text>
 
-  <!-- Vector representations -->
-  <text x="416" y="132" font-size="8.5" fill="#D1CFC5">[0.12, -0.34, 0.87, ...]</text>
-  <text x="416" y="148" font-size="8.5" fill="#D1CFC5">[0.45, 0.21, -0.09, ...]</text>
-  <text x="416" y="164" font-size="8.5" fill="#D1CFC5">[−0.67, 0.43, 0.12, ...]</text>
-  <text x="416" y="180" font-size="8.5" fill="#D1CFC5">[0.33, −0.78, 0.56, ...]</text>
-  <text x="416" y="196" font-size="8.5" fill="#D1CFC5">[...]</text>
-  <text x="416" y="216" font-size="8.5" fill="#87867F">语义相似度检索</text>
+  <!-- RIGHT BOTTOM: Query -->
+  <rect x="388" y="235" width="208" height="80" fill="#E3DACC" rx="8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="404" y="255" font-size="9" font-weight="700" fill="#141413">用户提问</text>
+  <text x="404" y="270" font-size="8.5" fill="#141413">"如何优化查询性能？"</text>
+  <text x="404" y="286" font-size="8" fill="#87867F">→ 查询向量</text>
+  <text x="404" y="299" font-size="8" fill="#788C5D">→ 匹配最相似的 Chunk</text>
 
-  <!-- Arrow: Vector DB to Query -->
-  <line x1="498" y1="230" x2="498" y2="250" stroke="#D97757" stroke-width="2"/>
-  <polygon points="494,250 498,257 502,250" fill="#D97757"/>
+  <!-- Arrow from Vector DB down to Query -->
+  <line x1="492" y1="225" x2="492" y2="235" stroke="#D97757" stroke-width="2"/>
+  <polygon points="488,235 492,242 496,235" fill="#D97757"/>
 
-  <!-- Query input -->
-  <rect x="400" y="253" width="196" height="62" fill="#E3DACC" rx="8" stroke="#D97757" stroke-width="1.5"/>
-  <text x="416" y="271" font-size="9" font-weight="600" fill="#141413">用户提问：</text>
-  <text x="416" y="285" font-size="8.5" fill="#141413">"如何优化查询性能？"</text>
-  <text x="416" y="300" font-size="8" fill="#87867F">→ 查询向量 → 语义检索</text>
-  <text x="416" y="312" font-size="8" fill="#788C5D">→ 匹配最相似的 Chunk</text>
-
-  <!-- Problem callout box -->
-  <rect x="24" y="330" width="572" height="54" fill="#D97757" opacity="0.12" rx="6" stroke="#D97757" stroke-width="1"/>
-  <text x="40" y="350" font-size="9.5" font-weight="700" fill="#D97757">⚠
+  <!-- BOTTOM: Problem callout -->
+  <rect x="24" y="330" width="572" height="56" fill="#D97757" opacity="0.10" rx="6" stroke="#D97757" stroke-width="1"/>
+  <text x="40" y="350" font-size="9.5" font-weight="700" fill="#D97757">⚠ 关键问题：切分可能破坏上下文</text>
+  <text x="40" y="366" font-size="9" fill="#141413">"这种设计模式的优势在于…（切分点）…能够显著提高性能"</text>
+  <text x="40" y="380" font-size="8.5" fill="#87867F">AI 只看到"能够显著提高性能"，不知道"这种设计模式"是什么。</text>
+</svg>

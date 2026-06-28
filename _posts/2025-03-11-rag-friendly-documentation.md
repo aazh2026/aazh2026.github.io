@@ -44,6 +44,8 @@ redirect_from:
 
 ## 二、人类阅读 vs AI阅读：根本差异
 
+<object data="/assets/images/2025-03-11-rag-friendly-documentation-01-rag-chunking.svg" type="image/svg+xml" width="100%"></object>
+
 ### 人类怎么读文档
 
 **线性浏览**：
