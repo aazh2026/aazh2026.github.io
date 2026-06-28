@@ -264,28 +264,7 @@ Shopify 是一个成功的模块化单体案例：
 
 ### 示例
 
-```
-初始状态：
-[Client] → [Monolith]
-
-第一步：
-[Client] → [Gateway] → [Monolith]
-                  ↓
-               [New Service A]
-
-第二步：
-[Client] → [Gateway] → [Monolith (缩小)]
-                  ↓
-               [Service A]
-               [Service B]
-
-最终状态：
-[Client] → [Gateway] → [Service A]
-                  ↓
-               [Service B]
-               [Service C]
-               [Service D]
-```
+<object data="/assets/images/2026-03-16-microservices-reflection-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 为什么不要重写
 
