@@ -1,0 +1,21 @@
+# Jekyll
+.bundle/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
