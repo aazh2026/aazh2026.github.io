@@ -820,7 +820,6 @@ Unix 哲学诞生于 50 年前，但它的核心思想——**小即是美、组
 **本系列文章**
 - [#48 Agent-Driven Debugging：从调试到诊断]({% post_url 2026-03-12-agent-driven-debugging %})
 - [#45 知识孤岛指数：衡量AI生成代码导致的集体理解度下降]({% post_url 2026-03-12-knowledge-isolation-index %})
-- [#14 10x工程师已死，10x乘数当立？]({% post_url 2025-03-26-10x-multiplier %})
 
 **Unix 哲学经典**
 - *The Unix Programming Environment* — Kernighan & Pike

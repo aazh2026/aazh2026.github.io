@@ -1173,7 +1173,6 @@ AI-Native时代的软件工程，正在成为一个**自我进化的智能系统
 ---
 
 **系列关联阅读**：
-- [#14 10x工程师已死，10x乘数当立？]({% post_url 2025-03-26-10x-multiplier %})
 - [#48 Agent-Driven Debugging：从调试到诊断]({% post_url 2026-03-12-agent-driven-debugging %})
 - [#51 Agent-DD：多Agent协作的Swarm Programming模式]({% post_url 2025-05-28-agent-dd-swarm-programming %})
 

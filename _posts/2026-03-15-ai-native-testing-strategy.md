@@ -1264,7 +1264,6 @@ AI-Native 模式：
 
 **系列关联阅读**：
 - [#1 TDD的死亡与重生：AI时代测试先行的本质转变]({% post_url 2025-05-18-tdd-death-and-rebirth %})
-- [#14 10x工程师已死，10x乘数当立？]({% post_url 2025-03-26-10x-multiplier %})
 - [#45 知识孤岛指数：衡量AI生成代码导致的集体理解度下降]({% post_url 2026-03-12-knowledge-isolation-index %})
 - [#48 Agent-Driven Debugging：从调试到诊断]({% post_url 2026-03-12-agent-driven-debugging %})
 
