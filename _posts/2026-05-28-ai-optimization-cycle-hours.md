@@ -14,7 +14,7 @@ tags: [AI Agent, Self-optimization, Brooks Framework]
 
 这个结果值得注意，不是因为 11/20 多惊人，而是因为**它揭示了一种新的进化机制正在形成**。
 
-<object data="/assets/images/assets/images/2026-05-28-ai-optimization-cycle-hours-01-wrapper-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-28-ai-optimization-cycle-hours-01-wrapper-shift.svg" type="image/svg+xml" width="100%"></object>
 
 ## 优化对象的转移
 

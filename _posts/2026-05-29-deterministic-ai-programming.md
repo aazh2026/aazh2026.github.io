@@ -28,9 +28,9 @@ tags:
 
 这两篇文章给出的答案截然不同，但指向的终点是同一个。
 
-<object data="/assets/images/2026-05-29-deterministic-ai-programming-01-two-paths.svg" type="image/svg+xml" width="100%"></object>
-
 ## 两个解法，一个问题
+
+<object data="/assets/images/2026-05-29-deterministic-ai-programming-01-two-paths-converge.svg" type="image/svg+xml" width="100%"></object>
 
 **Anthropic 的解法是"脚本化"。** Dynamic Workflows 让 Claude 把整个编排逻辑写成一段 JavaScript 脚本——循环、分支、中间结果的收集全部固化在代码里——再交给一个无脑的确定性运行时去执行。模型只在 agent() 调用时临时"醒来"干活，其他时候全程在睡觉。Jarred Sumner 用这套工作流，11 天迁移了 75 万行 Rust 代码，99.8% 测试通过。
 

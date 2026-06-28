@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" font-family="'Georgia', serif">
+  <defs>
+    <style>
+      .label { font-size: 14px; fill: #141413; }
+      .label-sm { font-size: 11px; fill: #87867F; }
+      .label-xl { font-size: 18px; fill: #141413; font-weight: bold; }
+      .label-white { font-size: 13px; fill: #FAF9F5; }
+      .title { font-size: 13px; fill: #87867F; letter-spacing: 3px; text-transform: uppercase; }
+    </style>
+    <!-- Pyramid layer gradients -->
+    <linearGradient id="g-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C85A38"/>
+      <stop offset="100%" stop-color="#D97757"/>
+    </linearGradient>
+    <linearGradient id="g-mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5E7849"/>
+    </linearGradient>
+    <linearGradient id="g-base" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8B4A8"/>
+      <stop offset="100%" stop-color="#D1CFC5"/>
+    </linearGradient>
+    <linearGradient id="g-path" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E3DACC"/>
+      <stop offset="100%" stop-color="#D4C9B8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="700" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" class="title">AISE Knowledge System</text>
+  <text x="400" y="60" text-anchor="middle" class="label-sm">AI-Native 软件工程知识体系</text>
+
+  <!-- ========== PYRAMID LAYERS ========== -->
+
+  <!-- Layer 4: 实践案例层 (widest) -->
+  <!-- Base trapezoid: top-left(185,430) top-right(615,430) bottom-right(690,590) bottom-left(110,590) -->
+  <polygon points="185,430 615,430 690,590 110,590" fill="url(#g-base)" stroke="#C4C0B4" stroke-width="1"/>
+  <text x="400" y="465" text-anchor="middle" class="label-xl">实践案例层</text>
+  <text x="400" y="486" text-anchor="middle" class="label-sm">团队 · 治理 · 架构 · 成本 · 数据与体验</text>
+  <!-- Sub-items -->
+  <text x="175" y="530" text-anchor="end" class="label-sm">AI-Native团队重组</text>
+  <text x="625" y="530" text-anchor="start" class="label-sm">大规模AI治理</text>
+  <text x="175" y="548" text-anchor="end" class="label-sm">架构模式失效</text>
+  <text x="625" y="548" text-anchor="start" class="label-sm">AI账单失控</text>
+  <text x="175" y="566" text-anchor="end" class="label-sm">API文档之死</text>
+  <text x="625" y="566" text-anchor="start" class="label-sm">开发者体验革命</text>
+
+  <!-- Layer 3: 工具/方法论层 -->
+  <!-- top-left(240,295) top-right(560,295) bottom-right(615,430) bottom-left(185,430) -->
+  <polygon points="240,295 560,295 615,430 185,430" fill="url(#g-mid)" stroke="#5E7849" stroke-width="1"/>
+  <text x="400" y="335" text-anchor="middle" class="label-xl" fill="#FAF9F5">工具方法论层</text>
+  <text x="400" y="358" text-anchor="middle" class="label-sm" fill="#D4E0CB">需求设计 · 开发实践 · 代码知识</text>
+  <!-- Sub-items -->
+  <text x="248" y="393" text-anchor="end" class="label-sm" fill="#D4E0CB">Executable PRD</text>
+  <text x="552" y="393" text-anchor="start" class="label-sm" fill="#D4E0CB">代码评审死亡</text>
+  <text x="248" y="410" text-anchor="end" class="label-sm" fill="#D4E0CB">S-curve采用</text>
+  <text x="552" y="410" text-anchor="start" class="label-sm" fill="#D4E0CB">Agent Swarm</text>
+
+  <!-- Layer 2: 理论基础层 (narrow) -->
+  <!-- top-left(310,165) top-right(490,165) bottom-right(560,295) bottom-left(240,295) -->
+  <polygon points="310,165 490,165 560,295 240,295" fill="url(#g-top)" stroke="#C85A38" stroke-width="1"/>
+  <text x="400" y="205" text-anchor="middle" class="label-xl" fill="#FAF9F5">理论基础层</text>
+  <text x="400" y="228" text-anchor="middle" class="label-sm" fill="#F5C4B0">Context Engineering · TDD→IDD · 意图复杂度</text>
+  <text x="400" y="245" text-anchor="middle" class="label-sm" fill="#F5C4B0">AI-Native软件工程宣言</text>
+
+  <!-- Layer 1: 顶点 - AISE Framework -->
+  <polygon points="310,80 490,80 490,165 310,165" fill="#D97757" stroke="#C85A38" stroke-width="1"/>
+  <text x="400" y="112" text-anchor="middle" class="label-white" font-weight="bold">AISE Framework</text>
+  <text x="400" y="132" text-anchor="middle" class="label-sm" fill="#FAF9F5">AI-Native 软件工程框架</text>
+
+  <!-- ========== LEFT SIDE: Learning Path ========== -->
+  <!-- Vertical axis -->
+  <line x1="62" y1="80" x2="62" y2="610" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="62" y="68" text-anchor="middle" class="label-sm" fill="#87867F">学习</text>
+  <text x="62" y="80" text-anchor="middle" class="label-sm" fill="#87867F">路径</text>
+
+  <!-- Path nodes -->
+  <!-- Node 1: 理解 -->
+  <circle cx="62" cy="120" r="10" fill="#D97757" stroke="#FAF9F5" stroke-width="2"/>
+  <text x="62" y="124" text-anchor="middle" class="label-white" font-size="9">1</text>
+  <text x="58" y="105" text-anchor="end" class="label-sm">理解</text>
+  <text x="58" y="117" text-anchor="end" class="label-sm">理论基础</text>
+
+  <!-- Node 2: 掌握 -->
+  <circle cx="62" cy="240" r="10" fill="#788C5D" stroke="#FAF9F5" stroke-width="2"/>
+  <text x="62" y="244" text-anchor="middle" class="label-white" font-size="9">2</text>
+  <text x="58" y="225" text-anchor="end" class="label-sm">掌握</text>
+  <text x="58" y="237" text-anchor="end" class="label-sm">工具方法论</text>
+
+  <!-- Node 3: 应用 -->
+  <circle cx="62" cy="510" r="10" fill="#D1CFC5" stroke="#FAF9F5" stroke-width="2"/>
+  <text x="62" y="514" text-anchor="middle" class="label-white" font-size="9">3</text>
+  <text x="58" y="495" text-anchor="end" class="label-sm">应用</text>
+  <text x="58" y="507" text-anchor="end" class="label-sm">实践案例</text>
+
+  <!-- Arrow at bottom -->
+  <polygon points="62,600 55,585 69,585" fill="#D1CFC5"/>
+
+  <!-- ========== RIGHT SIDE: Key Stats ========== -->
+  <rect x="700" y="80" width="88" height="520" rx="6" fill="url(#g-path)" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="744" y="102" text-anchor="middle" class="label-sm" fill="#87867F">系列统计</text>
+  <line x1="710" y1="112" x2="778" y2="112" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="744" y="140" text-anchor="middle" class="label-xl" fill="#D97757">25</text>
+  <text x="744" y="156" text-anchor="middle" class="label-sm">篇文章</text>
+
+  <text x="744" y="192" text-anchor="middle" class="label-xl" fill="#788C5D">6</text>
+  <text x="744" y="208" text-anchor="middle" class="label-sm">知识层次</text>
+
+  <text x="744" y="244" text-anchor="middle" class="label-xl" fill="#87867F">300</text>
+  <text x="744" y="260" text-anchor="middle" class="label-sm">分钟深度阅读</text>
+
+  <line x1="710" y1="278" x2="778" y2="278" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="744" y="305" text-anchor="middle" class="label-sm" fill="#87867F">三层结构</text>
+  <text x="744" y="322" text-anchor="middle" class="label-sm" fill="#C85A38">● 理论基础</text>
+  <text x="744" y="340" text-anchor="middle" class="label-sm" fill="#5E7849">● 工具方法论</text>
+  <text x="744" y="358" text-anchor="middle" class="label-sm" fill="#87867F">● 实践案例</text>
+
+  <line x1="710" y1="375" x2="778" y2="375" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="744" y="400" text-anchor="middle" class="label-sm" fill="#87867F">核心理念</text>
+  <text x="744" y="420" text-anchor="middle" class="label-sm">不是用AI工具</text>
+  <text x="744" y="436" text-anchor="middle" class="label-sm">而是重新定义</text>
+  <text x="744" y="452" text-anchor="middle" class="label-sm" font-weight="bold">软件工程本质</text>
+
+  <!-- ========== BOTTOM CAPTION ========== -->
+  <line x1="110" y1="620" x2="690" y2="620" stroke="#E3DACC" stroke-width="1"/>
+  <text x="400" y="640" text-anchor="middle" class="label-sm" fill="#87867F">学习路径：从理论根基 → 方法论工具 → 实践应用，层层递进</text>
+  <text x="400" y="658" text-anchor="middle" class="label-sm" fill="#87867F">本系列探索：当AI可以写代码时，软件工程还剩下什么？</text>
+
+</svg>

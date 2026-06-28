@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="'Georgia', serif">
+  <defs>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="540" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="16" font-weight="bold" fill="#141413">AI-Native 软件工程知识体系</text>
+  <text x="450" y="53" text-anchor="middle" font-size="11" fill="#87867F">6 层架构 · 27 篇文章 · 约 300 分钟深度阅读</text>
+
+  <!-- 6 Layers - left column with content on right -->
+  <!-- Layer colors -->
+  <!-- Layer 1: Theory - #D97757 (Clay) -->
+  <!-- Layer 2: Requirements/Design - #788C5D (Olive) -->
+  <!-- Layer 3: Development - #D1CFC5 (G300) -->
+  <!-- Layer 4: Code/Knowledge - #E3DACC (Oat) -->
+  <!-- Layer 5: Team/Org - #87867F (G500) -->
+  <!-- Layer 6: Governance - #141413 (Slate) -->
+
+  <!-- Layer 1: Theory -->
+  <rect x="20" y="72" width="160" height="60" rx="8" fill="#D97757" filter="url(#shadow4)"/>
+  <text x="100" y="93" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">理论基础层</text>
+  <text x="100" y="109" text-anchor="middle" font-size="9" fill="#E3DACC">Theory Layer</text>
+  <text x="100" y="124" text-anchor="middle" font-size="8" fill="#FAF9F5">4 篇文章</text>
+
+  <!-- Layer 1 content -->
+  <rect x="195" y="72" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="210" y="93" font-size="9" fill="#141413" font-weight="bold">Context Engineering · TDD vs Intent-Driven · Intent Complexity · AISE Manifesto</text>
+  <text x="210" y="110" font-size="9" fill="#87867F">AI 不是替代程序员，而是改变了上下文管理的复杂度层级</text>
+
+  <!-- Layer 2: Requirements/Design -->
+  <rect x="20" y="142" width="160" height="60" rx="8" fill="#788C5D" filter="url(#shadow4)"/>
+  <text x="100" y="163" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">需求与设计层</text>
+  <text x="100" y="179" text-anchor="middle" font-size="9" fill="#E3DACC">Requirements &amp; Design</text>
+  <text x="100" y="194" text-anchor="middle" font-size="8" fill="#FAF9F5">2 篇文章</text>
+
+  <rect x="195" y="142" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="210" y="163" font-size="9" fill="#141413" font-weight="bold">Executable PRD · S-curve Adoption</text>
+  <text x="210" y="180" font-size="9" fill="#87867F">PRD 不再是文档，而是可直接执行的意图表达 · AI 采用是 S 曲线的三次跃迁</text>
+
+  <!-- Layer 3: Development -->
+  <rect x="20" y="212" width="160" height="60" rx="8" fill="#D1CFC5" filter="url(#shadow4)"/>
+  <text x="100" y="233" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">开发实践层</text>
+  <text x="100" y="249" text-anchor="middle" font-size="9" fill="#141413">Development Practice</text>
+  <text x="100" y="264" text-anchor="middle" font-size="8" fill="#141413">4 篇文章</text>
+
+  <rect x="195" y="212" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="210" y="233" font-size="9" fill="#141413" font-weight="bold">Code Review 死亡 · Semantic Diff · Agent Swarm · 停止写单元测试</text>
+  <text x="210" y="250" font-size="9" fill="#87867F">人类评审的认知天花板与 AI 评审三形态 · 从文本 diff 到语义 diff</text>
+
+  <!-- Layer 4: Code/Knowledge -->
+  <rect x="20" y="282" width="160" height="60" rx="8" fill="#E3DACC" filter="url(#shadow4)"/>
+  <text x="100" y="303" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">代码与知识层</text>
+  <text x="100" y="319" text-anchor="middle" font-size="9" fill="#141413">Code &amp; Knowledge</text>
+  <text x="100" y="334" text-anchor="middle" font-size="8" fill="#141413">3 篇文章</text>
+
+  <rect x="195" y="282" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+  <text x="210" y="303" font-size="9" fill="#141413" font-weight="bold">Knowledge Assetization · Context ROT · Code Archaeology</text>
+  <text x="210" y="320" font-size="9" fill="#87867F">代码从资产变成负债，知识才是真正的资产 · Context 衰减与四层防线治理</text>
+
+  <!-- Layer 5: Team/Org -->
+  <rect x="20" y="352" width="160" height="60" rx="8" fill="#87867F" filter="url(#shadow4)"/>
+  <text x="100" y="373" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">团队与组织层</text>
+  <text x="100" y="389" text-anchor="middle" font-size="9" fill="#E3DACC">Team &amp; Organization</text>
+  <text x="100" y="404" text-anchor="middle" font-size="8" fill="#FAF9F5">1 篇文章</text>
+
+  <rect x="195" y="352" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#87867F" stroke-width="1.5"/>
+  <text x="210" y="373" font-size="9" fill="#141413" font-weight="bold">AI-Native Team Restructure · Intent Architect</text>
+  <text x="210" y="390" font-size="9" fill="#87867F">从技能持有到 Intent 架构师的组织演化 · 从个人杠杆到系统杠杆的价值跃迁</text>
+
+  <!-- Layer 6: Governance -->
+  <rect x="20" y="422" width="160" height="60" rx="8" fill="#141413" filter="url(#shadow4)"/>
+  <text x="100" y="443" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">治理与质量层</text>
+  <text x="100" y="459" text-anchor="middle" font-size="9" fill="#D1CFC5">Governance &amp; Quality</text>
+  <text x="100" y="474" text-anchor="middle" font-size="8" fill="#87867F">4 篇文章</text>
+
+  <rect x="195" y="422" width="685" height="60" rx="8" fill="#FAF9F5" stroke="#141413" stroke-width="1.5"/>
+  <text x="210" y="443" font-size="9" fill="#141413" font-weight="bold">Context/Prompt/HA 治理 · 可追溯性 · Human-AI SLA · Prompt Library</text>
+  <text x="210" y="460" font-size="9" fill="#87867F">Context 治理、Prompt 治理、人机协作治理 · 四层技术架构端到端可追溯</text>
+
+  <!-- Bottom: Core Question -->
+  <rect x="20" y="495" width="860" height="36" rx="8" fill="#D97757" stroke="#141413" stroke-width="1.5"/>
+  <text x="450" y="517" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">核心问题：当 AI 可以写代码时，软件工程还剩下什么？</text>
+</svg>

@@ -139,8 +139,6 @@ Claude Opus 4.6 的成功挑战了这个假设。
 
 ## 六、深层思考：这对我们意味着什么？
 
-<object data="/assets/images/2025-02-07-knuth-claude-opus-01-collaboration-loop.svg" type="image/svg+xml" width="100%"></object>
-
 ### 对研究者的意义
 
 如果你是数学、计算机科学或其他理论领域的研究者，这个消息意味着什么？

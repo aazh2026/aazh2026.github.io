@@ -5,6 +5,9 @@ permalink: /aise-series/
 
 redirect_from:
   - ////aise-series.html
+
+<object data="/assets/images/aise-series-01-architecture.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 # AI-Native软件工程系列
