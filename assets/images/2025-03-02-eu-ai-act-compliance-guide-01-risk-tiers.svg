@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" width="100%">
+  <defs>
+    <style>
+      text { font-family: 'Helvetica Neue', Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="480" height="560" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="24" y="38" font-size="15" font-weight="700" fill="#141413">EU AI Act · 风险分级体系</text>
+  <text x="24" y="56" font-size="10" fill="#87867F">Risk Classification Framework</text>
+
+  <!-- Pyramid tiers: top = smallest -->
+  <!-- Tier 4: Minimal Risk (top) -->
+  <polygon points="240,90 295,150 185,150" fill="#788C5D" opacity="0.85"/>
+  <text x="240" y="128" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">最小风险</text>
+  <text x="240" y="142" font-size="9" fill="#FAF9F5" text-anchor="middle">Minimal Risk</text>
+
+  <!-- Tier 3: Limited Risk -->
+  <polygon points="185,155 295,155 330,215 150,215" fill="#D1CFC5"/>
+  <text x="240" y="181" font-size="11" font-weight="700" fill="#141413" text-anchor="middle">有限风险</text>
+  <text x="240" y="195" font-size="9" fill="#87867F" text-anchor="middle">Limited Risk · 透明度义务</text>
+
+  <!-- Tier 2: High Risk -->
+  <polygon points="150,220 330,220 370,285 110,285" fill="#D97757" opacity="0.85"/>
+  <text x="240" y="248" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">高风险</text>
+  <text x="240" y="262" font-size="9" fill="#FAF9F5" text-anchor="middle">High Risk · 严格合规义务</text>
+
+  <!-- Tier 1: Unacceptable Risk (bottom) -->
+  <polygon points="110,290 370,290 410,360 70,360" fill="#141413"/>
+  <text x="240" y="322" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">不可接受风险</text>
+  <text x="240" y="336" font-size="9" fill="#87867F" text-anchor="middle">Unacceptable Risk · 完全禁止</text>
+
+  <!-- Divider -->
+  <line x1="24" y1="375" x2="456" y2="375" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Legend / Examples -->
+  <text x="24" y="397" font-size="10" font-weight="600" fill="#141413">典型场景</text>
+
+  <!-- Legend items -->
+  <rect x="24" y="408" width="10" height="10" fill="#141413" rx="2"/>
+  <text x="40" y="417" font-size="9.5" fill="#141413">社会信用评分、实时生物识别（公共场所）</text>
+
+  <rect x="24" y="428" width="10" height="10" fill="#D97757" rx="2"/>
+  <text x="40" y="437" font-size="9.5" fill="#141413">招聘筛选、信贷评估、医疗诊断、教育评分</text>
+
+  <rect x="24" y="448" width="10" height="10" fill="#D1CFC5" rx="2"/>
+  <text x="40" y="457" font-size="9.5" fill="#141413">聊天机器人、情感识别系统（需用户知情）</text>
+
+  <rect x="24" y="468" width="10" height="10" fill="#788C5D" rx="2"/>
+  <text x="40" y="477" font-size="9.5" fill="#141413">垃圾邮件过滤、游戏AI、智能推荐</text>
+
+  <!-- Arrow on the right side showing prohibition -->
+  <line x1="385" y1="310" x2="385" y2="380" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="385,385 381,375 389,375" fill="#D97757"/>
+  <text x="400" y="350" font-size="8.5" fill="#D97757" font-weight="600">处罚</text>
+  <text x="400" y="362" font-size="8.5" fill="#D97757">力度</text>
+
+  <!-- Bottom note -->
+  <text x="24" y="530" font-size="9" fill="#87867F">Article 6-9 · 风险等级决定合规义务的严格程度</text>
+  <text x="24" y="544" font-size="9" fill="#87867F">来源：EU AI Act (Regulation 2024/1689)</text>
+</svg>

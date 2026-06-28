@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAF9F5"/>
+      <stop offset="100%" style="stop-color:#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="420" fill="url(#bg2)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#141413">Brooks 复杂度框架：AI 的能力边界</text>
+  <text x="450" y="60" text-anchor="middle" font-size="12" fill="#87867F">本质复杂度 vs 偶然复杂度，以及 AI 引入的新型复杂度</text>
+
+  <!-- Left Column: Brooks Framework -->
+  <g transform="translate(40, 90)" filter="url(#shadow2)">
+    <rect width="260" height="280" fill="#FAF9F5" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="130" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#141413">Brooks 复杂度分类</text>
+
+    <!-- Essential -->
+    <rect x="15" y="48" width="230" height="95" fill="#D97757" fill-opacity="0.1" rx="6" stroke="#D97757" stroke-width="1"/>
+    <text x="130" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#D97757">本质复杂度 (Essential)</text>
+    <text x="130" y="88" text-anchor="middle" font-size="10" fill="#87867F">来自问题本身，无法消除</text>
+    <text x="25" y="108" font-size="10" fill="#141413">• 需求的内在矛盾</text>
+    <text x="25" y="123" font-size="10" fill="#141413">• 状态空间爆炸</text>
+    <text x="25" y="138" font-size="10" fill="#141413">• 严格一致性要求</text>
+
+    <!-- Accidental -->
+    <rect x="15" y="153" width="230" height="115" fill="#788C5D" fill-opacity="0.1" rx="6" stroke="#788C5D" stroke-width="1"/>
+    <text x="130" y="173" text-anchor="middle" font-size="12" font-weight="700" fill="#788C5D">偶然复杂度 (Accidental)</text>
+    <text x="130" y="193" text-anchor="middle" font-size="10" fill="#87867F">来自解决方案，可被消除</text>
+    <text x="25" y="213" font-size="10" fill="#141413">• 依赖地狱和版本冲突</text>
+    <text x="25" y="228" font-size="10" fill="#141413">• 配置文件的爆炸</text>
+    <text x="25" y="243" font-size="10" fill="#141413">• 微服务治理 overhead</text>
+    <text x="25" y="258" font-size="10" fill="#788C5D" font-weight="600">← AI 主要作用于此</text>
+  </g>
+
+  <!-- Center: AI Capabilities -->
+  <g transform="translate(320, 90)" filter="url(#shadow2)">
+    <rect width="260" height="280" fill="#FAF9F5" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="130" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#141413">AI 擅长解决的</text>
+
+    <g transform="translate(15, 48)">
+      <rect width="230" height="40" fill="#788C5D" fill-opacity="0.15" rx="4"/>
+      <text x="115" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">✅ 样板代码生成</text>
+      <text x="115" y="34" text-anchor="middle" font-size="10" fill="#141413">CRUD、测试、配置、文档</text>
+    </g>
+
+    <g transform="translate(15, 98)">
+      <rect width="230" height="40" fill="#788C5D" fill-opacity="0.15" rx="4"/>
+      <text x="115" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">✅ 记忆负担转移</text>
+      <text x="115" y="34" text-anchor="middle" font-size="10" fill="#141413">API 细节、算法实现</text>
+    </g>
+
+    <g transform="translate(15, 148)">
+      <rect width="230" height="40" fill="#788C5D" fill-opacity="0.15" rx="4"/>
+      <text x="115" y="18" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">✅ 快速原型探索</text>
+      <text x="115" y="34" text-anchor="middle" font-size="10" fill="#141413">Demo、算法验证、代码解释</text>
+    </g>
+
+    <g transform="translate(15, 198)">
+      <rect width="230" height="70" fill="#D97757" fill-opacity="0.1" rx="4"/>
+      <text x="115" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">❌ 无法替代的</text>
+      <text x="115" y="36" text-anchor="middle" font-size="10" fill="#141413">需求理解 · 架构设计 · 系统思考</text>
+      <text x="115" y="54" text-anchor="middle" font-size="10" fill="#D97757">"AI 解决如何做，无法决定应不应该做"</text>
+    </g>
+  </g>
+
+  <!-- Right: New Complexity Types -->
+  <g transform="translate(600, 90)" filter="url(#shadow2)">
+    <rect width="260" height="280" fill="#FAF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <text x="130" y="28" text-anchor="middle" font-size="14" font-weight="700" fill="#D97757">AI 引入的新型复杂度</text>
+
+    <g transform="translate(15, 50)">
+      <text x="0" y="0" font-size="12" font-weight="600" fill="#141413">认知分裂</text>
+      <text x="0" y="18" font-size="10" fill="#87867F">使用不理解的东西 vs 花费</text>
+      <text x="0" y="32" font-size="10" fill="#87867F">额外精力去理解它</text>
+    </g>
+
+    <g transform="translate(15, 100)">
+      <text x="0" y="0" font-size="12" font-weight="600" fill="#141413">验证负担</text>
+      <text x="0" y="18" font-size="10" fill="#87867F">每行 AI 代码都需要审查</text>
+      <text x="0" y="32" font-size="10" fill="#87867F">从"写"转移到"验证"</text>
+    </g>
+
+    <g transform="translate(15, 150)">
+      <text x="0" y="0" font-size="12" font-weight="600" fill="#141413">信任校准</text>
+      <text x="0" y="18" font-size="10" fill="#87867F">过度信任 vs 过度不信任</text>
+      <text x="0" y="32" font-size="10" fill="#87867F">判断何时该信、何时该质疑</text>
+    </g>
+
+    <g transform="translate(15, 200)">
+      <rect width="230" height="65" fill="#141413" fill-opacity="0.05" rx="4"/>
+      <text x="115" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">复杂性守恒定律</text>
+      <text x="115" y="40" text-anchor="middle" font-size="10" fill="#87867F">AI 没有消除复杂性</text>
+      <text x="115" y="54" text-anchor="middle" font-size="10" fill="#87867F">只是将它从一种形式转化为另一种</text>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="400" text-anchor="middle" font-size="10" fill="#87867F">Fred Brooks, "No Silver Bullet" (1986) | AI 是一把更锋利的剑，wielder 的能力会被放大</text>
+</svg>
