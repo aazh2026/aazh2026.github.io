@@ -10,7 +10,8 @@ redirect_from:
   - /worse-is-better-revisited.html
 ---
 
-> **TL;DR**
+
+<object data="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.png" type="image/svg+xml" width="100%"></object>> **TL;DR**
 > 
 > 1. **Worse is Better 不是妥协** — 它是系统设计的元策略，在约束条件下追求最优解
 > 2. **AI 正在加速这一范式** — 生成代码的"足够好"哲学，让迭代速度超越完美主义

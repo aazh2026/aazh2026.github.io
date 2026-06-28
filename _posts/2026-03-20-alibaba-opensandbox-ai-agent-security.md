@@ -60,6 +60,8 @@ series: AI-Native Engineering
 
 ## 架构解析：三层安全模型
 
+<object data="/assets/images/2026-03-20-alibaba-opensandbox-ai-agent-security-02-security-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ### 第一层：运行时隔离
 
 **容器化沙箱**：

@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="480" rx="12" fill="url(#bg5)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">Progressive Automation Journey</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#87867F">From single-point tasks to full system automation — the path successful OpenClaw users follow</text>
+
+  <!-- Stage 1: Single Task -->
+  <g transform="translate(50, 85)" filter="url(#shadow5)">
+    <rect width="220" height="200" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="220" height="28" rx="8" fill="#788C5D"/>
+    <rect y="16" width="220" height="12" fill="#788C5D"/>
+    <text x="110" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="white">Stage 1: Single Task</text>
+
+    <!-- Task icon -->
+    <circle cx="110" cy="80" r="28" fill="#E3DACC"/>
+    <text x="110" y="86" text-anchor="middle" font-size="28">⚡</text>
+
+    <text x="110" y="126" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">"帮我写日报"</text>
+    <text x="110" y="142" text-anchor="middle" font-size="10" fill="#87867F">One-off automation</text>
+
+    <line x1="20" y1="158" x2="200" y2="158" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="15" y="174" font-size="9" fill="#87867F">• Daily report generation</text>
+    <text x="15" y="188" font-size="9" fill="#87867F">• Single trigger + action</text>
+    <text x="15" y="202" font-size="9" fill="#87867F">• No state persistence</text>
+
+    <text x="110" y="228" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D">Time saved: 15 min/day</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g transform="translate(270, 170)">
+    <line x1="0" y1="15" x2="40" y2="15" stroke="#D1CFC5" stroke-width="2.5"/>
+    <polygon points="35,10 48,15 35,20" fill="#D1CFC5"/>
+    <text x="20" y="8" text-anchor="middle" font-size="9" fill="#87867F">weeks</text>
+  </g>
+
+  <!-- Stage 2: Workflow -->
+  <g transform="translate(340, 85)" filter="url(#shadow5)">
+    <rect width="220" height="200" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="220" height="28" rx="8" fill="#D97757"/>
+    <rect y="16" width="220" height="12" fill="#D97757"/>
+    <text x="110" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="white">Stage 2: Workflow</text>
+
+    <!-- Workflow diagram -->
+    <g transform="translate(30, 55)">
+      <rect width="55" height="28" rx="4" fill="#788C5D"/>
+      <text x="27" y="18" text-anchor="middle" font-size="8" font-weight="600" fill="white">Fetch</text>
+
+      <line x1="55" y1="14" x2="70" y2="14" stroke="#D1CFC5" stroke-width="1.5"/>
+      <polygon points="65,10 75,14 65,18" fill="#D1CFC5"/>
+
+      <rect x="75" y="0" width="55" height="28" rx="4" fill="#D97757"/>
+      <text x="102" y="18" text-anchor="middle" font-size="8" font-weight="600" fill="white">Summarize</text>
+
+      <line x1="130" y1="14" x2="145" y2="14" stroke="#D1CFC5" stroke-width="1.5"/>
+      <polygon points="140,10 150,14 140,18" fill="#D1CFC5"/>
+
+      <rect x="150" y="0" width="35" height="28" rx="4" fill="#141413"/>
+      <text x="167" y="18" text-anchor="middle" font-size="8" font-weight="600" fill="white">Notify</text>
+    </g>
+
+    <text x="110" y="108" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">Multi-step pipelines</text>
+    <text x="110" y="124" text-anchor="middle" font-size="10" fill="#87867F">Chained skills + conditional logic</text>
+
+    <line x1="20" y1="138" x2="200" y2="138" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="15" y="154" font-size="9" fill="#87867F">• Multi-source data collection</text>
+    <text x="15" y="168" font-size="9" fill="#87867F">• Conditional branching</text>
+    <text x="15" y="182" font-size="9" fill="#87867F">• Basic error handling</text>
+    <text x="15" y="196" font-size="9" fill="#87867F">• Scheduled execution</text>
+
+    <text x="110" y="228" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757">Time saved: 2 hr/day</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g transform="translate(560, 170)">
+    <line x1="0" y1="15" x2="40" y2="15" stroke="#D1CFC5" stroke-width="2.5"/>
+    <polygon points="35,10 48,15 35,20" fill="#D1CFC5"/>
+    <text x="20" y="8" text-anchor="middle" font-size="9" fill="#87867F">months</text>
+  </g>
+
+  <!-- Stage 3: System -->
+  <g transform="translate(630, 85)" filter="url(#shadow5)">
+    <rect width="220" height="200" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <rect width="220" height="28" rx="8" fill="#141413"/>
+    <rect y="16" width="220" height="12" fill="#141413"/>
+    <text x="110" y="19" text-anchor="middle" font-size="12" font-weight="700" fill="white">Stage 3: System</text>
+
+    <!-- System architecture mini diagram -->
+    <g transform="translate(20, 50)">
+      <!-- Central hub -->
+      <rect x="70" y="15" width="60" height="36" rx="6" fill="#141413"/>
+      <text x="100" y="30" text-anchor="middle" font-size="8" font-weight="600" fill="white">OpenClaw</text>
+      <text x="100" y="42" text-anchor="middle" font-size="8" fill="#D1CFC5">Hub</text>
+
+      <!-- Connected modules -->
+      <line x1="70" y1="33" x2="40" y2="15" stroke="#D1CFC5" stroke-width="1"/>
+      <rect x="5" y="0" width="35" height="22" rx="3" fill="#788C5D"/>
+      <text x="22" y="14" text-anchor="middle" font-size="7" fill="white">Notion</text>
+
+      <line x1="130" y1="33" x2="160" y2="15" stroke="#D1CFC5" stroke-width="1"/>
+      <rect x="160" y="0" width="35" height="22" rx="3" fill="#D97757"/>
+      <text x="177" y="14" text-anchor="middle" font-size="7" fill="white">GitHub</text>
+
+      <line x1="70" y1="51" x2="40" y2="68" stroke="#D1CFC5" stroke-width="1"/>
+      <rect x="5" y="55" width="35" height="22" rx="3" fill="#87867F"/>
+      <text x="22" y="69" text-anchor="middle" font-size="7" fill="white">Slack</text>
+
+      <line x1="130" y1="51" x2="160" y2="68" stroke="#D1CFC5" stroke-width="1"/>
+      <rect x="160" y="55" width="35" height="22" rx="3" fill="#788C5D"/>
+      <text x="177" y="69" text-anchor="middle" font-size="7" fill="white">Telegram</text>
+
+      <line x1="100" y1="51" x2="100" y2="72" stroke="#D1CFC5" stroke-width="1"/>
+      <rect x="82" y="72" width="36" height="22" rx="3" fill="#D97757"/>
+      <text x="100" y="86" text-anchor="middle" font-size="7" fill="white">+ more</text>
+    </g>
+
+    <text x="110" y="150" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">Integrated ecosystem</text>
+    <text x="110" y="166" text-anchor="middle" font-size="10" fill="#87867F">Skills + memory + reasoning</text>
+
+    <line x1="20" y1="180" x2="200" y2="180" stroke="#E3DACC" stroke-width="1"/>
+    <text x="15" y="196" font-size="9" fill="#87867F">• 7+ skills active</text>
+    <text x="15" y="210" font-size="9" fill="#87867F">• Self-healing workflows</text>
+
+    <text x="110" y="228" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D">Time saved: 4 hr/day</text>
+  </g>
+
+  <!-- Success Formula -->
+  <g transform="translate(50, 310)" filter="url(#shadow5)">
+    <rect width="380" height="145" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <text x="190" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#788C5D">Success Formula</text>
+    <line x1="20" y1="34" x2="360" y2="34" stroke="#E3DACC" stroke-width="1"/>
+
+    <g transform="translate(20, 46)">
+      <text x="0" y="0" font-size="11" font-weight="600" fill="#141413">Key Principles for Progression</text>
+      <text x="0" y="20" font-size="10" fill="#141413">① Start with the most painful, highest-frequency task</text>
+      <text x="0" y="36" font-size="10" fill="#141413">② Choose tasks that are rule-based, not judgment-based</text>
+      <text x="0" y="52" font-size="10" fill="#141413">③ Build trust with quick wins before complex flows</text>
+      <text x="0" y="68" font-size="10" fill="#141413">④ Always keep a "manual override" path for exceptions</text>
+      <text x="0" y="84" font-size="10" fill="#141413">⑤ Review monthly — remove broken, refine working flows</text>
+    </g>
+  </g>
+
+  <!-- ROI Timeline -->
+  <g transform="translate(460, 310)" filter="url(#shadow5)">
+    <rect width="390" height="145" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="195" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">ROI Timeline (Typical Knowledge Worker)</text>
+    <line x1="20" y1="34" x2="370" y2="34" stroke="#D1CFC5" stroke-width="1"/>
+
+    <!-- Timeline axis -->
+    <line x1="30" y1="115" x2="360" y2="115" stroke="#D1CFC5" stroke-width="2"/>
+
+    <!-- Month markers -->
+    <g transform="translate(30, 115)">
+      <line x1="0" y1="0" x2="0" y2="-8" stroke="#D1CFC5" stroke-width="1.5"/>
+      <text x="0" y="12" text-anchor="middle" font-size="9" fill="#87867F">M0</text>
+      <text x="0" y="-14" text-anchor="middle" font-size="9" fill="#141413">Setup</text>
+    </g>
+    <g transform="translate(105, 115)">
+      <line x1="0" y1="0" x2="0" y2="-8" stroke="#D1CFC5" stroke-width="1.5"/>
+      <text x="0" y="12" text-anchor="middle" font-size="9" fill="#87867F">M1</text>
+      <text x="0" y="-14" text-anchor="middle" font-size="9" fill="#141413">Payback</text>
+    </g>
+    <g transform="translate(180, 115)">
+      <line x1="0" y1="0" x2="0" y2="-8" stroke="#D1CFC5" stroke-width="1.5"/>
+      <text x="0" y="12" text-anchor="middle" font-size="9" fill="#87867F">M3</text>
+      <text x="0" y="-14" text-anchor="middle" font-size="9" fill="#141413">ROI 3x</text>
+    </g>
+    <g transform="translate(255, 115)">
+      <line x1="0" y1="0" x2="0" y2="-8" stroke="#D1CFC5" stroke-width="1.5"/>
+      <text x="0" y="12" text-anchor="middle" font-size="9" fill="#87867F">M6</text>
+      <text x="0" y="-14" text-anchor="middle" font-size="9" fill="#141413">ROI 10x</text>
+    </g>
+    <g transform="translate(330, 115)">
+      <line x1="0" y1="0" x2="0" y2="-8" stroke="#D1CFC5" stroke-width="1.5"/>
+      <text x="0" y="12" text-anchor="middle" font-size="9" fill="#87867F">M12</text>
+      <text x="0" y="-14" text-anchor="middle" font-size="9" fill="#141413">ROI 20x</text>
+    </g>
+
+    <!-- Cumulative time saved line -->
+    <polyline points="30,105 105,80 180,55 255,40 330,30" fill="none" stroke="#788C5D" stroke-width="2.5"/>
+
+    <!-- Data points -->
+    <circle cx="30" cy="105" r="4" fill="#788C5D"/>
+    <circle cx="105" cy="80" r="4" fill="#788C5D"/>
+    <circle cx="180" cy="55" r="4" fill="#788C5D"/>
+    <circle cx="255" cy="40" r="4" fill="#788C5D"/>
+    <circle cx="330" cy="30" r="4" fill="#788C5D"/>
+
+    <!-- Y axis label -->
+    <text x="20" y="65" font-size="8" fill="#87867F" transform="rotate(-90, 20, 65)">Hours saved/week</text>
+
+    <!-- Labels -->
+    <text x="30" y="120" font-size="8" fill="#87867F">0h</text>
+    <text x="100" y="120" font-size="8" fill="#87867F">5h</text>
+    <text x="175" y="120" font-size="8" fill="#87867F">15h</text>
+    <text x="250" y="120" font-size="8" fill="#87867F">22h</text>
+    <text x="325" y="120" font-size="8" fill="#87867F">28h</text>
+  </g>
+</svg>

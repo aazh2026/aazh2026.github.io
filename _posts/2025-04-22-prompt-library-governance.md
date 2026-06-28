@@ -160,6 +160,7 @@ Week 5: 有人发现了v2，不知道哪个是最新版本
 ### 治理的五个维度
 
 <object data="/assets/images/2025-04-22-prompt-library-01-governance.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-22-prompt-library-02-lifecycle.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

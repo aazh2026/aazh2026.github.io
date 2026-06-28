@@ -141,6 +141,8 @@ AI-Native 数据工程三层架构:
 
 ## 智能数据流水线：自愈、自适应、自优化
 
+<object data="/assets/images/2026-03-15-ai-native-data-engineering-02-self-healing-pipeline.svg" type="image/svg+xml" width="100%"></object>
+
 ### 传统数据流水线的问题
 
 ```

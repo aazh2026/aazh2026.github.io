@@ -678,6 +678,7 @@ AI 领域的对应：
 ### Unix 风格的 Agent 工具链
 
 <object data="/assets/images/2026-03-15-unix-philosophy-ai-era-01-toolchain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-unix-philosophy-ai-era-02-pipeline-patterns.svg" type="image/svg+xml" width="100%"></object>
 
 ### 最佳实践清单
 

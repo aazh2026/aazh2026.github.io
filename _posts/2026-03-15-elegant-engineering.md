@@ -523,6 +523,7 @@ AI 加速的是第一稿，但**后续的打磨仍需人类**。
 ### AI 协作的优雅工作流
 
 <object data="/assets/images/2026-03-15-elegant-01-steps.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-elegant-02-quality-velocity.svg" type="image/svg+xml" width="100%"></object>
 
 ### 优雅的 Prompt 模板
 

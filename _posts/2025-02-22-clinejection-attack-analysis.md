@@ -37,6 +37,7 @@ redirect_from:
 让我们详细拆解这个攻击是如何一步步实现的。
 
 <object data="/assets/images/2025-02-22-clinejection-attack-analysis-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-22-clinejection-attack-analysis-02-defense-depth.svg" type="image/svg+xml" width="100%"></object>
 
 ### Step 1: 侦察与目标选择
 

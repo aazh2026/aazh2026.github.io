@@ -498,6 +498,8 @@ AISE成熟度模型定义了五个级别，描述组织在AISE实践上的演进
 
 **注意**：Level 5是愿景，当前技术和组织准备度下，大多数组织应瞄准Level 3-4。
 
+<object data="/assets/images/2025-05-12-aise-framework-02-maturity-model.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## AISE实施路线图

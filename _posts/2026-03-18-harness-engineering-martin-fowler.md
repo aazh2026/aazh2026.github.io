@@ -99,6 +99,7 @@ OpenAI 团队构建了一套系统来：
 > 📌 *以下三层架构模型由 Martin Fowler 基于 OpenAI 的实践归纳提炼，是对原始经验的系统化整理。*
 
 <object data="/assets/images/2026-03-18-harness-engineering-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-harness-engineering-02-constraints-pyramid.svg" type="image/svg+xml" width="100%"></object>
 
 ### Layer 1: 上下文工程
 

@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#EDE8DF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">质量-速度曲线：优雅代码的长期优势</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#87867F">维护成本随时间的变化 — 丑陋代码加速恶化，优雅代码保持稳定</text>
+
+  <!-- Chart area -->
+  <g transform="translate(80, 80)">
+    <!-- Grid -->
+    <line x1="0" y1="380" x2="720" y2="380" stroke="#D1CFC5" stroke-width="1"/>
+    <line x1="0" y1="285" x2="720" y2="285" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="0" y1="190" x2="720" y2="190" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="0" y1="95" x2="720" y2="95" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="4,4"/>
+    <line x1="0" y1="0" x2="720" y2="0" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+    <!-- Y-axis labels -->
+    <text x="-12" y="384" text-anchor="end" font-size="10" fill="#87867F">低</text>
+    <text x="-12" y="289" text-anchor="end" font-size="10" fill="#87867F">中低</text>
+    <text x="-12" y="194" text-anchor="end" font-size="10" fill="#87867F">中</text>
+    <text x="-12" y="99" text-anchor="end" font-size="10" fill="#87867F">中高</text>
+    <text x="-12" y="4" text-anchor="end" font-size="10" fill="#87867F">高</text>
+    <text x="-12" y="192" text-anchor="end" font-size="10" fill="#87867F" font-weight="600">维护</text>
+    <text x="-12" y="205" text-anchor="end" font-size="10" fill="#87867F" font-weight="600">成本</text>
+
+    <!-- X-axis labels -->
+    <text x="0" y="400" text-anchor="middle" font-size="10" fill="#87867F">开发期</text>
+    <text x="360" y="400" text-anchor="middle" font-size="10" fill="#87867F">维护期</text>
+
+    <!-- Time divider -->
+    <line x1="360" y1="0" x2="360" y2="380" stroke="#87867F" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="360" y="-8" text-anchor="middle" font-size="9" fill="#87867F">上线</text>
+
+    <!-- Elegant code curve -->
+    <path d="M0,320 C60,322 120,324 180,326 C240,328 300,332 360,334 C420,335 480,337 540,339 C600,341 660,343 720,345" fill="none" stroke="#788C5D" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="0" cy="320" r="5" fill="#788C5D"/>
+    <circle cx="720" cy="345" r="5" fill="#788C5D"/>
+
+    <!-- Mediocre code curve -->
+    <path d="M0,280 C60,282 120,288 180,296 C240,308 300,322 360,340 C420,358 480,372 540,382 C600,390 660,395 720,398" fill="none" stroke="#D1CFC5" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="8,4"/>
+    <circle cx="0" cy="280" r="4" fill="#D1CFC5"/>
+    <circle cx="720" cy="398" r="4" fill="#D1CFC5"/>
+
+    <!-- Ugly code curve -->
+    <path d="M0,220 C60,225 120,240 180,262 C240,290 300,322 360,355 C420,378 480,390 540,395 C600,398 660,399 720,400" fill="none" stroke="#D97757" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="6,3"/>
+    <circle cx="0" cy="220" r="4" fill="#D97757"/>
+    <circle cx="720" cy="400" r="4" fill="#D97757"/>
+
+    <!-- Crossover annotation -->
+    <line x1="360" y1="334" x2="360" y2="340" stroke="#788C5D" stroke-width="1.5"/>
+    <text x="375" y="338" font-size="10" fill="#788C5D" font-weight="600">优雅代码</text>
+    <text x="375" y="350" font-size="9" fill="#788C5D">前期投入，</text>
+    <text x="375" y="362" font-size="9" fill="#788C5D">长期稳定</text>
+
+    <!-- Phase labels inside chart -->
+    <text x="180" y="430" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">开发期</text>
+    <text x="180" y="444" text-anchor="middle" font-size="10" fill="#87867F">前期投入略高（约+10-20%）</text>
+
+    <text x="540" y="430" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">维护期</text>
+    <text x="540" y="444" text-anchor="middle" font-size="10" fill="#87867F">丑陋代码的"复利债务"开始偿还</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(80, 510)">
+    <rect x="0" y="0" width="20" height="4" fill="#788C5D" rx="2"/>
+    <text x="28" y="8" font-size="11" fill="#141413">优雅代码 — 稳定、可维护</text>
+
+    <rect x="220" y="0" width="20" height="4" fill="#D1CFC5" rx="2"/>
+    <text x="248" y="8" font-size="11" fill="#141413">平庸代码 — 缓慢恶化</text>
+
+    <rect x="420" y="0" width="20" height="4" fill="#D97757" rx="2"/>
+    <text x="448" y="8" font-size="11" fill="#141413">丑陋代码 — 快速失控</text>
+  </g>
+
+  <!-- Right panel: insight cards -->
+  <g transform="translate(810, 80)">
+    <rect width="80" height="380" fill="#E3DACC" rx="6"/>
+    <text x="40" y="24" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">关键洞察</text>
+
+    <line x1="8" y1="34" x2="72" y2="34" stroke="#D1CFC5" stroke-width="1"/>
+
+    <text x="40" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">开发期</text>
+    <text x="40" y="76" text-anchor="middle" font-size="9" fill="#87867F">优雅代码</text>
+    <text x="40" y="88" text-anchor="middle" font-size="9" fill="#87867F">看似"慢一点"</text>
+    <text x="40" y="104" text-anchor="middle" font-size="9" fill="#788C5D" font-weight="600">+10-20%</text>
+
+    <line x1="8" y1="120" x2="72" y2="120" stroke="#D1CFC5" stroke-width="1"/>
+
+    <text x="40" y="144" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">维护期</text>
+    <text x="40" y="162" text-anchor="middle" font-size="9" fill="#87867F">丑陋代码</text>
+    <text x="40" y="174" text-anchor="middle" font-size="9" fill="#87867F">复利债务</text>
+    <text x="40" y="190" text-anchor="middle" font-size="9" fill="#87867F">连本带利</text>
+    <text x="40" y="206" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">×3-5x</text>
+    <text x="40" y="220" text-anchor="middle" font-size="9" fill="#87867F">成本</text>
+
+    <line x1="8" y1="236" x2="72" y2="236" stroke="#D1CFC5" stroke-width="1"/>
+
+    <text x="40" y="260" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">优雅代码</text>
+    <text x="40" y="278" text-anchor="middle" font-size="9" fill="#141413">维护成本</text>
+    <text x="40" y="294" text-anchor="middle" font-size="9" fill="#141413">6个月后</text>
+    <text x="40" y="312" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="700">1/5</text>
+    <text x="40" y="328" text-anchor="middle" font-size="9" fill="#141413">丑陋代码</text>
+  </g>
+</svg>

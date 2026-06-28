@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow5" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="540" fill="url(#bg5)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" fill="#141413">AI 时代效能度量范式转移</text>
+  <text x="450" y="64" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#87867F">From Writing Speed to Changing Speed: The Paradigm Shift in Productivity Metrics</text>
+
+  <!-- LEFT: Old Metrics (crossed out) -->
+  <rect x="40" y="90" width="360" height="380" rx="12" fill="#87867F" filter="url(#shadow5)" opacity="0.85"/>
+  <text x="220" y="120" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" font-weight="700" fill="#FAF9F5">❌ 传统度量</text>
+  <text x="220" y="142" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.75">已失效</text>
+
+  <!-- Old metric items -->
+  <rect x="60" y="160" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="80" y="185" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">LOC / 天</text>
+  <text x="300" y="185" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">代码行数越多越好</text>
+  <text x="80" y="202" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">问题：AI 可生成大量低质量代码</text>
+
+  <rect x="60" y="222" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="80" y="247" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">提交次数</text>
+  <text x="300" y="247" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">提交越频繁效率越高</text>
+  <text x="80" y="264" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">问题：AI 辅助下提交过于频繁无意义</text>
+
+  <rect x="60" y="284" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="80" y="309" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">功能点交付速度</text>
+  <text x="300" y="309" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">交付越快效能越高</text>
+  <text x="80" y="326" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">问题：速度快但维护成本高</text>
+
+  <rect x="60" y="346" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="80" y="371" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">代码覆盖率</text>
+  <text x="300" y="371" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">覆盖率越高质量越好</text>
+  <text x="80" y="388" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">问题：AI 生成测试覆盖率高但有效性低</text>
+
+  <!-- Strikethrough on old -->
+  <line x1="60" y1="280" x2="400" y2="280" stroke="#D97757" stroke-width="3" opacity="0.6"/>
+
+  <!-- Arrow in middle -->
+  <rect x="400" y="255" width="100" height="50" rx="25" fill="#D97757" filter="url(#shadow5)"/>
+  <text x="450" y="275" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">范式</text>
+  <text x="450" y="292" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">转移</text>
+
+  <!-- RIGHT: New Metrics -->
+  <rect x="500" y="90" width="360" height="380" rx="12" fill="#788C5D" filter="url(#shadow5)"/>
+  <text x="680" y="120" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="16" font-weight="700" fill="#FAF9F5">✅ 新效能度量</text>
+  <text x="680" y="142" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.75">AI-Native 时代</text>
+
+  <!-- New metric items -->
+  <rect x="520" y="160" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="540" y="185" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">意图修改率 IMR</text>
+  <text x="760" y="185" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">需求变更时修改代码的比例</text>
+  <text x="540" y="202" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">低 IMR = 高可维护性 = 架构质量</text>
+
+  <rect x="520" y="222" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="540" y="247" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">知识半衰期</text>
+  <text x="760" y="247" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">代码知识衰减的速度</text>
+  <text x="540" y="264" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">半衰期长 = 代码自解释性强</text>
+
+  <rect x="520" y="284" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="540" y="309" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">重构成本预测</text>
+  <text x="760" y="309" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">AI 预测修改所需工作量</text>
+  <text x="540" y="326" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">耦合度 + 复杂度 + 测试覆盖</text>
+
+  <rect x="520" y="346" width="320" height="50" rx="8" fill="#FAF9F5" opacity="0.15"/>
+  <text x="540" y="371" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#FAF9F5">可维护性指数</text>
+  <text x="760" y="371" text-anchor="end" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.8">代码易于修改的程度 (0-100)</text>
+  <text x="540" y="388" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.65">可读性 · 模块化 · 可测试性 · 可文档化</text>
+
+  <!-- Key takeaway -->
+  <rect x="40" y="488" width="820" height="40" rx="8" fill="#D1CFC5" opacity="0.4"/>
+  <text x="60" y="512" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#141413">💡 核心公式：</text>
+  <text x="195" y="512" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#141413">AI 时代效能 = 1 / 意图修改率 × 变更成功率  |  写代码容易，改代码难</text>
+</svg>

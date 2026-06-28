@@ -161,6 +161,7 @@ class TestMyAgent(unittest.TestCase):
 ### Agent 组合的三层模型
 
 <object data="/assets/images/2026-03-15-composition-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-composition-02-orchestrator.svg" type="image/svg+xml" width="100%"></object>
 
 ### 为什么 Agent 更需要组合
 

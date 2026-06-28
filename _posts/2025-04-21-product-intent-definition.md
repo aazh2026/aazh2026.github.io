@@ -271,6 +271,7 @@ evolution_intent:
 ### Product Intent 的层级结构
 
 <object data="/assets/images/2025-04-21-pid-01-intent-hierarchy.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-21-product-intent-definition-01-intent-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：Product Intent 关注 Level 2-3，将 Level 4 留给 AI 决定。
 

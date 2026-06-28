@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="540" fill="url(#bg4)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" fill="#141413">Agent-Driven Debugging 工作流</text>
+  <text x="450" y="64" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#87867F">从症状描述到根因定位的协作诊断流程</text>
+
+  <!-- Step boxes -->
+  <!-- Step 1 -->
+  <rect x="40" y="100" width="180" height="140" rx="12" fill="#D97757" filter="url(#shadow4)"/>
+  <text x="130" y="130" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Step 1</text>
+  <text x="130" y="155" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="600" fill="#FAF9F5">症状描述</text>
+  <text x="130" y="178" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">提供完整错误信息</text>
+  <text x="130" y="196" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">堆栈、时间、影响范围</text>
+  <text x="130" y="214" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">复现步骤</text>
+
+  <!-- Arrow 1-2 -->
+  <path d="M225 170 L250 170" stroke="#D1CFC5" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="237" y="160" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">描述</text>
+
+  <!-- Step 2 -->
+  <rect x="255" y="100" width="180" height="140" rx="12" fill="#788C5D" filter="url(#shadow4)"/>
+  <text x="345" y="130" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Step 2</text>
+  <text x="345" y="155" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="600" fill="#FAF9F5">Agent 分析</text>
+  <text x="345" y="178" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">日志检索与过滤</text>
+  <text x="345" y="196" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">代码定位与阅读</text>
+  <text x="345" y="214" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">相似案例检索</text>
+
+  <!-- Arrow 2-3 -->
+  <path d="M440 170 L465 170" stroke="#D1CFC5" stroke-width="3"/>
+
+  <!-- Step 3 -->
+  <rect x="470" y="100" width="180" height="140" rx="12" fill="#87867F" filter="url(#shadow4)"/>
+  <text x="560" y="130" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Step 3</text>
+  <text x="560" y="155" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="600" fill="#FAF9F5">假设生成</text>
+  <text x="560" y="178" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">AI 提出 2-3 个</text>
+  <text x="560" y="196" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">可能的根因假设</text>
+  <text x="560" y="214" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">含置信度评估</text>
+
+  <!-- Arrow 3-4 -->
+  <path d="M655 170 L680 170" stroke="#D1CFC5" stroke-width="3"/>
+
+  <!-- Step 4 -->
+  <rect x="685" y="100" width="180" height="140" rx="12" fill="#D97757" filter="url(#shadow4)"/>
+  <text x="775" y="130" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Step 4</text>
+  <text x="775" y="155" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="600" fill="#FAF9F5">人类决策</text>
+  <text x="775" y="178" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">选择最可能的假设</text>
+  <text x="775" y="196" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">设计验证实验</text>
+  <text x="775" y="214" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">判断修复方案</text>
+
+  <!-- Work distribution bar -->
+  <rect x="40" y="258" width="820" height="44" rx="8" fill="#D1CFC5" opacity="0.5"/>
+  <text x="60" y="283" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#141413">75/25 法则：</text>
+  <rect x="185" y="268" width="492" height="24" rx="4" fill="#788C5D"/>
+  <text x="431" y="285" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">Agent 处理 75% — 信息收集与模式匹配</text>
+  <rect x="677" y="268" width="171" height="24" rx="4" fill="#D97757"/>
+  <text x="762" y="285" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="600" fill="#FAF9F5">人类处理 25% — 高价值决策</text>
+
+  <!-- Three-layer pyramid -->
+  <text x="450" y="330" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700" fill="#141413">三层诊断能力</text>
+
+  <!-- Pyramid -->
+  <polygon points="450,350 620,480 280,480" fill="#87867F" filter="url(#shadow4)" opacity="0.9"/>
+  <polygon points="450,350 580,450 320,450" fill="#788C5D" filter="url(#shadow4)" opacity="0.9"/>
+  <polygon points="450,350 540,420 360,420" fill="#D97757" filter="url(#shadow4)" opacity="0.9"/>
+
+  <text x="450" y="395" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">组织诊断智能</text>
+  <text x="450" y="430" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">团队诊断中心</text>
+  <text x="450" y="462" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">个人诊断助手</text>
+
+  <!-- Layer labels -->
+  <text x="630" y="385" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">预测性诊断</text>
+  <text x="630" y="422" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">错误知识库</text>
+  <text x="630" y="455" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">日志分析</text>
+  <text x="630" y="470" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">代码理解</text>
+
+  <!-- Key insight -->
+  <rect x="40" y="498" width="820" height="32" rx="8" fill="#D1CFC5" opacity="0.4"/>
+  <text x="60" y="518" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#141413">💡 核心转变：</text>
+  <text x="195" y="518" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#141413">从"猎人追踪猎物"到"驯兽师指挥猎犬" — 人类定义目标，Agent 执行追踪</text>
+</svg>

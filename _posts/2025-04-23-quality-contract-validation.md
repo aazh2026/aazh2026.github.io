@@ -173,6 +173,7 @@ AI 生成代码的特点：
 ## 三、四层契约体系
 
 <object data="/assets/images/2025-04-23-quality-contract-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-23-quality-contract-02-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ### 体系概览
 

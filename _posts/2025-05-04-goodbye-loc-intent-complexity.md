@@ -331,6 +331,8 @@ IC = √(6² + 8² + 7² + 4²) / 2
 意图复杂度 = 6.4/10 = 6.4（中高复杂度）
 ```
 
+<object data="/assets/images/2025-05-04-goodbye-loc-intent-complexity-02-icq-radar.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 从写得多快到改得多快

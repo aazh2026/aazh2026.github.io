@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <rect width="900" height="520" fill="#FAF9F5"/>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">智能数据流水线：自愈 · 自适应 · 自优化</text>
+  <text x="450" y="57" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">Self-Healing · Self-Adaptive · Self-Optimizing Data Pipeline</text>
+
+  <!-- Three pipeline stages -->
+  <!-- Stage 1: Self-Healing -->
+  <g transform="translate(30, 85)">
+    <rect x="0" y="0" width="270" height="360" rx="12" fill="white" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="270" height="44" rx="12" fill="#D97757"/>
+    <rect x="0" y="32" width="270" height="16" fill="#D97757"/>
+    <text x="135" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">自愈 Self-Healing</text>
+
+    <!-- Flow diagram -->
+    <g transform="translate(20, 60)">
+      <!-- Input -->
+      <rect x="0" y="0" width="230" height="30" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="115" y="19" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">数据源 Input</text>
+
+      <!-- Arrow -->
+      <path d="M115 30 L115 48" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+      <!-- Schema drift detection -->
+      <rect x="0" y="50" width="230" height="44" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+      <text x="115" y="67" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#788C5D">Schema 漂移检测</text>
+      <text x="115" y="82" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">自动适应新 Schema</text>
+
+      <!-- Arrow -->
+      <path d="M115 94 L115 112" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+
+      <!-- Quality monitoring -->
+      <rect x="0" y="114" width="230" height="44" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+      <text x="115" y="131" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#788C5D">质量监控</text>
+      <text x="115" y="146" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">异常自动隔离/修复</text>
+
+      <!-- Arrow -->
+      <path d="M115 158 L115 176" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+
+      <!-- Smart routing -->
+      <rect x="0" y="178" width="230" height="44" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+      <text x="115" y="195" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#788C5D">智能路由</text>
+      <text x="115" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">自动优化数据路径</text>
+
+      <!-- Arrow -->
+      <path d="M115 222 L115 240" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+
+      <!-- Output -->
+      <rect x="0" y="242" width="230" height="30" rx="6" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="1"/>
+      <text x="115" y="261" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#788C5D">✓ 输出</text>
+    </g>
+
+    <!-- Fallback box -->
+    <g transform="translate(20, 310)">
+      <rect x="0" y="0" width="230" height="38" rx="6" fill="#D97757" fill-opacity="0.1" stroke="#D97757" stroke-width="1"/>
+      <text x="115" y="16" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#D97757">异常处理</text>
+      <text x="115" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">故障自动恢复或升级</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <path d="M305 265 L335 265" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="335,265 329,261 329,269" fill="#D1CFC5"/>
+
+  <!-- Stage 2: Self-Adaptive -->
+  <g transform="translate(340, 85)">
+    <rect x="0" y="0" width="270" height="360" rx="12" fill="white" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="270" height="44" rx="12" fill="#788C5D"/>
+    <rect x="0" y="32" width="270" height="16" fill="#788C5D"/>
+    <text x="135" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">自适应 Self-Adaptive</text>
+
+    <!-- Three adaptive dimensions -->
+    <g transform="translate(15, 60)">
+      <!-- Load adaptive -->
+      <rect x="0" y="0" width="240" height="70" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+      <text x="120" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">负载自适应</text>
+      <line x1="20" y1="28" x2="220" y2="28" stroke="#E3DACC" stroke-width="1"/>
+      <text x="20" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">监控：数据到达速率</text>
+      <text x="20" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D">响应：自动扩缩容处理资源</text>
+    </g>
+
+    <g transform="translate(15, 140)">
+      <!-- Quality adaptive -->
+      <rect x="0" y="0" width="240" height="70" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+      <text x="120" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">质量自适应</text>
+      <line x1="20" y1="28" x2="220" y2="28" stroke="#E3DACC" stroke-width="1"/>
+      <text x="20" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">监控：数据质量分数</text>
+      <text x="20" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D">响应：质量下降时切换备用数据源</text>
+    </g>
+
+    <g transform="translate(15, 220)">
+      <!-- Priority adaptive -->
+      <rect x="0" y="0" width="240" height="70" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+      <text x="120" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">优先级自适应</text>
+      <line x1="20" y1="28" x2="220" y2="28" stroke="#E3DACC" stroke-width="1"/>
+      <text x="20" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">监控：业务重要性</text>
+      <text x="20" y="58" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D">响应：高优先级数据优先处理</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <path d="M615 265 L645 265" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="645,265 639,261 639,269" fill="#D1CFC5"/>
+
+  <!-- Stage 3: Self-Optimizing -->
+  <g transform="translate(650, 85)">
+    <rect x="0" y="0" width="240" height="360" rx="12" fill="white" stroke="#141413" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="240" height="44" rx="12" fill="#141413"/>
+    <rect x="0" y="32" width="240" height="16" fill="#141413"/>
+    <text x="120" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">自优化 Self-Optimizing</text>
+
+    <!-- Optimization steps -->
+    <g transform="translate(15, 60)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">1. 查询模式学习</text>
+      <text x="105" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">分析历史查询行为</text>
+      <path d="M105 50 L105 62" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <g transform="translate(15, 125)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">2. 自动索引建议</text>
+      <text x="105" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">何时创建索引最有效</text>
+      <path d="M105 50 L105 62" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <g transform="translate(15, 190)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">3. 查询重写优化</text>
+      <text x="105" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">提升查询性能</text>
+      <path d="M105 50 L105 62" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <g transform="translate(15, 255)">
+      <rect x="0" y="0" width="210" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="105" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">4. 缓存策略优化</text>
+      <text x="105" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">智能缓存预热</text>
+    </g>
+
+    <!-- Code snippet -->
+    <g transform="translate(15, 315)">
+      <rect x="0" y="0" width="210" height="38" rx="6" fill="#141413"/>
+      <text x="105" y="16" text-anchor="middle" font-family="monospace" font-size="8" fill="#D1CFC5">if is_cache_friendly(query):</text>
+      <text x="105" y="30" text-anchor="middle" font-family="monospace" font-size="8" fill="#788C5D">execute_with_caching()</text>
+    </g>
+  </g>
+
+  <!-- Footer comparison -->
+  <line x1="40" y1="460" x2="860" y2="460" stroke="#E3DACC" stroke-width="1"/>
+  <text x="450" y="480" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">传统数据流水线：静态 · 被动 · 手动</text>
+  <text x="450" y="498" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">智能数据流水线：动态 · 主动 · 自动化</text>
+</svg>

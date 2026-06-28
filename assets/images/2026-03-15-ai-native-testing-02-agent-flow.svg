@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="12" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">Multi-Agent Integration Testing Flow</text>
+  <text x="450" y="60" text-anchor="middle" font-size="12" fill="#87867F">Complete Order Purchase Scenario — 5 Agent Collaboration</text>
+
+  <!-- Agent Cards -->
+  <!-- User Agent -->
+  <g transform="translate(40, 90)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="120" height="24" rx="8" fill="#788C5D"/>
+    <rect y="16" width="120" height="8" fill="#788C5D"/>
+    <text x="60" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="white">User Simulator</text>
+    <text x="60" y="46" text-anchor="middle" font-size="10" fill="#141413">Browse &amp; Select</text>
+    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#87867F">intent-driven</text>
+  </g>
+
+  <!-- Inventory Agent -->
+  <g transform="translate(40, 200)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="120" height="24" rx="8" fill="#D97757"/>
+    <rect y="16" width="120" height="8" fill="#D97757"/>
+    <text x="60" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="white">Inventory Agent</text>
+    <text x="60" y="46" text-anchor="middle" font-size="10" fill="#141413">Reserve / Confirm</text>
+    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#87867F">contract-validated</text>
+  </g>
+
+  <!-- Order Agent -->
+  <g transform="translate(40, 310)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="120" height="24" rx="8" fill="#141413"/>
+    <rect y="16" width="120" height="8" fill="#141413"/>
+    <text x="60" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="white">Order Service</text>
+    <text x="60" y="46" text-anchor="middle" font-size="10" fill="#141413">Create / Confirm</text>
+    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#87867F">state-managed</text>
+  </g>
+
+  <!-- Payment Agent -->
+  <g transform="translate(40, 420)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="120" height="24" rx="8" fill="#D97757"/>
+    <rect y="16" width="120" height="8" fill="#D97757"/>
+    <text x="60" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="white">Payment Agent</text>
+    <text x="60" y="46" text-anchor="middle" font-size="10" fill="#141413">Authorize / Capture</text>
+    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#87867F">secure-transaction</text>
+  </g>
+
+  <!-- Notification Agent -->
+  <g transform="translate(720, 310)" filter="url(#shadow)">
+    <rect width="120" height="70" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="120" height="24" rx="8" fill="#788C5D"/>
+    <rect y="16" width="120" height="8" fill="#788C5D"/>
+    <text x="60" y="17" text-anchor="middle" font-size="11" font-weight="600" fill="white">Notification</text>
+    <text x="60" y="46" text-anchor="middle" font-size="10" fill="#141413">Send Alert</text>
+    <text x="60" y="60" text-anchor="middle" font-size="9" fill="#87867F">multi-channel</text>
+  </g>
+
+  <!-- Flow Steps (right side) -->
+  <!-- Step 1 -->
+  <g transform="translate(220, 100)">
+    <circle cx="20" cy="20" r="18" fill="#788C5D"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">1</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Browse Products</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">Find $100-$200 items</text>
+    <line x1="120" y1="20" x2="160" y2="20" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Step 2 -->
+  <g transform="translate(220, 155)">
+    <circle cx="20" cy="20" r="18" fill="#788C5D"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">2</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Select &amp; Add to Cart</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">User picks first match</text>
+    <line x1="120" y1="20" x2="160" y2="20" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 3 -->
+  <g transform="translate(220, 215)">
+    <circle cx="20" cy="20" r="18" fill="#D97757"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">3</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Reserve Inventory</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">productId + qty → reserved</text>
+    <line x1="140" y1="20" x2="160" y2="50" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 4 -->
+  <g transform="translate(220, 280)">
+    <circle cx="20" cy="20" r="18" fill="#141413"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">4</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Create Order</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">pending_payment</text>
+    <line x1="120" y1="20" x2="160" y2="20" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 5 -->
+  <g transform="translate(220, 335)">
+    <circle cx="20" cy="20" r="18" fill="#D97757"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">5</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Authorize Payment</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">$199.98 authorized</text>
+    <line x1="140" y1="20" x2="160" y2="-10" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 6 -->
+  <g transform="translate(220, 395)">
+    <circle cx="20" cy="20" r="18" fill="#141413"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">6</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Confirm Order</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">status: confirmed</text>
+    <line x1="120" y1="20" x2="160" y2="20" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 7 -->
+  <g transform="translate(220, 450)">
+    <circle cx="20" cy="20" r="18" fill="#D97757"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">7</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Confirm Inventory</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">stock deducted</text>
+    <line x1="140" y1="20" x2="160" y2="-10" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Step 8 -->
+  <g transform="translate(580, 310)">
+    <circle cx="20" cy="20" r="18" fill="#788C5D"/>
+    <text x="20" y="25" text-anchor="middle" font-size="12" font-weight="700" fill="white">8</text>
+    <text x="50" y="16" font-size="11" font-weight="600" fill="#141413">Send Notification</text>
+    <text x="50" y="30" font-size="10" fill="#87867F">email + push sent</text>
+    <line x1="80" y1="20" x2="110" y2="20" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  </g>
+
+  <!-- Final State Box -->
+  <g transform="translate(580, 380)" filter="url(#shadow)">
+    <rect width="200" height="80" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <text x="100" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#788C5D">✓ Final State Verified</text>
+    <text x="100" y="44" text-anchor="middle" font-size="10" fill="#141413">paymentStatus: captured</text>
+    <text x="100" y="60" text-anchor="middle" font-size="10" fill="#141413">fulfillmentStatus: processing</text>
+  </g>
+
+  <!-- Connection lines from agents to steps -->
+  <line x1="160" y1="125" x2="220" y2="120" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="160" y1="235" x2="280" y2="235" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="160" y1="345" x2="240" y2="300" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="160" y1="455" x2="280" y2="415" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="720" y1="345" x2="700" y2="330" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Legend -->
+  <g transform="translate(580, 100)">
+    <text x="0" y="0" font-size="11" font-weight="600" fill="#141413">Agent Types</text>
+    <rect x="0" y="12" width="12" height="12" rx="2" fill="#788C5D"/>
+    <text x="18" y="22" font-size="10" fill="#87867F">Simulator / Notification</text>
+    <rect x="0" y="30" width="12" height="12" rx="2" fill="#D97757"/>
+    <text x="18" y="40" font-size="10" fill="#87867F">External Service Agent</text>
+    <rect x="0" y="48" width="12" height="12" rx="2" fill="#141413"/>
+    <text x="18" y="58" font-size="10" fill="#87867F">Core Service Agent</text>
+  </g>
+
+  <!-- Key Benefits -->
+  <g transform="translate(580, 195)">
+    <text x="0" y="0" font-size="11" font-weight="600" fill="#141413">Key Benefits</text>
+    <text x="0" y="18" font-size="10" fill="#87867F">• Natural language intent</text>
+    <text x="0" y="32" font-size="10" fill="#87867F">• Auto-handles API changes</text>
+    <text x="0" y="46" font-size="10" fill="#87867F">• Simulates failure scenarios</text>
+    <text x="0" y="60" font-size="10" fill="#87867F">• Parallel execution ready</text>
+  </g>
+</svg>

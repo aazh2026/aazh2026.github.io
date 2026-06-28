@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <rect width="900" height="540" fill="#FAF9F5"/>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">AISE 成熟度演进模型</text>
+  <text x="450" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">AISE Maturity Model — Five Levels of Organizational Evolution</text>
+
+  <!-- Five Level Cards -->
+  <!-- Level 1: Assisted -->
+  <g transform="translate(30, 85)">
+    <rect x="0" y="0" width="158" height="390" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect x="0" y="0" width="158" height="50" rx="10" fill="#D1CFC5"/>
+    <rect x="0" y="40" width="158" height="20" fill="#D1CFC5"/>
+    <text x="79" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">Level 1</text>
+    <text x="79" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#141413">辅助</text>
+    <text x="79" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Assisted</text>
+
+    <text x="12" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AI代码采纳率</text>
+    <text x="12" y="134" font-family="monospace" font-size="14" font-weight="700" fill="#D97757">10-30%</text>
+
+    <text x="12" y="162" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">节省时间</text>
+    <text x="12" y="180" font-family="monospace" font-size="14" font-weight="700" fill="#788C5D">10-20%</text>
+
+    <line x1="12" y1="196" x2="146" y2="196" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="216" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">关键实践</text>
+    <text x="12" y="234" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• AI 智能代码补全</text>
+    <text x="12" y="250" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 人工审查所有输出</text>
+    <text x="12" y="266" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 偶尔 AI 生成文档</text>
+    <text x="12" y="282" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 传统流程基本不变</text>
+
+    <line x1="12" y1="300" x2="146" y2="300" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="320" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">典型场景</text>
+    <text x="12" y="338" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">IDE 插件辅助编码</text>
+    <text x="12" y="354" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">文档自动生成</text>
+
+    <line x1="12" y1="372" x2="146" y2="372" stroke="#E3DACC" stroke-width="1"/>
+    <text x="79" y="388" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#D1CFC5">★★★★★</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <path d="M188 280 L210 280" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="210,280 204,276 204,284" fill="#D1CFC5"/>
+
+  <!-- Level 2: Augmented -->
+  <g transform="translate(220, 85)">
+    <rect x="0" y="0" width="158" height="390" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect x="0" y="0" width="158" height="50" rx="10" fill="#E3DACC"/>
+    <rect x="0" y="40" width="158" height="20" fill="#E3DACC"/>
+    <text x="79" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">Level 2</text>
+    <text x="79" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#141413">增强</text>
+    <text x="79" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Augmented</text>
+
+    <text x="12" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AI代码采纳率</text>
+    <text x="12" y="134" font-family="monospace" font-size="14" font-weight="700" fill="#D97757">30-50%</text>
+
+    <text x="12" y="162" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">节省时间</text>
+    <text x="12" y="180" font-family="monospace" font-size="14" font-weight="700" fill="#788C5D">20-40%</text>
+
+    <line x1="12" y1="196" x2="146" y2="196" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="216" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">关键实践</text>
+    <text x="12" y="234" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 结构化 Prompt 设计</text>
+    <text x="12" y="250" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• AI 参与代码审查</text>
+    <text x="12" y="266" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 初步 Prompt 库积累</text>
+    <text x="12" y="282" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 实验 AI 生成测试</text>
+
+    <line x1="12" y1="300" x2="146" y2="300" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="320" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">典型场景</text>
+    <text x="12" y="338" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Intent 表达初探</text>
+    <text x="12" y="354" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">知识资产化启动</text>
+
+    <line x1="12" y1="372" x2="146" y2="372" stroke="#E3DACC" stroke-width="1"/>
+    <text x="79" y="388" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#D1CFC5">★★★★</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <path d="M378 280 L400 280" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="400,280 394,276 394,284" fill="#D1CFC5"/>
+
+  <!-- Level 3: Collaborative -->
+  <g transform="translate(410, 85)">
+    <rect x="0" y="0" width="158" height="390" rx="10" fill="white" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="158" height="50" rx="10" fill="#D97757"/>
+    <rect x="0" y="40" width="158" height="20" fill="#D97757"/>
+    <text x="79" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">Level 3 ★</text>
+    <text x="79" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#141413">协作</text>
+    <text x="79" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Collaborative</text>
+    <text x="79" y="102" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" font-weight="600">目标成熟度</text>
+
+    <text x="12" y="122" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AI代码采纳率</text>
+    <text x="12" y="140" font-family="monospace" font-size="14" font-weight="700" fill="#D97757">50-70%</text>
+
+    <text x="12" y="168" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">节省时间</text>
+    <text x="12" y="186" font-family="monospace" font-size="14" font-weight="700" fill="#788C5D">40-60%</text>
+
+    <text x="12" y="212" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Prompt 库规模</text>
+    <text x="12" y="230" font-family="monospace" font-size="14" font-weight="700" fill="#141413">100-500</text>
+
+    <line x1="12" y1="246" x2="146" y2="246" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="266" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">关键实践</text>
+    <text x="12" y="284" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• Intent-Driven Dev</text>
+    <text x="12" y="300" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 可执行 PRD</text>
+    <text x="12" y="316" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 系统化 Context 管理</text>
+    <text x="12" y="332" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 人机 SLA 定义</text>
+
+    <line x1="12" y1="350" x2="146" y2="350" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="370" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">典型场景</text>
+    <text x="12" y="386" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">人机协作标准化</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <path d="M568 280 L590 280" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="590,280 584,276 584,284" fill="#D1CFC5"/>
+
+  <!-- Level 4: Optimized -->
+  <g transform="translate(600, 85)">
+    <rect x="0" y="0" width="158" height="390" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect x="0" y="0" width="158" height="50" rx="10" fill="#788C5D"/>
+    <rect x="0" y="40" width="158" height="20" fill="#788C5D"/>
+    <text x="79" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="white">Level 4</text>
+    <text x="79" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#141413">优化</text>
+    <text x="79" y="86" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Optimized</text>
+
+    <text x="12" y="116" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AI代码采纳率</text>
+    <text x="12" y="134" font-family="monospace" font-size="14" font-weight="700" fill="#D97757">70-85%</text>
+
+    <text x="12" y="162" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">自动化验证</text>
+    <text x="12" y="180" font-family="monospace" font-size="14" font-weight="700" fill="#788C5D">&gt;80%</text>
+
+    <text x="12" y="206" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">交付效率提升</text>
+    <text x="12" y="224" font-family="monospace" font-size="14" font-weight="700" fill="#141413">3-5x</text>
+
+    <line x1="12" y1="240" x2="146" y2="240" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="260" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">关键实践</text>
+    <text x="12" y="278" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• Multi-Agent 协作</text>
+    <text x="12" y="294" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 自动化意图验证</text>
+    <text x="12" y="310" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 全面度量体系</text>
+    <text x="12" y="326" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">• 预测性质量控制</text>
+
+    <line x1="12" y1="344" x2="146" y2="344" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="12" y="364" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413">典型场景</text>
+    <text x="12" y="380" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Agent 自主子任务</text>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <path d="M758 280 L780 280" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="780,280 774,276 774,284" fill="#D1CFC5"/>
+
+  <!-- Level 5: Autonomous -->
+  <g transform="translate(790, 85)">
+    <rect x="0" y="0" width="100" height="390" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect x="0" y="0" width="100" height="50" rx="10" fill="#141413"/>
+    <rect x="0" y="40" width="100" height="20" fill="#141413"/>
+    <text x="50" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="white">Level 5</text>
+    <text x="50" y="68" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">自主</text>
+    <text x="50" y="84" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Autonomous</text>
+    <text x="50" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">愿景</text>
+
+    <text x="10" y="124" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">AI自主率</text>
+    <text x="10" y="142" font-family="monospace" font-size="12" font-weight="700" fill="#D97757">&gt;50%</text>
+
+    <text x="10" y="168" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">人类聚焦</text>
+    <text x="10" y="186" font-family="monospace" font-size="12" font-weight="700" fill="#788C5D">&gt;80%</text>
+
+    <text x="10" y="212" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">效能提升</text>
+    <text x="10" y="230" font-family="monospace" font-size="12" font-weight="700" fill="#141413">5-10x</text>
+
+    <line x1="10" y1="244" x2="90" y2="244" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="10" y="264" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#141413">关键实践</text>
+    <text x="10" y="280" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">• AI 主导架构设计</text>
+    <text x="10" y="294" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">• 自动化需求分析</text>
+    <text x="10" y="308" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">• 自进化系统</text>
+    <text x="10" y="322" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">• 战略级人机协作</text>
+
+    <line x1="10" y1="338" x2="90" y2="338" stroke="#E3DACC" stroke-width="1"/>
+
+    <text x="10" y="358" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#141413">典型场景</text>
+    <text x="10" y="374" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">AI 主导开发</text>
+    <text x="10" y="388" font-family="system-ui, sans-serif" font-size="8" fill="#87867F">人类专注治理</text>
+  </g>
+
+  <!-- Footer note -->
+  <line x1="40" y1="492" x2="860" y2="492" stroke="#E3DACC" stroke-width="1"/>
+  <text x="450" y="512" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Level 3 是大多数组织的现实目标 · Level 4 是先进组织的目标 · Level 5 是长期愿景</text>
+  <text x="450" y="530" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">★ 当前技术和组织准备度下，建议大多数组织瞄准 Level 3-4</text>
+</svg>

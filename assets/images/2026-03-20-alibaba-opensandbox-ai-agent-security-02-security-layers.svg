@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520">
+  <rect width="900" height="520" fill="#FAF9F5"/>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">OpenSandbox 三层安全模型</text>
+  <text x="450" y="57" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">Three-Layer Security Model — Runtime Isolation · Behavior Monitoring · Policy Orchestration</text>
+
+  <!-- Layer 1: Runtime Isolation (top) -->
+  <g transform="translate(40, 80)">
+    <rect x="0" y="0" width="820" height="120" rx="12" fill="white" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="820" height="40" rx="12" fill="#D97757"/>
+    <rect x="0" y="28" width="820" height="16" fill="#D97757"/>
+    <text x="410" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">第一层：运行时隔离 Runtime Isolation</text>
+
+    <!-- Four isolation boxes -->
+    <g transform="translate(20, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">Namespace 隔离</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">PID · Network · Mount · IPC · UTS</text>
+    </g>
+    <g transform="translate(215, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">Cgroups 限制</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">CPU · 内存 · IO · 网络带宽</text>
+    </g>
+    <g transform="translate(410, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">Seccomp 过滤</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">系统调用白名单</text>
+    </g>
+    <g transform="translate(605, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">AppArmor/SELinux</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">强制访问控制</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M450 210 L450 238" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="450,238 446,232 454,232" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Behavior Monitoring (middle) -->
+  <g transform="translate(40, 250)">
+    <rect x="0" y="0" width="820" height="120" rx="12" fill="white" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="820" height="40" rx="12" fill="#788C5D"/>
+    <rect x="0" y="28" width="820" height="16" fill="#788C5D"/>
+    <text x="410" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">第二层：行为监控 Behavior Monitoring</text>
+
+    <!-- Monitoring dimensions -->
+    <g transform="translate(20, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">文件系统监控</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">敏感文件访问 · 大量读写</text>
+    </g>
+    <g transform="translate(215, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">网络监控</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">异常连接 · 数据传输</text>
+    </g>
+    <g transform="translate(410, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">进程监控</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">子进程创建 · 权限提升</text>
+    </g>
+    <g transform="translate(605, 56)">
+      <rect x="0" y="0" width="180" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="90" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">资源监控</text>
+      <text x="90" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">CPU/内存/磁盘使用</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M450 380 L450 408" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="450,408 446,402 454,402" fill="#D1CFC5"/>
+
+  <!-- Layer 3: Policy Orchestration (bottom) -->
+  <g transform="translate(40, 420)">
+    <rect x="0" y="0" width="820" height="80" rx="12" fill="white" stroke="#141413" stroke-width="2" filter="url(#shadow)"/>
+    <rect x="0" y="0" width="820" height="40" rx="12" fill="#141413"/>
+    <rect x="0" y="28" width="820" height="16" fill="#141413"/>
+    <text x="410" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="white">第三层：策略编排 Policy Orchestration</text>
+
+    <g transform="translate(20, 52)">
+      <rect x="0" y="0" width="240" height="22" rx="4" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="120" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#141413">声明式安全策略 · YAML 配置</text>
+    </g>
+    <g transform="translate(280, 52)">
+      <rect x="0" y="0" width="240" height="22" rx="4" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="120" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#141413">ALLOW / DENY 规则引擎</text>
+    </g>
+    <g transform="translate(540, 52)">
+      <rect x="0" y="0" width="240" height="22" rx="4" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="120" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#141413">实时告警 · 自动响应</text>
+    </g>
+  </g>
+
+  <!-- Comparison panel -->
+  <g transform="translate(40, 395)">
+    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">响应方式</text>
+    <text x="80" y="0" font-family="system-ui, sans-serif" font-size="10" fill="#D97757" font-weight="600">阻止 / 告警</text>
+    <text x="155" y="0" font-family="system-ui, sans-serif" font-size="10" fill="#D97757" font-weight="600">阻断 / 限速</text>
+    <text x="230" y="0" font-family="system-ui, sans-serif" font-size="10" fill="#D97757" font-weight="600">终止 / 恢复</text>
+  </g>
+</svg>

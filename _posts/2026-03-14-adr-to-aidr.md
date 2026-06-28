@@ -504,6 +504,8 @@ service.on('outgoing-call', (call) => {
 
 ## 工具链与实施路径
 
+<object data="/assets/images/2026-03-14-adr-to-aidr-02-cicd-validation.svg" type="image/svg+xml" width="100%"></object>
+
 ### 推荐工具链 (2026)
 
 | 功能 | 工具 | 说明 |

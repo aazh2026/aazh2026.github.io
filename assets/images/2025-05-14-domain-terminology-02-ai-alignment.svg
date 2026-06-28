@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="system-ui,sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#F0EDE5"/>
+    </linearGradient>
+    <marker id="arr3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg4)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">AI 辅助术语对齐流水线</text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#87867F">从业务语言到规范代码：术语表作为人机协作的桥梁</text>
+
+  <!-- Main pipeline -->
+  <g transform="translate(30, 80)">
+
+    <!-- Step 1: User Input -->
+    <rect x="0" y="0" width="210" height="200" fill="white" stroke="#D1CFC5" stroke-width="1.5" rx="8"/>
+    <rect x="0" y="0" width="210" height="30" fill="#D1CFC5" rx="8" clip-path="url(#clip14)"/>
+    <text x="105" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">① 用户输入</text>
+
+    <text x="12" y="46" font-size="10" fill="#141413" font-weight="600">业务语言描述：</text>
+    <rect x="12" y="54" width="186" height="56" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1" rx="4"/>
+    <text x="20" y="68" font-size="10" fill="#141413">"为客户生成</text>
+    <text x="20" y="82" font-size="10" fill="#141413">订单历史查询</text>
+    <text x="20" y="96" font-size="10" fill="#141413">功能"</text>
+
+    <text x="12" y="124" font-size="10" fill="#141413" font-weight="600">关键术语提取：</text>
+    <rect x="12" y="132" width="186" height="56" fill="#E3DACC" rx="4"/>
+    <text x="20" y="148" font-size="10.5" fill="#141413">📌 <tspan font-weight="600">客户</tspan> → Customer</text>
+    <text x="20" y="163" font-size="10.5" fill="#141413">📌 <tspan font-weight="600">订单</tspan> → Order</text>
+    <text x="20" y="178" font-size="10.5" fill="#141413">📌 <tspan font-weight="600">历史查询</tspan> → findOrders...</text>
+
+    <!-- Arrow 1→2 -->
+    <path d="M220,100 L248,100" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <!-- Step 2: Glossary Lookup -->
+    <rect x="258" y="0" width="210" height="200" fill="white" stroke="#788C5D" stroke-width="1.5" rx="8"/>
+    <rect x="258" y="0" width="210" height="30" fill="#788C5D" rx="8" clip-path="url(#clip15)"/>
+    <text x="363" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="white">② 术语表查询</text>
+
+    <text x="270" y="46" font-size="10" fill="#141413" font-weight="600">业务术语定义：</text>
+    <rect x="270" y="54" width="186" height="76" fill="#EDF3E5" stroke="#788C5D" stroke-width="1" rx="4"/>
+    <text x="280" y="68" font-size="9.5" fill="#141413"><tspan font-weight="600">Customer</tspan>：平台注册者</text>
+    <text x="280" y="81" font-size="9.5" fill="#141413"><tspan font-weight="600">class:</tspan> Customer</text>
+    <text x="280" y="94" font-size="9.5" fill="#141413"><tspan font-weight="600">package:</tspan> sales.domain</text>
+    <text x="280" y="107" font-size="9.5" fill="#141413"><tspan font-weight="600">Order</tspan>：购买记录</text>
+    <text x="280" y="120" font-size="9.5" fill="#141413"><tspan font-weight="600">class:</tspan> Order</text>
+    <text x="280" y="133" font-size="9.5" fill="#87867F"><tspan font-weight="600">rel:</tspan> Customer 1:N Order</text>
+
+    <text x="270" y="148" font-size="10" fill="#141413" font-weight="600">代码命名规范：</text>
+    <rect x="270" y="156" width="186" height="32" fill="#E3DACC" rx="4"/>
+    <text x="280" y="170" font-size="9.5" fill="#141413">方法：findOrdersByCustomerId</text>
+    <text x="280" y="183" font-size="9.5" fill="#141413">返回：List&lt;Order&gt;，最多100条</text>
+
+    <!-- Arrow 2→3 -->
+    <path d="M478,100 L506,100" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <!-- Step 3: AI Context Build -->
+    <rect x="516" y="0" width="210" height="200" fill="white" stroke="#D97757" stroke-width="1.5" rx="8"/>
+    <rect x="516" y="0" width="210" height="30" fill="#D97757" rx="8" clip-path="url(#clip16)"/>
+    <text x="621" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="white">③ AI 语境构建</text>
+
+    <text x="528" y="46" font-size="10" fill="#141413" font-weight="600">Prompt Context：</text>
+    <rect x="528" y="54" width="186" height="134" fill="#FFF0E8" stroke="#D97757" stroke-width="1" rx="4"/>
+    <text x="538" y="68" font-size="9" fill="#141413"><tspan font-weight="600">业务语境：</tspan></text>
+    <text x="538" y="80" font-size="9" fill="#141413">Customer: 平台注册者</text>
+    <text x="538" y="92" font-size="9" fill="#141413">Order: 购买记录，1:N 关系</text>
+    <text x="538" y="104" font-size="9" fill="#141413" font-weight="600">代码规范：</text>
+    <text x="538" y="116" font-size="9" fill="#141413">类名：Customer, Order</text>
+    <text x="538" y="128" font-size="9" fill="#141413">方法：findOrdersByCustomerId</text>
+    <text x="538" y="140" font-size="9" fill="#141413" font-weight="600">约束：</tspan></text>
+    <text x="538" y="152" font-size="9" fill="#141413">只返回已完成订单</text>
+    <text x="538" y="164" font-size="9" fill="#141413">按时间倒序，最多100条</text>
+    <text x="538" y="176" font-size="9" fill="#141413">使用 Repository 模式</text>
+
+    <!-- Arrow 3→4 -->
+    <path d="M736,100 L764,100" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+    <!-- Step 4: Aligned Code Output -->
+    <rect x="774" y="0" width="96" height="200" fill="white" stroke="#788C5D" stroke-width="2" rx="8"/>
+    <rect x="774" y="0" width="96" height="30" fill="#788C5D" rx="8" clip-path="url(#clip17)"/>
+    <text x="822" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="white">④ 代码</text>
+
+    <rect x="786" y="40" width="72" height="148" fill="#EDF3E5" rx="4"/>
+    <text x="822" y="56" text-anchor="middle" font-size="9" font-weight="700" fill="#141413">结果</text>
+    <line x1="796" y1="62" x2="848" y2="62" stroke="#788C5D" stroke-width="0.5"/>
+    <text x="794" y="74" font-size="8.5" fill="#141413">@Service</text>
+    <text x="794" y="86" font-size="8.5" fill="#141413">OrderQuery</text>
+    <text x="794" y="98" font-size="8.5" fill="#141413">Service</text>
+    <text x="794" y="112" font-size="8.5" fill="#141413">findOrders</text>
+    <text x="794" y="124" font-size="8.5" fill="#141413">ByCustomer</text>
+    <text x="794" y="136" font-size="8.5" fill="#141413">Id(customer)</text>
+    <text x="794" y="148" font-size="8.5" fill="#141413">{</text>
+    <text x="794" y="160" font-size="8.5" fill="#141413">return repo</text>
+    <text x="794" y="172" font-size="8.5" fill="#141413">.find...</text>
+    <text x="794" y="184" font-size="8.5" fill="#141413">}</text>
+
+    <!-- Bottom section: Linter + IDE integration -->
+    <line x1="0" y1="218" x2="840" y2="218" stroke="#D1CFC5" stroke-width="1"/>
+
+    <!-- Linter panel -->
+    <g transform="translate(0, 232)">
+      <rect x="0" y="0" width="410" height="138" fill="white" stroke="#D1CFC5" stroke-width="1.5" rx="8"/>
+      <text x="16" y="20" font-size="12" font-weight="700" fill="#141413">术语冲突检测（Linter）</text>
+      <text x="16" y="40" font-size="10" fill="#87867F">自动扫描代码中的命名不一致</text>
+
+      <!-- Bad code example -->
+      <rect x="16" y="52" width="178" height="74" fill="#FFF5F0" stroke="#D97757" stroke-width="1" rx="4"/>
+      <text x="24" y="66" font-size="9" fill="#D97757" font-weight="600">⚠️ 代码中的命名</text>
+      <text x="24" y="80" font-size="9" fill="#141413">class <tspan font-weight="600" fill="#D97757">User</tspan> {</text>
+      <text x="32" y="94" font-size="9" fill="#141413">List&lt;<tspan font-weight="600" fill="#D97757">Purchase</tspan>&gt; h;</text>
+      <text x="24" y="108" font-size="9" fill="#141413">}</text>
+
+      <!-- Arrow -->
+      <path d="M204,89 L228,89" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+      <!-- Detection result -->
+      <rect x="238" y="52" width="160" height="74" fill="#EDF3E5" stroke="#788C5D" stroke-width="1" rx="4"/>
+      <text x="246" y="66" font-size="9" fill="#788C5D" font-weight="600">✅ 检测结果</text>
+      <text x="246" y="80" font-size="9" fill="#141413"><tspan font-weight="600">User</tspan> → 应该是 Customer</text>
+      <text x="246" y="94" font-size="9" fill="#141413"><tspan font-weight="600">Purchase</tspan> → 考虑用 Order</text>
+      <text x="246" y="108" font-size="9" fill="#87867F">建议自动重构</text>
+    </g>
+
+    <!-- IDE panel -->
+    <g transform="translate(430, 232)">
+      <rect x="0" y="0" width="410" height="138" fill="white" stroke="#D1CFC5" stroke-width="1.5" rx="8"/>
+      <text x="16" y="20" font-size="12" font-weight="700" fill="#141413">IDE 实时集成</text>
+      <text x="16" y="40" font-size="10" fill="#87867F">开发时即时提示术语规范</text>
+
+      <!-- Real-time hint -->
+      <rect x="16" y="52" width="378" height="74" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1" rx="4"/>
+      <text x="24" y="68" font-size="9" fill="#141413">开发者输入：<tspan font-weight="600">class Client</tspan></text>
+      <text x="24" y="84" font-size="9" fill="#D97757">⚠️ 命名建议："Client" 可能对应业务术语 "客户"</text>
+      <text x="24" y="96" font-size="9" fill="#141413"><tspan font-weight="600">建议改为 "Customer" 以符合规范</tspan></text>
+      <rect x="24" y="104" width="72" height="16" fill="#788C5D" rx="4"/>
+      <text x="60" y="116" text-anchor="middle" font-size="9" fill="white" font-weight="600">自动重构</text>
+      <rect x="104" y="104" width="60" height="16" fill="#D1CFC5" rx="4"/>
+      <text x="134" y="116" text-anchor="middle" font-size="9" fill="#141413">查看定义</text>
+      <rect x="172" y="104" width="60" height="16" fill="white" stroke="#D1CFC5" rx="4"/>
+      <text x="202" y="116" text-anchor="middle" font-size="9" fill="#141413">忽略</text>
+    </g>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <rect x="30" y="458" width="840" height="52" fill="#EDF3E5" stroke="#788C5D" stroke-width="1.5" rx="8"/>
+  <text x="450" y="480" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">术语治理的战略价值</text>
+  <text x="450" y="496" text-anchor="middle" font-size="11" fill="#141413">术语是 AI 理解的桥梁 | 没有术语治理 = garbage in, garbage out | ROI极高：投入1小时，节省100小时沟通</text>
+</svg>

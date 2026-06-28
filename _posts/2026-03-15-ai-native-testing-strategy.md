@@ -145,6 +145,7 @@ def test_checkout_flow(driver):
 ## AI-Native 测试三层模型
 
 <object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 新模型的核心转变
 
