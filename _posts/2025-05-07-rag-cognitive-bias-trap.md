@@ -116,19 +116,7 @@ RAG回答：Python确实比Java好，因为...
 
 ### RAG确认偏误的循环
 
-```
-用户带着偏见提问
-        ↓
-RAG检索到支持偏见的内容
-        ↓
-RAG生成强化偏见的回答
-        ↓
-用户偏见被强化
-        ↓
-用户下次带着更强的偏见提问
-        ↓
-（循环继续，偏见加深）
-```
+<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-01-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

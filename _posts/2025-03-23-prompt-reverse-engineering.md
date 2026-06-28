@@ -101,6 +101,8 @@ Prompt泄露正在成为AI产品的新风险。那些被视为核心竞争力的
 
 Prompt就是AI系统的"灵魂"。而这个灵魂，正以明文形式暴露给每一个用户。
 
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
+
 ## 三、穿越周期：从软件逆向工程到Prompt逆向工程
 
 ### 软件保护的演进史

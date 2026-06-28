@@ -86,6 +86,8 @@ redirect_from:
 
 **洞察**：早期发现合规问题，成本可降低90%以上。
 
+<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-01-cost-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## AI需求风险识别
@@ -182,6 +184,8 @@ class PrivacyRiskAnalyzer:
 ---
 
 ## GDPR/个保法Checklist自动化
+
+<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-02-checklist-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 法规知识库
 

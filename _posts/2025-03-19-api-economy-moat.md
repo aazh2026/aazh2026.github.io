@@ -51,6 +51,8 @@ Grammarly的AI功能，被免费替代品逐步蚕食。
 
 **CopyAI的护城河，从一开始就是幻觉。**
 
+<object data="/assets/images/2025-03-19-api-economy-moat-01-moat-collapse.svg" type="image/svg+xml" width="100%"></object>
+
 ## 二、核心观点：API调用无法构建竞争壁垒
 
 让我说一个反直觉的事实：在API经济中，技术优势是最脆弱的护城河。
@@ -312,6 +314,8 @@ AI工具不是独立存在的，是嵌入用户工作流的。越深度的嵌入
 - 不是"AI工具"，是"领域专家+AI"
 - 强调人类专家的参与和审核
 - 建立长期可靠性的声誉
+
+<object data="/assets/images/2025-03-19-api-economy-moat-02-five-steps.svg" type="image/svg+xml" width="100%"></object>
 
 ## 六、写在最后：接受没有技术护城河的现实
 

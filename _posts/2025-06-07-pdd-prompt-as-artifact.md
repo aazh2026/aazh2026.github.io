@@ -77,6 +77,8 @@ series: AI-Native软件工程系列 #5
 
 ## Prompt版本控制
 
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+
 > 💡 **Key Insight**
 > 
 003e Prompt的微小改动可能导致输出巨大变化。版本控制不仅是备份，更是可追溯的实验记录。
