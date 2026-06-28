@@ -362,46 +362,7 @@ architecture_spec:
     service: Order Service
     language: Python
     
-    structure:
-      order_service/
-      ├── app/
-      │   ├── __init__.py
-      │   ├── main.py              # FastAPI app 入口
-      │   ├── config.py            # 配置管理
-      │   └── dependencies.py      # 依赖注入
-      ├── api/
-      │   ├── __init__.py
-      │   └── v1/
-      │       ├── __init__.py
-      │       ├── orders.py        # Order Controller
-      │       └── health.py        # 健康检查
-      ├── domain/
-      │   ├── __init__.py
-      │   ├── models/
-      │   │   ├── __init__.py
-      │   │   ├── order.py         # Order 实体
-      │   │   └── order_item.py    # OrderItem 实体
-      │   ├── services/
-      │   │   ├── __init__.py
-      │   │   └── order_service.py # Order Service (Domain)
-      │   └── repositories/
-      │       ├── __init__.py
-      │       └── order_repository.py
-      ├── infrastructure/
-      │   ├── __init__.py
-      │   ├── database.py          # 数据库连接
-      │   ├── clients/
-      │   │   ├── __init__.py
-      │   │   ├── payment_client.py
-      │   │   └── inventory_client.py
-      │   └── messaging/
-      │       ├── __init__.py
-      │       └── event_publisher.py
-      ├── tests/
-      │   ├── unit/
-      │   ├── integration/
-      │   └── e2e/
-      └── Dockerfile
+<object data="/assets/images/2025-04-05-architecture-spec-machine-readable-01-code-structure.svg" type="image/svg+xml" width="100%"></object>
 ```
 
 ---

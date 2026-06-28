@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.5 310.0" width="100%" role="img" aria-label="TradingAgents Architecture">
+<rect width="448.5" height="310.0" fill="#FAF9F5"/>
+<rect x="0" y="0" width="448.5" height="310.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
+<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────────┐</text>
+<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│        TradingAgents 架构               │</text>
+<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  自然语言输入  │ &quot;当 BTC 突破 50日均线买入&quot; │</text>
+<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  意图理解 Agent │ 解析策略语义             │</text>
+<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  数据获取 Agent │ 获取市场数据             │</text>
+<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  策略执行 Agent │ 生成交易指令             │</text>
+<text x="20" y="213.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="231.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  风险管理 Agent │ 评估风险、设置止损       │</text>
+<text x="20" y="249.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
+<text x="20" y="267.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  执行层        │ 连接交易所 API           │</text>
+<text x="20" y="285.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">└─────────────────────────────────────────┘</text>
+</svg>

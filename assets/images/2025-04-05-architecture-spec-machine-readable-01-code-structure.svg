@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600.5 760.0" width="100%" role="img" aria-label="Code Structure">
+<rect width="600.5" height="760.0" fill="#FAF9F5"/>
+<rect x="0" y="0" width="600.5" height="760.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
+<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">    structure:</text>
+<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      order_service/</text>
+<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      ├── app/</text>
+<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── __init__.py</text>
+<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── main.py              # FastAPI app 入口</text>
+<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── config.py            # 配置管理</text>
+<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   └── dependencies.py      # 依赖注入</text>
+<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      ├── api/</text>
+<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── __init__.py</text>
+<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   └── v1/</text>
+<text x="20" y="213.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       ├── __init__.py</text>
+<text x="20" y="231.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       ├── orders.py        # Order Controller</text>
+<text x="20" y="249.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       └── health.py        # 健康检查</text>
+<text x="20" y="267.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      ├── domain/</text>
+<text x="20" y="285.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── __init__.py</text>
+<text x="20" y="303.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── models/</text>
+<text x="20" y="321.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   ├── __init__.py</text>
+<text x="20" y="339.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   ├── order.py         # Order 实体</text>
+<text x="20" y="357.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   └── order_item.py    # OrderItem 实体</text>
+<text x="20" y="375.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── services/</text>
+<text x="20" y="393.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   ├── __init__.py</text>
+<text x="20" y="411.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   └── order_service.py # Order Service (Domain)</text>
+<text x="20" y="429.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   └── repositories/</text>
+<text x="20" y="447.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       ├── __init__.py</text>
+<text x="20" y="465.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       └── order_repository.py</text>
+<text x="20" y="483.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      ├── infrastructure/</text>
+<text x="20" y="501.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── __init__.py</text>
+<text x="20" y="519.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── database.py          # 数据库连接</text>
+<text x="20" y="537.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── clients/</text>
+<text x="20" y="555.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   ├── __init__.py</text>
+<text x="20" y="573.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   ├── payment_client.py</text>
+<text x="20" y="591.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   │   └── inventory_client.py</text>
+<text x="20" y="609.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   └── messaging/</text>
+<text x="20" y="627.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       ├── __init__.py</text>
+<text x="20" y="645.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │       └── event_publisher.py</text>
+<text x="20" y="663.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      ├── tests/</text>
+<text x="20" y="681.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── unit/</text>
+<text x="20" y="699.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   ├── integration/</text>
+<text x="20" y="717.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      │   └── e2e/</text>
+<text x="20" y="735.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">      └── Dockerfile</text>
+</svg>

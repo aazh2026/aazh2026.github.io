@@ -484,28 +484,7 @@ elif today.is_black_friday:
 **当你修改代码时，系统自动分析**：
 
 **示例**：
-```
-开发者修改：pricing-service/discount-engine.py
-
-系统分析：
-┌─────────────────────────────────────────────┐
-│ 影响范围分析                                 │
-├─────────────────────────────────────────────┤
-│ 直接影响模块：                               │
-│ • pricing-service (你修改的)                │
-│ • order-service (调用pricing-service)       │
-│ • payment-gateway (依赖价格计算)            │
-├─────────────────────────────────────────────┤
-│ 需要更新的测试：                             │
-│ • PricingServiceTest (3个测试用例)          │
-│ • OrderIntegrationTest (5个测试用例)        │
-│ • PaymentFlowTest (2个测试用例)             │
-├─────────────────────────────────────────────┤
-│ 风险评估：高风险                             │
-│ 原因：影响核心业务流程（订单→支付）          │
-│ 建议：需要Code Review + 集成测试            │
-└─────────────────────────────────────────────┘
-```
+<object data="/assets/images/2025-04-08-codebase-intelligence-01-impact-analysis.svg" type="image/svg+xml" width="100%"></object>
 
 **技术实现**：知识图谱遍历 + 依赖分析 + 风险评估模型
 

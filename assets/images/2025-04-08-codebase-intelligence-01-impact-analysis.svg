@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 486.5 400.0" width="100%" role="img" aria-label="Impact Analysis">
+<rect width="486.5" height="400.0" fill="#FAF9F5"/>
+<rect x="0" y="0" width="486.5" height="400.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
+<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">开发者修改：pricing-service/discount-engine.py</text>
+<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve"></text>
+<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">系统分析：</text>
+<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────────────┐</text>
+<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 影响范围分析                                 │</text>
+<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────────┤</text>
+<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 直接影响模块：                               │</text>
+<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • pricing-service (你修改的)                │</text>
+<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • order-service (调用pricing-service)       │</text>
+<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • payment-gateway (依赖价格计算)            │</text>
+<text x="20" y="213.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────────┤</text>
+<text x="20" y="231.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 需要更新的测试：                             │</text>
+<text x="20" y="249.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • PricingServiceTest (3个测试用例)          │</text>
+<text x="20" y="267.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • OrderIntegrationTest (5个测试用例)        │</text>
+<text x="20" y="285.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ • PaymentFlowTest (2个测试用例)             │</text>
+<text x="20" y="303.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────────┤</text>
+<text x="20" y="321.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 风险评估：高风险                             │</text>
+<text x="20" y="339.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 原因：影响核心业务流程（订单→支付）          │</text>
+<text x="20" y="357.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│ 建议：需要Code Review + 集成测试            │</text>
+<text x="20" y="375.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">└─────────────────────────────────────────────┘</text>
+</svg>

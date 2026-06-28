@@ -277,25 +277,7 @@ Wayfair 在美国、加拿大、英国、德国等市场运营，需要多语言
 
 ### 多语言架构
 
-```
-┌─────────────────────────────────────────┐
-│      Multi-Language Pipeline            │
-├─────────────────────────────────────────┤
-│  Source (English)                       │
-│  ↓                                      │
-│  Core Enhancement (English)             │
-│  ↓                                      │
-│  Translation / Adaptation               │
-│  ├── German                             │
-│  ├── French                             │
-│  ├── Spanish                            │
-│  └── ...                                │
-│  ↓                                      │
-│  Localization Review                    │
-│  ↓                                      │
-│  Local Market Deployment                │
-└─────────────────────────────────────────┘
-```
+<object data="/assets/images/2026-03-17-wayfair-ai-scale-01-multi-language.svg" type="image/svg+xml" width="100%"></object>
 
 ### 翻译策略选择
 
@@ -351,26 +333,7 @@ def translate_with_memory(text, target_lang):
 
 ### 三层质量控制
 
-```
-┌─────────────────────────────────────────┐
-│      Quality Control System             │
-├─────────────────────────────────────────┤
-│  Layer 1: Automated Validation          │
-│  - 规则检查（格式、范围、必填）           │
-│  - 交叉验证（属性间一致性）               │
-│  - 异常检测（统计离群值）                 │
-├─────────────────────────────────────────┤
-│  Layer 2: AI Verification               │
-│  - 自我一致性检查                        │
-│  - 与竞品对比                            │
-│  - 置信度评分                            │
-├─────────────────────────────────────────┤
-│  Layer 3: Human Review                  │
-│  - 抽样审核                              │
-│  - 异常标记审核                          │
-│  - 反馈闭环                              │
-└─────────────────────────────────────────┘
-```
+<object data="/assets/images/2026-03-17-wayfair-ai-scale-02-quality-control.svg" type="image/svg+xml" width="100%"></object>
 
 ### 自动化验证规则
 
