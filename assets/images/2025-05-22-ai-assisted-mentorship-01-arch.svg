@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420" role="img" aria-label="AI导师系统实施架构图">
+  <title>AI导师系统实施架构</title>
+  <desc>AI导师系统的三层架构：数据层、分析层、应用层</desc>
+
+  <defs>
+    <!-- Colors from blog CSS -->
+    <!-- Ivory #FAF9F5, Clay #D97757, Slate #141413, G300 #D1CFC5, G500 #87867F, Oat #E3DACC, Olive #788C5D -->
+    <style>
+      .bg { fill: #FAF9F5; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
+      .header-bg { fill: #D97757; }
+      .header-text { fill: #FAF9F5; font-family: monospace; font-size: 14px; font-weight: bold; }
+      .layer-bg { fill: #E3DACC; }
+      .layer-label { fill: #87867F; font-family: monospace; font-size: 11px; }
+      .layer-name { fill: #141413; font-family: monospace; font-size: 13px; font-weight: bold; }
+      .item-text { fill: #141413; font-family: monospace; font-size: 12px; }
+      .item-sub { fill: #87867F; font-family: monospace; font-size: 11px; }
+      .divider { stroke: #D1CFC5; stroke-width: 1; fill: none; }
+      .accent { fill: #788C5D; }
+      .box-bg { fill: #FAF9F5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="420" class="bg"/>
+
+  <!-- Outer container -->
+  <rect x="20" y="20" width="640" height="380" rx="4" class="border" stroke-width="2"/>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="640" height="36" rx="4" class="header-bg"/>
+  <!-- cover bottom corners of header -->
+  <rect x="20" y="50" width="640" height="8" fill="#D97757"/>
+  <text x="340" y="43" text-anchor="middle" class="header-text">AI导师系统</text>
+
+  <!-- Divider 1: after header -->
+  <line x1="20" y1="58" x2="660" y2="58" class="divider"/>
+
+  <!-- ===== 数据层 ===== -->
+  <text x="36" y="78" class="layer-label">数据层</text>
+
+  <!-- 数据层 items -->
+  <rect x="36" y="84" width="608" height="58" rx="3" class="box-bg" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Item 1 -->
+  <rect x="48" y="92" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="60" y="107" class="item-text">代码仓库（Git）</text>
+
+  <!-- Item 2 -->
+  <rect x="168" y="92" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="180" y="107" class="item-text">代码审查记录（PR数据）</text>
+
+  <!-- Item 3 -->
+  <rect x="350" y="92" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="362" y="107" class="item-text">学习记录（学习平台）</text>
+
+  <!-- Item 4 -->
+  <rect x="524" y="92" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="536" y="107" class="item-text">开发者画像</text>
+  <text x="536" y="122" class="item-sub">（匿名化存储）</text>
+
+  <!-- Divider 2 -->
+  <line x1="20" y1="152" x2="660" y2="152" class="divider"/>
+
+  <!-- ===== 分析层 ===== -->
+  <text x="36" y="172" class="layer-label">分析层</text>
+
+  <!-- 分析层 items -->
+  <rect x="36" y="178" width="608" height="58" rx="3" class="box-bg" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Item 1 -->
+  <rect x="48" y="186" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="60" y="201" class="item-text">代码质量分析引擎</text>
+
+  <!-- Item 2 -->
+  <rect x="228" y="186" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="240" y="201" class="item-text">行为模式识别</text>
+
+  <!-- Item 3 -->
+  <rect x="400" y="186" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="412" y="201" class="item-text">能力评估模型</text>
+
+  <!-- Item 4 -->
+  <rect x="572" y="186" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="584" y="201" class="item-text">个性化推荐引擎</text>
+
+  <!-- Divider 3 -->
+  <line x1="20" y1="246" x2="660" y2="246" class="divider"/>
+
+  <!-- ===== 应用层 ===== -->
+  <text x="36" y="266" class="layer-label">应用层</text>
+
+  <!-- 应用层 items -->
+  <rect x="36" y="272" width="608" height="58" rx="3" class="box-bg" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Item 1 -->
+  <rect x="48" y="280" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="60" y="295" class="item-text">IDE插件（实时指导）</text>
+
+  <!-- Item 2 -->
+  <rect x="228" y="280" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="240" y="295" class="item-text">Web平台（学习路径）</text>
+
+  <!-- Item 3 -->
+  <rect x="408" y="280" width="4" height="42" rx="2" fill="#D97757"/>
+  <text x="420" y="295" class="item-text">代码审查集成</text>
+
+  <!-- Item 4 -->
+  <rect x="580" y="280" width="4" height="42" rx="2" fill="#788C5D"/>
+  <text x="592" y="295" class="item-text">导师匹配系统</text>
+
+  <!-- Bottom border -->
+  <line x1="20" y1="340" x2="660" y2="340" class="divider"/>
+</svg>

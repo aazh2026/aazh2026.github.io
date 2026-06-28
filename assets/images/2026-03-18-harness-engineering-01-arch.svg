@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 360" role="img" aria-label="Harness 三层架构图">
+  <title>Harness 架构</title>
+  <desc>Harness Engineering 的三层架构：Layer 1 上下文工程、Layer 2 架构约束、Layer 3 垃圾回收</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .border { fill: none; stroke: #D1CFC5; stroke-width: 2; }
+      .title-bg { fill: #141413; }
+      .title-text { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; }
+      .layer3-bg { fill: #D97757; }
+      .layer2-bg { fill: #788C5D; }
+      .layer1-bg { fill: #E3DACC; }
+      .layer-label { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
+      .layer-sub { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 9px; }
+      .item { fill: #141413; font-family: 'Courier New', monospace; font-size: 11px; }
+      .item-light { fill: #141413; font-family: 'Courier New', monospace; font-size: 11px; opacity: 0.75; }
+      .divider { stroke: #D1CFC5; stroke-width: 1.5; }
+      .outer-border { fill: none; stroke: #D1CFC5; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="360" class="bg"/>
+
+  <!-- Outer frame -->
+  <rect x="20" y="20" width="520" height="320" rx="6" class="outer-border"/>
+
+  <!-- Title bar -->
+  <rect x="20" y="20" width="520" height="36" rx="6" class="title-bg"/>
+  <rect x="20" y="44" width="520" height="12" class="title-bg"/>
+  <text x="280" y="43" text-anchor="middle" class="title-text">Harness 架构</text>
+
+  <!-- Layer 3: Garbage Collection (top layer) -->
+  <rect x="20" y="68" width="520" height="90" class="layer3-bg"/>
+  <rect x="20" y="68" width="520" height="90" class="border"/>
+
+  <!-- Layer 3 label -->
+  <rect x="26" y="74" width="140" height="20" rx="3" fill="rgba(0,0,0,0.2)"/>
+  <text x="96" y="88" text-anchor="middle" class="layer-label">Layer 3</text>
+  <text x="96" y="99" text-anchor="middle" class="layer-sub">Garbage Collection</text>
+
+  <!-- Layer 3 items -->
+  <text x="176" y="90" class="item">- 定期运行的 Agent</text>
+  <text x="176" y="106" class="item">- 发现文档不一致</text>
+  <text x="176" y="122" class="item">- 修复架构违规</text>
+  <text x="176" y="138" class="item">- 对抗熵增和腐烂</text>
+
+  <!-- Divider 2-3 -->
+  <line x1="20" y1="158" x2="540" y2="158" class="divider"/>
+
+  <!-- Layer 2: Architectural Constraints -->
+  <rect x="20" y="158" width="520" height="90" class="layer2-bg"/>
+  <rect x="20" y="158" width="520" height="90" class="border"/>
+
+  <!-- Layer 2 label -->
+  <rect x="26" y="164" width="140" height="20" rx="3" fill="rgba(0,0,0,0.2)"/>
+  <text x="96" y="178" text-anchor="middle" class="layer-label">Layer 2</text>
+  <text x="96" y="189" text-anchor="middle" class="layer-sub">架构约束</text>
+
+  <!-- Layer 2 items -->
+  <text x="176" y="180" class="item">- 确定性自定义 Linter</text>
+  <text x="176" y="196" class="item">- 结构化测试</text>
+  <text x="176" y="212" class="item">- LLM-based Agent 监控</text>
+
+  <!-- Divider 1-2 -->
+  <line x1="20" y1="248" x2="540" y2="248" class="divider"/>
+
+  <!-- Layer 1: Context Engineering -->
+  <rect x="20" y="248" width="520" height="92" rx="0" class="layer1-bg"/>
+  <rect x="20" y="248" width="520" height="92" class="border"/>
+  <!-- round bottom corners manually -->
+  <path d="M20,332 Q20,340 28,340 L532,340 Q540,340 540,332" fill="#E3DACC" stroke="none"/>
+  <rect x="20" y="248" width="520" height="92" rx="6" fill="none" stroke="#D1CFC5" stroke-width="2.5"/>
+
+  <!-- Layer 1 label -->
+  <rect x="26" y="254" width="140" height="20" rx="3" fill="rgba(0,0,0,0.08)"/>
+  <text x="96" y="268" text-anchor="middle" class="layer-label" style="fill:#141413">Layer 1</text>
+  <text x="96" y="279" text-anchor="middle" class="layer-sub" style="fill:#141413">上下文工程</text>
+
+  <!-- Layer 1 items -->
+  <text x="176" y="270" class="item">- 持续增强的知识库</text>
+  <text x="176" y="286" class="item">- 动态上下文（可观测性数据）</text>
+  <text x="176" y="302" class="item">- 浏览器导航等实时信息</text>
+
+</svg>
