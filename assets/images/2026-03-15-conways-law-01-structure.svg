@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="'Courier New', monospace" font-size="14">
+  <rect width="560" height="320" fill="#FAF9F5"/>
+
+  <!-- Top border line -->
+  <line x1="0" y1="0" x2="560" y2="0" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="1" x2="560" y2="1" stroke="#141413" stroke-width="1"/>
+
+  <!-- Row 1: 第3章 -->
+  <rect x="0" y="0" width="560" height="42" fill="#141413"/>
+  <rect x="1" y="1" width="558" height="40" fill="#141413"/>
+  <text x="80" y="27" text-anchor="middle" fill="#D97757" font-size="13">第3章</text>
+  <line x1="90" y1="0" x2="90" y2="42" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="27" fill="#FAF9F5" font-size="13">Melvin Conway 的经典定律回顾</text>
+
+  <!-- Row 2: border row -->
+  <line x1="0" y1="42" x2="560" y2="42" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="43" x2="560" y2="43" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="42" x2="90" y2="84" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 3: 第4章 -->
+  <rect x="0" y="42" width="560" height="42" fill="#E3DACC"/>
+  <rect x="1" y="43" width="558" height="40" fill="#E3DACC"/>
+  <text x="80" y="69" text-anchor="middle" fill="#D97757" font-size="13">第4章</text>
+  <line x1="90" y1="42" x2="90" y2="84" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="69" fill="#141413" font-size="13">传统康威定律的局限</text>
+
+  <!-- Row 4: border -->
+  <line x1="0" y1="84" x2="560" y2="84" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="85" x2="560" y2="85" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="84" x2="90" y2="126" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 5: 第5章 -->
+  <rect x="0" y="84" width="560" height="42" fill="#141413"/>
+  <rect x="1" y="85" width="558" height="40" fill="#141413"/>
+  <text x="80" y="111" text-anchor="middle" fill="#D97757" font-size="13">第5章</text>
+  <line x1="90" y1="84" x2="90" y2="126" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="111" fill="#FAF9F5" font-size="13">AI Agent 作为组织新成员</text>
+
+  <!-- Row 6: border -->
+  <line x1="0" y1="126" x2="560" y2="126" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="127" x2="560" y2="127" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="126" x2="90" y2="168" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 7: 第6章 -->
+  <rect x="0" y="126" width="560" height="42" fill="#E3DACC"/>
+  <rect x="1" y="127" width="558" height="40" fill="#E3DACC"/>
+  <text x="80" y="153" text-anchor="middle" fill="#D97757" font-size="13">第6章</text>
+  <line x1="90" y1="126" x2="90" y2="168" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="153" fill="#141413" font-size="13">AI-Native 团队的组织设计</text>
+
+  <!-- Row 8: border -->
+  <line x1="0" y1="168" x2="560" y2="168" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="169" x2="560" y2="169" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="168" x2="90" y2="210" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 9: 第7章 -->
+  <rect x="0" y="168" width="560" height="42" fill="#141413"/>
+  <rect x="1" y="169" width="558" height="40" fill="#141413"/>
+  <text x="80" y="195" text-anchor="middle" fill="#D97757" font-size="13">第7章</text>
+  <line x1="90" y1="168" x2="90" y2="210" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="195" fill="#FAF9F5" font-size="13">从团队拓扑到系统架构的新映射</text>
+
+  <!-- Row 10: border -->
+  <line x1="0" y1="210" x2="560" y2="210" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="211" x2="560" y2="211" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="210" x2="90" y2="252" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 11: 第8章 -->
+  <rect x="0" y="210" width="560" height="42" fill="#E3DACC"/>
+  <rect x="1" y="211" width="558" height="40" fill="#E3DACC"/>
+  <text x="80" y="237" text-anchor="middle" fill="#D97757" font-size="13">第8章</text>
+  <line x1="90" y1="210" x2="90" y2="252" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="237" fill="#141413" font-size="13">反直觉洞察</text>
+
+  <!-- Row 12: border -->
+  <line x1="0" y1="252" x2="560" y2="252" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="253" x2="560" y2="253" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="90" y1="252" x2="90" y2="294" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Row 13: 第9章 -->
+  <rect x="0" y="252" width="560" height="42" fill="#141413"/>
+  <rect x="1" y="253" width="558" height="40" fill="#141413"/>
+  <text x="80" y="279" text-anchor="middle" fill="#D97757" font-size="13">第9章</text>
+  <line x1="90" y1="252" x2="90" y2="294" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="279" fill="#FAF9F5" font-size="13">实战：设计 AI-Native 组织的团队结构</text>
+
+  <!-- Row 14: border -->
+  <line x1="0" y1="294" x2="560" y2="294" stroke="#141413" stroke-width="2"/>
+
+  <!-- Row 15: 第10章 -->
+  <rect x="0" y="294" width="560" height="26" fill="#E3DACC"/>
+  <rect x="1" y="295" width="558" height="24" fill="#E3DACC"/>
+  <text x="80" y="311" text-anchor="middle" fill="#D97757" font-size="13">第10章</text>
+  <line x1="90" y1="294" x2="90" y2="320" stroke="#87867F" stroke-width="1"/>
+  <text x="100" y="311" fill="#141413" font-size="13">结语</text>
+
+  <!-- Bottom border -->
+  <line x1="0" y1="320" x2="560" y2="320" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="0" x2="0" y2="320" stroke="#141413" stroke-width="2"/>
+  <line x1="559" y1="0" x2="559" y2="320" stroke="#141413" stroke-width="2"/>
+</svg>

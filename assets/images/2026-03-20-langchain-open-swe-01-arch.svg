@@ -1,65 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
-  <title>open-swe 架构</title>
-  <style>
-    text { font-family: 'Courier New', Courier, monospace; }
-  </style>
-
-  <!-- Background -->
-  <rect width="520" height="360" fill="#FAF9F5" rx="6"/>
-
-  <!-- Outer border -->
-  <rect x="2" y="2" width="516" height="356" fill="none" stroke="#D1CFC5" stroke-width="2" rx="6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="'Courier New', monospace" font-size="15">
+  <rect width="640" height="300" fill="#FAF9F5"/>
+  <!-- Title bar -->
+  <rect x="0" y="0" width="640" height="36" fill="#141413"/>
+  <rect x="1" y="1" width="638" height="34" fill="#141413"/>
+  <text x="320" y="24" text-anchor="middle" fill="#FAF9F5" font-size="16" font-weight="bold" letter-spacing="4">open-swe 核心特性</text>
 
   <!-- Header row -->
-  <rect x="2" y="2" width="516" height="50" fill="#141413" rx="6"/>
-  <text x="260" y="34" text-anchor="middle" fill="#FAF9F5" font-size="17" font-weight="bold">open-swe 架构</text>
+  <rect x="0" y="36" width="640" height="30" fill="#D97757"/>
+  <rect x="1" y="37" width="638" height="28" fill="#D97757"/>
+  <rect x="321" y="36" width="1" height="30" fill="#141413"/>
+  <text x="162" y="56" text-anchor="middle" fill="#FAF9F5" font-size="14" font-weight="bold">特性</text>
+  <text x="480" y="56" text-anchor="middle" fill="#FAF9F5" font-size="14" font-weight="bold">说明</text>
 
-  <!-- Divider under header -->
-  <line x1="2" y1="52" x2="518" y2="52" stroke="#D1CFC5" stroke-width="2"/>
+  <!-- Row 1 -->
+  <rect x="0" y="66" width="640" height="36" fill="#E3DACC"/>
+  <rect x="1" y="67" width="638" height="34" fill="#E3DACC"/>
+  <rect x="321" y="66" width="1" height="36" fill="#D1CFC5"/>
+  <text x="18" y="89" fill="#788C5D" font-size="14" font-weight="bold">✅ 异步执行</text>
+  <text x="337" y="89" fill="#141413" font-size="14">非阻塞 I/O，高并发</text>
 
-  <!-- Row 1: Task Queue -->
-  <rect x="2" y="52" width="516" height="50" fill="#E3DACC"/>
-  <line x1="2" y1="102" x2="518" y2="102" stroke="#D1CFC5" stroke-width="2"/>
-  <text x="14" y="82" fill="#141413" font-size="14" font-weight="bold">Task Queue</text>
-  <text x="220" y="82" fill="#87867F" font-size="13">│</text>
-  <text x="240" y="82" fill="#141413" font-size="13">任务队列（异步）</text>
+  <!-- Row 2 -->
+  <rect x="0" y="102" width="640" height="36" fill="#FAF9F5"/>
+  <rect x="1" y="103" width="638" height="34" fill="#FAF9F5"/>
+  <rect x="321" y="102" width="1" height="36" fill="#D1CFC5"/>
+  <text x="18" y="125" fill="#788C5D" font-size="14" font-weight="bold">✅ 代码生成</text>
+  <text x="337" y="125" fill="#141413" font-size="14">多语言支持，上下文感知</text>
 
-  <!-- Row 2: Agent Worker -->
-  <rect x="2" y="102" width="516" height="50" fill="#FAF9F5"/>
-  <line x1="2" y1="152" x2="518" y2="152" stroke="#D1CFC5" stroke-width="2"/>
-  <text x="14" y="132" fill="#141413" font-size="14" font-weight="bold">Agent Worker</text>
-  <text x="220" y="132" fill="#87867F" font-size="13">│</text>
-  <text x="240" y="132" fill="#141413" font-size="13">Agent 工作协程</text>
+  <!-- Row 3 -->
+  <rect x="0" y="138" width="640" height="36" fill="#E3DACC"/>
+  <rect x="1" y="139" width="638" height="34" fill="#E3DACC"/>
+  <rect x="321" y="138" width="1" height="36" fill="#D1CFC5"/>
+  <text x="18" y="161" fill="#788C5D" font-size="14" font-weight="bold">✅ 文件协调</text>
+  <text x="337" y="161" fill="#141413" font-size="14">跨文件依赖分析</text>
 
-  <!-- Row 3: LLM Client -->
-  <rect x="2" y="152" width="516" height="50" fill="#E3DACC"/>
-  <line x1="2" y1="202" x2="518" y2="202" stroke="#D1CFC5" stroke-width="2"/>
-  <text x="14" y="172" fill="#141413" font-size="14" font-weight="bold">LLM Client</text>
-  <text x="220" y="172" fill="#87867F" font-size="13">│</text>
-  <text x="240" y="172" fill="#141413" font-size="13">LLM API 客户端（异步）</text>
+  <!-- Row 4 -->
+  <rect x="0" y="174" width="640" height="36" fill="#FAF9F5"/>
+  <rect x="1" y="175" width="638" height="34" fill="#FAF9F5"/>
+  <rect x="321" y="174" width="1" height="36" fill="#D1CFC5"/>
+  <text x="18" y="197" fill="#788C5D" font-size="14" font-weight="bold">✅ CI/CD 集成</text>
+  <text x="337" y="197" fill="#141413" font-size="14">自动化流水线</text>
 
-  <!-- Row 4: Tool Executor -->
-  <rect x="2" y="202" width="516" height="50" fill="#FAF9F5"/>
-  <line x1="2" y="252" x2="518" y2="252" stroke="#D1CFC5" stroke-width="2"/>
-  <text x="14" y="222" fill="#141413" font-size="14" font-weight="bold">Tool Executor</text>
-  <text x="220" y="222" fill="#87867F" font-size="13">│</text>
-  <text x="240" y="222" fill="#141413" font-size="13">工具执行器（异步）</text>
+  <!-- Row 5 -->
+  <rect x="0" y="210" width="640" height="36" fill="#E3DACC"/>
+  <rect x="1" y="211" width="638" height="34" fill="#E3DACC"/>
+  <rect x="321" y="210" width="1" height="36" fill="#D1CFC5"/>
+  <text x="18" y="233" fill="#788C5D" font-size="14" font-weight="bold">✅ 可扩展</text>
+  <text x="337" y="233" fill="#141413" font-size="14">插件化架构</text>
 
-  <!-- Row 5: State Manager -->
-  <rect x="2" y="252" width="516" height="50" fill="#E3DACC"/>
-  <line x1="2" y1="302" x2="518" y2="302" stroke="#D1CFC5" stroke-width="2"/>
-  <text x="14" y="272" fill="#141413" font-size="14" font-weight="bold">State Manager</text>
-  <text x="220" y="272" fill="#87867F" font-size="13">│</text>
-  <text x="240" y="272" fill="#141413" font-size="13">状态管理</text>
-
-  <!-- Bottom border -->
-  <line x1="2" y1="302" x2="518" y2="302" stroke="#D1CFC5" stroke-width="2"/>
-
-  <!-- Left bracket decoration -->
-  <text x="6" y="282" fill="#D97757" font-size="18" font-weight="bold">├</text>
-  <text x="6" y="92" fill="#D97757" font-size="18" font-weight="bold">├</text>
-  <text x="6" y="142" fill="#D97757" font-size="18" font-weight="bold">├</text>
-  <text x="6" y="192" fill="#D97757" font-size="18" font-weight="bold">├</text>
-  <text x="6" y="242" fill="#D97757" font-size="18" font-weight="bold">├</text>
-  <text x="6" y="302" fill="#D97757" font-size="18" font-weight="bold">└</text>
+  <!-- Border lines -->
+  <line x1="0" y1="36" x2="640" y2="36" stroke="#141413" stroke-width="2"/>
+  <line x1="321" y1="36" x2="321" y2="246" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="246" x2="640" y2="246" stroke="#141413" stroke-width="2"/>
+  <line x1="1" y1="36" x2="1" y2="246" stroke="#141413" stroke-width="2"/>
+  <line x1="639" y1="36" x2="639" y2="246" stroke="#141413" stroke-width="2"/>
 </svg>

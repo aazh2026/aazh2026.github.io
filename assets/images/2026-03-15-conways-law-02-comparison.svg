@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" font-family="'Courier New', monospace" font-size="13">
+  <rect width="700" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <rect x="0" y="0" width="700" height="36" fill="#141413"/>
+  <rect x="1" y="1" width="698" height="34" fill="#141413"/>
+  <text x="350" y="24" text-anchor="middle" fill="#FAF9F5" font-size="15" font-weight="bold" letter-spacing="3">康威定律 1.0 vs 2.0</text>
+
+  <!-- Header -->
+  <rect x="0" y="36" width="700" height="30" fill="#D97757"/>
+  <rect x="1" y="37" width="698" height="28" fill="#D97757"/>
+  <line x1="350" y1="36" x2="350" y2="66" stroke="#141413" stroke-width="2"/>
+  <text x="175" y="56" text-anchor="middle" fill="#FAF9F5" font-size="13" font-weight="bold">传统康威定律</text>
+  <text x="525" y="56" text-anchor="middle" fill="#FAF9F5" font-size="13" font-weight="bold">康威定律 2.0</text>
+
+  <!-- Row 1 -->
+  <rect x="0" y="66" width="350" height="42" fill="#E3DACC"/>
+  <rect x="0" y="66" width="700" height="42" fill="none"/>
+  <rect x="351" y="66" width="349" height="42" fill="#FAF9F5"/>
+  <text x="18" y="89" fill="#141413" font-size="12">人类 → 人类  通信</text>
+  <line x1="350" y1="66" x2="350" y2="108" stroke="#141413" stroke-width="2"/>
+  <text x="368" y="89" fill="#141413" font-size="12">人类 ↔ Agent ↔ 人类  混合通信</text>
+
+  <!-- Row 2 -->
+  <line x1="0" y1="108" x2="700" y2="108" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="0" y="108" width="350" height="42" fill="#FAF9F5"/>
+  <rect x="351" y="108" width="349" height="42" fill="#E3DACC"/>
+  <text x="18" y="131" fill="#141413" font-size="12">静态组织结构</text>
+  <line x1="350" y1="108" x2="350" y2="150" stroke="#141413" stroke-width="2"/>
+  <text x="368" y="131" fill="#141413" font-size="12">动态、流动的团队拓扑</text>
+
+  <!-- Row 3 -->
+  <line x1="0" y1="150" x2="700" y2="150" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="0" y="150" width="350" height="42" fill="#E3DACC"/>
+  <rect x="351" y="150" width="349" height="42" fill="#FAF9F5"/>
+  <text x="18" y="173" fill="#141413" font-size="12">单一组织边界</text>
+  <line x1="350" y1="150" x2="350" y2="192" stroke="#141413" stroke-width="2"/>
+  <text x="368" y="173" fill="#141413" font-size="12">开放的 Agent 生态系统</text>
+
+  <!-- Row 4 -->
+  <line x1="0" y1="192" x2="700" y2="192" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="0" y="192" width="350" height="42" fill="#FAF9F5"/>
+  <rect x="351" y="192" width="349" height="42" fill="#E3DACC"/>
+  <text x="18" y="215" fill="#141413" font-size="12">会议、文档为主要沟通方式</text>
+  <line x1="350" y1="192" x2="350" y2="234" stroke="#141413" stroke-width="2"/>
+  <text x="368" y="215" fill="#141413" font-size="12">API、Context、Event 驱动</text>
+
+  <!-- Row 5 -->
+  <line x1="0" y1="234" x2="700" y2="234" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="0" y="234" width="350" height="42" fill="#E3DACC"/>
+  <rect x="351" y="234" width="349" height="42" fill="#FAF9F5"/>
+  <text x="18" y="257" fill="#141413" font-size="12">设计 → 实现  线性流程</text>
+  <line x1="350" y1="234" x2="350" y2="276" stroke="#141413" stroke-width="2"/>
+  <text x="368" y="257" fill="#141413" font-size="12">持续迭代、自适应演化</text>
+
+  <!-- Border lines -->
+  <line x1="0" y1="36" x2="700" y2="36" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="276" x2="700" y2="276" stroke="#141413" stroke-width="2"/>
+  <line x1="0" y1="0" x2="0" y2="276" stroke="#141413" stroke-width="2"/>
+  <line x1="699" y1="0" x2="699" y2="276" stroke="#141413" stroke-width="2"/>
+
+  <!-- Arrow between columns -->
+  <line x1="350" y1="190" x2="350" y2="190" stroke="#141413" stroke-width="2"/>
+  <polygon points="350,190 358,186 358,194" fill="#D97757"/>
+
+  <!-- Footer note -->
+  <text x="350" y="310" text-anchor="middle" fill="#87867F" font-size="12" font-style="italic">在 AI-Native 组织中，康威定律映射到 Agent 的能力拓扑</text>
+  <line x1="100" y1="320" x2="600" y2="320" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="350" y="340" text-anchor="middle" fill="#87867F" font-size="11">核心洞察：组织架构决定 Agent 边界，沟通结构决定系统集成方式</text>
+  <text x="350" y="360" text-anchor="middle" fill="#87867F" font-size="11">传统：人在会议中沟通    AI-Native：Agent 在 API 中协调</text>
+</svg>
