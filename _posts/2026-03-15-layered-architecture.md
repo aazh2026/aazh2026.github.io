@@ -8,7 +8,6 @@ series: "Agent OS"
 series_order: 3
 slug: layered-architecture
 math: true
-mermaid: true
 ---
 
 ## 1. TL;DR
