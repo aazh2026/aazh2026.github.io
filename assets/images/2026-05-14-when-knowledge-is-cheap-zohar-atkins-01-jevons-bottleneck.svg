@@ -1,105 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" font-family="'Georgia', serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui,-apple-system,sans-serif">
   <defs>
     <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
     </marker>
-    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="sh2" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="480" fill="#FAF9F5"/>
+  <rect width="800" height="480" fill="#FAF9F5"/>
 
   <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" font-size="16" font-weight="bold" fill="#141413">Jevons 悖论：知识便宜了，瓶颈迁移了</text>
-  <text x="450" y="57" text-anchor="middle" font-size="11" fill="#87867F">@ZoharAtkins 的洞察：丰盛产生胃口，不是消除胃口</text>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">Jevons 悖论：知识便宜了，洞察变贵了</text>
+  <text x="400" y="56" text-anchor="middle" font-size="11" fill="#87867F">@ZoharAtkins | 效率产生需求，瓶颈持续迁移</text>
 
-  <!-- Left: Jevons 1865 box -->
-  <rect x="20" y="80" width="240" height="130" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2" filter="url(#shadow2)"/>
-  <text x="140" y="102" text-anchor="middle" font-size="11" font-weight="bold" fill="#D97757">Jevons 悖论 · 1865</text>
-  <text x="140" y="120" text-anchor="middle" font-size="10" fill="#141413">煤炭效率↑ → 消耗量↑ 10×</text>
-  <line x1="40" y1="132" x2="240" y2="132" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="140" y="148" text-anchor="middle" font-size="9" fill="#87867F">瓦特蒸汽机更高效</text>
-  <text x="140" y="162" text-anchor="middle" font-size="9" fill="#87867F">→ 煤炭总消耗爆炸增长</text>
-  <text x="140" y="178" text-anchor="middle" font-size="9" fill="#141413" font-weight="bold">效率产生需求</text>
+  <!-- Jevons paradox visualization -->
+  <!-- Coal era (left) -->
+  <rect x="40" y="80" width="160" height="220" rx="10" fill="#E3DACC" filter="url(#sh2)"/>
+  <text x="120" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">1865 煤炭时代</text>
+  <text x="120" y="124" text-anchor="middle" font-size="9" fill="#87867F">Jevons 悖论</text>
 
-  <!-- Arrow to middle -->
-  <path d="M 265 145 Q 310 145 340 145" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr2)"/>
-  <text x="302" y="136" text-anchor="middle" font-size="9" fill="#D97757">知识效率↑</text>
+  <!-- Steam engine efficiency -->
+  <rect x="55" y="138" width="130" height="24" rx="5" fill="#D97757"/>
+  <text x="120" y="154" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">蒸汽机效率↑</text>
 
-  <!-- Middle: Migration flow -->
-  <!-- Stack of bottlenecks (vertical flow) -->
-  <text x="460" y="82" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">瓶颈迁移路径</text>
+  <line x1="120" y1="165" x2="120" y2="185" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
 
-  <!-- Bottleneck boxes - vertical stack -->
-  <!-- Box 1: 可及性 -->
-  <rect x="355" y="100" width="210" height="58" rx="8" fill="#D1CFC5" stroke="#141413" stroke-width="1.5"/>
-  <text x="460" y="119" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">① 可及性约束</text>
-  <text x="460" y="135" text-anchor="middle" font-size="9" fill="#87867F">书很贵时，获取渠道是瓶颈</text>
+  <rect x="55" y="188" width="130" height="24" rx="5" fill="#D97757"/>
+  <text x="120" y="204" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">煤炭消耗↑ 10倍</text>
 
-  <!-- Arrow down -->
-  <path d="M 460 158 L 460 175" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="120" y1="215" x2="120" y2="235" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
 
-  <!-- Box 2: 识字 -->
-  <rect x="355" y="178" width="210" height="58" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="1.5"/>
-  <text x="460" y="197" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">② 识字约束</text>
-  <text x="460" y="213" text-anchor="middle" font-size="9" fill="#87867F">印刷松动后，识字成为新瓶颈</text>
+  <rect x="55" y="238" width="130" height="24" rx="5" fill="#141413"/>
+  <text x="120" y="254" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">需求爆炸</text>
 
-  <!-- Arrow down -->
-  <path d="M 460 236 L 460 253" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <text x="120" y="278" text-anchor="middle" font-size="9" fill="#87867F">效率↑ → 成本↓ →</text>
+  <text x="120" y="291" text-anchor="middle" font-size="9" fill="#87867F">应用爆炸 → 总消耗↑</text>
 
-  <!-- Box 3: 引导 -->
-  <rect x="355" y="256" width="210" height="58" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="1.5"/>
-  <text x="460" y="275" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">③ 引导约束</text>
-  <text x="460" y="291" text-anchor="middle" font-size="9" fill="#87867F">有人告诉你该翻哪页、为什么重要</text>
+  <!-- Arrow to knowledge era -->
+  <line x1="210" y1="190" x2="250" y2="190" stroke="#D97757" stroke-width="3" marker-end="url(#arr2)"/>
+  <text x="230" y="180" text-anchor="middle" font-size="9" fill="#D97757" font-weight="700">类比</text>
 
-  <!-- Arrow down -->
-  <path d="M 460 314 L 460 331" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <!-- Knowledge era (right of center) -->
+  <rect x="260" y="80" width="160" height="220" rx="10" fill="#E3DACC" filter="url(#sh2)"/>
+  <text x="340" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">2026 知识时代</text>
+  <text x="340" y="124" text-anchor="middle" font-size="9" fill="#87867F">Jevons 悖论重现</text>
 
-  <!-- Box 4: Chiddush (highlighted) -->
-  <rect x="355" y="334" width="210" height="70" rx="8" fill="#D97757" stroke="#141413" stroke-width="2" filter="url(#shadow2)"/>
-  <text x="460" y="353" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">④ Chiddush 洞察约束</text>
-  <text x="460" y="369" text-anchor="middle" font-size="9" fill="#E3DACC">AI 松动了咨询成本后</text>
-  <text x="460" y="383" text-anchor="middle" font-size="9" fill="#FAF9F5" font-weight="bold">真正的约束变成了洞察</text>
+  <rect x="275" y="138" width="130" height="24" rx="5" fill="#788C5D"/>
+  <text x="340" y="154" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">AI 咨询成本↓</text>
 
-  <!-- Arrow to right -->
-  <path d="M 570 368 Q 610 368 630 368" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr2)"/>
-  <text x="600" y="358" text-anchor="middle" font-size="9" fill="#D97757">AI 来了</text>
+  <line x1="340" y1="165" x2="340" y2="185" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
 
-  <!-- Right: AI era -->
-  <rect x="635" y="80" width="245" height="320" rx="10" fill="#141413" filter="url(#shadow2)"/>
-  <text x="757" y="103" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">AI 时代</text>
-  <text x="757" y="120" text-anchor="middle" font-size="9" fill="#87867F">知识获取成本 → 零</text>
+  <rect x="275" y="188" width="130" height="24" rx="5" fill="#788C5D"/>
+  <text x="340" y="204" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">知识需求量↑</text>
 
-  <line x1="655" y1="132" x2="860" y2="132" stroke="#87867F" stroke-width="1"/>
+  <line x1="340" y1="215" x2="340" y2="235" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
 
-  <!-- What AI provides -->
-  <text x="757" y="152" text-anchor="middle" font-size="10" font-weight="bold" fill="#788C5D">AI 提供的是原材料</text>
-  <text x="757" y="170" text-anchor="middle" font-size="9" fill="#D1CFC5">查找 · 翻译 · 上下文化</text>
-  <text x="757" y="186" text-anchor="middle" font-size="9" fill="#D1CFC5">一切摩擦都被消除了</text>
+  <rect x="275" y="238" width="130" height="24" rx="5" fill="#141413"/>
+  <text x="340" y="254" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">洞察需求↑↑↑</text>
 
-  <line x1="655" y1="200" x2="860" y2="200" stroke="#87867F" stroke-width="1"/>
+  <text x="340" y="278" text-anchor="middle" font-size="9" fill="#87867F">AI 消除可及性瓶颈</text>
+  <text x="340" y="291" text-anchor="middle" font-size="9" fill="#87867F">真正的约束变洞察</text>
 
-  <!-- The real constraint -->
-  <text x="757" y="220" text-anchor="middle" font-size="10" font-weight="bold" fill="#D97757">真正的价值在哪？</text>
+  <!-- Arrow to bottleneck migration -->
+  <line x1="430" y1="190" x2="470" y2="190" stroke="#D97757" stroke-width="3" marker-end="url(#arr2)"/>
+  <text x="450" y="180" text-anchor="middle" font-size="9" fill="#D97757" font-weight="700">瓶颈迁移</text>
 
-  <text x="757" y="245" text-anchor="middle" font-size="11" fill="#FAF9F5" font-weight="bold">吃生小麦的人</text>
-  <text x="757" y="262" text-anchor="middle" font-size="9" fill="#E3DACC">尝不到面包</text>
+  <!-- Bottleneck migration (right) -->
+  <rect x="480" y="80" width="280" height="220" rx="10" fill="#141413" filter="url(#sh2)"/>
+  <text x="620" y="108" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">瓶颈迁移路径</text>
 
-  <line x1="680" y1="275" x2="835" y2="275" stroke="#D97757" stroke-width="1" stroke-dasharray="4 3"/>
+  <!-- Migration steps -->
+  <rect x="498" y="128" width="244" height="26" rx="5" fill="#D97757"/>
+  <text x="620" y="145" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">书很贵 → 可及性是瓶颈</text>
 
-  <text x="757" y="295" text-anchor="middle" font-size="11" fill="#FAF9F5" font-weight="bold">会做面包的人</text>
-  <text x="757" y="312" text-anchor="middle" font-size="9" fill="#788C5D">从原材料产生真正洞察</text>
-  <text x="757" y="328" text-anchor="middle" font-size="9" fill="#788C5D">Chiddush = 浮现一直存在的结构</text>
+  <line x1="620" y1="157" x2="620" y2="172" stroke="#87867F" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr2)"/>
 
-  <line x1="680" y1="343" x2="835" y2="343" stroke="#87867F" stroke-width="1"/>
+  <rect x="498" y="175" width="244" height="26" rx="5" fill="#E3DACC"/>
+  <text x="620" y="192" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">印刷松动 → 识字是瓶颈</text>
 
-  <text x="757" y="363" text-anchor="middle" font-size="9" fill="#D1CFC5">问题从"能找到吗"</text>
-  <text x="757" y="379" text-anchor="middle" font-size="9" fill="#D1CFC5" font-weight="bold">变成"我看到了什么"</text>
+  <line x1="620" y1="204" x2="620" y2="219" stroke="#87867F" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr2)"/>
 
-  <!-- Bottom insight -->
-  <rect x="20" y="415" width="860" height="52" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="450" y="434" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">丰盛产生胃口，不是消除胃口 — 知识越便宜，对真正洞察的欲望越大</text>
-  <text x="450" y="452" text-anchor="middle" font-size="9" fill="#87867F">你的问题，才是真正有价值的东西。</text>
+  <rect x="498" y="222" width="244" height="26" rx="5" fill="#E3DACC"/>
+  <text x="620" y="239" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">AI 松动咨询 → Chiddush 是瓶颈</text>
+
+  <line x1="620" y1="251" x2="620" y2="266" stroke="#87867F" stroke-width="1.5" stroke-dasharray="3,2" marker-end="url(#arr2)"/>
+
+  <rect x="498" y="269" width="244" height="26" rx="5" fill="#788C5D"/>
+  <text x="620" y="286" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">丰盛产生胃口，不是消除胃口</text>
+
+  <!-- Bottom: Chiddush definition and key insight -->
+  <rect x="40" y="320" width="340" height="100" rx="10" fill="#E3DACC" filter="url(#sh2)"/>
+  <text x="210" y="344" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Chiddush 是什么？</text>
+  <text x="210" y="362" text-anchor="middle" font-size="10" fill="#141413">"在一本已经存在的文本中</text>
+  <text x="210" y="376" text-anchor="middle" font-size="10" fill="#141413">看到之前没人看到的真实的东西"</text>
+  <text x="210" y="394" text-anchor="middle" font-size="9" fill="#87867F">— 产生意义的阅读，而非吸收意义</text>
+  <text x="210" y="408" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">没有 Chiddush，学习室无法存续 (Chagigah 3a)</text>
+
+  <!-- Raw wheat metaphor -->
+  <rect x="400" y="320" width="360" height="100" rx="10" fill="#141413" filter="url(#sh2)"/>
+  <text x="580" y="344" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">面包不是小麦</text>
+  <text x="580" y="364" text-anchor="middle" font-size="10" fill="#D1CFC5">AI = 新的磨小麦师傅</text>
+  <text x="580" y="380" text-anchor="middle" font-size="10" fill="#D1CFC5">吃生小麦的人 = 只消费 AI 生成的 Chiddush</text>
+  <text x="580" y="396" text-anchor="middle" font-size="10" fill="#D1CFC5">而不转化它的人</text>
+  <text x="580" y="412" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">问题从"我能找到吗"变成"我看到了什么"</text>
+
+  <!-- Key takeaway -->
+  <rect x="40" y="436" width="720" height="32" rx="6" fill="#788C5D"/>
+  <text x="400" y="457" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">你的问题，才是真正有价值的东西。</text>
 </svg>

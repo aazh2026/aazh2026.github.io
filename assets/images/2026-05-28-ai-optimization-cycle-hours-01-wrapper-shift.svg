@@ -1,107 +1,91 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="'Georgia', serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui,-apple-system,sans-serif">
   <defs>
     <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
     </marker>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="460" fill="#FAF9F5"/>
+  <rect width="800" height="480" fill="#FAF9F5"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#141413" letter-spacing="0.5">从"月"到"小时"：优化对象的范式转移</text>
-  <text x="450" y="54" text-anchor="middle" font-size="11" fill="#87867F">Brooks 框架下的 Wrapper 层进化</text>
+  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">优化对象的转移：从模型权重到 Markdown Wrapper</text>
+  <text x="400" y="56" text-anchor="middle" font-size="11" fill="#87867F">Brooks 框架：偶发复杂度消除，本质复杂度迁移</text>
 
-  <!-- LEFT: Brooks Era timeline -->
-  <text x="115" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">偶发复杂度消除史</text>
+  <!-- Left column: Model weights -->
+  <rect x="40" y="80" width="200" height="320" rx="10" fill="#E3DACC" filter="url(#sh)"/>
+  <text x="140" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">模型权重</text>
+  <text x="140" y="124" text-anchor="middle" font-size="10" fill="#87867F">Model Weights</text>
 
-  <!-- Timeline line -->
-  <line x1="60" y1="120" x2="60" y2="370" stroke="#D1CFC5" stroke-width="2"/>
+  <rect x="60" y="140" width="160" height="28" rx="5" fill="#D97757"/>
+  <text x="140" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">训练集群</text>
 
-  <!-- 1980s -->
-  <circle cx="60" cy="135" r="10" fill="#D97757" filter="url(#shadow)"/>
-  <text x="60" y="139" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">A</text>
-  <text x="75" y="132" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">1980s</text>
-  <text x="75" y="147" text-anchor="start" font-size="9" fill="#87867F">汇编/机器码</text>
-  <text x="75" y="159" text-anchor="start" font-size="9" fill="#788C5D">↓ 高级语言消除复杂度</text>
+  <rect x="60" y="178" width="160" height="28" rx="5" fill="#D97757"/>
+  <text x="140" y="197" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">标注数据</text>
 
-  <!-- 2000s -->
-  <circle cx="60" cy="205" r="10" fill="#D97757" filter="url(#shadow)"/>
-  <text x="60" y="209" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">B</text>
-  <text x="75" y="202" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2000s</text>
-  <text x="75" y="217" text-anchor="start" font-size="9" fill="#87867F">过程式代码</text>
-  <text x="75" y="229" text-anchor="start" font-size="9" fill="#788C5D">↓ OOP/框架消除复杂度</text>
+  <rect x="60" y="216" width="160" height="28" rx="5" fill="#D97757"/>
+  <text x="140" y="235" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">数月迭代</text>
 
-  <!-- 2010s -->
-  <circle cx="60" cy="275" r="10" fill="#D97757" filter="url(#shadow)"/>
-  <text x="60" y="279" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">C</text>
-  <text x="75" y="272" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2010s</text>
-  <text x="75" y="287" text-anchor="start" font-size="9" fill="#87867F">单机架构</text>
-  <text x="75" y="299" text-anchor="start" font-size="9" fill="#788C5D">↓ 云服务/微服务消除复杂度</text>
+  <rect x="60" y="254" width="160" height="28" rx="5" fill="#87867F" opacity="0.4"/>
+  <text x="140" y="273" text-anchor="middle" font-size="10" fill="#141413" opacity="0.5">GPU 集群</text>
 
-  <!-- 2020s -->
-  <circle cx="60" cy="345" r="10" fill="#141413" filter="url(#shadow)"/>
-  <text x="60" y="349" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">D</text>
-  <text x="75" y="342" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2020s</text>
-  <text x="75" y="357" text-anchor="start" font-size="9" fill="#87867F">Wrapper / Skill 文件</text>
-  <text x="75" y="369" text-anchor="start" font-size="9" fill="#D97757">本质复杂度在此显现</text>
+  <rect x="60" y="292" width="160" height="28" rx="5" fill="#87867F" opacity="0.4"/>
+  <text x="140" y="311" text-anchor="middle" font-size="10" fill="#141413" opacity="0.5">重新训练</text>
 
-  <!-- Arrow to right panel -->
-  <path d="M 180 230 Q 240 230 260 230" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="220" y="222" text-anchor="middle" font-size="9" fill="#D97757">Wrapper 层</text>
+  <text x="140" y="345" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">偶发复杂度</text>
+  <text x="140" y="362" text-anchor="middle" font-size="9" fill="#87867F">已消除</text>
 
-  <!-- RIGHT: evo mechanism -->
-  <rect x="270" y="85" width="610" height="300" rx="12" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="575" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#141413">evo 优化闭环</text>
-  <text x="575" y="128" text-anchor="middle" font-size="10" fill="#87867F">SealQA 5/20 → 11/20 · 50次实验 · 145行 Skill 文件</text>
+  <!-- Arrow between columns -->
+  <line x1="250" y1="240" x2="290" y2="240" stroke="#D97757" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="270" y="228" text-anchor="middle" font-size="9" fill="#D97757" font-weight="700">优化对象</text>
+  <text x="270" y="256" text-anchor="middle" font-size="9" fill="#D97757">转移</text>
 
-  <!-- evo flow boxes -->
-  <!-- Box 1: Parallel Exploration -->
-  <rect x="295" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="372" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">并行探索</text>
-  <text x="372" y="181" text-anchor="middle" font-size="9" fill="#87867F">Multiple Agents</text>
-  <text x="372" y="194" text-anchor="middle" font-size="9" fill="#87867F">独立沙盒</text>
-  <text x="372" y="207" text-anchor="middle" font-size="9" fill="#87867F">不同假设</text>
+  <!-- Center column: Brooks framework -->
+  <rect x="300" y="130" width="200" height="220" rx="10" fill="#141413" filter="url(#sh)"/>
+  <text x="400" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">Brooks 框架</text>
+  <text x="400" y="178" text-anchor="middle" font-size="10" fill="#87867F">No Silver Bullet (1986)</text>
 
-  <!-- Arrow 1→2 -->
-  <path d="M 450 190 Q 478 190 498 190" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <rect x="320" y="194" width="160" height="26" rx="5" fill="#788C5D"/>
+  <text x="400" y="212" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">偶发复杂度 → 已消除</text>
 
-  <!-- Box 2: Tree Search -->
-  <rect x="500" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="577" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">树搜索</text>
-  <text x="577" y="181" text-anchor="middle" font-size="9" fill="#87867F">保留多维胜出分支</text>
-  <text x="577" y="194" text-anchor="middle" font-size="9" fill="#87867F">专家分支合并</text>
-  <text x="577" y="207" text-anchor="middle" font-size="9" fill="#87867F">跨维度探索</text>
+  <rect x="320" y="230" width="160" height="26" rx="5" fill="#D97757"/>
+  <text x="400" y="248" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">本质复杂度 → 迁移</text>
 
-  <!-- Arrow 2→3 -->
-  <path d="M 655 190 Q 683 190 703 190" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="400" y="285" text-anchor="middle" font-size="9" fill="#D1CFC5">1986: 编程语言消除复杂度</text>
+  <text x="400" y="300" text-anchor="middle" font-size="9" fill="#D1CFC5">2026: AI Wrapper 再次消除</text>
+  <text x="400" y="315" text-anchor="middle" font-size="9" fill="#D1CFC5">但本质复杂度永远存在</text>
 
-  <!-- Box 3: Gates -->
-  <rect x="705" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#141413" stroke-width="1.5"/>
-  <text x="782" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Gates</text>
-  <text x="782" y="181" text-anchor="middle" font-size="9" fill="#87867F">回归测试</text>
-  <text x="782" y="194" text-anchor="middle" font-size="9" fill="#87867F">Held-out 切片</text>
-  <text x="782" y="207" text-anchor="middle" font-size="9" fill="#87867F">防作弊审计</text>
+  <!-- Arrow to right column -->
+  <line x1="510" y1="240" x2="550" y2="240" stroke="#D97757" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="530" y="228" text-anchor="middle" font-size="9" fill="#D97757" font-weight="700">本质复杂度</text>
+  <text x="530" y="256" text-anchor="middle" font-size="9" fill="#D97757">落脚点</text>
 
-  <!-- Vertical arrow down from boxes -->
-  <line x1="577" y1="233" x2="577" y2="260" stroke="#D97757" stroke-width="1.5"/>
-  <path d="M 573 256 L 577 263 L 581 256" fill="none" stroke="#D97757" stroke-width="1.5"/>
+  <!-- Right column: Markdown wrapper -->
+  <rect x="560" y="80" width="200" height="320" rx="10" fill="#E3DACC" filter="url(#sh)"/>
+  <text x="660" y="108" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">Markdown Wrapper</text>
+  <text x="660" y="124" text-anchor="middle" font-size="10" fill="#87867F">Skill 文件 · Prompt</text>
 
-  <!-- Result box -->
-  <rect x="440" y="265" width="274" height="105" rx="8" fill="#141413" filter="url(#shadow)"/>
-  <text x="577" y="288" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">优化结果</text>
-  <text x="577" y="305" text-anchor="middle" font-size="10" fill="#E3DACC">Skill 文件 145 行</text>
-  <text x="577" y="320" text-anchor="middle" font-size="10" fill="#E3DACC">SealQA: 5/20 → 11/20</text>
-  <text x="577" y="338" text-anchor="middle" font-size="9" fill="#788C5D">✓ 验证通过</text>
+  <rect x="580" y="140" width="160" height="28" rx="5" fill="#788C5D"/>
+  <text x="660" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">编辑器即可修改</text>
 
-  <!-- Bottom insight bar -->
-  <rect x="270" y="395" width="610" height="55" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="575" y="413" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">本质复杂度不会消失，只转移到了 Wrapper 层</text>
-  <text x="575" y="430" text-anchor="middle" font-size="9" fill="#87867F">判断什么值得优化 · 设计 Gate · 定义目标 → 人的判断力变得更重要</text>
+  <rect x="580" y="178" width="160" height="28" rx="5" fill="#788C5D"/>
+  <text x="660" y="197" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">目标定义即可迭代</text>
 
-  <!-- Brooks label -->
-  <text x="575" y="80" text-anchor="middle" font-size="8" fill="#D97757" font-style="italic">Fred Brooks, "No Silver Bullet" (1986) — 偶发复杂度被消除，本质复杂度换了一层</text>
+  <rect x="580" y="216" width="160" height="28" rx="5" fill="#788C5D"/>
+  <text x="660" y="235" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">几小时完成优化</text>
+
+  <rect x="580" y="254" width="160" height="28" rx="5" fill="#D97757"/>
+  <text x="660" y="273" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">判断力成为瓶颈</text>
+
+  <rect x="580" y="292" width="160" height="28" rx="5" fill="#D97757"/>
+  <text x="660" y="311" text-anchor="middle" font-size="10" font-weight="600" fill="#FAF9F5">"Better" 定义权</text>
+
+  <text x="660" y="345" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">本质复杂度</text>
+  <text x="660" y="362" text-anchor="middle" font-size="9" fill="#87867F">新落脚点</text>
+
+  <!-- evo loop annotation -->
+  <rect x="40" y="420" width="720" height="46" rx="8" fill="#141413" filter="url(#sh)"/>
+  <text x="400" y="438" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">evo 闭环: 并行探索 → 树搜索 → Gates → 自动化优化 (50次实验: 5/20 → 11/20)</text>
+  <text x="400" y="455" text-anchor="middle" font-size="9" fill="#D1CFC5">优化周期: 月 → 小时 | 优化成本: 数万$ → 编辑器 + 目标定义</text>
 </svg>
