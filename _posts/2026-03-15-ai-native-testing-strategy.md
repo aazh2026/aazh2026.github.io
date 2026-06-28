@@ -56,16 +56,6 @@ redirect_from:
 
 Mike Cohn 在 2009 年提出的测试金字塔是一个伟大的模型：
 
-```
-        /\
-       /  \        E2E Tests (少量，慢)
-      /____\
-     /      \      Integration Tests (中量)
-    /________\
-   /          \    Unit Tests (大量，快)
-  /____________\
-```
-
 但在 AI 时代，这个模型暴露出三个致命缺陷：
 
 #### 缺陷 1：单元测试的边际收益递减
@@ -85,22 +75,6 @@ Mike Cohn 在 2009 年提出的测试金字塔是一个伟大的模型：
 
 传统集成测试的问题：
 
-```javascript
-// 一个典型的集成测试
-describe('OrderService', () => {
-  it('should create order with payment', async () => {
-    const order = await orderService.create({
-      userId: 'user-123',
-      items: [{ productId: 'p-1', qty: 2 }],
-      paymentMethod: 'credit_card'
-    });
-    
-    expect(order.status).toBe('confirmed');
-    expect(order.total).toBe(199.98);
-  });
-});
-```
-
 **脆弱性来源**：
 - 依赖 PaymentService 的具体响应格式
 - 依赖 ProductService 的价格数据
@@ -110,17 +84,6 @@ describe('OrderService', () => {
 结果是：集成测试变成了"变更探测器"而非"价值验证器"。
 
 #### 缺陷 3：E2E 测试的维护噩梦
-
-```python
-# Selenium E2E 测试示例
-def test_checkout_flow(driver):
-    driver.get("/products")
-    driver.find_element(By.CSS_SELECTOR, ".product-123").click()
-    driver.find_element(By.ID, "add-to-cart").click()
-    driver.find_element(By.ID, "checkout").click()
-    # 如果 UI 改版，这行代码就会失败
-    driver.find_element(By.XPATH, "//button[contains(text(), 'Pay Now')]").click()
-```
 
 **E2E 测试的 brittleness**：
 - 一个按钮的文字从 "Pay Now" 改成 "Complete Purchase" → 测试失败
@@ -172,165 +135,11 @@ def test_checkout_flow(driver):
 
 **第一步：意图表达**
 
-```typescript
-// discount.intent.ts
-/**
- * 折扣计算意图
- * 
- * 业务规则：
- * 1. VIP客户（积分>=1000）享受10%折扣
- * 2. 新用户首单享受20%折扣（不与VIP折扣叠加）
- * 3. 订单金额超过$500享受免运费
- * 4. 折扣不可叠加，取最高折扣
- * 5. 最小订单金额为$10
- * 
- * 边界条件：
- * - 负金额处理：抛出错误
- * - 零积分处理：视为普通用户
- * - 超大金额：支持到$1,000,000
- * - 浮点数精度：保留两位小数
- */
-export interface DiscountIntent {
-  userType: 'new' | 'vip' | 'regular';
-  loyaltyPoints: number;
-  orderAmount: number;
-  isFirstOrder: boolean;
-}
-
-export interface DiscountResult {
-  finalAmount: number;
-  discountApplied: number;
-  discountType: 'vip' | 'new_user' | 'none';
-  shippingFree: boolean;
-}
-```
-
 **第二步：AI 生成完整测试套件**
 
 使用 AI 测试生成工具（如 CodiumAI、GitHub Copilot Chat）：
 
-```bash
-# 命令行调用
-ai-test generate --intent discount.intent.ts --output discount.spec.ts
-```
-
 AI 生成的测试：
-
-```typescript
-// discount.spec.ts (AI Generated)
-describe('DiscountCalculator', () => {
-  describe('VIP Discount', () => {
-    it('should apply 10% discount for VIP with 1000+ points', () => {
-      const result = calculateDiscount({
-        userType: 'vip',
-        loyaltyPoints: 1000,
-        orderAmount: 500,
-        isFirstOrder: false
-      });
-      expect(result.finalAmount).toBe(450);
-      expect(result.discountApplied).toBe(0.10);
-      expect(result.discountType).toBe('vip');
-    });
-
-    it('should not apply VIP discount with 999 points', () => {
-      const result = calculateDiscount({
-        userType: 'vip',
-        loyaltyPoints: 999,
-        orderAmount: 500,
-        isFirstOrder: false
-      });
-      expect(result.finalAmount).toBe(500);
-      expect(result.discountType).toBe('none');
-    });
-  });
-
-  describe('New User Discount', () => {
-    it('should apply 20% discount for new user first order', () => {
-      const result = calculateDiscount({
-        userType: 'new',
-        loyaltyPoints: 0,
-        orderAmount: 100,
-        isFirstOrder: true
-      });
-      expect(result.finalAmount).toBe(80);
-      expect(result.discountApplied).toBe(0.20);
-    });
-
-    it('should prioritize new user discount over VIP', () => {
-      // 边界：既是VIP又是新用户（理论上不可能，但需处理）
-      const result = calculateDiscount({
-        userType: 'new',
-        loyaltyPoints: 2000,
-        orderAmount: 100,
-        isFirstOrder: true
-      });
-      expect(result.discountApplied).toBe(0.20); // 取最高
-    });
-  });
-
-  describe('Free Shipping', () => {
-    it('should offer free shipping for orders over $500', () => {
-      const result = calculateDiscount({
-        userType: 'regular',
-        loyaltyPoints: 0,
-        orderAmount: 501,
-        isFirstOrder: false
-      });
-      expect(result.shippingFree).toBe(true);
-    });
-
-    it('should charge shipping for orders under $500', () => {
-      const result = calculateDiscount({
-        userType: 'regular',
-        loyaltyPoints: 0,
-        orderAmount: 499,
-        isFirstOrder: false
-      });
-      expect(result.shippingFree).toBe(false);
-    });
-  });
-
-  describe('Edge Cases', () => {
-    it('should throw error for negative amount', () => {
-      expect(() => calculateDiscount({
-        userType: 'regular',
-        loyaltyPoints: 0,
-        orderAmount: -100,
-        isFirstOrder: false
-      })).toThrow('Order amount must be positive');
-    });
-
-    it('should throw error for amount below minimum', () => {
-      expect(() => calculateDiscount({
-        userType: 'regular',
-        loyaltyPoints: 0,
-        orderAmount: 9.99,
-        isFirstOrder: false
-      })).toThrow('Minimum order amount is $10');
-    });
-
-    it('should handle large amounts correctly', () => {
-      const result = calculateDiscount({
-        userType: 'vip',
-        loyaltyPoints: 5000,
-        orderAmount: 1000000,
-        isFirstOrder: false
-      });
-      expect(result.finalAmount).toBe(900000);
-    });
-
-    it('should handle floating point precision', () => {
-      const result = calculateDiscount({
-        userType: 'vip',
-        loyaltyPoints: 1000,
-        orderAmount: 99.99,
-        isFirstOrder: false
-      });
-      expect(result.finalAmount).toBe(89.99);
-    });
-  });
-});
-```
 
 **人类的工作**：
 1. 验证 AI 是否正确理解业务规则
@@ -360,61 +169,9 @@ describe('DiscountCalculator', () => {
 
 传统集成测试像是一个"硬接线"的电路：
 
-```javascript
-// 脆弱的集成测试
-it('should process payment', async () => {
-  // 硬编码依赖
-  const paymentResult = await paymentService.charge({
-    amount: 100,
-    currency: 'USD',
-    cardToken: 'tok_visa'
-  });
-  
-  // 如果 PaymentService 接口变了，测试就失败
-  expect(paymentResult.status).toBe('succeeded');
-  expect(paymentResult.transactionId).toMatch(/^txn_/);
-});
-```
-
 ### AI-Native 方案：Multi-Agent 集成测试
 
 使用 Agent 模拟真实的服务交互：
-
-```typescript
-// integration-test.config.ts
-export const integrationTest = {
-  agents: {
-    orderAgent: {
-      role: 'Order Service',
-      capabilities: ['createOrder', 'cancelOrder', 'getOrder'],
-      contracts: ['./contracts/order-service.yaml']
-    },
-    paymentAgent: {
-      role: 'Payment Service',
-      capabilities: ['authorize', 'capture', 'refund'],
-      contracts: ['./contracts/payment-service.yaml']
-    },
-    inventoryAgent: {
-      role: 'Inventory Service',
-      capabilities: ['reserve', 'release', 'confirm'],
-      contracts: ['./contracts/inventory-service.yaml']
-    }
-  },
-  scenarios: [
-    {
-      name: 'Complete Order Flow',
-      steps: [
-        { agent: 'inventoryAgent', action: 'reserve', input: { productId: 'P-123', qty: 2 } },
-        { agent: 'orderAgent', action: 'createOrder', input: { items: [{ productId: 'P-123', qty: 2 }] } },
-        { agent: 'paymentAgent', action: 'authorize', input: { amount: 199.98 } },
-        { agent: 'orderAgent', action: 'confirmOrder', input: { orderId: '{{step1.orderId}}' } },
-        { agent: 'inventoryAgent', action: 'confirm', input: { reservationId: '{{step1.reservationId}}' } },
-        { agent: 'paymentAgent', action: 'capture', input: { authorizationId: '{{step3.authorizationId}}' } }
-      ]
-    }
-  ]
-};
-```
 
 **Agent 协作测试的工作原理**：
 
@@ -425,85 +182,6 @@ export const integrationTest = {
 <object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 实战案例：电商订单流程
-
-```typescript
-// scenarios/complete-purchase.test.ts
-describe('Complete Purchase Flow', () => {
-  const agents = {
-    user: createAgent('User Simulator'),
-    orderService: createAgent('Order Service'),
-    paymentService: createAgent('Payment Service'),
-    inventoryService: createAgent('Inventory Service'),
-    notificationService: createAgent('Notification Service')
-  };
-
-  it('should complete end-to-end purchase with agent collaboration', async () => {
-    // 1. 用户浏览商品
-    const browseResult = await agents.user.act({
-      intent: '浏览商品列表，寻找价格在$100-$200之间的商品'
-    });
-    
-    // 2. 用户选择商品
-    const selection = await agents.user.act({
-      intent: '选择第一个符合条件的商品，加入购物车'
-    });
-
-    // 3. 库存服务预留
-    const reservation = await agents.inventoryService.act({
-      intent: '预留用户选择的商品库存',
-      context: { productId: selection.productId, quantity: 1 }
-    });
-    expect(reservation.status).toBe('reserved');
-
-    // 4. 创建订单
-    const order = await agents.orderService.act({
-      intent: '创建订单，关联预留的库存',
-      context: { 
-        userId: browseResult.userId,
-        items: [{ productId: selection.productId, qty: 1 }],
-        reservationId: reservation.id
-      }
-    });
-    expect(order.status).toBe('pending_payment');
-
-    // 5. 支付授权
-    const payment = await agents.paymentService.act({
-      intent: '授权支付金额',
-      context: { orderId: order.id, amount: order.total }
-    });
-    expect(payment.status).toBe('authorized');
-
-    // 6. 确认订单
-    const confirmedOrder = await agents.orderService.act({
-      intent: '确认订单并捕获支付',
-      context: { orderId: order.id, paymentAuthorizationId: payment.id }
-    });
-    expect(confirmedOrder.status).toBe('confirmed');
-
-    // 7. 库存确认
-    const inventoryConfirm = await agents.inventoryService.act({
-      intent: '确认库存扣减',
-      context: { reservationId: reservation.id }
-    });
-    expect(inventoryConfirm.status).toBe('confirmed');
-
-    // 8. 发送通知
-    const notification = await agents.notificationService.act({
-      intent: '发送订单确认通知',
-      context: { userId: browseResult.userId, orderId: order.id }
-    });
-    expect(notification.sent).toBe(true);
-
-    // 验证最终状态
-    const finalOrder = await agents.orderService.query({
-      intent: '查询订单最终状态',
-      context: { orderId: order.id }
-    });
-    expect(finalOrder.paymentStatus).toBe('captured');
-    expect(finalOrder.fulfillmentStatus).toBe('processing');
-  });
-});
-```
 
 **优势**：
 - 测试用自然语言表达意图，而非硬编码的 API 调用
@@ -516,72 +194,11 @@ describe('Complete Purchase Flow', () => {
 
 ### 传统 E2E 测试的 brittleness
 
-```python
-# 脆弱的 Selenium 测试
-def test_user_can_checkout(driver):
-    driver.get("/products")
-    time.sleep(2)  # 等待页面加载
-    
-    # 如果 CSS 选择器变了，测试失败
-    driver.find_element(By.CSS_SELECTOR, ".product-card[data-id='123']").click()
-    
-    # 如果按钮文字变了，测试失败
-    driver.find_element(By.XPATH, "//button[text()='Add to Cart']").click()
-    
-    # 如果流程变了，测试失败
-    driver.find_element(By.ID, "cart-icon").click()
-    driver.find_element(By.LINK_TEXT, "Checkout").click()
-    
-    # 如果表单字段变了，测试失败
-    driver.find_element(By.NAME, "email").send_keys("test@example.com")
-    driver.find_element(By.NAME, "credit_card").send_keys("4242424242424242")
-    driver.find_element(By.NAME, "expiry").send_keys("12/25")
-    
-    driver.find_element(By.CSS_SELECTOR, "button[type='submit']").click()
-    
-    # 如果成功页面的文字变了，测试失败
-    assert "Thank you for your order" in driver.page_source
-```
-
 ### AI-Native E2E：行为驱动 + AI 执行
 
 使用自然语言描述用户行为，让 AI 负责执行：
 
-```gherkin
-# features/checkout.feature
-Feature: Checkout Flow
-
-  Scenario: New user completes first purchase
-    Given a new user visits the store
-    When they browse products in the "Electronics" category
-    And they add a product priced between $100 and $200 to cart
-    And they proceed to checkout
-    And they enter valid shipping information
-    And they enter valid payment information
-    Then the order should be confirmed
-    And they should receive an order confirmation email
-    And the inventory should be updated
-```
-
 **AI 执行引擎**：
-
-```typescript
-// e2e-runner.ts
-import { AITestRunner } from '@ai-testing/core';
-
-const runner = new AITestRunner({
-  llm: 'claude-3-5-sonnet-20241022',
-  browser: 'playwright',
-  vision: true  // 启用视觉理解
-});
-
-// AI 理解自然语言场景并执行
-await runner.executeScenario({
-  feature: 'checkout.feature',
-  scenario: 'New user completes first purchase',
-  baseUrl: 'http://localhost:3000'
-});
-```
 
 **AI 如何执行**：
 
@@ -591,48 +208,6 @@ await runner.executeScenario({
 4. **结果验证**：AI 验证页面是否正确加载了电子产品
 
 ### 实战：自适应 E2E 测试
-
-```typescript
-// e2e/scenarios/purchase-journey.ai.test.ts
-describe('Purchase Journey', () => {
-  const ai = createE2EAgent();
-
-  it('should allow user to complete purchase journey', async () => {
-    await ai.execute(`
-      As a new customer, I want to buy a laptop.
-      
-      Steps:
-      1. Visit the homepage
-      2. Navigate to Laptops category  
-      3. Select a laptop priced under $1000
-      4. Add it to cart
-      5. Proceed to checkout as guest
-      6. Fill in shipping address: 123 Test St, San Francisco, CA 94102
-      7. Use credit card: 4242 4242 4242 4242, expiry 12/25, CVC 123
-      8. Complete purchase
-      9. Verify order confirmation page shows order number
-      10. Verify total amount is correct (including tax ~8.5%)
-    `);
-
-    // AI 会自动处理：
-    // - 页面布局变化
-    // - 按钮文字变化  
-    // - 表单字段顺序变化
-    // - 甚至 UI 改版（通过视觉理解）
-  });
-
-  it('should handle out of stock scenario gracefully', async () => {
-    await ai.execute(`
-      Try to purchase a product that is out of stock.
-      
-      Verify:
-      - User sees clear "Out of Stock" message
-      - User can sign up for restock notification
-      - User is suggested similar products
-    `);
-  });
-});
-```
 
 **与传统 E2E 的对比**：
 
@@ -650,119 +225,13 @@ describe('Purchase Journey', () => {
 
 ### 传统测试数据的问题
 
-```javascript
-// 手动构造的测试数据 — 脆弱且不真实
-const mockUser = {
-  id: 'user-123',
-  name: 'Test User',
-  email: 'test@example.com',
-  phone: '123-456-7890',
-  address: {
-    street: '123 Test St',
-    city: 'Test City',
-    zip: '12345'
-  }
-};
-
-// 问题：
-// 1. 不真实 — 不会暴露真实数据边界问题
-// 2. 难以维护 — 每个测试都要构造数据
-// 3. 关联复杂 — 用户需要订单，订单需要产品...
-// 4. 状态污染 — 测试间数据干扰
-```
-
 ### AI-Native 方案：智能数据合成
 
 使用 AI 生成逼真的测试数据：
 
-```typescript
-// test-data-generator.ts
-import { DataSynthesizer } from '@ai-testing/data';
-
-const synthesizer = new DataSynthesizer({
-  schema: './src/types/user.ts',
-  realism: 'high',  // high | medium | low
-  constraints: {
-    geographic: 'US',
-    timeRange: '2020-2024',
-    diversity: true  // 确保数据多样性
-  }
-});
-
-// 生成逼真的用户数据
-const users = await synthesizer.generate({
-  entity: 'User',
-  count: 100,
-  profile: 'ecommerce_active'  // 活跃电商用户画像
-});
-
-// 生成的数据示例：
-// {
-//   id: "usr_8f4a2b1c",
-//   name: "Sarah Martinez",
-//   email: "sarah.martinez@email.com",
-//   phone: "+1-415-555-0123",
-//   address: {
-//     street: "2847 Mission Street",
-//     city: "San Francisco",
-//     state: "CA",
-//     zip: "94110",
-//     country: "US"
-//   },
-//   preferences: {
-//     categories: ["electronics", "home"],
-//     priceRange: { min: 50, max: 500 },
-//     communication: ["email", "push"]
-//   },
-//   loyaltyPoints: 2450,
-//   createdAt: "2022-03-15T08:23:45Z",
-//   lastActive: "2024-01-20T14:32:18Z"
-// }
-```
-
 ### 关联数据自动生成
 
-```typescript
-// 生成完整的关联数据集
-const testDataset = await synthesizer.generateScenario({
-  name: 'complete-purchase-flow',
-  entities: {
-    users: { count: 10, profile: 'diverse' },
-    products: { count: 50, categories: ['electronics', 'clothing', 'home'] },
-    orders: { 
-      count: 100, 
-      distribution: {
-        status: { confirmed: 0.7, pending: 0.2, cancelled: 0.1 }
-      }
-    },
-    payments: { count: 100, linkedTo: 'orders' }
-  },
-  relationships: [
-    { from: 'orders', to: 'users', type: 'belongs_to' },
-    { from: 'orders', to: 'products', type: 'contains' },
-    { from: 'payments', to: 'orders', type: 'pays_for' }
-  ]
-});
-```
-
 ### 基于真实模式的数据生成
-
-```typescript
-// 从生产数据学习模式（脱敏后）
-const realisticData = await synthesizer.learnFrom({
-  source: 'production_analytics',  // 脱敏后的统计数据
-  preserve: [
-    'distributions',      // 数值分布
-    'correlations',       // 字段相关性
-    'temporal_patterns',  // 时间模式
-    'categorical_mix'     // 分类分布
-  ],
-  privacy: 'differential_privacy'  // 差分隐私保护
-});
-
-// 生成的数据保持与生产数据相同的统计特征
-// 但不会包含任何真实用户信息
-```
 
 ---
 
@@ -771,146 +240,12 @@ const realisticData = await synthesizer.learnFrom({
 ### 核心范式转变
 
 **传统测试**：
-```
-代码 → 测试验证代码是否正确
-```
-
 **AI-Native 测试**：
-```
-意图 → AI 生成实现 → 测试验证意图是否实现
-```
-
 ### 可执行意图规范
-
-```typescript
-// specifications/order-processing.spec.ts
-/**
- * @intent 订单处理系统
- * 
- * 业务目标：
- * - 确保订单在 30 秒内被处理
- * - 确保库存与订单一致性
- * - 确保支付安全性和可追溯性
- * 
- * 约束条件：
- * - 并发处理：支持 1000 并发订单
- * - 数据一致性：ACID 保证
- * - 失败恢复：任何步骤失败可回滚
- */
-
-export const OrderProcessingSpec = {
-  intent: 'Process customer orders reliably and efficiently',
-  
-  constraints: {
-    performance: {
-      maxProcessingTime: '30s',
-      throughput: '1000 orders/minute'
-    },
-    reliability: {
-      consistency: 'strong',
-      durability: 'write-ahead-log',
-      availability: '99.99%'
-    }
-  },
-  
-  scenarios: [
-    {
-      name: 'Standard Order',
-      given: 'valid order with available inventory',
-      when: 'order is submitted',
-      then: [
-        'order is confirmed within 30s',
-        'inventory is reserved',
-        'payment is authorized',
-        'confirmation is sent to customer'
-      ]
-    },
-    {
-      name: 'Insufficient Inventory',
-      given: 'order with insufficient inventory',
-      when: 'order is submitted',
-      then: [
-        'order is rejected immediately',
-        'customer sees clear error message',
-        'suggested alternatives are shown',
-        'no payment is processed'
-      ]
-    },
-    {
-      name: 'Payment Failure',
-      given: 'valid order with invalid payment',
-      when: 'payment is attempted',
-      then: [
-        'inventory reservation is released',
-        'order status is set to pending_payment',
-        'customer can retry with different method',
-        'no double-charging occurs'
-      ]
-    }
-  ]
-};
-```
 
 **AI 验证引擎**：
 
-```typescript
-// AI 自动验证意图是否实现
-import { IntentValidator } from '@ai-testing/validator';
-
-const validator = new IntentValidator({
-  spec: OrderProcessingSpec,
-  implementation: './src/services/order-service.ts'
-});
-
-const result = await validator.validate();
-
-// 结果：
-// {
-//   intentCoverage: 0.94,      // 94% 的意图被实现
-//   missingScenarios: ['edge-case: network-timeout'],
-//   performanceValidation: {
-//     p95Latency: '23s',       // 满足 <30s 约束
-//     throughputTest: 'passed' // 满足 1000/min 约束
-//   },
-//   securityValidation: {
-//     injectionTests: 'passed',
-//     authTests: 'passed'
-//   }
-// }
-```
-
 ### 意图到测试的自动生成流程
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│                     意图表达 (人类)                          │
-│  "确保系统在高并发下保持数据一致性"                           │
-└─────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────┐
-│                 AI 意图解析引擎                              │
-│  - 识别关键概念：并发、数据一致性                              │
-│  - 映射到测试场景：并发写入、读取一致性、冲突解决              │
-└─────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────┐
-│                 测试场景生成                                 │
-│  1. 100并发同时写入同一记录                                   │
-│  2. 读写混合负载下的最终一致性                                │
-│  3. 网络分区下的冲突检测与解决                                │
-│  4. 事务回滚与补偿机制验证                                    │
-└─────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────┐
-│                 测试代码生成 (AI)                            │
-│  生成具体的测试代码，包括负载生成、断言、监控                  │
-└─────────────────────────────────────────────────────────────┘
-                              ↓
-┌─────────────────────────────────────────────────────────────┐
-│                 执行与报告                                   │
-│  验证意图是否被满足，生成可读性报告                           │
-└─────────────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -929,109 +264,9 @@ const result = await validator.validate();
 
 ### AI-Native 测试维护
 
-```typescript
-// 智能测试适配器
-import { TestMaintenanceAgent } from '@ai-testing/maintenance';
-
-const agent = new TestMaintenanceAgent({
-  codebase: './src',
-  tests: './tests',
-  changes: [
-    { 
-      type: 'refactor', 
-      description: 'Split UserService into UserProfileService and UserAuthService',
-      commit: 'a1b2c3d'
-    }
-  ]
-});
-
-// AI 自动适配测试
-const adaptation = await agent.adapt();
-
-// AI 生成的变更报告：
-// {
-//   filesModified: 47,
-//   testsUpdated: 156,
-//   newMocksGenerated: 12,
-//   manualReviewRequired: [
-//     { file: 'tests/integration/legacy-auth.test.ts', reason: 'deprecated flow' }
-//   ],
-//   estimatedTimeSaved: '16 hours'
-// }
-```
-
 ### 自我修复测试
 
-```typescript
-// 自我修复测试示例
-class SelfHealingTest {
-  async runWithHealing() {
-    try {
-      await this.executeTest();
-    } catch (failure) {
-      // AI 分析失败原因
-      const diagnosis = await this.ai.diagnose(failure);
-      
-      if (diagnosis.type === 'implementation_change') {
-        // 尝试自动修复测试
-        const fix = await this.ai.proposeFix(diagnosis);
-        await this.applyFix(fix);
-        
-        // 重试测试
-        await this.executeTest();
-      } else {
-        // 需要人工介入的真实 bug
-        throw failure;
-      }
-    }
-  }
-}
-
-// 应用场景：
-// - API 响应字段重命名 → AI 自动更新断言
-// - 错误消息调整 → AI 更新期望文本
-// - 页面结构调整 → AI 更新选择器
-// - 性能阈值变化 → AI 更新 SLA 断言
-```
-
 ### 测试代码的智能重构
-
-```typescript
-// 测试代码质量分析
-const analysis = await ai.analyzeTestQuality({
-  testFiles: './tests/**/*.test.ts'
-});
-
-// 结果：
-// {
-//   duplication: [
-//     { 
-//       location: 'tests/user/*.test.ts', 
-//       pattern: 'user setup code duplicated 12 times',
-//       suggestion: 'Extract to UserTestFactory'
-//     }
-//   ],
-//   brittleness: [
-//     {
-//       location: 'tests/e2e/checkout.test.ts:45',
-//       issue: 'Hard-coded CSS selector',
-//       suggestion: 'Use data-testid or AI-driven locator'
-//     }
-//   ],
-//   coverage: {
-//     lines: 0.87,
-//     branches: 0.72,  // 分支覆盖不足
-//     missingScenarios: [
-//       'concurrent order modification',
-//       'payment timeout retry'
-//     ]
-//   },
-//   refactoringPlan: [...]
-// }
-
-// AI 自动执行重构
-await ai.refactorTests(analysis.refactoringPlan);
-```
 
 ---
 
@@ -1049,19 +284,6 @@ await ai.refactorTests(analysis.refactoringPlan);
 - 意图规范取代具体测试代码
 - AI 实时验证取代持久化测试
 
-```
-测试代码量
-  │
-  │     ╱╲
-  │    ╱  ╲    ← AI 生成阶段（测试爆炸）
-  │   ╱    ╲
-  │  ╱      ╲________________
-  │ ╱                        ╲___  ← 意图验证阶段（测试收缩）
-  │╱                              
-  └───────────────────────────────────
-    2024  2025  2026  2027  2028  2029
-```
-
 ### 洞察 2：测试覆盖率将变得无关紧要
 
 传统指标：
@@ -1073,31 +295,6 @@ await ai.refactorTests(analysis.refactoringPlan);
 - **意图覆盖率**（Intent Coverage）：多少业务意图被验证
 - **场景覆盖率**（Scenario Coverage）：多少用户场景被覆盖
 - **风险覆盖率**（Risk Coverage）：多少高风险路径被测试
-
-```typescript
-// 意图覆盖率报告示例
-const intentCoverage = {
-  totalIntents: 45,
-  coveredIntents: 43,
-  coverage: 0.956,
-  
-  missingIntents: [
-    {
-      intent: 'Handle payment provider timeout gracefully',
-      priority: 'high',
-      risk: 'Revenue loss during provider outage'
-    }
-  ],
-  
-  redundantTests: [
-    {
-      location: 'tests/unit/discount-*.test.ts',
-      count: 23,
-      suggestion: 'Consolidate into intent-based tests'
-    }
-  ]
-};
-```
 
 ### 洞察 3：测试工程师将分裂为两个物种
 
@@ -1121,18 +318,6 @@ const intentCoverage = {
 ### 洞察 4：生产环境将成为终极测试场
 
 **从"测试所有可能"到"快速检测和恢复"**
-
-```
-传统模式：
-开发 → 大量测试 → 谨慎发布 → 稳定运行
-         ↑_______↓
-         追求零缺陷发布
-
-AI-Native 模式：
-开发 → 意图验证 → 快速发布 → 智能监控 → 自动回滚
-                    ↑________________________↓
-                    追求快速反馈和恢复
-```
 
 **核心逻辑转变**：
 - 传统：在测试环境花 99% 精力找 bug，1% 在生产监控

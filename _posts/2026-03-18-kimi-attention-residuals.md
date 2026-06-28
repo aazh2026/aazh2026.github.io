@@ -34,12 +34,6 @@ series: AI-Native Engineering
 
 Transformer 使用 PreNorm 架构：
 
-```python
-# 标准 Transformer 层
-x = x + Attention(Norm(x))  # 残差连接 1
-x = x + FFN(Norm(x))        # 残差连接 2
-```
-
 **关键特性**：
 - 每层输出 = 输入 + 子层输出
 - 权重固定为 1.0
@@ -48,14 +42,6 @@ x = x + FFN(Norm(x))        # 残差连接 2
 ### 固定聚合的问题
 
 **问题 1：贡献稀释**
-
-```
-第 1 层贡献: 1.0
-第 2 层贡献: 1.0 (累积: 2.0, 第1层占 50%)
-第 3 层贡献: 1.0 (累积: 3.0, 第1层占 33%)
-...
-第 N 层贡献: 1.0 (累积: N, 第1层占 1/N)
-```
 
 随着深度增加：
 - 早期层的贡献被稀释
@@ -73,13 +59,6 @@ x = x + FFN(Norm(x))        # 残差连接 2
 
 **问题 3：隐藏状态增长失控**
 
-```
-隐藏状态范数随深度线性增长
-Layer 1: norm = 1.0
-Layer 10: norm = 10.0
-Layer 100: norm = 100.0
-```
-
 导致：
 - 训练不稳定
 - 需要大的学习率调整
@@ -93,14 +72,6 @@ Layer 100: norm = 100.0
 
 **用注意力机制替代固定相加**：
 
-```python
-# 标准残差连接
-output = x + sublayer(x)
-
-# Attention Residual
-output = AttentionResidual([x, layer_1_output, layer_2_output, ..., sublayer(x)])
-```
-
 **关键创新**：
 - 每层可以选择性关注前面所有层
 - 权重由输入决定（可学习）
@@ -109,17 +80,7 @@ output = AttentionResidual([x, layer_1_output, layer_2_output, ..., sublayer(x)]
 ### 直观理解
 
 **标准残差连接**：
-```
-每层都大喊："我的输出很重要！"
-系统："好的，都加 1.0"
-```
-
 **Attention Residuals**：
-```
-每层说："让我看看前面说了什么"
-系统："根据内容相关性分配权重"
-```
-
 ### 与标准 Attention 的区别
 
 | 维度 | 标准 Self-Attention | Attention Residuals |
@@ -147,49 +108,7 @@ output = AttentionResidual([x, layer_1_output, layer_2_output, ..., sublayer(x)]
 
 **数学公式**：
 
-```
-给定层输出序列：H = [h_1, h_2, ..., h_L]
-
-AttnRes(h_i) = softmax(Q_i @ K^T / √d) @ V
-
-其中：
-- Q_i = W_Q @ h_i          (当前层作为 query)
-- K = W_K @ H              (所有层作为 key)
-- V = W_V @ H              (所有层作为 value)
-```
-
 **PyTorch 伪代码**：
-
-```python
-class AttentionResidual(nn.Module):
-    def __init__(self, dim, num_layers):
-        super().__init__()
-        self.W_Q = nn.Linear(dim, dim)
-        self.W_K = nn.Linear(dim, dim)
-        self.W_V = nn.Linear(dim, dim)
-        self.num_layers = num_layers
-        
-    def forward(self, current_layer, previous_outputs):
-        # current_layer: [batch, seq, dim]
-        # previous_outputs: list of [batch, seq, dim], length = num_layers
-        
-        # Stack all layer outputs
-        H = torch.stack(previous_outputs + [current_layer], dim=0)  # [L, B, S, D]
-        
-        # Compute Q, K, V
-        Q = self.W_Q(current_layer)  # [B, S, D]
-        K = self.W_K(H)              # [L, B, S, D]
-        V = self.W_V(H)              # [L, B, S, D]
-        
-        # Attention computation
-        scores = torch.einsum('bsd,lbSD->lbsd', Q, K) / sqrt(dim)
-        weights = F.softmax(scores, dim=0)  # [L, B, S, D]
-        
-        # Weighted aggregation
-        output = torch.einsum('lbsd,lbSD->bsd', weights, V)
-        
-        return output
-```
 
 ### 内存挑战
 
@@ -202,26 +121,7 @@ class AttentionResidual(nn.Module):
 
 **核心思想**：分块注意力
 
-```
-原始：每层关注前面所有层
-      ↓
-Block：每层关注所在块内的层
-```
-
 **具体方法**：
-
-```
-将 L 层分成 B 个块，每块大小为 L/B
-
-块 1: [层 1, 2, ..., L/B]
-块 2: [层 L/B+1, ..., 2L/B]
-...
-块 B: [...]
-
-每层只关注：
-1. 同一块内的其他层
-2. 前一块的聚合表示
-```
 
 **内存优化**：
 
@@ -233,18 +133,6 @@ Block：每层关注所在块内的层
 | 带压缩的 Block | O(L × D) | 接近标准 Transformer |
 
 **Block 聚合表示**：
-
-```python
-def compute_block_representation(block_outputs):
-    """
-    将块内所有层的输出聚合成单一表示
-    """
-    # 方法 1：平均池化
-    return torch.mean(torch.stack(block_outputs), dim=0)
-    
-    # 方法 2：可学习聚合
-    return LearnableAggregator(block_outputs)
-```
 
 ---
 
@@ -264,41 +152,13 @@ AttnRes 允许任务自适应地选择需要的特征。
 **2. 梯度流动优化**
 
 标准残差：
-```
-梯度路径：output → 所有前面层（等权重）
-```
-
 AttnRes：
-```
-梯度路径：output → 重要层（高权重）
-          不重要的层获得较少梯度
-```
-
 **3. 表达能力提升**
 
 标准残差是 AttnRes 的特殊情况（均匀权重）：
-```
-AttnRes 权重 = [0, 0, ..., 1, ..., 0] → 等价于标准残差
-AttnRes 权重 = [0.1, 0.1, ..., 0.8, ...] → 更灵活
-```
-
 ### 实证分析
 
 **注意力权重可视化**：
-
-```
-任务：机器翻译
-层数：12
-
-第 6 层的注意力权重：
-
-关注层 1-3：  ████░░░░░░░░  (语法信息)
-关注层 4-6：  ████████░░░░  (当前处理)
-关注层 7-9：  ██████░░░░░░  (语义信息)
-关注层 10-12: ██░░░░░░░░░░  (高层抽象)
-
-→ 任务自适应的权重分配
-```
 
 ---
 
@@ -376,30 +236,9 @@ Block AttnRes 可以在推理时缓存块表示，速度接近标准 Transformer
 
 **1. 梯度检查点**
 
-```python
-# 不存储中间层输出，需要时重新计算
-with torch.utils.checkpoint.checkpoint():
-    block_outputs = compute_block(...)
-```
-
 **2. 混合精度训练**
 
-```python
-# 注意力计算用 FP32，存储用 FP16
-with autocast(dtype=torch.float16):
-    cached_outputs = [...]  # FP16 存储
-    
-# 注意力计算时转为 FP32
-attention_scores = compute_attention(cached_outputs.float())
-```
-
 **3. 分块计算**
-
-```python
-# 序列维度分块，减少峰值内存
-for chunk in sequence_chunks:
-    process_chunk(chunk)
-```
 
 ---
 
@@ -429,12 +268,6 @@ Block AttnRes 可以：
 **1. 新架构范式**
 
 从"层堆叠"到"动态图"：
-```
-传统：层 1 → 层 2 → 层 3 → ... → 输出
-       ↓
-AttnRes：层间动态连接图
-```
-
 **2. 神经架构搜索（NAS）**
 
 AttnRes 的参数化连接为 NAS 提供了新的搜索空间。
@@ -475,21 +308,7 @@ AttnRes 的参数化连接为 NAS 提供了新的搜索空间。
 
 **1. 自适应块大小**
 
-```
-根据任务复杂度动态调整块大小：
-- 简单任务：大块（更多压缩）
-- 复杂任务：小块（更多灵活性）
-```
-
 **2. 层次化 AttnRes**
-
-```
-局部块内 AttnRes
-    ↓
-块间 AttnRes
-    ↓
-全局 AttnRes
-```
 
 **3. 跨模态扩展**
 

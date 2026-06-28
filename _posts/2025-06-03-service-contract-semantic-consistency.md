@@ -37,31 +37,6 @@ redirect_from:
 ### 契约的重要性
 
 **什么是服务契约**：
-```yaml
-# 服务契约定义
-service: order-service
-version: v2.1.0
-
-endpoints:
-  - path: /orders
-    method: POST
-    request:
-      body:
-        user_id: string (required)
-        items: array (required)
-          - product_id: string
-            quantity: integer (min: 1)
-        shipping_address: object (required)
-    response:
-      201:
-        body:
-          order_id: string
-          status: enum [created, pending]
-          total_amount: number
-      400:
-        description: Invalid request
-```
-
 **契约的作用**：
 - 服务提供方和调用方的"合同"
 - 定义了交互的规则和边界
@@ -71,47 +46,9 @@ endpoints:
 
 **场景1：契约变更未同步**
 
-```python
-# 服务提供方（订单服务）更新了契约
-# 新增必填字段：currency
-
-# 但AI生成的调用代码（用户服务）没有更新
-class OrderClient:
-    def create_order(self, user_id, items, address):
-        # 缺少 currency 字段！
-        response = requests.post('/orders', json={
-            'user_id': user_id,
-            'items': items,
-            'shipping_address': address
-        })
-        return response.json()
-
-# 结果：运行时错误，订单创建失败
-```
-
 **场景2：语义不兼容**
 
-```python
-# 服务提供方：status 字段含义变更
-# v1: status = "pending" 表示待处理
-# v2: status = "pending" 表示待支付（新增状态）
-
-# AI生成的调用代码仍按v1理解
-if order.status == "pending":
-    # 错误逻辑！在v2中需要区分"待处理"和"待支付"
-    send_notification(order)
-```
-
 **场景3：隐式契约依赖**
-
-```python
-# 服务A返回的 order_id 格式：ORD-2024-XXXXX
-# 服务B假设 order_id 总是以 "ORD-" 开头
-
-# 服务A变更：order_id 改为 UUID 格式
-# 服务B的代码：
-order_prefix = order_id.split('-')[0]  # 现在得到的是UUID的一部分！
-```
 
 ---
 
@@ -140,31 +77,11 @@ order_prefix = order_id.split('-')[0]  # 现在得到的是UUID的一部分！
 **类型3：语义漂移（Semantic Drift）**
 
 最隐蔽的 drift：
-```python
-# 字段名不变，但业务含义变了
-# v1: priority = 1 表示高优先级
-# v2: priority = 1 表示低优先级（反过来了！）
-
-# 调用方代码没有语法错误，但逻辑完全错误
-if order.priority == 1:
-    process_urgently(order)  # 实际上是在处理低优先级订单
-```
-
 ### 契约漂移的影响
 
 <object data="/assets/images/2025-06-03-service-contract-semantic-consistency-02-drift-cascade.svg" type="image/svg+xml" width="100%"></object>
 
 **影响范围分析**：
-
-```
-契约变更
-    ↓
-直接影响：直接调用该服务的客户端
-    ↓
-间接影响：调用这些客户端的服务（级联影响）
-    ↓
-潜在影响：通过消息队列、事件总线的间接依赖
-```
 
 **真实案例**：
 - Netflix：一次契约变更导致数千个微服务调用失败
@@ -178,19 +95,6 @@ if order.priority == 1:
 ### 超越语法检查
 
 **传统契约检查（Consumer-Driven Contract）**：
-```python
-# Pact 测试示例
- pact = Consumer('user-service').has_pact_with('order-service')
- 
- pact.given('order exists').upon_receiving('get order').with_request(
-     method='GET',
-     path='/orders/123'
- ).will_respond_with(200, body={
-     'order_id': Term(r'^ORD-\d+$', 'ORD-123'),
-     'status': 'pending'
- })
-```
-
 **局限**：只检查语法结构，不检查语义。
 
 ### 语义一致性定义
@@ -205,90 +109,7 @@ if order.priority == 1:
 
 **方法1：契约差异分析**
 
-```python
-class ContractDiffAnalyzer:
-    def analyze(self, old_contract, new_contract):
-        """
-        分析两个契约版本之间的差异
-        """
-        changes = {
-            'breaking': [],
-            'non_breaking': [],
-            'semantic': []
-        }
-        
-        # 1. 字段级差异
-        for field in old_contract.fields:
-            if field not in new_contract.fields:
-                changes['breaking'].append(f"删除字段: {field}")
-            elif old_contract.fields[field].type != new_contract.fields[field].type:
-                changes['breaking'].append(f"类型变更: {field}")
-        
-        # 2. 语义级差异
-        for field in old_contract.fields:
-            if field in new_contract.fields:
-                old_semantic = self.extract_semantic(old_contract, field)
-                new_semantic = self.extract_semantic(new_contract, field)
-                
-                if not self.is_semantically_compatible(old_semantic, new_semantic):
-                    changes['semantic'].append({
-                        'field': field,
-                        'old': old_semantic,
-                        'new': new_semantic
-                    })
-        
-        return changes
-    
-    def extract_semantic(self, contract, field):
-        """
-        从契约中提取语义信息
-        """
-        return {
-            'description': field.description,
-            'examples': field.examples,
-            'constraints': field.constraints,
-            'business_meaning': self.infer_business_meaning(field)
-        }
-```
-
 **方法2：基于AI的语义理解**
-
-```python
-class AISemanticAnalyzer:
-    def __init__(self, llm):
-        self.llm = llm
-    
-    def analyze_semantic_compatibility(self, old_field, new_field):
-        """
-        使用AI分析字段语义兼容性
-        """
-        prompt = f"""
-分析以下两个字段定义的语义兼容性：
-
-旧定义：
-名称：{old_field.name}
-描述：{old_field.description}
-示例值：{old_field.examples}
-约束：{old_field.constraints}
-
-新定义：
-名称：{new_field.name}
-描述：{new_field.description}
-示例值：{new_field.examples}
-约束：{new_field.constraints}
-
-请分析：
-1. 两个定义在业务含义上是否一致？
-2. 如果不一致，变化是什么？
-3. 这种变化是否向后兼容？
-4. 对调用方有什么影响？
-
-以JSON格式返回分析结果。
-"""
-        
-        result = self.llm.analyze(prompt)
-        return json.loads(result)
-```
 
 ---
 
@@ -300,102 +121,11 @@ class AISemanticAnalyzer:
 
 ### 漂移检测流程
 
-```python
-class ContractDriftDetector:
-    def detect(self, service_name, new_contract):
-        """
-        检测契约漂移
-        """
-        # 1. 获取旧版本契约
-        old_contract = self.registry.get_contract(service_name)
-        
-        # 2. 语法级差异
-        syntax_diff = self.analyze_syntax_diff(old_contract, new_contract)
-        
-        # 3. 语义级差异
-        semantic_diff = self.analyze_semantic_diff(old_contract, new_contract)
-        
-        # 4. 影响分析
-        impact = self.analyze_impact(service_name, syntax_diff, semantic_diff)
-        
-        # 5. 生成报告
-        report = {
-            'service': service_name,
-            'old_version': old_contract.version,
-            'new_version': new_contract.version,
-            'syntax_changes': syntax_diff,
-            'semantic_changes': semantic_diff,
-            'impact': impact,
-            'recommendation': self.generate_recommendation(impact)
-        }
-        
-        return report
-```
-
 ### 自动修复机制
 
 **修复策略1：代码自动更新**
 
-```python
-class ContractAutoFixer:
-    def fix_client_code(self, client_code, contract_changes):
-        """
-        自动修复客户端代码
-        """
-        fixed_code = client_code
-        
-        for change in contract_changes:
-            if change.type == 'field_renamed':
-                # 字段重命名：全局替换
-                fixed_code = self.rename_field(
-                    fixed_code, 
-                    change.old_name, 
-                    change.new_name
-                )
-            
-            elif change.type == 'field_added':
-                # 新增必填字段：添加默认值或从上下文获取
-                fixed_code = self.add_field_with_default(
-                    fixed_code,
-                    change.field_name,
-                    change.default_value
-                )
-            
-            elif change.type == 'type_changed':
-                # 类型变更：添加类型转换
-                fixed_code = self.add_type_conversion(
-                    fixed_code,
-                    change.field_name,
-                    change.old_type,
-                    change.new_type
-                )
-        
-        return fixed_code
-```
-
 **修复策略2：适配器模式**
-
-```python
-# 当契约变化较大时，生成适配器
-class AdapterGenerator:
-    def generate_adapter(self, old_contract, new_contract):
-        """
-        生成契约适配器
-        """
-        adapter_code = f"""
-class {new_contract.service_name}Adapter:
-    '''
-    适配器：将新契约转换为旧契约格式
-    用于向后兼容
-    '''
-    
-    def __init__(self, client):
-        self.client = client
-    
-    {self.generate_adaptation_methods(old_contract, new_contract)}
-"""
-        return adapter_code
-```
 
 ---
 

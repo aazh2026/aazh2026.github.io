@@ -39,43 +39,14 @@ series: AI-Native软件工程系列 #6
 **场景：让AI实现一个支付功能**
 
 **上下文A（贫乏）：**
-```
-实现一个支付接口。
-```
 **输出：** 一个基础的支付函数，缺少错误处理、安全考虑、业务规则。
 
 **上下文B（丰富）：**
-```
-系统：跨境电商平台
-模块：支付网关
-约束：
-- 支持Visa/MasterCard/支付宝/微信支付
-- 符合PCI DSS Level 1标准
-- 支持3D Secure 2.0
-- 汇率实时转换（对接XE API）
-- 失败订单自动重试3次
-- 所有交易记录审计日志
-- 支付超时：15分钟
-业务规则：
-- 单笔限额：$10,000 USD
-- 日累计限额：$50,000 USD
-- 高风险国家需人工审核
-技术栈：Node.js + Stripe SDK
-```
 **输出：** 生产级的支付模块实现，包含完整的错误处理、安全控制、业务逻辑。
 
 **差异根源：上下文。**
 
 ### 上下文质量公式
-
-```
-AI输出质量 = f(模型能力, 上下文质量, Prompt质量)
-
-其中：
-- 模型能力：你控制不了（用最好的）
-- Prompt质量：可以学习提升
-- 上下文质量：90%的差异来源
-```
 
 | 维度 | 低质量上下文 | 高质量上下文 |
 |------|------------|------------|
@@ -99,98 +70,7 @@ AI输出质量 = f(模型能力, 上下文质量, Prompt质量)
 
 ### 上下文即代码（CaC）
 
-```yaml
-# context/ecommerce-system.yaml
-version: "3.2.1"
-name: ecommerce-platform
-scope: system
-
-# 系统架构上下文
-architecture:
-  style: microservices
-  services:
-    - name: user-service
-      tech: [Node.js, PostgreSQL]
-      responsibilities: [用户管理, 认证授权]
-    - name: order-service
-      tech: [Go, MongoDB]
-      responsibilities: [订单生命周期, 状态机]
-    - name: payment-service
-      tech: [Java, MySQL]
-      responsibilities: [支付处理, 对账]
-  
-  communication:
-    sync: [gRPC]
-    async: [Kafka]
-    patterns: [Saga, CQRS]
-
-# 技术规范上下文
-standards:
-  code_style: "@org/eslint-config-standard"
-  api_design: RESTful + OpenAPI 3.0
-  security: [OAuth2, JWT, mTLS]
-  observability: [OpenTelemetry, Prometheus, Grafana]
-
-# 业务规则上下文
-business_rules:
-  order:
-    max_items_per_order: 100
-    auto_cancel_hours: 24
-    refund_policy: "7天无理由"
-  payment:
-    supported_methods: [alipay, wechat, credit_card]
-    currency: CNY
-    tax_rate: 0.13
-
-# 外部依赖上下文
-integrations:
-  - name: alipay-sdk
-    version: "^4.0.0"
-    docs: https://...
-  - name: wechat-pay
-    version: "^3.0.0"
-    docs: https://...
-```
-
 ### 上下文版本与依赖
-
-```yaml
-# context/order-service.yaml
-version: "2.1.0"
-name: order-service
-scope: domain
-
-# 继承系统级上下文
-extends:
-  - context: ecommerce-system
-    version: "3.2.x"  # 语义化版本约束
-    
-# 依赖其他领域上下文
-dependencies:
-  - context: user-domain
-    version: "1.5.x"
-    import: [User, UserType]
-  - context: payment-domain
-    version: "2.0.x"
-    import: [PaymentMethod, PaymentStatus]
-  - context: inventory-domain
-    version: "1.8.x"
-    import: [StockLevel, Reservation]
-
-# 本领域上下文
-entities:
-  Order:
-    attributes: [id, user_id, items, status, created_at]
-    states: [created, paid, processing, shipped, delivered, cancelled]
-    
-  OrderItem:
-    attributes: [product_id, quantity, unit_price, subtotal]
-    
-constraints:
-  - "订单创建时必须验证库存"
-  - "已支付订单不可修改商品"
-  - "取消订单自动释放库存"
-```
 
 ---
 
@@ -206,72 +86,7 @@ constraints:
 
 ### 上下文组装策略
 
-```python
-class ContextAssembler:
-    def assemble(self, task: Task) -> Context:
-        context = Context()
-        
-        # 1. 加载系统上下文（精简版）
-        system_ctx = self.load_system_context(
-            scope="relevant",  # 只加载相关部分
-            task_type=task.type
-        )
-        context.add_layer(system_ctx, priority=1)
-        
-        # 2. 加载领域上下文
-        domain_ctx = self.load_domain_context(
-            domain=task.domain,
-            version=self.resolve_version(task.domain)
-        )
-        context.add_layer(domain_ctx, priority=2)
-        
-        # 3. 加载相关实体上下文
-        entities_ctx = self.load_entity_context(
-            entities=task.related_entities
-        )
-        context.add_layer(entities_ctx, priority=3)
-        
-        # 4. 加载任务特定上下文
-        task_ctx = TaskContext(
-            description=task.description,
-            constraints=task.constraints,
-            examples=task.examples
-        )
-        context.add_layer(task_ctx, priority=4)
-        
-        # 5. 智能截断（如果超token限制）
-        return self.smart_truncate(context, max_tokens=8000)
-```
-
 ### 上下文缓存与复用
-
-```python
-class ContextCache:
-    """缓存常用上下文组合，避免重复加载"""
-    
-    def __init__(self):
-        self.cache = {}
-    
-    def get_or_create(self, context_key: str) -> Context:
-        if context_key in self.cache:
-            return self.cache[context_key]
-        
-        # 创建新上下文
-        context = self.assemble_context(context_key)
-        
-        # 缓存（LRU策略）
-        self.cache[context_key] = context
-        return context
-    
-    def invalidate(self, context_type: str, version: str):
-        """当上下文更新时，使相关缓存失效"""
-        keys_to_remove = [
-            k for k in self.cache.keys()
-            if k.startswith(f"{context_type}@{version}")
-        ]
-        for key in keys_to_remove:
-            del self.cache[key]
-```
 
 ---
 
@@ -288,49 +103,9 @@ class ContextCache:
 ### 核心功能
 
 **1. 上下文发现**
-```bash
-# 搜索相关上下文
-ctx search "payment processing"
-
-Results:
-  1. context/payment-domain@2.1.0
-     描述: 支付领域上下文
-     匹配度: 95%
-     
-  2. context/order-service@1.5.0
-     描述: 订单服务（含支付集成）
-     匹配度: 78%
-```
-
 **2. 上下文组装**
-```bash
-# 为当前任务组装上下文
-ctx assemble --task "实现退款功能" \
-             --domain payment \
-             --output context.txt
-```
-
 **3. 上下文注入**
-```bash
-# 将上下文注入AI会话
-ctx inject --file context.txt --to claude
-
-# 或直接生成Prompt
-ctx prompt --task "实现退款功能" \
-           --template crud-operation
-```
-
 **4. 上下文验证**
-```bash
-# 检查上下文完整性
-ctx validate context/payment-domain.yaml
-
-Errors:
-  - 缺少PCI DSS合规要求
-  - 汇率API版本已过期
-  - 与user-domain@1.5.0存在约束冲突
-```
-
 ---
 
 ## 组织能力建设

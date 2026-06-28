@@ -77,46 +77,11 @@ series: AI-Native Engineering
 
 ### 基础设施
 
-```
-共享 bare git repo
-├── /upstream      # 共享仓库
-└── /workspace     # 每个 Agent 的本地克隆
-
-每个 Agent 运行在独立的 Docker 容器中
-```
-
 ### 任务锁：简单到荒谬
 
 协调的核心机制：
 
-```bash
-current_tasks/
-├── parse_if_statement.txt           # Agent A 正在处理
-├── codegen_function_definition.txt  # Agent B 正在处理
-└── optimize_register_allocation.txt # Agent C 正在处理
-```
-
 **协议**：
-
-```bash
-# Step 1: 尝试获取任务锁
-# 写文件到 current_tasks/parse_loops.txt
-echo "Agent-7 working on this" > current_tasks/parse_loops.txt
-git add . && git commit -m "claim: parse_loops"
-
-# 如果冲突（另一个 Agent 先写了），git push 会失败
-# Agent 必须选择其他任务
-
-# Step 2: 工作
-# ... 实现 parse_loops ...
-
-# Step 3: 完成并释放
-# Pull 上游变更 → Merge → Push → 删除锁文件
-git pull origin main
-git push origin main
-rm current_tasks/parse_loops.txt
-git commit -m "complete: parse_loops"
-```
 
 **没有中央调度器。没有复杂的状态管理。只有 Git 的原始力量。**
 
@@ -157,12 +122,6 @@ Carlini 明确说明：
 - 系统以稳定的速度推进
 
 这不是设计出来的，而是**涌现**出来的。
-
-```
-Agent-3: 我看到 parse_if_statement 被占了，那我去做 parse_while
-Agent-7: codegen_function 完成了，看看还有什么...
-Agent-12: 发现 type_checker 和 my work 有关，先 pull 最新代码
-```
 
 ---
 
@@ -213,21 +172,11 @@ Agent-12: 发现 type_checker 和 my work 有关，先 pull 最新代码
 
 **答案**：**测试套件作为隐性协调机制**
 
-```
-所有 Agent 的目标：通过测试
-          ↓
-    测试定义了"正确"
-          ↓
-    Agent 自然朝着同一方向努力
-```
-
 这是一种**目标层面的协调**，而非**过程层面的协调**。
 
 ### 挑战 3：异常处理
 
 Agent 可能做出破坏性操作。
-
-**案例**：
 
 > **"有一次我看到 Claude 意外执行 `pkill -9 bash`，杀死了自己和整个循环。Whoops!"**
 

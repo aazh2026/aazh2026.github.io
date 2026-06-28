@@ -29,17 +29,7 @@ series: AI-Native Engineering
 
 如果你用 PyTorch Geometric (PyG) 训练过图神经网络，一定见过这个画面：
 
-```
-RuntimeError: CUDA out of memory. Tried to allocate 2.00 GiB 
-( GPU 0 has 10.00 GiB total capacity)
-```
-
 或者更糟的：
-
-```
-MemoryError: Unable to allocate array with shape (17448000000,) 
-and data type float32
-```
 
 这是 Graph Neural Network (GNN) 开发者的日常噩梦。GNN 不同于普通神经网络——它需要存储整张图的邻接关系，内存消耗随节点数呈平方级增长。
 
@@ -62,15 +52,7 @@ mmap（memory-mapped files）是 Unix 系统调用，最早出现在 1970 年代
 > **让文件看起来像内存，让内存看起来像文件。**
 
 传统 I/O 流程：
-```
-磁盘文件 → 读入内存 → 处理 → 写回磁盘
-```
-
 mmap 流程：
-```
-磁盘文件 → 映射到虚拟内存空间 → 直接访问（按需加载）
-```
-
 关键区别：mmap **不一次性把整个文件读入内存**，而是按需将磁盘页加载到内存。操作系统负责换页，开发者像访问普通内存一样访问文件。
 
 <object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%"></object>
@@ -125,20 +107,6 @@ GraphZero 的开发者遇到了一个典型问题：
 - ✅ **让操作系统处理 paging，开发者专注于算法**
 
 ### 核心实现思路
-
-```cpp
-// 简化示意
-int fd = open("graph_data.bin", O_RDONLY);
-void* data = mmap(nullptr, file_size, PROT_READ, MAP_PRIVATE, fd, 0);
-
-// 现在 data 指向虚拟内存空间
-// 访问时，OS 自动从 SSD 加载所需页面
-for (int i = 0; i < num_nodes; i++) {
-    // 第一次访问会触发 page fault，从 SSD 加载
-    // 后续访问直接从内存读取
-    process_node(data + offset[i]);
-}
-```
 
 ### 性能权衡
 

@@ -253,26 +253,6 @@ Agent 每天自动：
 
 ### 建议路径
 
-```
-第 1-3 个月：Copilot 模式
-├─ 选择 1-2 个高频场景
-├─ 集成 LLM API（OpenAI/Claude）
-├─ 开发简单界面
-└─ 收集用户反馈
-
-第 4-6 个月：Workflow Automation
-├─ 识别可自动化的工作流
-├─ 构建 Workflow Engine
-├─ 添加规则引擎
-└─ 测试和优化
-
-第 7-12 个月：Autonomous Agent
-├─ 开发 Agent Runtime
-├─ 构建 Memory 系统
-├─ 添加审批机制
-└─ 规模化推广
-```
-
 ### 第一步：选择切入点
 
 **评估框架：**

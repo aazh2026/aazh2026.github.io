@@ -74,20 +74,6 @@ LLM的优势正是处理模糊性：
 
 ### 从概念到向量
 
-```
-领域概念: "订单"
-         ↓ Embedding
-向量: [0.23, -0.87, 0.15, ..., 0.44]  # 1536维
-
-领域概念: "采购单"
-         ↓ Embedding
-向量: [0.25, -0.82, 0.18, ..., 0.41]  # 相似但不相同
-
-领域概念: "用户"
-         ↓ Embedding
-向量: [-0.45, 0.33, 0.92, ..., -0.12] # 完全不同方向
-```
-
 **语义关系的几何表达：**
 
 | 关系类型 | 向量空间表现 | 计算方式 |
@@ -100,45 +86,9 @@ LLM的优势正是处理模糊性：
 ### 可视化示例
 
 <object data="/assets/images/2025-05-30-ddd-meets-llm-02-embedding-space.svg" type="image/svg+xml" width="100%"></object>
-```
-
----
-
-## 限界上下文映射
-
-> 💡 **Key Insight**
-> 
-003e 限界上下文的边界不是代码层面的，而是**语义层面的**。Embedding让我们可以量化这个边界——当两个概念的向量距离超过阈值时，它们属于不同的上下文。
-
-### 传统BC vs 语义BC
-
-**传统限界上下文（代码边界）：**
-```
 com.company.order      # 订单上下文
 com.company.inventory  # 库存上下文
 com.company.payment    # 支付上下文
-```
-
-**语义限界上下文（向量边界）：**
-```python
-# 计算概念所属上下文
-concept = "订单"
-vector = embed(concept)
-
-# 与各上下文中心点的距离
-order_center = get_context_center("订单上下文")
-inventory_center = get_context_center("库存上下文")
-
-distance_to_order = cosine_distance(vector, order_center)
-distance_to_inventory = cosine_distance(vector, inventory_center)
-
-# 判断归属
-if distance_to_order < distance_to_inventory:
-    context = "订单上下文"
-else:
-    context = "库存上下文"  # 概念漂移警告！
-```
-
 ### 上下文映射的自动化
 
 <object data="/assets/images/2025-05-30-ddd-meets-llm-03-bc-mapping.svg" type="image/svg+xml" width="100%"></object>
@@ -162,68 +112,7 @@ else:
 
 ### 实战：歧义检测系统
 
-```python
-class SemanticConflictDetector:
-    def detect_homonym(self, term: str) -> List[Context]:
-        """
-        检测同名异义：一个术语是否出现在多个上下文中
-        """
-        contexts = []
-        for context in all_contexts:
-            if term in context.terms:
-                vector = self.embed_in_context(term, context)
-                contexts.append((context, vector))
-        
-        # 如果同一个词在不同上下文的向量差异大，报告歧义
-        for (ctx1, vec1), (ctx2, vec2) in combinations(contexts, 2):
-            if cosine_distance(vec1, vec2) > THRESHOLD:
-                report_conflict(term, ctx1, ctx2)
-    
-    def detect_synonym(self) -> List[Tuple[str, str]]:
-        """
-        检测异名同义：不同术语是否指同一概念
-        """
-        synonyms = []
-        for term1, term2 in all_term_pairs:
-            vec1 = embed(term1)
-            vec2 = embed(term2)
-            if cosine_similarity(vec1, vec2) > 0.95:
-                synonyms.append((term1, term2))
-        return synonyms
-    
-    def detect_concept_drift(self, term: str, time_window: int):
-        """
-        检测概念漂移：术语含义是否随时间变化
-        """
-        historical_vectors = get_vectors_over_time(term, time_window)
-        if variance(historical_vectors) > DRIFT_THRESHOLD:
-            report_drift(term, historical_vectors)
-```
-
 ### 预警示例
-
-```
-⚠️ 语义冲突警告
-
-术语: "账户"
-
-发现该术语在两个上下文中使用，含义差异显著：
-
-【支付上下文】
-- 含义: 用户的支付账户（银行卡/余额）
-- 相关概念: 余额、交易、退款
-- 向量中心: [0.23, -0.15, ...]
-
-【CRM上下文】  
-- 含义: 客户的账户信息（公司/联系人）
-- 相关概念: 公司、商机、联系人
-- 向量中心: [-0.31, 0.27, ...]
-
-建议: 
-1. 支付上下文使用"支付账户"
-2. CRM上下文使用"客户账户"
-3. 在领域词汇表中明确区分
-```
 
 ---
 
@@ -240,39 +129,8 @@ class SemanticConflictDetector:
 ### 使用场景
 
 **场景1：新成员入职**
-```
-Q: "在我们的领域模型里，订单和采购单有什么区别？"
-
-A: 根据知识库检索：
-   - 订单（Order）：面向客户视角，包含客户信息、
-     配送地址、支付信息
-   - 采购单（Purchase Order）：面向供应商视角，
-     包含供应商信息、采购条款、到货日期
-   
-   关键区别：订单关注"卖给谁"，采购单关注"向谁买"
-```
-
 **场景2：跨团队协作**
-```
-Q: "库存上下文的'锁定'和仓储上下文的'冻结'是同一个概念吗？"
-
-A: 相似度分析：
-   - 语义相似度: 0.87 (高度相似)
-   - 建议: 统一术语，或明确区分业务场景
-```
-
 **场景3：代码审查辅助**
-```
-检测到您在"订单服务"中引入了"库存预留"概念。
-
-相关领域知识：
-- 库存预留应在库存上下文中管理
-- 订单上下文应使用"库存确认"领域事件
-- 参考实现: [链接]
-
-建议: 考虑将库存逻辑委托给库存服务
-```
-
 ---
 
 ## 结论

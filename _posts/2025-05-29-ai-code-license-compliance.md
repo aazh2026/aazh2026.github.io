@@ -37,18 +37,6 @@ redirect_from:
 
 **场景1：无意识抄袭**
 
-```python
-# AI生成的代码
-def quicksort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quicksort(left) + middle + quicksort(right)
-```
-
 **问题**：这段代码与GitHub上的某个MIT License项目高度相似。
 
 **风险**：
@@ -56,13 +44,6 @@ def quicksort(arr):
 - 可能构成版权侵权
 
 **场景2：License传染**
-
-```python
-# AI生成的代码，基于GPL代码训练
-def complex_algorithm(data):
-    # 实现逻辑...
-    pass
-```
 
 **问题**：如果AI模型在GPL代码上训练，生成的代码是否继承GPL？
 
@@ -72,13 +53,6 @@ def complex_algorithm(data):
 - 现状：法律边界模糊
 
 **场景3：混合License冲突**
-
-```python
-# AI生成的代码混合了多个License的代码片段
-# 片段A：MIT License
-# 片段B：Apache 2.0
-# 片段C：GPL v3
-```
 
 **问题**：这些License义务相互冲突，如何合规使用？
 
@@ -101,10 +75,6 @@ def complex_algorithm(data):
 <object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ### 传统SCA如何工作
-
-```
-代码 → 依赖分析 → 已知组件匹配 → License数据库 → 风险报告
-```
 
 **依赖分析**：识别manifest文件（package.json, requirements.txt等）
 
@@ -145,53 +115,6 @@ AI模型的训练数据：
 
 ### 技术方案：代码指纹比对
 
-```python
-class AICodeTracer:
-    def trace_origin(self, generated_code):
-        """
-        追溯AI生成代码的潜在来源
-        """
-        # 1. 生成代码指纹
-        fingerprint = self.generate_fingerprint(generated_code)
-        
-        # 2. 与开源代码库比对
-        matches = self.match_against_opensource(fingerprint)
-        
-        # 3. 相似度分析
-        similar_snippets = []
-        for match in matches:
-            similarity = self.calculate_similarity(
-                generated_code, 
-                match.source_code
-            )
-            if similarity > 0.7:  # 70%相似度阈值
-                similar_snippets.append({
-                    'source': match.repository,
-                    'license': match.license,
-                    'similarity': similarity,
-                    'matched_lines': match.lines
-                })
-        
-        return similar_snippets
-    
-    def generate_fingerprint(self, code):
-        """
-        生成代码指纹（AST + 语义特征）
-        """
-        # 语法树特征
-        ast_features = self.extract_ast_features(code)
-        
-        # 语义特征
-        semantic_features = self.extract_semantic_features(code)
-        
-        # 组合指纹
-        return {
-            'ast_hash': ast_features,
-            'semantic_hash': semantic_features,
-            'ngram_signature': self.ngram_signature(code)
-        }
-```
-
 ### 代码相似度检测
 
 **多维度检测**：
@@ -205,126 +128,17 @@ class AICodeTracer:
 
 ### 溯源报告示例
 
-```json
-{
-  "generated_file": "utils/sorting.py",
-  "analysis_timestamp": "2026-03-13T10:00:00Z",
-  
-  "similarity_findings": [
-    {
-      "function": "quicksort",
-      "similarity_score": 0.85,
-      "potential_sources": [
-        {
-          "repository": "github.com/example/algorithms",
-          "file": "sort/quicksort.py",
-          "license": "MIT",
-          "matched_lines": "12-28",
-          "similarity": 0.85,
-          "required_actions": ["保留版权声明"]
-        }
-      ],
-      "risk_level": "LOW",
-      "recommendation": "确认MIT License合规，添加版权声明"
-    },
-    {
-      "function": "complex_algorithm",
-      "similarity_score": 0.92,
-      "potential_sources": [
-        {
-          "repository": "github.com/opensource/gpl-project",
-          "file": "src/core.py",
-          "license": "GPL-3.0",
-          "matched_lines": "45-89",
-          "similarity": 0.92,
-          "required_actions": ["代码需开源", "相同License"]
-        }
-      ],
-      "risk_level": "HIGH",
-      "recommendation": "高风险！GPL代码可能传染，建议重写或开源"
-    }
-  ],
-  
-  "overall_risk": "MEDIUM",
-  "summary": {
-    "total_functions": 15,
-    "flagged_functions": 2,
-    "high_risk": 1,
-    "medium_risk": 0,
-    "low_risk": 1
-  }
-}
-```
-
 ---
 
 ## License风险标记系统
 
 ### 风险标记体系
 
-```python
-class LicenseRiskMarker:
-    def mark_risk(self, code_analysis):
-        """
-        标记代码的License风险
-        """
-        markers = []
-        
-        for finding in code_analysis.findings:
-            if finding.license in ['GPL-2.0', 'GPL-3.0', 'AGPL-3.0']:
-                markers.append({
-                    'level': 'CRITICAL',
-                    'type': 'COPYLEFT_RISK',
-                    'message': 'Copyleft License可能导致衍生作品需开源',
-                    'action': 'REVIEW_REQUIRED'
-                })
-            
-            elif finding.license in ['LGPL-2.1', 'LGPL-3.0']:
-                markers.append({
-                    'level': 'HIGH',
-                    'type': 'WEAK_COPYLEFT',
-                    'message': '弱Copyleft License，修改需开源',
-                    'action': 'REVIEW_REQUIRED'
-                })
-            
-            elif finding.similarity > 0.9:
-                markers.append({
-                    'level': 'MEDIUM',
-                    'type': 'HIGH_SIMILARITY',
-                    'message': '代码相似度极高，可能存在抄袭风险',
-                    'action': 'DOCUMENTATION_REQUIRED'
-                })
-        
-        return markers
-```
-
 ### IDE集成风险提示
 
 **实时提示**：
 
-```python
-# 开发者正在查看AI生成的代码
-def process_data(data):
-    # ⚠️ LICENSE RISK: HIGH
-    # 检测到与GPL-3.0代码92%相似
-    # 建议：重写此函数或开源项目
-    # 详情：点击查看溯源报告
-    ...
-```
-
 **CI/CD阻断**：
-
-```yaml
-# .github/workflows/license-check.yml
-- name: AI Code License Check
-  run: |
-    ai-license-check \
-      --critical-threshold=1 \
-      --high-threshold=5 \
-      --fail-on-critical=true
-  
-  # 如果有CRITICAL级别风险，阻断发布
-```
 
 ---
 
@@ -357,21 +171,6 @@ def process_data(data):
 - 优化检测算法
 
 ### 企业政策模板
-
-```
-【AI生成代码License合规政策】
-
-1. 所有AI生成代码必须经过License扫描
-2. 高风险（GPL/AGPL）代码禁止使用
-3. 中风险代码需要架构师审批
-4. 低风险代码需要文档化声明
-5. 每月进行License合规审计
-
-违规处理：
-- 首次违规：警告 + 培训
-- 重复违规：绩效扣分
-- 严重违规：停职审查
-```
 
 ### 推荐工具
 

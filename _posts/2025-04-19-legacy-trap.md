@@ -100,14 +100,6 @@ redirect_from:
 
 **现实**：AI可以理解代码的"语法"，但很难理解代码的"语义"——尤其是那些没有被显式表达的业务逻辑。
 
-**案例**：
-```cobol
-IF CUSTOMER-TYPE = "VIP" AND REGION-CODE = "NE"
-    COMPUTE DISCOUNT = BASE-PRICE * 0.15
-ELSE
-    COMPUTE DISCOUNT = BASE-PRICE * 0.10
-```
-
 AI可以完美地将其转换为Java。但它不知道的是：
 - 为什么VIP客户只在东北地区有额外折扣？（历史原因：东北地区曾是竞争最激烈的市场）
 - 这个折扣率是否与某些合同条款冲突？

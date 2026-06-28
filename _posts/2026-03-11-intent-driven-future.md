@@ -23,10 +23,6 @@ redirect_from:
 
 AI-Native SDLC 正在出现一种新范式：
 
-```
-Intent-Driven Development（意图驱动开发）
-```
-
 核心思想：
 
 > 很多"详细设计"会被 `intent + constraints + examples` 直接替代。
@@ -39,25 +35,7 @@ Intent-Driven Development（意图驱动开发）
 
 ### 传统详细设计
 
-```
-PRD (20 pages)
-    ↓
-Detailed Design (40 pages)
-    ↓
-Code
-```
-
 ### Intent-Driven
-
-```
-Intent.md (20 lines)
-    +
-Constraints.md (10 lines)
-    +
-Examples/ (3-5 个示例)
-    ↓
-AI generates code
-```
 
 **信息密度提升了 100 倍。**
 
@@ -67,62 +45,13 @@ AI generates code
 
 ### 1. Intent（意图）
 
-```markdown
-# intent.md
-
-Feature: Smart order routing
-
-Goal:
-Route orders to nearest warehouse to reduce shipping time
-
-Why:
-Current average shipping time is 5 days, target is 2 days
-
-Success metric:
-- Avg shipping time < 2 days
-- Routing accuracy > 95%
-```
-
 **关键：** 说清楚"为什么要做"和"怎么算成功"。
 
 ### 2. Constraints（约束）
 
-```markdown
-# constraints.md
-
-Functional:
-- Must support real-time inventory check
-- Must handle warehouse capacity limits
-- Must fallback to next nearest if primary is full
-
-Non-functional:
-- Routing decision < 100ms
-- 99.9% availability
-- Must be backward compatible with existing order API
-```
-
 **关键：** 划定边界，告诉 AI 什么不能做。
 
 ### 3. Examples（示例）
-
-```markdown
-# examples.md
-
-Example 1: Standard routing
-- Input: Order from NYC, inventory available in NJ
-- Output: Route to NJ warehouse
-- Reason: Nearest with stock
-
-Example 2: Capacity fallback
-- Input: Order from SF, nearest warehouse (Oakland) is at capacity
-- Output: Route to San Jose warehouse
-- Reason: Next nearest with available capacity
-
-Example 3: Out of stock
-- Input: Order from Miami, no Florida warehouse has inventory
-- Output: Route to Atlanta + notify customer of 1-day delay
-- Reason: Balance speed and transparency
-```
 
 **关键：** 用具体例子说明期望行为，比抽象描述更有效。
 
@@ -140,26 +69,6 @@ LLM 的本质是**模式匹配**。
 这就是 **Few-Shot Prompting** 在软件工程中的应用。
 
 ## Intent-Driven 的工作流程
-
-```
-1. Human writes:
-   - intent.md
-   - constraints.md
-   - examples/ (3-5 个)
-
-2. AI generates:
-   - Domain model
-   - API design
-   - Implementation
-   - Tests
-
-3. Human reviews:
-   - AI output
-   - Add more examples if needed
-   - Iterate
-
-4. Done
-```
 
 **设计文档不是写出来的，是"示例驱动"生成的。**
 
@@ -183,33 +92,13 @@ LLM 的本质是**模式匹配**。
 
 ### Layer 1: Intent-Driven（80% 的需求）
 
-```
-intent + constraints + examples
-    ↓
-AI generates everything
-```
-
 适用于：常规业务功能、CRUD、标准流程
 
 ### Layer 2: Structured Design（15% 的需求）
 
-```
-domain.md + api.yaml + constraints.md
-    ↓
-AI generates with structure
-```
-
 适用于：复杂业务逻辑、跨模块交互、性能敏感功能
 
 ### Layer 3: Detailed Design（5% 的需求）
-
-```
-Full design artifacts
-    ↓
-Human reviews carefully
-    ↓
-AI implements with supervision
-```
 
 适用于：核心算法、安全关键、架构级变更
 
@@ -217,20 +106,7 @@ AI implements with supervision
 
 ### 传统工程师
 
-```
-60% 写代码
-30% 写文档
-10% 开会
-```
-
 ### AI-Native 工程师
-
-```
-40% 定义 Intent & Examples
-30% Review AI output
-20% 处理复杂边界 case
-10% 写关键代码
-```
 
 **核心能力转移：**
 - 从"如何实现" → "想要什么"
@@ -240,31 +116,6 @@ AI implements with supervision
 ## 未来的终极形态
 
 想象这样一个工作流：
-
-```
-Product Manager writes:
-"我们需要一个智能订单路由系统，
-目标是2天内送达，
-参考这三个场景的例子..."
-
-AI asks:
-"如果最近仓库缺货，是延迟发货还是远距离发货？"
-
-PM answers:
-"远距离发货，但通知用户"
-
-AI generates:
-- 完整实现
-- 测试用例
-- 部署配置
-
-Engineer reviews:
-- 逻辑正确性
-- 边界处理
-- 性能优化点
-
-Deploy
-```
 
 **详细设计在哪里？**
 
@@ -292,13 +143,6 @@ Deploy
    - 性能关键路径
 
 ### 关键心法
-
-```
-不是"要不要写设计文档"
-而是"如何让 AI 理解我想要什么"
-
-手段不重要，目标才重要。
-```
 
 ## 总结
 

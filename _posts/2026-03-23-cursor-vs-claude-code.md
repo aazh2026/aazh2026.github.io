@@ -54,13 +54,6 @@ series: AI-Native Engineering
 ### 核心优势
 
 **1. 无缝的VS Code迁移**
-```
-如果你用VS Code，切换到Cursor只需2分钟：
-- 所有插件可用
-- 所有快捷键保留
-- 所有主题支持
-```
-
 **2. Composer：多文件AI编辑**
 Cursor的Composer可以：
 - 同时修改多个文件
@@ -93,13 +86,6 @@ Pro版$20/月，但重度使用可能触发额外计费。
 ### 核心优势
 
 **1. 极致的可控性**
-```bash
-# 你可以精确控制AI的行为
-claude "重构这个函数，但不要修改接口"
-claude "修复这个bug，使用TDD方法"
-claude "生成单元测试，覆盖率必须>90%"
-```
-
 **2. 原生Agent能力**
 Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 - 自主规划任务
@@ -107,15 +93,6 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 - 自主验证结果
 
 **3. 与现有工具链无缝集成**
-```bash
-# 结合tmux
-tmux new-session -d -s coding
-claude "在tmux会话中启动开发服务器"
-
-# 结合git
-claude "提交这个更改，并生成符合规范的commit message"
-```
-
 **4. 成本可控**
 | 方案 | 价格 | 适用 |
 |------|------|------|

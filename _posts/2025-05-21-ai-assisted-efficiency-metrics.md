@@ -55,15 +55,7 @@ redirect_from:
 **原因1：AI改变了生产函数**
 
 传统：
-```
-产出 = 开发者技能 × 时间
-```
-
 AI时代：
-```
-产出 = Prompt质量 × AI能力 × 验证时间
-```
-
 **原因2：代码质量差异被抹平**
 
 - AI生成的代码风格统一
@@ -88,10 +80,6 @@ AI时代：
 
 **定义**：当需求（意图）发生变更时，需要修改的代码比例。
 
-```
-IMR = 修改的代码行数 / 总代码行数
-```
-
 **为什么重要**：
 - 度量代码对需求变化的适应能力
 - 低IMR = 高可维护性
@@ -100,50 +88,12 @@ IMR = 修改的代码行数 / 总代码行数
 **示例对比**：
 
 **场景A：紧耦合代码（高IMR）**
-```python
-# 用户信息和订单信息混在一起
-class User:
-    def __init__(self):
-        self.name = ""
-        self.email = ""
-        self.order_id = ""
-        self.order_amount = 0
-        self.order_status = ""
-
-# 需求变更：用户可以有多个订单
-# 需要修改User类的所有字段
-# IMR = 80%
-```
-
 **场景B：松耦合代码（低IMR）**
-```python
-# 用户和订单分离
-class User:
-    def __init__(self):
-        self.name = ""
-        self.email = ""
-        self.orders = []  # 已经是列表
-
-class Order:
-    def __init__(self):
-        self.id = ""
-        self.amount = 0
-        self.status = ""
-
-# 需求变更：用户可以有多个订单
-# 无需修改，原本就支持
-# IMR = 0%
-```
-
 ---
 
 ### 核心指标：知识半衰期（Knowledge Half-life）
 
 **定义**：代码知识从"清晰理解"到"需要重新学习"的时间。
-
-```
-知识半衰期 = 从编写到需要重新学习理解的平均时间
-```
 
 **度量方法**：
 - 通过代码审查历史
@@ -153,25 +103,6 @@ class Order:
 **意义**：
 - 半衰期长 = 代码自解释性强
 - 半衰期短 = 代码难以理解，需要频繁查阅
-
-**示例**：
-
-```python
-# 知识半衰期短（需要频繁查阅文档）
-def process(x, y, z):
-    if z:
-        return x + y
-    else:
-        return x - y
-
-# 知识半衰期长（自解释）
-def calculate_total_price(base_price, tax_amount, include_tax):
-    """Calculate final price including or excluding tax."""
-    if include_tax:
-        return base_price + tax_amount
-    else:
-        return base_price
-```
 
 ---
 
@@ -191,28 +122,6 @@ def calculate_total_price(base_price, tax_amount, include_tax):
 
 **AI预测模型**：
 
-```python
-class RefactoringCostPredictor:
-    def predict(self, code_snippet, context):
-        features = {
-            'coupling_score': self.analyze_coupling(code_snippet),
-            'complexity_score': self.calculate_complexity(code_snippet),
-            'test_coverage': self.check_test_coverage(code_snippet),
-            'documentation_score': self.analyze_documentation(code_snippet),
-            'team_familiarity': self.analyze_git_history(code_snippet)
-        }
-        
-        # AI模型预测
-        cost_estimate = self.ml_model.predict(features)
-        
-        return {
-            'estimated_hours': cost_estimate.hours,
-            'risk_level': cost_estimate.risk,
-            'confidence': cost_estimate.confidence,
-            'recommendations': cost_estimate.suggestions
-        }
-```
-
 ---
 
 ### 核心指标：变更影响范围（Change Impact Scope）
@@ -220,33 +129,7 @@ class RefactoringCostPredictor:
 **定义**：修改一处代码对其他部分的影响范围。
 
 **度量方法**：
-```
-影响范围 = 直接依赖数 + 间接依赖数 + 测试用例数 + 接口调用方数
-```
-
 **AI增强的影响分析**：
-
-```python
-class AIImpactAnalyzer:
-    def analyze(self, code_change):
-        # 静态分析
-        static_impact = self.static_analysis(code_change)
-        
-        # AI语义分析
-        semantic_impact = self.ai_semantic_analysis(code_change)
-        
-        # 行为影响预测
-        behavioral_impact = self.predict_behavioral_changes(code_change)
-        
-        return {
-            'files_affected': static_impact.files,
-            'functions_affected': static_impact.functions,
-            'tests_to_update': static_impact.tests,
-            'semantic_risks': semantic_impact.risks,
-            'behavioral_changes': behavioral_impact.predictions,
-            'overall_risk_score': self.calculate_risk(static_impact, semantic_impact)
-        }
-```
 
 ---
 
@@ -254,50 +137,9 @@ class AIImpactAnalyzer:
 
 ### 模型架构
 
-```
-输入：代码片段 + 上下文
-    ↓
-特征提取层
-    ├── 静态特征（复杂度、耦合度、规模）
-    ├── 语义特征（命名质量、注释质量）
-    ├── 历史特征（修改频率、Bug率）
-    └── 团队特征（熟悉度、所有权）
-    ↓
-AI预测模型（Transformer + GNN）
-    ↓
-输出：可维护性评分 + 改进建议
-```
-
 ### 预测指标
 
 **可维护性指数（Maintainability Index）**：
-
-```python
-class MaintainabilityPredictor:
-    def calculate_index(self, code_module):
-        """
-        计算可维护性指数（0-100）
-        """
-        factors = {
-            'readability': self.score_readability(code_module),
-            'modularity': self.score_modularity(code_module),
-            'testability': self.score_testability(code_module),
-            'documentability': self.score_documentation(code_module),
-            'changeability': self.score_changeability(code_module)
-        }
-        
-        # 加权平均
-        weights = {
-            'readability': 0.25,
-            'modularity': 0.25,
-            'testability': 0.20,
-            'documentability': 0.15,
-            'changeability': 0.15
-        }
-        
-        index = sum(factors[k] * weights[k] for k in factors)
-        return index
-```
 
 **评分等级**：
 
@@ -315,51 +157,7 @@ class MaintainabilityPredictor:
 
 **IDE集成**：
 
-```
-开发者保存代码时：
-    ↓
-实时计算可维护性指数
-    ↓
-如果指数下降：
-    ⚠️ 警告：可维护性下降
-    建议改进措施：
-    - 简化函数复杂度
-    - 添加注释说明
-    - 拆分过大模块
-```
-
 **CI/CD集成**：
-
-```yaml
-# .github/workflows/maintainability-check.yml
-name: Maintainability Check
-
-on: [push]
-
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Calculate Maintainability Index
-        run: |
-          ai-maintainability-check \
-            --threshold=60 \
-            --fail-on-degradation=true
-      
-      - name: Comment PR
-        if: github.event_name == 'pull_request'
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: '📊 可维护性报告：\n' + process.env.REPORT
-            })
-```
 
 ---
 
@@ -368,17 +166,7 @@ jobs:
 ### 范式转移
 
 **传统思维**：
-```
-效能 = 写了多少代码 / 花了多少时间
-     = LOC / 小时
-```
-
 **AI时代思维**：
-```
-效能 = 能做多快的改变 / 改变的质量
-     = 1 / 意图修改率 × 变更成功率
-```
-
 ### 度量对比
 
 | 维度 | 传统度量 | AI时代度量 |
@@ -394,20 +182,6 @@ jobs:
 **案例：电商平台价格计算模块**
 
 **初始实现（追求写得多快）**：
-```python
-def calc_price(items, user):
-    total = 0
-    for item in items:
-        p = item.price
-        if user.vip:
-            p *= 0.9
-        if item.category == 'electronics':
-            p *= 0.95
-        if datetime.now().weekday() == 2:
-            p *= 0.98
-        total += p
-    return total
-```
 - 代码行数：12行
 - 开发时间：10分钟
 - 可维护性指数：35（较差）
@@ -418,35 +192,6 @@ def calc_price(items, user):
 - 测试成本：高
 
 **重构后（追求改得多快）**：
-```python
-class PriceCalculator:
-    def __init__(self):
-        self.discount_strategies = []
-    
-    def add_strategy(self, strategy):
-        self.discount_strategies.append(strategy)
-    
-    def calculate(self, items, user):
-        total = sum(item.base_price for item in items)
-        
-        for strategy in self.discount_strategies:
-            total = strategy.apply(total, items, user)
-        
-        return total
-
-# 折扣策略
-def vip_discount(total, items, user):
-    return total * user.vip_level.discount_rate
-
-def category_discount(total, items, user):
-    electronics = [i for i in items if i.category == 'electronics']
-    return total - sum(i.base_price * 0.05 for i in electronics)
-
-def weekday_discount(total, items, user):
-    if datetime.now().weekday() == 2:
-        return total * 0.98
-    return total
-```
 - 代码行数：25行
 - 开发时间：30分钟
 - 可维护性指数：75（良好）
@@ -458,14 +203,6 @@ def weekday_discount(total, items, user):
 - 测试成本：低（只需测试新策略）
 
 **ROI计算**：
-```
-初始开发多花：20分钟
-每次修改节省：2小时
-预计修改次数：10次
-总节省：20小时 - 0.3小时 = 19.7小时
-ROI：65倍
-```
-
 ---
 
 ## 实施与工具

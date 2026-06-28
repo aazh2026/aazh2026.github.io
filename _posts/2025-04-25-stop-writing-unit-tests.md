@@ -107,25 +107,6 @@ redirect_from:
 不是测试具体输入输出，而是测试"属性"——代码应该始终满足的条件。
 
 **传统测试**：
-```python
-def test_add():
-    assert add(2, 3) == 5
-    assert add(-1, 1) == 0
-```
-
-**属性测试**：
-```python
-# 定义属性：加法是交换律
-@given(st.integers(), st.integers())
-def test_add_commutative(a, b):
-    assert add(a, b) == add(b, a)
-
-# 定义属性：加法是结合律  
-@given(st.integers(), st.integers(), st.integers())
-def test_add_associative(a, b, c):
-    assert add(add(a, b), c) == add(a, add(b, c))
-```
-
 **优势**：
 - AI可以基于代码自动生成属性
 - 一次属性测试相当于数千个具体用例
@@ -158,15 +139,6 @@ def test_add_associative(a, b, c):
 - **异常检测**：基于统计模型检测异常行为
 - **影子验证**：新版本的并行验证
 
-**示例**：
-```python
-@invariant(lambda balance: balance >= 0)
-class Account:
-    def withdraw(self, amount):
-        # 运行时自动验证：withdraw后余额不会为负
-        self.balance -= amount
-```
-
 ---
 
 ## 五、实战：从单元测试到三层融合
@@ -193,29 +165,6 @@ class Account:
 <object data="/assets/images/2025-04-25-stop-writing-unit-tests-02-pyramid.svg" type="image/svg+xml" width="100%"></object>
 
 **传统金字塔**：
-```
-    /\
-   /  \  E2E测试（少）
-  /----\
- /      \ 集成测试（中）
-/--------\
-/          \ 单元测试（多）
-------------
-```
-
-**新金字塔**：
-```
-        /\
-       /  \ 运行时验证（持续）
-      /----\
-     /      \ 属性测试（关键属性）
-    /--------\
-   /          \ AI生成测试（自动化）
-  /------------\
- /              \ 手工测试（极少，核心逻辑）
-------------------
-```
-
 ### 组织变革
 
 **开发者的角色转变**：

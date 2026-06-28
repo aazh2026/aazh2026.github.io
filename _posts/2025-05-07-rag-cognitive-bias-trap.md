@@ -83,7 +83,6 @@ RAG回答的质量取决于检索质量。
 - 选择性记忆符合预期的信息
 - 对反对观点更苛刻地审视
 
-**案例**：
 > 相信"咖啡致癌"的人，会记住每篇说咖啡有害的文章，而忽略说咖啡有益的研究。
 
 ### RAG如何放大确认偏误
@@ -91,13 +90,6 @@ RAG回答的质量取决于检索质量。
 **问题1：查询本身的偏见**
 
 用户的查询往往带有偏见：
-```
-偏见查询："为什么Python比Java好？"
-RAG检索：Python优势的文章
-RAG回答：Python确实比Java好，因为...
-结果：用户的偏见被强化
-```
-
 **问题2：检索算法的"迎合"**
 
 现代检索系统（为了用户体验）倾向于：
@@ -152,57 +144,17 @@ RAG回答：Python确实比Java好，因为...
 
 热门内容 ≠ 准确内容
 
-```
-问题："地球是平的吗？"
-
-检索结果：
-- 地平说文章（ viral，大量转发）
-- 科学解释（枯燥，少人问津）
-
-RAG可能检索到地平说文章，因为算法按流行度排序。
-```
-
 **算法偏见2：近期偏见**
 
 最新内容 ≠ 最准确内容
-
-```
-医学领域：
-- 新研究（尚未验证）排在前面
-- 经典教科书（经过时间检验）被忽略
-
-结果：RAG可能引用尚未验证的新研究。
-```
 
 **算法偏见3：关键词匹配偏见**
 
 字面匹配 ≠ 语义相关
 
-```
-查询："Apple的产品"
-
-检索结果：
-- 苹果公司的iPhone（正确）
-- 苹果水果的种植（字面匹配，不相关）
-- 亚当夏娃的苹果（字面匹配，不相关）
-
-简单关键词匹配会引入噪声。
-```
-
 ### 检索结果的"精心筛选"
 
 **商业利益的干预**：
-
-```
-用户查询："最好的编程语言"
-
-检索结果可能被：
-- 赞助内容占据前排
-- SEO优化内容（而非客观比较）
-- 广告软文（而非真实评测）
-
-RAG基于这些检索结果生成答案，用户得到的是"被付费的内容"。
-```
 
 ---
 
@@ -229,33 +181,7 @@ RAG基于这些检索结果生成答案，用户得到的是"被付费的内容"
 
 **机制1：个性化检索**
 
-```
-用户A（环保主义者）查询："电动汽车的优势"
-RAG检索：环保网站、绿色科技博客、气候研究
-RAG回答：详细列举电动汽车的环保优势
-
-用户B（传统汽车爱好者）查询同样问题
-RAG检索：汽车论坛、性能评测网站、技术博客
-RAG回答：讨论电动汽车的性能局限和充电问题
-
-相同查询，不同答案，强化各自偏见。
-```
-
 **机制2：上下文记忆**
-
-```
-对话历史：
-User: "我觉得AI会取代程序员"
-AI: "确实有很多重复性工作可以被自动化..."
-
-User: "那我应该学什么技能？"
-
-RAG检索（受之前对话影响）：
-- 偏向"AI替代"的文章
-- 忽略"AI增强人类"的观点
-
-结果：强化用户的焦虑，而非提供平衡视角。
-```
 
 **机制3：隐性过滤**
 
@@ -296,19 +222,7 @@ RAG检索（受之前对话影响）：
 ### 什么是"有依据的幻觉"
 
 **传统幻觉**：AI胡说八道，没有任何依据。
-```
-用户："爱因斯坦发明了什么？"
-AI："爱因斯坦发明了电灯泡和电话。"
-（明显错误，用户容易识别）
-```
-
 **有依据的幻觉**：AI给出了错误的答案，但提供了"看似可信"的来源。
-```
-用户："爱因斯坦的主要贡献是什么？"
-AI："根据[某博客文章]，爱因斯坦的主要贡献是发明了电灯泡..."
-（用户可能相信，因为有"来源"）
-```
-
 **为什么更危险？**
 - 用户倾向于相信有来源的信息
 - 普通用户不会逐一验证来源
@@ -318,40 +232,9 @@ AI："根据[某博客文章]，爱因斯坦的主要贡献是发明了电灯泡
 
 **场景1：来源质量参差**
 
-```
-检索到的"来源"：
-- 知乎回答（个人观点）
-- 博客文章（未经审核）
-- 论坛讨论（群体偏见）
-- 营销软文（商业目的）
-
-RAG引用这些来源，赋予它们"事实"的权威。
-```
-
 **场景2：断章取义**
 
-```
-原始文章：
-"虽然某研究表明X可能有效，但后续大规模试验证明X并无显著效果。"
-
-RAG检索到前半句：
-"某研究表明X可能有效..."
-
-RAG回答：
-"根据[某研究]，X是有效的。"
-（断章取义，误导用户）
-```
-
 **场景3：过时的"事实"**
-
-```
-检索到的文章：2020年发表的"Java是最流行的编程语言"
-（2020年可能是对的，但2026年已不准确）
-
-RAG回答：
-"根据[某文章]，Java是最流行的编程语言。"
-（过时的信息被当作当前事实）
-```
 
 ### 为什么难以防范
 
@@ -387,118 +270,18 @@ RAG回答：
 
 **技术实现**：
 
-```python
-class DiverseRetrieval:
-    def retrieve(self, query):
-        # 标准检索
-        standard_results = self.standard_retrieval(query)
-        
-        # 生成对立查询
-        opposing_queries = self.generate_opposing_views(query)
-        
-        # 检索对立观点
-        opposing_results = []
-        for opp_query in opposing_queries:
-            opposing_results.extend(self.standard_retrieval(opp_query))
-        
-        # 合并并去重
-        diverse_results = self.merge_diverse(standard_results, opposing_results)
-        
-        return diverse_results
-    
-    def generate_opposing_views(self, query):
-        """生成对立观点的查询"""
-        prompt = f"""
-        查询：{query}
-        
-        生成3个探索对立观点的查询：
-        1. [从相反角度看的查询]
-        2. [质疑原查询假设的查询]
-        3. [寻找反对证据的查询]
-        """
-        return self.llm.generate(prompt)
-```
-
-**案例**：
-```
-用户查询："为什么Python是最好的编程语言"
-
-对立查询生成：
-1. "Python的局限性和缺点"
-2. "Java比Python更适合的场景"
-3. "编程语言选择不应该只看 popularity"
-
-检索结果包含支持和反对Python的观点。
-```
-
 ### 策略2：多源交叉验证
 
 **核心思想**：单一来源不可靠，需要多源验证。
 
 **技术实现**：
 
-```python
-class CrossValidation:
-    def validate_fact(self, claim, sources):
-        """
-        验证一个声明是否在多个独立来源中得到支持
-        """
-        supporting_sources = []
-        opposing_sources = []
-        
-        for source in sources:
-            stance = self.analyze_stance(source, claim)
-            if stance == "support":
-                supporting_sources.append(source)
-            elif stance == "oppose":
-                opposing_sources.append(source)
-        
-        consensus_score = len(supporting_sources) / len(sources)
-        controversy_flag = len(opposing_sources) > 0
-        
-        return {
-            "claim": claim,
-            "consensus": consensus_score,
-            "controversy": controversy_flag,
-            "supporting": supporting_sources,
-            "opposing": opposing_sources
-        }
-```
-
 **输出示例**：
-```
-声明："Python是2026年最流行的编程语言"
-
-验证结果：
-- 共识度：75%（4/5个来源支持）
-- 争议性：是（有1个来源反对）
-- 支持来源：[TIOBE, GitHub, StackOverflow]
-- 反对来源：[某技术博客，认为应该看企业级使用率]
-- 置信度：中等（存在争议）
-```
-
 ### 策略3：透明度设计
 
 **核心思想**：让用户了解RAG的工作过程。
 
 **界面设计**：
-
-```
-用户查询："Python的优势"
-
-AI回答：
-"Python在数据科学领域有显著优势...[回答内容]"
-
----
-📋 检索透明度
-本回答基于以下检索：
-✅ 检索了5个来源
-⚠️ 其中2个来源有商业利益相关（Python培训机构）
-✅ 同时检索了反对观点（"Python的局限性"）
-📊 观点分布：支持Python 70% | 中立 20% | 反对 10%
-
-查看详细检索过程 → [链接]
-```
 
 ### 策略4：不确定性表达
 
@@ -506,48 +289,11 @@ AI回答：
 
 **技术实现**：
 
-```python
-class UncertaintyExpression:
-    def generate_answer(self, query, retrieved_docs):
-        # 评估检索质量
-        retrieval_confidence = self.assess_retrieval_quality(retrieved_docs)
-        
-        # 评估信息充分性
-        information_sufficiency = self.assess_information_sufficiency(query, retrieved_docs)
-        
-        if information_sufficiency < THRESHOLD:
-            return {
-                "answer": "基于当前检索到的信息，我无法给出可靠答案。",
-                "reason": "检索到的信息来源不够权威，或存在争议。",
-                "suggestion": "建议查阅[权威来源A]和[权威来源B]获取更准确信息。",
-                "confidence": "low"
-            }
-        
-        if retrieval_confidence < THRESHOLD:
-            return {
-                "answer": "根据现有信息...[回答]",
-                "caveat": "⚠️ 注意：这个话题存在争议，以下答案仅代表部分观点。",
-                "alternative_views": "[简述反对观点]",
-                "confidence": "medium"
-            }
-```
-
 ### 策略5：人机协作验证
 
 **核心思想**：关键信息需要人工验证。
 
 **工作流程**：
-
-```
-RAG生成回答
-    ↓
-标记高风险声明（涉及事实、数据、争议话题）
-    ↓
-人工审核员验证
-    ↓
-验证通过 → 发布
-验证不通过 → 修改或标记为"待验证"
-```
 
 **适用场景**：
 - 医疗建议

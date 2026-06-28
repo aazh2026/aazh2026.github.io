@@ -60,13 +60,6 @@ redirect_from:
 所有指标都正常，但业务明显异常。
 
 你查看日志：
-```
-[INFO] 2026-03-14 02:15:32 - Recommendation request received
-[INFO] 2026-03-14 02:15:32 - User profile fetched
-[INFO] 2026-03-14 02:15:33 - ML model inference completed
-[INFO] 2026-03-14 02:15:33 - Results returned
-```
-
 日志显示一切正常，但用户收到的推荐明显不合理——全是 6 个月前的冷内容。
 
 你查看追踪：请求从 API 网关到推荐服务到模型服务，链路完整，没有错误。
@@ -150,28 +143,6 @@ AI 的输出高度依赖上下文：
 
 AI-Native 系统需要三层可观测性：
 
-```yaml
-三层可观测性:
-  
-  系统层 (System Layer):
-    对应: 传统可观测性
-    关注: 机器资源、网络、服务健康
-    指标: CPU, 内存, 延迟, 错误率
-    工具: Prometheus, Grafana, Jaeger
-  
-  Agent 层 (Agent Layer):
-    对应: AI 系统可观测性
-    关注: AI 组件的行为和性能
-    指标: 推理时间, token 消耗, 模型版本
-    工具: LLM 可观测性平台
-  
-  意图层 (Intent Layer):
-    对应: AI-Native 新维度
-    关注: AI 的决策意图和推理过程
-    指标: 意图清晰度, 推理链完整性, 决策依据
-    工具: 意图追踪系统 (新兴)
-```
-
 ### 什么是意图追踪
 
 意图追踪（Intent Tracing）记录的是：
@@ -182,76 +153,6 @@ AI-Native 系统需要三层可观测性：
 4. **上下文状态** — 决策时的完整上下文
 
 ### 意图追踪数据模型
-
-```yaml
-# 意图追踪记录示例
-intent_trace:
-  trace_id: "trace-001"
-  timestamp: "2026-03-14T10:30:00Z"
-  
-  # 输入意图
-  input_intent:
-    source: "user"  # user | system | agent
-    raw_input: "帮我找一下上个月的销售报告"
-    parsed_intent:
-      action: "search"
-      target: "sales_report"
-      time_range: "last_month"
-      format: null  # 未指定，使用默认
-  
-  # 推理过程
-  reasoning_chain:
-    - step: 1
-      action: "identify_user"
-      tool: "user_service"
-      input: { user_id: "u123" }
-      output: { department: "sales", role: "manager" }
-      duration_ms: 45
-      
-    - step: 2
-      action: "determine_permissions"
-      logic: "用户是销售经理，可以访问销售报告"
-      decision: "allow_access"
-      
-    - step: 3
-      action: "query_data"
-      tool: "report_service"
-      query: "SELECT * FROM sales WHERE month = '2026-02'"
-      context:
-        model_version: "gpt-4-turbo"
-        prompt_version: "v2.3"
-        temperature: 0.2
-      output_size: 1534
-      duration_ms: 1234
-      
-    - step: 4
-      action: "format_response"
-      decision: "使用表格格式展示，因为用户是经理，需要概览"
-      
-  # 决策依据
-  decision_basis:
-    - decision: "使用表格格式"
-      reason: "用户角色是 manager，历史偏好显示喜欢概览视图"
-      confidence: 0.85
-      alternatives_considered:
-        - format: "chart"
-          rejected_reason: "数据维度多，chart 不易阅读"
-        - format: "raw_csv"
-          rejected_reason: "用户未要求原始数据"
-  
-  # 输出结果
-  output:
-    content: "..."
-    format: "table"
-    satisfaction_prediction: 0.9
-  
-  # 元数据
-  metadata:
-    model: "gpt-4-turbo"
-    prompt_version: "v2.3"
-    context_window_used: 2341
-    total_tokens: 4567
-```
 
 ### 意图追踪 vs 传统追踪
 
@@ -269,200 +170,17 @@ intent_trace:
 
 ### 第一步：在 AI 组件中埋点
 
-```javascript
-// 意图追踪 SDK 示例
-const { IntentTracer } = require('@observability/intent-tracer');
-
-class RecommendationService {
-  async getRecommendations(userId, context) {
-    // 开始意图追踪
-    const trace = IntentTracer.start({
-      service: 'recommendation-service',
-      operation: 'get_recommendations',
-      input: { userId, context }
-    });
-    
-    try {
-      // 步骤 1: 获取用户画像
-      const userProfile = await trace.step('fetch_user_profile', async () => {
-        return await userService.getProfile(userId);
-      });
-      
-      // 步骤 2: 构建 prompt
-      const prompt = await trace.step('build_prompt', async (step) => {
-        const prompt = promptBuilder.build({
-          user: userProfile,
-          context: context
-        });
-        
-        // 记录关键上下文
-        step.recordContext({
-          prompt_version: prompt.version,
-          template_used: prompt.template,
-          variables: prompt.variables
-        });
-        
-        return prompt;
-      });
-      
-      // 步骤 3: 模型推理
-      const result = await trace.step('model_inference', async (step) => {
-        const inference = await modelService.infer({
-          prompt: prompt.text,
-          model: 'gpt-4-turbo',
-          temperature: 0.7
-        });
-        
-        // 记录模型决策依据
-        step.recordDecisionBasis({
-          model_version: inference.model_version,
-          tokens_used: inference.tokens,
-          reasoning: inference.reasoning_log  // 如果模型支持
-        });
-        
-        return inference;
-      });
-      
-      // 步骤 4: 后处理
-      const recommendations = await trace.step('post_process', async () => {
-        return postProcessor.process(result, {
-          diversity_threshold: 0.3,
-          freshness_boost: true
-        });
-      });
-      
-      // 记录最终输出
-      trace.recordOutput({
-        recommendations_count: recommendations.length,
-        categories: recommendations.map(r => r.category),
-        confidence_scores: recommendations.map(r => r.confidence)
-      });
-      
-      return recommendations;
-      
-    } catch (error) {
-      trace.recordError(error);
-      throw error;
-    } finally {
-      trace.end();
-    }
-  }
-}
-```
-
 ### 第二步：建立意图追踪存储
-
-```yaml
-# 意图追踪数据存储架构
-
-存储分层:
-  热数据 (最近 24 小时):
-    存储: In-memory cache + SSD
-    用途: 实时监控、告警
-    保留: 1 天
-    
-  温数据 (最近 30 天):
-    存储: Elasticsearch / ClickHouse
-    用途: 查询分析、问题排查
-    保留: 30 天
-    
-  冷数据 (历史):
-    存储: Object Storage (S3)
-    用途: 长期分析、模型训练
-    保留: 1 年
-
-数据索引:
-  - trace_id (主键)
-  - timestamp (时间范围查询)
-  - user_id (用户维度分析)
-  - intent_type (意图类型)
-  - model_version (模型版本)
-  - decision_outcome (决策结果)
-```
 
 ### 第三步：构建意图分析仪表板
 
-```yaml
-# 意图追踪仪表板
-
-核心视图:
-  
-  实时意图流:
-    显示: 当前系统的意图处理实况
-    指标: QPS, 延迟, 成功率, 意图分布
-    
-  意图热力图:
-    显示: 不同意图类型的处理情况
-    维度: 时间、意图类型、用户群体
-    
-  决策归因分析:
-    显示: AI 为什么会做出某个决策
-    输入: 查询特定 trace_id
-    输出: 完整的推理链可视化
-    
-  意图漂移检测:
-    显示: 用户意图的变化趋势
-    告警: 异常意图激增或下降
-    
-  模型决策分析:
-    显示: 不同模型版本的决策差异
-    分析: A/B 测试效果、决策质量
-```
-
 ### 第四步：建立意图告警机制
-
-```yaml
-# 意图感知告警规则
-
-告警规则:
-  
-  意图失败率激增:
-    condition: |
-      rate(intent_failed[5m]) > 0.1
-    severity: critical
-    action: page_oncall
-    
-  推理链断裂:
-    condition: |
-      missing_reasoning_steps > 0
-    severity: warning
-    action: create_ticket
-    
-  意图漂移:
-    condition: |
-      kl_divergence(intent_distribution, baseline) > 0.5
-    severity: info
-    action: notify_product_team
-    
-  模型决策异常:
-    condition: |
-      avg(decision_confidence) < 0.6
-    severity: warning
-    action: review_model
-```
 
 ---
 
 ## 从监控到理解：可解释性的崛起
 
 ### 可观测性的演进
-
-```
-阶段 1: 监控 (Monitoring)
-问题: 系统是否正常运行？
-能力: 检测异常、触发告警
-局限: 只能回答"是否有问题"
-
-阶段 2: 可观测性 (Observability)
-问题: 系统内部发生了什么？
-能力: 查询分析、定位根因
-局限: 需要专家解读数据
-
-阶段 3: 可解释性 (Explainability)
-问题: 为什么系统会这样行为？
-能力: 自动解释、决策可视化
-优势: 人人可理解 AI 的决策
-```
 
 ### 可解释性的实践
 
@@ -471,16 +189,6 @@ class RecommendationService {
 传统可观测性："推荐 API 延迟升高到 2s"
 
 意图可观测性：
-```
-问题: 推荐质量下降
-根因: 步骤 3 (模型推理) 使用了错误的 prompt 版本
-详细: 
-  - 期望: prompt-v2.3 (包含用户偏好)
-  - 实际: prompt-v2.1 (缺少用户偏好)
-  - 影响: 推荐结果与用户兴趣匹配度从 85% 降至 42%
-建议: 回滚到 prompt-v2.3 或检查配置管理
-```
-
 ---
 
 ## 反直觉洞察：少即是多

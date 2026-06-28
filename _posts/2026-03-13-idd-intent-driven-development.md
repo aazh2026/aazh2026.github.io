@@ -37,26 +37,8 @@ redirect_from:
 ### 软件开发范式的演进
 
 **阶段1：瀑布模型（1960s-1990s）**
-```
-需求 → 设计 → 编码 → 测试 → 部署
-        ↑
-    开发者主要工作
-```
-
 **阶段2：TDD（2000s-2010s）**
-```
-测试 → 编码 → 重构
-  ↑
-先写测试，再写代码
-```
-
 **阶段3：IDD（2020s-）**
-```
-意图 → AI生成 → 审查 → 迭代
-  ↑
-精确表达意图，AI负责实现
-```
-
 ### 什么是IDD
 
 **Intent-Driven Development（意图驱动开发）**：
@@ -89,37 +71,7 @@ redirect_from:
 
 ### 传统开发者能力栈
 
-```
-传统开发者
-├── 编程语言能力
-│   ├── 语法掌握
-│   ├── 标准库使用
-│   └── 框架熟练度
-├── 算法与数据结构
-├── 系统设计能力
-├── 调试与排错
-└── 工具使用
-```
-
 ### AI时代能力迁移
-
-```
-AI时代开发者
-├── 意图表达能力 ⭐NEW
-│   ├── 精确描述需求
-│   ├── 上下文管理
-│   └── Prompt工程
-├── 审查判断能力 ⭐NEW
-│   ├── 代码质量评估
-│   ├── 意图匹配验证
-│   └── 风险识别
-├── 架构设计能力 ↑强化
-├── 业务理解能力 ↑强化
-└── AI协作能力 ⭐NEW
-    ├── 多轮对话
-    ├── 反馈优化
-    └── 工具链使用
-```
 
 ### 能力迁移矩阵
 
@@ -172,28 +124,6 @@ AI时代开发者
 | L5 | 能训练/调优AI模型 |
 
 ### 胜任力评估
-
-```python
-class IntentEngineerAssessor:
-    def assess(self, developer):
-        """
-        评估开发者的IDD胜任力
-        """
-        dimensions = {
-            'intent_expression': self.assess_intent_expression(developer),
-            'review_judgment': self.assess_review_judgment(developer),
-            'ai_collaboration': self.assess_ai_collaboration(developer),
-            'architecture_design': self.assess_architecture(developer),
-            'business_understanding': self.assess_business(developer)
-        }
-        
-        return {
-            'dimensions': dimensions,
-            'overall_level': self.calculate_overall(dimensions),
-            'gaps': self.identify_gaps(dimensions),
-            'recommendations': self.generate_recommendations(dimensions)
-        }
-```
 
 ---
 

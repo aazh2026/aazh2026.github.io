@@ -123,16 +123,6 @@ OpenAI 团队构建了一套系统来：
 - **LLM 约束**：让 Agent 自己检查架构合规性
 
 **约束示例**（概念性说明）：
-```yaml
-# 伪代码：展示架构约束的思想，非真实配置格式
-architecture_constraints:
-  - rule: "所有 API 调用必须通过 service layer"
-    enforcement: custom_linter
-    
-  - rule: "数据库访问必须封装在 repository 中"
-    enforcement: structural_test
-```
-
 ### Layer 3: 垃圾回收
 
 **核心问题**：如何对抗代码腐烂？
@@ -268,25 +258,6 @@ OpenAI 的实验表明：
 | 实时信息 | Playwright + Browser | 让 Agent 能浏览文档和 API 参考 |
 
 **Cursor Rules 示例**（立即可用）：
-```markdown
-# .cursorrules
-
-## 项目架构
-- 使用 Clean Architecture，分层：API → Service → Repository → Model
-- 所有数据库访问必须通过 Repository 层
-- API 层只做输入验证和路由，不含业务逻辑
-
-## 编码规范
-- 使用 TypeScript 严格模式
-- 所有公共函数必须有 JSDoc 注释
-- 单元测试覆盖率必须 > 80%
-
-## 上下文
-- 项目文档在 /docs 目录
-- API 文档运行 `npm run docs:serve` 查看
-- 数据库 Schema 在 /prisma/schema.prisma
-```
-
 ### Layer 2: 架构约束（可用方案）
 
 **工具组合**：
@@ -299,28 +270,6 @@ OpenAI 的实验表明：
 | 类型安全 | TypeScript 严格模式 | 编译时捕获类型错误 |
 
 **ESLint 架构约束示例**：
-```javascript
-// .eslintrc.js
-module.exports = {
-  rules: {
-    // 禁止 repository 层直接导入 api 层
-    'no-restricted-imports': ['error', {
-      patterns: [{
-        group: ['**/api/**'],
-        message: 'Repository layer cannot depend on API layer'
-      }]
-    }],
-    // 强制使用 Repository 模式
-    'no-restricted-modules': ['error', {
-      paths: [{
-        name: 'prisma',
-        message: 'Use repository layer instead of direct Prisma access'
-      }]
-    }]
-  }
-};
-```
-
 ### Layer 3: 垃圾回收（可用方案）
 
 **工具组合**：
@@ -333,26 +282,6 @@ module.exports = {
 | 代码质量 | SonarQube / Code Climate | 持续监控代码健康度 |
 
 **GitHub Action 示例**（文档同步检查）：
-```yaml
-# .github/workflows/docs-sync.yml
-name: Docs Sync Check
-on:
-  schedule:
-    - cron: '0 9 * * *'  # 每天上午 9 点
-  workflow_dispatch:
-
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Check for stale documentation
-        run: |
-          # 检查最近修改的文件对应的文档是否更新
-          # 可集成 AI Agent 自动分析并创建提醒 Issue
-          echo "Scanning for doc/code mismatches..."
-```
-
 ---
 
 ## 我的尝试与踩坑
@@ -392,20 +321,6 @@ jobs:
    - 保留人工介入的机制（如 `// harness-ignore` 注释）
 
 ### 一个实用的最小 Harness
-
-```
-my-project/
-├── .cursorrules          # 给 AI 的上下文和约束
-├── .eslintrc.js          # 确定性架构约束
-├── docs/
-│   ├── ARCHITECTURE.md   # 高层架构（供人读）
-│   └── AI-CONTEXT.md     # AI 专用上下文（精炼版）
-├── scripts/
-│   └── harness-check.js  # 自定义检查脚本
-└── .github/
-    └── workflows/
-        └── harness.yml   # CI 中运行 Harness 检查
-```
 
 ---
 

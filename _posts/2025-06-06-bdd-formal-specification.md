@@ -36,14 +36,6 @@ series: AI-Native软件工程系列 #4
 
 ### 经典Gherkin示例
 
-```gherkin
-Feature: 订单折扣计算
-  Scenario: VIP客户享受折扣
-    Given 一个VIP客户
-    When 他下单购买$100的商品
-    Then 他应该支付$90
-```
-
 **看起来清晰，但魔鬼在细节：**
 
 | 模糊点 | 可能解释A | 可能解释B | 可能解释C |
@@ -56,22 +48,6 @@ Feature: 订单折扣计算
 这些歧义在实际开发中需要反复确认，每次确认都是时间和认知成本。
 
 ### 为什么模糊性是问题
-
-```
-产品经理写的Gherkin
-        ↓
-开发者理解A版本
-        ↓
-测试人员理解B版本
-        ↓
-验收时发现不一致
-        ↓
-开会澄清（30分钟）
-        ↓
-修改实现（2小时）
-        ↓
-重新测试（1小时）
-```
 
 **每次模糊点平均消耗3-4小时。**
 
@@ -88,22 +64,8 @@ Feature: 订单折扣计算
 用数学符号精确描述系统行为，消除所有自然语言歧义。
 
 **非形式化：**
-```
-"订单金额大于$50免运费"
-```
-
 **半形式化（结构化）：**
-```yaml
-condition: order.total_amount > 50
-action: shipping_fee = 0
-```
-
 **完全形式化（数学表达式）：**
-```
-∀ order ∈ Orders:
-  order.total_amount > 50 → order.shipping_fee = 0
-```
-
 ### 常用形式化方法
 
 | 方法 | 适用场景 | 示例 |
@@ -115,56 +77,6 @@ action: shipping_fee = 0
 | **合约式** | 前置/后置条件 | `requires: x > 0; ensures: result > 0` |
 
 ### TLA+示例：简单规格
-
-```tla
-(* 订单状态机规格 *)
-MODULE Order
-
-EXTENDS Integers, Sequences, FiniteSets
-
-CONSTANTS Items, Customers
-
-VARIABLES orders, orderCounter
-
-(* 类型不变式 *)
-TypeInvariant ==
-  orders ⊆ [id: Nat, 
-            customer: Customers, 
-            items: SUBSET Items,
-            status: {"created", "paid", "shipped", "delivered", "cancelled"}]
-
-(* 初始状态 *)
-Init ==
-  orders = {}
-  orderCounter = 0
-
-(* 创建订单 *)
-CreateOrder(c, i) ==
-  orderCounter' = orderCounter + 1
-  orders' = orders ∪ {[id ↦ orderCounter',
-                        customer ↦ c,
-                        items ↦ i,
-                        status ↦ "created"]}
-
-(* 支付订单 *)
-PayOrder(o) ==
-  o ∈ orders
-  o.status = "created"
-  orders' = (orders \\ {o}) ∪ 
-            {[id ↦ o.id,
-              customer ↦ o.customer,
-              items ↦ o.items,
-              status ↦ "paid"]}
-  UNCHANGED orderCounter
-
-(* 状态转换 *)
-Next ==
-  ∃ c ∈ Customers, i ∈ SUBSET Items: CreateOrder(c, i)
-  ∨ ∃ o ∈ orders: PayOrder(o)
-
-(* 系统规格 *)
-Spec == Init ∧ □[Next]_⟨orders, orderCounter⟩
-```
 
 这个规格可以被TLC模型检查器验证，确保没有死锁、状态不一致等问题。
 
@@ -184,11 +96,6 @@ Scenario: 并发订单不超卖
   When 100个用户同时下单购买商品A
   Then 最多只有10个订单能成功
   And 所有成功的订单加起来不能超过10件
-```
-
-**AI转换过程：**
-
-```
 步骤1: 识别关键概念
 - 库存: inventory[product_id] = quantity
 - 订单: order[order_id] = {product, quantity, status}
@@ -199,87 +106,8 @@ Scenario: 并发订单不超卖
 - 原子性: 库存检查与扣减必须一起完成
 
 步骤3: 形式化规格(TLA+)
-```tla
-(* 库存不变式 *)
-InventoryInvariant ==
-  ∀ p ∈ Products:
-    LET sold = Sum({o.quantity : o ∈ orders ∧ o.product = p ∧ o.status = "success"})
-    IN sold ≤ inventory[p]
-
-(* 并发操作的原子性 *)
-PlaceOrder(c, p, q) ==
-  LET available = inventory[p] - Sum({o.quantity : o ∈ orders ∧ o.product = p ∧ o.status = "success"})
-  IN IF available >= q
-     THEN orders' = orders ∪ {[customer ↦ c, product ↦ p, quantity ↦ q, status ↦ "success"]}
-     ELSE orders' = orders ∪ {[customer ↦ c, product ↦ p, quantity ↦ q, status ↦ "failed"]}
-```
-
 步骤4: 生成实现代码
-```python
-@transaction.atomic
-def place_order(customer_id, product_id, quantity):
-    # SELECT FOR UPDATE 保证原子性
-    product = Product.objects.select_for_update().get(id=product_id)
-    
-    sold = Order.objects.filter(
-        product=product, 
-        status='success'
-    ).aggregate(Sum('quantity'))['quantity__sum'] or 0
-    
-    available = product.inventory - sold
-    
-    if available >= quantity:
-        order = Order.objects.create(
-            customer_id=customer_id,
-            product=product,
-            quantity=quantity,
-            status='success'
-        )
-        return order
-    else:
-        Order.objects.create(
-            customer_id=customer_id,
-            product=product,
-            quantity=quantity,
-            status='failed'
-        )
-        raise InsufficientInventory()
-```
-
 步骤5: 生成验证测试
-```python
-def test_concurrent_orders_no_oversell():
-    # 设置库存
-    product = Product.objects.create(inventory=10)
-    
-    # 并发执行100个订单请求
-    with ThreadPoolExecutor(max_workers=100) as executor:
-        futures = [
-            executor.submit(place_order, i, product.id, 1)
-            for i in range(100)
-        ]
-        results = [f.result() for f in futures]
-    
-    # 验证
-    successful = [r for r in results if r.status == 'success']
-    total_sold = sum(o.quantity for o in successful)
-    
-    assert len(successful) <= 10
-    assert total_sold <= 10
-```
-```
-
----
-
-## 闭环验证系统
-
-> 💡 **Key Insight**
-> 
-003e 规格与代码应该是双向约束的：规格生成代码，代码反验证规格。任何不一致都说明理解偏差。
-
-### 双向验证模型
-
-```
          自然语言需求
                ↓
     ┌─────────────────────┐
@@ -300,35 +128,6 @@ def test_concurrent_orders_no_oversell():
     └─────────────────────┘
                ↓
          偏差报告 → 反馈给规格
-```
-
-<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" type="image/svg+xml" width="100%"></object>
-
-### 运行时验证
-
-```python
-# 规格作为装饰器
-@invariant("balance >= 0")
-@requires("amount > 0")
-@ensures("balance == old(balance) - amount")
-def withdraw(account, amount):
-    account.balance -= amount
-    return account.balance
-
-# 运行时自动检查
-class Account:
-    def __init__(self):
-        self.balance = 100
-    
-    @precondition(lambda self, amount: amount > 0)
-    @postcondition(lambda result, self, amount: self.balance >= 0)
-    def withdraw(self, amount):
-        if amount > self.balance:
-            raise InsufficientFunds()
-        self.balance -= amount
-        return self.balance
-```
-
 ---
 
 ## 工具链实践
@@ -347,34 +146,6 @@ class Account:
 | 超高 | Coq/Isabelle | 数月 | 安全关键系统 |
 
 ### AI增强BDD工具链
-
-```
-┌─────────────────────────────────────────┐
-│  Feature文件 (Gherkin)                  │
-│  自然语言描述业务场景                    │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  SpecAI (LLM转换层)                     │
-│  - 歧义检测                             │
-│  - 结构化转换                           │
-│  - 形式化生成                           │
-└─────────────────────────────────────────┘
-                    ↓
-          ┌─────────┴─────────┐
-          ↓                   ↓
-┌─────────────────┐   ┌─────────────────┐
-│  形式化规格      │   │  可执行测试      │
-│  - TLA+/Alloy   │   │  - 单元测试      │
-│  - 模型检查     │   │  - 集成测试      │
-└─────────────────┘   └─────────────────┘
-          ↓                   ↓
-┌─────────────────┐   ┌─────────────────┐
-│  性质验证报告    │   │  测试报告        │
-│  - 死锁检测     │   │  - 覆盖率        │
-│  - 不变式检查   │   │  - 边界条件      │
-└─────────────────┘   └─────────────────┘
-```
 
 ### 渐进式采用策略
 

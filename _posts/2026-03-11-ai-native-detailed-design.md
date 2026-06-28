@@ -19,16 +19,6 @@ redirect_from:
 
 典型的详细设计文档长这样：
 
-```
-design.md (20 pages)
-├─ Class Diagram
-├─ Sequence Diagram
-├─ API Design
-├─ Database Schema
-├─ Error Handling
-└─ Algorithm Description
-```
-
 **核心问题：**
 
 1. **AI 读不懂** —— 松散的自然语言，缺乏结构化约束
@@ -42,10 +32,6 @@ design.md (20 pages)
 
 详细设计的本质在改变：
 
-```
-Detailed Design → Executable Design Context
-```
-
 新范式下，设计必须满足三个标准：
 
 | 标准 | 要求 |
@@ -58,32 +44,11 @@ Detailed Design → Executable Design Context
 
 AI-Native 详细设计不再是单一大文档，而是**多个结构化 artifacts 的组合**：
 
-```
-design/
-├─ intent.md           # 意图：为什么要做这个
-├─ domain-model.md     # 领域模型：业务对象定义
-├─ api-contract.yaml   # API 契约：接口规范
-├─ constraints.md      # 约束：性能、安全、一致性要求
-└─ evaluation.md       # 评估：验收标准和测试策略
-```
-
 ## 六种核心 Artifact
 
 ### 1. Intent（意图）
 
 让 AI 知道**为什么**要做这个功能。
-
-```markdown
-# intent.md
-
-Feature: One-click checkout
-
-Goal:
-Reduce checkout time for returning customers
-
-Success metric:
-Checkout completion rate +10%
-```
 
 没有 Intent，AI 会出现典型问题：过度实现、功能方向错误、设计与产品目标脱节。
 
@@ -91,43 +56,11 @@ Checkout completion rate +10%
 
 定义业务对象，划定 AI 的业务边界。
 
-```markdown
-# domain-model.md
-
-Entity: Order
-
-Fields:
-- id: UUID
-- customerId: UUID
-- status: enum(PENDING, PAID, CANCELLED)
-- totalAmount: decimal
-
-Rules:
-- order must have at least one item
-- totalAmount >= 0
-```
-
 没有 Domain Model，AI 会"发明"实体、字段和关系，导致代码与业务不符。
 
 ### 3. API Contract（API 契约）
 
 用 OpenAPI/JSON Schema 定义接口。
-
-```yaml
-# api.yaml
-
-POST /orders
-
-request:
-  customerId: string
-  items:
-    - productId: string
-      quantity: number
-
-response:
-  orderId: string
-  status: string
-```
 
 AI 可以自动生成：Controller、Client SDK、测试用例。
 
@@ -135,60 +68,17 @@ AI 可以自动生成：Controller、Client SDK、测试用例。
 
 用场景描述代替 Sequence Diagram。
 
-```markdown
-# behavior.md
-
-Scenario: checkout success
-
-Given:
-  user has cart items
-
-When:
-  user clicks checkout
-
-Then:
-  order created
-  payment initiated
-  inventory reserved
-```
-
 本质上是 **BDD + AI Context**，比图形更易解析。
 
 ### 5. Constraint Design（约束设计）
 
 明确 AI 必须遵守的边界。
 
-```markdown
-# constraints.md
-
-Latency:
-  checkout API < 300ms
-
-Consistency:
-  order creation must be atomic
-
-Security:
-  all endpoints require JWT auth
-```
-
 没有约束，AI 通常写出简单但不可用的代码——不考虑性能、安全和一致性。
 
 ### 6. Evaluation Spec（评估规格）
 
 定义如何验证实现是否符合预期。
-
-```markdown
-# evaluation.md
-
-Test cases:
-1. checkout success
-2. payment failure
-3. inventory shortage
-
-Metrics:
-- API latency
-- error rate
-```
 
 AI 据此生成单元测试和集成测试。
 
@@ -198,15 +88,7 @@ AI 据此生成单元测试和集成测试。
 
 传统流程：
 
-```
-Design → Code
-```
-
 AI-Native 流程：
-
-```
-Design → AI → Code
-```
 
 设计的质量直接决定：代码质量、生成效率、幻觉概率。
 
@@ -216,19 +98,7 @@ Design → AI → Code
 
 传统角色：
 
-```
-Architect → Developer
-```
-
 AI-Native 角色：
-
-```
-Architect
-    ↓
-Context Engineer
-    ↓
-AI Developer
-```
 
 设计师的新身份是 **Intent Architect**，负责：
 - 系统上下文定义
@@ -243,24 +113,9 @@ AI-Native 设计中，**图形减少**——因为 AI 更擅长处理文本、Sc
 
 未来的设计更多是：
 
-```
-markdown
-yaml
-json
-sql
-```
-
 ## 最小设计集合
 
 实践中，80% 的场景只需要 **4 个文件**：
-
-```
-spec/
-├─ intent.md       # 意图
-├─ domain.md       # 领域模型
-├─ api.yaml        # API 契约
-└─ constraints.md  # 约束
-```
 
 这四个文件足够驱动：代码生成、测试生成、PR Review。
 
@@ -270,19 +125,7 @@ spec/
 
 详细设计可能演化为 **Executable Specification**：
 
-```
-spec/
-├─ feature.yaml
-├─ domain.yaml
-├─ api.yaml
-└─ constraints.yaml
-```
-
 AI 可以直接：
-
-```
-spec → system
-```
 
 这也是很多 AI 工程师在探索的方向：**Spec Driven Engineering**。
 

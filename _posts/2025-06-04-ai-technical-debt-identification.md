@@ -47,31 +47,9 @@ redirect_from:
 
 ### 债务严重程度
 
-```python
-class TechnicalDebt:
-    def __init__(self, debt_type, location, severity):
-        self.type = debt_type
-        self.location = location
-        self.severity = severity  # 1-5
-        
-        # 计算债务成本
-        self.interest_rate = self.calculate_interest()  # 持有成本/月
-        self.principal = self.calculate_principal()     # 修复成本
-        self.impact_scope = self.calculate_impact()     # 影响范围
-```
-
 <object data="/assets/images/2025-06-04-ai-technical-debt-02-priority-matrix.svg" type="image/svg+xml" width="100%"></object>
 
 **债务成本计算**：
-
-```
-总债务成本 = 本金（修复成本）+ 利息（持有成本 × 时间）
-
-示例：
-- 本金：重构一个模块需要40小时 = $4,000
-- 月利息：每月增加10小时维护 = $1,000/月
-- 持有6个月后的成本：$4,000 + $6,000 = $10,000
-```
 
 ---
 
@@ -90,178 +68,19 @@ class TechnicalDebt:
 
 **AI识别模型**：
 
-```python
-class ArchitectureDebtDetector:
-    def detect(self, codebase):
-        debts = []
-        
-        # 1. 耦合度分析
-        coupling_graph = self.build_coupling_graph(codebase)
-        high_coupling = self.find_high_coupling(coupling_graph, threshold=0.7)
-        
-        for pair in high_coupling:
-            debts.append({
-                'type': 'high_coupling',
-                'location': f"{pair.module_a} <-> {pair.module_b}",
-                'severity': self.calculate_severity(pair.coupling_score),
-                'suggestion': '考虑引入接口层或事件驱动解耦'
-            })
-        
-        # 2. 循环依赖检测
-        cycles = self.find_circular_dependencies(codebase)
-        for cycle in cycles:
-            debts.append({
-                'type': 'circular_dependency',
-                'location': ' → '.join(cycle.modules),
-                'severity': len(cycle.modules),  # 涉及模块越多越严重
-                'suggestion': '重构依赖关系，考虑依赖注入'
-            })
-        
-        return debts
-```
-
 ### 代码债务识别
 
 **代码坏味道检测**：
 
-```python
-class CodeDebtDetector:
-    def detect(self, code_file):
-        debts = []
-        
-        # 使用AST分析
-        tree = ast.parse(code_file.content)
-        
-        # 检测长函数
-        for node in ast.walk(tree):
-            if isinstance(node, ast.FunctionDef):
-                lines = node.end_lineno - node.lineno
-                if lines > 50:
-                    debts.append({
-                        'type': 'long_function',
-                        'location': f"{code_file.name}:{node.lineno}",
-                        'severity': min(lines / 50, 5),
-                        'suggestion': f'函数长度{lines}行，建议拆分为小函数'
-                    })
-        
-        # 检测重复代码
-        duplicates = self.find_duplicate_code(code_file)
-        for dup in duplicates:
-            debts.append({
-                'type': 'duplicate_code',
-                'location': dup.locations,
-                'severity': dup.similarity * 5,
-                'suggestion': '提取公共函数或类'
-            })
-        
-        return debts
-```
-
 ### 测试债务识别
 
-```python
-class TestDebtDetector:
-    def detect(self, codebase):
-        debts = []
-        
-        for module in codebase.modules:
-            # 计算测试覆盖率
-            coverage = self.calculate_coverage(module)
-            
-            if coverage.line_coverage < 0.6:
-                debts.append({
-                    'type': 'low_coverage',
-                    'location': module.name,
-                    'severity': (1 - coverage.line_coverage) * 5,
-                    'suggestion': f'行覆盖率{coverage.line_coverage:.1%}，建议增加到80%+'
-                })
-            
-            # 检测无测试的关键路径
-            untested_critical = self.find_untested_critical_paths(module)
-            for path in untested_critical:
-                debts.append({
-                    'type': 'untested_critical_path',
-                    'location': path,
-                    'severity': 4,
-                    'suggestion': '关键业务路径缺少测试'
-                })
-        
-        return debts
-```
-
 ### 文档债务识别
-
-```python
-class DocumentationDebtDetector:
-    def detect(self, codebase):
-        debts = []
-        
-        for module in codebase.modules:
-            # 检查公共API文档
-            public_functions = self.get_public_functions(module)
-            
-            for func in public_functions:
-                if not func.has_docstring:
-                    debts.append({
-                        'type': 'missing_docstring',
-                        'location': f"{module.name}:{func.name}",
-                        'severity': 2,
-                        'suggestion': '为公共函数添加文档字符串'
-                    })
-                
-                # 检查文档是否过时
-                if func.has_docstring and self.is_doc_outdated(func):
-                    debts.append({
-                        'type': 'outdated_documentation',
-                        'location': f"{module.name}:{func.name}",
-                        'severity': 3,
-                        'suggestion': '文档与实现不一致，需要更新'
-                    })
-        
-        return debts
-```
 
 ---
 
 ## 债务优先级排序
 
 ### 排序算法
-
-```python
-class DebtPrioritizer:
-    def prioritize(self, debts, business_context):
-        """
-        基于多维度对债务进行优先级排序
-        """
-        scored_debts = []
-        
-        for debt in debts:
-            score = self.calculate_priority_score(debt, business_context)
-            scored_debts.append((debt, score))
-        
-        # 按分数排序
-        scored_debts.sort(key=lambda x: x[1], reverse=True)
-        
-        return scored_debts
-    
-    def calculate_priority_score(self, debt, context):
-        """
-        计算债务优先级分数
-        """
-        # 1. 业务影响（40%）
-        business_impact = self.assess_business_impact(debt, context) * 0.4
-        
-        # 2. 修复成本（20%）
-        fix_cost_score = (5 - debt.principal / 100) * 0.2  # 成本越低分数越高
-        
-        # 3. 持有成本（20%）
-        holding_cost_score = debt.interest_rate * 0.2
-        
-        # 4. 技术风险（20%）
-        tech_risk = self.assess_technical_risk(debt) * 0.2
-        
-        return business_impact + fix_cost_score + holding_cost_score + tech_risk
-```
 
 ### 优先级矩阵
 
@@ -281,59 +100,9 @@ class DebtPrioritizer:
 
 **策略1：代码生成时预防**
 
-```python
-class DebtPrevention:
-    def review_generation(self, generated_code):
-        """
-        在代码生成时检查潜在债务
-        """
-        warnings = []
-        
-        # 检查函数长度
-        if self.count_lines(generated_code) > 30:
-            warnings.append("生成的函数较长，建议拆分")
-        
-        # 检查复杂度
-        if self.calculate_complexity(generated_code) > 10:
-            warnings.append("圈复杂度过高，建议简化")
-        
-        # 检查重复
-        if self.find_similar_code(generated_code):
-            warnings.append("检测到相似代码，检查是否可复用")
-        
-        return warnings
-```
-
 **策略2：提交前检查**
 
-```yaml
-# .github/workflows/debt-check.yml
-name: Technical Debt Check
-
-on: [pull_request]
-
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Run AI Debt Scanner
-        run: |
-          ai-debt-scanner \
-            --severity-threshold=3 \
-            --fail-on-new-debt=true \
-            --report-format=pr-comment
-```
-
 **策略3：债务预算**
-
-```
-每个Sprint的债务预算：
-- 新债务：最多引入 5分（相当于5个minor债务）
-- 偿还债务：至少偿还 10分
-- 债务上限：项目总债务 < 100分
-```
 
 ---
 

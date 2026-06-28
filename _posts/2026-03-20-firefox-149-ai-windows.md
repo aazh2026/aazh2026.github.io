@@ -60,16 +60,6 @@ series: AI-Native Engineering
 **策略**：将 AI 作为浏览器核心功能，无处不在
 
 **实现方式**：
-```
-地址栏 → AI 搜索建议
-    ↓
-右键菜单 → AI 总结/翻译
-    ↓
-侧边栏 → AI 助手常驻
-    ↓
-开发者工具 → AI 代码建议
-```
-
 **优势**：
 - AI 功能触手可及
 - 用户体验流畅
@@ -85,14 +75,6 @@ series: AI-Native Engineering
 **策略**：与操作系统深度绑定，AI 是系统能力
 
 **实现方式**：
-```
-macOS Apple Intelligence
-    ↓
-Safari 调用系统 AI API
-    ↓
-与其他应用共享 AI 上下文
-```
-
 **优势**：
 - 性能优化（硬件加速）
 - 跨应用一致性
@@ -108,15 +90,6 @@ Safari 调用系统 AI API
 **策略**：AI 是可插拔模块，用户自主选择
 
 **实现方式**：
-```
-Firefox Core（无 AI）
-    ↓
-可选 AI 模块
-    ├── 本地 AI（隐私优先）
-    ├── Mozilla AI（云端）
-    └── 第三方 AI（自定义）
-```
-
 **优势**：
 - 用户选择自由
 - 隐私可控
@@ -163,18 +136,6 @@ Firefox Core（无 AI）
 ### 本地 AI vs 云端 AI
 
 **本地 AI 处理**：
-```javascript
-// 使用本地模型（如 Llama.cpp）
-async function localAI(prompt) {
-  const model = await loadLocalModel('llama-3-8b');
-  const response = await model.generate(prompt, {
-    maxTokens: 1024,
-    temperature: 0.7
-  });
-  return response;
-}
-```
-
 **优势**：
 - 数据不离开设备
 - 响应速度快（无网络延迟）
@@ -186,18 +147,6 @@ async function localAI(prompt) {
 - 模型更新困难
 
 **云端 AI 处理**：
-```javascript
-// 调用 Mozilla AI API
-async function cloudAI(prompt, context) {
-  const response = await fetch('https://ai.mozilla.org/api/v1/chat', {
-    method: 'POST',
-    headers: { 'Authorization': 'Bearer ' + token },
-    body: JSON.stringify({ prompt, context })
-  });
-  return response.json();
-}
-```
-
 **优势**：
 - 模型能力更强
 - 无需本地硬件
@@ -211,27 +160,7 @@ async function cloudAI(prompt, context) {
 ### 隐私保护机制
 
 **差分隐私**：
-```javascript
-// 在数据上传前添加噪声
-function addPrivacyNoise(data, epsilon = 1.0) {
-  return data.map(value => {
-    const noise = sampleLaplace(0, 1/epsilon);
-    return value + noise;
-  });
-}
-```
-
 **联邦学习**：
-```javascript
-// 本地训练，只上传模型更新
-async function federatedLearning() {
-  const localModel = await trainLocalModel(userData);
-  const modelUpdate = await computeGradient(localModel);
-  // 只发送模型更新，不发送原始数据
-  await sendToServer(modelUpdate);
-}
-```
-
 ---
 
 ## 对比分析：Chrome vs Edge vs Safari vs Firefox
@@ -281,46 +210,11 @@ async function federatedLearning() {
 - 用途：训练模型、行为预测
 
 **风险升级**：
-```
-传统追踪："用户访问了医疗网站"
-    ↓
-AI 追踪："用户正在研究某种疾病的症状，并询问 AI 治疗方案"
-```
-
 ### Mozilla 的隐私保护方案
 
 **1. 数据最小化**
-```javascript
-// 只收集必要数据
-const allowedData = {
-  pageTitle: true,      // ✅ 页面标题
-  pageContent: false,   // ❌ 不收集内容
-  userQuery: true,      // ✅ 用户问题（经同意）
-  browsingHistory: false // ❌ 不收集历史
-};
-```
-
 **2. 透明度**
-```javascript
-// 明确告知用户数据使用
-showPrivacyNotice({
-  what: 'Your question to AI',
-  why: 'To generate a helpful response',
-  where: 'Processed on-device or in Mozilla servers',
-  howLong: 'Deleted after 30 days'
-});
-```
-
 **3. 用户控制**
-```javascript
-// 用户可随时删除数据
-async function deleteUserData() {
-  await localStorage.clear();
-  await server.deleteUserData(userId);
-  await clearAIContext();
-}
-```
-
 ---
 
 ## 结论：浏览器的未来是 AI 操作系统
@@ -328,22 +222,8 @@ async function deleteUserData() {
 ### 浏览器的演进
 
 **过去：网页查看器**
-```
-HTTP 请求 → 渲染 HTML → 显示页面
-```
-
 **现在：应用平台**
-```
-Web Apps → 本地 API 访问 → 操作系统集成
-```
-
 **未来：AI 操作系统**
-```
-用户意图 → AI 理解 → 自动执行任务
-    ↓
-浏览器成为 AI 与现实世界的接口
-```
-
 ### 不同厂商的愿景
 
 | 厂商 | 愿景 | 风险 |

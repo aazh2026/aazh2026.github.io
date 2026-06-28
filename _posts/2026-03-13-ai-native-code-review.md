@@ -132,74 +132,7 @@ redirect_from:
 
 ### 陪审团架构
 
-```yaml
-Agent 陪审团构成:
-  
-  技术审查员 (Technical Reviewer):
-    职责: 代码规范、语法、最佳实践
-    检查项:
-      - 代码格式是否符合项目规范
-      - 是否存在明显的反模式
-      - 变量/函数命名是否清晰
-      - 注释是否完整
-    自动化程度: 95%
-  
-  安全审计员 (Security Auditor):
-    职责: 安全漏洞、注入风险、敏感数据处理
-    检查项:
-      - SQL 注入风险
-      - XSS/CSRF 漏洞
-      - 敏感数据泄露
-      - 依赖包已知漏洞
-    自动化程度: 85%
-  
-  性能分析师 (Performance Analyst):
-    职责: 性能影响、资源使用、复杂度
-    检查项:
-      - 时间复杂度分析
-      - 内存使用模式
-      - 数据库查询效率
-      - 并发安全性
-    自动化程度: 70%
-  
-  架构守卫 (Architecture Guardian):
-    职责: 架构一致性、依赖关系、模块边界
-    检查项:
-      - 是否符合架构规范
-      - 是否引入循环依赖
-      - 模块边界是否清晰
-      - 技术债务影响评估
-    自动化程度: 60%
-  
-  业务逻辑验证员 (Business Logic Validator):
-    职责: 业务规则、边界条件、异常处理
-    检查项:
-      - 业务规则实现是否正确
-      - 边界条件是否覆盖
-      - 异常处理是否完备
-      - 与需求文档的一致性
-    自动化程度: 40% (需要人类辅助)
-```
-
 ### 陪审团决策流程
-
-```
-PR 提交
-    ↓
-技术审查员 → 格式/规范检查 (自动)
-    ↓ (通过)
-安全审计员 → 漏洞扫描 (自动)
-    ↓ (通过)
-性能分析师 → 性能影响评估 (自动+半自动)
-    ↓ (通过)
-架构守卫 → 架构一致性检查 (半自动)
-    ↓ (通过)
-业务逻辑验证员 → 业务规则验证 (需要人类输入)
-    ↓
-人类审查者 → 设计判断、知识传播、最终批准
-    ↓
-合并
-```
 
 ### 关键优势
 
@@ -229,85 +162,13 @@ PR 提交
 
 不是所有项目都需要所有 Agent。根据项目特点选择：
 
-```yaml
-Web 应用项目:
-  必需: [技术审查员, 安全审计员, 业务逻辑验证员]
-  推荐: [性能分析师]
-  可选: [架构守卫]
-
-高性能系统:
-  必需: [技术审查员, 性能分析师, 架构守卫]
-  推荐: [安全审计员]
-  可选: [业务逻辑验证员]
-
-金融/医疗系统:
-  必需: [技术审查员, 安全审计员, 业务逻辑验证员, 合规检查员]
-  推荐: [性能分析师, 架构守卫]
-```
-
 ### 第二步：配置审查规则
 
 每个 Agent 的规则应该是可配置的：
 
-```javascript
-// security-auditor.config.js
-module.exports = {
-  rules: {
-    'no-sql-injection': {
-      severity: 'error',
-      patterns: [
-        /\.query\s*\(\s*[^,]*\+/,  // 字符串拼接 SQL
-        /exec\s*\(\s*[^)]*\$\{/,   // 模板字符串 SQL
-      ]
-    },
-    'no-hardcoded-secrets': {
-      severity: 'error',
-      patterns: [
-        /api[_-]?key\s*[:=]\s*['"][a-zA-Z0-9]{32,}['"]/i,
-        /password\s*[:=]\s*['"][^'"]{8,}['"]/i,
-      ]
-    },
-    'dependency-vulnerabilities': {
-      severity: 'warning',
-      check: 'npm-audit',
-      failThreshold: 'high'
-    }
-  },
-  
-  // 可学习的规则
-  learnFrom: {
-    pastPRs: './data/security-fixes.json',
-    falsePositives: './data/fp-reports.json'
-  }
-};
-```
-
 ### 第三步：设计人机协作界面
 
 Agent 的输出需要为人类审查者设计：
-
-```markdown
-## PR #1234 审查报告
-
-### 🟢 技术审查员 — 通过
-- 代码格式：符合项目规范
-- 命名规范：通过
-- 复杂度：中等 (可接受)
-
-### 🟢 安全审计员 — 通过
-- 未发现注入漏洞
-- 未发现敏感数据泄露
-- 依赖检查：1 个 low severity (可接受)
-
-### 🟡 性能分析师 — 需要关注
-**发现潜在性能问题：**
-
-```javascript
-// 当前实现
-const result = await Promise.all(
-  users.map(user => fetchUserDetails(user.id))
-);
-```
 
 **问题：** 如果 users 数组很大，会同时发起大量请求，可能导致：
 1. 服务端压力激增
@@ -316,27 +177,12 @@ const result = await Promise.all(
 
 **建议：** 使用批处理或限流
 
-```javascript
-// 建议修改
-const result = await batchProcess(
-  users.map(user => user.id),
-  fetchUserDetails,
-  { batchSize: 10, concurrency: 5 }
-);
-```
-
 **影响评估：** 中等 (仅在用户量 > 1000 时触发)
 
 ### 🔴 业务逻辑验证员 — 需要人工确认
 **需要确认的业务逻辑：**
 
 文件：`src/payment/process.js:45`
-```javascript
-if (amount > 10000) {
-  requireAdditionalVerification = false;  // ← 这里
-}
-```
-
 **问题：** 大额交易 (>> 10000) 跳过了额外验证，这与通常的安全实践相反。
 
 **请确认：**
@@ -358,29 +204,6 @@ if (amount > 10000) {
 - Agent 已处理 85% 的标准化检查
 - 需要您关注：1 个性能建议 + 1 个业务逻辑确认
 - 建议审查重点：架构设计是否合理
-```
-
-### 第四步：持续学习机制
-
-Agent 陪审团应该越用越聪明：
-
-```yaml
-学习循环:
-  反馈收集:
-    - 人类审查者标记 Agent 的误判
-    - 记录漏检的问题 (生产环境发现的 bug)
-    
-  规则更新:
-    - 每周分析反馈数据
-    - 更新 Agent 的检查规则
-    - 调整严重级别和阈值
-    
-  知识沉淀:
-    - 将常见问题和解决方案写入知识库
-    - 更新项目特定的检查规则
-    - 训练团队专用的 Agent 模型
-```
-
 ---
 
 ## 人类审查者的新角色
@@ -413,28 +236,6 @@ Agent 陪审团应该越用越聪明：
 - 建立团队的技术文化
 
 ### 具体实践
-
-```markdown
-## 人类审查者检查清单
-
-### 架构层面
-- [ ] 这个改动与系统整体架构是否一致？
-- [ ] 是否引入了不必要的技术债务？
-- [ ] 模块边界是否清晰？
-- [ ] 是否有更好的抽象方式？
-
-### 业务层面
-- [ ] 业务逻辑实现是否正确？
-- [ ] 边界条件是否考虑周全？
-- [ ] 异常处理是否完备？
-- [ ] 是否满足非功能性需求 (性能、安全、可扩展性)？
-
-### 团队层面
-- [ ] 这个改动是否有助于团队知识传播？
-- [ ] 是否有教育价值 (对审查者和作者)？
-- [ ] 是否符合团队的编码哲学？
-- [ ] 是否为未来的改动留出了空间？
-```
 
 ---
 
@@ -485,16 +286,6 @@ Agent 陪审团应该越用越聪明：
 - **Git Hooks**：Husky, pre-commit
 
 **实施**：
-```bash
-# 提交前自动检查
-pre-commit install
-
-# CI 中强制执行
-github-actions:
-  - run: npm run lint
-  - run: npm run test
-```
-
 ### 阶段 2：智能审查 (2-4 周)
 
 **目标**：引入 AI 驱动的审查 Agent
@@ -506,24 +297,6 @@ github-actions:
 - **自研 Agent** (基于 OpenAI/Claude API)
 
 **实施**：
-```yaml
-# .github/workflows/agent-review.yml
-name: Agent Review
-on: [pull_request]
-
-jobs:
-  agent-review:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Security Audit
-        uses: security-agent-action@v1
-      - name: Performance Analysis
-        uses: perf-agent-action@v1
-      - name: Architecture Check
-        uses: arch-agent-action@v1
-```
-
 ### 阶段 3：陪审团完整化 (1-2 个月)
 
 **目标**：多 Agent 协作 + 人机协作界面

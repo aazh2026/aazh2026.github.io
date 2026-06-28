@@ -71,11 +71,6 @@ OpenAI 的解决方案简单而深刻：
 
 Agent 不再被大量信息淹没 upfront。它从一个**小且稳定的入口点**开始，被教导"下一步去哪里看"，而不是一次性加载所有内容。
 
-```
-AGENTS.md (约100行)          → 作为目录/入口点
-docs/ (结构化知识库)          → 作为真相来源
-```
-
 就像人类阅读技术文档一样：先看目录，再深入感兴趣的章节。
 
 ### 核心转变
@@ -106,31 +101,6 @@ related:
   - docs/architecture/auth-domain.md
   - plans/active/oauth-migration.md
 ---
-```
-
-### 计划作为一等公民
-
-在 Harness 工程中，计划不是临时的待办事项，而是**版本化的产物**：
-
-```markdown
-# plans/active/api-v2-migration.md
-
-## 目标
-将 REST API 迁移到 GraphQL
-
-## 决策日志
-- 2026-03-10: 选择 GraphQL 而非 tRPC（原因：前端团队熟悉度）
-- 2026-03-12: 决定分阶段迁移（原因：零停机要求）
-
-## 当前状态
-Phase 1: 用户模块 ✅
-Phase 2: 订单模块 🔄 (50%)
-Phase 3: 支付模块 ⏳
-
-## 阻塞项
-- 等待 @bob 完成支付服务的测试覆盖
-```
-
 所有计划都入库，Agent 可以在不依赖外部上下文的情况下操作。
 
 ---
@@ -143,57 +113,9 @@ Phase 3: 支付模块 ⏳
 
 OpenAI 部署了一个专门的 Agent：
 
-```python
-# doc-gardener-agent.py (概念示意)
-
-def scan_knowledge_base():
-    for doc in docs.walk():
-        # 检查最后验证日期
-        if doc.last_verified < today() - timedelta(days=30):
-            # 检查文档是否与代码一致
-            if not verify_against_code(doc):
-                create_fix_pr(doc, "文档与代码不符")
-        
-        # 检查死链接
-        for link in doc.links:
-            if not link.exists():
-                create_fix_pr(doc, f"死链接: {link}")
-        
-        # 检查 orphaned 文档
-        if not doc.has_incoming_links():
-            flag_for_review(doc, "孤立文档")
-```
-
 这个 Agent 每周运行一次，主动发起文档修复 PR。
 
 ### CI 验证规则
-
-```yaml
-# .github/workflows/knowledge-check.yml
-name: Knowledge Base Validation
-
-on: [push, pull_request]
-
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check doc freshness
-        run: |
-          ./scripts/check-doc-freshness.sh --max-age 30
-      
-      - name: Verify cross-links
-        run: |
-          ./scripts/verify-cross-links.sh
-      
-      - name: Check orphaned docs
-        run: |
-          ./scripts/check-orphaned-docs.sh
-      
-      - name: Validate ADR format
-        run: |
-          ./scripts/validate-adr-format.sh
-```
 
 ---
 
@@ -207,28 +129,6 @@ jobs:
 - 这个系统的核心目标是什么？
 - 从哪里开始理解架构？
 - 如何找到特定领域的详细文档？
-
-```markdown
-# AGENTS.md 示例结构
-
-## 系统目标
-这是 X 服务，负责 Y 功能。
-
-## 架构入口
-- 整体架构: docs/architecture/overview.md
-- 领域划分: docs/architecture/domains.md
-- 包结构: docs/architecture/packages.md
-
-## 工作方式
-- 代码风格: docs/style-guide.md
-- 提交规范: docs/commit-conventions.md
-- 测试要求: docs/testing-guidelines.md
-
-## 快速参考
-- 常用命令: docs/cheatsheet.md
-- 故障排查: docs/troubleshooting.md
-- 关键决策: docs/decisions/
-```
 
 ### 第2-4周：建立机械验证机制
 

@@ -63,17 +63,7 @@ Kent Beck 1999年提出TDD时，测试是稀缺资源。
 
 传统TDD的循环是：
 
-```
-Red → Green → Refactor
-(写测试 → 写实现 → 重构)
-```
-
 AI时代的循环正在变成：
-
-```
-Intent → Generate → Validate
-(表达意图 → AI生成 → 验证契约)
-```
 
 **测试的新角色是"契约"**
 
@@ -102,33 +92,8 @@ Intent → Generate → Validate
 让我们对比三种表达方式：
 
 **传统测试（JUnit）**：
-```java
-@Test
-void shouldCalculateDiscountForVIP() {
-    Customer vip = new Customer("VIP", 1000);
-    Order order = new Order(vip, 500);
-    assertEquals(450, order.getFinalAmount());
-}
-```
-
 **BDD（Gherkin）**：
-```gherkin
-Scenario: VIP customer gets 10% discount
-  Given a VIP customer with 1000 points
-  When they place an order of $500
-  Then the final amount should be $450
-```
-
 **AI-DD（Prompt）**：
-```
-实现订单折扣计算：
-- VIP客户（积分≥1000）享受10%折扣
-- 普通客户无折扣
-- 输入：客户类型、积分、订单金额
-- 输出：最终应付金额（整数）
-- 需要处理边界：负金额、零积分、超大数值
-```
-
 **三种形式，同一本质。**
 
 但Prompt的优势在于：它是AI可以直接消费的"测试"。不需要额外的DSL，不需要转换层，意图即代码。
@@ -161,15 +126,6 @@ Scenario: VIP customer gets 10% discount
 - [ ] 批准或要求重新生成
 
 ### 测试金字塔的坍塌
-
-```
-        ▲
-       ▲▲▲      E2E Tests (意图验收)
-      ▲▲▲▲▲
-     ▲▲▲▲▲▲▲    Integration (契约验证)
-    ▲▲▲▲▲▲▲▲▲
-   ▲▲▲▲▲▲▲▲▲▲▲   Unit Tests (AI内部使用)
-```
 
 **人类只关心顶层两层：**
 - 我的意图是否被正确实现？（E2E）

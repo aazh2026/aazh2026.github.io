@@ -22,7 +22,6 @@ redirect_from:
 
 ---
 
-
 ## 📋 本文结构
 
 1. [TDD 的辉煌与疲惫](#tdd-的辉煌与疲惫)
@@ -161,50 +160,7 @@ TDD 的承诺：测试就是最好的文档
 
 ### AI-First 测试三层模型
 
-```yaml
-意图层 (Intent Layer):
-  描述: 人类用自然语言定义期望的行为
-  示例: "当用户未登录时，访问 /dashboard 应该重定向到 /login"
-  维护者: 人类 (产品/开发)
-  
-场景层 (Scenario Layer):
-  描述: AI 将意图扩展为具体的测试场景
-  示例: 
-    - 场景1: 完全未登录用户
-    - 场景2: 登录但 token 过期
-    - 场景3: 登录但权限不足
-  生成者: AI (基于意图和领域知识)
-  
-验证层 (Verification Layer):
-  描述: AI 生成具体的测试代码
-  示例: 具体的测试函数、mock、断言
-  生成者: AI (基于场景)
-  审查者: 人类 (关键场景)
-```
-
 ### 新模式：意图 → 场景 → 验证
-
-```
-人类: "用户下单后应该收到确认邮件"
-    ↓
-AI 场景生成:
-  - 正常下单流程
-  - 下单但支付失败
-  - 下单但库存不足
-  - 下单但邮件服务不可用
-  - 并发下单场景
-    ↓
-AI 测试生成:
-  - 为每个场景生成测试代码
-  - 建议需要的 mock
-  - 识别边界条件
-    ↓
-人类审查:
-  - "等等，并发场景很重要，但测试不够全面"
-  - AI 补充并发测试
-    ↓
-测试运行 + 代码生成
-```
 
 <object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
 
@@ -216,68 +172,7 @@ AI 测试生成:
 
 **经典 TDD 方式**：
 
-```javascript
-// 1. 红：写失败测试
-test('should create user with valid data', () => {
-  const user = createUser({ email: 'test@example.com', password: '123456' });
-  expect(user.email).toBe('test@example.com');
-  expect(user.id).toBeDefined();
-});
-
-// 2. 绿：写最少代码
-function createUser(data) {
-  return { id: 1, email: data.email };
-}
-
-// 3. 重构：优化实现
-// ... 实际的数据库操作
-```
-
 **AI-First 方式**：
-
-```markdown
-## 意图定义
-
-### 功能意图
-用户可以通过提供邮箱和密码注册账号。
-
-### 业务规则
-- 邮箱必须符合格式
-- 密码必须至少 6 位
-- 邮箱不能已被注册
-- 注册成功后发送验证邮件
-- 密码必须加密存储
-
-### 边界条件
-- 无效邮箱格式
-- 密码太短
-- 重复注册
-- 邮件服务不可用
-```
-
-```javascript
-// AI 生成的测试矩阵
-// 由意图自动扩展的场景
-
-describe('User Registration', () => {
-  // 主场景
-  test('creates user with valid email and password', () => {});
-  
-  // 边界条件 (AI 自动识别)
-  test('rejects invalid email format', () => {});
-  test('rejects password shorter than 6 characters', () => {});
-  test('rejects duplicate email registration', () => {});
-  test('handles email service failure gracefully', () => {});
-  
-  // 安全场景 (AI 从意图推导)
-  test('stores password in encrypted form', () => {});
-  test('prevents SQL injection in email field', () => {});
-  
-  // 性能场景
-  test('completes registration within 500ms', () => {});
-  test('handles concurrent registrations correctly', () => {});
-});
-```
 
 ### 关键差异
 
@@ -303,46 +198,9 @@ describe('User Registration', () => {
 
 ### AI-First 解决方案：单一真相源
 
-```yaml
-单一真相源: 意图定义文件 (user-registration.intent.yml)
-
-内容:
-  功能: 用户注册
-  触发条件: 用户提交注册表单
-  期望结果: 创建新用户账号
-  
-  业务规则:
-    - 邮箱格式验证
-    - 密码强度要求
-    - 唯一性检查
-    - 邮件通知
-  
-  边界条件:
-    - 无效输入
-    - 重复注册
-    - 服务不可用
-
-下游产物 (AI 自动生成):
-  - 测试代码
-  - API 文档
-  - 用户故事
-  - 验收标准
-```
-
 当意图变更时，AI 自动更新所有下游产物。
 
 ### 活的文档系统
-
-```
-意图定义 (人类维护)
-    ↓
-AI 同步引擎
-    ↓
-├── 测试代码 (自动更新)
-├── API 文档 (自动更新)
-├── 用户手册 (自动更新)
-└── 验收清单 (自动更新)
-```
 
 **价值**：需求、测试、文档永远同步。
 
@@ -393,17 +251,6 @@ AI-First：
 **目标**：开始用自然语言描述测试意图
 
 **实践**：
-```javascript
-// 之前
-test('createUser works', () => { ... });
-
-// 之后
-test('Intent: User can register with valid email and password', () => {
-  // AI 可以基于这个意图生成具体测试
-  ...
-});
-```
-
 ### 阶段 2：AI 辅助生成 (2-4 周)
 
 **目标**：用 AI 生成测试模板和边界条件
@@ -413,42 +260,16 @@ test('Intent: User can register with valid email and password', () => {
 - ChatGPT/Claude 扩展测试场景
 
 **实践**：
-```
-人类: "测试用户登录功能"
-AI: "我将生成以下测试场景：..."
-人类: "加上并发登录的场景"
-AI: "已添加"
-```
-
 ### 阶段 3：意图驱动开发 (1-2 个月)
 
 **目标**：意图成为主要工件，测试代码自动衍生
 
 **系统**：
-```yaml
-# 项目结构
-features/
-  user-registration/
-    intent.yml          # 人类维护
-    scenarios.auto.js   # AI 生成
-    tests.auto.js       # AI 生成
-    manual-tests.js     # 人类补充 (复杂场景)
-```
-
 ### 阶段 4：全自动化 (3-6 个月)
 
 **目标**：意图变更自动触发测试更新
 
 **CI/CD 集成**：
-```yaml
-# CI 流程
-1. 检测意图文件变更
-2. AI 重新生成测试代码
-3. 运行测试
-4. 人类审查变更
-5. 合并
-```
-
 ---
 
 ## 结语：测试的终极目的

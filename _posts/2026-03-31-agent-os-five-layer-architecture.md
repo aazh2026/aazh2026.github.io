@@ -90,57 +90,9 @@ redirect_from:
 
 管理所有可用的连接器和工具：
 
-```python
-class ConnectorRegistry:
-    def __init__(self):
-        self.connectors = {}
-    
-    def register(self, name: str, connector: Connector):
-        self.connectors[name] = connector
-    
-    def get(self, name: str) -> Connector:
-        return self.connectors.get(name)
-    
-    def list_available(self) -> List[str]:
-        return list(self.connectors.keys())
-```
-
 **2. Base Connector 接口**
 
-```python
-class BaseConnector(ABC):
-    @abstractmethod
-    def authenticate(self, credentials: dict) -> bool:
-        """认证连接"""
-        pass
-    
-    @abstractmethod
-    def execute(self, action: str, params: dict) -> Result:
-        """执行操作"""
-        pass
-    
-    @abstractmethod
-    def get_schema(self) -> Schema:
-        """获取数据结构"""
-        pass
-```
-
 **3. 具体 Connector 示例**
-
-```python
-class SalesforceConnector(BaseConnector):
-    def execute(self, action: str, params: dict) -> Result:
-        if action == "create_lead":
-            return self.create_lead(params)
-        elif action == "update_opportunity":
-            return self.update_opportunity(params)
-        # ...
-    
-    def create_lead(self, params: dict) -> Result:
-        # 调用 Salesforce API
-        response = self.client.Lead.create(params)
-        return Result(success=True, data=response)
-```
 
 ### 关键技术决策
 
@@ -177,144 +129,17 @@ class SalesforceConnector(BaseConnector):
 
 **1. Working Memory**
 
-```python
-class WorkingMemory:
-    """工作记忆：当前会话的上下文"""
-    
-    def __init__(self, session_id: str):
-        self.session_id = session_id
-        self.context_window = []  # 最近 N 轮对话
-        self.active_tasks = {}    # 当前执行的任务
-        self.variables = {}       # 临时变量
-    
-    def add_to_context(self, message: Message):
-        self.context_window.append(message)
-        # 保持窗口大小
-        if len(self.context_window) > MAX_CONTEXT_SIZE:
-            self.context_window.pop(0)
-    
-    def get_context(self) -> List[Message]:
-        return self.context_window
-```
-
 **2. Short-term Memory**
 
 使用 Vector DB 存储：
-
-```python
-class ShortTermMemory:
-    """短期记忆：可检索的近期信息"""
-    
-    def __init__(self, vector_store: VectorStore):
-        self.vector_store = vector_store
-    
-    def store(self, content: str, metadata: dict):
-        """存储记忆"""
-        embedding = self.embed(content)
-        self.vector_store.add(
-            id=generate_id(),
-            embedding=embedding,
-            content=content,
-            metadata=metadata,
-            timestamp=now()
-        )
-    
-    def retrieve(self, query: str, k: int = 5) -> List[Memory]:
-        """检索相关记忆"""
-        query_embedding = self.embed(query)
-        return self.vector_store.search(
-            query_embedding, 
-            k=k,
-            filter={"timestamp": {">": now() - timedelta(days=7)}}
-        )
-```
 
 **3. Long-term Memory**
 
 使用关系型数据库 + 缓存：
 
-```python
-class LongTermMemory:
-    """长期记忆：用户偏好和业务知识"""
-    
-    def __init__(self, db: Database, cache: Cache):
-        self.db = db
-        self.cache = cache
-    
-    def get_user_preference(self, user_id: str, key: str):
-        # 先查缓存
-        cached = self.cache.get(f"user:{user_id}:pref:{key}")
-        if cached:
-            return cached
-        
-        # 再查数据库
-        value = self.db.query(
-            "SELECT value FROM user_preferences WHERE user_id = ? AND key = ?",
-            user_id, key
-        )
-        
-        # 写入缓存
-        self.cache.set(f"user:{user_id}:pref:{key}", value)
-        return value
-    
-    def update_user_preference(self, user_id: str, key: str, value: any):
-        self.db.execute(
-            "INSERT OR REPLACE INTO user_preferences (user_id, key, value) VALUES (?, ?, ?)",
-            user_id, key, value
-        )
-        self.cache.set(f"user:{user_id}:pref:{key}", value)
-```
-
 **4. Knowledge Graph**
 
 使用图数据库：
-
-```python
-class KnowledgeGraph:
-    """知识图谱：实体和关系"""
-    
-    def __init__(self, graph_db: GraphDatabase):
-        self.graph = graph_db
-    
-    def add_entity(self, entity: Entity):
-        """添加实体"""
-        self.graph.run("""
-            MERGE (e:Entity {id: $id})
-            SET e.name = $name, e.type = $type
-        """, id=entity.id, name=entity.name, type=entity.type)
-    
-    def add_relation(self, from_id: str, relation: str, to_id: str):
-        """添加关系
-        
-        注意：Cypher 不支持参数化关系类型，需要使用字符串拼接或 APOC
-        """
-        # 方法 1：使用字符串拼接（注意防范注入）
-        query = f"""
-            MATCH (a:Entity {{id: $from_id}})
-            MATCH (b:Entity {{id: $to_id}})
-            MERGE (a)-[r:{relation}]->(b)
-        """
-        self.graph.run(query, from_id=from_id, to_id=to_id)
-        
-        # 方法 2：使用 APOC（如果可用）
-        # self.graph.run("""
-        #     MATCH (a:Entity {id: $from_id})
-        #     MATCH (b:Entity {id: $to_id})
-        #     CALL apoc.merge.relationship(a, $relation, {}, {}, b) YIELD rel
-        #     RETURN rel
-        # """, from_id=from_id, to_id=to_id, relation=relation)
-    
-    def query(self, start_entity: str, relation_type: str, depth: int = 2):
-        """查询关系
-        
-        注意：Cypher 不支持参数化可变长度关系，需要使用字符串拼接
-        """
-        query = f"""
-            MATCH path = (start:Entity {{id: $start}})-[:{relation_type}*1..{depth}]-(related)
-            RETURN related, path
-        """
-        return self.graph.run(query, start=start_entity)
-```
 
 > ⚠️ **重要提示**：上述代码中的字符串拼接存在 Cypher 注入风险。生产环境应该：
 > 1. 对 `relation` 参数进行白名单验证（只允许预定义的关系类型）
@@ -346,130 +171,11 @@ class KnowledgeGraph:
 
 **1. ReAct Loop（推理-行动循环）**
 
-```python
-class ReActRuntime:
-    """
-    ReAct: Reasoning and Acting
-    思考 → 行动 → 观察 → 重复
-    """
-    
-    def __init__(self, llm: LLM, tools: ToolRegistry, memory: MemorySystem):
-        self.llm = llm
-        self.tools = tools
-        self.memory = memory
-    
-    def run(self, task: str, max_iterations: int = 10) -> Result:
-        context = self.memory.get_context()
-        
-        for i in range(max_iterations):
-            # 1. 思考（Reasoning）
-            thought = self.think(task, context)
-            
-            # 2. 决定行动（Action Decision）
-            action = self.decide_action(thought)
-            
-            if action.type == "FINISH":
-                return Result(success=True, output=action.output)
-            
-            # 3. 执行行动（Acting）
-            observation = self.execute_action(action)
-            
-            # 4. 更新上下文
-            context.add_step(thought, action, observation)
-            
-            # 5. 检查是否需要人工介入
-            if self.needs_human_intervention(context):
-                return Result(
-                    success=False, 
-                    status="NEEDS_APPROVAL",
-                    context=context
-                )
-        
-        return Result(success=False, status="MAX_ITERATIONS_REACHED")
-    
-    def think(self, task: str, context: Context) -> Thought:
-        """让 LLM 思考下一步"""
-        prompt = self.build_thought_prompt(task, context)
-        return self.llm.generate(prompt)
-    
-    def decide_action(self, thought: Thought) -> Action:
-        """根据思考决定行动"""
-        # 解析 LLM 输出，确定是调用工具还是完成任务
-        pass
-    
-    def execute_action(self, action: Action) -> Observation:
-        """执行行动并观察结果"""
-        if action.tool:
-            tool = self.tools.get(action.tool)
-            return tool.execute(action.params)
-        return Observation(content="No tool called")
-```
-
 **2. Plan-and-Execute（计划-执行模式）**
 
 适合复杂多步骤任务：
 
-```python
-class PlanAndExecuteRuntime:
-    """
-    先制定计划，再逐步执行
-    """
-    
-    def run(self, task: str) -> Result:
-        # 1. 制定计划
-        plan = self.create_plan(task)
-        
-        # 2. 执行计划
-        for step in plan.steps:
-            result = self.execute_step(step)
-            
-            if not result.success:
-                # 重新规划
-                plan = self.replan(plan, step, result)
-        
-        return Result(success=True, output=self.compile_results())
-    
-    def create_plan(self, task: str) -> Plan:
-        """让 LLM 制定执行计划"""
-        prompt = f"""
-        Task: {task}
-        
-        Create a step-by-step plan to accomplish this task.
-        Available tools: {self.tools.list_available()}
-        
-        Plan:
-        """
-        plan_text = self.llm.generate(prompt)
-        return self.parse_plan(plan_text)
-```
-
 **3. Reflection（反思改进）**
-
-```python
-class ReflectionCapability:
-    """
-    让 Agent 能够反思自己的错误并改进
-    """
-    
-    def reflect(self, task: str, actions: List[Action], result: Result) -> Lessons:
-        """反思执行过程"""
-        prompt = f"""
-        Task: {task}
-        Actions taken: {actions}
-        Result: {result}
-        
-        Analyze what went well and what could be improved.
-        Provide specific lessons for future similar tasks.
-        """
-        reflection = self.llm.generate(prompt)
-        return self.parse_lessons(reflection)
-    
-    def apply_lessons(self, lessons: Lessons, future_tasks: List[str]):
-        """将经验教训应用到未来任务"""
-        for task in future_tasks:
-            if self.is_similar(task, lessons.original_task):
-                task.add_context(f"Previous lesson: {lessons.summary}")
-```
 
 ### 关键技术决策
 
@@ -569,79 +275,7 @@ class ReflectionCapability:
 
 实际系统中 often 需要混合使用多种模式：
 
-```
-Hierarchy（顶层）
-    └── CEO Agent
-        ├── VP1（Supervisor-Workers）
-        │       └── 管理 3 个 Worker Agent
-        ├── VP2（Peer-to-Peer）
-        │       └── 与 2 个平级 Agent 协作
-        └── VP3（Hierarchy）
-                └── 继续向下分层
-```
-
 ### 实现方案
-
-```python
-class OrchestrationEngine:
-    """
-    多 Agent 编排引擎
-    """
-    
-    def __init__(self):
-        self.agents = {}
-        self.message_bus = MessageBus()
-        self.task_queue = TaskQueue()
-    
-    def register_agent(self, agent_id: str, agent: Agent):
-        """注册 Agent"""
-        self.agents[agent_id] = agent
-        agent.set_message_bus(self.message_bus)
-    
-    def execute_workflow(self, workflow: Workflow) -> Result:
-        """执行工作流"""
-        execution_plan = self.create_execution_plan(workflow)
-        
-        for step in execution_plan:
-            if step.type == "SINGLE":
-                result = self.execute_single_agent_step(step)
-            elif step.type == "PARALLEL":
-                result = self.execute_parallel_step(step)
-            elif step.type == "CONDITIONAL":
-                result = self.execute_conditional_step(step)
-            
-            if not result.success:
-                return self.handle_failure(workflow, step, result)
-        
-        return Result(success=True)
-    
-    def execute_parallel_step(self, step: Step) -> Result:
-        """并行执行多个 Agent"""
-        futures = []
-        for agent_id in step.agents:
-            agent = self.agents[agent_id]
-            future = self.executor.submit(agent.run, step.subtask)
-            futures.append((agent_id, future))
-        
-        # 收集结果
-        results = {}
-        for agent_id, future in futures:
-            results[agent_id] = future.result(timeout=step.timeout)
-        
-        # 汇总结果
-        return self.aggregate_results(results)
-    
-    def handle_agent_communication(self, from_agent: str, to_agent: str, message: Message):
-        """处理 Agent 间通信"""
-        if to_agent == "BROADCAST":
-            # 广播给所有 Agent
-            for agent_id, agent in self.agents.items():
-                if agent_id != from_agent:
-                    agent.receive_message(message)
-        else:
-            # 单播
-            self.agents[to_agent].receive_message(message)
-```
 
 ---
 
@@ -662,17 +296,6 @@ class OrchestrationEngine:
 
 **2. 命令式界面（Command Interface）**
 
-```
-> /find leads high-value not-contacted 7d
-找到 12 个高价值客户，7 天内未联系
-
-> /draft follow-up email
-已生成 3 个版本的跟进邮件
-
-> /schedule meeting tomorrow 2pm
-已发送会议邀请
-```
-
 **3. 嵌入式界面（Embedded Widget）**
 
 在现有 SaaS 界面中添加 AI 助手按钮，点击后弹出对话窗口。
@@ -683,176 +306,23 @@ class OrchestrationEngine:
 
 Agent 的思考过程和输出应该实时展示给用户，而不是等全部完成：
 
-```python
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
-import asyncio
-
-app = FastAPI()
-
-@app.post("/chat")
-async def chat_stream(message: str):
-    async def event_generator():
-        # 发送 Agent 的思考过程
-        async for thought in agent.think_stream(message):
-            yield f"data: {json.dumps({'type': 'thought', 'content': thought})}\n\n"
-        
-        # 发送工具调用
-        yield f"data: {json.dumps({'type': 'action', 'tool': 'search_leads', 'status': 'started'})}\n\n"
-        result = await agent.execute_action()
-        yield f"data: {json.dumps({'type': 'action', 'tool': 'search_leads', 'status': 'completed', 'result': result})}\n\n"
-        
-        # 发送最终结果
-        yield f"data: {json.dumps({'type': 'final', 'content': result.summary})}\n\n"
-    
-    return StreamingResponse(
-        event_generator(),
-        media_type="text/event-stream"
-    )
-```
-
 **前端实现（SSE）：**
-
-```javascript
-const eventSource = new EventSource('/chat?message=...');
-
-eventSource.onmessage = (event) => {
-    const data = JSON.parse(event.data);
-    
-    switch(data.type) {
-        case 'thought':
-            showThinkingBubble(data.content);
-            break;
-        case 'action':
-            updateActionStatus(data.tool, data.status);
-            break;
-        case 'final':
-            displayFinalResult(data.content);
-            eventSource.close();
-            break;
-    }
-};
-```
 
 **2. 中途打断（Interruption）**
 
 用户应该能随时停止 Agent 的执行：
 
-```python
-class InterruptibleAgent:
-    def __init__(self):
-        self.cancel_token = asyncio.Event()
-    
-    async def run(self, task: str) -> Result:
-        for step in self.plan_steps(task):
-            # 检查是否被取消
-            if self.cancel_token.is_set():
-                return Result(
-                    status="CANCELLED",
-                    partial_results=self.collect_partial_results()
-                )
-            
-            await self.execute_step(step)
-    
-    def cancel(self):
-        """用户点击停止按钮时调用"""
-        self.cancel_token.set()
-```
-
 **API 设计：**
-
-```python
-@app.post("/chat/{session_id}/cancel")
-async def cancel_agent(session_id: str):
-    agent = get_agent(session_id)
-    agent.cancel()
-    return {"status": "cancelled"}
-```
 
 **3. 多模态输出**
 
 Agent 的输出不应该只有文本：
 
-```python
-class MultiModalResponse:
-    def __init__(self):
-        self.blocks = []
-    
-    def add_text(self, text: str):
-        self.blocks.append({"type": "text", "content": text})
-    
-    def add_table(self, headers: List[str], rows: List[List]):
-        self.blocks.append({
-            "type": "table",
-            "headers": headers,
-            "rows": rows
-        })
-    
-    def add_chart(self, chart_type: str, data: dict):
-        self.blocks.append({
-            "type": "chart",
-            "chart_type": chart_type,  # line, bar, pie
-            "data": data
-        })
-    
-    def add_code(self, code: str, language: str):
-        self.blocks.append({
-            "type": "code",
-            "language": language,
-            "content": code
-        })
-    
-    def add_actions(self, actions: List[Action]):
-        """添加可点击的操作按钮"""
-        self.blocks.append({
-            "type": "actions",
-            "actions": [
-                {"label": a.label, "action_id": a.id, "params": a.params}
-                for a in actions
-            ]
-        })
-```
-
 **前端渲染：**
-
-```jsx
-function MessageBlock({ block }) {
-    switch(block.type) {
-        case 'text':
-            return <Markdown content={block.content} />;
-        case 'table':
-            return <DataTable headers={block.headers} rows={block.rows} />;
-        case 'chart':
-            return <Chart type={block.chart_type} data={block.data} />;
-        case 'code':
-            return <CodeBlock code={block.content} language={block.language} />;
-        case 'actions':
-            return <ActionButtons actions={block.actions} onAction={handleAction} />;
-    }
-}
-```
 
 **4. 人工介入点（Human-in-the-loop）**
 
 关键决策点必须让用户确认：
-
-```python
-class AgentWithApproval:
-    async def execute_high_risk_action(self, action: Action) -> Result:
-        # 发送审批请求到界面
-        approval_request = await self.request_approval(
-            action=action,
-            context=self.get_current_context(),
-            timeout=300  # 5分钟超时
-        )
-        
-        if approval_request.status == "APPROVED":
-            return await self.execute(action)
-        elif approval_request.status == "REJECTED":
-            return Result(status="REJECTED", reason=approval_request.reason)
-        else:  # TIMEOUT
-            return Result(status="TIMEOUT", fallback_action=self.get_safe_fallback())
-```
 
 ### 关键设计原则
 

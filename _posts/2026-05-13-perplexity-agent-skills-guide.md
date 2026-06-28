@@ -17,7 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-
 ## 📋 本文结构
 
 1. [Zen of Python vs Zen of Skills](#zen-of-python-vs-zen-of-skills) — 至少一半的 Python 智慧在 Skills 写作里是错的
@@ -68,15 +67,6 @@ Perplexity 的定义：Skill 至少是四样东西。
 ### 1. Skill 是一个目录
 
 Skill 不仅仅是一个 SKILL.md 文件。在很多情况下，Skill 包含几个文件。在以 Skill 命名的目录下，你可能有：
-
-```
-skill-name/
-├── SKILL.md           # frontmatter 和 instructions
-├── scripts/           # agent 运行而非重写的代码
-├── references/        # 按条件加载的重文档
-├── assets/            # 模板、schemas、数据
-└── config.json        # 首步用户设置
-```
 
 这个 hub-and-spoke 模式让你保持 Skills 非常专注和紧凑。有时候，尤其是复杂的 Skills，从多层级 hierarchy 中受益。
 

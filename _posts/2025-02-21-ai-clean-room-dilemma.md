@@ -242,16 +242,6 @@ Simon Willison提出了一个更尖锐的问题：**AI Coding Agent能否通过C
 
 对于AI辅助开发的代码，建议的许可证声明方式：
 
-```
-Copyright 2026 [Your Name]
-
-This code was developed with assistance from AI tools (Claude/GPT/etc.).
-The AI was instructed to implement the following specification: [link to spec]
-No existing code was referenced during the implementation process.
-
-Licensed under [MIT/Apache-2.0/etc.]
-```
-
 这种声明：
 - 诚实地披露了AI的使用
 - 提供了规格说明的追溯链

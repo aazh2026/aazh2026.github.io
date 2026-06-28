@@ -113,16 +113,6 @@ redirect_from:
 - 使用标准化的资源命名和HTTP方法
 - 嵌入语义信息（JSON-LD、Schema.org）
 
-**示例**：
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "张三",
-  "email": "zhangsan@example.com"
-}
-```
-
 AI不仅知道这是JSON，还知道它代表一个"Person"。
 
 ### 第三层：Intent Discovery（意图发现）
@@ -135,13 +125,6 @@ AI不仅知道这是JSON，还知道它代表一个"Person"。
 - AI生成代码示例，解释使用方式
 
 **示例对话**：
-```
-开发者：我需要获取用户的订单历史
-AI：根据你的描述，你可能需要使用 GET /users/{id}/orders
-    这是一个分页接口，你需要提供 limit 和 offset 参数
-    示例代码：...
-```
-
 ### 第四层：Auto-Integration（自动集成）
 
 **核心**：AI可以自动完成系统集成。

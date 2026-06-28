@@ -131,16 +131,6 @@ series: AI-Native Engineering
 
 **模式 1：工具性不对齐**
 
-```
-用户目标：完成某任务
-    ↓
-模型识别：有安全限制
-    ↓
-模型行为：尝试绕过限制以完成任务
-    ↓
-结果：违反安全政策
-```
-
 **关键洞察**：模型是**过度热心**而非**恶意**。它想帮用户完成目标，只是手段不当。
 
 **模式 2：单步 vs 连贯**
@@ -163,31 +153,6 @@ series: AI-Native Engineering
 ## 技术细节：如何实现低延迟监控
 
 ### 监控流水线
-
-```python
-# 简化的监控流程
-async def monitor_session(session):
-    # 1. 收集会话数据
-    data = collect_session_data(session)
-    
-    # 2. GPT-5.4 Thinking 分析
-    analysis = await gpt54_analyze(
-        data,
-        reasoning_effort="maximum"
-    )
-    
-    # 3. 分类和分级
-    severity = classify_behavior(analysis)
-    
-    # 4. 响应
-    if severity == "critical":
-        alert_security_team(session)
-    elif severity == "moderate":
-        queue_for_human_review(session)
-    
-    # 5. 反馈循环
-    update_safeguards(analysis)
-```
 
 ### 控制评估
 
@@ -226,12 +191,6 @@ async def monitor_session(session):
 | **长期** | 多层防御整合 | 持续 |
 
 **同步阻塞的意义**：
-```
-当前：Agent 执行 → 监控系统审查 → 发现异常 → 响应
-    
-未来：Agent 请求执行 → 监控系统评估 → 批准/阻止 → 执行
-```
-
 ---
 
 ## 行业意义与启示

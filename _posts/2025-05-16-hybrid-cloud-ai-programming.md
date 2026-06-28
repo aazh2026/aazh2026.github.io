@@ -135,217 +135,22 @@ redirect_from:
 
 ### 自动分级算法
 
-```python
-class CodeSensitivityClassifier:
-    def classify(self, code_context):
-        """
-        基于多维度特征判断代码敏感度
-        """
-        features = {
-            'keyword_risk': self.check_sensitive_keywords(code_context),
-            'data_flow': self.analyze_data_flow(code_context),
-            'dependency': self.check_dependencies(code_context),
-            'scope': self.determine_code_scope(code_context),
-            'history': self.check_security_history(code_context.file_path)
-        }
-        
-        return self.calculate_sensitivity_level(features)
-    
-    def check_sensitive_keywords(self, context):
-        """检查敏感关键词"""
-        sensitive_patterns = [
-            r'password|secret|key|token|credential',
-            r'encrypt|decrypt|hash|sign',
-            r'payment|transaction|transfer',
-            r'auth|permission|role|admin',
-            r'ssn|credit_card|pii|personal'
-        ]
-        # 返回风险评分
-        
-    def analyze_data_flow(self, context):
-        """分析数据流是否涉及敏感数据"""
-        # 检查是否处理用户输入、数据库查询等
-        pass
-    
-    def check_dependencies(self, context):
-        """检查依赖的敏感度"""
-        # 检查import的库是否敏感
-        pass
-```
-
 ### 分级规则示例
-
-```yaml
-# sensitivity_rules.yaml
-
-L1_Public:
-  patterns:
-    - "utility|helper|common"
-    - "test_|_test.py"
-  max_lines: 50
-  no_external_calls: true
-
-L2_Internal:
-  patterns:
-    - "config|settings|setup"
-    - "middleware|decorator"
-  allowed_domains:
-    - "logging"
-    - "monitoring"
-    - "internal_api"
-
-L3_Sensitive:
-  patterns:
-    - "business|domain|service"
-    - "repository|dao|model"
-  requires:
-    - data_sanitization
-    - access_control_check
-  forbidden:
-    - "hardcoded_secrets"
-    - "raw_sql"
-
-L4_Critical:
-  patterns:
-    - "crypto|cipher|vault"
-    - "payment_gateway|core_engine"
-    - "risk|fraud|compliance"
-  default_action: "local_only"
-  requires_approval: true
-```
 
 ### 动态分级调整
 
 **基于反馈的学习**：
-```python
-class AdaptiveClassification:
-    def update_from_feedback(self, code_snippet, predicted_level, actual_issues):
-        """
-        根据安全审计结果调整分类模型
-        """
-        if actual_issues and predicted_level < L3:
-            # 预测过于宽松，提升该模式的敏感度
-            self.increase_sensitivity(code_snippet.pattern)
-        
-        if not actual_issues and predicted_level >= L3:
-            # 预测过于严格，可适当降低
-            self.decrease_sensitivity(code_snippet.pattern)
-```
-
 ---
 
 ## 智能路由机制
 
 ### 路由决策流程
 
-```
-开发者请求代码生成
-        ↓
-[代码敏感度分类器]
-        ↓
-    L1/L2 → 云端生成
-    L3    → 混合模式（本地生成，云端提供Context）
-    L4    → 纯本地生成
-        ↓
-[生成结果]
-        ↓
-[安全扫描]（自动）
-        ↓
-[返回给开发者]
-```
-
 ### 云端生成流程（L1/L2）
-
-```python
-class CloudGeneration:
-    def generate(self, prompt, context):
-        # 1. 数据脱敏
-        sanitized_context = self.sanitize_for_cloud(context)
-        
-        # 2. 发送到云端AI
-        response = cloud_ai_service.generate(
-            prompt=prompt,
-            context=sanitized_context,
-            model="cloud-llm-v2"
-        )
-        
-        # 3. 结果本地校验
-        validated_code = self.local_validation(response.code)
-        
-        # 4. 记录审计日志
-        self.audit_log.record({
-            'location': 'cloud',
-            'prompt_hash': hash(prompt),
-            'model_version': response.model_version,
-            'timestamp': now(),
-            'sensitivity_level': 'L1/L2'
-        })
-        
-        return validated_code
-```
 
 ### 混合模式流程（L3）
 
-```python
-class HybridGeneration:
-    def generate(self, prompt, context):
-        # 1. 分离敏感和非敏感Context
-        sensitive_parts, public_parts = self.split_context(context)
-        
-        # 2. 本地保留敏感部分
-        local_context = sensitive_parts
-        
-        # 3. 云端获取公开知识
-        cloud_knowledge = cloud_ai_service.retrieve_knowledge(
-            query=prompt,
-            public_context=public_parts
-        )
-        
-        # 4. 本地AI整合生成
-        local_prompt = f"""
-        任务：{prompt}
-        公开参考：{cloud_knowledge}
-        本地约束：{local_context}
-        要求：生成代码，遵守本地约束
-        """
-        
-        code = local_ai_service.generate(local_prompt)
-        
-        # 5. 严格安全扫描
-        secure_code = self.strict_security_scan(code)
-        
-        return secure_code
-```
-
 ### 纯本地模式（L4）
-
-```python
-class LocalGeneration:
-    def generate(self, prompt, context):
-        # 1. 检查是否允许AI辅助
-        if not self.is_ai_assist_allowed(context.file_path):
-            return {
-                'code': None,
-                'message': '核心代码区域，AI生成已禁用',
-                'suggestion': '请参考模板手动实现'
-            }
-        
-        # 2. 使用本地部署的小模型
-        # 模型不离开本地服务器
-        code = local_llm.generate(
-            prompt=prompt,
-            context=context,
-            # 使用量化模型，降低性能但保证隐私
-            model="local-llm-7b-quantized"
-        )
-        
-        # 3. 强制人工审查标记
-        return {
-            'code': code,
-            'requires_human_review': True,
-            'review_checklist': self.get_security_checklist()
-        }
-```
 
 ---
 
@@ -362,71 +167,8 @@ class LocalGeneration:
 ### 部署架构
 
 **本地组件**：
-```yaml
-# docker-compose.local.yml
-version: '3.8'
-services:
-  local-llm:
-    image: company/local-llm:7b-quantized
-    volumes:
-      - ./models:/models
-      - ./safety-rules:/rules
-    environment:
-      - MODEL_PATH=/models/llm-7b-q4.gguf
-      - SAFETY_RULES=/rules/sensitive-patterns.json
-    
-  code-classifier:
-    image: company/code-sensitivity-classifier:latest
-    volumes:
-      - ./classification-rules:/rules
-    
-  security-scanner:
-    image: company/ai-code-security-scanner:latest
-    volumes:
-      - ./security-policies:/policies
-```
-
 **云端组件**：
-```yaml
-# 企业私有云或混合云部署
-cloud_services:
-  ai_gateway:
-    # 统一API网关
-    rate_limiting: true
-    authentication: enterprise_sso
-    logging: comprehensive
-    
-  model_services:
-    - name: code-generation
-      model: gpt-4-code
-      data_residency: us-west
-      encryption: at_rest_and_in_transit
-      
-    - name: code-review
-      model: claude-3-sonnet
-      data_residency: us-west
-      retention: 0_days  # 不保留数据
-```
-
 ### 网络架构
-
-```
-企业内网                    隔离区(DMZ)              云端
-┌──────────────┐          ┌──────────────┐        ┌──────────────┐
-│ 开发者工作站  │◄────────►│  API网关     │◄──────►│  云端AI服务  │
-│ 本地AI服务   │          │  安全扫描    │        │              │
-└──────────────┘          └──────────────┘        └──────────────┘
-       │                          │
-       │                    ┌─────┴─────┐
-       │                    │  数据脱敏  │
-       │                    │  审计日志  │
-       │                    └───────────┘
-       │
-┌──────┴──────┐
-│ 敏感代码库   │  ← 物理隔离，不出内网
-│ 核心系统    │
-└─────────────┘
-```
 
 ---
 
@@ -435,97 +177,11 @@ cloud_services:
 ### 无感知切换
 
 **开发者视角**：
-```
-开发者输入：
-"帮我写一个处理用户订单的函数"
-
-系统自动：
-1. 分析当前文件路径 → 识别为敏感业务代码
-2. 自动切换到混合模式
-3. 本地LLM生成核心逻辑
-4. 云端提供最佳实践参考
-5. 合并生成最终结果
-
-开发者看到：
-✅ 代码生成完成（混合云模式）
-⚠️  已自动脱敏敏感信息
-📋 建议进行安全审查后提交
-```
-
 ### IDE集成
 
 **Visual Studio Code插件示例**：
 
-```json
-{
-  "name": "Hybrid AI Assistant",
-  "features": {
-    "auto_detect_sensitivity": true,
-    "show_generation_mode": true,
-    "one_click_mode_switch": true,
-    "security_warnings": true
-  },
-  "modes": {
-    "cloud": {
-      "icon": "☁️",
-      "color": "blue",
-      "description": "云端生成 - 高效率"
-    },
-    "hybrid": {
-      "icon": "🔀",
-      "color": "yellow",
-      "description": "混合模式 - 平衡安全"
-    },
-    "local": {
-      "icon": "🔒",
-      "color": "green",
-      "description": "本地生成 - 高安全"
-    }
-  }
-}
-```
-
 ### 配置界面
-
-```yaml
-# .hybrid-ai-config.yml
-# 项目级混合云AI配置
-
-# 默认生成模式
-default_mode: auto  # auto/cloud/hybrid/local
-
-# 路径特定规则
-path_rules:
-  "src/core/**":
-    mode: local
-    require_approval: true
-    
-  "src/business/**":
-    mode: hybrid
-    
-  "src/utils/**":
-    mode: cloud
-    
-  "tests/**":
-    mode: cloud
-    sensitivity_override: L1
-
-# 关键词触发规则
-keyword_rules:
-  - pattern: "crypto|encrypt|password"
-    mode: local
-    alert_security_team: true
-    
-  - pattern: "TODO|FIXME|HACK"
-    mode: hybrid
-    add_warning: "包含临时代码标记，建议重构"
-
-# 开发者个人设置（可覆盖项目设置）
-user_preferences:
-  preferred_mode: hybrid
-  show_mode_indicator: true
-  auto_submit_for_review: true
-```
 
 ---
 

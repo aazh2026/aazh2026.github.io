@@ -36,12 +36,6 @@ redirect_from:
 ### TDD的核心价值
 
 **红-绿-重构循环**：
-```
-1. 写失败测试（红）
-2. 写最少代码通过（绿）
-3. 重构（保持通过）
-```
-
 > 💡 **Key Insight**
 > 
 > TDD的核心价值：设计驱动 + 快速反馈 + 重构安全网
@@ -74,25 +68,7 @@ redirect_from:
 ### 悖论：高覆盖率 + 高Bug率
 
 **原因1：测试"自圆其说"**
-```python
-# AI生成代码
-result = a + b
-
-# AI生成测试（基于自己的实现）
-assert result == a + b  # tautology，永远通过
-```
-
 **原因2：覆盖代码路径，不覆盖业务场景**
-```python
-# 业务意图：VIP满1000打8折
-# AI理解：if is_vip and amount > 1000: discount = 0.2
-
-# 遗漏的业务规则：
-# - 特价商品不参与
-# - 优惠券可叠加
-# - 每月上限500元
-```
-
 **原因3：边界条件不完整**
 - AI测试了：1001、1000、999
 - AI漏掉了：负数、零值、极大值、None
@@ -123,18 +99,6 @@ assert result == a + b  # tautology，永远通过
 **1. 业务意图（Business Intent）**
 
 不是"计算折扣"，而是：
-```
-意图：为VIP用户提供购买激励
-规则：
-  - 用户等级 = VIP
-  - 订单金额 >= 1000元
-  - 非特价商品
-  - 每月上限500元
-约束：
-  - 折扣不能为负
-  - 计算性能 < 10ms
-```
-
 **2. 意图验证（Intent Verification）**
 
 验证：
@@ -144,81 +108,17 @@ assert result == a + b  # tautology，永远通过
 
 ### IDD开发流程
 
-```
-Step 1: 定义业务意图
-    ↓
-Step 2: AI生成候选实现
-    ↓
-Step 3: 意图验证
-    ↓
-Step 4: 人类审查
-    ↓
-Step 5: 意图保持监控
-```
-
 ---
 
 ## 四、IDD的技术实现
 
 ### 技术1：结构化意图文档（SID）
 
-```yaml
-intent_id: DISCOUNT-001
-name: VIP折扣计算
-
-business_rules:
-  - rule_id: RULE-001
-    condition: user.tier == 'VIP'
-  - rule_id: RULE-002
-    condition: order.amount >= 1000
-
-constraints:
-  - type: safety
-    description: 折扣金额不能为负数
-  - type: performance
-    threshold: 10ms
-```
-
 ### 技术2：意图到代码的生成
 
 **AI Prompt**：
-```
-基于意图文档，生成Python实现：
-- 实现所有业务规则
-- 处理所有边界条件
-- 满足性能约束
-- 引用对应的规则ID
-```
-
 **AI输出**：
-```python
-def calculate_discount(order, user):
-    # RULE-001: 验证用户等级
-    if user.get('tier') != 'VIP':
-        return 0
-    
-    # CONS-001: 安全性检查
-    if amount < 0:
-        raise ValueError("Amount cannot be negative")
-    
-    # ... 实现其他规则
-```
-
 ### 技术3：意图验证引擎
-
-```python
-class IntentVerifier:
-    def verify_implementation(self, code):
-        # 1. 静态分析：检查规则实现
-        # 2. 动态测试：验证约束
-        # 3. 示例验证
-        # 4. 计算总体得分
-        return {
-            'rules_implemented': [...],
-            'rules_missing': [...],
-            'overall_score': 95
-        }
-```
 
 ### 技术4：意图保持监控
 
@@ -231,22 +131,7 @@ class IntentVerifier:
 ### 场景：订单折扣系统
 
 **TDD方式**（4小时）：
-```
-Step 1: 写20个测试用例（2小时）
-Step 2: 写代码让测试通过（1小时）
-Step 3: 重构（30分钟）
-Step 4: 调试（30分钟）
-```
-
 **IDD方式**（1小时）：
-```
-Step 1: 定义意图文档（30分钟）
-Step 2: AI生成实现（30秒）
-Step 3: 意图验证（5分钟）
-Step 4: 人类审查（15分钟）
-Step 5: 意图监控（自动）
-```
-
 ### 📊 对比数据
 
 | 指标 | TDD | IDD | 提升 |
@@ -282,18 +167,6 @@ Step 5: 意图监控（自动）
 | 80%时间写代码 | 80%时间设计意图 |
 
 ### 软件工程演进脉络
-
-```
-1960s 结构化编程
-  ↓
-1980s 面向对象
-  ↓
-2000s 敏捷/TDD
-  ↓
-2010s DevOps
-  ↓
-2020s AI-Native/IDD  ← 我们在这里
-```
 
 > 💡 **Key Insight**
 > 

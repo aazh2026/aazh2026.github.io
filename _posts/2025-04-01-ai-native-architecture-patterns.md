@@ -95,24 +95,11 @@ redirect_from:
 **传统方案**：复杂的if-else或规则引擎
 
 **AI-Native方案**：
-```
-User Input → Intent Router → Specialized Agent
-                    ↓
-            (使用LLM理解意图)
-```
-
 **关键**：Router本身也是AI，它能理解用户意图的细微差别，将请求路由到最合适的处理单元。
 
 ### 模式二：Context Cache（上下文缓存）
 
 **问题**：AI处理需要大量Context，但频繁构建Context成本高。
-
-**解决方案**：
-```
-User Session → Context Cache ← Background Refresh
-                    ↓
-              AI Processing
-```
 
 **关键**：预加载和缓存用户相关的Context，减少每次请求的Context构建时间。
 
@@ -120,29 +107,11 @@ User Session → Context Cache ← Background Refresh
 
 **问题**：不同的AI任务需要不同的模型（快但弱 vs 慢但强）。
 
-**解决方案**：
-```
-Request → Model Gateway → GPT-4 (复杂任务)
-                    ↓
-                Claude-3 (中等任务)
-                    ↓
-                Local LLM (简单任务)
-```
-
 **关键**：根据任务复杂度、成本预算、延迟要求，自动选择最合适的模型。
 
 ### 模式四：Feedback Loop（反馈循环）
 
 **问题**：AI的输出质量需要持续优化。
-
-**解决方案**：
-```
-AI Output → User Feedback → Quality Metrics
-                                ↓
-                        Model Fine-tuning
-                                ↓
-                        Improved AI Output
-```
 
 **关键**：建立从用户反馈到模型改进的闭环，让系统越用越好。
 
@@ -150,29 +119,11 @@ AI Output → User Feedback → Quality Metrics
 
 **问题**：如何安全地测试新的AI策略？
 
-**解决方案**：
-```
-Traffic → Router → Agent A (90%流量，现有策略)
-            ↓
-          Agent B (10%流量，新策略)
-            ↓
-          Compare & Decide
-```
-
 **关键**：像A/B测试UI一样，A/B测试AI Agent的行为。
 
 ### 模式六：Human-in-the-Loop（人在回路）
 
 **问题**：AI可能出错，关键决策需要人类确认。
-
-**解决方案**：
-```
-AI Proposal → Confidence Score → [High] Auto-execute
-                    ↓
-              [Medium] Human Review
-                    ↓
-              [Low] Human Decision
-```
 
 **关键**：根据AI的置信度和任务的关键性，动态决定是否需要人类介入。
 

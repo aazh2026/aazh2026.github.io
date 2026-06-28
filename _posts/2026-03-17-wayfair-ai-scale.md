@@ -75,25 +75,6 @@ Wayfair 的 AI 项目经历了典型的三阶段演进。
 - 单一语言：英语
 
 **技术方案**：
-```python
-# 简单的直接调用
-import openai
-
-def optimize_title(original_title):
-    prompt = f"""
-    Optimize this product title for e-commerce:
-    Original: {original_title}
-    Include: style, material, color, dimensions
-    """
-    
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    
-    return response.choices[0].message.content
-```
-
 **结果**：
 - 质量提升显著：80% 的优化结果可用
 - 人工审核工作量：仍需 100% 审核
@@ -116,30 +97,6 @@ def optimize_title(original_title):
 - 引入质量控制系统
 
 **技术演进**：
-```python
-# 批量处理 + 质量检查
-class ProductAttributeEnhancer:
-    def __init__(self):
-        self.quality_checker = QualityChecker()
-        self.batch_processor = BatchProcessor()
-    
-    def enhance_products(self, products):
-        # 批量处理
-        enhanced = self.batch_processor.process(
-            products,
-            batch_size=100,
-            max_concurrency=10
-        )
-        
-        # 质量检查
-        for product in enhanced:
-            score = self.quality_checker.evaluate(product)
-            if score < 0.8:
-                product.flag_for_human_review()
-        
-        return enhanced
-```
-
 **关键改进**：
 - 批量化：成本降低 60%
 - 并行化：速度提升 10x
@@ -170,30 +127,6 @@ class ProductAttributeEnhancer:
 
 **优先级队列设计**：
 
-```python
-class PriorityQueue:
-    def __init__(self):
-        self.queues = {
-            'critical': [],    # 新品上线
-            'high': [],        # 热销品更新
-            'normal': [],      # 常规更新
-            'low': [],         # 批量优化
-        }
-    
-    def enqueue(self, product):
-        priority = self.calculate_priority(product)
-        self.queues[priority].append(product)
-    
-    def calculate_priority(self, product):
-        if product.is_new_arrival:
-            return 'critical'
-        if product.sales_rank < 1000:
-            return 'high'
-        if product.data_quality_score < 0.5:
-            return 'normal'
-        return 'low'
-```
-
 **变更检测**：
 - 对比供应商新数据与现有数据
 - 只处理变更的字段
@@ -203,66 +136,7 @@ class PriorityQueue:
 
 **批处理策略**：
 
-```python
-class BatchProcessor:
-    def __init__(self):
-        self.batch_size = 100  # 每批 100 个产品
-        self.max_tokens_per_batch = 8000
-    
-    def create_batches(self, products):
-        """智能分批，考虑 Token 限制"""
-        batches = []
-        current_batch = []
-        current_tokens = 0
-        
-        for product in products:
-            estimated_tokens = self.estimate_tokens(product)
-            
-            if current_tokens + estimated_tokens > self.max_tokens_per_batch:
-                batches.append(current_batch)
-                current_batch = [product]
-                current_tokens = estimated_tokens
-            else:
-                current_batch.append(product)
-                current_tokens += estimated_tokens
-        
-        if current_batch:
-            batches.append(current_batch)
-        
-        return batches
-    
-    def process_batch(self, batch):
-        """批量调用 LLM"""
-        prompt = self.create_batch_prompt(batch)
-        
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=4000
-        )
-        
-        return self.parse_batch_response(response, batch)
-```
-
 **批处理 Prompt 优化**：
-
-```
-Optimize the following product attributes:
-
-Product 1:
-- ID: SKU001
-- Title: "Sofa"
-- Description: "A nice sofa"
-
-Product 2:
-- ID: SKU002
-- Title: "Table"
-- Description: "Wooden table"
-
-...
-
-Provide optimized versions for each product.
-```
 
 **关键优化**：
 - 批量处理降低 API 调用次数
@@ -290,30 +164,6 @@ Wayfair 在美国、加拿大、英国、德国等市场运营，需要多语言
 
 **术语库集成**：
 
-```python
-TRANSLATION_MEMORY = {
-    "Mid-Century Modern": {
-        "de": "Mitte des Jahrhunderts Modern",
-        "fr": "Milieu de Siècle Moderne",
-        # ...
-    },
-    "Velvet": {
-        "de": "Samt",
-        "fr": "Velours",
-        # ...
-    }
-}
-
-def translate_with_memory(text, target_lang):
-    # 先匹配术语库
-    for term, translations in TRANSLATION_MEMORY.items():
-        if term in text:
-            text = text.replace(term, translations[target_lang])
-    
-    # 剩余部分用 LLM 翻译
-    return llm_translate(text, target_lang)
-```
-
 ### 文化适配
 
 **不只是翻译，还有文化适配**：
@@ -337,73 +187,7 @@ def translate_with_memory(text, target_lang):
 
 ### 自动化验证规则
 
-```python
-class ValidationRules:
-    def validate_title(self, title):
-        errors = []
-        
-        # 长度检查
-        if len(title) < 10:
-            errors.append("Title too short")
-        if len(title) > 200:
-            errors.append("Title too long")
-        
-        # 内容检查
-        if not any(word in title.lower() for word in ['sofa', 'chair', 'table']):
-            errors.append("Missing product type")
-        
-        # 格式检查
-        if title != title.strip():
-            errors.append("Leading/trailing spaces")
-        
-        return len(errors) == 0, errors
-    
-    def validate_dimensions(self, width, depth, height):
-        # 合理性检查
-        if width > 500:  # 超过 500 英寸不合理
-            return False, ["Width seems unrealistic"]
-        
-        # 一致性检查
-        if width < depth and width < height:
-            return False, ["Width should not be smallest dimension for furniture"]
-        
-        return True, []
-```
-
 ### AI 置信度评分
-
-```python
-def calculate_confidence_score(product):
-    """计算 AI 生成结果的可信度"""
-    
-    scores = []
-    
-    # 1. 输入数据完整性
-    input_completeness = score_input_completeness(product.raw_data)
-    scores.append(input_completeness * 0.2)
-    
-    # 2. AI 输出一致性
-    ai_consistency = check_ai_output_consistency(product.enhanced_data)
-    scores.append(ai_consistency * 0.3)
-    
-    # 3. 与历史数据对比
-    historical_similarity = compare_with_historical(product)
-    scores.append(historical_similarity * 0.2)
-    
-    # 4. 交叉属性验证
-    cross_validation = validate_cross_attributes(product)
-    scores.append(cross_validation * 0.3)
-    
-    return sum(scores)
-
-# 自动路由决策
-if confidence_score > 0.9:
-    auto_publish()
-elif confidence_score > 0.7:
-    queue_for_sampling_review()
-else:
-    queue_for_full_review()
-```
 
 ---
 
@@ -424,76 +208,13 @@ else:
 
 **1. 智能模型选择**
 
-```python
-MODEL_SELECTION = {
-    'simple_tasks': 'gpt-3.5-turbo',      # 便宜、快速
-    'complex_tasks': 'gpt-4',              # 贵但能力强
-    'review_tasks': 'gpt-4',               # 准确性要求高
-}
-
-def select_model(task_complexity, quality_requirement):
-    if quality_requirement == 'high':
-        return 'gpt-4'
-    elif task_complexity == 'simple':
-        return 'gpt-3.5-turbo'
-    else:
-        return 'gpt-4'
-```
-
 **2. Prompt 压缩**
 
-```python
-def compress_prompt(original_prompt):
-    """移除冗余信息，保留关键内容"""
-    
-    # 移除停用词
-    compressed = remove_stop_words(original_prompt)
-    
-    # 缩写常见术语
-    compressed = abbreviate_common_terms(compressed)
-    
-    # 结构化而非叙述
-    compressed = structure_as_bullets(compressed)
-    
-    return compressed
-
-# 效果：Token 减少 30-40%，质量保持 95%+
-```
-
 **3. 结果缓存**
-
-```python
-class ResultCache:
-    def __init__(self):
-        self.cache = {}
-    
-    def get_or_compute(self, product_hash, compute_func):
-        if product_hash in self.cache:
-            return self.cache[product_hash]
-        
-        result = compute_func()
-        self.cache[product_hash] = result
-        return result
-
-# 缓存命中率：40-60%（供应商重复提交相似数据）
-```
 
 **4. 增量处理**
 
 只处理变更的部分：
-
-```python
-def process_changes_only(old_product, new_product):
-    changed_fields = detect_changes(old_product, new_product)
-    
-    for field in changed_fields:
-        if field in AI_ENHANCED_FIELDS:
-            new_product[field] = ai_enhance(field, new_product[field])
-    
-    return new_product
-
-# 节省：70% 的处理量（大多数更新只改价格/库存）
-```
 
 ### 成本效果
 
@@ -514,64 +235,7 @@ def process_changes_only(old_product, new_product):
 
 ### 智能工单分类
 
-```python
-class TicketClassifier:
-    def classify(self, customer_message):
-        prompt = f"""
-        Classify this customer support ticket:
-        Message: {customer_message}
-        
-        Categories:
-        - ORDER_STATUS
-        - RETURN_REQUEST
-        - PRODUCT_INQUIRY
-        - DELIVERY_ISSUE
-        - ACCOUNT_ISSUE
-        
-        Also extract:
-        - Order ID (if mentioned)
-        - Product name (if mentioned)
-        - Urgency level (1-5)
-        """
-        
-        response = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
-            messages=[{"role": "user", "content": prompt}]
-        )
-        
-        return parse_classification(response)
-
-# 效果：分类准确率 95%，响应时间 < 1秒
-```
-
 ### 自动回复建议
-
-```python
-def generate_response_suggestion(ticket, knowledge_base):
-    context = retrieve_relevant_knowledge(ticket, knowledge_base)
-    
-    prompt = f"""
-    Customer ticket: {ticket.message}
-    
-    Relevant knowledge:
-    {context}
-    
-    Generate a helpful response:
-    - Be empathetic
-    - Provide specific solution
-    - Include next steps
-    """
-    
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[{"role": "user", "content": prompt}]
-    )
-    
-    return response.choices[0].message.content
-
-# 客服代表可以直接使用或修改
-# 平均处理时间降低 30%
-```
 
 ---
 

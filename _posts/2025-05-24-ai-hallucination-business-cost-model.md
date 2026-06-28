@@ -130,44 +130,6 @@ redirect_from:
 
 ### 幻觉成本计算公式
 
-```python
-class HallucinationCostModel:
-    def calculate_total_cost(self, scenario):
-        """
-        计算AI幻觉的总成本
-        """
-        # 基础参数
-        hallucination_rate = scenario.hallucination_rate  # 幻觉率
-        output_volume = scenario.monthly_outputs  # 月输出量
-        
-        # 直接成本
-        direct_costs = {
-            'detection': self.calc_detection_cost(scenario),
-            'fixing': hallucination_rate * output_volume * self.avg_fix_cost,
-            'rollback': hallucination_rate * output_volume * self.rollback_rate * self.avg_rollback_cost,
-            'review': self.calc_review_cost(scenario),
-            'compensation': hallucination_rate * output_volume * self.compensation_rate * self.avg_compensation
-        }
-        
-        # 间接成本（基于直接成本乘数）
-        indirect_multiplier = 2.5  # 经验值：间接成本通常是直接成本的2-3倍
-        indirect_costs = sum(direct_costs.values()) * indirect_multiplier
-        
-        # 风险成本（概率加权）
-        risk_costs = (
-            scenario.regulatory_fine_probability * scenario.avg_regulatory_fine +
-            scenario.lawsuit_probability * scenario.avg_lawsuit_cost +
-            scenario.insurance_premium
-        )
-        
-        return {
-            'direct': sum(direct_costs.values()),
-            'indirect': indirect_costs,
-            'risk': risk_costs,
-            'total': sum(direct_costs.values()) + indirect_costs + risk_costs
-        }
-```
-
 ---
 
 ## 概率化ROI计算
@@ -175,24 +137,9 @@ class HallucinationCostModel:
 ### 传统ROI vs 概率化ROI
 
 **传统ROI**：
-```
-ROI = (收益 - 成本) / 成本
-
-假设：
-- AI开发成本：$500,000
-- 年度节省人力：$1,000,000
-- ROI = ($1,000,000 - $500,000) / $500,000 = 100%
-```
-
 **问题**：没有考虑幻觉风险和成本。
 
 **概率化ROI**：
-```
-期望收益 = Σ (收益 × 概率)
-期望成本 = Σ (成本 × 概率)
-概率化ROI = (期望收益 - 期望成本) / 期望成本
-```
-
 ### 概率化ROI计算示例
 
 **场景：AI代码生成工具投资**
@@ -205,20 +152,6 @@ ROI = (收益 - 成本) / 成本
 
 **计算**：
 
-```
-年度期望节省 = $1,000,000 × 90%（无幻觉情况）+ $700,000 × 10%（有幻觉情况）
-            = $900,000 + $70,000
-            = $970,000
-
-年度期望成本 = 幻觉成本 = $300,000 × 10% = $30,000
-
-年度净收益 = $970,000 - $30,000 = $940,000
-
-概率化ROI = ($940,000 - $500,000/5年摊销) / ($500,000/5)
-          = ($940,000 - $100,000) / $100,000
-          = 840%
-```
-
 **对比**：
 - 传统ROI：100%
 - 概率化ROI：840%
@@ -228,36 +161,6 @@ ROI = (收益 - 成本) / 成本
 ---
 
 ### 风险调整后的ROI
-
-```python
-def calculate_risk_adjusted_roi(investment, returns, hallucination_costs, confidence_level=0.95):
-    """
-    计算风险调整后的ROI
-    """
-    # Monte Carlo模拟
-    simulations = 10000
-    roi_distribution = []
-    
-    for _ in range(simulations):
-        # 随机抽样
-        actual_return = np.random.normal(returns.mean, returns.std)
-        actual_hallucination_cost = np.random.choice(hallucination_costs)
-        
-        net_return = actual_return - actual_hallucination_cost
-        roi = (net_return - investment) / investment
-        roi_distribution.append(roi)
-    
-    # 计算VaR（Value at Risk）
-    var_95 = np.percentile(roi_distribution, (1 - confidence_level) * 100)
-    
-    return {
-        'expected_roi': np.mean(roi_distribution),
-        'median_roi': np.median(roi_distribution),
-        'worst_case_roi': np.min(roi_distribution),
-        'var_95': var_95,  # 95%置信度下的最坏情况
-        'roi_distribution': roi_distribution
-    }
-```
 
 ---
 
@@ -332,62 +235,11 @@ def calculate_risk_adjusted_roi(investment, returns, hallucination_costs, confid
 
 **类型1：人工复核保险**
 
-```
-成本 = 复核人力 × 时间
-
-示例：
-- 高风险决策必须人工复核
-- 复核时间：10分钟/决策
-- 人力成本：$50/小时
-- 保险成本：$8.3/决策
-
-效果：
-- 可以将幻觉风险从10%降到0.1%
-- ROI：如果避免一次重大损失的收益 > $8.3，则值得
-```
-
 **类型2：回滚机制保险**
-
-```
-成本 = 回滚系统建设 + 维护
-
-示例：
-- 蓝绿部署系统：$200,000建设 + $20,000/月维护
-- 可以做到5分钟内回滚
-
-效果：
-- 即使发生幻觉，损失可控
-- 适合中等风险场景
-```
 
 **类型3：混合AI保险**
 
-```
-成本 = 多模型运行成本
-
-示例：
-- 主模型：GPT-4
-- 验证模型：Claude（交叉验证）
-- 成本增加：50%
-
-效果：
-- 两个模型同时出错的概率很低
-- 适合高风险场景
-```
-
 **类型4：金融保险（传统保险）**
-
-```
-成本 = 保费
-
-示例：
-- AI错误责任保险：$200,000/年
-- 覆盖：诉讼、赔偿、监管罚款
-
-效果：
-- 转移极端风险
-- 适合所有涉及外部用户的场景
-```
 
 ### 保险策略选择矩阵
 

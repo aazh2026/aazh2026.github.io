@@ -14,7 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-
 ## 📋 本文结构
 
 1. [AI 优先工程的幻灭](#ai-优先工程的幻灭)
@@ -45,13 +44,6 @@ series: AI-Native Engineering
 
 **场景一：AI 生成的电商网站**
 
-```
-周一：CEO 要求"用 AI 一周内重建网站"
-周五：AI 生成了 50,000 行代码，功能"完整"
-次月：页面加载 8 秒，购物车经常丢失数据，SEO 排名暴跌
-季度末：聘请资深开发者重构，预算 3x 于原计划
-```
-
 **场景二：AI 优先的初创公司**
 
 - 前 3 个月：快速原型，投资人 impressed
@@ -69,40 +61,6 @@ series: AI-Native Engineering
 
 AI 倾向于生成它认为"完整"的解决方案，而不是"简单"的解决方案。
 
-```python
-# AI 生成的代码
-class UserDataManager:
-    def __init__(self):
-        self.cache = RedisCache()
-        self.validator = UserValidator()
-        self.transformer = DataTransformer()
-        self.logger = StructuredLogger()
-        self.metrics = MetricsCollector()
-    
-    def get_user(self, user_id):
-        # 检查缓存
-        if cached := self.cache.get(f"user:{user_id}"):
-            self.metrics.increment("cache_hit")
-            return cached
-        
-        # 查询数据库
-        user = db.query(User).filter(User.id == user_id).first()
-        
-        # 验证数据
-        if not self.validator.validate(user):
-            self.logger.error(f"Invalid user data: {user_id}")
-            return None
-        
-        # 转换格式
-        transformed = self.transformer.transform(user)
-        
-        # 更新缓存
-        self.cache.set(f"user:{user_id}", transformed, ttl=3600)
-        
-        self.metrics.increment("db_query")
-        return transformed
-```
-
 **问题**：
 - 简单的查询变成了 50 行代码
 - 引入了不必要的依赖（Redis、Metrics）
@@ -110,61 +68,19 @@ class UserDataManager:
 
 **资深开发者的修复**：
 
-```python
-# 简化版本
-def get_user(user_id: int) -> User | None:
-    return db.query(User).get(user_id)
-```
-
 ### 症状 2：并发问题
 
 AI 不理解并发，生成的代码经常包含竞态条件。
 
-```python
-# AI 生成的订单处理
-@route('/order', methods=['POST'])
-def create_order():
-    product = get_product(request.product_id)
-    if product.stock > 0:
-        # 这里有问题！
-        product.stock -= 1
-        save(product)
-        create_order_record(request)
-        return {"status": "success"}
-```
-
 **问题**：两个请求同时检查库存，都看到 stock=1，都下单成功，实际库存变成 -1。
 
 ### 症状 3：N+1 查询问题
-
-```python
-# AI 生成的列表查询
-users = db.query(User).all()
-for user in users:
-    # 每次循环都查询数据库
-    orders = db.query(Order).filter(Order.user_id == user.id).all()
-    user.orders = orders
-```
 
 **问题**：100 个用户 = 101 次数据库查询
 
 ### 症状 4：缓存失效逻辑缺失
 
 AI 知道"应该使用缓存"，但不知道如何正确失效缓存。
-
-```python
-# AI 生成的缓存代码
-@cached(ttl=3600)
-def get_product_price(product_id):
-    return db.query(Product).get(product_id).price
-
-# 但更新价格时...
-def update_price(product_id, new_price):
-    product = db.query(Product).get(product_id)
-    product.price = new_price
-    db.commit()
-    # 忘记清除缓存！
-```
 
 ---
 
@@ -234,20 +150,6 @@ def update_price(product_id, new_price):
 
 **第一周：数据收集**
 
-```bash
-# 分析慢查询
-pg_badger /var/log/postgresql/*.log
-
-# 发现：
-# - 慢查询 #1: 平均 2.3s，每天 50K 次
-# - 慢查询 #2: 平均 1.8s，每天 30K 次
-# - N+1 查询：100+ 个位置
-
-# 分析代码
-python -m cProfile -o profile.stats app.py
-# 发现：重复计算、不必要的序列化、阻塞调用
-```
-
 **第二周：问题定位**
 
 核心问题清单：
@@ -260,24 +162,6 @@ python -m cProfile -o profile.stats app.py
 ### 修复方案
 
 **阶段 1：紧急止血（2 周）**
-
-```sql
--- 添加关键索引
-CREATE INDEX CONCURRENTLY idx_orders_user_id_created 
-ON orders(user_id, created_at DESC);
-
-CREATE INDEX CONCURRENTLY idx_products_category_active 
-ON products(category_id) WHERE active = true;
-```
-
-```python
-# 添加连接池
-DATABASE_CONFIG = {
-    'pool_size': 10,
-    'max_overflow': 20,
-    'pool_timeout': 30,
-}
-```
 
 **结果**：API 响应降到 1.5 秒，数据库 CPU 降到 70%
 
@@ -330,18 +214,6 @@ AI 不会取代开发者，但会**分化**开发者市场：
 
 **学习路径**：
 
-```
-初级：能写代码
-    ↓
-中级：能写好代码
-    ↓
-高级：能设计好系统
-    ↓
-资深：能修复烂系统
-    ↓
-专家：能预防烂系统
-```
-
 ### 3. 建立个人品牌
 
 - **博客**：分享架构经验和 cleanup 案例
@@ -387,16 +259,6 @@ AI 不会取代开发者，但会**分化**开发者市场：
 ## 结论：从生产力工具到负债
 
 AI 编程工具的发展历程：
-
-```
-2023: "AI 会取代开发者"
-    ↓
-2024: "AI 是生产力工具"
-    ↓
-2025: "AI 需要被管理"
-    ↓
-2026: "修复 AI 代码成为职业"
-```
 
 **核心洞察**：
 

@@ -18,17 +18,7 @@ series: AI-Native Engineering
 
 大多数人在计算AI Agent成本时：
 
-```python
-# 错误的计算方式
-total_cost = prompt_tokens * price_per_token
-```
-
 **实际成本结构**：
-```
-总成本 = API调用 + 基础设施 + 数据存储 + 监控 + 人力 + 错误成本
-        (20%)      (30%)       (15%)     (10%)   (15%)   (10%)
-```
-
 ---
 
 ## 二、成本层级拆解
@@ -66,12 +56,6 @@ total_cost = prompt_tokens * price_per_token
 | **月总成本** | **$100** | |
 
 **架构**：
-```
-[User] → [API Gateway] → [Single Agent Instance] → [DB]
-                ↓
-           [LLM API]
-```
-
 ---
 
 ### Level 3: $1,000/月 生产阶段
@@ -88,12 +72,6 @@ total_cost = prompt_tokens * price_per_token
 | **月总成本** | **$1,000** | |
 
 **架构**：
-```
-[User] → [Load Balancer] → [Agent Cluster] → [Message Queue]
-                                    ↓
-                              [Vector DB] → [LLM API]
-```
-
 **隐藏成本开始显现**：
 - 上下文缓存：Redis集群 $100/月
 - 向量数据库：Pinecone $50/月
@@ -117,15 +95,6 @@ total_cost = prompt_tokens * price_per_token
 **关键优化**：
 
 **1. 模型路由**
-```python
-# 根据复杂度选择模型
-if complexity < 0.3:
-    use("gpt-3.5")  # 便宜
-elif complexity < 0.8:
-    use("claude-3-5")  # 平衡
-else:
-    use("gpt-4")  # 昂贵但强大
-```
 **节省**: 40% API成本
 
 **2. 缓存策略**
@@ -134,11 +103,6 @@ else:
 **节省**: 30% API调用
 
 **3. 批处理**
-```python
-# 批量处理而非实时
-batch_requests = collect(5_seconds)
-process_batch(batch_requests)
-```
 **节省**: 20% 基础设施
 
 ---
@@ -194,31 +158,8 @@ process_batch(batch_requests)
 ## 四、成本优化策略
 
 ### 1. 智能降级
-```python
-def smart_call(prompt, priority):
-    if priority == "high":
-        return call_gpt4(prompt)
-    elif priority == "medium":
-        return call_claude(prompt)
-    else:
-        return call_cached_or_cheap(prompt)
-```
-
 ### 2. 预处理过滤
-```python
-# 简单问题不走LLM
-if is_simple_question(query):
-    return rule_based_answer(query)
-return llm_answer(query)
-```
-
 ### 3. Token优化
-```python
-# 压缩Prompt
-compressed = compress_prompt(original_prompt)
-# 预计节省: 30-50% tokens
-```
-
 ### 4. 自建模型
 当API成本 > $5,000/月时，考虑：
 - 微调开源模型

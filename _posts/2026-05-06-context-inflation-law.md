@@ -81,13 +81,6 @@ series: AI-Native Engineering
 
 而架构层最大的成本来源，是**上下文**。
 
-```
-2023 年成本 = 模型价格 × Token 数
-2026 年成本 = 架构效率 × (模型价格 × Token 数)
-
-架构效率 = f(缓存命中率, 上下文压缩率, 路由优化, 批处理效率)
-```
-
 ---
 
 ## 三、成本结构解析
@@ -97,21 +90,6 @@ series: AI-Native Engineering
 ### 你的钱到底花在哪了？
 
 让我们拆解一个典型 Agent 请求的成本构成：
-
-```
-总成本 = Base Cost（模型计算）+ Context Cost（上下文处理）+ Tool Cost（工具调用）
-
-典型比例（未优化系统）：
-- Base Cost：30%
-- Context Cost：55%  ← 主要成本来源
-- Tool Cost：15%
-
-优化后目标比例：
-- Base Cost：25%
-- Context Cost：35%  ← 通过架构优化压缩
-- Tool Cost：15%
-- 缓存节省：25%     ← 通过缓存回收
-```
 
 ### 上下文成本的三个层次
 
@@ -141,22 +119,6 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" type="image/svg+xml" width="100%"></object>
 
-```
-                    高频
-                      ↑
-                      │
-       缓存层 ←———+———→ 压缩层
-       (命中>60%)      |    (结构性)
-                      │
-    低价值 ←————————+—————————→ 高价值
-                      │
-       精简层 ←———+———→ 路由层
-       (快速见效)      |    (精准匹配)
-                      │
-                      ↓
-                    低频
-```
-
 ### 象限 1：高频高价值 → 智能缓存
 
 **适用场景**：重复性问题、常见查询、可预测的请求模式
@@ -165,29 +127,6 @@ series: AI-Native Engineering
 - 语义缓存（Semantic Cache）— 不是精确匹配，是语义相似度匹配
 - 结果缓存（Response Cache）— 完全相同的请求直接返回
 - 预热缓存（Warm Cache）— 高峰期前预加载热点数据
-
-```python
-class SemanticCache:
-    def __init__(self, threshold=0.92):
-        self.threshold = threshold
-        self.vector_store = VectorStore()
-        self.cache = {}
-    
-    def get(self, query: str) -> Optional[str]:
-        """语义检索缓存"""
-        query_embedding = embed(query)
-        results = self.vector_store.search(query_embedding, top_k=1)
-        
-        if results and results[0].score >= self.threshold:
-            return results[0].cached_response
-        return None
-    
-    def set(self, query: str, response: str):
-        """写入缓存"""
-        embedding = embed(query)
-        self.vector_store.add(embedding)
-        self.cache[hash(query)] = response
-```
 
 **优化效果**：成本降低 40-60%，延迟降低 50%
 
@@ -202,37 +141,6 @@ class SemanticCache:
 - 对话历史压缩（只保留关键轮次）
 - 动态上下文窗口（根据任务类型调整窗口大小）
 
-```python
-class ContextCompressor:
-    def __init__(self, max_tokens: int):
-        self.max_tokens = max_tokens
-    
-    def compress(self, context: dict) -> dict:
-        """智能压缩上下文"""
-        compressed = {}
-        
-        # 知识库：只保留 top-10 相关片段
-        if 'knowledge' in context:
-            docs = context['knowledge']
-            scored = [(d, relevance(d.query)) for d in docs]
-            top_docs = sorted(scored, key=lambda x: x[1], reverse=True)[:10]
-            compressed['knowledge'] = [d for d, _ in top_docs]
-        
-        # 对话历史：只保留关键轮次
-        if 'history' in context:
-            compressed['history'] = self.extract_key_turns(context['history'])
-        
-        return compressed
-    
-    def extract_key_turns(self, history: list) -> list:
-        """提取关键对话轮次"""
-        key_turns = []
-        for turn in history:
-            if self.is_key_turn(turn):
-                key_turns.append(turn)
-        return self.truncate_to_token_limit(key_turns)
-```
-
 **优化效果**：成本降低 30-50%，对质量影响 < 5%
 
 ---
@@ -246,28 +154,6 @@ class ContextCompressor:
 - 智能模型路由（简单任务用小模型）
 - 人机协作（极复杂任务转人工）
 
-```python
-def route_request(query: str, user_segment: str) -> str:
-    """智能路由"""
-    complexity = estimate_complexity(query)
-    
-    # 高价值用户：始终用最强模型
-    if user_segment == 'enterprise':
-        return 'claude-3-5-sonnet'
-    
-    # 低复杂度：便宜模型
-    if complexity < 0.3:
-        return 'gpt-3.5-turbo'
-    
-    # 高复杂度：强模型
-    elif complexity > 0.7:
-        return 'claude-3-opus'
-    
-    # 中等复杂度：平衡选择
-    else:
-        return 'claude-3-sonnet'
-```
-
 **优化效果**：成本降低 50-70%，高价值场景质量不降
 
 ---
@@ -280,36 +166,6 @@ def route_request(query: str, user_segment: str) -> str:
 - 批处理（聚合多个低价值请求）
 - 异步处理（非实时，降低优先级）
 - 边缘计算（简单判断在端侧完成）
-
-```python
-class BatchProcessor:
-    """低价值请求批量处理"""
-    
-    def __init__(self, batch_size=10, max_wait_seconds=30):
-        self.batch_size = batch_size
-        self.queue = []
-        self.max_wait = max_wait_seconds
-    
-    def add(self, request: dict) -> Future:
-        """加入批处理队列"""
-        future = Future()
-        self.queue.append((request, future))
-        
-        if len(self.queue) >= self.batch_size:
-            self.process_batch()
-        
-        return future
-    
-    def process_batch(self):
-        """批量执行"""
-        batch = self.queue[:self.batch_size]
-        results = self_llm.batch_generate([r for r, _ in batch])
-        
-        for (req, future), result in zip(batch, results):
-            future.set_result(result)
-        
-        self.queue = self.queue[self.batch_size:]
-```
 
 **优化效果**：成本降低 60-80%，延迟增加但可接受
 

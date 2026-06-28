@@ -87,24 +87,6 @@ series: AI-Native Engineering
 
 ### 三维模型
 
-```
-                    高抽象
-                      ↑
-                      |
-         IDE类工具 ←——+——→ 声明式工具
-         (Cursor)    |      (Spec驱动)
-                      |
-    强控制 ←—————————+—————————→ 弱控制
-                      |
-         终端类工具 ←——+——→ 自动化平台
-         (Claude)     |      (Low-code)
-                      |
-                      ↓
-                    低抽象
-         
-         第三维：协作深度（个人 → 团队 → 企业）
-```
-
 <object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
 ### 维度1：控制轴（Control Spectrum）
@@ -260,12 +242,6 @@ series: AI-Native Engineering
 工具切换的真实成本 = 学习成本 + 迁移成本 + 机会成本
 
 **计算**：
-```
-切换ROI = (新工具效率提升 × 使用时长) - 总迁移成本
-
-只有当ROI > 3时才值得切换
-```
-
 ---
 
 ### 原则3：组合优于单选原则

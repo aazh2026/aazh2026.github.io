@@ -52,22 +52,6 @@ series: AI-Native Engineering
 
 **传统同步编程模型**：
 
-```python
-# 同步 Agent 示例
-def generate_code(task):
-    # 1. 分析需求（阻塞）
-    analysis = analyze_requirements(task)
-    
-    # 2. 生成代码（阻塞，等待 LLM API）
-    code = llm.generate(analysis)
-    
-    # 3. 运行测试（阻塞，等待执行完成）
-    result = run_tests(code)
-    
-    # 4. 返回结果
-    return result
-```
-
 **问题**：
 - 每个步骤串行执行
 - I/O 等待时 CPU 空闲
@@ -76,22 +60,6 @@ def generate_code(task):
 ### 异步 Agent 的优势
 
 **异步编程模型**：
-
-```python
-# 异步 Agent 示例
-async def generate_code(task):
-    # 1. 分析需求（非阻塞）
-    analysis = await analyze_requirements(task)
-    
-    # 2. 生成代码（非阻塞，等待时可执行其他任务）
-    code = await llm.generate(analysis)
-    
-    # 3. 运行测试（非阻塞）
-    result = await run_tests(code)
-    
-    # 4. 返回结果
-    return result
-```
 
 **优势**：
 - I/O 等待时执行其他任务
@@ -118,66 +86,6 @@ async def generate_code(task):
 
 ### 异步事件循环
 
-```python
-import asyncio
-from typing import List, Dict
-
-class AsyncAgent:
-    def __init__(self):
-        self.task_queue = asyncio.Queue()
-        self.workers: List[asyncio.Task] = []
-        
-    async def run(self, num_workers: int = 5):
-        """启动 Agent 工作协程"""
-        # 创建工作协程
-        self.workers = [
-            asyncio.create_task(self._worker_loop())
-            for _ in range(num_workers)
-        ]
-        
-        # 等待所有任务完成
-        await asyncio.gather(*self.workers)
-    
-    async def _worker_loop(self):
-        """工作协程主循环"""
-        while True:
-            # 从队列获取任务（非阻塞等待）
-            task = await self.task_queue.get()
-            
-            try:
-                # 执行任务
-                result = await self._execute_task(task)
-                await self._handle_result(task, result)
-            except Exception as e:
-                await self._handle_error(task, e)
-            finally:
-                self.task_queue.task_done()
-    
-    async def _execute_task(self, task: Dict) -> Dict:
-        """执行单个任务"""
-        # 并行执行多个子任务
-        subtasks = [
-            self._analyze_requirements(task),
-            self._fetch_context(task),
-            self._check_dependencies(task)
-        ]
-        
-        # 等待所有子任务完成
-        results = await asyncio.gather(*subtasks)
-        
-        # 生成代码
-        code = await self._generate_code(results)
-        
-        # 运行测试
-        test_result = await self._run_tests(code)
-        
-        return {
-            'code': code,
-            'tests': test_result,
-            'status': 'success' if test_result['passed'] else 'failed'
-        }
-```
-
 ### 并发模型对比
 
 | 模型 | 机制 | 适用场景 | open-swe 使用 |
@@ -193,30 +101,6 @@ class AsyncAgent:
 ### 性能对比
 
 **测试场景：生成 100 个 Python 函数**
-
-```python
-# 测试代码
-import time
-import asyncio
-
-# 同步版本
-def sync_generate():
-    results = []
-    for i in range(100):
-        result = generate_function(f"task_{i}")
-        results.append(result)
-    return results
-
-# 异步版本
-async def async_generate():
-    tasks = [generate_function_async(f"task_{i}") for i in range(100)]
-    results = await asyncio.gather(*tasks)
-    return results
-
-# 性能对比
-sync_time = time_sync(sync_generate)  # ~300 秒
-async_time = time_async(async_generate)  # ~30 秒
-```
 
 **结果**：
 - 同步：300 秒
@@ -234,23 +118,7 @@ async_time = time_async(async_generate)  # ~30 秒
 ### 代码复杂度对比
 
 **同步代码**：
-```python
-def process_tasks(tasks):
-    results = []
-    for task in tasks:
-        result = process(task)  # 阻塞
-        results.append(result)
-    return results
-```
-
 **异步代码**：
-```python
-async def process_tasks(tasks):
-    coroutines = [process(task) for task in tasks]
-    results = await asyncio.gather(*coroutines)
-    return results
-```
-
 **复杂度**：异步代码稍复杂，但性能提升巨大。
 
 ---
@@ -261,33 +129,9 @@ async def process_tasks(tasks):
 
 **1. CI/CD 流水线自动化**
 
-```python
-# 并行处理多个代码审查任务
-async def ci_pipeline(prs: List[PR]):
-    tasks = [review_pr(pr) for pr in prs]
-    results = await asyncio.gather(*tasks)
-    return merge_results(results)
-```
-
 **2. 大规模代码重构**
 
-```python
-# 并行重构多个文件
-async def refactor_project(files: List[File]):
-    tasks = [refactor_file(f) for f in files]
-    results = await asyncio.gather(*tasks)
-    return consolidate_changes(results)
-```
-
 **3. 多文件协调编程**
-
-```python
-# 并行分析文件依赖
-async def analyze_dependencies(files: List[File]):
-    tasks = [analyze_file(f) for f in files]
-    dependencies = await asyncio.gather(*tasks)
-    return build_dependency_graph(dependencies)
-```
 
 ### 不适用场景
 
@@ -303,138 +147,13 @@ async def analyze_dependencies(files: List[File]):
 
 ### 核心类设计
 
-```python
-class OpenSWE:
-    """异步编程 Agent 核心类"""
-    
-    def __init__(
-        self,
-        llm_client: AsyncLLMClient,
-        tool_registry: ToolRegistry,
-        max_workers: int = 5
-    ):
-        self.llm = llm_client
-        self.tools = tool_registry
-        self.max_workers = max_workers
-        self.task_queue = asyncio.Queue()
-        
-    async def generate(
-        self,
-        task: str,
-        context: Optional[Dict] = None
-    ) -> CodeResult:
-        """
-        异步生成代码
-        
-        Args:
-            task: 任务描述
-            context: 上下文信息
-            
-        Returns:
-            CodeResult: 生成的代码及元数据
-        """
-        # 1. 分析任务（并行）
-        analysis_task = asyncio.create_task(
-            self._analyze_task(task, context)
-        )
-        
-        # 2. 获取相关知识（并行）
-        knowledge_task = asyncio.create_task(
-            self._fetch_knowledge(task)
-        )
-        
-        # 3. 等待分析完成
-        analysis = await analysis_task
-        knowledge = await knowledge_task
-        
-        # 4. 生成代码
-        code = await self._generate_code(analysis, knowledge)
-        
-        # 5. 验证代码（并行）
-        verify_task = asyncio.create_task(
-            self._verify_code(code)
-        )
-        
-        # 6. 获取测试用例（并行）
-        test_task = asyncio.create_task(
-            self._generate_tests(code)
-        )
-        
-        # 7. 等待验证和测试完成
-        verification = await verify_task
-        tests = await test_task
-        
-        # 8. 如果验证失败，修复代码
-        if not verification['passed']:
-            code = await self._fix_code(code, verification['errors'])
-        
-        return CodeResult(
-            code=code,
-            tests=tests,
-            verification=verification,
-            metadata={
-                'analysis': analysis,
-                'knowledge_used': knowledge
-            }
-        )
-```
-
 ### 工具调用异步化
-
-```python
-class ToolRegistry:
-    """异步工具注册表"""
-    
-    def __init__(self):
-        self.tools: Dict[str, AsyncTool] = {}
-        
-    async def execute(
-        self,
-        tool_name: str,
-        params: Dict
-    ) -> ToolResult:
-        """异步执行工具"""
-        tool = self.tools.get(tool_name)
-        if not tool:
-            raise ToolNotFoundError(tool_name)
-        
-        # 异步执行工具
-        result = await tool.run(**params)
-        return result
-
-# 示例工具：异步代码执行
-class AsyncCodeExecutor(AsyncTool):
-    async def run(self, code: str, language: str) -> ExecutionResult:
-        """异步执行代码"""
-        proc = await asyncio.create_subprocess_exec(
-            f'{language}_interpreter',
-            stdin=asyncio.subprocess.PIPE,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE
-        )
-        
-        stdout, stderr = await proc.communicate(code.encode())
-        
-        return ExecutionResult(
-            output=stdout.decode(),
-            errors=stderr.decode(),
-            return_code=proc.returncode
-        )
-```
 
 ---
 
 ## 生态意义：LangChain 的 Agent 战略
 
 ### LangChain Agent 矩阵
-
-```
-LangChain Agent 生态
-    ├── open-swe（异步编程 Agent）
-    ├── langgraph（状态机 Agent）
-    ├── langserve（部署服务）
-    └── langsmith（监控调试）
-```
 
 ### 战略意图
 
@@ -449,14 +168,6 @@ LangChain Agent 生态
 - 生态锁定
 
 **3. 商业化路径**
-```
-开源核心（吸引用户）
-    ↓
-云服务（LangSmith）
-    ↓
-企业支持（商业化）
-```
-
 ### 与竞争对手对比
 
 | 维度 | LangChain | OpenAI | Anthropic |
@@ -500,13 +211,6 @@ AI Agent 的主要工作：
 ### 未来趋势
 
 **异步 Agent 将成为标配**：
-
-```
-2024: 同步 Agent 为主
-2025: 异步 Agent 兴起
-2026: 异步成为标准
-2027+: 异步 Agent 基础设施成熟
-```
 
 open-swe 的出现标志着这一趋势的开始。
 

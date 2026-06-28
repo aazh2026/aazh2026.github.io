@@ -88,21 +88,6 @@ Hickey 指出：
 - 容易的工具往往假设特定上下文，难以抽离重用
 - 真正的复用来自简单性，而非便利性
 
-```clojure
-;; 简单的函数：只做一件事，无副作用
-(defn calculate-total [items]
-  (reduce + (map :price items)))
-
-;; 容易但不简单的函数：做了太多事，隐藏副作用
-(defn process-order [order]
-  (let [total (calculate-total (:items order))]
-    (save-to-database order)      ;; 副作用
-    (send-email (:email order))   ;; 副作用
-    (update-inventory order)      ;; 副作用
-    (log-audit-trail order)       ;; 副作用
-    {:status :success :total total}))
-```
-
 第二个函数用起来"容易"——一行代码搞定所有事。但它把计算、存储、通信、日志全部交织在一起，既不简单，也难以测试和复用。
 
 ### 2.3 认知负载 (Cognitive Load)
@@ -166,21 +151,6 @@ AI 生成的代码往往：
 - **处理了边界情况，但你不知道边界在哪**
 - **引入了依赖，但你不知道依赖什么**
 
-```python
-# AI 生成的代码：看起来很简单
-def process_data(df):
-    return df.groupby('category').agg({
-        'value': 'sum',
-        'count': 'count'
-    }).reset_index()
-
-# 但背后隐藏着：
-# - pandas 的 GroupBy 内部实现
-# - 内存使用模式
-# - 对 NaN 的处理逻辑
-# - 索引的行为变化
-```
-
 你得到了容易（几行代码搞定），但你失去了简单（你无法在脑子里完整推理这段代码的行为）。
 
 ### 4.2 黑盒系统
@@ -233,20 +203,7 @@ AI 让每个人都能快速生成代码，结果是：
 **规则**：宁可多写几行显式代码，也不要依赖"魔法"。
 
 **反例**（AI 可能生成的）：
-```python
-# 隐式魔法：你不知道发生了什么
-result = magic_pipeline(data)
-```
-
 **正例**（简单性优先）：
-```python
-# 显式步骤：每一步都清晰可见
-validated = validate_schema(data)
-transformed = apply_transforms(validated)
-filtered = remove_outliers(transformed)
-result = aggregate_by_key(filtered)
-```
-
 ### 5.3 小步快跑，频繁验证
 
 **规则**：用 AI 生成小的、可验证的单元，而不是大块的黑盒。

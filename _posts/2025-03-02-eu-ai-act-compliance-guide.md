@@ -75,38 +75,6 @@ EU AI Act采用基于风险的分级监管方法，将AI系统分为四个等级
 - 定期更新风险管理文档
 
 **工程实践**：
-```python
-# 风险管理框架示例
-class AIRiskManagement:
-    def __init__(self):
-        self.risk_register = {}
-        self.mitigation_strategies = {}
-    
-    def identify_risks(self, system_context):
-        """识别系统特定风险"""
-        risks = []
-        # 偏见风险
-        risks.append(Risk(
-            category="bias",
-            description="训练数据可能包含历史偏见",
-            likelihood="high",
-            impact="discrimination"
-        ))
-        # 准确性风险
-        risks.append(Risk(
-            category="accuracy",
-            description="模型在边缘案例表现不佳",
-            likelihood="medium", 
-            impact="wrong_decision"
-        ))
-        return risks
-    
-    def implement_mitigation(self, risk_id, strategy):
-        """实施风险缓解措施"""
-        self.mitigation_strategies[risk_id] = strategy
-        # 记录实施证据
-        self.log_mitigation_implementation(risk_id, strategy)
-```
 
 ### 2. 数据治理（Article 10）
 
@@ -121,29 +89,6 @@ class AIRiskManagement:
 - 记录偏见检测方法和结果
 
 **技术实现**：
-```python
-class DataGovernance:
-    def audit_training_data(self, dataset):
-        """审计训练数据的合规性"""
-        audit_results = {
-            "gdpr_compliance": self.check_gdpr_compliance(dataset),
-            "bias_analysis": self.analyze_demographic_bias(dataset),
-            "data_quality": self.assess_data_quality(dataset)
-        }
-        return audit_results
-    
-    def analyze_demographic_bias(self, dataset):
-        """分析人口统计偏见"""
-        bias_metrics = {}
-        for group in self.protected_groups:
-            group_data = dataset.filter(demographic=group)
-            bias_metrics[group] = {
-                "representation": len(group_data) / len(dataset),
-                "outcome_distribution": group_data.outcomes.value_counts(),
-                "potential_bias": self.detect_disparate_treatment(group_data)
-            }
-        return bias_metrics
-```
 
 ### 3. 技术文档（Article 11）
 
@@ -176,28 +121,6 @@ class DataGovernance:
 - 支持审计和调查
 
 **技术实现**：
-```python
-class ComplianceLogger:
-    def log_decision(self, context, input_data, output, metadata):
-        """记录AI决策用于审计"""
-        log_entry = {
-            "timestamp": datetime.utcnow(),
-            "system_version": self.system_version,
-            "input_hash": self.hash_input(input_data),  # 隐私保护
-            "output_type": output.category,
-            "confidence_score": output.confidence,
-            "model_version": metadata.model_version,
-            "user_id": context.user_id  # 用于责任追溯
-        }
-        self.audit_log.store(log_entry)
-        
-    def retrieve_decision_history(self, user_id, time_range):
-        """检索决策历史用于审计"""
-        return self.audit_log.query(
-            user_id=user_id,
-            timestamp_range=time_range
-        )
-```
 
 ### 5. 透明度（Article 13）
 
@@ -207,35 +130,6 @@ class ComplianceLogger:
 - 对于深度伪造内容，必须明确标注
 
 **技术实现**：
-```python
-class TransparencyInterface:
-    def generate_user_notice(self, system_type):
-        """生成用户告知内容"""
-        notice = {
-            "ai_disclosure": "您正在与AI系统交互",
-            "system_purpose": "本系统用于[具体用途]",
-            "capabilities": [
-                "能够执行[具体能力]",
-                "准确度约为[百分比]"
-            ],
-            "limitations": [
-                "可能在[场景]表现不佳",
-                "不应被用于[限制用途]"
-            ],
-            "human_oversight": "人类监督信息...",
-            "contact": "如有疑问，请联系..."
-        }
-        return notice
-    
-    def display_realtime_indicator(self):
-        """实时显示AI交互指示器"""
-        return UIComponent(
-            type="badge",
-            text="AI生成内容",
-            style="warning",
-            dismissible=False
-        )
-```
 
 ### 6. 人工监督（Article 14）
 
@@ -245,36 +139,6 @@ class TransparencyInterface:
 - 建立人工审查和干预流程
 
 **技术实现**：
-```python
-class HumanOversight:
-    def __init__(self):
-        self.oversight_threshold = 0.8  # 置信度阈值
-        self.human_review_queue = []
-    
-    def evaluate_need_for_oversight(self, decision):
-        """评估是否需要人类监督"""
-        needs_oversight = False
-        
-        # 触发条件
-        if decision.confidence < self.oversight_threshold:
-            needs_oversight = True
-        if decision.category in HIGH_RISK_CATEGORIES:
-            needs_oversight = True
-        if decision.user_requested_review:
-            needs_oversight = True
-            
-        if needs_oversight:
-            self.queue_for_human_review(decision)
-            return "pending_human_review"
-        
-        return "approved"
-    
-    def human_override(self, decision_id, human_decision, reason):
-        """人类审查员推翻AI决策"""
-        self.log_override(decision_id, human_decision, reason)
-        self.update_model_feedback(decision_id, human_decision)
-        return human_decision
-```
 
 ### 7. 准确性、鲁棒性和网络安全（Article 15）
 

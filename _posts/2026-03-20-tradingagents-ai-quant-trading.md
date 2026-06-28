@@ -51,146 +51,13 @@ series: AI-Native Engineering
 
 **1. 意图理解 Agent（Strategy Parser）**
 
-```python
-class StrategyParser:
-    """解析自然语言策略"""
-    
-    async def parse(self, natural_language: str) -> Strategy:
-        """
-        将自然语言转换为结构化策略
-        
-        示例输入：
-        "当 BTC 突破 50日均线且 RSI > 70 时买入"
-        
-        示例输出：
-        {
-            'asset': 'BTC',
-            'condition': {
-                'indicator': 'MA50',
-                'comparison': 'cross_above',
-                'secondary': {'RSI': {'>': 70}}
-            },
-            'action': 'BUY',
-            'risk_params': {
-                'stop_loss': '5%',
-                'take_profit': '15%'
-            }
-        }
-        """
-        # 使用 LLM 解析意图
-        parsed = await self.llm.parse(natural_language)
-        
-        # 验证策略有效性
-        validated = self.validate_strategy(parsed)
-        
-        return Strategy(validated)
-```
-
 **2. 数据获取 Agent（Data Fetcher）**
-
-```python
-class DataFetcher:
-    """获取多源市场数据"""
-    
-    async def fetch(self, strategy: Strategy) -> MarketData:
-        # 并行获取多个数据源
-        tasks = [
-            self.get_price_data(strategy.asset),
-            self.get_news_sentiment(strategy.asset),
-            self.get_social_media_trends(strategy.asset),
-            self.get_onchain_data(strategy.asset)  # 如果是加密资产
-        ]
-        
-        results = await asyncio.gather(*tasks)
-        
-        return MarketData(
-            price=results[0],
-            sentiment=results[1],
-            social=results[2],
-            onchain=results[3]
-        )
-```
 
 **3. 策略执行 Agent（Trade Executor）**
 
-```python
-class TradeExecutor:
-    """生成并执行交易指令"""
-    
-    async def execute(
-        self,
-        strategy: Strategy,
-        data: MarketData
-    ) -> TradeDecision:
-        # 评估策略条件
-        if self.check_conditions(strategy, data):
-            # 计算仓位大小
-            position_size = self.calculate_position(
-                strategy, 
-                self.portfolio
-            )
-            
-            # 生成交易指令
-            return TradeDecision(
-                action=strategy.action,
-                asset=strategy.asset,
-                size=position_size,
-                order_type='LIMIT',
-                risk_params=strategy.risk_params
-            )
-```
-
 **4. 风险管理 Agent（Risk Manager）**
 
-```python
-class RiskManager:
-    """评估和控制交易风险"""
-    
-    async def assess(self, decision: TradeDecision) -> RiskAssessment:
-        risks = {
-            'market_risk': self.calculate_var(decision),
-            'liquidity_risk': self.check_liquidity(decision),
-            'concentration_risk': self.check_concentration(decision),
-            'correlation_risk': self.check_correlation(decision)
-        }
-        
-        total_risk = sum(risks.values())
-        
-        if total_risk > self.risk_threshold:
-            return RiskAssessment(
-                approved=False,
-                reasons=['风险超出阈值'],
-                suggested_adjustments=self.suggest_adjustments(decision)
-            )
-        
-        return RiskAssessment(approved=True)
-```
-
 ### 多 Agent 协作流程
-
-```
-用户输入："当 BTC 突破 50日均线买入"
-    ↓
-意图理解 Agent
-    ↓
-结构化策略对象
-    ↓
-数据获取 Agent（并行获取价格、新闻、情绪）
-    ↓
-市场数据聚合
-    ↓
-策略执行 Agent（评估条件、生成指令）
-    ↓
-交易决策
-    ↓
-风险管理 Agent（评估风险）
-    ↓
-批准/拒绝
-    ↓
-执行层（连接交易所）
-    ↓
-订单提交
-```
 
 ---
 
@@ -211,36 +78,7 @@ class RiskManager:
 ### 示例：自然语言到代码
 
 **输入**：
-```
-"创建一个策略：当标普500指数下跌超过2%时，
-买入VIX期货对冲，仓位不超过总资金的10%"
-```
-
 **LLM 生成代码**：
-```python
-class VIXHedgeStrategy:
-    def __init__(self):
-        self.max_position = 0.10  # 10% 资金上限
-        self.trigger_threshold = -0.02  # -2% 触发
-        
-    async def on_market_data(self, data):
-        sp500_change = data['SP500']['daily_change']
-        
-        if sp500_change < self.trigger_threshold:
-            position_size = self.calculate_position_size(
-                portfolio_value=data['portfolio']['total_value'],
-                max_percentage=self.max_position
-            )
-            
-            return Order(
-                symbol='VIX',
-                side='BUY',
-                quantity=position_size,
-                order_type='MARKET',
-                time_in_force='IOC'
-            )
-```
-
 ### 延迟问题
 
 **关键路径延迟**：
@@ -273,41 +111,9 @@ class VIXHedgeStrategy:
 
 **1. 级联故障**
 
-```
-Agent A 错误判断市场方向
-    ↓
-Agent B 基于 A 的错误信息执行
-    ↓
-Agent C 放大仓位
-    ↓
-巨大损失
-```
-
 **2. 反馈循环**
 
-```
-多个 TradingAgents 使用相似策略
-    ↓
-同时检测到同一信号
-    ↓
-同时下单
-    ↓
-市场冲击成本激增
-    ↓
-策略失效
-```
-
 **3. 幻觉交易**
-
-```
-LLM 幻觉："苹果即将发布革命性产品"
-    ↓
-Strategy Parser 生成买入信号
-    ↓
-实际：没有这个产品
-    ↓
-亏损
-```
 
 <object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" type="image/svg+xml" width="100%"></object>
 
@@ -342,16 +148,6 @@ Strategy Parser 生成买入信号
 
 **1. 责任归属**
 
-```
-AI Agent 错误交易导致损失
-    ↓
-谁负责？
-    ├── 开发者？（模型设计）
-    ├── 用户？（策略输入）
-    ├── AI 本身？（不可能）
-    └── 交易所？（未审核）
-```
-
 **2. 市场操纵风险**
 
 AI 可能无意中：
@@ -381,16 +177,6 @@ AI 可能无意中：
 | **实盘就绪** | ❌ 否 | ✅ 部分支持 |
 
 ### 技术对比
-
-```
-TradingAgents：自然语言 → LLM 解析 → 执行
-    优点：易用
-    缺点：不可控、高风险
-
-qlib：Python 代码 → 回测优化 → 实盘
-    优点：可控、专业
-    缺点：门槛高
-```
 
 ### 适用场景
 

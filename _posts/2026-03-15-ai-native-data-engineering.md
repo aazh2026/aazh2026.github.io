@@ -101,31 +101,6 @@ redirect_from:
 
 ### 架构概览
 
-```yaml
-AI-Native 数据工程三层架构:
-  
-  第一层：智能数据接入层 (Smart Ingestion Layer):
-    功能: 自适应数据采集与质量保障
-    核心能力:
-      - Schema 自动发现与演化
-      - 智能数据质量监控
-      - 异常自动检测与修复
-    
-  第二层：智能特征工程层 (Intelligent Feature Layer):
-    功能: 自动化特征发现、生成与管理
-    核心能力:
-      - AutoFE (自动特征工程)
-      - 特征重要性评估
-      - 特征版本与血缘管理
-    
-  第三层：向量数据网格层 (Vector Data Mesh Layer):
-    功能: 分布式向量数据服务
-    核心能力:
-      - Embedding 即服务
-      - 跨模型向量互操作
-      - 语义检索与推荐
-```
-
 ### 与传统数据架构的对比
 
 | 维度 | 传统数据工程 | AI-Native 数据工程 |
@@ -145,12 +120,6 @@ AI-Native 数据工程三层架构:
 
 ### 传统数据流水线的问题
 
-```
-数据源 → [ETL Job] → 数据仓库 → [ETL Job] → 特征表 → [Sync] → 模型服务
-     ↓         ↓            ↓           ↓          ↓
-  手动配置   静态代码     定时调度    人工维护   容易断裂
-```
-
 **痛点**：
 - 上游 Schema 变更 → 管道断裂 → 人工修复
 - 数据质量下降 → 发现滞后 → 模型失效
@@ -160,32 +129,6 @@ AI-Native 数据工程三层架构:
 
 **1. 自愈 (Self-Healing)**
 
-```python
-# 智能数据管道示例
-class SelfHealingPipeline:
-    def process(self, data_source):
-        try:
-            # 1. Schema 漂移检测
-            schema_drift = self.detect_schema_drift(data_source)
-            if schema_drift:
-                # 自动适应新 Schema
-                self.adapt_schema(schema_drift)
-            
-            # 2. 数据质量监控
-            quality_report = self.assess_quality(data_source)
-            if quality_report.anomalies:
-                # 自动修复或隔离异常数据
-                self.handle_anomalies(quality_report)
-            
-            # 3. 智能路由
-            route = self.optimize_route(data_source)
-            return self.process_with_route(data_source, route)
-            
-        except Exception as e:
-            # 自动故障恢复
-            return self.recover_or_escalate(e)
-```
-
 **自愈能力**：
 - Schema 漂移自动适应
 - 数据异常自动隔离/修复
@@ -193,93 +136,13 @@ class SelfHealingPipeline:
 
 **2. 自适应 (Self-Adaptive)**
 
-```yaml
-自适应数据管道:
-  负载自适应:
-    监控: 数据到达速率
-    响应: 自动扩缩容处理资源
-    
-  质量自适应:
-    监控: 数据质量分数
-    响应: 质量下降时切换备用数据源
-    
-  优先级自适应:
-    监控: 业务重要性
-    响应: 高优先级数据优先处理
-```
-
 **3. 自优化 (Self-Optimizing)**
-
-```python
-# 自优化示例：查询优化
-class SelfOptimizingQuery:
-    def execute(self, query):
-        # 1. 查询模式学习
-        query_pattern = self.analyze_query_pattern(query)
-        
-        # 2. 自动索引建议
-        if self.should_create_index(query_pattern):
-            self.suggest_index_creation()
-        
-        # 3. 查询重写优化
-        optimized_query = self.rewrite_for_performance(query)
-        
-        # 4. 缓存策略优化
-        if self.is_cache_friendly(query_pattern):
-            return self.execute_with_caching(optimized_query)
-        
-        return self.execute_direct(optimized_query)
-```
 
 ### 智能数据质量监控
 
 传统数据质量：固定规则检查
 
-```sql
--- 传统方式
-SELECT COUNT(*) FROM orders WHERE amount < 0;  -- 检查负数金额
-SELECT COUNT(*) FROM orders WHERE created_at > NOW();  -- 检查未来日期
-```
-
 AI-Native 数据质量：智能异常检测
-
-```python
-# AI 驱动的异常检测
-class IntelligentQualityMonitor:
-    def __init__(self):
-        self.baseline_models = {}
-    
-    def assess_quality(self, dataset):
-        anomalies = []
-        
-        # 1. 统计异常检测
-        for column in dataset.numeric_columns:
-            z_scores = self.calculate_z_scores(column)
-            outliers = self.detect_outliers(z_scores, threshold=3)
-            if outliers:
-                anomalies.append({
-                    'type': 'statistical_outlier',
-                    'column': column,
-                    'severity': 'warning',
-                    'suggestion': 'Review outliers: ' + str(outliers)
-                })
-        
-        # 2. 分布漂移检测
-        drift_score = self.detect_distribution_drift(column)
-        if drift_score > 0.5:
-            anomalies.append({
-                'type': 'distribution_drift',
-                'column': column,
-                'severity': 'error',
-                'suggestion': 'Data distribution changed significantly'
-            })
-        
-        # 3. 模式异常检测 (AI)
-        pattern_anomalies = self.ai_pattern_detection(dataset)
-        anomalies.extend(pattern_anomalies)
-        
-        return QualityReport(anomalies=anomalies)
-```
 
 ---
 
@@ -296,28 +159,6 @@ class IntelligentQualityMonitor:
 
 ### AutoFE：自动特征工程
 
-```python
-# 自动特征工程示例
-class AutoFeatureEngineer:
-    def generate_features(self, dataset, target):
-        features = []
-        
-        # 1. 自动特征生成
-        generated = self.generate_candidate_features(dataset)
-        # 包括：统计特征、时序特征、交叉特征、文本特征等
-        
-        # 2. 特征重要性评估
-        importance_scores = self.assess_importance(generated, target)
-        
-        # 3. 特征选择
-        selected = self.select_features(generated, importance_scores, top_k=50)
-        
-        # 4. 特征验证
-        validated = self.validate_features(selected, target)
-        
-        return FeatureSet(features=validated, pipeline=self.build_pipeline())
-```
-
 **自动特征类型**：
 
 | 类型 | 自动生成示例 | 适用场景 |
@@ -330,50 +171,7 @@ class AutoFeatureEngineer:
 
 ### 特征即服务 (Feature-as-a-Service)
 
-```yaml
-特征服务架构:
-  
-  特征存储 (Feature Store):
-    在线存储: Redis / DynamoDB  # 低延迟特征服务
-    离线存储: S3 / Delta Lake    # 批量特征计算
-    
-  特征服务 (Feature Service):
-    API: /features/{entity_type}/{entity_id}
-    能力:
-      - 实时特征计算
-      - 特征版本管理
-      - 特征血缘追踪
-      - 特征共享与复用
-    
-  特征治理 (Feature Governance):
-    - 特征注册与发现
-    - 特征质量监控
-    - 特征使用审计
-    - 特征影响分析
-```
-
 **实战示例**：
-
-```python
-# 使用特征服务
-from feature_store import FeatureClient
-
-client = FeatureClient()
-
-# 获取用户特征 (自动处理在线/离线特征融合)
-user_features = client.get_features(
-    entity_type='user',
-    entity_id='user_123',
-    feature_names=['avg_order_value', 'recent_viewed_categories', 'lifetime_value'],
-    point_in_time='2026-03-15T10:00:00Z'  # 时间旅行查询
-)
-
-# 特征自动发现
-recommended_features = client.discover_features(
-    target='purchase_conversion',
-    context={'user_segments': ['high_value', 'frequent_buyer']}
-)
-```
 
 ---
 
@@ -383,103 +181,15 @@ recommended_features = client.discover_features(
 
 传统架构的问题：
 
-```
-搜索服务 → 自建向量索引
-推荐服务 → 自建向量索引
-客服 Bot → 自建向量索引
-语义分析 → 自建向量索引
-     ↓
-重复计算、资源浪费、不一致
-```
-
 **向量数据网格** 提供统一的向量数据服务。
 
 ### 向量数据网格架构
 
-```yaml
-向量数据网格 (Vector Data Mesh):
-  
-  统一 Embedding 服务:
-    功能: 文本/图像/多模态 Embedding
-    模型管理: 版本控制、A/B 测试、动态切换
-    能力:
-      - 批量 Embedding
-      - 增量 Embedding
-      - Embedding 缓存
-  
-  分布式向量存储:
-    存储引擎: Milvus / Pinecone / Weaviate / pgvector
-    特性:
-      - 分片与复制
-      - 混合检索 (向量 + 标量)
-      - 实时更新
-  
-  语义检索服务:
-    API: /search/semantic
-    能力:
-      - 相似度搜索
-      - 多向量联合检索
-      - 检索结果重排序
-  
-  向量治理:
-    - 向量版本管理
-    - 跨模型向量对齐
-    - 向量质量监控
-```
-
 ### 向量即服务 (Vector-as-a-Service)
-
-```python
-# 向量服务使用示例
-from vector_mesh import VectorClient
-
-client = VectorClient()
-
-# 1. Embedding 生成
-embedding = client.embed(
-    text="AI-Native 数据工程",
-    model="text-embedding-3-large"
-)
-
-# 2. 向量存储
-client.store(
-    collection="product_catalog",
-    vectors=[{
-        'id': 'product_001',
-        'vector': embedding,
-        'metadata': {'category': 'tech', 'price': 99.99}
-    }]
-)
-
-# 3. 语义检索
-results = client.search(
-    collection="product_catalog",
-    query="智能数据管道",
-    top_k=10,
-    filters={'price': {'$lt': 100}},
-    rerank=True
-)
-```
 
 ### 跨模型向量互操作
 
 不同 Embedding 模型的向量空间不同，需要映射：
-
-```python
-# 跨模型向量对齐
-class VectorAlignment:
-    def __init__(self, source_model, target_model):
-        self.translator = self.train_translator(source_model, target_model)
-    
-    def translate(self, vector, from_model, to_model):
-        """将向量从一个模型空间映射到另一个"""
-        return self.translator.transform(vector)
-    
-    def train_translator(self, source, target):
-        # 使用对比学习训练映射模型
-        # 使语义相似的文本在两种向量空间中距离相近
-        pass
-```
 
 ---
 

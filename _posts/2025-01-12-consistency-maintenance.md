@@ -106,37 +106,6 @@ Agent需要：
 
 维护一个相对稳定的用户画像，跨会话持久化：
 
-```python
-@dataclass
-class UserProfile:
-    user_id: str
-    
-    # 静态属性（很少变化）
-    preferences: Dict[str, Any]  # 喜欢/不喜欢
-    facts: Dict[str, Any]        # 基本事实（年龄、职业等）
-    
-    # 动态摘要（定期更新）
-    interaction_summary: str     # "用户主要关注技术话题，近期在找工作"
-    
-    # 关系历史
-    relationship_stage: str      # "新朋友"/"熟客"/"VIP"
-    trust_level: float           # 0-1，基于历史交互质量
-    
-    # 时间戳
-    created_at: datetime
-    updated_at: datetime
-    
-    def update(self, new_info: dict):
-        """更新画像，处理冲突"""
-        for key, value in new_info.items():
-            if key in self.facts and self.facts[key] != value:
-                # 记录历史版本
-                self._archive_fact(key, self.facts[key])
-            self.facts[key] = value
-        
-        self.updated_at = datetime.now()
-```
-
 **使用时机：** 每次对话开始时加载，作为系统prompt的一部分。
 
 **更新策略：**
@@ -147,18 +116,6 @@ class UserProfile:
 ### 3.2 会话摘要链：压缩的历史
 
 不存储完整对话，存储**分层摘要**：
-
-```
-会话100（原始）→ 摘要（100 tokens）
-会话99（原始）→ 摘要（100 tokens）
-...
-
-当摘要积累到10个：
-→ 合并为"第10-20会话摘要"（150 tokens）
-
-当合并摘要积累到10个：
-→ 合并为"第1-100会话总摘要"（200 tokens）
-```
 
 形成**金字塔结构**：
 - 底层：最近5个会话的详细摘要
@@ -176,126 +133,19 @@ class UserProfile:
 
 给每个记忆加上**时间维度**：
 
-```python
-class TemporalMemory:
-    def __init__(self, content, timestamp, ttl=None):
-        self.content = content
-        self.created_at = timestamp
-        self.ttl = ttl  # Time to live，过期自动降级
-        self.access_count = 0
-        self.last_accessed = timestamp
-    
-    def relevance_score(self, query_time):
-        """计算时间相关性"""
-        age = query_time - self.created_at
-        recency = math.exp(-age.days / 30)  # 30天半衰期
-        
-        frequency = math.log(1 + self.access_count)
-        
-        return recency * frequency
-    
-    def is_stale(self, current_time):
-        """检查是否过期"""
-        if self.ttl is None:
-            return False
-        return (current_time - self.created_at) > self.ttl
-```
-
 **查询时排序：**
-```python
-def retrieve_relevant_memories(query, user_id, current_time):
-    memories = vector_db.search(query, user_id=user_id)
-    
-    # 按时间相关性重排序
-    scored = [(m, m.relevance_score(current_time)) for m in memories]
-    scored.sort(key=lambda x: x[1], reverse=True)
-    
-    return [m for m, _ in scored[:5]]  # Top-5最相关的
-```
 
 ### 3.4 冲突检测与解决
 
 **检测冲突：**
 
-```python
-class ConflictDetector:
-    def detect(self, new_fact, existing_facts):
-        conflicts = []
-        
-        for fact in existing_facts:
-            # 语义相似但值不同
-            if (self.semantic_similarity(new_fact, fact) > 0.8 and
-                new_fact.value != fact.value):
-                conflicts.append({
-                    'existing': fact,
-                    'new': new_fact,
-                    'type': 'contradiction'
-                })
-        
-        return conflicts
-```
-
 **解决策略：**
-
-```python
-def resolve_conflict(conflict):
-    existing, new = conflict['existing'], conflict['new']
-    
-    # 策略1：时间优先（新覆盖旧）
-    if new.timestamp > existing.timestamp:
-        return new, reason="newer_information"
-    
-    # 策略2：来源可信度假先
-    if new.source_credibility > existing.source_credibility:
-        return new, reason="more_credible_source"
-    
-    # 策略3：用户显式纠正
-    if new.is_explicit_correction:
-        return new, reason="user_correction"
-    
-    # 策略4：标记矛盾，询问用户
-    return ConflictResolution.ASK_USER, details=conflict
-```
 
 ### 3.5 会话状态管理
 
 维护跨会话的**状态机**：
 
-```python
-class ConversationState:
-    def __init__(self):
-        self.current_topic: str = None
-        self.pending_questions: List[str] = []
-        self.agreements: Dict[str, Any] = {}  # 已达成的共识
-        self.action_items: List[Dict] = []    # 待办事项
-        
-    def save_to_memory(self):
-        """会话结束时保存状态"""
-        return {
-            'topic': self.current_topic,
-            'pending': self.pending_questions,
-            'agreements': self.agreements,
-            'todos': self.action_items,
-            'timestamp': datetime.now()
-        }
-    
-    @classmethod
-    def load_from_memory(cls, saved_state):
-        """新会话开始时恢复状态"""
-        state = cls()
-        state.current_topic = saved_state.get('topic')
-        state.pending_questions = saved_state.get('pending', [])
-        state.agreements = saved_state.get('agreements', {})
-        state.action_items = saved_state.get('todos', [])
-        return state
-```
-
 **开场白示例：**
-
-```
-"欢迎回来！上次我们聊到[话题]，你提到想[待办事项]。
-另外，关于[之前的问题]，我找到了一些新信息..."
-```
 
 ## 四、实践中的经验
 
@@ -310,13 +160,6 @@ class ConversationState:
 ### 4.2 优雅降级
 
 当一致性维护失败时：
-
-```
-"我注意到我们之前讨论过这个话题，但我的记录可能不完整。
-为了给你最好的帮助，能否快速确认一下：
-- 你目前使用的是[系统X]吗？
-- 你提到的[问题Y]解决了吗？"
-```
 
 不假装记得，主动确认，用户通常很乐意快速更新。
 

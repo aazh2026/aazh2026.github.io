@@ -39,26 +39,12 @@ redirect_from:
 **问题1：安全审查太晚**
 
 传统流程：
-```
-开发 → 测试 → 安全扫描 → 修复 → 发布
-                ↑
-            发现问题时
-        已经写了很多代码
-```
-
 后果：
 - 修复成本高（返工）
 - 发布延期
 - 安全问题被"妥协"
 
 **问题2：安全工具误报率高**
-
-```
-扫描结果：
-- 高危漏洞：50个
-  - 真实漏洞：5个
-  - 误报：45个
-```
 
 开发人员："狼来了"效应，对安全警告麻木。
 
@@ -89,15 +75,7 @@ redirect_from:
 ### 什么是"终极左移"
 
 **传统左移**：
-```
-安全扫描左移到CI/CD阶段
-```
-
 **AI终极左移**：
-```
-安全策略左移到代码生成阶段
-```
-
 **对比**：
 
 | 维度 | 传统DevSecOps | AI DevSecOps |
@@ -111,63 +89,9 @@ redirect_from:
 
 **能力1：安全Prompt工程**
 
-```python
-# 安全增强的代码生成Prompt
-SECURITY_PROMPT = """
-生成Python代码，遵循以下安全规范：
-1. 所有用户输入必须验证和转义
-2. 数据库操作使用参数化查询（防SQL注入）
-3. 敏感数据必须加密存储
-4. 不使用eval()等危险函数
-5. 遵循OWASP Top 10安全实践
-
-代码要求：
-{user_requirement}
-"""
-```
-
 **能力2：实时安全审查**
 
-```python
-class AISecurityReviewer:
-    def review_code(self, code):
-        """
-        AI实时审查代码安全性
-        """
-        issues = []
-        
-        # 检查SQL注入
-        if self.detect_sql_injection_risk(code):
-            issues.append({
-                'type': 'SQL_INJECTION',
-                'severity': 'HIGH',
-                'fix': '使用参数化查询'
-            })
-        
-        # 检查XSS风险
-        if self.detect_xss_risk(code):
-            issues.append({
-                'type': 'XSS',
-                'severity': 'HIGH', 
-                'fix': '对用户输入进行HTML转义'
-            })
-        
-        return issues
-```
-
 **能力3：自动安全修复**
-
-```python
-# 不安全的代码
-def get_user(name):
-    query = f"SELECT * FROM users WHERE name = '{name}'"
-    return db.execute(query)
-
-# AI自动修复
-def get_user(name):
-    query = "SELECT * FROM users WHERE name = %s"
-    return db.execute(query, (name,))  # 参数化查询
-```
 
 ---
 
@@ -175,113 +99,14 @@ def get_user(name):
 
 ### 安全代码生成流程
 
-```
-开发者输入需求
-      ↓
-AI分析需求，识别安全风险点
-      ↓
-选择相应的安全策略Prompt
-      ↓
-生成符合安全规范的代码
-      ↓
-自动安全验证
-      ↓
-输出安全代码 + 安全说明
-```
-
 ### 实战示例
 
 **场景：用户注册功能**
 
 **开发者需求**：
-```
-实现用户注册功能，接收用户名和密码，存储到数据库
-```
-
 **传统AI生成（有安全风险）**：
-```python
-def register_user(username, password):
-    # 风险1：密码明文存储
-    # 风险2：SQL注入
-    # 风险3：无输入验证
-    query = f"INSERT INTO users VALUES ('{username}', '{password}')"
-    db.execute(query)
-```
-
 **安全增强AI生成**：
-```python
-import bcrypt
-import re
-from typing import Optional
-
-class UserService:
-    def register_user(self, username: str, password: str) -> Optional[dict]:
-        """
-        用户注册 - 安全实现
-        
-        安全措施：
-        1. 输入验证：防止注入攻击
-        2. 密码加密：使用bcrypt哈希
-        3. 参数化查询：防止SQL注入
-        4. 错误处理：不泄露敏感信息
-        """
-        # 1. 输入验证
-        if not self._validate_username(username):
-            raise ValueError("用户名格式无效")
-        
-        if not self._validate_password(password):
-            raise ValueError("密码强度不足")
-        
-        # 2. 检查用户是否存在
-        if self._user_exists(username):
-            raise ValueError("用户已存在")
-        
-        # 3. 密码哈希
-        password_hash = bcrypt.hashpw(
-            password.encode('utf-8'), 
-            bcrypt.gensalt()
-        )
-        
-        # 4. 安全的数据库操作
-        try:
-            query = """
-                INSERT INTO users (username, password_hash, created_at)
-                VALUES (%s, %s, NOW())
-            """
-            db.execute(query, (username, password_hash))
-            return {'username': username, 'status': 'created'}
-        except Exception:
-            # 不泄露数据库错误详情
-            raise ValueError("注册失败，请稍后重试")
-    
-    def _validate_username(self, username: str) -> bool:
-        """用户名验证：字母数字，长度3-20"""
-        return bool(re.match(r'^[a-zA-Z0-9]{3,20}$', username))
-    
-    def _validate_password(self, password: str) -> bool:
-        """密码强度验证：至少8位，包含大小写和数字"""
-        return (
-            len(password) >= 8 and
-            any(c.isupper() for c in password) and
-            any(c.islower() for c in password) and
-            any(c.isdigit() for c in password)
-        )
-```
-
 **安全说明**：
-```
-✅ 已实施的安全措施：
-- 输入验证（防注入）
-- 密码bcrypt哈希（防泄露）
-- 参数化查询（防SQL注入）
-- 错误信息模糊化（防信息泄露）
-
-⚠️ 需要注意：
-- 数据库连接使用SSL
-- 实施速率限制防暴力破解
-- 添加审计日志
-```
-
 ---
 
 ## 策略即代码实践
@@ -290,69 +115,7 @@ class UserService:
 
 **YAML格式的安全策略**：
 
-```yaml
-# security-policies.yaml
-policies:
-  - name: "SQL Injection Prevention"
-    id: "SEC-001"
-    severity: "critical"
-    rules:
-      - "禁止使用字符串拼接SQL"
-      - "必须使用参数化查询"
-    auto_fix: true
-    
-  - name: "Password Security"
-    id: "SEC-002"
-    severity: "critical"
-    rules:
-      - "密码必须哈希存储"
-      - "使用bcrypt或Argon2"
-      - "禁止明文存储"
-    auto_fix: true
-    
-  - name: "Input Validation"
-    id: "SEC-003"
-    severity: "high"
-    rules:
-      - "所有用户输入必须验证"
-      - "验证失败给出明确错误"
-    auto_fix: false
-    
-  - name: "GDPR Compliance"
-    id: "COMP-001"
-    severity: "high"
-    rules:
-      - "个人数据必须加密"
-      - "实施数据最小化原则"
-      - "提供数据删除功能"
-    auto_fix: false
-```
-
 ### 策略到Prompt的转换
-
-```python
-class SecurityPolicyConverter:
-    def convert_to_prompt(self, policy_file, context):
-        """
-        将安全策略转换为AI Prompt
-        """
-        policies = yaml.load(policy_file)
-        
-        prompt = "生成代码时必须遵循以下安全策略：\n\n"
-        
-        for policy in policies:
-            prompt += f"【{policy['id']}】{policy['name']}\n"
-            prompt += f"级别：{policy['severity']}\n"
-            prompt += "要求：\n"
-            for rule in policy['rules']:
-                prompt += f"  - {rule}\n"
-            prompt += "\n"
-        
-        prompt += f"\n上下文：{context}\n"
-        prompt += "请生成符合以上所有安全策略的代码。"
-        
-        return prompt
-```
 
 ---
 

@@ -61,12 +61,6 @@ GitHub的答案是：**成为AI驱动开发的基础设施**。
 - 跨文件重构
 
 **技术栈**：
-```
-[GitHub Issues] → [AI Planner] → [Multi-file Edit] → [PR]
-                     ↓
-              [Copilot Chat]
-```
-
 **关键洞察**：
 Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 
@@ -77,17 +71,6 @@ Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 **定位**：自主开发Agent
 
 **愿景**：
-```
-开发者："修复这个bug"
-GitHub Agent：
-  1. 分析Issue
-  2. 定位代码
-  3. 生成修复
-  4. 运行测试
-  5. 提交PR
-  6. 通知开发者
-```
-
 **技术基础**：
 - OpenAI GPT-4/GPT-5
 - GitHub Actions
@@ -171,15 +154,6 @@ GitHub Agent可以介入任何环节。
 ### 形态1：Issue-to-PR Agent
 
 **工作流**：
-```
-1. 开发者创建Issue（自然语言描述）
-2. Agent分析需求
-3. Agent生成实现方案
-4. Agent创建分支并编码
-5. Agent提交PR
-6. 开发者Review并Merge
-```
-
 **预计发布时间**：2026 Q3
 
 ---

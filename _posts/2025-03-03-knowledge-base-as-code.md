@@ -87,31 +87,10 @@ redirect_from:
 ### KBaaC的三大支柱
 
 **1. 架构决策记录（ADR）**
-```
-docs/adr/
-├── 0001-record-architecture-decisions.md
-├── 0002-use-postgresql-as-primary-database.md
-├── 0003-implement-cqrs-for-order-service.md
-└── 0004-migrate-from-rest-to-graphql.md
-```
 
 **2. 编码规范（Coding Standards）**
-```
-docs/standards/
-├── 0001-python-code-style.md
-├── 0002-api-design-guidelines.md
-├── 0003-error-handling-patterns.md
-└── 0004-testing-strategy.md
-```
 
 **3. 运行手册（Runbooks）**
-```
-docs/runbooks/
-├── 0001-oncall-procedures.md
-├── 0002-database-failover.md
-├── 0003-security-incident-response.md
-└── 0004-performance-degradation.md
-```
 
 ---
 
@@ -128,101 +107,9 @@ docs/runbooks/
 
 ### ADR标准模板
 
-```markdown
-# ADR 0002: 使用PostgreSQL作为主要数据库
-
-## 状态
-- 已接受（Accepted）
-- 日期：2024-03-15
-- 决策者：架构委员会（张工、李工、王工）
-
-## 背景
-我们需要为新的订单服务选择数据库。该服务的特点是：
-- 高写入吞吐量（峰值10,000 TPS）
-- 复杂查询需求（多表JOIN）
-- 强一致性要求（金融交易）
-- 团队已有SQL经验
-
-## 考虑的选项
-
-### 选项1：MySQL 8.0
-**优点**：
-- 团队熟悉度高
-- 社区活跃，生态成熟
-- 云服务商支持好
-
-**缺点**：
-- 复杂查询性能不如PostgreSQL
-- JSON支持有限
-- 扩展性瓶颈（写放大问题）
-
-### 选项2：PostgreSQL 15
-**优点**：
-- 复杂查询优化器优秀
-- 强大的JSON/JSONB支持
-- 更好的扩展性（逻辑复制）
-- 符合SQL标准
-
-**缺点**：
-- 团队学习成本
-- 国内云服务商支持稍弱
-
-### 选项3：MongoDB
-**优点**：
-- 灵活的文档模型
-- 水平扩展容易
-
-**缺点**：
-- 不符合ACID要求
-- 团队缺乏NoSQL经验
-- 复杂查询性能差
-
-## 决策
-选择**PostgreSQL 15**。
-
-**主要理由**：
-1. 复杂查询性能是关键需求
-2. JSON支持为未来的 schema 演进提供灵活性
-3. 团队愿意投资学习成本
-
-## 后果
-
-### 积极后果
-- 查询性能比MySQL提升40%
-- 可以灵活处理半结构化数据
-
-### 消极后果
-- 需要培训团队成员
-- 监控和运维工具需要调整
-
-### 缓解措施
-- 安排PostgreSQL培训课程
-- 建立专门的DBA支持
-
-## 相关决策
-- ADR 0001: 微服务架构选择
-- ADR 0003: CQRS模式实现（依赖本决策）
-
-## 参考
-- [PostgreSQL vs MySQL Benchmark 2024](https://)
-- [团队技术能力评估报告](https://)
-```
-
 ### ADR的状态流转
 
 <object data="/assets/images/2025-03-03-knowledge-base-as-code-01-adr-lifecycle.svg" type="image/svg+xml" width="100%"></object>
-
-```
-提议（Proposed）
-    ↓
-审核中（Under Review）
-    ↓
-已接受（Accepted）/ 已拒绝（Rejected）
-    ↓
-已弃用（Deprecated）
-    ↓
-被取代（Superseded by ADR XXXX）
-```
 
 <object data="/assets/images/2025-03-03-knowledge-base-as-code-02-kbac-pillars.svg" type="image/svg+xml" width="100%"></object>
 
@@ -231,60 +118,10 @@ docs/runbooks/
 ### 阶段一：基础设施（Week 1）
 
 **1. 创建知识库目录结构**
-```bash
-mkdir -p docs/{adr,standards,runbooks,api}
-touch docs/README.md
-```
 
 **2. 初始化ADR模板**
-```bash
-cat > docs/adr/template.md << 'EOF'
-# ADR XXXX: [标题]
-
-## 状态
-- [状态]
-- 日期：[YYYY-MM-DD]
-- 决策者：[姓名/团队]
-
-## 背景
-[问题描述和上下文]
-
-## 考虑的选项
-
-### 选项1：[名称]
-**优点**：
-- 
-
-**缺点**：
-- 
-
-### 选项2：[名称]
-...
-
-## 决策
-[选择的选项和理由]
-
-## 后果
-### 积极后果
-- 
-
-### 消极后果
-- 
-
-## 相关决策
-- 
-
-## 参考
-- 
-EOF
-```
 
 **3. 设置Git工作流**
-```bash
-# 创建分支保护规则
-# - main分支需要PR审核
-# - docs目录的修改需要至少1人审核
-```
 
 ### 阶段二：试点项目（Week 2-4）
 
@@ -298,96 +135,14 @@ EOF
 - 通过PR流程提交
 
 **3. 建立审查流程**
-```markdown
-## ADR审查检查清单
-
-- [ ] 背景描述是否充分？
-- [ ] 是否考虑了至少2个替代方案？
-- [ ] 每个方案的优缺点是否客观？
-- [ ] 决策理由是否清晰？
-- [ ] 后果（正面和负面）是否都被考虑？
-- [ ] 相关决策是否正确链接？
-- [ ] 状态标记是否正确？
-```
 
 ### 阶段三：推广与自动化（Week 5-8）
 
 **1. CI/CD集成**
-```yaml
-# .github/workflows/kbac-check.yml
-name: KBaaC Checks
-
-on:
-  pull_request:
-    paths:
-      - 'docs/**'
-
-jobs:
-  adr-validation:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Validate ADR format
-        run: |
-          # 检查ADR编号连续性
-          # 检查必填字段
-          # 检查链接有效性
-          python scripts/validate_adr.py
-      
-      - name: Check for superseded ADRs
-        run: |
-          # 检查被取代的ADR是否标记正确
-          python scripts/check_superseded.py
-```
 
 **2. 自动化工具**
-```python
-# scripts/validate_adr.py
-import re
-import os
-from pathlib import Path
-
-def validate_adr(filepath):
-    """验证ADR格式"""
-    with open(filepath) as f:
-        content = f.read()
-    
-    # 检查必填字段
-    required_sections = [
-        "## 状态",
-        "## 背景",
-        "## 考虑的选项",
-        "## 决策",
-        "## 后果"
-    ]
-    
-    missing = []
-    for section in required_sections:
-        if section not in content:
-            missing.append(section)
-    
-    if missing:
-        print(f"❌ {filepath}: 缺少部分: {missing}")
-        return False
-    
-    print(f"✅ {filepath}: 格式正确")
-    return True
-
-# 检查所有ADR
-adr_dir = Path("docs/adr")
-for adr_file in sorted(adr_dir.glob("*.md")):
-    if adr_file.name != "template.md":
-        validate_adr(adr_file)
-```
 
 **3. 知识图谱生成**
-```python
-# scripts/generate_knowledge_graph.py
-# 自动生成ADR依赖关系图
-# 生成决策时间线
-# 创建可搜索的索引
-```
 
 ---
 
@@ -396,18 +151,8 @@ for adr_file in sorted(adr_dir.glob("*.md")):
 ### 实践一：ADR的粒度控制
 
 **不要**：一个ADR包含多个独立决策
-```markdown
-# ❌ 不好的ADR
-# ADR 0005: 数据库选择、缓存策略和消息队列
-```
 
 **要**：每个ADR一个决策
-```markdown
-# ✅ 好的ADR
-# ADR 0005: 使用PostgreSQL作为主要数据库
-# ADR 0006: 使用Redis作为缓存层
-# ADR 0007: 使用RabbitMQ作为消息队列
-```
 
 ### 实践二：及时记录
 
@@ -426,43 +171,13 @@ for adr_file in sorted(adr_dir.glob("*.md")):
 
 **决策不是孤立的**。
 
-```markdown
-## 相关决策
-- ADR 0001: 微服务架构选择（本决策的前提）
-- ADR 0003: CQRS模式实现（依赖本决策）
-- ADR 0012: 数据库分片策略（取代本决策的某些方面）
-```
-
 ### 实践四：处理决策变更
 
 **决策会过时，这是正常的**。
 
-```markdown
-# ADR 0002: 使用PostgreSQL作为主要数据库
-
-## 状态
-- ~~已接受~~
-- **已弃用**（2025-01-15）
-- **被取代**：ADR 0015: 迁移到分布式SQL（CockroachDB）
-
-## 弃用理由
-- 数据量增长超出PostgreSQL单机扩展能力
-- 多区域部署需要更强的分布式事务支持
-- 参见 ADR 0015 的详细分析
-```
-
 ### 实践五：与代码审查结合
 
 **代码审查时，同时检查相关的ADR**。
-
-```markdown
-## PR审查检查清单
-
-- [ ] 代码是否符合编码规范？
-- [ ] 是否有相关的ADR？
-- [ ] 实现是否与ADR中的决策一致？
-- [ ] 是否需要在ADR中记录新的考虑？
-```
 
 ---
 
@@ -471,20 +186,6 @@ for adr_file in sorted(adr_dir.glob("*.md")):
 ### ADR工具
 
 **adr-tools**：命令行ADR管理工具
-```bash
-# 初始化ADR目录
-adr init docs/adr
-
-# 创建新ADR
-adr new "使用Kubernetes进行容器编排"
-# 创建: docs/adr/0004-use-kubernetes-for-container-orchestration.md
-
-# 列出所有ADR
-adr list
-
-# 生成图形化决策图
-adr generate graph
-```
 
 **Log4brains**：现代化的ADR管理工具
 - Web界面浏览ADR
@@ -494,13 +195,6 @@ adr generate graph
 ### 文档工具
 
 **MkDocs**：静态文档站点生成器
-```yaml
-# 自动生成ADR索引页面
-plugins:
-  - adr:
-      docs_dir: docs/adr
-      output_file: docs/adr-index.md
-```
 
 **Obsidian + Git**：个人知识管理
 - 本地Markdown编辑
@@ -526,7 +220,6 @@ plugins:
 
 **问题**：写ADR需要额外时间，团队可能抵触。
 
-**解决方案**：
 - 从最重要的决策开始（二八法则）
 - 将ADR编写纳入迭代计划（算入工时）
 - 展示长期收益（减少重复讨论、加速新人入职）
@@ -535,7 +228,6 @@ plugins:
 
 **问题**：ADR快速过时，维护困难。
 
-**解决方案**：
 - 定期审查（每季度ADR梳理会议）
 - 明确标记过时ADR
 - 接受"过时是正常的"，重点是有记录可查
@@ -544,7 +236,6 @@ plugins:
 
 **问题**：ADR多了之后，难以找到相关信息。
 
-**解决方案**：
 - 良好的命名规范
 - 标签系统
 - 自动生成索引和图谱
@@ -557,18 +248,6 @@ plugins:
 回到张工的故事。
 
 如果他在2019年使用了KBaaC：
-
-```bash
-# 2024年，新团队调查性能问题
-git log --grep="microservices" --all -- docs/adr/
-# 找到 ADR 0003: 微服务架构迁移
-
-git show 2019-03-15:docs/adr/0003-microservices-migration.md
-# 看到当时的完整上下文
-
-git log --follow docs/adr/0003-microservices-migration.md
-# 看到决策的演进过程
-```
 
 **KBaaC不是增加工作负担，而是给未来的团队留下时间胶囊。**
 

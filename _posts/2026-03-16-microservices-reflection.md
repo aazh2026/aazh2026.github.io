@@ -111,21 +111,6 @@ Netflix 的微服务转型：
 
 ### 运维成本
 
-```yaml
-# 单体：一个部署单元
-deploy:
-  - app
-
-# 微服务：N 个部署单元
-deploy:
-  - service-user
-  - service-order
-  - service-payment
-  - service-inventory
-  - service-notification
-  # ... 还有 20 个
-```
-
 每个服务需要：
 - 独立的 CI/CD pipeline
 - 独立的监控和告警
@@ -187,32 +172,11 @@ deploy:
 
 保持单一部署单元，但在代码层面严格划分模块：
 
-```
-<object data="/assets/images/2026-03-16-microservices-reflection-03-arch.svg" type="image/svg+xml" width="100%"></object>
-```
-
 ### 模块边界规则
 
 1. **模块间通过 API 通信**
-   ```python
-   # 不要这样
-   from modules.order.models import Order
-   
-   # 要这样
-   from modules.order.api import get_order
-   ```
-
 2. **禁止跨模块数据库访问**
-   ```python
-   # 用户模块不能直接查询订单表
-   ```
-
 3. **每个模块有自己的业务逻辑**
-   ```python
-   # 订单模块负责订单生命周期
-   # 支付模块只处理支付状态变更
-   ```
-
 ### 模块化单体的优势
 
 | 优势 | 说明 |

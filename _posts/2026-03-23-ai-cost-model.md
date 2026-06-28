@@ -33,23 +33,11 @@ series: AI-Native Engineering
 
 ### 传统成本模型（过时）
 
-```
-总成本 = API调用次数 × 单价
-
-优化策略：降低单价
-```
-
 **问题**：这个模型在2023年有效，在2026年失效。
 
 ---
 
 ### 现代成本结构（现实）
-
-```
-总成本 = f(架构复杂度, 请求模式, 缓存效率, 错误率, 人力成本)
-
-优化策略：重构架构
-```
 
 **关键差异**：成本从"变量成本"变成了"结构性成本"。
 
@@ -73,22 +61,6 @@ series: AI-Native Engineering
 ## 四、核心模型：成本结构四象限
 
 ### 四象限模型
-
-```
-                    高频
-                      ↑
-                      |
-         缓存优化 ←——+——→ 架构重构
-         (Redis)      |      (系统重设计)
-                      |
-    低复杂度 ←————————+—————————→ 高复杂度
-                      |
-         模型降级 ←——+——→ 预计算
-         (路由)       |      (离线生成)
-                      |
-                      ↓
-                    低频
-```
 
 ### 象限1：高频低复杂度 → 缓存优化
 
@@ -205,34 +177,7 @@ series: AI-Native Engineering
 **行动**：
 
 **缓存层（如果适用）**：
-```python
-# 语义缓存示例
-from semantic_cache import SemanticCache
-
-cache = SemanticCache(similarity_threshold=0.95)
-
-def get_response(query):
-    cached = cache.get(query)
-    if cached:
-        return cached
-    
-    response = llm.generate(query)
-    cache.set(query, response)
-    return response
-```
-
 **路由层（如果适用）**：
-```python
-# 智能路由示例
-def route_request(query, complexity):
-    if complexity < 0.3:
-        return gpt35.generate(query)  # 便宜
-    elif complexity < 0.8:
-        return claude.generate(query)  # 平衡
-    else:
-        return gpt4.generate(query)  # 强大但贵
-```
-
 **预期效果**：成本降低 30-50%
 
 ---

@@ -91,33 +91,6 @@ MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得
 
 考虑一个不分层的 Agent 系统：
 
-```python
-# 反模式：面条代码
-class Agent:
-    def process(self, user_input):
-        # 解析输入
-        parsed = self.parse(user_input)
-        
-        # 直接调用 LLM
-        response = requests.post("https://api.openai.com/...", json={...})
-        
-        # 解析响应
-        action = json.loads(response.text)
-        
-        # 直接操作数据库
-        conn = sqlite3.connect("memory.db")
-        conn.execute("INSERT INTO history ...")
-        
-        # 直接调用工具
-        if action["type"] == "search":
-            result = self.google_search(action["query"])
-        elif action["type"] == "file":
-            with open(action["path"], "w") as f:
-                f.write(action["content"])
-        
-        return result
-```
-
 问题在哪里？
 - **难以测试**：需要模拟 HTTP、数据库、文件系统
 - **难以修改**：改动一处可能影响全局
@@ -127,57 +100,11 @@ class Agent:
 
 分层通过**抽象**隐藏了底层复杂性：
 
-```python
-# 好的分层：每层只关心下一层的接口
-
-class AgentInterface:
-    """接口层：只关心如何接收和返回数据"""
-    def receive(self, message: str) -> Response:
-        context = self.parse_input(message)
-        result = self.orchestrator.execute(context)
-        return self.format_output(result)
-
-class TaskOrchestrator:
-    """编排层：只关心任务调度"""
-    def execute(self, context: Context) -> Result:
-        plan = self.planner.create_plan(context)
-        for step in plan.steps:
-            yield self.execute_step(step)
-
-class CognitionEngine:
-    """认知层：只关心推理和决策"""
-    def decide(self, context: Context, memory: Memory) -> Action:
-        prompt = self.build_prompt(context, memory.retrieve(context))
-        return self.llm.generate(prompt)
-
-class MemoryStore:
-    """记忆层：只关心知识的存储和检索"""
-    def retrieve(self, query: Context) -> Knowledge:
-        return self.vector_db.search(query.embedding)
-```
-
 **每一层都只依赖下一层的抽象接口**，而不是具体实现。
 
 ### 4.3 可替换性
 
 分层架构的另一个巨大优势是**组件可替换性**。
-
-```python
-# 更换 LLM 提供商？只需修改认知层的实现
-
-class CognitionEngine:
-    def __init__(self, llm_provider: LLMProvider):
-        self.llm = llm_provider  # 依赖注入
-
-# 可以是 OpenAI
-engine = CognitionEngine(OpenAIProvider(api_key="..."))
-
-# 也可以是 Anthropic
-engine = CognitionEngine(AnthropicProvider(api_key="..."))
-
-# 甚至是本地模型
-engine = CognitionEngine(OllamaProvider(model="llama3"))
-```
 
 > 💡 **分层架构的核心收益**：层与层之间是契约关系，而非实现依赖。
 
@@ -199,60 +126,6 @@ engine = CognitionEngine(OllamaProvider(model="llama3"))
 - 输入验证和 sanitization
 - 响应格式化
 
-```python
-from dataclasses import dataclass
-from typing import Optional, Dict, Any
-from enum import Enum
-
-class InputType(Enum):
-    TEXT = "text"
-    VOICE = "voice"
-    IMAGE = "image"
-    FILE = "file"
-
-@dataclass
-class UserInput:
-    content: str
-    input_type: InputType
-    metadata: Dict[str, Any]
-    session_id: str
-    timestamp: float
-
-class InterfaceLayer:
-    def __init__(self, orchestrator: OrchestrationLayer):
-        self.orchestrator = orchestrator
-    
-    async def handle(self, raw_input: Dict[str, Any]) -> Dict[str, Any]:
-        # 1. 解析和验证
-        user_input = self.parse(raw_input)
-        
-        # 2. 创建 Context
-        context = Context(
-            input=user_input,
-            session_id=user_input.session_id,
-            metadata=user_input.metadata
-        )
-        
-        # 3. 调用编排层
-        result = await self.orchestrator.execute(context)
-        
-        # 4. 格式化响应
-        return self.format_response(result)
-    
-    def parse(self, raw: Dict[str, Any]) -> UserInput:
-        # 验证必需字段
-        if "content" not in raw:
-            raise ValidationError("Missing 'content' field")
-        
-        return UserInput(
-            content=raw["content"],
-            input_type=InputType(raw.get("type", "text")),
-            metadata=raw.get("metadata", {}),
-            session_id=raw.get("session_id", generate_uuid()),
-            timestamp=time.time()
-        )
-```
-
 #### 第4层：编排层 (Orchestration Layer)
 
 **职责**：
@@ -260,58 +133,6 @@ class InterfaceLayer:
 - 子任务调度
 - 并发控制
 - 错误恢复与重试
-
-```python
-from typing import List, AsyncIterator
-import asyncio
-
-@dataclass
-class Task:
-    id: str
-    description: str
-    dependencies: List[str]
-    max_retries: int = 3
-    timeout: float = 30.0
-
-class OrchestrationLayer:
-    def __init__(self, cognition: CognitionLayer, memory: MemoryLayer):
-        self.cognition = cognition
-        self.memory = memory
-        self.execution_graph: Dict[str, Task] = {}
-    
-    async def execute(self, context: Context) -> Result:
-        # 1. 任务规划（调用认知层）
-        plan = await self.cognition.plan(context)
-        
-        # 2. 构建执行图
-        self.build_execution_graph(plan)
-        
-        # 3. 拓扑排序执行
-        results = []
-        for batch in self.topological_batches():
-            batch_results = await asyncio.gather(
-                *[self.execute_task(t, context) for t in batch],
-                return_exceptions=True
-            )
-            results.extend(batch_results)
-        
-        # 4. 聚合结果
-        return self.aggregate_results(results)
-    
-    async def execute_task(self, task: Task, context: Context) -> TaskResult:
-        for attempt in range(task.max_retries):
-            try:
-                # 带超时的执行
-                result = await asyncio.wait_for(
-                    self.cognition.execute(task, context, self.memory),
-                    timeout=task.timeout
-                )
-                return TaskResult(success=True, data=result)
-            except Exception as e:
-                if attempt == task.max_retries - 1:
-                    return TaskResult(success=False, error=e)
-                await asyncio.sleep(2 ** attempt)  # 指数退避
-```
 
 #### 第3层：认知层 (Cognition Layer)
 
@@ -321,69 +142,6 @@ class OrchestrationLayer:
 - 工具选择与参数生成
 - 策略优化
 
-```python
-from abc import ABC, abstractmethod
-
-class LLMProvider(ABC):
-    @abstractmethod
-    async def generate(self, prompt: str, **kwargs) -> str:
-        pass
-
-class CognitionLayer:
-    def __init__(self, llm: LLMProvider, tools: ToolRegistry):
-        self.llm = llm
-        self.tools = tools
-        self.reasoning_chain: List[Thought] = []
-    
-    async def plan(self, context: Context) -> Plan:
-        """基于 ReAct 模式进行规划"""
-        
-        system_prompt = """你是一个任务规划专家。请将用户的请求分解为可执行的子任务。
-        
-可用工具：
-{tool_descriptions}
-
-请以 JSON 格式返回执行计划：
-{{
-  "tasks": [
-    {{"id": "1", "description": "...", "tool": "...", "dependencies": []}}
-  ]
-}}"""
-        
-        prompt = system_prompt.format(
-            tool_descriptions=self.tools.describe_all()
-        ) + f"\n\n用户请求：{context.input.content}"
-        
-        response = await self.llm.generate(prompt, temperature=0.2)
-        return self.parse_plan(response)
-    
-    async def execute(self, task: Task, context: Context, memory: MemoryLayer) -> Any:
-        """执行单个任务"""
-        
-        # 1. 检索相关记忆
-        relevant_memory = await memory.retrieve_relevant(context)
-        
-        # 2. 构建推理上下文
-        reasoning_context = self.build_reasoning_context(
-            task, context, relevant_memory
-        )
-        
-        # 3. 生成决策
-        response = await self.llm.generate(reasoning_context)
-        
-        # 4. 解析动作
-        action = self.parse_action(response)
-        
-        # 5. 记录推理过程
-        self.reasoning_chain.append(Thought(
-            task_id=task.id,
-            reasoning=response,
-            action=action
-        ))
-        
-        return action
-```
-
 #### 第2层：记忆层 (Memory Layer)
 
 **职责**：
@@ -391,85 +149,6 @@ class CognitionLayer:
 - 长期记忆（知识库检索）
 - 语义记忆（向量存储）
 - 程序性记忆（技能/工具记忆）
-
-```python
-from typing import Protocol
-import numpy as np
-
-class VectorStore(Protocol):
-    async def search(self, embedding: List[float], top_k: int = 5) -> List[Document]:
-        ...
-    
-    async def upsert(self, documents: List[Document]) -> None:
-        ...
-
-class MemoryLayer:
-    def __init__(
-        self,
-        vector_store: VectorStore,
-        graph_store: Optional[GraphStore] = None,
-        cache: Optional[Cache] = None
-    ):
-        self.vector_store = vector_store
-        self.graph_store = graph_store
-        self.cache = cache
-        self.short_term: List[Message] = []  # 当前对话窗口
-    
-    async def retrieve_relevant(self, context: Context) -> Knowledge:
-        """检索与当前上下文相关的知识"""
-        
-        # 1. 生成查询嵌入
-        query_embedding = await self.embed(context.input.content)
-        
-        # 2. 向量检索
-        vector_results = await self.vector_store.search(
-            query_embedding, top_k=5
-        )
-        
-        # 3. 图谱检索（如果有）
-        graph_results = []
-        if self.graph_store:
-            graph_results = await self.graph_store.traverse(
-                start_node=context.input.content,
-                depth=2
-            )
-        
-        # 4. 短期记忆
-        recent_messages = self.short_term[-10:]  # 最近10条
-        
-        return Knowledge(
-            long_term=vector_results,
-            relational=graph_results,
-            short_term=recent_messages
-        )
-    
-    async def remember(self, context: Context, outcome: Any) -> None:
-        """将经验存入长期记忆"""
-        
-        # 编码为向量
-        embedding = await self.embed(f"{context.input} → {outcome}")
-        
-        # 存储到向量数据库
-        document = Document(
-            id=generate_uuid(),
-            content=str(outcome),
-            metadata={
-                "input": context.input.content,
-                "timestamp": time.time(),
-                "session_id": context.session_id
-            },
-            embedding=embedding
-        )
-        
-        await self.vector_store.upsert([document])
-        
-        # 更新短期记忆
-        self.short_term.append(Message(
-            role="assistant",
-            content=str(outcome),
-            timestamp=time.time()
-        ))
-```
 
 #### 第1层：执行层 (Execution Layer)
 
@@ -480,88 +159,6 @@ class MemoryLayer:
 - 浏览器自动化
 - 所有与外部世界的交互
 
-```python
-import subprocess
-import aiohttp
-from typing import Callable, Dict
-
-ToolFunction = Callable[..., Any]
-
-class ExecutionLayer:
-    def __init__(self):
-        self.tools: Dict[str, ToolFunction] = {}
-        self._register_default_tools()
-    
-    def _register_default_tools(self):
-        """注册默认工具"""
-        self.register_tool("search", self.web_search)
-        self.register_tool("read_file", self.read_file)
-        self.register_tool("write_file", self.write_file)
-        self.register_tool("execute_command", self.execute_command)
-        self.register_tool("http_request", self.http_request)
-    
-    def register_tool(self, name: str, func: ToolFunction) -> None:
-        self.tools[name] = func
-    
-    async def execute(self, action: Action) -> ExecutionResult:
-        """执行动作"""
-        
-        tool_name = action.tool
-        params = action.parameters
-        
-        if tool_name not in self.tools:
-            return ExecutionResult(
-                success=False,
-                error=f"Unknown tool: {tool_name}"
-            )
-        
-        try:
-            # 执行前验证
-            self.validate_params(tool_name, params)
-            
-            # 执行工具
-            result = await self.tools[tool_name](**params)
-            
-            return ExecutionResult(success=True, data=result)
-            
-        except Exception as e:
-            return ExecutionResult(success=False, error=str(e))
-    
-    async def web_search(self, query: str, top_n: int = 5) -> List[SearchResult]:
-        """网页搜索"""
-        # 实际实现会调用搜索引擎 API
-        pass
-    
-    async def read_file(self, path: str) -> str:
-        """读取文件"""
-        # 安全检查
-        if not self.is_path_allowed(path):
-            raise PermissionError(f"Access denied: {path}")
-        
-        async with aiofiles.open(path, 'r') as f:
-            return await f.read()
-    
-    async def execute_command(self, command: str, timeout: int = 30) -> str:
-        """执行系统命令（沙箱化）"""
-        # 使用受限环境执行
-        proc = await asyncio.create_subprocess_shell(
-            command,
-            stdout=asyncio.subprocess.PIPE,
-            stderr=asyncio.subprocess.PIPE,
-            limit=1024 * 1024  # 1MB 输出限制
-        )
-        
-        try:
-            stdout, stderr = await asyncio.wait_for(
-                proc.communicate(),
-                timeout=timeout
-            )
-            return stdout.decode()
-        except asyncio.TimeoutError:
-            proc.kill()
-            raise TimeoutError(f"Command timed out after {timeout}s")
-```
-
 ---
 
 ## 6. 分层与跨层通信
@@ -570,118 +167,11 @@ class ExecutionLayer:
 
 层间通信的核心是 **Context 对象**——它像快递包裹一样在各层之间传递：
 
-```python
-from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional
-from datetime import datetime
-
-@dataclass
-class Context:
-    """贯穿所有层的上下文对象"""
-    
-    # 输入信息
-    input: UserInput
-    session_id: str
-    
-    # 执行状态
-    current_step: int = 0
-    execution_trace: List[TraceEvent] = field(default_factory=list)
-    
-    # 层间数据
-    metadata: Dict[str, Any] = field(default_factory=dict)
-    
-    # 性能指标
-    timestamps: Dict[str, datetime] = field(default_factory=dict)
-    
-    def mark(self, layer: str) -> "Context":
-        """记录进入某层的时间"""
-        self.timestamps[f"enter_{layer}"] = datetime.now()
-        return self
-    
-    def fork(self) -> "Context":
-        """创建子上下文（用于并发执行）"""
-        return Context(
-            input=self.input,
-            session_id=self.session_id,
-            metadata=self.metadata.copy()
-        )
-```
-
 ### 6.2 层间通信的三种模式
 
 <object data="/assets/images/2026-03-15-layered-architecture-03-comm-patterns.svg" type="image/svg+xml" width="100%"></object>
 
 ### 6.3 事件总线实现
-
-```python
-from typing import Callable, Awaitable
-import asyncio
-
-EventHandler = Callable[[Event], Awaitable[None]]
-
-class EventBus:
-    """层间解耦的事件总线"""
-    
-    def __init__(self):
-        self.subscribers: Dict[str, List[EventHandler]] = {}
-        self.event_history: List[Event] = []
-    
-    def subscribe(self, event_type: str, handler: EventHandler):
-        """订阅特定类型的事件"""
-        if event_type not in self.subscribers:
-            self.subscribers[event_type] = []
-        self.subscribers[event_type].append(handler)
-    
-    async def publish(self, event: Event):
-        """发布事件到所有订阅者"""
-        self.event_history.append(event)
-        
-        handlers = self.subscribers.get(event.type, [])
-        
-        # 并行执行所有处理器
-        await asyncio.gather(
-            *[self._safe_handle(h, event) for h in handlers],
-            return_exceptions=True
-        )
-    
-    async def _safe_handle(self, handler: EventHandler, event: Event):
-        try:
-            await handler(event)
-        except Exception as e:
-            logger.error(f"Event handler failed: {e}")
-
-
-# 使用示例
-class AgentSystem:
-    def __init__(self):
-        self.event_bus = EventBus()
-        self.interface = InterfaceLayer(self.event_bus)
-        self.orchestrator = OrchestrationLayer(self.event_bus)
-        self.cognition = CognitionLayer(self.event_bus)
-        self.memory = MemoryLayer(self.event_bus)
-        self.execution = ExecutionLayer(self.event_bus)
-        
-        self._wire_events()
-    
-    def _wire_events(self):
-        """连接各层的事件流"""
-        
-        # 接口层 → 编排层
-        self.event_bus.subscribe("user_input", 
-            lambda e: self.orchestrator.on_user_input(e))
-        
-        # 编排层 → 认知层
-        self.event_bus.subscribe("plan_required",
-            lambda e: self.cognition.on_plan_request(e))
-        
-        # 认知层 → 执行层
-        self.event_bus.subscribe("action_ready",
-            lambda e: self.execution.on_action(e))
-        
-        # 执行层 → 记忆层（记录执行结果）
-        self.event_bus.subscribe("execution_complete",
-            lambda e: self.memory.on_execution_result(e))
-```
 
 ---
 
@@ -694,38 +184,7 @@ class AgentSystem:
 - 函数调用开销
 - Context 拷贝开销
 
-```python
-# 正常分层（可读性好）
-async def process(self, context: Context):
-    validated = await self.interface.validate(context)
-    planned = await self.orchestrator.plan(validated)
-    result = await self.cognition.execute(planned)
-    return result
-
-# 性能优化版本（跳过中间层）
-async def process_fast(self, raw_input: str):
-    # 直接调用认知层，绕过编排层
-    # 适用于简单、确定性的任务
-    return await self.cognition.quick_answer(raw_input)
-```
-
 ### 7.2 特殊场景的直接通信
-
-```python
-class FastPath:
-    """快速路径：允许跨层直接通信"""
-    
-    FAST_OPERATIONS = {"ping", "health", "echo"}
-    
-    async def handle(self, context: Context) -> Result:
-        # 识别是否可以使用快速路径
-        if context.input.content in self.FAST_OPERATIONS:
-            # 跳过编排层和认知层，直接返回
-            return await self.execution.execute_cached(context)
-        
-        # 否则走正常分层流程
-        return await self.full_pipeline(context)
-```
 
 ### 7.3 分层的打破原则
 
@@ -751,34 +210,6 @@ OSI 七层 vs TCP/IP 四层的教训：**分层数量应与问题复杂度匹配
 
 ### 8.2 完美的分层是动态分层的
 
-```python
-class AdaptiveLayering:
-    """根据任务复杂度动态调整分层深度"""
-    
-    async def execute(self, task: Task) -> Result:
-        complexity = self.assess_complexity(task)
-        
-        if complexity < 0.3:
-            # 简单任务：单层处理
-            return await self.execution.direct_execute(task)
-        elif complexity < 0.7:
-            # 中等任务：三层架构
-            return await self.three_layer_execute(task)
-        else:
-            # 复杂任务：完整五层
-            return await self.full_layer_execute(task)
-    
-    def assess_complexity(self, task: Task) -> float:
-        """评估任务复杂度"""
-        factors = [
-            len(task.subtasks) / 10,           # 子任务数量
-            len(task.required_tools) / 5,       # 涉及工具数
-            1.0 if task.requires_reasoning else 0.0,  # 是否需要推理
-            1.0 if task.has_side_effects else 0.0,    # 是否有副作用
-        ]
-        return min(sum(factors) / len(factors), 1.0)
-```
-
 ### 8.3 层间依赖的方向比层本身更重要
 
 **关键原则**：
@@ -787,61 +218,11 @@ class AdaptiveLayering:
 - ❌ 下层绝不应该依赖上层
 - ❌ 避免循环依赖
 
-```python
-# 好的依赖方向
-Interface → Orchestration → Cognition → Memory → Execution
-
-# 坏的依赖方向（循环依赖）
-Cognition ──→ Memory
-    ↑          │
-    └──────────┘
-```
-
 ### 8.4 Context 膨胀是分层架构的隐形杀手
 
 随着系统演化，Context 对象会不断膨胀：
 
-```python
-# 初期：简洁的 Context
-@dataclass
-class Context:
-    input: str
-    session_id: str
-
-# 演化后：臃肿的 Context
-@dataclass
-class Context:
-    input: str
-    session_id: str
-    user_profile: UserProfile      # 后来添加
-    permission: Permission         # 后来添加
-    cache: Cache                   # 后来添加
-    audit_log: AuditLog            # 后来添加
-    feature_flags: FeatureFlags    # 后来添加
-    # ... 持续膨胀
-```
-
 **解决方案**：使用**分层 Context**
-
-```python
-@dataclass
-class BaseContext:
-    """所有层共享的最小上下文"""
-    input: str
-    session_id: str
-
-@dataclass
-class InterfaceContext(BaseContext):
-    """接口层特有数据"""
-    raw_request: Request
-    protocol: str
-
-@dataclass
-class CognitionContext(BaseContext):
-    """认知层特有数据"""
-    reasoning_chain: List[Thought]
-    tool_calls: List[ToolCall]
-```
 
 ---
 
@@ -904,7 +285,6 @@ class ReviewReport:
     statistics: Dict[str, int]
     generated_at: datetime = field(default_factory=datetime.now)
 
-
 # ==================== 第5层：接口层 ====================
 
 @dataclass
@@ -916,7 +296,6 @@ class PRWebhookPayload:
     head_sha: str
     diff_url: str
     author: str
-
 
 class InterfaceLayer:
     """接口层：处理多种输入协议"""
@@ -1003,7 +382,6 @@ class InterfaceLayer:
         
         return "\n".join(lines)
 
-
 # ==================== 第4层：编排层 ====================
 
 @dataclass
@@ -1017,7 +395,6 @@ class ReviewContext:
     timestamp: datetime
     changes: List[CodeChange] = field(default_factory=list)
     history_reviews: List[Dict] = field(default_factory=list)
-
 
 class OrchestrationLayer:
     """编排层：任务分解与调度"""
@@ -1100,14 +477,12 @@ class OrchestrationLayer:
             stats[sev.value] = sum(1 for c in comments if c.severity == sev)
         return stats
 
-
 # ==================== 第3层：认知层 ====================
 
 class LLMProvider(Protocol):
     """LLM 提供商抽象"""
     async def analyze(self, prompt: str, context: Dict) -> str:
         ...
-
 
 class CognitionLayer:
     """认知层：代码分析与推理"""
@@ -1120,10 +495,6 @@ class CognitionLayer:
         """安全分析"""
         prompt = f"""
         Analyze the following {change.language} code for security issues:
-        
-        ```{change.language}
-        {change.diff}
-        ```
         
         Look for: SQL injection, XSS, path traversal, hardcoded secrets, etc.
         Return findings as JSON array with file_path, line, severity, message.
@@ -1138,9 +509,6 @@ class CognitionLayer:
         Analyze this {change.language} code for performance issues:
         N+1 queries, inefficient loops, memory leaks, etc.
         
-        ```{change.language}
-        {change.diff}
-        ```
         """
         
         response = await self.llm.analyze(prompt, {"type": "performance"})
@@ -1160,9 +528,6 @@ class CognitionLayer:
         Review this code against team style guidelines:
         {style_context}
         
-        ```{change.language}
-        {change.diff}
-        ```
         """
         
         response = await self.llm.analyze(prompt, {"type": "style"})
@@ -1204,7 +569,6 @@ class CognitionLayer:
         # 简化实现，实际应使用结构化输出
         return []
 
-
 # ==================== 第2层：记忆层 ====================
 
 class VectorStore(Protocol):
@@ -1212,7 +576,6 @@ class VectorStore(Protocol):
         ...
     async def upsert(self, documents: List[Dict]) -> None:
         ...
-
 
 class MemoryLayer:
     """记忆层：审查历史存储与检索"""
@@ -1272,7 +635,6 @@ class MemoryLayer:
         
         return "; ".join(parts)
 
-
 # ==================== 第1层：执行层 ====================
 
 class GitHubAPI(Protocol):
@@ -1280,7 +642,6 @@ class GitHubAPI(Protocol):
         ...
     async def post_comment(self, pr_id: str, comment: str) -> None:
         ...
-
 
 class ExecutionLayer:
     """执行层：外部交互与工具执行"""
@@ -1361,7 +722,6 @@ class ExecutionLayer:
         emoji = emoji_map.get(comment.severity, "💬")
         return f"{emoji} **[{comment.category.upper()}]** {comment.message}"
 
-
 # ==================== 系统组装 ====================
 
 class CodeReviewAgent:
@@ -1389,7 +749,6 @@ class CodeReviewAgent:
     async def handle_webhook(self, payload: Dict[str, Any]) -> Dict[str, Any]:
         """Webhook 入口"""
         return await self.interface.handle_webhook(payload)
-
 
 # ==================== 使用示例 ====================
 
@@ -1435,38 +794,8 @@ index 0000000..1234567
     report = await agent.review_pr("myorg/myrepo", 123)
     print(report)
 
-
 if __name__ == "__main__":
     asyncio.run(main())
-```
-
-### 9.4 架构亮点
-
-1. **清晰的层边界**：每层只关心自己的职责，通过明确的数据结构通信
-2. **可测试性**：每层的依赖都通过接口注入，易于 mock
-3. **可扩展性**：新增分析类型只需扩展认知层，不影响其他层
-4. **可观测性**：Context 贯穿全链路，便于追踪和调试
-
----
-
-## 10. 结语：分层是一种思维方式
-
-分层架构不仅仅是一种技术模式，更是一种**思维方式**。
-
-> "分层的艺术在于知道在哪里画线，而不在于画多少条线。" —— 改编自理查德·费曼
-
-### 核心原则回顾
-
-| 原则 | 含义 |
-|------|------|
-| **关注点分离** | 不同的问题由不同的层解决 |
-| **抽象** | 上层只看到下层的接口，不看实现 |
-| **可替换性** | 层内组件可以独立替换 |
-| **最小知识** | 每层只知道它需要知道的 |
-
-### 何时分层，何时不分层
-
-```
 分层                    不分层
 ─────────────────────────────────────────────
 复杂系统               简单脚本
@@ -1474,31 +803,3 @@ if __name__ == "__main__":
 长期维护               一次性任务
 需要可测试性            快速原型
 多个客户端             单一入口
-```
-
-### 最后的思考
-
-在 AI 时代，分层架构变得更加重要：
-
-1. **模型与系统解耦**：认知层的 LLM 可以独立演进
-2. **多模态输入**：接口层统一处理文本、语音、图像
-3. **记忆的可控性**：记忆层让 Agent 拥有真正的"智慧"
-4. **安全与治理**：执行层是唯一的副作用来源，便于审计
-
-Agent OS 的五层架构不是终点，而是一个**起点**。随着 AI 系统的发展，分层模式会不断演化——但分层的本质永远不会改变：
-
-**将混沌切割为有意义的边界。**
-
----
-
-## 参考阅读
-
-1. *Computer Networks* - Andrew S. Tanenbaum (OSI 模型权威参考)
-2. *Clean Architecture* - Robert C. Martin (软件分层原则)
-3. *Designing Data-Intensive Applications* - Martin Kleppmann (系统架构设计)
-4. [ReAct Pattern](https://arxiv.org/abs/2210.03629) - 推理与行动结合的 Agent 架构
-5. [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - 注意力机制的层次理解
-
----
-
-> "简单是复杂的终极形式。" —— 达芬奇

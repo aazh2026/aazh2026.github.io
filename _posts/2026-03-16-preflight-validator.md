@@ -31,16 +31,6 @@ series: AI-Native Engineering
 
 Reddit 用户 Red_Egnival 启动了一个新的训练任务。模型结构没问题，超参数调好了，数据加载器也写完了。
 
-```python
-for epoch in range(num_epochs):
-    for batch in dataloader:
-        optimizer.zero_grad()
-        outputs = model(batch['input'])
-        loss = criterion(outputs, batch['label'])
-        loss.backward()
-        optimizer.step()
-```
-
 训练运行正常。没有错误，没有崩溃，GPU 利用率也很健康。
 
 但验证准确率一直很差。
@@ -71,59 +61,19 @@ ML 工程有一个独特的挑战：**很多问题在训练期间不会报错。
 
 训练特征包含了目标变量的信息。
 
-```python
-# 错误的特征工程
-features = ['user_id', 'purchase_amount', 'is_returning_customer']
-target = 'will_purchase_again'
-
-# 问题：is_returning_customer 本质上是目标变量的代理
-```
-
 模型准确率 95%！但上线后表现糟糕——因为这个特征在预测时不可用。
 
 ### NaN 污染
 
 数据中有 NaN，但模型默默处理了它们。
 
-```python
-# 你以为的
-tensor([1.0, 2.0, 3.0])
-
-# 实际的
-tensor([1.0, nan, 3.0])
-
-# 结果：梯度变成 nan，但训练继续
-```
-
 ### 类别不平衡
-
-```python
-# 二分类问题
-train_labels = [0] * 9900 + [1] * 100  # 99% 是负类
-
-# 模型学会了一切都预测为 0
-# 准确率 99%！
-```
 
 ### 死梯度 (Dead Gradients)
 
 ReLU 的"死亡"问题，或者梯度消失。
 
-```python
-# 网络太深，没有残差连接
-x = layer1(x)
-x = layer2(x)
-x = layer3(x)
-# ...
-x = layer50(x)  # 梯度已经几乎为 0
-```
-
 ### 通道顺序错误
-
-```python
-# 模型期望 RGB
-input = cv2.imread('image.jpg')  # 但 OpenCV 默认读取 BGR
-```
 
 模型能训练，但永远达不到预期性能。
 
@@ -192,94 +142,11 @@ preflight 目前包含 10 项检查：
 
 ### 基本使用
 
-```bash
-pip install preflight-ml
-
-preflight run --dataloader my_dataloader.py
-```
-
 ### Python API
-
-```python
-from preflight import Validator
-from my_project import train_dataloader, val_dataloader
-
-validator = Validator()
-
-# 运行所有检查
-results = validator.run(
-    train_loader=train_dataloader,
-    val_loader=val_dataloader,
-    model=my_model,
-    device='cuda'
-)
-
-# 查看结果
-print(results.summary())
-
-# 如果有 fatal 错误，抛出异常
-results.raise_on_fatal()
-```
 
 ### GitHub Actions 集成
 
-```yaml
-name: ML Training Validation
-
-on: [push, pull_request]
-
-jobs:
-  preflight:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
-          pip install preflight-ml
-      
-      - name: Run preflight checks
-        run: preflight run --dataloader train.py
-        
-      # 如果 preflight 返回非零，workflow 会在这里失败
-      
-      - name: Start training
-        run: python train.py
-```
-
 ### 配置示例
-
-```python
-# preflight_config.py
-CONFIG = {
-    'checks': {
-        'label_leakage': {
-            'threshold': 0.95,  # 相关性阈值
-            'enabled': True
-        },
-        'class_balance': {
-            'min_ratio': 0.1,  # 最弱类别至少占 10%
-            'enabled': True
-        },
-        'vram_estimate': {
-            'safety_factor': 1.2,  # 20% 安全余量
-            'enabled': True
-        }
-    },
-    'severity': {
-        'nan_detection': 'fatal',
-        'label_leakage': 'fatal',
-        'class_imbalance': 'warn',
-        'vram_estimate': 'info'
-    }
-}
-```
 
 ---
 
@@ -354,15 +221,7 @@ preflight 不是要替代 PyTorch 的灵活性，而是：
 ML 工程需要同样的转变。
 
 传统 ML 流程：
-```
-训练开始 → 等待 3 天 → 发现问题 → 调试 3 天 → 重新训练
-```
-
 左移后的流程：
-```
-preflight 检查 → 立即发现问题 → 修复 → 开始训练
-```
-
 Red_Egnival 的 3 天痛苦经历本可以用 3 分钟避免。
 
 > **"Every ML engineer should have a tool like this. We spend too much time debugging after training instead of preventing before training."**

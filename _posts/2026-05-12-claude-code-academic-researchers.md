@@ -57,15 +57,9 @@ Mushtaq Bilal 博士写了这篇面向零技术背景学术研究者的 Claude C
 这是 Claude Code 和 ChatGPT/Gemini 的核心区别：
 
 **浏览器 AI（ChatGPT、Claude）：**
-```
-研究者 → 上传文件 → AI 处理 → 下载结果
-```
 局限：每次只能处理少量文件，上下文窗口有限，文件处理后不保存。
 
 **Claude Code：**
-```
-研究者打开文件夹 → AI 进入文件夹 → AI 读/写/编辑所有文件
-```
 优势：同时处理 45 篇论文，创建新文件，保留工作历史，跨文件关联分析。
 
 | 维度 | 浏览器 AI | Claude Code |
@@ -116,20 +110,6 @@ Mushtaq Bilal 博士写了这篇面向零技术背景学术研究者的 Claude C
 > CLAUDE.md 不需要完美，可以随项目演化而迭代。重要的是开始，然后让它和项目一起成长。
 
 Mushtaq 推荐把 CLAUDE.md 分成四个区块：
-
-```markdown
-#Role
-描述你希望 Claude 扮演的角色，关于你研究领域和当前项目的细节。
-
-#Standards
-描述你领域相关的学术标准：引用格式、论文结构、研究伦理规范。
-
-#Writing Style
-你希望用学术风格还是非正式风格写作？是否需要使用特定术语？
-
-#Critique Style
-你希望 Claude 如何批评你的工作：聚焦论点、证据、方法论还是结构？
-```
 
 如果你不想手动写，直接让 Claude Code 根据你的描述自动生成。
 

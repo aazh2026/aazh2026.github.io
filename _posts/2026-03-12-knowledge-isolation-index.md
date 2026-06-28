@@ -38,14 +38,6 @@ redirect_from:
 
 **场景1：神秘的AI代码**
 
-```python
-# 小张用AI生成的代码
-class DataProcessor:
-    def process(self, data, **kwargs):
-        result = self._apply_strategy(data, kwargs.get('mode'))
-        return self._optimize(result)
-```
-
 **问题**：
 - 小张："这是AI生成的，我也不是很清楚具体逻辑"
 - 小李："我需要修改，但看不懂"
@@ -74,14 +66,6 @@ class DataProcessor:
 ### KII定义
 
 **知识孤岛指数（Knowledge Isolation Index）**：衡量代码被团队集体理解程度的指标。
-
-```
-KII = 1 - (能理解代码的团队成员数 / 团队总人数)
-
-KII范围：0-1
-- 0：所有人都能理解（理想状态）
-- 1：只有作者能理解（知识孤岛）
-```
 
 ### 影响因素
 
@@ -113,44 +97,13 @@ KII范围：0-1
 
 **正常情况**：知识从专家传播到整个团队
 
-```
-专家开发者
-    ↓ 代码审查、Pair Programming
-中级开发者
-    ↓ 文档、分享
-初级开发者
-```
-
 **AI时代的问题**：
-
-```
-AI + 个人Prompt
-    ↓ 生成代码
-个人理解（可能不完整）
-    ↓ ?
-? （传播中断）
-```
 
 ### 知识阻断点识别
 
 **阻断类型1：无解释生成**
 
-```python
-# 问题：AI生成，无解释
-def process(data):
-    # AI生成的复杂逻辑，无任何注释
-    return [x for x in data if x.get('status') == 'active']
-```
-
 **阻断类型2：个人化抽象**
-
-```python
-# 问题：使用了只有作者理解的抽象
-class StrategyManager:
-    def execute(self, context):
-        # 个人命名的策略，他人不知所云
-        return self._apply_x_strategy(context)
-```
 
 ---
 
@@ -174,14 +127,6 @@ class StrategyManager:
 
 ### 预警系统
 
-```
-KII > 0.6 → 🔴 高风险警报
-  → 立即组织代码讲解
-  
-KII > 0.4 → 🟠 中风险提醒
-  → 增加文档，安排分享
-```
-
 ---
 
 ## 重建集体理解
@@ -189,21 +134,6 @@ KII > 0.4 → 🟠 中风险提醒
 ### 策略1：强制文档化
 
 **AI代码必须带解释**：
-
-```python
-class OrderDiscountCalculator:
-    """
-    订单折扣计算器
-    
-    设计意图：
-    - 使用策略模式支持多种折扣类型
-    - 支持会员折扣、促销折扣、优惠券叠加
-    
-    AI生成部分：
-    - 基础计算逻辑由AI生成
-    - 策略模式结构由人工设计
-    """
-```
 
 ### 策略2：代码讲解会
 

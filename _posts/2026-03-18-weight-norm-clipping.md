@@ -38,24 +38,6 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 ### 典型现象
 
-```
-训练早期（记忆阶段）：
-- 训练准确率：100%
-- 验证准确率：0%
-- 模型在"死记硬背"
-
-训练中期（平台期）：
-- 训练准确率：100%
-- 验证准确率：0%
-- 持续数千到数万步
-- 看似没有进展
-
-训练后期（Grokking）：
-- 训练准确率：100%
-- 验证准确率：突然跳到 100%
-- 模型"顿悟"了 underlying 规律
-```
-
 ### 经典示例：模运算
 
 **任务**：学习模加法（a + b）mod p
@@ -118,16 +100,6 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 **Weight Norm Clipping（权重范数裁剪）**：
 
-```python
-# 每次优化器步骤后
-for param in model.parameters():
-    # 计算每行的 L2 范数
-    row_norms = torch.norm(param, p=2, dim=1, keepdim=True)
-    
-    # 裁剪超过阈值的行
-    param.data = param.data * torch.clamp(max_norm / row_norms, max=1.0)
-```
-
 **关键参数**：
 - `max_norm`：最大允许的权重范数（超参数，通常 1.0-10.0）
 - 应用位置：Decoder 权重（不是所有参数）
@@ -171,28 +143,6 @@ for param in model.parameters():
 - 加速向泛化的转变
 
 ### 可视化理解
-
-```
-权重空间
-
-记忆状态（大权重）：
-    *  *   *
-  *    *     *
-    *      *
-  复杂、过拟合
-
-Weight Norm Clipping 后：
-    ·  ·   ·
-  ·    ·     ·
-    ·      ·
-  平滑、可泛化
-
-目标状态（泛化）：
-    ·  ·   ·
-  ·    ·     ·
-    ·      ·
-  简单、generalizable
-```
 
 ---
 
@@ -264,68 +214,9 @@ Weight Norm Clipping 后：
 
 ### PyTorch 实现
 
-```python
-import torch
-import torch.nn as nn
-
-def weight_norm_clipping(model, max_norm=1.0):
-    """
-    Apply weight norm clipping to decoder weights.
-    
-    Args:
-        model: Transformer model
-        max_norm: Maximum allowed norm per row
-    """
-    for name, param in model.named_parameters():
-        # Only apply to decoder weights (not embeddings, not biases)
-        if 'decoder' in name and param.dim() >= 2:
-            with torch.no_grad():
-                # Compute L2 norm per row
-                row_norms = torch.norm(param, p=2, dim=1, keepdim=True)
-                
-                # Clip weights that exceed max_norm
-                scale = torch.clamp(max_norm / row_norms, max=1.0)
-                param.mul_(scale)
-
-# Training loop
-for batch in dataloader:
-    # Forward pass
-    loss = model(batch)
-    
-    # Backward pass
-    loss.backward()
-    
-    # Optimizer step
-    optimizer.step()
-    optimizer.zero_grad()
-    
-    # Apply weight norm clipping
-    weight_norm_clipping(model, max_norm=1.0)
-```
-
 ### 与优化器集成
 
 **使用 Lion 优化器（推荐）**：
-
-```python
-from lion_pytorch import Lion
-
-optimizer = Lion(model.parameters(), lr=3e-4, weight_decay=0)
-
-# Training loop
-for step in range(num_steps):
-    loss = train_step(model, batch)
-    
-    loss.backward()
-    optimizer.step()
-    optimizer.zero_grad()
-    
-    # Weight norm clipping
-    for param in model.parameters():
-        if param.dim() >= 2:
-            row_norms = torch.norm(param, p=2, dim=1, keepdim=True)
-            param.data *= torch.clamp(1.0 / row_norms, max=1.0)
-```
 
 ### 超参数调优
 

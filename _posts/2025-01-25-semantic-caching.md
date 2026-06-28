@@ -26,11 +26,6 @@ redirect_from:
 ### 1.1 精确匹配的局限
 
 传统缓存（如Redis）：
-```python
-# 精确匹配
-if query == cached_query:
-    return cached_response
-```
 
 **问题：** "什么是GIL" 和 "能解释一下GIL吗" 语义相同，但字符串不同。
 
@@ -39,13 +34,8 @@ if query == cached_query:
 ### 1.2 模糊匹配的问题
 
 用编辑距离或TF-IDF：
-```python
-# 模糊匹配
-if edit_distance(query, cached_query) < threshold:
-    return cached_response
-```
 
-**问题：** 
+**问题：**
 - "Python GIL" 和 "Python Git" 编辑距离很小，但语义完全不同
 - "GIL" 和 "Global Interpreter Lock" TF-IDF差异大，但语义相同
 
@@ -54,13 +44,6 @@ if edit_distance(query, cached_query) < threshold:
 ### 1.3 语义缓存的机会
 
 向量相似度：
-```python
-query_embedding = embed(query)
-cached_embedding = embed(cached_query)
-
-if cosine_similarity(query_embedding, cached_embedding) > 0.95:
-    return cached_response
-```
 
 **优势：**
 - 理解语义，不只是字符串
@@ -77,45 +60,6 @@ if cosine_similarity(query_embedding, cached_embedding) > 0.95:
 传统缓存键：查询字符串本身
 
 语义缓存键：查询的向量表示
-
-```python
-class SemanticCache:
-    def __init__(self, embedding_model, threshold=0.95):
-        self.embedder = embedding_model
-        self.threshold = threshold
-        self.cache = VectorDB()  # 向量数据库作为缓存
-    
-    def get_cache_key(self, query):
-        """生成语义键"""
-        return self.embedder.encode(query)
-    
-    def lookup(self, query):
-        """查找缓存"""
-        query_vec = self.get_cache_key(query)
-        
-        # 向量相似性搜索
-        results = self.cache.similarity_search(
-            query_vec, 
-            k=1,  # 找最相似的一个
-            score_threshold=self.threshold
-        )
-        
-        if results:
-            return results[0].response
-        return None
-    
-    def store(self, query, response):
-        """存入缓存"""
-        query_vec = self.get_cache_key(query)
-        
-        self.cache.add({
-            'query_vec': query_vec,
-            'query_text': query,  # 存储原文用于调试
-            'response': response,
-            'timestamp': datetime.now(),
-            'access_count': 0
-        })
-```
 
 ### 2.3 相似度阈值的选择
 
@@ -139,42 +83,6 @@ class SemanticCache:
 
 像CPU缓存一样，多层架构：
 
-```python
-class MultiLevelSemanticCache:
-    def __init__(self):
-        # L1：内存中，精确语义匹配，最高速
-        self.l1_exact = {}
-        
-        # L2：Redis，高相似度（>0.95）
-        self.l2_redis = RedisVectorStore()
-        
-        # L3：向量数据库，中等相似度（>0.90）
-        self.l3_vector = VectorDB()
-    
-    def get(self, query):
-        query_vec = embed(query)
-        
-        # L1: 内存精确匹配（哈希表O(1)）
-        if query in self.l1_exact:
-            return self.l1_exact[query]
-        
-        # L2: Redis高相似度
-        l2_result = self.l2_redis.similarity_search(query_vec, threshold=0.95)
-        if l2_result:
-            # 提升到L1
-            self.l1_exact[query] = l2_result
-            return l2_result
-        
-        # L3: 向量DB中等相似度
-        l3_result = self.l3_vector.similarity_search(query_vec, threshold=0.90)
-        if l3_result:
-            # 提升到L2
-            self.l2_redis.store(query, l3_result)
-            return l3_result
-        
-        return None
-```
-
 **性能对比：**
 - L1命中：~0.1ms
 - L2命中：~5ms
@@ -188,13 +96,6 @@ class MultiLevelSemanticCache:
 不是所有答案都能直接复用，特别是包含个性化信息时。
 
 **模板缓存：**
-```python
-# 缓存模板而非完整答案
-cached_template = "{{name}}的当前余额是{{balance}}元"
-
-# 使用时填充变量
-response = template.render(name=user.name, balance=get_balance(user))
-```
 
 这样相似的问题可以复用模板，只替换变量。
 
@@ -202,85 +103,15 @@ response = template.render(name=user.name, balance=get_balance(user))
 
 有些答案只变了一部分：
 
-```python
-# 缓存结构
-cached_answer = {
-    'static_part': 'Python的GIL是...',
-    'dynamic_part': '在Python 3.12中...',
-    'last_updated': '2024-01-15'
-}
-
-# 只更新dynamic_part
-if cached_answer['last_updated'] < knowledge_cutoff_date:
-    cached_answer['dynamic_part'] = fetch_latest_info()
-    cached_answer['last_updated'] = datetime.now()
-```
-
 ### 3.3 置信度加权
 
 不是所有缓存答案都一样可靠：
-
-```python
-class WeightedCacheEntry:
-    def __init__(self, response, source_llm, verification_status):
-        self.response = response
-        self.source_llm = source_llm
-        self.verification_status = verification_status  # 'verified', 'unverified', 'flagged'
-        self.access_count = 0
-        self.positive_feedback = 0
-        self.negative_feedback = 0
-    
-    @property
-    def confidence(self):
-        base = 0.5
-        
-        # 来源可信度
-        if self.source_llm == 'gpt-4':
-            base += 0.2
-        elif self.source_llm == 'gpt-3.5':
-            base += 0.1
-        
-        # 验证状态
-        if self.verification_status == 'verified':
-            base += 0.2
-        elif self.verification_status == 'flagged':
-            base -= 0.3
-        
-        # 用户反馈
-        if self.access_count > 0:
-            feedback_ratio = self.positive_feedback / self.access_count
-            base += feedback_ratio * 0.1
-        
-        return min(max(base, 0), 1)
-```
 
 只返回高置信度的缓存答案。
 
 ### 3.4 预热策略
 
 预测用户可能问什么，提前缓存：
-
-```python
-class CacheWarmer:
-    def __init__(self):
-        self.common_queries = self._load_common_queries()
-    
-    def _load_common_queries(self):
-        # 从历史数据加载高频查询
-        return [
-            "什么是Python的GIL",
-            "Docker和虚拟机区别",
-            "React Hooks是什么",
-            # ...
-        ]
-    
-    def warm_cache(self, llm_client):
-        """在低峰期预热缓存"""
-        for query in self.common_queries:
-            if not cache.exists(query):
-                response = llm_client.generate(query)
-                cache.store(query, response)
-```
 
 ## 四、实际效果
 
@@ -308,8 +139,8 @@ class CacheWarmer:
 
 ### 4.2 延迟优化
 
-**API调用：** 500-2000ms  
-**缓存命中：** 5-50ms  
+**API调用：** 500-2000ms
+**缓存命中：** 5-50ms
 **加速比：** 10-100x
 
 用户体验显著提升：从"有点慢"到"秒回"。

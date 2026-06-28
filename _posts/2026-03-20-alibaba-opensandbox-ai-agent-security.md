@@ -66,31 +66,6 @@ series: AI-Native Engineering
 
 **容器化沙箱**：
 
-```yaml
-# OpenSandbox 运行时配置
-runtime:
-  type: "docker"  # 或 "k8s", "vm"
-  
-  # 资源限制
-  resources:
-    cpu: "2 cores"
-    memory: "4GB"
-    disk: "10GB"
-    
-  # 网络隔离
-  network:
-    mode: "isolated"  # 完全隔离
-    # mode: "restricted"  # 受限访问
-    # mode: "bridge"  # 桥接模式
-    
-  # 文件系统隔离
-  filesystem:
-    read_only: true
-    allowed_paths:
-      - "/workspace"
-      - "/tmp"
-```
-
 **技术实现**：
 - **Namespace 隔离**：PID、Network、Mount、IPC、UTS
 - **Cgroups 限制**：CPU、内存、IO、网络带宽
@@ -100,37 +75,6 @@ runtime:
 ### 第二层：行为监控
 
 **实时审计系统**：
-
-```python
-# 行为监控示例
-class BehaviorMonitor:
-    def __init__(self):
-        self.rules = [
-            # 检测异常文件访问
-            FileAccessRule(
-                pattern="/etc/passwd",
-                action="BLOCK"
-            ),
-            # 检测网络异常
-            NetworkRule(
-                protocol="TCP",
-                port=[22, 3389],  # SSH/RDP
-                action="ALERT"
-            ),
-            # 检测资源异常
-            ResourceRule(
-                cpu_threshold=90,
-                memory_threshold=80,
-                action="THROTTLE"
-            )
-        ]
-    
-    def monitor(self, event):
-        for rule in self.rules:
-            if rule.match(event):
-                return rule.action
-        return "ALLOW"
-```
 
 **监控维度**：
 
@@ -144,35 +88,6 @@ class BehaviorMonitor:
 ### 第三层：策略编排
 
 **声明式安全策略**：
-
-```yaml
-# 安全策略配置
-policy:
-  name: "coding-agent-policy"
-  
-  # 允许的操作
-  allow:
-    - read: "/workspace/**/*"
-    - write: "/workspace/output/**"
-    - exec: ["python", "node", "gcc"]
-    - network:
-        - "pypi.org"
-        - "npmjs.com"
-        
-  # 禁止的操作
-  deny:
-    - read: ["/etc/passwd", "/etc/shadow"]
-    - write: ["/usr/**", "/etc/**"]
-    - exec: ["sudo", "su", "bash"]
-    - network:
-        - "0.0.0.0/0"  # 禁止全网访问
-        
-  # 监控规则
-  monitor:
-    - alert_on: "privilege_escalation"
-    - alert_on: "sensitive_data_access"
-    - limit: "network_bandwidth:100Mbps"
-```
 
 ---
 
@@ -191,23 +106,7 @@ policy:
 ### 设计理念差异
 
 **Anthropic：研究优先**
-```
-目标：探索 AI Agent 能力的边界
-    ↓
-方法：最小约束，观察涌现行为
-    ↓
-结果：发现能力，暴露风险
-```
-
 **阿里 OpenSandbox：生产优先**
-```
-目标：让企业安全地使用 AI Agent
-    ↓
-方法：最大约束，严格隔离
-    ↓
-结果：可控风险，可预测行为
-```
-
 ### 安全策略对比
 
 | 场景 | Anthropic | OpenSandbox |
@@ -225,100 +124,13 @@ policy:
 
 **基础镜像**：
 
-```dockerfile
-# OpenSandbox 基础镜像
-FROM opensandbox/base:latest
-
-# 最小化系统
-RUN apt-get update && apt-get install -y \
-    python3 \
-    nodejs \
-    git \
-    && rm -rf /var/lib/apt/lists/*
-
-# 创建受限用户
-RUN useradd -m -s /bin/bash sandbox
-USER sandbox
-
-# 工作目录
-WORKDIR /workspace
-
-# 只读根文件系统
-VOLUME ["/workspace"]
-```
-
 **运行时安全**：
-
-```bash
-# Docker 安全选项
-docker run \
-  --read-only \  # 只读根文件系统
-  --security-opt seccomp=opensandbox.json \  # Seccomp 配置
-  --security-opt apparmor=opensandbox \  # AppArmor 配置
-  --cap-drop ALL \  # 丢弃所有能力
-  --cap-add CHOWN \  # 仅保留必要能力
-  --network none \  # 默认无网络
-  --memory 4g \  # 内存限制
-  --cpus 2 \  # CPU 限制
-  --pids-limit 100 \  # 进程数限制
-  opensandbox/agent:latest
-```
 
 ### Kubernetes 集成
 
 **Pod 安全策略**：
 
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: ai-agent-pod
-  namespace: opensandbox
-spec:
-  securityContext:
-    runAsNonRoot: true
-    runAsUser: 1000
-    fsGroup: 1000
-    seccompProfile:
-      type: RuntimeDefault
-  containers:
-  - name: agent
-    image: opensandbox/agent:latest
-    securityContext:
-      allowPrivilegeEscalation: false
-      readOnlyRootFilesystem: true
-      capabilities:
-        drop:
-        - ALL
-    resources:
-      limits:
-        cpu: "2"
-        memory: "4Gi"
-      requests:
-        cpu: "100m"
-        memory: "256Mi"
-    volumeMounts:
-    - name: workspace
-      mountPath: /workspace
-  volumes:
-  - name: workspace
-    emptyDir: {}
-```
-
 ### gVisor 集成（可选 VM 级隔离）
-
-```yaml
-# 使用 gVisor 提供更强隔离
-runtimeClassName: gvisor
-
-# gVisor 配置
-spec:
-  containers:
-  - name: agent
-    image: opensandbox/agent:latest
-    # 在 gVisor 沙箱中运行
-    # 系统调用由用户空间内核处理
-```
 
 ---
 
@@ -374,16 +186,6 @@ spec:
 
 **阿里云 + OpenSandbox**：
 
-```
-阿里云基础设施
-    ├── ECS / Kubernetes
-    ├── 阿里云安全中心
-    ├── 阿里云日志服务
-    └── OpenSandbox（开源）
-            ↓
-    AI Agent 安全运行环境
-```
-
 **商业模式**：
 - **开源**：OpenSandbox 核心（吸引用户）
 - **云服务**：阿里云托管版（商业化）
@@ -419,16 +221,6 @@ spec:
 
 **2. 云原生设计**
 
-```
-微服务架构
-    ↓
-容器化部署
-    ↓
-弹性扩展
-    ↓
-云原生生态
-```
-
 **3. 开放生态**
 
 - 支持多语言 SDK
@@ -446,16 +238,6 @@ spec:
 | **平台集成** | Chrome/Edge AI | 消费者产品 |
 
 **未来的 AI 基础设施**：
-
-```
-多云支持（阿里云、AWS、GCP）
-    ↓
-开源核心（OpenSandbox）
-    ↓
-安全隔离（容器 + VM）
-    ↓
-AI Agent 生态
-```
 
 ### 最后的思考
 

@@ -38,30 +38,8 @@ redirect_from:
 **场景：某公司的Prompt乱象**
 
 开发者A：
-```
-"请帮我优化这段代码"
-```
-
 开发者B：
-```
-作为资深工程师，请review以下代码并提供优化建议，
-重点关注性能和可读性。
-代码：
-{code}
-```
-
 开发者C：
-```
-Act as a senior software engineer with 10 years of experience.
-Review the following code and suggest improvements.
-Focus on: performance, readability, security.
-
-Code:
-{code}
-
-Provide your feedback in Chinese.
-```
-
 **问题**：
 - 同样的任务，三种不同的Prompt
 - 效果差异巨大
@@ -104,67 +82,11 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 **原则2：语义化版本**
 **原则2：语义化版本**
 
-```
-Prompt版本号：主版本.次版本.修订号
-
-v1.0.0 - 初始版本
-v1.1.0 - 优化了输出格式（向后兼容）
-v1.1.1 - 修复了边界情况（向后兼容）
-v2.0.0 - 重构了Prompt结构（不兼容变更）
-```
-
 **原则3：变更记录**
-
-```markdown
-# prompts/code-review/CHANGELOG.md
-
-## [1.2.0] - 2026-03-10
-### Added
-- 增加了安全审查检查点
-- 添加了性能优化建议输出格式
-
-### Changed
-- 优化了代码结构分析逻辑
-- 改进了错误提示的描述
-
-### Fixed
-- 修复了Python装饰器解析失败的问题
-
-## [1.1.0] - 2026-02-15
-### Added
-- 支持多语言代码审查
-...
-```
 
 ### Prompt代码审查
 
 **审查清单**：
-
-```markdown
-## Prompt Code Review Checklist
-
-### 功能性
-- [ ] Prompt是否清晰表达了意图？
-- [ ] 输入变量是否定义完整？
-- [ ] 输出格式是否明确？
-- [ ] 边界情况是否考虑？
-
-### 质量
-- [ ] 是否遵循Prompt最佳实践？
-- [ ] 是否有示例说明？
-- [ ] 是否包含质量评估标准？
-- [ ] 是否经过实际测试？
-
-### 安全性
-- [ ] 是否包含敏感信息？
-- [ ] 是否有Prompt注入风险？
-- [ ] 输出是否有安全过滤？
-
-### 文档
-- [ ] 是否有使用说明？
-- [ ] 版本变更是否记录？
-- [ ] 是否有效果评估数据？
-```
 
 **审查流程**：
 
@@ -173,56 +95,6 @@ v2.0.0 - 重构了Prompt结构（不兼容变更）
 ### CI/CD for Prompts
 
 **自动化流程**：
-
-```yaml
-# .github/workflows/prompt-ci.yml
-name: Prompt CI/CD
-
-on:
-  push:
-    paths:
-      - 'prompts/**'
-
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: Prompt Lint
-        run: |
-          prompt-lint check prompts/
-          # 检查Prompt格式、变量定义、安全性
-      
-      - name: Security Scan
-        run: |
-          prompt-security-scan prompts/
-          # 扫描Prompt注入风险
-  
-  test:
-    runs-on: ubuntu-latest
-    needs: lint
-    steps:
-      - name: Effectiveness Test
-        run: |
-          prompt-test run prompts/ --test-suite=standard
-          # 运行标准测试集，评估Prompt效果
-      
-      - name: Regression Test
-        run: |
-          prompt-test compare prompts/ --baseline=main
-          # 与基线版本对比，确保没有退化
-  
-  deploy:
-    runs-on: ubuntu-latest
-    needs: test
-    if: github.ref == 'refs/heads/main'
-    steps:
-      - name: Deploy to Prompt Registry
-        run: |
-          prompt-registry publish prompts/ --version=$(cat VERSION)
-          # 发布到企业Prompt注册中心
-```
 
 ---
 
@@ -250,44 +122,6 @@ jobs:
 
 ### 权限模型
 
-```yaml
-# permissions.yml
-
-roles:
-  prompt_admin:
-    - enterprise: read, write, delete
-    - department: read, write, delete
-    - project: read, write, delete
-    
-  department_lead:
-    - enterprise: read
-    - department.{own}: read, write, delete
-    - department.*: read
-    - project: read
-    
-  developer:
-    - enterprise: read
-    - department.*: read
-    - department.{own}: write
-    - project.{member}: read, write
-    
-  intern:
-    - enterprise: read
-    - department.*: read
-    - project.{member}: read
-
-access_control:
-  sensitive_prompts:
-    - pattern: "*security*"
-      requires_approval: true
-      approvers: ["security_team"]
-    
-  deprecated_prompts:
-    - pattern: "*deprecated*"
-      allow_read: false
-      redirect_to: "latest_version"
-```
-
 ### 共享与发现机制
 
 **Prompt市场（Internal Marketplace）**：
@@ -295,23 +129,6 @@ access_control:
 <object data="/assets/images/2025-05-17-plem-01-prompt-marketplace.svg" type="image/svg+xml" width="100%"></object>
 
 **发现算法**：
-```python
-class PromptDiscovery:
-    def recommend(self, user, context):
-        """
-        基于用户画像和上下文推荐Prompt
-        """
-        factors = {
-            'team': self.get_team_popular_prompts(user.team),
-            'role': self.get_role_specific_prompts(user.role),
-            'history': self.get_user_history(user.id),
-            'context': self.match_context(context),
-            'quality': self.filter_high_quality()
-        }
-        
-        return self.rank_prompts(factors)
-```
-
 ---
 
 ## 效果评估：A/B测试与数据驱动
@@ -347,101 +164,9 @@ class PromptDiscovery:
 
 **测试设计**：
 
-```python
-class PromptABTest:
-    def __init__(self, prompt_a, prompt_b, metric):
-        self.variants = {
-            'A': prompt_a,
-            'B': prompt_b
-        }
-        self.metric = metric
-        
-    def run(self, test_cases, sample_size=100):
-        results = {'A': [], 'B': []}
-        
-        for case in test_cases:
-            for variant in ['A', 'B']:
-                scores = []
-                for _ in range(sample_size // len(test_cases)):
-                    output = self.variants[variant].execute(case.input)
-                    score = self.metric.evaluate(output, case.expected)
-                    scores.append(score)
-                results[variant].extend(scores)
-        
-        return self.analyze_results(results)
-    
-    def analyze_results(self, results):
-        """统计分析A/B测试结果"""
-        import scipy.stats as stats
-        
-        mean_a = sum(results['A']) / len(results['A'])
-        mean_b = sum(results['B']) / len(results['B'])
-        
-        # t检验
-        t_stat, p_value = stats.ttest_ind(results['A'], results['B'])
-        
-        return {
-            'mean_A': mean_a,
-            'mean_B': mean_b,
-            'improvement': (mean_b - mean_a) / mean_a * 100,
-            'p_value': p_value,
-            'significant': p_value < 0.05,
-            'winner': 'B' if mean_b > mean_a and p_value < 0.05 else 'A'
-        }
-```
-
 **测试案例**：
 
-```yaml
-# test-cases/code-review.yml
-
-test_suites:
-  code_review:
-    - name: "Python function review"
-      input:
-        code: |
-          def calculate_total(items):
-              total = 0
-              for item in items:
-                  total += item.price * item.quantity
-              return total
-        language: "python"
-      expected:
-        - "检查空列表处理"
-        - "建议使用sum()函数"
-        - "类型提示建议"
-      
-    - name: "JavaScript async review"
-      input:
-        code: |
-          async function fetchData() {
-            const response = await fetch('/api/data');
-            return response.json();
-          }
-      expected:
-        - "缺少错误处理"
-        - "建议添加try-catch"
-```
-
 ### 持续优化流程
-
-```
-收集使用数据
-    ↓
-识别低效Prompt（使用率低、评分差）
-    ↓
-分析原因（Prompt问题？场景不匹配？）
-    ↓
-设计改进方案（A/B测试）
-    ↓
-验证效果
-    ↓
-发布新版本
-    ↓
-监控效果
-    ↓
-（循环）
-```
 
 ---
 

@@ -78,10 +78,6 @@ Ashpreet Bedi 的代码库从一开始就是为 auto-improvement 设计的：
 
 Ashpreet Bedi 在 Claude Code 里输入：
 
-```
-Run create-new-agent.md in a new branch.
-```
-
 然后 Claude 会：
 
 1. 问几个关于 agent 用途和需要工具的问题
@@ -104,10 +100,6 @@ Run create-new-agent.md in a new branch.
 ---
 
 ## 四、Improve → Hill Climb 递归循环
-
-```
-Improve → Hill Climb → Improve → Hill Climb → ...
-```
 
 递归改进循环，用最小监督持续提升 agent 能力。
 

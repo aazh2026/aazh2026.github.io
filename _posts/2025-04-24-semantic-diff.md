@@ -21,11 +21,6 @@ redirect_from:
 
 2024年3月，某金融科技公司的工程师小李提交了一个PR。变更很简单：
 
-```java
-- private int amount;
-+ private long amount;
-```
-
 只是将一个字段从int改为long。原因也很合理：业务增长，int可能溢出。
 
 代码审查很快通过。文本对比工具显示这是一个"安全"的变更——只有3行改动，没有复杂的逻辑，测试也通过了。
@@ -63,14 +58,6 @@ redirect_from:
 **问题的根源**：代码的意义不在于它的文本表示，而在于它的**语义**——它对系统行为的影响、它与其他组件的交互、它遵守的隐性和显性契约。
 
 一个简单的例子：
-
-```python
-# 变更前
-result = database.query("SELECT * FROM users WHERE id = " + user_id)
-
-# 变更后
-result = database.query(f"SELECT * FROM users WHERE id = {user_id}")
-```
 
 文本对比显示这只是一个字符串格式化方式的改变。但语义分析会立即警告：**这是一个SQL注入漏洞**。两种写法在功能上等价，但f-string并没有解决注入问题。
 
@@ -110,17 +97,7 @@ result = database.query(f"SELECT * FROM users WHERE id = {user_id}")
 超越文本，进入代码的结构表示。
 
 **文本diff看到的**：
-```
-- if (x > 0) {
-+ if (x >= 0) {
-```
-
 **AST diff看到的**：
-```
-条件表达式：GT(x, 0) → GTE(x, 0)
-影响：边界条件改变，x=0时的行为翻转
-```
-
 AST diff可以：
 - 识别重构（只是代码结构改变，语义不变）
 - 发现语义改变（看似小的文本变化，实际影响巨大）
@@ -138,13 +115,6 @@ AST diff可以：
 - 它与原始意图是否一致？
 
 **例子**：
-```python
-# PR描述："优化性能"
-- data = fetch_all_records()
-- result = [process(r) for r in data]
-+ result = (process(r) for r in fetch_all_records())
-```
-
 文本diff：改变了实现方式
 AST diff：从列表推导改为生成器表达式
 Intent diff：确实优化了内存使用（惰性求值），但可能改变了时序行为（如果process有副作用）。这与"优化性能"的意图一致，但可能有副作用。
@@ -160,12 +130,6 @@ Intent diff：确实优化了内存使用（惰性求值），但可能改变了
 - 风险分析：这个变更的潜在副作用是什么？
 
 **例子**：
-```java
-// 变更
-- public void processOrder(Order order)
-+ public void processOrder(Order order, boolean priority)
-```
-
 影响图分析会显示：
 - 直接调用者：23个
 - 间接调用者（通过接口）：156个

@@ -103,39 +103,7 @@ series: AI-Native Engineering
 
 ### 文件夹结构
 
-```
-inbox/             — 任务输入
-research-briefs/  — 研究简报输出
-drafts/            — 初稿
-approved-content/ — 批准内容
-distribution/     — 分发准备
-logs/              — 执行日志
-```
-
 ### Master CLAUDE.md 示例
-
-```markdown
-# Multi-Agent Content System
-
-## System Overview
-4-agent content team: Research → Production → Quality → Distribution
-
-## Agent Roles
-- /agents/research.md    — Research Agent
-- /agents/production.md  — Production Agent  
-- /agents/quality.md     — Quality Agent
-- /agents/distribution.md — Distribution Agent
-
-## Workflow
-1. Task lands in /inbox
-2. Research Agent → /research-briefs
-3. Production Agent → /drafts
-4. Quality Agent → /approved-content or /drafts (revision)
-5. Distribution Agent → deployed
-
-## Quality Standards
-Each agent has a never does list. Respect boundaries.
-```
 
 ---
 
@@ -145,35 +113,9 @@ Each agent has a never does list. Respect boundaries.
 
 将任务描述放入 `/inbox/task.md`：
 
-```markdown
-# Task: 写一篇关于 multi-agent 系统的博客
-Topic: Claude Multi-Agent systems
-Audience: AI-Native 工程师
-Length: 1500 words
-Deadline: 2026-05-12
-```
-
 ### 第二阶段：Research Agent
 
 Research Agent 读取 `/inbox/task.md`，输出到 `/research-briefs/YYYYMMDD-task-slug.md`：
-
-```markdown
-# Research Brief: Multi-Agent Systems
-
-## Topic Overview
-[研究结果...]
-
-## Key Points
-1. 四个 agents 覆盖完整周期
-2. 并行比串行快 4 倍
-3. 边界定义质量
-
-## Sources
-- [相关链接]
-
-## Open Questions
-[需要进一步确认的问题]
-```
 
 ### 第三阶段：Production Agent
 
@@ -188,14 +130,6 @@ Quality Agent 给出修订 brief 或批准。
 Distribution Agent 读取批准稿，部署到目标平台。
 
 ### 第五阶段：每日站会
-
-```markdown
-# Daily Standup
-
-Yesterday: [completed tasks]
-Today: [planned tasks]
-Blocked: [any blockers]
-```
 
 ---
 

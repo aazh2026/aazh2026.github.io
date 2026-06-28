@@ -48,14 +48,6 @@ redirect_from:
 **场景：智能客服系统**
 
 传统 PRD 这样写：
-```
-功能：用户咨询自动回复
-- 输入：用户问题（文本）
-- 处理：调用大模型生成回复
-- 输出：回复内容
-- 验收标准：回复准确率 > 80%
-```
-
 三个月后的问题：
 - AI 在回答退货问题时，给出了过期的退货政策
 - 对于 angry customer，AI 的回复过于机械，导致投诉升级
@@ -98,38 +90,13 @@ redirect_from:
 
 **原则 1：意图优先于实现**
 
-```
-❌ PRD 思维：
-"系统需要一个推荐算法，使用协同过滤，
-基于用户历史行为计算相似度..."
-
-✅ Product Intent：
-"意图：帮助用户发现可能感兴趣但尚未了解的商品
-目标：点击率 > 5%，购买转化率 > 2%
-约束：不重复推荐已购买商品，不侵犯隐私"
-```
-
 **原则 2：约束与自由并重**
 
 Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
-```
-边界约束：
-- 不能推荐缺货商品
-- 不能推荐用户明确不感兴趣的商品
-- 不能基于敏感属性（种族、宗教）进行推荐
-```
-
 **原则 3：可验证的成功标准**
 
 意图必须有明确的验证方式：
-
-```
-成功标准：
-- 定量：CTR > 5%, CVR > 2%, 平均推荐多样性 > 0.7
-- 定性：用户调研中 "推荐有用" 评分 > 4/5
-- 边界：误推荐率 < 0.1%
-```
 
 ---
 
@@ -143,128 +110,21 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 **核心问题**：这个功能要解决什么业务问题？
 
-```yaml
-business_intent:
-  problem: 用户在海量商品中难以发现感兴趣的商品
-  opportunity: 提升用户发现效率，增加购买转化
-  success_metrics:
-    - metric: 推荐位点击率
-      target: "> 5%"
-      baseline: "当前 2%"
-    - metric: 推荐商品购买占比
-      target: "> 30%"
-      baseline: "当前 15%"
-```
-
 ### 维度 2：用户意图（User Intent）
 
 **核心问题**：用户希望通过这个功能获得什么价值？
-
-```yaml
-user_intent:
-  user_segments:
-    - segment: 新用户
-      goal: 快速了解平台商品范围
-      pain_point: 不知道从哪里开始浏览
-    - segment: 老用户
-      goal: 发现新品，避免重复
-      pain_point: 总是看到相似商品
-    - segment: 目的性购买者
-      goal: 找到最佳选项
-      pain_point: 需要比较多件商品
-  
-  user_scenarios:
-    - scenario: 浏览时
-      expectation: 发现惊喜
-    - scenario: 搜索后
-      expectation: 看到相关补充
-    - scenario: 购物车
-      expectation: 搭配建议
-```
 
 ### 维度 3：功能意图（Functional Intent）
 
 **核心问题**：系统需要具备什么能力？
 
-```yaml
-functional_intent:
-  core_capabilities:
-    - capability: 理解用户偏好
-      description: 基于浏览、点击、购买历史构建用户画像
-      precision_requirement: "相关性 > 0.8"
-    
-    - capability: 商品匹配
-      description: 将用户画像与商品特征匹配
-      coverage_requirement: "全站商品覆盖率 > 95%"
-    
-    - capability: 多样性控制
-      description: 避免推荐过于相似的商品
-      diversity_metric: "类别分散度 > 0.6"
-  
-  non_functional_requirements:
-    latency: "< 100ms"
-    availability: "> 99.9%"
-    scalability: "支持10倍流量增长"
-```
-
 ### 维度 4：约束意图（Constraint Intent）
 
 **核心问题**：系统绝对不能做什么？边界在哪里？
 
-```yaml
-constraint_intent:
-  hard_constraints:
-    - constraint: 隐私保护
-      rule: 不使用未授权的个人数据
-      enforcement: 数据访问审计
-    
-    - constraint: 公平性
-      rule: 不因用户 demographics 区别对待
-      verification: 定期公平性审计
-    
-    - constraint: 准确性
-      rule: 不展示过时或错误信息
-      example: "价格、库存必须实时准确"
-  
-  soft_constraints:
-    - constraint: 解释性
-      preference: 能够解释为什么推荐某商品
-      priority: "高，但非阻断"
-    
-    - constraint: 新鲜度
-      preference: 优先推荐新品
-      priority: "中"
-```
-
 ### 维度 5：演化意图（Evolution Intent）
 
 **核心问题**：这个功能如何随时间和反馈演进？
-
-```yaml
-evolution_intent:
-  learning_mechanism:
-    feedback_sources:
-      - explicit: 用户反馈（点赞/点踩）
-      - implicit: 点击、购买、停留时长
-    adaptation: 模型每周自动重训练
-  
-  iteration_plan:
-    phase_1:
-      scope: 首页个性化推荐
-      timeline: "M1-M2"
-    phase_2:
-      scope: 全站推荐位统一
-      timeline: "M3-M4"
-    phase_3:
-      scope: 跨品类推荐优化
-      timeline: "M5-M6"
-  
-  sunset_criteria:
-    - criteria: CTR 连续4周低于 3%
-      action: 启动诊断和优化
-    - criteria: 用户投诉率 > 0.5%
-      action: 暂停功能并复盘
-```
 
 ---
 
@@ -278,38 +138,8 @@ evolution_intent:
 
 ### AI 如何理解 Product Intent
 
-**传统方式**：
-```
-产品经理 → PRD → 工程师理解 → 代码实现
-                ↑
-         （信息丢失和扭曲发生在这里）
-```
-
 **Intent-Driven 方式**：
-```
-产品经理 → Product Intent (结构化) → AI 意图理解引擎 
-                                     ↓
-                              生成实现方案 → 代码生成
-                                     ↓
-                              意图验证引擎 ←→ 人类审查
-```
-
 ### 意图验证循环
-
-```
-Product Intent
-      ↓
-AI 实现
-      ↓
-验证：是否满足所有约束？
-      ↓
-Yes → 部署 + 监控
-No  → 反馈 → 调整 Intent 或 AI 实现
-      ↓
-运行时监控：实际行为是否符合意图？
-      ↓
-持续学习和优化
-```
 
 ---
 
@@ -319,19 +149,6 @@ No  → 反馈 → 调整 Intent 或 AI 实现
 
 **传统 PRD 方式**：
 
-```
-需求文档 v1.2
-==============
-
-功能：首页推荐模块
-- 展示位置：首页瀑布流
-- 展示数量：20个商品
-- 数据来源：用户历史行为
-- 算法：协同过滤
-- 更新频率：每天一次
-- 成功指标：点击率 > 3%
-```
-
 **三个月后的问题**：
 - 推荐大量已购买商品
 - 价格区间与用户消费能力不匹配
@@ -339,78 +156,6 @@ No  → 反馈 → 调整 Intent 或 AI 实现
 - 无法解释为什么推荐某商品
 
 ### Product Intent 重构
-
-```yaml
-product_intent:
-  id: RECOMMENDATION-HOME-001
-  name: 首页个性化发现
-  
-  business_intent:
-    problem: 用户难以从海量商品中发现感兴趣的商品
-    opportunity: 通过个性化推荐提升发现效率和购买转化
-    success_metrics:
-      - metric: 推荐位点击率
-        target: "> 8%"
-        measurement: 7日滚动平均
-      - metric: 推荐商品GMV占比
-        target: "> 35%"
-      - metric: 用户满意度（调研）
-        target: "> 4.2/5"
-  
-  user_intent:
-    segments:
-      new_users:
-        goal: 快速了解平台，建立信任
-        strategy: 热门 + 多样性 + 低客单价商品
-      returning_users:
-        goal: 发现新品，提升复购
-        strategy: 个性化 + 补货提醒 + 关联推荐
-      high_value_users:
-        goal: 高效找到想要的商品
-        strategy: 精准匹配 + 高品质筛选
-  
-  functional_intent:
-    core_capabilities:
-      - name: 用户画像构建
-        inputs: [浏览, 点击, 加购, 购买, 收藏]
-        freshness: 实时更新
-      - name: 商品召回
-        methods: [向量相似度, 协同过滤, 热门趋势]
-        coverage: "> 95% 商品池"
-      - name: 个性化排序
-        factors: [相关性, 多样性, 新鲜度, 利润]
-        latency: "< 50ms"
-    
-    constraints:
-      - 不展示已购买商品（除非可复购）
-      - 价格区间匹配用户历史消费层级
-      - 库存实时同步，不展示缺货商品
-      - 新用户冷启动：前3次推荐用热门策略过渡
-  
-  constraint_intent:
-    hard:
-      - 隐私：不使用站外数据
-      - 公平：不因性别/地域歧视性推荐
-      - 准确：价格、库存、优惠必须实时准确
-    soft:
-      - 可解释：能够提供推荐理由
-      - 可控：用户可标记"不感兴趣"
-  
-  evolution_intent:
-    feedback_loop:
-      signals: [点击, 购买, 跳过, 负反馈]
-      model_update: 每日增量 + 每周全量
-    
-    experimentation:
-      a_b_test: 持续运行至少1个实验
-      metrics: [CTR, CVR, 长期留存]
-    
-    monitoring:
-      alerts:
-        - CTR 环比下降 > 20%
-        - 推荐商品缺货率 > 5%
-        - 用户负反馈率 > 1%
-```
 
 ### 实施结果对比
 

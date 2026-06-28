@@ -39,15 +39,6 @@ redirect_from:
 **场景**：让AI生成一个用户认证模块
 
 **通用AI的输出**：
-```python
-# 标准JWT实现
-def authenticate(username, password):
-    user = db.query(f"SELECT * FROM users WHERE username='{username}'")
-    if user and user.password == password:
-        return generate_jwt(user.id)
-    return None
-```
-
 **问题**：
 - ❌ 不符合企业的SQL参数化规范
 - ❌ 没有使用企业的密码哈希标准（Argon2）
@@ -86,109 +77,13 @@ def authenticate(username, password):
 
 **层级1：编码规范**
 
-```yaml
-# coding-standards.yaml
-python:
-  style: "PEP8"
-  line_length: 100
-  import_order: ["stdlib", "third_party", "local"]
-  
-security:
-  sql: "必须使用参数化查询"
-  password_hash: "使用Argon2id"
-  secrets: "使用AWS Secrets Manager"
-  
-naming:
-  classes: "PascalCase"
-  functions: "snake_case"
-  constants: "UPPER_SNAKE_CASE"
-  private: "_prefix"
-```
-
 **层级2：架构模式**
-
-```yaml
-# architecture-patterns.yaml
-microservices:
-  communication: "异步消息优先"
-  service_discovery: "Consul"
-  config_management: "Spring Cloud Config"
-  
-data_access:
-  pattern: "Repository + Unit of Work"
-  caching: "Redis with Cache-Aside"
-  
-error_handling:
-  strategy: "Domain Exceptions + Global Handler"
-  logging: "Structured Logging with correlation_id"
-```
 
 **层级3：业务规则**
 
-```yaml
-# business-rules.yaml
-user_management:
-  password_policy:
-    min_length: 12
-    require_special: true
-    expiry_days: 90
-  
-  authentication:
-    mfa_required: true
-    session_timeout: 30_minutes
-    max_attempts: 5
-
-pricing:
-  currency: "USD"
-  tax_calculation: "自动根据地区计算"
-  discount_rules: ["member", "volume", "promotional"]
-```
-
 **层级4：历史代码**
 
-```
-knowledge-base/
-├── patterns/
-│   ├── payment-service/     # 支付服务实现模式
-│   ├── notification-service/ # 通知服务实现模式
-│   └── auth-service/        # 认证服务实现模式
-├── examples/
-│   ├── api-design/          # API设计示例
-│   ├── error-handling/      # 错误处理示例
-│   └── testing/             # 测试用例示例
-└── decisions/
-    ├── adr-001-auth.md      # 架构决策记录
-    └── adr-002-database.md
-```
-
 ### 知识库向量化
-
-```python
-class KnowledgeBaseIndexer:
-    def index_knowledge(self, knowledge_items):
-        """
-        将知识库内容索引为向量
-        """
-        for item in knowledge_items:
-            # 1. 文本分块
-            chunks = self.chunk_document(item.content)
-            
-            for chunk in chunks:
-                # 2. 生成嵌入向量
-                embedding = self.embedding_model.encode(chunk)
-                
-                # 3. 存储到向量数据库
-                self.vector_store.add(
-                    id=generate_id(),
-                    embedding=embedding,
-                    content=chunk,
-                    metadata={
-                        'source': item.source,
-                        'type': item.type,
-                        'tags': item.tags
-                    }
-                )
-```
 
 ---
 
@@ -204,99 +99,9 @@ class KnowledgeBaseIndexer:
 
 **组件1：意图解析器（Intent Parser）**
 
-```python
-class IntentParser:
-    def parse(self, user_intent):
-        """
-        解析开发者意图，提取关键信息
-        """
-        return {
-            'domain': self.extract_domain(user_intent),      # 领域：支付、用户管理
-            'operation': self.extract_operation(user_intent), # 操作：创建、查询
-            'entities': self.extract_entities(user_intent),   # 实体：订单、用户
-            'constraints': self.extract_constraints(user_intent), # 约束：性能、安全
-            'context': self.extract_context(user_intent)      # 上下文：微服务、单体
-        }
-```
-
 **组件2：知识检索引擎（Retrieval Engine）**
 
-```python
-class KnowledgeRetrievalEngine:
-    def retrieve(self, parsed_intent, top_k=5):
-        """
-        根据意图检索相关知识
-        """
-        # 1. 生成查询向量
-        query_vector = self.encode_intent(parsed_intent)
-        
-        # 2. 多维度检索
-        results = []
-        
-        # 检索编码规范
-        coding_standards = self.vector_store.search(
-            query_vector,
-            filter={'type': 'coding_standard'},
-            top_k=top_k
-        )
-        
-        # 检索架构模式
-        arch_patterns = self.vector_store.search(
-            query_vector,
-            filter={'type': 'architecture_pattern'},
-            top_k=top_k
-        )
-        
-        # 检索业务规则
-        business_rules = self.vector_store.search(
-            query_vector,
-            filter={'type': 'business_rule', 'domain': parsed_intent['domain']},
-            top_k=top_k
-        )
-        
-        # 检索历史代码
-        similar_code = self.vector_store.search(
-            query_vector,
-            filter={'type': 'code_example'},
-            top_k=top_k
-        )
-        
-        return {
-            'coding_standards': coding_standards,
-            'architecture_patterns': arch_patterns,
-            'business_rules': business_rules,
-            'similar_code': similar_code
-        }
-```
-
 **组件3：上下文融合引擎（Fusion Engine）**
-
-```python
-class ContextFusionEngine:
-    def fuse(self, user_intent, retrieved_knowledge):
-        """
-        融合用户意图和检索到的知识
-        """
-        prompt = f"""
-生成代码要求：
-{user_intent}
-
-必须遵循的企业规范：
-{self.format_coding_standards(retrieved_knowledge['coding_standards'])}
-
-必须使用的架构模式：
-{self.format_architecture_patterns(retrieved_knowledge['architecture_patterns'])}
-
-必须实现的业务规则：
-{self.format_business_rules(retrieved_knowledge['business_rules'])}
-
-参考实现：
-{self.format_similar_code(retrieved_knowledge['similar_code'])}
-
-请生成符合以上所有要求的代码。
-"""
-        return prompt
-```
 
 ---
 
@@ -306,104 +111,15 @@ class ContextFusionEngine:
 
 **策略1：意图增强查询**
 
-```python
-class IntentAugmentedQuery:
-    def enhance(self, user_query, intent_context):
-        """
-        增强查询以提高检索相关性
-        """
-        # 扩展同义词
-        expanded_terms = self.expand_synonyms(user_query)
-        
-        # 添加上下文关键词
-        context_keywords = self.extract_keywords(intent_context)
-        
-        # 组合增强查询
-        enhanced_query = f"{user_query} {' '.join(expanded_terms)} {' '.join(context_keywords)}"
-        
-        return enhanced_query
-```
-
 **策略2：层次化检索**
 
-```
-第一层：精确匹配（Exact Match）
-  → 查找与意图完全匹配的知识
-  
-第二层：语义相似（Semantic Similarity）
-  → 查找语义相似的知识
-  
-第三层：上下文扩展（Context Expansion）
-  → 根据上下文扩展检索范围
-  
-第四层：默认规范（Default Standards）
-  → 使用通用企业规范
-```
-
 **策略3：检索结果重排序**
-
-```python
-class Reranker:
-    def rerank(self, retrieved_results, user_intent):
-        """
-        基于意图对检索结果重排序
-        """
-        scores = []
-        for result in retrieved_results:
-            score = 0
-            
-            # 领域匹配度
-            score += self.domain_match(result, user_intent) * 0.3
-            
-            # 时效性（优先使用最新知识）
-            score += self.recency_score(result) * 0.2
-            
-            # 使用频率（优先使用常用知识）
-            score += self.usage_score(result) * 0.2
-            
-            # 语义相似度
-            score += self.semantic_similarity(result, user_intent) * 0.3
-            
-            scores.append((result, score))
-        
-        # 按分数排序
-        return sorted(scores, key=lambda x: x[1], reverse=True)
-```
 
 ### 生成优化策略
 
 **策略1：Chain-of-Thought生成**
 
-```
-步骤1：分析需求 → 识别所需规范
-步骤2：选择模式 → 确定架构方案
-步骤3：应用规则 → 融入业务约束
-步骤4：生成代码 → 输出实现
-步骤5：自检验证 → 确保符合规范
-```
-
 **策略2：多轮精化**
-
-```python
-class IterativeRefinement:
-    def refine(self, initial_code, knowledge_base, max_iterations=3):
-        """
-        多轮精化生成的代码
-        """
-        code = initial_code
-        
-        for i in range(max_iterations):
-            # 检查是否符合规范
-            violations = self.check_compliance(code, knowledge_base)
-            
-            if not violations:
-                break
-            
-            # 基于违规点精化
-            code = self.refine_code(code, violations)
-        
-        return code
-```
 
 ---
 
@@ -439,14 +155,6 @@ class IterativeRefinement:
 
 **实践1：知识库维护**
 
-```
-知识库不是一次性的：
-✅ 定期更新（每月审查）
-✅ 版本控制（追踪变更）
-✅ 使用反馈（标记有用/无用）
-✅ 自动化入库（新代码自动分析）
-```
-
 **实践2：检索质量监控**
 
 | 指标 | 目标 | 监控频率 |
@@ -457,13 +165,6 @@ class IterativeRefinement:
 | 规范符合度 | >90% | 每周 |
 
 **实践3：渐进式采用**
-
-```
-第1步：先用于新功能开发
-第2步：扩展到重构项目
-第3步：覆盖维护性开发
-第4步：集成到代码审查
-```
 
 ---
 

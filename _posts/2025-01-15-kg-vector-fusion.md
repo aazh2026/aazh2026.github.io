@@ -81,38 +81,8 @@ redirect_from:
 **方案1：显式实体标注**
 在索引文本时，先做NER（命名实体识别），存储实体位置。
 
-```python
-# 索引时
-chunk = "Python 3.12引入了PEP 703，允许禁用GIL"
-entities = ner_model.extract(chunk)
-# entities: [("Python 3.12", "ProgrammingLanguage"), ("PEP 703", "PEP"), ("GIL", "Concept")]
-
-vector_db.add({
-    'text': chunk,
-    'embedding': embed(chunk),
-    'entities': entities  # 存储实体信息
-})
-```
-
 **方案2：模糊匹配**
 通过实体名称相似度+上下文匹配，动态链接。
-
-```python
-def link_entity(text_mention, kg_candidates):
-    # 1. 名称相似度
-    name_scores = [jaccard_similarity(text_mention, c.name) 
-                   for c in kg_candidates]
-    
-    # 2. 上下文相似度（使用周围文本的embedding）
-    context = get_surrounding_text(text_mention)
-    context_emb = embed(context)
-    desc_scores = [cosine_similarity(context_emb, c.description_emb) 
-                   for c in kg_candidates]
-    
-    # 3. 综合评分
-    best_match = argmax(0.5*name_scores + 0.5*desc_scores)
-    return kg_candidates[best_match]
-```
 
 ### 2.3 融合策略：什么时候相信谁
 
@@ -121,81 +91,15 @@ def link_entity(text_mention, kg_candidates):
 - 用图谱验证每个候选的"事实准确性"
 - 过滤掉与图谱矛盾的候选
 
-```python
-def vector_with_kg_validation(query, top_k=5):
-    # 向量召回
-    candidates = vector_db.similarity_search(query, k=top_k)
-    
-    # 图谱验证
-    validated = []
-    for cand in candidates:
-        # 提取候选中的事实声明
-        claims = extract_claims(cand.text)
-        
-        # 在图谱中验证
-        verified_claims = []
-        for claim in claims:
-            if kg.verify(claim):
-                verified_claims.append(claim)
-        
-        # 如果主要声明都被验证，保留该候选
-        if len(verified_claims) / len(claims) > 0.8:
-            validated.append(cand)
-    
-    return validated
-```
-
 **策略2：图谱为主，向量补充**
 - 先用图谱找到精确答案
 - 如果图谱答案不够详细，用向量检索补充上下文
-
-```python
-def kg_with_vector_context(query):
-    # 图谱查询
-    kg_answer = kg.query(query)
-    
-    if kg_answer.confidence > 0.9:
-        # 答案很确定，但需要更多背景
-        context = vector_db.similarity_search(kg_answer.topic, k=2)
-        return {
-            'answer': kg_answer,
-            'context': context
-        }
-    else:
-        # 图谱不确定，依赖向量检索
-        return vector_db.similarity_search(query, k=3)
-```
 
 **策略3：动态权重**
 根据查询类型决定权重：
 - "什么是X？" → 向量70%，图谱30%
 - "X和Y的关系？" → 向量30%，图谱70%
 - "X的最新进展？" → 向量90%，图谱10%（图谱更新慢）
-
-```python
-class DynamicFusion:
-    def __init__(self):
-        self.query_classifier = QueryClassifier()
-    
-    def fuse(self, query):
-        # 分类查询类型
-        q_type = self.query_classifier.classify(query)
-        
-        # 根据类型决定权重
-        weights = {
-            'definition': {'vector': 0.7, 'kg': 0.3},
-            'relation': {'vector': 0.3, 'kg': 0.7},
-            'recent': {'vector': 0.9, 'kg': 0.1},
-            'how_to': {'vector': 0.6, 'kg': 0.4}
-        }.get(q_type, {'vector': 0.5, 'kg': 0.5})
-        
-        # 分别检索
-        vector_results = self.vector_search(query)
-        kg_results = self.kg_query(query)
-        
-        # 加权融合
-        return self.weighted_merge(vector_results, kg_results, weights)
-```
 
 ## 三、实战案例：混合RAG系统
 
@@ -221,61 +125,6 @@ class DynamicFusion:
 5. 生成回答：结合通用知识（图谱）和具体案例（向量）
 
 ### 3.2 代码示例
-
-```python
-class HybridRAG:
-    def __init__(self, vector_db, knowledge_graph):
-        self.vector_db = vector_db
-        self.kg = knowledge_graph
-        self.entity_linker = EntityLinker(kg)
-    
-    def retrieve(self, query):
-        # Step 1: 向量召回候选
-        vector_candidates = self.vector_db.similarity_search(query, k=10)
-        
-        # Step 2: 实体链接
-        linked_entities = []
-        for cand in vector_candidates:
-            entities = self.entity_linker.link(cand.text)
-            linked_entities.append({
-                'candidate': cand,
-                'entities': entities
-            })
-        
-        # Step 3: 图谱扩展
-        kg_context = []
-        for item in linked_entities:
-            for entity in item['entities']:
-                # 在图谱中查找相关邻居（1-hop和2-hop）
-                neighbors = self.kg.get_neighbors(entity, depth=2)
-                kg_context.extend(neighbors)
-        
-        # Step 4: 去重和排序
-        # 优先保留同时被向量和图谱支持的信息
-        fused_results = self._fuse_and_rank(vector_candidates, kg_context)
-        
-        return fused_results
-    
-    def _fuse_and_rank(self, vector_results, kg_context):
-        """融合并排序：同时出现在两种来源的信息优先"""
-        vector_ids = {v.id for v in vector_results}
-        kg_mentions = {k.mentioned_in for k in kg_context}
-        
-        # 交集：高置信度
-        high_confidence = vector_ids & kg_mentions
-        
-        # 仅向量：中等置信度
-        vector_only = vector_ids - kg_mentions
-        
-        # 仅图谱：补充信息
-        kg_only = kg_mentions - vector_ids
-        
-        return {
-            'high_confidence': [v for v in vector_results if v.id in high_confidence],
-            'medium_confidence': [v for v in vector_results if v.id in vector_only],
-            'supplementary': [k for k in kg_context if k.mentioned_in in kg_only]
-        }
-```
 
 ## 四、常见陷阱
 

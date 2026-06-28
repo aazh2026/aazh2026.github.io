@@ -41,23 +41,6 @@ redirect_from:
 - "商家可以查看客户的购买历史"
 
 代码实现：
-```java
-// 团队A的代码
-class User {
-    List<Order> orders;
-}
-
-// 团队B的代码
-class Customer {
-    List<Purchase> purchaseHistory;
-}
-
-// 团队C的代码
-class Member {
-    List<Transaction> transactions;
-}
-```
-
 **问题**：
 - 同一个业务概念，三种代码命名
 - AI生成代码时无所适从
@@ -67,15 +50,6 @@ class Member {
 ### AI时代的术语危机
 
 **问题1：AI理解困难**
-
-```
-Prompt："为客户生成订单报表"
-
-AI困惑：
-- "客户"对应哪个类？User、Customer、Member？
-- "订单"对应哪个类？Order、Purchase、Transaction？
-- 报表需要哪些字段？
-```
 
 **结果**：AI生成的代码可能混用不同团队的命名风格，造成更大混乱。
 
@@ -136,106 +110,9 @@ AI困惑：
 
 ### 术语表结构
 
-```yaml
-# business-glossary.yml
-
-terms:
-  - id: "customer"
-    display_name: "客户"
-    definition: "在平台注册并购买商品或服务的个人或组织"
-    domain: "销售域"
-    owner: "产品团队"
-    
-    aliases: # 别名
-      - "顾客"
-      - "买家"
-    
-    code_mappings: # 代码映射
-      - language: "java"
-        class_name: "Customer"
-        package: "com.company.sales.domain"
-      - language: "python"
-        class_name: "Customer"
-        module: "sales.models"
-      - language: "typescript"
-        class_name: "ICustomer"
-        file: "src/types/customer.ts"
-    
-    attributes: # 属性定义
-      - name: "id"
-        type: "UUID"
-        description: "唯一标识"
-      - name: "name"
-        type: "String"
-        description: "客户名称"
-      - name: "status"
-        type: "Enum"
-        enum_values: ["ACTIVE", "INACTIVE", "SUSPENDED"]
-        description: "客户状态"
-    
-    relationships: # 关系定义
-      - target: "order"
-        relation: "one-to-many"
-        description: "一个客户有多个订单"
-    
-    constraints: # 约束
-      - "客户名称不能为空"
-      - "邮箱格式必须合法"
-    
-    examples: # 使用示例
-      - "新客户注册后状态为ACTIVE"
-      - "客户可以查看自己的订单历史"
-    
-    status: "approved"  # approved/draft/deprecated
-    version: "2.1"
-    last_updated: "2026-03-01"
-    updated_by: "zhangsan"
-```
-
 ### 术语分类体系
 
-```
-业务术语
-├── 核心域（Core Domain）
-│   ├── 客户域
-│   │   ├── 客户
-│   │   ├── 会员等级
-│   │   └── 客户标签
-│   ├── 订单域
-│   │   ├── 订单
-│   │   ├── 订单项
-│   │   └── 订单状态
-│   └── 商品域
-│       ├── 商品
-│       ├── SKU
-│       └── 库存
-│
-├── 支持域（Supporting Domain）
-│   ├── 支付域
-│   ├── 物流域
-│   └── 营销域
-│
-└── 通用域（Generic Domain）
-    ├── 用户认证
-    ├── 通知
-    └── 审计日志
-```
-
 ### 术语生命周期
-
-```
-草稿（Draft）
-    ↓ 业务方提出
-评审中（Under Review）
-    ↓ 术语委员会评审
-已批准（Approved）
-    ↓ 正式发布
-已发布（Published）
-    ↓ 业务变化
-已废弃（Deprecated）
-    ↓ 过渡期后
-已退役（Retired）
-```
 
 ---
 
@@ -244,104 +121,13 @@ terms:
 ### 命名约定
 
 **类名（Class Name）**：
-```java
-// 业务实体
-Customer              // 客户
-Order                 // 订单
-PaymentTransaction    // 支付交易
-
-// 服务
-CustomerService       // 客户服务
-OrderProcessor        // 订单处理器
-PaymentGateway        // 支付网关
-
-// 仓库（Repository）
-CustomerRepository    // 客户仓储
-OrderRepository       // 订单仓储
-```
-
 **方法名（Method Name）**：
-```java
-// 查询
-findCustomerById(id)           // 根据ID查找客户
-findOrdersByCustomerId(id)     // 根据客户ID查找订单
-searchCustomers(criteria)      // 搜索客户
-
-// 命令
-createCustomer(dto)            // 创建客户
-updateCustomerStatus(id, status) // 更新客户状态
-cancelOrder(id)                // 取消订单
-
-// 业务操作
-placeOrder(customerId, items)  // 下单
-processPayment(orderId, payment) // 处理支付
-refundOrder(orderId, reason)   // 退款
-```
-
 **变量名（Variable Name）**：
-```java
-// 避免缩写
-customer                // ✓ 好
-cust                    // ✗ 不好
-
-// 避免无意义命名
-customerName            // ✓ 好
-name                    // ✗ 上下文不明
-cn                      // ✗ 缩写
-
-// 集合命名
-customers               // 客户列表（复数）
-customerList            // 明确List类型
-customerMap             // 明确Map类型
-```
-
 ### 语言特定规范
 
 **Java**：
-```java
-// 包命名
-com.company.sales.domain      // 领域层
-com.company.sales.application // 应用层
-com.company.sales.infrastructure // 基础设施层
-
-// 接口与实现
-CustomerRepository            // 接口
-CustomerRepositoryImpl        // 实现
-CustomerRepositoryJpa         // JPA实现
-```
-
 **Python**：
-```python
-# 模块命名
-sales/models/customer.py      # 模型
-sales/services/customer_service.py  # 服务
-sales/repositories/customer_repo.py # 仓储
-
-# 类命名（PEP8）
-class Customer:
-    pass
-
-class CustomerService:
-    pass
-```
-
 **TypeScript/JavaScript**：
-```typescript
-// 接口命名
-interface ICustomer {          // 匈牙利命名法（可选）
-  id: string;
-  name: string;
-}
-
-// 类型别名
-type CustomerStatus = 'ACTIVE' | 'INACTIVE';
-
-// 文件名
-customer.ts                   // 单数小写
-customer-service.ts           // 短横线连接
-customer.service.ts           // 点分隔（Angular风格）
-```
-
 ---
 
 <object data="/assets/images/2025-05-14-domain-terminology-02-ai-alignment.svg" type="image/svg+xml" width="100%"></object>
@@ -352,203 +138,23 @@ customer.service.ts           // 点分隔（Angular风格）
 
 **Context注入**：
 
-```python
-class AIContextBuilder:
-    def build_context(self, task_description):
-        """
-        根据任务描述构建AI理解的语境
-        """
-        # 1. 提取关键业务术语
-        terms = self.extract_business_terms(task_description)
-        
-        # 2. 查询术语定义
-        term_definitions = []
-        for term in terms:
-            definition = self.glossary.lookup(term)
-            if definition:
-                term_definitions.append(definition)
-        
-        # 3. 构建AI Prompt Context
-        context = f"""
-        业务语境：
-        当前任务涉及以下业务概念：
-        {self.format_term_definitions(term_definitions)}
-        
-        代码命名规范：
-        - 使用英文类名：{self.get_code_mappings(terms)}
-        - 遵循命名约定：首字母大写驼峰命名
-        - 包/模块位置：{self.get_package_info(terms)}
-        
-        相关实体关系：
-        {self.get_relationships(terms)}
-        
-        约束条件：
-        {self.get_constraints(terms)}
-        """
-        
-        return context
-```
-
-**示例**：
-
-```
-用户输入：
-"为客户生成订单历史查询功能"
-
-AI构建的Context：
-业务语境：
-- 客户（Customer）：在平台注册的个人或组织，类名Customer，位于sales.domain
-- 订单（Order）：客户的购买记录，类名Order，位于sales.domain
-- 关系：Customer 1:N Order
-
-代码命名规范：
-- 查询方法名：findOrdersByCustomerId
-- 服务类名：OrderQueryService
-- 返回类型：List<Order>
-
-约束条件：
-- 只返回已完成的订单
-- 按时间倒序排列
-- 最多返回100条
-```
-
 ### 代码生成对齐
 
 **生成模板**：
 
-```python
-class AlignedCodeGenerator:
-    def generate(self, task, business_context):
-        prompt = f"""
-        任务：{task}
-        
-        业务语境：
-        {business_context}
-        
-        要求：
-        1. 使用上述业务语境中的类名和方法名
-        2. 遵循代码命名规范
-        3. 包含适当的注释说明业务含义
-        4. 返回类型和参数类型必须与术语定义一致
-        
-        请生成符合规范的代码：
-        """
-        
-        return self.llm.generate(prompt)
-```
-
 **示例输出**：
-
-```java
-@Service
-public class OrderQueryService {
-    
-    private final OrderRepository orderRepository;
-    
-    /**
-     * 查询客户的订单历史
-     * 
-     * @param customerId 客户ID
-     * @return 客户的订单列表（只包含已完成订单，按时间倒序）
-     */
-    public List<Order> findOrdersByCustomerId(UUID customerId) {
-        // 业务规则：只查询已完成的订单
-        return orderRepository.findByCustomerIdAndStatusOrderByCreatedAtDesc(
-            customerId, 
-            OrderStatus.COMPLETED,
-            PageRequest.of(0, 100)  // 最多100条
-        );
-    }
-}
-```
 
 ### 命名冲突检测
 
 **自动检测代码中的术语不一致**：
 
-```python
-class TerminologyLinter:
-    def lint(self, code_file):
-        issues = []
-        
-        # 1. 解析代码中的命名
-        code_entities = self.parse_code(code_file)
-        
-        # 2. 对比术语表
-        for entity in code_entities:
-            business_term = self.infer_business_term(entity)
-            
-            if business_term:
-                # 检查是否符合规范
-                standard_name = self.glossary.get_code_name(business_term)
-                
-                if entity.name != standard_name:
-                    issues.append({
-                        'type': 'naming_mismatch',
-                        'entity': entity.name,
-                        'business_term': business_term,
-                        'should_be': standard_name,
-                        'location': entity.location
-                    })
-        
-        return issues
-```
-
 **示例检测**：
-
-```java
-// 代码中的命名
-class User {                    // ⚠️ 警告：应该用 Customer
-    List<Purchase> history;     // ⚠️ 警告：Purchase 应该用 Order
-}
-
-// 检测结果
-[
-  {
-    "type": "naming_mismatch",
-    "entity": "User",
-    "business_term": "客户",
-    "should_be": "Customer",
-    "suggestion": "Rename 'User' to 'Customer' to align with business glossary"
-  },
-  {
-    "type": "naming_mismatch",
-    "entity": "Purchase",
-    "business_term": "订单",
-    "should_be": "Order",
-    "suggestion": "Consider using 'Order' instead of 'Purchase'"
-  }
-]
-```
 
 ### IDE集成
 
 **实时提示**：
 
-```
-开发者输入：
-class Client {
-
-IDE提示：
-⚠️ 命名建议
-"Client" 可能对应业务术语 "客户"
-建议改为 "Customer" 以符合规范
-
-[查看定义] [自动重构] [忽略]
-```
-
 **自动补全**：
-
-```
-开发者输入：
-customer.find
-
-IDE自动补全：
-customer.findOrdersById()
-customer.findActiveOrders()
-customer.findOrderHistory()
-（基于术语表中的方法定义）
-```
 
 ---
 
