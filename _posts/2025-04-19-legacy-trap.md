@@ -37,6 +37,8 @@ redirect_from:
 
 ## 二、核心观点：遗留系统的三层债务
 
+<object data="/assets/images/2025-04-19-legacy-trap-01-three-layer-debt.svg" type="image/svg+xml" width="100%"></object>
+
 让我说一个反直觉的事实：**遗留系统的问题不是技术问题，是知识问题**。
 
 传统的遗留系统现代化思路假设：
@@ -85,6 +87,8 @@ redirect_from:
 | AI时代 | 软件系统 | ??? | ??? |
 
 **历史在押韵**：每一次"遗留系统"危机，最危险的策略都是"彻底重写"。最安全的策略都是"渐进式演进"。
+
+<object data="/assets/images/2025-04-19-legacy-trap-02-strangler-fig.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

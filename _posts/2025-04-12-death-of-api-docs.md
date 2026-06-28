@@ -77,11 +77,15 @@ redirect_from:
 | 互联网时代 | 电子文档 | 在线编辑 | 搜索 |
 | AI时代 | 自解释代码 | 代码即文档 | AI问答 |
 
+<object data="/assets/images/2025-04-12-death-of-api-docs-02-era-timeline.svg" type="image/svg+xml" width="100%"></object>
+
 **历史在押韵**：每一次信息技术的跃迁都重新定义了"什么是最好的知识载体"。在AI时代，代码本身成为了最好的知识载体。
 
 ---
 
 ## 四、反直觉洞察：自解释系统的四层架构
+
+<object data="/assets/images/2025-04-12-death-of-api-docs-01-four-layer-arch.svg" type="image/svg+xml" width="100%"></object>
 
 我提出**四层自解释架构模型**：
 
