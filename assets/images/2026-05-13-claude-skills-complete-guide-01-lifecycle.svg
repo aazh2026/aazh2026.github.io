@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="860" height="440" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">Claude Skills 建设四阶段流程</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">Saved Prompt vs Skill：质的区别，不是量的区别</text>
+
+  <!-- Phase boxes -->
+  <!-- Phase 1 -->
+  <rect x="30" y="78" width="190" height="200" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
+  <rect x="30" y="78" width="190" height="34" fill="#788C5D" rx="10"/>
+  <rect x="30" y="102" width="190" height="10" fill="#788C5D"/>
+  <text x="125" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Phase 1</text>
+  <text x="125" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">5 分钟安装</text>
+  <text x="125" y="148" text-anchor="middle" font-size="10" fill="#141413">首个 Skill</text>
+
+  <line x1="30" y1="158" x2="220" y2="158" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="125" y="176" text-anchor="middle" font-size="10" fill="#141413">浏览 skillsmp.com</text>
+  <text x="125" y="192" text-anchor="middle" font-size="10" fill="#141413">安装社区 Skill</text>
+  <text x="125" y="208" text-anchor="middle" font-size="10" fill="#141413">对比输出质量</text>
+  <text x="125" y="224" text-anchor="middle" font-size="10" fill="#141413">记录改进点</text>
+
+  <rect x="45" y="238" width="160" height="24" fill="#E3DACC" rx="6"/>
+  <text x="125" y="255" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">目标：找到感觉</text>
+
+  <!-- Arrow -->
+  <line x1="224" y1="178" x2="252" y2="178" stroke="#87867F" stroke-width="2" marker-end="url(#arr)"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <!-- Phase 2 -->
+  <rect x="258" y="78" width="190" height="200" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="258" y="78" width="190" height="34" fill="#D97757" rx="10"/>
+  <rect x="258" y="102" width="190" height="10" fill="#D97757"/>
+  <text x="353" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Phase 2</text>
+  <text x="353" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">从零构建</text>
+  <text x="353" y="148" text-anchor="middle" font-size="10" fill="#141413">自定义 Skill</text>
+
+  <line x1="258" y1="158" x2="448" y2="158" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="353" y="176" text-anchor="middle" font-size="10" fill="#141413" font-weight="700">三问题测试：</text>
+  <text x="353" y="192" text-anchor="middle" font-size="10" fill="#141413">① 这个 Skill 做什么？</text>
+  <text x="353" y="206" text-anchor="middle" font-size="10" fill="#141413">② 什么时候激活？</text>
+  <text x="353" y="220" text-anchor="middle" font-size="10" fill="#141413">③ 完美输出什么样？</text>
+
+  <rect x="278" y="232" width="150" height="22" fill="#E3DACC" rx="5"/>
+  <text x="353" y="247" text-anchor="middle" font-size="10" fill="#141413">YAML frontmatter</text>
+  <rect x="278" y="258" width="150" height="22" fill="#E3DACC" rx="5"/>
+  <text x="353" y="273" text-anchor="middle" font-size="10" fill="#141413">&lt; 500 行分步指令</text>
+
+  <!-- Arrow -->
+  <line x1="452" y1="178" x2="480" y2="178" stroke="#87867F" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 3 -->
+  <rect x="486" y="78" width="190" height="200" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
+  <rect x="486" y="78" width="190" height="34" fill="#788C5D" rx="10"/>
+  <rect x="486" y="102" width="190" height="10" fill="#788C5D"/>
+  <text x="581" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Phase 3</text>
+  <text x="581" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">测试 · 优化</text>
+  <text x="581" y="148" text-anchor="middle" font-size="10" fill="#141413">Production-grade</text>
+
+  <line x1="486" y1="158" x2="676" y2="158" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="581" y="176" text-anchor="middle" font-size="10" fill="#141413" font-weight="700">三场景测试：</text>
+  <rect x="500" y="184" width="162" height="18" fill="#788C5D" rx="4"/>
+  <text x="581" y="196" text-anchor="middle" font-size="10" fill="#FAF9F5">快乐路径（80% 用例）</text>
+  <rect x="500" y="206" width="162" height="18" fill="#D97757" rx="4"/>
+  <text x="581" y="218" text-anchor="middle" font-size="10" fill="#FAF9F5">边缘情况（异常/不完整）</text>
+  <rect x="500" y="228" width="162" height="18" fill="#87867F" rx="4"/>
+  <text x="581" y="240" text-anchor="middle" font-size="10" fill="#FAF9F5">压力测试（最复杂输入）</text>
+
+  <rect x="500" y="256" width="162" height="22" fill="#E3DACC" rx="5"/>
+  <text x="581" y="271" text-anchor="middle" font-size="10" fill="#141413">输出 = 客户可接受</text>
+
+  <!-- Arrow -->
+  <line x1="680" y1="178" x2="708" y2="178" stroke="#87867F" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 4 -->
+  <rect x="714" y="78" width="116" height="200" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="714" y="78" width="116" height="34" fill="#D97757" rx="10"/>
+  <rect x="714" y="102" width="116" height="10" fill="#D97757"/>
+  <text x="772" y="100" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Phase 4</text>
+  <text x="772" y="130" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">完整</text>
+  <text x="772" y="146" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Skill 库</text>
+
+  <line x1="714" y1="158" x2="830" y2="158" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="772" y="176" text-anchor="middle" font-size="10" fill="#141413" font-weight="700">1个 Skill</text>
+  <text x="772" y="192" text-anchor="middle" font-size="10" fill="#141413">= 工具</text>
+
+  <text x="772" y="212" text-anchor="middle" font-size="10" fill="#D97757" font-weight="700">10个 Skills</text>
+  <text x="772" y="228" text-anchor="middle" font-size="10" fill="#141413">= 劳动力</text>
+
+  <text x="772" y="250" text-anchor="middle" font-size="10" fill="#141413">覆盖每个</text>
+  <text x="772" y="264" text-anchor="middle" font-size="10" fill="#141413">主要工作流</text>
+
+  <rect x="724" y="270" width="96" height="22" fill="#141413" rx="5"/>
+  <text x="772" y="285" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">复利资产</text>
+
+  <!-- Comparison table -->
+  <rect x="30" y="296" width="800" height="110" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
+  <text x="430" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">Saved Prompt vs Skill 核心差异</text>
+
+  <line x1="30" y1="324" x2="830" y2="324" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Table headers -->
+  <rect x="30" y="324" width="180" height="22" fill="#D1CFC5" rx="0"/>
+  <rect x="210" y="324" width="260" height="22" fill="#E3DACC" rx="0"/>
+  <rect x="470" y="324" width="360" height="22" fill="#788C5D" rx="0"/>
+  <text x="120" y="339" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">维度</text>
+  <text x="340" y="339" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Saved Prompt</text>
+  <text x="650" y="339" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">Skill</text>
+
+  <!-- Table row 1 -->
+  <text x="120" y="358" text-anchor="middle" font-size="10" fill="#141413">性质</text>
+  <text x="340" y="358" text-anchor="middle" font-size="10" fill="#87867F">对话起点</text>
+  <text x="650" y="358" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">训练有素的员工</text>
+
+  <!-- Table row 2 -->
+  <text x="120" y="376" text-anchor="middle" font-size="10" fill="#141413">输出质量</text>
+  <text x="340" y="376" text-anchor="middle" font-size="10" fill="#87867F">一次性，不一致</text>
+  <text x="650" y="376" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">标准化，每次相同</text>
+
+  <!-- Table row 3 -->
+  <text x="120" y="394" text-anchor="middle" font-size="10" fill="#141413">持久性</text>
+  <text x="340" y="394" text-anchor="middle" font-size="10" fill="#87867F">每次重新解释</text>
+  <text x="650" y="394" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">永久存在，自动执行</text>
+
+  <!-- Table row 4 -->
+  <text x="120" y="412" text-anchor="middle" font-size="10" fill="#141413">适用场景</text>
+  <text x="340" y="412" text-anchor="middle" font-size="10" fill="#87867F">一次性任务</text>
+  <text x="650" y="412" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">重复性任务</text>
+</svg>
