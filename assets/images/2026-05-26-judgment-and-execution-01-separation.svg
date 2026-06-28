@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Georgia, serif">
+  <title>Judgment vs Execution Separation</title>
+  <desc>判断力与执行力必须分离——Generator-Evaluator双Agent架构</desc>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#788C5D"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr-g" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="520" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="1">JUDGMENT 与 EXECUTION 必须分离</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#87867F" letter-spacing="0.5">AI无法可靠评判自己的工作——需要一个独立的Evaluator</text>
+  <line x1="180" y1="68" x2="720" y2="68" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Top insight box -->
+  <rect x="250" y="84" width="400" height="52" rx="12" fill="#141413" filter="url(#shadow)"/>
+  <text x="450" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">「评判能力需要距离感，执行能力需要沉浸感」</text>
+  <text x="450" y="124" text-anchor="middle" font-size="11" fill="#D97757">这两种认知状态是互斥的</text>
+
+  <!-- LEFT: WRONG approach (crossed out) -->
+  <rect x="40" y="165" width="280" height="180" rx="12" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="165" width="280" height="36" rx="12" fill="#D97757" opacity="0.15"/>
+  <rect x="40" y="185" width="280" height="16" fill="#D97757" opacity="0.15"/>
+  <text x="180" y="187" text-anchor="middle" font-size="13" font-weight="bold" fill="#D97757">✗ 错误做法</text>
+  <text x="180" y="187" text-anchor="middle" font-size="13" font-weight="bold" fill="#D97757" letter-spacing="0">✗ 错误做法</text>
+  <text x="180" y="210" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">单模型既写代码又评判代码</text>
+  <line x1="90" y1="220" x2="270" y2="220" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Single model box -->
+  <rect x="100" y="230" width="160" height="60" rx="8" fill="#D97757" opacity="0.12" stroke="#D97757" stroke-width="1.5"/>
+  <text x="180" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">SAME MODEL</text>
+  <text x="180" y="270" text-anchor="middle" font-size="11" fill="#D97757">Generator + Evaluator</text>
+
+  <!-- Problem list -->
+  <text x="80" y="308" font-size="10" fill="#141413">• 无法保持外部观察者视角</text>
+  <text x="80" y="324" font-size="10" fill="#141413">• 对自己的工作评价过于正面</text>
+  <text x="80" y="340" font-size="10" fill="#141413">• 知道代码从哪里来，无法客观</text>
+  <text x="80" y="356" font-size="10" fill="#D97757">→ 评价不可信</text>
+
+  <!-- Cross out line -->
+  <line x1="50" y1="330" x2="310" y2="165" stroke="#D97757" stroke-width="3" opacity="0.6"/>
+
+  <!-- RIGHT: CORRECT approach -->
+  <rect x="380" y="165" width="480" height="280" rx="12" fill="#FAF9F5" stroke="#788C5D" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="380" y="165" width="480" height="36" rx="12" fill="#788C5D" opacity="0.15"/>
+  <rect x="380" y="185" width="480" height="16" fill="#788C5D" opacity="0.15"/>
+  <text x="620" y="187" text-anchor="middle" font-size="13" font-weight="bold" fill="#788C5D" letter-spacing="1">✓ 正确架构：GENERATOR + EVALUATOR 双模型</text>
+
+  <!-- GENERATOR box -->
+  <rect x="400" y="215" width="200" height="120" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="400" y="215" width="200" height="30" rx="10" fill="#D97757"/>
+  <rect x="400" y="235" width="200" height="10" fill="#D97757"/>
+  <text x="500" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5" letter-spacing="1">GENERATOR</text>
+  <text x="500" y="262" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">执行 (Execution)</text>
+  <line x1="430" y1="272" x2="570" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="500" y="290" text-anchor="middle" font-size="10" fill="#141413">写代码</text>
+  <text x="500" y="306" text-anchor="middle" font-size="10" fill="#141413">实现功能</text>
+  <text x="500" y="322" text-anchor="middle" font-size="10" fill="#141413">提出解决方案</text>
+
+  <!-- Arrow: Generator → Code -->
+  <path d="M 500 335 L 500 355" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="520" y="348" font-size="10" fill="#D97757">生成代码</text>
+
+  <!-- Code block -->
+  <rect x="420" y="358" width="160" height="55" rx="6" fill="#141413" opacity="0.06"/>
+  <text x="432" y="374" font-size="9" font-family="Courier New, monospace" fill="#141413">def sort_items(items):</text>
+  <text x="432" y="387" font-size="9" font-family="Courier New, monospace" fill="#141413">  return sorted(items)</text>
+  <text x="432" y="400" font-size="9" font-family="Courier New, monospace" fill="#87867F">  # ...更多代码</text>
+
+  <!-- EVALUATOR box -->
+  <rect x="640" y="215" width="200" height="120" rx="10" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="640" y="215" width="200" height="30" rx="10" fill="#788C5D"/>
+  <rect x="640" y="235" width="200" height="10" fill="#788C5D"/>
+  <text x="740" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5" letter-spacing="1">EVALUATOR</text>
+  <text x="740" y="262" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">判断 (Judgment)</text>
+  <line x1="670" y1="272" x2="810" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="740" y="290" text-anchor="middle" font-size="10" fill="#141413">独立验证行为</text>
+  <text x="740" y="306" text-anchor="middle" font-size="10" fill="#141413">从代码中得出自己的分析</text>
+  <text x="740" y="322" text-anchor="middle" font-size="10" fill="#141413">标记缺陷</text>
+
+  <!-- Arrow: Evaluator → judgment -->
+  <path d="M 740 335 L 740 355" stroke="#788C5D" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="760" y="348" font-size="10" fill="#788C5D">评判结果</text>
+
+  <!-- Judgment result box -->
+  <rect x="660" y="358" width="160" height="55" rx="6" fill="#788C5D" opacity="0.12"/>
+  <text x="672" y="374" font-size="9" font-family="Courier New, monospace" fill="#141413">Bug: sorted()不稳定</text>
+  <text x="672" y="387" font-size="9" font-family="Courier New, monospace" fill="#141413">建议: 用quicksort</text>
+  <text x="672" y="400" font-size="9" font-family="Courier New, monospace" fill="#D97757">Severity: HIGH</text>
+
+  <!-- Arrows between Generator and Evaluator -->
+  <path d="M 600 275 Q 620 255 640 275" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <path d="M 640 305 Q 620 325 600 305" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="620" y="250" text-anchor="middle" font-size="10" fill="#87867F">独立</text>
+  <text x="620" y="340" text-anchor="middle" font-size="10" fill="#87867F">交叉</text>
+
+  <!-- Nolan Lawson quote -->
+  <rect x="40" y="365" width="280" height="80" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="1.5"/>
+  <text x="180" y="384" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Nolan Lawson实践：</text>
+  <text x="180" y="400" text-anchor="middle" font-size="10" fill="#141413">Claude sub-agent + Codex +</text>
+  <text x="180" y="414" text-anchor="middle" font-size="10" fill="#141413">Cursor Bugbot</text>
+  <text x="180" y="434" text-anchor="middle" font-size="10" fill="#788C5D">三模型都认为有问题→</text>
+  <text x="180" y="446" text-anchor="middle" font-size="10" fill="#788C5D">误报概率接近于零</text>
+
+  <!-- Bottom principle -->
+  <rect x="380" y="435" width="480" height="68" rx="10" fill="#141413" filter="url(#shadow)"/>
+  <text x="620" y="458" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">架构原则，不是AI的bug</text>
+  <line x1="430" y1="466" x2="810" y2="466" stroke="#87867F" stroke-width="1"/>
+  <text x="620" y="483" text-anchor="middle" font-size="10" fill="#D1CFC5">Unix small tools · TDD红/绿/重构 · 代码审查制度</text>
+  <text x="620" y="498" text-anchor="middle" font-size="10" fill="#D97757">judgment/execution分离是工程原则，不是对AI缺陷的妥协</text>
+</svg>

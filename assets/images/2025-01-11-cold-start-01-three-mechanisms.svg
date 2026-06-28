@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" role="img" aria-label="Cold Start Three Mechanisms">
+  <title>冷启动：三种传承机制</title>
+  <desc>知识蒸馏、组织记忆、合成经验——解决Agent冷启动问题的三种传承机制</desc>
+
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC" stop-opacity="0.4"/>
+    </linearGradient>
+    <marker id="arrBlue" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,7 Z" fill="#788C5D"/>
+    </marker>
+    <marker id="arrClay" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,7 Z" fill="#D97757"/>
+    </marker>
+    <marker id="arrGray" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,7 Z" fill="#87867F"/>
+    </marker>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg4)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="Georgia, serif" font-size="14" fill="#141413" text-anchor="middle" font-weight="bold" letter-spacing="0.5">冷启动：三种传承机制</text>
+  <line x1="180" y1="46" x2="620" y2="46" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="400" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">知识蒸馏 · 组织记忆 · 合成经验</text>
+
+  <!-- ========== MATURE AGENT (top) ========== -->
+  <g filter="url(#shadow4)">
+    <rect x="260" y="78" width="280" height="72" rx="14" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  </g>
+  <text x="400" y="100" font-family="Georgia, serif" font-size="14" fill="#788C5D" text-anchor="middle" font-weight="bold">成熟 Agent</text>
+  <text x="400" y="118" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">运行半年 · 10万+ 对话经验</text>
+  <!-- brain icon -->
+  <g transform="translate(290, 114)" opacity="0.6">
+    <path d="M0,8 Q-6,0 -3,-7 Q3,-13 9,-8 Q13,-13 19,-7 Q25,0 22,8 Q25,16 18,20 Q10,24 3,20 Q-4,24 -10,18 Q-14,12 -10,8Z" fill="none" stroke="#788C5D" stroke-width="1.5"/>
+    <line x1="0" y1="8" x2="10" y2="8" stroke="#788C5D" stroke-width="1"/>
+  </g>
+  <!-- experience dots -->
+  <g transform="translate(520, 108)">
+    <circle cx="0"   cy="0" r="5" fill="#788C5D" opacity="0.3"/>
+    <circle cx="14"  cy="0" r="5" fill="#788C5D" opacity="0.4"/>
+    <circle cx="28"  cy="0" r="5" fill="#788C5D" opacity="0.5"/>
+    <circle cx="42"  cy="0" r="5" fill="#788C5D" opacity="0.6"/>
+    <circle cx="56"  cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+  </g>
+
+  <!-- ========== THREE MECHANISM PATHS ========== -->
+
+  <!-- PATH 1: 知识蒸馏 (left) -->
+  <g transform="translate(130, 168)">
+    <line x1="0" y1="0" x2="-50" y2="52" stroke="#788C5D" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrBlue)"/>
+  </g>
+  <g filter="url(#shadow4)">
+    <rect x="24" y="228" width="236" height="100" rx="12" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+  </g>
+  <rect x="24" y="228" width="236" height="32" rx="12" fill="#788C5D"/>
+  <rect x="24" y="250" width="236" height="10" fill="#788C5D"/>
+  <text x="142" y="249" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">① 知识蒸馏</text>
+  <text x="142" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#5a6b44" text-anchor="middle">从大师到学徒</text>
+  <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+    <text x="36" y="294">→ 提取「思维模式」而非记忆</text>
+    <text x="36" y="310">→ 如何理解模糊问题</text>
+    <text x="36" y="326">→ 如何组织复杂回答</text>
+  </g>
+
+  <!-- PATH 2: 组织记忆 (center) -->
+  <g transform="translate(400, 158)">
+    <line x1="0" y1="0" x2="0" y2="52" stroke="#D97757" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrClay)"/>
+  </g>
+  <g filter="url(#shadow4)">
+    <rect x="282" y="228" width="236" height="100" rx="12" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  </g>
+  <rect x="282" y="228" width="236" height="32" rx="12" fill="#D97757"/>
+  <rect x="282" y="250" width="236" height="10" fill="#D97757"/>
+  <text x="400" y="249" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">② 组织记忆库</text>
+  <text x="400" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#b85f42" text-anchor="middle">共享的基础设施</text>
+  <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+    <text x="294" y="294">→ 产品知识（所有 Agent 共享）</text>
+    <text x="294" y="310">→ 最佳实践（经验沉淀）</text>
+    <text x="294" y="326">→ 常见错误（教训总结）</text>
+  </g>
+
+  <!-- PATH 3: 合成经验 (right) -->
+  <g transform="translate(670, 168)">
+    <line x1="0" y1="0" x2="50" y2="52" stroke="#87867F" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrGray)"/>
+  </g>
+  <g filter="url(#shadow4)">
+    <rect x="540" y="228" width="236" height="100" rx="12" fill="#FAF9F5" stroke="#87867F" stroke-width="1.5"/>
+  </g>
+  <rect x="540" y="228" width="236" height="32" rx="12" fill="#87867F"/>
+  <rect x="540" y="250" width="236" height="10" fill="#87867F"/>
+  <text x="658" y="249" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">③ 合成经验</text>
+  <text x="658" y="274" font-family="system-ui, sans-serif" font-size="10" fill="#666" text-anchor="middle">没有历史就创造历史</text>
+  <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+    <text x="552" y="294">→ 文档 → 模拟对话</text>
+    <text x="552" y="310">→ 教学案例（含思考过程）</text>
+    <text x="552" y="326">→ 知识可以被「设计」出来</text>
+  </g>
+
+  <!-- ========== NEW AGENT (bottom) ========== -->
+  <g transform="translate(0, 344)">
+    <!-- converging arrows -->
+    <line x1="96"  y1="0" x2="72"  y2="-44" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrBlue)"/>
+    <line x1="400" y1="0" x2="400" y2="-44" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrClay)"/>
+    <line x1="704" y1="0" x2="728" y2="-44" stroke="#87867F" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrGray)"/>
+  </g>
+
+  <g filter="url(#shadow4)">
+    <rect x="260" y="348" width="280" height="72" rx="14" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2"/>
+  </g>
+  <text x="400" y="370" font-family="Georgia, serif" font-size="14" fill="#141413" text-anchor="middle" font-weight="bold">新 Agent</text>
+  <text x="400" y="388" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">部署第一天 → 继承半年经验</text>
+  <!-- checkmarks instead of dots -->
+  <g transform="translate(520, 380)">
+    <circle cx="0"   cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+    <circle cx="14"  cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+    <circle cx="28"  cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+    <circle cx="42"  cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+    <circle cx="56"  cy="0" r="5" fill="#788C5D" opacity="0.8"/>
+  </g>
+
+  <!-- ========== BOTTOM INSIGHT ========== -->
+  <rect x="40" y="438" width="720" height="44" rx="10" fill="#E3DACC"/>
+  <text x="400" y="460" font-family="Georgia, serif" font-size="12" fill="#141413" text-anchor="middle" font-style="italic">"冷启动的解决，标志着 AI 从『个体智能』走向『集体智能』的转折点"</text>
+
+  <!-- Footer -->
+  <text x="400" y="496" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">个体智能（孤岛）→ 集体智能（传承网络）</text>
+</svg>

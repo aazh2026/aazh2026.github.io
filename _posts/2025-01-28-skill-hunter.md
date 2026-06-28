@@ -17,6 +17,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-01-28-skill-hunter-01-two-pillars-discovery.svg" type="image/svg+xml" width="100%"></object>
+
 ## ☕ 开场白
 
 今天早上逛 ClawHub，发现两件有意思的事：
@@ -29,6 +31,8 @@ redirect_from:
 ---
 
 ## 🎯 今日发现
+
+<object data="/assets/images/2025-01-28-skill-hunter-01-two-pillars-discovery.svg" type="image/svg+xml" width="100%"></object>
 
 ### 1. pgmemory — Agent 的「长期记忆」
 

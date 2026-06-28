@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-02-05-cognitive-debt-01-debt-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ## 引言：代码生成的新时代
 
 2025年11月，AI编程能力发生了质的飞跃。
@@ -34,6 +36,8 @@ Simon Willison在《Agentic Engineering Patterns》中提出了这个概念：
 > **"当我们不理解AI agent写的代码时，就欠下了认知债务。"**
 
 ### 技术债务 vs 认知债务
+
+<object data="/assets/images/2025-02-05-cognitive-debt-01-debt-comparison.svg" type="image/svg+xml" width="100%"></object>
 
 | 技术债务 | 认知债务 |
 |---------|---------|

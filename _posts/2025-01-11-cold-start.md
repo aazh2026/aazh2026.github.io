@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-01-11-cold-start-01-three-mechanisms.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一、一个荒谬的现象
 
 2026年，我们有了能写诗、能编程、能诊断疾病的AI。
@@ -62,7 +64,7 @@ redirect_from:
 
 **解决冷启动的关键，不是让单个Agent学得更快，而是让Agent之间能「传承」。**
 
----
+<object data="/assets/images/2025-01-11-cold-start-01-three-mechanisms.svg" type="image/svg+xml" width="100%"></object>
 
 ## 四、三种传承机制
 

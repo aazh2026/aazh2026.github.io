@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一、一个历史性时刻
 
 2026年3月，图灵奖得主、算法分析之父 Donald Knuth 发布了一份声明。
@@ -28,6 +30,8 @@ Knuth 的原话是：
 对于熟悉 Knuth 的人来说，这句话的震撼程度不亚于爱因斯坦承认牛顿力学需要修正。
 
 ---
+
+<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%"></object>
 
 ## 二、Knuth 是谁？为什么他的认可如此重要？
 

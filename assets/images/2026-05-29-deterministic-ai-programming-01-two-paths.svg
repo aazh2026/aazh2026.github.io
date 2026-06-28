@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Georgia, serif">
+  <title>Two Paths to Deterministic AI Programming</title>
+  <desc>Dynamic Workflows 与 iii agent harness 两条路径的本质比较——从实时编排走向确定性执行</desc>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#788C5D"/>
+    </marker>
+    <marker id="arr-gray" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#87867F"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr-g" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="540" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="1">确定性AI编程的两条路径</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#87867F" letter-spacing="0.5">Dynamic Workflows vs iii agent harness——脚本化与总线化的殊途同归</text>
+  <line x1="150" y1="68" x2="750" y2="68" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- TOP: Problem box -->
+  <rect x="250" y="84" width="400" height="60" rx="12" fill="#141413" filter="url(#shadow)"/>
+  <text x="450" y="105" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5">核心问题</text>
+  <text x="450" y="124" text-anchor="middle" font-size="11" fill="#D1CFC5">当agent工作规模大到需要协调数十上百个并行任务</text>
+  <text x="450" y="138" text-anchor="middle" font-size="11" fill="#D97757">纯靠模型实时判断已不够用</text>
+
+  <!-- LEFT PATH: Dynamic Workflows -->
+  <!-- Path label -->
+  <rect x="40" y="168" width="300" height="36" rx="8" fill="#D97757" filter="url(#shadow)"/>
+  <text x="190" y="191" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5" letter-spacing="1">路径一：SCRIPTED 脚本化</text>
+  <text x="190" y="204" text-anchor="middle" font-size="10" fill="#E3DACC">Anthropic Dynamic Workflows</text>
+
+  <!-- Left approach box -->
+  <rect x="40" y="218" width="300" height="110" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
+  <text x="190" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">做法：让Claude把编排逻辑</text>
+  <text x="190" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">写成JavaScript脚本</text>
+  <line x1="90" y1="272" x2="290" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="190" y="288" text-anchor="middle" font-size="10" fill="#87867F">循环、分支、中间结果的收集</text>
+  <text x="190" y="302" text-anchor="middle" font-size="10" fill="#87867F">全部固化在代码里</text>
+  <text x="190" y="316" text-anchor="middle" font-size="11" fill="#D97757">模型只在agent()调用时「醒来」</text>
+
+  <!-- Left example box -->
+  <rect x="40" y="342" width="300" height="70" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="190" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">案例：Bun 75万行Rust迁移</text>
+  <text x="190" y="380" text-anchor="middle" font-size="10" fill="#141413">Jarred Sumner，11天，99.8%测试通过</text>
+  <text x="190" y="396" text-anchor="middle" font-size="10" fill="#87867F">数百agent并行，互相review</text>
+
+  <!-- Arrow down to convergence -->
+  <path d="M 190 424 L 190 460" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="210" y="445" font-size="10" fill="#D97757">确定性运行时</text>
+  <text x="210" y="458" font-size="10" fill="#D97757">执行脚本</text>
+
+  <!-- RIGHT PATH: iii agent harness -->
+  <!-- Path label -->
+  <rect x="560" y="168" width="300" height="36" rx="8" fill="#788C5D" filter="url(#shadow)"/>
+  <text x="710" y="191" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5" letter-spacing="1">路径二：BUS-FIRST 总线化</text>
+  <text x="710" y="204" text-anchor="middle" font-size="10" fill="#E3DACC">iii agent harness (Mike Piccolo)</text>
+
+  <!-- Right approach box -->
+  <rect x="560" y="218" width="300" height="110" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
+  <text x="710" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">做法：把harness的15种职责</text>
+  <text x="710" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">拆成独立worker，WebSocket总线连接</text>
+  <line x1="610" y1="272" x2="810" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="710" y="288" text-anchor="middle" font-size="10" fill="#87867F">凭证解析、状态机驱动、policy检查、</text>
+  <text x="710" y="302" text-anchor="middle" font-size="10" fill="#87867F">skill加载、session持久化…</text>
+  <text x="710" y="316" text-anchor="middle" font-size="11" fill="#788C5D">iii.trigger()通信，可独立版本化</text>
+
+  <!-- Right example box -->
+  <rect x="560" y="342" width="300" height="70" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="710" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">15种职责拆解</text>
+  <text x="710" y="380" text-anchor="middle" font-size="10" fill="#141413">credential解析、model查询、policy检查、</text>
+  <text x="710" y="396" text-anchor="middle" font-size="10" fill="#87867F">session持久化、OpenTelemetry trace…</text>
+
+  <!-- Arrow down to convergence -->
+  <path d="M 710 424 L 710 460" stroke="#788C5D" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="730" y="445" font-size="10" fill="#788C5D">确定性协议通信</text>
+  <text x="730" y="458" font-size="10" fill="#788C5D">结果可预期</text>
+
+  <!-- CENTER: CONVERGENCE -->
+  <rect x="250" y="468" width="400" height="58" rx="14" fill="#141413" filter="url(#shadow)"/>
+  <text x="450" y="490" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5">✓ 共同终点：确定性执行</text>
+  <text x="450" y="509" text-anchor="middle" font-size="11" fill="#D1CFC5">编排从「实时决策」变成「静态资产」</text>
+
+  <!-- Left arrow to convergence -->
+  <path d="M 190 468 Q 250 468 250 468" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Right arrow to convergence -->
+  <path d="M 710 468 Q 650 468 650 468" stroke="#788C5D" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Bottom labels -->
+  <rect x="40" y="468" width="180" height="58" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="130" y="490" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">把控制权还给代码</text>
+  <text x="130" y="507" text-anchor="middle" font-size="10" fill="#87867F">Workflow = LLM调用的编排</text>
+  <text x="130" y="520" text-anchor="middle" font-size="10" fill="#87867F">变成确定性代码</text>
+
+  <rect x="680" y="468" width="180" height="58" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="770" y="490" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">让每个组件只做一件事</text>
+  <text x="770" y="507" text-anchor="middle" font-size="10" fill="#87867F">通过组合而非集成</text>
+  <text x="770" y="520" text-anchor="middle" font-size="10" fill="#87867F">实现复杂功能</text>
+
+  <!-- Arrow between paths at top -->
+  <path d="M 355 115 Q 450 95 545 115" fill="none" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="450" y="100" text-anchor="middle" font-size="10" fill="#87867F">同一问题的两个解法</text>
+</svg>

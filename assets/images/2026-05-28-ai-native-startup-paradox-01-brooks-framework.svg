@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" role="img" aria-label="Brooks Framework AI-Native">
+  <title>AI-Native 初创悖论：Brooks 框架</title>
+  <desc>偶发复杂度被AI消除，本质复杂度（判断力）完全暴露——AI-Native创业的核心矛盾</desc>
+
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC" stop-opacity="0.4"/>
+    </linearGradient>
+    <marker id="arrGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#788C5D"/>
+    </marker>
+    <marker id="arrRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#D97757"/>
+    </marker>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg3)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="34" font-family="Georgia, serif" font-size="14" fill="#141413" text-anchor="middle" font-weight="bold" letter-spacing="0.5">Brooks 框架 · AI-Native 悖论</text>
+  <line x1="180" y1="46" x2="620" y2="46" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="400" y="62" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">Fred Brooks《没有银弹》1986 · 偶发复杂度 vs 本质复杂度</text>
+
+  <!-- ======== CONCENTRIC RINGS DIAGRAM ======== -->
+  <g transform="translate(240, 278)">
+
+    <!-- Layer 4: Accidental - Old (outermost) -->
+    <circle cx="0" cy="0" r="200" fill="#E3DACC" opacity="0.8"/>
+    <circle cx="0" cy="0" r="200" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="0" y="-186" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">❌ 汇编语言</text>
+    <text x="145" y="-138" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">❌ 手动编译</text>
+    <text x="185" y="-58" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">❌ 手动版本管理</text>
+    <text x="192" y="18" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">❌ 调试成本</text>
+
+    <!-- Layer 3: Accidental - AI eliminates (middle) -->
+    <circle cx="0" cy="0" r="148" fill="#D1CFC5" opacity="0.5"/>
+    <circle cx="0" cy="0" r="148" fill="none" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="0" y="-134" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle" font-weight="bold">✓ AI 消除偶发复杂度</text>
+    <text x="108" y="-100" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">API 参数</text>
+    <text x="140" y="-50" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">边界处理</text>
+    <text x="140" y="14" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">代码实现</text>
+
+    <!-- Arrow: AI eliminates -->
+    <line x1="220" y1="-162" x2="170" y2="-110" stroke="#788C5D" stroke-width="2" stroke-linecap="round" marker-end="url(#arrGreen)"/>
+
+    <!-- Layer 2: Essential -->
+    <circle cx="0" cy="0" r="96" fill="#D97757" opacity="0.12"/>
+    <circle cx="0" cy="0" r="96" fill="none" stroke="#D97757" stroke-width="2"/>
+    <text x="0" y="-78" font-family="system-ui, sans-serif" font-size="11" fill="#b85f42" text-anchor="middle" font-weight="bold">本质复杂度</text>
+    <text x="72" y="-48" font-family="system-ui, sans-serif" font-size="10" fill="#b85f42" text-anchor="middle">做什么？</text>
+    <text x="80" y="2"  font-family="system-ui, sans-serif" font-size="10" fill="#b85f42" text-anchor="middle">架构？</text>
+    <text x="72" y="48" font-family="system-ui, sans-serif" font-size="10" fill="#b85f42" text-anchor="middle">边界？</text>
+    <text x="0"   y="72" font-family="system-ui, sans-serif" font-size="10" fill="#b85f42" text-anchor="middle">← 不可消除</text>
+
+    <!-- Layer 1: Core - Judgment -->
+    <circle cx="0" cy="0" r="48" fill="#D97757" opacity="0.25"/>
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#D97757" stroke-width="2.5"/>
+    <text x="0" y="-12" font-family="Georgia, serif" font-size="13" fill="#D97757" text-anchor="middle" font-weight="bold">判断力</text>
+    <text x="0" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#b85f42" text-anchor="middle">← 真正稀缺</text>
+  </g>
+
+  <!-- ======== RIGHT SIDE: Key Insight Cards ======== -->
+
+  <!-- Card 1: Execution vs Judgment -->
+  <g filter="url(#shadow3)">
+    <rect x="470" y="74" width="304" height="122" rx="12" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.2"/>
+  </g>
+  <rect x="470" y="74" width="304" height="38" rx="12" fill="#141413"/>
+  <rect x="470" y="100" width="304" height="12" fill="#141413"/>
+  <text x="622" y="98" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">执行与判断的分离</text>
+  <g font-family="system-ui, sans-serif" font-size="12" fill="#141413">
+    <text x="488" y="130">以前：瓶颈是时间 → 写代码、做运营</text>
+    <text x="488" y="150">现在：瓶颈是判断的质量</text>
+    <text x="488" y="170" font-weight="bold" fill="#D97757">AI 让执行变容易，判断变得更重要，也更难</text>
+  </g>
+
+  <!-- Card 2: What to build -->
+  <g filter="url(#shadow3)">
+    <rect x="470" y="210" width="304" height="120" rx="12" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.2"/>
+  </g>
+  <rect x="470" y="210" width="304" height="38" rx="12" fill="#788C5D"/>
+  <rect x="470" y="236" width="304" height="12" fill="#788C5D"/>
+  <text x="622" y="234" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">知道该做什么 → 知道什么值得知道</text>
+  <g font-family="system-ui, sans-serif" font-size="12" fill="#141413">
+    <text x="488" y="266">知道该做什么 = 执行技能（教得会）</text>
+    <text x="488" y="286">知道什么值得知道 = 元技能（只能靠经验）</text>
+    <text x="488" y="306" font-weight="bold" fill="#788C5D">"知道该问什么"比"知道怎么做"稀缺得多</text>
+  </g>
+
+  <!-- Card 3: The paradox -->
+  <g filter="url(#shadow3)">
+    <rect x="470" y="344" width="304" height="120" rx="12" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  </g>
+  <rect x="470" y="344" width="304" height="38" rx="12" fill="#D97757"/>
+  <rect x="470" y="370" width="304" height="12" fill="#D97757"/>
+  <text x="622" y="368" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" text-anchor="middle" font-weight="bold">核心悖论</text>
+  <g font-family="system-ui, sans-serif" font-size="12" fill="#141413">
+    <text x="488" y="400">AI 消除了"不知道怎么做"的门槛</text>
+    <text x="488" y="420">但放大了"不知道该问什么"的问题</text>
+    <text x="488" y="440" font-style="italic" fill="#87867F">"前提错了，最精确的执行反而浪费更多时间"</text>
+  </g>
+
+  <!-- Footer -->
+  <line x1="40" y1="480" x2="760" y2="480" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="400" y="500" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Brooks 1986 · AI-Native 时代：偶发复杂度被消除 → 本质复杂度（判断力）完全暴露</text>
+</svg>

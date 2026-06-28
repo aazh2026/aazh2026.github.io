@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-03-01-code-watermark-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ## 幽灵注释
 
 2025年6月，一位安全工程师在例行代码审计时，发现了一些奇怪的东西。
