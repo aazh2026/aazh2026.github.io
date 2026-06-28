@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 340" font-family="system-ui,-apple-system,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="340" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">软件开发范式演进：从编码到意图</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">Traditional → TDD → IDD 三个时代的核心工作流</text>
+
+  <!-- Stage 1: Traditional -->
+  <rect x="30" y="80" width="220" height="200" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
+  <rect x="30" y="80" width="220" height="32" fill="#E3DACC" rx="10"/>
+  <rect x="30" y="96" width="220" height="16" fill="#E3DACC"/>
+  <text x="140" y="102" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">阶段1：瀑布模型</text>
+  <text x="140" y="122" text-anchor="middle" font-size="10" fill="#87867F">1960s – 1990s</text>
+
+  <!-- Stage 1 boxes -->
+  <rect x="50" y="136" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="80" y="155" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">需求</text>
+  <rect x="120" y="136" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="150" y="155" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">设计</text>
+  <rect x="190" y="136" width="40" height="30" fill="#D97757" rx="5"/>
+  <text x="210" y="155" text-anchor="middle" font-size="9" font-weight="700" fill="#FAF9F5">编码</text>
+
+  <line x1="80" y1="166" x2="80" y2="184" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="50" y="184" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="80" y="203" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">测试</text>
+  <line x1="150" y1="166" x2="150" y2="184" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="120" y="184" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="150" y="203" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">部署</text>
+
+  <line x1="210" y1="166" x2="210" y2="228" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="190" y="228" width="40" height="24" fill="#D97757" rx="5"/>
+  <text x="210" y="243" text-anchor="middle" font-size="9" font-weight="700" fill="#FAF9F5">上线</text>
+
+  <line x1="80" y1="214" x2="150" y2="214" stroke="#87867F" stroke-dasharray="3,3"/>
+  <line x1="150" y1="214" x2="210" y2="214" stroke="#87867F" stroke-dasharray="3,3"/>
+  <text x="140" y="270" text-anchor="middle" font-size="10" fill="#87867F">开发者主要工作</text>
+  <text x="140" y="284" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">编码 → 实现</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="255" y1="180" x2="305" y2="180" stroke="#87867F" marker-end="url(#arrow)"/>
+  <text x="280" y="172" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">范式转移</text>
+
+  <!-- Stage 2: TDD -->
+  <rect x="310" y="80" width="220" height="200" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
+  <rect x="310" y="80" width="220" height="32" fill="#E3DACC" rx="10"/>
+  <rect x="310" y="96" width="220" height="16" fill="#E3DACC"/>
+  <text x="420" y="102" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">阶段2：TDD</text>
+  <text x="420" y="122" text-anchor="middle" font-size="10" fill="#87867F">2000s – 2010s</text>
+
+  <rect x="360" y="140" width="120" height="30" fill="#D97757" rx="5"/>
+  <text x="420" y="159" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">测试 → 编码 → 重构</text>
+
+  <line x1="360" y1="170" x2="360" y2="188" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="330" y="188" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="360" y="207" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">测试</text>
+  <line x1="420" y1="170" x2="420" y2="188" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="390" y="188" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="420" y="207" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">编码</text>
+  <line x1="480" y1="170" x2="480" y2="188" stroke="#87867F" stroke-dasharray="3,3"/>
+  <rect x="450" y="188" width="60" height="30" fill="#E3DACC" rx="5"/>
+  <text x="480" y="207" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">重构</text>
+
+  <line x1="360" y1="218" x2="420" y2="218" stroke="#87867F" stroke-dasharray="3,3"/>
+  <line x1="420" y1="218" x2="480" y2="218" stroke="#87867F" stroke-dasharray="3,3"/>
+  <text x="420" y="240" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">先写测试，再写代码</text>
+  <text x="420" y="270" text-anchor="middle" font-size="10" fill="#87867F">开发者角色</text>
+  <text x="420" y="284" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">测试驱动实现</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="535" y1="180" x2="585" y2="180" stroke="#87867F" marker-end="url(#arrow)"/>
+  <text x="560" y="172" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">范式转移</text>
+
+  <!-- Stage 3: IDD -->
+  <rect x="590" y="80" width="240" height="200" fill="none" stroke="#D97757" stroke-width="2" rx="10"/>
+  <rect x="590" y="80" width="240" height="32" fill="#D97757" rx="10"/>
+  <rect x="590" y="96" width="240" height="16" fill="#D97757"/>
+  <text x="710" y="102" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">阶段3：IDD ⭐</text>
+  <text x="710" y="122" text-anchor="middle" font-size="10" fill="#141413">2020s–</text>
+
+  <!-- IDD flow -->
+  <rect x="610" y="140" width="52" height="30" fill="#788C5D" rx="5"/>
+  <text x="636" y="159" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">意图</text>
+
+  <line x1="662" y1="155" x2="680" y2="155" stroke="#87867F" marker-end="url(#arrow)"/>
+
+  <rect x="680" y="140" width="50" height="30" fill="#D1CFC5" rx="5"/>
+  <text x="705" y="159" text-anchor="middle" font-size="9" font-weight="600" fill="#141413">AI生成</text>
+
+  <line x1="730" y1="155" x2="748" y2="155" stroke="#87867F" marker-end="url(#arrow)"/>
+
+  <rect x="748" y="140" width="52" height="30" fill="#E3DACC" rx="5"/>
+  <text x="774" y="159" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">审查</text>
+
+  <line x1="800" y1="155" x2="818" y2="155" stroke="#87867F" marker-end="url(#arrow)"/>
+
+  <rect x="784" y="140" width="32" height="30" fill="#E3DACC" rx="5"/>
+  <text x="800" y="159" text-anchor="middle" font-size="9" font-weight="600" fill="#141413">迭代</text>
+
+  <text x="710" y="186" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">精确表达意图，AI负责实现</text>
+
+  <!-- Role comparison -->
+  <rect x="610" y="196" width="200" height="20" fill="#E3DACC" rx="4"/>
+  <text x="710" y="210" text-anchor="middle" font-size="10" fill="#141413">传统角色：代码实现者</text>
+
+  <rect x="610" y="220" width="200" height="20" fill="#788C5D" rx="4"/>
+  <text x="710" y="234" text-anchor="middle" font-size="10" fill="#FAF9F5" font-weight="600">IDD角色：意图架构师 ⭐</text>
+
+  <text x="710" y="268" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">核心技能：意图表达 + 审查判断</text>
+  <text x="710" y="284" text-anchor="middle" font-size="10" fill="#87867F">人类做判断，AI做执行</text>
+
+  <!-- Bottom legend -->
+  <rect x="30" y="310" width="12" height="12" fill="#D97757" rx="2"/>
+  <text x="48" y="321" font-size="10" fill="#87867F">开发者主要工作</text>
+  <rect x="150" y="310" width="12" height="12" fill="#788C5D" rx="2"/>
+  <text x="168" y="321" font-size="10" fill="#87867F">AI辅助工作</text>
+  <rect x="260" y="310" width="12" height="12" fill="#E3DACC" rx="2"/>
+  <text x="278" y="321" font-size="10" fill="#87867F">人类核心职责</text>
+  <rect x="370" y="310" width="12" height="12" fill="#D1CFC5" rx="2"/>
+  <text x="388" y="321" font-size="10" fill="#87867F">AI生成</text>
+</svg>

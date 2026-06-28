@@ -1,108 +1,135 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="关键路径分析">
-  <title>依赖管理与关键路径</title>
-  <desc>展示 Execution Plan 中的任务依赖关系和关键路径分析</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="依赖关系与关键路径">
+  <title>Execution Plan 依赖管理与关键路径</title>
+  <desc>展示任务间的依赖关系、关键路径分析以及动态计划调整的流程</desc>
 
   <defs>
-    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
-    </linearGradient>
-    <marker id="arrowGray" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#87867F"/>
+    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
     </marker>
-    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    <marker id="arrGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
     </marker>
   </defs>
 
-  <rect width="800" height="400" fill="url(#bgGrad4)"/>
+  <rect width="900" height="420" fill="#FAF9F5"/>
 
-  <!-- Title -->
-  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141413" text-anchor="middle">依赖管理与关键路径</text>
+  <!-- Title area -->
+  <text x="30" y="32" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413">依赖关系图</text>
+  <text x="30" y="50" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Finish-to-Start 依赖 · 红色箭头 = 关键路径</text>
 
-  <!-- Legend -->
-  <rect x="40" y="52" width="16" height="16" rx="3" fill="#D97757"/>
-  <text x="62" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#141413">关键路径任务</text>
+  <!-- Task boxes - row 1 -->
+  <g filter="url(#shadow2)">
+    <rect x="30" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <text x="90" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-001</text>
+    <text x="90" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Order Model</text>
+    <text x="90" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D" text-anchor="middle">Day 1-2 · 8h</text>
+  </g>
 
-  <rect x="170" y="52" width="16" height="16" rx="3" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
-  <text x="192" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#141413">非关键路径任务</text>
+  <g filter="url(#shadow2)">
+    <rect x="195" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="255" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-002 ★</text>
+    <text x="255" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Order API</text>
+    <text x="255" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 2-4 · 12h</text>
+  </g>
 
-  <line x1="310" y1="60" x2="340" y2="60" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrowGray)"/>
-  <text x="350" y="64" font-family="system-ui, sans-serif" font-size="11" fill="#141413">依赖关系</text>
+  <g filter="url(#shadow2)">
+    <rect x="360" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="420" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-003</text>
+    <text x="420" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Inventory</text>
+    <text x="420" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Day 2-3 · 8h</text>
+  </g>
 
-  <!-- Day labels -->
-  <text x="100" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Day 1-2</text>
-  <text x="210" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Day 2-4</text>
-  <text x="320" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Day 3-4</text>
-  <text x="430" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Day 4-6</text>
-  <text x="540" y="95" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Day 6-7</text>
+  <g filter="url(#shadow2)">
+    <rect x="525" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="585" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-004 ★</text>
+    <text x="585" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Frontend</text>
+    <text x="585" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 4-6 · 16h</text>
+  </g>
 
-  <!-- Critical Path (top) -->
-  <rect x="40" y="110" width="720" height="60" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
-  <rect x="40" y="110" width="720" height="24" rx="8" fill="#D97757"/>
-  <rect x="40" y="126" width="720" height="8" fill="#D97757"/>
-  <text x="60" y="126" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5">关键路径（Critical Path）</text>
-  <text x="720" y="126" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="end">总工期：7 working days</text>
+  <g filter="url(#shadow2)">
+    <rect x="690" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+    <text x="750" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-005 ★</text>
+    <text x="750" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Integration</text>
+    <text x="750" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 6-7 · 8h</text>
+  </g>
 
-  <!-- TK-001 -->
-  <rect x="55" y="142" width="140" height="36" rx="6" fill="#D97757"/>
-  <text x="125" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">TK-001</text>
-  <text x="125" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">Order 模型设计</text>
+  <!-- Arrows row 1 -->
+  <!-- TK-001 → TK-002 -->
+  <path d="M150 92 L195 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- TK-001 → TK-003 -->
+  <path d="M150 100 Q172 120 195 120 Q218 120 255 100" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrGray)"/>
+  <!-- TK-002 → TK-004 -->
+  <path d="M315 92 L360 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- TK-003 → TK-005 -->
+  <path d="M480 100 Q510 120 585 100" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrGray)"/>
+  <!-- TK-004 → TK-005 -->
+  <path d="M645 92 L690 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
 
-  <line x1="195" y1="160" x2="218" y2="160" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <!-- Float tasks section label -->
+  <text x="30" y="148" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">浮时任务（可在关键路径延期时压缩）</text>
 
-  <!-- TK-002 -->
-  <rect x="220" y="142" width="140" height="36" rx="6" fill="#D97757"/>
-  <text x="290" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">TK-002</text>
-  <text x="290" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">订单创建 API</text>
+  <!-- Float task boxes -->
+  <g filter="url(#shadow2)">
+    <rect x="30" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="80" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-006</text>
+    <text x="80" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Coupon Logic</text>
+    <text x="80" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 2 days</text>
+  </g>
 
-  <line x1="360" y1="160" x2="383" y2="160" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <g filter="url(#shadow2)">
+    <rect x="140" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="190" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-007</text>
+    <text x="190" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Discount Calc</text>
+    <text x="190" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 1.5 days</text>
+  </g>
 
-  <!-- TK-003 -->
-  <rect x="385" y="142" width="120" height="36" rx="6" fill="#D97757"/>
-  <text x="445" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">TK-003</text>
-  <text x="445" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">库存服务集成</text>
+  <g filter="url(#shadow2)">
+    <rect x="250" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="300" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-008</text>
+    <text x="300" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Coupon UI</text>
+    <text x="300" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 1 day</text>
+  </g>
 
-  <line x1="505" y1="160" x2="528" y2="160" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <!-- Divider -->
+  <rect x="30" y="220" width="840" height="1" fill="#E3DACC"/>
 
-  <!-- TK-004 -->
-  <rect x="530" y="142" width="120" height="36" rx="6" fill="#D97757"/>
-  <text x="590" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">TK-004</text>
-  <text x="590" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">前端下单页面</text>
+  <!-- Critical Path Summary -->
+  <text x="30" y="240" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413">关键路径分析</text>
 
-  <line x1="650" y1="160" x2="673" y2="160" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <g filter="url(#shadow2)">
+    <rect x="30" y="255" width="500" height="100" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <text x="50" y="276" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">关键路径</text>
+    <text x="50" y="295" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">TK-001 → TK-002 → TK-004 → TK-005</text>
+    <text x="50" y="315" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Day 1 → Day 7</text>
+    <text x="50" y="335" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#D97757">总工期: 7 working days</text>
 
-  <!-- TK-005 -->
-  <rect x="675" y="142" width="70" height="36" rx="6" fill="#D97757"/>
-  <text x="710" y="160" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5" text-anchor="middle">TK-005</text>
-  <text x="710" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">集成测试</text>
+    <!-- Mini timeline -->
+    <rect x="250" y="275" width="260" height="8" rx="4" fill="#E3DACC"/>
+    <rect x="250" y="275" width="250" height="8" rx="4" fill="#D97757"/>
+    <text x="250" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 1</text>
+    <text x="390" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 4</text>
+    <text x="500" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 7</text>
+  </g>
 
-  <!-- Non-critical path -->
-  <rect x="40" y="200" width="720" height="60" rx="8" fill="#FAF9F5" stroke="#87867F" stroke-width="1.5"/>
-  <rect x="40" y="200" width="720" height="24" rx="8" fill="#87867F"/>
-  <rect x="40" y="216" width="720" height="8" fill="#87867F"/>
-  <text x="60" y="216" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5">非关键路径（Float Tasks）</text>
-  <text x="720" y="216" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="end">可调整，有缓冲时间</text>
+  <!-- Risk summary -->
+  <g filter="url(#shadow2)">
+    <rect x="545" y="255" width="325" height="100" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <text x="565" y="276" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">风险评估</text>
 
-  <!-- TK-006 -->
-  <rect x="55" y="232" width="100" height="36" rx="6" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
-  <text x="105" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">TK-006</text>
-  <text x="105" y="263" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">优惠券验证</text>
+    <circle cx="565" cy="295" r="5" fill="#D97757"/>
+    <text x="578" y="299" font-family="system-ui,sans-serif" font-size="9" fill="#141413">Inventory API 延期 (P:30%, Impact: High)</text>
 
-  <!-- TK-007 -->
-  <rect x="170" y="232" width="100" height="36" rx="6" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
-  <text x="220" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">TK-007</text>
-  <text x="220" y="263" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">金额计算</text>
+    <circle cx="565" cy="315" r="5" fill="#788C5D"/>
+    <text x="578" y="319" font-family="system-ui,sans-serif" font-size="9" fill="#141413">前端资源紧张 (P:20%, Impact: Medium)</text>
 
-  <!-- TK-008 -->
-  <rect x="285" y="232" width="100" height="36" rx="6" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
-  <text x="335" y="250" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">TK-008</text>
-  <text x="335" y="263" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">优惠券前端</text>
+    <circle cx="565" cy="335" r="5" fill="#87867F"/>
+    <text x="578" y="339" font-family="system-ui,sans-serif" font-size="9" fill="#141413">优惠券复杂度超预期 (P:40%, Impact: Medium)</text>
+  </g>
 
-  <!-- Dependencies note -->
-  <rect x="40" y="300" width="720" height="85" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="60" y="322" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#141413">关键路径分析</text>
-  <text x="60" y="342" font-family="system-ui, sans-serif" font-size="10" fill="#141413">• 关键路径上的任务没有缓冲时间（Float = 0）</text>
-  <text x="60" y="358" font-family="system-ui, sans-serif" font-size="10" fill="#141413">• 关键路径延期 = 项目总工期延期</text>
-  <text x="60" y="374" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">• 优化关键路径是缩短工期的唯一有效方式</text>
-</svg>
+  <!-- Dynamic adjustment section -->
+  <rect x="30" y="370" width="840" height="1" fill="#E3DACC"/>
+  <text x="30" y="390" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">动态计划调整</text>
+  <text x="195" y="390" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">延期检测 → 影响分析 → 调整建议 → 自动更新
