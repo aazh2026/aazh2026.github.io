@@ -109,6 +109,8 @@ AI擅长识别「这看起来像是我见过的某个问题」，然后套用已
 
 ---
 
+<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%"></object>
+
 ## 五、为什么这改变了游戏规则？
 
 让我说一个更大胆的观点：

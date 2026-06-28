@@ -15,7 +15,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%"></object>
 
 ## 一、50万条记忆的教训
 

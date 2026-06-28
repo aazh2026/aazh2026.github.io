@@ -16,7 +16,7 @@ author: "@postcodeeng"
 
 ---
 
-<object data="/assets/images/assets/images/2026-05-14-when-knowledge-is-cheap-zohar-atkins-01-jevons-bottleneck.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-14-when-knowledge-is-cheap-zohar-atkins-01-jevons-bottleneck.svg" type="image/svg+xml" width="100%"></object>
 
 ## 📋 本文结构
 
