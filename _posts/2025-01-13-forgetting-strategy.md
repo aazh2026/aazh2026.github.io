@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一、50万条记忆的教训
 
 去年，我的OpenClaw助手运行了3个月后，开始变得「迟钝」。

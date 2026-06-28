@@ -9,6 +9,8 @@ tags:
   - Claude
 ---
 
+<object data="/assets/images/assets/images/2026-06-11-loop-engineering-01-agent-loop-cycle.svg" type="image/svg+xml" width="100%"></object>
+
 ## TL;DR
 
 AI编程的下一阶段不是更好的模型，而是**从"写提示词"到"设计循环"**的范式转移。提示词是输入，循环是过程——这个区别看似微妙，却是理解AI编程进化的核心。

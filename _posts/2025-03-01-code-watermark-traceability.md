@@ -17,6 +17,8 @@ redirect_from:
 
 <object data="/assets/images/2025-03-01-code-watermark-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ## 幽灵注释
 
 2025年6月，一位安全工程师在例行代码审计时，发现了一些奇怪的东西。
@@ -71,6 +73,8 @@ redirect_from:
 ---
 
 ## 代码水印的三重境界
+
+<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
 
 ### 第一层：文本水印（Textual Watermark）
 
