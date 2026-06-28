@@ -154,19 +154,7 @@ architecture_spec:
 
 C4 Model 是 Simon Brown 提出的软件架构可视化方法，包含四个层次：
 
-```
-Level 1: System Context（系统上下文）
-         系统与用户、外部系统的关系
-         
-Level 2: Container（容器）
-         应用/服务级别的组件
-         
-Level 3: Component（组件）
-         应用内部的模块/组件
-         
-Level 4: Code（代码）
-         类/接口级别的结构
-```
+<object data="/assets/images/2025-04-05-architecture-spec-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 传统 C4 的局限
 

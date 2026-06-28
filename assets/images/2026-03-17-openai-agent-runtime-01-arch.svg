@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 640" width="560" height="640">
+  <defs>
+    <style>
+      text { font-family: 'SF Mono', 'Menlo', 'Monaco', 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="640" fill="#FAF9F5"/>
+
+  <!-- Border -->
+  <rect x="8" y="8" width="544" height="624" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="6"/>
+
+  <!-- Layer 7: 应用层审计 -->
+  <rect x="24" y="24" width="512" height="72" fill="#D97757" rx="4"/>
+  <rect x="24" y="24" width="512" height="72" fill="none" stroke="#D97757" stroke-width="2" rx="4"/>
+  <text x="40" y="48" fill="#FAF9F5" font-size="14" font-weight="bold">Layer 7: 应用层审计</text>
+  <text x="40" y="66" fill="#FAF9F5" font-size="11">- 操作日志记录</text>
+  <text x="40" y="82" fill="#FAF9F5" font-size="11">- 异常行为检测</text>
+
+  <!-- Layer 6: API 层控制 -->
+  <rect x="24" y="102" width="512" height="66" fill="#E3DACC" rx="4"/>
+  <rect x="24" y="102" width="512" height="66" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
+  <text x="40" y="124" fill="#141413" font-size="14" font-weight="bold">Layer 6: API 层控制</text>
+  <text x="40" y="142" fill="#141413" font-size="11">- 请求限流</text>
+  <text x="40" y="158" fill="#141413" font-size="11">- 权限验证</text>
+
+  <!-- Layer 5: 工具层限制 -->
+  <rect x="24" y="174" width="512" height="66" fill="#FAF9F5" rx="4"/>
+  <rect x="24" y="174" width="512" height="66" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
+  <text x="40" y="196" fill="#141413" font-size="14" font-weight="bold">Layer 5: 工具层限制</text>
+  <text x="40" y="214" fill="#141413" font-size="11">- 命令白名单</text>
+  <text x="40" y="230" fill="#141413" font-size="11">- 参数校验</text>
+
+  <!-- Layer 4: 容器层隔离 -->
+  <rect x="24" y="246" width="512" height="66" fill="#E3DACC" rx="4"/>
+  <rect x="24" y="246" width="512" height="66" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
+  <text x="40" y="268" fill="#141413" font-size="14" font-weight="bold">Layer 4: 容器层隔离</text>
+  <text x="40" y="286" fill="#141413" font-size="11">- 命名空间隔离</text>
+  <text x="40" y="302" fill="#141413" font-size="11">- 文件系统隔离</text>
+
+  <!-- Layer 3: 系统层限制 -->
+  <rect x="24" y="318" width="512" height="66" fill="#FAF9F5" rx="4"/>
+  <rect x="24" y="318" width="512" height="66" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
+  <text x="40" y="340" fill="#141413" font-size="14" font-weight="bold">Layer 3: 系统层限制</text>
+  <text x="40" y="358" fill="#141413" font-size="11">- Seccomp 过滤</text>
+  <text x="40" y="374" fill="#141413" font-size="11">- Capabilities 限制</text>
+
+  <!-- Layer 2: 资源层控制 -->
+  <rect x="24" y="390" width="512" height="66" fill="#E3DACC" rx="4"/>
+  <rect x="24" y="390" width="512" height="66" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
+  <text x="40" y="412" fill="#141413" font-size="14" font-weight="bold">Layer 2: 资源层控制</text>
+  <text x="40" y="430" fill="#141413" font-size="11">- Cgroups 限制</text>
+  <text x="40" y="446" fill="#141413" font-size="11">- 网络隔离</text>
+
+  <!-- Layer 1: 基础设施层 -->
+  <rect x="24" y="462" width="512" height="66" fill="#788C5D" rx="4"/>
+  <rect x="24" y="462" width="512" height="66" fill="none" stroke="#788C5D" stroke-width="2" rx="4"/>
+  <text x="40" y="484" fill="#FAF9F5" font-size="14" font-weight="bold">Layer 1: 基础设施层</text>
+  <text x="40" y="502" fill="#FAF9F5" font-size="11">- 虚拟机隔离</text>
+  <text x="40" y="518" fill="#FAF9F5" font-size="11">- 物理安全</text>
+
+  <!-- Layer number labels on right -->
+  <text x="520" y="56" fill="#FAF9F5" font-size="11" text-anchor="end" font-weight="bold">L7</text>
+  <text x="520" y="134" fill="#87867F" font-size="11" text-anchor="end" font-weight="bold">L6</text>
+  <text x="520" y="206" fill="#87867F" font-size="11" text-anchor="end" font-weight="bold">L5</text>
+  <text x="520" y="278" fill="#87867F" font-size="11" text-anchor="end" font-weight="bold">L4</text>
+  <text x="520" y="350" fill="#87867F" font-size="11" text-anchor="end" font-weight="bold">L3</text>
+  <text x="520" y="422" fill="#87867F" font-size="11" text-anchor="end" font-weight="bold">L2</text>
+  <text x="520" y="494" fill="#FAF9F5" font-size="11" text-anchor="end" font-weight="bold">L1</text>
+</svg>

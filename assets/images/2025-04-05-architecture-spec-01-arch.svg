@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" role="img" aria-label="C4 Model 四层架构图">
+  <title>C4 Model 四层架构</title>
+  <desc>C4 Model 的四个层次：System Context、Container、Component、Code</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
+      .divider { stroke: #D1CFC5; stroke-width: 1; stroke-dasharray: 4 3; }
+      .level-badge { fill: #D97757; }
+      .level-text { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; font-size: 11px; fill: #FAF9F5; font-weight: 600; }
+      .level-num { font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', monospace; font-size: 13px; fill: #D97757; font-weight: 700; }
+      .level-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 14px; fill: #141413; font-weight: 600; }
+      .level-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; font-size: 12px; fill: #87867F; }
+      .connector { fill: #D1CFC5; }
+      .connector-line { stroke: #D1CFC5; stroke-width: 1.5; stroke-dasharray: 3 2; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="560" height="400" rx="10" class="bg"/>
+  <rect width="560" height="400" rx="10" class="border" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="28" y="38" class="level-title" style="font-size:16px; fill:#141413;">C4 Model — 软件架构可视化方法论</text>
+  <line x1="28" y1="50" x2="532" y2="50" class="border" stroke-width="1"/>
+
+  <!-- Connecting lines between levels -->
+  <path d="M 80 210 L 80 250 L 240 250 L 240 210" class="connector-line"/>
+  <path d="M 80 295 L 80 335 L 400 335 L 400 295" class="connector-line"/>
+
+  <!-- Level 1: System Context -->
+  <g transform="translate(28, 68)">
+    <!-- Badge -->
+    <rect width="48" height="20" rx="4" class="level-badge"/>
+    <text x="24" y="14.5" text-anchor="middle" class="level-text">L1</text>
+    <!-- Title & Desc -->
+    <text x="60" y="10" class="level-title">System Context</text>
+    <text x="60" y="26" class="level-desc">系统上下文 — 系统与用户、外部系统的关系</text>
+    <!-- Box -->
+    <rect x="0" y="38" width="504" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="14" y="64" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 用户/角色（Actors）— 与系统交互的人或外部系统</text>
+    <text x="14" y="82" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 系统边界 — 系统本身及其与外部参与者的边界</text>
+  </g>
+
+  <!-- Level 2: Container -->
+  <g transform="translate(28, 170)">
+    <rect width="48" height="20" rx="4" class="level-badge"/>
+    <text x="24" y="14.5" text-anchor="middle" class="level-text">L2</text>
+    <text x="60" y="10" class="level-title">Container</text>
+    <text x="60" y="26" class="level-desc">容器 — 应用/服务级别的组件</text>
+    <rect x="0" y="38" width="504" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="14" y="64" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 应用/服务 — 独立的可部署单元（Web App、微服务、数据库等）</text>
+    <text x="14" y="82" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 技术选型 — 明确技术栈和通信协议</text>
+  </g>
+
+  <!-- Level 3: Component -->
+  <g transform="translate(28, 272)">
+    <rect width="48" height="20" rx="4" class="level-badge"/>
+    <text x="24" y="14.5" text-anchor="middle" class="level-text">L3</text>
+    <text x="60" y="10" class="level-title">Component</text>
+    <text x="60" y="26" class="level-desc">组件 — 应用内部的模块/组件</text>
+    <rect x="0" y="38" width="504" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="14" y="64" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 模块分组 — 相关的类/接口归类为组件</text>
+    <text x="14" y="82" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 职责划分 — 明确组件的职责和依赖关系</text>
+  </g>
+
+  <!-- Level 4: Code -->
+  <g transform="translate(28, 374)">
+    <rect width="48" height="20" rx="4" class="level-badge"/>
+    <text x="24" y="14.5" text-anchor="middle" class="level-text">L4</text>
+    <text x="60" y="10" class="level-title">Code</text>
+    <text x="60" y="26" class="level-desc">代码 — 类/接口级别的结构</text>
+    <rect x="0" y="38" width="504" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="14" y="64" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 类/接口 — 具体的代码实现细节</text>
+    <text x="14" y="82" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:12px;fill:#141413;">&#x25CF; 方法签名 — 函数名、参数、返回值类型</text>
+  </g>
+
+  <!-- Vertical hierarchy indicator (left side) -->
+  <g transform="translate(14, 78)">
+    <circle cx="6" cy="6" r="4" fill="#D97757"/>
+    <line x1="6" y1="10" x2="6" y2="50" stroke="#D1CFC5" stroke-width="2"/>
+    <circle cx="6" cy="60" r="4" fill="#D97757"/>
+    <line x1="6" y1="64" x2="6" y2="104" stroke="#D1CFC5" stroke-width="2"/>
+    <circle cx="6" cy="114" r="4" fill="#D97757"/>
+    <line x1="6" y1="118" x2="6" y2="158" stroke="#D1CFC5" stroke-width="2"/>
+    <circle cx="6" cy="168" r="4" fill="#D97757"/>
+  </g>
+
+  <!-- Footer attribution -->
+  <text x="532" y="390" text-anchor="end" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:10px;fill:#87867F;">C4 Model — Simon Brown</text>
+</svg>

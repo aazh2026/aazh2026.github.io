@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
+      .sep { stroke: #D1CFC5; stroke-width: 1; }
+      .title-bg { fill: #141413; }
+      .title-text { fill: #FAF9F5; font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace; font-size: 13px; font-weight: 600; }
+      .layer-bg { fill: #E3DACC; }
+      .layer-text { fill: #141413; font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace; font-size: 12px; font-weight: 600; }
+      .bullet-text { fill: #87867F; font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace; font-size: 11px; }
+      .bullet-dot { fill: #D97757; }
+      .accent-text { fill: #D97757; font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace; font-size: 12px; font-weight: 600; }
+      .layer-count { fill: #788C5D; font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace; font-size: 10px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="640" class="bg"/>
+
+  <!-- Outer border -->
+  <rect x="30" y="30" width="580" height="580" rx="6" class="border" stroke-width="2"/>
+
+  <!-- Title bar -->
+  <rect x="30" y="30" width="580" height="46" rx="6" class="title-bg"/>
+  <rect x="30" y="56" width="580" height="20" class="title-bg"/>
+  <text x="320" y="59" text-anchor="middle" class="title-text">Wayfair AI Data Pipeline</text>
+
+  <!-- Horizontal separator after title -->
+  <line x1="30" y1="76" x2="610" y2="76" class="sep"/>
+
+  <!-- Layer 1: Ingestion -->
+  <rect x="30" y="76" width="580" height="98" fill="#FAF9F5"/>
+  <rect x="30" y="76" width="580" height="98" class="border"/>
+  <text x="48" y="98" class="accent-text">Ingestion Layer</text>
+  <text x="558" y="98" text-anchor="end" class="layer-count">01</text>
+  <!-- Bullets -->
+  <circle cx="56" cy="114" r="2.5" class="bullet-dot"/>
+  <text x="68" y="118" class="bullet-text">供应商数据接入</text>
+  <circle cx="56" cy="134" r="2.5" class="bullet-dot"/>
+  <text x="68" y="138" class="bullet-text">变更检测</text>
+  <circle cx="56" cy="154" r="2.5" class="bullet-dot"/>
+  <text x="68" y="158" class="bullet-text">优先级队列</text>
+
+  <!-- Separator -->
+  <line x1="30" y1="174" x2="610" y2="174" class="sep"/>
+
+  <!-- Layer 2: Preprocessing -->
+  <rect x="30" y="174" width="580" height="98" fill="#FAF9F5"/>
+  <rect x="30" y="174" width="580" height="98" class="border"/>
+  <text x="48" y="196" class="accent-text">Preprocessing Layer</text>
+  <text x="558" y="196" text-anchor="end" class="layer-count">02</text>
+  <!-- Bullets -->
+  <circle cx="56" cy="212" r="2.5" class="bullet-dot"/>
+  <text x="68" y="216" class="bullet-text">数据清洗</text>
+  <circle cx="56" cy="232" r="2.5" class="bullet-dot"/>
+  <text x="68" y="236" class="bullet-text">格式标准化</text>
+  <circle cx="56" cy="252" r="2.5" class="bullet-dot"/>
+  <text x="68" y="256" class="bullet-text">去重与合并</text>
+
+  <!-- Separator -->
+  <line x1="30" y1="272" x2="610" y2="272" class="sep"/>
+
+  <!-- Layer 3: AI Enhancement -->
+  <rect x="30" y="272" width="580" height="98" fill="#FAF9F5"/>
+  <rect x="30" y="272" width="580" height="98" class="border"/>
+  <text x="48" y="294" class="accent-text">AI Enhancement Layer</text>
+  <text x="558" y="294" text-anchor="end" class="layer-count">03</text>
+  <!-- Bullets -->
+  <circle cx="56" cy="310" r="2.5" class="bullet-dot"/>
+  <text x="68" y="314" class="bullet-text">批量 LLM 调用</text>
+  <circle cx="56" cy="330" r="2.5" class="bullet-dot"/>
+  <text x="68" y="334" class="bullet-text">结果解析</text>
+  <circle cx="56" cy="350" r="2.5" class="bullet-dot"/>
+  <text x="68" y="354" class="bullet-text">后处理</text>
+
+  <!-- Separator -->
+  <line x1="30" y1="370" x2="610" y2="370" class="sep"/>
+
+  <!-- Layer 4: Quality Control -->
+  <rect x="30" y="370" width="580" height="98" fill="#FAF9F5"/>
+  <rect x="30" y="370" width="580" height="98" class="border"/>
+  <text x="48" y="392" class="accent-text">Quality Control Layer</text>
+  <text x="558" y="392" text-anchor="end" class="layer-count">04</text>
+  <!-- Bullets -->
+  <circle cx="56" cy="408" r="2.5" class="bullet-dot"/>
+  <text x="68" y="412" class="bullet-text">自动化验证</text>
+  <circle cx="56" cy="428" r="2.5" class="bullet-dot"/>
+  <text x="68" y="432" class="bullet-text">一致性检查</text>
+  <circle cx="56" cy="448" r="2.5" class="bullet-dot"/>
+  <text x="68" y="452" class="bullet-text">人工审核队列</text>
+
+  <!-- Separator -->
+  <line x1="30" y1="468" x2="610" y2="468" class="sep"/>
+
+  <!-- Layer 5: Deployment -->
+  <rect x="30" y="468" width="580" height="98" fill="#FAF9F5"/>
+  <rect x="30" y="468" width="580" height="98" rx="6" class="border"/>
+  <text x="48" y="490" class="accent-text">Deployment Layer</text>
+  <text x="558" y="490" text-anchor="end" class="layer-count">05</text>
+  <!-- Bullets -->
+  <circle cx="56" cy="506" r="2.5" class="bullet-dot"/>
+  <text x="68" y="510" class="bullet-text">数据发布</text>
+  <circle cx="56" cy="526" r="2.5" class="bullet-dot"/>
+  <text x="68" y="530" class="bullet-text">缓存更新</text>
+  <circle cx="56" cy="546" r="2.5" class="bullet-dot"/>
+  <text x="68" y="550" class="bullet-text">监控告警</text>
+
+  <!-- Bottom border overlay to fix corners -->
+  <rect x="30" y="560" width="580" height="50" rx="0" fill="#FAF9F5"/>
+  <line x1="30" y1="566" x2="610" y2="566" class="sep"/>
+</svg>
