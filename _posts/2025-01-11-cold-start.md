@@ -15,7 +15,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-01-11-cold-start-01-three-mechanisms.svg" type="image/svg+xml" width="100%"></object>
 
 ## 一、一个荒谬的现象
 

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Georgia', serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="17" font-weight="bold" fill="#141413" letter-spacing="1">Agent Loop 循环架构</text>
+  <text x="450" y="60" text-anchor="middle" font-size="11" fill="#87867F">Goal → Action → Observation → Evaluation → Revision</text>
+
+  <!-- Central hub -->
+  <circle cx="450" cy="265" r="52" fill="#141413" filter="url(#shadow)"/>
+  <text x="450" y="258" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">Engineer</text>
+  <text x="450" y="273" text-anchor="middle" font-size="11" fill="#D1CFC5">设计师</text>
+  <text x="450" y="286" text-anchor="middle" font-size="9" fill="#87867F">站在循环外</text>
+
+  <!-- Outer loop ring -->
+  <ellipse cx="450" cy="265" rx="270" ry="155" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="8 4"/>
+
+  <!-- Node positions (clockwise from top) -->
+  <!-- GOAL - top -->
+  <g transform="translate(450, 115)">
+    <circle r="48" fill="#D97757" filter="url(#shadow)"/>
+    <text y="-14" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">Goal</text>
+    <text y="1" text-anchor="middle" font-size="10" fill="#FAF9F5">目标</text>
+    <text y="15" text-anchor="middle" font-size="8" fill="#E3DACC">定义完成标准</text>
+  </g>
+
+  <!-- ACTION - top right -->
+  <g transform="translate(670, 190)">
+    <circle r="48" fill="#788C5D" filter="url(#shadow)"/>
+    <text y="-14" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">Action</text>
+    <text y="1" text-anchor="middle" font-size="10" fill="#FAF9F5">行动</text>
+    <text y="15" text-anchor="middle" font-size="8" fill="#E3DACC">调用工具执行</text>
+  </g>
+
+  <!-- OBSERVATION - bottom right -->
+  <g transform="translate(670, 340)">
+    <circle r="48" fill="#87867F" filter="url(#shadow)"/>
+    <text y="-14" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">Observation</text>
+    <text y="1" text-anchor="middle" font-size="10" fill="#FAF9F5">观察</text>
+    <text y="15" text-anchor="middle" font-size="8" fill="#E3DACC">状态反馈</text>
+  </g>
+
+  <!-- EVALUATION - bottom left -->
+  <g transform="translate(230, 340)">
+    <circle r="48" fill="#D1CFC5" filter="url(#shadow)"/>
+    <text y="-14" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">Evaluation</text>
+    <text y="1" text-anchor="middle" font-size="10" fill="#141413">评估</text>
+    <text y="15" text-anchor="middle" font-size="8" fill="#141413">通过/失败</text>
+  </g>
+
+  <!-- REVISION - top left -->
+  <g transform="translate(230, 190)">
+    <circle r="48" fill="#E3DACC" filter="url(#shadow)"/>
+    <text y="-14" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">Revision</text>
+    <text y="1" text-anchor="middle" font-size="10" fill="#141413">修正</text>
+    <text y="15" text-anchor="middle" font-size="8" fill="#141413">策略调整</text>
+  </g>
+
+  <!-- Arrows around the loop -->
+  <!-- Goal → Action -->
+  <path d="M 490 130 Q 580 120 635 165" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Action → Observation -->
+  <path d="M 680 240 Q 690 290 680 295" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Observation → Evaluation -->
+  <path d="M 620 365 Q 500 400 295 365" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Evaluation → Revision -->
+  <path d="M 185 310 Q 165 250 210 205" fill="none" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Revision → Goal -->
+  <path d="M 270 140 Q 350 95 405 108" fill="none" stroke="#E3DACC" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Stop Conditions label (bottom) -->
+  <rect x="360" y="435" width="180" height="55" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <text x="450" y="455" text-anchor="middle" font-size="10" font-weight="bold" fill="#D97757">Stop Conditions 停止条件</text>
+  <text x="450" y="470" text-anchor="middle" font-size="9" fill="#141413">成功 / 失败 / 资源上限 / 风险检查点</text>
+
+  <!-- Context Management sidebar -->
+  <rect x="10" y="100" width="130" height="120" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="75" y="120" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Context</text>
+  <text x="75" y="133" text-anchor="middle" font-size="9" fill="#141413">上下文管理</text>
+  <line x1="20" y1="143" x2="130" y2="143" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="75" y="157" text-anchor="middle" font-size="8" fill="#87867F">锚点文件</text>
+  <text x="75" y="169" text-anchor="middle" font-size="8" fill="#87867F">Git 状态</text>
+  <text x="75" y="181" text-anchor="middle" font-size="8" fill="#87867F">对话历史</text>
+  <text x="75" y="193" text-anchor="middle" font-size="8" fill="#87867F">工具结果</text>
+
+  <!-- Tools sidebar -->
+  <rect x="760" y="260" width="130" height="100" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="825" y="280" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Tools</text>
+  <text x="825" y="293" text-anchor="middle" font-size="9" fill="#141413">工具集</text>
+  <line x1="770" y1="303" x2="880" y2="303" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="825" y="317" text-anchor="middle" font-size="8" fill="#87867F">Agent 能力边界</text>
+  <text x="825" y="329" text-anchor="middle" font-size="8" fill="#87867F">按任务精心选择</text>
+  <text x="825" y="341" text-anchor="middle" font-size="8" fill="#87867F">清晰使用时机</text>
+
+  <!-- Engineer arrow pointing to loop design -->
+  <path d="M 450 215 L 450 165" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrowhead)"/>
+  <text x="490" y="195" font-size="9" fill="#D97757">设计循环</text>
+</svg>

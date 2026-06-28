@@ -24,7 +24,7 @@ Pi 的 issue tracker 现在不只是存储用户报告——它也成了 AI agen
 
 问题是：**issue 描述的质量正在急剧下降**。
 
----
+<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 ## Slop Issues：95% 是 AI 生成的垃圾
 
@@ -56,6 +56,8 @@ Pi 的 issue tracker 现在不只是存储用户报告——它也成了 AI agen
 ---
 
 ## Slop Begets Slop：过度工程化的陷阱
+
+<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 我们看到的充满 slop 的 issue 只是当下这些机器质量的结果。但糟糕的是，生成的代码质量也好不到哪里去——不是全部，但很多。
 

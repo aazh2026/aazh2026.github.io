@@ -15,7 +15,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-02-05-cognitive-debt-01-debt-comparison.svg" type="image/svg+xml" width="100%"></object>
 
 ## 引言：代码生成的新时代
 

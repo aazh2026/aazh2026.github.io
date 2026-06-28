@@ -17,7 +17,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-01-28-skill-hunter-01-two-pillars-discovery.svg" type="image/svg+xml" width="100%"></object>
 
 ## ☕ 开场白
 

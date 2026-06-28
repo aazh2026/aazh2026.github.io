@@ -82,6 +82,8 @@ Editing is thinking. Review is thinking more carefully.
 
 ---
 
+<object data="/assets/images/2026-05-26-judgment-and-execution-01-separation.svg" type="image/svg+xml" width="100%"></object>
+
 ## judgment 和 execution 分离是架构原则，不是 AI 的 bug
 
 Unix 的 philosophy of small tools，每个工具只做一件事，用管道连接。这是 judgment/execution 分离在系统设计层面的体现。

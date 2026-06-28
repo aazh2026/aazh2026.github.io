@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="'Georgia', serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="460" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#141413" letter-spacing="0.5">从"月"到"小时"：优化对象的范式转移</text>
+  <text x="450" y="54" text-anchor="middle" font-size="11" fill="#87867F">Brooks 框架下的 Wrapper 层进化</text>
+
+  <!-- LEFT: Brooks Era timeline -->
+  <text x="115" y="90" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">偶发复杂度消除史</text>
+
+  <!-- Timeline line -->
+  <line x1="60" y1="120" x2="60" y2="370" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- 1980s -->
+  <circle cx="60" cy="135" r="10" fill="#D97757" filter="url(#shadow)"/>
+  <text x="60" y="139" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">A</text>
+  <text x="75" y="132" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">1980s</text>
+  <text x="75" y="147" text-anchor="start" font-size="9" fill="#87867F">汇编/机器码</text>
+  <text x="75" y="159" text-anchor="start" font-size="9" fill="#788C5D">↓ 高级语言消除复杂度</text>
+
+  <!-- 2000s -->
+  <circle cx="60" cy="205" r="10" fill="#D97757" filter="url(#shadow)"/>
+  <text x="60" y="209" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">B</text>
+  <text x="75" y="202" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2000s</text>
+  <text x="75" y="217" text-anchor="start" font-size="9" fill="#87867F">过程式代码</text>
+  <text x="75" y="229" text-anchor="start" font-size="9" fill="#788C5D">↓ OOP/框架消除复杂度</text>
+
+  <!-- 2010s -->
+  <circle cx="60" cy="275" r="10" fill="#D97757" filter="url(#shadow)"/>
+  <text x="60" y="279" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">C</text>
+  <text x="75" y="272" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2010s</text>
+  <text x="75" y="287" text-anchor="start" font-size="9" fill="#87867F">单机架构</text>
+  <text x="75" y="299" text-anchor="start" font-size="9" fill="#788C5D">↓ 云服务/微服务消除复杂度</text>
+
+  <!-- 2020s -->
+  <circle cx="60" cy="345" r="10" fill="#141413" filter="url(#shadow)"/>
+  <text x="60" y="349" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="bold">D</text>
+  <text x="75" y="342" text-anchor="start" font-size="11" fill="#141413" font-weight="bold">2020s</text>
+  <text x="75" y="357" text-anchor="start" font-size="9" fill="#87867F">Wrapper / Skill 文件</text>
+  <text x="75" y="369" text-anchor="start" font-size="9" fill="#D97757">本质复杂度在此显现</text>
+
+  <!-- Arrow to right panel -->
+  <path d="M 180 230 Q 240 230 260 230" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="220" y="222" text-anchor="middle" font-size="9" fill="#D97757">Wrapper 层</text>
+
+  <!-- RIGHT: evo mechanism -->
+  <rect x="270" y="85" width="610" height="300" rx="12" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2" filter="url(#shadow)"/>
+  <text x="575" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#141413">evo 优化闭环</text>
+  <text x="575" y="128" text-anchor="middle" font-size="10" fill="#87867F">SealQA 5/20 → 11/20 · 50次实验 · 145行 Skill 文件</text>
+
+  <!-- evo flow boxes -->
+  <!-- Box 1: Parallel Exploration -->
+  <rect x="295" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="372" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">并行探索</text>
+  <text x="372" y="181" text-anchor="middle" font-size="9" fill="#87867F">Multiple Agents</text>
+  <text x="372" y="194" text-anchor="middle" font-size="9" fill="#87867F">独立沙盒</text>
+  <text x="372" y="207" text-anchor="middle" font-size="9" fill="#87867F">不同假设</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M 450 190 Q 478 190 498 190" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 2: Tree Search -->
+  <rect x="500" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="577" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">树搜索</text>
+  <text x="577" y="181" text-anchor="middle" font-size="9" fill="#87867F">保留多维胜出分支</text>
+  <text x="577" y="194" text-anchor="middle" font-size="9" fill="#87867F">专家分支合并</text>
+  <text x="577" y="207" text-anchor="middle" font-size="9" fill="#87867F">跨维度探索</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M 655 190 Q 683 190 703 190" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- Box 3: Gates -->
+  <rect x="705" y="148" width="155" height="85" rx="8" fill="#E3DACC" stroke="#141413" stroke-width="1.5"/>
+  <text x="782" y="167" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Gates</text>
+  <text x="782" y="181" text-anchor="middle" font-size="9" fill="#87867F">回归测试</text>
+  <text x="782" y="194" text-anchor="middle" font-size="9" fill="#87867F">Held-out 切片</text>
+  <text x="782" y="207" text-anchor="middle" font-size="9" fill="#87867F">防作弊审计</text>
+
+  <!-- Vertical arrow down from boxes -->
+  <line x1="577" y1="233" x2="577" y2="260" stroke="#D97757" stroke-width="1.5"/>
+  <path d="M 573 256 L 577 263 L 581 256" fill="none" stroke="#D97757" stroke-width="1.5"/>
+
+  <!-- Result box -->
+  <rect x="440" y="265" width="274" height="105" rx="8" fill="#141413" filter="url(#shadow)"/>
+  <text x="577" y="288" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">优化结果</text>
+  <text x="577" y="305" text-anchor="middle" font-size="10" fill="#E3DACC">Skill 文件 145 行</text>
+  <text x="577" y="320" text-anchor="middle" font-size="10" fill="#E3DACC">SealQA: 5/20 → 11/20</text>
+  <text x="577" y="338" text-anchor="middle" font-size="9" fill="#788C5D">✓ 验证通过</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="270" y="395" width="610" height="55" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="575" y="413" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">本质复杂度不会消失，只转移到了 Wrapper 层</text>
+  <text x="575" y="430" text-anchor="middle" font-size="9" fill="#87867F">判断什么值得优化 · 设计 Gate · 定义目标 → 人的判断力变得更重要</text>
+
+  <!-- Brooks label -->
+  <text x="575" y="80" text-anchor="middle" font-size="8" fill="#D97757" font-style="italic">Fred Brooks, "No Silver Bullet" (1986) — 偶发复杂度被消除，本质复杂度换了一层</text>
+</svg>

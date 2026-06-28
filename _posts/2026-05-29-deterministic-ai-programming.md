@@ -28,7 +28,7 @@ tags:
 
 这两篇文章给出的答案截然不同，但指向的终点是同一个。
 
-<object data="/assets/images/assets/images/2026-05-29-deterministic-ai-programming-01-two-paths.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-29-deterministic-ai-programming-01-two-paths.svg" type="image/svg+xml" width="100%"></object>
 
 ## 两个解法，一个问题
 

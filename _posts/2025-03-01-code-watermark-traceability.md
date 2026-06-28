@@ -15,7 +15,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-03-01-code-watermark-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-01-code-watermark-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
 
 ## 幽灵注释
 

@@ -1,96 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="Georgia, serif">
-  <title>Slop Begets Slop Feedback Cycle</title>
-  <desc>AI生成代码的过度工程化导致更多slop，维护者负担加重，形成恶性循环</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 480" font-family="Georgia, serif">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
-    </marker>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#87867F"/>
-    </marker>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
-    </filter>
-    <marker id="arr-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#788C5D"/>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#87867F"/>
     </marker>
   </defs>
 
-  <rect width="900" height="500" fill="#FAF9F5"/>
+  <!-- Background -->
+  <rect width="820" height="480" fill="#FAF9F5"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="1">SLOP BEGETS SLOP</text>
-  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#87867F" letter-spacing="0.5">AI生成代码的过度工程化如何摧毁开源维护</text>
-  <line x1="200" y1="68" x2="700" y2="68" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="410" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="0.5">「Slop begets slop」：开源的 AI 困境循环</text>
+  <line x1="60" y1="50" x2="760" y2="50" stroke="#D1CFC5" stroke-width="1"/>
 
-  <!-- CENTER: Issue Tracker -->
-  <rect x="340" y="215" width="220" height="70" rx="12" fill="#141413" filter="url(#shadow)"/>
-  <text x="450" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5">ISSUE TRACKER</text>
-  <text x="450" y="260" text-anchor="middle" font-size="11" fill="#D1CFC5">GitHub Issues / Pull Requests</text>
-  <text x="450" y="276" text-anchor="middle" font-size="11" fill="#D97757">+LLM +LLM +LLM…</text>
+  <!-- Central quote -->
+  <rect x="240" y="60" width="340" height="44" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="410" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#141413" font-style="italic">「AI 没有增加需要软件的人，</text>
+  <text x="410" y="98" text-anchor="middle" font-size="13" font-weight="bold" fill="#141413" font-style="italic">也没有增加能够 review 代码的维护者」</text>
 
-  <!-- LEFT: Human submits issue -->
-  <rect x="30" y="210" width="170" height="80" rx="10" fill="#E3DACC" stroke="#87867F" stroke-width="1.5" filter="url(#shadow)"/>
-  <text x="115" y="234" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">人类提交Issue</text>
-  <line x1="115" y1="244" x2="115" y2="244" stroke="#87867F" stroke-width="1"/>
-  <text x="115" y="258" text-anchor="middle" font-size="10" fill="#87867F">「这个session日志</text>
-  <text x="115" y="272" text-anchor="middle" font-size="10" fill="#87867F">格式错误导致reader崩溃」</text>
-  <text x="115" y="286" text-anchor="middle" font-size="10" fill="#D97757">窄而基于事实</text>
+  <!-- Cycle diagram: 4 nodes in a loop -->
 
-  <!-- Arrow: Human → LLM -->
-  <path d="M 200 250 Q 250 200 340 230" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
-  <text x="255" y="212" text-anchor="middle" font-size="10" fill="#87867F">clanker扩大范围</text>
+  <!-- Node 1: User submits vague issue (top-left) -->
+  <rect x="60" y="130" width="200" height="100" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <rect x="60" y="130" width="200" height="32" rx="10" fill="#D97757"/>
+  <rect x="60" y="150" width="200" height="12" fill="#D97757"/>
+  <text x="160" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">① 模糊 Issue</text>
+  <text x="80" y="178" font-size="10" fill="#141413">用户把问题扔给 AI</text>
+  <text x="80" y="194" font-size="10" fill="#141413">「帮我理解这个问题」</text>
+  <text x="80" y="210" font-size="10" fill="#87867F">↓ AI 重新措辞</text>
 
-  <!-- LLM Box -->
-  <rect x="570" y="120" width="200" height="90" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="570" y="120" width="200" height="28" rx="10" fill="#D97757"/>
-  <rect x="570" y="138" width="200" height="10" fill="#D97757"/>
-  <text x="670" y="139" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">LLM AGENT</text>
-  <text x="670" y="162" text-anchor="middle" font-size="10" fill="#141413">「分析issue → 过度工程化」</text>
-  <text x="670" y="178" text-anchor="middle" font-size="10" fill="#141413">添加 tolerant reader</text>
-  <text x="670" y="192" text-anchor="middle" font-size="10" fill="#141413">fallback + migration + debug</text>
-  <text x="670" y="206" text-anchor="middle" font-size="10" fill="#141413">更多测试…</text>
+  <!-- Node 2: AI generates slop (top-right) -->
+  <rect x="560" y="130" width="200" height="100" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2" stroke-dasharray="5,3"/>
+  <rect x="560" y="130" width="200" height="32" rx="10" fill="#87867F"/>
+  <rect x="560" y="150" width="200" height="12" fill="#87867F"/>
+  <text x="660" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">② AI 生成 Slop</text>
+  <text x="580" y="178" font-size="10" fill="#141413">充满假设的诊断</text>
+  <text x="580" y="194" font-size="10" fill="#141413">假的最小复现</text>
+  <text x="580" y="210" font-size="10" fill="#D97757">这是比没有更糟糕的结果</text>
 
-  <!-- Arrow: LLM → Issue Tracker -->
-  <path d="M 570 170 Q 510 190 480 210" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="508" y="184" text-anchor="middle" font-size="10" fill="#D97757">巨大烂摊子</text>
+  <!-- Node 3: Maintainer wastes time (bottom-right) -->
+  <rect x="560" y="290" width="200" height="100" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2"/>
+  <rect x="560" y="290" width="200" height="32" rx="10" fill="#141413"/>
+  <rect x="560" y="310" width="200" height="12" fill="#141413"/>
+  <text x="660" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">③ 维护者白费力气</text>
+  <text x="580" y="338" font-size="10" fill="#141413">先解开 AI 制造的混乱</text>
+  <text x="580" y="354" font-size="10" fill="#141413">再处理原始问题</text>
+  <text x="580" y="370" font-size="10" fill="#87867F">对话被拉回全局不变量</text>
 
-  <!-- OVER-ENGINEERING Box -->
-  <rect x="570" y="310" width="200" height="100" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="570" y="310" width="200" height="28" rx="10" fill="#141413"/>
-  <rect x="570" y="328" width="200" height="10" fill="#141413"/>
-  <text x="670" y="329" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">OVER-ENGINEERING</text>
-  <text x="670" y="354" text-anchor="middle" font-size="10" fill="#141413">局部防御代替全局不变量</text>
-  <text x="670" y="370" text-anchor="middle" font-size="10" fill="#141413">让坏状态「工作」</text>
-  <text x="670" y="386" text-anchor="middle" font-size="10" fill="#141413">而非让坏状态「不可能」</text>
-  <text x="670" y="402" text-anchor="middle" font-size="10" fill="#D97757">复杂度爆炸</text>
+  <!-- Node 4: More slop generated (bottom-left) -->
+  <rect x="60" y="290" width="200" height="100" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  <rect x="60" y="290" width="200" height="32" rx="10" fill="#788C5D"/>
+  <rect x="60" y="310" width="200" height="12" fill="#788C5D"/>
+  <text x="160" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">④ 循环往复</text>
+  <text x="80" y="338" font-size="10" fill="#141413">AI 生成的代码同样</text>
+  <text x="80" y="354" font-size="10" fill="#141413">过度工程化，局部防御</text>
+  <text x="80" y="370" font-size="10" fill="#141413">累积更多 Technical Debt</text>
 
-  <!-- Arrow: Issue → Over-eng -->
-  <path d="M 450 285 Q 450 295 450 310" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-  <text x="462" y="300" font-size="10" fill="#D97757">PI看到</text>
+  <!-- Arrows clockwise: 1→2 -->
+  <path d="M 265 180 Q 400 120 555 180" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="410" y="145" text-anchor="middle" font-size="9" fill="#87867F">扩大范围</text>
 
-  <!-- Arrow: Over-eng → LLM (cycle) -->
-  <path d="M 570 360 Q 510 360 480 310" fill="none" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4" marker-end="url(#arr)"/>
-  <text x="512" y="340" text-anchor="middle" font-size="10" fill="#D97757">更多误判</text>
+  <!-- 2→3 -->
+  <path d="M 660 235 Q 720 260 660 285" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="728" y="265" text-anchor="middle" font-size="9" fill="#87867F">传递</text>
 
-  <!-- MAINTAINERS Box (bottom right) -->
-  <rect x="620" y="430" width="250" height="52" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2" filter="url(#shadow)"/>
-  <text x="745" y="450" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">MAINTAINERS 被淹没</text>
-  <text x="745" y="468" text-anchor="middle" font-size="10" fill="#87867F">「90天：3145个issue，8% PR被合并」</text>
+  <!-- 3→4 -->
+  <path d="M 555 340 Q 400 400 265 340" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="410" y="380" text-anchor="middle" font-size="9" fill="#87867F">恶性循环</text>
 
-  <!-- Arrow: Issue → Maintenance -->
-  <path d="M 560 270 Q 640 280 640 430" fill="none" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arr-green)"/>
-  <text x="612" y="350" text-anchor="middle" font-size="10" fill="#788C5D">Volume</text>
-  <text x="612" y="364" text-anchor="middle" font-size="10" fill="#788C5D">是问题本身</text>
+  <!-- 4→1 -->
+  <path d="M 160 285 Q 100 260 160 235" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="88" y="265" text-anchor="middle" font-size="9" fill="#87867F">更多</text>
 
-  <!-- The virtuous cycle that SHOULD happen (dashed) -->
-  <rect x="30" y="360" width="170" height="70" rx="10" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="115" y="381" text-anchor="middle" font-size="11" font-weight="bold" fill="#788C5D">正确的修复</text>
-  <text x="115" y="398" text-anchor="middle" font-size="10" fill="#141413">让坏状态</text>
-  <text x="115" y="413" text-anchor="middle" font-size="10" fill="#141413">不可能发生</text>
-  <text x="115" y="428" text-anchor="middle" font-size="10" fill="#788C5D">而非处理坏状态</text>
+  <!-- Statistics panel -->
+  <rect x="295" y="160" width="240" height="130" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <rect x="295" y="160" width="240" height="32" rx="10" fill="#D97757"/>
+  <rect x="295" y="180" width="240" height="12" fill="#D97757"/>
+  <text x="415" y="182" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">Pi Issue Tracker 数据</text>
+  <text x="315" y="212" font-size="11" font-weight="bold" fill="#141413">90 天数据：</text>
+  <text x="315" y="230" font-size="10" fill="#141413">• 外部 Issue + PR：3,145</text>
+  <text x="315" y="248" font-size="10" fill="#D97757">• PR 最终被合并：8%</text>
+  <text x="315" y="266" font-size="10" fill="#87867F">• 大多数是 AI 辅助的低质量 Spam</text>
 
-  <!-- Bottom text -->
-  <text x="450" y="488" text-anchor="middle" font-size="10" fill="#87867F">核心问题：AI没有增加能够review代码的维护者——它只增加了代码量和争夺注意力的项目数量</text>
+  <!-- Bottom insight -->
+  <rect x="295" y="310" width="240" height="90" rx="10" fill="#E3DACC" stroke="#141413" stroke-width="1.5"/>
+  <text x="415" y="334" text-anchor="middle" font-size="11" font-weight="bold" fill="#141413">核心洞察</text>
+  <text x="315" y="356" font-size="10" fill="#141413">「GitHub 不是为这种</text>
+  <text x="315" y="372" font-size="10" fill="#141413">新型 Open Source 建造的」</text>
+  <text x="315" y="390" font-size="10" fill="#87867F">— Armin Ronacher</text>
+
+  <!-- Key insight box -->
+  <rect x="280" y="420" width="260" height="44" rx="8" fill="#141413"/>
+  <text x="410" y="440" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">开源需要协作，不是与机器隔离的工作</text>
+  <text x="410" y="456" text-anchor="middle" font-size="10" fill="#D1CFC5">人类沟通是难的，但隔离不是开源的价值所在</text>
 </svg>
