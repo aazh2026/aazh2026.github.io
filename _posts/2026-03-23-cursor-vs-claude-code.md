@@ -29,6 +29,8 @@ series: AI-Native Engineering
 
 ---
 
+<object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一、为什么这场对比很重要
 
 2026年的AI编程工具市场已经分化出两条路径：

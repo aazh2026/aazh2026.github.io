@@ -155,6 +155,8 @@ series: AI-Native Engineering
 
 ### 象限4：低频高复杂度 → 预计算
 
+<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" type="image/svg+xml" width="100%"></object>
+
 **特征**：
 - 请求量小
 - 任务复杂

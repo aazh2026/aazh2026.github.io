@@ -45,6 +45,8 @@ Claude Code 在 2026 年初已经超过十亿美元年化营收，被 Anthropic 
 
 ---
 
+<object data="/assets/images/2026-05-14-boris-cherny-coding-is-solved-01-spectrum.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一个每天合并 150 个 PR 的人的比喻
 
 > 💡 **Key Insight**

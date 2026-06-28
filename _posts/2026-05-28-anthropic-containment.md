@@ -104,6 +104,8 @@ Claude Cowork 面向的是非技术用户——普通知识工作者，而不是
 
 ## 值得特别注意的两个漏洞
 
+<object data="/assets/images/2026-05-28-anthropic-containment-01-three-patterns.svg" type="image/svg+xml" width="100%"></object>
+
 ### 漏洞 1：信任对话框之前发生的事
 
 2025 年中到 2026 年 1 月之间，Anthropic 通过 responsible disclosure 收到了三个漏洞报告——都是利用「用户同意之前」就执行的代码。

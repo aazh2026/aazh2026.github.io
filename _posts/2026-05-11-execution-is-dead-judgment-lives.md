@@ -63,6 +63,8 @@ series: AI-Native软件工程系列
 
 ---
 
+<object data="/assets/images/2026-05-11-execution-is-dead-judgment-lives-01-era-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ## 约束即注意力分配
 
 > 💡 **Key Insight**

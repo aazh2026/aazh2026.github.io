@@ -14,6 +14,8 @@ author: "@postcodeeng"
 
 ---
 
+<object data="/assets/images/2026-05-28-ai-colleague-trust-boundary-01-trust-model.svg" type="image/svg+xml" width="100%"></object>
+
 ## 一个被低估的命名决定
 
 2026 年 5 月 25 日，安全研究公司 PromptArmor 披露了 Microsoft Copilot Cowork 的一个漏洞：

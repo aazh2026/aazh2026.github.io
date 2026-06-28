@@ -33,6 +33,8 @@ total_cost = prompt_tokens * price_per_token
 
 ## 二、成本层级拆解
 
+<object data="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ### Level 1: $0 原型阶段
 
 **适用场景**：个人项目、POC验证

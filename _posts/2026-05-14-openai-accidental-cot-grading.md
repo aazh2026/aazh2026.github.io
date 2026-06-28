@@ -132,6 +132,8 @@ OpenAI 在 2025 年底以来一直在进行实验，故意在标准 RL pipeline 
 
 ## 实验发现
 
+<object data="/assets/images/2026-05-14-openai-accidental-cot-grading-01-three-factors.svg" type="image/svg+xml" width="100%"></object>
+
 > 💡 **Key Insight**
 >
 > 在我们的实验中，在现实训练条件下，很难产生显著降解 monitorability 的变化。诱导 CoT obfuscation 的难易程度似乎强烈依赖于完整训练设置。

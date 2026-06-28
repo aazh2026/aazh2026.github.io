@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/assets/images/2025-02-03-ai-tech-frontier-01-three-events.svg" type="image/svg+xml" width="100%"></object>
+
 ## 1️⃣ Donald Knuth：Claude Opus 4.6 解决了我的开放问题
 
 **📄 论文**: [Claude's Cycles](https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf) (Stanford, 2026)

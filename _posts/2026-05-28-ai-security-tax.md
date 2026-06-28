@@ -14,6 +14,8 @@ author: "@postcodeeng"
 
 ---
 
+<object data="/assets/images/2026-05-28-ai-security-tax-01-jevons-paradox.svg" type="image/svg+xml" width="100%"></object>
+
 ## 开场：一个人的 DDoS
 
 2026 年 1 月 26 日，curl 项目正式终止了运行多年的 bug bounty 项目。

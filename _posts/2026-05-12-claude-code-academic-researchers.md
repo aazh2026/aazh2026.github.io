@@ -46,6 +46,8 @@ Mushtaq Bilal 博士写了这篇面向零技术背景学术研究者的 Claude C
 
 ---
 
+<object data="/assets/images/2026-05-12-claude-code-academic-researchers-01-paradigm.svg" type="image/svg+xml" width="100%"></object>
+
 ## 范式转变：从"上传文件"到"带 AI 进文件夹"
 
 > 💡 **Key Insight**

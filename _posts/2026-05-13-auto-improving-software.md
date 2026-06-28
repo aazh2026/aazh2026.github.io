@@ -56,6 +56,8 @@ Sweeps the repo for drift between docs, code, and config。自动修复文档、
 
 ---
 
+<object data="/assets/images/2026-05-13-auto-improving-software-01-cycle.svg" type="image/svg+xml" width="100%"></object>
+
 ## 二、为什么 auto-improvement 现在才可能
 
 大多数软件无法 auto-improve，因为它的输入和输出分散在多个工具之间。

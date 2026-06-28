@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="100%">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="460" fill="url(#bg5)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" letter-spacing="-0.3">AI 编程工具选择：三维框架</text>
+  <line x1="200" y1="48" x2="600" y2="48" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Triangular diagram: X=Control, Y=Abstraction, Z=Collaboration -->
+  <!-- Triangle corners: top=High Control+High Abstraction, bottom-left=Low Control+Low Abstraction+Personal, bottom-right=High Abstraction+Team/Enterprise -->
+
+  <!-- Main triangle area -->
+  <!-- Vertices: (400,70)=top, (60,380)=bottom-left, (740,380)=bottom-right -->
+
+  <!-- Axis 1: Control Spectrum (vertical center) -->
+  <!-- Arrow from (400,390) to (400,80) -->
+  <line x1="400" y1="390" x2="400" y2="80" stroke="#D97757" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="400,70 394,82 406,82" fill="#D97757"/>
+  <text x="400" y="408" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#D97757">强控制</text>
+  <text x="400" y="422" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Claude Code · aider</text>
+  <text x="400" y="392" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#87867F">弱控制</text>
+
+  <!-- Axis 2: Abstraction Spectrum (left side) -->
+  <line x1="400" y1="390" x2="80" y2="330" stroke="#788C5D" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="70,330 82,322 82,338" fill="#788C5D"/>
+  <text x="65" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D">高抽象</text>
+  <text x="50" y="374" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">IDE类</text>
+  <text x="200" y="368" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D">低抽象</text>
+  <text x="210" y="382" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">终端类</text>
+
+  <!-- Axis 3: Collaboration Spectrum (right side) -->
+  <line x1="400" y1="390" x2="720" y2="330" stroke="#87867F" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="730,330 718,322 718,338" fill="#87867F"/>
+  <text x="740" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F">个人</text>
+  <text x="560" y="368" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F">团队/企业</text>
+
+  <!-- Tool positions as labeled dots -->
+  <!-- Claude Code: strong control (0.75), low-mid abstraction (0.3), personal (0.2) -->
+  <!-- Position approx: x = 400 + (0.3-0.5)*scale, y = 390 - 0.75*280 -->
+  <!-- Using barycentric: top corner weight = abstraction, bottom-left = 1-control-abstraction... -->
+  <!-- Simple 2D placement: x spreads from 400±200, y from 80-390 -->
+  <!-- Claude Code: strong control (high y), low abstraction (near left), personal (near center-right) -->
+  <!-- x=340, y=175 -->
+  <circle cx="325" cy="195" r="22" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="325" y="190" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">Claude</text>
+  <text x="325" y="202" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Code</text>
+
+  <!-- Cursor: medium-high control, high abstraction, team-leaning -->
+  <!-- x=420, y=165 -->
+  <circle cx="445" cy="180" r="22" fill="#FAF9F5" stroke="#788C5D" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="445" y="175" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#788C5D">Cursor</text>
+  <text x="445" y="187" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Composer</text>
+
+  <!-- Copilot: weak control, high abstraction, enterprise -->
+  <!-- x=510, y=300 -->
+  <circle cx="530" cy="285" r="22" fill="#FAF9F5" stroke="#87867F" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="530" y="280" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#87867F">GitHub</text>
+  <text x="530" y="292" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Copilot</text>
+
+  <!-- Codex CLI: strong control, low abstraction, personal -->
+  <!-- x=260, y=250 -->
+  <circle cx="255" cy="265" r="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow5)"/>
+  <text x="255" y="261" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">Codex</text>
+  <text x="255"

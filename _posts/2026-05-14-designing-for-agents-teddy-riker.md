@@ -81,6 +81,8 @@ User → User's Agent → Software's Agent → Database
 
 ## 教 Agent 如何成功
 
+<object data="/assets/images/2026-05-14-designing-for-agents-teddy-riker-01-interaction-layers.svg" type="image/svg+xml" width="100%"></object>
+
 > 💡 **Key Insight**
 >
 > Notion MCP 的设计智慧：每次让 Agent 写东西，它从不失败。因为 notion-create-pages 工具的描述开头是："For the complete Markdown specification, always first fetch the MCP resource at notion://docs/enhanced-markdown-spec. Do NOT guess or hallucinate Markdown syntax."

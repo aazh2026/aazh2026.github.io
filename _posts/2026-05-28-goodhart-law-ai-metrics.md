@@ -14,6 +14,8 @@ author: "@postcodeeng"
 
 ---
 
+<object data="/assets/images/2026-05-28-goodhart-law-ai-metrics-01-judgment-bottleneck.svg" type="image/svg+xml" width="100%"></object>
+
 ## 决策疲劳：一个不被承认的危机
 
 Stack Overflow 的 2025 年开发者调查揭示了一个被低估的现象：

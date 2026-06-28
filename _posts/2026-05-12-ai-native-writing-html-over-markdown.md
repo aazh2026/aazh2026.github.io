@@ -17,6 +17,8 @@ series: AI-Native软件工程系列
 
 ---
 
+<object data="/assets/images/assets/images/2026-05-12-ai-native-writing-html-over-markdown-01-six-dimensions.svg" type="image/svg+xml" width="100%"></object>
+
 ## 📋 本文结构
 
 1. [Markdown 的局限](#markdown-的局限) — 它为什么会成为 AI 时代的瓶颈

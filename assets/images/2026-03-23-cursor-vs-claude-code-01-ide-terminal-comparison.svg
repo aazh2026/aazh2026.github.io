@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 520" font-family="Georgia, serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#87867F"/>
+    </marker>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="520" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="410" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="1">AI 编程工具的双轨路径 2026</text>
+  <line x1="60" y1="52" x2="760" y2="52" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- LEFT: IDE Path -->
+  <rect x="50" y="70" width="330" height="420" rx="12" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Header IDE -->
+  <rect x="50" y="70" width="330" height="42" rx="12" fill="#141413"/>
+  <rect x="50" y="92" width="330" height="20" fill="#141413"/>
+  <text x="215" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5">路径 A：IDE 中心化</text>
+
+  <!-- Cursor box -->
+  <rect x="80" y="128" width="270" height="52" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="2"/>
+  <text x="215" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#141413">Cursor</text>
+  <text x="215" y="170" text-anchor="middle" font-size="11" fill="#87867F">$20/月 · VS Code 分支 · GUI</text>
+
+  <!-- IDE features -->
+  <rect x="80" y="194" width="270" height="140" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="215" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">核心特性</text>
+
+  <text x="100" y="238" font-size="11" fill="#141413">✓ 开箱即用，零学习成本</text>
+  <text x="100" y="258" font-size="11" fill="#141413">✓ Composer 多文件 AI 编辑</text>
+  <text x="100" y="278" font-size="11" fill="#141413">✓ 内置图形化 Debugger</text>
+  <text x="100" y="298" font-size="11" fill="#141413">✓ 多模型支持 (GPT-4, Claude, o1)</text>
+  <text x="100" y="318" font-size="11" fill="#141413">✗ 黑盒化严重，透明度低</text>
+
+  <!-- IDE cons -->
+  <rect x="80" y="348" width="270" height="60" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="215" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#D97757">局限性</text>
+  <text x="100" y="388" font-size="11" fill="#87867F">⚠ Vendor Lock-in（迁移成本高）</text>
+  <text x="100" y="404" font-size="11" fill="#87867F">⚠ 成本不透明</text>
+
+  <!-- IDE verdict -->
+  <rect x="80" y="422" width="270" height="52" rx="8" fill="#788C5D" stroke="none"/>
+  <text x="215" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">主流开发者默认选择</text>
+  <text x="215" y="464" text-anchor="middle" font-size="10" fill="#E3DACC">开箱即用 · 团队协作</text>
+
+  <!-- CENTER: Converge -->
+  <text x="410" y="260" text-anchor="middle" font-size="13" fill="#141413" font-weight="bold">本质</text>
+  <text x="410" y="280" text-anchor="middle" font-size="12" fill="#D97757">便利 vs 控制</text>
+  <text x="410" y="302" text-anchor="middle" font-size="11" fill="#87867F">Trade-off</text>
+  <line x1="380" y1="318" x2="440" y2="318" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <!-- RIGHT: Terminal Path -->
+  <rect x="440" y="70" width="330" height="420" rx="12" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Header Terminal -->
+  <rect x="440" y="70" width="330" height="42" rx="12" fill="#D97757"/>
+  <rect x="440" y="92" width="330" height="20" fill="#D97757"/>
+  <text x="605" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#FAF9F5">路径 B：终端中心化</text>
+
+  <!-- Claude Code box -->
+  <rect x="470" y="128" width="270" height="52" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="2"/>
+  <text x="605" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#141413">Claude Code</text>
+  <text x="605" y="170" text-anchor="middle" font-size="11" fill="#87867F">$0–$100/月 · CLI · 极致控制</text>
+
+  <!-- Terminal features -->
+  <rect x="470" y="194" width="270" height="140" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="605" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">核心特性</text>
+
+  <text x="490" y="238" font-size="11" fill="#141413">✓ 精确可控，可脚本化</text>
+  <text x="490" y="258" font-size="11" fill="#141413">✓ 原生 Agent 能力</text>
+  <text x="490" y="278" font-size="11" fill="#141413">✓ 与现有工具链无缝集成</text>
+  <text x="490" y="298" font-size="11" fill="#141413">✓ 成本可控，方案灵活</text>
+  <text x="490" y="318" font-size="11" fill="#141413">✗ 学习曲线陡峭</text>
+
+  <!-- Terminal cons -->
+  <rect x="470" y="348" width="270" height="60" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="605" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#788C5D">局限性</text>
+  <text x="490" y="388" font-size="11" fill="#87867F">⚠ 调试体验不如 IDE</text>
+  <text x="490" y="404" font-size="11" fill="#87867F">⚠ 多语言支持待完善</text>
+
+  <!-- Terminal verdict -->
+  <rect x="470" y="422" width="270" height="52" rx="8" fill="#141413" stroke="none"/>
+  <text x="605" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">高级用户与自动化首选</text>
+  <text x="605" y="464" text-anchor="middle" font-size="10" fill="#D1CFC5">极致控制 · 可审计 · 可复用</text>
+
+  <!-- Bottom note -->
+  <text x="410" y="506" text-anchor="middle" font-size="10" fill="#87867F">「最佳选择：两者都用，根据场景切换」</text>
+</svg>

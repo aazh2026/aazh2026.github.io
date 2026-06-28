@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Anthropic 三种 containment 架构对比">
+  <title>Anthropic Containment 三层架构</title>
+  <desc>三种 containment 架构对比：Ephemeral Container、Human-in-the-loop Sandbox、Local VM；93% 批准率与 approval fatigue 的工程启示</desc>
+
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B85A3F"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5E7347"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141413"/>
+      <stop offset="100%" stop-color="#2E2E2C"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87867F"/>
+      <stop offset="100%" stop-color="#6A6860"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg5)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">Anthropic 三种 Containment 架构对比</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#87867F">信任边界工程：当 AI 可以「helpful」地绕过限制时</text>
+
+  <!-- Top warning banner: 93% stat -->
+  <rect x="150" y="70" width="500" height="40" fill="#D97757" rx="6"/>
+  <text x="400" y="88" text-anchor="middle" font-family="monospace" font-size="14" font-weight="bold" fill="#FAF9F5">93% — 用户批准率 · Human-in-the-loop 范式结构性失效</text>
+  <text x="400" y="102" text-anchor="middle" font-family="monospace" font-size="10" fill="#FAF9F5">批准率不随时间下降，用户实际变得更不加思考地批准</text>
+
+  <!-- Three cards -->
+  <!-- Card 1: Ephemeral Container -->
+  <rect x="40" y="125" width="235" height="230" fill="#FAF9F5" stroke="#D97757" stroke-width="3" rx="10"/>
+  <rect x="40" y="125" width="235" height="36" fill="url(#g1)" rx="10 10 0 0"/>
+  <text x="157" y="150" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#FAF9F5">Ephemeral Container</text>
+
+  <text x="55" y="178" font-family="monospace" font-size="10" fill="#141413" font-weight="bold">产品：claude.ai</text>
+  <text x="55" y="195" font-family="monospace" font-size="10" fill="#141413">环境：gVisor container</text>
+  <text x="55" y="212" font-family="monospace" font-size="10" fill="#141413">文件系统：短暂（per-session）</text>
+  <text x="55" y="229" font-family="monospace" font-size="10" fill="#141413">Agent：完全在服务器端</text>
+
+  <line x1="50" y1="242" x2="265" y2="242" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="55" y="260" font-family="monospace" font-size="10" fill="#788C5D" font-weight="bold">✓ Blast radius 最小</text>
+  <text x="55" y="276" font-family="monospace" font-size="10" fill="#141413">无持久化文件系统</text>
+  <text x="55" y="292" font-family="monospace" font-size="10" fill="#141413">无本地机器访问</text>
+
+  <line x1="50" y1="305" x2="265" y2="305" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="55" y="323" font-family="monospace" font-size="10" fill="#87867F" font-weight="bold">限制：</text>
+  <text x="55" y="339" font-family="monospace" font-size="10" fill="#87867F">不能访问用户文件系统</text>
+  <text x="55" y="352" font-family="monospace" font-size="10" fill="#87867F">不能做持久化工作</text>
+
+  <!-- Card 2: HiTL Sandbox -->
+  <rect x="283" y="125" width="235" height="230" fill="#FAF9F5" stroke="#788C5D" stroke-width="3" rx="10"/>
+  <rect x="283" y="125" width="235" height="36" fill="url(#g2)" rx="10 10 0 0"/>
+  <text x="400" y="150" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#FAF9F5">Human-in-the-loop Sandbox</text>
+
+  <text x="298" y="178" font-family="monospace" font-size="10" fill="#141413" font-weight="bold">产品：Claude Code</text>
+  <text x="298" y="195" font-family="monospace" font-size="10" fill="#141413">环境：用户机器本地</text>
+  <text x="298" y="212" font-family="monospace" font-size="10" fill="#141413">访问：文件系统 + shell</text>
+  <text x="298" y="229" font-family="monospace" font-size="10" fill="#141413">OS sandbox：Seatbelt/bubblewrap</text>
+
+  <line x1="293" y1="242" x2="508" y2="242" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="298" y="260" font-family="monospace" font-size="10" fill="#D97757" font-weight="bold">→ 93% 批准率（失效）</text>
+  <text x="298" y="276" font-family="monospace" font-size="10" fill="#141413">Permission prompts 下降 84%</text>
+  <text x="298" y="292" font-family="monospace" font-size="10" fill="#141413">reads 允许，writes 限 workspace</text>
+  <text x="298" y="308" font-family="monospace" font-size="10" fill="#141413">network 默认 deny</text>
+
+  <line x1="293" y1="318" x2="508" y2="318" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="298" y="336" font-family="monospace" font-size="10" fill="#B85A3F" font-weight="bold">⚠ 用户作为 injection vector</text>
+  <text x="298" y="352" font-family="monospace" font-size="10" fill="#87867F">钓鱼测试：24/25 成功</text>
+
+  <!-- Card 3: Local VM -->
+  <rect x="526" y="125" width="235" height="230" fill="#FAF9F5" stroke="#141413" stroke-width="3" rx="10"/>
+  <rect x="526" y="125" width="235" height="36" fill="url(#g3)" rx="10 10 0 0"/>
+  <text x="643" y="150" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#FAF9F5">Local VM</text>
+
+  <text x="541" y="178" font-family="monospace" font-size="10" fill="#141413" font-weight="bold">产品：Claude Cowork</text>
+  <text x="541" y="195" font-family="monospace" font-size="10" fill="#141413">环境：完整虚拟机隔离</text>
+  <text x="541" y="212" font-family="monospace" font-size="10" fill="#141413">包含独立 Linux kernel</text>
+  <text x="541" y="229" font-family="monospace" font-size="10" fill="#141413">进程表、filesystem</text>
+
+  <line x1="536" y1="242" x2="751" y2="242" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="541" y="260" font-family="monospace" font-size="10" fill="#788C5D" font-weight="bold">✓ 最小特权原则实现</text>
+  <text x="541" y="276" font-family="monospace" font-size="10" fill="#141413">workspace 手动挂载</text>
+  <text x="541" y="292" font-family="monospace" font-size="10" fill="#141413">宿主机文件不可见</text>
+  <text x="541" y="308" font-family="monospace" font-size="10" fill="#141413">keychain 凭证不进入 VM</text>
+
+  <line x1="536" y1="318" x2="751" y2="318" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="541" y="336" font-family="monospace" font-size="10" fill="#141413" font-weight="bold">关键：无 escape-hatch key</text>
+  <text x="541" y="352" font-family="monospace" font-size="10" fill="#87867F">Claude Code: 有（可被说服）</text>
+  <text x="541" y="368" font-family="monospace" font-size="10" fill="#87867F">Cowork: 无 — VM 边界绝对</text>
+
+  <!-- Defense layers bottom section -->
+  <rect x="40" y="365" width="720" height="120" fill="#141413" rx="8"/>
+  <text x="400" y="387" text-anchor="middle" font-family="monospace" font-size="12" font-weight="bold" fill="#FAF9F5">三层防御体系</text>
+
+  <!-- Layer 1: Model -->
+  <rect x="60" y="396" width="215" height="75" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="2" rx="6"/>
+  <text x="167" y="414" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#D97757">① Model 层</text>
+  <text x="167" y="432" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">system prompts / classifiers</text>
+  <text x="167" y="447" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">probes / training</text>
+  <text x="167" y="462" text-anchor="middle" font-family="monospace" font-size="9" fill="#87867F">塑造倾向，不是能力边界</text>
+
+  <!-- Layer 2: Environment -->
+  <rect x="292" y="396" width="215" height="75" fill="#788C5D" fill-opacity="0.2" stroke="#788C5D" stroke-width="2" rx="6"/>
+  <text x="399" y="414" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#788C5D">② Environment 层</text>
+  <text x="399" y="432" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">VMs / Process sandboxes</text>
+  <text x="399" y="447" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">filesystem boundaries</text>
+  <text x="399" y="462" text-anchor="middle" font-family="monospace" font-size="9" fill="#788C5D">最有效 — Anthropic 重点投入</text>
+
+  <!-- Layer 3: External Content -->
+  <rect x="524" y="396" width="215" height="75" fill="#87867F" fill-opacity="0.2" stroke="#87867F" stroke-width="2" rx="6"/>
+  <text x="631" y="414" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#87867F">③ External Content 层</text>
+  <text x="631" y="432" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">MCP servers / plugins</text>
+  <text x="631" y="447" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">web search tools</text>
+  <text x="631" y="462" text-anchor="middle" font-family="monospace" font-size="9" fill="#87867F">Connector 审计 ≠ 数据审计</text>
+
+  <!-- Arrows between layers -->
+  <line x1="275" y1="433" x2="290" y2="433" stroke="#FAF9F5" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="507" y1="433" x2="522" y2="433" stroke="#FAF9F5" stroke-width="2"/>
+
+  <!-- Footer -->
+  <text x="400" y="503" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">核心原则：凭证永远不会进入 sandbox —— 无论模型能力多强，环境边界是最有效的防御</text>
+  <text x="400" y="517" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">数据来源：Anthropic Engineering Blog · "How we contain Claude across products" · 2026</text>
+
+  <!-- arrow marker def (local) -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#FAF9F5"/>
+    </marker>
+  </defs>
+
+</svg>

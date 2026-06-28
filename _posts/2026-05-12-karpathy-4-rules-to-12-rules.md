@@ -17,6 +17,8 @@ series: AI-Native软件工程系列
 
 ---
 
+<object data="/assets/images/assets/images/2026-05-12-karpathy-4-rules-to-12-rules-01-metrics-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ## 📋 本文结构
 
 1. [数据驱动的方法](#数据驱动的方法) — 不是理论，是 30 代码库 × 6 周的实验

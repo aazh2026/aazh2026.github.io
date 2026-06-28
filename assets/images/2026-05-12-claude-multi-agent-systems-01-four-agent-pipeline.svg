@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <marker id="arr4b" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#788C5D"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="400" fill="url(#bg4)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" letter-spacing="-0.3">Claude Multi-Agent：4-Agent 内容团队</text>
+  <line x1="200" y1="46" x2="600" y2="46" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Orchestrator (top center) -->
+  <rect x="250" y="62" width="300" height="52" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow4)"/>
+  <rect x="250" y="62" width="300" height="24" rx="10" fill="#D97757"/>
+  <rect x="250" y="80" width="300" height="6" fill="#D97757"/>
+  <text x="400" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Orchestrator</text>
+  <text x="400" y="100" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">唯一知道全局的 Agent · 任务路由 · 失败管理</text>
+
+  <!-- Arrows down to 4 agents -->
+  <path d="M 310,114 L 100,178" fill="none" stroke="#D1CFC5" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arr4)"/>
+  <path d="M 370,114 L 260,178" fill="none" stroke="#D1CFC5" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arr4)"/>
+  <path d="M 430,114 L 540,178" fill="none" stroke="#D1CFC5" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arr4)"/>
+  <path d="M 490,114 L 700,178" fill="none" stroke="#D1CFC5" stroke-width="1.8" stroke-dasharray="5,4" marker-end="url(#arr4)"/>
+
+  <!-- 4 Agent Cards -->
+  <!-- Agent 1: Research -->
+  <rect x="30" y="180" width="170" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow4)"/>
+  <rect x="30" y="180" width="170" height="42" rx="14" fill="#788C5D"/>
+  <rect x="30" y="208" width="170" height="14" fill="#788C5D"/>
+  <text x="115" y="205" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">① Research Agent</text>
+
+  <text x="46" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">INPUT</text>
+  <text x="46" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">主题 / 问题 / Brief</text>
+
+  <text x="46" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">OUTPUT</text>
+  <text x="46" y="286" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">结构化研究简报</text>
+
+  <line x1="46" y1="298" x2="184" y2="298" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="46" y="306" width="138" height="38" rx="6" fill="#D97757" opacity="0.10"/>
+  <text x="115" y="320" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#D97757" font-weight="600">NEVER DOES</text>
+  <text x="115" y="336" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9.5" fill="#87867F">写作 · 编辑 · 发布</text>
+
+  <!-- Agent 2: Production -->
+  <rect x="218" y="180" width="170" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow4)"/>
+  <rect x="218" y="180" width="170" height="42" rx="14" fill="#D97757"/>
+  <rect x="218" y="208" width="170" height="14" fill="#D97757"/>
+  <text x="303" y="205" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">② Production Agent</text>
+
+  <text x="234" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">INPUT</text>
+  <text x="234" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">结构化研究简报</text>
+
+  <text x="234" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">OUTPUT</text>
+  <text x="234" y="286" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">完整初稿</text>
+
+  <line x1="234" y1="298" x2="372" y2="298" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="234" y="306" width="138" height="38" rx="6" fill="#D97757" opacity="0.10"/>
+  <text x="303" y="320" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#D97757" font-weight="600">NEVER DOES</text>
+  <text x="303" y="336" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9.5" fill="#87867F">研究 · 编辑 · 发布</text>
+
+  <!-- Agent 3: Quality -->
+  <rect x="410" y="180" width="170" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow4)"/>
+  <rect x="410" y="180" width="170" height="42" rx="14" fill="#87867F"/>
+  <rect x="410" y="208" width="170" height="14" fill="#87867F"/>
+  <text x="495" y="205" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">③ Quality Agent</text>
+
+  <text x="426" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F" letter-spacing="1">INPUT</text>
+  <text x="426" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">初稿</text>
+
+  <text x="426" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F" letter-spacing="1">OUTPUT</text>
+  <text x="426" y="286" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">批准稿 / 修订 Brief</text>
+
+  <line x1="426" y1="298" x2="564" y2="298" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="426" y="306" width="138" height="38" rx="6" fill="#87867F" opacity="0.10"/>
+  <text x="495" y="320" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F" font-weight="600">NEVER DOES</text>
+  <text x="495" y="336" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9.5" fill="#87867F">研究 · 写作 · 发布</text>
+
+  <!-- Agent 4: Distribution -->
+  <rect x="600" y="180" width="170" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow4)"/>
+  <rect x="600" y="180" width="170" height="42" rx="14" fill="#5F7249"/>
+  <rect x="600" y="208" width="170" height="14" fill="#5F7249"/>
+  <text x="685" y="205" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">④ Distribution Agent</text>
+
+  <text x="616" y="240" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">INPUT</text>
+  <text x="616" y="254" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">批准稿</text>
+
+  <text x="616" y="272" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">OUTPUT</text>
+  <text x="616" y="286" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">部署到目标平台</text>
+
+  <line x1="616" y1="298" x2="754" y2="298" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="616" y="306" width="138" height="38" rx="6" fill="#788C5D" opacity="0.10"/>
+  <text x="685" y="320" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#788C5D" font-weight="600">NEVER DOES</text>
+  <text x="685" y="336" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9.5" fill="#87867F">研究 · 写作 · 质量评估</text>
+
+  <!-- Key insight bar -->
+  <rect x="30" y="370" width="740" height="26" rx="10" fill="#141413" opacity="0.04"/>
+  <text x="400" y="387" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">并行执行：4-Agent 同时跑 = 单 Agent 顺序跑耗时的 1/4 · 边界定义质量 · 30 天认知复利</text>
+</svg>

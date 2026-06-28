@@ -55,6 +55,8 @@ AI 建议把存储 bucket 设为公开，或者把云文件存储设为「任何
 
 ---
 
+<object data="/assets/images/2026-05-28-vibesec-reckoning-01-risk-matrix.svg" type="image/svg+xml" width="100%"></object>
+
 ## 核心问题：Prompt 不够
 
 在与工程和安全同事分享这些事件后，一个清晰的结论回来了：**告诉 AI agent 要安全，不等于强制它安全。**

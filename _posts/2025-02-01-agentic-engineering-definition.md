@@ -15,6 +15,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/2025-02-01-agentic-engineering-definition-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ## 那个著名的推特时刻
 
 2024年2月，OpenAI的创始成员Andrej Karpathy发布了一条影响深远的推文：

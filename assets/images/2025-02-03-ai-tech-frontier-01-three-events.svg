@@ -11,77 +11,100 @@
 
   <rect width="800" height="400" fill="url(#bg3f)" rx="16"/>
 
-  <!-- Title -->
   <text x="400" y="32" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" letter-spacing="-0.3">AI 技术前沿 | 2026-03-04</text>
   <line x1="200" y1="46" x2="600" y2="46" stroke="#D1CFC5" stroke-width="1.5"/>
 
   <!-- Card 1: Knuth -->
-  <rect x="20" y="62" width="240" height="288" rx="14" fill="#FAF9F5" filter="url(#shadow3f)"/>
-  <rect x="20" y="62" width="240" height="50" rx="14" fill="#D97757"/>
-  <rect x="20" y="98" width="240" height="14" fill="#D97757"/>
-  <text x="140" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">① Knuth × Claude Opus 4.6</text>
-  <text x="140" y="102" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">数学开放问题被解决</text>
+  <rect x="20" y="60" width="238" height="290" rx="14" fill="#FAF9F5" filter="url(#shadow3f)"/>
+  <rect x="20" y="60" width="238" height="48" rx="14" fill="#D97757"/>
+  <rect x="20" y="94" width="238" height="14" fill="#D97757"/>
+  <text x="139" y="86" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Knuth × Claude Opus 4.6</text>
+  <text x="139" y="100" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">数学开放问题被解决</text>
 
-  <text x="36" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">图灵奖得主的验证</text>
-
-  <g transform="translate(36, 145)">
+  <text x="36" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">协作流程</text>
+  <g transform="translate(36,140)">
     <circle cx="5" cy="5" r="4" fill="#D97757" opacity="0.7"/>
     <text x="18" y="9" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Knuth 提出开放问题</text>
-
     <circle cx="5" cy="28" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="18" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Claude 30+ 次探索</text>
-
+    <text x="18" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Claude 30+ 次探索尝试</text>
     <circle cx="5" cy="51" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="18" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">找到奇数情况解法</text>
-
+    <text x="18" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">找到所有奇数情况解</text>
     <circle cx="5" cy="74" r="4" fill="#D97757" opacity="0.7"/>
     <text x="18" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Knuth 完成形式化证明</text>
   </g>
 
-  <line x1="36" y1="235" x2="244" y2="235" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="36" y1="232" x2="242" y2="232" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="36" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">结果</text>
+  <rect x="36" y="260" width="90" height="30" rx="8" fill="#D97757" opacity="0.15"/>
+  <text x="81" y="279" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#D97757" font-weight="700">奇数 ✅</text>
+  <rect x="134" y="260" width="90" height="30" rx="8" fill="#D1CFC5" opacity="0.5"/>
+  <text x="179" y="279" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">偶数 ❌</text>
 
-  <text x="36" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">结果</text>
-  <rect x="36" y="262" width="88" height="32" rx="8" fill="#D97757" opacity="0.15"/>
-  <text x="80" y="282" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#D97757" font-weight="700">✅ 奇数情况</text>
-  <rect x="132" y="262" width="88" height="32" rx="8" fill="#D1CFC5" opacity="0.6"/>
-  <text x="176" y="282" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">❌ 偶数开放</text>
-
-  <text x="36" y="320" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">意义：</text>
-  <text x="36" y="334" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">AI 负责探索，</text>
-  <text x="36" y="347" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">人类负责验证</text>
+  <rect x="36" y="302" width="200" height="38" rx="8" fill="#E3DACC" opacity="0.6"/>
+  <text x="44" y="317" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">AI → 探索/试错</text>
+  <text x="44" y="331" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">人类 → 验证/形式化</text>
 
   <!-- Card 2: Agentic Engineering -->
-  <rect x="280" y="62" width="240" height="288" rx="14" fill="#FAF9F5" filter="url(#shadow3f)"/>
-  <rect x="280" y="62" width="240" height="50" rx="14" fill="#788C5D"/>
-  <rect x="280" y="98" width="240" height="14" fill="#788C5D"/>
-  <text x="400" y="88" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">② Agentic Engineering</text>
-  <text x="400" y="102" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Simon Willison 方法论</text>
+  <rect x="280" y="60" width="238" height="290" rx="14" fill="#FAF9F5" filter="url(#shadow3f)"/>
+  <rect x="280" y="60" width="238" height="48" rx="14" fill="#788C5D"/>
+  <rect x="280" y="94" width="238" height="14" fill="#788C5D"/>
+  <text x="399" y="86" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Agentic Engineering</text>
+  <text x="399" y="100" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Simon Willison 方法论</text>
 
-  <text x="296" y="130" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">核心模式</text>
-
-  <g transform="translate(296, 145)">
+  <text x="296" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">核心模式</text>
+  <g transform="translate(296,140)">
     <circle cx="5" cy="5" r="4" fill="#788C5D" opacity="0.7"/>
     <text x="18" y="9" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">代码现在很便宜</text>
-
     <circle cx="5" cy="28" r="4" fill="#788C5D" opacity="0.7"/>
     <text x="18" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">囤积知识 (Hoard)</text>
-
     <circle cx="5" cy="51" r="4" fill="#788C5D" opacity="0.7"/>
     <text x="18" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">红/绿 TDD</text>
-
     <circle cx="5" cy="74" r="4" fill="#788C5D" opacity="0.7"/>
     <text x="18" y="78" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">线性遍历理解代码</text>
   </g>
 
-  <line x1="296" y1="235" x2="504" y2="235" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="296" y1="232" x2="502" y2="232" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="296" y="250" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">认知债务</text>
+  <rect x="296" y="260" width="206" height="36" rx="8" fill="#788C5D" opacity="0.10"/>
+  <text x="304" y="274" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">不理解 AI 代码 = 欠下认知债务</text>
+  <text x="304" y="288" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">拖慢未来所有开发速度</text>
 
-  <text x="296" y="253" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D" letter-spacing="1">认知债务 (Cognitive Debt)</text>
-  <rect x="296" y="262" width="208" height="38" rx="8" fill="#788C5D" opacity="0.10"/>
-  <text x="300" y="277" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">不理解 AI 代码 = 欠债</text>
-  <text x="300" y="291" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">会拖慢未来开发速度</text>
-
-  <text x="296" y="328" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">关键词：</text>
-  <text x="296" y="342" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">验证能力是新核心竞争力</text>
+  <rect x="296" y="306" width="206" height="36" rx="8" fill="#E3DACC" opacity="0.6"/>
+  <text x="304" y="320" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">验证能力 = 新核心竞争力</text>
 
   <!-- Card 3: Claude Code Remote -->
-  <rect x="540" y="62" width="240" height="288"
+  <rect x="540" y="60" width="240" height="290" rx="14" fill="#FAF9F5" filter="url(#shadow3f)"/>
+  <rect x="540" y="60" width="240" height="48" rx="14" fill="#87867F"/>
+  <rect x="540" y="94" width="240" height="14" fill="#87867F"/>
+  <text x="660" y="86" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Claude Code Remote</text>
+  <text x="660" y="100" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Anthropic 远程控制功能</text>
+
+  <text x="556" y="126" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F" letter-spacing="1">支持的设备</text>
+  <g transform="translate(556,140)">
+    <circle cx="5" cy="5" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="18" y="9" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Claude Code for Web</text>
+    <circle cx="5" cy="28" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="18" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Claude iOS App</text>
+    <circle cx="5" cy="51" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="18" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Claude Desktop App</text>
+  </g>
+
+  <line x1="556" y1="208" x2="764" y2="208" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="556" y="226" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#D97757" letter-spacing="1">当前限制 ⚠️</text>
+  <g transform="translate(556,238)">
+    <circle cx="5" cy="5" r="4" fill="#D97757" opacity="0.5"/>
+    <text x="18" y="9" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">电脑必须保持唤醒</text>
+    <circle cx="5" cy="25" r="4" fill="#D97757" opacity="0.5"/>
+    <text x="18" y="29" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">Desktop 必须打开</text>
+    <circle cx="5" cy="45" r="4" fill="#D97757" opacity="0.5"/>
+    <text x="18" y="49" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">不支持危险权限跳过</text>
+  </g>
+
+  <rect x="556" y="300" width="208" height="40" rx="8" fill="#E3DACC" opacity="0.6"/>
+  <text x="564" y="314" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">竞争：OpenClaw 有定时任务、</text>
+  <text x="564" y="328" font-family="system-ui,-apple-system,sans-serif" font-size="10.5" fill="#141413">云端执行、成熟权限管理</text>
+
+  <!-- Bottom trend line -->
+  <rect x="20" y="364" width="760" height="32" rx="10" fill="#141413" opacity="0.04"/>
+  <text x="400" y="384" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">三大趋势：AI 从工具→协作者 | 方法论重构：验证>写代码 | 远程 Agent 竞争白热化</text>
+</svg>

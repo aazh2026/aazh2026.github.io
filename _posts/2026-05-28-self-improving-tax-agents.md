@@ -14,6 +14,8 @@ author: "@postcodeeng"
 
 ---
 
+<object data="/assets/images/2026-05-28-self-improving-tax-agents-01-feedback-loop.svg" type="image/svg+xml" width="100%"></object>
+
 ## 数字本身说明问题
 
 Tax AI 在 Crete 的_tax season 处理了 7000 份纳税申报单。
