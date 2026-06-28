@@ -479,7 +479,6 @@ Agent-Driven Debugging 就像**驯兽师指挥猎犬**：你定义目标（Inten
 ---
 
 **系列关联阅读**：
-- [#14 10x工程师已死，10x乘数当立？]({% post_url 2025-03-26-10x-multiplier %})
 - [#45 知识孤岛指数：衡量AI生成代码导致的集体理解度下降]({% post_url 2026-03-12-knowledge-isolation-index %})
 
 **下一篇预告**：#49 AI-Native Code Review：从人工审查到 Agent 陪审团
