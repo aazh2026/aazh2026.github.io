@@ -182,6 +182,8 @@ AI方式：
 
 <object data="/assets/images/2025-04-27-traceability-01-stack.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-04-27-traceability-02-network.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 三、全链路自动追踪的技术实现

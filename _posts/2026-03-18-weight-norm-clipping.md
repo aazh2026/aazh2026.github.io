@@ -70,6 +70,8 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 <object data="/assets/images/2026-03-18-weight-norm-clipping-01-grokking-phases.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2026-03-18-weight-norm-clipping-02-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## Grokking 的问题

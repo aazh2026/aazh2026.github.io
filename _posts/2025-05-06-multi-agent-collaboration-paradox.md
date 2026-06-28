@@ -353,6 +353,8 @@ O(N) = 协调开销（随N增长）
 
 <object data="/assets/images/2025-05-06-multi-agent-01-stack.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-05-06-multi-agent-02-efficiency-curve.svg" type="image/svg+xml" width="100%"></object>
+
 **关键设计点**：
 1. **星型拓扑**：所有通信通过协调者，避免网状通信
 2. **有限状态**：执行层Agent无状态或有限状态，简化同步

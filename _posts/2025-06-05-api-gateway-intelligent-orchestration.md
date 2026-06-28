@@ -451,6 +451,8 @@ optimization:
 
 <object data="/assets/images/2025-06-05-api-gateway-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-06-05-api-gateway-02-orchestration-flow.svg" type="image/svg+xml" width="100%"></object>
+
 ### 实战案例
 
 **案例：电商平台首页BFF**

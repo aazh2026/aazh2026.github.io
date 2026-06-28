@@ -301,6 +301,8 @@ AI："好的，我可以添加索引。请执行：ALTER TABLE..."
 
 <object data="/assets/images/2025-05-02-security-01-rings.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-05-02-security-02-workflow.svg" type="image/svg+xml" width="100%"></object>
+
 ### 第一环：感知监测层 (Perception Monitoring)
 
 **目标**：在AI"理解"请求之前，识别潜在风险信号

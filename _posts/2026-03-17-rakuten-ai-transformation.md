@@ -177,6 +177,8 @@ Rakuten 将 AI 深度集成到开发工具链，形成无缝体验。
 
 <object data="/assets/images/2026-03-17-rakuten-ai-transformation-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%"></object>
+
 ### IDE 集成：开发者的 AI 伴侣
 
 **日常工作流**：

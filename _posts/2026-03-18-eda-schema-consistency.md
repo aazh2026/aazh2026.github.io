@@ -86,6 +86,8 @@ series: AI-Native软件工程系列 #8
 
 <object data="/assets/images/2026-03-18-eda-schema-consistency-01-generation-paths.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2026-03-18-eda-schema-consistency-02-compatibility-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ### 实战：代码生成Schema
 
 **输入代码（TypeScript）：**

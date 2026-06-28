@@ -21,6 +21,8 @@ AI 正在改变软件开发，但它不是解决复杂性问题的银弹。Fred 
 
 <object data="/assets/images/2026-03-15-software-complexity-01-ai-complexity-types.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2026-03-15-software-complexity-02-complexity-taxonomy.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 2. 📋 本文结构

@@ -38,6 +38,8 @@ series: AI-Native软件工程系列 #7
 
 <object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%"></object>
+
 **问题：CR成为瓶颈，且无法发现意图偏离**
 
 **AI能发现的问题（传统测试发现不了）：**

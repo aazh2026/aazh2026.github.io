@@ -302,6 +302,8 @@ def test_concurrent_orders_no_oversell():
          偏差报告 → 反馈给规格
 ```
 
+<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" type="image/svg+xml" width="100%"></object>
+
 ### 运行时验证
 
 ```python
