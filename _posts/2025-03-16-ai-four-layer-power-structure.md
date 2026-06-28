@@ -99,6 +99,8 @@ OpenAI的API看似是护城河，实际上可能是"最脆弱的业务模式"。
 
 <object data="/assets/images/2025-03-16-ai-power-structure-01-stack.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-03-16-ai-four-layer-power-structure-02-thick-vs-thin.svg" type="image/svg+xml" width="100%"></object>
+
 ### Layer 4: Application Layer 应用层
 
 **特征**：

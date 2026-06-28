@@ -36,6 +36,8 @@ redirect_from:
 
 <object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-05-26-prompt-engineering-ladder-02-three-levels.svg" type="image/svg+xml" width="100%"></object>
+
 ### 现实挑战
 
 **挑战1：Prompt能力参差不齐**

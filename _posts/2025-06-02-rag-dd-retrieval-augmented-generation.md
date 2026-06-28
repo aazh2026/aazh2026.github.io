@@ -198,6 +198,8 @@ class KnowledgeBaseIndexer:
 
 <object data="/assets/images/2025-06-02-rag-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-06-02-rag-dd-02-knowledge-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ### 核心组件
 
 **组件1：意图解析器（Intent Parser）**

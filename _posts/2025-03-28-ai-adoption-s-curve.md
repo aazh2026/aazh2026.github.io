@@ -101,6 +101,8 @@ redirect_from:
 
 <object data="/assets/images/2025-03-28-ai-adoption-01-scurve.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-03-28-ai-adoption-s-curve-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
+
 **关键洞察**：
 - 每层都有自己的S-curve
 - 上层依赖下层的成熟

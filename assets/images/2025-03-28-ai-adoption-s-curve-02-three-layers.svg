@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 22px; font-weight: 800; fill: #141413; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #87867F; }
+      .lvl-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; }
+      .lvl-period { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; }
+      .lvl-desc { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; }
+      .item-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; fill: #141413; font-weight: 600; }
+      .item-desc { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #87867F; }
+      .tag { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; }
+      .divider { stroke: #D1CFC5; stroke-width: 1; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="900" height="540"/>
+
+  <!-- Header -->
+  <text x="30" y="34" class="title">AI Adoption 三层嵌套 S-curve：不能跳过的演化路径</text>
+  <text x="30" y="54" class="subtitle">Individual → Team → Organization，每层都有自己的 S-curve，上层依赖下层的成熟</text>
+  <line x1="30" y1="64" x2="870" y2="64" class="divider"/>
+
+  <!-- ============ LAYER 3: Organization (top, darkest) ============ -->
+  <g transform="translate(30, 80)">
+    <rect width="820" height="128" rx="14" fill="#141413" filter="url(#shadow)"/>
+    <rect width="820" height="6" rx="3" fill="#D97757"/>
+
+    <!-- Left badge -->
+    <rect x="16" y="18" width="60" height="60" rx="12" fill="#D97757" opacity="0.3"/>
+    <text x="46" y="55" text-anchor="middle" font-family="Helvetica Neue" font-size="32" font-weight="800" fill="#D97757">3</text>
+
+    <text x="92" y="32" class="lvl-title" fill="#FAF9F5" font-size="17">组织层 Organizational Adoption</text>
+    <text x="92" y="50" class="lvl-desc" fill="#87867F">战略规划 · 规模推广 · 文化转型</text>
+
+    <!-- Period -->
+    <rect x="92" y="58" width="90" height="20" rx="10" fill="#D97757" opacity="0.25"/>
+    <text x="137" y="73" text-anchor="middle" class="lvl-period" fill="#D97757">预计 5年+</text>
+
+    <!-- S-curve mini chart -->
+    <g transform="translate(460, 20)">
+      <path d="M0,70 Q60,68 100,60 Q140,45 180,20 Q200,8 240,0" fill="none" stroke="#D97757" stroke-width="2.5" opacity="0.7"/>
+      <text x="0" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">早期</text>
+      <text x="110" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">加速期</text>
+      <text x="210" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">成熟期</text>
+      <text x="120" y="14" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="#D97757">AI成熟度</text>
+    </g>
+
+    <!-- Key tasks -->
+    <g transform="translate(92, 90)">
+      <g>
+        <circle cx="5" cy="5" r="4" fill="#D97757"/>
+        <text x="14" y="9" class="tag" fill="#FAF9F5">AI战略 &amp; 治理体系</text>
+      </g>
+      <g transform="translate(160, 0)">
+        <circle cx="5" cy="5" r="4" fill="#D97757"/>
+        <text x="14" y="9" class="tag" fill="#FAF9F5">AI平台 &amp; 标准化工具</text>
+      </g>
+      <g transform="translate(320, 0)">
+        <circle cx="5" cy="5" r="4" fill="#D97757"/>
+        <text x="14" y="9" class="tag" fill="#FAF9F5">内部培训 &amp; 认证体系</text>
+      </g>
+      <g transform="translate(480, 0)">
+        <circle cx="5" cy="5" r="4" fill="#D97757"/>
+        <text x="14" y="9" class="tag" fill="#FAF9F5">AI-Native 文化转型</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow down 2→3 -->
+  <g transform="translate(438, 210)">
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#D1CFC5" stroke-width="2.5"/>
+    <polygon points="-6,18 6,18 0,26" fill="#D1CFC5"/>
+    <text x="18" y="14" font-family="Helvetica Neue" font-size="10" fill="#87867F">依赖</text>
+  </g>
+
+  <!-- ============ LAYER 2: Team (middle) ============ -->
+  <g transform="translate(30, 238)">
+    <rect width="820" height="128" rx="14" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="820" height="6" rx="3" fill="#87867F"/>
+
+    <rect x="16" y="18" width="60" height="60" rx="12" fill="#87867F" opacity="0.15"/>
+    <text x="46" y="55" text-anchor="middle" font-family="Helvetica Neue" font-size="32" font-weight="800" fill="#87867F">2</text>
+
+    <text x="92" y="32" class="lvl-title" fill="#141413" font-size="17">团队层 Team Adoption</text>
+    <text x="92" y="50" class="lvl-desc" fill="#87867F">标准化 · 流程整合 · 协作优化</text>
+
+    <rect x="92" y="58" width="90" height="20" rx="10" fill="#87867F" opacity="0.2"/>
+    <text x="137" y="73" text-anchor="middle" class="lvl-period" fill="#87867F">预计 12月</text>
+
+    <!-- S-curve mini chart -->
+    <g transform="translate(460, 20)">
+      <path d="M0,70 Q60,65 100,50 Q140,28 180,8 Q200,2 240,0" fill="none" stroke="#87867F" stroke-width="2.5" opacity="0.7"/>
+      <text x="0" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">早期</text>
+      <text x="110" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">加速期</text>
+      <text x="210" y="85" font-family="Helvetica Neue" font-size="10" fill="#87867F">成熟期</text>
+      <text x="120" y="14" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="#87867F">团队AI效能</text>
+    </g>
+
+    <!-- Key tasks -->
+    <g transform="translate(92, 90)">
+      <g>
+        <circle cx="5" cy="5" r="4" fill="#87867F"/>
+        <text x="14" y="9" class="tag" fill="#141413">AI使用规范建立</text>
+      </g>
+      <g transform="translate(160, 0)">
+        <circle cx="5" cy="5" r="4" fill="#87867F"/>
+        <text x="14" y="9" class="tag" fill="#141413">开发流程集成AI</text>
+      </g>
+      <g transform="translate(320, 0)">
+        <circle cx="5" cy="5" r="4" fill="#87867F"/>
+        <text x="14" y="9" class="tag" fill="#141413">CI/CD 集成AI检查</text>
+      </g>
+      <g transform="translate(480, 0)">
+        <circle cx="5" cy="5" r="4" fill="#87867F"/>
+        <text x="14" y="9" class="tag" fill="#141413">团队知识库沉淀</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Arrow down 1→2 -->
+  <g transform="translate(438, 368)">
+    <line x1="0" y1="0" x2="0" y2="18" stroke="#D1CFC5" stroke-width="2.5"/>
+    <polygon points="-6,18 6,18 0,26" fill="#D1CFC5"/>
+    <text x="18" y="14" font-family="Helvetica Neue" font-size="10" fill="#87867F">依赖</text>
+  </g>
+
+  <!-- ============ LAYER 1: Individual (bottom) ============ -->
+  <g transform="translate(30, 396)">
+    <rect width="820" height="110" rx="14" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+    <rect width="820" height="6" rx="3" fill="#788C5D"/>
+
+    <rect x="16" y="18" width="60" height="60" rx="12" fill="#788C5D" opacity="0.15"/>
+    <text x="46" y="55" text-anchor="middle" font-family="Helvetica Neue" font-size="32" font-weight="800" fill="#788C5D">1</text>
+
+    <text x="92" y="32" class="lvl-title" fill="#141413" font-size="17">个人层 Individual Adoption</text>
+    <text x="92" y="50" class="lvl-desc" fill="#87867F">探索期 · 熟练期 · 创新期</text>
+
+    <rect x="92" y="58" width="90" height="20" rx="10" fill="#788C5D" opacity="0.2"/>
+    <text x="137" y="73" text-anchor="middle" class="lvl-period" fill="#788C5D">预计 6月</text>
+
+    <!-- Key tasks -->
+    <g transform="translate(92, 80)">
+      <g>
+        <circle cx="5" cy="5" r="4" fill="#788C5D"/>
+        <text x="14" y="9" class="tag" fill="#141413">AI工具选型 &amp; 培训</text>
+      </g>
+      <g transform="translate(180, 0)">
+        <circle cx="5" cy="5" r="4" fill="#788C5D"/>
+        <text x="14" y="9" class="tag" fill="#141413">个人 Prompt 库建设</text>
+      </g>
+      <g transform="translate(360, 0)">
+        <circle cx="5" cy="5" r="4" fill="#788C5D"/>
+        <text x="14" y="9" class="tag" fill="#141413">编码效率提升 30%+</text>
+      </g>
+      <g transform="translate(530, 0)">
+        <circle cx="5" cy="5" r="4" fill="#788C5D"/>
+        <text x="14" y="9" class="tag" fill="#141413">AI Champion 涌现</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <rect x="30" y="520" width="820" height="32" rx="8" fill="#E3DACC" opacity="0.5"/>
+  <text x="50" y="540" font-family="Helvetica Neue" font-size="12" fill="#141413" font-weight="700">💡 关键洞察</text>
+  <text x="160" y="540" font-family="Helvetica Neue" font-size="12" fill="#87867F">三层 S-curve 不能跳过：个人层是基础，团队层是放大器，组织层是终态</text>
+</svg>
