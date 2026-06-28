@@ -68,16 +68,7 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 **可视化**：
 
-```
-准确率
-100% ┤███████ 训练准确率（始终 100%）
-     │
-  0% ┤        ████████████ 验证准确率（突然上升）
-     └────┬────────┬────────┬────────→ 训练步数
-         1K      10K      100K
-              ↑
-           Grokking 发生
-```
+<object data="/assets/images/2026-03-18-weight-norm-clipping-01-grokking-phases.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

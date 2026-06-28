@@ -166,6 +166,8 @@ User Story Pack
 
 ### 层次结构概览
 
+<object data="/assets/images/2025-04-28-user-story-pack-automation-01-three-layer-hierarchy.svg" type="image/svg+xml" width="100%"></object>
+
 ```
 User Story Pack
 ├── Story（用户故事）
@@ -394,6 +396,8 @@ examples:
 ## 四、从用户故事到自动化测试
 
 ### 验收标准即测试
+
+<object data="/assets/images/2025-04-28-user-story-pack-automation-02-story-to-test-flow.svg" type="image/svg+xml" width="100%"></object>
 
 User Story Pack 的核心价值：**验收标准可以直接转化为自动化测试**。
 

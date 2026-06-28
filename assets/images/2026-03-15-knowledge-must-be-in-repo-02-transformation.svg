@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460">
+  <defs>
+    <linearGradient id="bg9" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <filter id="shadow9" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arr10" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="460" fill="url(#bg9)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">实践路径：知识入库的四种场景</text>
+  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Row 1: Decision to ADR -->
+  <g transform="translate(40,76)">
+    <rect x="0" y="0" width="290" height="70" rx="10" fill="#D97757" opacity="0.06"/>
+    <text x="145" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌ 传统做法</text>
+    <text x="145" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">会议讨论 → 口头决策 → 遗忘</text>
+    <text x="145" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757" opacity="0.7">一个月后不知为何这样决定</text>
+  </g>
+
+  <path d="M338,111 L365,111" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr10)" opacity="0.6"/>
+
+  <g transform="translate(373,76)">
+    <rect x="0" y="0" width="487" height="70" rx="10" fill="#788C5D" opacity="0.08"/>
+    <text x="243" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#788C5D">✅ Harness 工程做法</text>
+    <text x="243" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">会议讨论 → 写入 docs/decisions/YYYY-MM-DD-*.md → 决策 → 永久可查阅</text>
+    <text x="243" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">背景、选项、理由、影响、参与者 — 全部记录</text>
+  </g>
+
+  <!-- Row 2: Slack to Summary -->
+  <g transform="translate(40,162)">
+    <rect x="0" y="0" width="290" height="70" rx="10" fill="#D97757" opacity="0.06"/>
+    <text x="145" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌ 传统做法</text>
+    <text x="145" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">Slack 讨论 → 2周后淹没</text>
+    <text x="145" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757" opacity="0.7">关键上下文随时间消失</text>
+  </g>
+
+  <path d="M338,197 L365,197" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr10)" opacity="0.6"/>
+
+  <g transform="translate(373,162)">
+    <rect x="0" y="0" width="487" height="70" rx="10" fill="#788C5D" opacity="0.08"/>
+    <text x="243" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#788C5D">✅ Harness 工程做法</text>
+    <text x="243" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Slack 讨论 → 总结入库 → docs/sessions/YYYY-MM-DD-*.md</text>
+    <text x="243" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">任何人和 Agent 都可以 later 查阅</text>
+  </g>
+
+  <!-- Row 3: Code Review to Linter Rules -->
+  <g transform="translate(40,248)">
+    <rect x="0" y="0" width="290" height="70" rx="10" fill="#D97757" opacity="0.06"/>
+    <text x="145" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌ 传统做法</text>
+    <text x="145" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">Review 评论 → PR 合并 → 评论消失</text>
+    <text x="145" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757" opacity="0.7">同样的错误在下一个 PR 重复出现</text>
+  </g>
+
+  <path d="M338,283 L365,283" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr10)" opacity="0.6"/>
+
+  <g transform="translate(373,248)">
+    <rect x="0" y="0" width="487" height="70" rx="10" fill="#788C5D" opacity="0.08"/>
+    <text x="243" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#788C5D">✅ Harness 工程做法</text>
+    <text x="243" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">重复问题 → linter 规则 → 自动化检查</text>
+    <text x="243" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">PR 评论知识 → .pylintrc / .eslintrc → 永久自动化</text>
+  </g>
+
+  <!-- Row 4: Experience to Documentation -->
+  <g transform="translate(40,334)">
+    <rect x="0" y="0" width="290" height="70" rx="10" fill="#D97757" opacity="0.06"/>
+    <text x="145" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌ 传统做法</text>
+    <text x="145" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">经验传承 → 师徒制</text>
+    <text x="145" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757" opacity="0.7">员工离职带走关键知识</text>
+  </g>
+
+  <path d="M338,369 L365,369" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arr10)" opacity="0.6"/>
+
+  <g transform="translate(373,334)">
+    <rect x="0" y="0" width="487" height="70" rx="10" fill="#788C5D" opacity="0.08"/>
+    <text x="243" y="24" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#788C5D">✅ Harness 工程做法</text>
+    <text x="243" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">经验 → docs/troubleshooting.md → 制度化留存</text>
+    <text x="243" y="58" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">新员工 onboarding 时间缩短 30-50%（Netflix 研究）</text>
+  </g>
+
+  <!-- Bottom quote -->
+  <rect x="40" y="418" width="820" height="36" rx="10" fill="#141413" opacity="0.05"/>
+  <text x="450" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-style="italic">"Harness 工程只是给了我们一个理由去正视这些问题 — 知识必须显性化。"</text>
+</svg>

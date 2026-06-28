@@ -19,6 +19,8 @@ AI 正在改变软件开发，但它不是解决复杂性问题的银弹。Fred 
 
 本文试图回答一个核心问题：**在 AI 时代，我们如何理解和管理软件复杂性？**
 
+<object data="/assets/images/2026-03-15-software-complexity-01-ai-complexity-types.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 2. 📋 本文结构
