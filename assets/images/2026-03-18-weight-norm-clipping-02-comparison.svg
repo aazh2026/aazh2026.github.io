@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="system-ui,sans-serif">
+  <rect width="800" height="450" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#141413" letter-spacing="1">Weight Norm Clipping 效果对比</text>
+  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#87867F">强制平滑权重范数，18-66 倍加速 Grokking</text>
+
+  <!-- Left panel: Baseline -->
+  <g transform="translate(175, 230)">
+    <rect x="-155" y="-155" width="310" height="310" rx="16" fill="#E3DACC" opacity="0.35"/>
+    <text x="0" y="-132" text-anchor="middle" font-size="14" font-weight="700" fill="#141413">Baseline (AdamW)</text>
+    <text x="0" y="-116" text-anchor="middle" font-size="10" fill="#87867F">无 Weight Norm Clipping</text>
+
+    <!-- Training curve area (red/warm = bad) -->
+    <g transform="translate(-130, -90)">
+      <text x="0" y="0" font-size="11" font-weight="600" fill="#141413">训练 vs 验证准确率</text>
+      <!-- Axes -->
+      <line x1="0" y1="0" x2="0" y2="120" stroke="#87867F" stroke-width="1.5"/>
+      <line x1="0" y1="120" x2="230" y2="120" stroke="#87867F" stroke-width="1.5"/>
+      <!-- Y labels -->
+      <text x="-5" y="5" font-size="9" fill="#87867F" text-anchor="end">100%</text>
+      <text x="-5" y="62" font-size="9" fill="#87867F" text-anchor="end">50%</text>
+      <text x="-5" y="120" font-size="9" fill="#87867F" text-anchor="end">0%</text>
+      <!-- X label -->
+      <text x="115" y="138" font-size="9" fill="#87867F" text-anchor="middle">训练步数</text>
+
+      <!-- Train accuracy: stays high from start -->
+      <polyline points="0,5 40,3 80,2 120,1 160,1 200,1" fill="none" stroke="#D97757" stroke-width="2.5"/>
+      <!-- Val accuracy: stays at 0 then jumps late -->
+      <polyline points="0,118 50,118 90,118 130,118 170,116 210,100 230,5" fill="none" stroke="#141413" stroke-width="2.5"/>
+      <!-- Late jump annotation -->
+      <text x="200" y="80" font-size="9" fill="#D97757" font-weight="600">~100K步</text>
+      <text x="200" y="92" font-size="9" fill="#D97757">才泛化</text>
+      <line x1="195" y1="96" x2="210" y2="100" stroke="#D97757" stroke-width="1.5"/>
+    </g>
+
+    <!-- Stats -->
+    <text x="0" y="88" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">泛化步数: ~100K</text>
+    <text x="0" y="104" text-anchor="middle" font-size="11" fill="#D97757">失败率: 20%</text>
+    <text x="0" y="120" text-anchor="middle" font-size="10" fill="#87867F">不稳定，大量试错</text>
+  </g>
+
+  <!-- Center divider -->
+  <line x1="400" y1="60" x2="400" y2="380" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="400" y="55" text-anchor="middle" font-size="20" fill="#D97757">→</text>
+
+  <!-- Right panel: With WNC -->
+  <g transform="translate(625, 230)">
+    <rect x="-155" y="-155" width="310" height="310" rx="16" fill="#788C5D" opacity="0.15"/>
+    <text x="0" y="-132" text-anchor="middle" font-size="14" font-weight="700" fill="#141413">Lion + Weight Norm Clipping</text>
+    <text x="0" y="-116" text-anchor="middle" font-size="10" fill="#87867F">max_norm=1.0, 每步裁剪</text>
+
+    <!-- Training curve area (green = good) -->
+    <g transform="translate(-130, -90)">
+      <text x="0" y="0" font-size="11" font-weight="600" fill="#141413">训练 vs 验证准确率</text>
+      <!-- Axes -->
+      <line x1="0" y1="0" x2="0" y2="120" stroke="#87867F" stroke-width="1.5"/>
+      <line x1="0" y1="120" x2="230" y2="120" stroke="#87867F" stroke-width="1.5"/>
+      <!-- Y labels -->
+      <text x="-5" y="5" font-size="9" fill="#87867F" text-anchor="end">100%</text>
+      <text x="-5" y="62" font-size="9" fill="#87867F" text-anchor="end">50%</text>
+      <text x="-5" y="120" font-size="9" fill="#87867F" text-anchor="end">0%</text>
+      <!-- X label -->
+      <text x="115" y="138" font-size="9" fill="#87867F" text-anchor="middle">训练步数</text>
+
+      <!-- Train accuracy: rises then stabilizes -->
+      <polyline points="0,110 20,50 40,10 60,3 100,2 160,1 200,1" fill="none" stroke="#D97757" stroke-width="2.5"/>
+      <!-- Val accuracy: rises quickly and stays -->
+      <polyline points="0,118 20,100 40,15 60,3 100,2 160,1 200,1" fill="none" stroke="#788C5D" stroke-width="2.5"/>
+      <!-- Early convergence annotation -->
+      <text x="55" y="35" font-size="9" fill="#788C5D" font-weight="600">~1.5K步</text>
+      <text x="55" y="47" font-size="9" fill="#788C5D">即泛化!</text>
+      <line x1="60" y1="52" x2="60" y2="10" stroke="#788C5D" stroke-width="1.5"/>
+    </g>
+
+    <!-- Stats -->
+    <text x="0" y="88" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">泛化步数: ~1.5K</text>
+    <text x="0" y="104" text-anchor="middle" font-size="11" fill="#788C5D">失败率: 0%</text>
+    <text x="0" y="120" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">300 随机种子零失败</text>
+  </g>
+
+  <!-- Speedup badge -->
+  <g transform="translate(400, 395)">
+    <rect x="-90" y="-22" width="180" height="44" rx="22" fill="#D97757"/>
+    <text x="0" y="-4" text-anchor="middle" font-size="14" font-weight="800" fill="#FAF9F5">66× Speedup</text>
+    <text x="0" y="14" text-anchor="middle" font-size="10" fill="#E3DACC">仅需 5 行代码</text>
+  </g>
+
+  <!-- Key insight -->
+  <text x="400" y="435" text-anchor="middle" font-size="10" fill="#87867F">核心：限制权重范数 → 阻止过度记忆 → 强制学习泛化规律</text>
+</svg>

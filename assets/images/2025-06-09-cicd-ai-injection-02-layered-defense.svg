@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="ivory-bg4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#F0EDE4"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" fill="url(#ivory-bg4)"/>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" font-size="20" fill="#141413" font-weight="bold">分层验证防御 / Layered Validation Defense</text>
+  <line x1="200" y1="50" x2="760" y2="50" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Layer boxes -->
+  <!-- Layer 6: Pre-deploy (innermost/top) -->
+  <g transform="translate(60, 70)">
+    <rect width="560" height="52" rx="8" fill="#141413" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#141413"/>
+    <rect x="60" y="0" width="20" height="52" fill="#141413"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="#FAF9F5" font-weight="bold">Layer 6</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#D1CFC5">Pre-deploy</text>
+    <text x="100" y="22" font-size="12" fill="white" font-weight="bold">部署风险评估</text>
+    <text x="100" y="38" font-size="10" fill="#D1CFC5">综合风险评分 / 影响分析 / 预测模型</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: 2-10min</text>
+  </g>
+
+  <!-- Layer 5 -->
+  <g transform="translate(60, 130)">
+    <rect width="560" height="52" rx="8" fill="white" stroke="#D97757" stroke-width="2" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#D97757"/>
+    <rect x="60" y="0" width="20" height="52" fill="#D97757"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Layer 5</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#FAF9F5">Pre-review</text>
+    <text x="100" y="22" font-size="12" fill="#141413" font-weight="bold">PR摘要生成 + 审查优先级</text>
+    <text x="100" y="38" font-size="10" fill="#87867F">文本摘要 / 风险评分 / 影响分析</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: 即时</text>
+  </g>
+
+  <!-- Layer 4 -->
+  <g transform="translate(60, 190)">
+    <rect width="560" height="52" rx="8" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#E3DACC"/>
+    <rect x="60" y="0" width="20" height="52" fill="#E3DACC"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="#141413" font-weight="bold">Layer 4</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#141413">Post-build</text>
+    <text x="100" y="22" font-size="12" fill="#141413" font-weight="bold">依赖评估 + 配置检查 + 测试质量</text>
+    <text x="100" y="38" font-size="10" fill="#87867F">依赖风险 / 配置合理性 / 测试有效性</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: 1-5min</text>
+  </g>
+
+  <!-- Layer 3 -->
+  <g transform="translate(60, 250)">
+    <rect width="560" height="52" rx="8" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#D1CFC5"/>
+    <rect x="60" y="0" width="20" height="52" fill="#D1CFC5"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="#141413" font-weight="bold">Layer 3</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#141413">Pre-build</text>
+    <text x="100" y="22" font-size="12" fill="#141413" font-weight="bold">语义审查 + 安全扫描 + 复杂度预警</text>
+    <text x="100" y="38" font-size="10" fill="#87867F">业务逻辑漏洞 / 设计模式误用 / 异常复杂度</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: 10-30s</text>
+  </g>
+
+  <!-- Layer 2 -->
+  <g transform="translate(60, 310)">
+    <rect width="560" height="52" rx="8" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#E3DACC"/>
+    <rect x="60" y="0" width="20" height="52" fill="#E3DACC"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="#141413" font-weight="bold">Layer 2</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#141413">On-commit</text>
+    <text x="100" y="22" font-size="12" fill="#141413" font-weight="bold">提交信息验证 + 意图匹配</text>
+    <text x="100" y="38" font-size="10" fill="#87867F">类型标签与变更匹配 / PR描述与代码意图一致</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: &lt;5s</text>
+  </g>
+
+  <!-- Layer 1 -->
+  <g transform="translate(60, 370)">
+    <rect width="560" height="52" rx="8" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow4)"/>
+    <rect x="0" y="0" width="80" height="52" rx="8" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <rect x="60" y="0" width="20" height="52" fill="#FAF9F5" stroke="#D1CFC5"/>
+    <text x="40" y="30" text-anchor="middle" font-size="11" fill="#141413" font-weight="bold">Layer 1</text>
+    <text x="40" y="44" text-anchor="middle" font-size="9" fill="#87867F">Pre-commit</text>
+    <text x="100" y="22" font-size="12" fill="#141413" font-weight="bold">本地AI插件实时检查</text>
+    <text x="100" y="38" font-size="10" fill="#87867F">语法错误 / 明显语义问题 / 提交规范</text>
+    <text x="510" y="30" text-anchor="middle" font-size="10" fill="#87867F">反馈: &lt;1s</text>
+  </g>
+
+  <!-- Right panel: Key insight -->
+  <rect x="650" y="70" width="280" height="360" rx="12" fill="white" filter="url(#shadow4)"/>
+  <rect x="650" y="70" width="280" height="36" rx="12" fill="#788C5D"/>
+  <rect x="650" y="94" width="280" height="12" fill="#788C5D"/>
+  <text x="790" y="92" text-anchor="middle" font-size="13" fill="white" font-weight="bold">💡 分层防御核心洞察</text>
+
+  <text x="668" y="130" font-size="12" fill="#141413" font-weight="bold">越早发现，修复成本越低</text>
+  <line x1="668" y1="140" x2="910" y2="140" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="668" y="162" font-size="11" fill="#141413">Layer 1 发现错误：</text>
+  <text x="668" y="178" font-size="11" fill="#141413">  修复成本 ≈ 1x</text>
+  <text x="668" y="196" font-size="11" fill="#141413">Layer 3 发现错误：</text>
+  <text x="668" y="212" font-size="11" fill="#141413">  修复成本 ≈ 10x</text>
+  <text x="668" y="230" font-size="11" fill="#D97757" font-weight="bold">Layer 6 发现错误：</text>
+  <text x="668" y="246" font-size="11" fill="#D97757" font-weight="bold">  修复成本 ≈ 100x</text>
+
+  <line x1="668" y1="260" x2="910" y2="260" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="668" y="282" font-size="12" fill="#141413" font-weight="bold">AI验证不是取代现有测试</text>
+  <text x="668" y="300" font-size="11" fill="#87867F">而是填补测试覆盖</text>
+  <text x="668" y="316" font-size="11" fill="#87867F">不了的维度</text>
+
+  <line x1="668" y1="330" x2="910" y2="330" stroke="#E3DACC" stroke-width="1"/>
+
+  <text x="668" y="352" font-size="11" fill="#141413" font-weight="bold">人机协作模式：</text>
+  <text x="668" y="370" font-size="10" fill="#141413">AI 负责：初筛 + 模式识别</text>
+  <text x="668" y="386" font-size="10" fill="#141413">人类负责：最终决策</text>
+  <text x="668" y="402" font-size="10" fill="#141413">→ 效率 + 质量兼得</text>
+
+  <!-- Bottom note -->
+  <text x="480" y="500" text-anchor="middle" font-size="10" fill="#87867F">错误修复成本随 Pipeline 阶段指数增长：Layer 1 = 1x → Layer 6 = 100x</text>
+</svg>

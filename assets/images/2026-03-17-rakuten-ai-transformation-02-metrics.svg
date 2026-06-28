@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="system-ui,sans-serif">
+  <rect width="800" height="450" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#141413" letter-spacing="1">Rakuten AI 转型成果指标</text>
+  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#87867F">MTTR 降低 50%，质量与速度双提升</text>
+
+  <!-- Before/After comparison bars -->
+  <!-- MTTR -->
+  <g transform="translate(60, 80)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#141413">MTTR</text>
+    <text x="0" y="14" font-size="10" fill="#87867F">平均修复时间</text>
+    <!-- Before bar -->
+    <rect x="0" y="24" width="240" height="28" rx="6" fill="#D1CFC5"/>
+    <text x="8" y="43" font-size="11" font-weight="600" fill="#141413">8-12h</text>
+    <text x="244" y="43" font-size="10" fill="#87867F">转型前</text>
+    <!-- After bar -->
+    <rect x="0" y="58" width="120" height="28" rx="6" fill="#D97757"/>
+    <text x="8" y="77" font-size="11" font-weight="600" fill="#FAF9F5">4-6h</text>
+    <text x="124" y="77" font-size="10" fill="#D97757" font-weight="600">50% ↓</text>
+  </g>
+
+  <!-- Code Review Time -->
+  <g transform="translate(60, 185)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#141413">代码审查时间</text>
+    <text x="0" y="14" font-size="10" fill="#87867F">Code Review</text>
+    <rect x="0" y="24" width="220" height="28" rx="6" fill="#D1CFC5"/>
+    <text x="8" y="43" font-size="11" font-weight="600" fill="#141413">1-2天</text>
+    <text x="224" y="43" font-size="10" fill="#87867F">转型前</text>
+    <rect x="0" y="58" width="66" height="28" rx="6" fill="#D97757"/>
+    <text x="8" y="77" font-size="11" font-weight="600" fill="#FAF9F5">4-6h</text>
+    <text x="70" y="77" font-size="10" fill="#D97757" font-weight="600">70% ↓</text>
+  </g>
+
+  <!-- Feature Delivery -->
+  <g transform="translate(60, 290)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#141413">新功能交付</text>
+    <text x="0" y="14" font-size="10" fill="#87867F">全栈功能</text>
+    <rect x="0" y="24" width="280" height="28" rx="6" fill="#D1CFC5"/>
+    <text x="8" y="43" font-size="11" font-weight="600" fill="#141413">2-3月</text>
+    <text x="284" y="43" font-size="10" fill="#87867F">转型前</text>
+    <rect x="0" y="58" width="112" height="28" rx="6" fill="#D97757"/>
+    <text x="8" y="77" font-size="11" font-weight="600" fill="#FAF9F5">2-4周</text>
+    <text x="116" y="77" font-size="10" fill="#D97757" font-weight="600">60% ↓</text>
+  </g>
+
+  <!-- Right side: quality metrics -->
+  <g transform="translate(480, 80)">
+    <text x="0" y="0" font-size="13" font-weight="700" fill="#141413">质量指标提升</text>
+
+    <!-- Bug rate -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="290" height="55" rx="8" fill="#E3DACC" opacity="0.5"/>
+      <text x="15" y="20" font-size="11" font-weight="600" fill="#141413">生产环境 Bug 率</text>
+      <text x="15" y="38" font-size="18" font-weight="800" fill="#788C5D">-20%</text>
+      <text x="85" y="38" font-size="11" fill="#788C5D">降低</text>
+    </g>
+
+    <!-- Review pass rate -->
+    <g transform="translate(0, 95)">
+      <rect x="0" y="0" width="290" height="55" rx="8" fill="#E3DACC" opacity="0.5"/>
+      <text x="15" y="20" font-size="11" font-weight="600" fill="#141413">代码审查通过率</text>
+      <text x="15" y="38" font-size="18" font-weight="800" fill="#788C5D">60% → 85%</text>
+    </g>
+
+    <!-- Rework rate -->
+    <g transform="translate(0, 160)">
+      <rect x="0" y="0" width="290" height="55" rx="8" fill="#E3DACC" opacity="0.5"/>
+      <text x="15" y="20" font-size="11" font-weight="600" fill="#141413">返工率</text>
+      <text x="15" y="38" font-size="18" font-weight="800" fill="#788C5D">-35%</text>
+      <text x="85" y="38" font-size="11" fill="#788C5D">降低</text>
+    </g>
+
+    <!-- Engineer satisfaction -->
+    <g transform="translate(0, 225)">
+      <rect x="0" y="0" width="290" height="55" rx="8" fill="#E3DACC" opacity="0.5"/>
+      <text x="15" y="20" font-size="11" font-weight="600" fill="#141413">工程师满意度</text>
+      <text x="15" y="38" font-size="18" font-weight="800" fill="#788C5D">+25%</text>
+      <text x="95" y="38" font-size="11" fill="#788C5D">提升</text>
+    </g>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <rect x="40" y="370" width="720" height="60" rx="12" fill="#141413"/>
+  <text x="400" y="393" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">核心洞察：AI 不是替代工程师，而是增强工程师</text>
+  <text x="400" y="412" text-anchor="middle" font-size="11" fill="#D1CFC5">AI 处理 boilerplate、审查初筛、文档生成 | 工程师专注架构设计、业务逻辑、关键决策</text>
+</svg>

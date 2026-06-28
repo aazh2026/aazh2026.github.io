@@ -79,6 +79,11 @@ class ImageGenerationInterface:
 *图 1：Fat Interface（❌）将所有方法打包在一个接口中；Thin Interfaces（✅）将每种能力拆分为独立接口，调用者只依赖其所需。*
 {% endfigure %}
 
+{% figure center %}
+<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.png" type="image/svg+xml" width="100%"></object>
+*图 2：Human-AI 契约设计的三层接口——Intent（我想要什么）、Context（我给了什么）、Prompt（怎么表达），构成 AI 可执行的清晰契约。*
+{% endfigure %}
+
 ---
 
 ## 二、AI 时代的接口新形态

@@ -261,11 +261,12 @@ Agent："周末异常分析报告：
 ---
 
 <object data="/assets/images/2026-03-12-agent-driven-debugging-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2026-03-12-agent-driven-debugging-02-workflow.svg" type="image/svg+xml" width="100%"></object>
 
 ## 实战框架：让 Agent 成为你的调试搭档
 
 现在让我们进入实战。如何设计一个有效的 Agent-Driven Debugging 工作流？
+
+<object data="/assets/images/2026-03-12-agent-driven-debugging-02-workflow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 1. 意图设计：如何与调试 Agent 对话
 

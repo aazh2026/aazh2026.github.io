@@ -344,6 +344,8 @@ customer.service.ts           // 点分隔（Angular风格）
 
 ---
 
+<object data="/assets/images/2025-05-14-domain-terminology-02-ai-alignment.svg" type="image/svg+xml" width="100%"></object>
+
 ## AI辅助对齐机制
 
 ### AI理解业务语境

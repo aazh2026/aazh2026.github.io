@@ -137,6 +137,8 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 完整的 Product Intent 包含五个维度，缺一不可。
 
+<object data="/assets/images/2025-04-21-product-intent-definition-01-intent-dimensions.svg" type="image/svg+xml" width="100%"></object>
+
 ### 维度 1：业务意图（Business Intent）
 
 **核心问题**：这个功能要解决什么业务问题？
@@ -271,7 +273,6 @@ evolution_intent:
 ### Product Intent 的层级结构
 
 <object data="/assets/images/2025-04-21-pid-01-intent-hierarchy.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2025-04-21-product-intent-definition-01-intent-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：Product Intent 关注 Level 2-3，将 Level 4 留给 AI 决定。
 

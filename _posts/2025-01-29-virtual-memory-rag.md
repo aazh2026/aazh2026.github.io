@@ -364,6 +364,8 @@ class PageFaultMonitor:
         return "stable"
 ```
 
+<object data="/assets/images/2025-01-29-virtual-memory-rag-02-pagefault.svg" type="image/svg+xml" width="100%"></object>
+
 ## 七、为什么这很重要
 
 长上下文模型是**硬件限制**（我们造不出无限大的芯片），不是**架构最优**。

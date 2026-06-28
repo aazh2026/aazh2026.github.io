@@ -32,7 +32,10 @@ redirect_from:
 ### 1.1 四层架构模型
 
 <object data="/assets/images/2025-01-22-openclaw-insight-report-01-architecture.svg" type="image/svg+xml" width="100%"></object>
-```
+
+### 渐进式自动化路径
+
+<object data="/assets/images/2025-01-22-openclaw-insight-report-02-journey.svg" type="image/svg+xml" width="100%"></object>
 
 ### 1.2 能力边界清晰定义
 

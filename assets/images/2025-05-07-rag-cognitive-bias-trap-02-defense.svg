@@ -1,99 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 320" role="img">
-  <title>RAG偏见防御策略</title>
-  <desc>对抗RAG确认偏误的五大防御策略</desc>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
   <defs>
     <style>
       .bg { fill: #FAF9F5; }
-      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
-      .text-secondary { fill: #87867F; font-family: system-ui, sans-serif; }
-      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; font-weight: 600; }
-      .text-olive { fill: #788C5D; font-family: system-ui, sans-serif; }
-      .border { stroke: #D1CFC5; stroke-width: 1; fill: none; }
-      .card { fill: #E3DACC; }
+      .slate-text { fill: #141413; font-family: monospace; }
+      .clay-fill { fill: #D97757; }
+      .clay-stroke { stroke: #D97757; fill: none; }
+      .slate-fill { fill: #141413; }
+      .g300-fill { fill: #D1CFC5; }
+      .g500-fill { fill: #87867F; }
+      .oat-fill { fill: #E3DACC; }
+      .olive-fill { fill: #788C5D; }
+      .box { stroke: #141413; stroke-width: 1.5; }
+      .arrow { stroke: #87867F; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .darrow { stroke: #D97757; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; marker-end: url(#darrowhead); }
+      .garrow { stroke: #788C5D; stroke-width: 1.5; fill: none; marker-end: url(#garrowhead); }
     </style>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
+    </marker>
+    <marker id="darrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    </marker>
+    <marker id="garrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#788C5D"/>
+    </marker>
   </defs>
-
-  <!-- Background -->
-  <rect width="680" height="320" class="bg"/>
+  <rect width="800" height="440" class="bg"/>
 
   <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" class="text-main" font-size="18" font-weight="600">对抗RAG偏见的五大防御策略</text>
+  <text x="400" y="28" class="slate-text" font-size="15" font-weight="bold" text-anchor="middle" fill="#141413">对抗偏见的 RAG 防御架构</text>
 
-  <!-- Strategy cards -->
-  <!-- Row 1 -->
-  <g transform="translate(0, 55)">
-    <!-- Card 1 -->
-    <g transform="translate(50, 0)">
-      <rect width="130" height="110" rx="8" class="card"/>
-      <rect width="130" height="110" rx="8" class="border"/>
-      <rect width="130" height="28" rx="8" fill="#788C5D" opacity="0.2"/>
-      <rect y="20" width="130" height="8" fill="#E3DACC"/>
-      <text x="65" y="19" text-anchor="middle" class="text-olive" font-size="11" font-weight="600">策略1</text>
-      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">主动寻找</text>
-      <text x="65" y="63" text-anchor="middle" class="text-main" font-size="11" font-weight="500">反对观点</text>
-      <line x1="20" y1="78" x2="110" y2="78" stroke="#D1CFC5" stroke-width="1"/>
-      <text x="65" y="93" text-anchor="middle" class="text-secondary" font-size="9">检索对立查询</text>
-      <text x="65" y="106" text-anchor="middle" class="text-secondary" font-size="9">探索相反视角</text>
-    </g>
+  <!-- === LEFT: Biased RAG Flow === -->
+  <text x="130" y="54" class="slate-text" font-size="12" font-weight="bold" text-anchor="middle" fill="#D97757">传统 RAG (偏见放大)</text>
 
-    <!-- Card 2 -->
-    <g transform="translate(195, 0)">
-      <rect width="130" height="110" rx="8" class="card"/>
-      <rect width="130" height="110" rx="8" class="border"/>
-      <rect width="130" height="28" rx="8" fill="#788C5D" opacity="0.2"/>
-      <rect y="20" width="130" height="8" fill="#E3DACC"/>
-      <text x="65" y="19" text-anchor="middle" class="text-olive" font-size="11" font-weight="600">策略2</text>
-      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">多源</text>
-      <text x="65" y="63" text-anchor="middle" class="text-main" font-size="11" font-weight="500">交叉验证</text>
-      <line x1="20" y1="78" x2="110" y2="78" stroke="#D1CFC5" stroke-width="1"/>
-      <text x="65" y="93" text-anchor="middle" class="text-secondary" font-size="9">多独立来源</text>
-      <text x="65" y="106" text-anchor="middle" class="text-secondary" font-size="9">验证声明一致性</text>
-    </g>
+  <!-- User query -->
+  <rect x="30" y="64" width="200" height="30" rx="4" class="box" fill="#FAF9F5"/>
+  <text x="130" y="84" class="slate-text" font-size="11" text-anchor="middle" fill="#141413">用户: "Python 最好的语言?"</text>
+  <line x1="130" y1="94" x2="130" y2="112" class="arrow"/>
 
-    <!-- Card 3 -->
-    <g transform="translate(340, 0)">
-      <rect width="130" height="110" rx="8" class="card"/>
-      <rect width="130" height="110" rx="8" class="border"/>
-      <rect width="130" height="28" rx="8" fill="#D97757" opacity="0.2"/>
-      <rect y="20" width="130" height="8" fill="#E3DACC"/>
-      <text x="65" y="19" text-anchor="middle" class="text-accent" font-size="11" font-weight="600">策略3</text>
-      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">透明度设计</text>
-      <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
-      <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">公开检索过程</text>
-      <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">展示观点分布</text>
-      <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">标注来源可信度</text>
-    </g>
+  <!-- Biased retrieval -->
+  <rect x="30" y="112" width="200" height="52" rx="4" class="box" fill="#D97757" opacity="0.15" stroke="#D97757"/>
+  <text x="130" y="130" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#D97757">检索 (有偏)</text>
+  <text x="130" y="146" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">→ Python 优势文章 × 5</text>
+  <text x="130" y="159" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">→ 反对观点: 0</text>
 
-    <!-- Card 4 -->
-    <g transform="translate(485, 0)">
-      <rect width="130" height="110" rx="8" class="card"/>
-      <rect width="130" height="110" rx="8" class="border"/>
-      <rect width="130" height="28" rx="8" fill="#D97757" opacity="0.2"/>
-      <rect y="20" width="130" height="8" fill="#E3DACC"/>
-      <text x="65" y="19" text-anchor="middle" class="text-accent" font-size="11" font-weight="600">策略4</text>
-      <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">不确定性表达</text>
-      <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
-      <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">不知道时</text>
-      <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">承认不知道</text>
-      <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">优于自信错误</text>
-    </g>
-  </g>
+  <line x1="130" y1="164" x2="130" y2="182" class="arrow"/>
 
-  <!-- Row 2: Strategy 5 (centered) -->
-  <g transform="translate(275, 175)">
-    <rect width="130" height="110" rx="8" class="card"/>
-    <rect width="130" height="110" rx="8" class="border"/>
-    <rect width="130" height="28" rx="8" fill="#141413" opacity="0.1"/>
-    <rect y="20" width="130" height="8" fill="#E3DACC"/>
-    <text x="65" y="19" text-anchor="middle" class="text-main" font-size="11" font-weight="600">策略5</text>
-    <text x="65" y="48" text-anchor="middle" class="text-main" font-size="11" font-weight="500">人机协作验证</text>
-    <line x1="20" y1="58" x2="110" y2="58" stroke="#D1CFC5" stroke-width="1"/>
-    <text x="65" y="75" text-anchor="middle" class="text-secondary" font-size="9">关键信息</text>
-    <text x="65" y="88" text-anchor="middle" class="text-secondary" font-size="9">人工审核</text>
-    <text x="65" y="101" text-anchor="middle" class="text-secondary" font-size="9">高风险场景必检</text>
-  </g>
+  <!-- Biased generation -->
+  <rect x="30" y="182" width="200" height="38" rx="4" class="box" fill="#D97757" opacity="0.15" stroke="#D97757"/>
+  <text x="130" y="202" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#D97757">生成 (回音壁)</text>
+  <text x="130" y="216" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">"Python 确实最优..."</text>
 
-  <!-- Bottom note -->
-  <text x="340" y="305" text-anchor="middle" class="text-secondary" font-size="10">技术本身是中立的，但技术的设计和使用方式决定了它的影响</text>
+  <!-- Arrow to Result -->
+  <line x1="130" y1="220" x2="130" y2="236" class="arrow"/>
+  <rect x="30" y="236" width="200" height="28" rx="4" class="box" fill="#D97757"/>
+  <text x="130" y="255" class="slate-text" font-size="11" text-anchor="middle" fill="#FAF9F5">用户偏见被强化 ✅</text>
+
+  <!-- === RIGHT: Diverse RAG Flow === -->
+  <text x="670" y="54" class="slate-text" font-size="12" font-weight="bold" text-anchor="middle" fill="#788C5D">防御 RAG (偏见对抗)</text>
+
+  <!-- User query -->
+  <rect x="570" y="64" width="200" height="30" rx="4" class="box" fill="#FAF9F5"/>
+  <text x="670" y="84" class="slate-text" font-size="11" text-anchor="middle" fill="#141413">用户: "Python 最好的语言?"</text>
+  <line x1="670" y1="94" x2="670" y2="112" class="arrow"/>
+
+  <!-- Dual retrieval -->
+  <rect x="490" y="112" width="360" height="60" rx="6" class="box" fill="#788C5D" opacity="0.1" stroke="#788C5D"/>
+  <text x="670" y="128" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#788C5D">双重检索 ( DiverseRetrieval )</text>
+  <rect x="502" y="136" width="160" height="28" rx="3" fill="#788C5D" opacity="0.3"/>
+  <text x="582" y="154" class="slate-text" font-size="10" text-anchor="middle" fill="#141413">支持 Python × 3</text>
+  <rect x="678" y="136" width="160" height="28" rx="3" fill="#D97757" opacity="0.25" stroke="#D97757"/>
+  <text x="758" y="154" class="slate-text" font-size="10" text-anchor="middle" fill="#D97757">反对观点 × 2</text>
+
+  <line x1="670" y1="172" x2="670" y2="190" class="garrow"/>
+
+  <!-- Cross validation -->
+  <rect x="490" y="190" width="360" height="54" rx="6" class="box" fill="#E3DACC" stroke="#D1CFC5"/>
+  <text x="670" y="208" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#141413">交叉验证 ( CrossValidation )</text>
+  <text x="670" y="226" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">共识度: 60% | 争议标记: ⚠️ | 反对来源已记录</text>
+  <text x="670" y="240" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">置信度: 中等 (存在争议，建议用户自行判断)</text>
+
+  <line x1="670" y1="244" x2="670" y2="262" class="garrow"/>
+
+  <!-- Balanced generation -->
+  <rect x="490" y="262" width="360" height="54" rx="6" class="box" fill="#FAF9F5" stroke="#788C5D"/>
+  <text x="670" y="280" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#788C5D">透明生成 ( UncertaintyExpression )</text>
+  <text x="670" y="296" class="slate-text" font-size="10" text-anchor="middle" fill="#141413">"Python 在数据科学领域有优势，但存在争议，</text>
+  <text x="670" y="311" class="slate-text" font-size="10" text-anchor="middle" fill="#141413">反对观点认为... 请结合场景判断"</text>
+
+  <line x1="670" y1="316" x2="670" y2="332" class="garrow"/>
+
+  <!-- Transparency report -->
+  <rect x="490" y="332" width="360" height="80" rx="6" class="box" fill="#FAF9F5" stroke="#D1CFC5"/>
+  <text x="670" y="350" class="slate-text" font-size="11" font-weight="bold" text-anchor="middle" fill="#141413">📋 检索透明度报告</text>
+  <rect x="502" y="358" width="336" height="16" rx="2" fill="#788C5D" opacity="0.2"/>
+  <text x="520" y="370" class="slate-text" font-size="10" fill="#141413">✅ 5 个来源 | ⚠️ 2 个有商业利益相关 | 观点分布: 支持 60% | 反对 40%</text>
+  <rect x="502" y="380" width="336" height="16" rx="2" fill="#D97757" opacity="0.15"/>
+  <text x="520" y="392" class="slate-text" font-size="10" fill="#87867F">反对观点: "Python 局限性" "Java 企业优势" "TIOBE vs GitHub 差异"</text>
+
+  <!-- === CENTER: Strategy labels === -->
+  <text x="400" y="76" class="slate-text" font-size="10" text-anchor="middle" fill="#D97757" font-weight="bold">❌</text>
+
+  <!-- VS divider -->
+  <line x1="400" y1="100" x2="400" y2="380" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="6 4"/>
+  <rect x="376" y="230" width="48" height="24" rx="12" fill="#141413"/>
+  <text x="400" y="246" class="slate-text" font-size="11" text-anchor="middle" fill="#FAF9F5">VS</text>
+
+  <!-- Labels above divider -->
+  <text x="400" y="108" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">信息茧房</text>
+  <text x="400" y="378" class="slate-text" font-size="10" text-anchor="middle" fill="#87867F">主动多样化</text>
+
+  <!-- Opposing query generation bubble (below) -->
+  <rect x="490" y="420" width="360" height="16" rx="3" fill="#E3DACC"/>
+  <text x="514" y="432" class="slate-text" font-size="9" fill="#87867F">对立查询生成: "Python局限性" "Java优势" "编程语言选择不应只看popularity"</text>
+
+  <!-- Legend -->
+  <rect x="30" y="420" width="10" height="10" fill="#D97757" rx="2"/>
+  <text x="44" y="429" class="slate-text" font-size="9" fill="#87867F">有偏检索</text>
+  <rect x="108" y="420" width="10" height="10" fill="#788C5D" rx="2"/>
+  <text x="122" y="429" class="slate-text" font-size="9" fill="#87867F">多样化检索</text>
+  <rect x="200" y="420" width="10" height="10" fill="#E3DACC" rx="2"/>
+  <text x="214" y="429" class="slate-text" font-size="9" fill="#87867F">交叉验证</text>
+
 </svg>

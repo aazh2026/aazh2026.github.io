@@ -402,6 +402,11 @@ constraints:
 *图 1：Executable PRD 编译流程——一份 YAML 规格说明通过 Spec Compiler 生成数据库 Schema、API 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源到多份工件的高效转化。*
 {% endfigure %}
 
+{% figure center %}
+<object data="/assets/images/2025-04-14-executable-prd-02-workflow.png" type="image/svg+xml" width="100%"></object>
+*图 2：Executable PRD 工作流——结构化规格说明（YAML）通过 Spec Compiler 编译为 SQL Schema、OpenAPI 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源。*
+{% endfigure %}
+
 ```
 order_feature.spec
     ↓

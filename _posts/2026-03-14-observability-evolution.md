@@ -515,6 +515,9 @@ class RecommendationService {
 ### 架构建议
 
 <object data="/assets/images/2026-03-14-observability-evolution-01-arch.svg" type="image/svg+xml" width="100%"></object>
+
+### 三层可观测性模型
+
 <object data="/assets/images/2026-03-14-observability-evolution-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
 
 ---

@@ -173,7 +173,6 @@ AI 生成代码的特点：
 ## 三、四层契约体系
 
 <object data="/assets/images/2025-04-23-quality-contract-01-stack.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2025-04-23-quality-contract-02-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ### 体系概览
 
@@ -432,18 +431,8 @@ compliance_contract:
 Quality Contract 的核心价值：**契约可以直接转化为自动化测试**。
 
 **转换流程**：
-```
-Quality Contract (YAML)
-    ↓
-Contract Compiler
-    ↓
-├─ Unit Tests
-├─ Integration Tests
-├─ E2E Tests
-├─ Performance Tests
-├─ Security Tests
-└─ Compliance Reports
-```
+
+<object data="/assets/images/2025-04-23-quality-contract-02-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ### 功能契约生成测试
 

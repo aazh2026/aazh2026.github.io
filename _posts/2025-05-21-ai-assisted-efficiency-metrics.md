@@ -82,6 +82,8 @@ AI时代：
 
 ## 新效能度量体系
 
+<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ### 核心指标：意图修改率（Intent Modification Rate）
 
 **定义**：当需求（意图）发生变更时，需要修改的代码比例。
@@ -503,8 +505,6 @@ ROI：65倍
 - **自定义AI模型**：基于团队历史数据训练
 
 ### 度量仪表盘
-
-<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 

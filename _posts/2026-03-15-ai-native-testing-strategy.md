@@ -145,7 +145,6 @@ def test_checkout_flow(driver):
 ## AI-Native 测试三层模型
 
 <object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 新模型的核心转变
 
@@ -422,6 +421,8 @@ export const integrationTest = {
 1. **契约验证 Agent**：确保每个服务遵守约定的接口
 2. **场景编排 Agent**：按照业务流程编排多个 Agent 的交互
 3. **断言验证 Agent**：验证整个流程的业务结果
+
+<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ### 实战案例：电商订单流程
 

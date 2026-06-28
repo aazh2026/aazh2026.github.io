@@ -216,6 +216,11 @@ PR 提交
 *图 1：Agent 陪审团模型——5 个专业 Agent 并行审查 PR，最终汇总为 Review Report，由人类审查者做最终设计判断。Agent 处理 80% 标准化检查，人类专注 20% 架构与设计决策。*
 {% endfigure %}
 
+{% figure center %}
+<object data="/assets/images/2026-03-13-ai-native-code-review-02-agent-jury-flow.png" type="image/svg+xml" width="100%"></object>
+*图 2：Agent 陪审团审查流程——5 个专业 Agent 并行处理 80% 标准化检查，Review Report 汇总后由人类审查者专注 20% 架构设计判断和知识传播。*
+{% endfigure %}
+
 ---
 
 ## 实战：设计你的 Agent 陪审团
