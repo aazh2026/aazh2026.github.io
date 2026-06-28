@@ -139,6 +139,8 @@ series: AI-Native Engineering
 
 ### 优化矩阵
 
+<object data="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" type="image/svg+xml" width="100%"></object>
+
 ```
                     高频
                       ↑

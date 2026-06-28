@@ -224,7 +224,7 @@ docs/runbooks/
 被取代（Superseded by ADR XXXX）
 ```
 
----
+<object data="/assets/images/2025-03-03-knowledge-base-as-code-02-kbac-pillars.svg" type="image/svg+xml" width="100%"></object>
 
 ## 四、实施KBaaC：从0到1的路线图
 

@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 22px; font-weight: 800; fill: #141413; }
+      .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #87867F; }
+      .lvl-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 700; }
+      .lvl-desc { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; }
+      .cell-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #141413; font-weight: 600; }
+      .cell-val { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; fill: #141413; font-weight: 700; }
+      .cell-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; fill: #87867F; }
+      .divider { stroke: #D1CFC5; stroke-width: 1; }
+      .tag { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; fill: #87867F; }
+    </style>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <rect class="bg" width="900" height="540"/>
+
+  <!-- Header -->
+  <text x="30" y="34" class="title">AI时代 DORA 四项新指标与基准线</text>
+  <text x="30" y="54" class="subtitle">意图交付频率 · 意图交付周期 · 意图恢复时间 · 意图偏离率 — 度量"意图流动"而非"代码流动"</text>
+  <line x1="30" y1="64" x2="870" y2="64" class="divider"/>
+
+  <!-- Table Header Row -->
+  <g transform="translate(30, 80)">
+    <!-- Metric name column -->
+    <rect width="220" height="44" rx="0" fill="#141413"/>
+    <text x="110" y="28" text-anchor="middle" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#FAF9F5">指标定义</text>
+
+    <!-- Elite -->
+    <rect x="220" width="162" height="44" rx="0" fill="#788C5D"/>
+    <text x="301" y="16" text-anchor="middle" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#FAF9F5">精英 Elite</text>
+    <text x="301" y="32" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="rgba(250,249,245,0.7)">高绩效</text>
+
+    <!-- High -->
+    <rect x="382" width="162" height="44" rx="0" fill="#D1CFC5"/>
+    <text x="463" y="16" text-anchor="middle" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">高绩效 High</text>
+    <text x="463" y="32" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="#87867F">良好</text>
+
+    <!-- Medium -->
+    <rect x="544" width="162" height="44" rx="0" fill="#E3DACC"/>
+    <text x="625" y="16" text-anchor="middle" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">中等 Medium</text>
+    <text x="625" y="32" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="#87867F">需改进</text>
+
+    <!-- Low -->
+    <rect x="706" width="162" height="44" rx="0" fill="#D97757"/>
+    <rect x="706" y="22" width="162" height="22" rx="0" fill="#D97757"/>
+    <text x="787" y="16" text-anchor="middle" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#FAF9F5">低绩效 Low</text>
+    <text x="787" y="32" text-anchor="middle" font-family="Helvetica Neue" font-size="10" fill="rgba(250,249,245,0.7)">风险</text>
+  </g>
+
+  <!-- ============ ROW 1: Intent Delivery Frequency ============ -->
+  <g transform="translate(30, 124)">
+    <!-- Row background -->
+    <rect width="838" height="90" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="0.5"/>
+
+    <!-- Label column -->
+    <rect width="220" height="90" fill="#141413" opacity="0.04"/>
+    <text x="14" y="28" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">📦 意图交付频率</text>
+    <text x="14" y="44" font-family="Helvetica Neue" font-size="10" fill="#87867F">Intent Delivery</text>
+    <text x="14" y="56" font-family="Helvetica Neue" font-size="10" fill="#87867F">Frequency</text>
+    <text x="14" y="76" font-family="Helvetica Neue" font-size="9" fill="#87867F">单位时间成功交付的</text>
+    <text x="14" y="88" font-family="Helvetica Neue" font-size="9" fill="#87867F">意图变更数量</text>
+
+    <!-- Elite: 按需（每天多次） -->
+    <g transform="translate(220, 0)">
+      <rect width="162" height="90" fill="#788C5D" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#788C5D">按需</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">每天多次部署</text>
+      <text x="81" y="68" text-anchor="middle" font-family="Courier New" font-size="10" fill="#788C5D" font-weight="700">≥1次/天</text>
+    </g>
+
+    <!-- High: 每天1次-每周1次 -->
+    <g transform="translate(382, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.5"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">每天 ~ 每周</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">每日部署 1 次</text>
+      <text x="81" y="68" text-anchor="middle" font-family="Courier New" font-size="10" fill="#141413" font-weight="700">1-7次/周</text>
+    </g>
+
+    <!-- Medium: 每周1次-每月1次 -->
+    <g transform="translate(544, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.3"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">每周 ~ 每月</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">周级迭代</text>
+      <text x="81" y="68" text-anchor="middle" font-family="Courier New" font-size="10" fill="#141413" font-weight="700">0.2-1次/周</text>
+    </g>
+
+    <!-- Low: &lt;每月1次 -->
+    <g transform="translate(706, 0)">
+      <rect width="162" height="90" fill="#D97757" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#D97757">&lt; 每月1次</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">月级部署</text>
+      <text x="81" y="68" text-anchor="middle" font-family="Courier New" font-size="10" fill="#D97757" font-weight="700">&lt;0.2次/周</text>
+    </g>
+  </g>
+
+  <!-- ============ ROW 2: Intent Lead Time ============ -->
+  <g transform="translate(30, 214)">
+    <rect width="838" height="90" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="0.5"/>
+
+    <rect width="220" height="90" fill="#141413" opacity="0.04"/>
+    <text x="14" y="28" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">⏱ 意图交付周期</text>
+    <text x="14" y="44" font-family="Helvetica Neue" font-size="10" fill="#87867F">Intent Lead Time</text>
+    <text x="14" y="76" font-family="Helvetica Neue" font-size="9" fill="#87867F">意图定义 → 成功</text>
+    <text x="14" y="88" font-family="Helvetica Neue" font-size="9" fill="#87867F">交付的时间</text>
+
+    <g transform="translate(220, 0)">
+      <rect width="162" height="90" fill="#788C5D" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#788C5D">&lt; 1 天</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">当天完成</text>
+    </g>
+
+    <g transform="translate(382, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.5"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">1天 ~ 1周</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">周内交付</text>
+    </g>
+
+    <g transform="translate(544, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.3"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">1周 ~ 1月</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">月级迭代</text>
+    </g>
+
+    <g transform="translate(706, 0)">
+      <rect width="162" height="90" fill="#D97757" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#D97757">&gt; 1 月</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">超长周期</text>
+    </g>
+  </g>
+
+  <!-- ============ ROW 3: Intent Recovery Time ============ -->
+  <g transform="translate(30, 304)">
+    <rect width="838" height="90" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="0.5"/>
+
+    <rect width="220" height="90" fill="#141413" opacity="0.04"/>
+    <text x="14" y="28" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">🔧 意图恢复时间</text>
+    <text x="14" y="44" font-family="Helvetica Neue" font-size="10" fill="#87867F">Intent Recovery Time</text>
+    <text x="14" y="76" font-family="Helvetica Neue" font-size="9" fill="#87867F">意图偏离被发现到</text>
+    <text x="14" y="88" font-family="Helvetica Neue" font-size="9" fill="#87867F">恢复正常的时间</text>
+
+    <g transform="translate(220, 0)">
+      <rect width="162" height="90" fill="#788C5D" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#788C5D">&lt; 1 小时</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">快速纠错</text>
+    </g>
+
+    <g transform="translate(382, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.5"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">1小时 ~ 1天</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">日内恢复</text>
+    </g>
+
+    <g transform="translate(544, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.3"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val">1天 ~ 1周</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">周内修复</text>
+    </g>
+
+    <g transform="translate(706, 0)">
+      <rect width="162" height="90" fill="#D97757" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#D97757">&gt; 1 周</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">长期故障</text>
+    </g>
+  </g>
+
+  <!-- ============ ROW 4: Intent Deviation Rate ============ -->
+  <g transform="translate(30, 394)">
+    <rect width="838" height="90" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="0.5"/>
+
+    <rect width="220" height="90" fill="#141413" opacity="0.04"/>
+    <text x="14" y="28" font-family="Helvetica Neue" font-size="11" font-weight="700" fill="#141413">📉 意图偏离率</text>
+    <text x="14" y="44" font-family="Helvetica Neue" font-size="10" fill="#87867F">Intent Deviation Rate</text>
+    <text x="14" y="76" font-family="Helvetica Neue" font-size="9" fill="#87867F">导致返工或修正的</text>
+    <text x="14" y="88" font-family="Helvetica Neue" font-size="9" fill="#87867F">意图变更占比</text>
+
+    <g transform="translate(220, 0)">
+      <rect width="162" height="90" fill="#788C5D" opacity="0.1"/>
+      <text x="81" y="32" text-anchor="middle" class="cell-val" fill="#788C5D">0 - 10%</text>
+      <text x="81" y="48" text-anchor="middle" class="cell-sub">几乎无偏离</text>
+    </g>
+
+    <g transform="translate(382, 0)">
+      <rect width="162" height="90" fill="#E3DACC" opacity="0.5"/>
+      <text x="81" y="32" text-anchor

@@ -234,6 +234,8 @@ async function getRecentOrders(userId) {
 
 ### 编程的三个层次
 
+<object data="/assets/images/2026-03-14-post-code-era-02-three-levels.svg" type="image/svg+xml" width="100%"></object>
+
 ```
 Level 1: 语法 (Syntax)
 - 正确的括号匹配

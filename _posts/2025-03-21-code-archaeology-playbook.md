@@ -47,6 +47,8 @@ redirect_from:
 
 <object data="/assets/images/2025-03-21-cap-01-six-steps.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2025-03-21-code-archaeology-playbook-02-mental-model.svg" type="image/svg+xml" width="100%"></object>
+
 ### Step 1: 遗址勘探 (Site Survey) —— 建立系统整体认知
 
 **目标**：在不深入代码细节的情况下，建立系统的宏观认知。

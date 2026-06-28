@@ -82,6 +82,8 @@ skill-name/
 
 **一个关键例子：** Perplexity 团队在美国个人所得税能力的 Skills 里用了三层 topical nesting。1,945 个 IRS 代码章节全部放在一个文件夹里，结果性能比不加载 Skill 还差。**组织成逻辑细分是确保高精度读取操作不可或缺的条件。**
 
+<object data="/assets/images/2026-05-13-perplexity-agent-skills-guide-02-skill-folder.svg" type="image/svg+xml" width="100%"></object>
+
 ### 2. Skill 是一个格式
 
 核心 root `SKILL.md` 文件必须有 name 和 description。而且 Skill 必须精确映射到 Skill 所在目录的名称。名称全小写、无空格、可用连字符。

@@ -27,7 +27,7 @@ redirect_from:
 5. [评审流程重构](#评审流程重构)
 6. [架构师角色进化](#架构师角色进化)
 
----
+<object data="/assets/images/2025-05-11-ai-architecture-review-02-review-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
 ## 传统架构评审的局限性
 

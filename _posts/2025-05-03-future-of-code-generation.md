@@ -23,6 +23,8 @@ redirect_from:
 
 ---
 
+<object data="/assets/images/2025-05-03-future-of-code-generation-02-engineer-evolution.svg" type="image/svg+xml" width="100%"></object>
+
 ## 📋 本文结构
 
 1. [2026年的今天：我们身在何处](#2026年的今天我们身在何处)

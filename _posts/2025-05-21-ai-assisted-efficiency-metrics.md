@@ -506,6 +506,8 @@ ROI：65倍
 
 ### 度量仪表盘
 
+<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 结论

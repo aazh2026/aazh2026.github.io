@@ -237,6 +237,8 @@ class ConflictPredictor:
         return None
 ```
 
+<object data="/assets/images/2026-03-20-distributed-code-review-ai-02-conflict-detection.svg" type="image/svg+xml" width="100%"></object>
+
 ### 冲突预警示例
 
 ```yaml

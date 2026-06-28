@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-label="工程师角色演进">
+  <title>工程师角色演进：从编码者到治理者</title>
+  <desc>代码生成三个阶段中工程师角色的转变，从Phase 1的编码者到Phase 3的意图架构师和AI治理师</desc>
+
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <marker id="arrowRight" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="460" fill="url(#bg3)"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">工程师角色演进</text>
+  <text x="400" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">从"写代码"到"描述意图"到"治理AI系统"</text>
+
+  <!-- Timeline arrow -->
+  <line x1="60" y1="95" x2="740" y2="95" stroke="#D1CFC5" stroke-width="3" marker-end="url(#arrowRight)"/>
+  <text x="400" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">时间演进 →</text>
+
+  <!-- Phase labels on timeline -->
+  <g font-family="system-ui, sans-serif">
+    <circle cx="120" cy="95" r="6" fill="#788C5D"/>
+    <text x="120" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Phase 1</text>
+    <text x="120" y="132" text-anchor="middle" font-size="10" fill="#87867F">AI辅助时代</text>
+    <text x="120" y="146" text-anchor="middle" font-size="9" fill="#87867F">（现在）</text>
+
+    <circle cx="400" cy="95" r="6" fill="#D97757"/>
+    <text x="400" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Phase 2</text>
+    <text x="400" y="132" text-anchor="middle" font-size="10" fill="#87867F">AI协作时代</text>
+    <text x="400" y="146" text-anchor="middle" font-size="9" fill="#87867F">（1-2年）</text>
+
+    <circle cx="680" cy="95" r="6" fill="#141413"/>
+    <text x="680" y="118" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Phase 3</text>
+    <text x="680" y="132" text-anchor="middle" font-size="10" fill="#87867F">AI主导时代</text>
+    <text x="680" y="146" text-anchor="middle" font-size="9" fill="#87867F">（3-5年）</text>
+  </g>
+
+  <!-- Phase 1 Role Card -->
+  <g transform="translate(30, 170)">
+    <rect width="220" height="260" rx="10" fill="#788C5D" opacity="0.12" stroke="#788C5D" stroke-width="1.5"/>
+    <text x="110" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">🔨 编码者 (Coder)</text>
+    <text x="110" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Phase 1 核心角色</text>
+
+    <line x1="15" y1="60" x2="205" y2="60" stroke="#788C5D" stroke-width="1" opacity="0.4"/>
+
+    <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+      <text x="15" y="82" font-weight="600">核心活动：</text>
+      <text x="15" y="100">• 编写业务代码</text>
+      <text x="15" y="118">• 调试与修复 Bug</text>
+      <text x="15" y="136">• 简单架构实现</text>
+      <text x="15" y="154">• Code Review</text>
+
+      <text x="15" y="182" font-weight="600">使用工具：</text>
+      <text x="15" y="200">• GitHub Copilot</text>
+      <text x="15" y="218">• Cursor / Claude Code</text>
+      <text x="15" y="236">• 传统 IDE</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <text x="265" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#D97757">→</text>
+
+  <!-- Phase 2 Role Card -->
+  <g transform="translate(290, 170)">
+    <rect width="220" height="260" rx="10" fill="#D97757" opacity="0.12" stroke="#D97757" stroke-width="1.5"/>
+    <text x="110" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">🎯 任务分配者 (Orchestrator)</text>
+    <text x="110" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Phase 2 核心角色</text>
+
+    <line x1="15" y1="60" x2="205" y2="60" stroke="#D97757" stroke-width="1" opacity="0.4"/>
+
+    <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+      <text x="15" y="82" font-weight="600">核心活动：</text>
+      <text x="15" y="100">• 分解复杂任务</text>
+      <text x="15" y="118">• 分配给多个 AI Agent</text>
+      <text x="15" y="136">• 审核 AI 生成结果</text>
+      <text x="15" y="154">• 处理异常情况</text>
+
+      <text x="15" y="182" font-weight="600">使用工具：</text>
+      <text x="15" y="200">• AI Agent 平台</text>
+      <text x="15" y="218">• 任务管理系统</text>
+      <text x="15" y="236">• 自动化 CI/CD</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <text x="525" y="300" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#141413">→</text>
+
+  <!-- Phase 3 Role Cards (two roles) -->
+  <!-- Intent Architect -->
+  <g transform="translate(565, 170)">
+    <rect width="205" height="120" rx="10" fill="#141413" opacity="0.1" stroke="#141413" stroke-width="1.5"/>
+    <text x="102" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#141413">🏗️ 意图架构师</text>
+    <text x="102" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Intent Architect</text>
+    <line x1="15" y1="56" x2="190" y2="56" stroke="#141413" stroke-width="1" opacity="0.3"/>
+    <g font-family="system-ui, sans-serif" font-size="10" fill="#141413">
+      <text x="15" y="74">• 将业务需求转化为</text>
+      <text x="15" y="90">  AI 可理解的意图规格</text>
+      <text x="15" y="108">• 设计意图表达语言</text>
+    </g>
+  </g>
+
+  <!-- AI Governance Engineer -->
+  <g transform="translate(565, 300)">
+    <rect width="205" height="130" rx="10" fill="#141413" opacity="0.1" stroke="#141413" stroke-width="1.5"/>
+    <text x="102" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#141413">🛡️ AI治理工程师</text>
+    <text x="102" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AI Governance Engineer</text>
+    <line x1="15" y1="56" x2="190" y2="56" stroke="#141413" stroke-width="1" opacity="0.3"/>
+    <g font-family="system-ui, sans-serif" font-size="10" fill="#141413">
+      <text x="15" y="74">• 监控 AI 行为，防止失控</text>
+      <text x="15" y="90">• 处理 AI 无法处理的</text>
+      <text x="15" y="106">  异常情况</text>
+      <text x="15" y="122">• 安全、合规、伦理治理</text>
+    </g>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="435" width="740" height="22" rx="4" fill="#141413" opacity="0.08"/>
+  <text x="400" y="450" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">💡 核心转变：从 <tspan font-weight="600">"写代码"</tspan> → <tspan font-weight="600">"描述意图"</tspan> → <tspan font-weight="600">"治理AI"</tspan></text>
+</svg>

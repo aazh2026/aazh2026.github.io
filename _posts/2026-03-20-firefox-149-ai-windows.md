@@ -127,6 +127,8 @@ Firefox Core（无 AI）
 - 功能可能不如深度集成丰富
 - 需要用户有技术认知
 
+<object data="/assets/images/2026-03-20-firefox-149-ai-windows-02-three-paths.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## Firefox 的差异化策略

@@ -355,6 +355,10 @@ class LocalGeneration:
 
 <object data="/assets/images/2025-05-16-hybrid-cloud-01-router.svg" type="image/svg+xml" width="100%"></object>
 
+### 代码敏感度分级金字塔
+
+<object data="/assets/images/2025-05-16-hybrid-cloud-ai-programming-02-sensitivity-levels.svg" type="image/svg+xml" width="100%"></object>
+
 ### 部署架构
 
 **本地组件**：

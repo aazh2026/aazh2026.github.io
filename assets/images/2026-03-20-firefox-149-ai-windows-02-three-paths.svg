@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <rect width="900" height="560" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">浏览器 AI 化的三条路径</text>
+
+  <!-- Path 1: Chrome/Edge - Deep Integration (top) -->
+  <rect x="50" y="75" width="250" height="180" rx="12" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2"/>
+  <text x="175" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#D97757">Chrome / Edge</text>
+  <text x="175" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">深度集成策略</text>
+
+  <rect x="65" y="135" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="175" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">地址栏 → AI 搜索建议</text>
+
+  <rect x="65" y="168" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="175" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">右键菜单 → AI 总结/翻译</text>
+
+  <rect x="65" y="201" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="175" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">侧边栏 → AI 助手常驻</text>
+
+  <rect x="65" y="234" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="175" y="253" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">DevTools → AI 代码建议</text>
+
+  <!-- Path 2: Safari - System-level (middle-left) -->
+  <rect x="325" y="75" width="250" height="180" rx="12" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2"/>
+  <text x="450" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#788C5D">Safari</text>
+  <text x="450" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">系统级集成策略</text>
+
+  <rect x="340" y="135" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="450" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">macOS Apple Intelligence</text>
+
+  <rect x="340" y="168" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="450" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">Safari 调用系统 AI API</text>
+
+  <rect x="340" y="201" width="220" height="28" rx="4" fill="#141413"/>
+  <text x="450" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#FAF9F5">跨应用 AI 上下文共享</text>
+
+  <!-- Path 3: Firefox - Modular (right) -->
+  <rect x="600" y="75" width="250" height="180" rx="12" fill="#D1CFC5" stroke="#87867F" stroke-width="2"/>
+  <text x="725" y="102" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#141413">Firefox</text>
+  <text x="725" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">模块化集成策略</text>
+
+  <rect x="615" y="135" width="220" height="28" rx="4" fill="#D1CFC5" stroke="#87867F"/>
+  <text x="725" y="154" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">Firefox Core（无 AI）</text>
+
+  <rect x="615" y="168" width="220" height="28" rx="4" fill="#E3DACC" stroke="#D97757" stroke-dasharray="4,2"/>
+  <text x="725" y="187" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">可选 AI 模块</text>
+
+  <rect x="615" y="201" width="220" height="28" rx="4" fill="#E3DACC" stroke="#D97757" stroke-dasharray="4,2"/>
+  <text x="725" y="220" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">本地 / Mozilla / 第三方</text>
+
+  <!-- Arrows pointing down -->
+  <path d="M175 260 L175 290 M165 280 L175 290 L185 280" stroke="#D97757" stroke-width="2" fill="none"/>
+  <path d="M450 260 L450 290 M440 280 L450 290 L460 280" stroke="#788C5D" stroke-width="2" fill="none"/>
+  <path d="M725 260 L725 290 M715 280 L725 290 L735 280" stroke="#87867F" stroke-width="2" fill="none"/>
+
+  <!-- Comparison metrics row -->
+  <rect x="50" y="295" width="800" height="250" rx="12" fill="#E3DACC" fill-opacity="0.3"/>
+
+  <!-- Metrics table header -->
+  <rect x="50" y="295" width="800" height="35" rx="12" fill="#141413"/>
+  <text x="120" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FAF9F5">维度</text>
+  <text x="280" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FAF9F5">Chrome/Edge</text>
+  <text x="450" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FAF9F5">Safari</text>
+  <text x="620" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FAF9F5">Firefox</text>
+  <text x="770" y="318" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FAF9F5">隐私</text>
+
+  <!-- Row 1 -->
+  <rect x="50" y="330" width="800" height="38" fill="#FAF9F5"/>
+  <text x="120" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">用户选择权</text>
+  <text x="280" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">⚠️</text>
+  <text x="450" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">⚠️</text>
+  <text x="620" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#788C5D">✅</text>
+  <text x="770" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#788C5D">最强</text>
+
+  <!-- Row 2 -->
+  <rect x="50" y="368" width="800" height="38" fill="#E3DACC" fill-opacity="0.5"/>
+  <text x="120" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">本地 AI</text>
+  <text x="280" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">❌</text>
+  <text x="450" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#788C5D">✅</text>
+  <text x="620" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#788C5D">✅</text>
+  <text x="770" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#788C5D">支持</text>
+
+  <!-- Row 3 -->
+  <rect x="50" y="406" width="800" height="38" fill="#FAF9F5"/>
+  <text x="120" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">第三方 AI</text>
+  <text x="280" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">❌</text>
+  <text x="450" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">❌</text>
+  <text x="620" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#788C5D">✅</text>
+  <text x="770" y="431" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#D97757">按需</text>
+
+  <!-- Row 4 -->
+  <rect x="50" y="444" width="800" height="38" fill="#E3DACC" fill-opacity="0.5"/>
+  <text x="120" y="469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">数据控制</text>
+  <text x="280" y="469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">⚠️</text>
+  <text x="450" y="469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">⚠️</text>
+  <text x="620" y="469" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#788C5D">✅</text>
+  <text x="770" y="469" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#788C5D">用户</text>
+
+  <!-- Row 5 -->
+  <rect x="50" y="482" width="800" height="38" fill="#FAF9F5"/>
+  <text x="120" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">生态开放性</text>
+  <text x="280" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">🔒</text>
+  <text x="450" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">🔒</text>
+  <text x="620" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">🔓</text>
+  <text x="770" y="507" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#788C5D">开放</text>
+
+  <!-- Key insight box -->
+  <rect x="50" y="525" width="800" height="28" rx="4" fill="#D97757" fill-opacity="0.2" stroke="#D97757"/>
+  <text x="450" y="543" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#141413">关键洞察：Firefox 的模块化策略以用户选择自由换取功能丰富度</text>
+</svg>

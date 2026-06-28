@@ -60,6 +60,8 @@ class TechnicalDebt:
         self.impact_scope = self.calculate_impact()     # 影响范围
 ```
 
+<object data="/assets/images/2025-06-04-ai-technical-debt-02-priority-matrix.svg" type="image/svg+xml" width="100%"></object>
+
 **债务成本计算**：
 
 ```

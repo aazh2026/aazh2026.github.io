@@ -309,6 +309,8 @@ Strategy Parser 生成买入信号
 亏损
 ```
 
+<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" type="image/svg+xml" width="100%"></object>
+
 ### 历史教训
 
 **Knight Capital (2012)**：

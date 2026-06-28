@@ -206,6 +206,8 @@ AI 测试生成:
 测试运行 + 代码生成
 ```
 
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 实战：从红绿重构到意图验证

@@ -152,6 +152,8 @@ if order.priority == 1:
 
 ### 契约漂移的影响
 
+<object data="/assets/images/2025-06-03-service-contract-semantic-consistency-02-drift-cascade.svg" type="image/svg+xml" width="100%"></object>
+
 **影响范围分析**：
 
 ```

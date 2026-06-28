@@ -76,6 +76,8 @@ series: AI-Native软件工程系列 #2
 
 ### 结构对比
 
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" type="image/svg+xml" width="100%"></object>
+
 **传统用户故事**：
 ```
 作为顾客，

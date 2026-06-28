@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="SDD 2.0 三元组结构">
+  <title>SDD 2.0 三元组：上下文-约束-验收标准</title>
+  <desc>AI-Native需求工程的最小完备信息单元结构图</desc>
+
+  <defs>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#F0EFE9"/>
+    </linearGradient>
+    <marker id="tripleArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgGrad4)"/>
+
+  <text x="400" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">SDD 2.0 三元组结构</text>
+  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F">Context + Constraints + Acceptance Criteria</text>
+
+  <!-- Center: The Triplet -->
+  <circle cx="400" cy="170" r="52" fill="#141413"/>
+  <text x="400" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">最小完备</text>
+  <text x="400" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">信息单元</text>
+
+  <!-- Context node -->
+  <g filter="url(#shadow4)">
+    <rect x="60" y="240" width="220" height="130" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  </g>
+  <rect x="60" y="240" width="220" height="36" rx="10" fill="#D97757"/>
+  <rect x="60" y="262" width="220" height="14" fill="#D97757"/>
+  <text x="170" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">Context 上下文</text>
+  <text x="170" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">actor: 参与者</text>
+  <text x="170" y="313" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">state: 当前状态</text>
+  <text x="170" y="331" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">goal: 目标意图</text>
+  <text x="170" y="352" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">谁？在哪？想要什么？</text>
+
+  <!-- Arrow: Triplet -> Context -->
+  <line x1="360" y1="210" x2="270" y2="240" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#tripleArrow)"/>
+
+  <!-- Constraints node -->
+  <g filter="url(#shadow4)">
+    <rect x="290" y="240" width="220" height="130" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  </g>
+  <rect x="290" y="240" width="220" height="36" rx="10" fill="#788C5D"/>
+  <rect x="290" y="262" width="220" height="14" fill="#788C5D"/>
+  <text x="400" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">Constraints 约束</text>
+  <text x="400" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">功能: 必须支持/限制</text>
+  <text x="400" y="313" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">性能: P95 &lt; 3s</text>
+  <text x="400" y="331" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">合规: GDPR / PCI-DSS</text>
+  <text x="400" y="352" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">怎么做？做到什么程度？</text>
+
+  <!-- Arrow: Triplet -> Constraints -->
+  <line x1="400" y1="222" x2="400" y2="240" stroke="#D1CFC5" stroke-width="2" marker-end="url(#tripleArrow)"/>
+
+  <!-- Acceptance Criteria node -->
+  <g filter="url(#shadow4)">
+    <rect x="520" y="240" width="220" height="130" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2"/>
+  </g>
+  <rect x="520" y="240" width="220" height="36" rx="10" fill="#141413"/>
+  <rect x="520" y="262" width="220" height="14" fill="#141413"/>
+  <text x="630" y="264" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">Acceptance Criteria</text>
+  <text x="630" y="295" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">Given / When / Then</text>
+  <text x="630" y="313" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">正常路径 + 异常路径</text>
+  <text x="630" y="331" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#141413">边界条件测试</text>
+  <text x="630" y="352" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">如何验证成功？</text>
+
+  <!-- Arrow: Triplet -> AC -->
+  <line x1="440" y1="210" x2="530" y2="240" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#tripleArrow)"/>
+
+  <!-- Comparison table -->
+  <line x1="60" y1="395" x2="740" y2="395" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="400" y="420" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#141413">传统用户故事 vs SDD 2.0 三元组</text>
+
+  <g filter="url(#shadow4)">
+    <rect x="80" y="435" width="310" height="65" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+  </g>
+  <text x="235" y="455" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413">传统格式</text>
+  <text x="235" y="472" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">"作为用户，我想要登录功能"</text>
+  <text x="235" y="488" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">上下文缺失 · 约束模糊 · AC游离</text>
+
+  <g filter="url(#shadow4)">
+    <rect x="410" y="435" width="310" height="65" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="1"/>
+  </g>
+  <text x="565" y="455" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413">SDD 2.0 三元组</text>
+  <text x="565" y="472" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">context + constraints + AC</text>
+  <text x="565" y="488" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D">自包含 · 结构化 · 可验证</text>
+</svg>

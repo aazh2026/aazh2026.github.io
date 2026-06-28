@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+  <rect width="900" height="560" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">AI-First 测试三层模型</text>
+
+  <!-- Layer 1: Intent (top) -->
+  <rect x="50" y="70" width="800" height="130" rx="12" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2"/>
+  <text x="110" y="102" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#D97757">1</text>
+  <text x="180" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#141413">意图层 (Intent Layer)</text>
+  <text x="180" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">描述 · 维护者：人类</text>
+
+  <rect x="280" y="85" width="550" height="100" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="555" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#141413">"当用户未登录时，访问 /dashboard 应该重定向到 /login"</text>
+  <text x="555" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#87867F">自然语言描述期望的行为</text>
+  <rect x="350" y="155" width="200" height="22" rx="3" fill="#141413"/>
+  <text x="450" y="171" text-anchor="middle" font-family="Courier, monospace" font-size="10" fill="#FAF9F5">user-registration.intent.yml</text>
+
+  <!-- Arrow 1->2 -->
+  <path d="M450 205 L450 235 M440 225 L450 235 L460 225" stroke="#87867F" stroke-width="2.5" fill="none"/>
+  <text x="475" y="228" font-family="Arial, sans-serif" font-size="11" fill="#87867F">AI 扩展</text>
+
+  <!-- Layer 2: Scenario (middle) -->
+  <rect x="50" y="240" width="800" height="130" rx="12" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2"/>
+  <text x="110" y="272" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#788C5D">2</text>
+  <text x="180" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#141413">场景层 (Scenario Layer)</text>
+  <text x="180" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">扩展 · 生成者：AI</text>
+
+  <!-- Scenario boxes -->
+  <rect x="280" y="255" width="160" height="45" rx="6" fill="#FAF9F5" stroke="#788C5D"/>
+  <text x="360" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">完全未登录用户</text>
+
+  <rect x="455" y="255" width="160" height="45" rx="6" fill="#FAF9F5" stroke="#788C5D"/>
+  <text x="535" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">登录但 token 过期</text>
+
+  <rect x="630" y="255" width="200" height="45" rx="6" fill="#FAF9F5" stroke="#788C5D"/>
+  <text x="730" y="283" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">登录但权限不足</text>
+
+  <rect x="280" y="310" width="550" height="45" rx="6" fill="#FAF9F5" stroke="#788C5D"/>
+  <text x="555" y="338" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">并发注册场景 (AI 自动识别的高价值边界条件)</text>
+
+  <!-- Arrow 2->3 -->
+  <path d="M450 375 L450 405 M440 395 L450 405 L460 395" stroke="#87867F" stroke-width="2.5" fill="none"/>
+  <text x="475" y="398" font-family="Arial, sans-serif" font-size="11" fill="#87867F">AI 生成</text>
+
+  <!-- Layer 3: Verification (bottom) -->
+  <rect x="50" y="410" width="800" height="130" rx="12" fill="#141413" fill-opacity="0.08" stroke="#141413" stroke-width="2"/>
+  <text x="110" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#141413">3</text>
+  <text x="180" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#141413">验证层 (Verification Layer)</text>
+  <text x="180" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#87867F">代码生成 · 生成者：AI · 审查者：人类</text>
+
+  <!-- Code snippet -->
+  <rect x="280" y="425" width="550" height="100" rx="8" fill="#141413"/>
+  <text x="300" y="450" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">test('redirects to login when not authenticated', () => {</text>
+  <text x="300" y="468" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">  const req = { session: null, path: '/dashboard' };</text>
+  <text x="300" y="486" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">  const res = mockResponse();</text>
+  <text x="300" y="504" font-family="Courier, monospace" font-size="11" fill="#788C5D">  expect(authMiddleware(req, res)).to.redirectTo('/login');</text>
+  <text x="300" y="522" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">});</text>
+
+  <!-- Key insight -->
+  <rect x="50" y="20" width="800" height="30" rx="4" fill="#D97757" fill-opacity="0.2"/>
+  <text x="450" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#141413">人类定义意图，AI 生成验证 —— 测试的本质从未改变</text>
+</svg>

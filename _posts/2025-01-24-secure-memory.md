@@ -150,6 +150,8 @@ class MLSensitivityClassifier:
 
 ### 2.3 用户显式标记
 
+<object data="/assets/images/2025-01-24-secure-memory-02-encryption-isolation.svg" type="image/svg+xml" width="100%"></object>
+
 让用户可以标记敏感信息：
 
 ```

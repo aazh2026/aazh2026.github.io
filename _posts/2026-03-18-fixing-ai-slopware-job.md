@@ -218,6 +218,8 @@ def update_price(product_id, new_price):
 
 ---
 
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-02-cost-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ## 实战：一次架构救援的真实案例
 
 ### 背景
