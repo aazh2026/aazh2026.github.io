@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 560" width="420" height="560">
+  <rect width="420" height="560" fill="#FAF9F5"/>
+  <style>
+    text { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; fill: #141413; }
+    .box { fill: none; stroke: #141413; stroke-width: 1.5; }
+    .header { fill: #141413; font-weight: bold; }
+    .divider { stroke: #D1CFC5; stroke-width: 1; }
+    .agent-text { fill: #141413; }
+    .user-text { fill: #87867F; }
+    .button { fill: #E3DACC; stroke: #D1CFC5; stroke-width: 1; rx: 4; }
+    .button-text { font-size: 11px; fill: #141413; }
+    .input-area { fill: #E3DACC; stroke: #D1CFC5; stroke-width: 1; rx: 6; }
+    .dim { fill: #D1CFC5; }
+  </style>
+
+  <!-- Main box -->
+  <rect x="20" y="20" width="380" height="520" rx="8" class="box"/>
+
+  <!-- Header -->
+  <rect x="20" y="20" width="380" height="40" rx="8" fill="#141413"/>
+  <rect x="20" y="44" width="380" height="16" fill="#141413"/>
+  <text x="36" y="45" fill="#FAF9F5" font-size="13" font-weight="bold">💬 Agent Assistant</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="60" x2="400" y2="60" class="divider"/>
+
+  <!-- Content area -->
+  <!-- Agent message -->
+  <text x="36" y="100" class="agent-text">Agent: 你好！我是你的销售</text>
+  <text x="36" y="116" class="agent-text">助手。今天需要我做什么？</text>
+
+  <!-- Separator line -->
+  <line x1="36" y1="150" x2="384" y2="150" stroke="#D1CFC5" stroke-dasharray="4,4" stroke-width="1"/>
+
+  <!-- User message -->
+  <text x="36" y="180" class="user-text">User: 帮我看看这周要跟进</text>
+  <text x="36" y="196" class="user-text">的客户</text>
+
+  <!-- Agent response -->
+  <text x="36" y="230" class="agent-text">Agent: 找到 5 个客户需要</text>
+  <text x="36" y="246" class="agent-text">跟进：</text>
+  <text x="36" y="270" class="agent-text">1. Acme Corp - 合同待签</text>
+  <text x="36" y="290" class="agent-text">2. ...</text>
+
+  <!-- Action buttons -->
+  <rect x="36" y="340" width="130" height="28" rx="6" class="button"/>
+  <text x="101" y="358" text-anchor="middle" class="button-text">帮我起草邮件</text>
+
+  <rect x="176" y="340" width="110" height="28" rx="6" class="button"/>
+  <text x="231" y="358" text-anchor="middle" class="button-text">安排会议</text>
+
+  <!-- Bottom divider -->
+  <line x1="20" y1="420" x2="400" y2="420" class="divider"/>
+
+  <!-- Input area -->
+  <rect x="36" y="440" width="290" height="36" rx="6" class="input-area"/>
+  <text x="52" y="463" class="dim">输入消息...</text>
+
+  <!-- Send button -->
+  <rect x="336" y="440" width="52" height="36" rx="6" fill="#788C5D"/>
+  <text x="362" y="463" text-anchor="middle" fill="#FAF9F5" font-weight="bold">发送</text>
+</svg>

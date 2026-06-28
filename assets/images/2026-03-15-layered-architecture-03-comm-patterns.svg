@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 480" width="600" height="480">
+  <rect width="600" height="480" fill="#FAF9F5"/>
+  <style>
+    text { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 11px; fill: #141413; }
+    .box { fill: none; stroke: #141413; stroke-width: 1.5; }
+    .title { fill: #141413; font-weight: bold; font-size: 12px; }
+    .layer { fill: #E3DACC; stroke: #D1CFC5; stroke-width: 1; rx: 4; }
+    .layer-alt { fill: #FAF9F5; stroke: #D1CFC5; stroke-width: 1; rx: 4; }
+    .bus { fill: #788C5D; rx: 4; }
+    .queue { fill: #D97757; rx: 4; }
+    .arrow { stroke: #141413; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+    .arrow-back { stroke: #87867F; stroke-width: 1; fill: none; stroke-dasharray: 4,2; }
+    .label { font-size: 10px; fill: #87867F; }
+    .subtitle { fill: #D97757; font-weight: bold; font-size: 11px; }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#141413"/>
+    </marker>
+  </defs>
+
+  <!-- Pattern 1: Synchronous -->
+  <text x="20" y="24" class="subtitle">模式1：直接调用（Synchronous）</text>
+  <line x1="20" y1="32" x2="200" y2="32" stroke="#D97757" stroke-width="1"/>
+
+  <!-- Layer N -->
+  <rect x="40" y="44" width="80" height="36" rx="4" class="layer"/>
+  <text x="80" y="66" text-anchor="middle">Layer N</text>
+
+  <!-- Layer N-1 -->
+  <rect x="200" y="44" width="80" height="36" rx="4" class="layer-alt"/>
+  <text x="240" y="66" text-anchor="middle">Layer N-1</text>
+
+  <!-- Vertical lines -->
+  <line x1="80" y1="80" x2="80" y2="100" class="arrow"/>
+  <text x="80" y="110" text-anchor="middle" class="label">execute(ctx)</text>
+
+  <line x1="240" y1="80" x2="240" y2="100" stroke="#87867F" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="240" y="110" text-anchor="middle" class="label">result</text>
+
+  <!-- Pattern 2: Event-Driven -->
+  <text x="20" y="144" class="subtitle">模式2：事件总线（Event-Driven）</text>
+  <line x1="20" y1="152" x2="260" y2="152" stroke="#D97757" stroke-width="1"/>
+
+  <rect x="40" y="164" width="80" height="36" rx="4" class="layer"/>
+  <text x="80" y="186" text-anchor="middle">Layer N</text>
+
+  <rect x="200" y="164" width="80" height="36" rx="4" class="layer-alt"/>
+  <text x="240" y="186" text-anchor="middle">Layer N-1</text>
+
+  <!-- Event Bus -->
+  <rect x="150" y="164" width="40" height="36" rx="4" class="bus"/>
+  <text x="170" y="186" text-anchor="middle" fill="#FAF9F5" font-size="9">Event</text>
+  <text x="170" y="196" text-anchor="middle" fill="#FAF9F5" font-size="9">Bus</text>
+
+  <!-- Arrows to/from event bus -->
+  <line x1="120" y1="182" x2="148" y2="182" class="arrow"/>
+  <text x="134" y="176" text-anchor="middle" class="label">publish</text>
+
+  <line x1="192" y1="182" x2="200" y2="182" class="arrow"/>
+  <text x="210" y="176" text-anchor="middle" class="label">route</text>
+
+  <!-- Pattern 3: Async Queue -->
+  <text x="320" y="24" class="subtitle">模式3：消息队列（Async Queue）</text>
+  <line x1="320" y1="32" x2="580" y2="32" stroke="#D97757" stroke-width="1"/>
+
+  <rect x="340" y="44" width="80" height="36" rx="4" class="layer"/>
+  <text x="380" y="66" text-anchor="middle">Layer N</text>
+
+  <rect x="480" y="44" width="80" height="36" rx="4" class="layer-alt"/>
+  <text x="520" y="66" text-anchor="middle">Layer N-1</text>
+
+  <!-- Queue -->
+  <rect x="430" y="44" width="40" height="36" rx="4" class="queue"/>
+  <text x="450" y="66" text-anchor="middle" fill="#FAF9F5" font-size="10">Queue</text>
+
+  <!-- Arrows -->
+  <line x1="420" y1="62" x2="430" y2="62" class="arrow"/>
+  <text x="408" y="56" text-anchor="middle" class="label">enqueue</text>
+
+  <line x1="470" y1="62" x2="480" y2="62" class="arrow"/>
+  <text x="490" y="56" text-anchor="middle" class="label">dequeue</text>
+
+  <!-- Key insight box -->
+  <rect x="320" y="100" width="260" height="60" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="340" y="122" font-weight="bold" fill="#D97757">💡 关键洞察</text>
+  <text x="340" y="140" fill="#141413">层间通信的成本决定了架构的成败</text>
+  <text x="340" y="154" font-size="10" fill="#87867F">同步调用最简单，事件驱动最灵活，</text>
+  <text x="340" y="166" font-size="10" fill="#87867F">消息队列最适合跨进程/跨服务。</text>
+</svg>

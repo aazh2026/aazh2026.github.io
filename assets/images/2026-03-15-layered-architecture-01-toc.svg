@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+  <rect width="420" height="320" fill="#FAF9F5"/>
+  <style>
+    text { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; fill: #141413; }
+    .box { fill: none; stroke: #D1CFC5; stroke-width: 1; }
+    .chapter-num { fill: #D97757; font-weight: bold; }
+    .chapter-title { fill: #141413; }
+    .dots { fill: none; stroke: #D1CFC5; stroke-width: 1; stroke-dasharray: 2,2; }
+    .separator { fill: #D97757; }
+  </style>
+
+  <!-- Row 1 -->
+  <text x="16" y="28" class="chapter-num">第3章</text>
+  <text x="80" y="28" class="chapter-title">│</text>
+  <text x="100" y="28">分层的历史：从 OSI 七层到现代软件架构</text>
+  <line x1="390" y1="16" x2="390" y2="40" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="36" r="2" class="separator"/>
+
+  <!-- Row 2 -->
+  <text x="16" y="60" class="chapter-num">第4章</text>
+  <text x="80" y="60" class="chapter-title">│</text>
+  <text x="100" y="60">为什么分层有效：关注点分离与抽象的力量</text>
+  <line x1="390" y1="48" x2="390" y2="72" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="68" r="2" class="separator"/>
+
+  <!-- Row 3 -->
+  <text x="16" y="92" class="chapter-num">第5章</text>
+  <text x="80" y="92" class="chapter-title">│</text>
+  <text x="100" y="92">Agent OS 五层架构：重新定义 AI 系统边界</text>
+  <line x1="390" y1="80" x2="390" y2="104" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="100" r="2" class="separator"/>
+
+  <!-- Row 4 -->
+  <text x="16" y="124" class="chapter-num">第6章</text>
+  <text x="80" y="124" class="chapter-title">│</text>
+  <text x="100" y="124">层间通信：Context 传递的艺术</text>
+  <line x1="390" y1="112" x2="390" y2="136" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="132" r="2" class="separator"/>
+
+  <!-- Row 5 -->
+  <text x="16" y="156" class="chapter-num">第7章</text>
+  <text x="80" y="156" class="chapter-title">│</text>
+  <text x="100" y="156">何时打破分层：性能与灵活性的权衡</text>
+  <line x1="390" y1="144" x2="390" y2="168" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="164" r="2" class="separator"/>
+
+  <!-- Row 6 -->
+  <text x="16" y="188" class="chapter-num">第8章</text>
+  <text x="80" y="188" class="chapter-title">│</text>
+  <text x="100" y="188">反直觉洞察：分层架构的隐藏代价</text>
+  <line x1="390" y1="176" x2="390" y2="200" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="196" r="2" class="separator"/>
+
+  <!-- Row 7 -->
+  <text x="16" y="220" class="chapter-num">第9章</text>
+  <text x="80" y="220" class="chapter-title">│</text>
+  <text x="100" y="220">实战：从零设计分层的 Agent 系统</text>
+  <line x1="390" y1="208" x2="390" y2="232" class="box"/>
+
+  <!-- Separator -->
+  <circle cx="72" cy="228" r="2" class="separator"/>
+
+  <!-- Row 8 -->
+  <text x="16" y="252" class="chapter-num">第10章</text>
+  <text x="96" y="252" class="chapter-title">│</text>
+  <text x="116" y="252">结语：分层是一种思维方式</text>
+</svg>
