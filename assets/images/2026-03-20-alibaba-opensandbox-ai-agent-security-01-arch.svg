@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 340" font-family="ui-monospace, 'Cascadia Code', 'Fira Code', monospace">
+  <rect width="520" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="260" y="22" text-anchor="middle" fill="#141413" font-size="13" font-weight="bold">OpenSandbox 能力矩阵</text>
+
+  <!-- Main container -->
+  <rect x="30" y="38" width="460" height="290" rx="6" fill="none" stroke="#141413" stroke-width="2"/>
+
+  <!-- Header row -->
+  <rect x="30" y="38" width="460" height="28" rx="6" fill="#141413"/>
+  <text x="120" y="57" text-anchor="middle" fill="#FAF9F5" font-size="11" font-weight="bold">能力维度</text>
+  <text x="370" y="57" text-anchor="middle" fill="#FAF9F5" font-size="11" font-weight="bold">详细说明</text>
+
+  <!-- Row 1: Multi-language SDK -->
+  <rect x="30" y="66" width="460" height="50" rx="0" fill="none" stroke="#141413" stroke-width="1"/>
+  <rect x="30" y="66" width="180" height="50" fill="#D97757" fill-opacity="0.15"/>
+  <text x="40" y="86" fill="#141413" font-size="11" font-weight="bold">多语言 SDK</text>
+  <text x="40" y="100" fill="#87867F" font-size="10">Python、JavaScript、Go</text>
+  <text x="220" y="91" fill="#141413" font-size="10">└─ 跨语言统一接口</text>
+
+  <!-- Row 2: Runtime support -->
+  <rect x="30" y="116" width="460" height="50" rx="0" fill="none" stroke="#141413" stroke-width="1"/>
+  <rect x="30" y="116" width="180" height="50" fill="#788C5D" fill-opacity="0.15"/>
+  <text x="40" y="136" fill="#141413" font-size="11" font-weight="bold">运行时支持</text>
+  <text x="40" y="150" fill="#87867F" font-size="10">Docker、K8s、VM</text>
+  <text x="220" y="141" fill="#141413" font-size="10">└─ 容器化 / 虚拟化部署</text>
+
+  <!-- Row 3: Security isolation -->
+  <rect x="30" y="166" width="460" height="50" rx="0" fill="none" stroke="#141413" stroke-width="1"/>
+  <rect x="30" y="166" width="180" height="50" fill="#141413" fill-opacity="0.08"/>
+  <text x="40" y="186" fill="#141413" font-size="11" font-weight="bold">安全隔离</text>
+  <text x="40" y="200" fill="#87867F" font-size="10">网络、文件系统、资源</text>
+  <text x="220" y="191" fill="#141413" font-size="10">└─ Namespace + Cgroups + Seccomp</text>
+
+  <!-- Row 4: Behavior monitoring -->
+  <rect x="30" y="216" width="460" height="50" rx="0" fill="none" stroke="#141413" stroke-width="1"/>
+  <rect x="30" y="216" width="180" height="50" fill="#D97757" fill-opacity="0.15"/>
+  <text x="40" y="236" fill="#141413" font-size="11" font-weight="bold">行为监控</text>
+  <text x="40" y="250" fill="#87867F" font-size="10">实时审计、日志追踪</text>
+  <text x="220" y="241" fill="#141413" font-size="10">└─ 文件 / 网络 / 进程 / 资源</text>
+
+  <!-- Row 5: Resource limits -->
+  <rect x="30" y="266" width="460" height="50" rx="0" fill="none" stroke="#141413" stroke-width="1"/>
+  <rect x="30" y="266" width="180" height="50" fill="#788C5D" fill-opacity="0.15"/>
+  <text x="40" y="286" fill="#141413" font-size="11" font-weight="bold">资源限制</text>
+  <text x="40" y="300" fill="#87867F" font-size="10">CPU、内存、磁盘、网络</text>
+  <text x="220" y="291" fill="#141413" font-size="10">└─ Cgroups quota + 网络带宽控制</text>
+
+  <!-- Right column content boxes -->
+  <rect x="210" y="66" width="280" height="50" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="210" y="116" width="280" height="50" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="210" y="166" width="280" height="50" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="210" y="216" width="280" height="50" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="210" y="266" width="280" height="50" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Bottom border rounding fix -->
+  <rect x="30" y="306" width="460" height="22" rx="0" fill="#FAF9F5"/>
+  <rect x="30" y="306" width="460" height="22" rx="6" fill="none" stroke="#141413" stroke-width="1"/>
+</svg>

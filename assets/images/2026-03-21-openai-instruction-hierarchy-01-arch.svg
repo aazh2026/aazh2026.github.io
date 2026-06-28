@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 280" font-family="ui-monospace, 'Cascadia Code', 'Fira Code', monospace">
+  <rect width="520" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="260" y="24" text-anchor="middle" fill="#141413" font-size="13" font-weight="bold">OpenAI Instruction Hierarchy</text>
+
+  <!-- Box 1: System (highest priority) -->
+  <rect x="40" y="44" width="440" height="44" rx="4" fill="#141413"/>
+  <text x="60" y="66" fill="#FAF9F5" font-size="12" font-weight="bold">System</text>
+  <text x="60" y="80" fill="#D1CFC5" font-size="10">安全政策、核心行为约束</text>
+  <text x="420" y="72" text-anchor="end" fill="#D97757" font-size="11" font-weight="bold">▲ 最高优先级</text>
+
+  <!-- Connector -->
+  <line x1="260" y1="88" x2="260" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="260,108 256,100 264,100" fill="#D1CFC5"/>
+
+  <!-- Box 2: Developer -->
+  <rect x="40" y="108" width="440" height="44" rx="4" fill="#788C5D"/>
+  <text x="60" y="130" fill="#FAF9F5" font-size="12" font-weight="bold">Developer</text>
+  <text x="60" y="144" fill="#E3DACC" font-size="10">应用特定的行为指导</text>
+  <text x="420" y="136" text-anchor="end" fill="#FAF9F5" font-size="11" font-weight="bold">▲ 高优先级</text>
+
+  <!-- Connector -->
+  <line x1="260" y1="152" x2="260" y2="172" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="260,172 256,164 264,164" fill="#D1CFC5"/>
+
+  <!-- Box 3: User -->
+  <rect x="40" y="172" width="440" height="44" rx="4" fill="#87867F"/>
+  <text x="60" y="194" fill="#FAF9F5" font-size="12" font-weight="bold">User</text>
+  <text x="60" y="208" fill="#E3DACC" font-size="10">直接请求</text>
+  <text x="420" y="200" text-anchor="end" fill="#FAF9F5" font-size="11" font-weight="bold">▲ 中优先级</text>
+
+  <!-- Connector -->
+  <line x1="260" y1="216" x2="260" y2="236" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="260,236 256,228 264,228" fill="#D1CFC5"/>
+
+  <!-- Box 4: Tool (lowest priority) -->
+  <rect x="40" y="236" width="440" height="36" rx="4" fill="#D97757"/>
+  <text x="60" y="255" fill="#FAF9F5" font-size="12" font-weight="bold">Tool</text>
+  <text x="150" y="255" fill="#E3DACC" font-size="10">外部数据源、不可信内容</text>
+  <text x="420" y="255" text-anchor="end" fill="#FAF9F5" font-size="11" font-weight="bold">▼ 最低优先级</text>
+
+  <!-- Decorative side labels -->
+  <text x="20" y="70" fill="#D97757" font-size="10" transform="rotate(-90,20,70)">Priority</text>
+</svg>
