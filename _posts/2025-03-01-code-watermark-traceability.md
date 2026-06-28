@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /code-watermark-traceability.html
+series: AI-Native Engineering
 ---
 
 # 当AI开始写代码，谁拥有这段代码的指纹？

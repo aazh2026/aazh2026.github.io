@@ -21,8 +21,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
 - [为什么记忆是 Agent 的核心能力](#为什么记忆是-agent-的核心能力)
 - [记忆的三个层次](#记忆的三个层次)
 - [Working Memory：当下的上下文](#working-memory当下的上下文)

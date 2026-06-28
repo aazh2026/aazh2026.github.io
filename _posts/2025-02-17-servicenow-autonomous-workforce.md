@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /servicenow-autonomous-workforce.html
+series: AI-Native Engineering
 ---
 
 # ServiceNow Autonomous Workforce：企业级AI的"控制塔"模式与治理新范式

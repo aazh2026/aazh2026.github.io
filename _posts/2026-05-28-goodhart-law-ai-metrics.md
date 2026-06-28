@@ -4,6 +4,7 @@ title: "Goodhart 定律回归：AI 重新发明了衡量不了生产力的指标
 date: 2026-05-28T10:00:00+08:00
 tags: [AI工程管理, 生产力度量, Goodhart定律, 知识工作]
 author: "@postcodeeng"
+series: AI-Native Engineering
 ---
 
 > **TL;DR**

@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /cognitive-debt.html
+series: AI-Native Engineering
 ---
 
 # 认知债务：AI时代的代码理解危机
@@ -80,7 +81,7 @@ Simon Willison提出了三种方法：
 
 不是"这段代码做什么"（功能层面），而是"这行代码*怎么做*"（实现层面）。
 
-**操作方式**：
+### 操作方式
 
 ### 2. 交互式解释（Interactive Explanations）
 

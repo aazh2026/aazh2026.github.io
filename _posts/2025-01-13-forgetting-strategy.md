@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /forgetting-strategy.html
+series: AI-Native Engineering
 ---
 
 # 你的Agent不是记忆力差，而是不会「遗忘」
@@ -17,7 +18,7 @@ redirect_from:
 
 <object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%"></object>
 
-## 一、50万条记忆的教训
+## 50万条记忆的教训
 
 去年，我的OpenClaw助手运行了3个月后，开始变得「迟钝」。
 
@@ -36,7 +37,7 @@ redirect_from:
 
 ---
 
-## 二、人类为什么能正常思考？因为我们会忘
+## 人类为什么能正常思考？因为我们会忘
 
 1885年，德国心理学家艾宾浩斯发现了著名的**遗忘曲线**：
 - 20分钟后，忘记42%
@@ -55,7 +56,7 @@ redirect_from:
 
 ---
 
-## 三、核心观点：Agent的「记忆肥胖症」
+## 核心观点：Agent的「记忆肥胖症」
 
 今天的大多数Agent系统，都有一个共同的设计缺陷：**只进不出**。
 
@@ -70,7 +71,7 @@ redirect_from:
 
 ---
 
-## 四、反直觉洞察：遗忘让记忆更有价值
+## 反直觉洞察：遗忘让记忆更有价值
 
 让我说一个反直觉的观点：
 
@@ -91,7 +92,7 @@ redirect_from:
 
 ---
 
-## 五、遗忘策略：让Agent学会「整理房间」
+## 遗忘策略：让Agent学会「整理房间」
 
 ### 策略1：时间衰减
 
@@ -143,7 +144,7 @@ redirect_from:
 
 ---
 
-## 六、穿越周期：从「记忆一切」到「智慧遗忘」
+## 穿越周期：从「记忆一切」到「智慧遗忘」
 
 让我做一个穿越周期的对比：
 
@@ -159,7 +160,7 @@ redirect_from:
 
 ---
 
-## 七、写在最后：遗忘让Agent更像人
+## 写在最后：遗忘让Agent更像人
 
 一个不会遗忘的Agent，就像一个从不整理房间的人——最终会在垃圾堆里找不到任何东西。
 

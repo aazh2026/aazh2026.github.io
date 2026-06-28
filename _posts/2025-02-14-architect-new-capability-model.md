@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /architect-new-capability-model.html
+series: AI-Native Engineering
 ---
 
 # AI时代架构师的新能力模型：从画图决策到设计Context

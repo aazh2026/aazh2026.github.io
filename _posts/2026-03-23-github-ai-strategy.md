@@ -14,7 +14,7 @@ series: AI-Native Engineering
 
 ---
 
-## 一、GitHub的战略困境
+## GitHub的战略困境
 
 2023年，GitHub面临一个 existential question：
 
@@ -24,7 +24,7 @@ GitHub的答案是：**成为AI驱动开发的基础设施**。
 
 ---
 
-## 二、三层AI战略全景
+## 三层AI战略全景
 
 ### 第一层：Copilot（已成熟）
 
@@ -60,7 +60,7 @@ GitHub的答案是：**成为AI驱动开发的基础设施**。
 - 智能Code Review
 - 跨文件重构
 
-**技术栈**：
+### 技术栈
 **关键洞察**：
 Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 
@@ -70,7 +70,7 @@ Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 
 **定位**：自主开发Agent
 
-**愿景**：
+### 愿景
 **技术基础**：
 - OpenAI GPT-4/GPT-5
 - GitHub Actions
@@ -79,7 +79,7 @@ Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 
 ---
 
-## 三、竞争格局分析
+## 竞争格局分析
 
 ### GitHub vs Cursor
 
@@ -112,7 +112,7 @@ Workspace不是在IDE里加AI，而是在GitHub平台原生集成AI。
 
 ---
 
-## 四、GitHub的战略优势
+## GitHub的战略优势
 
 ### 1. 数据护城河
 
@@ -149,7 +149,7 @@ GitHub Agent可以介入任何环节。
 
 ---
 
-## 五、GitHub Agent的潜在形态
+## GitHub Agent的潜在形态
 
 ### 形态1：Issue-to-PR Agent
 
@@ -185,7 +185,7 @@ GitHub Agent可以介入任何环节。
 
 ---
 
-## 六、对开发者的影响
+## 对开发者的影响
 
 ### 短期（6个月）
 
@@ -208,7 +208,7 @@ GitHub Agent可以介入任何环节。
 
 ---
 
-## 七、给开发者的建议
+## 给开发者的建议
 
 ### 如果你是GitHub用户
 
@@ -230,7 +230,7 @@ GitHub Agent可以介入任何环节。
 
 ---
 
-## 八、关键预测
+## 关键预测
 
 ### 预测1：GitHub Agent将在12个月内成为企业标准
 

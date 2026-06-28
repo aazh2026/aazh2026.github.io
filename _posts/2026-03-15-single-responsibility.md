@@ -1,5 +1,6 @@
 ---
 layout: post
+author: "@postcodeeng"
 title: "单一职责的升维：从类到 Agent"
 date: 2026-03-15 09:00:00 +0800
 categories: [Agent Design, Software Architecture]
@@ -10,19 +11,6 @@ series: agent-os
 > **TL;DR**
 >
 > 一个类只有一个变化原因，一个Agent只有一个职责。单一职责原则（SRP）是面向对象设计的基石，但在AI Agent时代，它的边界被重新定义了。本文将SRP从"类"升维到"Agent"，揭示为什么一个混乱的Agent比混乱的类更难维护，并提供可落地的设计原则与代码示例。
-
----
-
-## 📋 本文结构
-
-1. [单一职责原则（SRP）回顾](#3-单一职责原则srp回顾)
-2. [为什么 SRP 重要](#4-为什么-srp-重要)
-3. [从类到 Agent：SRP 的升维](#5-从类到-agentsrp-的升维)
-4. [设计单一职责的 Agent](#6-设计单一职责的-agent)
-5. [反模式：上帝 Agent 与面条 Agent](#7-反模式上帝-agent-与面条-agent)
-6. [反直觉洞察](#8-反直觉洞察)
-7. [实战代码示例](#9-实战代码示例)
-8. [结语](#10-结语)
 
 ---
 

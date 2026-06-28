@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /openclaw-agent-swarm-consensus.html
+series: AI-Native Engineering
 ---
 
 # OpenClaw：当AI Agent开始像创业公司一样思考

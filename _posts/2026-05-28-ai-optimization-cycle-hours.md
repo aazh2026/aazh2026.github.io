@@ -1,7 +1,10 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: "AI 的优化周期正在从月变成小时"
 date: 2026-05-28
 tags: [AI Agent, Self-optimization, Brooks Framework]
+series: AI-Native Engineering
 ---
 
 2026年5月，一个叫 Alok Bishoyi 的工程师在 X 上发了一条长帖，讲了一个具体的故事：

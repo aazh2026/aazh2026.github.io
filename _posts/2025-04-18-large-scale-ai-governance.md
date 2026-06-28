@@ -16,7 +16,7 @@ redirect_from:
 
 ---
 
-## 一、大规模AI工程的混乱现实
+## 大规模AI工程的混乱现实
 
 ### 场景：200人微服务团队的AI灾难
 
@@ -40,7 +40,7 @@ redirect_from:
 
 ---
 
-## 二、大规模AI工程治理框架
+## 大规模AI工程治理框架
 
 ### 治理的三大支柱
 <object data="/assets/images/2025-04-18-governance-01-pillars.svg" type="image/svg+xml" width="100%"></object>

@@ -4,6 +4,7 @@ title: "知识便宜了，但你的问题变贵了"
 date: 2026-05-14T08:00:00+08:00
 tags: [AI哲学, Jevons悖论, 知识管理]
 author: "@postcodeeng"
+series: AI-Native Engineering
 ---
 
 > **TL;DR**
@@ -17,16 +18,6 @@ author: "@postcodeeng"
 ---
 
 <object data="/assets/images/2026-05-14-when-knowledge-is-cheap-zohar-atkins-01-jevons-bottleneck.svg" type="image/svg+xml" width="100%"></object>
-
-## 📋 本文结构
-
-1. [Jevons 悖论](#jevons-悖论) — 1865年的煤炭问题和今天的知识问题
-2. [咨询传统的成本](#咨询传统的成本) — 由劳动配给到近乎为零
-3. [瓶颈迁移](#瓶颈迁移) — 从可及性到 Chiddush（洞察）
-4. [西奈的冠冕](#西奈的冠冕) — 结构一直存在，缺的是看见它的眼睛
-5. [面包不是小麦](#面包不是小麦) — AI 提供原材料，但消化不了原材料
-
----
 
 ## Jevons 悖论
 

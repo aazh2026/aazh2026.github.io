@@ -14,18 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [OpenSandbox 是什么](#opensandbox-是什么)
-2. [架构解析：三层安全模型](#架构解析三层安全模型)
-3. [与 Anthropic 实验的对比](#与-anthropic-实验的对比)
-4. [技术实现：容器化隔离](#技术实现容器化隔离)
-5. [企业级 AI 安全的需求](#企业级-ai-安全的需求)
-6. [开源生态的战略意义](#开源生态的战略意义)
-7. [结论：AI 基础设施的中国方案](#结论ai-基础设施的中国方案)
-
----
-
 ## OpenSandbox 是什么
 
 ### 项目概述
@@ -64,7 +52,7 @@ series: AI-Native Engineering
 
 ### 第一层：运行时隔离
 
-**容器化沙箱**：
+### 容器化沙箱
 
 **技术实现**：
 - **Namespace 隔离**：PID、Network、Mount、IPC、UTS
@@ -74,7 +62,7 @@ series: AI-Native Engineering
 
 ### 第二层：行为监控
 
-**实时审计系统**：
+### 实时审计系统
 
 **监控维度**：
 
@@ -87,7 +75,7 @@ series: AI-Native Engineering
 
 ### 第三层：策略编排
 
-**声明式安全策略**：
+### 声明式安全策略
 
 ---
 
@@ -122,13 +110,13 @@ series: AI-Native Engineering
 
 ### Docker 沙箱
 
-**基础镜像**：
+### 基础镜像
 
-**运行时安全**：
+### 运行时安全
 
 ### Kubernetes 集成
 
-**Pod 安全策略**：
+### Pod 安全策略
 
 ### gVisor 集成（可选 VM 级隔离）
 
@@ -184,7 +172,7 @@ series: AI-Native Engineering
 
 ### 与云服务的协同
 
-**阿里云 + OpenSandbox**：
+### 阿里云 + OpenSandbox
 
 **商业模式**：
 - **开源**：OpenSandbox 核心（吸引用户）
@@ -208,7 +196,7 @@ series: AI-Native Engineering
 
 ---
 
-## 结论：AI 基础设施的中国方案
+## 结尾：AI 基础设施的中国方案
 
 ### OpenSandbox 的独特价值
 
@@ -237,7 +225,7 @@ series: AI-Native Engineering
 | **企业部署** | OpenSandbox | 生产环境安全 |
 | **平台集成** | Chrome/Edge AI | 消费者产品 |
 
-**未来的 AI 基础设施**：
+### 未来的 AI 基础设施
 
 ### 最后的思考
 

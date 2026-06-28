@@ -14,20 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [Transformer 的残差连接问题](#transformer-的残差连接问题)
-2. [Attention Residuals 的核心思想](#attention-residuals-的核心思想)
-3. [技术细节：从 AttnRes 到 Block AttnRes](#技术细节从-attnres-到-block-attnres)
-4. [为什么可学习聚合更好？](#为什么可学习聚合更好)
-5. [实验结果与性能分析](#实验结果与性能分析)
-6. [内存优化：Block AttnRes 的工程智慧](#内存优化block-attnres-的工程智慧)
-7. [对 Transformer 架构的影响](#对-transformer-架构的影响)
-8. [局限与未来方向](#局限与未来方向)
-9. [结论：架构创新的中国声音](#结论架构创新的中国声音)
-
----
-
 ## Transformer 的残差连接问题
 
 ### 标准残差连接
@@ -70,7 +56,7 @@ Transformer 使用 PreNorm 架构：
 
 ### 基本思想
 
-**用注意力机制替代固定相加**：
+### 用注意力机制替代固定相加
 
 **关键创新**：
 - 每层可以选择性关注前面所有层
@@ -79,8 +65,8 @@ Transformer 使用 PreNorm 架构：
 
 ### 直观理解
 
-**标准残差连接**：
-**Attention Residuals**：
+### 标准残差连接
+### Attention Residuals
 ### 与标准 Attention 的区别
 
 | 维度 | 标准 Self-Attention | Attention Residuals |
@@ -91,7 +77,7 @@ Transformer 使用 PreNorm 架构：
 | **目的** | 捕获序列依赖 | 选择性聚合层表征 |
 
 {% figure center %}
-![Standard Residual vs Attention Residuals](/assets/images/2026-03-18-kimi-attention-residuals-01-residual-comparison.png)
+<img src="/assets/images/2026-03-18-kimi-attention-residuals-01-residual-comparison.png" alt="Standard Residual vs Attention Residuals" style="width:100%;height:auto;">
 *图 1：Standard Residual（❌）使用固定权重（=1.0）的加法残差连接，所有层贡献均等；Attention Residual（✅）通过注意力机制动态决定各层的聚合权重，实现选择性层聚合。*
 {% endfigure %}
 
@@ -106,9 +92,9 @@ Transformer 使用 PreNorm 架构：
 
 ### Attention Residuals（AttnRes）
 
-**数学公式**：
+### 数学公式
 
-**PyTorch 伪代码**：
+### PyTorch 伪代码
 
 ### 内存挑战
 
@@ -121,7 +107,7 @@ Transformer 使用 PreNorm 架构：
 
 **核心思想**：分块注意力
 
-**具体方法**：
+### 具体方法
 
 **内存优化**：
 
@@ -132,7 +118,7 @@ Transformer 使用 PreNorm 架构：
 | Block AttnRes (B=8) | O(L²/B × D) | 减少 8x |
 | 带压缩的 Block | O(L × D) | 接近标准 Transformer |
 
-**Block 聚合表示**：
+### Block 聚合表示
 
 ---
 
@@ -158,7 +144,7 @@ AttnRes：
 标准残差是 AttnRes 的特殊情况（均匀权重）：
 ### 实证分析
 
-**注意力权重可视化**：
+### 注意力权重可视化
 
 ---
 
@@ -318,7 +304,7 @@ AttnRes 的参数化连接为 NAS 提供了新的搜索空间。
 
 ---
 
-## 结论：架构创新的中国声音
+## 结尾：架构创新的中国声音
 
 Attention Residuals 代表了几个重要趋势：
 

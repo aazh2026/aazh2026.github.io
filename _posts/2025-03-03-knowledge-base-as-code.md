@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /knowledge-base-as-code.html
+series: AI-Native Engineering
 ---
 
 # 知识库即代码：把架构决策装进Git的时光机
@@ -15,7 +16,7 @@ redirect_from:
 
 ---
 
-## 一、文档的墓地：为什么知识总是丢失
+## 文档的墓地：为什么知识总是丢失
 
 几乎每个技术团队都经历过这样的场景：
 
@@ -62,7 +63,7 @@ redirect_from:
 
 ---
 
-## 二、KBaaC：知识库即代码的范式
+## KBaaC：知识库即代码的范式
 
 ### 什么是KBaaC
 
@@ -94,7 +95,7 @@ redirect_from:
 
 ---
 
-## 三、ADR：架构决策的标准格式
+## ADR：架构决策的标准格式
 
 ### 为什么需要标准化ADR格式
 
@@ -113,7 +114,7 @@ redirect_from:
 
 <object data="/assets/images/2025-03-03-knowledge-base-as-code-02-kbac-pillars.svg" type="image/svg+xml" width="100%"></object>
 
-## 四、实施KBaaC：从0到1的路线图
+## 实施KBaaC：从0到1的路线图
 
 ### 阶段一：基础设施（Week 1）
 
@@ -146,7 +147,7 @@ redirect_from:
 
 ---
 
-## 五、KBaaC的最佳实践
+## KBaaC的最佳实践
 
 ### 实践一：ADR的粒度控制
 
@@ -181,7 +182,7 @@ redirect_from:
 
 ---
 
-## 六、工具与生态系统
+## 工具与生态系统
 
 ### ADR工具
 
@@ -214,7 +215,7 @@ redirect_from:
 
 ---
 
-## 七、KBaaC的挑战与解决方案
+## KBaaC的挑战与解决方案
 
 ### 挑战一：维护成本
 
@@ -243,7 +244,7 @@ redirect_from:
 
 ---
 
-## 八、结语：给未来的时间胶囊
+## 结语：给未来的时间胶囊
 
 回到张工的故事。
 

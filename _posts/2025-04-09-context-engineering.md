@@ -21,19 +21,7 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [Prompt Engineering的局限](#一prompt-engineering的局限) — 一个真实的失败案例
-2. [Context Engineering定义](#二context-engineering的定义) — 什么是Context Engineering
-3. [核心挑战](#三context-engineering的核心挑战) — 信息分散、动态、权限、过载
-4. [五层技术架构](#四context-engineering的技术架构) — 从数据源到交付的完整方案
-5. [实战对比](#五context-engineering-vs-prompt-engineering实战对比) — 效果数据说话
-6. [行业实践](#六context-engineering的行业实践) — Shopify、Salesforce、OpenClaw
-7. [结论](#七写在最后从prompt到context的范式转移) — 范式转移的核心洞察
-
----
-
-## 一、Prompt Engineering的局限
+## Prompt Engineering的局限
 
 > 💡 **Key Insight**
 > 
@@ -61,7 +49,7 @@ redirect_from:
 
 ---
 
-## 二、Context Engineering的定义
+## Context Engineering的定义
 
 ### 🔥 核心定义
 
@@ -111,7 +99,7 @@ Context太多，超出LLM窗口：
 
 ---
 
-## 四、Context Engineering的技术架构
+## Context Engineering的技术架构
 
 ### 🏗️ 五层技术架构
 
@@ -132,7 +120,7 @@ Context太多，超出LLM窗口：
 - **缓存层** → 热点数据加速
 - **多策略检索** → 语义+关键词+图遍历
 <object data="/assets/images/2025-04-09-context-eng-02-delivery.svg" type="image/svg+xml" width="100%"></object>
-## 五、Context Engineering vs Prompt Engineering：实战对比
+## Context Engineering vs Prompt Engineering：实战对比
 
 ### 场景：AI客服系统
 

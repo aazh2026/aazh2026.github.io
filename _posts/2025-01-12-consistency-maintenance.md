@@ -1,10 +1,13 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: 跨会话一致性：如何让Agent不变成"精神分裂"
 date: 2025-01-12T01:35:00+08:00
 tags: [Agent设计, 一致性, 记忆管理, 长期交互]
 
 redirect_from:
   - /consistency-maintenance/
+series: AI-Native Engineering
 ---
 
 # 跨会话一致性：如何让Agent不变成"精神分裂"
@@ -25,7 +28,7 @@ redirect_from:
 
 这就是跨会话一致性的灾难：**Agent在长期交互中失去了对用户的连续认知**。
 
-## 一、什么是跨会话一致性
+## 什么是跨会话一致性
 
 ### 1.1 三个层面的一致性
 
@@ -59,7 +62,7 @@ redirect_from:
 - 客户流失（73%的用户因为"需要重复解释"而放弃服务）
 - 品牌损害（"这个AI助手记不住事"）
 
-## 二、一致性维护的核心挑战
+## 一致性维护的核心挑战
 
 ### 2.1 时间旅行问题
 
@@ -100,7 +103,7 @@ Agent需要：
 
 **需要：** 智能地选择"当前相关的历史信息"
 
-## 三、工程解决方案
+## 工程解决方案
 
 ### 3.1 用户画像（User Profile）：不变的核心
 
@@ -122,7 +125,7 @@ Agent需要：
 - 中层：过去20个会话的合并摘要
 - 顶层：历史总摘要
 
-![会话摘要金字塔结构](/assets/images/2025-01-12-consistency-maintenance-01-pyramid.png)
+<img src="/assets/images/2025-01-12-consistency-maintenance-01-pyramid.png" alt="会话摘要金字塔结构" style="width:100%;height:auto;">
 
 **检索时：**
 - 优先加载底层（细节准确）
@@ -147,7 +150,7 @@ Agent需要：
 
 **开场白示例：**
 
-## 四、实践中的经验
+## 实践中的经验
 
 ### 4.1 一致性校验清单
 
@@ -173,7 +176,7 @@ Agent需要：
 
 透明度和控制权建立信任。
 
-## 五、总结
+## 总结
 
 跨会话一致性不是技术问题，是**产品设计问题**。
 

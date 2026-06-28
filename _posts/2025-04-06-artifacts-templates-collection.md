@@ -15,21 +15,7 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [模板设计理念](#一模板设计理念) — 为什么需要统一模板
-2. [Product Intent 模板](#二product-intent-模板) — 产品意图定义
-3. [User Story Pack 模板](#三user-story-pack-模板) — 用户故事包
-4. [Architecture Spec 模板](#四architecture-spec-模板) — 架构规范
-5. [Execution Plan 模板](#五execution-plan-模板) — 执行计划
-6. [Quality Contract 模板](#六quality-contract-模板) — 质量契约
-7. [Operations Runbook 模板](#七operations-runbook-模板) — 运维手册
-8. [Traceability Matrix 模板](#八traceability-matrix-模板) — 追溯矩阵
-9. [使用指南与最佳实践](#九使用指南与最佳实践)
-
----
-
-## 一、模板设计理念
+## 模板设计理念
 
 <object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%"></object>
 
@@ -51,7 +37,7 @@ redirect_from:
 
 ---
 
-## 二、Product Intent 模板
+## Product Intent 模板
 
 ### 完整模板
 
@@ -59,7 +45,7 @@ redirect_from:
 
 ---
 
-## 三、User Story Pack 模板
+## User Story Pack 模板
 
 ### 完整模板
 
@@ -67,7 +53,7 @@ redirect_from:
 
 ---
 
-## 四、Architecture Spec 模板
+## Architecture Spec 模板
 
 ### 完整模板
 
@@ -75,7 +61,7 @@ redirect_from:
 
 ---
 
-## 五、Execution Plan 模板
+## Execution Plan 模板
 
 ### 完整模板
 
@@ -83,7 +69,7 @@ redirect_from:
 
 ---
 
-## 六、Quality Contract 模板
+## Quality Contract 模板
 
 ### 完整模板
 
@@ -91,7 +77,7 @@ redirect_from:
 
 ---
 
-## 七、Operations Runbook 模板
+## Operations Runbook 模板
 
 ### 完整模板
 
@@ -99,13 +85,13 @@ redirect_from:
 
 ---
 
-## 八、Traceability Matrix 模板
+## Traceability Matrix 模板
 
 ### 完整模板
 
 ---
 
-## 九、使用指南与最佳实践
+## 使用指南与最佳实践
 
 ### 模板选择指南
 

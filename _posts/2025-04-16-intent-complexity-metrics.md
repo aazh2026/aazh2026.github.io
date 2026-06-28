@@ -15,7 +15,7 @@ redirect_from:
 
 ---
 
-## 一、传统研发指标的崩塌
+## 传统研发指标的崩塌
 
 ### 传统指标的黄金时代
 
@@ -69,7 +69,7 @@ AI快速生成功能，但可能：
 
 ---
 
-## 二、为什么传统指标失效了？
+## 为什么传统指标失效了？
 
 ### 根本原因：指标与价值的脱钩
 
@@ -85,7 +85,7 @@ AI快速生成功能，但可能：
 
 ---
 
-## 三、Intent Complexity：新范式的核心指标
+## Intent Complexity：新范式的核心指标
 
 ### 什么是Intent Complexity？
 
@@ -99,7 +99,7 @@ AI快速生成功能，但可能：
 
 ---
 
-## 四、AI时代的研发指标体系
+## AI时代的研发指标体系
 
 基于Intent Complexity，我提出**AI-Native研发指标体系**。
 
@@ -121,17 +121,17 @@ AI快速生成功能，但可能：
 
 ---
 
-## 五、实战：从LOC到Intent Complexity的转换
+## 实战：从LOC到Intent Complexity的转换
 
 ### 场景：电商订单系统
 
-**传统度量（LOC导向）**：
+### 传统度量（LOC导向）
 
-**Intent Complexity度量**：
+### Intent Complexity度量
 
 ---
 
-## 六、实施Intent Complexity度量
+## 实施Intent Complexity度量
 
 ### 实施步骤
 
@@ -161,7 +161,7 @@ AI快速生成功能，但可能：
 
 ---
 
-## 七、写在最后：从度量到管理
+## 写在最后：从度量到管理
 
 ### 度量的目的不是度量本身
 

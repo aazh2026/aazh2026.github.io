@@ -17,17 +17,6 @@ series: AI-Native软件工程系列 #1
 
 ---
 
-## 📋 本文结构
-
-1. [TDD的黄昏](#tdd的黄昏) — 为什么传统测试先行失效了
-2. [意图即契约](#意图即契约) — 测试角色的根本性转变
-3. [AI-DD新范式](#ai-dd新范式) — Prompt如何成为新测试
-4. [实践重构](#实践重构) — 从Red-Green-Refactor到Prompt-Generate-Validate
-5. [组织 implications](#组织-implications) — 团队需要哪些新能力
-6. [结论](#结论) — 测试工程师的下一步
-
----
-
 ## TDD的黄昏
 
 > 💡 **Key Insight**
@@ -91,8 +80,8 @@ AI时代的循环正在变成：
 
 让我们对比三种表达方式：
 
-**传统测试（JUnit）**：
-**BDD（Gherkin）**：
+### 传统测试（JUnit）
+### BDD（Gherkin）
 **AI-DD（Prompt）**：
 **三种形式，同一本质。**
 
@@ -169,8 +158,7 @@ AI时代的循环正在变成：
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 传统TDD思维 | AI-Native思维 |

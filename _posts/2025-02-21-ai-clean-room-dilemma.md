@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /ai-clean-room-dilemma.html
+series: AI-Native Engineering
 ---
 
 # AI时代的Clean Room困境：从技术实验到许可证的灰色地带

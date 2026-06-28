@@ -1,7 +1,10 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: "AI-Native Startup 的本质矛盾：工具消除了复杂度，却放大了判断的重量"
 date: 2026-05-28
 tags: [AI, 创业, Paul Graham, 判断力, Brooks]
+series: AI-Native Engineering
 ---
 
 # AI-Native Startup 的本质矛盾：工具消除了复杂度，却放大了判断的重量

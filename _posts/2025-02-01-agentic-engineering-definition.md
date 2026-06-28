@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /agentic-engineering-definition.html
+series: AI-Native Engineering
 ---
 
 # Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移

@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /openclaw-insight-report.html
+series: AI-Native Engineering
 ---
 
 # OpenClaw 使用场景深度洞察报告

@@ -1,4 +1,6 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: 提示词是输入，循环是过程
 date: 2026-06-11 22:30:00
 tags:
@@ -7,6 +9,7 @@ tags:
   - Loop
   - Codex
   - Claude
+series: AI-Native Engineering
 ---
 
 <object data="/assets/images/2026-06-11-loop-engineering-01-agent-loop-cycle.svg" type="image/svg+xml" width="100%"></object>

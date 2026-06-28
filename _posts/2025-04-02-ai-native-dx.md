@@ -15,7 +15,7 @@ redirect_from:
 
 ---
 
-## 一、那个崩溃的开发午后
+## 那个崩溃的开发午后
 
 让我们从一个熟悉的场景开始。
 
@@ -33,7 +33,7 @@ redirect_from:
 
 ---
 
-## 二、核心观点：AI重新定义了认知负荷
+## 核心观点：AI重新定义了认知负荷
 
 让我说一个反直觉的事实：**AI不是让开发变简单，而是重新定义了"难"在哪里**。
 
@@ -56,7 +56,7 @@ redirect_from:
 
 ---
 
-## 三、穿越周期：从命令行到GUI到AI-Native
+## 穿越周期：从命令行到GUI到AI-Native
 
 让我们看看开发者工具的演化史。
 
@@ -84,7 +84,7 @@ redirect_from:
 
 ---
 
-## 四、反直觉洞察：五维DX模型
+## 反直觉洞察：五维DX模型
 
 <object data="/assets/images/2025-04-02-ai-native-dx-01-five-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
@@ -157,7 +157,7 @@ redirect_from:
 
 ---
 
-## 五、实战：设计AI-Native开发者工具
+## 实战：设计AI-Native开发者工具
 
 ### 原则一：意图优先
 
@@ -195,7 +195,7 @@ redirect_from:
 
 ---
 
-## 六、写在最后
+## 写在最后
 
 开发者体验不是关于工具，是关于人。
 

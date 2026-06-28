@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /organizational-memory-externalization.html
+series: AI-Native Engineering
 ---
 
 # 当专家退休时，公司失去的不是一个人，而是一部活历史

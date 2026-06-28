@@ -15,7 +15,7 @@ redirect_from:
 
 ---
 
-## 一、那个被忽略的Pull Request
+## 那个被忽略的Pull Request
 
 2018年4月，Uber的工程师Ryan在GitHub上提交了一个看似无害的PR。
 
@@ -33,7 +33,7 @@ redirect_from:
 
 ---
 
-## 二、核心观点：人类评审的认知天花板
+## 核心观点：人类评审的认知天花板
 
 让我说一个反直觉的事实：**人类不适合做代码评审**。
 
@@ -58,7 +58,7 @@ redirect_from:
 
 ---
 
-## 三、穿越周期：从手工作坊到智能工厂
+## 穿越周期：从手工作坊到智能工厂
 
 让我们看看质量控制的演化史。
 
@@ -88,7 +88,7 @@ redirect_from:
 
 ---
 
-## 四、反直觉洞察：三种AI-Native评审形态
+## 反直觉洞察：三种AI-Native评审形态
 
 <object data="/assets/images/2025-04-13-death-of-code-reviews-01-forms.svg" type="image/svg+xml" width="100%"></object>
 
@@ -128,7 +128,7 @@ AI持续监控已合并的代码：
 
 ---
 
-## 五、实战：构建AI-Native评审体系
+## 实战：构建AI-Native评审体系
 
 ### 五阶段转型路线图
 
@@ -167,7 +167,7 @@ AI持续监控已合并的代码：
 
 ---
 
-## 六、写在最后
+## 写在最后
 
 代码评审的死亡，不是终结，是重生。
 

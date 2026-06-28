@@ -16,7 +16,7 @@ redirect_from:
 
 ---
 
-## 一、AI adoption的残酷现实
+## AI adoption的残酷现实
 
 ### 现实1：个人使用 ≠ 团队生产力
 
@@ -35,7 +35,7 @@ redirect_from:
 
 ---
 
-## 二、S-curve Adoption模型
+## S-curve Adoption模型
 
 ### 什么是S-curve？
 
@@ -61,7 +61,7 @@ redirect_from:
 
 ---
 
-## 三、Layer 1：Individual Adoption（个人层）
+## Layer 1：Individual Adoption（个人层）
 
 ### 阶段划分
 
@@ -142,7 +142,7 @@ redirect_from:
 
 ---
 
-## 四、Layer 2：Team Adoption（团队层）
+## Layer 2：Team Adoption（团队层）
 
 ### 阶段划分
 
@@ -153,7 +153,7 @@ redirect_from:
 - 统一AI工具选择
 - 制定代码审查标准
 
-**关键任务**：
+### 关键任务
 **常见挑战**：
 - 不同工程师习惯不同工具
 - 代码风格不一致
@@ -173,7 +173,7 @@ redirect_from:
 - CI/CD集成AI检查
 - 知识库建设
 
-**关键任务**：
+### 关键任务
 **常见挑战**：
 - 现有工具链集成困难
 - 流程变更阻力
@@ -216,7 +216,7 @@ redirect_from:
 
 ---
 
-## 五、Layer 3：Organizational Adoption（组织层）
+## Layer 3：Organizational Adoption（组织层）
 
 ### 阶段划分
 
@@ -227,7 +227,7 @@ redirect_from:
 - 建立AI治理体系
 - 投资AI基础设施
 
-**关键任务**：
+### 关键任务
 **常见挑战**：
 - 高层对AI理解不足
 - 投资回报难以量化
@@ -247,7 +247,7 @@ redirect_from:
 - 建立AI基础设施
 - 培养内部AI专家
 
-**关键任务**：
+### 关键任务
 **常见挑战**：
 - 规模化带来的复杂性
 - 遗留系统改造困难
@@ -289,12 +289,12 @@ redirect_from:
 
 ---
 
-## 六、跨层依赖与策略
+## 跨层依赖与策略
 
 ### 不能跳过的阶段
 
-**错误做法**：
-**正确做法**：
+### 错误做法
+### 正确做法
 ### 各层的关键成功因素
 
 | 层级 | 关键成功因素 | 常见失败原因 |
@@ -322,7 +322,7 @@ redirect_from:
 
 ---
 
-## 七、实战：S-curve Adoption路线图
+## 实战：S-curve Adoption路线图
 
 ### 第一年路线图
 
@@ -371,7 +371,7 @@ redirect_from:
 
 ---
 
-## 八、写在最后：耐心的力量
+## 写在最后：耐心的力量
 
 ### AI adoption不是项目，是旅程
 

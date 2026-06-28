@@ -14,14 +14,14 @@ series: AI-Native Engineering
 
 ---
 
-## 一、为什么成本预估总是错的
+## 为什么成本预估总是错的
 
 大多数人在计算AI Agent成本时：
 
-**实际成本结构**：
+### 实际成本结构
 ---
 
-## 二、成本层级拆解
+## 成本层级拆解
 
 <object data="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" type="image/svg+xml" width="100%"></object>
 
@@ -55,7 +55,7 @@ series: AI-Native Engineering
 | 监控 | $5 | 基础日志 |
 | **月总成本** | **$100** | |
 
-**架构**：
+### 架构
 ---
 
 ### Level 3: $1,000/月 生产阶段
@@ -71,7 +71,7 @@ series: AI-Native Engineering
 | CDN | $50 | 静态资源 |
 | **月总成本** | **$1,000** | |
 
-**架构**：
+### 架构
 **隐藏成本开始显现**：
 - 上下文缓存：Redis集群 $100/月
 - 向量数据库：Pinecone $50/月
@@ -107,7 +107,7 @@ series: AI-Native Engineering
 
 ---
 
-## 三、各行业真实案例
+## 各行业真实案例
 
 ### Case 1: AI客服Agent
 | 指标 | 数值 |
@@ -155,7 +155,7 @@ series: AI-Native Engineering
 
 ---
 
-## 四、成本优化策略
+## 成本优化策略
 
 ### 1. 智能降级
 ### 2. 预处理过滤
@@ -168,7 +168,7 @@ series: AI-Native Engineering
 
 ---
 
-## 五、成本监控清单
+## 成本监控清单
 
 ### 每周检查
 - [ ] API调用量和费用
@@ -184,7 +184,7 @@ series: AI-Native Engineering
 
 ---
 
-## 六、总结：成本层级选择
+## 总结：成本层级选择
 
 | 阶段 | 月成本 | 用户数 | 关键决策 |
 |------|--------|--------|----------|

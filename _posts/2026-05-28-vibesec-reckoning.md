@@ -4,6 +4,7 @@ title: "Vibe Coding 的账单来了：Thoughtworks 的教训"
 date: 2026-05-28T14:00:00+08:00
 tags: [AI安全, Vibe Coding, 开发实践, Agent架构]
 author: "@postcodeeng"
+series: AI-Native Engineering
 ---
 
 > **TL;DR**

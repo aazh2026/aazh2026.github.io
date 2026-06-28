@@ -17,18 +17,7 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [为什么是四个 Agent](#一为什么是四个-agent) — 不是随意选的数字
-2. [4-Agent 架构](#二4-agent-架构) — 研究 / 生产 / 质量 / 分发
-3. [Orchestrator 的角色](#三orchestrator-的角色) — 路由任务、管理失败
-4. [环境配置](#四环境配置) — Claude Code + 项目结构 + CLAUDE.md
-5. [工作流实战](#五工作流实战) — 从任务输入到内容分发
-6. [延伸思考](#六延伸思考)
-
----
-
-## 一、为什么是四个 Agent
+## 为什么是四个 Agent
 
 在谈架构之前，先说原理。
 
@@ -48,7 +37,7 @@ series: AI-Native Engineering
 
 ---
 
-## 二、4-Agent 架构
+## 4-Agent 架构
 
 ### Agent 1：Research Agent
 
@@ -82,7 +71,7 @@ series: AI-Native Engineering
 
 ---
 
-## 三、Orchestrator 的角色
+## Orchestrator 的角色
 
 **Role**：在 agents 之间路由任务、管理工作流、处理失败
 
@@ -94,7 +83,7 @@ series: AI-Native Engineering
 
 ---
 
-## 四、环境配置
+## 环境配置
 
 ### 前提条件
 
@@ -107,7 +96,7 @@ series: AI-Native Engineering
 
 ---
 
-## 五、工作流实战
+## 工作流实战
 
 ### 第一阶段：任务输入
 
@@ -133,7 +122,7 @@ Distribution Agent 读取批准稿，部署到目标平台。
 
 ---
 
-## 六、延伸思考
+## 延伸思考
 
 CyrilXBT 的这个 4-Agent 框架本质上是一个**内容工厂的生产线设计**。它的价值不在于每个 agent 本身，而在于它们之间的**握手协议**和**边界定义**。
 

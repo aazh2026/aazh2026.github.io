@@ -14,18 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [Firefox 149 新功能解析](#firefox-149-新功能解析)
-2. [浏览器 AI 化的三条路径](#浏览器-ai-化的三条路径)
-3. [Firefox 的差异化策略](#firefox-的差异化策略)
-4. [技术实现：AI 窗口的架构](#技术实现ai-窗口的架构)
-5. [对比分析：Chrome vs Edge vs Safari vs Firefox](#对比分析chrome-vs-edge-vs-safari-vs-firefox)
-6. [隐私与 AI：Mozilla 的核心主张](#隐私与-aimozilla-的核心主张)
-7. [结论：浏览器的未来是 AI 操作系统](#结论浏览器的未来是-ai-操作系统)
-
----
-
 ## Firefox 149 新功能解析
 
 ### 官方公告要点
@@ -59,7 +47,7 @@ series: AI-Native Engineering
 
 **策略**：将 AI 作为浏览器核心功能，无处不在
 
-**实现方式**：
+### 实现方式
 **优势**：
 - AI 功能触手可及
 - 用户体验流畅
@@ -74,7 +62,7 @@ series: AI-Native Engineering
 
 **策略**：与操作系统深度绑定，AI 是系统能力
 
-**实现方式**：
+### 实现方式
 **优势**：
 - 性能优化（硬件加速）
 - 跨应用一致性
@@ -89,7 +77,7 @@ series: AI-Native Engineering
 
 **策略**：AI 是可插拔模块，用户自主选择
 
-**实现方式**：
+### 实现方式
 **优势**：
 - 用户选择自由
 - 隐私可控
@@ -135,7 +123,7 @@ series: AI-Native Engineering
 
 ### 本地 AI vs 云端 AI
 
-**本地 AI 处理**：
+### 本地 AI 处理
 **优势**：
 - 数据不离开设备
 - 响应速度快（无网络延迟）
@@ -146,7 +134,7 @@ series: AI-Native Engineering
 - 需要较强硬件
 - 模型更新困难
 
-**云端 AI 处理**：
+### 云端 AI 处理
 **优势**：
 - 模型能力更强
 - 无需本地硬件
@@ -159,8 +147,8 @@ series: AI-Native Engineering
 
 ### 隐私保护机制
 
-**差分隐私**：
-**联邦学习**：
+### 差分隐私
+### 联邦学习
 ---
 
 ## 对比分析：Chrome vs Edge vs Safari vs Firefox
@@ -209,7 +197,7 @@ series: AI-Native Engineering
 - AI 收集：阅读内容、思考问题、写作草稿
 - 用途：训练模型、行为预测
 
-**风险升级**：
+### 风险升级
 ### Mozilla 的隐私保护方案
 
 **1. 数据最小化**
@@ -217,7 +205,7 @@ series: AI-Native Engineering
 **3. 用户控制**
 ---
 
-## 结论：浏览器的未来是 AI 操作系统
+## 结尾：浏览器的未来是 AI 操作系统
 
 ### 浏览器的演进
 

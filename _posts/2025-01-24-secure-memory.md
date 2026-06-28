@@ -1,10 +1,13 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: 敏感记忆的保险箱：当Agent记住你的秘密
 date: 2025-01-24T01:45:00+08:00
 tags: [安全, 隐私, 机密计算, 数据隔离]
 
 redirect_from:
   - /secure-memory.html
+series: AI-Native Engineering
 ---
 
 # 敏感记忆的保险箱：当Agent记住你的秘密
@@ -23,7 +26,7 @@ redirect_from:
 
 这就是**敏感记忆的安全问题**：Agent需要记住这些信息才能服务好用户，但记住意味着风险。
 
-## 一、敏感记忆的分类
+## 敏感记忆的分类
 
 ### 1.1 机密等级
 
@@ -52,7 +55,7 @@ redirect_from:
 
 <object data="/assets/images/2025-01-24-secure-memory-01-sensitivity-layers.svg" type="image/svg+xml" width="100%"></object>
 
-## 二、检测敏感信息
+## 检测敏感信息
 
 ### 2.1 规则匹配
 
@@ -66,7 +69,7 @@ redirect_from:
 
 让用户可以标记敏感信息：
 
-## 三、加密存储方案
+## 加密存储方案
 
 ### 3.1 客户端加密（推荐）
 
@@ -92,7 +95,7 @@ redirect_from:
 
 **缺点：** 复杂性高，检索时需要协调多个位置。
 
-## 四、隔离与访问控制
+## 隔离与访问控制
 
 ### 4.1 内存隔离
 
@@ -104,7 +107,7 @@ redirect_from:
 
 记录所有敏感数据的访问：
 
-## 五、隐私增强技术
+## 隐私增强技术
 
 ### 5.1 差分隐私
 
@@ -114,7 +117,7 @@ redirect_from:
 
 用户的敏感记忆只在用户设备上，Agent只上传聚合后的匿名模式：
 
-## 六、合规与最佳实践
+## 合规与最佳实践
 
 ### 6.1 GDPR/CCPA合规
 
@@ -143,7 +146,7 @@ redirect_from:
 - [ ] 脱敏展示（如需要）
 - [ ] 提供数据来源解释
 
-## 七、总结
+## 总结
 
 敏感记忆的安全不是可选项，是**必选项**。
 

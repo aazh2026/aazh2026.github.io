@@ -17,18 +17,7 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [一个反直觉的账单](#一一个反直觉的账单) — 从真实案例看成本来源
-2. [上下文膨胀定律](#二上下文膨胀定律) — 什么在驱动成本上升
-3. [成本结构解析](#三成本结构解析) — 你的钱到底花在哪了
-4. [四象限优化框架](#四四象限优化框架) — 如何系统性降低上下文成本
-5. [实施路径](#五实施路径) — 从诊断到优化的完整路线图
-6. [结论](#六结论) — Takeaway 与延伸思考
-
----
-
-## 一、一个反直觉的账单
+## 一个反直觉的账单
 
 ### 真实案例
 
@@ -55,7 +44,7 @@ series: AI-Native Engineering
 
 ---
 
-## 二、上下文膨胀定律
+## 上下文膨胀定律
 
 ### 什么是上下文膨胀？
 
@@ -83,7 +72,7 @@ series: AI-Native Engineering
 
 ---
 
-## 三、成本结构解析
+## 成本结构解析
 
 <object data="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" type="image/svg+xml" width="100%"></object>
 
@@ -113,7 +102,7 @@ series: AI-Native Engineering
 
 ---
 
-## 四、四象限优化框架
+## 四象限优化框架
 
 ### 优化矩阵
 
@@ -171,7 +160,7 @@ series: AI-Native Engineering
 
 ---
 
-## 五、实施路径
+## 实施路径
 
 ### 阶段 1：诊断（Week 1）
 
@@ -224,8 +213,7 @@ series: AI-Native Engineering
 
 ---
 
-## 六、结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 传统思维 | AI-Native思维 |

@@ -17,17 +17,6 @@ series: AI-Native软件工程系列 #5
 
 ---
 
-## 📋 本文结构
-
-1. [为什么Prompt是第一等制品](#为什么prompt是第一等制品) — 从临时指令到核心资产
-2. [Prompt版本控制](#prompt版本控制) — 如何管理Prompt的演进
-3. [Prompt Code Review](#prompt-code-review) — 评审什么，怎么评审
-4. [Prompt CI/CD](#prompt-cicd) — 自动化测试与部署
-5. [Prompt资产管理](#prompt资产管理) — 组织级Prompt库建设
-6. [结论](#结论) — PDD的工程化成熟度模型
-
----
-
 ## 为什么Prompt是第一等制品
 
 > 💡 **Key Insight**
@@ -133,8 +122,7 @@ series: AI-Native软件工程系列 #5
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 临时使用Prompt | 工程化使用Prompt |

@@ -1,10 +1,13 @@
 ---
+layout: post
+author: "@postcodeeng"
 title: 上下文窗口的"虚拟内存"化：当RAG成为分页机制
 date: 2025-01-29T00:35:00+08:00
 tags: [RAG, 上下文窗口, 内存管理, LLM优化]
 
 redirect_from:
   - /virtual-memory-rag.html
+series: AI-Native Engineering
 ---
 
 # 上下文窗口的"虚拟内存"化：当RAG成为分页机制
@@ -23,7 +26,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 
 操作系统早就解决了这个问题：**虚拟内存（Virtual Memory）**。
 
-## 一、操作系统教给我们的事
+## 操作系统教给我们的事
 
 ### 1.1 虚拟内存的核心思想
 
@@ -42,7 +45,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 
 这就是为什么虚拟内存可行——程序实际的行为是"局部"的。
 
-## 二、LLM的"页错误"时刻
+## LLM的"页错误"时刻
 
 ### 2.1 当前架构的问题
 
@@ -66,7 +69,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 
 问题：早期步骤的结果被后期淹没，形成"上下文债务"。
 
-## 三、RAG作为分页机制的设计
+## RAG作为分页机制的设计
 
 <object data="/assets/images/2025-01-29-virtual-memory-rag-01-mapping.svg" type="image/svg+xml" width="100%"></object>
 
@@ -98,7 +101,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 - 控制粒度适中
 - 符合大多数文档的自然结构
 
-## 四、交换策略：什么时候换入/换出
+## 交换策略：什么时候换入/换出
 
 ### 4.1 预取（Prefetching）
 
@@ -134,7 +137,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 - 这些应该常驻上下文（"钉住"在内存中）
 - 其他的可以换出
 
-## 五、混合内存管理：长上下文模型 + RAG
+## 混合内存管理：长上下文模型 + RAG
 
 <object data="/assets/images/2025-01-29-virtual-memory-rag-02-hybrid-arch.svg" type="image/svg+xml" width="100%"></object>
 
@@ -168,7 +171,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 - 非常用信息按需加载（省）
 - 工作集跟踪保持连贯性（准）
 
-## 六、实现中的细节
+## 实现中的细节
 
 ### 6.1 页ID设计
 
@@ -205,7 +208,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 
 <object data="/assets/images/2025-01-29-virtual-memory-rag-02-pagefault.svg" type="image/svg+xml" width="100%"></object>
 
-## 七、为什么这很重要
+## 为什么这很重要
 
 长上下文模型是**硬件限制**（我们造不出无限大的芯片），不是**架构最优**。
 

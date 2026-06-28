@@ -16,7 +16,7 @@ redirect_from:
 
 ---
 
-## 一、传统PRD的困境
+## 传统PRD的困境
 
 ### PRD是什么？
 
@@ -47,7 +47,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ---
 
-## 二、Executable Specification：新范式
+## Executable Specification：新范式
 
 ### 什么是Executable Specification？
 
@@ -78,7 +78,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ---
 
-## 三、Executable PRD的技术实现
+## Executable PRD的技术实现
 
 ### 格式：结构化需求语言
 
@@ -89,7 +89,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 **编译流程**：
 
 {% figure center %}
-![Executable PRD: Compilation Pipeline](/assets/images/2025-04-14-executable-prd-01-compilation-pipeline.png)
+<img src="/assets/images/2025-04-14-executable-prd-01-compilation-pipeline.png" alt="Executable PRD: Compilation Pipeline" style="width:100%;height:auto;">
 *图 1：Executable PRD 编译流程——一份 YAML 规格说明通过 Spec Compiler 生成数据库 Schema、API 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源到多份工件的高效转化。*
 {% endfigure %}
 
@@ -98,13 +98,13 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 *图 2：Executable PRD 工作流——结构化规格说明（YAML）通过 Spec Compiler 编译为 SQL Schema、OpenAPI 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源。*
 {% endfigure %}
 
-**编译示例**：
+### 编译示例
 
 ### 可执行性：PRD即测试
 
 ---
 
-## 四、Executable PRD的工作流程
+## Executable PRD的工作流程
 
 ### 新范式的工作流程
 
@@ -129,11 +129,11 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ---
 
-## 五、实战：传统PRD vs Executable PRD
+## 实战：传统PRD vs Executable PRD
 
 ### 场景：优惠券功能
 
-**传统PRD**：
+### 传统PRD
 
 **问题**：
 - "使用条件"具体是什么？
@@ -143,7 +143,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 需要多次沟通才能明确。
 
-**Executable PRD**：
+### Executable PRD
 
 **优势**：
 - 所有业务规则显式定义
@@ -153,7 +153,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ---
 
-## 六、Executable PRD的挑战与应对
+## Executable PRD的挑战与应对
 
 ### 挑战1：学习曲线
 
@@ -193,7 +193,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ---
 
-## 七、写在最后：从文档到源代码的范式转移
+## 写在最后：从文档到源代码的范式转移
 
 ### 软件工程的历史脉络
 

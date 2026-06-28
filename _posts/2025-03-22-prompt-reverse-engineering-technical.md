@@ -16,7 +16,7 @@ redirect_from:
 
 ---
 
-## 一、从"可以逆向"到"如何逆向"
+## 从"可以逆向"到"如何逆向"
 
 在上一篇文章中，我讨论了Prompt逆向工程的风险——你的Prompt可能被竞争对手套取。
 
@@ -74,7 +74,7 @@ redirect_from:
 
 ---
 
-## 二、RPE技术框架：四层方法论
+## RPE技术框架：四层方法论
 
 基于以上案例和行业实践，我提出**RPE（Reverse Prompt Engineering）四层方法论**。
 
@@ -139,7 +139,7 @@ redirect_from:
 
 ---
 
-## 三、Prompt层级的逆向难度矩阵
+## Prompt层级的逆向难度矩阵
 
 不是所有Prompt都能被同等程度地逆向。不同层级的Prompt，逆向难度差异巨大。
 

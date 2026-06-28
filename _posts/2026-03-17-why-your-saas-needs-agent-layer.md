@@ -21,8 +21,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
 - [不做 Agent 层的代价](#不做-agent-层的代价)
 - [做 Agent 层的收益](#做-agent-层的收益)
 - [Agent 层的 3 个切入点](#agent-层的-3-个切入点)

@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /ai-tech-frontier/
+series: AI-Native Engineering
 ---
 
 # AI 技术前沿 | 2026-03-04

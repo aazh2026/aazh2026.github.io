@@ -1,11 +1,13 @@
 ---
 layout: post
+author: "@postcodeeng"
 title: 接口隔离：人类与 AI 的契约设计
 date: 2026-03-15T10:00:00+08:00
 tags: [接口隔离, SOLID, Intent-Driven, AI-Native, 软件工程]
 
 redirect_from:
   - /interface-segregation.html
+series: AI-Native Engineering
 ---
 
 # 接口隔离：人类与 AI 的契约设计
@@ -15,8 +17,6 @@ redirect_from:
 > AI-Native开发中，人类与AI的交互本质上是一种契约关系。接口隔离原则的核心启示是：将"胖接口"拆分为"瘦接口"——不是让AI理解人类的一切意图，而是人类通过清晰的Intent接口、Context接口和Prompt接口与AI对话。好的契约设计让AI成为可靠的协作者。核心公式：有效协作 = 清晰的边界 + 明确的契约 + 可预测的错误处理。
 
 ---
-
-## 📋 本文结构
 
 - **第3节**：回顾 SOLID 中的 I——为什么胖接口会毁掉协作
 - **第4节**：AI 时代三种新接口形态——Intent、Context、Prompt
@@ -28,7 +28,7 @@ redirect_from:
 
 ---
 
-## 一、接口隔离原则回顾：SOLID 中的 I
+## 接口隔离原则回顾：SOLID 中的 I
 
 ### 1.1 胖接口 vs 瘦接口
 
@@ -50,7 +50,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 **💡 关键洞察：** 接口隔离的本质是**关注点分离**——让调用者只依赖他们真正需要的东西。
 
 {% figure center %}
-![Interface Segregation: Fat vs Thin](/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.png)
+<img src="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.png" alt="Interface Segregation: Fat vs Thin" style="width:100%;height:auto;">
 *图 1：Fat Interface（❌）将所有方法打包在一个接口中；Thin Interfaces（✅）将每种能力拆分为独立接口，调用者只依赖其所需。*
 {% endfigure %}
 
@@ -61,7 +61,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 二、AI 时代的接口新形态
+## AI 时代的接口新形态
 
 当人类成为"调用者"、AI 成为"服务提供者"时，接口的形态发生了根本性变化。我们需要三种新接口：
 
@@ -99,7 +99,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 三、人类-AI 契约设计
+## 人类-AI 契约设计
 
 好的契约设计让协作变得可预测。一个完整的人类-AI 契约包含四个要素：
 
@@ -121,7 +121,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 四、实战：设计良好的 Intent 接口
+## 实战：设计良好的 Intent 接口
 
 ### 4.1 粒度设计：多细才算合适？
 
@@ -145,7 +145,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 五、接口版本与演化
+## 接口版本与演化
 
 ### 5.1 向后兼容的策略
 
@@ -165,7 +165,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 六、反直觉洞察
+## 反直觉洞察
 
 ### 洞察 1："更少上下文 = 更好结果"
 
@@ -187,7 +187,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 七、工具链与最佳实践
+## 工具链与最佳实践
 
 ### 7.1 契约定义工具
 
@@ -225,7 +225,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ---
 
-## 八、结语
+## 结语
 
 接口隔离原则在 AI 时代的核心启示是：**清晰的契约胜过聪明的猜测**。
 

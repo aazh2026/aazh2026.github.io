@@ -1,8 +1,10 @@
 ---
 layout: post
+author: "@postcodeeng"
 title: "软件复杂性的本质：与 AI 共舞"
 date: 2026-03-15
 tags: [软件工程, AI, 复杂性, 人月神话, 系统思考]
+series: AI-Native Engineering
 ---
 
 > *"There is no single development, in either technology or management technique, which by itself promises even one order-of-magnitude improvement within a decade in productivity, in reliability, in simplicity."*
@@ -24,8 +26,6 @@ AI 正在改变软件开发，但它不是解决复杂性问题的银弹。Fred 
 <object data="/assets/images/2026-03-15-software-complexity-02-complexity-taxonomy.svg" type="image/svg+xml" width="100%"></object>
 
 ---
-
-## 2. 📋 本文结构
 
 - **第 3 节**：回到 Brooks 的源头，区分两种复杂度
 - **第 4 节：复杂性如何度量**——从认知负荷到认知跨度

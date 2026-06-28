@@ -14,20 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [什么是 Grokking？](#什么是-grokking)
-2. [Grokking 的问题](#grokking-的问题)
-3. [Weight Norm Clipping 的原理](#weight-norm-clipping-的原理)
-4. [为什么它有效？](#为什么它有效)
-5. [实验结果：18-66 倍加速](#实验结果18-66-倍加速)
-6. [实现：仅需 5 行代码](#实现仅需-5-行代码)
-7. [对深度学习的影响](#对深度学习的影响)
-8. [局限与未来方向](#局限与未来方向)
-9. [结论：简单之美](#结论简单之美)
-
----
-
 ## 什么是 Grokking？
 
 Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
@@ -98,7 +84,7 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 ### 方法
 
-**Weight Norm Clipping（权重范数裁剪）**：
+### Weight Norm Clipping（权重范数裁剪）
 
 **关键参数**：
 - `max_norm`：最大允许的权重范数（超参数，通常 1.0-10.0）
@@ -216,7 +202,7 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 ### 与优化器集成
 
-**使用 Lion 优化器（推荐）**：
+### 使用 Lion 优化器（推荐）
 
 ### 超参数调优
 
@@ -326,7 +312,7 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 ---
 
-## 结论：简单之美
+## 结尾：简单之美
 
 Weight Norm Clipping 给我们上了重要的一课：
 

@@ -18,17 +18,6 @@ series: AI-Native软件工程系列
 
 ---
 
-## 📋 本文结构
-
-1. [UI 没死，但 80/20 翻了](#ui-没死但-8020-翻了) — Salesforce 宣布 Headless 360
-2. [新交互模式](#新交互模式) — 双 LLM 协作的新三层结构
-3. [教 Agent 如何成功](#教-agent-如何成功) — Notion MCP 的设计智慧
-4. [构建反馈循环](#构建反馈循环) — rationale 参数、feedback tool、tool-specific seeds
-5. [注意 context gap](#注意-context-gap) — 你的 Agent 有它没有的东西
-6. [结论：像对待人类用户一样为 Agent 构建](#结论像对待人类用户一样为-agent-构建)
-
----
-
 ## UI 没死，但 80/20 翻了
 
 > 💡 **Key Insight**
@@ -155,7 +144,7 @@ Diego 和他的 Agent 永远不需要知道 GL 代码是什么，财务团队得
 
 ---
 
-## 结论：像对待人类用户一样为 Agent 构建
+## 结尾：像对待人类用户一样为 Agent 构建
 
 > 💡 **Key Insight**
 >

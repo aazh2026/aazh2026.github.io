@@ -20,18 +20,7 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [TDD的黄金时代](#一tdd的黄金时代) — 价值与局限
-2. [AI生成代码的困境](#二ai生成代码tdd的噩梦) — 高覆盖率+高Bug率悖论
-3. [Intent-Driven Development](#三intent-driven-development新范式) — 意图驱动开发
-4. [技术实现](#四idd的技术实现) — 意图文档+验证引擎
-5. [实战对比](#五实战tdd-vs-idd) — 效率与质量数据
-6. [结论](#六写在最后范式转移的意义) — 开发者角色转变
-
----
-
-## 一、TDD的黄金时代
+## TDD的黄金时代
 
 ### TDD的核心价值
 
@@ -55,7 +44,7 @@ redirect_from:
 
 ---
 
-## 二、AI生成代码：TDD的噩梦
+## AI生成代码：TDD的噩梦
 
 ### AI代码的特点
 
@@ -81,7 +70,7 @@ redirect_from:
 
 ---
 
-## 三、Intent-Driven Development：新范式
+## Intent-Driven Development：新范式
 
 <object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%"></object>
 
@@ -110,14 +99,14 @@ redirect_from:
 
 ---
 
-## 四、IDD的技术实现
+## IDD的技术实现
 
 ### 技术1：结构化意图文档（SID）
 
 ### 技术2：意图到代码的生成
 
-**AI Prompt**：
-**AI输出**：
+### AI Prompt
+### AI输出
 ### 技术3：意图验证引擎
 
 ### 技术4：意图保持监控
@@ -126,7 +115,7 @@ redirect_from:
 
 ---
 
-## 五、实战：TDD vs IDD
+## 实战：TDD vs IDD
 
 ### 场景：订单折扣系统
 
@@ -143,7 +132,7 @@ redirect_from:
 
 ---
 
-## 六、写在最后：范式转移的意义
+## 写在最后：范式转移的意义
 
 ### IDD不是取代TDD，是升级TDD
 

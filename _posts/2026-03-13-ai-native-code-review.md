@@ -22,19 +22,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [代码审查的三重困境](#代码审查的三重困境)
-2. [为什么传统 Code Review 在失效](#为什么传统-code-review-在失效)
-3. [Agent 陪审团模型](#agent-陪审团模型)
-4. [实战：设计你的 Agent 陪审团](#实战设计你的-agent-陪审团)
-5. [人类审查者的新角色](#人类审查者的新角色)
-6. [反直觉洞察：审查越多，速度越快](#反直觉洞察审查越多速度越快)
-7. [实施路径与工具链](#实施路径与工具链)
-8. [结语：从守门人到知识园丁](#结语从守门人到知识园丁)
-
----
-
 ## 代码审查的三重困境
 
 让我们从一个普遍存在的现象开始。
@@ -145,7 +132,7 @@ redirect_from:
 | **知识沉淀** | 难以积累 | 持续学习改进 |
 
 {% figure center %}
-![Agent Jury Code Review Model](/assets/images/2026-03-13-ai-native-code-review-01-agent-jury.png)
+<img src="/assets/images/2026-03-13-ai-native-code-review-01-agent-jury.png" alt="Agent Jury Code Review Model" style="width:100%;height:auto;">
 *图 1：Agent 陪审团模型——5 个专业 Agent 并行审查 PR，最终汇总为 Review Report，由人类审查者做最终设计判断。Agent 处理 80% 标准化检查，人类专注 20% 架构与设计决策。*
 {% endfigure %}
 
@@ -285,7 +272,7 @@ Agent 的输出需要为人类审查者设计：
 - **静态分析**：ESLint, SonarQube, CodeClimate
 - **Git Hooks**：Husky, pre-commit
 
-**实施**：
+### 实施
 ### 阶段 2：智能审查 (2-4 周)
 
 **目标**：引入 AI 驱动的审查 Agent
@@ -296,7 +283,7 @@ Agent 的输出需要为人类审查者设计：
 - **DeepCode / Snyk Code**
 - **自研 Agent** (基于 OpenAI/Claude API)
 
-**实施**：
+### 实施
 ### 阶段 3：陪审团完整化 (1-2 个月)
 
 **目标**：多 Agent 协作 + 人机协作界面

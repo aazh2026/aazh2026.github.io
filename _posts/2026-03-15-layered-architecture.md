@@ -1,5 +1,6 @@
 ---
 layout: post
+author: "@postcodeeng"
 title: "分层的艺术：从 OSI 七层到 Agent OS 五层"
 date: 2026-03-15 10:00:00 +0800
 categories: [Architecture, AI]
@@ -24,8 +25,6 @@ Agent OS 的五层架构：
 记住：**好的分层不是物理隔离，而是逻辑边界；层间通信的成本决定了架构的成败**。
 
 ---
-
-## 2. 📋 本文结构
 
 <object data="/assets/images/2026-03-15-layered-architecture-01-toc.svg" type="image/svg+xml" width="100%"></object>
 

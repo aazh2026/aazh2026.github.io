@@ -17,18 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-## 📋 本文结构
-
-1. [Agent = Model + Harness](#agent--model--harness) — 核心等式
-2. [Harness 到底是什么](#harness-到底是什么) — 六层组件
-3. [重 reframing"skill issue"](#重-reframing-skill-issue) — 不是模型问题，是配置问题
-4. [棘轮效应：每个错误变成一条规则](#棘轮效应每个错误变成一条规则) — 永久化改进
-5. [从行为倒推 harness 设计](#从行为倒推-harness-设计) — 六层基础构件
-6. [Harness 不缩小，只是移动](#harness-不缩小只是移动) — 模型好了，scaffold 不会消失
-7. [结论：竞争在地基](#结论竞争在地基)
-
----
-
 ## Agent = Model + Harness
 
 > 💡 **Key Insight**
@@ -174,7 +162,7 @@ Addy 指出了一个反直觉的趋势：更好的模型让人以为 scaffolding
 
 ---
 
-## 结论：竞争在地基
+## 结尾：竞争在地基
 
 > 💡 **Key Insight**
 >

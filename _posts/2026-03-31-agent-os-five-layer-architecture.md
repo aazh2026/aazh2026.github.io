@@ -22,8 +22,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
 - [为什么需要分层架构？](#为什么需要分层架构)
 - [五层架构全景图](#五层架构全景图)
 - [Layer 1: Tools & Connectors](#layer-1-tools--connectors)

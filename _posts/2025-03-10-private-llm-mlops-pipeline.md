@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /private-llm-mlops-pipeline.html
+series: AI-Native Engineering
 ---
 
 # 训练AI只是5%的工作，MLOps才是决定成败的95%

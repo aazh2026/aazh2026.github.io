@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /agency-agents-analysis.html
+series: AI-Native Engineering
 ---
 
 # agency-agents深度解析：多Agent协作架构如何从概念走向落地

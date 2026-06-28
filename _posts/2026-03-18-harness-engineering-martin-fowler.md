@@ -16,20 +16,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [什么是 Harness？](#什么是-harness)
-2. [OpenAI 的内部实验](#openai-的内部实验)
-3. [Harness 的三层架构](#harness-的三层架构)
-4. [从"生成 Anything"到"约束解空间"](#从生成-anything到约束解空间)
-5. [Harness 会成为新的服务模板吗？](#harness-会成为新的服务模板吗)
-6. [技术栈收敛：一个值得怀疑的预测](#技术栈收敛一个值得怀疑的预测)
-7. [实践：用现有工具构建 Harness](#实践用现有工具构建-harness)
-8. [我的尝试与踩坑](#我的尝试与踩坑)
-9. [结论：可控的 AI 自主](#结论可控的-ai-自主)
-
----
-
 ## 什么是 Harness？
 
 **Harness** 原意是"马具"——用来控制和引导马匹的工具。
@@ -269,7 +255,7 @@ OpenAI 的实验表明：
 | 代码风格 | Prettier + ESLint | 统一代码格式 |
 | 类型安全 | TypeScript 严格模式 | 编译时捕获类型错误 |
 
-**ESLint 架构约束示例**：
+### ESLint 架构约束示例
 ### Layer 3: 垃圾回收（可用方案）
 
 **工具组合**：
@@ -324,7 +310,7 @@ OpenAI 的实验表明：
 
 ---
 
-## 结论：可控的 AI 自主
+## 结尾：可控的 AI 自主
 
 Harness Engineering 提供了一种思考框架：
 

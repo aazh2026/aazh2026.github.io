@@ -19,19 +19,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [Richard Gabriel 的经典论述回顾](#richard-gabriel-的经典论述回顾)
-2. [Worse is Better 的核心逻辑](#worse-is-better-的核心逻辑)
-3. [AI 时代的重新审视：好代码 vs 快代码](#ai-时代的重新审视好代码-vs-快代码)
-4. [AI 生成代码的"足够好"哲学](#ai-生成代码的足够好哲学)
-5. [迭代速度与系统质量的平衡](#迭代速度与系统质量的平衡)
-6. [反直觉洞察](#反直觉洞察)
-7. [实战指导](#实战指导)
-8. [结语](#结语)
-
----
-
 ## Richard Gabriel 的经典论述回顾
 
 ### 1989 年的那场 Lisp 社区论战
@@ -102,7 +89,7 @@ Worse is Better 真正的洞见在于：
 **Worse is Better 的智慧**：快速获得一个可用的版本，在真实世界中学习，然后迭代。
 
 {% figure center %}
-![Fitness Landscape: Worse is Better vs The Right Thing](/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.png)
+<img src="/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.png" alt="Fitness Landscape: Worse is Better vs The Right Thing" style="width:100%;height:auto;">
 *图 1：Fitness Landscape——Worse is Better 接受局部最优，快速迭代；The Right Thing 追求全局最优，但路径更长、风险更高。*
 {% endfigure %}
 
@@ -349,7 +336,7 @@ The Right Thing 思维假设：
 - 初始设计总是部分错误
 - 能快速演化的系统胜过完美但僵化的系统
 
-**AI 时代的启示**：
+### AI 时代的启示
 
 ---
 

@@ -17,17 +17,6 @@ series: AI-Native软件工程系列 #9
 
 ---
 
-## 📋 本文结构
-
-1. [契约测试基础](#契约测试基础) — CDC模式的核心价值
-2. [契约的AI生成](#契约的ai生成) — 自动化契约定义
-3. [AI增强的Pact](#ai增强的pact) — 智能契约测试平台
-4. [测试桩智能化](#测试桩智能化) — AI生成逼真Mock
-5. [持续契约验证](#持续契约验证) — CI/CD中的契约门禁
-6. [结论](#结论) — 契约测试的AI-Native未来
-
----
-
 ## 契约测试基础
 
 <object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%"></object>
@@ -106,8 +95,7 @@ series: AI-Native软件工程系列 #9
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 传统契约测试 | AI增强契约测试 |

@@ -22,23 +22,13 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [从单Agent到多Agent](#从单agent到多agent)
-2. [Swarm Programming模式](#swarm-programming模式)
-3. [Agent角色与职责](#agent角色与职责)
-4. [协作与冲突解决](#协作与冲突解决)
-5. [实施框架](#实施框架)
-
----
-
 ## 从单Agent到多Agent
 
 ### 单Agent的局限
 
 **场景：开发一个电商订单系统**
 
-**单Agent尝试**：
+### 单Agent尝试
 **原因**：
 - 单个Agent难以同时处理多个维度
 - 没有专业分工
@@ -46,7 +36,7 @@ redirect_from:
 
 ### 多Agent的优势
 
-**多Agent协作**：
+### 多Agent协作
 **优势**：
 - 专业分工
 - 并行开发
@@ -160,8 +150,7 @@ redirect_from:
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 单Agent | 多Agent Swarm |

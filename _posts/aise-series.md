@@ -1,11 +1,13 @@
 ---
 layout: page
+author: "@postcodeeng"
 title: "AI-Native软件工程系列"
 permalink: /aise-series/
 
 redirect_from:
   - ////aise-series.html
 
+series: AI-Native Engineering
 ---
 
 # AI-Native软件工程系列

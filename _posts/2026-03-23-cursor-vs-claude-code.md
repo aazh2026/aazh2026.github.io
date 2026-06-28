@@ -31,7 +31,7 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%"></object>
 
-## 一、为什么这场对比很重要
+## 为什么这场对比很重要
 
 2026年的AI编程工具市场已经分化出两条路径：
 
@@ -49,7 +49,7 @@ series: AI-Native Engineering
 
 ---
 
-## 二、Cursor：全能型IDE的标杆
+## Cursor：全能型IDE的标杆
 
 ### 核心优势
 
@@ -81,7 +81,7 @@ Pro版$20/月，但重度使用可能触发额外计费。
 
 ---
 
-## 三、Claude Code：终端极客的选择
+## Claude Code：终端极客的选择
 
 ### 核心优势
 
@@ -116,7 +116,7 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 
 ---
 
-## 四、场景化选择指南
+## 场景化选择指南
 
 ### 选择 Cursor 如果你：
 
@@ -136,7 +136,7 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 
 ---
 
-## 五、成本对比实战
+## 成本对比实战
 
 假设一个全栈开发者，每月编码200小时：
 
@@ -152,7 +152,7 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 
 ---
 
-## 六、2026年的趋势判断
+## 2026年的趋势判断
 
 ### Cursor 的演进方向
 - 更强大的Composer
@@ -171,7 +171,7 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 
 ---
 
-## 七、我的建议
+## 我的建议
 
 **如果你是AI编程新手**：从Cursor开始，降低门槛。
 

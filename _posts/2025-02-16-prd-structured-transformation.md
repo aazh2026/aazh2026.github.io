@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /prd-structured-transformation.html
+series: AI-Native Engineering
 ---
 
 # PRD的结构化转型：从Word到可执行的语义规格说明

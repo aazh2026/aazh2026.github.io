@@ -13,19 +13,6 @@ series: AI-Native Engineering
 
 ---
 
-## 📋 本文结构
-
-1. [open-swe 是什么](#open-swe-是什么)
-2. [为什么需要异步 Agent](#为什么需要异步-agent)
-3. [架构解析：异步编程模型](#架构解析异步编程模型)
-4. [与同步 Agent 的对比](#与同步-agent-的对比)
-5. [应用场景：什么时候用 open-swe](#应用场景什么时候用-open-swe)
-6. [实现细节：代码 walkthrough](#实现细节代码-walkthrough)
-7. [生态意义：LangChain 的 Agent 战略](#生态意义langchain-的-agent-战略)
-8. [结论：异步是 Agent 的未来](#结论异步是-agent-的未来)
-
----
-
 ## open-swe 是什么
 
 ### 项目概述
@@ -50,7 +37,7 @@ series: AI-Native Engineering
 
 ### 同步 Agent 的问题
 
-**传统同步编程模型**：
+### 传统同步编程模型
 
 **问题**：
 - 每个步骤串行执行
@@ -59,7 +46,7 @@ series: AI-Native Engineering
 
 ### 异步 Agent 的优势
 
-**异步编程模型**：
+### 异步编程模型
 
 **优势**：
 - I/O 等待时执行其他任务
@@ -117,7 +104,7 @@ series: AI-Native Engineering
 
 ### 代码复杂度对比
 
-**同步代码**：
+### 同步代码
 **异步代码**：
 **复杂度**：异步代码稍复杂，但性能提升巨大。
 
@@ -179,7 +166,7 @@ series: AI-Native Engineering
 
 ---
 
-## 结论：异步是 Agent 的未来
+## 结尾：异步是 Agent 的未来
 
 ### 为什么异步是必然选择
 

@@ -2,12 +2,14 @@
 title: "当 AI 编程走向\"确定性\"：Dynamic Workflows 与 Agent Harness 的殊途同归"
 date: 2026-05-29
 layout: post
+author: "@postcodeeng"
 excerpt: "Anthropic Dynamic Workflows 和 iii agent harness 同天发布，表面是两种路线，实则同一问题的两个解法——都在把编排从「实时判断」变成「静态资产」。引入微内核、Spring vs EJB、《人月神话》作为历史先例。"
 tags:
   - AI编程
   - Agent
   - Claude
   - 工程思想
+series: AI-Native Engineering
 ---
 
 > **TL;DR**

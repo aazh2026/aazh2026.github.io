@@ -14,7 +14,7 @@ series: AI-Native Engineering
 
 ---
 
-## 一、Hook：一个普遍困境
+## Hook：一个普遍困境
 
 2026年，AI编程工具呈现爆炸式增长：
 - IDE类：Cursor, Windsurf, Trae
@@ -28,7 +28,7 @@ series: AI-Native Engineering
 
 ---
 
-## 二、问题本质：工具选择的认知误区
+## 问题本质：工具选择的认知误区
 
 ### 三种典型误区
 
@@ -68,7 +68,7 @@ series: AI-Native Engineering
 
 ---
 
-## 三、现有方案的问题：为什么对比评测没用
+## 现有方案的问题：为什么对比评测没用
 
 ### 传统对比评测的局限
 
@@ -83,7 +83,7 @@ series: AI-Native Engineering
 
 ---
 
-## 四、核心模型：工具选择三维框架
+## 核心模型：工具选择三维框架
 
 ### 三维模型
 
@@ -149,7 +149,7 @@ series: AI-Native Engineering
 
 ---
 
-## 五、实战拆解：决策路径
+## 实战拆解：决策路径
 
 ### 场景1：独立开发者，追求极致效率
 
@@ -223,7 +223,7 @@ series: AI-Native Engineering
 
 ---
 
-## 六、上升到原则：通用选择框架
+## 上升到原则：通用选择框架
 
 ### 原则1：认知匹配原则
 
@@ -241,7 +241,7 @@ series: AI-Native Engineering
 **核心**：
 工具切换的真实成本 = 学习成本 + 迁移成本 + 机会成本
 
-**计算**：
+### 计算
 ---
 
 ### 原则3：组合优于单选原则
@@ -256,7 +256,7 @@ series: AI-Native Engineering
 
 ---
 
-## 七、未来判断：工具演进趋势
+## 未来判断：工具演进趋势
 
 ### 预测1：工具收敛（12-18月）
 
@@ -294,7 +294,7 @@ series: AI-Native Engineering
 
 ---
 
-## 八、可执行清单
+## 可执行清单
 
 ### 立即执行（今天）
 

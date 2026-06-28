@@ -17,17 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-## 📋 本文结构
-
-1. [背景：为什么 CoT grading 是风险](#背景为什么-cot-grading-是风险) — 如果奖励评估推理本身，模型可能学会产生误导性推理痕迹
-2. [发现了什么](#发现了什么) — 三个意外 CoT grading 实例，受影响模型
-3. [影响分析](#影响分析) — 为什么没有发现明显的 monitorability 退化
-4. [什么时候 CoT grading 导致 CoT obfuscation](#什么时候-cot-grading-导致-cot-obfuscation) — 三个决定性因素
-5. [实验发现](#实验发现) — 一系列代表性实验，压力测试结果
-6. [结论：对 AI 安全的启示](#结论对-ai-安全的启示)
-
----
-
 ## 背景：为什么 CoT grading 是风险
 
 > 💡 **Key Insight**
@@ -158,7 +147,7 @@ OpenAI 在固定内部生产 RL pipeline 中进行了一系列代表性实验。
 
 ---
 
-## 结论：对 AI 安全的启示
+## 结尾：对 AI 安全的启示
 
 > 💡 **Key Insight**
 >

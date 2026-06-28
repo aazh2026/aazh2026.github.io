@@ -19,17 +19,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [术语不一致的问题](#术语不一致的问题)
-2. [统一术语治理模型](#统一术语治理模型)
-3. [业务术语表设计](#业务术语表设计)
-4. [代码命名规范](#代码命名规范)
-5. [AI辅助对齐机制](#ai辅助对齐机制)
-6. [实施与治理](#实施与治理)
-
----
-
 ## 术语不一致的问题
 
 ### 混乱的现实
@@ -120,14 +109,14 @@ redirect_from:
 
 ### 命名约定
 
-**类名（Class Name）**：
-**方法名（Method Name）**：
-**变量名（Variable Name）**：
+### 类名（Class Name）
+### 方法名（Method Name）
+### 变量名（Variable Name）
 ### 语言特定规范
 
-**Java**：
-**Python**：
-**TypeScript/JavaScript**：
+### Java
+### Python
+### TypeScript/JavaScript
 ---
 
 <object data="/assets/images/2025-05-14-domain-terminology-02-ai-alignment.svg" type="image/svg+xml" width="100%"></object>
@@ -136,25 +125,25 @@ redirect_from:
 
 ### AI理解业务语境
 
-**Context注入**：
+### Context注入
 
 ### 代码生成对齐
 
-**生成模板**：
+### 生成模板
 
-**示例输出**：
+### 示例输出
 
 ### 命名冲突检测
 
-**自动检测代码中的术语不一致**：
+### 自动检测代码中的术语不一致
 
-**示例检测**：
+### 示例检测
 
 ### IDE集成
 
-**实时提示**：
+### 实时提示
 
-**自动补全**：
+### 自动补全
 
 ---
 
@@ -219,8 +208,7 @@ redirect_from:
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 无术语治理 | 有术语治理 |

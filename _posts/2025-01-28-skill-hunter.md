@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /skill-hunter.html
+series: AI-Native Engineering
 ---
 
 # 技能猎手 | 2026-03-03

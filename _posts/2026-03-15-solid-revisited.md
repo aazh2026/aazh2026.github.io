@@ -1,5 +1,6 @@
 ---
 layout: post
+author: "@postcodeeng"
 title: "SOLID 原则的 AI 时代重构：从面向对象到 Agent 协作"
 date: 2026-03-15 09:00:00 +0800
 categories: [ai-native, architecture, design-patterns]
@@ -10,19 +11,6 @@ series: ai-native-dev-guide
 > **TL;DR**
 >
 > 传统SOLID原则诞生于面向对象编程时代，旨在解决类级别设计的耦合问题。在AI-Native时代，软件系统的核心单元已从类(Class)演变为Agent——具有自主决策能力、上下文感知和工具调用能力的智能实体。本文提出新SOLID原则，将设计哲学从"对象协作"升维到"Agent协作"。核心洞察：Agent不是更好的类，而是完全不同的抽象层次，需要一套全新的设计原则来驾驭这种转变。
-
----
-
-## 📋 本文结构
-
-1. [SOLID 原则回顾](#3-solid-原则回顾) - 快速重温五大原则
-2. [面向对象时代的 SOLID 局限](#4-面向对象时代的-solid-局限) - 为什么它们不再足够
-3. [AI-Native 时代的 SOLID 重构](#5-ai-native-时代的-solid-重构) - 从类到 Agent 的范式转移
-4. [新 SOLID：Agent 协作设计原则](#6-新-solid适用于-agent-协作的设计原则) - 五大新原则的详细阐述
-5. [实战：应用新 SOLID 设计 Agent 系统](#7-实战应用新-solid-设计-agent-系统) - 完整代码示例
-6. [反直觉洞察](#8-反直觉洞察) - 那些容易被忽视的真相
-7. [工具链与最佳实践](#9-工具链与最佳实践) - 落地指南
-8. [结语](#10-结语) - 面向未来的思考
 
 ---
 

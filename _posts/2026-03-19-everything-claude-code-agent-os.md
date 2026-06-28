@@ -158,7 +158,7 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 **问题**：AI 是否具备完成特定任务的能力？
 
-**执行流程**：
+### 执行流程
 
 #### 2. Regression Eval（回归评估）
 
@@ -182,9 +182,9 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### Eval Harness 在 everything-claude-code 中的实现
 
-**触发方式**：
+### 触发方式
 
-**输出示例**：
+### 输出示例
 
 ---
 
@@ -199,7 +199,7 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 | **可检查性** | 难 | 易 |
 | **一致性** | 低 | 高 |
 
-**示例对比**：
+### 示例对比
 
 ### Rules 的分类
 
@@ -223,7 +223,7 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### Rules Engine 的实现
 
-**Reviewer Agent 的工作流程**：
+### Reviewer Agent 的工作流程
 
 ### Rule 文件的演进
 
@@ -267,11 +267,11 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 #### 3. 条件触发 Hooks
 
-**基于状态的条件触发**：
+### 基于状态的条件触发
 
 ### Automation 的价值
 
-**Harness 自动化方式**：
+### Harness 自动化方式
 **关键差异**：
 - 传统：依赖人的记忆和自觉性
 - Harness：系统化强制，不会遗漏
@@ -345,9 +345,9 @@ tdd-process.md     → 流程约束
 
 示例技能：
 
-**TDD Skill**：
-**eval-harness Skill**：
-**continuous-learning Skill**：
+### TDD Skill
+### eval-harness Skill
+### continuous-learning Skill
 ### Layer 3: 控制层 — 机械约束（不是建议）
 
 **核心思想**：把工程规范"编译进系统"。
@@ -379,7 +379,7 @@ tdd-process.md     → 流程约束
 
 **MCP（Model Context Protocol）**：AI 直接操作外部系统的标准接口。
 
-**GitHub MCP**：
+### GitHub MCP
 **Supabase MCP**：
 **核心价值**：消灭"人工搬运"环节。
 
@@ -399,7 +399,7 @@ MCP 流程：
 
 ### 阶段 1：规划（/plan）
 
-**用户输入**：
+### 用户输入
 **系统内部**：
 
 1. **Command Router** 识别 `/plan` 命令
@@ -410,15 +410,15 @@ MCP 流程：
 
 ### 阶段 2：TDD 开发（/tdd）
 
-**用户输入**：
-**系统内部执行循环**：
+### 用户输入
+### 系统内部执行循环
 
 #### 🔴 RED（先写测试）
 
-**TDD Skill 触发**：
+### TDD Skill 触发
 #### 🟢 GREEN（实现功能）
 
-**Coder Agent 编写代码**：
+### Coder Agent 编写代码
 #### 🔵 REFACTOR（优化）
 
 **重构代码结构**：
@@ -428,7 +428,7 @@ MCP 流程：
 
 #### ✅ VERIFY
 
-**运行测试**：
+### 运行测试
 **边界检查**：
 - 空客户资料处理
 - 大量标签性能
@@ -436,14 +436,14 @@ MCP 流程：
 
 ### 阶段 3：实时评估（eval-harness）
 
-**用户输入**：
+### 用户输入
 **eval-harness Skill 执行**：
 
 **核心价值**：AI 开发的"单元测试系统"
 
 ### 阶段 4：代码审查（/review）
 
-**Reviewer Agent 检查清单**：
+### Reviewer Agent 检查清单
 
 ### 阶段 5：系统验证（/verify）
 
@@ -464,7 +464,7 @@ MCP 流程：
 
 ### 阶段 6：Checkpoint（关键设计冻结）
 
-**保存关键状态**：
+### 保存关键状态
 
 **系统保存**：
 - 当前架构设计
@@ -491,17 +491,17 @@ MCP 流程：
 
 **触发时机**：Session 结束（Stop Hook）
 
-**自动执行三件事**：
+### 自动执行三件事
 
 #### 1️⃣ 评估本次对话
 
 #### 2️⃣ 模式提取
 
-**识别有价值的模式**：
+### 识别有价值的模式
 
 #### 3️⃣ 生成新技能
 
-**保存到学习目录**：
+### 保存到学习目录
 
 **生成的 Skill 示例**：
 
@@ -515,7 +515,7 @@ MCP 流程：
 
 #### 2️⃣ Rules（约束层）
 
-**系统化强制（不是建议）**：
+### 系统化强制（不是建议）
 
 **约束类型**：
 - **硬约束**：必须满足（如安全规则）
@@ -537,7 +537,7 @@ MCP 流程：
 
 #### 4️⃣ Metrics（度量层）
 
-**量化 AI 表现**：
+### 量化 AI 表现
 
 ### 和传统工程的对比
 
@@ -590,8 +590,8 @@ everything-claude-code 证明：
 
 ### 3️⃣ 未来软件工程形态
 
-**从**：
-**到**：
+### 从
+### 到
 **开发者角色的转变**：
 
 | 传统 | AI-Native |

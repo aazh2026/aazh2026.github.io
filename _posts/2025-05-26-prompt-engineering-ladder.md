@@ -21,17 +21,6 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [为什么需要Prompt Engineering梯队](#为什么需要prompt-engineering梯队)
-2. [初级开发者：Prompt使用者](#初级开发者prompt使用者)
-3. [中级开发者：Prompt设计者](#中级开发者prompt设计者)
-4. [高级开发者：Prompt架构师](#高级开发者prompt架构师)
-5. [培养体系设计](#培养体系设计)
-6. [能力评估与认证](#能力评估与认证)
-
----
-
 ## 为什么需要Prompt Engineering梯队
 
 <object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%"></object>
@@ -390,8 +379,7 @@ redirect_from:
 
 ---
 
-## 结论
-
+## 结尾
 ### 🎯 Takeaway
 
 | 级别 | 核心能力 | 培养周期 | 关键产出 |

@@ -15,18 +15,7 @@ redirect_from:
 
 ---
 
-## 📋 本文结构
-
-1. [意图的崩塌：为什么需求文档不再够用](#一意图的崩塌为什么需求文档不再够用) — 从PRD到Product Intent的范式转移
-2. [什么是 Product Intent](#二什么是-product-intent) — 定义与核心概念
-3. [Product Intent 的五个维度](#三-product-intent-的五个维度) — 完整的意图描述框架
-4. [从 Intent 到 Implementation](#四从-intent-到-implementation) — AI 如何理解并执行意图
-5. [实战：电商推荐系统的意图重构](#五实战电商推荐系统的意图重构) — 传统需求 vs Product Intent
-6. [写在最后：产品管理者的角色进化](#六写在最后产品管理者的角色进化) — 从需求翻译到意图架构
-
----
-
-## 一、意图的崩塌：为什么需求文档不再够用
+## 意图的崩塌：为什么需求文档不再够用
 
 ### 传统需求文档的黄金时代
 
@@ -68,7 +57,7 @@ redirect_from:
 
 ---
 
-## 二、什么是 Product Intent
+## 什么是 Product Intent
 
 ### 定义
 
@@ -100,7 +89,7 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ---
 
-## 三、Product Intent 的五个维度
+## Product Intent 的五个维度
 
 完整的 Product Intent 包含五个维度，缺一不可。
 
@@ -128,7 +117,7 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ---
 
-## 四、从 Intent 到 Implementation
+## 从 Intent 到 Implementation
 
 ### Product Intent 的层级结构
 
@@ -138,16 +127,16 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ### AI 如何理解 Product Intent
 
-**Intent-Driven 方式**：
+### Intent-Driven 方式
 ### 意图验证循环
 
 ---
 
-## 五、实战：电商推荐系统的意图重构
+## 实战：电商推荐系统的意图重构
 
 ### 场景：重构推荐系统
 
-**传统 PRD 方式**：
+### 传统 PRD 方式
 
 **三个月后的问题**：
 - 推荐大量已购买商品
@@ -174,7 +163,7 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ---
 
-## 六、写在最后：产品管理者的角色进化
+## 写在最后：产品管理者的角色进化
 
 ### 从"需求翻译官"到"意图架构师"
 

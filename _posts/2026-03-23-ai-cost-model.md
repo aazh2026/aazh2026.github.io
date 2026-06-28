@@ -14,7 +14,7 @@ series: AI-Native Engineering
 
 ---
 
-## 一、Hook：一个反直觉现象
+## Hook：一个反直觉现象
 
 2026年，AI API的价格已经下降90%以上：
 - GPT-4：从$0.03/1K tokens → $0.01/1K tokens
@@ -29,7 +29,7 @@ series: AI-Native Engineering
 
 ---
 
-## 二、问题本质：线性思维的陷阱
+## 问题本质：线性思维的陷阱
 
 ### 传统成本模型（过时）
 
@@ -43,7 +43,7 @@ series: AI-Native Engineering
 
 ---
 
-## 三、现有方案的问题：为什么传统优化无效
+## 现有方案的问题：为什么传统优化无效
 
 ### 传统优化策略的局限
 
@@ -58,7 +58,7 @@ series: AI-Native Engineering
 
 ---
 
-## 四、核心模型：成本结构四象限
+## 核心模型：成本结构四象限
 
 ### 四象限模型
 
@@ -148,7 +148,7 @@ series: AI-Native Engineering
 
 ---
 
-## 五、实战拆解：成本优化路径
+## 实战拆解：成本优化路径
 
 ### 阶段1：诊断（Week 1）
 
@@ -174,9 +174,9 @@ series: AI-Native Engineering
 
 **目标**：实施零/低成本优化
 
-**行动**：
+### 行动
 
-**缓存层（如果适用）**：
+### 缓存层（如果适用）
 **路由层（如果适用）**：
 **预期效果**：成本降低 30-50%
 
@@ -186,7 +186,7 @@ series: AI-Native Engineering
 
 **目标**：结构性优化
 
-**行动**：
+### 行动
 
 **高频高复杂度场景**：
 - 任务分解：将大任务拆分为小任务
@@ -225,7 +225,7 @@ series: AI-Native Engineering
 
 ---
 
-## 六、上升到原则：通用成本模型
+## 上升到原则：通用成本模型
 
 ### 原则1：成本是架构的函数
 
@@ -268,7 +268,7 @@ series: AI-Native Engineering
 
 ---
 
-## 七、未来判断：成本演进趋势
+## 未来判断：成本演进趋势
 
 ### 预测1：API commoditization（6-12月）
 
@@ -306,7 +306,7 @@ series: AI-Native Engineering
 
 ---
 
-## 八、可执行清单
+## 可执行清单
 
 ### 本周诊断
 
