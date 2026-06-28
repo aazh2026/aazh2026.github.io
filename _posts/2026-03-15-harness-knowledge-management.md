@@ -93,29 +93,7 @@ docs/ (结构化知识库)          → 作为真相来源
 
 OpenAI 的知识库不是随意堆砌的文档集合，而是一个精心设计的系统：
 
-```
-repository/
-├── AGENTS.md              # 入口点 (~100行)
-├── docs/
-│   ├── beliefs/          # 核心信念与原则
-│   │   └── 验证状态追踪
-│   ├── architecture/     # 架构地图
-│   │   └── 领域与包分层
-│   ├── quality/          # 质量评估
-│   │   └── 各领域健康度
-│   ├── plans/            # 执行计划
-│   │   ├── active/       # 进行中
-│   │   └── completed/    # 已完成
-│   └── debt/             # 已知技术债务
-└── .ci/
-    └── knowledge-linter/ # 知识库验证工具
-```
-
-### 设计文档的目录化
-
-每份设计文档都有元数据：
-
-```yaml
+<object data="/assets/images/2026-03-15-harness-knowledge-management-02-repo-structure.svg" type="image/svg+xml" width="100%"></object>
 ---
 title: "用户认证模块设计"
 status: verified      # verified | stale | deprecated

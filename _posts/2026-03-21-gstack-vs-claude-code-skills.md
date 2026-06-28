@@ -154,29 +154,7 @@ scripts/utils.py（工具函数）
 
 当我们检查 gstack 的安装目录，发现它完全符合 Skills 的规范：
 
-```bash
-~/.claude/skills/gstack/
-├── SKILL.md              # Skill 主文档
-├── config.json           # Skill 配置
-├── skills/               # 15 个子 Skill
-│   ├── office-hours/
-│   │   ├── SKILL.md      # 该命令的描述
-│   │   └── scripts/      # 支持脚本
-│   ├── review/
-│   ├── qa/
-│   └── ...
-└── scripts/              # 共享脚本
-    ├── utils.sh
-    └── constants.py
-```
-
-### 这意味着什么
-
-**gstack 不是与 Skills 竞争的工具，而是基于 Skills 构建的预置流程包。**
-
-两者的关系是层次关系，不是平行关系：
-
-```
+<object data="/assets/images/2026-03-21-gstack-vs-claude-code-skills-01-tree.svg" type="image/svg+xml" width="100%"></object>
 Skills（底层机制）
     ↓
 gstack（基于 Skills 的应用层实现）
@@ -304,35 +282,7 @@ gstack（基于 Skills 的应用层实现）
 └─────────────────────────────────────────┘
     ↓
 结果输出
-```
-
----
-
-## 未来趋势：技能市场的兴起
-
-### 基于证据的判断
-
-根据 Anthropic 的产品动向和业界趋势，**融合走向可能性更大**：
-
-| 证据 | 解读 |
-|------|------|
-| Claude Code 官方文档增加 Skills 章节 | Skills 正在从内部实践变为官方支持的功能 |
-| Skills 增加流程编排相关特性 | 官方正在填补 gstack 覆盖的流程治理能力 |
-| gstack 依赖 Skills 机制 | 两者技术上已经耦合，分化需要技术隔离 |
-
-**判断**：未来不太可能是"gstack vs Skills"的二选一，而是 Skills 成为底层标准，gstack 和其他流程工具成为上层应用。
-
-### 预测：技能市场的形成
-
-类似于 VS Code 的插件市场，我们可能会看到：
-
-```
-Claude Code Skills 市场
-    ├── 流程类（gstack 及变体）
-    ├── 工具类（部署、测试、监控）
-    ├── 领域类（前端、后端、AI、数据）
-    └── 团队私有（企业内部 Skills）
-```
+<object data="/assets/images/2026-03-21-gstack-vs-claude-code-skills-02-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 给开发者的具体建议
 

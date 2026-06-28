@@ -178,56 +178,7 @@ Spec == Init ∧ □[Next]_⟨orders, orderCounter⟩
 
 ### 转换Pipeline
 
-```
-┌─────────────────────────────────────────┐
-│  输入: Gherkin自然语言描述               │
-│                                         │
-│  Given 一个VIP客户                      │
-│  When 他下单购买$100的商品              │
-│  Then 他应该支付$90                     │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  步骤1: 歧义识别与澄清                   │
-│                                         │
-│  AI检测: "VIP客户"定义不明确             │
-│  询问: VIP的判断标准是什么？             │
-│  回答: 积分≥1000                        │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  步骤2: 转换为结构化规格                 │
-│                                         │
-│  preconditions:                         │
-│    - customer.points >= 1000            │
-│    - order.original_amount == 100        │
-│    - discount_rate = 0.1                 │
-│  postconditions:                        │
-│    - order.final_amount == 90            │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  步骤3: 生成形式化表达式                 │
-│                                         │
-│  ∀ c ∈ Customer, o ∈ Order:             │
-│    c.points ≥ 1000 ∧ o.amount = 100     │
-│    → o.final = 90                        │
-└─────────────────────────────────────────┘
-                    ↓
-┌─────────────────────────────────────────┐
-│  步骤4: 生成可执行代码+测试              │
-│                                         │
-│  def calculate_total(customer, order):  │
-│      if customer.points >= 1000:        │
-│          return order.amount * 0.9       │
-│      return order.amount                 │
-└─────────────────────────────────────────┘
-```
-
-### 实战：转换示例
-
-**输入Gherkin：**
-```gherkin
+<object data="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 Scenario: 并发订单不超卖
   Given 商品A库存为10
   When 100个用户同时下单购买商品A
