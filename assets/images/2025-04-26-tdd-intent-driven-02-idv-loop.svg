@@ -1,0 +1,76 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- IDD Intent Verification Loop -->
+  <title>Intent Verification Loop</title>
+  <desc>IDD工作流：业务意图 → 代码生成 → 意图验证引擎，失败则循环，成功则结束</desc>
+
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">IDD 意图验证循环</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Intent-Driven Development · IDD</text>
+
+  <!-- Stage 1: Business Intent (top input) -->
+  <rect x="60" y="60" width="560" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="60" y="60" width="560" height="20" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="340" y="75" text-anchor="middle" font-size="11" fill="#87867F" font-weight="600" font-family="ui-monospace, monospace">Business Intent 输入</text>
+  <text x="340" y="93" text-anchor="middle" font-size="10.5" fill="#141413">结构化意图文档（SID）：业务规则 · 边界条件 · 性能约束</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="340" y1="104" x2="340" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,124 336,116 344,116" fill="#D1CFC5"/>
+  <text x="358" y="116" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">SID 上下文</text>
+
+  <!-- Stage 2: Code Generation (AI) -->
+  <rect x="60" y="128" width="240" height="72" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="60" y="128" width="240" height="20" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="180" y="143" text-anchor="middle" font-size="11" fill="#87867F" font-weight="600" font-family="ui-monospace, monospace">Code Generation</text>
+  <text x="180" y="162" text-anchor="middle" font-size="10.5" fill="#141413">AI 接收 SID，生成代码</text>
+  <text x="180" y="178" text-anchor="middle" font-size="10" fill="#87867F">intent → function 映射</text>
+
+  <!-- Stage 3: Intent Verification Engine (clay) -->
+  <rect x="380" y="128" width="240" height="72" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="380" y="128" width="240" height="20" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
+  <text x="500" y="143" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600" font-family="ui-monospace, monospace">Intent Verification Engine</text>
+  <text x="500" y="162" text-anchor="middle" font-size="10.5" fill="#141413">grader 按 rubric 检查</text>
+  <text x="500" y="178" text-anchor="middle" font-size="10" fill="#87867F">意图验证</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="300" y1="164" x2="380" y2="164" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="376,160 368,164 376,168" fill="#D1CFC5"/>
+  <text x="340" y="158" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">生成代码</text>
+
+  <!-- Arrow: Verification → Code Generation (fail loop) -->
+  <path d="M 380 170 C 340 170, 340 210, 300 210 C 260 210, 260 170, 180 170" stroke="#D97757" stroke-width="1.8" fill="none" stroke-dasharray="4,3"/>
+  <polygon points="180,166 174,170 180,174" fill="#D97757"/>
+  <text x="260" y="224" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">验证失败 → 修正</text>
+
+  <!-- Arrow: Verification → Success (pass) -->
+  <line x1="500" y1="200" x2="500" y2="228" stroke="#788C5D" stroke-width="1.8"/>
+  <polygon points="500,234 496,226 504,226" fill="#788C5D"/>
+  <text x="518" y="222" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">Pass</text>
+
+  <!-- Success node -->
+  <rect x="430" y="240" width="140" height="36" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="500" y="262" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">Intent Satisfied</text>
+
+  <!-- Below verification box: three checklist items -->
+  <text x="380" y="256" text-anchor="middle" font-size="9.5" fill="#141413" font-weight="600">验证清单</text>
+
+  <!-- Checklist item 1 -->
+  <rect x="60" y="268" width="180" height="40" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="72" y="285" font-size="10" fill="#141413">业务规则覆盖</text>
+  <text x="72" y="300" font-size="9" fill="#87867F">所有意图项均有对应实现</text>
+
+  <!-- Checklist item 2 -->
+  <rect x="250" y="268" width="180" height="40" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="262" y="285" font-size="10" fill="#141413">边界条件处理</text>
+  <text x="262" y="300" font-size="9" fill="#87867F">负数、零值、极大值、None</text>
+
+  <!-- Checklist item 3 -->
+  <rect x="440" y="268" width="180" height="40" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="452" y="285" font-size="10" fill="#141413">性能约束满足</text>
+  <text x="452" y="300" font-size="9" fill="#87867F">时间/空间复杂度达标</text>
+
+  <!-- Bottom note -->
+  <text x="340" y="336" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">IDD = TDD 的"意图验证"升级：不再是代码对不对，而是代码是否说了正确的事</text>
+</svg>

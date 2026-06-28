@@ -1,0 +1,83 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>多层级语义缓存架构</title>
+  <desc>语义缓存的多层级架构图，对比 L1/L2/L3 缓存层与 API 调用的延迟与成本</desc>
+
+  <!-- Background -->
+  <rect width="680" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">多层级语义缓存架构</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 2025/01/25</text>
+
+  <!-- LEFT SIDE: 3-tier pyramid -->
+
+  <!-- L1 Cache (top, smallest) -->
+  <rect x="60" y="72" width="220" height="70" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="60" y="72" width="220" height="22" rx="8" fill="#D97757"/>
+  <rect x="60" y="86" width="220" height="8" fill="#D97757"/>
+  <text x="75" y="87" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">L1 Cache</text>
+  <text x="75" y="103" font-size="12" fill="#141413">向量数据库（内存）</text>
+  <text x="75" y="119" font-size="10.5" fill="#87867F">延迟 ~0.1ms · 容量最小</text>
+  <text x="75" y="135" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">成本 ≈ $0</text>
+
+  <!-- Arrow L1→L2 -->
+  <line x1="170" y1="142" x2="170" y2="158" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="170,162 166,154 174,154" fill="#D1CFC5"/>
+
+  <!-- L2 Cache (middle) -->
+  <rect x="40" y="170" width="260" height="70" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <rect x="40" y="170" width="260" height="22" rx="8" fill="#788C5D"/>
+  <rect x="40" y="184" width="260" height="8" fill="#788C5D"/>
+  <text x="55" y="185" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">L2 Cache</text>
+  <text x="55" y="201" font-size="12" fill="#141413">向量数据库（SSD）</text>
+  <text x="55" y="217" font-size="10.5" fill="#87867F">延迟 ~5ms · 容量中等</text>
+  <text x="55" y="233" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">成本 ≈ $0.001/1k 查询</text>
+
+  <!-- Arrow L2→L3 -->
+  <line x1="170" y1="240" x2="170" y2="256" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="170,260 166,252 174,252" fill="#D1CFC5"/>
+
+  <!-- L3 Cache (bottom, largest) -->
+  <rect x="20" y="268" width="300" height="70" rx="8" fill="#FFFFFF" stroke="#87867F" stroke-width="1.8"/>
+  <rect x="20" y="268" width="300" height="22" rx="8" fill="#87867F"/>
+  <rect x="20" y="282" width="300" height="8" fill="#87867F"/>
+  <text x="35" y="283" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">L3 Cache</text>
+  <text x="35" y="299" font-size="12" fill="#141413">外部向量数据库（云存储）</text>
+  <text x="35" y="315" font-size="10.5" fill="#87867F">延迟 ~50ms · 容量最大</text>
+  <text x="35" y="331" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">成本 ≈ $0.005/1k 查询</text>
+
+  <!-- RIGHT SIDE: API Call -->
+  <rect x="420" y="148" width="220" height="160" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.8"/>
+  <rect x="420" y="148" width="220" height="26" rx="8" fill="#141413"/>
+  <rect x="420" y="166" width="220" height="8" fill="#141413"/>
+  <text x="435" y="166" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">API Call</text>
+  <text x="440" y="193" font-size="12" fill="#141413">OpenAI / Claude</text>
+  <text x="440" y="213" font-size="11" fill="#141413">语义理解 + 生成</text>
+  <text x="440" y="231" font-size="10.5" fill="#87867F">延迟 500–2000ms</text>
+  <text x="440" y="249" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">成本 $0.02/次</text>
+  <text x="440" y="269" font-size="10" fill="#87867F">+ 网络往返 + Rate Limit</text>
+  <text x="440" y="287" font-size="10" fill="#87867F">+ 隐私合规风险</text>
+
+  <!-- Horizontal comparison arrows -->
+  <line x1="320" y1="107" x2="410" y2="170" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="320" y1="205" x2="410" y2="200" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="320" y1="303" x2="410" y2="260" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- Miss arrow: L3 miss → API -->
+  <line x1="170" y1="338" x2="170" y2="365" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="170,375 166,367 174,367" fill="#D97757"/>
+  <text x="188" y="355" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">未命中</text>
+
+  <!-- Speed multiplier badges on right -->
+  <rect x="600" y="168" width="62" height="18" rx="9" fill="#D97757"/>
+  <text x="631" y="181" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">5000x</text>
+
+  <rect x="600" y="210" width="62" height="18" rx="9" fill="#788C5D"/>
+  <text x="631" y="223" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">100x</text>
+
+  <rect x="600" y="252" width="62" height="18" rx="9" fill="#87867F"/>
+  <text x="631" y="265" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">10x</text>
+
+  <!-- Bottom attribution -->
+  <text x="340" y="390" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">语义缓存 · 多层级架构 · AI-Native Engineering</text>
+</svg>

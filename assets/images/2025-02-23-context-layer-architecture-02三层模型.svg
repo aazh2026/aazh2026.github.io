@@ -1,0 +1,53 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>Context Layer三层模型</title>
+  <desc>垂直堆叠的三层卡片：Layer 1项目上下文、Layer 2技术上下文、Layer 3业务上下文，显示层次依赖关系</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">三层Context模型</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">企业级AI系统的上下文分层</text>
+
+  <!-- Layer 3 (outermost, Business Context) -->
+  <rect x="140" y="68" width="400" height="80" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <rect x="140" y="68" width="400" height="80" rx="10" fill="#D97757" opacity="0.06"/>
+  <text x="160" y="92" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 3</text>
+  <text x="160" y="112" font-size="13" fill="#141413">Business Context（业务上下文）</text>
+  <text x="160" y="130" font-size="10" fill="#87867F">领域模型 · 业务规则 · 合规要求</text>
+  <!-- Badge -->
+  <rect x="476" y="86" width="50" height="20" rx="10" fill="#D97757"/>
+  <text x="501" y="100" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">最抽象</text>
+
+  <!-- Arrow 3→2 -->
+  <line x1="340" y1="148" x2="340" y2="162" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,166 335,156 345,156" fill="#D1CFC5"/>
+
+  <!-- Layer 2 (middle, Technical Context) -->
+  <rect x="160" y="172" width="360" height="80" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <rect x="160" y="172" width="360" height="80" rx="10" fill="#D97757" opacity="0.04"/>
+  <text x="180" y="196" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 2</text>
+  <text x="180" y="216" font-size="13" fill="#141413">Technical Context（技术上下文）</text>
+  <text x="180" y="234" font-size="10" fill="#87867F">架构标准 · 技术栈 · 安全策略</text>
+  <!-- Badge -->
+  <rect x="446" y="190" width="60" height="20" rx="10" fill="#D1CFC5"/>
+  <text x="476" y="204" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">中层</text>
+
+  <!-- Arrow 2→1 -->
+  <line x1="340" y1="252" x2="340" y2="266" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,270 335,260 345,260" fill="#D1CFC5"/>
+
+  <!-- Layer 1 (innermost, Project Context) -->
+  <rect x="180" y="276" width="320" height="68" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="200" y="300" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 1</text>
+  <text x="200" y="318" font-size="13" fill="#141413">Project Context（项目上下文）</text>
+  <text x="200" y="336" font-size="10" fill="#87867F">编码规范 · 命名约定 · 测试模式</text>
+  <!-- Badge -->
+  <rect x="416" y="294" width="70" height="20" rx="10" fill="#D97757"/>
+  <text x="451" y="308" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">最具体</text>
+
+  <!-- Dependency label on right side -->
+  <text x="560" y="200" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" transform="rotate(90,560,200)">依赖方向</text>
+  <path d="M545 290 Q555 210 545 130" stroke="#D1CFC5" stroke-width="1.5" fill="none" stroke-dasharray="3,2"/>
+  <polygon points="545,130 541,140 549,140" fill="#D1CFC5"/>
+</svg>

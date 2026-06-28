@@ -5,18 +5,26 @@ date: 2025-01-13T01:20:00+08:00
 tags: [AI架构, 认知科学, 遗忘策略, 深度思考]
 author: "@postcodeeng"
 
-redirect_from:
-  - /forgetting-strategy.html
 series: AI-Native Engineering
 ---
 
 # 你的Agent不是记忆力差，而是不会「遗忘」
+
+> **TL;DR**
+>
+> 本文核心观点：
+> 1. **记忆过载是设计缺陷** — Agent的"迟钝"不是因为算力不足，而是记忆系统从不清理
+> 2. **遗忘是认知智慧** — 人类通过遗忘实现噪声过滤、存储优化和泛化学习
+> 3. **四层遗忘策略** — 时间衰减、用进废退、重要性分级、渐进式压缩
+> 4. **从"记忆一切"到"智慧遗忘"** — 这是Agent设计的范式转变
 
 > *「那个记得一切的Agent，最后崩溃了——不是因为记性不好，是因为记性太好。」*
 
 ---
 
 <object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%"></object>
+
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%"></object>
 
 ## 50万条记忆的教训
 
@@ -54,6 +62,10 @@ series: AI-Native Engineering
 
 **遗忘不是记忆的失败，是记忆的智慧。**
 
+> 💡 **Key Insight**
+>
+> 我们从小被教育「要记住，不要忘」。但在AI时代，**遗忘能力可能比记忆能力更重要**。
+
 ---
 
 ## 核心观点：Agent的「记忆肥胖症」
@@ -65,9 +77,11 @@ series: AI-Native Engineering
 - 检索延迟指数增长
 - 上下文污染：被过时信息误导
 
-**这不是AI的宿命，是设计选择。**
+**这不是AI的宿命，是设计选择。** 我们把Agent设计成了「永远不会遗忘」的存在，但这恰恰违背了认知科学的基本原理。
 
-我们把Agent设计成了「永远不会遗忘」的存在，但这恰恰违背了认知科学的基本原理。
+> 💡 **Key Insight**
+>
+> 不完美，会犯错，但会学习和遗忘——这才是智能的真正形态。
 
 ---
 
@@ -94,7 +108,7 @@ series: AI-Native Engineering
 
 ## 遗忘策略：让Agent学会「整理房间」
 
-### 策略1：时间衰减
+### 时间衰减：不同信息，不同遗忘速度
 
 最简单的遗忘机制：**越旧的信息，相关性越低。**
 
@@ -108,7 +122,7 @@ series: AI-Native Engineering
 
 **关键洞察：** 不是所有信息都值得长期保留。
 
-### 策略2：用进废退
+### 用进废退：访问频率决定去留
 
 时间衰减的改进版：**不仅看年龄，还看访问频率。**
 
@@ -118,7 +132,7 @@ series: AI-Native Engineering
 
 **这是LRU算法的启示，也是人脑的工作方式。**
 
-### 策略3：重要性分级
+### 重要性分级：给记忆打标签
 
 有些东西，即使很久不用，也不能忘：
 - 用户的核心偏好（「我是素食者」）
@@ -131,7 +145,7 @@ series: AI-Native Engineering
 - 普通 → 1个月
 - 临时 → 1天
 
-### 策略4：压缩而非删除
+### 渐进式压缩：保留元信息
 
 完全删除可能丢失有价值的信息。更好的策略：**渐进式摘要**。
 
@@ -170,6 +184,10 @@ series: AI-Native Engineering
 
 毕竟，最深刻的记忆，往往来自于选择性遗忘之后留下的痕迹。
 
+> 💡 **Key Insight**
+>
+> 不完美，会犯错，但会学习和遗忘——这才是智能的真正形态。
+
 ---
 
-*Published on 2026-03-03 | 深度阅读时间：约 6 分钟*
+*深度阅读时间：约 6 分钟*

@@ -1,0 +1,77 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+  <title>AI导师核心能力图</title>
+  <desc>展示AI如何通过代码审查历史分析生成个性化导师方案的流程图</desc>
+
+  <!-- Background -->
+  <rect width="680" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI导师：让每个开发者都有专属导师</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native软件工程 · 2025/05/22</text>
+
+  <!-- Left: Developer + Code Review History -->
+  <rect x="30" y="68" width="130" height="200" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="95" y="88" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">开发者</text>
+
+  <!-- Developer silhouette (simple) -->
+  <circle cx="95" cy="118" r="18" fill="#D1CFC5"/>
+  <rect x="77" y="138" width="36" height="50" rx="8" fill="#D1CFC5"/>
+
+  <!-- Code review history document -->
+  <rect x="45" y="200" width="100" height="55" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="95" y="218" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">代码审查历史</text>
+  <line x1="55" y1="226" x2="135" y2="226" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="55" y1="234" x2="120" y2="234" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="55" y1="242" x2="128" y2="242" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Arrow: Developer → AI Engine -->
+  <line x1="160" y1="170" x2="210" y2="170" stroke="#D97757" stroke-width="2"/>
+  <polygon points="210,170 202,166 202,174" fill="#D97757"/>
+  <text x="185" y="162" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">输入</text>
+
+  <!-- Center: AI Mentor Core -->
+  <rect x="220" y="90" width="160" height="160" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="220" y="90" width="160" height="28" rx="10" fill="#D97757"/>
+  <rect x="220" y="110" width="160" height="8" fill="#D97757"/>
+  <text x="300" y="109" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">AI导师核心</text>
+
+  <!-- AI Engine label -->
+  <text x="300" y="138" text-anchor="middle" font-size="11" fill="#141413">开发者画像</text>
+  <text x="300" y="154" text-anchor="middle" font-size="10" fill="#87867F">能力评估 + 历史分析</text>
+
+  <!-- Radar chart (simplified skill levels) -->
+  <polygon points="300,168 320,182 310,202 280,202 270,182" fill="none" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="300,174 312,184 305,198 285,198 278,184" fill="#D97757" fill-opacity="0.15" stroke="none"/>
+  <text x="300" y="220" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">技能雷达</text>
+
+  <!-- Four output arrows -->
+  <line x1="380" y1="130" x2="430" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="430,110 422,114 422,106" fill="#D1CFC5"/>
+  <line x1="380" y1="150" x2="430" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="430,150 422,146 422,154" fill="#D1CFC5"/>
+  <line x1="380" y1="170" x2="430" y2="190" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="430,190 422,186 422,194" fill="#D1CFC5"/>
+  <line x1="380" y1="190" x2="430" y2="230" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="430,230 422,224 422,236" fill="#D1CFC5"/>
+
+  <!-- Right: Four output cards -->
+  <rect x="440" y="76" width="210" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="456" y="96" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">个性化推荐</text>
+  <text x="456" y="110" font-size="9" fill="#87867F">技术文章·练习任务·学习伙伴</text>
+
+  <rect x="440" y="128" width="210" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="456" y="148" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">实时指导</text>
+  <text x="456" y="162" font-size="9" fill="#87867F">IDE内实时反馈·边写边学</text>
+
+  <rect x="440" y="180" width="210" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="456" y="200" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">效果追踪</text>
+  <text x="456" y="214" font-size="9" fill="#87867F">成长曲线·能力变化可视化</text>
+
+  <rect x="440" y="232" width="210" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="456" y="252" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">学习路径</text>
+  <text x="456" y="266" font-size="9" fill="#87867F">AI生成·动态调整·分阶段目标</text>
+
+  <!-- Source line -->
+  <text x="340" y="304" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI生成 · 2025-05-22</text>
+</svg>

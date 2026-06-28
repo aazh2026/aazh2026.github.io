@@ -1,0 +1,75 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="380" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">多Agent协作的工作流</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">角色 → 知识库 → 交付物</text>
+
+  <!-- Role boxes: 4 across the top -->
+  <!-- Role 1: 前端专家 -->
+  <rect x="30" y="68" width="130" height="88" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="95" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">前端专家</text>
+  <text x="95" y="110" text-anchor="middle" font-size="10" fill="#141413">UI/UX 实现</text>
+  <text x="95" y="126" text-anchor="middle" font-size="10" fill="#87867F">设计系统 · React/Vue</text>
+  <text x="95" y="142" text-anchor="middle" font-size="10" fill="#87867F">视觉优先认知风格</text>
+
+  <!-- Role 2: 后端架构师 -->
+  <rect x="185" y="68" width="130" height="88" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="250" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">后端架构师</text>
+  <text x="250" y="110" text-anchor="middle" font-size="10" fill="#141413">系统设计</text>
+  <text x="250" y="126" text-anchor="middle" font-size="10" fill="#87867F">数据库 · API</text>
+  <text x="250" y="142" text-anchor="middle" font-size="10" fill="#87867F">系统优先认知风格</text>
+
+  <!-- Role 3: 产品经理 -->
+  <rect x="340" y="68" width="130" height="88" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="405" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">产品经理</text>
+  <text x="405" y="110" text-anchor="middle" font-size="10" fill="#141413">需求分析</text>
+  <text x="405" y="126" text-anchor="middle" font-size="10" fill="#87867F">优先级 · 跨团队协调</text>
+  <text x="405" y="142" text-anchor="middle" font-size="10" fill="#87867F">业务语言↔技术语言</text>
+
+  <!-- Role 4: 社区运营 -->
+  <rect x="495" y="68" width="130" height="88" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.8"/>
+  <text x="560" y="92" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">社区运营</text>
+  <text x="560" y="110" text-anchor="middle" font-size="10" fill="#141413">用户关系</text>
+  <text x="560" y="126" text-anchor="middle" font-size="10" fill="#87867F">内容策划 · 数据分析</text>
+  <text x="560" y="142" text-anchor="middle" font-size="10" fill="#87867F">技术→用户友好表达</text>
+
+  <!-- Arrows from roles down to knowledge base -->
+  <!-- Arrow: Role1 → KB -->
+  <line x1="95" y1="156" x2="95" y2="195" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="95,200 91,192 99,192" fill="#D97757"/>
+
+  <!-- Arrow: Role2 → KB -->
+  <line x1="250" y1="156" x2="250" y2="195" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="250,200 246,192 254,192" fill="#D97757"/>
+
+  <!-- Arrow: Role3 → KB -->
+  <line x1="405" y1="156" x2="405" y2="195" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="405,200 401,192 409,192" fill="#D97757"/>
+
+  <!-- Arrow: Role4 → KB -->
+  <line x1="560" y1="156" x2="560" y2="195" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="560,200 556,192 564,192" fill="#D97757"/>
+
+  <!-- Knowledge Base (center node) -->
+  <rect x="200" y="208" width="280" height="80" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  <text x="340" y="234" text-anchor="middle" font-size="13" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">共享知识库</text>
+  <line x1="220" y1="246" x2="460" y2="246" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="263" text-anchor="middle" font-size="10" fill="#141413">代码规范 · 设计系统 · 架构原则</text>
+  <text x="340" y="280" text-anchor="middle" font-size="10" fill="#87867F">角色边界 · 接口契约 · 验证规则</text>
+
+  <!-- Arrow from KB to Deliverable -->
+  <line x1="340" y1="288" x2="340" y2="310" stroke="#D97757" stroke-width="1.8"/>
+  <polygon points="340,316 336,308 344,308" fill="#D97757"/>
+
+  <!-- Deliverable node -->
+  <rect x="220" y="322" width="240" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="340" y="343" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">结构化交付物</text>
+  <text x="340" y="358" text-anchor="middle" font-size="10" fill="#87867F">代码 · 文档 · 设计稿 · 数据</text>
+
+  <title>多Agent协作的工作流</title>
+  <desc>Horizontal flowchart showing 4 role boxes (前端专家, 后端架构师, 产品经理, 社区运营) connected via a central 共享知识库 to a structured 交付物 output node.</desc>
+</svg>

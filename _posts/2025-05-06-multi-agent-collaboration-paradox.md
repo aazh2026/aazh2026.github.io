@@ -22,7 +22,7 @@ redirect_from:
 
 ---
 
-## 现象：为什么我的Multi-Agent系统越来越慢
+## 现象：Multi-Agent系统为何反而变慢
 
 ### 一个真实的困惑
 
@@ -63,6 +63,10 @@ redirect_from:
 
 答案是：**Agent之间的协调开销**。
 
+> 💡 **Key Insight**
+>
+> 串行执行时间不代表实际运行时间——协调开销会成倍放大延迟。
+
 每个箭头都是：
 - 状态序列化
 - 网络传输
@@ -75,7 +79,7 @@ redirect_from:
 
 ---
 
-## 协作成本分析：被忽视的O(n²)问题
+## 协作成本：被忽视的O(n²)问题
 
 ### 通信复杂度的数学真相
 
@@ -90,6 +94,10 @@ redirect_from:
 | 10 | 45 | 45x |
 
 **Agent数量从4增加到10，连接数增长7.5倍。**
+
+> 💡 **Key Insight**
+>
+> O(n²) 连接数增长是 Multi-Agent 架构的性能杀手——这也是为什么 Agent 数量不能无限扩张的根本原因。
 
 ### 状态同步的成本
 
@@ -158,6 +166,10 @@ redirect_from:
 
 ** eventually，协调成本超过执行成本。**
 
+> 💡 **Key Insight**
+>
+> 协调成本以平方速度增长，执行成本以线性速度增长——两条成本曲线的交点，就是最优 Agent 数量的分水岭。
+
 **案例数据**：
 
 | Agent数量 | 执行成本 | 协调成本 | 总成本 | 协调占比 |
@@ -182,17 +194,21 @@ redirect_from:
 
 ---
 
-## 反直觉洞察：协调税的真相
+## 反直觉洞察：协调税的三个真相
 
 ### 洞察1：Multi-Agent的协调税被严重低估
 
 **业界普遍认知**：
 > "Multi-Agent可以并行处理，效率更高"
 
-**现实**：
+**现实：**
 - 并行度受限于任务依赖关系
 - 协调开销抵消并行收益
 - 实际加速比远低于理论值
+
+> 💡 **Key Insight**
+>
+> Amdahl 定律在 Multi-Agent 场景下意味着：当协调开销超过并行收益时，增加 Agent 反而降低整体性能。
 
 **Amdahl定律在Multi-Agent中的体现**：
 **当O(N) > P/N时，增加Agent反而降低性能。**
@@ -202,6 +218,10 @@ redirect_from:
 **系统可靠性 = 各组件可靠性的乘积**
 
 假设单个Agent可靠性 = 99%
+
+> 💡 **Key Insight**
+>
+> 系统可靠性是各组件可靠性的乘积——16 个 99% 可靠的 Agent 组装后，系统可靠性只剩 85%，相当于每 6-7 次请求就有 1 次失败。
 
 | Agent数量 | 系统可靠性 | 失败概率 |
 |-----------|-----------|---------|
@@ -221,6 +241,10 @@ redirect_from:
 - **超时策略**
 - **重试逻辑**
 
+> 💡 **Key Insight**
+>
+> Agent 间的"语言不通"——状态表示、错误处理、超时策略不一致——是系统性不一致的根源，也是 Multi-Agent 架构最难解决的隐性债务。
+
 **结果是**：
 - Agent A以为成功了
 - Agent B以为失败了
@@ -229,7 +253,7 @@ redirect_from:
 
 ---
 
-## 设计原则：何时用Multi-Agent，何时不用
+## 设计原则：何时用Multi-Agent
 
 ### 适用Multi-Agent的场景
 
@@ -358,7 +382,7 @@ redirect_from:
 
 **本系列相关**
 - [为什么单个AI Agent不够用了？](/agent-swarm/) (第16篇)
-- [Agent-DD：多Agent协作的Swarm Programming模式](#) *(待撰写)*
+- [Agent-DD：多Agent协作的Swarm Programming模式](#) （本系列后续文章详解）
 
 **学术参考**
 - Multi-Agent Systems: Algorithmic, Game-Theoretic, and Logical Foundations

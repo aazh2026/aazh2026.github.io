@@ -1,0 +1,61 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>记忆版本控制流程</title>
+  <desc>Horizontal flow diagram showing three stages: old knowledge, version detection, and new knowledge</desc>
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">记忆版本控制流程</text>
+  <text x="300" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">记忆版本控制 · 2025/01/18</text>
+
+  <!-- Stage 1: Old Knowledge -->
+  <rect x="30" y="75" width="150" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="55" y="87" width="100" height="22" rx="11" fill="#E3DACC"/>
+  <text x="105" y="103" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">旧知识 (过时)</text>
+  <text x="105" y="130" text-anchor="middle" font-size="11" fill="#141413">Python 有 GIL</text>
+  <text x="105" y="148" text-anchor="middle" font-size="11" fill="#141413">多线程性能受限</text>
+  <text x="105" y="175" text-anchor="middle" font-size="9.5" fill="#87867F">v1.0.0 · 2023</text>
+
+  <!-- Clock icon (top-right of stage 1) -->
+  <circle cx="155" cy="88" r="12" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="155" y1="88" x2="155" y2="80" stroke="#D97757" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="155" y1="88" x2="161" y2="91" stroke="#D97757" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Arrow 1→2 -->
+  <line x1="182" y1="135" x2="218" y2="135" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="222,135 214,130 214,140" fill="#D1CFC5"/>
+
+  <!-- Stage 2: Version Detection (clay accent) -->
+  <rect x="220" y="75" width="160" height="120" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="255" y="87" width="90" height="22" rx="11" fill="#D97757"/>
+  <text x="300" y="103" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">版本检测</text>
+  <text x="300" y="132" text-anchor="middle" font-size="11" fill="#141413">检测到知识过期</text>
+  <text x="300" y="150" text-anchor="middle" font-size="11" fill="#141413">发现新版本事实</text>
+  <text x="300" y="168" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">v1.0.0 → v2.0.0</text>
+
+  <!-- Detection sparkle icons -->
+  <text x="232" y="110" font-size="11" fill="#D97757">✦</text>
+  <text x="356" y="110" font-size="11" fill="#D97757">✦</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="382" y1="135" x2="418" y2="135" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="422,135 414,130 414,140" fill="#D1CFC5"/>
+
+  <!-- Stage 3: New Knowledge -->
+  <rect x="420" y="75" width="150" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="445" y="87" width="100" height="22" rx="11" fill="#788C5D"/>
+  <text x="495" y="103" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">新知识 (更新)</text>
+  <text x="495" y="130" text-anchor="middle" font-size="11" fill="#141413">Python 3.12+</text>
+  <text x="495" y="148" text-anchor="middle" font-size="11" fill="#141413">可禁用 GIL</text>
+  <text x="495" y="175" text-anchor="middle" font-size="9.5" fill="#87867F">v2.0.0 · 2024</text>
+
+  <!-- Checkmark (top-right of stage 3) -->
+  <circle cx="545" cy="88" r="12" fill="#788C5D"/>
+  <polyline points="539,88 543,92 551,84" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dashed return arrow (bottom) -->
+  <path d="M 495 210 C 495 230, 300 245, 300 245 C 300 245, 105 230, 105 210" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="5,4" opacity="0.5"/>
+  <polygon points="105,210 111,215 111,205" fill="#D97757" opacity="0.5"/>
+  <text x="300" y="252" text-anchor="middle" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">回滚可用</text>
+</svg>

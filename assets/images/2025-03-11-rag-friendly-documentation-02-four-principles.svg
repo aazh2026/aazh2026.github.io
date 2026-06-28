@@ -1,0 +1,67 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Background -->
+  <rect width="680" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="15" font-weight="500" fill="#141413" letter-spacing="-0.02em">RAG-Friendly 四大原则</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">文档写作范式转移</text>
+
+  <!-- Card 1: Self-Contained (top-left) -->
+  <rect x="40" y="68" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="60" y="94" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">01 Self-Contained</text>
+  <text x="60" y="112" font-size="13" fill="#141413">自包含</text>
+  <text x="60" y="132" font-size="10.5" fill="#87867F">每个文档块必须包含理解它所需的</text>
+  <text x="60" y="148" font-size="10.5" fill="#87867F">全部上下文，不依赖外部引用。</text>
+  <text x="60" y="170" font-size="10" fill="#141413">避免："如前所述..."、"详见X文档"</text>
+  <rect x="270" y="82" width="46" height="18" rx="9" fill="#D97757"/>
+  <text x="293" y="95" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">独立</text>
+
+  <!-- Card 2: Explicit Structure (top-right) -->
+  <rect x="350" y="68" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="370" y="94" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">02 Explicit Structure</text>
+  <text x="370" y="112" font-size="13" fill="#141413">显式结构</text>
+  <text x="370" y="132" font-size="10.5" fill="#87867F">使用编号、列表、定义代替</text>
+  <text x="370" y="148" font-size="10.5" fill="#87867F">隐含的段落结构。</text>
+  <text x="370" y="170" font-size="10" fill="#141413">AI无法理解"这段讲的是分层设计"</text>
+  <rect x="580" y="82" width="46" height="18" rx="9" fill="#D97757"/>
+  <text x="603" y="95" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">结构</text>
+
+  <!-- Arrow: 1 → 2 -->
+  <line x1="330" y1="133" x2="350" y2="133" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="345,129 351,133 345,137" fill="#D1CFC5"/>
+
+  <!-- Card 3: Terminology Consistency (bottom-left) -->
+  <rect x="40" y="218" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="60" y="244" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">03 Terminology Consistency</text>
+  <text x="60" y="262" font-size="13" fill="#141413">术语一致性</text>
+  <text x="60" y="282" font-size="10.5" fill="#87867F">每个概念只有一个标准名称，</text>
+  <text x="60" y="298" font-size="10.5" fill="#87867F">别名需显式声明关联。</text>
+  <text x="60" y="320" font-size="10" fill="#141413">避免：API网关 vs 网关层 vs 入口服务</text>
+  <rect x="270" y="232" width="46" height="18" rx="9" fill="#788C5D"/>
+  <text x="293" y="245" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">一致</text>
+
+  <!-- Card 4: QA-Oriented (bottom-right) -->
+  <rect x="350" y="218" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="370" y="244" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">04 QA-Oriented</text>
+  <text x="370" y="262" font-size="13" fill="#141413">问答导向</text>
+  <text x="370" y="282" font-size="10.5" fill="#87867F">直接写出问题和答案，</text>
+  <text x="370" y="298" font-size="10.5" fill="#87867F">让AI精确匹配用户查询。</text>
+  <text x="370" y="320" font-size="10" fill="#141413">避免：从陈述句中提取答案</text>
+  <rect x="580" y="232" width="46" height="18" rx="9" fill="#788C5D"/>
+  <text x="603" y="245" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">精准</text>
+
+  <!-- Arrow: 3 → 4 -->
+  <line x1="330" y1="283" x2="350" y2="283" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="345,279 351,283 345,287" fill="#D1CFC5"/>
+
+  <!-- Vertical connector: 2 → 3 -->
+  <line x1="495" y1="198" x2="495" y2="218" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="491,213 495,207 499,213" fill="#D1CFC5"/>
+
+  <!-- Diagonal connector: 1 → 4 (dashed, showing all principles interconnect) -->
+  <path d="M 330 170 C 340 360, 540 100, 560 218" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="420" y="195" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" opacity="0.7">四位一体</text>
+
+  <title>RAG-Friendly 四大原则</title>
+  <desc>RAG-Friendly文档写作的四大核心原则：自包含、显式结构、术语一致性、问答导向，以2x2卡片网格呈现。</desc>
+</svg>

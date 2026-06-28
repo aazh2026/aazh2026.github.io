@@ -1,0 +1,80 @@
+<svg viewBox="0 0 720 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="720" height="260" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="360" y="22" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 辅助 Quality Contract 生成循环</text>
+  <text x="360" y="38" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">LangChain / 2025</text>
+
+  <!-- Top-right badge -->
+  <rect x="590" y="12" width="118" height="22" rx="11" fill="#D97757"/>
+  <text x="649" y="27" text-anchor="middle" font-size="9.5" fill="#FFFFFF" font-family="ui-monospace, monospace">AI 辅助契约生成</text>
+
+  <!-- Node 1: 需求输入 -->
+  <g transform="translate(30, 75)">
+    <rect width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="45" y="26" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">需求输入</text>
+    <text x="45" y="42" text-anchor="middle" font-size="9" fill="#87867F">User Story</text>
+    <text x="45" y="54" text-anchor="middle" font-size="9" fill="#87867F">PRD 文档</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <line x1="120" y1="103" x2="148" y2="103" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <polygon points="143,98 156,103 143,108" fill="#D1CFC5"/>
+
+  <!-- Node 2: AI 分析需求 -->
+  <g transform="translate(158, 75)">
+    <rect width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+    <text x="45" y="26" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">AI 分析需求</text>
+    <text x="45" y="42" text-anchor="middle" font-size="9" fill="#87867F">抽取质量维度</text>
+    <text x="45" y="54" text-anchor="middle" font-size="9" fill="#87867F">结构化提取</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <line x1="248" y1="103" x2="276" y2="103" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <polygon points="271,98 284,103 271,108" fill="#D1CFC5"/>
+
+  <!-- Node 3: Quality Contract 草稿 (center, emphasized) -->
+  <g transform="translate(286, 65)">
+    <rect width="110" height="76" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2.5"/>
+    <text x="55" y="26" text-anchor="middle" font-size="11.5" fill="#D97757" font-weight="700">QC 草稿</text>
+    <text x="55" y="44" text-anchor="middle" font-size="9" fill="#141413">Functional Contract</text>
+    <text x="55" y="57" text-anchor="middle" font-size="9" fill="#141413">Performance Contract</text>
+    <text x="55" y="70" text-anchor="middle" font-size="9" fill="#141413">Security Contract</text>
+  </g>
+
+  <!-- Arrow 3→4 -->
+  <line x1="396" y1="103" x2="424" y2="103" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <polygon points="419,98 432,103 419,108" fill="#D1CFC5"/>
+
+  <!-- Node 4: 自动生成测试用例 -->
+  <g transform="translate(434, 75)">
+    <rect width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="45" y="26" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">自动生成</text>
+    <text x="45" y="42" text-anchor="middle" font-size="9" fill="#87867F">pytest / k6</text>
+    <text x="45" y="54" text-anchor="middle" font-size="9" fill="#87867F">安全扫描脚本</text>
+  </g>
+
+  <!-- Arrow 4→5 -->
+  <line x1="524" y1="103" x2="552" y2="103" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,4"/>
+  <polygon points="547,98 560,103 547,108" fill="#D1CFC5"/>
+
+  <!-- Node 5: CI 验证 -->
+  <g transform="translate(562, 75)">
+    <rect width="70" height="56" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+    <text x="35" y="26" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">CI 验证</text>
+    <text x="35" y="42" text-anchor="middle" font-size="9" fill="#87867F">自动化</text>
+    <text x="35" y="54" text-anchor="middle" font-size="9" fill="#87867F">质量门禁</text>
+  </g>
+
+  <!-- Feedback arrow: CI → AI (dashed, bottom path) -->
+  <path d="M 597 131 L 597 155 L 203 155 L 203 131" stroke="#D97757" stroke-width="2" fill="none" stroke-dasharray="5,4" opacity="0.7"/>
+  <polygon points="207,131 203,118 199,131" fill="#D97757" opacity="0.7"/>
+  <text x="400" y="168" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" opacity="0.8">反馈给 AI 迭代优化</text>
+
+  <!-- Annotation: AI role -->
+  <text x="203" y="145" text-anchor="middle" font-size="8.5" fill="#87867F">AI 自动识别边界条件</text>
+  <text x="203" y="157" text-anchor="middle" font-size="8.5" fill="#87867F">生成结构化契约文档</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>生物学启示：三大韧性机制</title>
+  <desc>森林功能冗余、珊瑚自适应边界、免疫系统默认安全三个生物学类比</desc>
+
+  <rect width="680" height="200" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">生物学启示：系统的三大韧性机制</text>
+  <text x="340" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">分布式系统设计的自然原型</text>
+
+  <!-- Card 1: Forest -->
+  <rect x="40" y="56" width="190" height="108" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <rect x="52" y="68" width="50" height="22" rx="11" fill="#788C5D"/>
+  <text x="77" y="84" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">🌲</text>
+  <text x="118" y="84" font-size="12" font-weight="600" fill="#788C5D">功能冗余</text>
+  <text x="52" y="106" font-size="10.5" fill="#141413">多种授粉者</text>
+  <text x="52" y="120" font-size="10.5" fill="#141413">不依赖单一物种</text>
+  <text x="52" y="140" font-size="9.5" fill="#87867F">干旱时优先保障根系</text>
+  <text x="52" y="154" font-size="9.5" fill="#87867F">舍弃枝叶保核心</text>
+
+  <!-- Card 2: Coral -->
+  <rect x="245" y="56" width="190" height="108" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="257" y="68" width="50" height="22" rx="11" fill="#D97757"/>
+  <text x="282" y="84" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">🪸</text>
+  <text x="323" y="84" font-size="12" font-weight="600" fill="#D97757">自适应边界</text>
+  <text x="257" y="106" font-size="10.5" fill="#141413">珊瑚白化</text>
+  <text x="257" y="120" font-size="10.5" fill="#141413">是过渡，不是死亡</text>
+  <text x="257" y="140" font-size="9.5" fill="#87867F">环境恢复后</text>
+  <text x="257" y="154" font-size="9.5" fill="#87867F">可重新招募藻类</text>
+
+  <!-- Card 3: Immune -->
+  <rect x="450" y="56" width="190" height="108" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.5"/>
+  <rect x="462" y="68" width="50" height="22" rx="11" fill="#141413"/>
+  <text x="487" y="84" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">🛡️</text>
+  <text x="528" y="84" font-size="12" font-weight="600" fill="#141413">默认安全</text>
+  <text x="462" y="106" font-size="10.5" fill="#141413">免疫系统</text>
+  <text x="462" y="120" font-size="10.5" fill="#141413">默认"攻击"模式</text>
+  <text x="462" y="140" font-size="9.5" fill="#87867F">直到被调节信号抑制</text>
+  <text x="462" y="154" font-size="9.5" fill="#87867F">新功能默认关闭</text>
+
+  <!-- Bottom note -->
+  <text x="340" y="182" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">这些机制在分布式系统中同样适用 → 功能冗余 · 自适应边界 · 默认安全</text>
+</svg>

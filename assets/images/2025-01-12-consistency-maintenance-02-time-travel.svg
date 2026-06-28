@@ -1,0 +1,57 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">时间旅行问题 — 从海量记忆中定位历史上下文</text>
+  <text x="300" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">跨会话记忆索引 · 2025/01/12</text>
+
+  <!-- Timeline base line -->
+  <line x1="60" y1="200" x2="540" y2="200" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- Node 1: 上周 -->
+  <circle cx="120" cy="200" r="24" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="120" y="206" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">上周</text>
+
+  <!-- Memory bubble 1 -->
+  <rect x="60" y="236" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="120" y="256" text-anchor="middle" font-size="10" fill="#141413">「蓝色方案」</text>
+  <text x="120" y="272" text-anchor="middle" font-size="9.5" fill="#87867F">配色讨论 · 周二</text>
+
+  <!-- Node 2: 昨天 -->
+  <circle cx="300" cy="200" r="24" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
+  <text x="300" y="206" text-anchor="middle" font-size="13" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">昨天</text>
+
+  <!-- Memory bubble 2 -->
+  <rect x="240" y="236" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="300" y="256" text-anchor="middle" font-size="10" fill="#141413">「绿色偏好」</text>
+  <text x="300" y="272" text-anchor="middle" font-size="9.5" fill="#87867F">偏好更新 · 周四</text>
+
+  <!-- Node 3: 今天 -->
+  <circle cx="480" cy="200" r="24" fill="#FFFFFF" stroke="#141413" stroke-width="2"/>
+  <text x="480" y="206" text-anchor="middle" font-size="13" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">今天</text>
+
+  <!-- Memory bubble 3 -->
+  <rect x="420" y="236" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="480" y="256" text-anchor="middle" font-size="10" fill="#141413">当前会话</text>
+  <text x="480" y="272" text-anchor="middle" font-size="9.5" fill="#87867F">正在输入…</text>
+
+  <!-- Magnifying glass (query icon) -->
+  <circle cx="300" cy="140" r="22" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <line x1="316" y1="156" x2="332" y2="172" stroke="#D97757" stroke-width="3" stroke-linecap="round"/>
+  <text x="300" y="145" text-anchor="middle" font-size="16" fill="#D97757">?</text>
+
+  <!-- Query arrow -->
+  <line x1="300" y1="162" x2="300" y2="172" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="300,176 296,168 304,168" fill="#D97757"/>
+
+  <!-- User quote bubble -->
+  <rect x="180" y="300" width="380" height="50" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="200" y="320" font-size="11" fill="#141413">"我上周说的那个方案，现在想改一下"</text>
+  <text x="200" y="338" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">— 用户原话</text>
+
+  <!-- Source caption -->
+  <text x="300" y="376" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">挑战：如何在海量记忆中准确定位历史上下文？</text>
+</svg>

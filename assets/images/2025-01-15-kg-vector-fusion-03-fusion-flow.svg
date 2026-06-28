@@ -1,0 +1,83 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>混合RAG融合策略流程</title>
+  <desc>三种融合策略：向量为主图谱验证、动态权重策略、图谱为主向量补充</desc>
+
+  <!-- Background -->
+  <rect width="680" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">融合策略的三条路径</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">融合策略 · postcodeengineering.com · 2025/01/15</text>
+
+  <!-- Row 1: 向量为主路径 -->
+  <text x="48" y="68" font-size="11" font-weight="600" fill="#141413">路径一：向量为主，图谱验证</text>
+
+  <!-- Node 1: 向量召回 -->
+  <rect x="48" y="80" width="140" height="44" rx="6" fill="#2563EB"/>
+  <text x="118" y="98" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="500" font-family="ui-monospace, monospace">向量召回 Top-5</text>
+  <text x="118" y="113" text-anchor="middle" font-size="9" fill="#BFDBFE" font-family="ui-monospace, monospace">Chroma / FAISS</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="188" y1="102" x2="214" y2="102" stroke="#D97757" stroke-width="2"/>
+  <polygon points="214,98 208,106 220,106" fill="#D97757"/>
+
+  <!-- Node 2: 图谱验证 -->
+  <rect x="218" y="80" width="120" height="44" rx="6" fill="#D97757"/>
+  <text x="278" y="98" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="500" font-family="ui-monospace, monospace">图谱验证</text>
+  <text x="278" y="113" text-anchor="middle" font-size="9" fill="#FECACA" font-family="ui-monospace, monospace">三元组校验</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="338" y1="102" x2="364" y2="102" stroke="#D97757" stroke-width="2"/>
+  <polygon points="364,98 358,106 370,106" fill="#D97757"/>
+
+  <!-- Node 3: 过滤矛盾 -->
+  <rect x="368" y="80" width="140" height="44" rx="6" fill="#DC2626"/>
+  <text x="438" y="98" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="500" font-family="ui-monospace, monospace">过滤矛盾候选</text>
+  <text x="438" y="113" text-anchor="middle" font-size="9" fill="#FEE2E2" font-family="ui-monospace, monospace">Entity Link</text>
+
+  <!-- Row 2: 动态权重策略 -->
+  <rect x="48" y="142" width="584" height="60" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="64" y="162" font-size="11" font-weight="600" fill="#141413">动态权重策略</text>
+
+  <!-- Badge 1: What is X -->
+  <rect x="64" y="172" width="160" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="187" font-size="9" fill="#141413" font-family="ui-monospace, monospace">"What is X?"</text>
+  <rect x="234" y="172" width="72" height="22" rx="4" fill="#2563EB"/>
+  <text x="270" y="187" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">向量 70%</text>
+  <rect x="314" y="172" width="72" height="22" rx="4" fill="#059669"/>
+  <text x="350" y="187" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">图谱 30%</text>
+
+  <!-- Badge 2: X→Y relation -->
+  <rect x="64" y="200" width="160" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="215" font-size="9" fill="#141413" font-family="ui-monospace, monospace">"X→Y relation?"</text>
+  <rect x="234" y="200" width="72" height="22" rx="4" fill="#2563EB"/>
+  <text x="270" y="215" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">向量 30%</text>
+  <rect x="314" y="200" width="72" height="22" rx="4" fill="#059669"/>
+  <text x="350" y="215" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">图谱 70%</text>
+
+  <!-- Badge 3: Latest X -->
+  <rect x="420" y="172" width="160" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="436" y="187" font-size="9" fill="#141413" font-family="ui-monospace, monospace">"Latest X?"</text>
+  <rect x="590" y="172" width="36" height="22" rx="4" fill="#2563EB"/>
+  <text x="608" y="187" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">90%</text>
+  <rect x="590" y="200" width="36" height="22" rx="4" fill="#059669"/>
+  <text x="608" y="215" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">10%</text>
+
+  <!-- Row 3: 图谱为主路径 -->
+  <text x="48" y="246" font-size="11" font-weight="600" fill="#141413">路径二：图谱为主，向量补充</text>
+
+  <!-- Node 1: 图谱精确查询 -->
+  <rect x="48" y="258" width="140" height="36" rx="6" fill="#059669"/>
+  <text x="118" y="280" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="500" font-family="ui-monospace, monospace">图谱精确查询</text>
+
+  <!-- Arrow -->
+  <line x1="188" y1="276" x2="214" y2="276" stroke="#D97757" stroke-width="2"/>
+  <polygon points="214,272 208,280 220,280" fill="#D97757"/>
+
+  <!-- Node 2: 向量补充上下文 -->
+  <rect x="218" y="258" width="140" height="36" rx="6" fill="#2563EB"/>
+  <text x="288" y="280" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="500" font-family="ui-monospace, monospace">向量补充上下文</text>
+
+  <!-- Source line -->
+  <text x="340" y="296" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">融合策略 · postcodeengineering.com · 2025/01/15</text>
+</svg>

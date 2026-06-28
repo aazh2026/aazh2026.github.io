@@ -1,0 +1,79 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">三层融合测试模型</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Testing Paradigm · 2025</text>
+
+  <!-- Top layer: Runtime Verification -->
+  <rect x="40" y="60" width="600" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="60" width="600" height="90" rx="8" fill="none"/>
+  <!-- Layer tag -->
+  <rect x="56" y="76" width="24" height="24" rx="4" fill="#D97757"/>
+  <text x="68" y="93" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
+  <!-- Layer name -->
+  <text x="92" y="90" font-size="14" font-weight="600" fill="#141413">Runtime Verification</text>
+  <text x="92" y="108" font-size="11" fill="#87867F">运行时验证</text>
+  <!-- Divider -->
+  <line x1="260" y1="76" x2="260" y2="134" stroke="#D1CFC5" stroke-width="1.2"/>
+  <!-- What it covers -->
+  <text x="276" y="92" font-size="11" fill="#141413">覆盖：</text>
+  <text x="276" y="110" font-size="10.5" fill="#87867F">生产环境不变量</text>
+  <text x="276" y="126" font-size="10.5" fill="#87867F">异常检测 · 影子验证</text>
+  <!-- Pill: top -->
+  <rect x="532" y="80" width="94" height="22" rx="11" fill="#D97757"/>
+  <text x="579" y="95" text-anchor="middle" font-size="9.5" fill="#FFFFFF" font-family="ui-monospace, monospace">生产层</text>
+
+  <!-- Arrow 3→2 -->
+  <line x1="340" y1="150" x2="340" y2="162" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,166 336,158 344,158" fill="#D1CFC5"/>
+
+  <!-- Middle layer: AI-Generated Tests -->
+  <rect x="40" y="172" width="600" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <!-- Layer tag -->
+  <rect x="56" y="188" width="24" height="24" rx="4" fill="#788C5D"/>
+  <text x="68" y="205" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+  <!-- Layer name -->
+  <text x="92" y="202" font-size="14" font-weight="600" fill="#141413">AI-Generated Tests</text>
+  <text x="92" y="220" font-size="11" fill="#87867F">AI 生成测试</text>
+  <!-- Divider -->
+  <line x1="260" y1="188" x2="260" y2="246" stroke="#D1CFC5" stroke-width="1.2"/>
+  <!-- What it covers -->
+  <text x="276" y="204" font-size="11" fill="#141413">覆盖：</text>
+  <text x="276" y="222" font-size="10.5" fill="#87867F">代码路径 · 业务意图 · 变更自动更新</text>
+  <text x="276" y="238" font-size="10.5" fill="#87867F">行为驱动 · 契约驱动 · 覆盖率驱动</text>
+  <!-- Pill: middle -->
+  <rect x="532" y="192" width="94" height="22" rx="11" fill="#788C5D"/>
+  <text x="579" y="207" text-anchor="middle" font-size="9.5" fill="#FFFFFF" font-family="ui-monospace, monospace">代码层</text>
+
+  <!-- Arrow 2→1 -->
+  <line x1="340" y1="262" x2="340" y2="274" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,278 336,270 344,270" fill="#D1CFC5"/>
+
+  <!-- Base layer: Property-based Testing -->
+  <rect x="40" y="284" width="600" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <!-- Layer tag -->
+  <rect x="56" y="300" width="24" height="24" rx="4" fill="#141413"/>
+  <text x="68" y="317" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+  <!-- Layer name -->
+  <text x="92" y="314" font-size="14" font-weight="600" fill="#141413">Property-based Testing</text>
+  <text x="92" y="332" font-size="11" fill="#87867F">属性测试</text>
+  <!-- Divider -->
+  <line x1="260" y1="300" x2="260" y2="358" stroke="#D1CFC5" stroke-width="1.2"/>
+  <!-- What it covers -->
+  <text x="276" y="316" font-size="11" fill="#141413">覆盖：</text>
+  <text x="276" y="334" font-size="10.5" fill="#87867F">代码不变式 · 数学不变量</text>
+  <text x="276" y="350" font-size="10.5" fill="#87867F">一次属性测试 = 数千个具体用例</text>
+  <!-- Pill: base -->
+  <rect x="532" y="304" width="94" height="22" rx="11" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="579" y="319" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">基础层</text>
+
+  <!-- Bottom description -->
+  <text x="340" y="388" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">覆盖力 ↑ | 维护成本 ↓ | AI 自动化程度 ↑</text>
+
+  <title>三层融合测试模型</title>
+  <desc>AI-Native 测试范式的三层架构：底层属性测试覆盖不变量，中层AI生成测试覆盖代码路径，顶层运行时验证覆盖生产环境。</desc>
+</svg>

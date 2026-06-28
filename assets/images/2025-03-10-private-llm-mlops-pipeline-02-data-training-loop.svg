@@ -1,0 +1,112 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Background -->
+  <rect width="680" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">数据训练反馈循环</text>
+  <text x="340" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Fine-tuning Pipeline · 2025/03/10</text>
+
+  <!-- Base model label -->
+  <text x="90" y="130" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">StarCoder2 / CodeLlama</text>
+  <text x="90" y="144" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Base Model</text>
+
+  <!-- LoRA overlay badge -->
+  <rect x="54" y="112" width="72" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="90" y="130" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">+ LoRA</text>
+  <text x="90" y="144" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Adapter</text>
+
+  <!-- Node 1: Code Ingestion (clay) -->
+  <rect x="180" y="88" width="100" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="230" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">代码获取</text>
+  <text x="230" y="126" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">GitHub/GitLab Scan</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="280" y1="114" x2="300" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="300,110 294,114 294,118" fill="#D1CFC5"/>
+
+  <!-- Node 2: Data Sanitization (olive) -->
+  <rect x="308" y="88" width="100" height="52" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="358" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">数据脱敏</text>
+  <text x="358" y="126" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Password/API Key Removal</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="408" y1="114" x2="428" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="428,110 422,114 422,118" fill="#D1CFC5"/>
+
+  <!-- Node 3: Quality Filtering (g300) -->
+  <rect x="436" y="88" width="100" height="52" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="486" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">质量过滤</text>
+  <text x="486" y="126" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Clean / No Test Code</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="536" y1="114" x2="556" y2="114" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="556,110 550,114 550,118" fill="#D1CFC5"/>
+
+  <!-- Node 4: DVC Storage (olive) -->
+  <rect x="564" y="88" width="90" height="52" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="609" y="110" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">DVC</text>
+  <text x="609" y="126" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Versioned Storage</text>
+
+  <!-- Row 2 arrows: DVC → LoRA fine-tuning -->
+  <line x1="609" y1="140" x2="609" y2="172" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="605,172 609,166 613,172" fill="#D1CFC5"/>
+
+  <!-- Node 5: LoRA Fine-tuning (clay) - main node -->
+  <rect x="436" y="180" width="180" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="526" y="202" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">LoRA 微调</text>
+  <text x="526" y="218" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">只训练 1% 参数 = 90% 效果</text>
+
+  <!-- Arrow fine-tuning → evaluation -->
+  <line x1="526" y1="232" x2="526" y2="252" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="522,252 526,246 530,252" fill="#D1CFC5"/>
+
+  <!-- Node 6: Evaluation (g300) -->
+  <rect x="436" y="260" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="481" y="277" text-anchor="middle" font-size="10" fill="#141413">评估</text>
+  <text x="481" y="291" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">HumanEval</text>
+
+  <!-- Node 7: Deployment (g300) -->
+  <rect x="330" y="260" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="375" y="277" text-anchor="middle" font-size="10" fill="#141413">部署</text>
+  <text x="375" y="291" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">K8s Canary</text>
+
+  <!-- Node 8: Monitoring (olive) -->
+  <rect x="224" y="260" width="90" height="40" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="269" y="277" text-anchor="middle" font-size="10" fill="#788C5D">监控</text>
+  <text x="269" y="291" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">K8s + Grafana</text>
+
+  <!-- Node 9: Developer Feedback (clay) - feedback source -->
+  <rect x="70" y="200" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="130" y="222" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">开发者反馈</text>
+  <text x="130" y="238" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Accept / Reject Code</text>
+
+  <!-- Arrow from feedback to code ingestion -->
+  <line x1="130" y1="200" x2="130" y2="172" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="126,172 130,166 134,172" fill="#D97757"/>
+  <line x1="130" y1="172" x2="230" y2="172" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="230" y1="172" x2="230" y2="140" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="226,140 230,134 234,140" fill="#D97757"/>
+
+  <!-- Feedback loop label -->
+  <text x="40" y="180" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">反馈循环</text>
+
+  <!-- Row 2 horizontal arrows: evaluation → deployment → monitoring -->
+  <line x1="436" y1="280" x2="420" y2="280" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="420,276 426,280 420,284" fill="#D1CFC5"/>
+
+  <line x1="330" y1="280" x2="314" y2="280" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="314,276 320,280 314,284" fill="#D1CFC5"/>
+
+  <!-- Monitoring → back to DVC via dashed return path (olive) -->
+  <line x1="224" y1="260" x2="224" y2="180" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="220,180 224,174 228,180" fill="#788C5D"/>
+  <line x1="224" y1="180" x2="564" y2="180" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="564" y1="180" x2="564" y2="140" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="560,140 564,134 568,140" fill="#788C5D"/>
+
+  <!-- Return path label -->
+  <text x="580" y="196" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">增量训练</text>
+
+  <title>数据训练反馈循环</title>
+  <desc>Horizontal flow diagram showing the data training feedback loop for private code LLM: code ingestion via GitHub/GitLab scan, data sanitization for password/API key removal, quality filtering, DVC versioned storage, LoRA fine-tuning pipeline, evaluation, deployment via Kubernetes canary, monitoring, and developer feedback closing the loop back to code ingestion.</desc>
+</svg>

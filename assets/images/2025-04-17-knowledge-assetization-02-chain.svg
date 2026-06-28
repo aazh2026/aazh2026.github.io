@@ -1,0 +1,87 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">价值链重构：从线性成本到知识复杂度成本</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">传统工程 vs AI-Native 工程</text>
+
+  <!-- Divider line -->
+  <line x1="340" y1="58" x2="340" y2="340" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4" opacity="0.6"/>
+
+  <!-- ===== LEFT: Traditional Chain ===== -->
+  <rect x="20" y="58" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="36" y="79" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">传统工程</text>
+  <text x="120" y="79" font-size="11" fill="#141413">需求 → 代码 → 价值</text>
+
+  <!-- Arrow 1: 需求 → 代码 -->
+  <rect x="36" y="116" width="72" height="28" rx="5" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="72" y="134" text-anchor="middle" font-size="11" fill="#141413">需求</text>
+  <line x1="108" y1="130" x2="128" y2="130" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="128,126 136,130 128,134" fill="#D1CFC5"/>
+
+  <rect x="140" y="116" width="72" height="28" rx="5" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="176" y="134" text-anchor="middle" font-size="11" fill="#141413">代码</text>
+  <line x1="212" y1="130" x2="232" y2="130" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="232,126 240,130 232,134" fill="#D1CFC5"/>
+
+  <rect x="244" y="116" width="72" height="28" rx="5" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="280" y="134" text-anchor="middle" font-size="11" fill="#141413">价值</text>
+
+  <!-- Cost label: 线性维护成本 -->
+  <rect x="36" y="158" width="120" height="22" rx="11" fill="#E3DACC"/>
+  <text x="96" y="173" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">线性维护成本 ↑</text>
+
+  <!-- Cost curve: Linear growth -->
+  <path d="M 36 290 Q 100 280, 160 240 T 300 200" stroke="#D97757" stroke-width="2" fill="none"/>
+  <circle cx="36" cy="290" r="4" fill="#D97757"/>
+  <circle cx="300" cy="200" r="4" fill="#D97757"/>
+
+  <!-- Axis labels for traditional -->
+  <text x="36" y="310" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">代码量 →</text>
+  <text x="36" y="290" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">成本</text>
+
+  <!-- ===== RIGHT: AI-Native Chain ===== -->
+  <rect x="360" y="58" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="376" y="79" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">AI-Native 工程</text>
+  <text x="496" y="79" font-size="11" fill="#141413">需求 → Intent → AI代码 → 价值</text>
+
+  <!-- Arrow 2: 需求 → Intent → AI生成代码 → 价值 -->
+  <rect x="376" y="116" width="60" height="28" rx="5" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="406" y="134" text-anchor="middle" font-size="11" fill="#141413">需求</text>
+  <line x1="436" y1="130" x2="452" y2="130" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="452,126 460,130 452,134" fill="#D1CFC5"/>
+
+  <rect x="464" y="116" width="60" height="28" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="494" y="134" text-anchor="middle" font-size="11" fill="#141413">Intent</text>
+  <line x1="524" y1="130" x2="540" y2="130" stroke="#788C5D" stroke-width="1.5"/>
+  <polygon points="540,126 548,130 540,134" fill="#788C5D"/>
+
+  <rect x="552" y="116" width="64" height="28" rx="5" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="584" y="134" text-anchor="middle" font-size="11" fill="#141413">AI代码</text>
+
+  <!-- Cost label: 知识复杂度成本 -->
+  <rect x="530" y="158" width="132" height="22" rx="11" fill="#DDE5D4"/>
+  <text x="596" y="173" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">知识复杂度成本 ↓</text>
+
+  <!-- Cost curve: Logarithmic / step function -->
+  <path d="M 376 290 Q 420 285, 440 278 T 520 220 T 640 195" stroke="#788C5D" stroke-width="2" fill="none"/>
+  <circle cx="376" cy="290" r="4" fill="#788C5D"/>
+  <circle cx="640" cy="195" r="4" fill="#788C5D"/>
+
+  <!-- Axis labels for AI-native -->
+  <text x="376" y="310" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">知识复杂度 →</text>
+  <text x="376" y="290" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">成本</text>
+
+  <!-- Crossover annotation -->
+  <line x1="340" y1="265" x2="340" y2="282" stroke="#D97757" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <circle cx="340" cy="265" r="5" fill="none" stroke="#D97757" stroke-width="1.5"/>
+  <text x="340" y="256" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">交叉点</text>
+  <text x="340" y="335" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">当知识复杂度 &gt; 临界值，AI-Native 成本优势显现</text>
+
+  <!-- Description text area -->
+  <rect x="20" y="340" width="640" height="18" rx="4" fill="none"/>
+  <text x="340" y="352" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">传统成本与代码量线性相关；AI-Native 成本与知识抽象度相关 — 复杂度可控</text>
+</svg>

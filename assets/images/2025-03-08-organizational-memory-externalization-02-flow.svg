@@ -1,0 +1,82 @@
+<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 驱动的知识捕获流水线</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">从专家工作到活的知识网络</text>
+
+  <!-- Expert Work node (left) -->
+  <rect x="40" y="90" width="130" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="105" y="114" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">专家工作</text>
+  <text x="105" y="132" text-anchor="middle" font-size="9.5" fill="#87867F">故障排查</text>
+  <text x="105" y="146" text-anchor="middle" font-size="9.5" fill="#87867F">架构决策</text>
+  <text x="105" y="160" text-anchor="middle" font-size="9.5" fill="#87867F">代码审查</text>
+
+  <!-- Arrow: Expert Work → AI Capture Layer -->
+  <line x1="170" y1="130" x2="200" y2="130" stroke="#D97757" stroke-width="2"/>
+  <polygon points="200,130 192,124 192,136" fill="#D97757"/>
+
+  <!-- AI Capture Layer node (center, highlighted) -->
+  <rect x="200" y="80" width="160" height="100" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <!-- Clay accent bar on top -->
+  <rect x="200" y="80" width="160" height="6" rx="3" fill="#D97757"/>
+  <text x="280" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">AI 捕获层</text>
+  <text x="280" y="124" text-anchor="middle" font-size="9.5" fill="#87867F">自动转录</text>
+  <text x="280" y="138" text-anchor="middle" font-size="9.5" fill="#87867F">情境标注</text>
+  <text x="280" y="152" text-anchor="middle" font-size="9.5" fill="#87867F">模式识别</text>
+  <text x="280" y="166" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">捕获成本 ≈ 0</text>
+
+  <!-- Bidirectional arrow: Expert Work ↔ AI Capture (feedback loop above) -->
+  <path d="M 200 90 C 180 60, 160 60, 105 60 C 80 60, 70 90, 70 90" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+  <polygon points="70,90 64,82 76,82" fill="#D97757"/>
+  <text x="115" y="58" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">反馈 / 校正</text>
+
+  <!-- Arrow: AI Capture Layer → Knowledge Graph -->
+  <line x1="360" y1="130" x2="390" y2="130" stroke="#788C5D" stroke-width="2"/>
+  <polygon points="390,130 382,124 382,136" fill="#788C5D"/>
+
+  <!-- Knowledge Graph node (right) -->
+  <rect x="390" y="90" width="130" height="80" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
+  <!-- Olive accent bar on top -->
+  <rect x="390" y="90" width="130" height="6" rx="3" fill="#788C5D"/>
+  <text x="455" y="114" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">知识图谱</text>
+  <text x="455" y="132" text-anchor="middle" font-size="9.5" fill="#87867F">结构化知识</text>
+  <text x="455" y="146" text-anchor="middle" font-size="9.5" fill="#87867F">关联网络</text>
+  <text x="455" y="160" text-anchor="middle" font-size="9.5" fill="#87867F">情境索引</text>
+
+  <!-- Arrow: Knowledge Graph → Query & Retrieval (output) -->
+  <line x1="520" y1="130" x2="550" y2="130" stroke="#141413" stroke-width="2"/>
+  <polygon points="550,130 542,124 542,136" fill="#141413"/>
+
+  <!-- Query & Retrieval node (far right) -->
+  <rect x="400" y="220" width="160" height="70" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="480" y="244" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">查询与检索</text>
+  <text x="480" y="262" text-anchor="middle" font-size="9.5" fill="#87867F">语义理解</text>
+  <text x="480" y="276" text-anchor="middle" font-size="9.5" fill="#87867F">主动推送</text>
+
+  <!-- Connection: Knowledge Graph → Query (angled arrow) -->
+  <path d="M 455 170 L 455 190 L 480 190 L 480 220" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+  <polygon points="480,220 476,212 484,212" fill="#D1CFC5"/>
+
+  <!-- Core transformation label -->
+  <text x="280" y="220" text-anchor="middle" font-size="10" fill="#141413">从"写下来"</text>
+  <text x="280" y="234" text-anchor="middle" font-size="10" fill="#141413">到"捕获出来"</text>
+
+  <!-- Transformation arrow (down from AI Capture) -->
+  <line x1="280" y1="180" x2="280" y2="205" stroke="#D97757" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="280,205 276,197 284,197" fill="#D97757"/>
+
+  <!-- Key principle box -->
+  <rect x="180" y="310" width="200" height="36" rx="6" fill="#D97757" opacity="0.1" stroke="#D97757" stroke-width="1.5"/>
+  <text x="280" y="330" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600" font-family="ui-monospace, monospace">捕获成本必须趋近于零</text>
+  <text x="280" y="342" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">否则专家不会配合</text>
+
+  <!-- Pipeline stage labels at bottom -->
+  <text x="105" y="185" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">输入</text>
+  <text x="280" y="185" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">处理</text>
+  <text x="455" y="185" text-anchor="middle" font-size="8.5" fill="#788C5D" font-family="ui-monospace, monospace">存储</text>
+  <text x="480" y="300" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">输出</text>
+</svg>

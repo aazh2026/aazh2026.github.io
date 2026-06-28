@@ -1,0 +1,76 @@
+<svg viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="370" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">PRD vs Product Intent</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">从需求文档到意图文档的转型</text>
+
+  <!-- Center divider -->
+  <line x1="340" y1="60" x2="340" y2="340" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Bidirectional arrow -->
+  <polygon points="340,190 332,180 348,180" fill="#D97757"/>
+  <polygon points="340,210 332,220 348,220" fill="#D97757"/>
+  <text x="340" y="202" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">转型</text>
+
+  <!-- === LEFT: PRD === -->
+  <text x="170" y="68" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">PRD</text>
+  <text x="170" y="82" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">传统需求文档</text>
+
+  <!-- PRD Card 1 -->
+  <rect x="20" y="94" width="290" height="52" rx="6" fill="#F5E6E0" stroke="#D97757" stroke-width="1.5"/>
+  <text x="34" y="114" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">静态性</text>
+  <text x="34" y="130" font-size="10.5" fill="#141413">文档写完后很少更新</text>
+  <text x="34" y="142" font-size="9.5" fill="#87867F">与实际业务脱节</text>
+
+  <!-- PRD Card 2 -->
+  <rect x="20" y="154" width="290" height="52" rx="6" fill="#F5E6E0" stroke="#D97757" stroke-width="1.5"/>
+  <text x="34" y="174" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">二义性</text>
+  <text x="34" y="190" font-size="10.5" fill="#141413">"智能回复"可以有 100 种理解</text>
+  <text x="34" y="202" font-size="9.5" fill="#87867F">AI 实现与期望不符</text>
+
+  <!-- PRD Card 3 -->
+  <rect x="20" y="214" width="290" height="52" rx="6" fill="#F5E6E0" stroke="#D97757" stroke-width="1.5"/>
+  <text x="34" y="234" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">缺约束</text>
+  <text x="34" y="250" font-size="10.5" fill="#141413">只定义功能，不定义边界</text>
+  <text x="34" y="262" font-size="9.5" fill="#87867F">AI 越界行为</text>
+
+  <!-- PRD Card 4 -->
+  <rect x="20" y="274" width="290" height="52" rx="6" fill="#F5E6E0" stroke="#D97757" stroke-width="1.5"/>
+  <text x="34" y="294" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">无演化</text>
+  <text x="34" y="310" font-size="10.5" fill="#141413">假设需求不变</text>
+  <text x="34" y="322" font-size="9.5" fill="#87867F">无法适应业务变化</text>
+
+  <!-- === RIGHT: Product Intent === -->
+  <text x="510" y="68" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">Product Intent</text>
+  <text x="510" y="82" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">五维意图框架</text>
+
+  <!-- PI Card 1 -->
+  <rect x="370" y="94" width="290" height="52" rx="6" fill="#EDF2EA" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="384" y="114" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">动态意图图谱</text>
+  <text x="384" y="130" font-size="10.5" fill="#141413">意图随业务和反馈持续更新</text>
+  <text x="384" y="142" font-size="9.5" fill="#87867F">evolution_intent</text>
+
+  <!-- PI Card 2 -->
+  <rect x="370" y="154" width="290" height="52" rx="6" fill="#EDF2EA" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="384" y="174" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">意图优先</text>
+  <text x="384" y="190" font-size="10.5" fill="#141413">先定义"要解决什么问题"</text>
+  <text x="384" y="202" font-size="9.5" fill="#87867F">business_intent + user_intent</text>
+
+  <!-- PI Card 3 -->
+  <rect x="370" y="214" width="290" height="52" rx="6" fill="#EDF2EA" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="384" y="234" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">约束完备</text>
+  <text x="384" y="250" font-size="10.5" fill="#141413">精确约束 + 明确边界</text>
+  <text x="384" y="262" font-size="9.5" fill="#87867F">constraint_intent</text>
+
+  <!-- PI Card 4 -->
+  <rect x="370" y="274" width="290" height="52" rx="6" fill="#EDF2EA" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="384" y="294" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">可验证标准</text>
+  <text x="384" y="310" font-size="10.5" fill="#141413">每个维度都有验证机制</text>
+  <text x="384" y="322" font-size="9.5" fill="#87867F">成功标准 · 监控指标</text>
+
+  <!-- Bottom note -->
+  <text x="340" y="352" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">PRD 是为人类工程师设计的 — Product Intent 是为 AI 设计的</text>
+</svg>

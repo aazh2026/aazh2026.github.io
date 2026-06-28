@@ -1,0 +1,58 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>会话摘要金字塔结构</title>
+  <desc>分层摘要的金字塔结构：底层最近会话、中层合并摘要、顶层历史总摘要，检索优先级从下而上</desc>
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">会话摘要金字塔：分层压缩的历史</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">检索优先级：底层优先 · 时间由近及远</text>
+
+  <!-- Left side: tier labels -->
+  <text x="80" y="90" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">顶层</text>
+  <text x="80" y="185" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">中层</text>
+  <text x="80" y="305" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">底层</text>
+
+  <!-- Top tier: 历史总摘要 (smallest) -->
+  <rect x="110" y="62" width="380" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="110" y="62" width="6" height="52" rx="3" fill="#D1CFC5"/>
+  <text x="130" y="84" font-size="12" font-weight="500" fill="#141413">历史总摘要</text>
+  <text x="130" y="100" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">跨会话的长期背景 · 最高抽象层次</text>
+  <text x="400" y="84" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">retrieval</text>
+  <text x="400" y="98" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">priority: low</text>
+
+  <!-- Middle tier: 过去20个会话的合并摘要 (medium) -->
+  <rect x="110" y="152" width="380" height="70" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="110" y="152" width="6" height="70" rx="3" fill="#D97757"/>
+  <text x="130" y="174" font-size="12" font-weight="500" fill="#141413">过去 20 个会话的合并摘要</text>
+  <text x="130" y="192" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">近期上下文 · 中等抽象层次</text>
+  <text x="400" y="174" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">retrieval</text>
+  <text x="400" y="188" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">priority: mid</text>
+
+  <!-- Bottom tier: 最近5个会话的详细摘要 (widest, olive accent) -->
+  <rect x="110" y="260" width="380" height="90" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <rect x="110" y="260" width="8" height="90" rx="4" fill="#788C5D"/>
+  <text x="134" y="286" font-size="12" font-weight="600" fill="#788C5D">最近 5 个会话的详细摘要</text>
+  <text x="134" y="304" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">细节准确 · 最高检索优先级</text>
+  <text x="134" y="322" font-size="10.5" fill="#141413">任务进度 · 决策理由 · 待办事项</text>
+  <text x="134" y="338" font-size="10.5" fill="#141413">用户偏好快照 · 未兑现的承诺</text>
+  <rect x="400" y="274" width="76" height="20" rx="10" fill="#788C5D"/>
+  <text x="438" y="288" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">优先加载</text>
+
+  <!-- Right side: pyramid shape indicator -->
+  <polygon points="560,72 620,152 560,152" fill="#D1CFC5" opacity="0.4"/>
+  <polygon points="560,162 620,252 560,252" fill="#D1CFC5" opacity="0.4"/>
+  <polygon points="560,270 620,370 560,370" fill="#788C5D" opacity="0.3"/>
+  <text x="630" y="115" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">宽</text>
+  <text x="630" y="210" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">度</text>
+  <text x="630" y="320" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">↑</text>
+  <text x="630" y="338" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">细节</text>
+
+  <!-- Arrow: bottom first -->
+  <line x1="500" y1="380" x2="500" y2="60" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <polygon points="500,56 496,66 504,66" fill="#D97757"/>
+  <text x="510" y="220" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" transform="rotate(90, 510, 220)">检索顺序：底部优先</text>
+</svg>

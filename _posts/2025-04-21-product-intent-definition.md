@@ -15,7 +15,17 @@ redirect_from:
 
 ---
 
-## 意图的崩塌：为什么需求文档不再够用
+> **TL;DR**
+>
+> 本文核心观点：
+> 1. **需求文档的局限** — PRD 为人类工程师设计，AI 无法通过讨论消除歧义，导致"意图失败"
+> 2. **Product Intent 五维框架** — 业务/用户/功能/约束/演化五个维度，替代传统功能列表
+> 3. **Level 2-3 关注区间** — Product Intent 精确描述"要解决什么"和"不能做什么"，Level 4 留给 AI 决定
+> 4. **约束即产品** — 在 AI 时代，正确的意图定义比代码更珍贵
+
+---
+
+## 需求文档的黄金时代与 AI 时代的意图危机
 
 ### 传统需求文档的黄金时代
 
@@ -55,9 +65,15 @@ redirect_from:
 
 **核心洞察**：PRD 是为人类工程师设计的——他们可以通过讨论、澄清、迭代来消除歧义。但 AI 不会问你"你真正的意思是什么"，它会按照最可能的理解去执行。
 
+> 💡 **Key Insight**
+>
+> PRD 是为人类工程师设计的——他们可以通过讨论、澄清、迭代来消除歧义。但 AI 不会问你"你真正的意思是什么"，它会按照最可能的理解去执行。
+
+<object data="/assets/images/2025-04-21-product-intent-definition-03-prd-vs-intent.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
-## 什么是 Product Intent
+## Product Intent 的定义与原则
 
 ### 定义
 
@@ -79,17 +95,23 @@ redirect_from:
 
 **原则 1：意图优先于实现**
 
+Product Intent 首先回答"要解决什么业务问题"，而不是"系统需要什么功能"。当意图清晰时，实现方案有多种选择；当意图模糊时，任何实现都是猜测。在 AI 时代，这意味着你告诉 AI 的第一句话应该是目标描述，而不是功能规格。
+
 **原则 2：约束与自由并重**
 
-Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
+Product Intent 不仅定义要做什么，更精确定义**不能做什么**。一个完备的 constraint_intent 包括：hard constraints（绝对不能越过的红线）、soft constraints（尽量满足的边界）、以及隐式假设（哪些条件下当前意图不再适用）。这些约束是 AI 行为的边界，没有它们，AI 会自由发挥到意想不到的方向。
 
 **原则 3：可验证的成功标准**
 
-意图必须有明确的验证方式：
+意图必须有明确的验证方式：每个维度都需要定义"如何判断成功了"。这包括可量化的指标（如点击率、转化率）、不可量化但可判断的标准（如"推荐结果要有解释力"）、以及验证频率（每天检查、每周评审）。没有验证方式的意图只是愿望，不是目标。
+
+> 💡 **Key Insight**
+>
+> Product Intent 不仅定义要做什么，更精确定义不能做什么。
 
 ---
 
-## Product Intent 的五个维度
+## 五维意图框架
 
 完整的 Product Intent 包含五个维度，缺一不可。
 
@@ -117,18 +139,33 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ---
 
-## 从 Intent 到 Implementation
+## 从意图到实现
 
 ### Product Intent 的层级结构
 
-<object data="/assets/images/2025-04-21-pid-01-intent-hierarchy.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-21-product-intent-definition-02-intent-hierarchy.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：Product Intent 关注 Level 2-3，将 Level 4 留给 AI 决定。
 
+> 💡 **Key Insight**
+>
+> Product Intent 关注 Level 2-3，将 Level 4 留给 AI 决定。
+
 ### AI 如何理解 Product Intent
 
-### Intent-Driven 方式
+AI 系统读取 Product Intent 文档时，会将五个维度解析为结构化的上下文输入。与解析传统 PRD 不同，AI 不会从功能列表中推断意图，而是直接从 business_intent 获取目标、从 user_intent 获取用户价值期望、从 functional_intent 获取能力要求、从 constraint_intent 获取行为边界、从 evolution_intent 获取演化条件。
+
+这个解析过程有两个关键特性。首先，**意图的优先级决定 AI 的决策权重**：当 constraint_intent 中的某个约束与 functional_intent 中的某个功能冲突时，AI 会优先满足约束，因为约束定义了"不能做什么"。其次，**每个维度都有隐式的验证触发器**：AI 在生成实现方案时，会主动检查是否满足 constraint_intent 中的所有 hard constraints，如果方案违反任何一条，AI 会标记并重新生成。
+
+这也是为什么五维框架中的 constraint_intent 和 evolution_intent 最为关键——它们直接影响 AI 的输出质量和安全性。
+
 ### 意图验证循环
+
+Product Intent 的执行不是一次性事件，而是一个持续运转的闭环。循环的起点是 Intent Definition（意图定义），AI 接收完整的五维输入；接着进入 AI Implementation（AI 实现）阶段，AI 根据意图生成代码或方案；然后通过 Verification Against Constraints（约束验证）检查实现是否满足所有约束；最后 Feedback to Intent（反馈回传）将验证结果写回意图层，形成累积的意图知识。
+
+这个循环中，constraint_intent 和 evolution_intent 是两个核心锚点。constraint_intent 中的每一条 hard constraint 都是循环的验证门——如果验证失败，AI 必须重新实现而不是忽略约束。evolution_intent 则定义了循环的演进条件：当某些监控指标触发阈值时，evolution_intent 中预设的迭代规则会自动调整 functional_intent 中的参数，使得整个系统具备自适应性。
+
+在电商推荐系统的重构中，这个循环表现为：每周根据 click-through rate 和用户投诉率的监控数据，AI 自动调整 functional_intent 中的推荐策略参数，而不需要人工介入。这种"意图定义—AI 实现—约束验证—反馈演进"的循环，是 Intent-Driven Development 与传统需求实现模式的根本区别。
 
 ---
 
@@ -148,6 +185,10 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ### 实施结果对比
 
+在电商推荐系统的 Product Intent 重构中，团队首先识别了三个月前用传统 PRD 方式交付时暴露的四个核心问题：推荐大量已购买商品（用户分层缺失）、价格区间与用户消费能力不匹配（约束缺失）、新用户推荐质量极差（functional_intent 不完整）、无法解释推荐原因（缺少验证标准）。针对每一个问题，团队在 constraint_intent 中定义了对应的约束条件，在 user_intent 中补充了用户分层画像，在 evolution_intent 中设定了推荐质量的监控指标。
+
+重构后的系统在上线第一个月，点击率就从 3.2% 提升到了 9.1%，核心驱动因素是 constraint_intent 中"不推荐已购买商品"的 hard constraint 和用户分层策略的引入。用户投诉从每周 15+ 下降到每周 2-3 条，主要来源于"价格区间匹配"约束和可解释性要求的满足。开发周期从 6 周缩短到 4 周，因为 AI 在有完备约束的情况下可以一次性给出正确实现，而不需要反复澄清和迭代。
+
 | 指标 | PRD 方式 | Product Intent 方式 | 提升 |
 |------|---------|---------------------|------|
 | 开发周期 | 6周 | 4周 | **-33%** |
@@ -163,7 +204,7 @@ Product Intent 不仅定义要做什么，更精确定义**不能做什么**。
 
 ---
 
-## 写在最后：产品管理者的角色进化
+## 结尾：产品管理者的角色进化
 
 ### 从"需求翻译官"到"意图架构师"
 
@@ -214,11 +255,15 @@ Product Intent 不是另一个文档模板，而是一种新的思维方式。
 
 在 AI 时代，代码变得廉价，但**正确的意图定义变得无比珍贵**。
 
+> 💡 **Key Insight**
+>
+> 在 AI 时代，代码变得廉价，但正确的意图定义变得无比珍贵。
+
 这就是 Product Intent 的意义。
 
 ---
 
-## 📚 延伸阅读
+## 延伸阅读
 
 ### 意图工程理论
 - **Intent-Driven Development** — 意图驱动开发方法论

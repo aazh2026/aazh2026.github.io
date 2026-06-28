@@ -1,0 +1,59 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>软件架构范式演化史</title>
+  <desc>1990年代单体架构、2010年代微服务架构、2020年代AI-Native架构的对比时间线</desc>
+
+  <!-- Background -->
+  <rect width="680" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">软件架构范式演化史</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 2025/04/01</text>
+
+  <!-- Connecting arrow line -->
+  <line x1="120" y1="175" x2="560" y2="175" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="560,175 550,169 550,181" fill="#D1CFC5"/>
+
+  <!-- Era 1: Monolith -->
+  <rect x="40" y="80" width="160" height="190" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="40" y="80" width="160" height="36" rx="8" fill="#D1CFC5"/>
+  <rect x="40" y="104" width="160" height="12" fill="#D1CFC5"/>
+  <text x="120" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">1990s</text>
+  <text x="120" y="136" text-anchor="middle" font-size="14" fill="#141413">单体架构</text>
+  <text x="120" y="154" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">Monolith</text>
+  <rect x="56" y="170" width="128" height="84" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="120" y="190" text-anchor="middle" font-size="10.5" fill="#141413">大教堂模式</text>
+  <text x="120" y="208" text-anchor="middle" font-size="10" fill="#87867F">精心设计</text>
+  <text x="120" y="222" text-anchor="middle" font-size="10" fill="#87867F">长期规划</text>
+  <text x="120" y="236" text-anchor="middle" font-size="10" fill="#87867F">代码组织</text>
+
+  <!-- Era 2: Microservices -->
+  <rect x="260" y="80" width="160" height="190" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="260" y="80" width="160" height="36" rx="8" fill="#D1CFC5"/>
+  <rect x="260" y="104" width="160" height="12" fill="#D1CFC5"/>
+  <text x="340" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">2010s</text>
+  <text x="340" y="136" text-anchor="middle" font-size="14" fill="#141413">微服务架构</text>
+  <text x="340" y="154" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">Microservices</text>
+  <rect x="276" y="170" width="128" height="84" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="190" text-anchor="middle" font-size="10.5" fill="#141413">集市模式</text>
+  <text x="340" y="208" text-anchor="middle" font-size="10" fill="#87867F">小团队</text>
+  <text x="340" y="222" text-anchor="middle" font-size="10" fill="#87867F">独立部署</text>
+  <text x="340" y="236" text-anchor="middle" font-size="10" fill="#87867F">服务拆分</text>
+
+  <!-- Era 3: AI-Native (highlighted with clay accent) -->
+  <rect x="480" y="80" width="160" height="190" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="480" y="80" width="160" height="36" rx="8" fill="#D97757"/>
+  <rect x="480" y="104" width="160" height="12" fill="#D97757"/>
+  <text x="560" y="103" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF">2020s</text>
+  <text x="560" y="136" text-anchor="middle" font-size="14" fill="#141413">AI-Native</text>
+  <text x="560" y="154" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">？</text>
+  <rect x="496" y="170" width="128" height="84" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1"/>
+  <text x="560" y="190" text-anchor="middle" font-size="10.5" fill="#D97757">新范式</text>
+  <text x="560" y="208" text-anchor="middle" font-size="10" fill="#87867F">Context边界</text>
+  <text x="560" y="222" text-anchor="middle" font-size="10" fill="#87867F">Intent对齐</text>
+  <text x="560" y="236" text-anchor="middle" font-size="10" fill="#87867F">Context组织</text>
+
+  <!-- Complexity label under each era -->
+  <text x="120" y="288" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">复杂性：代码内部</text>
+  <text x="340" y="288" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">复杂性：服务交互</text>
+  <text x="560" y="288" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">复杂性：Context管理</text>
+</svg>

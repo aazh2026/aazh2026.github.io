@@ -1,0 +1,88 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>AI偏见的四个时代演变</title>
+  <desc>从20世纪显性歧视到2024年AI放大偏见的演变时间线</desc>
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI偏见的四个时代</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">1970s – 2024 · 偏见演变时间线</text>
+
+  <!-- Card 1: 20世纪显性歧视 -->
+  <rect x="30" y="60" width="120" height="170" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="90" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">1970s</text>
+  <text x="90" y="100" text-anchor="middle" font-size="12" fill="#141413">显性歧视</text>
+  <text x="90" y="118" text-anchor="middle" font-size="10" fill="#87867F">明文规则</text>
+  <text x="90" y="136" text-anchor="middle" font-size="9.5" fill="#141413">"不招女性"</text>
+  <text x="90" y="150" text-anchor="middle" font-size="9.5" fill="#141413">"不租给某些族裔"</text>
+  <!-- Badge: 高可见性 -->
+  <rect x="42" y="160" width="44" height="16" rx="8" fill="#788C5D"/>
+  <text x="64" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">高可见</text>
+  <!-- Badge: 高可追责 -->
+  <rect x="92" y="160" width="44" height="16" rx="8" fill="#788C5D"/>
+  <text x="114" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">高追责</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="152" y1="145" x2="172" y2="145" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="170,141 178,145 170,149" fill="#D1CFC5"/>
+
+  <!-- Card 2: 民权运动后隐性歧视 -->
+  <rect x="180" y="60" width="120" height="170" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="240" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">1980–2010</text>
+  <text x="240" y="100" text-anchor="middle" font-size="12" fill="#141413">隐性歧视</text>
+  <text x="240" y="118" text-anchor="middle" font-size="10" fill="#87867F">主观判断</text>
+  <text x="240" y="136" text-anchor="middle" font-size="9.5" fill="#141413">"文化契合度"</text>
+  <text x="240" y="150" text-anchor="middle" font-size="9.5" fill="#141413">替代性拒绝理由</text>
+  <!-- Badge: 中可见性 -->
+  <rect x="192" y="160" width="44" height="16" rx="8" fill="#D97757" opacity="0.6"/>
+  <text x="214" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">中可见</text>
+  <!-- Badge: 中可追责 -->
+  <rect x="242" y="160" width="44" height="16" rx="8" fill="#D97757" opacity="0.6"/>
+  <text x="264" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">中追责</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="302" y1="145" x2="322" y2="145" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="320,141 328,145 320,149" fill="#D1CFC5"/>
+
+  <!-- Card 3: 大数据算法歧视 -->
+  <rect x="330" y="60" width="120" height="170" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="390" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">2010–2018</text>
+  <text x="390" y="100" text-anchor="middle" font-size="12" fill="#141413">算法歧视</text>
+  <text x="390" y="118" text-anchor="middle" font-size="10" fill="#87867F">黑盒算法</text>
+  <text x="390" y="136" text-anchor="middle" font-size="9.5" fill="#141413">"客观"的偏见</text>
+  <text x="390" y="150" text-anchor="middle" font-size="9.5" fill="#141413">难以被发现</text>
+  <!-- Badge: 低可见性 -->
+  <rect x="342" y="160" width="44" height="16" rx="8" fill="#D97757" opacity="0.35"/>
+  <text x="364" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">低可见</text>
+  <!-- Badge: 低可追责 -->
+  <rect x="392" y="160" width="44" height="16" rx="8" fill="#D97757" opacity="0.35"/>
+  <text x="414" y="172" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">低追责</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="452" y1="145" x2="472" y2="145" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="470,141 478,145 470,149" fill="#D97757"/>
+
+  <!-- Card 4: 2024 AI放大偏见 (clay accent) -->
+  <rect x="480" y="60" width="110" height="170" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2.2"/>
+  <text x="535" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">2024+</text>
+  <text x="535" y="100" text-anchor="middle" font-size="12" fill="#141413">AI放大偏见</text>
+  <text x="535" y="118" text-anchor="middle" font-size="10" fill="#87867F">深度学习</text>
+  <text x="535" y="136" text-anchor="middle" font-size="9.5" fill="#141413">历史偏见</text>
+  <text x="535" y="150" text-anchor="middle" font-size="9.5" fill="#141413">被编码进系统</text>
+  <!-- Badge: 极低可见性 -->
+  <rect x="490" y="160" width="52" height="16" rx="8" fill="#D97757" opacity="0.2"/>
+  <text x="516" y="172" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">极低可见</text>
+  <!-- Badge: 极低可追责 -->
+  <rect x="548" y="160" width="28" height="16" rx="8" fill="#D97757" opacity="0.2"/>
+  <text x="562" y="172" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">?</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="255" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">每一次技术革新都被用来掩盖和放大偏见 · AI不是例外</text>
+
+  <!-- Trend arrow showing visibility declining -->
+  <path d="M 60 245 Q 180 240, 300 238 Q 420 236, 540 235" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="3,2" opacity="0.5"/>
+  <text x="560" y="240" font-size="8" fill="#D97757" opacity="0.7" font-family="ui-monospace, monospace">可见性↓</text>
+</svg>

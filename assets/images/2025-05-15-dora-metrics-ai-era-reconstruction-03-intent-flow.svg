@@ -1,0 +1,106 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">意图流动 vs 代码流动</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">DORA Research · AI-Native Engineering</text>
+
+  <!-- Divider line -->
+  <line x1="40" y1="58" x2="640" y2="58" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- === Traditional DORA Track (top) === -->
+  <text x="40" y="78" font-size="11" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">传统 DORA</text>
+  <text x="40" y="92" font-size="10" fill="#87867F">代码流动</text>
+
+  <!-- Stage 1: 代码提交 -->
+  <rect x="40" y="102" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="95" y="120" text-anchor="middle" font-size="10.5" fill="#141413">代码提交</text>
+  <text x="95" y="134" text-anchor="middle" font-size="9" fill="#87867F">Code Commit</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="150" y1="123" x2="166" y2="123" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="170,123 162,119 162,127" fill="#D1CFC5"/>
+
+  <!-- Stage 2: 部署 -->
+  <rect x="176" y="102" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="231" y="120" text-anchor="middle" font-size="10.5" fill="#141413">部署</text>
+  <text x="231" y="134" text-anchor="middle" font-size="9" fill="#87867F">Deploy</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="286" y1="123" x2="302" y2="123" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="306,123 298,119 298,127" fill="#D1CFC5"/>
+
+  <!-- Stage 3: 故障检测 -->
+  <rect x="312" y="102" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="367" y="120" text-anchor="middle" font-size="10.5" fill="#141413">故障检测</text>
+  <text x="367" y="134" text-anchor="middle" font-size="9" fill="#87867F">Failure Detection</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="422" y1="123" x2="438" y2="123" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="442,123 434,119 434,127" fill="#D1CFC5"/>
+
+  <!-- Stage 4: 修复 -->
+  <rect x="448" y="102" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="503" y="120" text-anchor="middle" font-size="10.5" fill="#141413">修复</text>
+  <text x="503" y="134" text-anchor="middle" font-size="9" fill="#87867F">Fix</text>
+
+  <!-- Quality gate: 部署失败 -->
+  <rect x="312" y="154" width="110" height="24" rx="12" fill="#E8C4B8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="367" y="170" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">部署失败 = 质量门禁</text>
+
+  <!-- === AI-era DORA Track (bottom) === -->
+  <text x="40" y="212" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">AI时代 DORA</text>
+  <text x="40" y="226" font-size="10" fill="#D97757">意图流动</text>
+
+  <!-- Stage 1: 意图定义 -->
+  <rect x="40" y="236" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="95" y="254" text-anchor="middle" font-size="10.5" fill="#141413">意图定义</text>
+  <text x="95" y="268" text-anchor="middle" font-size="9" fill="#87867F">Intent Definition</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="150" y1="257" x2="166" y2="257" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="170,257 162,253 162,261" fill="#D97757"/>
+
+  <!-- Stage 2: Prompt工程 -->
+  <rect x="176" y="236" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="231" y="254" text-anchor="middle" font-size="10.5" fill="#141413">Prompt工程</text>
+  <text x="231" y="268" text-anchor="middle" font-size="9" fill="#87867F">Prompt Engineering</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="286" y1="257" x2="302" y2="257" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="306,257 298,253 298,261" fill="#D97757"/>
+
+  <!-- Stage 3: AI生成 -->
+  <rect x="312" y="236" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="367" y="254" text-anchor="middle" font-size="10.5" fill="#141413">AI生成</text>
+  <text x="367" y="268" text-anchor="middle" font-size="9" fill="#87867F">AI Generation</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="422" y1="257" x2="438" y2="257" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="442,257 434,253 434,261" fill="#D97757"/>
+
+  <!-- Stage 4: 意图验证 -->
+  <rect x="448" y="236" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="503" y="254" text-anchor="middle" font-size="10.5" fill="#141413">意图验证</text>
+  <text x="503" y="268" text-anchor="middle" font-size="9" fill="#87867F">Intent Verification</text>
+
+  <!-- Quality gate: 意图偏离 -->
+  <rect x="312" y="288" width="110" height="24" rx="12" fill="#D97757"/>
+  <text x="367" y="304" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">意图偏离 = 质量门禁</text>
+
+  <!-- Cross-track arrow: new quality gate replaces old -->
+  <line x1="530" y1="160" x2="530" y2="282" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="510" y1="282" x2="550" y2="282" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="555" y="225" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">意图偏离检测</text>
+  <text x="555" y="237" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">替换故障检测</text>
+
+  <!-- Bottom source line -->
+  <line x1="40" y1="330" x2="640" y2="330" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="346" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">DORA Research &amp; Assessment · AI-Native Engineering Framework</text>
+
+  <title>意图流动 vs 代码流动</title>
+  <desc>传统DORA与AI时代DORA的对比流程图。传统DORA追踪代码流动（代码提交→部署→故障检测→修复），质量门禁为部署失败。AI时代DORA追踪意图流动（意图定义→Prompt工程→AI生成→意图验证），质量门禁为意图偏离。</desc>
+</svg>

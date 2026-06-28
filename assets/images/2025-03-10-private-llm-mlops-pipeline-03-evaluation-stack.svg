@@ -1,0 +1,62 @@
+<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Background -->
+  <rect width="600" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">三层评估体系</text>
+  <text x="300" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">评估管道 · 2025/03/10</text>
+
+  <!-- Top layer: Human Evaluation (clay) -->
+  <rect x="80" y="60" width="440" height="60" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <!-- Clay pill badge -->
+  <rect x="92" y="74" width="62" height="20" rx="10" fill="#D97757"/>
+  <text x="123" y="88" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">人工评估</text>
+  <!-- Content -->
+  <text x="170" y="85" font-size="12" fill="#141413">资深工程师审查</text>
+  <text x="170" y="102" font-size="10.5" fill="#87867F">判断生成代码的工程合理性，不只是语法正确性</text>
+  <!-- Right side tag -->
+  <text x="482" y="88" text-anchor="end" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">← 最重要</text>
+
+  <!-- Arrow top→middle -->
+  <line x1="300" y1="120" x2="300" y2="134" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="296,134 300,128 304,134" fill="#D1CFC5"/>
+
+  <!-- Middle layer: Enterprise Custom (olive) -->
+  <rect x="80" y="142" width="440" height="60" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <!-- Olive pill badge -->
+  <rect x="92" y="156" width="72" height="20" rx="10" fill="#788C5D"/>
+  <text x="128" y="170" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">企业自定义</text>
+  <!-- Content -->
+  <text x="180" y="167" font-size="12" fill="#141413">内部测试套件</text>
+  <text x="180" y="184" font-size="10.5" fill="#87867F">基于公司实际代码库构建，针对内部框架和 DSL</text>
+  <!-- Right side tag -->
+  <text x="482" y="170" text-anchor="end" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">中成本</text>
+
+  <!-- Arrow middle→bottom -->
+  <line x1="300" y1="202" x2="300" y2="216" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="296,216 300,210 304,216" fill="#D1CFC5"/>
+
+  <!-- Bottom layer: Automated Benchmark (g300) -->
+  <rect x="80" y="224" width="440" height="48" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Gray pill badge -->
+  <rect x="92" y="236" width="72" height="18" rx="9" fill="#E8E6DF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="128" y="248" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">自动化基准</text>
+  <!-- Content -->
+  <text x="180" y="247" font-size="12" fill="#141413">HumanEval / MBPP</text>
+  <text x="316" y="247" font-size="10.5" fill="#87867F">代码生成标准测试集</text>
+  <!-- Right side tag -->
+  <text x="482" y="247" text-anchor="end" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">低成本 / 高覆盖</text>
+
+  <!-- Left side labels for failure modes -->
+  <text x="40" y="88" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">捕获：</text>
+  <text x="40" y="100" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">工程合理性</text>
+
+  <text x="40" y="170" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">捕获：</text>
+  <text x="40" y="182" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">内部规范</text>
+
+  <text x="40" y="248" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">捕获：</text>
+  <text x="40" y="260" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">语法正确性</text>
+
+  <title>三层评估体系</title>
+  <desc>A three-layer vertical stack diagram showing the three evaluation tiers for private code LLM: top layer is human evaluation by senior engineers (clay #D97757), middle layer is enterprise custom test suite (olive #788C5D), bottom layer is automated benchmarks HumanEval and MBPP (g300 #D1CFC5). Each layer catches different failure modes.</desc>
+</svg>

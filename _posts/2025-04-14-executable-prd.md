@@ -6,9 +6,15 @@ tags: [Executable PRD, 需求工程, AI-Native, 产品文档, 范式转移]
 author: "@postcodeeng"
 series: AI-Native软件工程
 
-redirect_from:
-  - /executable-prd/
 ---
+
+> **TL;DR**
+>
+> 本文核心观点：
+> 1. **Executable PRD 是什么** — 用结构化语言（YAML/JSON Schema）书写的可执行规格说明，机器可直接编译为数据库 Schema、API、UI 组件和测试用例
+> 2. **核心机制** — 需求即代码、单一真相源、意图显式化三大理念，让产品经理和工程师在同一语言上协作
+> 3. **实际效果** — 将需求定义周期从 5-6 周压缩到 1-2 天，AI 生成的代码不再是框架，而是可直接运行的业务逻辑
+> 4. **当前局限** — 学习曲线、复杂度管理和 AI 编译器成熟度是主要挑战，混合模式是短期最优解
 
 # AI时代PRD长什么样？——从文档到Executable Specification
 
@@ -29,21 +35,25 @@ redirect_from:
 
 ### 传统PRD的典型结构
 
+一份标准的产品需求文档通常包含以下章节：概述与背景（产品要解决什么问题、目标用户是谁）、用户故事（从用户视角描述功能需求）、功能需求详述（非功能需求如性能要求往往另写）、业务流程图（用泳道图或时序图展示系统交互）、验收标准（Acceptance Criteria，说明怎样算"完成"）。这份文档通常以 Word 或 Google Doc 的形式存在，由产品经理维护，工程师在开发过程中参考。问题在于，这份文档和产品代码是分离的两份实体——代码改了对接，文档不一定跟着改；文档改了理解，代码也不一定跟着实现。这就是传统 PRD 与代码之间那道看不见的鸿沟。
+
 ### 传统PRD的困境
 
-**困境1：文档与实现的鸿沟**
+**文档与实现的鸿沟**
 
 **总周期：5-6周**
 
+> 💡 **Key Insight**
+>
+> AI加速了代码生成，但需求定义的速度没有跟上——这是 AI 时代最讽刺的效率瓶颈。
+
 **问题**：自然语言的歧义性导致理解偏差。
 
-**困境2：PRD的维护成本**
+#### 维护成本持续攀升
 
-**困境3：PRD的不可执行性**
+**不可执行的文档**
 
-**困境4：AI时代的加速困境**
-
-AI加速了代码生成，但需求定义的速度没有跟上。
+**AI加速了生成，却加速不了需求定义**
 
 ---
 
@@ -55,7 +65,13 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 一种结构化的、机器可读的、可直接编译为可运行代码的产品需求描述。
 
-不是"给工程师看的文档"，是"产品的源代码"。
+> 💡 **Key Insight**
+>
+> 不是"给工程师看的文档"，是"产品的源代码"。
+
+> 💡 **Key Insight**
+>
+> 需求即代码：产品经理用 YAML 编写规格说明，AI 直接编译出数据库 Schema、API 接口、前端组件和测试用例——PRD 本身就是源代码。
 
 ### Executable PRD vs 传统PRD
 
@@ -70,11 +86,29 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ### Executable PRD的核心理念
 
-**核心理念1：需求即代码**
+**需求即代码**
 
-**核心理念2：单一真相源**
+在 Executable PRD 模式下，产品经理不再是写"描述功能的文字"，而是写"定义规格的代码"。用 YAML 或 JSON Schema 描述数据结构、业务规则、API 接口、状态机——这些结构化规格说明通过 Spec Compiler 同时编译为：数据库建表 SQL、REST/OpenAPI 接口定义、业务逻辑实现类、前端 React/Vue 组件，以及 Jest/Vitest 测试用例。
 
-**核心理念3：意图显式化**
+这意味着同一份规格说明既是文档、又是代码、又是测试。一个结构化规格语言的声明可以同时决定数据库Schema 的字段类型、API 的请求响应格式、前端表单的校验规则，以及测试用例的边界条件输入。工程师不再需要"理解文字后自己写代码"——AI 读取结构化规格后直接输出可运行的实现。这就是为什么说 Executable PRD 本质上是"产品的源代码"，而不是"给工程师看的文档"。
+
+**单一真相源**
+
+传统 PRD 模式下，产品需求文档、设计文档和代码是三份独立的文件，随着迭代推进它们不可避免地产生偏差——文档写的是 v1.2，代码跑的是 v1.3，设计师又改了第三版。维护多份文档的成本随着团队规模增长呈指数级上升。
+
+#### 版本控制与变更追踪
+
+Executable PRD 的核心改进是用一份结构化规格说明（YAML/JSON）作为唯一的真相来源，所有产物——Schema、API、组件、测试——都从这份规格编译而来。这份规格说明通过 Git 进行版本控制，每次 commit 记录规格变更历史，每次合并都触发重新编译和回归测试。规格和实现永远同步，代码不会"悄悄偏离文档"，文档也不会"过期无人更新"。
+
+版本控制还带来了一个额外好处：diff 就是变更记录。PM 提了一个需求变更，工程师看到的不是一段模糊的文字描述，而是一个精确的结构化 diff——哪些字段变了、哪些规则改了、哪些测试需要更新。沟通成本大幅降低，误读几乎消失。
+
+**意图显式化**
+
+传统 PRD 用自然语言描述需求，而自然语言天然隐含了大量"上下文"——这些上下文只存在于 PM 的脑海里，落在纸面上时往往被省略，在代码实现时又被重新猜测。"订单取消后恢复库存"这句话，PM 理解的是"取消操作触发的同步恢复"，工程师理解为"异步消息队列处理"，测试理解的是"乐观锁冲突时的兜底逻辑"——三者都不算错，但因为没有显式声明，谁也没对齐谁。
+
+Executable PRD 强制 PM 将业务规则、边界条件和状态转换全部显式化。当你在 YAML 里写 `if coupon.status == 'active' and order.amount >= coupon.threshold` 时，这条规则没有任何歧义：状态名、比较操作符、阈值都是精确的表达式，而不是"基本"和"达到"这样的模糊量词。对于复杂的业务规则，PM 甚至需要建模状态机——优惠券有 active/used/expired 三种状态，每种状态的转换条件是什么、哪些动作触发哪些状态跃迁，这些在自然语言文档里经常被写成"其他情况以此类推"，在 Executable PRD 里必须一一列出。
+
+意图显式化的代价是前期写作成本更高，收益是下游的误解和返工几乎清零。
 
 ---
 
@@ -88,17 +122,41 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 **编译流程**：
 
-{% figure center %}
-<img src="/assets/images/2025-04-14-executable-prd-01-compilation-pipeline.png" alt="Executable PRD: Compilation Pipeline" style="width:100%;height:auto;">
+<object data="/assets/images/2025-04-14-executable-prd-01-compilation-pipeline.svg" type="image/svg+xml" width="100%"></object>
 *图 1：Executable PRD 编译流程——一份 YAML 规格说明通过 Spec Compiler 生成数据库 Schema、API 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源到多份工件的高效转化。*
-{% endfigure %}
 
-{% figure center %}
-<object data="/assets/images/2025-04-14-executable-prd-02-workflow.png" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-14-executable-prd-02-workflow.svg" type="image/svg+xml" width="100%"></object>
 *图 2：Executable PRD 工作流——结构化规格说明（YAML）通过 Spec Compiler 编译为 SQL Schema、OpenAPI 定义、业务逻辑、UI 组件、测试用例和文档，实现单一真相源。*
-{% endfigure %}
 
 ### 编译示例
+
+以下是一份简化的优惠券功能 YAML 规格说明，以及它编译后产出的各类工件：
+
+```yaml
+coupon:
+  code: string[16]          # 优惠码，16字符
+  type: discount_by_amount | discount_by_percent
+  threshold: decimal        # 满减门槛，如 100.00
+  discount: decimal         # 减免金额，如 20.00
+  applicable_categories: [string]  # 限品类，如 ["electronics", "books"]
+  valid_from: datetime
+  valid_until: datetime
+  max_uses: integer         # 最大使用次数
+  status: active | used | expired
+  redemption:
+    - user_id: string
+      order_id: string
+      redeemed_at: datetime
+```
+
+**从这份规格，Spec Compiler 编译出：**
+
+- **SQL 建表语句**：`coupon` 表含 code、type、threshold、discount 等字段，以及 `redemption` 子表的关联查询
+- **OpenAPI 定义**：`POST /coupons/issue`（发放优惠券）、`POST /coupons/redeem`（核销），请求/响应格式直接对应 YAML 中的字段定义
+- **React 组件**：`CouponCard` 组件，props 类型与 YAML 字段一一对应，表单校验规则来自 `threshold` 和 `applicable_categories` 的约束
+- **Jest 测试用例**：覆盖门槛未达标的拒绝场景、品类不匹配的拒绝场景、已过期优惠券的拒绝场景、并发重复核销的幂等性验证
+
+关键是：所有这些工件都从同一份 YAML 编译而来。只要改一行 YAML——比如把 `max_uses` 从 1 改为 5——所有工件（SQL、API、组件、测试）同步更新，不存在"文档和代码不一致"的问题。
 
 ### 可执行性：PRD即测试
 
@@ -135,15 +193,35 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ### 传统PRD
 
-**问题**：
-- "使用条件"具体是什么？
-- 满减规则如何计算？
-- 品类限制如何实现？
-- 并发使用如何处理？
+产品经理写了一段关于优惠券功能的自然语言描述："用户领取优惠券后，在结算时满足满100元可使用，每张优惠券只能使用一次，且不能与秒杀活动同时使用。"工程师看完后产生了分歧：小张认为"满100元"指的是原价满100，折扣后不计入；小李认为折扣后满100也算；测试问"每张优惠券只能使用一次"是指每个用户只能领一张，还是每张优惠券只能被一个用户核销一次。产品经理需要逐一澄清，每一论澄清都可能引出新的问题——这是典型的自然语言歧义导致的沟通循环。
 
-需要多次沟通才能明确。
+这类歧义还包括：优惠券过期时间是以领取时间计算还是以发放时间计算？品类限制是精确匹配还是支持子分类？并发场景下两个请求同时核销同一张优惠券，后端是乐观锁还是悲观锁？这些问题在自然语言文档里没有明确答案，但它们直接影响业务逻辑的正确性。每一次 PM 和工程师之间的来回确认，都是沟通成本的浪费——最终整个需求定义周期从理想的几天拉长到 5-6 周。
 
 ### Executable PRD
+
+等价的 Executable PRD 写法是直接用 YAML 描述所有规则：
+
+```yaml
+coupon:
+  rule:
+    threshold: 100.00           # 订单原价满 100 可用
+    discount_type: fixed        # 固定金额减免，非折扣率
+    discount_value: 20.00       # 减 20 元
+    applicability:
+      categories: ["electronics", "books"]   # 仅限指定品类
+      stackable: false          # 不可与秒杀同用
+    validity:
+      start: issued_at          # 从领取时刻起生效
+      end: issued_at + 30d      # 30 天后过期
+    limit:
+      per_user: 1               # 每用户最多领 1 张
+      total_uses: 1             # 每张券只能核销 1 次
+  concurrency:
+    strategy: optimistic_lock   # 乐观锁防并发重复核销
+    retry_on_conflict: true     # 冲突时重试，最多 3 次
+```
+
+这份 YAML 没有歧义：门槛是"原价"还是"折后价"由注释明确；过期是 30 天从领取时刻起算；每张券只能核销一次且不可与秒杀同用；并发用乐观锁处理。AI 读取这份规格后可以直接生成对应的 SQL、API、组件和测试，不需要任何额外澄清。歧义消失了，沟通轮次从 5-6 轮降到 0 轮——PM 写出规格，AI 编译出实现，工程师只做审查和边界情况补充。
 
 **优势**：
 - 所有业务规则显式定义
@@ -155,7 +233,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 
 ## Executable PRD的挑战与应对
 
-### 挑战1：学习曲线
+### 学习曲线
 
 **问题**：产品经理需要学习结构化规格语言
 
@@ -164,7 +242,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 - AI辅助编写（自然语言→结构化规格）
 - 培训渐进式迁移
 
-### 挑战2：复杂度管理
+### 复杂度管理
 
 **问题**：复杂系统的规格可能很长
 
@@ -173,7 +251,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 - 分层（高层概览→低层细节）
 - 版本控制（Git管理规格变更）
 
-### 挑战3：与遗留系统集成
+### 与遗留系统集成
 
 **问题**：已有系统不是Executable PRD生成的
 
@@ -182,7 +260,7 @@ AI加速了代码生成，但需求定义的速度没有跟上。
 - 渐进式迁移
 - 混合模式（部分用Executable，部分传统）
 
-### 挑战4：AI编译器的成熟度
+### AI编译器的成熟度
 
 **问题**：AI生成的代码质量不稳定
 

@@ -1,0 +1,67 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="640" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Knuth 与 Claude Opus 4.6：人机协作战</text>
+  <text x="320" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Donald Knuth · Stanford · 2026/02</text>
+
+  <!-- Left node: Claude Opus 4.6 -->
+  <rect x="50" y="80" width="160" height="50" rx="25" fill="#D97757"/>
+  <text x="130" y="107" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Claude Opus 4.6</text>
+
+  <!-- Right node: Knuth -->
+  <rect x="430" y="80" width="160" height="50" rx="25" fill="#D97757"/>
+  <text x="510" y="107" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Donald Knuth</text>
+
+  <!-- Bidirectional arrows between nodes -->
+  <line x1="210" y1="105" x2="340" y2="105" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="210,101 218,105 210,109" fill="#D1CFC5"/>
+  <polygon points="340,101 332,105 340,109" fill="#D1CFC5"/>
+
+  <!-- Loop label -->
+  <text x="320" y="100" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">双向协作</text>
+
+  <!-- Vertical loop below nodes -->
+  <!-- Step 1: Human提出问题 -->
+  <rect x="130" y="158" width="160" height="36" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="160" y="180" font-size="11" fill="#141413" font-family="ui-monospace, monospace">1. Human 提出问题</text>
+  <line x1="210" y1="194" x2="210" y2="214" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="210,218 206,210 214,210" fill="#D1CFC5"/>
+
+  <!-- Step 2: AI探索 -->
+  <rect x="130" y="222" width="160" height="36" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="160" y="244" font-size="11" fill="#141413" font-family="ui-monospace, monospace">2. AI 探索（30+ 次尝试）</text>
+  <line x1="210" y1="258" x2="210" y2="278" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="210,282 206,274 214,274" fill="#D1CFC5"/>
+
+  <!-- Step 3: Human验证/形式化 -->
+  <rect x="130" y="286" width="160" height="36" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="160" y="308" font-size="11" fill="#141413" font-family="ui-monospace, monospace">3. Human 验证/形式化</text>
+  <line x1="210" y1="322" x2="210" y2="342" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="210,346 206,338 214,338" fill="#D1CFC5"/>
+
+  <!-- Step 4: Proof完成 -->
+  <rect x="130" y="350" width="160" height="36" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="160" y="372" font-size="11" fill="#141413" font-family="ui-monospace, monospace">4. Proof 完成</text>
+
+  <!-- Outcome badges (right side, vertical) -->
+  <!-- Badge 1: 2Z+1 solved -->
+  <rect x="350" y="158" width="230" height="44" rx="8" fill="#788C5D"/>
+  <text x="465" y="180" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">2Z+1 情况已解决</text>
+  <text x="465" y="195" text-anchor="middle" font-size="10" fill="#E3DACC" font-family="ui-monospace, monospace">所有奇数情况</text>
+
+  <!-- Badge 2: even case open -->
+  <rect x="350" y="214" width="230" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="465" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">偶数情况仍是开放问题</text>
+  <text x="465" y="251" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">待后续探索</text>
+
+  <!-- Key roles labels (left side) -->
+  <text x="320" y="165" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">↓ 探索者 ↓</text>
+  <text x="320" y="296" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">↓ 验证者 ↓</text>
+
+  <!-- Source note -->
+  <text x="320" y="394" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">来源：https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf</text>
+</svg>

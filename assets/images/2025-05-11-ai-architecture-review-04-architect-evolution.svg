@@ -1,0 +1,65 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>架构师角色演进：从设计者到治理者</title>
+  <desc>传统架构师 vs AI时代架构师的角色变化对比</desc>
+
+  <!-- Background -->
+  <rect width="680" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">架构师角色演进：从设计者到治理者</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">关键转变：从执行者到治理者</text>
+
+  <!-- Left Card: 传统架构师 -->
+  <rect x="30" y="62" width="240" height="170" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="30" y="62" width="240" height="30" rx="8" fill="#E3DACC" stroke="none"/>
+  <rect x="30" y="84" width="240" height="8" fill="#E3DACC" stroke="none"/>
+  <text x="150" y="81" text-anchor="middle" font-size="11.5" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">传统架构师</text>
+
+  <!-- Role badge -->
+  <rect x="55" y="100" width="70" height="18" rx="9" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="90" y="113" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">执行者</text>
+
+  <!-- Skills list -->
+  <text x="55" y="140" font-size="10.5" fill="#141413">· 设计系统架构</text>
+  <text x="55" y="158" font-size="10.5" fill="#141413">· 编写架构文档</text>
+  <text x="55" y="176" font-size="10.5" fill="#141413">· 技术选型决策</text>
+  <text x="55" y="194" font-size="10.5" fill="#141413">· 指导开发团队</text>
+  <text x="55" y="212" font-size="10.5" fill="#141413">· 手工评审</text>
+
+  <!-- Center arrow -->
+  <line x1="270" y1="147" x2="330" y2="147" stroke="#D97757" stroke-width="2"/>
+  <polygon points="330,143 322,147 322,151" fill="#D97757"/>
+  <text x="300" y="136" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">角色演进</text>
+
+  <!-- Right Card: AI时代架构师 -->
+  <rect x="340" y="62" width="280" height="170" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="340" y="62" width="280" height="30" rx="8" fill="#D97757" stroke="none"/>
+  <rect x="340" y="84" width="280" height="8" fill="#D97757" stroke="none"/>
+  <text x="480" y="81" text-anchor="middle" font-size="11.5" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">AI时代架构师</text>
+
+  <!-- Role badge -->
+  <rect x="365" y="100" width="70" height="18" rx="9" fill="#D97757"/>
+  <text x="400" y="113" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">治理者</text>
+
+  <!-- Skills list -->
+  <text x="365" y="140" font-size="10.5" fill="#141413">· 定义架构原则与标准</text>
+  <text x="365" y="158" font-size="10.5" fill="#141413">· 设计评审流程机制</text>
+  <text x="365" y="176" font-size="10.5" fill="#141413">· 治理AI生成架构质量</text>
+  <text x="365" y="194" font-size="10.5" fill="#141413">· 培养团队架构能力</text>
+  <text x="365" y="212" font-size="10.5" fill="#141413">· 审查AI方案与决策</text>
+
+  <!-- Bottom summary box -->
+  <rect x="30" y="246" width="620" height="36" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="340" y="268" text-anchor="middle" font-size="10.5" fill="#141413" font-family="ui-monospace, monospace">核心转变：架构师从"设计者"进化为"治理者"——定义原则、评审AI产出、治理架构质量</text>
+
+  <!-- Legend -->
+  <rect x="30" y="288" width="10" height="10" rx="2" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="46" y="297" font-size="9" fill="#87867F">传统角色</text>
+  <rect x="110" y="288" width="10" height="10" rx="2" fill="#D97757"/>
+  <text x="126" y="297" font-size="9" fill="#87867F">AI时代角色</text>
+  <line x1="210" y1="293" x2="240" y2="293" stroke="#D97757" stroke-width="2"/>
+  <polygon points="240,289 232,293 232,297" fill="#D97757"/>
+  <text x="250" y="297" font-size="9" fill="#87867F">角色转变</text>
+</svg>

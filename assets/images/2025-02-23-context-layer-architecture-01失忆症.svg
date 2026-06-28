@@ -1,0 +1,76 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>AI的失忆症示意图</title>
+  <desc>一个人形AI图标位于中心，周围散布着知识节点（Confluence、ADR、README、团队知识），用虚线连接表示无法访问</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI的"失忆症"</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">上下文获取的限制</text>
+
+  <!-- Central AI figure (clay colored) -->
+  <circle cx="340" cy="180" r="50" fill="#D97757" opacity="0.15"/>
+  <circle cx="340" cy="180" r="38" fill="#D97757" opacity="0.25"/>
+  <circle cx="340" cy="180" r="26" fill="#D97757"/>
+
+  <!-- AI head -->
+  <ellipse cx="340" cy="168" rx="14" ry="16" fill="#FAF9F5"/>
+  <!-- AI body -->
+  <path d="M326 192 Q340 220 354 192" stroke="#FAF9F5" stroke-width="3" fill="none"/>
+  <!-- AI eyes -->
+  <circle cx="334" cy="166" r="2.5" fill="#D97757"/>
+  <circle cx="346" cy="166" r="2.5" fill="#D97757"/>
+
+  <!-- "Current Input" arrow pointing to AI -->
+  <path d="M160 180 L285 180" stroke="#D97757" stroke-width="2.5" fill="none"/>
+  <polygon points="285,174 295,180 285,186" fill="#D97757"/>
+  <rect x="80" y="166" width="72" height="28" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="116" y="184" text-anchor="middle" font-size="11" fill="#141413">当前输入</text>
+
+  <!-- Scattered knowledge nodes (gray) -->
+  <!-- Confluence node (top left) -->
+  <rect x="90" y="72" width="100" height="50" rx="8" fill="#FFFFFF" stroke="#87867F" stroke-width="1.5"/>
+  <text x="140" y="95" text-anchor="middle" font-size="11" fill="#141413">Confluence</text>
+  <text x="140" y="110" text-anchor="middle" font-size="9" fill="#87867F">架构文档</text>
+  <line x1="190" y1="122" x2="302" y2="150" stroke="#87867F" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- ADR node (top right) -->
+  <rect x="490" y="72" width="100" height="50" rx="8" fill="#FFFFFF" stroke="#87867F" stroke-width="1.5"/>
+  <text x="540" y="95" text-anchor="middle" font-size="11" fill="#141413">ADR</text>
+  <text x="540" y="110" text-anchor="middle" font-size="9" fill="#87867F">架构决策记录</text>
+  <line x1="490" y1="122" x2="378" y2="150" stroke="#87867F" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- README node (bottom left) -->
+  <rect x="90" y="238" width="100" height="50" rx="8" fill="#FFFFFF" stroke="#87867F" stroke-width="1.5"/>
+  <text x="140" y="261" text-anchor="middle" font-size="11" fill="#141413">README</text>
+  <text x="140" y="276" text-anchor="middle" font-size="9" fill="#87867F">项目规范</text>
+  <line x1="190" y1="238" x2="302" y2="210" stroke="#87867F" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Team brain node (bottom right) -->
+  <rect x="490" y="238" width="100" height="50" rx="8" fill="#FFFFFF" stroke="#87867F" stroke-width="1.5"/>
+  <text x="540" y="261" text-anchor="middle" font-size="11" fill="#141413">团队知识</text>
+  <text x="540" y="276" text-anchor="middle" font-size="9" fill="#87867F">经验与惯例</text>
+  <line x1="490" y1="238" x2="378" y2="210" stroke="#87867F" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- X marks indicating "cannot access" -->
+  <g opacity="0.7">
+    <line x1="248" y1="135" x2="258" y2="145" stroke="#D97757" stroke-width="2"/>
+    <line x1="258" y1="135" x2="248" y2="145" stroke="#D97757" stroke-width="2"/>
+
+    <line x1="422" y1="135" x2="432" y2="145" stroke="#D97757" stroke-width="2"/>
+    <line x1="432" y1="135" x2="422" y2="145" stroke="#D97757" stroke-width="2"/>
+
+    <line x1="248" y1="215" x2="258" y2="225" stroke="#D97757" stroke-width="2"/>
+    <line x1="258" y1="215" x2="248" y2="225" stroke="#D97757" stroke-width="2"/>
+
+    <line x1="422" y1="215" x2="432" y2="225" stroke="#D97757" stroke-width="2"/>
+    <line x1="432" y1="215" x2="422" y2="225" stroke="#D97757" stroke-width="2"/>
+  </g>
+
+  <!-- "Cannot access" label -->
+  <text x="340" y="320" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">虚线 = 无法自动获取</text>
+
+  <!-- "?" inside AI figure -->
+  <text x="340" y="185" text-anchor="middle" font-size="16" font-weight="600" fill="#FAF9F5">?</text>
+</svg>

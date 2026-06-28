@@ -1,0 +1,91 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">agency-agents 三大工程机制</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">个性 · 流程 · 交付物</text>
+
+  <!-- Column dividers -->
+  <line x1="228" y1="58" x2="228" y2="390" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="456" y1="58" x2="456" y2="390" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Column header row -->
+  <!-- Column 1 header -->
+  <rect x="20" y="58" width="200" height="36" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="120" y="81" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">01 个性 (Personality)</text>
+
+  <!-- Column 2 header -->
+  <rect x="238" y="58" width="210" height="36" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="343" y="81" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">02 流程 (Process)</text>
+
+  <!-- Column 3 header -->
+  <rect x="466" y="58" width="194" height="36" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="563" y="81" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">03 交付物 (Deliverable)</text>
+
+  <!-- Column 1 cards -->
+  <!-- Card 1-1 -->
+  <rect x="30" y="108" width="180" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="120" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">认知风格</text>
+  <text x="120" y="150" text-anchor="middle" font-size="10" fill="#87867F">前端"视觉优先"</text>
+  <text x="120" y="165" text-anchor="middle" font-size="10" fill="#87867F">后端"系统优先"</text>
+
+  <!-- Card 1-2 -->
+  <rect x="30" y="186" width="180" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="120" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">沟通风格</text>
+  <text x="120" y="228" text-anchor="middle" font-size="10" fill="#87867F">产品经理: 业务↔技术</text>
+  <text x="120" y="243" text-anchor="middle" font-size="10" fill="#87867F">社区运营: 技术→用户语言</text>
+
+  <!-- Card 1-3 -->
+  <rect x="30" y="264" width="180" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="120" y="288" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">决策偏好</text>
+  <text x="120" y="306" text-anchor="middle" font-size="10" fill="#87867F">安全专家"风险厌恶型"</text>
+  <text x="120" y="321" text-anchor="middle" font-size="10" fill="#87867F">研究Agent"创新偏好型"</text>
+
+  <!-- Column 2 cards -->
+  <!-- Card 2-1 -->
+  <rect x="248" y="108" width="190" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="343" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">设计评审流程</text>
+  <text x="343" y="150" text-anchor="middle" font-size="10" fill="#87867F">设计稿→可行性评估</text>
+  <text x="343" y="165" text-anchor="middle" font-size="10" fill="#87867F">→业务价值确认→开发</text>
+
+  <!-- Card 2-2 -->
+  <rect x="248" y="186" width="190" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="343" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">Bug修复流程</text>
+  <text x="343" y="228" text-anchor="middle" font-size="10" fill="#87867F">监控→诊断→修复→测试</text>
+  <text x="343" y="243" text-anchor="middle" font-size="10" fill="#87867F">→文档更新</text>
+
+  <!-- Card 2-3 -->
+  <rect x="248" y="264" width="190" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="343" y="288" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">新功能开发流程</text>
+  <text x="343" y="306" text-anchor="middle" font-size="10" fill="#87867F">需求→方案→原型</text>
+  <text x="343" y="321" text-anchor="middle" font-size="10" fill="#87867F">→内测→用户测试→发布</text>
+
+  <!-- Column 3 cards -->
+  <!-- Card 3-1 -->
+  <rect x="476" y="108" width="174" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="563" y="132" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">代码</text>
+  <text x="563" y="150" text-anchor="middle" font-size="10" fill="#87867F">可执行 · 带测试</text>
+  <text x="563" y="165" text-anchor="middle" font-size="10" fill="#87867F">符合代码规范</text>
+
+  <!-- Card 3-2 -->
+  <rect x="476" y="186" width="174" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="563" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">文档</text>
+  <text x="563" y="228" text-anchor="middle" font-size="10" fill="#87867F">背景·方案·风险评估</text>
+  <text x="563" y="243" text-anchor="middle" font-size="10" fill="#87867F">后续行动</text>
+
+  <!-- Card 3-3 -->
+  <rect x="476" y="264" width="174" height="68" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="563" y="288" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">数据</text>
+  <text x="563" y="306" text-anchor="middle" font-size="10" fill="#87867F">带Schema · 可验证</text>
+  <text x="563" y="321" text-anchor="middle" font-size="10" fill="#87867F">可追溯来源</text>
+
+  <!-- Bottom insight strip -->
+  <rect x="20" y="350" width="640" height="38" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="340" y="374" text-anchor="middle" font-size="11" fill="#141413">三大机制共同构成 agency-agents 的工程基础：个性定义角色 · 流程约束协作 · 交付物验证产出</text>
+
+  <title>agency-agents 三大工程机制</title>
+  <desc>Three-column layout with labeled column headers '01 个性 (Personality)', '02 流程 (Process)', '03 交付物 (Deliverable)'. Each column contains 3 compact cards with Chinese descriptor text.</desc>
+</svg>

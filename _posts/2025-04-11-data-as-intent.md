@@ -1,14 +1,19 @@
 ---
 layout: post
-title: "\"数据即Intent：当数据成为新的编程语言\""
-date: 2025-04-11T11:35:00+08:00
+title: '"数据即Intent：当数据成为新的编程语言"'
+date: 2026-03-09T10:00:00+08:00
 tags: [AI-Native软件工程, 数据工程, 数据质量]
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #24
-
-redirect_from:
-  - /data-as-intent/
+series: AI-Native Engineering
 ---
+
+> **TL;DR**
+>
+> 本文核心观点：
+> 1. **数据优先** — AI系统中，数据质量直接决定模型表现；优化数据的收益远超优化架构
+> 2. **Intent工程** — 数据是Intent的载体；高质量数据 = 高质量Intent = 更好的模型行为
+> 3. **飞轮效应** — 数据-模型-应用形成正反馈循环；数据质量差则飞轮反向运转
+> 4. **四层体系** — 数据收集→处理→管理→策略，构成完整的数据工程能力
 
 *"2024年，某AI团队发现了一个令人震惊的事实：他们花了6个月优化模型架构，却只提升了3%的准确率。而另一支团队，仅仅通过清理和重新标注训练数据，就在2周内提升了15%的准确率。不是模型不重要，而是数据更重要。"
 *
@@ -35,6 +40,10 @@ redirect_from:
 
 **这不是个案。2024年的一项研究显示，数据科学家80%的时间花在数据准备上，只有20%用于模型开发。**
 
+> 💡 **Key Insight**
+>
+> 调查后发现：**训练数据是一团糟**。但真正的问题不是数据本身——而是团队在系统设计阶段没有把数据质量纳入核心工程目标。
+
 ---
 
 ## 核心观点：数据工程正在变成Intent工程
@@ -56,6 +65,10 @@ redirect_from:
 | 逻辑是显式的 | 逻辑是隐式的（在模型中） |
 
 **关键洞察**：在AI系统中，数据就是Intent——数据告诉模型"世界是什么样的"、"什么是正确的行为"。高质量的数据就是高质量的Intent表达。
+
+> 💡 **Key Insight**
+>
+> 在AI系统中，**数据就是Intent**——数据告诉模型"世界是什么样的"和"什么是正确的行为"。高质量的数据 = 高质量的Intent = 更好的模型行为。
 
 ---
 ## 穿越周期：从代码到模型到数据
@@ -181,23 +194,21 @@ redirect_from:
 ## 延伸阅读
 
 **经典案例**
-- Netflix的推荐系统数据工程
-- Google的数据中心运营
-- OpenAI的数据策略
+- [Netflix 推荐系统的数据工程实践](https://netflixtechblog.com)：从埋点设计到特征管道的完整体系，支撑着每天千亿级推荐请求
+- [Google 数据中心的环境运营](https://cloud.google.com/blog/products/gcp/how-google-does-disaster-recovery)：「Data Quality at Google」内部框架的公开冰山一角
+- [OpenAI 的数据策略与 GPT 数据飞轮](https://arxiv.org/abs/2005.04128)：从 WebText 到人类反馈对齐，数据构建的核心思路
 
 **技术实现**
-- 数据质量工具（Great Expectations, dbt）
-- 数据 lineage（OpenLineage）
-- 数据版本控制（DVC）
+- [Great Expectations](https://greatexpectations.io)：Python 数据质量验证框架，支持声明式的数据期望（data expectations）
+- [dbt（data build tool）](https://docs.getdbt.com/)：用 SQL 做数据转换的同时管理数据血缘和文档，是现代数据栈的核心粘合剂
+- [OpenLineage](https://openlineage.io)：CNCF 孵化的数据 lineage 标准，统一追踪数据从收集到应用的全链路 provenance
+- [DVC（Data Version Control）](https://dvc.org)：用 Git 工作流管理数据集和模型版本，解决 ML 项目的可复现性问题
 
 **学术与理论**
-- Data-Centric AI
-- 数据质量管理
-- 数据治理框架
+- [Data-Centric AI（Hazy, 2021）](https://arxiv.org/abs/2112.00073)：吴恩达倡导的研究范式——从优化模型转向优化数据
+- [数据质量管理（Gartner, 2023）](https://www.gartner.com/en/data-analytics/articles/average-cost-of-poor-data-quality)：poor data quality 平均每年给企业造成 1290 万美元的损失
+- [数据治理框架（DAMA-DMBOK）](https://www.dama.org/cpages/body-of-knowledge)：国际数据管理协会的数据治理知识体系，是建立数据资产管理的理论基座
 
 ---
 
-*Published on 2026-03-09
-深度阅读时间：约 11 分钟*
-
-AI-Native软件工程系列 #24 —— 探索AI时代的软件工程范式转移
+*Published on 2026-03-09 · 深度阅读时间：约 11 分钟*

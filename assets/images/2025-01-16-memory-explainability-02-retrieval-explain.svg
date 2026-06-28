@@ -1,0 +1,96 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">向量检索：标准 vs 可解释</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">检索即解释</text>
+
+  <!-- Divider -->
+  <line x1="340" y1="60" x2="340" y2="310" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- LEFT PANEL: Standard Retrieval -->
+  <rect x="24" y="60" width="300" height="252" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="174" y="82" text-anchor="middle" font-size="12" fill="#87867F" font-family="ui-monospace, monospace">标准向量检索</text>
+
+  <!-- Query box -->
+  <rect x="54" y="96" width="120" height="32" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="114" y="117" text-anchor="middle" font-size="11" fill="#141413" font-family="ui-monospace, monospace">Query</text>
+
+  <!-- Arrow down -->
+  <line x1="114" y1="128" x2="114" y2="148" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="114,154 110,146 118,146" fill="#D1CFC5"/>
+
+  <!-- Vector DB -->
+  <ellipse cx="114" cy="172" rx="48" ry="20" fill="#D1CFC5" stroke="#87867F" stroke-width="1.2"/>
+  <text x="114" y="177" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">Vector DB</text>
+
+  <!-- Arrow down -->
+  <line x1="114" y1="192" x2="114" y2="212" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="114,218 110,210 118,210" fill="#D1CFC5"/>
+
+  <!-- Results -->
+  <rect x="44" y="226" width="140" height="70" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="114" y="244" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Top-k Results</text>
+  <text x="58" y="260" font-size="9" fill="#141413">Result 1  (0.93)</text>
+  <text x="58" y="274" font-size="9" fill="#141413">Result 2  (0.87)</text>
+  <text x="58" y="288" font-size="9" fill="#141413">Result 3  (0.81)</text>
+
+  <!-- No explanation label -->
+  <text x="240" y="260" text-anchor="middle" font-size="11" fill="#87867F">?</text>
+  <text x="240" y="276" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">无归因</text>
+
+  <!-- RIGHT PANEL: Explainable Retrieval -->
+  <rect x="356" y="60" width="300" height="252" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="506" y="82" text-anchor="middle" font-size="12" fill="#D97757" font-family="ui-monospace, monospace">可解释检索</text>
+
+  <!-- Query box -->
+  <rect x="386" y="96" width="120" height="32" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.2"/>
+  <text x="446" y="117" text-anchor="middle" font-size="11" fill="#141413" font-family="ui-monospace, monospace">Query</text>
+
+  <!-- Arrow down -->
+  <line x1="446" y1="128" x2="446" y2="148" stroke="#D97757" stroke-width="2"/>
+  <polygon points="446,154 442,146 450,146" fill="#D97757"/>
+
+  <!-- Vector DB -->
+  <ellipse cx="446" cy="172" rx="48" ry="20" fill="#D97757" stroke="#D97757" stroke-width="1.2"/>
+  <text x="446" y="177" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">Vector DB</text>
+
+  <!-- Arrow down -->
+  <line x1="446" y1="192" x2="446" y2="212" stroke="#D97757" stroke-width="2"/>
+  <polygon points="446,218 442,210 450,210" fill="#D97757"/>
+
+  <!-- Results with badges -->
+  <rect x="366" y="226" width="280" height="70" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.2"/>
+  <text x="386" y="244" font-size="10" fill="#141413">Result 1 (0.93)</text>
+  <!-- Attribution badges -->
+  <rect x="486" y="232" width="60" height="16" rx="8" fill="#788C5D"/>
+  <text x="516" y="243" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">来源</text>
+  <rect x="552" y="232" width="60" height="16" rx="8" fill="#D97757"/>
+  <text x="582" y="243" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">时间</text>
+
+  <text x="386" y="262" font-size="10" fill="#141413">Result 2 (0.87)</text>
+  <rect x="486" y="250" width="60" height="16" rx="8" fill="#788C5D"/>
+  <text x="516" y="261" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">来源</text>
+  <rect x="552" y="250" width="60" height="16" rx="8" fill="#D97757"/>
+  <text x="582" y="261" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">时间</text>
+
+  <!-- Attribution card popup -->
+  <rect x="510" y="100" width="130" height="68" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="520" y="118" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">归因卡片</text>
+  <line x1="510" y1="124" x2="640" y2="124" stroke="#D97757" stroke-width="1"/>
+  <text x="520" y="140" font-size="9" fill="#141413">来源: 对话#47</text>
+  <text x="520" y="154" font-size="9" fill="#141413">时间: 2024-10-15</text>
+  <text x="520" y="168" font-size="9" fill="#141413">置信度: 0.82</text>
+
+  <!-- Arrow pointing to popup -->
+  <line x1="492" y1="130" x2="510" y2="130" stroke="#D97757" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Legend / note -->
+  <text x="340" y="338" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">← 无归因，难以验证  |  带归因，每段记忆都有身份证 →</text>
+
+  <title>向量检索：标准 vs 可解释</title>
+  <desc>对比标准向量检索（无归因信息）与可解释检索（每条结果附带来源、时间、置信度归因卡片）</desc>
+</svg>

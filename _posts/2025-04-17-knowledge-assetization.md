@@ -4,10 +4,7 @@ title: "\"为什么你的代码正在变成负债？\""
 date: 2025-04-17T09:50:00+08:00
 tags: [AI-Native软件工程, 知识资产化, 架构演进]
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #10
-
-redirect_from:
-  - /knowledge-assetization.html
+series: AI-Native Engineering
 ---
 
 > **TL;DR**
@@ -20,7 +17,9 @@ redirect_from:
 
 ---
 
-## GitLab的「债务日」
+<object data="/assets/images/2025-04-17-knowledge-assetization-01-stack.svg" type="image/svg+xml" width="100%"></object>
+
+## GitLab的Debt Day
 
 > 💡 **Key Insight**
 > 
@@ -42,11 +41,13 @@ redirect_from:
 
 ---
 
-## 核心观点：代码不是资产，知识才是
+## 代码不是资产，知识才是
 
-### 🔥 反直觉事实
+### 反直觉事实
 
 > **在AI时代，代码本身正在从资产变成负债。**
+
+<object data="/assets/images/2025-04-17-knowledge-assetization-02-chain.svg" type="image/svg+xml" width="100%"></object>
 
 这不是危言耸听，是数学：
 
@@ -62,6 +63,10 @@ redirect_from:
 
 **AI-Native链条：**
 需求 → **Intent** → AI生成代码 → 价值
+
+> 💡 **Key Insight**
+>
+> 传统链条的问题不在于效率低，而在于每一步都在积累"死重量"——无法被AI理解的代码。
 
 > 💡 **Key Insight**
 > 
@@ -91,6 +96,10 @@ redirect_from:
 
 每一次跃迁，知识复用效率都提升**数量级**。
 
+> 💡 **Key Insight**
+>
+> 知识资产的真正护城河不是"有多少知识"，而是"知识被复用的摩擦成本有多低"。
+
 ---
 
 ## 反直觉洞察：知识资产化的三层悖论
@@ -114,7 +123,7 @@ AI需要更结构化的形态：
 - Intent Templates  
 - Verification Heuristics
 
-### 悖论三：保留成本 > 重写成本
+### 悖论三：保留成本大于重写成本
 
 > 💡 **Key Insight**
 > 
@@ -203,5 +212,5 @@ AI需要更结构化的形态：
 
 ---
 
-*AI-Native软件工程系列 #10*
+*AI-Native Engineering*
 *深度阅读时间：约 12 分钟*

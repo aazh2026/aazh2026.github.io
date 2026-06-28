@@ -1,0 +1,98 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>C4 Model 四层模型</title>
+  <desc>C4 Model 的四个层次：System Context、Container、Component、Code Structure</desc>
+
+  <!-- Background -->
+  <rect width="680" height="380" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">C4 Model 四层模型</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Simon Brown · c4model.com</text>
+
+  <!-- ========== Level 1: System Context (outermost) ========== -->
+  <rect x="40" y="60" width="600" height="100" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="40" y="60" width="600" height="28" rx="10" fill="#D97757"/>
+  <rect x="40" y="75" width="600" height="13" fill="#D97757"/>
+  <text x="56" y="78" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Level 1</text>
+  <text x="56" y="92" font-size="13" fill="#141413">System Context</text>
+  <text x="56" y="108" font-size="10.5" fill="#87867F">人物图标 + 企业软件系统 · 最高层全局视图</text>
+
+  <!-- Person icon for System Context -->
+  <circle cx="580" cy="100" r="16" fill="#E8E4DC" stroke="#D1CFC5" stroke-width="1.5"/>
+  <circle cx="580" cy="94" r="6" fill="#D1CFC5"/>
+  <path d="M 565 118 Q 580 108 595 118" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+
+  <!-- Software system box -->
+  <rect x="450" y="86" width="100" height="26" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="500" y="103" text-anchor="middle" font-size="10" fill="#141413">企业软件系统</text>
+
+  <!-- ========== Level 2: Container (inside L1) ========== -->
+  <rect x="70" y="170" width="540" height="100" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="70" y="170" width="540" height="28" rx="10" fill="#D97757" opacity="0.85"/>
+  <rect x="70" y="185" width="540" height="13" fill="#D97757" opacity="0.85"/>
+  <text x="86" y="188" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Level 2</text>
+  <text x="86" y="202" font-size="13" fill="#141413">Container</text>
+  <text x="86" y="218" font-size="10.5" fill="#87867F">应用程序 + 数据库 · 进程 / 容器级别</text>
+
+  <!-- Container boxes inside L2 -->
+  <rect x="130" y="228" width="110" height="32" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.2"/>
+  <text x="185" y="240" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">Web App</text>
+  <text x="185" y="252" text-anchor="middle" font-size="9" fill="#87867F">React / Spring</text>
+
+  <rect x="285" y="228" width="110" height="32" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.2"/>
+  <text x="340" y="240" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">API Gateway</text>
+  <text x="340" y="252" text-anchor="middle" font-size="9" fill="#87867F">Kong / Nginx</text>
+
+  <rect x="440" y="228" width="110" height="32" rx="6" fill="#F0EEE6" stroke="#D97757" stroke-width="1.2"/>
+  <text x="495" y="240" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">Database</text>
+  <text x="495" y="252" text-anchor="middle" font-size="9" fill="#87867F">PostgreSQL</text>
+
+  <!-- ========== Level 3: Component (inside L2) ========== -->
+  <rect x="110" y="280" width="460" height="80" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <rect x="110" y="280" width="460" height="26" rx="10" fill="#788C5D" opacity="0.85"/>
+  <rect x="110" y="294" width="460" height="12" fill="#788C5D" opacity="0.85"/>
+  <text x="126" y="297" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Level 3</text>
+  <text x="126" y="310" font-size="13" fill="#141413">Component</text>
+  <text x="126" y="326" font-size="10.5" fill="#87867F">容器内的组件集合 · 类与模块级别</text>
+
+  <!-- Component boxes inside L3 -->
+  <rect x="160" y="336" width="90" height="20" rx="5" fill="#E8EDDE" stroke="#788C5D" stroke-width="1"/>
+  <text x="205" y="349" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">OrderService</text>
+
+  <rect x="295" y="336" width="90" height="20" rx="5" fill="#E8EDDE" stroke="#788C5D" stroke-width="1"/>
+  <text x="340" y="349" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">PaymentSvc</text>
+
+  <rect x="430" y="336" width="90" height="20" rx="5" fill="#E8EDDE" stroke="#788C5D" stroke-width="1"/>
+  <text x="475" y="349" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">InventoryMgr</text>
+
+  <!-- ========== Level 4: Code (innermost) ========== -->
+  <rect x="240" y="316" width="200" height="44" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="256" y="334" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Level 4</text>
+  <text x="256" y="348" font-size="11" fill="#141413">Code Structure</text>
+  <text x="256" y="358" font-size="9" fill="#87867F">类 / 方法 / 接口</text>
+
+  <!-- Code snippet box -->
+  <rect x="360" y="326" width="70" height="28" rx="4" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="367" y="338" font-size="8" fill="#141413" font-family="ui-monospace, monospace">class Order</text>
+  <text x="367" y="348" font-size="8" fill="#141413" font-family="ui-monospace, monospace">  create()</text>
+
+  <!-- Downward arrows between levels (left side) -->
+  <line x1="56" y1="160" x2="56" y2="168" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="56,172 52,164 60,164" fill="#D1CFC5"/>
+  <line x1="56" y1="270" x2="56" y2="278" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="56,282 52,274 60,274" fill="#D1CFC5"/>
+  <line x1="56" y1="360" x2="56" y2="368" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="56,372 52,364 60,364" fill="#D1CFC5"/>
+
+  <!-- Level labels on left -->
+  <text x="56" y="158" text-anchor="middle" font-size="8" fill="#87867F">细化</text>
+  <text x="56" y="268" text-anchor="middle" font-size="8" fill="#87867F">细化</text>
+  <text x="56" y="358" text-anchor="middle" font-size="8" fill="#87867F">展开</text>
+
+  <!-- Legend bottom right -->
+  <rect x="540" y="336" width="100" height="36" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="550" y="344" width="10" height="10" rx="2" fill="#D97757"/>
+  <text x="565" y="352" font-size="9" fill="#141413">Level 1-3</text>
+  <rect x="550" y="358" width="10" height="10" rx="2" fill="#788C5D"/>
+  <text x="565" y="366" font-size="9" fill="#141413">Level 3</text>
+</svg>

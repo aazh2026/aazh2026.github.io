@@ -1,0 +1,88 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>GPT-5.4 通用→专用 范式转移</title>
+  <desc>Horizontal flow diagram showing GPT-5.3-Codex (specialized) on the left and GPT-5.4 (generalist) on the right, with a central arrow labeled 通用知识加成</desc>
+
+  <!-- Background -->
+  <rect width="680" height="380" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">GPT-5.4：通用模型超越专用模型</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">范式转移示意 · OpenAI · 2026/03/05</text>
+
+  <!-- Left Card: GPT-5.3-Codex (specialized) -->
+  <rect x="40" y="64" width="180" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="40" y="64" width="180" height="32" rx="8" fill="#E3DACC"/>
+  <rect x="40" y="84" width="180" height="12" fill="#E3DACC"/>
+  <text x="130" y="84" text-anchor="middle" font-size="12" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">GPT-5.3-Codex</text>
+  <text x="130" y="112" text-anchor="middle" font-size="11" fill="#87867F">专用模型</text>
+
+  <!-- Codex node labels -->
+  <rect x="56" y="124" width="148" height="28" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="130" y="142" text-anchor="middle" font-size="10" fill="#141413">代码语法 &amp; 结构</text>
+
+  <rect x="56" y="160" width="148" height="28" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="130" y="178" text-anchor="middle" font-size="10" fill="#141413">单一领域优化</text>
+
+  <rect x="56" y="196" width="148" height="28" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="130" y="214" text-anchor="middle" font-size="10" fill="#141413">32k 上下文</text>
+
+  <rect x="56" y="232" width="148" height="28" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="130" y="250" text-anchor="middle" font-size="10" fill="#141413">代码生成专项</text>
+
+  <!-- Bottom label: Codex -->
+  <text x="130" y="272" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">编码专用</text>
+
+  <!-- Center Arrow: 通用知识加成 -->
+  <rect x="250" y="156" width="180" height="56" rx="28" fill="#D97757"/>
+  <text x="340" y="178" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">通用知识加成</text>
+  <text x="340" y="196" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">SWE-bench +7.4%</text>
+
+  <!-- Arrow lines from left card to center -->
+  <line x1="220" y1="130" x2="250" y2="170" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="220" y1="174" x2="250" y2="184" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="220" y1="218" x2="250" y2="198" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Arrow lines from center to right card -->
+  <line x1="430" y1="170" x2="460" y2="130" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="430" y1="184" x2="460" y2="174" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="430" y1="198" x2="460" y2="218" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Right Card: GPT-5.4 (generalist) -->
+  <rect x="460" y="64" width="180" height="220" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="460" y="64" width="180" height="32" rx="8" fill="#D97757"/>
+  <rect x="460" y="84" width="180" height="12" fill="#D97757"/>
+  <text x="550" y="84" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">GPT-5.4</text>
+  <text x="550" y="112" text-anchor="middle" font-size="11" fill="#D97757" font-weight="500">通用模型</text>
+
+  <!-- GPT-5.4 node labels -->
+  <rect x="476" y="124" width="148" height="28" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1"/>
+  <text x="550" y="142" text-anchor="middle" font-size="10" fill="#141413">业务逻辑理解</text>
+
+  <rect x="476" y="160" width="148" height="28" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1"/>
+  <text x="550" y="178" text-anchor="middle" font-size="10" fill="#141413">跨领域推理</text>
+
+  <rect x="476" y="196" width="148" height="28" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1"/>
+  <text x="550" y="214" text-anchor="middle" font-size="10" fill="#141413">1M 上下文</text>
+
+  <rect x="476" y="232" width="148" height="28" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1"/>
+  <text x="550" y="250" text-anchor="middle" font-size="10" fill="#141413">代码 + 多模态</text>
+
+  <!-- Bottom label: GPT-5.4 -->
+  <text x="550" y="272" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">全能型</text>
+
+  <!-- Bottom comparison bar -->
+  <rect x="40" y="310" width="600" height="50" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="130" y="334" text-anchor="middle" font-size="11" fill="#141413">HumanEval 87.2%</text>
+  <text x="130" y="350" text-anchor="middle" font-size="10" fill="#87867F">GPT-5.3-Codex</text>
+  <line x1="200" y1="316" x2="200" y2="354" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="290" y="334" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">91.5% +4.3%</text>
+  <text x="290" y="350" text-anchor="middle" font-size="10" fill="#D97757">GPT-5.4</text>
+  <line x1="370" y1="316" x2="370" y2="354" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="460" y="334" text-anchor="middle" font-size="11" fill="#141413">SWE-bench 48.3%</text>
+  <text x="460" y="350" text-anchor="middle" font-size="10" fill="#87867F">GPT-5.3-Codex</text>
+  <line x1="530" y1="316" x2="530" y2="354" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="590" y="334" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">55.7% +7.4%</text>
+  <text x="590" y="350" text-anchor="middle" font-size="10" fill="#D97757">GPT-5.4</text>
+</svg>

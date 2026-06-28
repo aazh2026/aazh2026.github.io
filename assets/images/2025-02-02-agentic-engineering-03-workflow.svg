@@ -1,0 +1,77 @@
+<svg viewBox="0 0 680 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">API 设计工作流</text>
+  <text x="340" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Agentic Engineering · 案例二 · 2026</text>
+
+  <!-- Flow: Circle → Rectangle → Diamond → Rectangle → Circle -->
+
+  <!-- Node 1: 问题定义 (circle) -->
+  <circle cx="80" cy="140" r="36" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="80" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">问题</text>
+  <text x="80" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">定义</text>
+  <text x="80" y="186" text-anchor="middle" font-size="9" fill="#87867F">边界探索</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="116" y1="140" x2="148" y2="140" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="152,140 144,136 144,144" fill="#D1CFC5"/>
+
+  <!-- Node 2: AI分析 (rectangle) -->
+  <rect x="156" y="112" width="100" height="56" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="206" y="134" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">AI 分析</text>
+  <text x="206" y="150" text-anchor="middle" font-size="10" fill="#87867F">列出考虑因素</text>
+  <text x="206" y="178" text-anchor="middle" font-size="9" fill="#87867F">意图分层</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="256" y1="140" x2="288" y2="140" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="292,140 284,136 284,144" fill="#D1CFC5"/>
+
+  <!-- Node 3: 策略选择 (diamond) -->
+  <polygon points="340,104 380,140 340,176 300,140" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="340" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">策略</text>
+  <text x="340" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">选择</text>
+  <text x="340" y="196" text-anchor="middle" font-size="9" fill="#87867F">trade-offs 讨论</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="380" y1="140" x2="412" y2="140" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="416,140 408,136 408,144" fill="#D1CFC5"/>
+
+  <!-- Node 4: 增量实现 (rectangle) -->
+  <rect x="420" y="112" width="100" height="56" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="470" y="134" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">增量实现</text>
+  <text x="470" y="150" text-anchor="middle" font-size="10" fill="#87867F">逐 endpoint 审查</text>
+  <text x="470" y="178" text-anchor="middle" font-size="9" fill="#87867F">增量验证</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="520" y1="140" x2="552" y2="140" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="556,140 548,136 548,144" fill="#D1CFC5"/>
+
+  <!-- Node 5: 验证通过 (circle) -->
+  <circle cx="600" cy="140" r="36" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="600" y="136" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">验证</text>
+  <text x="600" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">通过</text>
+  <!-- checkmark inside circle -->
+  <polyline points="588,140 596,148 612,130" stroke="#788C5D" stroke-width="2.5" fill="none"/>
+
+  <!-- Timeline below -->
+  <line x1="40" y1="224" x2="640" y2="224" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="40" y="218" width="8" height="12" rx="2" fill="#D1CFC5"/>
+  <rect x="200" y="218" width="8" height="12" rx="2" fill="#D1CFC5"/>
+  <rect x="380" y="218" width="8" height="12" rx="2" fill="#D1CFC5"/>
+  <rect x="620" y="218" width="8" height="12" rx="2" fill="#D1CFC5"/>
+  <text x="44" y="246" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">开始</text>
+  <text x="204" y="246" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">分析</text>
+  <text x="384" y="246" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">实现</text>
+  <text x="608" y="246" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">完成</text>
+
+  <!-- Skill library update annotation -->
+  <rect x="430" y="256" width="140" height="20" rx="4" fill="#E8F0E0" stroke="#788C5D" stroke-width="1"/>
+  <text x="500" y="270" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">技能库更新</text>
+
+  <title>API 设计工作流</title>
+  <desc>API 设计工作流：问题定义 → AI分析 → 策略选择 → 增量实现 → 验证通过，配合技能库更新</desc>
+</svg>

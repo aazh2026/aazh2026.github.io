@@ -1,0 +1,62 @@
+<svg viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">会话摘要金字塔 — 分层存储与检索</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 2025/01/12</text>
+
+  <!-- Pyramid: Top tier (narrowest) -->
+  <polygon points="300,62 220,120 380,120" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="300" y="97" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">顶层 · 历史总摘要</text>
+  <text x="300" y="112" text-anchor="middle" font-size="9.5" fill="#87867F">总览 · 低频更新</text>
+
+  <!-- Pyramid: Middle tier -->
+  <polygon points="220,124 160,186 440,186 380,124" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="300" y="160" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">中层 · 过去20个会话合并摘要</text>
+  <text x="300" y="175" text-anchor="middle" font-size="9.5" fill="#87867F">合并 · 中频更新</text>
+
+  <!-- Pyramid: Bottom tier (widest) -->
+  <polygon points="160,190 80,262 520,262 440,190" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="300" y="224" text-anchor="middle" font-size="12" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">底层 · 最近5个会话详细摘要</text>
+  <text x="300" y="240" text-anchor="middle" font-size="9.5" fill="#87867F">详细 · 高频更新</text>
+
+  <!-- Retrieval flow (right side, vertical) -->
+  <rect x="450" y="90" width="130" height="160" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="515" y="110" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">检索顺序</text>
+
+  <!-- Step 1 -->
+  <rect x="462" y="120" width="106" height="28" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="515" y="138" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">1. 底层 → 细节准确</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="515" y1="148" x2="515" y2="157" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="515,161 511,153 519,153" fill="#D1CFC5"/>
+
+  <!-- Step 2 -->
+  <rect x="462" y="165" width="106" height="28" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="515" y="183" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">2. 中层 → 近期上下文</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="515" y1="193" x2="515" y2="202" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="515,206 511,198 519,198" fill="#D1CFC5"/>
+
+  <!-- Step 3 -->
+  <rect x="462" y="210" width="106" height="28" rx="6" fill="#FAF9F5" stroke="#87867F" stroke-width="1.5"/>
+  <text x="515" y="228" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">3. 顶层 → 背景知识</text>
+
+  <!-- Time indicator labels (left side) -->
+  <text x="60" y="130" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">长期</text>
+  <text x="60" y="205" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">中期</text>
+  <text x="60" y="270" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">短期</text>
+
+  <!-- Granularity labels (below pyramid) -->
+  <text x="170" y="290" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">总览</text>
+  <text x="300" y="290" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">合并</text>
+  <text x="430" y="290" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">详细</text>
+
+  <!-- Source caption -->
+  <text x="300" y="390" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">不存储完整对话，存储分层摘要</text>
+</svg>

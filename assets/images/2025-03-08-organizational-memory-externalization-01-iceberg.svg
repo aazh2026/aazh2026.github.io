@@ -1,55 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 440" width="100%">
-  <defs>
-    <style>
-      text { font-family: 'Helvetica Neue', Arial, sans-serif; }
-    </style>
-  </defs>
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
 
-  <rect width="520" height="440" fill="#FAF9F5" rx="12"/>
+  <!-- Background -->
+  <rect width="600" height="400" fill="#FAF9F5"/>
 
   <!-- Title -->
-  <text x="24" y="36" font-size="15" font-weight="700" fill="#141413">知识冰山：隐性知识 vs 显性知识</text>
-  <text x="24" y="54" font-size="10" fill="#87867F">The Knowledge Iceberg: Tacit vs Explicit Knowledge</text>
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">知识冰山：显性与隐性知识分布</text>
+  <text x="300" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">野中郁次郎 · 知识创造理论 · 1995</text>
 
-  <!-- Water line label -->
-  <text x="24" y="208" font-size="10" font-weight="600" fill="#87867F">水面</text>
-  <line x1="60" y1="212" x2="496" y2="212" stroke="#87867F" stroke-width="1" stroke-dasharray="6,4"/>
-  <text x="466" y="208" font-size="10" font-weight="600" fill="#87867F">Water Line</text>
+  <!-- Water surface line (clay accent) -->
+  <line x1="40" y1="168" x2="440" y2="168" stroke="#D97757" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <!-- Waterline label (clay) -->
+  <text x="440" y="164" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">水位线</text>
 
-  <!-- Water fill (semi-transparent) -->
-  <rect x="0" y="212" width="520" height="228" fill="#D1CFC5" opacity="0.3"/>
+  <!-- Above water (10%) - iceberg tip -->
+  <path d="M 300 68 L 362 163 L 238 163 Z" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="300" y="118" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">显性知识 10%</text>
+  <text x="300" y="134" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">API 文档 · 架构图 · 代码注释 · 手册</text>
 
-  <!-- Iceberg below water (tacit) -->
-  <polygon points="260,215 400,340 120,340" fill="#87867F" opacity="0.6"/>
-  <text x="260" y="280" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">隐性知识 90%</text>
-  <text x="260" y="298" font-size="10" fill="#E3DACC" text-anchor="middle">Tacit Knowledge</text>
+  <!-- Clay circles at waterline intersections -->
+  <circle cx="238" cy="168" r="5" fill="#D97757"/>
+  <circle cx="362" cy="168" r="5" fill="#D97757"/>
 
-  <!-- Iceberg above water (explicit) -->
-  <polygon points="260,75 340,210 180,210" fill="#D97757" opacity="0.85"/>
-  <text x="260" y="145" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">显性知识 10%</text>
-  <text x="260" y="163" font-size="10" fill="#FAF9F5" text-anchor="middle">Explicit Knowledge</text>
+  <!-- Below water (90%) - main iceberg body -->
+  <path d="M 238 168 L 196 275 L 230 290 L 275 282 L 300 295 L 325 282 L 370 290 L 404 275 L 362 168 Z" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="300" y="240" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D">隐性知识 90%</text>
+  <text x="300" y="258" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">直觉判断 · 情境决策 · 部落知识</text>
 
-  <!-- Explicit knowledge examples (above water) -->
-  <text x="360" y="110" font-size="10" font-weight="600" fill="#141413">显性知识示例</text>
-  <text x="360" y="126" font-size="9.5" fill="#141413">• API 文档</text>
-  <text x="360" y="141" font-size="9.5" fill="#141413">• 架构图</text>
-  <text x="360" y="156" font-size="9.5" fill="#141413">• 代码注释</text>
-  <text x="360" y="171" font-size="9.5" fill="#141413">• 操作手册</text>
+  <!-- Documentation captures visible portion arrow (dashed, pointing down into water) -->
+  <line x1="300" y1="100" x2="300" y2="150" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <polygon points="300,154 296,146 304,146" fill="#D1CFC5"/>
+  <text x="318" y="118" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">文档</text>
+  <text x="318" y="130" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">只能捕获</text>
+  <text x="318" y="142" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">可见部分</text>
 
-  <!-- Tacit knowledge examples (below water) -->
-  <text x="360" y="270" font-size="10" font-weight="600" fill="#141413">隐性知识示例</text>
-  <text x="360" y="286" font-size="9.5" fill="#141413">• "感觉不对劲"的直觉</text>
-  <text x="360" y="301" font-size="9.5" fill="#141413">• 架构决策的背景</text>
-  <text x="360" y="316" font-size="9.5" fill="#141413">• 判断供应商虚实</text>
-  <text x="360" y="331" font-size="9.5" fill="#141413">• 识别潜在性能问题</text>
+  <!-- Right side labels -->
+  <text x="468" y="118" font-size="10" font-weight="600" fill="#141413">显性知识</text>
+  <text x="468" y="132" font-size="9" fill="#87867F">可文档化</text>
+  <text x="468" y="145" font-size="9" fill="#87867F">可编码</text>
+  <text x="468" y="158" font-size="9" fill="#87867F">可传递</text>
 
-  <!-- Left side labels -->
-  <text x="80" y="145" font-size="10" font-weight="600" fill="#D97757" text-anchor="middle">可见</text>
-  <text x="80" y="295" font-size="10" font-weight="600" fill="#87867F" text-anchor="middle">不可见</text>
+  <text x="468" y="215" font-size="10" font-weight="600" fill="#141413">隐性知识</text>
+  <text x="468" y="229" font-size="9" fill="#87867F">经验内化</text>
+  <text x="468" y="242" font-size="9" fill="#87867F">情境依赖</text>
+  <text x="468" y="255" font-size="9" fill="#87867F">难以言传</text>
 
-  <!-- Key insight box -->
-  <rect x="24" y="365" width="472" height="58" fill="#E3DACC" rx="8"/>
-  <text x="40" y="385" font-size="10" font-weight="700" fill="#141413">💡 关键洞察</text>
-  <text x="40" y="401" font-size="9.5" fill="#141413">显性知识告诉你"怎么做"，</text>
-  <text x="40" y="415" font-size="9.5" fill="#141413">隐性知识告诉你"什么时候做、为什么做、什么时候不该做"。</text>
+  <!-- Percentage indicators right side -->
+  <text x="540" y="118" font-size="22" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">10%</text>
+  <text x="540" y="230" font-size="22" font-weight="700" fill="#788C5D" font-family="ui-monospace, monospace">90%</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="318" width="360" height="60" rx="8" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="300" y="340" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">💡 关键洞察</text>
+  <text x="300" y="356" text-anchor="middle" font-size="9.5" fill="#141413">显性知识告诉你"怎么做"，</text>
+  <text x="300" y="370" text-anchor="middle" font-size="9.5" fill="#141413">隐性知识告诉你"什么时候做、为什么做、什么时候不该做"。</text>
 </svg>

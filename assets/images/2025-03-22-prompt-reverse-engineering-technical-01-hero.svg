@@ -1,0 +1,82 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>RPE 四层方法论</title>
+  <desc>Prompt 逆向工程（Reverse Prompt Engineering）的四层技术框架：行为分析层、系统 Prompt 提取层、工具模式推断层、工作流重建层，展示各层难度与迭代反馈关系。</desc>
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">RPE 四层方法论</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Prompt 逆向工程技术框架 · postcodeeng · 2025/03/22</text>
+
+  <!-- Dashed outer enclosure -->
+  <rect x="20" y="56" width="640" height="348" rx="10" fill="none" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Level 4: Workflow Reconstruction (top, clay/red — very hard) -->
+  <rect x="40" y="68" width="560" height="68" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="58" y="90" font-size="11" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">Layer 4</text>
+  <text x="58" y="108" font-size="13" fill="#141413">Workflow Reconstruction</text>
+  <text x="58" y="124" font-size="10.5" fill="#87867F">工作流重建层 · 多轮对话分析、状态机模型、Agent 交互模式</text>
+  <!-- Stars -->
+  <text x="570" y="100" font-size="11" fill="#D97757" font-family="ui-monospace, monospace">★★★★</text>
+  <text x="558" y="115" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">Very Hard</text>
+  <!-- Difficulty pill -->
+  <rect x="568" y="72" width="20" height="18" rx="9" fill="#D97757"/>
+  <text x="578" y="84" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
+
+  <!-- Arrow 4→3 -->
+  <line x1="320" y1="136" x2="320" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="320,154 316,146 324,146" fill="#D1CFC5"/>
+
+  <!-- Level 3: Tool Schema Inference (orange — hard) -->
+  <rect x="40" y="158" width="560" height="68" rx="6" fill="#FFFFFF" stroke="#C9652A" stroke-width="1.5"/>
+  <text x="58" y="180" font-size="11" font-weight="700" fill="#C9652A" font-family="ui-monospace, monospace">Layer 3</text>
+  <text x="58" y="198" font-size="13" fill="#141413">Tool Schema Inference</text>
+  <text x="58" y="214" font-size="10.5" fill="#87867F">工具模式推断层 · 工具触发探测、Tool Schema 重建、调用逻辑推断</text>
+  <!-- Stars -->
+  <text x="570" y="190" font-size="11" fill="#C9652A" font-family="ui-monospace, monospace">★★★</text>
+  <text x="558" y="205" font-size="9" fill="#C9652A" font-family="ui-monospace, monospace">Hard</text>
+  <!-- Difficulty pill -->
+  <rect x="568" y="162" width="20" height="18" rx="9" fill="#C9652A"/>
+  <text x="578" y="174" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
+
+  <!-- Arrow 3→2 -->
+  <line x1="320" y1="226" x2="320" y2="240" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="320,244 316,236 324,236" fill="#D1CFC5"/>
+
+  <!-- Level 2: System Prompt Extraction (blue — medium) -->
+  <rect x="40" y="248" width="560" height="68" rx="6" fill="#FFFFFF" stroke="#5B7FA6" stroke-width="1.5"/>
+  <text x="58" y="270" font-size="11" font-weight="700" fill="#5B7FA6" font-family="ui-monospace, monospace">Layer 2</text>
+  <text x="58" y="288" font-size="13" fill="#141413">System Prompt Extraction</text>
+  <text x="58" y="304" font-size="10.5" fill="#87867F">系统 Prompt 提取层 · 角色推断、任务模板重建、约束条件提取</text>
+  <!-- Stars -->
+  <text x="570" y="280" font-size="11" fill="#5B7FA6" font-family="ui-monospace, monospace">★★</text>
+  <text x="558" y="295" font-size="9" fill="#5B7FA6" font-family="ui-monospace, monospace">Medium</text>
+  <!-- Difficulty pill -->
+  <rect x="568" y="252" width="20" height="18" rx="9" fill="#5B7FA6"/>
+  <text x="578" y="264" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+
+  <!-- Arrow 2→1 -->
+  <line x1="320" y1="316" x2="320" y2="330" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="320,334 316,326 324,326" fill="#D1CFC5"/>
+
+  <!-- Level 1: Behavior Analysis (olive/green — easy, bottom) -->
+  <rect x="40" y="338" width="560" height="68" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="58" y="360" font-size="11" font-weight="700" fill="#788C5D" font-family="ui-monospace, monospace">Layer 1</text>
+  <text x="58" y="378" font-size="13" fill="#141413">Behavior Analysis</text>
+  <text x="58" y="394" font-size="10.5" fill="#87867F">行为分析层 · 采样分析、约束探测、Fuzzing 测试、约束空间映射</text>
+  <!-- Stars -->
+  <text x="570" y="370" font-size="11" fill="#788C5D" font-family="ui-monospace, monospace">★</text>
+  <text x="558" y="385" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">Easy</text>
+  <!-- Difficulty pill -->
+  <rect x="568" y="342" width="20" height="18" rx="9" fill="#788C5D"/>
+  <text x="578" y="354" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+
+  <!-- Return arrow: Layer 4 → Layer 1 (iterative refinement) -->
+  <path d="M 600 102 C 630 102, 630 380, 600 372" stroke="#D97757" stroke-width="2" fill="none" stroke-dasharray="5,3" opacity="0.65"/>
+  <polygon points="600,372 592,362 608,362" fill="#D97757" opacity="0.65"/>
+  <text x="616" y="240" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">迭代</text>
+  <text x="616" y="253" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">改进</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Prompt as a Service 架构</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">后端封装 · API 解耦 · 攻击面收缩</text>
+
+  <!-- Column 1: Client -->
+  <rect x="40" y="64" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="110" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">用户 / 攻击者</text>
+  <!-- Device icon -->
+  <rect x="86" y="100" width="48" height="36" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="94" y="108" width="32" height="20" rx="2" fill="#E3DACC"/>
+  <text x="110" y="122" text-anchor="middle" font-size="8" fill="#87867F">LLM API</text>
+  <text x="110" y="174" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">无法接触后端</text>
+
+  <!-- Arrow: Client → API Gateway (dashed, clay) -->
+  <line x1="180" y1="124" x2="220" y2="124" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="224,124 216,120 216,128" fill="#D97757"/>
+  <text x="200" y="116" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">LLM API 调用</text>
+  <text x="200" y="130" text-anchor="middle" font-size="8" fill="#87867F">（Prompt 不可见）</text>
+
+  <!-- Column 2: API Gateway (center) -->
+  <rect x="224" y="64" width="152" height="120" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="300" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">API Gateway</text>
+  <!-- Server icon -->
+  <rect x="272" y="100" width="56" height="40" rx="4" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="272" y1="110" x2="328" y2="110" stroke="#D97757" stroke-width="1"/>
+  <line x1="272" y1="118" x2="328" y2="118" stroke="#D97757" stroke-width="1"/>
+  <line x1="272" y1="126" x2="328" y2="126" stroke="#D97757" stroke-width="1"/>
+  <text x="300" y="156" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">/v1/assistant</text>
+  <text x="300" y="174" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">动态组装 Prompt</text>
+
+  <!-- Arrow: API Gateway → Prompt Service (solid, olive) -->
+  <line x1="376" y1="124" x2="416" y2="124" stroke="#788C5D" stroke-width="2"/>
+  <polygon points="420,124 412,120 412,128" fill="#788C5D"/>
+  <text x="398" y="116" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">组装 + 调用</text>
+
+  <!-- Column 3: Prompt Service (right) -->
+  <rect x="420" y="64" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="490" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">Prompt Service</text>
+  <!-- Backend icon with lock -->
+  <rect x="452" y="100" width="56" height="40" rx="4" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
+  <line x1="452" y1="110" x2="508" y2="110" stroke="#788C5D" stroke-width="1"/>
+  <line x1="452" y1="118" x2="508" y2="118" stroke="#788C5D" stroke-width="1"/>
+  <line x1="452" y1="126" x2="508" y2="126" stroke="#788C5D" stroke-width="1"/>
+  <!-- Lock icon -->
+  <rect x="474" y="134" width="12" height="10" rx="2" fill="#788C5D"/>
+  <path d="M477 134 L477 131 C477 128, 483 128, 483 131 L483 134" stroke="#788C5D" stroke-width="1.5" fill="none"/>
+  <text x="490" y="174" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">后端 · 加密存储</text>
+
+  <!-- Return arrow below -->
+  <path d="M 490 184 L 300 184 L 300 200" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
+  <polygon points="300,204 296,196 304,196" fill="#D1CFC5"/>
+  <text x="395" y="196" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">加密 / 代理响应</text>
+
+  <!-- Note card at bottom right -->
+  <rect x="420" y="218" width="140" height="52" rx="6" fill="#E3DACC"/>
+  <text x="430" y="236" font-size="9" font-weight="600" fill="#141413">攻击者只能套取 API 响应</text>
+  <text x="430" y="252" font-size="9" fill="#87867F">无法接触后端 Prompt 存储</text>
+  <text x="430" y="264" font-size="9" fill="#87867F">Prompt 逻辑完全不暴露</text>
+</svg>

@@ -1,0 +1,57 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>三级Prompt架构</title>
+  <desc>企业级Prompt管理的三级架构：Enterprise（企业级）、Department（部门级）、Project（项目级）</desc>
+
+  <!-- Background -->
+  <rect width="680" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">三级Prompt架构</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Enterprise · Department · Project</text>
+
+  <!-- Level 1: Enterprise (clay accent border) -->
+  <rect x="40" y="62" width="600" height="68" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="40" y="62" width="600" height="68" rx="8" fill="none" stroke="#D97757" stroke-width="0" stroke-dasharray="0"/>
+
+  <!-- Level badge -->
+  <rect x="56" y="76" width="22" height="18" rx="4" fill="#D97757"/>
+  <text x="67" y="89" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
+
+  <!-- Level 1 content -->
+  <text x="88" y="82" font-size="13" font-weight="600" fill="#141413">企业级（Enterprise）</text>
+  <rect x="88" y="88" width="60" height="16" rx="8" fill="#788C5D"/>
+  <text x="118" y="100" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">CoE 管理</text>
+  <rect x="156" y="88" width="44" height="16" rx="8" fill="#E3DACC"/>
+  <text x="178" y="100" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">全员可读</text>
+  <text x="56" y="118" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">适用范围：全公司 · 内容：通用Prompt、安全规范、最佳实践</text>
+
+  <!-- Level 2: Department -->
+  <rect x="40" y="140" width="600" height="68" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Level badge -->
+  <rect x="56" y="154" width="22" height="18" rx="4" fill="#788C5D"/>
+  <text x="67" y="167" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
+
+  <!-- Level 2 content -->
+  <text x="88" y="160" font-size="13" font-weight="600" fill="#141413">部门级（Department）</text>
+  <rect x="88" y="166" width="68" height="16" rx="8" fill="#788C5D"/>
+  <text x="122" y="178" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">Tech Lead 管理</text>
+  <rect x="164" y="166" width="100" height="16" rx="8" fill="#E3DACC"/>
+  <text x="214" y="178" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">部门内读写·其他可读</text>
+  <text x="56" y="196" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">适用范围：特定部门（后端/前端/数据）· 内容：领域专用Prompt、团队规范</text>
+
+  <!-- Level 3: Project -->
+  <rect x="40" y="218" width="600" height="68" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Level badge -->
+  <rect x="56" y="232" width="22" height="18" rx="4" fill="#D1CFC5"/>
+  <text x="67" y="245" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">L3</text>
+
+  <!-- Level 3 content -->
+  <text x="88" y="238" font-size="13" font-weight="600" fill="#141413">项目级（Project）</text>
+  <rect x="88" y="244" width="68" height="16" rx="8" fill="#D1CFC5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="122" y="256" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">项目团队管理</text>
+  <rect x="164" y="244" width="68" height="16" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="198" y="256" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">项目团队内读写</text>
+  <text x="56" y="274" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">适用范围：特定项目 · 内容：项目专用Prompt、临时Prompt</text>
+</svg>

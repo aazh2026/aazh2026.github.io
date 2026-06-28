@@ -1,0 +1,105 @@
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="760" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="380" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">安全范式的三次演进</text>
+  <text x="380" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">威胁进化 → 范式崩溃 → 重构突破</text>
+
+  <!-- Three era cards -->
+  <!-- Card 1: Castle Model -->
+  <g transform="translate(80, 72)">
+    <rect x="0" y="0" width="190" height="130" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+    <!-- Era badge -->
+    <rect x="12" y="12" width="60" height="20" rx="10" fill="#D1CFC5"/>
+    <text x="42" y="26" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">1980s-2000s</text>
+    <!-- Title -->
+    <text x="95" y="56" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">城堡模型</text>
+    <!-- Core assumption -->
+    <text x="12" y="78" font-size="10" fill="#87867F">核心假设</text>
+    <text x="12" y="92" font-size="10" fill="#141413">边界防御有效</text>
+    <text x="12" y="106" font-size="10" fill="#141413">内部 = 可信</text>
+    <!-- Failure mode -->
+    <text x="12" y="122" font-size="10" fill="#D97757">失效触发</text>
+    <text x="75" y="122" font-size="10" fill="#D97757">蠕虫病毒</text>
+  </g>
+
+  <!-- Arrow 1→2 -->
+  <g transform="translate(270, 137)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#D97757" stroke-width="2"/>
+    <polygon points="50,-5 60,0 50,5" fill="#D97757"/>
+    <text x="30" y="-8" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">蠕虫</text>
+  </g>
+
+  <!-- Card 2: Zero Trust -->
+  <g transform="translate(355, 72)">
+    <rect x="0" y="0" width="190" height="130" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+    <!-- Era badge -->
+    <rect x="12" y="12" width="60" height="20" rx="10" fill="#D97757"/>
+    <text x="42" y="26" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">2010s-2020s</text>
+    <!-- Title -->
+    <text x="95" y="56" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">零信任模型</text>
+    <!-- Core assumption -->
+    <text x="12" y="78" font-size="10" fill="#87867F">核心假设</text>
+    <text x="12" y="92" font-size="10" fill="#141413">永不信任</text>
+    <text x="12" y="106" font-size="10" fill="#141413">始终验证</text>
+    <!-- Failure mode -->
+    <text x="12" y="122" font-size="10" fill="#D97757">失效触发</text>
+    <text x="75" y="122" font-size="10" fill="#D97757">移动/云</text>
+  </g>
+
+  <!-- Arrow 2→3 -->
+  <g transform="translate(545, 137)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#D97757" stroke-width="2"/>
+    <polygon points="50,-5 60,0 50,5" fill="#D97757"/>
+    <text x="30" y="-8" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">Clinejection</text>
+  </g>
+
+  <!-- Card 3: AI-Native Security -->
+  <g transform="translate(630, 72)">
+    <rect x="0" y="0" width="190" height="130" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
+    <!-- Era badge -->
+    <rect x="12" y="12" width="50" height="20" rx="10" fill="#788C5D"/>
+    <text x="37" y="26" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">Now</text>
+    <!-- Title -->
+    <text x="95" y="56" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">AI-Native安全</text>
+    <!-- Core assumption -->
+    <text x="12" y="78" font-size="10" fill="#87867F">核心假设</text>
+    <text x="12" y="92" font-size="10" fill="#141413">意图验证</text>
+    <text x="12" y="106" font-size="10" fill="#141413">持续动态</text>
+    <!-- Failure mode -->
+    <text x="12" y="122" font-size="10" fill="#788C5D">防御核心</text>
+    <text x="75" y="122" font-size="10" fill="#788C5D">认知机制</text>
+  </g>
+
+  <!-- Bottom row: Core shift labels -->
+  <g transform="translate(0, 230)">
+    <text x="175" y="0" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">边界防御</text>
+    <rect x="100" y="8" width="150" height="24" rx="12" fill="#D1CFC5"/>
+
+    <text x="450" y="0" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">身份验证</text>
+    <rect x="375" y="8" width="150" height="24" rx="12" fill="#E3DACC"/>
+
+    <text x="725" y="0" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">意图验证</text>
+    <rect x="650" y="8" width="150" height="24" rx="12" fill="#E8EDE3" stroke="#788C5D" stroke-width="1"/>
+  </g>
+
+  <!-- Arrows between bottom labels -->
+  <g transform="translate(265, 244)">
+    <line x1="0" y1="0" x2="95" y2="0" stroke="#D97757" stroke-width="1.5"/>
+    <polygon points="95,-4 105,0 95,4" fill="#D97757"/>
+  </g>
+  <g transform="translate(540, 244)">
+    <line x1="0" y1="0" x2="95" y2="0" stroke="#D97757" stroke-width="1.5"/>
+    <polygon points="95,-4 105,0 95,4" fill="#D97757"/>
+  </g>
+
+  <!-- Key insight box -->
+  <g transform="translate(40, 285)">
+    <rect x="0" y="0" width="680" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+    <text x="20" y="18" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">范式转移规律</text>
+    <text x="20" y="34" font-size="10" fill="#141413">威胁进化 → 旧范式崩溃 → 新范式崛起。每一次转移都因为旧假设在新技术环境下失效。</text>
+  </g>
+</svg>

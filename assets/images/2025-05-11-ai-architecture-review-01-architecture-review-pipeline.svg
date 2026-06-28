@@ -1,0 +1,85 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>AI架构评审流程</title>
+  <desc>AI辅助架构评审的完整流程：AI方案生成 → 自动检查 → 人工审查 → 架构决策</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI辅助架构评审流程</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">人机协作 · 双层审查</text>
+
+  <!-- Stage 1: AI方案生成 -->
+  <rect x="30" y="76" width="130" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="30" y="76" width="130" height="26" rx="8" fill="#E3DACC" stroke="none"/>
+  <rect x="30" y="94" width="130" height="8" fill="#E3DACC" stroke="none"/>
+  <text x="95" y="93" text-anchor="middle" font-size="10.5" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">AI方案生成</text>
+  <text x="95" y="118" text-anchor="middle" font-size="10" fill="#87867F">需求分析</text>
+  <text x="95" y="133" text-anchor="middle" font-size="10" fill="#87867F">多方案对比</text>
+  <text x="95" y="148" text-anchor="middle" font-size="10" fill="#87867F">Trade-off 分析</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="160" y1="121" x2="185" y2="121" stroke="#D97757" stroke-width="1.8"/>
+  <polygon points="185,117 177,121 177,125" fill="#D97757"/>
+
+  <!-- Stage 2: 自动检查 -->
+  <rect x="190" y="60" width="180" height="122" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="190" y="60" width="180" height="26" rx="8" fill="#D97757" stroke="none"/>
+  <rect x="190" y="78" width="180" height="8" fill="#D97757" stroke="none"/>
+  <text x="280" y="77" text-anchor="middle" font-size="10.5" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">自动检查（AI预审）</text>
+  <text x="208" y="102" font-size="10" fill="#141413">· 合规性检查</text>
+  <text x="208" y="117" font-size="10" fill="#141413">· 安全扫描</text>
+  <text x="208" y="132" font-size="10" fill="#141413">· 性能预测</text>
+  <text x="208" y="147" font-size="10" fill="#141413">· 成本估算</text>
+  <text x="208" y="162" font-size="10" fill="#141413">· AI特性评估</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="370" y1="121" x2="395" y2="121" stroke="#D97757" stroke-width="1.8"/>
+  <polygon points="395,117 387,121 387,125" fill="#D97757"/>
+
+  <!-- Stage 3: 人工审查 -->
+  <rect x="400" y="76" width="130" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="400" y="76" width="130" height="26" rx="8" fill="#E3DACC" stroke="none"/>
+  <rect x="400" y="94" width="130" height="8" fill="#E3DACC" stroke="none"/>
+  <text x="465" y="93" text-anchor="middle" font-size="10.5" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">人工审查</text>
+  <text x="465" y="118" text-anchor="middle" font-size="10" fill="#87867F">战略对齐</text>
+  <text x="465" y="133" text-anchor="middle" font-size="10" fill="#87867F">组织适应性</text>
+  <text x="465" y="148" text-anchor="middle" font-size="10" fill="#87867F">创新判断</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="530" y1="121" x2="555" y2="121" stroke="#D97757" stroke-width="1.8"/>
+  <polygon points="555,117 547,121 547,125" fill="#D97757"/>
+
+  <!-- Stage 4: 架构决策 -->
+  <rect x="560" y="76" width="110" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="560" y="76" width="110" height="26" rx="8" fill="#D97757" stroke="none"/>
+  <rect x="560" y="94" width="110" height="8" fill="#D97757" stroke="none"/>
+  <text x="615" y="93" text-anchor="middle" font-size="10.5" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">架构决策</text>
+  <text x="615" y="118" text-anchor="middle" font-size="10" fill="#141413">最终方案</text>
+  <text x="615" y="133" text-anchor="middle" font-size="10" fill="#141413">决策记录</text>
+  <text x="615" y="148" text-anchor="middle" font-size="10" fill="#87867F">责任确认</text>
+
+  <!-- Human-AI collaboration note -->
+  <rect x="30" y="200" width="620" height="36" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="340" y="222" text-anchor="middle" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">人机协作：AI处理可量化检查 · 人类专注判断力与创造力</text>
+
+  <!-- Bottom legend -->
+  <rect x="30" y="250" width="14" height="14" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="50" y="262" font-size="10" fill="#87867F">人工主导</text>
+  <rect x="130" y="250" width="14" height="14" rx="3" fill="#D97757"/>
+  <text x="150" y="262" font-size="10" fill="#87867F">AI自动处理</text>
+  <rect x="230" y="250" width="14" height="14" rx="3" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="250" y="262" font-size="10" fill="#87867F">关键决策节点</text>
+
+  <!-- Pipeline number labels -->
+  <circle cx="95" cy="175" r="10" fill="#D97757"/>
+  <text x="95" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
+  <circle cx="280" cy="175" r="10" fill="#D97757"/>
+  <text x="280" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
+  <circle cx="465" cy="175" r="10" fill="#D97757"/>
+  <text x="465" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
+  <circle cx="615" cy="175" r="10" fill="#D97757"/>
+  <text x="615" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
+</svg>

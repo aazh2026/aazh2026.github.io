@@ -1,4 +1,6 @@
 <svg viewBox="0 0 820 520" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <title>ServiceNow Autonomous Workforce AI控制塔三层架构</title>
+  <desc>ServiceNow Autonomous Workforce的三层架构图：顶部治理层（Governance治理、Authority权限、Auditability审计），中间协调层（工作流编排、上下文传递、异常处理），底部执行层（IT服务Agent、HR服务Agent、客户服务Agent、财务Agent等预构建专业Agent）。核心定位为"可控的自主"。</desc>
   <defs>
     <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 Z" fill="#D97757"/>

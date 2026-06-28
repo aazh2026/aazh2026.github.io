@@ -1,0 +1,105 @@
+<svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>降级策略矩阵</title>
+  <desc>四列场景（负载突增/依赖失效/数据不一致/资源枯竭）对应生物学类比、技术实现和恢复策略</desc>
+
+  <rect width="680" height="240" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="22" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">降级策略矩阵</text>
+  <text x="340" y="38" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">场景 × 维度 映射表</text>
+
+  <!-- Header row -->
+  <rect x="30" y="46" width="100" height="32" rx="4" fill="#D97757"/>
+  <text x="80" y="66" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">场景</text>
+
+  <rect x="132" y="46" width="128" height="32" rx="4" fill="#D97757"/>
+  <text x="196" y="66" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">生物学类比</text>
+
+  <rect x="262" y="46" width="158" height="32" rx="4" fill="#D97757"/>
+  <text x="341" y="66" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">技术实现</text>
+
+  <rect x="422" y="46" width="158" height="32" rx="4" fill="#D97757"/>
+  <text x="501" y="66" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">恢复策略</text>
+
+  <rect x="582" y="46" width="68" height="32" rx="4" fill="#D97757"/>
+  <text x="616" y="66" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">状态</text>
+
+  <!-- Row 1: 负载突增 (ivory bg) -->
+  <rect x="30" y="80" width="100" height="44" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="96" text-anchor="middle" font-size="10" fill="#141413" font-weight="500">负载突增</text>
+  <text x="80" y="112" text-anchor="middle" font-size="9" fill="#87867F">Load Spike</text>
+
+  <rect x="132" y="80" width="128" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="196" y="97" text-anchor="middle" font-size="10" fill="#788C5D">代谢抑制</text>
+  <text x="196" y="113" text-anchor="middle" font-size="9" fill="#87867F">metabolic slowdown</text>
+
+  <rect x="262" y="80" width="158" height="44" rx="0" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="341" y="97" text-anchor="middle" font-size="10" fill="#141413">限流 · 队列 · 异步化</text>
+  <text x="341" y="113" text-anchor="middle" font-size="9" fill="#87867F">rate limit / queue / async</text>
+
+  <rect x="422" y="80" width="158" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="501" y="97" text-anchor="middle" font-size="10" fill="#141413">负载降低后</text>
+  <text x="501" y="113" text-anchor="middle" font-size="9" fill="#788C5D">自动恢复</text>
+
+  <rect x="582" y="80" width="68" height="44" rx="4" fill="#788C5D" opacity="0.2"/>
+  <text x="616" y="97" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">可逆</text>
+  <text x="616" y="113" text-anchor="middle" font-size="9" fill="#788C5D">reversible</text>
+
+  <!-- Row 2: 依赖失效 (white bg) -->
+  <rect x="30" y="126" width="100" height="44" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="142" text-anchor="middle" font-size="10" fill="#141413" font-weight="500">依赖失效</text>
+  <text x="80" y="158" text-anchor="middle" font-size="9" fill="#87867F">Dep Failure</text>
+
+  <rect x="132" y="126" width="128" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="196" y="143" text-anchor="middle" font-size="10" fill="#D97757">共生断裂</text>
+  <text x="196" y="159" text-anchor="middle" font-size="9" fill="#87867F">symbiosis break</text>
+
+  <rect x="262" y="126" width="158" height="44" rx="0" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="341" y="143" text-anchor="middle" font-size="10" fill="#141413">熔断 · 降级 · Mock</text>
+  <text x="341" y="159" text-anchor="middle" font-size="9" fill="#87867F">circuit break / degrade</text>
+
+  <rect x="422" y="126" width="158" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="501" y="143" text-anchor="middle" font-size="10" fill="#141413">依赖恢复后</text>
+  <text x="501" y="159" text-anchor="middle" font-size="9" fill="#788C5D">自动重连</text>
+
+  <rect x="582" y="126" width="68" height="44" rx="4" fill="#D97757" opacity="0.2"/>
+  <text x="616" y="143" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">可逆</text>
+  <text x="616" y="159" text-anchor="middle" font-size="9" fill="#D97757">reversible</text>
+
+  <!-- Row 3: 数据不一致 (ivory bg) -->
+  <rect x="30" y="172" width="100" height="44" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="188" text-anchor="middle" font-size="10" fill="#141413" font-weight="500">数据不一致</text>
+  <text x="80" y="204" text-anchor="middle" font-size="9" fill="#87867F">Data Inconsist.</text>
+
+  <rect x="132" y="172" width="128" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="196" y="189" text-anchor="middle" font-size="10" fill="#788C5D">基因突变</text>
+  <text x="196" y="205" text-anchor="middle" font-size="9" fill="#87867F">genetic mutation</text>
+
+  <rect x="262" y="172" width="158" height="44" rx="0" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="341" y="189" text-anchor="middle" font-size="10" fill="#141413">最终一致性 · 冲突解决</text>
+  <text x="341" y="205" text-anchor="middle" font-size="9" fill="#87867F">eventual consistency</text>
+
+  <rect x="422" y="172" width="158" height="44" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="501" y="189" text-anchor="middle" font-size="10" fill="#141413">数据同步后</text>
+  <text x="501" y="205" text-anchor="middle" font-size="9" fill="#788C5D">自动修复</text>
+
+  <rect x="582" y="172" width="68" height="44" rx="4" fill="#D97757" opacity="0.2"/>
+  <text x="616" y="189" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">可逆</text>
+  <text x="616" y="205" text-anchor="middle" font-size="9" fill="#D97757">reversible</text>
+
+  <!-- Row 4: 资源枯竭 (white bg) -->
+  <rect x="30" y="218" width="100" height="20" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="80" y="231" text-anchor="middle" font-size="10" fill="#141413" font-weight="500">资源枯竭</text>
+
+  <rect x="132" y="218" width="128" height="20" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="196" y="231" text-anchor="middle" font-size="10" fill="#87867F">冬眠</text>
+
+  <rect x="262" y="218" width="158" height="20" rx="0" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="341" y="231" text-anchor="middle" font-size="10" fill="#141413">功能关闭 · 资源回收</text>
+
+  <rect x="422" y="218" width="158" height="20" rx="0" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="501" y="231" text-anchor="middle" font-size="10" fill="#788C5D">资源充足后自动重启</text>
+
+  <rect x="582" y="218" width="68" height="20" rx="4" fill="#87867F" opacity="0.2"/>
+  <text x="616" y="231" text-anchor="middle" font-size="10" fill="#87867F" font-weight="600">待恢复</text>
+</svg>

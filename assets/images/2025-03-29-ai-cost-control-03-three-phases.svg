@@ -1,0 +1,92 @@
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 成本失控的三阶段</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">蜜月期 → 临界点 → 失控期</text>
+
+  <!-- Cost curve: bottom-up faint background showing the hockey stick -->
+  <path d="M 60 290 Q 160 285, 200 270 T 300 200 T 380 100 T 440 40"
+        stroke="#D1CFC5" stroke-width="2" fill="none" stroke-dasharray="4,4"/>
+  <text x="450" y="42" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">成本曲线</text>
+
+  <!-- Phase 1: 蜜月期 (stable) -->
+  <rect x="40" y="68" width="180" height="190" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="40" y="68" width="180" height="28" rx="10" fill="#788C5D"/>
+  <rect x="40" y="88" width="180" height="8" fill="#788C5D"/>
+  <text x="130" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">阶段一</text>
+  <text x="130" y="118" text-anchor="middle" font-size="14" fill="#141413">蜜月期</text>
+  <text x="130" y="136" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">Honeymoon</text>
+
+  <!-- Phase 1 characteristics -->
+  <text x="56" y="160" font-size="10" fill="#141413">使用量稳定增长</text>
+  <text x="56" y="176" font-size="10" fill="#141413">成本与使用量成正比</text>
+  <text x="56" y="192" font-size="10" fill="#141413">ROI 符合预期</text>
+
+  <!-- Phase 1 indicator -->
+  <circle cx="130" cy="218" r="12" fill="#788C5D" opacity="0.2"/>
+  <text x="130" y="222" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">可控</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="220" y1="163" x2="248" y2="163" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="252,163 244,159 244,167" fill="#D1CFC5"/>
+  <text x="236" y="156" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">临界点</text>
+
+  <!-- Phase 2: 临界点 (warning) -->
+  <rect x="256" y="68" width="180" height="190" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="256" y="68" width="180" height="28" rx="10" fill="#D97757" opacity="0.7"/>
+  <rect x="256" y="88" width="180" height="8" fill="#D97757" opacity="0.7"/>
+  <text x="346" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">阶段二</text>
+  <text x="346" y="118" text-anchor="middle" font-size="14" fill="#141413">临界点</text>
+  <text x="346" y="136" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">Tipping Point</text>
+
+  <!-- Phase 2 characteristics -->
+  <text x="272" y="160" font-size="10" fill="#141413">成本增速 > 用户增速</text>
+  <text x="272" y="176" font-size="10" fill="#141413">单位用户成本上升</text>
+  <text x="272" y="192" font-size="10" fill="#141413">"账单怎么了？"</text>
+
+  <!-- Phase 2 trigger labels -->
+  <text x="272" y="208" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">触发: 功能扩展/用户行为变化/模型升级</text>
+
+  <!-- Phase 2 indicator -->
+  <circle cx="346" cy="218" r="12" fill="#D97757" opacity="0.3"/>
+  <text x="346" y="222" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">预警</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="436" y1="163" x2="464" y2="163" stroke="#D97757" stroke-width="1.5"/>
+  <polygon points="468,163 460,159 460,167" fill="#D97757"/>
+  <text x="452" y="156" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">失控</text>
+
+  <!-- Phase 3: 失控期 (danger) -->
+  <rect x="472" y="68" width="180" height="190" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="472" y="68" width="180" height="28" rx="10" fill="#D97757"/>
+  <rect x="472" y="88" width="180" height="8" fill="#D97757"/>
+  <text x="562" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">阶段三</text>
+  <text x="562" y="118" text-anchor="middle" font-size="14" fill="#141413">失控期</text>
+  <text x="562" y="136" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">Out of Control</text>
+
+  <!-- Phase 3 characteristics -->
+  <text x="488" y="160" font-size="10" fill="#141413">成本曲线近乎垂直</text>
+  <text x="488" y="176" font-size="10" fill="#141413">紧急优化效果有限</text>
+  <text x="488" y="192" font-size="10" fill="#141413">质疑 AI 策略可行性</text>
+
+  <!-- Phase 3 root cause -->
+  <text x="488" y="208" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">根因: 架构已深度依赖 AI</text>
+  <text x="488" y="222" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">重构成本极高</text>
+
+  <!-- Phase 3 indicator -->
+  <circle cx="562" cy="238" r="12" fill="#D97757"/>
+  <text x="562" y="242" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">危险</text>
+
+  <!-- Timeline base -->
+  <line x1="40" y1="300" x2="640" y2="300" stroke="#D1CFC5" stroke-width="1.5"/>
+  <circle cx="130" cy="300" r="4" fill="#788C5D"/>
+  <circle cx="346" cy="300" r="4" fill="#D97757" opacity="0.7"/>
+  <circle cx="562" cy="300" r="4" fill="#D97757"/>
+  <text x="130" y="316" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">月 1-6</text>
+  <text x="346" y="316" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">月 7-9</text>
+  <text x="562" y="316" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">月 10+</text>
+</svg>

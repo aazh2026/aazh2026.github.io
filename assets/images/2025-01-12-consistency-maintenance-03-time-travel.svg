@@ -1,0 +1,81 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <title>时间旅行问题的四步工作流</title>
+  <desc>处理"我上周说的那个方案，现在想改一下"的四步流程：定位、找到、理解、更新</desc>
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">时间旅行问题：跨会话上下文定位</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">用户："我上周说的那个方案，现在想改一下"</text>
+
+  <!-- Step 1 -->
+  <rect x="60" y="80" width="140" height="80" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="60" y="80" width="6" height="80" rx="3" fill="#D97757"/>
+  <text x="80" y="102" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 1</text>
+  <text x="80" y="120" font-size="11.5" fill="#141413">定位历史</text>
+  <text x="80" y="136" font-size="11.5" fill="#141413">上下文</text>
+  <text x="80" y="152" font-size="10" fill="#87867F">时间戳 + 会话ID</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="200" y1="120" x2="224" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="228,120 220,116 220,124" fill="#D1CFC5"/>
+
+  <!-- Step 2 -->
+  <rect x="234" y="80" width="140" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="234" y="80" width="6" height="80" rx="3" fill="#D1CFC5"/>
+  <text x="254" y="102" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 2</text>
+  <text x="254" y="120" font-size="11.5" fill="#141413">找到目标</text>
+  <text x="254" y="136" font-size="11.5" fill="#141413">方案</text>
+  <text x="254" y="152" font-size="10" fill="#87867F">语义检索</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="374" y1="120" x2="398" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="402,120 394,116 394,124" fill="#D1CFC5"/>
+
+  <!-- Step 3 -->
+  <rect x="408" y="80" width="140" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="408" y="80" width="6" height="80" rx="3" fill="#D1CFC5"/>
+  <text x="428" y="102" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 3</text>
+  <text x="428" y="120" font-size="11.5" fill="#141413">理解变更</text>
+  <text x="428" y="136" font-size="11.5" fill="#141413">意图</text>
+  <text x="428" y="152" font-size="10" fill="#87867F">意图分类</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="548" y1="120" x2="572" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="576,120 568,116 568,124" fill="#D1CFC5"/>
+
+  <!-- Step 4 -->
+  <rect x="582" y="80" width="90" height="80" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <rect x="582" y="80" width="6" height="80" rx="3" fill="#788C5D"/>
+  <text x="602" y="102" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Step 4</text>
+  <text x="602" y="120" font-size="10.5" fill="#141413">更新记忆</text>
+  <text x="602" y="136" font-size="10.5" fill="#141413">保留审计</text>
+  <text x="602" y="152" font-size="9.5" fill="#87867F">不可变性</text>
+
+  <!-- Challenge card below steps -->
+  <rect x="60" y="196" width="520" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="80" y="220" font-size="11" font-weight="500" fill="#D97757" font-family="ui-monospace, monospace">挑战：</text>
+  <text x="124" y="220" font-size="11" fill="#141413">如何在海量记忆中准确定位历史上下文？</text>
+  <text x="80" y="238" font-size="10.5" fill="#87867F">时间戳稀疏 · 语义漂移 · 跨会话关联断裂</text>
+
+  <!-- Time dimension arrow (dashed, right side) -->
+  <path d="M 620 300 Q 640 280 620 260 Q 600 240 620 220 Q 640 200 620 180"
+        stroke="#D97757" stroke-width="2" fill="none" stroke-dasharray="5,4" opacity="0.7"/>
+  <polygon points="620,180 614,192 626,192" fill="#D97757" opacity="0.7"/>
+  <text x="600" y="250" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" transform="rotate(-90, 600, 250)">时间维度</text>
+
+  <!-- Note: retrieval priority -->
+  <rect x="60" y="288" width="520" height="50" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="80" y="310" font-size="10.5" fill="#141413" font-family="ui-monospace, monospace">检索策略：</text>
+  <text x="172" y="310" font-size="10.5" fill="#141413">时间范围限定 → 语义相似度排序 → 意图匹配过滤</text>
+  <text x="80" y="326" font-size="10" fill="#87867F">底层摘要优先加载（细节准确），顶层摘要作为背景知识补充</text>
+
+  <!-- Audit trail note -->
+  <rect x="60" y="360" width="520" height="44" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="80" y="380" font-size="10.5" fill="#788C5D" font-family="ui-monospace, monospace">审计要求：</text>
+  <text x="156" y="380" font-size="10.5" fill="#141413">更新记忆时保留历史版本，不原地覆盖，支持溯源</text>
+  <text x="80" y="396" font-size="10" fill="#87867F">每次变更记录：时间戳、操作类型、变更内容、变更原因</text>
+</svg>
