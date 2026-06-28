@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="olive-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5F7249"/>
+    </linearGradient>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#87867F"/>
+    </marker>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
+      <path d="M0,0 L0,8 L8,4 z" fill="#788C5D"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#bg5)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">Carlini 并行 Agent 协调机制</text>
+  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Left: Infrastructure -->
+  <rect x="40" y="76" width="390" height="340" rx="14" fill="#FAF9F5" filter="url(#shadow5)"/>
+  <text x="60" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#141413">基础设施</text>
+
+  <!-- File tree -->
+  <g transform="translate(60,125)">
+    <text x="0" y="0" font-family="monospace" font-size="13" fill="#788C5D" font-weight="700">shared-bare-repo/</text>
+    <text x="20" y="20" font-family="monospace" font-size="12" fill="#87867F">├── upstream/      # 共享仓库</text>
+    <text x="20" y="38" font-family="monospace" font-size="12" fill="#87867F">│   ├── src/</text>
+    <text x="20" y="56" font-family="monospace" font-size="12" fill="#87867F">│   ├── tests/</text>
+    <text x="20" y="74" font-family="monospace" font-size="12" fill="#87867F">│   └── current_tasks/</text>
+    <text x="40" y="92" font-family="monospace" font-size="11" fill="#D97757">│       ├── parse_if_statement.txt  ← Agent A</text>
+    <text x="40" y="108" font-family="monospace" font-size="11" fill="#D97757">│       ├── codegen_fn_def.txt      ← Agent B</text>
+    <text x="40" y="124" font-family="monospace" font-size="11" fill="#D97757">│       └── opt_reg_alloc.txt       ← Agent C</text>
+
+    <text x="20" y="148" font-family="monospace" font-size="12" fill="#87867F">└── workspace/     # 每个 Agent 本地克隆</text>
+    <text x="40" y="166" font-family="monospace" font-size="12" fill="#87867F">├── agent-1/</text>
+    <text x="40" y="182" font-family="monospace" font-size="12" fill="#87867F">├── agent-2/</text>
+    <text x="40" y="198" font-family="monospace" font-size="12" fill="#87867F">└── agent-N/       (共 16 个)</text>
+  </g>
+
+  <text x="60" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">每个 Agent 运行在独立 Docker 容器中</text>
+
+  <!-- Right: Protocol -->
+  <rect x="450" y="76" width="410" height="340" rx="14" fill="#FAF9F5" filter="url(#shadow5)"/>
+  <text x="470" y="108" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#141413">任务锁协议</text>
+
+  <!-- Protocol steps -->
+  <g transform="translate(470,125)">
+    <!-- Step 1 -->
+    <rect x="0" y="0" width="370" height="60" rx="10" fill="#788C5D" opacity="0.08"/>
+    <circle cx="22" cy="30" r="14" fill="#788C5D"/>
+    <text x="22" y="36" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">1</text>
+    <text x="48" y="22" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">尝试获取任务锁</text>
+    <text x="48" y="42" font-family="monospace" font-size="11" fill="#87867F">echo "Agent-7" &gt; current_tasks/parse_loops.txt</text>
+    <text x="48" y="56" font-family="monospace" font-size="11" fill="#87867F">git add . &amp;&amp; git commit -m "claim: parse_loops"</text>
+
+    <!-- Arrow -->
+    <path d="M22,66 L22,80" stroke="#788C5D" stroke-width="2" marker-end="url(#arr-green)" opacity="0.6"/>
+
+    <!-- Step 2 -->
+    <rect x="0" y="85" width="370" height="60" rx="10" fill="#788C5D" opacity="0.08"/>
+    <circle cx="22" cy="115" r="14" fill="#788C5D"/>
+    <text x="22" y="121" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">2</text>
+    <text x="48" y="107" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">git push → 成功？</text>
+    <text x="48" y="127" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">冲突 → 锁被抢占，选择其他任务</text>
+    <text x="48" y="141" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">成功 → 获得任务，开始工作</text>
+
+    <!-- Arrow -->
+    <path d="M22,151 L22,165" stroke="#788C5D" stroke-width="2" marker-end="url(#arr-green)" opacity="0.6"/>
+
+    <!-- Step 3 -->
+    <rect x="0" y="170" width="370" height="60" rx="10" fill="#788C5D" opacity="0.08"/>
+    <circle cx="22" cy="200" r="14" fill="#788C5D"/>
+    <text x="22" y="206" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">3</text>
+    <text x="48" y="192" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">完成并释放锁</text>
+    <text x="48" y="212" font-family="monospace" font-size="11" fill="#87867F">git pull origin main --rebase</text>
+    <text x="48" y="226" font-family="monospace" font-size="11" fill="#87867F">git push origin main</text>
+
+    <!-- Arrow -->
+    <path d="M22,236 L22,250" stroke="#788C5D" stroke-width="2" marker-end="url(#arr-green)" opacity="0.6"/>
+
+    <!-- Step 4 -->
+    <rect x="0" y="255" width="370" height="60" rx="10" fill="#788C5D" opacity="0.08"/>
+    <circle cx="22" cy="285" r="14" fill="#788C5D"/>
+    <text x="22" y="291" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">4</text>
+    <text x="48" y="277" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">删除锁文件</text>
+    <text x="48" y="297" font-family="monospace" font-size="11" fill="#87867F">rm current_tasks/parse_loops.txt</text>
+    <text x="48" y="311" font-family="monospace" font-size="11" fill="#87867F">git commit -m "complete: parse_loops"</text>
+  </g>
+
+  <!-- Bottom: Key insight -->
+  <rect x="40" y="428"

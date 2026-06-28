@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="bar-acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5F7249"/>
+    </linearGradient>
+    <linearGradient id="bar-ess" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B05540"/>
+    </linearGradient>
+    <linearGradient id="bar-cog" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#87867F"/>
+      <stop offset="100%" stop-color="#6A675F"/>
+    </linearGradient>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="480" fill="url(#bg4)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">AI 能力地图：解决什么，不解决什么</text>
+  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Legend -->
+  <g transform="translate(200,68)">
+    <rect x="0" y="0" width="14" height="14" rx="3" fill="#788C5D"/>
+    <text x="22" y="12" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">AI 能解决（偶然复杂度）</text>
+
+    <rect x="200" y="0" width="14" height="14" rx="3" fill="#D97757"/>
+    <text x="222" y="12" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">AI 无法解决（本质复杂度）</text>
+
+    <rect x="430" y="0" width="14" height="14" rx="3" fill="#87867F"/>
+    <text x="452" y="12" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">AI 引入的新问题</text>
+  </g>
+
+  <!-- Horizontal bar chart -->
+  <!-- Row labels (left) -->
+  <!-- Row 1: 语法生成 -->
+  <text x="40" y="132" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">语法生成</text>
+  <text x="40" y="148" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">Boilerplate, 结构补全</text>
+  <!-- Bar -->
+  <rect x="280" y="120" width="540" height="36" rx="8" fill="#788C5D" opacity="0.85" filter="url(#shadow4)"/>
+  <text x="845" y="144" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">高</text>
+
+  <!-- Row 2: API 记忆 -->
+  <text x="40" y="195" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">API 记忆</text>
+  <text x="40" y="211" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">函数签名、参数提示</text>
+  <rect x="280" y="183" width="450" height="36" rx="8" fill="#788C5D" opacity="0.70" filter="url(#shadow4)"/>
+  <text x="845" y="207" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">中高</text>
+
+  <!-- Row 3: 快速原型 -->
+  <text x="40" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">快速原型</text>
+  <text x="40" y="274" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">试错循环、探索实现路径</text>
+  <rect x="280" y="246" width="380" height="36" rx="8" fill="#788C5D" opacity="0.55" filter="url(#shadow4)"/>
+  <text x="845" y="270" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">中</text>
+
+  <!-- Row 4: 调试辅助 -->
+  <text x="40" y="321" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">调试辅助</text>
+  <text x="40" y="337" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">错误解释、日志分析</text>
+  <rect x="280" y="309" width="300" height="36" rx="8" fill="#788C5D" opacity="0.45" filter="url(#shadow4)"/>
+  <text x="845" y="333" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">中低</text>
+
+  <!-- Row 5: 需求理解 -->
+  <text x="40" y="384" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">需求理解</text>
+  <text x="40" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">用户意图、矛盾识别</text>
+  <rect x="280" y="372" width="60" height="36" rx="8" fill="#D97757" opacity="0.75" filter="url(#shadow4)"/>
+  <text x="355" y="396" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌</text>
+
+  <!-- Row 6: 架构设计 -->
+  <text x="440" y="384" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">架构设计</text>
+  <text x="440" y="400" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">权衡艺术、长期决策</text>
+  <rect x="280" y="372" width="40" height="36" rx="8" fill="#D97757" opacity="0.75" filter="url(#shadow4)" transform="translate(130,0)"/>
+  <text x="880" y="396" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌</text>
+
+  <!-- Row 7: 系统思考 -->
+  <text x="40" y="447" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">系统思考</text>
+  <text x="40" y="463" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">涌现行为、未知风险</text>
+  <rect x="280" y="435" width="50" height="36" rx="8" fill="#D97757" opacity="0.75" filter="url(#shadow4)"/>
+  <text x="345" y="459" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#D97757">❌</text>
+
+  <!-- Row 8: 验证负担 (new) -->
+  <text x="440" y="447" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-weight="500">验证负担</text>
+  <text x="440" y="463" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">判断 AI 输出正确性</text>
+  <rect x="280" y="435" width="50" height="36" rx="8" fill="#87867F" opacity="0.70" filter="url(#shadow4)" transform="translate(130,0)"/>
+  <text x="345" y="459" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#6A675F">⚠</text>
+
+  <!-- Axis labels -->
+  <text x="280" y="418" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">0</text>
+  <text x="415" y="418" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">低</text>
+  <text x="550" y="418" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">中</text>
+  <text x="685" y="418" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">高</text>
+  <text x="820" y="418" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">极高</text>
+
+  <!-- Bottom insight -->
+  <rect x="40" y="438" width="820" height="34" rx="10" fill="#141413" opacity="0.05"/>
+  <text x="450" y="460" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-style="italic">"AI 擅长'如何做'，但不擅长'做什么'和'为什么做'。"</text>
+</svg>

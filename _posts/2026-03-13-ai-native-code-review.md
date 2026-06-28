@@ -211,6 +211,11 @@ PR 提交
 | **可扩展性** | 与团队规模相关 | 与代码量无关 |
 | **知识沉淀** | 难以积累 | 持续学习改进 |
 
+{% figure center %}
+![Agent Jury Code Review Model](/assets/images/2026-03-13-ai-native-code-review-01-agent-jury.png)
+*图 1：Agent 陪审团模型——5 个专业 Agent 并行审查 PR，最终汇总为 Review Report，由人类审查者做最终设计判断。Agent 处理 80% 标准化检查，人类专注 20% 架构与设计决策。*
+{% endfigure %}
+
 ---
 
 ## 实战：设计你的 Agent 陪审团

@@ -120,6 +120,11 @@ Worse is Better 思维：
 
 **Worse is Better 的智慧**：快速获得一个可用的版本，在真实世界中学习，然后迭代。
 
+{% figure center %}
+![Fitness Landscape: Worse is Better vs The Right Thing](/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.png)
+*图 1：Fitness Landscape——Worse is Better 接受局部最优，快速迭代；The Right Thing 追求全局最优，但路径更长、风险更高。*
+{% endfigure %}
+
 ### 复利效应
 
 为什么"更糟"的系统往往最终"更好"？

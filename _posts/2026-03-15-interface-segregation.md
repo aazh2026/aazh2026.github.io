@@ -74,6 +74,11 @@ class ImageGenerationInterface:
 
 **💡 关键洞察：** 接口隔离的本质是**关注点分离**——让调用者只依赖他们真正需要的东西。
 
+{% figure center %}
+![Interface Segregation: Fat vs Thin](/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.png)
+*图 1：Fat Interface（❌）将所有方法打包在一个接口中；Thin Interfaces（✅）将每种能力拆分为独立接口，调用者只依赖其所需。*
+{% endfigure %}
+
 ---
 
 ## 二、AI 时代的接口新形态

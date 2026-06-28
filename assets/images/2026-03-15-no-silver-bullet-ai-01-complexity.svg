@@ -27,7 +27,6 @@
   <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">Brooks 框架：两种复杂度</text>
   <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
 
-  <!-- Three columns -->
   <!-- Col 1: Essential -->
   <rect x="40" y="76" width="265" height="370" rx="14" fill="#FAF9F5" filter="url(#shadow3)"/>
   <rect x="40" y="76" width="265" height="52" rx="14" fill="url(#ess-grad)"/>
@@ -98,4 +97,36 @@
   <rect x="596" y="76" width="265" height="370" rx="14" fill="#FAF9F5" filter="url(#shadow3)"/>
   <rect x="596" y="76" width="265" height="52" rx="14" fill="url(#cog-grad)"/>
   <rect x="596" y="110" width="265" height="18" fill="url(#cog-grad)"/>
-  <text x="728" y="108" text-anchor="middle" font-family="system-ui,-apple-system
+  <text x="728" y="108" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#FAF9F5">认知复杂度</text>
+  <text x="728" y="128" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.85">Cognitive Complexity (AI 引入)</text>
+
+  <text x="616" y="160" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#87867F" letter-spacing="1">AI 新引入的第三种复杂度</text>
+
+  <g transform="translate(616,178)">
+    <circle cx="6" cy="6" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="20" y="11" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">验证负担：判断 AI 输出是否正确</text>
+
+    <circle cx="6" cy="32" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="20" y="37" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">信任校准：权威偏见 + 自动化偏见</text>
+
+    <circle cx="6" cy="58" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="20" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">知识幻觉：看似正确但实际错误</text>
+
+    <circle cx="6" cy="84" r="4" fill="#87867F" opacity="0.7"/>
+    <text x="20" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">技能退化：过度依赖导致能力萎缩</text>
+  </g>
+
+  <line x1="616" y1="285" x2="841" y2="285" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="616" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#87867F" letter-spacing="1">AI 解决能力</text>
+
+  <rect x="616" y="320" width="220" height="32" rx="8" fill="#87867F" opacity="0.12"/>
+  <text x="726" y="341" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#87867F" font-weight="700">⚠️ 自身引入，难以自我解决</text>
+
+  <rect x="616" y="365" width="220" height="32" rx="8" fill="#87867F" opacity="0.06"/>
+  <text x="726" y="386" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">必须靠人类判断力来对抗</text>
+
+  <!-- Bottom quote -->
+  <rect x="40" y="460" width="820" height="34" rx="10" fill="#141413" opacity="0.05"/>
+  <text x="450" y="482" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413" font-style="italic">"AI 让写代码变快了，但让写正确的代码变难了。"</text>
+</svg>

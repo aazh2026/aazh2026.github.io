@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="AIDR Five Enhancement Dimensions">
+  <title>AIDR 五大增强维度</title>
+  <desc>Architecture Decision Records 到 AI-Enhanced Architecture Decision Records 的五个增强维度对比</desc>
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="clayGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#C0634A"/>
+    </linearGradient>
+    <linearGradient id="oliveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5F7350"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="400" y="42" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" text-anchor="middle">AIDR 五大增强维度</text>
+  <text x="400" y="65" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#87867F" text-anchor="middle">从 ADR 静态文档到 AIDR 可执行规范的演进</text>
+
+  <!-- Traditional ADR Column -->
+  <rect x="30" y="90" width="360" height="400" fill="#FFFFFF" rx="12" filter="url(#cardShadow)"/>
+  <rect x="30" y="90" width="360" height="44" fill="#87867F" rx="12"/>
+  <rect x="30" y="118" width="360" height="16" fill="#87867F"/>
+  <text x="210" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle" dy="14">传统 ADR</text>
+
+  <!-- Traditional items -->
+  <g transform="translate(50, 155)">
+    <!-- Structured -->
+    <rect x="0" y="0" width="320" height="60" fill="#F5F4F2" rx="8"/>
+    <circle cx="22" cy="30" r="14" fill="#D1CFC5"/>
+    <text x="22" y="35" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#87867F" text-anchor="middle">1</text>
+    <text x="48" y="22" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">结构化</text>
+    <text x="48" y="40" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">自然语言描述</text>
+
+    <!-- Verifiable -->
+    <rect x="0" y="70" width="320" height="60" fill="#F5F4F2" rx="8"/>
+    <circle cx="22" cy="100" r="14" fill="#D1CFC5"/>
+    <text x="22" y="105" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#87867F" text-anchor="middle">2</text>
+    <text x="48" y="92" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可验证</text>
+    <text x="48" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">人类阅读理解</text>
+
+    <!-- Traceable -->
+    <rect x="0" y="140" width="320" height="60" fill="#F5F4F2" rx="8"/>
+    <circle cx="22" cy="170" r="14" fill="#D1CFC5"/>
+    <text x="22" y="175" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#87867F" text-anchor="middle">3</text>
+    <text x="48" y="162" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可追溯</text>
+    <text x="48" y="180" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">记录决策结果</text>
+
+    <!-- Reusable -->
+    <rect x="0" y="210" width="320" height="60" fill="#F5F4F2" rx="8"/>
+    <circle cx="22" cy="240" r="14" fill="#D1CFC5"/>
+    <text x="22" y="245" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#87867F" text-anchor="middle">4</text>
+    <text x="48" y="232" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可复用</text>
+    <text x="48" y="250" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">每个项目独立</text>
+
+    <!-- Living -->
+    <rect x="0" y="280" width="320" height="60" fill="#F5F4F2" rx="8"/>
+    <circle cx="22" cy="310" r="14" fill="#D1CFC5"/>
+    <text x="22" y="315" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#87867F" text-anchor="middle">5</text>
+    <text x="48" y="302" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">活的</text>
+    <text x="48" y="320" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">写完后很少更新</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(390, 270)">
+    <polygon points="0,0 20,12 0,24" fill="#D97757"/>
+    <text x="10" y="38" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" text-anchor="middle">AI</text>
+    <text x="10" y="48" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" text-anchor="middle">增强</text>
+  </g>
+
+  <!-- AIDR Column -->
+  <rect x="410" y="90" width="360" height="400" fill="#FFFFFF" rx="12" filter="url(#cardShadow)"/>
+  <rect x="410" y="90" width="360" height="44" fill="url(#clayGrad)" rx="12"/>
+  <rect x="410" y="118" width="360" height="16" fill="url(#clayGrad)"/>
+  <text x="590" y="118" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="600" fill="#FFFFFF" text-anchor="middle" dy="14">AIDR · AI-Enhanced ADR</text>
+
+  <!-- AIDR items -->
+  <g transform="translate(430, 155)">
+    <!-- Structured -->
+    <rect x="0" y="0" width="320" height="60" fill="#FDF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="22" cy="30" r="14" fill="url(#clayGrad)"/>
+    <text x="22" y="35" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="48" y="22" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">结构化</text>
+    <text x="48" y="40" font-family="system-ui,sans-serif" font-size="11" fill="#788C5D">结构化数据 + 自然语言，机器可解析</text>
+
+    <!-- Verifiable -->
+    <rect x="0" y="70" width="320" height="60" fill="#FDF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="22" cy="100" r="14" fill="url(#clayGrad)"/>
+    <text x="22" y="105" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="48" y="92" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可验证</text>
+    <text x="48" y="110" font-family="system-ui,sans-serif" font-size="11" fill="#788C5D">自动化验证规则，系统自动检查</text>
+
+    <!-- Traceable -->
+    <rect x="0" y="140" width="320" height="60" fill="#FDF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="22" cy="170" r="14" fill="url(#clayGrad)"/>
+    <text x="22" y="175" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="48" y="162" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可追溯</text>
+    <text x="48" y="180" font-family="system-ui,sans-serif" font-size="11" fill="#788C5D">完整推理链 + 支持证据</text>
+
+    <!-- Reusable -->
+    <rect x="0" y="210" width="320" height="60" fill="#FDF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="22" cy="240" r="14" fill="url(#clayGrad)"/>
+    <text x="22" y="245" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="48" y="232" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">可复用</text>
+    <text x="48" y="250" font-family="system-ui,sans-serif" font-size="11" fill="#788C5D">决策模式库，跨项目复用</text>
+
+    <!-- Living -->
+    <rect x="0" y="280" width="320" height="60" fill="#FDF9F5" rx="8" stroke="#D97757" stroke-width="1.5"/>
+    <circle cx="22" cy="310" r="14" fill="url(#clayGrad)"/>
+    <text x="22" y="315" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+    <text x="48" y="302" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">活的</text>
+    <text x="48" y="320" font-family="system-ui,sans-serif" font-size="11" fill="#788C5D">与代码同步演进，文档永不过时</text>
+  </g>
+</svg>

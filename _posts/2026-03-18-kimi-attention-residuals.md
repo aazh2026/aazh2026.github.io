@@ -129,6 +129,11 @@ output = AttentionResidual([x, layer_1_output, layer_2_output, ..., sublayer(x)]
 | **Key/Value** | 其他 tokens | 前面层输出 |
 | **目的** | 捕获序列依赖 | 选择性聚合层表征 |
 
+{% figure center %}
+![Standard Residual vs Attention Residuals](/assets/images/2026-03-18-kimi-attention-residuals-01-residual-comparison.png)
+*图 1：Standard Residual（❌）使用固定权重（=1.0）的加法残差连接，所有层贡献均等；Attention Residual（✅）通过注意力机制动态决定各层的聚合权重，实现选择性层聚合。*
+{% endfigure %}
+
 ---
 
 ## 技术细节：从 AttnRes 到 Block AttnRes
