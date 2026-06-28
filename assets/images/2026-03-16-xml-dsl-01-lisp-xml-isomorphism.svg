@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FAF9F5"/>
+      <stop offset="100%" style="stop-color:#E3DACC"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" fill="url(#bg4)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#141413">XML 与 S-Expression：结构同构的两种 DSL</text>
+
+  <!-- Left: Lisp -->
+  <rect x="30" y="55" width="360" height="300" rx="12" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  <text x="210" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#788C5D">Lisp S-Expression</text>
+  <text x="210" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">"Code as data, data as code"</text>
+
+  <!-- Lisp code box -->
+  <rect x="50" y="110" width="320" height="100" rx="8" fill="#141413"/>
+  <text x="65" y="133" font-family="monospace" font-size="12" fill="#E3DACC">(workflow "order"</text>
+  <text x="75" y="152" font-family="monospace" font-size="12" fill="#E3DACC">  (step "validate"</text>
+  <text x="85" y="171" font-family="monospace" font-size="12" fill="#E3DACC">    (input "order-data")</text>
+  <text x="85" y="190" font-family="monospace" font-size="12" fill="#E3DACC">    (rule "amount &gt; 0"))</text>
+  <text x="75" y="209" font-family="monospace" font-size="12" fill="#E3DACC">  (step "payment"</text>
+  <text x="65" y="228" font-family="monospace" font-size="12" fill="#E3DACC">    (action "pay")))</text>
+
+  <!-- Key insight left -->
+  <rect x="50" y="245" width="320" height="80" rx="8" fill="#E3DACC"/>
+  <text x="210" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ 语法即 AST（抽象语法树）</text>
+  <text x="210" y="286" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ 极简语法，极致表达能力</text>
+  <text x="210" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ Homoiconicity（同象性）</text>
+  <text x="210" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">代码本身可以被当作数据操作</text>
+
+  <!-- VS in middle -->
+  <text x="400" y="195" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" font-weight="700" fill="#D97757">≅</text>
+  <text x="400" y="215" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">结构同构</text>
+
+  <!-- Right: XML -->
+  <rect x="410" y="55" width="360" height="300" rx="12" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <text x="590" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#D97757">XML</text>
+  <text x="590" y="97" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">"Tag-based hierarchical DSL"</text>
+
+  <!-- XML code box -->
+  <rect x="430" y="110" width="320" height="100" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="445" y="133" font-family="monospace" font-size="11" fill="#141413">&lt;workflow name="order"&gt;</text>
+  <text x="455" y="152" font-family="monospace" font-size="11" fill="#141413">&lt;step id="validate"&gt;</text>
+  <text x="465" y="171" font-family="monospace" font-size="11" fill="#141413">&lt;input&gt;order-data&lt;/input&gt;</text>
+  <text x="465" y="190" font-family="monospace" font-size="11" fill="#141413">&lt;rule&gt;amount &gt; 0&lt;/rule&gt;</text>
+  <text x="455" y="209" font-family="monospace" font-size="11" fill="#141413">&lt;/step&gt;</text>
+  <text x="445" y="228" font-family="monospace" font-size="11" fill="#141413">&lt;/workflow&gt;</text>
+
+  <!-- Key insight right -->
+  <rect x="430" y="245" width="320" height="80" rx="8" fill="#E3DACC"/>
+  <text x="590" y="268" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ 层级结构，语义清晰</text>
+  <text x="590" y="286" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ 属性 vs 元素区分语义</text>
+  <text x="590" y="304" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">✓ Schema 验证 + 命名空间</text>
+  <text x="590" y="322" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">XSD、XPath、XSLT 丰富工具链</text>
+
+  <!-- Bottom quote -->
+  <rect x="30" y="370" width="740" height="40" rx="8" fill="#141413"/>
+  <text x="400" y="397" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#FAF9F5">"Imagine lisp but instead of parens you had xml tags" — Reddit</text>
+</svg>

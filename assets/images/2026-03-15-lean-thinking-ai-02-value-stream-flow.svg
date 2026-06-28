@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="价值流图与流效率">
+  <title>价值流图与流效率</title>
+  <desc>展示从需求到交付的完整价值流，包含各阶段的有效时间和等待时间，以及流效率计算</desc>
+
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <marker id="arrowRight" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bgGrad6)"/>
+
+  <!-- Title -->
+  <text x="400" y="30" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141413" text-anchor="middle">价值流图与流效率</text>
+
+  <!-- Stage 1 -->
+  <rect x="40" y="60" width="120" height="120" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <rect x="40" y="60" width="120" height="28" rx="8" fill="#D97757"/>
+  <rect x="40" y="80" width="120" height="8" fill="#D97757"/>
+  <text x="100" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">需求澄清</text>
+
+  <text x="100" y="108" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#141413" text-anchor="middle">2h</text>
+  <text x="100" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle">/ 48h</text>
+
+  <rect x="60" y="140" width="80" height="14" rx="3" fill="#D97757"/>
+  <text x="100" y="151" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#FAF9F5" text-anchor="middle">效率 4%</text>
+
+  <text x="100" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">等待: 46h</text>
+
+  <!-- Arrow -->
+  <line x1="160" y1="120" x2="185" y2="120" stroke="#D97757" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- Stage 2 -->
+  <rect x="185" y="60" width="120" height="120" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  <rect x="185" y="60" width="120" height="28" rx="8" fill="#788C5D"/>
+  <rect x="185" y="80" width="120" height="8" fill="#788C5D"/>
+  <text x="245" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">开发</text>
+
+  <text x="245" y="108" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#141413" text-anchor="middle">4h</text>
+  <text x="245" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle">/ 24h</text>
+
+  <rect x="205" y="140" width="80" height="14" rx="3" fill="#788C5D"/>
+  <text x="245" y="151" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#FAF9F5" text-anchor="middle">效率 17%</text>
+
+  <text x="245" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">等待: 20h</text>
+
+  <!-- Arrow -->
+  <line x1="305" y1="120" x2="330" y2="120" stroke="#788C5D" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- Stage 3 -->
+  <rect x="330" y="60" width="120" height="120" rx="8" fill="#FAF9F5" stroke="#5B8BD4" stroke-width="2"/>
+  <rect x="330" y="60" width="120" height="28" rx="8" fill="#5B8BD4"/>
+  <rect x="330" y="80" width="120" height="8" fill="#5B8BD4"/>
+  <text x="390" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">Code Review</text>
+
+  <text x="390" y="108" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#141413" text-anchor="middle">1h</text>
+  <text x="390" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle">/ 8h</text>
+
+  <rect x="350" y="140" width="80" height="14" rx="3" fill="#5B8BD4"/>
+  <text x="390" y="151" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#FAF9F5" text-anchor="middle">效率 13%</text>
+
+  <text x="390" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">等待: 7h</text>
+
+  <!-- Arrow -->
+  <line x1="450" y1="120" x2="475" y2="120" stroke="#5B8BD4" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- Stage 4 -->
+  <rect x="475" y="60" width="120" height="120" rx="8" fill="#FAF9F5" stroke="#87867F" stroke-width="2"/>
+  <rect x="475" y="60" width="120" height="28" rx="8" fill="#87867F"/>
+  <rect x="475" y="80" width="120" height="8" fill="#87867F"/>
+  <text x="535" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">测试</text>
+
+  <text x="535" y="108" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#141413" text-anchor="middle">2h</text>
+  <text x="535" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle">/ 16h</text>
+
+  <rect x="495" y="140" width="80" height="14" rx="3" fill="#87867F"/>
+  <text x="535" y="151" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#FAF9F5" text-anchor="middle">效率 13%</text>
+
+  <text x="535" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">等待: 14h</text>
+
+  <!-- Arrow -->
+  <line x1="595" y1="120" x2="620" y2="120" stroke="#87867F" stroke-width="2" marker-end="url(#arrowRight)"/>
+
+  <!-- Stage 5 -->
+  <rect x="620" y="60" width="140" height="120" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+  <rect x="620" y="60" width="140" height="28" rx="8" fill="#D97757"/>
+  <rect x="620" y="80" width="140" height="8" fill="#D97757"/>
+  <text x="690" y="79" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">部署 + 激活</text>
+
+  <text x="690" y="108" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#141413" text-anchor="middle">1h</text>
+  <text x="690" y="125" font-family="system-ui, sans-serif" font-size="11" fill="#788C5D" text-anchor="middle">/ 76h</text>
+
+  <rect x="650" y="140" width="80" height="14" rx="3" fill="#D97757"/>
+  <text x="690" y="151" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#FAF9F5" text-anchor="middle">效率 1.3%</text>
+
+  <text x="690" y="173" font-family="system-ui, sans-serif" font-size="9" fill="#87867F" text-anchor="middle">等待: 75h</text>
+
+  <!-- Summary box -->
+  <rect x="40" y="210" width="720" height="195" rx="10" fill="#141413"/>
+  <text x="400" y="240" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">流效率分析</text>
+
+  <!-- Stats row -->
+  <rect x="80" y="260" width="180" height="70" rx="8" fill="#D97757"/>
+  <text x="170" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="middle">总周期时间</text>
+  <text x="170" y="318" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#FAF9F5" text-anchor="middle">172h</text>
+
+  <rect x="280" y="260" width="180" height="70" rx="8" fill="#788C5D"/>
+  <text x="370" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="middle">价值增加时间</text>
+  <text x="370" y="318" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#FAF9F5" text-anchor="middle">10h</text>
+
+  <rect x="480" y="260" width="260" height="70" rx="8" fill="#FAF9F5"/>
+  <text x="610" y="290" font-family="system-ui, sans-serif" font-size="11" fill="#141413" text-anchor="middle">流效率</text>
+  <text x="610" y="318" font-family="system-ui, sans-serif" font-size="24" font-weight="800" fill="#D97757" text-anchor="middle">5.8% ⚠️</text>
+
+  <!-- Insight -->
+  <text x="80" y="355" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5">关键洞察：</text>
+  <text x="80" y="375" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">• 90%+ 的时间在等待，只有 10% 在创造价值</text>
+  <text x="80" y="392" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">• 最大瓶颈：部署 + 激活（等待 75h）和需求澄清（等待 46h）</text>
+  <text x="80" y="409" font-family="system-ui, sans-serif" font-size="10" fill="#C8E6C9">• 行业优秀水平：流效率 > 15%</text>
+</svg>
