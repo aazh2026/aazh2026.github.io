@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 340" font-family="'Courier New', Courier, monospace" font-size="12">
+  <rect width="420" height="340" fill="#FAF9F5"/>
+  <!-- Main flow boxes -->
+  <rect x="140" y="10" width="140" height="30" fill="#D1CFC5" stroke="#141413" stroke-width="1.5"/>
+  <text x="210" y="29" text-anchor="middle" fill="#141413" font-weight="bold">用户输入</text>
+  <!-- Arrow -->
+  <line x1="210" y1="40" x2="210" y2="58" stroke="#141413" stroke-width="1.5"/>
+  <polygon points="210,62 205,54 215,54" fill="#141413"/>
+
+  <rect x="100" y="66" width="220" height="30" fill="#D1CFC5" stroke="#141413" stroke-width="1.5"/>
+  <text x="210" y="85" text-anchor="middle" fill="#141413" font-weight="bold">意图识别（Claude Code）</text>
+  <!-- Arrow -->
+  <line x1="210" y1="96" x2="210" y2="114" stroke="#141413" stroke-width="1.5"/>
+  <polygon points="210,118 205,110 215,110" fill="#141413"/>
+
+  <!-- Decision box -->
+  <rect x="40" y="122" width="340" height="90" fill="none" stroke="#141413" stroke-width="2"/>
+  <text x="210" y="140" text-anchor="middle" fill="#141413" font-weight="bold" font-size="12">决策：使用 gstack 命令还是加载 Skill？</text>
+  <line x1="40" y1="148" x2="380" y2="148" stroke="#141413" stroke-width="1"/>
+
+  <!-- Left: gstack -->
+  <text x="55" y="166" fill="#D97757" font-weight="bold">gstack 命令（如 /review）</text>
+  <line x1="55" y1="173" x2="55" y2="186" stroke="#141413" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="55" y="200" fill="#141413">预置流程执行（用 Skill 机制实现）</text>
+
+  <!-- Divider -->
+  <line x1="210" y1="148" x2="210" y2="212" stroke="#141413" stroke-width="1"/>
+
+  <!-- Right: custom skill -->
+  <text x="225" y="166" fill="#788C5D" font-weight="bold">自定义 Skill（如 deploy-service）</text>
+  <line x1="225" y1="173" x2="225" y2="186" stroke="#141413" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="225" y="200" fill="#141413">能力扩展执行</text>
+
+  <!-- Arrow -->
+  <line x1="210" y1="212" x2="210" y2="230" stroke="#141413" stroke-width="1.5"/>
+  <polygon points="210,234 205,226 215,226" fill="#141413"/>
+
+  <!-- Bottom -->
+  <rect x="140" y="238" width="140" height="30" fill="#D1CFC5" stroke="#141413" stroke-width="1.5"/>
+  <text x="210" y="257" text-anchor="middle" fill="#141413" font-weight="bold">结果输出</text>
+
+  <!-- Status badges -->
+  <rect x="55" y="218" width="100" height="18" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
+  <text x="105" y="231" text-anchor="middle" fill="#141413" font-size="10">Layer 1-2</text>
+  <rect x="265" y="218" width="100" height="18" fill="#E3DACC" stroke="#87867F" stroke-width="1"/>
+  <text x="315" y="231" text-anchor="middle" fill="#141413" font-size="10">Layer 3+</text>
+</svg>

@@ -265,24 +265,8 @@ gstack（基于 Skills 的应用层实现）
 ### 架构图
 
 ```
-用户输入
-    ↓
-意图识别（Claude Code）
-    ↓
-┌─────────────────────────────────────────┐
-│ 决策：使用 gstack 命令还是加载 Skill？      │
-├─────────────────────────────────────────┤
-│ gstack 命令（如 /review）                 │
-│     ↓                                   │
-│ 预置流程执行（用 Skill 机制实现）          │
-├─────────────────────────────────────────┤
-│ 自定义 Skill（如 deploy-service）          │
-│     ↓                                   │
-│ 能力扩展执行                            │
-└─────────────────────────────────────────┘
-    ↓
-结果输出
-<object data="/assets/images/2026-03-21-gstack-vs-claude-code-skills-02-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-21-gstack-vs-claude-code-skills-04-arch.svg" type="image/svg+xml" width="100%"></object>
+```
 
 ### 给开发者的具体建议
 

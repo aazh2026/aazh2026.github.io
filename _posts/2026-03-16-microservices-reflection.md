@@ -188,24 +188,8 @@ deploy:
 保持单一部署单元，但在代码层面严格划分模块：
 
 ```
-myapp/
-├── modules/
-│   ├── user/           # 用户模块
-│   │   ├── api.py      # 内部 API
-│   │   ├── models.py   # 数据模型
-│   │   └── service.py  # 业务逻辑
-│   ├── order/          # 订单模块
-│   │   ├── api.py
-│   │   ├── models.py
-│   │   └── service.py
-│   └── payment/        # 支付模块
-│       ├── api.py
-│       ├── models.py
-│       └── service.py
-├── shared/             # 共享组件
-├── tests/
-└── app.py              # 统一的入口点
-<object data="/assets/images/2026-03-16-microservices-reflection-02-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-16-microservices-reflection-03-arch.svg" type="image/svg+xml" width="100%"></object>
+```
 
 ### 模块边界规则
 
