@@ -106,6 +106,8 @@ Agent：我需要查A，然后基于A查B，然后基于B查C...
 
 ## 三、RAG作为分页机制的设计
 
+<object data="/assets/images/2025-01-29-virtual-memory-rag-01-mapping.svg" type="image/svg+xml" width="100%"></object>
+
 ### 3.1 核心组件映射
 
 | 操作系统 | LLM/RAG系统 |
@@ -245,6 +247,8 @@ class WorkingSetTracker:
 ```
 
 ## 五、混合内存管理：长上下文模型 + RAG
+
+<object data="/assets/images/2025-01-29-virtual-memory-rag-02-hybrid-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 5.1 为什么不是二选一
 

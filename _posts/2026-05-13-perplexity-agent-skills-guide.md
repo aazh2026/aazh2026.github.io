@@ -17,7 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-<object data="/assets/images/assets/images/2026-05-13-perplexity-agent-skills-guide-01-context-cost.svg" type="image/svg+xml" width="100%"></object>
 
 ## 📋 本文结构
 

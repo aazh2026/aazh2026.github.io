@@ -15,7 +15,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-02-22-clinejection-attack-analysis-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
 
 ## 事件概览：一次精心设计的供应链攻击
 

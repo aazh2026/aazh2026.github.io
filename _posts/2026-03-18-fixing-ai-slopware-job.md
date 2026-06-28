@@ -14,7 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%"></object>
 
 ## 📋 本文结构
 
