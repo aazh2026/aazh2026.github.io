@@ -57,6 +57,8 @@ redirect_from:
 
 AI-Native 设计的核心转变：
 
+<object data="/assets/images/2026-03-15-ai-native-ux-ui-01-intent-vs-pixel.svg" type="image/svg+xml" width="100%"></object>
+
 ```yaml
 设计范式对比:
   
@@ -511,6 +513,8 @@ AI 可用性测试代理:
 ## 设计与开发的桥梁：设计即代码
 
 ### 设计交付的演进
+
+<object data="/assets/images/2026-03-15-ai-native-ux-ui-02-design-to-code-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ```yaml
 设计交付演进史:

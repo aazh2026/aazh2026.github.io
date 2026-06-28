@@ -31,6 +31,8 @@ redirect_from:
 
 ## 一、模板设计理念
 
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%"></object>
+
 ### 设计原则
 
 **原则 1：机器可读优先**
@@ -1005,6 +1007,10 @@ jobs:
 ---
 
 ## 📚 模板版本管理
+
+### 模板演进路径
+
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-02-template-evolution.svg" type="image/svg+xml" width="100%"></object>
 
 ### 模板更新策略
 

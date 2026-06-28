@@ -154,6 +154,8 @@ execution_plan:
 
 ### 层次化工作分解结构（WBS）
 
+<object data="/assets/images/2025-04-15-execution-plan-ai-orchestration-01-wbs-four-layer.svg" type="image/svg+xml" width="100%"></object>
+
 ```
 Epic（史诗）         - 业务目标，可独立交付的价值
   ↓
@@ -553,6 +555,8 @@ dependencies:
 ```
 
 ### 关键路径分析
+
+<object data="/assets/images/2025-04-15-execution-plan-ai-orchestration-02-critical-path.svg" type="image/svg+xml" width="100%"></object>
 
 ```python
 class CriticalPathAnalyzer:

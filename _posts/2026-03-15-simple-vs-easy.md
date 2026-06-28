@@ -67,6 +67,8 @@ Hickey 用一句话点破了程序员的集体幻觉：
 
 ### 2.1 心智负担 (Mental Burden)
 
+<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 | 维度 | 容易性 | 简单性 |
 |------|--------|--------|
 | 短期 | 低（熟悉就好） | 可能较高（需要理解） |
@@ -150,6 +152,8 @@ AI 让"容易"达到了前所未有的高度：
 ---
 
 ## 4. 但 AI 让"简单"更难
+
+<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%"></object>
 
 这是一个反直觉的事实：AI 在让"容易"变得更容易的同时，正在系统性地让"简单"变得更难。
 

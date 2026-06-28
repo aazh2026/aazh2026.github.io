@@ -29,6 +29,8 @@ series: AI-Native软件工程
 
 ### 1. 消除浪费（Muda）
 
+<object data="/assets/images/2026-03-15-lean-thinking-ai-01-seven-wastes.svg" type="image/svg+xml" width="100%"></object>
+
 丰田生产系统定义了 7 种浪费，软件工程同样有对应的版本：
 
 | 制造业浪费 | 软件工程对应 | 表现 |
@@ -425,6 +427,8 @@ def calculate_flow_efficiency(stages: List[Stage]) -> float:
 ```
 
 **可视化输出**：
+
+<object data="/assets/images/2026-03-15-lean-thinking-ai-02-value-stream-flow.svg" type="image/svg+xml" width="100%"></object>
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐

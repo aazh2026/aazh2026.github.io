@@ -64,6 +64,8 @@ Cobbe 等人的发现，把这个直觉**实证化**了：
 
 这不是巧合。这是某种深层规律的体现。
 
+<object data="/assets/images/2026-03-15-verifier-economics-01-workflow.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## Harness 工程中的验证器实践

@@ -66,6 +66,8 @@ OpenAI 引入了一个关键概念：
 
 这不是说这些知识没有价值。而是说，**它们对 Agent 不可见**，因此在 Harness 工程语境下，它们对系统是不可靠的。
 
+<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-01-legible-spectrum.svg" type="image/svg+xml" width="100%"></object>
+
 ### 可读性的光谱
 
 ```
@@ -180,6 +182,8 @@ Harness 工程的要求，本质上是在推动一种**组织知识的显性化*
 ---
 
 ## 实践：如何推动知识入库
+
+<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-02-transformation.svg" type="image/svg+xml" width="100%"></object>
 
 ### 1. 从决策开始
 
