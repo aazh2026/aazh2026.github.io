@@ -7,6 +7,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /gpt-54-analysis.html
+series: AI-Native Engineering
 ---
 
 # GPT-5.4发布：当通用模型开始超越专用模型，编码能力的范式正在转移
@@ -15,7 +16,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%"></object>
 
 ## 产品速览：GPT-5.4的核心规格
 
