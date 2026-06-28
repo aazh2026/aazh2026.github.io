@@ -446,31 +446,8 @@ class ReasoningEngine:
 - 模块边界
 
 **示例**：
-```
-输入：代码库
 
-输出：
-┌─────────────────────────────────────┐
-│ Order Service                       │
-│  ├─ POST /api/orders               │
-│  ├─ GET  /api/orders/{id}          │
-│  └─ Event: order.created           │
-└──────────┬──────────────────────────┘
-           │ calls
-           ▼
-┌─────────────────────────────────────┐
-│ Pricing Service                     │
-│  ├─ calculatePrice()               │
-│  └─ applyDiscount()                │
-└──────────┬──────────────────────────┘
-           │ uses
-           ▼
-┌─────────────────────────────────────┐
-│ Promotion Engine                    │
-│  ├─ Black Friday Rules             │
-│  └─ Member Discounts               │
-└─────────────────────────────────────┘
-```
+<object data="/assets/images/2025-04-08-codebase-intelligence-02-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 **技术实现**：静态分析 + 知识图谱可视化
 

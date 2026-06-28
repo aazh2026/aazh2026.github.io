@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360">
+  <title>open-swe 架构</title>
+  <style>
+    text { font-family: 'Courier New', Courier, monospace; }
+  </style>
+
+  <!-- Background -->
+  <rect width="520" height="360" fill="#FAF9F5" rx="6"/>
+
+  <!-- Outer border -->
+  <rect x="2" y="2" width="516" height="356" fill="none" stroke="#D1CFC5" stroke-width="2" rx="6"/>
+
+  <!-- Header row -->
+  <rect x="2" y="2" width="516" height="50" fill="#141413" rx="6"/>
+  <text x="260" y="34" text-anchor="middle" fill="#FAF9F5" font-size="17" font-weight="bold">open-swe 架构</text>
+
+  <!-- Divider under header -->
+  <line x1="2" y1="52" x2="518" y2="52" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- Row 1: Task Queue -->
+  <rect x="2" y="52" width="516" height="50" fill="#E3DACC"/>
+  <line x1="2" y1="102" x2="518" y2="102" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="14" y="82" fill="#141413" font-size="14" font-weight="bold">Task Queue</text>
+  <text x="220" y="82" fill="#87867F" font-size="13">│</text>
+  <text x="240" y="82" fill="#141413" font-size="13">任务队列（异步）</text>
+
+  <!-- Row 2: Agent Worker -->
+  <rect x="2" y="102" width="516" height="50" fill="#FAF9F5"/>
+  <line x1="2" y1="152" x2="518" y2="152" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="14" y="132" fill="#141413" font-size="14" font-weight="bold">Agent Worker</text>
+  <text x="220" y="132" fill="#87867F" font-size="13">│</text>
+  <text x="240" y="132" fill="#141413" font-size="13">Agent 工作协程</text>
+
+  <!-- Row 3: LLM Client -->
+  <rect x="2" y="152" width="516" height="50" fill="#E3DACC"/>
+  <line x1="2" y1="202" x2="518" y2="202" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="14" y="172" fill="#141413" font-size="14" font-weight="bold">LLM Client</text>
+  <text x="220" y="172" fill="#87867F" font-size="13">│</text>
+  <text x="240" y="172" fill="#141413" font-size="13">LLM API 客户端（异步）</text>
+
+  <!-- Row 4: Tool Executor -->
+  <rect x="2" y="202" width="516" height="50" fill="#FAF9F5"/>
+  <line x1="2" y="252" x2="518" y2="252" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="14" y="222" fill="#141413" font-size="14" font-weight="bold">Tool Executor</text>
+  <text x="220" y="222" fill="#87867F" font-size="13">│</text>
+  <text x="240" y="222" fill="#141413" font-size="13">工具执行器（异步）</text>
+
+  <!-- Row 5: State Manager -->
+  <rect x="2" y="252" width="516" height="50" fill="#E3DACC"/>
+  <line x1="2" y1="302" x2="518" y2="302" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="14" y="272" fill="#141413" font-size="14" font-weight="bold">State Manager</text>
+  <text x="220" y="272" fill="#87867F" font-size="13">│</text>
+  <text x="240" y="272" fill="#141413" font-size="13">状态管理</text>
+
+  <!-- Bottom border -->
+  <line x1="2" y1="302" x2="518" y2="302" stroke="#D1CFC5" stroke-width="2"/>
+
+  <!-- Left bracket decoration -->
+  <text x="6" y="282" fill="#D97757" font-size="18" font-weight="bold">├</text>
+  <text x="6" y="92" fill="#D97757" font-size="18" font-weight="bold">├</text>
+  <text x="6" y="142" fill="#D97757" font-size="18" font-weight="bold">├</text>
+  <text x="6" y="192" fill="#D97757" font-size="18" font-weight="bold">├</text>
+  <text x="6" y="242" fill="#D97757" font-size="18" font-weight="bold">├</text>
+  <text x="6" y="302" fill="#D97757" font-size="18" font-weight="bold">└</text>
+</svg>

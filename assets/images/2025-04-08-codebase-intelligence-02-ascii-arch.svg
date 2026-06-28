@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 420" width="680" height="420" role="img" aria-label="服务依赖架构图">
+  <title>服务依赖架构图</title>
+  <desc>Order Service → Pricing Service → Promotion Engine 的调用关系图</desc>
+
+  <defs>
+    <!-- Box fill gradient -->
+    <linearGradient id="boxGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F3EE"/>
+      <stop offset="100%" stop-color="#EDE8DE"/>
+    </linearGradient>
+    <!-- Arrow marker -->
+    <marker id="arrowHead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <!-- Dotted line pattern for uses -->
+    <marker id="dotArrowHead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5" rx="8"/>
+
+  <!-- ===================== ORDER SERVICE BOX ===================== -->
+  <!-- Main box -->
+  <rect x="60" y="24" width="560" height="108" rx="6" fill="url(#boxGrad)" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Header bar -->
+  <rect x="60" y="24" width="560" height="30" rx="6" fill="#D97757"/>
+  <rect x="60" y="44" width="560" height="10" fill="#D97757"/>
+  <!-- Header text -->
+  <text x="76" y="45" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#FAF9F5">Order Service</text>
+
+  <!-- Separator line inside box -->
+  <line x1="60" y1="54" x2="620" y2="54" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Content lines -->
+  <text x="84" y="74" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">├─</text>
+  <text x="104" y="74" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">POST  /api/orders</text>
+
+  <text x="84" y="92" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">├─</text>
+  <text x="104" y="92" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">GET   /api/orders/{id}</text>
+
+  <text x="84" y="110" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">└─</text>
+  <text x="104" y="110" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">Event: order.created</text>
+
+  <!-- Branch line (vertical) -->
+  <line x1="78" y1="66" x2="78" y2="118" stroke="#D1CFC5" stroke-width="1"/>
+  <!-- Horizontal branches -->
+  <line x1="78" y1="66" x2="92" y2="66" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="84" x2="92" y2="84" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="102" x2="92" y2="102" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Tail connector from Order Service (bottom-right, going down-right) -->
+  <line x1="530" y1="132" x2="530" y2="170" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="530" y1="170" x2="555" y2="170" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="555" y1="170" x2="555" y2="185" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- Arrow -->
+  <line x1="555" y1="185" x2="555" y2="200" stroke="#D97757" stroke-width="2" marker-end="url(#arrowHead)"/>
+  <!-- Label -->
+  <text x="555" y="164" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="11" fill="#D97757" text-anchor="middle" font-weight="600">calls</text>
+
+  <!-- ===================== PRICING SERVICE BOX ===================== -->
+  <rect x="60" y="200" width="560" height="80" rx="6" fill="url(#boxGrad)" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Header bar -->
+  <rect x="60" y="200" width="560" height="30" rx="6" fill="#788C5D"/>
+  <rect x="60" y="220" width="560" height="10" fill="#788C5D"/>
+  <!-- Header text -->
+  <text x="76" y="221" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#FAF9F5">Pricing Service</text>
+
+  <!-- Separator line -->
+  <line x1="60" y1="230" x2="620" y2="230" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Content lines -->
+  <text x="84" y="250" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">├─</text>
+  <text x="104" y="250" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">calculatePrice()</text>
+
+  <text x="84" y="266" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">└─</text>
+  <text x="104" y="266" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">applyDiscount()</text>
+
+  <!-- Branch lines -->
+  <line x1="78" y1="242" x2="78" y2="274" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="242" x2="92" y2="242" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="258" x2="92" y2="258" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Tail connector from Pricing Service -->
+  <line x1="530" y1="280" x2="530" y2="318" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="530" y1="318" x2="555" y2="318" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <line x1="555" y1="318" x2="555" y2="333" stroke="#87867F" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <!-- Arrow -->
+  <line x1="555" y1="333" x2="555" y2="348" stroke="#87867F" stroke-width="2" marker-end="url(#dotArrowHead)"/>
+  <!-- Label -->
+  <text x="555" y="312" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="11" fill="#87867F" text-anchor="middle" font-weight="600">uses</text>
+
+  <!-- ===================== PROMOTION ENGINE BOX ===================== -->
+  <rect x="60" y="348" width="560" height="64" rx="6" fill="url(#boxGrad)" stroke="#D1CFC5" stroke-width="1.5"/>
+  <!-- Header bar -->
+  <rect x="60" y="348" width="560" height="30" rx="6" fill="#141413"/>
+  <rect x="60" y="368" width="560" height="10" fill="#141413"/>
+  <!-- Header text -->
+  <text x="76" y="369" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#FAF9F5">Promotion Engine</text>
+
+  <!-- Separator line -->
+  <line x1="60" y1="378" x2="620" y2="378" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Content lines -->
+  <text x="84" y="396" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">├─</text>
+  <text x="104" y="396" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">Black Friday Rules</text>
+
+  <text x="84" y="408" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">└─</text>
+  <text x="104" y="408" font-family="ui-monospace, 'Cascadia Code', 'JetBrains Mono', monospace" font-size="12" fill="#141413">Member Discounts</text>
+
+  <!-- Branch lines -->
+  <line x1="78" y1="388" x2="78" y2="416" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="388" x2="92" y2="388" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="78" y1="400" x2="92" y2="400" stroke="#D1CFC5" stroke-width="1"/>
+
+</svg>

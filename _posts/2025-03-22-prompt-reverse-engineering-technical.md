@@ -465,26 +465,7 @@ User Input → System Prompt → LLM → Output
 
 真正安全的AI系统应该是**Prompt Graph**，而不是单Prompt：
 
-```
-                    ┌─────────────┐
-                    │   Planner   │
-                    │   Prompt    │
-                    └──────┬──────┘
-                           │
-           ┌───────────────┼───────────────┐
-           │               │               │
-    ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼──────┐
-    │  Executor   │ │   Critic    │ │   Memory    │
-    │   Prompt    │ │   Prompt    │ │   Prompt    │
-    └──────┬──────┘ └──────┬──────┘ └──────┬──────┘
-           │               │               │
-           └───────────────┼───────────────┘
-                           │
-                    ┌──────▼──────┐
-                    │  Tool Use   │
-                    │   Logic     │
-                    └─────────────┘
-```
+<object data="/assets/images/2025-03-22-prompt-reverse-engineering-technical-02-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 在这个架构中：
 - **Planner Prompt**：决定任务分解策略

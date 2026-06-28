@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 920" role="img" aria-label="多抽象层级系统架构图">
+  <title>多抽象层级系统架构图</title>
+  <desc>展示智能日志分析平台从自然语言接口到硬件优化的六层架构设计</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .border { fill: none; stroke: #D1CFC5; stroke-width: 1.5; }
+      .border-light { fill: none; stroke: #D1CFC5; stroke-width: 1; }
+      .text-primary { fill: #141413; font-family: 'Georgia', 'Noto Serif SC', serif; font-size: 13px; }
+      .text-layer { fill: #141413; font-family: 'Georgia', 'Noto Serif SC', serif; font-size: 14px; font-weight: bold; }
+      .text-tools { fill: #87867F; font-family: 'Menlo', 'Consolas', monospace; font-size: 11px; }
+      .text-code { fill: #87867F; font-family: 'Menlo', 'Consolas', monospace; font-size: 10.5px; }
+      .text-abst { fill: #788C5D; font-family: 'Georgia', 'Noto Serif SC', serif; font-size: 12px; }
+      .text-desc { fill: #141413; font-family: 'Georgia', 'Noto Serif SC', serif; font-size: 12px; }
+      .accent-bar { fill: #D97757; }
+      .layer-bg-odd { fill: #F5F3EE; }
+      .layer-bg-even { fill: #FAF9F5; }
+      .connector-line { fill: none; stroke: #D1CFC5; stroke-width: 1; stroke-dasharray: 4,3; }
+      .arrow-head { fill: #D1CFC5; }
+      .tree-v { stroke: #87867F; stroke-width: 1; fill: none; }
+      .tree-h { stroke: #87867F; stroke-width: 1; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="920" class="bg"/>
+
+  <!-- Title -->
+  <text x="390" y="28" text-anchor="middle" class="text-layer" font-size="16">智能日志分析平台 · 六层架构</text>
+  <line x1="80" y1="38" x2="700" y2="38" class="border-light"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 6: 自然语言接口 (用户交互层)
+       ══════════════════════════════════════════════════════════ -->
+  <!-- Box -->
+  <rect x="40" y="50" width="700" height="120" rx="4" class="layer-bg-odd"/>
+  <rect x="40" y="50" width="700" height="120" rx="4" class="border"/>
+  <!-- Accent bar -->
+  <rect x="40" y="50" width="6" height="120" rx="3" class="accent-bar"/>
+  <!-- Layer label -->
+  <text x="58" y="70" class="text-layer">Layer 6</text>
+  <text x="115" y="70" class="text-layer" fill="#D97757">自然语言接口</text>
+  <text x="222" y="70" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 用户交互层</text>
+  <!-- User query bubble -->
+  <rect x="58" y="82" width="664" height="30" rx="3" fill="#E3DACC"/>
+  <text x="72" y="101" class="text-desc" font-style="italic">"过去一小时内，支付服务有什么异常？"</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="120" x2="58" y2="138" class="tree-v"/>
+  <line x1="58" y1="138" x2="120" y2="138" class="tree-h"/>
+  <circle cx="58" cy="120" r="2" fill="#87867F"/>
+  <text x="126" y="134" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="134" class="text-tools">工具: LLM API (OpenAI/Claude)</text>
+  <line x1="58" y1="138" x2="120" y2="138" class="tree-h"/>
+  <text x="126" y="152" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="152" class="text-abst">抽象: 意图理解 → 查询生成 → 结果解释</text>
+  <circle cx="58" cy="138" r="2" fill="#87867F"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 5: 查询DSL (业务逻辑层)
+       ══════════════════════════════════════════════════════════ -->
+  <rect x="40" y="178" width="700" height="120" rx="4" class="layer-bg-even"/>
+  <rect x="40" y="178" width="700" height="120" rx="4" class="border"/>
+  <rect x="40" y="178" width="6" height="120" rx="3" class="accent-bar"/>
+  <text x="58" y="198" class="text-layer">Layer 5</text>
+  <text x="115" y="198" class="text-layer" fill="#D97757">查询DSL</text>
+  <text x="177" y="198" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 业务逻辑层</text>
+  <!-- Code snippet -->
+  <rect x="58" y="210" width="664" height="26" rx="3" fill="#F0EDE6"/>
+  <text x="70" y="227" class="text-code">query = LogQuery().service("payment").time_range("1h").severity("ERROR").aggregate("count")</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="244" x2="58" y2="262" class="tree-v"/>
+  <line x1="58" y1="262" x2="120" y2="262" class="tree-h"/>
+  <circle cx="58" cy="244" r="2" fill="#87867F"/>
+  <text x="126" y="258" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="258" class="text-tools">工具: Python / Pandas</text>
+  <line x1="58" y1="262" x2="120" y2="262" class="tree-h"/>
+  <text x="126" y="276" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="276" class="text-abst">抽象: 声明式数据查询</text>
+  <circle cx="58" cy="262" r="2" fill="#87867F"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 4: 流处理框架 (数据处理层)
+       ══════════════════════════════════════════════════════════ -->
+  <rect x="40" y="306" width="700" height="120" rx="4" class="layer-bg-odd"/>
+  <rect x="40" y="306" width="700" height="120" rx="4" class="border"/>
+  <rect x="40" y="306" width="6" height="120" rx="3" class="accent-bar"/>
+  <text x="58" y="326" class="text-layer">Layer 4</text>
+  <text x="115" y="326" class="text-layer" fill="#D97757">流处理框架</text>
+  <text x="207" y="326" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 数据处理层</text>
+  <!-- Code snippet (2 lines) -->
+  <rect x="58" y="338" width="664" height="40" rx="3" fill="#F0EDE6"/>
+  <text x="70" y="353" class="text-code">stream.filter(e → e.level == ERROR)</text>
+  <text x="70" y="367" class="text-code">      .window(TimeWindow.minutes(5)).aggregate(CountAgg())</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="386" x2="58" y2="404" class="tree-v"/>
+  <line x1="58" y1="404" x2="120" y2="404" class="tree-h"/>
+  <circle cx="58" cy="386" r="2" fill="#87867F"/>
+  <text x="126" y="400" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="400" class="text-tools">工具: Apache Flink / Kafka Streams</text>
+  <line x1="58" y1="404" x2="120" y2="404" class="tree-h"/>
+  <text x="126" y="418" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="418" class="text-abst">抽象: 声明式流处理，自动分布式执行</text>
+  <circle cx="58" cy="404" r="2" fill="#87867F"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 3: 高性能网络 (通信层)
+       ══════════════════════════════════════════════════════════ -->
+  <rect x="40" y="434" width="700" height="120" rx="4" class="layer-bg-even"/>
+  <rect x="40" y="434" width="700" height="120" rx="4" class="border"/>
+  <rect x="40" y="434" width="6" height="120" rx="3" class="accent-bar"/>
+  <text x="58" y="454" class="text-layer">Layer 3</text>
+  <text x="115" y="454" class="text-layer" fill="#D97757">高性能网络</text>
+  <text x="217" y="454" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 通信层</text>
+  <!-- Description -->
+  <rect x="58" y="466" width="664" height="26" rx="3" fill="#E3DACC"/>
+  <text x="72" y="483" class="text-desc">零拷贝传输，DPDK 网络栈</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="500" x2="58" y2="518" class="tree-v"/>
+  <line x1="58" y1="518" x2="120" y2="518" class="tree-h"/>
+  <circle cx="58" cy="500" r="2" fill="#87867F"/>
+  <text x="126" y="514" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="514" class="text-tools">工具: C / Rust + DPDK</text>
+  <line x1="58" y1="518" x2="120" y2="518" class="tree-h"/>
+  <text x="126" y="532" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="532" class="text-abst">抽象: 绕过内核的网络包处理</text>
+  <circle cx="58" cy="518" r="2" fill="#87867F"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 2: 存储引擎 (持久化层)
+       ══════════════════════════════════════════════════════════ -->
+  <rect x="40" y="562" width="700" height="120" rx="4" class="layer-bg-odd"/>
+  <rect x="40" y="562" width="700" height="120" rx="4" class="border"/>
+  <rect x="40" y="562" width="6" height="120" rx="3" class="accent-bar"/>
+  <text x="58" y="582" class="text-layer">Layer 2</text>
+  <text x="115" y="582" class="text-layer" fill="#D97757">存储引擎</text>
+  <text x="187" y="582" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 持久化层</text>
+  <!-- Description -->
+  <rect x="58" y="594" width="664" height="26" rx="3" fill="#E3DACC"/>
+  <text x="72" y="611" class="text-desc">LSM-Tree，内存映射文件，RAID 配置</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="628" x2="58" y2="646" class="tree-v"/>
+  <line x1="58" y1="646" x2="120" y2="646" class="tree-h"/>
+  <circle cx="58" cy="628" r="2" fill="#87867F"/>
+  <text x="126" y="642" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="642" class="text-tools">工具: RocksDB / 自研引擎</text>
+  <line x1="58" y1="646" x2="120" y2="646" class="tree-h"/>
+  <text x="126" y="660" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="660" class="text-abst">抽象: 键值存储，隐藏 LSM 复杂性</text>
+  <circle cx="58" cy="646" r="2" fill="#87867F"/>
+
+  <!-- ══════════════════════════════════════════════════════════
+       Layer 1: 硬件优化 (基础设施层)
+       ══════════════════════════════════════════════════════════ -->
+  <rect x="40" y="690" width="700" height="120" rx="4" class="layer-bg-even"/>
+  <rect x="40" y="690" width="700" height="120" rx="4" class="border"/>
+  <rect x="40" y="690" width="6" height="120" rx="3" class="accent-bar"/>
+  <text x="58" y="710" class="text-layer">Layer 1</text>
+  <text x="115" y="710" class="text-layer" fill="#D97757">硬件优化</text>
+  <text x="187" y="710" class="text-layer" fill="#87867F" font-size="12" font-weight="normal"> 基础设施层</text>
+  <!-- Description -->
+  <rect x="58" y="722" width="664" height="26" rx="3" fill="#E3DACC"/>
+  <text x="72" y="739" class="text-desc">NUMA 感知内存分配，CPU 亲和性，DMA</text>
+  <!-- Tools & Abstraction -->
+  <line x1="58" y1="756" x2="58" y2="774" class="tree-v"/>
+  <line x1="58" y1="774" x2="120" y2="774" class="tree-h"/>
+  <circle cx="58" cy="756" r="2" fill="#87867F"/>
+  <text x="126" y="770" class="text-tools" fill="#D97757">├─</text>
+  <text x="144" y="770" class="text-tools">工具: C / 汇编，系统调用</text>
+  <line x1="58" y1="774" x2="120" y2="774" class="tree-h"/>
+  <text x="126" y="788" class="text-tools" fill="#D97757">└─</text>
+  <text x="144" y="788" class="text-abst">抽象: 最大化硬件利用率</text>
+  <circle cx="58" cy="774" r="2" fill="#87867F"/>
+
+  <!-- Legend -->
+  <line x1="40" y1="828" x2="740" y2="828" class="border-light"/>
+  <rect x="40" y="840" width="12" height="12" rx="2" class="accent-bar"/>
+  <text x="58" y="851" class="text-desc" font-size="11">强调色 Clay #D97757</text>
+  <rect x="160" y="840" width="12" height="12" rx="2" fill="#788C5D"/>
+  <text x="178" y="851" class="text-desc" font-size="11">次级强调 Olive #788C5D</text>
+  <rect x="310" y="840" width="12" height="12" rx="2" fill="#E3DACC"/>
+  <text x="328" y="851" class="text-desc" font-size="11">辅助背景 Oat #E3DACC</text>
+  <rect x="450" y="840" width="12" height="12" rx="2" fill="#F0EDE6"/>
+  <text x="468" y="851" class="text-desc" font-size="11">代码背景</text>
+
+  <!-- Flow arrows on the left side -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+  <!-- Vertical connector showing data flow direction -->
+  <line x1="22" y1="80" x2="22" y2="790" class="connector-line" marker-end="url(#arrowhead)"/>
+  <text x="22" y="438" text-anchor="middle" transform="rotate(-90, 22, 438)" class="text-tools" fill="#87867F" font-size="10">数据流向</text>
+
+</svg>

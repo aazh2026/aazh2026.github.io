@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500" role="img" aria-label="企业级 AI Agent 典型架构">
+  <title>企业级 AI Agent 典型架构</title>
+  <desc>用户触发器 → Agent 核心（意图理解、任务规划、工具调用）→ 权限边界（文件系统、网络访问、代码执行）</desc>
+
+  <defs>
+    <!-- Main box shadow -->
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+    <!-- Sub-box shadow -->
+    <filter id="subshadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#141413" flood-opacity="0.12"/>
+    </filter>
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <!-- Dotted line marker -->
+    <marker id="dot" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <circle cx="3" cy="3" r="2.5" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="500" fill="#FAF9F5"/>
+
+  <!-- ========== ROW 1: 用户/触发器 ========== -->
+  <!-- Main box -->
+  <rect x="50" y="30" width="620" height="90" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Header accent bar -->
+  <rect x="50" y="30" width="620" height="5" rx="3" fill="#D97757"/>
+  <!-- Label -->
+  <text x="360" y="68" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="600" fill="#141413">用户 / 触发器</text>
+  <!-- Subtitle -->
+  <text x="360" y="92" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" fill="#87867F">自然语言指令 / API 调用 / 定时任务</text>
+
+  <!-- Arrow 1 -->
+  <line x1="360" y1="120" x2="360" y2="150" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== ROW 2: Agent 核心 ========== -->
+  <rect x="50" y="150" width="620" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Header accent bar -->
+  <rect x="50" y="150" width="620" height="5" rx="3" fill="#788C5D"/>
+  <!-- Label -->
+  <text x="360" y="182" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="600" fill="#141413">Agent 核心</text>
+
+  <!-- Three sub-components -->
+  <!-- Component 1: 意图理解 -->
+  <rect x="88" y="200" width="160" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1" filter="url(#subshadow)"/>
+  <text x="168" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">意图理解</text>
+  <text x="168" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#87867F">Intent Understanding</text>
+
+  <!-- Component 2: 任务规划 -->
+  <rect x="280" y="200" width="160" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1" filter="url(#subshadow)"/>
+  <text x="360" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">任务规划</text>
+  <text x="360" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#87867F">Task Planning</text>
+
+  <!-- Component 3: 工具调用 -->
+  <rect x="472" y="200" width="160" height="58" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1" filter="url(#subshadow)"/>
+  <text x="552" y="230" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">工具调用</text>
+  <text x="552" y="248" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#87867F">Tool Use</text>
+
+  <!-- Arrow 2 -->
+  <line x1="360" y1="280" x2="360" y2="310" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== ROW 3: 权限边界 ========== -->
+  <rect x="50" y="310" width="620" height="160" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+  <!-- Header accent bar -->
+  <rect x="50" y="310" width="620" height="5" rx="3" fill="#D97757"/>
+  <!-- Label -->
+  <text x="360" y="342" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" font-weight="600" fill="#141413">权限边界</text>
+
+  <!-- Component 1: 文件系统 -->
+  <rect x="88" y="360" width="160" height="82" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" filter="url(#subshadow)"/>
+  <!-- Lock icon indicator -->
+  <rect x="152" y="372" width="32" height="32" rx="50%" fill="#D97757" opacity="0.12"/>
+  <text x="168" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#D97757">🔒</text>
+  <text x="168" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">文件系统</text>
+  <text x="168" y="434" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#D97757">受限</text>
+
+  <!-- Component 2: 网络访问 -->
+  <rect x="280" y="360" width="160" height="82" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" filter="url(#subshadow)"/>
+  <rect x="344" y="372" width="32" height="32" rx="50%" fill="#D97757" opacity="0.12"/>
+  <text x="360" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#D97757">🔒</text>
+  <text x="360" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">网络访问</text>
+  <text x="360" y="434" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#D97757">受限</text>
+
+  <!-- Component 3: 代码执行 -->
+  <rect x="472" y="360" width="160" height="82" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" filter="url(#subshadow)"/>
+  <rect x="536" y="372" width="32" height="32" rx="50%" fill="#D97757" opacity="0.12"/>
+  <text x="552" y="395" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" fill="#D97757">🔒</text>
+  <text x="552" y="418" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="15" font-weight="600" fill="#141413">代码执行</text>
+  <text x="552" y="434" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#D97757">受限</text>
+</svg>
