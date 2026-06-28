@@ -192,6 +192,8 @@ Metrics:
 
 AI 据此生成单元测试和集成测试。
 
+<object data="/assets/images/2026-03-11-ai-native-detailed-design-01-artifacts.svg" type="image/svg+xml" width="100%"></object>
+
 ## 设计与代码的关系变化
 
 传统流程：

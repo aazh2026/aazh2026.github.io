@@ -83,6 +83,8 @@ AI系统需要持续维护：
 
 这些工作不会在账单上体现，但会消耗大量工程资源。
 
+<object data="/assets/images/2025-03-29-ai-cost-control-01-iceberg.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 三、穿越周期：从煤到电到算力

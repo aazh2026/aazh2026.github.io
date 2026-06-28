@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="clay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#C06548"/>
+    </linearGradient>
+    <linearGradient id="olive" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#667A4F"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+    <filter id="shadow-sm" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">简单 vs 容易 — 核心对比</text>
+  <line x1="200" y1="60" x2="700" y2="60" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- LEFT CARD: Simple -->
+  <rect x="40" y="82" width="390" height="390" rx="14" fill="#FAF9F5" filter="url(#shadow)"/>
+  <!-- Simple header -->
+  <rect x="40" y="82" width="390" height="56" rx="14" fill="url(#olive)"/>
+  <rect x="40" y="120" width="390" height="18" fill="url(#olive)"/>
+  <text x="235" y="120" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FAF9F5">简单 Simple</text>
+
+  <!-- Etymology -->
+  <text x="65" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#788C5D" letter-spacing="1">词源 ETYMOLOGY</text>
+  <text x="65" y="190" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#141413"><tspan font-style="italic">simplex</tspan> = 单一的、不交织的</text>
+  <text x="65" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#87867F">一个念头 · 一个任务 · 一个角色</text>
+
+  <line x1="65" y1="226" x2="405" y2="226" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Attributes -->
+  <text x="65" y="252" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#788C5D" letter-spacing="1">特征 ATTRIBUTES</text>
+
+  <g transform="translate(65,265)">
+    <!-- Attribute items -->
+    <circle cx="8" cy="8" r="4" fill="#788C5D"/>
+    <text x="22" y="13" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">客观可度量</text>
+
+    <circle cx="8" cy="33" r="4" fill="#788C5D"/>
+    <text x="22" y="38" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">各部分不纠缠</text>
+
+    <circle cx="8" cy="58" r="4" fill="#788C5D"/>
+    <text x="22" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">理解 A 不需理解 B</text>
+
+    <circle cx="8" cy="83" r="4" fill="#788C5D"/>
+    <text x="22" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">可独立测试、推理、修改</text>
+  </g>
+
+  <line x1="65" y1="362" x2="405" y2="362" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Value tag -->
+  <rect x="65" y="374" width="130" height="34" rx="8" fill="#788C5D" opacity="0.15"/>
+  <text x="130" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">长期价值 ✓</text>
+
+  <rect x="210" y="374" width="130" height="34" rx="8" fill="#788C5D" opacity="0.15"/>
+  <text x="275" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">可组合 ✓</text>
+
+  <rect x="65" y="420" width="130" height="34" rx="8" fill="#788C5D" opacity="0.15"/>
+  <text x="130" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">稳定可控 ✓</text>
+
+  <rect x="210" y="420" width="130" height="34" rx="8" fill="#788C5D" opacity="0.15"/>
+  <text x="275" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">认知高效 ✓</text>
+
+  <!-- CENTER DIVIDER -->
+  <line x1="450" y1="110" x2="450" y2="470" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="450" y="300" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="28" fill="#87867F" transform="rotate(-90,450,300)">VS</text>
+
+  <!-- RIGHT CARD: Easy -->
+  <rect x="470" y="82" width="390" height="390" rx="14" fill="#FAF9F5" filter="url(#shadow)"/>
+  <!-- Easy header -->
+  <rect x="470" y="82" width="390" height="56" rx="14" fill="url(#clay)"/>
+  <rect x="470" y="120" width="390" height="18" fill="url(#clay)"/>
+  <text x="665" y="120" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#FAF9F5">容易 Easy</text>
+
+  <!-- Etymology -->
+  <text x="495" y="168" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#D97757" letter-spacing="1">词源 ETYMOLOGY</text>
+  <text x="495" y="190" font-family="system-ui,-apple-system,sans-serif" font-size="14" fill="#141413"><tspan font-style="italic">ease</tspan> = 近在咫尺、触手可及</text>
+  <text x="495" y="212" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#87867F">熟悉程度 · 获取难度</text>
+
+  <line x1="495" y1="226" x2="835" y2="226" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Attributes -->
+  <text x="495" y="252" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#D97757" letter-spacing="1">特征 ATTRIBUTES</text>
+
+  <g transform="translate(495,265)">
+    <circle cx="8" cy="8" r="4" fill="#D97757"/>
+    <text x="22" y="13" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">主观感受，因人而异</text>
+
+    <circle cx="8" cy="33" r="4" fill="#D97757"/>
+    <text x="22" y="38" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">隐藏交织和依赖</text>
+
+    <circle cx="8" cy="58" r="4" fill="#D97757"/>
+    <text x="22" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">API 顺手，但底层复杂</text>
+
+    <circle cx="8" cy="83" r="4" fill="#D97757"/>
+    <text x="22" y="88" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#141413">"感觉不错" ≠ 设计良好</text>
+  </g>
+
+  <line x1="495" y1="362" x2="835" y2="362" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Risk tag -->
+  <rect x="495" y="374" width="130" height="34" rx="8" fill="#D97757" opacity="0.12"/>
+  <text x="560" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">债务累积 ⚠</text>
+
+  <rect x="640" y="374" width="130" height="34" rx="8" fill="#D97757" opacity="0.12"/>
+  <text x="705" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">认知超载 ⚠</text>
+
+  <rect x="495" y="420" width="130" height="34" rx="8" fill="#D97757" opacity="0.12"/>
+  <text x="560" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">难以复用 ⚠</text>
+
+  <rect x="640" y="420" width="130" height="34" rx="8" fill="#D97757" opacity="0.12"/>
+  <text x="705" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">维护噩梦 ⚠</text>
+
+  <!-- Bottom insight -->
+  <rect x="200" y="488" width="500" height="26" rx="13" fill="#141413" opacity="0.06"/>
+  <text x="450" y="506" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">我们选择容易，是因为简单很难。</text>
+</svg>

@@ -39,6 +39,8 @@ New System
 
 AI 只需要理解**变化部分**。
 
+<object data="/assets/images/2026-03-11-delta-specification-01-workflow.svg" type="image/svg+xml" width="100%"></object>
+
 ## 推荐的工程结构
 
 在已有设计基础上，引入 `changes/` 目录：

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="ess-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B05540"/>
+    </linearGradient>
+    <linearGradient id="acc-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5F7249"/>
+    </linearGradient>
+    <linearGradient id="cog-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87867F"/>
+      <stop offset="100%" stop-color="#6A675F"/>
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#141413" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bg3)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">Brooks 框架：两种复杂度</text>
+  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Three columns -->
+  <!-- Col 1: Essential -->
+  <rect x="40" y="76" width="265" height="370" rx="14" fill="#FAF9F5" filter="url(#shadow3)"/>
+  <rect x="40" y="76" width="265" height="52" rx="14" fill="url(#ess-grad)"/>
+  <rect x="40" y="110" width="265" height="18" fill="url(#ess-grad)"/>
+  <text x="172" y="108" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#FAF9F5">本质复杂度</text>
+  <text x="172" y="128" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.85">Essential Complexity</text>
+
+  <text x="60" y="160" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#D97757" letter-spacing="1">无法消除，只能转移</text>
+
+  <g transform="translate(60,178)">
+    <circle cx="6" cy="6" r="4" fill="#D97757" opacity="0.7"/>
+    <text x="20" y="11" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">需求模糊且易变</text>
+
+    <circle cx="6" cy="32" r="4" fill="#D97757" opacity="0.7"/>
+    <text x="20" y="37" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">约束条件相互冲突</text>
+
+    <circle cx="6" cy="58" r="4" fill="#D97757" opacity="0.7"/>
+    <text x="20" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">边界情况爆炸</text>
+
+    <circle cx="6" cy="84" r="4" fill="#D97757" opacity="0.7"/>
+    <text x="20" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">系统涌现行为</text>
+  </g>
+
+  <line x1="60" y1="285" x2="285" y2="285" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="60" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#D97757" letter-spacing="1">AI 解决能力</text>
+
+  <rect x="60" y="320" width="220" height="32" rx="8" fill="#D97757" opacity="0.12"/>
+  <text x="170" y="341" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#D97757" font-weight="700">❌ 无法解决</text>
+
+  <rect x="60" y="365" width="220" height="32" rx="8" fill="#D97757" opacity="0.06"/>
+  <text x="170" y="386" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">需求理解、架构设计、系统思考</text>
+
+  <!-- Col 2: Accidental -->
+  <rect x="318" y="76" width="265" height="370" rx="14" fill="#FAF9F5" filter="url(#shadow3)"/>
+  <rect x="318" y="76" width="265" height="52" rx="14" fill="url(#acc-grad)"/>
+  <rect x="318" y="110" width="265" height="18" fill="url(#acc-grad)"/>
+  <text x="450" y="108" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="17" font-weight="700" fill="#FAF9F5">偶然复杂度</text>
+  <text x="450" y="128" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#FAF9F5" opacity="0.85">Accidental Complexity</text>
+
+  <text x="338" y="160" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#788C5D" letter-spacing="1">可以被消除或大幅减少</text>
+
+  <g transform="translate(338,178)">
+    <circle cx="6" cy="6" r="4" fill="#788C5D" opacity="0.7"/>
+    <text x="20" y="11" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">语法和样板代码</text>
+
+    <circle cx="6" cy="32" r="4" fill="#788C5D" opacity="0.7"/>
+    <text x="20" y="37" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">API 记忆负担</text>
+
+    <circle cx="6" cy="58" r="4" fill="#788C5D" opacity="0.7"/>
+    <text x="20" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">环境配置与工具链</text>
+
+    <circle cx="6" cy="84" r="4" fill="#788C5D" opacity="0.7"/>
+    <text x="20" y="89" font-family="system-ui,-apple-system,sans-serif" font-size="12.5" fill="#141413">依赖地狱、版本冲突</text>
+  </g>
+
+  <line x1="338" y1="285" x2="563" y2="285" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="338" y="305" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#788C5D" letter-spacing="1">AI 解决能力</text>
+
+  <rect x="338" y="320" width="220" height="32" rx="8" fill="#788C5D" opacity="0.18"/>
+  <text x="448" y="341" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#788C5D" font-weight="700">✅ 大量削减</text>
+
+  <rect x="338" y="365" width="220" height="32" rx="8" fill="#788C5D" opacity="0.06"/>
+  <text x="448" y="386" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">语法生成、API 提示、调试辅助</text>
+
+  <!-- Col 3: Cognitive (new) -->
+  <rect x="596" y="76" width="265" height="370" rx="14" fill="#FAF9F5" filter="url(#shadow3)"/>
+  <rect x="596" y="76" width="265" height="52" rx="14" fill="url(#cog-grad)"/>
+  <rect x="596" y="110" width="265" height="18" fill="url(#cog-grad)"/>
+  <text x="728" y="108" text-anchor="middle" font-family="system-ui,-apple-system

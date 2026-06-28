@@ -105,6 +105,8 @@ KII范围：0-1
 
 ---
 
+<object data="/assets/images/2026-03-12-knowledge-isolation-index-01-kii-tiers.svg" type="image/svg+xml" width="100%"></object>
+
 ## 知识传染与阻断分析
 
 ### 知识传染模型

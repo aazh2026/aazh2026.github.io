@@ -39,6 +39,8 @@ spec/
 
 这四个已经足够驱动：代码生成、测试生成、PR review。
 
+<object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%"></object>
+
 ## 为什么只需要 4 个？
 
 ### 1. Intent（必须）

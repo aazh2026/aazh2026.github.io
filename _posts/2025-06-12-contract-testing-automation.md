@@ -30,6 +30,8 @@ series: AI-Native软件工程系列 #9
 
 ## 契约测试基础
 
+<object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%"></object>
+
 > 💡 **Key Insight**> 
 003e 集成测试的问题是"太慢"，单元测试的问题是"太假"。契约测试在两者之间找到平衡点——既快又真。
 

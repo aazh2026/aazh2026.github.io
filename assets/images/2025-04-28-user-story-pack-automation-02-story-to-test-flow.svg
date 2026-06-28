@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="用户故事到自动化测试的流程">
+  <title>从用户故事到自动化测试</title>
+  <desc>展示 User Story Pack 如何从结构化验收标准直接转化为自动化测试的流程对比</desc>
+
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <marker id="arrowClay" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#D97757"/>
+    </marker>
+    <marker id="arrowOlive" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#788C5D"/>
+    </marker>
+    <marker id="arrowSlate" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#141413"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="420" fill="url(#bgGrad2)"/>
+
+  <!-- Title -->
+  <text x="400" y="35" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141413" text-anchor="middle">从用户故事到自动化测试</text>
+
+  <!-- Traditional Way -->
+  <rect x="40" y="65" width="350" height="280" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="65" width="350" height="36" rx="10" fill="#D97757"/>
+  <rect x="40" y="89" width="350" height="12" fill="#D97757"/>
+  <text x="215" y="88" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">❌ 传统方式</text>
+
+  <rect x="60" y="115" width="310" height="50" rx="6" fill="#E3DACC"/>
+  <text x="215" y="132" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">产品经理写验收标准</text>
+  <text x="215" y="148" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">（自然语言描述）</text>
+
+  <path d="M215 165 L215 188" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowClay)"/>
+
+  <rect x="60" y="192" width="310" height="50" rx="6" fill="#E3DACC"/>
+  <text x="215" y="209" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">测试工程师理解</text>
+  <text x="215" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">（信息丢失 + 理解偏差）</text>
+
+  <path d="M215 242 L215 265" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowClay)"/>
+
+  <rect x="60" y="269" width="310" height="50" rx="6" fill="#E3DACC"/>
+  <text x="215" y="286" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">写测试代码</text>
+  <text x="215" y="302" font-family="system-ui, sans-serif" font-size="10" fill="#D97757" text-anchor="middle">结果：需求不一致</text>
+
+  <!-- VS -->
+  <text x="400" y="220" font-family="system-ui, sans-serif" font-size="28" font-weight="800" fill="#D1CFC5" text-anchor="middle">→</text>
+
+  <!-- User Story Pack Way -->
+  <rect x="410" y="65" width="350" height="280" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+  <rect x="410" y="65" width="350" height="36" rx="10" fill="#788C5D"/>
+  <rect x="410" y="89" width="350" height="12" fill="#788C5D"/>
+  <text x="585" y="88" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">✓ User Story Pack 方式</text>
+
+  <rect x="430" y="115" width="310" height="50" rx="6" fill="#E3DACC"/>
+  <text x="585" y="132" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">结构化验收标准</text>
+  <text x="585" y="148" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">（Given-When-Then）</text>
+
+  <path d="M585 165 L585 188" stroke="#788C5D" stroke-width="2" fill="none" marker-end="url(#arrowOlive)"/>
+
+  <rect x="430" y="192" width="310" height="50" rx="6" fill="#E3DACC"/>
+  <text x="585" y="209" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">AI 自动生成测试代码</text>
+  <text x="585" y="225" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">（零信息丢失）</text>
+
+  <path d="M585 242 L585 265" stroke="#788C5D" stroke-width="2" fill="none" marker-end="url(#arrowOlive)"/>
+
+  <rect x="430" y="269" width="310" height="50" rx="6" fill="#C8E6C9"/>
+  <text x="585" y="286" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">直接执行</text>
+  <text x="585" y="302" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">结果：100% 一致</text>
+
+  <!-- Result -->
+  <rect x="40" y="360" width="720" height="48" rx="8" fill="#141413"/>
+  <text x="400" y="385" font-family="system-ui, sans-serif" font-size="13" fill="#FAF9F5" text-anchor="middle">核心价值：验收标准 = 测试代码 = 可执行契约</text>
+  <text x="400" y="402" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">消除人与人之间的理解偏差，实现「验收即测试」</text>
+</svg>

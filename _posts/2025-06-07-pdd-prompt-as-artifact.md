@@ -322,6 +322,8 @@ class PromptReviewer:
 
 ### Prompt测试金字塔
 
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%"></object>
+
 ```
            ▲
           ▲▲▲       集成测试：Prompt + 上下文 → 完整功能

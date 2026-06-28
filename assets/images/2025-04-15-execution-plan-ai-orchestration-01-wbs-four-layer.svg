@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="四层任务拆解结构">
+  <title>四层拆解：Epic → Story → Task → Subtask</title>
+  <desc>展示 Execution Plan 的层次化工作分解结构（WBS），从史诗到子任务的四级拆分</desc>
+
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bgGrad3)"/>
+
+  <!-- Title -->
+  <text x="400" y="32" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#141413" text-anchor="middle">四层拆解：Epic → Story → Task → Subtask</text>
+  <text x="400" y="50" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">层次化工作分解结构（WBS）</text>
+
+  <!-- Epic Layer -->
+  <rect x="40" y="75" width="720" height="85" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
+  <rect x="40" y="75" width="720" height="30" rx="10" fill="#D97757"/>
+  <rect x="40" y="95" width="720" height="10" fill="#D97757"/>
+  <text x="60" y="96" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Level 1: Epic（史诗）</text>
+  <text x="400" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="middle">业务目标，可独立交付的价值单元</text>
+  <text x="720" y="96" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="end">80 pts · 4 weeks</text>
+
+  <rect x="55" y="115" width="130" height="35" rx="5" fill="#E3DACC"/>
+  <text x="120" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">EP-001</text>
+
+  <rect x="200" y="115" width="130" height="35" rx="5" fill="#E3DACC"/>
+  <text x="265" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">EP-002</text>
+
+  <rect x="345" y="115" width="130" height="35" rx="5" fill="#E3DACC"/>
+  <text x="410" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">EP-003</text>
+
+  <rect x="490" y="115" width="130" height="35" rx="5" fill="#E3DACC"/>
+  <text x="555" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">EP-004</text>
+
+  <rect x="635" y="115" width="110" height="35" rx="5" fill="#E3DACC"/>
+  <text x="690" y="137" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413" text-anchor="middle">...</text>
+
+  <!-- Arrow -->
+  <path d="M400 160 L400 183" stroke="#D97757" stroke-width="2.5" fill="none"/>
+  <polygon points="400,190 395,182 405,182" fill="#D97757"/>
+  <text x="420" y="180" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#D97757">拆解</text>
+
+  <!-- Story Layer -->
+  <rect x="40" y="200" width="720" height="85" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2.5"/>
+  <rect x="40" y="200" width="720" height="30" rx="10" fill="#788C5D"/>
+  <rect x="40" y="220" width="720" height="10" fill="#788C5D"/>
+  <text x="60" y="221" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">Level 2: Story（用户故事）</text>
+  <text x="400" y="221" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="middle">用户可感知的功能点</text>
+  <text x="720" y="221" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" text-anchor="end">对应 User Story Pack</text>
+
+  <rect x="55" y="240" width="115" height="35" rx="5" fill="#E3DACC"/>
+  <text x="112" y="262" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413" text-anchor="middle">ST-001</text>
+
+  <rect x="185" y="240" width="115" height="35" rx="5" fill="#E3DACC"/>
+  <text x="242" y="262" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413" text-anchor="middle">ST-002</text>
+
+  <rect x="315" y="240" width="115" height="35" rx="5" fill="#E3DACC"/>
+  <text x="372" y="262" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413" text-anchor="middle">ST-003</text>
+
+  <rect x="445" y="240" width="115" height="35" rx="5" fill="#E3DACC"/>
+  <text x="502" y="262" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413" text-anchor="middle">ST-004</text>
+
+  <rect x="575" y="240" width="115" height="35" rx="5" fill="#E3DACC"/>
+  <text x="632" y="262" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#141413" text-anchor="middle">ST-005</text>
+
+  <!-- Arrow -->
+  <path d="M400 285 L400 308" stroke="#788C5D" stroke-width="2.5" fill="none"/>
+  <polygon points="400,315 395,307 405,307" fill="#788C5D"/>
+  <text x="420" y="305" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#788C5D">拆解</text>
+
+  <!-- Task Layer -->
+  <rect x="40" y="325" width="720" height="85" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2.5"/>
+  <rect x="40" y="325" width
