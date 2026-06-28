@@ -172,6 +172,8 @@ AIDR 增强维度:
      优势: 文档永远反映真实状态
 ```
 
+<object data="/assets/images/2026-03-14-adr-to-aidr-01-aidp-dimensions.svg" type="image/svg+xml" width="100%"></object>
+
 ### AIDR 格式示例
 
 ```yaml

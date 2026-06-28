@@ -52,6 +52,8 @@ Reddit 上的安全研究人员最近在讨论一个令人不安的趋势：
 
 GitHub 恶意仓库的攻击手法已经形成了完整的产业链：
 
+<object data="/assets/images/2026-03-16-github-supply-chain-attack-01-typosquatting-flow.svg" type="image/svg+xml" width="100%"></object>
+
 ### 1. 拼写劫持 (Typosquatting)
 
 | 真实包 | 恶意包 | 攻击手法 |

@@ -170,6 +170,8 @@ Agent-enabled 产品的 Net Dollar Retention（净收入留存率）：
 
 ## Agent 层的 3 个切入点
 
+<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-01-evolution-path.svg" type="image/svg+xml" width="100%"></object>
+
 ### 切入点 1：Copilot 模式（推荐起点）
 
 **定义**：AI 作为助手，用户主导，AI 辅助

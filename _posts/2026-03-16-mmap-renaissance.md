@@ -73,6 +73,8 @@ mmap 流程：
 
 关键区别：mmap **不一次性把整个文件读入内存**，而是按需将磁盘页加载到内存。操作系统负责换页，开发者像访问普通内存一样访问文件。
 
+<object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 ### 为什么被遗忘了？
 
 1. **SSD 之前，磁盘太慢**
