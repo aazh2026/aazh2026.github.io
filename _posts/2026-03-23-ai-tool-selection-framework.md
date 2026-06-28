@@ -14,8 +14,6 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%"></object>
-
 ## 一、Hook：一个普遍困境
 
 2026年，AI编程工具呈现爆炸式增长：
@@ -106,6 +104,8 @@ series: AI-Native Engineering
          
          第三维：协作深度（个人 → 团队 → 企业）
 ```
+
+<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%"></object>
 
 ### 维度1：控制轴（Control Spectrum）
 

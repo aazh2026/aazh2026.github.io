@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Georgia, serif">
+  <title>Human-AI Collaboration Loop</title>
+  <desc>Human researcher提出深刻问题，AI系统探索解空间、尝试构造、验证思路，人类验证发现、提炼洞察、提出下一个问题——形成协作闭环</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="18" font-weight="bold" fill="#141413" letter-spacing="1">HUMAN-AI COLLABORATION</text>
+  <text x="450" y="64" text-anchor="middle" font-size="12" fill="#87867F" letter-spacing="0.5">从「工具」到「协作者」的质变</text>
+  <line x1="200" y1="74" x2="700" y2="74" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Outer loop ring -->
+  <circle cx="450" cy="295" r="200" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="8,6"/>
+  <!-- Arrow around the loop -->
+  <path d="M 450 95 A 200 200 0 0 1 635 135" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- HUMAN side (left) -->
+  <rect x="60" y="230" width="180" height="130" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="60" y="230" width="180" height="32" rx="10" fill="#141413"/>
+  <rect x="60" y="250" width="180" height="12" fill="#141413"/>
+  <text x="150" y="251" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5" letter-spacing="2">HUMAN RESEARCHER</text>
+
+  <!-- Human tasks -->
+  <circle cx="100" cy="286" r="7" fill="#D97757"/>
+  <text x="116" y="291" font-size="12" fill="#141413">提出深刻问题</text>
+  <circle cx="100" cy="313" r="7" fill="#D97757"/>
+  <text x="116" y="318" font-size="12" fill="#141413">验证AI的发现</text>
+  <circle cx="100" cy="340" r="7" fill="#D97757"/>
+  <text x="116" y="345" font-size="12" fill="#141413">提炼洞察</text>
+
+  <!-- AI SYSTEM side (right) -->
+  <rect x="660" y="230" width="180" height="130" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="660" y="230" width="180" height="32" rx="10" fill="#788C5D"/>
+  <rect x="660" y="250" width="180" height="12" fill="#788C5D"/>
+  <text x="750" y="251" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5" letter-spacing="2">AI SYSTEM</text>
+
+  <!-- AI tasks -->
+  <circle cx="700" cy="286" r="7" fill="#788C5D"/>
+  <text x="716" y="291" font-size="12" fill="#141413">探索解空间</text>
+  <circle cx="700" cy="313" r="7" fill="#788C5D"/>
+  <text x="716" y="318" font-size="12" fill="#141413">尝试构造</text>
+  <circle cx="700" cy="340" r="7" fill="#788C5D"/>
+  <text x="716" y="345" font-size="12" fill="#141413">验证思路</text>
+
+  <!-- Center: Paradigm Shift label -->
+  <rect x="330" y="267" width="240" height="56" rx="28" fill="#D97757" filter="url(#shadow)"/>
+  <text x="450" y="293" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5">PARADIGM SHIFT</text>
+  <text x="450" y="311" text-anchor="middle" font-size="11" fill="#FAF9F5">工具 → 协作者</text>
+
+  <!-- Center top: Question -->
+  <rect x="350" y="108" width="200" height="46" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="127" text-anchor="middle" font-size="11" fill="#141413">Human: 提出深刻问题</text>
+  <text x="450" y="144" text-anchor="middle" font-size="10" fill="#87867F">直觉 · 领域知识 · 重要性判断</text>
+
+  <!-- Center bottom: Insight -->
+  <rect x="350" y="436" width="200" height="46" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="455" text-anchor="middle" font-size="11" fill="#141413">Human: 提炼洞察</text>
+  <text x="450" y="472" text-anchor="middle" font-size="10" fill="#87867F">批判性思维 · 创造性综合</text>
+
+  <!-- Connecting arrows: Human to AI -->
+  <path d="M 240 270 Q 330 220 340 250" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 240 340 Q 320 360 340 320" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Connecting arrows: AI to Human -->
+  <path d="M 660 250 Q 570 220 560 240" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 660 320 Q 580 360 560 330" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Loop description -->
+  <text x="450" y="492" text-anchor="middle" font-size="10" fill="#87867F">闭环：每一次「下一个问题」都建立在前一次协作的发现之上</text>
+</svg>

@@ -11,63 +11,96 @@
 
   <rect width="800" height="460" fill="url(#bg5)" rx="16"/>
 
-  <!-- Title -->
   <text x="400" y="34" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" letter-spacing="-0.3">AI 编程工具选择：三维框架</text>
   <line x1="200" y1="48" x2="600" y2="48" stroke="#D1CFC5" stroke-width="1.5"/>
 
-  <!-- Triangular diagram: X=Control, Y=Abstraction, Z=Collaboration -->
-  <!-- Triangle corners: top=High Control+High Abstraction, bottom-left=Low Control+Low Abstraction+Personal, bottom-right=High Abstraction+Team/Enterprise -->
+  <!-- Triangle vertices: top=(400,70), bl=(60,390), br=(740,390) -->
 
-  <!-- Main triangle area -->
-  <!-- Vertices: (400,70)=top, (60,380)=bottom-left, (740,380)=bottom-right -->
+  <!-- Axis: Control (vertical center) -->
+  <line x1="400" y1="390" x2="400" y2="82" stroke="#D97757" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="400,72 394,84 406,84" fill="#D97757"/>
+  <text x="415" y="120" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#D97757">强控制</text>
+  <text x="415" y="134" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Claude · aider</text>
+  <text x="415" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#87867F">弱控制</text>
+  <text x="415" y="364" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Copilot · Codeium</text>
 
-  <!-- Axis 1: Control Spectrum (vertical center) -->
-  <!-- Arrow from (400,390) to (400,80) -->
-  <line x1="400" y1="390" x2="400" y2="80" stroke="#D97757" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="400,70 394,82 406,82" fill="#D97757"/>
-  <text x="400" y="408" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#D97757">强控制</text>
-  <text x="400" y="422" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Claude Code · aider</text>
-  <text x="400" y="392" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#87867F">弱控制</text>
+  <!-- Axis: Abstraction (left side, 30deg from vertical) -->
+  <line x1="400" y1="390" x2="80" y2="340" stroke="#788C5D" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="70,340 82,332 82,348" fill="#788C5D"/>
+  <text x="180" y="330" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#788C5D">高抽象 · IDE类</text>
+  <text x="160" y="344" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Cursor · Windsurf</text>
+  <text x="260" y="375" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#788C5D">低抽象 · 终端类</text>
 
-  <!-- Axis 2: Abstraction Spectrum (left side) -->
-  <line x1="400" y1="390" x2="80" y2="330" stroke="#788C5D" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="70,330 82,322 82,338" fill="#788C5D"/>
-  <text x="65" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D">高抽象</text>
-  <text x="50" y="374" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">IDE类</text>
-  <text x="200" y="368" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#788C5D">低抽象</text>
-  <text x="210" y="382" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">终端类</text>
+  <!-- Axis: Collaboration (right side, 30deg from vertical) -->
+  <line x1="400" y1="390" x2="720" y2="340" stroke="#87867F" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="730,340 718,332 718,348" fill="#87867F"/>
+  <text x="660" y="355" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#87867F">团队 → 企业</text>
+  <text x="620" y="369" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">Copilot Enterprise</text>
+  <text x="540" y="388" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" fill="#87867F">个人</text>
 
-  <!-- Axis 3: Collaboration Spectrum (right side) -->
-  <line x1="400" y1="390" x2="720" y2="330" stroke="#87867F" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="730,330 718,322 718,338" fill="#87867F"/>
-  <text x="740" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F">个人</text>
-  <text x="560" y="368" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="600" fill="#87867F">团队/企业</text>
+  <!-- Tool positions -->
+  <!-- Claude Code: strong control, low abstraction, personal -->
+  <!-- Approx: x=310, y=200 -->
+  <circle cx="310" cy="210" r="24" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="310" y="206" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#D97757">Claude</text>
+  <text x="310" y="219" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">Code</text>
 
-  <!-- Tool positions as labeled dots -->
-  <!-- Claude Code: strong control (0.75), low-mid abstraction (0.3), personal (0.2) -->
-  <!-- Position approx: x = 400 + (0.3-0.5)*scale, y = 390 - 0.75*280 -->
-  <!-- Using barycentric: top corner weight = abstraction, bottom-left = 1-control-abstraction... -->
-  <!-- Simple 2D placement: x spreads from 400±200, y from 80-390 -->
-  <!-- Claude Code: strong control (high y), low abstraction (near left), personal (near center-right) -->
-  <!-- x=340, y=175 -->
-  <circle cx="325" cy="195" r="22" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5" filter="url(#shadow5)"/>
-  <text x="325" y="190" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">Claude</text>
-  <text x="325" y="202" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Code</text>
+  <!-- Cursor: medium-high control, high abstraction, team -->
+  <!-- Approx: x=430, y=175 -->
+  <circle cx="430" cy="185" r="24" fill="#FAF9F5" stroke="#788C5D" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="430" y="181" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#788C5D">Cursor</text>
+  <text x="430" y="194" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">Composer</text>
 
-  <!-- Cursor: medium-high control, high abstraction, team-leaning -->
-  <!-- x=420, y=165 -->
-  <circle cx="445" cy="180" r="22" fill="#FAF9F5" stroke="#788C5D" stroke-width="2.5" filter="url(#shadow5)"/>
-  <text x="445" y="175" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#788C5D">Cursor</text>
-  <text x="445" y="187" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Composer</text>
-
-  <!-- Copilot: weak control, high abstraction, enterprise -->
-  <!-- x=510, y=300 -->
-  <circle cx="530" cy="285" r="22" fill="#FAF9F5" stroke="#87867F" stroke-width="2.5" filter="url(#shadow5)"/>
-  <text x="530" y="280" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#87867F">GitHub</text>
-  <text x="530" y="292" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#141413">Copilot</text>
+  <!-- GitHub Copilot: weak control, high abstraction, enterprise -->
+  <!-- Approx: x=510, y=295 -->
+  <circle cx="510" cy="295" r="24" fill="#FAF9F5" stroke="#87867F" stroke-width="2.5" filter="url(#shadow5)"/>
+  <text x="510" y="291" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#87867F">GitHub</text>
+  <text x="510" y="304" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">Copilot</text>
 
   <!-- Codex CLI: strong control, low abstraction, personal -->
-  <!-- x=260, y=250 -->
-  <circle cx="255" cy="265" r="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow5)"/>
-  <text x="255" y="261" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">Codex</text>
-  <text x="255"
+  <!-- Approx: x=270, y=280 -->
+  <circle cx="270" cy="280" r="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow5)"/>
+  <text x="270" y="276" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">Codex CLI</text>
+
+  <!-- aider: strong control, low abstraction, personal -->
+  <!-- Approx: x=340, y=310 -->
+  <circle cx="340" cy="305" r="20" fill="#FAF9F5" stroke="#D97757" stroke-width="2" filter="url(#shadow5)"/>
+  <text x="340" y="301" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#D97757">aider</text>
+
+  <!-- Windsurf: medium control, high abstraction, team -->
+  <!-- Approx: x=490, y=210 -->
+  <circle cx="490" cy="215" r="20" fill="#FAF9F5" stroke="#788C5D" stroke-width="2" filter="url(#shadow5)"/>
+  <text x="490" y="211" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" font-weight="700" fill="#788C5D">Windsurf</text>
+
+  <!-- Three principle cards on right panel -->
+  <rect x="560" y="72" width="220" height="340" rx="14" fill="#FAF9F5" filter="url(#shadow5)"/>
+  <rect x="560" y="72" width="220" height="44" rx="14" fill="#D97757" opacity="0.9"/>
+  <rect x="560" y="102" width="220" height="14" fill="#D97757" opacity="0.9"/>
+  <text x="670" y="97" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">三维选择原则</text>
+
+  <!-- Principle 1 -->
+  <text x="576" y="136" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#D97757">① 认知匹配原则</text>
+  <rect x="576" y="144" width="188" height="46" rx="8" fill="#E3DACC" opacity="0.5"/>
+  <text x="584" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">工具认知模型</text>
+  <text x="584" y="171" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">必须匹配使用者认知模型</text>
+  <text x="584" y="184" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">控制型→黑盒=错配</text>
+
+  <!-- Principle 2 -->
+  <text x="576" y="210" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#788C5D">② 迁移成本原则</text>
+  <rect x="576" y="218" width="188" height="46" rx="8" fill="#E3DACC" opacity="0.5"/>
+  <text x="584" y="232" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">切换ROI =</text>
+  <text x="584" y="245" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">(新工具效率提升×时长)</text>
+  <text x="584" y="258" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">- 总迁移成本</text>
+  <text x="584" y="271" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">ROI&gt;3 才值得切换</text>
+
+  <!-- Principle 3 -->
+  <text x="576" y="296" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="700" fill="#87867F">③ 组合优于单选原则</text>
+  <rect x="576" y="304" width="188" height="54" rx="8" fill="#E3DACC" opacity="0.5"/>
+  <text x="584" y="318" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">探索阶段 → 高抽象工具</text>
+  <text x="584" y="332" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">实现阶段 → 中抽象工具</text>
+  <text x="584" y="346" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#141413">优化阶段 → 低抽象工具</text>
+
+  <!-- Bottom insight -->
+  <rect x="30" y="422" width="740" height="32" rx="10" fill="#141413" opacity="0.04"/>
+  <text x="400" y="442" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413" font-style="italic">工具是手段，认知升级才是目的 — 不要问哪个更好，问哪个适合你的认知方式</text>
+</svg>

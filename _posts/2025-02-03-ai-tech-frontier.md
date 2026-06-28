@@ -15,8 +15,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2025-02-03-ai-tech-frontier-01-three-events.svg" type="image/svg+xml" width="100%"></object>
-
 ## 1️⃣ Donald Knuth：Claude Opus 4.6 解决了我的开放问题
 
 **📄 论文**: [Claude's Cycles](https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf) (Stanford, 2026)
@@ -137,6 +135,8 @@ claude remote-control
 | 定时任务 | ❌ (Cowork 有限支持) | ✅ |
 | 云端执行 | ❌ | ✅ |
 | 权限管理 | 基础 | 成熟 |
+
+<object data="/assets/images/2025-02-03-ai-tech-frontier-01-three-events.svg" type="image/svg+xml" width="100%"></object>
 
 Simon Willison 的评价：
 > *"It's interesting to then contrast this to solutions like OpenClaw, where one of the big selling points is the ability to control your personal device from your phone."*

@@ -17,8 +17,6 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%"></object>
-
 ## 📋 本文结构
 
 1. [为什么是四个 Agent](#一为什么是四个-agent) — 不是随意选的数字
@@ -79,6 +77,8 @@ series: AI-Native Engineering
 - **Input**：Quality Agent 的批准稿
 - **Output**：以正确格式部署到正确平台
 - **Never does**：研究、写作或质量评估
+
+<object data="/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 
