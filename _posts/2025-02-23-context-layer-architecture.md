@@ -209,48 +209,7 @@ business_context:
 
 ### 系统架构图
 
-```mermaid
-flowchart TB
-    subgraph App["AI Application"]
-        Chatbot["Chatbot"]
-        CodeGen["Code Generator"]
-        Analyst["Analyst"]
-    end
-    
-    API["Context Layer API"]
-    
-    subgraph APIInternal[" "
-        Query["Query Interface\nGet context for: order creation"]
-        Agg["Aggregation Engine\nCollect from multiple sources"]
-        Cache["Caching Layer\nRedis/Memcached"]
-    end
-    
-    Source1["Source 1\nGitHub/Repo"]
-    Source2["Source 2\nConfluence"]
-    SourceN["Source N\nADR"]
-    
-    Chatbot --> API
-    CodeGen --> API
-    Analyst --> API
-    
-    API --> Query
-    Query --> Agg
-    Agg --> Cache
-    
-    Cache --> Source1
-    Cache --> Source2
-    Cache --> SourceN
-    
-    style App fill:#f8fafc,stroke:#64748b,stroke-width:2px
-    style API fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style APIInternal fill:#fef3c7,stroke:#d97706
-    style Query fill:#fed7aa,stroke:#ea580c
-    style Agg fill:#fed7aa,stroke:#ea580c
-    style Cache fill:#fed7aa,stroke:#ea580c
-    style Source1 fill:#dbeafe,stroke:#2563eb
-    style Source2 fill:#dbeafe,stroke:#2563eb
-    style SourceN fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2025-02-23-context-layer-02-architecture.svg" type="image/svg+xml" width="100%"></object>
 
 ### 核心组件详解
 

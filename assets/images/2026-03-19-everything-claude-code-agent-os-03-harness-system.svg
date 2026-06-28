@@ -1,0 +1,122 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Harness Engineering 完整系统运行视图 -->
+  <rect width="560" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Harness Engineering 完整运行视图</text>
+  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/19</text>
+
+  <!-- Row 1: User Input + Command Router -->
+  <rect x="40" y="40" width="100" height="36" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="90" y="54" text-anchor="middle" font-size="9" fill="#D97706" font-family="ui-monospace, monospace" font-weight="600">User Input</text>
+  <text x="90" y="67" text-anchor="middle" font-size="8.5" fill="#87867F">/plan /tdd /verify</text>
+
+  <line x1="140" y1="58" x2="155" y2="58" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="151,54 158,58 151,62" fill="#D1CFC5"/>
+
+  <rect x="160" y="40" width="110" height="36" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="215" y="54" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Command Router</text>
+  <text x="215" y="67" text-anchor="middle" font-size="8.5" fill="#87867F">路由到对应 Agent</text>
+
+  <!-- Row 2: Agent Layer -->
+  <line x1="215" y1="76" x2="215" y2="86" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="211,82 215,90 219,82" fill="#D1CFC5"/>
+
+  <rect x="40" y="88" width="480" height="50" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="60" y="106" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent Layer</text>
+  <rect x="110" y="95" width="100" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="160" y="116" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Planner</text>
+  <text x="160" y="127" text-anchor="middle" font-size="8" fill="#87867F">架构设计</text>
+  <rect x="220" y="95" width="100" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="270" y="116" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Coder</text>
+  <text x="270" y="127" text-anchor="middle" font-size="8" fill="#87867F">代码实现</text>
+  <rect x="330" y="95" width="100" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="380" y="116" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Reviewer</text>
+  <text x="380" y="127" text-anchor="middle" font-size="8" fill="#87867F">质量审查</text>
+  <rect x="440" y="95" width="70" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="475" y="116" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Skills</text>
+  <text x="475" y="127" text-anchor="middle" font-size="8" fill="#87867F">TDD/Eval</text>
+
+  <!-- Row 3: Skills Layer -->
+  <line x1="475" y1="138" x2="475" y2="148" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="471,144 475,152 479,144" fill="#D1CFC5"/>
+
+  <rect x="40" y="150" width="480" height="40" rx="6" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.2"/>
+  <text x="60" y="168" font-size="9" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">Skills Layer</text>
+  <rect x="120" y="157" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="165" y="173" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">TDD</text>
+  <rect x="220" y="157" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="265" y="173" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Eval</text>
+  <rect x="320" y="157" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="365" y="173" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Learning</text>
+  <rect x="420" y="157" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="465" y="173" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Reviewer</text>
+
+  <!-- Row 4: Rules Engine -->
+  <line x1="465" y1="183" x2="465" y2="193" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="461,189 465,197 469,189" fill="#D1CFC5"/>
+
+  <rect x="40" y="195" width="480" height="40" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.2"/>
+  <text x="60" y="213" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Rules Engine</text>
+  <rect x="130" y="202" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="175" y="218" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Coding</text>
+  <rect x="230" y="202" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="275" y="218" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Security</text>
+  <rect x="330" y="202" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="375" y="218" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Testing</text>
+  <rect x="430" y="202" width="80" height="26" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="470" y="218" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Process</text>
+
+  <!-- Row 5: MCP Tools -->
+  <line x1="470" y1="228" x2="470" y2="238" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="466,234 470,242 474,234" fill="#D1CFC5"/>
+
+  <rect x="40" y="240" width="480" height="40" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="60" y="258" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" font-weight="600">MCP Tools</text>
+  <rect x="130" y="247" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#87867F" stroke-width="1"/>
+  <text x="175" y="263" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">GitHub</text>
+  <rect x="230" y="247" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#87867F" stroke-width="1"/>
+  <text x="275" y="263" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">DB</text>
+  <rect x="330" y="247" width="90" height="26" rx="4" fill="#FFFFFF" stroke="#87867F" stroke-width="1"/>
+  <text x="375" y="263" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">APIs</text>
+  <rect x="430" y="247" width="80" height="26" rx="4" fill="#FFFFFF" stroke="#87867F" stroke-width="1"/>
+  <text x="470" y="263" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Files</text>
+
+  <!-- Row 6: Eval Harness -->
+  <line x1="475" y1="280" x2="475" y2="290" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="471,286 475,294 479,286" fill="#D1CFC5"/>
+
+  <rect x="40" y="292" width="480" height="36" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.2"/>
+  <text x="60" y="308" font-size="9" fill="#D97706" font-family="ui-monospace, monospace" font-weight="600">Eval Harness</text>
+  <text x="160" y="308" font-size="9" fill="#141413" font-weight="600">能力评估</text>
+  <text x="250" y="308" font-size="9" fill="#87867F">·</text>
+  <text x="270" y="308" font-size="9" fill="#141413" font-weight="600">回归测试</text>
+  <text x="355" y="308" font-size="9" fill="#87867F">·</text>
+  <text x="375" y="308" font-size="9" fill="#141413" font-weight="600">质量检查</text>
+  <text x="470" y="308" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">pass@k</text>
+
+  <!-- Row 7: Metrics -->
+  <line x1="475" y1="328" x2="475" y2="338" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="471,334 475,342 479,334" fill="#D1CFC5"/>
+
+  <rect x="40" y="340" width="480" height="36" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1.2"/>
+  <text x="60" y="356" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Metrics Layer</text>
+  <text x="160" y="356" font-size="9" fill="#141413" font-weight="600">pass@k</text>
+  <text x="230" y="356" font-size="9" fill="#87867F">·</text>
+  <text x="250" y="356" font-size="9" fill="#141413" font-weight="600">历史追踪</text>
+  <text x="340" y="356" font-size="9" fill="#87867F">·</text>
+  <text x="360" y="356" font-size="9" fill="#141413" font-weight="600">基线对比</text>
+  <text x="450" y="356" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">量化一切</text>
+
+  <!-- Row 8: Continuous Learning -->
+  <line x1="475" y1="376" x2="475" y2="386" stroke="#D1CFC5" stroke-width="1.2"/>
+  <polygon points="471,382 475,390 479,382" fill="#D1CFC5"/>
+
+  <rect x="40" y="388" width="480" height="26" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.2"/>
+  <text x="60" y="404" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Continuous Learning</text>
+  <text x="200" y="404" font-size="9" fill="#141413" font-weight="600">模式提取 → 新 Skill 生成</text>
+  <text x="420" y="404" font-size="9" fill="#059669" font-family="ui-monospace, monospace">经验沉淀</text>
+
+  <!-- Bottom label -->
+  <text x="280" y="418" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">不是相信 AI 会做对，而是确保 AI 必须做对</text>
+</svg>

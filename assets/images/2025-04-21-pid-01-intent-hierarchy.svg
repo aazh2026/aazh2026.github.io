@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="100%">
+  <defs>
+    <marker id="arr7" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <filter id="shadow7" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D1CFC5" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="720" height="360" fill="#FAF9F5" rx="8"/>
+
+  <!-- Title -->
+  <text x="360" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Product Intent 层级结构</text>
+
+  <!-- L1: Strategic Intent -->
+  <g transform="translate(360,75)">
+    <rect x="-300" y="-34" width="600" height="68" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="3" filter="url(#shadow7)"/>
+    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#D97757">Level 1: 战略意图 Strategic Intent</text>
+    <text x="-275" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">"成为最懂用户的电商平台"</text>
+  </g>
+
+  <!-- Arrow L1 → L2 -->
+  <path d="M 360,109 L 360,144" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr7)"/>
+
+  <!-- L2: Product Intent -->
+  <g transform="translate(360,192)">
+    <rect x="-300" y="-34" width="600" height="68" rx="10" fill="#E3DACC" stroke="#87867F" stroke-width="2" filter="url(#shadow7)"/>
+    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#141413">Level 2: 产品意图 Product Intent</text>
+    <text x="-275" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">"通过个性化推荐提升用户发现和购买效率"</text>
+  </g>
+
+  <!-- Arrow L2 → L3 -->
+  <path d="M 360,226 L 360,261" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)"/>
+
+  <!-- L3: Feature Intent -->
+  <g transform="translate(360,309)">
+    <rect x="-300" y="-34" width="600" height="68" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="2" filter="url(#shadow7)"/>
+    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#141413">Level 3: 功能意图 Feature Intent</text>
+    <text x="-275" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">"首页个性化推荐模块：在 100ms 内展示 5 个相关商品"</text>
+  </g>
+
+  <!-- Arrow L3 → L4 -->
+  <path d="M 360,343 L 360,355" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)"/>
+
+  <!-- L4: Implementation Intent (smaller, bottom) -->
+  <g transform="translate(360,370)">
+    <rect x="-280" y="-12" width="560" height="30" rx="6" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5" filter="url(#shadow7)"/>
+    <text x="0" y="5" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#788C5D">Level 4: 实现意图 (由 AI 决定) — 向量检索 + 排序模型，Top-K 召回后精排</text>
+  </g>
+
+  <!-- Key insight label -->
+  <text x="360" y="410" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">Product Intent 关注 Level 2–3，将 Level 4 留给 AI 决定</text>
+</svg>

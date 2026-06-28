@@ -345,22 +345,7 @@ def test_calculate_discount():
 
 **智能审查流程**：
 
-```mermaid
-flowchart TD
-    PR["PR提交"] --> AIPre["AI预审 (30秒内完成)<br/>- 安全扫描<br/>- 性能检查<br/>- 规范合规<br/>- 测试覆盖"]
-    
-    AIPre -->|"🔴 严重问题"| Block["自动阻止合并 + 建议修复"]
-    AIPre -->|"🟡 警告"| Mark["标记供人工关注"]
-    AIPre -->|"🟢 通过"| Human["进入人工审查队列"]
-    
-    Human --> Review["人类审查者关注:<br/>- 架构设计合理性<br/>- 业务逻辑正确性<br/>- 创新性解决方案"]
-    
-    style AIPre fill:#dbeafe,stroke:#2563eb
-    style Block fill:#fee2e2,stroke:#dc2626
-    style Mark fill:#fef3c7,stroke:#d97706
-    style Human fill:#d1fae5,stroke:#059669
-    style Review fill:#fef3c7,stroke:#d97706,stroke-width:2px
-```
+<object data="/assets/images/2026-03-15-feedback-loop-03-ai-review.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：AI处理"可模式化"的审查，人类专注"需要判断"的审查。
 
@@ -449,24 +434,7 @@ flowchart TD
 
 一个有效的实时反馈系统需要三个核心要素：
 
-```mermaid
-flowchart TB
-    subgraph RealTime["实时反馈系统三要素"]
-        Engine["实时反馈引擎 Real-Time Engine"]
-        Intent["Intent-Driven 意图驱动"]
-        Context["Context-Rich 上下文丰富"]
-        Action["Action-Ready 行动就绪"]
-    end
-    
-    Intent --> Engine
-    Context --> Engine
-    Action --> Engine
-    
-    style Engine fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style Intent fill:#fef3c7,stroke:#d97706
-    style Context fill:#d1fae5,stroke:#059669
-    style Action fill:#fed7aa,stroke:#ea580c
-```
+<object data="/assets/images/2026-03-15-feedback-loop-04-realtime-engine.svg" type="image/svg+xml" width="100%"></object>
 
 ### 要素一：Intent-Driven（意图驱动）
 

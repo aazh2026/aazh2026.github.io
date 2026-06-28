@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-size: 12px; }
+      .text-sm { fill: #87867F; font-size: 10px; }
+      .text-xs { fill: #87867F; font-size: 9px; }
+      .text-label { fill: #141413; font-size: 11px; font-weight: 500; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; }
+      .fill-client { fill: #E3DACC; }
+      .fill-router { fill: #fef3c7; stroke: #D97757; stroke-width: 2; }
+      .fill-agent { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .fill-capability { fill: #d1fae5; stroke: #059669; stroke-width: 1.5; }
+      .fill-prompt { fill: #fed7aa; stroke: #ea580c; stroke-width: 1.5; }
+      .fill-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="900" height="480" class="bg"/>
+
+  <!-- Title -->
+  <text x="450" y="28" text-anchor="middle" class="text-main" font-size="15" font-weight="700">智能客服系统架构图 — 新 SOLID 原则应用</text>
+
+  <!-- ========== Client ========== -->
+  <rect x="40" y="80" width="120" height="44" rx="7" class="fill-client border"/>
+  <text x="100" y="98" text-anchor="middle" class="text-label">Client</text>
+  <text x="100" y="112" text-anchor="middle" class="text-xs">用户请求</text>
+
+  <!-- Arrow: Client → Router -->
+  <line x1="160" y1="102" x2="200" y2="102" class="border" stroke-width="2"/>
+  <polygon points="200,102 192,97 192,107" fill="#141413"/>
+
+  <!-- ========== IntentRouter ========== -->
+  <rect x="200" y="60" width="160" height="84" rx="8" class="fill-router"/>
+  <text x="280" y="80" text-anchor="middle" class="text-label" fill="#141413" font-weight="600">IntentRouter</text>
+  <text x="280" y="93" text-anchor="middle" class="text-xs">ISP: Intent 隔离原则</text>
+  <rect x="215" y="100" width="130" height="34" rx="5" class="fill-white border"/>
+  <text x="280" y="115" text-anchor="middle" class="text-sm">解析用户查询 →</text>
+  <text x="280" y="128" text-anchor="middle" class="text-xs">分解为独立 Intent</text>
+
+  <!-- Arrows: Router → Agents -->
+  <line x1="280" y1="144" x2="200" y2="220" class="border" stroke-width="1.5"/>
+  <polygon points="200,220 207,214 200,208" fill="#141413"/>
+  <line x1="280" y1="144" x2="360" y2="220" class="border" stroke-width="1.5"/>
+  <polygon points="360,220 353,214 360,208" fill="#141413"/>
+
+  <!-- ========== Agents box (dashed) ========== -->
+  <rect x="110" y="200" width="340" height="160" rx="10" fill="none" stroke="#D1CFC5" stroke-dasharray="6 4"/>
+  <text x="280" y="216" text-anchor="middle" class="text-sm" fill="#87867F">Agents (SCP — 单一能力原则)</text>
+
+  <!-- OrderAgent -->
+  <rect x="130" y="228" width="140" height="60" rx="7" class="fill-agent"/>
+  <text x="200" y="248" text-anchor="middle" class="text-label">OrderAgent</text>
+  <text x="200" y="262" text-anchor="middle" class="text-xs">专注：订单查询</text>
+  <text x="200" y="276" text-anchor="middle" class="text-xs">Capability: order_query</text>
+
+  <!-- SupportAgent -->
+  <rect x="290" y="228" width="140" height="60" rx="7" class="fill-agent"/>
+  <text x="360" y="248" text-anchor="middle" class="text-label">SupportAgent</text>
+  <text x="360" y="262" text-anchor="middle" class="text-xs">专注：退款处理</text>
+  <text x="360" y="276" text-anchor="middle" class="text-xs">Capability: refund_processor</text>
+
+  <!-- ========== Capability Layer ========== -->
+  <rect x="110" y="380" width="340" height="80" rx="10" fill="none" stroke="#D1CFC5" stroke-dasharray="6 4"/>
+  <text x="280" y="396" text-anchor="middle" class="text-sm" fill="#87867F">Capability Layer (DIP — 依赖抽象)</text>
+
+  <!-- LLM -->
+  <rect x="130" y="406" width="90" height="44" rx="6" class="fill-capability"/>
+  <text x="175" y="424" text-anchor="middle" class="text-label">LLM</text>
+  <text x="175" y="438" text-anchor="middle" class="text-xs">LLMProvider</text>
+
+  <!-- Tools -->
+  <rect x="235" y="406" width="90" height="44" rx="6" class="fill-capability"/>
+  <text x="280" y="424" text-anchor="middle" class="text-label">Tools</text>
+  <text x="280" y="438" text-anchor="middle" class="text-xs">ToolProvider</text>
+
+  <!-- Memory -->
+  <rect x="340" y="406" width="90" height="44" rx="6" class="fill-capability"/>
+  <text x="385" y="424" text-anchor="middle" class="text-label">Memory</text>
+  <text x="385" y="438" text-anchor="middle" class="text-xs">MemoryProvider</text>
+
+  <!-- Arrows: Agents → Capability -->
+  <line x1="200" y1="288" x2="175" y2="406" class="border" stroke-dasharray="4 4"/>
+  <line x1="360" y1="288" x2="385" y2="406" class="border" stroke-dasharray="4 4"/>
+  <line x1="280" y1="288" x2="280" y2="406" class="border" stroke-dasharray="4 4"/>
+
+  <!-- ========== Prompt Template System ========== -->
+  <rect x="500" y="60" width="200" height="120" rx="8" class="fill-prompt"/>
+  <text x="600" y="80" text-anchor="middle" class="text-label" font-weight="600">Prompt Template System</text>
+  <text x="600" y="94" text-anchor="middle" class="text-xs" fill="#87867F">OCP-P: 提示工程开闭原则</text>
+  <rect x="515" y="102" width="170" height="28" rx="5" class="fill-white border"/>
+  <text x="600" y="118" text-anchor="middle" class="text-sm">BaseTemplate</text>
+  <rect x="515" y="136" width="80" height="26" rx="4" class="fill-white border"/>
+  <text x="555" y="153" text-anchor="middle" class="text-xs">PremiumSupport</text>
+  <rect x="605" y="136" width="80" height="26" rx="4" class="fill-white border"/>
+  <text x="645" y="153" text-anchor="middle" class="text-xs">TechSupport</text>
+
+  <!-- Dashed arrows: PromptSystem → Agents -->
+  <line x1="580" y1="180" x2="200" y2="250" class="border" stroke="#ea580c" stroke-dasharray="5 5"/>
+  <line x1="600" y1="180" x2="360" y2="250" class="border" stroke="#ea580c" stroke-dasharray="5 5"/>
+
+  <!-- ========== Legend ========== -->
+  <rect x="730" y="60" width="150" height="180" rx="8" fill="none" class="border"/>
+  <text x="805" y="80" text-anchor="middle" class="text-label">图例</text>
+
+  <rect x="744" y="90" width="14" height="14" rx="3" class="fill-client border"/>
+  <text x="764" y="102" class="text-xs">用户入口</text>
+
+  <rect x="744" y="112" width="14" height="14" rx="3" class="fill-router"/>
+  <text x="764" y="124" class="text-xs">Intent 路由器 (ISP)</text>
+
+  <rect x="744" y="134" width="14" height="14" rx="3" class="fill-agent"/>
+  <text x="764" y="146" class="text-xs">专业化 Agent (SCP)</text>
+
+  <rect x="744" y="156" width="14" height="14" rx="3" class="fill-capability"/>
+  <text x="764" y="168" class="text-xs">能力抽象层 (DIP)</text>
+
+  <rect x="744" y="178" width="14" height="14" rx="3" class="fill-prompt"/>
+  <text x="764" y="190" class="text-xs">Prompt 模板 (OCP-P)</text>
+
+  <line x1="744" y1="208" x2="870" y2="208" class="border" stroke-dasharray="4 4"/>
+  <text x="764" y="220" class="text-xs">依赖抽象（运行时注入）</text>
+
+  <!-- ========== Principles applied ========== -->
+  <rect x="730" y="260" width="150" height="190" rx="8" fill="none" class="border"/>
+  <text x="805" y="280" text-anchor="middle" class="text-label">新 SOLID 应用</text>
+
+  <rect x="744" y="290" width="122" height="24" rx="4" class="fill-router"/>
+  <text x="805" y="306" text-anchor="middle" class="text-xs">ISP — Intent 隔离</text>
+
+  <rect x="744" y="320" width="122" height="24" rx="4" class="fill-agent"/>
+  <text x="805" y="336" text-anchor="middle" class="text-xs">SCP — 单一能力</text>
+
+  <rect x="744" y="350" width="122" height="24" rx="4" class="fill-prompt"/>
+  <text x="805" y="366" text-anchor="middle" class="text-xs">OCP-P — 提示工程开闭</text>
+
+  <rect x="744" y="380" width="122" height="24" rx="4" class="fill-capability"/>
+  <text x="805" y="396" text-anchor="middle" class="text-xs">DIP — 抽象层依赖倒置</text>
+
+  <rect x="744" y="410" width="122" height="24" rx="4" class="fill-capability"/>
+  <text x="805" y="426" text-anchor="middle" class="text-xs">LAP — 忠实表达原则</text>
+</svg>

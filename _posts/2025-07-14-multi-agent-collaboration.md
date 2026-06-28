@@ -72,23 +72,7 @@ redirect_from:
 
 **结构：**
 
-```mermaid
-flowchart TB
-    Supervisor["Supervisor Agent<br/>协调者：任务分解、分配、汇总"]
-    
-    Worker1["Worker 1"]
-    Worker2["Worker 2"]
-    Worker3["Worker 3"]
-    
-    Supervisor --> Worker1
-    Supervisor --> Worker2
-    Supervisor --> Worker3
-    
-    style Supervisor fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Worker1 fill:#dbeafe,stroke:#2563eb
-    style Worker2 fill:#dbeafe,stroke:#2563eb
-    style Worker3 fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景：**
 - 任务可明确分解为独立子任务
@@ -132,23 +116,7 @@ class MarketResearchOrchestrator:
 
 **结构：**
 
-```mermaid
-flowchart TB
-    AgentA["Agent A"]
-    AgentB["Agent B"]
-    AgentC["Agent C"]
-    AgentD["Agent D"]
-    
-    AgentA <--> AgentB
-    AgentA <--> AgentC
-    AgentB <--> AgentD
-    AgentC <--> AgentD
-    
-    style AgentA fill:#dbeafe,stroke:#2563eb
-    style AgentB fill:#dbeafe,stroke:#2563eb
-    style AgentC fill:#dbeafe,stroke:#2563eb
-    style AgentD fill:#dbeafe,stroke:#2563eb
-```
+<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景：**
 - 任务需要多轮协商
@@ -203,45 +171,7 @@ class CodeReviewCommittee:
 
 **结构：**
 
-```mermaid
-flowchart TB
-    CEO["CEO Agent 战略决策"]
-    
-    VPSales["VP Sales 战术规划"]
-    VPMkt["VP Marketing 战术规划"]
-    VPProd["VP Product 战术规划"]
-    
-    Mgr1["Manager 执行管理"]
-    Mgr2["Manager 执行管理"]
-    Mgr3["Manager 执行管理"]
-    
-    Worker1["Worker 具体执行"]
-    Worker2["Worker 具体执行"]
-    Worker3["Worker 具体执行"]
-    
-    CEO --> VPSales
-    CEO --> VPMkt
-    CEO --> VPProd
-    
-    VPSales --> Mgr1
-    VPMkt --> Mgr2
-    VPProd --> Mgr3
-    
-    Mgr1 --> Worker1
-    Mgr2 --> Worker2
-    Mgr3 --> Worker3
-    
-    style CEO fill:#fef3c7,stroke:#d97706,stroke-width:3px
-    style VPSales fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style VPMkt fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style VPProd fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style Mgr1 fill:#dbeafe,stroke:#2563eb
-    style Mgr2 fill:#dbeafe,stroke:#2563eb
-    style Mgr3 fill:#dbeafe,stroke:#2563eb
-    style Worker1 fill:#d1fae5,stroke:#059669
-    style Worker2 fill:#d1fae5,stroke:#059669
-    style Worker3 fill:#d1fae5,stroke:#059669
-```
+<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%"></object>
 
 **适用场景：**
 - 复杂组织模拟

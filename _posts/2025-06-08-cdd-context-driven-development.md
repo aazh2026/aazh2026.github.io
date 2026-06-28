@@ -202,18 +202,7 @@ constraints:
 
 ### 三层上下文模型
 
-```mermaid
-flowchart TB
-    L3["Layer 3: 任务上下文 Task Context<br/>- 当前具体任务<br/>- 相关代码片段<br/>- 用户当前输入<br/>- 会话历史<br/>Size: 1K-2K tokens"]
-    L2["Layer 2: 领域上下文 Domain Context<br/>- 领域模型<br/>- 业务规则<br/>- 相关API定义<br/>- 数据模型<br/>Size: 2K-4K tokens"]
-    L1["Layer 1: 系统上下文 System Context<br/>- 架构风格<br/>- 技术栈<br/>- 工程规范<br/>- 基础设施<br/>Size: 1K-2K tokens"]
-    
-    L3 --> L2 --> L1
-    
-    style L3 fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-06-08-cdd-02-layer-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 上下文组装策略
 
@@ -294,26 +283,7 @@ class ContextCache:
 
 ### 系统架构
 
-```mermaid
-flowchart TB
-    L1["开发者工具层
-    IDE插件 │ CLI工具 │ Web界面"]
-    L2["API网关层
-    认证 │ 限流 │ 路由 │ 缓存"]
-    L3["上下文服务层
-    组装引擎 │ 版本管理 │ 索引搜索 │ 依赖解析"]
-    L4["存储层
-    Git仓库 │ 向量数据库 │ 缓存(Redis)"]
-    
-    L1 --> L2
-    L2 --> L3
-    L3 --> L4
-    
-    style L1 fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style L2 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style L3 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style L4 fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2025-06-08-cdd-03-system-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 核心功能
 

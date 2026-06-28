@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 440" width="100%" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-size: 13px; }
+      .text-sm { fill: #87867F; font-size: 11px; }
+      .text-xs { fill: #87867F; font-size: 10px; }
+      .text-label { fill: #141413; font-size: 12px; font-weight: 600; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; }
+      .fill-user { fill: #E3DACC; }
+      .fill-parser { fill: #fef3c7; stroke: #D97757; }
+      .fill-router { fill: #fed7aa; stroke: #ea580c; }
+      .fill-executor { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .fill-pipeline { fill: #bfdbfe; stroke: #3b82f6; }
+      .fill-formatter { fill: #d1fae5; stroke: #059669; }
+      .fill-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="860" height="440" class="bg"/>
+
+  <!-- Title -->
+  <text x="430" y="28" text-anchor="middle" class="text-main" font-size="15" font-weight="700">Agent 工具链全景图：Unix 哲学的 AI 时代回响</text>
+
+  <!-- ========== User Input ========== -->
+  <rect x="330" y="48" width="200" height="40" rx="8" class="fill-user border"/>
+  <text x="430" y="70" text-anchor="middle" class="text-label">User Input</text>
+
+  <!-- Arrow: User → IntentParser -->
+  <line x1="430" y1="88" x2="430" y2="108" class="border" stroke-width="2"/>
+  <polygon points="430,108 425,100 435,100" fill="#141413"/>
+
+  <!-- ========== Chain container ========== -->
+  <rect x="40" y="108" width="780" height="210" rx="12" fill="none" class="border" stroke="#D1CFC5" stroke-width="2"/>
+  <text x="60" y="126" class="text-label">Agent 工具链</text>
+
+  <!-- ========== IntentParser ========== -->
+  <rect x="60" y="140" width="160" height="60" rx="8" class="fill-parser"/>
+  <text x="140" y="162" text-anchor="middle" class="text-label" fill="#D97757">IntentParser</text>
+  <text x="140" y="178" text-anchor="middle" class="text-xs">Intent 解析（类似 shell 解析命令）</text>
+  <text x="140" y="192" text-anchor="middle" class="text-xs">将自然语言转为结构化 Intent</text>
+
+  <!-- Arrow: IntentParser → Router -->
+  <line x1="220" y1="170" x2="255" y2="170" class="border" stroke-width="2"/>
+  <polygon points="255,170 247,165 247,175" fill="#141413"/>
+
+  <!-- ========== Router ========== -->
+  <rect x="255" y="140" width="160" height="60" rx="8" class="fill-router"/>
+  <text x="335" y="162" text-anchor="middle" class="text-label" fill="#ea580c">Router</text>
+  <text x="335" y="178" text-anchor="middle" class="text-xs">路由（类似 shell 的 which）</text>
+  <text x="335" y="192" text-anchor="middle" class="text-xs">根据 Intent 选择 Agent</text>
+
+  <!-- Arrow: Router → Executor -->
+  <line x1="415" y1="170" x2="450" y2="170" class="border" stroke-width="2"/>
+  <polygon points="450,170 442,165 442,175" fill="#141413"/>
+
+  <!-- ========== Executor ========== -->
+  <rect x="450" y="140" width="160" height="60" rx="8" class="fill-executor"/>
+  <text x="530" y="162" text-anchor="middle" class="text-label">Executor</text>
+  <text x="530" y="178" text-anchor="middle" class="text-xs">执行（类似 fork/exec）</text>
+  <text x="530" y="192" text-anchor="middle" class="text-xs">运行选定的 Agent</text>
+
+  <!-- Arrow: Executor → Pipeline -->
+  <line x1="610" y1="170" x2="645" y2="170" class="border" stroke-width="2"/>
+  <polygon points="645,170 637,165 637,175" fill="#141413"/>
+
+  <!-- ========== Pipeline ========== -->
+  <rect x="645" y="140" width="160" height="60" rx="8" class="fill-pipeline"/>
+  <text x="725" y="162" text-anchor="middle" class="text-label">Pipeline</text>
+  <text x="725" y="178" text-anchor="middle" class="text-xs">管道（类似 pipe）</text>
+  <text x="725" y="192" text-anchor="middle" class="text-xs">连接多个 Agent</text>
+
+  <!-- ========== Formatter ========== -->
+  <rect x="340" y="258" width="180" height="50" rx="8" class="fill-formatter"/>
+  <text x="430" y="280" text-anchor="middle" class="text-label" fill="#059669">Formatter</text>
+  <text x="430" y="296" text-anchor="middle" class="text-xs">格式化（类似 printf）结果格式化输出</text>
+
+  <!-- Arrow: Pipeline → Formatter -->
+  <line x1="725" y1="200" x2="430" y2="258" class="border" stroke-width="2"/>
+  <polygon points="430,258 438,252 430,246" fill="#141413"/>
+
+  <!-- Arrow: Formatter → UserOutput -->
+  <line x1="430" y1="308" x2="430" y2="328" class="border" stroke-width="2"/>
+  <polygon points="430,328 425,320 435,320" fill="#141413"/>
+
+  <!-- ========== User Output ========== -->
+  <rect x="330" y="328" width="200" height="40" rx="8" class="fill-user border"/>
+  <text x="430" y="350" text-anchor="middle" class="text-label">User Output</text>
+
+  <!-- ========== Comparison with Unix ========== -->
+  <rect x="40" y="380" width="780" height="52" rx="8" fill="none" class="border" stroke="#D1CFC5" stroke-dasharray="5 4"/>
+  <text x="430" y="397" text-anchor="middle" class="text-main" font-size="12" font-weight="600">Unix 命令类比</text>
+  <text x="430" y="415" text-anchor="middle" class="text-sm" fill="#87867F">
+    IntentParser ≈ bash 解析 | Router ≈ which/command lookup | Executor ≈ fork+exec | Pipeline ≈ | 管道符 | Formatter ≈ printf
+  </text>
+
+  <!-- ========== Legend ========== -->
+  <rect x="690" y="48" width="130" height="160" rx="8" fill="none" class="border"/>
+  <text x="755" y="66" text-anchor="middle" class="text-label">图例</text>
+
+  <rect x="704" y="78" width="12" height="12" rx="2" class="fill-parser"/>
+  <text x="722" y="89" class="text-xs">Intent 解析</text>
+
+  <rect x="704" y="96" width="12" height="12" rx="2" class="fill-router"/>
+  <text x="722" y="107" class="text-xs">Intent 路由</text>
+
+  <rect x="704" y="114" width="12" height="12" rx="2" class="fill-executor"/>
+  <text x="722" y="125" class="text-xs">Agent 执行器</text>
+
+  <rect x="704" y="132" width="12" height="12" rx="2" class="fill-pipeline"/>
+  <text x="722" y="143" class="text-xs">Agent 管道</text>
+
+  <rect x="704" y="150" width="12" height="12" rx="2" class="fill-formatter"/>
+  <text x="722" y="161" class="text-xs">输出格式化</text>
+
+  <line x1="704" y1="176" x2="790" y2="176" class="border" stroke-width="1.5"/>
+  <polygon points="790,176 782,171 782,181" fill="#141413"/>
+  <text x="722" y="188" class="text-xs">数据流向</text>
+</svg>

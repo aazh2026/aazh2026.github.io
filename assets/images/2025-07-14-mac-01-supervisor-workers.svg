@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%">
+  <defs>
+    <marker id="arr4" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <filter id="shadow4" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D1CFC5" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="320" fill="#FAF9F5" rx="8"/>
+
+  <!-- Title -->
+  <text x="350" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Supervisor-Workers 协作模式</text>
+
+  <!-- Supervisor -->
+  <g transform="translate(350,75)">
+    <rect x="-200" y="-30" width="400" height="60" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2.5" filter="url(#shadow4)"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#D97757">Supervisor Agent</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">协调者：任务分解 · 分配 · 汇总</text>
+  </g>
+
+  <!-- Arrows Supervisor → Workers -->
+  <path d="M 280,105 L 160,160" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr4)"/>
+  <path d="M 350,135 L 350,160" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr4)"/>
+  <path d="M 420,105 L 540,160" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr4)"/>
+
+  <!-- Worker 1 -->
+  <g transform="translate(130,220)">
+    <rect x="-90" y="-26" width="180" height="52" rx="8" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow4)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#141413">Worker 1</text>
+  </g>
+
+  <!-- Worker 2 -->
+  <g transform="translate(350,220)">
+    <rect x="-90" y="-26" width="180" height="52" rx="8" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow4)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#141413">Worker 2</text>
+  </g>
+
+  <!-- Worker 3 -->
+  <g transform="translate(570,220)">
+    <rect x="-90" y="-26" width="180" height="52" rx="8" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow4)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#141413">Worker 3</text>
+  </g>
+
+  <!-- Bottom label -->
+  <text x="350" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#87867F">主管统一协调，多个工作节点并行执行子任务</text>
+</svg>

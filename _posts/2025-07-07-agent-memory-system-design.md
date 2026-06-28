@@ -673,26 +673,7 @@ class AgentKnowledgeGraph:
 
 ### 整体架构
 
-```mermaid
-flowchart TB
-    subgraph MMS["Agent Memory System"]
-        subgraph Top[""]
-            WM["Working Memory<br/>(In-Memory)<br/>• ContextWindow<br/>• EntityTracker<br/>• Summarizer"]
-            STM["Short-term Memory<br/>(Vector DB)<br/>• Semantic retrieval<br/>• Temporal decay<br/>• Importance scoring"]
-        end
-        
-        subgraph Bottom[""]
-            LTM["Long-term Memory<br/>(Relational DB)<br/>• User profiles<br/>• Business rules<br/>• Case studies"]
-            KG["Knowledge Graph<br/>(Graph DB)<br/>• Entity relationships<br/>• Inference queries<br/>• Path finding"]
-        end
-    end
-    
-    style MMS fill:#f8fafc,stroke:#64748b,stroke-width:2px
-    style WM fill:#fef3c7,stroke:#d97706
-    style STM fill:#dbeafe,stroke:#2563eb
-    style LTM fill:#d1fae5,stroke:#059669
-    style KG fill:#fce7f3,stroke:#db2777
-```
+<object data="/assets/images/2025-07-07-agent-memory-02-system.svg" type="image/svg+xml" width="100%"></object>
 
 ### 关键设计决策
 

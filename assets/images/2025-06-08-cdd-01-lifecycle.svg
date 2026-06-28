@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="100%">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#D1CFC5" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="320" fill="#FAF9F5" rx="8"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">上下文的生命周期</text>
+
+  <!-- Cycle Arrow (circular path) -->
+  <path d="M 400,60 C 560,60 680,80 680,160 C 680,240 560,280 400,280 C 240,280 120,240 120,160 C 120,80 240,60 400,60" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- Nodes positioned along the cycle -->
+  <!-- Node 1: Create -->
+  <g transform="translate(400,80)">
+    <rect x="-70" y="-22" width="140" height="44" rx="8" fill="#D97757" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">1. Create 创建</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FAF9F5">上下文文档编写</text>
+  </g>
+
+  <!-- Node 2: Load -->
+  <g transform="translate(580,160)">
+    <rect x="-60" y="-22" width="120" height="44" rx="8" fill="#788C5D" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">2. Load 加载</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FAF9F5">按需读取上下文</text>
+  </g>
+
+  <!-- Node 3: Assemble -->
+  <g transform="translate(460,260)">
+    <rect x="-70" y="-22" width="140" height="44" rx="8" fill="#141413" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">3. Assemble 组装</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FAF9F5">分层组装上下文</text>
+  </g>
+
+  <!-- Node 4: Inject -->
+  <g transform="translate(340,260)">
+    <rect x="-65" y="-22" width="130" height="44" rx="8" fill="#87867F" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">4. Inject 注入</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FAF9F5">传递给 AI 会话</text>
+  </g>
+
+  <!-- Node 5: Execute -->
+  <g transform="translate(220,160)">
+    <rect x="-70" y="-22" width="140" height="44" rx="8" fill="#D97757" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">5. Execute 执行</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FAF9F5">AI 消费上下文</text>
+  </g>
+
+  <!-- Node 6: Validate -->
+  <g transform="translate(220,80)">
+    <rect x="-70" y="-22" width="140" height="44" rx="8" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="600" fill="#141413">6. Validate 验证</text>
+    <text x="0" y="12" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#87867F">输出质量验证</text>
+  </g>
+
+  <!-- Cycle arrows between nodes -->
+  <path d="M 470,80 C 520,80 560,110 580,140" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 580,200 C 580,230 540,255 500,260" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 390,260 C 350,260 310,230 290,200" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 150,160 C 130,130 150,90 190,80" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+  <path d="M 330,80 C 290,80 250,80 220,80" fill="none" stroke="#D97757" stroke-width="1.5" marker-end="url(#arr)"/>
+</svg>

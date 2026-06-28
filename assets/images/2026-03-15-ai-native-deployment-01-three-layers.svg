@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-size: 13px; }
+      .text-sm { fill: #87867F; font-size: 11px; }
+      .text-xs { fill: #87867F; font-size: 10px; }
+      .text-label { fill: #141413; font-size: 12px; font-weight: 600; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; }
+      .fill-l1 { fill: #d1fae5; stroke: #059669; stroke-width: 2; }
+      .fill-l2 { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+      .fill-l3 { fill: #fef3c7; stroke: #D97757; stroke-width: 2; }
+      .fill-white { fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="800" height="380" class="bg"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" class="text-main" font-size="15" font-weight="700">AI-Native 部署三层智能化架构</text>
+
+  <!-- ========== Layer 3 (top) ========== -->
+  <rect x="60" y="60" width="680" height="90" rx="10" class="fill-l3"/>
+  <text x="100" y="84" class="text-label" fill="#D97757">Layer 3</text>
+  <rect x="60" y="60" width="4" height="90" rx="2" fill="#D97757"/>
+
+  <text x="400" y="82" text-anchor="middle" class="text-label" font-size="14">智能回滚策略</text>
+  <text x="400" y="100" text-anchor="middle" class="text-sm">Intelligent Rollback — 何时回滚、如何回滚、影响评估</text>
+
+  <rect x="140" y="112" width="140" height="26" rx="5" class="fill-white border"/>
+  <text x="210" y="130" text-anchor="middle" class="text-xs">风险评分 &gt; 0.8 → 自动回滚</text>
+  <rect x="300" y="112" width="140" height="26" rx="5" class="fill-white border"/>
+  <text x="370" y="130" text-anchor="middle" class="text-xs">影响评估引擎</text>
+  <rect x="460" y="112" width="140" height="26" rx="5" class="fill-white border"/>
+  <text x="530" y="130" text-anchor="middle" class="text-xs">渐进/区域/全量回滚</text>
+  <rect x="620" y="112" width="100" height="26" rx="5" class="fill-white border"/>
+  <text x="670" y="130" text-anchor="middle" class="text-xs">MTTR 分钟级</text>
+
+  <!-- Arrow: L3 → L2 -->
+  <line x1="400" y1="150" x2="400" y2="168" class="border" stroke-width="2"/>
+  <polygon points="400,168 395,160 405,160" fill="#141413"/>
+
+  <!-- ========== Layer 2 (middle) ========== -->
+  <rect x="60" y="168" width="680" height="90" rx="10" class="fill-l2"/>
+  <text x="100" y="192" class="text-label" fill="#2563eb">Layer 2</text>
+  <rect x="60" y="168" width="4" height="90" rx="2" fill="#2563eb"/>
+
+  <text x="400" y="190" text-anchor="middle" class="text-label" font-size="14">智能风险控制</text>
+  <text x="400" y="208" text-anchor="middle" class="text-sm">Intelligent Risk Control — 实时异常检测、动态流量调节、熔断机制</text>
+
+  <rect x="140" y="220" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="200" y="238" text-anchor="middle" class="text-xs">技术指标监控</text>
+  <rect x="280" y="220" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="340" y="238" text-anchor="middle" class="text-xs">业务指标监控</text>
+  <rect x="420" y="220" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="480" y="238" text-anchor="middle" class="text-xs">模型漂移检测</text>
+  <rect x="560" y="220" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="620" y="238" text-anchor="middle" class="text-xs">熔断 &amp; 限流</text>
+
+  <!-- Arrow: L2 → L1 -->
+  <line x1="400" y1="258" x2="400" y2="276" class="border" stroke-width="2"/>
+  <polygon points="400,276 395,268 405,268" fill="#141413"/>
+
+  <!-- ========== Layer 1 (bottom) ========== -->
+  <rect x="60" y="276" width="680" height="90" rx="10" class="fill-l1"/>
+  <text x="100" y="300" class="text-label" fill="#059669">Layer 1</text>
+  <rect x="60" y="276" width="4" height="90" rx="2" fill="#059669"/>
+
+  <text x="400" y="298" text-anchor="middle" class="text-label" font-size="14">智能部署决策</text>
+  <text x="400" y="316" text-anchor="middle" class="text-sm">Intelligent Deployment Decision — 部署时机、部署范围、资源分配</text>
+
+  <rect x="140" y="328" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="200" y="346" text-anchor="middle" class="text-xs">时机预测</text>
+  <rect x="280" y="328" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="340" y="346" text-anchor="middle" class="text-xs">范围优化</text>
+  <rect x="420" y="328" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="480" y="346" text-anchor="middle" class="text-xs">金丝雀策略</text>
+  <rect x="560" y="328" width="120" height="26" rx="5" class="fill-white border"/>
+  <text x="620" y="346" text-anchor="middle" class="text-xs">资源预热</text>
+
+  <!-- ========== Legend ========== -->
+  <rect x="60" y="54" width="680" height="26" rx="4" fill="none" stroke="#D97757" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="60" y="162" width="680" height="26" rx="4" fill="none" stroke="#2563eb" stroke-width="1" stroke-dasharray="4 3"/>
+  <rect x="60" y="270" width="680" height="26" rx="4" fill="none" stroke="#059669" stroke-width="1" stroke-dasharray="4 3"/>
+</svg>

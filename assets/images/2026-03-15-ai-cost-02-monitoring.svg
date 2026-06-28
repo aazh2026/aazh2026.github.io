@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 260" role="img" aria-label="四层成本监控模型">
+  <title>四层成本追踪模型</title>
+  <desc>AI成本监控的四层追踪体系：资源层、请求层、会话层、业务层</desc>
+
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="520" height="260" fill="#FAF9F5"/>
+
+  <!-- L1: 资源层 -->
+  <rect x="20" y="30" width="480" height="45" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="40" width="60" height="25" rx="4" fill="#065f46"/>
+  <text x="60" y="57" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">L1</text>
+  <text x="110" y="47" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#065f46">资源层成本</text>
+  <text x="110" y="63" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#047857">模型调用次数、缓存命中率、延迟</text>
+
+  <!-- Arrow L1->L2 -->
+  <path d="M260,75 L260,95" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#a1)"/>
+  <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#87867F"/></marker></defs>
+
+  <!-- L2: 请求层 -->
+  <rect x="20" y="100" width="480" height="45" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="110" width="60" height="25" rx="4" fill="#1e40af"/>
+  <text x="60" y="127" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">L2</text>
+  <text x="110" y="117" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#1e40af">请求层成本</text>
+  <text x="110" y="133" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1e3a8a">单次API调用的输入/输出Token</text>
+
+  <!-- Arrow L2->L3 -->
+  <path d="M260,145 L260,165" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#a2)"/>
+  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#87867F"/></marker></defs>
+
+  <!-- L3: 会话层 -->
+  <rect x="20" y="170" width="480" height="45" rx="8" fill="#fed7aa" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="180" width="60" height="25" rx="4" fill="#c2410c"/>
+  <text x="60" y="197" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">L3</text>
+  <text x="110" y="187" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#c2410c">会话层成本</text>
+  <text x="110" y="203" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#9a3412">单次对话的累计Token和费用</text>
+
+  <!-- Arrow L3->L4 -->
+  <path d="M260,215 L260,235" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#a3)"/>
+  <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#87867F"/></marker></defs>
+
+  <!-- L4: 业务层 -->
+  <rect x="20" y="240" width="480" height="45" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="250" width="60" height="25" rx="4" fill="#b45309"/>
+  <text x="60" y="267" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">L4</text>
+  <text x="110" y="257" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#b45309">业务层成本</text>
+  <text x="110" y="273" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#92400e">每客户成本、每功能成本、ROI分析</text>
+
+  <!-- 右侧注释 -->
+  <text x="490" y="52" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">最细粒度</text>
+  <text x="490" y="240" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">最宏观</text>
+</svg>

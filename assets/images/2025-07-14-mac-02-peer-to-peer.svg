@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 320" width="100%">
+  <defs>
+    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D1CFC5" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="700" height="320" fill="#FAF9F5" rx="8"/>
+
+  <!-- Title -->
+  <text x="350" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Peer-to-Peer 对等协作模式</text>
+
+  <!-- Nodes arranged in a 2x2 grid with diagonal connections -->
+  <!-- A top-left, B top-right, C bottom-left, D bottom-right -->
+
+  <!-- Agent A -->
+  <g transform="translate(180,110)">
+    <rect x="-75" y="-28" width="150" height="56" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow5)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Agent A</text>
+  </g>
+
+  <!-- Agent B -->
+  <g transform="translate(520,110)">
+    <rect x="-75" y="-28" width="150" height="56" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow5)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Agent B</text>
+  </g>
+
+  <!-- Agent C -->
+  <g transform="translate(180,230)">
+    <rect x="-75" y="-28" width="150" height="56" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow5)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Agent C</text>
+  </g>
+
+  <!-- Agent D -->
+  <g transform="translate(520,230)">
+    <rect x="-75" y="-28" width="150" height="56" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow5)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">Agent D</text>
+  </g>
+
+  <!-- Connections: A↔B, A↔C, B↔D, C↔D (as in original) -->
+  <!-- A ↔ B -->
+  <line x1="255" y1="110" x2="445" y2="110" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- A ↔ C -->
+  <line x1="180" y1="138" x2="180" y2="202" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- B ↔ D -->
+  <line x1="520" y1="138" x2="520" y2="202" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <!-- C ↔ D -->
+  <line x1="255" y1="230" x2="445" y2="230" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,3"/>
+
+  <!-- Bottom label -->
+  <text x="350" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#87867F">平等协商，多轮讨论，多路通信</text>
+</svg>

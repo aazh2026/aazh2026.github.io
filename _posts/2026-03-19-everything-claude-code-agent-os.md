@@ -79,24 +79,7 @@ series: AI-Native Engineering
 
 这个项目是 Harness Engineering 的**完整实战案例**：
 
-```mermaid
-flowchart TB
-    subgraph Harness["Harness Engineering 体系"]
-        L1["1️⃣ Eval Harness (测试层)<br/>把 AI 行为变成可测试对象"]
-        L2["2️⃣ Rules Engine (约束层)<br/>系统化强制，不是建议"]
-        L3["3️⃣ Hooks & Automation (执行层)<br/>无人值守的自动化流水线"]
-        L4["4️⃣ Continuous Learning (进化层)<br/>经验自动沉淀为机制"]
-    end
-    
-    L1 --> L2
-    L2 --> L3
-    L3 --> L4
-    
-    style L1 fill:#fef3c7,stroke:#d97706
-    style L2 fill:#fed7aa,stroke:#ea580c
-    style L3 fill:#dbeafe,stroke:#2563eb
-    style L4 fill:#d1fae5,stroke:#059669
-```
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-01-harness-pillars.svg" type="image/svg+xml" width="100%"></object>
 
 **核心洞察**：
 > "不是相信 AI 会做对，而是确保 AI 必须做对。"
@@ -107,27 +90,7 @@ flowchart TB
 
 everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
-```mermaid
-flowchart TB
-    subgraph Pillars["Harness 四大支柱"]
-        Eval["Eval Harness (测试层)"]
-        Rules["Rules Engine (约束层)"]
-        Hooks["Hooks (执行层)"]
-        Learning["Learning (进化层)"]
-        AI["AI Behavior"]
-    end
-    
-    Eval --> AI
-    Rules --> AI
-    AI --> Hooks
-    AI --> Learning
-    
-    style Eval fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Rules fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style AI fill:#dbeafe,stroke:#2563eb,stroke-width:3px
-    style Hooks fill:#bfdbfe,stroke:#3b82f6,stroke-width:2px
-    style Learning fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" type="image/svg+xml" width="100%"></object>
 
 ### 支柱 1：Eval Harness（测试层）
 
@@ -950,29 +913,7 @@ tdd-process.md     → 流程约束
 
 ### Agent OS 与 Harness 的关系
 
-```mermaid
-flowchart TB
-    subgraph Harness["Harness Engineering"]
-        Eval["Eval Harness"]
-        Rules["Rules Engine"]
-        Hooks["Hooks & Learning"]
-    end
-    
-    subgraph AgentOS["Agent OS (实现)"]
-        Agents["Agents"]
-        Skills["Skills"]
-        Commands["Commands"]
-    end
-    
-    Eval --> AgentOS
-    Rules --> AgentOS
-    Hooks --> AgentOS
-    
-    style Eval fill:#fef3c7,stroke:#d97706
-    style Rules fill:#fed7aa,stroke:#ea580c
-    style Hooks fill:#dbeafe,stroke:#2563eb
-    style AgentOS fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" type="image/svg+xml" width="100%"></object>
 
 **关系**：
 - Harness 是**理论框架**

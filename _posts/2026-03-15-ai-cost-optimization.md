@@ -109,41 +109,7 @@ AI应用产生大量数据需要存储：
 
 一个典型的AI客服系统月成本构成：
 
-```mermaid
-flowchart TB
-    Total["总成本: $10,000"]
-    
-    Token["Token成本: $7,000 (70%)"]
-    Storage["存储成本: $1,500 (15%)"]
-    Other["其他: $1,500 (15%)"]
-    
-    Input["输入: $2,000"]
-    Output["输出: $5,000"]
-    
-    Vector["向量数据库: $800"]
-    History["对话历史: $700"]
-    
-    Hosting["推理服务托管: $1,000"]
-    Log["日志监控: $500"]
-    
-    Total --> Token
-    Total --> Storage
-    Total --> Other
-    
-    Token --> Input
-    Token --> Output
-    
-    Storage --> Vector
-    Storage --> History
-    
-    Other --> Hosting
-    Other --> Log
-    
-    style Total fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Token fill:#fee2e2,stroke:#dc2626,stroke-width:2px
-    style Storage fill:#dbeafe,stroke:#2563eb
-    style Other fill:#d1fae5,stroke:#059669
-```
+<object data="/assets/images/2026-03-15-ai-cost-01-structure.svg" type="image/svg+xml" width="100%"></object>
 
 **优化优先级：Token成本 > 存储成本 > 推理成本**
 
@@ -155,22 +121,7 @@ flowchart TB
 
 ### 2.1 四层成本追踪模型
 
-```mermaid
-flowchart TB
-    L4["L4: 业务层成本<br/>每客户成本、每功能成本、ROI分析"]
-    L3["L3: 会话层成本<br/>单次对话的累计Token和费用"]
-    L2["L2: 请求层成本<br/>单次API调用的输入/输出Token"]
-    L1["L1: 资源层成本<br/>模型调用次数、缓存命中率、延迟"]
-    
-    L1 --> L2
-    L2 --> L3
-    L3 --> L4
-    
-    style L4 fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style L3 fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-    style L2 fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style L1 fill:#d1fae5,stroke:#059669,stroke-width:2px
-```
+<object data="/assets/images/2026-03-15-ai-cost-02-monitoring.svg" type="image/svg+xml" width="100%"></object>
 
 ### 2.2 L1：资源层监控
 

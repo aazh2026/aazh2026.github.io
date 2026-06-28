@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" role="img" aria-label="Codebase Intelligence五层架构">
+  <title>Codebase Intelligence 五层架构</title>
+  <desc>Codebase Intelligence系统的五层架构模型：从代码采集到推理</desc>
+
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="380" fill="#FAF9F5"/>
+
+  <!-- 外框标题 -->
+  <rect x="15" y="12" width="610" height="356" rx="10" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="30" y="32" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#141413">Codebase Intelligence 五层架构</text>
+
+  <!-- ========== L5: Reasoning Layer ========== -->
+  <rect x="30" y="48" width="580" height="60" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="58" width="50" height="40" rx="8" fill="#b45309"/>
+  <text x="65" y="82" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">L5</text>
+  <text x="105" y="72" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#92400e">推理层 Reasoning Layer</text>
+  <line x1="105" y1="80" x2="520" y2="80" stroke="#fcd34d" stroke-width="1"/>
+  <text x="105" y="95" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#b45309">能力：问答、推理、建议、生成</text>
+  <!-- Arrow down -->
+  <path d="M320,108 L320,128" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/></marker></defs>
+
+  <!-- ========== L4: Knowledge Graph ========== -->
+  <rect x="30" y="133" width="580" height="60" rx="10" fill="#fed7aa" stroke="#ea580c" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="143" width="50" height="40" rx="8" fill="#c2410c"/>
+  <text x="65" y="167" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">L4</text>
+  <text x="105" y="157" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#c2410c">知识图谱层 Knowledge Graph</text>
+  <line x1="105" y1="165" x2="520" y2="165" stroke="#fdba74" stroke-width="1"/>
+  <text x="105" y="180" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#9a3412">能力：实体关系、业务规则、架构映射</text>
+  <!-- Arrow down -->
+  <path d="M320,193 L320,213" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#a2)"/>
+  <defs><marker id="a2" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/></marker></defs>
+
+  <!-- ========== L3: Semantic Index ========== -->
+  <rect x="30" y="218" width="580" height="60" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="228" width="50" height="40" rx="8" fill="#1e40af"/>
+  <text x="65" y="252" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">L3</text>
+  <text x="105" y="242" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1e40af">语义索引层 Semantic Index</text>
+  <line x1="105" y1="250" x2="520" y2="250" stroke="#93c5fd" stroke-width="1"/>
+  <text x="105" y="265" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1e3a8a">能力：语义搜索、向量检索、相似度匹配</text>
+  <!-- Arrow down -->
+  <path d="M320,278 L320,298" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#a3)"/>
+  <defs><marker id="a3" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/></marker></defs>
+
+  <!-- ========== L2: Code Parsing ========== -->
+  <rect x="30" y="303" width="580" height="60" rx="10" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="313" width="50" height="40" rx="8" fill="#1d4ed8"/>
+  <text x="65" y="337" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">L2</text>
+  <text x="105" y="327" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1e40af">代码解析层 Code Parsing</text>
+  <line x1="105" y1="335" x2="520" y2="335" stroke="#60a5fa" stroke-width="1"/>
+  <text x="105" y="350" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1e3a8a">能力：AST、符号表、依赖图、调用图</text>
+
+  <!-- Side annotation: 数据流向 -->
+  <text x="600" y="210" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F" transform="rotate(-90,600,210)">数据流向</text>
+  <path d="M600,115 L600,330" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4" fill="none"/>
+
+  <!-- 说明框 -->
+  <rect x="30" y="270" width="200" height="18" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="130" y="282" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">↓</text>
+</svg>

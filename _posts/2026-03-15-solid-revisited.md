@@ -261,71 +261,7 @@ class AnalysisIntent:
 
 ### 5.3 核心转变总结
 
-```mermaid
-flowchart TB
-    subgraph Paradigm["范式转移全景图"]
-        subgraph Traditional["传统 SOLID"]
-            Class["Class"]
-            Encap["Encapsulation"]
-            Method["Method"]
-            State["State (fields)"]
-            Class --> Encap
-            Class --> Method
-            Class --> State
-        end
-        
-        subgraph New["新 SOLID (AI-Native)"]
-            Agent["Agent"]
-            Context["Context Management"]
-            Intent["Intent + Tool Calling"]
-            Memory["Memory + Working Context"]
-            Agent --> Context
-            Agent --> Intent
-            Agent --> Memory
-        end
-        
-        Class <---> Agent
-    end
-    
-    subgraph Interface["Interface 转变"]
-        Interface1["Interface"]
-        Static["Static typing"]
-        Compile["Compile-time check"]
-        Interface1 --> Static
-        Interface1 --> Compile
-        
-        Contract["Capability Contract"]
-        Dynamic["Dynamic capability desc"]
-        Runtime["Runtime validation"]
-        Contract --> Dynamic
-        Contract --> Runtime
-        
-        Interface1 <---> Contract
-    end
-    
-    subgraph Inheritance["Inheritance 转变"]
-        Inherit["Inheritance"]
-        IsA["Is-a relationship"]
-        Override["Method override"]
-        Inherit --> IsA
-        Inherit --> Override
-        
-        Composition["Composition + Prompting"]
-        HasCap["Has-capability pattern"]
-        Prompt["Prompt template override"]
-        Composition --> HasCap
-        Composition --> Prompt
-        
-        Inherit <---> Composition
-    end
-    
-    style Class fill:#dbeafe,stroke:#2563eb
-    style Agent fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Interface1 fill:#dbeafe,stroke:#2563eb
-    style Contract fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style Inherit fill:#dbeafe,stroke:#2563eb
-    style Composition fill:#fef3c7,stroke:#d97706,stroke-width:2px
-```
+<object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 
@@ -865,40 +801,7 @@ agent_v3 = BusinessAnalystAgent(
 
 ### 7.2 系统设计
 
-```mermaid
-flowchart TB
-    subgraph System["智能客服系统架构"]
-        Client["Client"]
-        Router["IntentRouter<br/>Intent Segregation Principle"]:::isp
-        
-        subgraph Agents["Agents (SCP - 单一能力原则)"]
-            OrderAgent["Order Agent"]
-            SupportAgent["Support Agent"]
-        end
-        
-        subgraph Capability["Capability Layer<br/>DIP - 依赖抽象"]
-            LLM["LLM"]
-            Tools["Tools"]
-            Memory["Memory"]
-        end
-        
-        PromptSystem["Prompt Template System<br/>OCP-P: 提示工程开闭原则"]:::ocpp
-    end
-    
-    Client -->|query| Router
-    Router -->|intent| OrderAgent
-    Router -->|intent| SupportAgent
-    OrderAgent --> Capability
-    SupportAgent --> Capability
-    
-    PromptSystem -.-> OrderAgent
-    PromptSystem -.-> SupportAgent
-    
-    classDef isp fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    classDef scp fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    classDef dip fill:#d1fae5,stroke:#059669,stroke-width:2px
-    classDef ocpp fill:#fed7aa,stroke:#ea580c,stroke-width:2px
-```
+<object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%"></object>
 
 ### 7.3 完整代码实现
 
@@ -928,50 +831,9 @@ class LLMProvider(ABC):
         pass
     
     @abstractmethod
-    async def complete_structured(self, messages: List[dict], schema: dict) -> dict:
-        pass
-
-class ToolProvider(ABC):
-    """工具能力抽象"""
-    
-    @property
-    @abstractmethod
-    def spec(self) -> ToolSpec:
-        pass
-    
-    @abstractmethod
-    async def execute(self, params: dict) -> ToolResult:
-        pass
-
-class MemoryProvider(ABC):
-    """记忆能力抽象"""
-    
-    @abstractmethod
-    async def store(self, session_id: str, entry: MemoryEntry):
-        pass
-    
-    @abstractmethod
-    async def retrieve(self, session_id: str, query: str, k: int = 3) -> List[MemoryEntry]:
-        pass
-
-# ============================================================================
-# 领域模型
-# ============================================================================
-
-class IntentType(Enum):
-    ORDER_QUERY = auto()
-    REFUND_REQUEST = auto()
-    TECH_SUPPORT = auto()
-    PRODUCT_RECOMMENDATION = auto()
-    GENERAL_INQUIRY = auto()
-
-@dataclass
-class Intent:
-    type: IntentType
-    confidence: float
-    entities: Dict[str, Any]
-    raw_query: str
-    required_capabilities: List[str]
+    async def
+        @property
+        def capabilities: List[str]
 
 @dataclass
 class ToolSpec:
