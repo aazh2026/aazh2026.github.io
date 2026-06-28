@@ -73,6 +73,8 @@ Khairallah AL-Awady 的这篇文章开头做了这个区分：
 
 ## 四阶段流程
 
+<object data="/assets/images/2026-05-13-claude-skills-complete-guide-01-lifecycle.svg" type="image/svg+xml" width="100%"></object>
+
 ### Phase 1：5 分钟安装第一个 Skill
 
 **Skills 存的地方：** Skills 就是你电脑上的文件夹。每个文件夹里有一个叫 SKILL.md 的文件。在 Claude Code 里，它们住在 `.claude/skills/` 或全局 `~/.claude/skills/`。

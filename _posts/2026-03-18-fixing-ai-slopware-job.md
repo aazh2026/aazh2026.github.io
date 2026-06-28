@@ -62,6 +62,8 @@ series: AI-Native Engineering
 
 ---
 
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%"></object>
+
 ## "AI 垃圾代码"的典型症状
 
 ### 症状 1：过度工程化

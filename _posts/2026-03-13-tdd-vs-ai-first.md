@@ -144,6 +144,8 @@ TDD 的承诺：测试就是最好的文档
 
 ---
 
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+
 ## AI-First 测试范式
 
 ### 核心转变

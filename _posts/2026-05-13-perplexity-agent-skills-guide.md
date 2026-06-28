@@ -56,6 +56,8 @@ Perplexity Agents 团队审查了许多优秀工程师在工作中开发的 Skil
 
 ---
 
+<object data="/assets/images/2026-05-13-perplexity-agent-skills-guide-01-context-cost.svg" type="image/svg+xml" width="100%"></object>
+
 ## Skill 是什么：四个定义
 
 > 💡 **Key Insight**

@@ -1,128 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="User Story Pack 三层结构">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-label="User Story Pack 三层结构">
   <title>User Story Pack 三层结构：Story → Scenario → Example</title>
-  <desc>展示用户故事包的三层层次化组织结构，从 Story 到 Scenario 到 Example 的层级关系</desc>
+  <desc>展示 User Story Pack 的层次化结构：Story（用户故事）、Scenarios（场景集）、Examples（示例数据）</desc>
 
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
-    </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="sf1" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
     </filter>
+    <marker id="dArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#D1CFC5"/>
+    </marker>
+    <marker id="oArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <polygon points="0 0, 8 4, 0 8" fill="#D97757"/>
+    </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="800" height="560" fill="url(#bgGrad)"/>
+  <rect width="900" height="480" fill="#FAF9F5"/>
 
-  <!-- Header -->
-  <text x="400" y="38" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413" text-anchor="middle">User Story Pack 三层结构</text>
-  <text x="400" y="58" font-family="system-ui, sans-serif" font-size="12" fill="#87867F" text-anchor="middle">Story → Scenario → Example</text>
+  <!-- Title -->
+  <text x="30" y="35" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#141413">User Story Pack 三层结构</text>
+  <text x="30" y="53" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Story（用户故事） → Scenarios（场景集） → Examples（示例数据）</text>
 
   <!-- Layer 1: Story -->
-  <rect x="40" y="90" width="720" height="100" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="90" width="720" height="32" rx="10" fill="#D97757"/>
-  <rect x="40" y="110" width="720" height="12" fill="#D97757"/>
-  <text x="60" y="112" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Layer 1: Story（用户故事）</text>
+  <g filter="url(#sf1)">
+    <rect x="30" y="68" width="840" height="100" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <rect x="30" y="68" width="840" height="40" rx="10" fill="#788C5D"/>
+    <rect x="30" y="98" width="840" height="10" fill="#788C5D"/>
+    <text x="450" y="93" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">Layer 1: Story（用户故事）</text>
+    <text x="450" y="130" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">一句话概述用户目标的价值和意义</text>
+    <text x="450" y="152" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">As a [角色] · I want [功能] · So that [价值]</text>
+  </g>
 
-  <text x="60" y="132" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413">As a</text>
-  <text x="60" y="148" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413">I want</text>
-  <text x="60" y="164" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#141413">So that</text>
-
-  <rect x="120" y="122" width="200" height="18" rx="4" fill="#E3DACC"/>
-  <text x="128" y="135" font-family="monospace" font-size="10" fill="#141413">注册用户</text>
-
-  <rect x="120" y="138" width="280" height="18" rx="4" fill="#E3DACC"/>
-  <text x="128" y="151" font-family="monospace" font-size="10" fill="#141413">查看我的历史订单</text>
-
-  <rect x="120" y="154" width="240" height="18" rx="4" fill="#E3DACC"/>
-  <text x="128" y="167" font-family="monospace" font-size="10" fill="#141413">跟踪购买记录和配送状态</text>
-
-  <text x="480" y="132" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">ID: US-001</text>
-  <text x="480" y="148" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Priority: High</text>
-  <text x="480" y="164" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Estimate: 5 pts</text>
-
-  <!-- Arrow 1 -->
-  <path d="M400 190 L400 215" stroke="#D97757" stroke-width="2.5" fill="none" marker-end="url(#arrowOrange)"/>
-  <text x="415" y="207" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#D97757">展开</text>
+  <!-- Arrow -->
+  <line x1="450" y1="168" x2="450" y2="188" stroke="#D1CFC5" stroke-width="3" marker-end="url(#dArr)"/>
+  <text x="470" y="182" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">展开</text>
 
   <!-- Layer 2: Scenarios -->
-  <rect x="40" y="225" width="720" height="155" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="225" width="720" height="32" rx="10" fill="#788C5D"/>
-  <rect x="40" y="245" width="720" height="12" fill="#788C5D"/>
-  <text x="60" y="247" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Layer 2: Scenarios（场景集）</text>
+  <g filter="url(#sf1)">
+    <rect x="30" y="195" width="840" height="150" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+    <rect x="30" y="195" width="840" height="40" rx="10" fill="#D97757"/>
+    <rect x="30" y="225" width="840" height="10" fill="#D97757"/>
+    <text x="450" y="220" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">Layer 2: Scenarios（场景集）</text>
+    <text x="450" y="260" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">穷尽所有可能的交互路径</text>
 
-  <!-- Scenario boxes -->
-  <rect x="55" y="268" width="162" height="98" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-  <rect x="55" y="268" width="162" height="22" rx="6" fill="#788C5D"/>
-  <rect x="55" y="282" width="162" height="8" fill="#788C5D"/>
-  <text x="63" y="283" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FAF9F5">SC-001: Happy Path</text>
-  <text x="63" y="296" font-family="monospace" font-size="9" fill="#141413">Given: 用户已登录</text>
-  <text x="63" y="308" font-family="monospace" font-size="9" fill="#141413">When: 访问订单历史</text>
-  <text x="63" y="320" font-family="monospace" font-size="9" fill="#141413">Then: 显示订单列表</text>
-  <text x="63" y="336" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D" font-style="italic">正常流程</text>
+    <!-- Scenario cards -->
+    <g transform="translate(60, 275)">
+      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <rect width="150" height="4" rx="2" fill="#788C5D"/>
+      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">正常流程</text>
+      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">happy_path</text>
+      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#788C5D" text-anchor="middle">SC-001</text>
+    </g>
 
-  <rect x="230" y="268" width="162" height="98" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-  <rect x="230" y="268" width="162" height="22" rx="6" fill="#788C5D"/>
-  <rect x="230" y="282" width="162" height="8" fill="#788C5D"/>
-  <text x="238" y="283" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FAF9F5">SC-002: Edge Case</text>
-  <text x="238" y="296" font-family="monospace" font-size="9" fill="#141413">Given: 无历史订单</text>
-  <text x="238" y="308" font-family="monospace" font-size="9" fill="#141413">When: 访问订单历史</text>
-  <text x="238" y="320" font-family="monospace" font-size="9" fill="#141413">Then: 显示空状态</text>
-  <text x="238" y="336" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D" font-style="italic">边界条件</text>
+    <g transform="translate(225, 275)">
+      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <rect width="150" height="4" rx="2" fill="#D97757"/>
+      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">边界条件</text>
+      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">boundary</text>
+      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#D97757" text-anchor="middle">SC-002</text>
+    </g>
 
-  <rect x="405" y="268" width="162" height="98" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-  <rect x="405" y="268" width="162" height="22" rx="6" fill="#788C5D"/>
-  <rect x="405" y="282" width="162" height="8" fill="#788C5D"/>
-  <text x="413" y="283" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FAF9F5">SC-003: Boundary</text>
-  <text x="413" y="296" font-family="monospace" font-size="9" fill="#141413">Given: 50个订单</text>
-  <text x="413" y="308" font-family="monospace" font-size="9" fill="#141413">When: 访问第1页</text>
-  <text x="413" y="320" font-family="monospace" font-size="9" fill="#141413">Then: 显示20条</text>
-  <text x="413" y="336" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D" font-style="italic">分页场景</text>
+    <g transform="translate(390, 275)">
+      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <rect width="150" height="4" rx="2" fill="#D97757"/>
+      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">错误处理</text>
+      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">error_handling</text>
+      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#D97757" text-anchor="middle">SC-003</text>
+    </g>
 
-  <rect x="580" y="268" width="162" height="98" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-  <rect x="580" y="268" width="162" height="22" rx="6" fill="#788C5D"/>
-  <rect x="580" y="282" width="162" height="8" fill="#788C5D"/>
-  <text x="588" y="283" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#FAF9F5">SC-004: Error</text>
-  <text x="588" y="296" font-family="monospace" font-size="9" fill="#141413">Given: 未登录</text>
-  <text x="588" y="308" font-family="monospace" font-size="9" fill="#141413">When: 访问订单历史</text>
-  <text x="588" y="320" font-family="monospace" font-size="9" fill="#141413">Then: 跳转登录页</text>
-  <text x="588" y="336" font-family="system-ui, sans-serif" font-size="9" fill="#788C5D" font-style="italic">错误处理</text>
+    <g transform="translate(555, 275)">
+      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <rect width="150" height="4" rx="2" fill="#87867F"/>
+      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">替代路径</text>
+      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">alternative</text>
+      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">SC-004</text>
+    </g>
 
-  <!-- Arrow 2 -->
-  <path d="M400 380 L400 405" stroke="#D97757" stroke-width="2.5" fill="none"/>
-  <text x="415" y="397" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#D97757">展开</text>
+    <text x="720" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Given-When-Then</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="450" y1="345" x2="450" y2="365" stroke="#D1CFC5" stroke-width="3" marker-end="url(#dArr)"/>
+  <text x="470" y="359" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">填充数据</text>
 
   <!-- Layer 3: Examples -->
-  <rect x="40" y="415" width="720" height="125" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="40" y="415" width="720" height="32" rx="10" fill="#141413"/>
-  <rect x="40" y="435" width="720" height="12" fill="#141413"/>
-  <text x="60" y="437" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Layer 3: Examples（示例数据）</text>
+  <g filter="url(#sf1)">
+    <rect x="30" y="372" width="840" height="95" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2"/>
+    <rect x="30" y="372" width="840" height="40" rx="10" fill="#D1CFC5"/>
+    <rect x="30" y="402" width="840" height="10" fill="#D1CFC5"/>
+    <text x="450" y="397" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">Layer 3: Examples（示例数据）</text>
+    <text x="450" y="432" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">提供具体的测试数据，消除歧义</text>
 
-  <!-- Example table -->
-  <rect x="55" y="458" width="690" height="70" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <rect x="55" y="458" width="690" height="24" rx="6" fill="#E3DACC"/>
-  <rect x="55" y="474" width="690" height="8" fill="#E3DACC"/>
-  <text x="70" y="474" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">订单号</text>
-  <text x="190" y="474" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">日期</text>
-  <text x="330" y="474" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">金额</text>
-  <text x="460" y="474" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">状态</text>
-  <text x="580" y="474" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#141413">场景</text>
-
-  <text x="70" y="493" font-family="monospace" font-size="9" fill="#141413">ORD-2026-001</text>
-  <text x="190" y="493" font-family="monospace" font-size="9" fill="#141413">2026-03-10</text>
-  <text x="330" y="493" font-family="monospace" font-size="9" fill="#D97757" font-weight="600">¥299.00</text>
-  <text x="460" y="493" font-family="monospace" font-size="9" fill="#788C5D">已送达</text>
-  <text x="580" y="493" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">SC-001</text>
-
-  <line x1="55" y1="502" x2="745" y2="502" stroke="#D1CFC5" stroke-width="0.5"/>
-
-  <text x="70" y="515" font-family="monospace" font-size="9" fill="#141413">ORD-2026-002</text>
-  <text x="190" y="515" font-family="monospace" font-size="9" fill="#141413">2026-03-08</text>
-  <text x="330" y="515" font-family="monospace" font-size="9" fill="#D97757" font-weight="600">¥599.00</text>
-  <text x="460" y="515" font-family="monospace" font-size="9" fill="#5B8BD4">配送中</text>
-  <text x="580" y="515" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">SC-001</text>
-
-  <!-- Footer note -->
-  <text x="400" y="548" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">每层可直接转化为自动化测试，实现「验收即测试」</text>
+    <!-- Example cards -->
+    <g transform="translate(100, 445)">
+      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">user: { id: U12345, tier: vip }</text>
+    </g>
+    <g transform="translate(310, 445)">
+      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">orders: [ ORD-001, ORD-002 ]</text>
+    </g>
+    <g transform="translate(520, 445)">
+      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
+      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">expected: { total: ¥897.00 }</text>
+    </g>
+  </g>
 </svg>

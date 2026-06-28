@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="system-ui,-apple-system,sans-serif">
+  <!-- Background -->
+  <rect width="860" height="480" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">混合架构：长上下文 + RAG 分页 = 性能最优解</text>
+  <text x="30" y="56" font-size="11" fill="#87867F">纯长上下文（贵+慢）vs 纯RAG（丢连贯性）vs 分页RAG（快+准+省）</text>
+
+  <!-- Three approaches comparison bar -->
+  <rect x="30" y="72" width="230" height="36" fill="#D1CFC5" opacity="0.5" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="145" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">❌ 纯长上下文</text>
+  <text x="145" y="102" text-anchor="middle" font-size="10" fill="#87867F">128K · 5s · $$$
+
+  <rect x="280" y="72" width="230" height="36" fill="#D1CFC5" opacity="0.5" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="395" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">❌ 纯 RAG</text>
+  <text x="395" y="102" text-anchor="middle" font-size="10" fill="#87867F">top-10 · 2s · $
+
+  <rect x="530" y="72" width="300" height="36" fill="#788C5D" rx="8" stroke="#5A7347" stroke-width="1.5"/>
+  <text x="680" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">✅ 分页 RAG（混合）</text>
+  <text x="680" y="102" text-anchor="middle" font-size="10" fill="#FAF9F5">1.5s · $$ · 85%</text>
+
+  <!-- Main flow diagram -->
+  <!-- Step 1: User input -->
+  <rect x="30" y="136" width="140" height="40" fill="#141413" rx="8"/>
+  <text x="100" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">用户输入</text>
+  <text x="100" y="169" text-anchor="middle" font-size="10" fill="#D1CFC5">Query</text>
+
+  <line x1="170" y1="156" x2="210" y2="156" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0,8 3,0 6" fill="#87867F"/>
+    </marker>
+  </defs>
+
+  <!-- Step 2: Intent classification -->
+  <rect x="216" y="136" width="160" height="40" fill="#D97757" rx="8"/>
+  <text x="296" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">意图识别</text>
+  <text x="296" y="169" text-anchor="middle" font-size="10" fill="#FAF9F5">需要哪些信息？</text>
+
+  <line x1="376" y1="156" x2="416" y2="156" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Step 3: Working set check -->
+  <rect x="422" y="136" width="150" height="40" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="497" y="155" text-anchor="middle" font-size="12" font-weight="700" fill="#141413">工作集检查</text>
+  <text x="497" y="169" text-anchor="middle" font-size="10" fill="#87867F">已在上下文中？</text>
+
+  <!-- Branch: Yes -->
+  <line x1="497" y1="176" x2="497" y2="200" stroke="#788C5D" stroke-width="2"/>
+  <line x1="497" y1="200" x2="650" y2="200" stroke="#788C5D" stroke-width="2" marker-end="url(#arr2)"/>
+  <rect x="655" y="184" width="90" height="30" fill="#788C5D" rx="6"/>
+  <text x="700" y="203" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">✅ 直接使用</text>
+  <text x="700" y="216" text-anchor="middle" font-size="10" fill="#788C5D">零延迟</text>
+
+  <!-- Branch: No -->
+  <line x1="572" y1="156" x2="640" y2="156" stroke="#D97757" stroke-width="2" marker-end="url(#arr2)"/>
+  <rect x="646" y="136" width="120" height="40" fill="#D97757" opacity="0.2" rx="8" stroke="#D97757" stroke-width="1.5"/>
+  <text x="706" y="155" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">❌ 页错误</text>
+  <text x="706" y="169" text-anchor="middle" font-size="10" fill="#87867F">触发检索</text>
+
+  <!-- Page Fault handling path -->
+  <line x1="706" y1="176" x2="706" y2="252" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- Vector retrieval -->
+  <rect x="636" y="260" width="140" height="40" fill="#D97757" rx="8"/>
+  <text x="706" y="279" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">向量检索</text>
+  <text x="706" y="293" text-anchor="middle" font-size="10" fill="#FAF9F5">找到相关页</text>
+
+  <line x1="706" y1="300" x2="706" y2="332" stroke="#D97757" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Load to context + LRU -->
+  <rect x="636" y="340" width="140" height="40" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="706" y="359" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">加载到上下文</text>
+  <text x="706" y="373" text-anchor="middle" font-size="10" fill="#87867F">LRU 置换</text>
+
+  <!-- Converge -->
+  <line x1="706" y1="380" x2="706" y2="400" stroke="#87867F" stroke-width="2"/>
+  <line x1="706" y1="400" x2="100" y2="400" stroke="#87867F" stroke-width="2"/>
+  <line x1="100" y1="400" x2="100" y2="386" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Generate response -->
+  <rect x="30" y="360" width="140" height="40" fill="#788C5D" rx="8"/>
+  <text x="100" y="379" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">生成回答</text>
+  <text x="100" y="393" text-anchor="middle" font-size="10" fill="#FAF9F5">上下文完整</text>
+
+  <!-- Update access log loop -->
+  <line x1="100" y1="400" x2="100" y2="430" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="30" y="422" width="140" height="30" fill="#E3DACC" rx="6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="100" y="441" text-anchor="middle" font-size="10" fill="#141413">更新访问记录</text>
+
+  <!-- From generate back up (update access) -->
+  <line x1="100" y1="430" x2="636" y2="430" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="636" y1="430" x2="636" y2="370" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="636" y1="370" x2="646" y2="370" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="640" y="398" text-anchor="middle" font-size="9" fill="#788C5D" transform="rotate(-90 640 398)">预取信号</text>
+
+  <!-- LRU eviction label -->
+  <rect x="750" y="340" width="80" height="40" fill="#D1CFC5" rx="6"/>
+  <text x="790" y="356" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">LRU</text>
+  <text x="790" y="370" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">置换</text>
+  <line x1="776" y1="360" x2="636" y2="360" stroke="#87867F" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Context window visualization (right side) -->
+  <rect x="750" y="136" width="80" height="280" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="790" y="155" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">上下文</text>
+  <text x="790" y="168" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">窗口</text>
+
+  <!-- Pinned pages (top, green) -->
+  <rect x="755" y="178" width="70" height="30" fill="#788C5D" rx="4"/>
+  <text x="790" y="197" text-anchor="middle" font-size="9" font-weight="600" fill="#FAF9F5">常驻页</text>
+  <text x="790" y="208" text-anchor="middle" font-size="8" fill="#FAF9F5">（工作集）</text>
+
+  <!-- Active pages (middle, white) -->
+  <rect x="755" y="212" width="70" height="30" fill="#FAF9F5" rx="4" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="790" y="231" text-anchor="middle" font-size="9" font-weight="600" fill="#141413">当前页</text>
+
+  <!-- Swappable (lower, light) -->
+  <rect x="755" y="246" width="70" height="30" fill="#FAF9F5" rx="4" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="790" y="265" text-anchor="middle" font-size="9" font-weight="600" fill="#87867F">可换出</text>
+
+  <rect x="755" y="280" width="70" height="30" fill="#FAF9F5" rx="4" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="790" y="299" text-anchor="middle" font-size="9" font-weight="600" fill="#87867F">LRU 候选</text>
+
+  <!-- Arrow to evicted -->
+  <line x1="790" y1="310" x2="790" y2="338" stroke="#D97757" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <rect x="755" y="340" width="70" height="26" fill="#D97757" opacity="0.3" rx="4" stroke="#D97757" stroke-width="1"/>
+  <text x="790" y="357" text-anchor="middle" font-size="9" font-weight="600" fill="#D97757">已换出</text>
+
+  <!-- Bottom summary -->
+  <rect x="30" y="462" width="800" height="20" fill="#141413" rx="6"/>
+  <text x="430" y="476" text-anchor="middle" font-size="10" fill="#FAF9F5">常用信息常驻（快）| 非常用信息按需加载（省）| 工作集跟踪保持连贯性（准）</text>
+</svg>

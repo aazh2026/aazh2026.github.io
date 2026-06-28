@@ -87,6 +87,8 @@ redirect_from:
 
 ## 开发者能力迁移模型
 
+<object data="/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" type="image/svg+xml" width="100%"></object>
+
 ### 传统开发者能力栈
 
 ```
@@ -136,6 +138,8 @@ AI时代开发者
 ---
 
 ## Intent工程师胜任力矩阵
+
+<object data="/assets/images/2026-03-13-idd-intent-driven-development-02-capability-migration.svg" type="image/svg+xml" width="100%"></object>
 
 ### 能力维度定义
 
