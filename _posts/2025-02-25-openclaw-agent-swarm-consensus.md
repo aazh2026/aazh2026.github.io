@@ -186,7 +186,7 @@ OpenClaw的崛起揭示了一个正在形成的**市场分化**。
 
 > 💡 **Key Insight**
 >
-> OpenAI给我一个会写邮件的Agent。OpenClaw给我一个会发邮件的Agent
+> OpenAI给我一个会写邮件的Agent。OpenClaw给我一个会发邮件的Agent。
 
 ---
 

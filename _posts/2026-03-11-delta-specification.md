@@ -11,6 +11,12 @@ redirect_from:
 
 # 增量需求不再头疼：Delta Specification 工作流
 
+> **TL;DR**
+> - 增量需求的核心是 **Delta Specification**，而非完整 PRD；AI 只需要理解变化部分
+> - 用 `changes/` 目录管理所有变更，类似 Git commit 和 Database Migration
+> - 必须声明 **Compatibility Rules**，防止 AI 过度重构破坏已有逻辑
+> - 定期将 delta merge 回 base spec，避免 spec 碎片化
+
 在 AI-Native SDLC 里，增量需求最大的挑战不是"写需求"，而是：
 
 **如何让 AI 在理解历史系统上下文的基础上，只实现增量变化。**
@@ -28,6 +34,9 @@ redirect_from:
 增量需求必须明确三件事：
 
 AI 只需要理解**变化部分**。
+
+> 💡 **Key Insight**
+> Delta Specification 的本质是**只传递变化量**，而非重新传递整个系统上下文。AI 读取 `Base Spec + Delta` 的组合效果等同于读取完整需求文档，但信息量减少 80% 以上。
 
 <object data="/assets/images/2026-03-11-delta-specification-01-workflow.svg" type="image/svg+xml" width="100%"></object>
 
@@ -78,15 +87,62 @@ AI 读取顺序：
 
 非常稳定。
 
+> 💡 **Key Insight**
+> Delta 模式天然支持**幂等变更**：相同的 delta 重复执行不会累积副作用，这与 Database Migration 的幂等性保证如出一辙。
+
 ## 完整示例
 
+> 💡 **Key Insight**
+> Delta Spec 的威力在示例中最容易体现：一个完整的 change 文件通常只有 15-30 行，却能精确驱动 AI 完成原本需要上百行 PRD 才能描述的改动。
+
 ### 当前系统
+
+假设已有订单管理系统，支持创建订单和查询订单状态。
 
 ### 新需求：支持订单取消
 
 **change.md:**
+
+```markdown
+## 变更概述
+新增「取消订单」功能，允许用户在订单未发货前取消订单。
+
+## 影响范围
+- domain/OrderService：新增 cancelOrder 方法
+- api/OrderController：新增 POST /orders/{id}/cancel
+- tests：新增 cancel 场景测试
+
+## 兼容性规则
+- 已发货订单不可取消，返回 400 错误
+- 取消操作不删除订单记录，改为标记 status=CANCELLED
+```
+
 **domain.delta.md:**
+
+```markdown
+## Order 实体变更
+新增字段：
+- status: OrderStatus (PENDING, SHIPPED, CANCELLED)
+- cancelledAt: DateTime (nullable)
+
+新增方法：
+- cancel(): void — 将 status 设为 CANCELLED，cancelledAt 设为当前时间
+```
+
 **api.delta.yaml:**
+
+```yaml
+paths:
+  /orders/{id}/cancel:
+    post:
+      summary: 取消订单
+      responses:
+        200:
+          description: 取消成功
+        400:
+          description: 订单已发货，无法取消
+```
+
 AI 可以：
 - 修改 service（增加取消逻辑）
 - 修改 controller（增加 endpoint）

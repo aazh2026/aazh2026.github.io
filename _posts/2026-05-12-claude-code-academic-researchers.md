@@ -98,9 +98,17 @@ Mushtaq Bilal 博士写了这篇面向零技术背景学术研究者的 Claude C
 >
 > CLAUDE.md 不需要完美，可以随项目演化而迭代。重要的是开始，然后让它和项目一起成长。
 
-Mushtaq 推荐把 CLAUDE.md 分成四个区块：
+Mushtaq 推荐把 CLAUDE.md 分成四个维度，为研究场景定制 AI 行为：
 
-如果你不想手动写，直接让 Claude Code 根据你的描述自动生成。
+**Role（角色）** — 告诉 Claude 你是谁。专业领域、研究阶段、用什么方法。"我是用定性方法研究职业发展的博士生，主要做半结构化访谈。"
+
+**Standards（标准）** — 你的学术规范。引用格式、写作风格、哪些事情不可妥协。"所有引用用 APA 格式，不要改写原文意思。"
+
+**Writing（写作风格）** — 你的表达偏好。用主动语态还是被动语态、段落长度、是否允许使用"首先、其次"这类连接词。
+
+**Critique（批评方式）** — 你希望 AI 怎么挑毛病。是关注逻辑漏洞、还是数据可靠性、还是论证结构的完整性。
+
+这四个维度构成一个完整的研究者画像。如果你不想手动写，直接让 Claude Code 根据你的描述自动生成初稿，然后按自己的风格调整——CLAUDE.md 不需要一步到位，它应该跟着你的研究一起演化。
 
 ---
 
@@ -110,7 +118,7 @@ Claude Code 有一个被低估的功能：**Auto-Memory。**
 
 随着你在项目中工作，Claude Code 会自动写短期笔记保存。每次 session 开始时，它读取 CLAUDE.md 和自己的笔记，获得关于你和你的项目的上下文。久而久之，它成为一个真正了解你研究方向、写作风格、偏好的研究助手。
 
-你可以随时问它："Tell me what you have stored in your memory." 如果某条信息过时了（比如引用格式变了），直接让它更新。
+你可以随时问它："Tell me what you have stored in your memory." 如果某条信息过时了（比如引用格式变了），直接让它更新。整个记忆系统是项目级别的——换一个新项目，AI 会从空白开始，不会把上一个项目的上下文带过来。
 
 **关键约束：**
 - 不要放机密信息进 CLAUDE.md 或让 AI 记忆的内容
@@ -149,9 +157,9 @@ Mushtaq 在文章结尾说的这句话，和 Garry Tan 的 skillify 哲学、和
 - Mushtaq Bilal 的教程（英文）：https://x.com/mushtaqbilalphd/status/2052338632426467550
 
 **本系列相关**
-- [执行已死，判断力永生](#) (AI-Native 软件工程系列)
-- [Skillify：如何让 AI Agent 不再犯同样的错误](#) (AI-Native 软件工程系列)
-- [AI 原生写作：为什么我放弃 Markdown，改用 HTML](#) (AI-Native 软件工程系列)
+- [执行已死，判断力永生](/posts/2026-05-11-execution-is-dead-judgment-lives) (AI-Native 软件工程系列)
+- [Skillify：如何让 AI Agent 不再犯同样的错误](/posts/2026-05-13-claude-skills-complete-guide) (AI-Native 软件工程系列)
+- [AI 原生写作：为什么我放弃 Markdown，改用 HTML](/posts/2026-05-12-ai-native-writing-html-over-markdown) (AI-Native 软件工程系列)
 
 **工具**
 - Claude Code：https://claude.com/download

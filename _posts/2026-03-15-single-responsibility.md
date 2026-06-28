@@ -14,7 +14,7 @@ series: agent-os
 
 ---
 
-## 3. 单一职责原则（SRP）回顾
+## 单一职责原则（SRP）回顾
 
 ### 定义
 
@@ -24,13 +24,34 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 
 注意，这里的关键不是"做一件事"，而是"只有一个变化原因"。一个类可以做很多事情，只要这些事情都源于同一个业务规则。
 
+> 💡 **Key Insight**
+>
+> SRP 的本质是"一个变化原因"，而非"做一件事"。职责的边界由"什么会同时变化"来决定。
+
 ### 经典示例
 
-❌ **违反 SRP：**
-✅ **遵循 SRP：**
----
+一个典型的违反 SRP 的类：
 
-## 4. 为什么 SRP 重要
+```python
+# ❌ 违反 SRP：一个类处理多种不相关的职责
+class UserManager:
+    def authenticate(self): ...
+    def send_email(self): ...
+    def generate_report(self): ...
+    def export_data(self): ...
+```
+
+遵循 SRP 的做法是拆分：
+
+```python
+# ✅ 遵循 SRP：每个类只有一个变化原因
+class AuthManager: ...
+class EmailService: ...
+class ReportGenerator: ...
+class DataExporter: ...
+```
+
+## 为什么 SRP 重要
 
 ### 关注点分离（Separation of Concerns）
 
@@ -52,7 +73,7 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 
 ---
 
-## 5. 从类到 Agent：SRP 的升维
+## 从类到 Agent：SRP 的升维
 
 ### Agent 是什么？
 
@@ -75,17 +96,25 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 | 回滚成本 | 重启服务 | 协调多服务 |
 | 理解成本 | 读代码 | 读代码 + 读 prompt + 读历史对话 |
 
+> 💡 **Key Insight**
+>
+> Agent 违反 SRP 的代价远超类违反 SRP——影响范围是整个系统，而非单个调用方。
+
 ### 核心原则
 
 > **一个 Agent 只有一个职责，并且这个职责应该是完整的、内聚的。**
 
 这不是类的简单放大，而是对"职责"的重新定义。
 
+> 💡 **Key Insight**
+>
+> Agent 的职责是"完整的内聚单元"——它独立完成一个业务动作，而非机械地"做一件事"。
+
 ---
 
-## 6. 设计单一职责的 Agent
+## 设计单一职责的 Agent
 
-### 6.1 粒度选择
+### 粒度选择
 
 选择 Agent 的粒度就像切蛋糕——太大或太小都不行。
 
@@ -110,7 +139,7 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 
 <object data="/assets/images/2026-03-15-single-responsibility-02-specialized.svg" type="image/svg+xml" width="100%"></object>
 
-### 6.2 边界定义：CUBE 原则
+### 边界定义：CUBE 原则
 
 我提出 **CUBE** 原则来定义 Agent 边界：
 
@@ -121,32 +150,43 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 | **B**usiness | 业务领域一致 | 财务、人事、营销分开 |
 | **E**rror | 错误处理一致 | 同类型错误在同一层处理 |
 
-### 6.3 协作模式
+### 协作模式
 
 #### 模式一：管道模式（Pipeline）
 
 **适用场景：** 数据流清晰、步骤固定的任务
 
-**示例：** 新闻摘要系统
+数据沿固定链路流动，每个 Agent 只完成一道工序。
+
+**示例：** 新闻摘要系统 — 抓取 → 清洗 → 摘要 → 发布
+
 #### 模式二：主从模式（Master-Worker）
 
 **适用场景：** 需要协调多个专业 Agent
 
-**示例：** 会议安排系统
+**示例：** 会议安排系统 — Master 协调多个专业 Worker 并行查询后汇总
+
 #### 模式三：黑板模式（Blackboard）
 
 **适用场景：** 复杂问题求解，各 Agent 贡献部分解
 
-**示例：** 代码审查系统
+**示例：** 代码审查系统 — 多个专业 Agent 各展所长，共同解决复杂审查问题
+
 #### 模式四：服务网格模式（Service Mesh）
 
 **适用场景：** 高度解耦、动态协作的系统
 
+各 Agent 通过标准协议通信，编排逻辑与业务逻辑分离。
+
+> 💡 **Key Insight**
+>
+> 协作模式没有优劣，只有场景适配——Pipeline 适合线性流程，Blackboard 适合开放问题，Master-Worker 适合需要协调的场景。
+
 ---
 
-## 7. 反模式：上帝 Agent 与面条 Agent
+## 反模式：上帝 Agent 与面条 Agent
 
-### 7.1 上帝 Agent（God Agent）
+### 上帝 Agent（God Agent）
 
 **症状：**
 - Prompt 超过 2000 tokens
@@ -154,14 +194,19 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 - "你什么都能做"
 - 每次修改都要动 prompt
 
-**示例：**
+**示例：** 一个处理邮件、日历、文档、搜索、报表、客服等所有功能的"全能 Agent"
+
 **问题：**
 - LLM 难以精确理解"现在该用哪个能力"
 - 上下文被稀释，响应质量下降
 - 一个功能的 bug 可能影响整个 Agent
 - 难以测试和复用
 
-### 7.2 面条 Agent（Spaghetti Agent）
+> 💡 **Key Insight**
+>
+> 上帝 Agent 的本质是"职责边界模糊"——所有能力堆在一起，每次修改都是对全系统的冒险。
+
+### 面条 Agent（Spaghetti Agent）
 
 **症状：**
 - Agent 之间随意相互调用
@@ -169,20 +214,21 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 - 循环依赖
 - 不知道哪个 Agent 最终处理了请求
 
-**示例：**
+**示例：** Agent A 调用 B，B 调用 C，C 又回调 A，形成循环调用链
+
 **问题：**
 - 调试时 stack trace 像迷宫
 - 循环调用导致无限递归
 - 无法预测性能
 - 系统行为不可控
 
-### 7.3 正确的层次结构
+### 正确的层次结构
 
 <object data="/assets/images/2026-03-15-single-responsibility-03-orchestrator.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 
-## 8. 反直觉洞察
+## 反直觉洞察
 
 ### 洞察一：Agent 比类更需要 SRP
 
@@ -211,7 +257,8 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 2. 共享同一上下文
 3. 错误处理方式一致
 
-**示例：**
+**示例：** 同一个 Agent 处理"查询订单"和"取消订单"——两者共享订单上下文，可以合并
+
 ### 洞察四：延迟是 SRP 的隐性成本
 
 严格遵循 SRP 可能导致 Agent 之间频繁的 RPC 调用。
@@ -223,23 +270,23 @@ Robert C. Martin 在《敏捷软件开发》中定义：
 
 ---
 
-## 9. 实战代码示例
+## 实战代码示例
 
-### 9.1 项目结构
+### 项目结构
 
-### 9.2 基础 Agent 类
+### 基础 Agent 类
 
-### 9.3 邮件 Agent（单一职责示例）
+### 邮件 Agent（单一职责示例）
 
-### 9.4 日程 Agent（另一个单一职责示例）
+### 日程 Agent（另一个单一职责示例）
 
-### 9.5 编排器（协调多个单一职责 Agent）
+### 编排器（协调多个单一职责 Agent）
 
-### 9.6 使用示例
+### 使用示例
 
 ---
 
-## 10. 结语
+## 结语
 
 单一职责原则从类到 Agent 的升维，本质上是软件复杂性的升维。
 

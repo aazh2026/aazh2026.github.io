@@ -5,26 +5,26 @@
   <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">万能 Agent：单一职责原则的反模式</text>
   <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
 
-  <!-- God Agent Box (red, anti-pattern) -->
-  <rect x="120" y="54" width="320" height="90" rx="8" fill="#FEE2E2" stroke="#DC2626" stroke-width="2.5"/>
-  <text x="280" y="72" text-anchor="middle" font-size="11" fill="#DC2626" font-weight="600">万能 Agent（反模式）</text>
+  <!-- God Agent Box (clay, anti-pattern) -->
+  <rect x="120" y="54" width="320" height="90" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="2.5"/>
+  <text x="280" y="72" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">万能 Agent（反模式）</text>
   <text x="280" y="86" text-anchor="middle" font-size="9" fill="#87867F">一个 Agent 负责所有功能</text>
 
   <!-- Three service labels inside -->
-  <rect x="148" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <text x="193" y="112" text-anchor="middle" font-size="9" fill="#EA580C" font-weight="600">搜索/邮件</text>
+  <rect x="148" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="193" y="112" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">搜索/邮件</text>
   <text x="193" y="124" text-anchor="middle" font-size="8" fill="#87867F">所有功能堆在一起</text>
 
-  <rect x="250" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <text x="295" y="112" text-anchor="middle" font-size="9" fill="#EA580C" font-weight="600">分析/日历</text>
+  <rect x="250" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="295" y="112" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">分析/日历</text>
   <text x="295" y="124" text-anchor="middle" font-size="8" fill="#87867F">职责边界模糊</text>
 
-  <rect x="352" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <text x="397" y="112" text-anchor="middle" font-size="9" fill="#EA580C" font-weight="600">写作/文件</text>
+  <rect x="352" y="98" width="90" height="34" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="397" y="112" text-anchor="middle" font-size="9" fill="#D97757" font-weight="600">写作/文件</text>
   <text x="397" y="124" text-anchor="middle" font-size="8" fill="#87867F">难以独立演进</text>
 
   <!-- Problem label -->
-  <text x="450" y="70" font-size="10" fill="#DC2626" font-weight="600">⚠ 问题：</text>
+  <text x="450" y="70" font-size="10" fill="#D97757" font-weight="600">问题：</text>
   <text x="450" y="84" font-size="9" fill="#87867F">职责不清</text>
   <text x="450" y="97" font-size="9" fill="#87867F">难以测试</text>
   <text x="450" y="110" font-size="9" fill="#87867F">无法独立演进</text>

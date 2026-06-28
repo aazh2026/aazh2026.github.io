@@ -5,27 +5,27 @@
   <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/05/28</text>
 
   <!-- Four agents (top row) -->
-  <rect x="30" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="30" y="50" width="100" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="80" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Architect</text>
+  <rect x="30" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="30" y="50" width="100" height="16" rx="6" fill="#FEF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="80" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Architect</text>
   <text x="80" y="82" text-anchor="middle" font-size="9" fill="#141413">架构 Agent</text>
   <text x="80" y="96" text-anchor="middle" font-size="8" fill="#87867F">架构设计</text>
 
-  <rect x="150" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="150" y="50" width="100" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="200" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">DevAgent</text>
+  <rect x="150" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="150" y="50" width="100" height="16" rx="6" fill="#FEF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="200" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">DevAgent</text>
   <text x="200" y="82" text-anchor="middle" font-size="9" fill="#141413">开发 Agent</text>
   <text x="200" y="96" text-anchor="middle" font-size="8" fill="#87867F">代码生成</text>
 
-  <rect x="270" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="270" y="50" width="100" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="320" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">TestAgent</text>
+  <rect x="270" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="270" y="50" width="100" height="16" rx="6" fill="#FEF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="320" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">TestAgent</text>
   <text x="320" y="82" text-anchor="middle" font-size="9" fill="#141413">测试 Agent</text>
   <text x="320" y="96" text-anchor="middle" font-size="8" fill="#87867F">测试生成</text>
 
-  <rect x="390" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="390" y="50" width="100" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="440" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">ReviewAgent</text>
+  <rect x="390" y="50" width="100" height="55" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="390" y="50" width="100" height="16" rx="6" fill="#FEF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="440" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">ReviewAgent</text>
   <text x="440" y="82" text-anchor="middle" font-size="9" fill="#141413">审查 Agent</text>
   <text x="440" y="96" text-anchor="middle" font-size="8" fill="#87867F">代码审查</text>
 

@@ -1,0 +1,74 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>同步 Agent vs 异步 Agent 性能与资源对比</title>
+  <desc>对比同步多进程 Agent 和异步协程 Agent 在时间、内存、CPU、网络连接四个维度的差异</desc>
+
+  <!-- Background -->
+  <rect width="680" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">同步 Agent vs 异步 Agent</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">100 个 Python 函数生成 · 性能与资源消耗</text>
+
+  <!-- Divider line -->
+  <line x1="340" y1="58" x2="340" y2="270" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Left column: Sync Agent -->
+  <text x="170" y="68" text-anchor="middle" font-size="12" font-weight="600" fill="#C06050" font-family="ui-monospace, monospace">同步 Agent</text>
+  <text x="170" y="82" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">多进程 · 串行等待</text>
+
+  <!-- Sync metric cards -->
+  <rect x="60" y="92" width="220" height="36" rx="6" fill="#FDF0EC" stroke="#E8C0B8" stroke-width="1.5"/>
+  <text x="76" y="108" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">总时间</text>
+  <text x="76" y="122" font-size="13" font-weight="600" fill="#C06050">300 秒</text>
+  <text x="180" y="122" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">每个任务独立进程</text>
+
+  <rect x="60" y="134" width="220" height="36" rx="6" fill="#FDF0EC" stroke="#E8C0B8" stroke-width="1.5"/>
+  <text x="76" y="150" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">内存占用</text>
+  <text x="76" y="164" font-size="13" font-weight="600" fill="#C06050">10 GB</text>
+  <text x="180" y="164" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">进程间无共享</text>
+
+  <rect x="60" y="176" width="220" height="36" rx="6" fill="#FDF0EC" stroke="#E8C0B8" stroke-width="1.5"/>
+  <text x="76" y="192" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">CPU 利用率</text>
+  <text x="76" y="206" font-size="13" font-weight="600" fill="#C06050">20%</text>
+  <text x="180" y="206" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">I/O 等待时 CPU 空闲</text>
+
+  <rect x="60" y="218" width="220" height="36" rx="6" fill="#FDF0EC" stroke="#E8C0B8" stroke-width="1.5"/>
+  <text x="76" y="234" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">网络连接</text>
+  <text x="76" y="248" font-size="13" font-weight="600" fill="#C06050">100 个</text>
+  <text x="180" y="248" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">每个任务独立连接</text>
+
+  <!-- Right column: Async Agent -->
+  <text x="510" y="68" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">异步 Agent</text>
+  <text x="510" y="82" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">协程 · 事件循环</text>
+
+  <!-- Async metric cards -->
+  <rect x="400" y="92" width="220" height="36" rx="6" fill="#E8F0E0" stroke="#B8D0A8" stroke-width="1.5"/>
+  <text x="416" y="108" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">总时间</text>
+  <text x="416" y="122" font-size="13" font-weight="600" fill="#788C5D">30 秒</text>
+  <text x="510" y="122" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">协程并发执行</text>
+
+  <rect x="400" y="134" width="220" height="36" rx="6" fill="#E8F0E0" stroke="#B8D0A8" stroke-width="1.5"/>
+  <text x="416" y="150" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">内存占用</text>
+  <text x="416" y="164" font-size="13" font-weight="600" fill="#788C5D">500 MB</text>
+  <text x="510" y="164" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">协程共享内存</text>
+
+  <rect x="400" y="176" width="220" height="36" rx="6" fill="#E8F0E0" stroke="#B8D0A8" stroke-width="1.5"/>
+  <text x="416" y="192" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">CPU 利用率</text>
+  <text x="416" y="206" font-size="13" font-weight="600" fill="#788C5D">90%</text>
+  <text x="510" y="206" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">I/O 期间调度其他任务</text>
+
+  <rect x="400" y="218" width="220" height="36" rx="6" fill="#E8F0E0" stroke="#B8D0A8" stroke-width="1.5"/>
+  <text x="416" y="234" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">网络连接</text>
+  <text x="416" y="248" font-size="13" font-weight="600" fill="#788C5D">10 个</text>
+  <text x="510" y="248" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">连接复用</text>
+
+  <!-- Center 10x badge -->
+  <circle cx="340" cy="155" r="38" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <circle cx="340" cy="155" r="30" fill="#D97757" opacity="0.1"/>
+  <text x="340" y="150" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">10x</text>
+  <text x="340" y="164" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">性能提升</text>
+
+  <!-- Legend -->
+  <rect x="240" y="268" width="200" height="20" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="282" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">测试：生成 100 个 Python 函数 · AsyncIO 协程</text>
+</svg>

@@ -1,0 +1,86 @@
+<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>汇编语言时代到循环时代的类比</title>
+  <desc>左：手写每条指令的汇编时代；右：定义目标后自主循环的高级语言时代。同一类转变的两个层次。</desc>
+
+  <!-- Background -->
+  <rect width="680" height="260" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="24" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.01em">同一类转变的两个层次</text>
+  <text x="340" y="38" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">硬件层 ↑ 代码层 ↑ 循环层</text>
+
+  <!-- LEFT COLUMN: 汇编语言时代 -->
+  <rect x="30" y="52" width="270" height="160" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <text x="165" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">汇编语言时代</text>
+  <text x="165" y="90" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Assembly Era</text>
+
+  <!-- Person icon (simple stick figure) -->
+  <circle cx="70" cy="120" r="12" fill="none" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="70" y1="132" x2="70" y2="158" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="70" y1="140" x2="55" y2="150" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="70" y1="140" x2="85" y2="150" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="70" y1="158" x2="60" y2="178" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="70" y1="158" x2="80" y2="178" stroke="#D97757" stroke-width="1.5"/>
+  <text x="70" y="192" text-anchor="middle" font-size="8" fill="#87867F">工程师</text>
+
+  <!-- Arrow down to code -->
+  <line x1="115" y1="126" x2="155" y2="126" stroke="#D1CFC5" stroke-width="1"/>
+  <polygon points="155,122 161,126 155,130" fill="#D1CFC5"/>
+
+  <!-- Code block left -->
+  <rect x="115" y="98" width="145" height="62" rx="4" fill="#F5F4EF" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="125" y="114" font-size="8" fill="#141413" font-family="ui-monospace, monospace">MOV AX, 5</text>
+  <text x="125" y="126" font-size="8" fill="#141413" font-family="ui-monospace, monospace">ADD BX, AX</text>
+  <text x="125" y="138" font-size="8" fill="#141413" font-family="ui-monospace, monospace">CMP BX, 10</text>
+  <text x="125" y="150" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">; 每条指令</text>
+  <text x="125" y="160" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">; 手动写出</text>
+
+  <!-- Label below left -->
+  <text x="165" y="228" text-anchor="middle" font-size="9" fill="#141413">低级指令 = 单次输入</text>
+  <text x="165" y="242" text-anchor="middle" font-size="8" fill="#87867F">人驱动每一步</text>
+
+  <!-- CENTER: Arrow showing transformation -->
+  <line x1="310" y1="132" x2="370" y2="132" stroke="#D97757" stroke-width="2"/>
+  <polygon points="370,128 376,132 370,136" fill="#D97757"/>
+  <rect x="315" y="108" width="70" height="22" rx="11" fill="#D97757" opacity="0.12"/>
+  <text x="340" y="123" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">同一类转变</text>
+  <line x1="310" y1="148" x2="370" y2="148" stroke="#D97757" stroke-width="2"/>
+  <polygon points="370,144 376,148 370,152" fill="#D97757"/>
+
+  <!-- RIGHT COLUMN: 循环时代 -->
+  <rect x="380" y="52" width="270" height="160" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+
+  <text x="515" y="74" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">循环时代</text>
+  <text x="515" y="90" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Loop Era</text>
+
+  <!-- Person (designer) icon with loop -->
+  <circle cx="415" cy="120" r="12" fill="none" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="415" y1="132" x2="415" y2="158" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="415" y1="140" x2="400" y2="150" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="415" y1="140" x2="430" y2="150" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="415" y1="158" x2="405" y2="178" stroke="#D97757" stroke-width="1.5"/>
+  <line x1="415" y1="158" x2="425" y2="178" stroke="#D97757" stroke-width="1.5"/>
+  <text x="415" y="192" text-anchor="middle" font-size="8" fill="#87867F">工程师</text>
+
+  <!-- Arrow to loop -->
+  <line x1="430" y1="126" x2="458" y2="126" stroke="#D1CFC5" stroke-width="1"/>
+  <polygon points="458,122 464,126 458,130" fill="#D1CFC5"/>
+
+  <!-- Loop box right -->
+  <rect x="458" y="96" width="145" height="62" rx="4" fill="#F5F4EF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="468" y="112" font-size="8.5" fill="#141413" font-family="ui-monospace, monospace">Goal: 响应 &lt;300ms</text>
+  <text x="468" y="124" font-size="8.5" fill="#141413" font-family="ui-monospace, monospace">Stop: test pass</text>
+  <text x="468" y="140" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">while not done:</text>
+  <text x="468" y="152" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">  agent.run()</text>
+
+  <!-- Label below right -->
+  <text x="515" y="228" text-anchor="middle" font-size="9" fill="#141413">高级意图 = 持续过程</text>
+  <text x="515" y="242" text-anchor="middle" font-size="8" fill="#87867F">系统自主迭代直到达成</text>
+
+  <!-- Equivalence labels at bottom -->
+  <line x1="165" y1="252" x2="340" y2="252" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="340" y1="252" x2="515" y2="252" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="165" y="258" text-anchor="middle" font-size="7.5" fill="#87867F" font-family="ui-monospace, monospace">提示词 ≈ 汇编</text>
+  <text x="515" y="258" text-anchor="middle" font-size="7.5" fill="#87867F" font-family="ui-monospace, monospace">循环 ≈ 高级语言</text>
+</svg>

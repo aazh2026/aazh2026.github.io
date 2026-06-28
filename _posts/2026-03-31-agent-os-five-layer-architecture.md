@@ -5,10 +5,6 @@ date: 2026-03-31T10:00:00+08:00
 tags: [AI, Agent, Architecture, System-Design, Technical]
 author: "@postcodeeng"
 series: "Agent-OS-Series"
-series_title: "从 SaaS 到 Agent OS"
-
-redirect_from:
-  - /agent-os-five-layer-architecture.html
 ---
 
 *"架构决定上限，工程决定下限。"
@@ -18,23 +14,16 @@ redirect_from:
 
 > **TL;DR**
 >
-> Agent OS 的五层架构（Tools → Memory → Runtime → Orchestration → Interface）提供了一个可落地的工程框架。每一层有明确职责边界：Tools 连接外部世界，Memory 存储知识经验，Runtime 负责推理行动，Orchestration 管理协作调度，Interface 处理人机交互。关键洞察：好的架构决定上限，扎实的工程实现决定下限。
+> 本文核心观点：
+> 1. **五层架构框架** — Tools → Memory → Runtime → Orchestration → Interface，每层职责边界清晰
+> 2. **关注点分离** — 分层使系统可维护、可扩展、可测试、可独立升级
+> 3. **渐进式实现** — 从 MVP 到生产级，分阶段构建，每阶段有明确目标
+> 4. **人工介入机制** — 高风险操作必须人工确认，关键决策保留人类控制权
 
 ---
 
-- [为什么需要分层架构？](#为什么需要分层架构)
-- [五层架构全景图](#五层架构全景图)
-- [Layer 1: Tools & Connectors](#layer-1-tools--connectors)
-- [Layer 2: Memory & State](#layer-2-memory--state)
-- [Layer 3: Agent Runtime](#layer-3-agent-runtime)
-- [Layer 4: Orchestration](#layer-4-orchestration)
-- [Layer 5: Interface](#layer-5-interface)
-- [实现路径：从 MVP 到生产](#实现路径从-mvp-到生产)
-- [写在最后](#写在最后)
 
----
-
-## 为什么需要分层架构？
+## 分层架构的必要性
 
 ### Agent 系统的复杂性
 
@@ -51,6 +40,10 @@ redirect_from:
 - 难以扩展
 - 难以调试
 - 难以测试
+
+> 💡 **Key Insight**
+>
+> 每一层都有明确的职责边界：Tools 连接外部世界，Memory 存储知识经验，Runtime 负责推理行动，Orchestration 管理协作调度，Interface 处理人机交互。
 
 ### 分层架构的优势
 
@@ -73,7 +66,7 @@ redirect_from:
 
 ---
 
-## Layer 1: Tools & Connectors
+## 第一层：工具与连接器
 
 ### 职责
 
@@ -108,9 +101,15 @@ redirect_from:
 3. **幂等性**：关键操作必须是幂等的，防止重复执行
 4. **审计日志**：所有操作都要记录，便于调试和合规
 
+### 设计要点
+
+> 💡 **Key Insight**
+>
+> 工具描述的质量直接影响 Agent 的工具选择能力。每个 connector 的描述应该清晰说明"能做什么"和"适合什么场景"。
+
 ---
 
-## Layer 2: Memory & State
+## 第二层：记忆与状态
 
 ### 职责
 
@@ -155,7 +154,7 @@ redirect_from:
 
 ---
 
-## Layer 3: Agent Runtime
+## 第三层：Agent 运行时
 
 ### 职责
 
@@ -185,9 +184,15 @@ redirect_from:
 | **人工介入** | 高风险操作必须人工确认 |
 | **超时控制** | 单次 LLM 调用 < 30s，整体任务 < 5min |
 
+### 运行时设计要点
+
+> 💡 **Key Insight**
+>
+> ReAct 是起点，不是终点。从简单模式开始，在使用过程中识别局限性，再逐步引入 Plan-and-Execute 等复杂模式。
+
 ---
 
-## Layer 4: Orchestration
+## 第四层：编排层
 
 ### 职责
 
@@ -271,13 +276,17 @@ redirect_from:
 
 **混合使用**
 
-实际系统中 often 需要混合使用多种模式：
+实际系统中往往需要混合使用多种模式：
 
 ### 实现方案
 
+> 💡 **Key Insight**
+>
+> 模式没有优劣，只有适用场景。Supervisor-Workers 适合任务可分解的场景，Peer-to-Peer 适合需要平等协商的场景，Hierarchy 适合组织结构清晰的大型系统。
+
 ---
 
-## Layer 5: Interface
+## 第五层：界面层
 
 ### 职责
 
@@ -338,6 +347,12 @@ Agent 的输出不应该只有文本：
 - Agent 失败时提供重试选项
 - 显示失败原因（技术细节可折叠）
 - 提供人工接管的快捷入口
+
+### 界面设计要点
+
+> 💡 **Key Insight**
+>
+> 好的 Agent 界面不是"越透明越好"，而是让用户在任何时刻都能做出有意义的选择——继续、暂停、或接管。
 
 ---
 
@@ -424,9 +439,13 @@ Agent OS 的五层架构与现有框架的关系：
 
 > 💡 **关于"任务成功率"的定义**：指用户提交任务后，Agent 生成的结果被用户接受（无需重大修改即可使用）的比例。不同于传统的"准确率"，因为 Agent 任务往往没有唯一正确答案。
 
+> 💡 **Key Insight**
+>
+> 自动化不等于把人类从循环里移除。在每一层，都有天然的人类介入点。
+
 ---
 
-## 写在最后
+## 结尾
 
 **Agent OS 的五层架构不是一个理论模型，而是可以落地的工程方案。**
 

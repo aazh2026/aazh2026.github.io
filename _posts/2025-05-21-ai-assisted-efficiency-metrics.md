@@ -112,24 +112,14 @@ AI时代：
 | **文档完整度** | 注释和文档的充分性 | NLP分析 |
 | **团队熟悉度** | 团队对这段代码的了解程度 | Git历史分析 |
 
-### AI预测模型
-
----
 
 ### 变更影响范围：一次修改的波及范围
 
 **定义**：修改一处代码对其他部分的影响范围。
 
-### 度量方法
-### AI增强的影响分析
-
----
 
 ## 代码可维护性AI预测模型
 
-### 模型架构
-
-### 预测指标
 
 ### 可维护性指数（Maintainability Index）
 
@@ -145,11 +135,6 @@ AI时代：
 
 ---
 
-### 实时可维护性监控
-
-### IDE集成
-
-### CI/CD集成
 
 ---
 
@@ -157,8 +142,6 @@ AI时代：
 
 ### 范式转移
 
-### 传统思维
-### AI时代思维
 ### 度量对比
 
 | 维度 | 传统度量 | AI时代度量 |
@@ -194,7 +177,6 @@ AI时代：
 - 引入Bug风险：低
 - 测试成本：低（只需测试新策略）
 
-### ROI计算
 ---
 
 ## 实施与工具
@@ -235,7 +217,7 @@ AI时代：
 
 ### 度量仪表盘
 
-<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.svg" type="image/svg+xml" width="100%"></object>
+<img src="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.svg" alt="度量仪表盘" width="100%">
 
 ---
 

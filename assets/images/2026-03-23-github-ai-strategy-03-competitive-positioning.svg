@@ -1,0 +1,66 @@
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Background -->
+  <rect width="680" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">竞争定位对比</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">GitHub vs Cursor · GitHub vs Claude Code</text>
+
+  <!-- Section 1: GitHub vs Cursor -->
+  <rect x="40" y="56" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="56" y="78" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">GitHub vs Cursor</text>
+
+  <rect x="56" y="90" width="50" height="18" rx="9" fill="#788C5D"/>
+  <text x="81" y="103" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">GitHub</text>
+  <text x="114" y="103" font-size="10" fill="#141413">平台 · 标准化</text>
+
+  <rect x="56" y="116" width="50" height="18" rx="9" fill="#87867F"/>
+  <text x="81" y="129" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">Cursor</text>
+  <text x="114" y="129" font-size="10" fill="#141413">工具 · 个性化</text>
+
+  <text x="56" y="156" font-size="9.5" fill="#87867F">入口：代码托管 vs IDE</text>
+  <text x="56" y="170" font-size="9.5" fill="#87867F">AI深度：平台级 vs 编辑器级</text>
+  <text x="56" y="184" font-size="9.5" fill="#788C5D">锁定效应：极强 vs 中等</text>
+
+  <!-- Section 2: GitHub vs Claude Code -->
+  <rect x="350" y="56" width="290" height="130" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="366" y="78" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">GitHub vs Claude Code</text>
+
+  <rect x="366" y="90" width="50" height="18" rx="9" fill="#788C5D"/>
+  <text x="391" y="103" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">GitHub</text>
+  <text x="424" y="103" font-size="10" fill="#141413">标准化工作流</text>
+
+  <rect x="366" y="116" width="50" height="18" rx="9" fill="#87867F"/>
+  <text x="391" y="129" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">Claude</text>
+  <text x="424" y="129" font-size="10" fill="#141413">定制化能力</text>
+
+  <text x="366" y="156" font-size="9.5" fill="#87867F">可控性：中等 vs 极高</text>
+  <text x="366" y="170" font-size="9.5" fill="#87867F">学习曲线：低 vs 高</text>
+  <text x="366" y="184" font-size="9.5" fill="#788C5D">生态锁定：强 vs 弱</text>
+
+  <!-- Summary comparison table -->
+  <rect x="40" y="200" width="600" height="100" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="56" y="220" font-size="11" font-weight="600" fill="#141413">核心差异总结</text>
+
+  <line x1="40" y1="228" x2="640" y2="228" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="56" y="248" font-size="10" fill="#141413">维度</text>
+  <text x="180" y="248" font-size="10" fill="#141413">GitHub</text>
+  <text x="380" y="248" font-size="10" fill="#141413">Cursor</text>
+  <text x="540" y="248" font-size="10" fill="#141413">Claude Code</text>
+
+  <line x1="40" y1="258" x2="640" y2="258" stroke="#D1CFC5" stroke-width="0.5"/>
+
+  <text x="56" y="276" font-size="10" fill="#87867F">定位</text>
+  <text x="180" y="276" font-size="10" fill="#141413">平台</text>
+  <text x="380" y="276" font-size="10" fill="#141413">工具</text>
+  <text x="540" y="276" font-size="10" fill="#141413">CLI工具</text>
+
+  <text x="56" y="292" font-size="10" fill="#87867F">优势</text>
+  <text x="180" y="292" font-size="10" fill="#788C5D">生态锁定</text>
+  <text x="380" y="292" font-size="10" fill="#141413">个性化</text>
+  <text x="540" y="292" font-size="10" fill="#141413">高度定制</text>
+
+  <!-- Source -->
+  <text x="340" y="322" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">竞争格局分析 · 2026</text>
+</svg>

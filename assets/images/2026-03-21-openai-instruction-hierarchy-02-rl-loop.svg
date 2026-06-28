@@ -1,0 +1,60 @@
+<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>IH-Challenge RL 训练循环</title>
+  <desc>强化学习训练循环图：生成冲突指令对话 → 模型生成响应 → 奖励信号 → 更新模型</desc>
+
+  <!-- Background -->
+  <rect width="640" height="300" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">IH-Challenge 强化学习训练循环</text>
+  <text x="320" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">OpenAI Instruction Hierarchy · 2026/03</text>
+
+  <!-- Node 1: Generate conflicting dialogue -->
+  <rect x="30" y="80" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="100" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 1</text>
+  <text x="100" y="124" text-anchor="middle" font-size="12" fill="#141413">生成冲突指令对话</text>
+  <text x="100" y="142" text-anchor="middle" font-size="10" fill="#87867F">System / Developer /</text>
+  <text x="100" y="156" text-anchor="middle" font-size="10" fill="#87867F">User / Tool 冲突</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="170" y1="125" x2="195" y2="125" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="195,125 187,119 187,131" fill="#D1CFC5"/>
+
+  <!-- Node 2: Model generates response -->
+  <rect x="200" y="80" width="140" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="270" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 2</text>
+  <text x="270" y="124" text-anchor="middle" font-size="12" fill="#141413">模型生成响应</text>
+  <text x="270" y="142" text-anchor="middle" font-size="10" fill="#87867F">给定对话上下文</text>
+  <text x="270" y="156" text-anchor="middle" font-size="10" fill="#87867F">预测下一步输出</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="340" y1="125" x2="365" y2="125" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="365,125 357,119 357,131" fill="#D1CFC5"/>
+
+  <!-- Node 3: Reward signal -->
+  <rect x="370" y="80" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <text x="450" y="104" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Step 3</text>
+  <text x="450" y="124" text-anchor="middle" font-size="12" fill="#141413">奖励信号判定</text>
+
+  <!-- Correct branch -->
+  <rect x="382" y="134" width="58" height="26" rx="5" fill="#788C5D"/>
+  <text x="411" y="151" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">✓ 遵循正确指令</text>
+
+  <!-- Incorrect branch -->
+  <rect x="450" y="134" width="58" height="26" rx="5" fill="#C9544D"/>
+  <text x="479" y="151" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">✗ 遵循错误指令</text>
+
+  <!-- Feedback arrow: Reward → Model (curved, bottom) -->
+  <path d="M 450 170 C 450 220, 270 220, 270 170" stroke="#D97757" stroke-width="1.8" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="270,170 278,178 262,178" fill="#D97757"/>
+  <text x="360" y="236" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">反向传播更新</text>
+
+  <!-- Bottom note -->
+  <text x="320" y="270" text-anchor="middle" font-size="10" fill="#87867F">模型通过反复试错学会在冲突中选择正确的指令来源</text>
+
+  <!-- Legend -->
+  <rect x="30" y="252" width="12" height="12" rx="2" fill="#788C5D"/>
+  <text x="48" y="262" font-size="9" fill="#87867F">正确奖励</text>
+  <rect x="100" y="252" width="12" height="12" rx="2" fill="#C9544D"/>
+  <text x="118" y="262" font-size="9" fill="#87867F">错误惩罚</text>
+</svg>

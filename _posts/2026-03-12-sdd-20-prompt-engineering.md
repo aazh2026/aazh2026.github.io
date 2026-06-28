@@ -61,10 +61,6 @@ series: AI-Native软件工程系列 #2
 
 <object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" type="image/svg+xml" width="100%"></object>
 
-### 传统用户故事
-### SDD 2.0 三元组
-### 为什么三元组更优？
-
 | 维度 | 传统格式 | SDD 2.0 |
 |------|---------|---------|
 | 完整性 | 需人工补充 | 自包含 |

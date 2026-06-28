@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 308" width="414" height="308" style="font-family: 'Courier New', Courier, monospace; background: #FAF9F5;">
+<svg viewBox="0 0 414 308" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>gstack Skill 目录结构</title>
+  <desc>gstack 的 ~/.claude/skills/gstack/ 目录结构，展示了 scripts/、assets/、data/、config.json 等组成部分</desc>
   <rect width="414" height="308" fill="#FAF9F5"/>
 <text x="207.0" y="18" text-anchor="middle" font-size="12px" font-weight="bold" fill="#141413">gstack Skill 目录结构</text>
   <g>

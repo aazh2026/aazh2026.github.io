@@ -17,6 +17,8 @@ series: AI-Native软件工程系列
 
 ---
 
+<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-00-hero.svg" type="image/svg+xml" width="100%"></object>
+
 ## Agent = Model + Harness
 
 > 💡 **Key Insight**
@@ -91,6 +93,10 @@ Addy 列举了几个例子：
 - 如果 agent 在 40 步任务里迷失 → 拆分成 planner 和 executor
 - 如果 agent 总以 broken code 结束 → 在循环里接入 type-checking back-pressure signal
 
+> 💡 **Key Insight**
+>
+> 约束只在你观察到真实失败时添加，只在有能力的模型让它冗余时移除。
+
 **性能基准测试证明了这一点：** 一个领先模型跑在现成框架里，分数往往远低于同一个模型跑在定制的、高度调优的 harness 里。把模型移到一个有更好 codebase tools、更紧 prompt、更sharp back-pressure 的环境，可以解锁原 setup 留下的能力。
 
 ---
@@ -106,7 +112,15 @@ Addy 列举了几个例子：
 - Mnimiy：每次失败追加一条规则到 CLAUDE.md
 - Addy：每次失败是 harness 的输入，不是模型的问题
 
+> 💡 **Key Insight**
+>
+> 每个错误变成一条规则——不是一次性可以重试后忘记的 fluke。如果 agent 提交了一个 PR，里面有被注释掉的测试然后被 merge 了——那是一个输入，不是可以忽略的事件。
+
 Addy 的表达最精确：**约束只在你观察到真实失败时添加，只在有能力的模型让它冗余时移除。**
+
+> 💡 **Key Insight**
+>
+> 约束只在你观察到真实失败时添加，只在有能力的模型让它冗余时移除。
 
 好的 system prompt 里的每一行都应该追溯到一个具体的、历史性的失败。因为这个，harness engineering 是一个 discipline，而不是一个 one-size-fits-all framework。**正确的 harness 对于特定 codebase 来说，完全是由其独特的失败历史塑造的。**
 
@@ -163,6 +177,10 @@ Addy 指出了一个反直觉的趋势：更好的模型让人以为 scaffolding
 ---
 
 ## 结尾：竞争在地基
+
+当这个框架完整拼合之后，一个核心逻辑变得清晰：模型的迭代是可预测的——下一代更强的模型会继承这一代的能力；但 harness 的迭代是 path-dependent 的。每个团队在 scaffold 层积累的失败日志、规则集和 tool wrappers，构成了一个无法靠切换模型来复制的结构性优势。这正是为什么 Addy 反复强调 Agent = Model + Harness——括号里的两项不是可选的，其中一项的改进不能替代另一项的投入。
+
+Harness engineering 的思维方式本质上是把软件工程的纪律带回到一个容易被当作玄学讨论的领域。不是"怎么让 AI 更好用"，而是"具体哪个行为失败了、应该在哪一层强制约束、下一次循环如何验证"。这种精确度把 AI 编程从个人运气变成可积累的系统能力。
 
 > 💡 **Key Insight**
 >

@@ -65,6 +65,8 @@ Transformer 使用 PreNorm 架构：
 
 ### 直观理解
 
+标准残差连接将每一层的输出简单地加回输入，形成 `output = input + SubLayer(output)` 的形式。这种"复制粘贴"式的传递方式让所有层以相同权重累积——最终深层网络无法分辨哪些信息来自哪个学习阶段。
+
 ### 标准残差连接
 ### Attention Residuals
 ### 与标准 Attention 的区别
@@ -82,7 +84,7 @@ Transformer 使用 PreNorm 架构：
 {% endfigure %}
 
 {% figure center %}
-<object data="/assets/images/2026-03-18-kimi-attention-residuals-02-layer-aggregation.png" type="image/svg+xml" width="100%"></object>
+<img src="/assets/images/2026-03-18-kimi-attention-residuals-02-layer-aggregation.png" alt="Layer Aggregation Comparison" style="width:100%;height:auto;">
 *图 2：层聚合方式对比——标准残差连接的固定权重导致贡献稀释；Attention Residuals 通过可学习权重实现自适应层聚合，Block AttnRes 在保持内存效率的同时实现这一机制。*
 {% endfigure %}
 
@@ -93,6 +95,12 @@ Transformer 使用 PreNorm 架构：
 ### Attention Residuals（AttnRes）
 
 ### 数学公式
+
+AttnRes 将层聚合从固定加权求和改为注意力加权聚合：
+
+$$\mathbf{y}^l = \sum_{i=1}^{l} \text{Softmax}(\mathbf{q}^l \cdot \mathbf{k}^i) \cdot \mathbf{v}^i$$
+
+其中 Query 来自当前层输出，Key/Value 来自前面所有层。注意力权重由当前层动态计算，而非手工设定。
 
 ### PyTorch 伪代码
 
@@ -108,6 +116,8 @@ Transformer 使用 PreNorm 架构：
 **核心思想**：分块注意力
 
 ### 具体方法
+
+Block AttnRes 将层分为多个块，每个块内保持完整的 AttnRes，块间使用标准残差连接。这样在块大小 B 内实现选择性聚合，同时将内存复杂度从 O(L^2) 降低到 O(L^2/B)。
 
 **内存优化**：
 
@@ -128,21 +138,22 @@ Transformer 使用 PreNorm 架构：
 
 **1. 自适应信息流动**
 
-不同层捕获不同抽象级别的特征：
-- 浅层：语法、局部模式
-- 中层：语义、实体关系
-- 深层：推理、全局上下文
-
-AttnRes 允许任务自适应地选择需要的特征。
+> 💡 **Key Insight**
+> 不同层捕获不同抽象级别的特征：浅层学语法、中层学语义、深层学推理。AttnRes 让模型动态选择需要哪一层的信息，而不是被固定权重稀释。
 
 **2. 梯度流动优化**
 
-标准残差：
-AttnRes：
+> 💡 **Key Insight**
+> 标准残差的加法路径会产生梯度消失；AttnRes 的注意力路径为每层创建独立的梯度通道，缓解了深层网络的梯度流动问题。
+
 **3. 表达能力提升**
 
-标准残差是 AttnRes 的特殊情况（均匀权重）：
+> 💡 **Key Insight**
+> 标准残差不过是 AttnRes 的一个特例——当所有注意力权重都等于 1/L 时，两者在数学上等价。换言之，AttnRes 是标准残差的严格超集。
 ### 实证分析
+
+> 💡 **Key Insight**
+> Kimi 团队在翻译、语言建模、文本分类等基准上的实验表明：注意力权重并非均匀分布，而是呈现出自适应选择特性——某些层被显著增强，另一些则被抑制。
 
 ### 注意力权重可视化
 
@@ -217,6 +228,9 @@ Block AttnRes 可以在推理时缓存块表示，速度接近标准 Transformer
 **Block AttnRes**：
 - 内存：O(L × D + B × D) ≈ O(L × D) （接近标准）
 - 计算：O(L²/B × D) （可接受）
+
+> 💡 **Key Insight**
+> Block AttnRes 的核心洞察是：不需要在所有层之间做注意力。只需在块内（L/B 的范围内）做完整注意力，块间用标准残差，就能在极低的内存开销下获得大部分收益。
 
 ### 实现技巧
 

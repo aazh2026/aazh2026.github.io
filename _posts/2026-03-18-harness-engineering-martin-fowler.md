@@ -108,7 +108,24 @@ OpenAI 团队构建了一套系统来：
 - **确定性约束**：自定义 Linter、结构测试（不可绕过）
 - **LLM 约束**：让 Agent 自己检查架构合规性
 
-**约束示例**（概念性说明）：
+**混合约束示例**：
+
+```json
+// .eslintrc.json 片段
+{
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@repo/*"]
+      }
+    ]
+  }
+}
+```
+
+自定义 Linter 强制执行架构边界，Agent 无法绕过。
+
 ### Layer 3: 垃圾回收
 
 **核心问题**：如何对抗代码腐烂？
@@ -122,7 +139,7 @@ OpenAI 团队构建了一套系统来：
   - 死代码
 - 自动生成修复 PR
 
-**类比**：就像垃圾回收器自动管理内存，Harness 自动维护代码健康。
+**类比**：就像垃圾回收器自动管理内存，Harness 自动维护代码健康——将"代码质量维护"从人工任务变为系统化的自动流程。
 
 ---
 
@@ -244,6 +261,17 @@ OpenAI 的实验表明：
 | 实时信息 | Playwright + Browser | 让 Agent 能浏览文档和 API 参考 |
 
 **Cursor Rules 示例**（立即可用）：
+
+```markdown
+# .cursorrules
+- 项目采用分层架构：UI 层 → Service 层 → Repository 层
+- 禁止跨层直接导入（如 UI 层不能直接导入 Repository 层）
+- 所有 API 端点必须有文档注释
+- 使用 TypeScript 严格模式
+```
+
+在项目根目录放置 `.cursorrules` 文件，Cursor Agent 会自动读取并在生成代码时遵循这些约束。
+
 ### Layer 2: 架构约束（可用方案）
 
 **工具组合**：
@@ -256,6 +284,30 @@ OpenAI 的实验表明：
 | 类型安全 | TypeScript 严格模式 | 编译时捕获类型错误 |
 
 ### ESLint 架构约束示例
+
+```javascript
+// eslint-plugin-architecture/index.js
+module.exports = {
+  rules: {
+    'no-cross-layer-imports': {
+      create(context) {
+        return {
+          ImportDeclaration(node) {
+            const source = node.source.value;
+            // 检查是否跨越分层边界
+            if (isViolation(source)) {
+              context.report({ node, message: '禁止跨层导入' });
+            }
+          }
+        };
+      }
+    }
+  }
+};
+```
+
+通过自定义 ESLint 插件，可以在代码层面强制执行架构约束，AI 生成违规代码时会立即被 Linter 捕获。
+
 ### Layer 3: 垃圾回收（可用方案）
 
 **工具组合**：

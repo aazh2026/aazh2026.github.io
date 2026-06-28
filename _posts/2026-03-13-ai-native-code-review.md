@@ -71,6 +71,10 @@ redirect_from:
 
 这三重困境在代码量激增、团队规模扩大、技术栈复杂化的今天，已经到了不可容忍的地步。
 
+{% figure center %}
+💡 **Key Insight** — 代码审查的三重困境根源在于人类认知带宽的物理限制。AI-Native 审查不是要让机器"更像人"，而是要让人从重复劳动中解放，专注于机器无法替代的设计判断。
+{% endfigure %}
+
 ---
 
 ## 为什么传统 Code Review 在失效
@@ -102,6 +106,10 @@ redirect_from:
 
 **结论**：传统 Code Review 的投入产出比正在快速恶化。
 
+{% figure center %}
+💡 **Key Insight** — 传统 Code Review 失效的根本原因是它的隐含假设已不成立：人类审查者并非最优错误发现者，审查不是"把关"行为，质量与时间不成正比，知识不会自动传播。Agent 陪审团从设计上打破了这些假设。
+{% endfigure %}
+
 ---
 
 ## Agent 陪审团模型
@@ -132,12 +140,16 @@ redirect_from:
 | **知识沉淀** | 难以积累 | 持续学习改进 |
 
 {% figure center %}
+💡 **Key Insight** — Agent 陪审团的核心优势不是"更快"，而是"更一致"。人类审查者因疲劳、情绪、经验差异导致审查质量波动；5个专业 Agent 并行运作，每次审查都遵循同一标准，真正实现了可量化的审查质量。
+{% endfigure %}
+
+{% figure center %}
 <img src="/assets/images/2026-03-13-ai-native-code-review-01-agent-jury.png" alt="Agent Jury Code Review Model" style="width:100%;height:auto;">
 *图 1：Agent 陪审团模型——5 个专业 Agent 并行审查 PR，最终汇总为 Review Report，由人类审查者做最终设计判断。Agent 处理 80% 标准化检查，人类专注 20% 架构与设计决策。*
 {% endfigure %}
 
 {% figure center %}
-<object data="/assets/images/2026-03-13-ai-native-code-review-02-agent-jury-flow.png" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-13-ai-native-code-review-02-agent-jury-flow.png" type="image/png" width="100%"></object>
 *图 2：Agent 陪审团审查流程——5 个专业 Agent 并行处理 80% 标准化检查，Review Report 汇总后由人类审查者专注 20% 架构设计判断和知识传播。*
 {% endfigure %}
 
@@ -303,6 +315,10 @@ Agent 的输出需要为人类审查者设计：
 | AI 审查 | — | GitHub Copilot | GPT-4/Claude API |
 | 性能分析 | — | Datadog, New Relic | 自定义脚本 |
 | 报告聚合 | — | — | 自研 Dashboard |
+
+{% figure center %}
+💡 **Key Insight** — 实施 Agent 陪审团不必追求一步到位。从阶段 1 的自动化格式化工具，到阶段 2 的 AI 审查，再到阶段 3 的完整陪审团——每一步都在减少人类审查者的重复劳动，让团队在实践中逐步适应人机协作的新模式。
+{% endfigure %}
 
 ---
 

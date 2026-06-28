@@ -1,0 +1,83 @@
+<svg viewBox="0 0 680 440" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <title>成本结构四象限模型</title>
+  <desc>AI系统成本优化的四象限框架：高频低复杂度用缓存优化，高频高复杂度用架构重构，低频低复杂度用模型降级，低频高复杂度用预计算</desc>
+
+  <!-- Background -->
+  <rect width="680" height="440" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">成本结构四象限模型</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 2026</text>
+
+  <!-- Axis labels -->
+  <text x="22" y="220" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace" writing-mode="vertical-rl" transform="rotate(-90,22,220)">高频 ←→ 低频</text>
+  <text x="340" y="418" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">低复杂度 ←→ 高复杂度</text>
+
+  <!-- Diagonal arrow (center) -->
+  <line x1="80" y1="380" x2="600" y2="80" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4" opacity="0.5"/>
+  <text x="340" y="215" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" opacity="0.7">架构越复杂 → 成本越高</text>
+
+  <!-- Grid lines -->
+  <line x1="340" y1="65" x2="340" y2="395" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="55" y1="230" x2="625" y2="230" stroke="#D1CFC5" stroke-width="1"/>
+
+  <!-- Q1: Top-left — 高频低复杂度 → 缓存优化 (olive) -->
+  <rect x="55" y="65" width="285" height="165" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="55" y="65" width="285" height="26" rx="8" fill="#788C5D"/>
+  <rect x="55" y="83" width="285" height="8" fill="#788C5D"/>
+  <text x="67" y="82" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Q1 · 高频低复杂度</text>
+  <text x="67" y="106" font-size="13" fill="#141413">缓存优化</text>
+  <text x="67" y="122" font-size="10" fill="#87867F">语义缓存 · 结果缓存 · 智能预取</text>
+  <text x="67" y="142" font-size="10.5" fill="#788C5D" font-family="ui-monospace, monospace">成本降低 60-80%</text>
+  <text x="67" y="160" font-size="10" fill="#141413">客服Agent案例：</text>
+  <text x="67" y="175" font-size="10" fill="#87867F">80%问题重复，缓存命中率&gt;70%</text>
+  <text x="67" y="190" font-size="10" fill="#87867F">$0.05/次 → $0.01/次</text>
+  <rect x="290" y="205" width="36" height="15" rx="7.5" fill="#788C5D"/>
+  <text x="308" y="216" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">缓存</text>
+
+  <!-- Q2: Top-right — 高频高复杂度 → 架构重构 (clay) -->
+  <rect x="340" y="65" width="285" height="165" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="340" y="65" width="285" height="26" rx="8" fill="#D97757"/>
+  <rect x="340" y="83" width="285" height="8" fill="#D97757"/>
+  <text x="352" y="82" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Q2 · 高频高复杂度</text>
+  <text x="352" y="106" font-size="13" fill="#141413">架构重构</text>
+  <text x="352" y="122" font-size="10" fill="#87867F">任务分解 · 异步处理 · 预计算+增量更新</text>
+  <text x="352" y="142" font-size="10.5" fill="#D97757" font-family="ui-monospace, monospace">成本降低 40-60% · 延迟降低 50%</text>
+  <text x="352" y="160" font-size="10" fill="#141413">金融分析Agent案例：</text>
+  <text x="352" y="175" font-size="10" fill="#87867F">实时生成 → 预计算+增量</text>
+  <text x="352" y="190" font-size="10" fill="#87867F">$10/报告 → $4/报告 · 30s → 5s</text>
+  <rect x="575" y="205" width="36" height="15" rx="7.5" fill="#D97757"/>
+  <text x="593" y="216" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">重构</text>
+
+  <!-- Q3: Bottom-left — 低频低复杂度 → 模型降级 (gray) -->
+  <rect x="55" y="230" width="285" height="165" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="55" y="230" width="285" height="26" rx="8" fill="#87867F"/>
+  <rect x="55" y="248" width="285" height="8" fill="#87867F"/>
+  <text x="67" y="247" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Q3 · 低频低复杂度</text>
+  <text x="67" y="271" font-size="13" fill="#141413">模型降级</text>
+  <text x="67" y="287" font-size="10" fill="#87867F">智能路由 · 边缘计算 · 批处理聚合</text>
+  <text x="67" y="307" font-size="10.5" fill="#87867F" font-family="ui-monospace, monospace">成本降低 70-90%</text>
+  <text x="67" y="325" font-size="10" fill="#141413">内部工具Agent案例：</text>
+  <text x="67" y="340" font-size="10" fill="#87867F">80%任务用GPT-3.5 · 20%用GPT-4</text>
+  <text x="67" y="355" font-size="10" fill="#87867F">平均成本降低75%</text>
+  <rect x="290" y="370" width="36" height="15" rx="7.5" fill="#87867F"/>
+  <text x="308" y="381" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">降级</text>
+
+  <!-- Q4: Bottom-right — 低频高复杂度 → 预计算 (dark) -->
+  <rect x="340" y="230" width="285" height="165" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="340" y="230" width="285" height="26" rx="8" fill="#141413"/>
+  <rect x="340" y="248" width="285" height="8" fill="#141413"/>
+  <text x="352" y="247" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Q4 · 低频高复杂度</text>
+  <text x="352" y="271" font-size="13" fill="#141413">预计算</text>
+  <text x="352" y="287" font-size="10" fill="#87867F">离线预生成 · 增量更新 · 人机协作</text>
+  <text x="352" y="307" font-size="10.5" fill="#141413" font-family="ui-monospace, monospace">成本降低 50-70% · 质量提升</text>
+  <text x="352" y="325" font-size="10" fill="#141413">市场研报生成案例：</text>
+  <text x="352" y="340" font-size="10" fill="#87867F">实时生成 → 每日凌晨预生成</text>
+  <text x="352" y="355" font-size="10" fill="#87867F">$50/报告 → $15/报告 · 质量因人工Review提升</text>
+  <rect x="575" y="370" width="36" height="15" rx="7.5" fill="#141413"/>
+  <text x="593" y="381" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">预计算</text>
+
+  <!-- Footer -->
+  <line x1="55" y1="405" x2="625" y2="405" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="420" text-anchor="middle" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">核心洞察：80% 的成本浪费来自结构性错配</text>
+</svg>

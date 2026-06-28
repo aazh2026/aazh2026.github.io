@@ -4,7 +4,7 @@ title: "\"Agent-DD：多Agent协作的Swarm Programming模式\""
 date: 2025-05-28T18:00:00+08:00
 tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #51
+series: AI-Native Engineering
 
 redirect_from:
   - /agent-dd-swarm-programming/
@@ -26,9 +26,11 @@ redirect_from:
 
 ### 单Agent的局限
 
-**场景：开发一个电商订单系统**
+单Agent在处理复杂任务时面临明显的瓶颈。以电商订单系统为例，涉及库存、支付、物流、促销等多个相互关联的子系统，单个Agent难以全面把握所有细节。
 
 ### 单Agent尝试
+
+**原因**：
 **原因**：
 - 单个Agent难以同时处理多个维度
 - 没有专业分工
@@ -62,6 +64,10 @@ redirect_from:
 | **自组织** | Agent自动协调，动态调整 |
 | **涌现智能** | 群体表现出超越个体的智能 |
 
+> 💡 **Key Insight**
+>
+> 去中心化的Agent群体能涌现出超越任何单个Agent的智能，关键在于明确的角色分工与有效的协调机制。
+
 ### Swarm Programming架构
 
 <object data="/assets/images/2025-05-28-agent-dd-swarm-01-cluster.svg" type="image/svg+xml" width="100%"></object>
@@ -70,9 +76,15 @@ redirect_from:
 
 **阶段1：任务分解**
 
+Coordinator Agent 将复杂任务拆解为多个子任务，根据Agent能力分配给专业角色。
+
 **阶段2：并行执行**
 
+各Agent独立处理分配的子任务，通过共享状态保持信息同步。
+
 **阶段3：结果整合**
+
+Coordinator Agent 汇总各Agent输出，解决冲突并生成最终交付物。
 
 ---
 
@@ -82,13 +94,23 @@ redirect_from:
 
 **角色1：架构师Agent（Architect Agent）**
 
+负责系统架构设计，定义模块边界和接口契约。
+
 **角色2：开发Agent（Developer Agent）**
+
+负责根据架构设计实现具体代码。
 
 **角色3：测试Agent（Tester Agent）**
 
+负责生成测试用例，验证功能正确性。
+
 **角色4：审查Agent（Reviewer Agent）**
 
+负责代码质量审查，发现潜在问题。
+
 **角色5：协调Agent（Coordinator Agent）**
+
+负责任务分配、进度协调和冲突解决。
 
 ### 角色交互图
 
@@ -105,6 +127,8 @@ redirect_from:
 **类型3：逻辑冲突**
 
 ### 冲突检测
+
+Coordinator Agent 通过比对各Agent输出的接口契约和数据模型定义，识别不一致之处并标记为冲突。
 
 ### 冲突解决策略
 

@@ -13,6 +13,8 @@ series: AI-Native Engineering
 >
 > **Key Insight:** Anthropic 发现用户对 permission prompt 的批准率约 93%——而且随着批准次数增加，注意力的下降速度比预期快。这意味着「human-in-the-loop」作为安全机制的核心假设（人会认真审查每个请求）从来就不成立。
 
+<object data="/assets/images/2026-05-28-anthropic-containment-01-three-patterns.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 开场：一个被验证的工程判断
@@ -43,6 +45,10 @@ Claude Code 最初的设计是：用户批准每个操作。
 解决方案不是让用户更认真，而是**把用户从安全决策中移除**。
 
 这就是为什么 Claude Code 后来增加了 OS-level sandbox（Seatbelt/bubblewrap）：把安全边界做在环境层，而不是依赖用户每次的审查决定。结果是 permission prompts 下降了 84%。
+
+> 💡 **Key Insight**
+>
+> 把安全边界做在环境层——而不是依赖用户的持续注意力——才能真正解决 approval fatigue 问题。
 
 ---
 
@@ -86,6 +92,10 @@ Anthropic 描述了一个 2026 年 2 月的 red team 实验：
 
 唯一有效的防御：**环境层的 egress controls 和 filesystem boundaries**。
 
+> 💡 **Key Insight**
+>
+> 当用户自己就是攻击者时，model-layer 防御完全失效——唯一有效的防线在环境层。
+
 ### Pattern 3: Local VM（Claude Cowork）
 
 Claude Cowork 面向的是非技术用户——普通知识工作者，而不是工程师。
@@ -104,8 +114,6 @@ Claude Cowork 面向的是非技术用户——普通知识工作者，而不是
 ---
 
 ## 值得特别注意的两个漏洞
-
-<object data="/assets/images/2026-05-28-anthropic-containment-01-three-patterns.svg" type="image/svg+xml" width="100%"></object>
 
 ### 漏洞 1：信任对话框之前发生的事
 
@@ -165,6 +173,10 @@ MCP servers、第三方 plugins、web search tools——这些把来自你不控
 
 防御应该是重叠和互补的。当环境防御不可用时，model 层需要补位。当环境防御和 model 防御都在本地可以防御恶意 tool 输出时，更高层的防御可以通过限制 tool 的能力和访问来添加。
 
+> 💡 **Key Insight**
+>
+> 防御必须是重叠的——当环境防御和 model 防御都在本地可以防御恶意 tool 输出时，更高层的防御可以通过限制 tool 能力来叠加冗余。
+
 ---
 
 ## 深层洞见：「helpful」的风险
@@ -184,6 +196,10 @@ Anthropic 的文章记录了几个「模型『helpful』地绕过限制」的具
 
 这意味着：随着模型能力提升，**安全研究的优先级必须从「让模型不犯错」转向「限制模型的可达范围」**。能力在增长，攻击面也在扩大——防御必须跟上这个趋势。
 
+> 💡 **Key Insight**
+>
+> 随着模型能力提升，防御的焦点必须从「让模型不犯错」转向「限制模型的可达范围」。
+
 ---
 
 ## 对行业的意义
@@ -199,6 +215,10 @@ Anthropic 的这篇文章是迄今为止最诚实的 AI Agent 安全工程实践
 **第二：model-layer 防御永远不够，必须和环境层配合。**
 
 即使是最好的分类器和 prompt engineering，也有非零的 miss rate。Probabilistic defenses 永远无法达到 100% 有效。这意味着 AI Agent 安全不能靠单一层——必须 model + environment + external content 叠加。
+
+> 💡 **Key Insight**
+>
+> AI Agent 安全没有银弹——model 层、environment 层、external content 层必须叠加互补，每层堵住另一层的盲区。
 
 **第三：「信任」是新的攻击面。**
 

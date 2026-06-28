@@ -1,0 +1,90 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>open-swe 异步事件循环工作原理</title>
+  <desc>展示 AsyncIO 事件循环如何调度协程、任务队列和 I/O 等待，实现单线程高并发</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">open-swe 异步事件循环</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AsyncIO · 协程调度 · I/O 并发</text>
+
+  <!-- Central Event Loop Circle -->
+  <circle cx="340" cy="160" r="52" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <circle cx="340" cy="160" r="38" fill="#D97757" opacity="0.12"/>
+  <text x="340" y="155" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Event</text>
+  <text x="340" y="170" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Loop</text>
+
+  <!-- Task Queue (left) -->
+  <rect x="40" y="108" width="120" height="100" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="100" y="130" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Task Queue</text>
+  <line x1="60" y1="138" x2="140" y2="138" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="56" y="148" width="88" height="14" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="100" y="159" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Task A: await LLM</text>
+  <rect x="56" y="166" width="88" height="14" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="100" y="177" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Task B: read file</text>
+  <rect x="56" y="184" width="88" height="14" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="100" y="195" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Task C: write file</text>
+
+  <!-- Coroutines (top right) -->
+  <rect x="450" y="68" width="200" height="90" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="550" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">协程 Coroutines</text>
+  <line x1="470" y1="98" x2="630" y2="98" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="462" y="108" width="80" height="18" rx="5" fill="#E8F0E0" stroke="#788C5D" stroke-width="1"/>
+  <text x="502" y="121" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">async def run()</text>
+  <rect x="554" y="108" width="80" height="18" rx="5" fill="#E8F0E0" stroke="#788C5D" stroke-width="1"/>
+  <text x="594" y="121" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">async def tool()</text>
+  <rect x="462" y="132" width="80" height="18" rx="5" fill="#E8F0E0" stroke="#788C5D" stroke-width="1"/>
+  <text x="502" y="145" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">await create_task()</text>
+  <rect x="554" y="132" width="80" height="18" rx="5" fill="#E8F0E0" stroke="#788C5D" stroke-width="1"/>
+  <text x="594" y="145" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">await gather()</text>
+
+  <!-- I/O Handlers (bottom right) -->
+  <rect x="450" y="188" width="200" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="550" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">I/O await 处理器</text>
+  <line x1="470" y1="218" x2="630" y2="218" stroke="#D1CFC5" stroke-width="1"/>
+  <!-- I/O icons as small boxes -->
+  <rect x="462" y="228" width="56" height="20" rx="4" fill="#FDF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="490" y="242" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">HTTP</text>
+  <rect x="528" y="228" width="56" height="20" rx="4" fill="#FDF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="556" y="242" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">File I/O</text>
+  <rect x="462" y="254" width="56" height="20" rx="4" fill="#FDF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="490" y="268" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">subprocess</text>
+  <rect x="528" y="254" width="56" height="20" rx="4" fill="#FDF0EC" stroke="#D97757" stroke-width="1"/>
+  <text x="556" y="268" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">sleep</text>
+
+  <!-- Connection lines -->
+  <!-- Task Queue to Event Loop -->
+  <path d="M 160 158 Q 240 158, 288 158" stroke="#788C5D" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="288,158 280,154 280,162" fill="#788C5D"/>
+  <text x="200" y="152" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">dequeue</text>
+
+  <!-- Event Loop to Coroutines -->
+  <path d="M 392 130 Q 420 100, 450 108" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="450,108 442,112 448,120" fill="#D97757"/>
+  <text x="410" y="106" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">schedule</text>
+
+  <!-- Event Loop to I/O Handlers -->
+  <path d="M 392 190 Q 420 220, 450 218" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/>
+  <polygon points="450,218 442,214 448,222" fill="#D97757"/>
+  <text x="410" y="228" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">await</text>
+
+  <!-- CPU Utilization Comparison -->
+  <rect x="40" y="288" width="600" height="58" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="56" y="308" font-size="11" font-weight="600" fill="#141413">CPU 利用率对比</text>
+
+  <!-- Sync bar -->
+  <text x="140" y="322" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">同步</text>
+  <rect x="170" y="314" width="120" height="16" rx="4" fill="#E8C0B8" stroke="#C06050" stroke-width="1"/>
+  <text x="290" y="325" font-size="9" fill="#C06050" font-family="ui-monospace, monospace">20%</text>
+
+  <!-- Async bar -->
+  <text x="140" y="342" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">异步</text>
+  <rect x="170" y="334" width="120" height="16" rx="4" fill="#C06050" stroke="#C06050" stroke-width="1" fill-opacity="0.85"/>
+  <text x="290" y="345" font-size="9" fill="#C06050" font-family="ui-monospace, monospace">90%</text>
+
+  <!-- Annotation -->
+  <text x="430" y="322" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">I/O 等待时 CPU 空闲</text>
+  <text x="430" y="338" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">协程让 CPU 持续忙碌</text>
+  <text x="430" y="354" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">单线程高并发不是梦</text>
+</svg>

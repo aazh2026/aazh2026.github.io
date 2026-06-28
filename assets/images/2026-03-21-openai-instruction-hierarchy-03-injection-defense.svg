@@ -1,0 +1,80 @@
+<svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>提示注入攻击与 IH 防御机制</title>
+  <desc>序列图展示提示注入攻击路径以及指令层级如何防御：用户查询 → 工具输出（含注入） → 模型输出（被层级拦截）</desc>
+
+  <!-- Background -->
+  <rect width="640" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">提示注入攻击与 IH 防御机制</text>
+  <text x="320" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">恶意指令嵌入在工具输出中 · OpenAI 2026</text>
+
+  <!-- Left column: User Query -->
+  <rect x="30" y="70" width="120" height="60" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="90" y="95" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">User Query</text>
+  <text x="90" y="113" text-anchor="middle" font-size="10" fill="#141413">正常用户指令</text>
+
+  <!-- Arrow: User → Tool Output -->
+  <line x1="150" y1="100" x2="210" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="210,100 202,94 202,106" fill="#D1CFC5"/>
+  <text x="180" y="92" text-anchor="middle" font-size="9" fill="#87867F">调用工具</text>
+
+  <!-- Center column: Tool Output with injection -->
+  <rect x="215" y="70" width="160" height="60" rx="8" fill="#FFFFFF" stroke="#C9544D" stroke-width="1.8"/>
+  <text x="295" y="95" text-anchor="middle" font-size="11" font-weight="600" fill="#C9544D" font-family="ui-monospace, monospace">Tool Output</text>
+  <text x="295" y="113" text-anchor="middle" font-size="9" fill="#C9544D">"ignore previous instructions"</text>
+
+  <!-- Arrow: Tool Output → Model Output -->
+  <line x1="375" y1="100" x2="435" y2="100" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="435,100 427,94 427,106" fill="#D1CFC5"/>
+  <text x="405" y="92" text-anchor="middle" font-size="9" fill="#87867F">返回结果</text>
+
+  <!-- Right column: Model Output (blocked) -->
+  <rect x="440" y="70" width="120" height="60" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="500" y="95" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Model Output</text>
+  <text x="500" y="113" text-anchor="middle" font-size="10" fill="#141413">✓ 指令层级生效</text>
+
+  <!-- Defense tower on right side -->
+  <rect x="500" y="155" width="110" height="160" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- System level (top) -->
+  <rect x="510" y="165" width="90" height="32" rx="4" fill="#D97757"/>
+  <text x="555" y="182" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">System</text>
+  <text x="555" y="193" text-anchor="middle" font-size="8" fill="#FFFFFF">最高优先级</text>
+
+  <!-- Developer level -->
+  <rect x="510" y="200" width="90" height="28" rx="4" fill="#D1CFC5" stroke="#D97757" stroke-width="1.2"/>
+  <text x="555" y="218" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">Developer</text>
+
+  <!-- User level -->
+  <rect x="510" y="231" width="90" height="28" rx="4" fill="#D1CFC5" stroke="#D97757" stroke-width="1.2"/>
+  <text x="555" y="249" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">User</text>
+
+  <!-- Tool level (bottom) -->
+  <rect x="510" y="262" width="90" height="28" rx="4" fill="#D1CFC5" stroke="#87867F" stroke-width="1.2"/>
+  <text x="555" y="280" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Tool</text>
+
+  <!-- Barrier indicator: Tool → blocked by System -->
+  <line x1="420" y1="230" x2="510" y2="181" stroke="#C9544D" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+  <polygon points="510,181 504,189 512,189" fill="#C9544D" opacity="0.7"/>
+  <text x="465" y="195" font-size="9" fill="#C9544D" font-family="ui-monospace, monospace">注入被拦截</text>
+
+  <!-- Attack indicator on left side -->
+  <rect x="30" y="160" width="140" height="70" rx="6" fill="#F5E6E6" stroke="#C9544D" stroke-width="1.2"/>
+  <text x="100" y="180" text-anchor="middle" font-size="10" font-weight="600" fill="#C9544D" font-family="ui-monospace, monospace">Attack Vector</text>
+  <text x="100" y="196" text-anchor="middle" font-size="9" fill="#141413">恶意指令隐藏在</text>
+  <text x="100" y="210" text-anchor="middle" font-size="9" fill="#141413">工具返回内容中</text>
+  <text x="100" y="224" text-anchor="middle" font-size="8" fill="#87867F">例如：网页、RAG 文档</text>
+
+  <!-- Defense indicator on right side -->
+  <rect x="30" y="245" width="140" height="70" rx="6" fill="#E8EFE2" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="100" y="265" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">IH Defense</text>
+  <text x="100" y="281" text-anchor="middle" font-size="9" fill="#141413">Tool 级指令无法</text>
+  <text x="100" y="295" text-anchor="middle" font-size="9" fill="#141413">覆盖 System 级策略</text>
+  <text x="100" y="309" text-anchor="middle" font-size="8" fill="#87867F">层级隔离保护</text>
+
+  <!-- Arrow showing hierarchy principle -->
+  <line x1="555" y1="197" x2="555" y2="200" stroke="#D97757" stroke-width="1"/>
+  <line x1="555" y1="228" x2="555" y2="231" stroke="#D97757" stroke-width="1"/>
+  <line x1="555" y1="259" x2="555" y2="262" stroke="#87867F" stroke-width="1"/>
+</svg>

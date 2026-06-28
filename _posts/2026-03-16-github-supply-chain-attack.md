@@ -38,7 +38,11 @@ GitHub 恶意仓库的攻击手法已经形成了完整的产业链：
 
 <object data="/assets/images/2026-03-16-github-supply-chain-attack-01-typosquatting-flow.svg" type="image/svg+xml" width="100%"></object>
 
-### 1. 拼写劫持 (Typosquatting)
+> 💡 **Key Insight**
+>
+> 攻击者通过 typosquatting、虚假 star 和伪装流行项目形成了一条完整的攻击链，每个环节都有成熟的商业模式支撑。
+
+### 拼写劫持 (Typosquatting)
 
 | 真实包 | 恶意包 | 攻击手法 |
 |--------|--------|----------|
@@ -49,7 +53,7 @@ GitHub 恶意仓库的攻击手法已经形成了完整的产业链：
 
 攻击者会注册大量常见的拼写错误变体，等待受害者上钩。
 
-### 2. 虚假 star 经济
+### 虚假 star 经济
 
 > "you can literally buy 500 github stars for $50 and suddenly your repo looks legit enough that people clone it without thinking twice"
 
@@ -60,7 +64,7 @@ GitHub star 已经变成了可以购买的商品：
 
 一个拥有 1000+ star 的仓库，即使是上周才创建的，也会看起来很"成熟"。
 
-### 3. 伪装流行项目
+### 伪装流行项目
 
 攻击者的进阶手法：
 1. Fork 一个真实的流行项目
@@ -69,7 +73,7 @@ GitHub star 已经变成了可以购买的商品：
 4. 购买 star 和 fork，制造活跃的假象
 5. 在 Reddit、Discord 等社区"分享"这个"有用的工具"
 
-### 4. 依赖混淆
+### 依赖混淆
 
 攻击者会在 PyPI/npm 上注册与内部私有包同名的公开包。当企业的 CI/CD 系统配置错误时，会优先下载攻击者的公开包而不是内部私有包。
 
@@ -78,6 +82,10 @@ GitHub star 已经变成了可以购买的商品：
 ## typosquatting：最老套但最有效的攻击
 
 typosquatting 不是新攻击手法。npm 在 2017 年就经历过 `crossenv` vs `cross-env` 的大规模攻击。但为什么它仍然有效？
+
+> 💡 **Key Insight**
+>
+> typosquatting 之所以长盛不衰，是因为它精准利用了开发者在时间压力下的认知偏差——一个拼写错误，就足以让所有安全习惯失效。
 
 ### 心理学原理
 
@@ -104,6 +112,10 @@ GitHub star 本来是一种信任信号：
 
 但这个信号已经被完全商品化了。
 
+> 💡 **Key Insight**
+>
+> $50 就能买 500 个 star——信任信号的商品化让"看起来可信"和"真正可信"之间产生了巨大的鸿沟。
+
 ### 购买渠道
 
 在搜索引擎输入 "buy github stars"，你会找到：
@@ -128,11 +140,15 @@ GitHub star 本来是一种信任信号：
 
 npm 也有过供应链安全问题，但 GitHub 有几个特点让它更危险：
 
-### 1. 直接代码执行
+> 💡 **Key Insight**
+>
+> 与 npm 的隔离构建过程不同，GitHub 仓库的 `setup.py`、`install.sh` 可以直接执行任意代码——这让攻击门槛降到了最低。
+
+### 直接代码执行
 
 npm 包至少还有隔离的构建过程。GitHub 仓库的 `setup.py`、`install.sh` 可以直接执行任意代码。
 
-### 2. 信任错觉
+### 信任错觉
 
 开发者对 GitHub 有天然的信任：
 - "这是开源的，有人 review 过"
@@ -141,9 +157,9 @@ npm 包至少还有隔离的构建过程。GitHub 仓库的 `setup.py`、`instal
 
 这些假设都是错误的。
 
-### 3. 传播路径多样
+### 传播路径多样
 
-### 4. 检测困难
+### 检测困难
 
 GitHub 不像 PyPI/npm 有统一的包管理系统。恶意代码可以隐藏在：
 - 构建脚本中
@@ -154,6 +170,10 @@ GitHub 不像 PyPI/npm 有统一的包管理系统。恶意代码可以隐藏在
 ---
 
 ## 防御策略：开发者自救指南
+
+> 💡 **Key Insight**
+>
+> 供应链攻击只需成功一次，防御者却需要每次都对——个人层面的最小化信任原则和企业层面的纵深防御，缺一不可。
 
 ### 个人层面
 

@@ -9,7 +9,7 @@
   <rect width="900" height="560" fill="url(#bg2)" rx="12"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">Harness 约束类型金字塔</text>
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413" font-family="ui-serif, serif">Harness 约束类型金字塔</text>
   <text x="450" y="56" text-anchor="middle" font-size="12" fill="#87867F">确定性约束在底层（AI 无法绕过）→ LLM 约束在上层（AI 自我管理）</text>
 
   <!-- Left panel: constraint pyramid -->

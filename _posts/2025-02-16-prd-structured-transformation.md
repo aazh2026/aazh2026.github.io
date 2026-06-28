@@ -163,6 +163,20 @@ CCC模型是一个**思维框架**，不强制特定格式。你可以用YAML、
 ### 验证流水线
 
 在CI中自动验证PRD：
+- **完整性检查**：JSON Schema验证必填字段（context/constraints/criteria）
+- **一致性校验**：context中的字段在criteria中被引用，constraints不相互矛盾
+- **链接验证**：检查与其他PRD文档的交叉引用是否有效
+- **格式规范**：标题层级、列表符号、代码块语法检查
+
+示例GitHub Actions配置：
+
+```yaml
+- name: Validate PRD Structure
+  uses: prd-lint/action@v1
+  with:
+    schema: ./schemas/ccc-schema.json
+    fail-on-error: true
+```
 
 ### IDE集成
 
@@ -299,6 +313,6 @@ PRD的结构化转型，本质是从**叙述需求**（Narrating Requirements）
 
 - [Gherkin Syntax Reference](https://cucumber.io/docs/gherkin/)
 - [OpenAPI Specification](https://swagger.io/specification/)
-- [Specification by Example - Gojko Adzic](https://)
-- [Domain-Driven Design - Eric Evans](https://)
-- [AI-Native Development Patterns](https://)
+- [Specification by Example - Gojko Adzic](https://www.oreilly.com/library/view/specification-by-example/9781617290398/)
+- [Domain-Driven Design - Eric Evans](https://www.domainlanguage.com/ddd/)
+- [AI-Native Development Patterns](https://github.com/anthropics/anthropic-cookbook/tree/main/patterns)

@@ -7,14 +7,14 @@
       .bg { fill: #FAF9F5; }
       .border { fill: none; stroke: #D1CFC5; stroke-width: 2; }
       .title-bg { fill: #141413; }
-      .title-text { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; }
+      .title-text { fill: #FAF9F5; font-family: ui-monospace, monospace; font-size: 13px; font-weight: bold; }
       .layer3-bg { fill: #D97757; }
       .layer2-bg { fill: #788C5D; }
       .layer1-bg { fill: #E3DACC; }
-      .layer-label { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 11px; font-weight: bold; }
-      .layer-sub { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 9px; }
-      .item { fill: #141413; font-family: 'Courier New', monospace; font-size: 11px; }
-      .item-light { fill: #141413; font-family: 'Courier New', monospace; font-size: 11px; opacity: 0.75; }
+      .layer-label { fill: #FAF9F5; font-family: ui-monospace, monospace; font-size: 11px; font-weight: bold; }
+      .layer-sub { fill: #FAF9F5; font-family: ui-monospace, monospace; font-size: 9px; }
+      .item { fill: #141413; font-family: ui-monospace, monospace; font-size: 11px; }
+      .item-light { fill: #141413; font-family: ui-monospace, monospace; font-size: 11px; opacity: 0.75; }
       .divider { stroke: #D1CFC5; stroke-width: 1.5; }
       .outer-border { fill: none; stroke: #D1CFC5; stroke-width: 2.5; }
     </style>

@@ -10,7 +10,7 @@ redirect_from:
   - /worse-is-better-revisited.html
 ---
 
-<object data="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.png" type="image/svg+xml" width="100%"></object>> **TL;DR**
+**TL;DR**
 > 
 > 1. **Worse is Better 不是妥协** — 它是系统设计的元策略，在约束条件下追求最优解
 > 2. **AI 正在加速这一范式** — 生成代码的"足够好"哲学，让迭代速度超越完美主义
@@ -94,7 +94,7 @@ Worse is Better 真正的洞见在于：
 {% endfigure %}
 
 {% figure center %}
-<object data="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.png" type="image/svg+xml" width="100%"></object>
+<img src="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.png" alt="Iteration Flywheel" style="width:100%;height:auto;">
 *图 2：Worse is Better 迭代飞轮——快速发布 → 获取反馈 → AI 迭代 → 持续进化，代码生成成本趋近于零使快速试错成为主动策略。*
 {% endfigure %}
 
@@ -120,8 +120,11 @@ Worse is Better 真正的洞见在于：
 
 **变化 1：生成成本趋近于零**
 
-传统时代：
-AI 时代：
+在传统时代，每一行代码都需要人工编写，生成成本高昂；而在 AI 时代，生成代码的成本趋近于零，我们可以快速生成大量代码并进行实验。
+
+传统时代：代码由人工编写，每一行都有成本，需要仔细权衡
+AI 时代：代码由 AI 生成，成本趋近于零，可以快速试错
+
 **变化 2：迭代成本大幅降低**
 
 传统时代，"先发布再迭代"是有成本的：

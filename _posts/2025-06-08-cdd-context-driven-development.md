@@ -57,10 +57,6 @@ series: AI-Native软件工程系列 #6
 
 <object data="/assets/images/2025-06-08-cdd-01-cycle.svg" type="image/svg+xml" width="100%"></object>
 
-### 上下文即代码（CaC）
-
-### 上下文版本与依赖
-
 ---
 
 ## 分层上下文架构
@@ -73,10 +69,6 @@ series: AI-Native软件工程系列 #6
 
 <object data="/assets/images/2025-06-08-cdd-02-layer-arch.svg" type="image/svg+xml" width="100%"></object>
 
-### 上下文组装策略
-
-### 上下文缓存与复用
-
 ---
 
 ## 上下文管理系统
@@ -84,8 +76,6 @@ series: AI-Native软件工程系列 #6
 > 💡 **Key Insight**
 > 
 003e 上下文管理不是可选的奢侈品，而是AI-Native开发的刚需。没有它，团队会在重复的上下文构建中浪费90%的时间。
-
-### 系统架构
 
 <object data="/assets/images/2025-06-08-cdd-03-system-arch.svg" type="image/svg+xml" width="100%"></object>
 

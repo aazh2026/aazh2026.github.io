@@ -1,0 +1,65 @@
+<svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent = Model + Harness</text>
+  <text x="300" y="46" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Addy Osmani · Google Cloud AI Director · 2026/05</text>
+
+  <!-- Model circle (left) -->
+  <circle cx="140" cy="140" r="56" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="140" y="132" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Model</text>
+  <text x="140" y="150" text-anchor="middle" font-size="10" fill="#87867F">LLM weights</text>
+  <text x="140" y="164" text-anchor="middle" font-size="10" fill="#87867F">+ training</text>
+
+  <!-- Plus sign -->
+  <text x="300" y="146" text-anchor="middle" font-size="28" font-weight="300" fill="#D1CFC5">+</text>
+
+  <!-- Harness rectangle (right) -->
+  <rect x="230" y="74" width="300" height="156" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- Harness header bar -->
+  <rect x="230" y="74" width="300" height="32" rx="10" fill="#D97757"/>
+  <rect x="230" y="96" width="300" height="10" fill="#D97757"/>
+  <text x="380" y="94" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Harness</text>
+
+  <!-- Harness components -->
+  <rect x="246" y="118" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="287" y="135" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">prompts</text>
+
+  <rect x="338" y="118" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="379" y="135" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">tools</text>
+
+  <rect x="430" y="118" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="471" y="135" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">context</text>
+
+  <rect x="246" y="152" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="287" y="169" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">hooks</text>
+
+  <rect x="338" y="152" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="379" y="169" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">sandboxes</text>
+
+  <rect x="430" y="152" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="471" y="169" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">subagents</text>
+
+  <rect x="246" y="186" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="287" y="203" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">feedback</text>
+
+  <rect x="338" y="186" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="379" y="203" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">recovery</text>
+
+  <rect x="430" y="186" width="82" height="26" rx="5" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="471" y="203" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">traces</text>
+
+  <!-- Arrow connecting Model to Harness -->
+  <line x1="196" y1="140" x2="224" y2="140" stroke="#D97757" stroke-width="2"/>
+  <polygon points="224,136 216,140 224,144" fill="#D97757"/>
+
+  <!-- Key label below -->
+  <text x="300" y="252" text-anchor="middle" font-size="11" fill="#87867F">模型只是输入之一，其余全是 harness</text>
+
+  <!-- Bottom attribution -->
+  <text x="580" y="272" text-anchor="end" font-size="9" fill="#D1CFC5" font-family="ui-monospace, monospace">Harness Engineering · Osmani 2026</text>
+</svg>

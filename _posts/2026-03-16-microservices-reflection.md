@@ -8,7 +8,9 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-> **TL;DR**> > "You don't need microservices. You need better module boundaries." 这篇文章质疑了微服务的普遍适用性，主张在团队真正独立、规模需求截然不同、或员工数超过 150 人之前，保持单体架构。微服务不是技术解决方案，而是组织结构的映射。
+> **TL;DR**
+>
+> "You don't need microservices. You need better module boundaries." 这篇文章质疑了微服务的普遍适用性，主张在团队真正独立、规模需求截然不同、或员工数超过 150 人之前，保持单体架构。微服务不是技术解决方案，而是组织结构的映射。
 
 ---
 
@@ -106,6 +108,10 @@ Netflix 的微服务转型：
 
 ### 故障排查成本
 
+> 💡 **Key Insight**
+>
+> 微服务把单体的"跨函数调用"变成了"跨网络调用"——延迟、可靠性、版本兼容问题全部从代码层面暴露出来，这不是改进，是把问题复杂化。
+
 单体中的 bug：
 1. 查看堆栈跟踪
 2. 定位代码行
@@ -159,6 +165,12 @@ Netflix 的微服务转型：
 
 保持单一部署单元，但在代码层面严格划分模块：
 
+<object data="/assets/images/2026-03-16-microservices-reflection-02-arch.svg" type="image/svg+xml" width="100%"></object>
+
+> 💡 **Key Insight**
+>
+> 模块化单体不是"妥协"，而是大多数中小团队的最佳选择——在需要时，边界已经清晰，拆分成本最低。
+
 ### 模块边界规则
 
 1. **模块间通过 API 通信**
@@ -173,6 +185,8 @@ Netflix 的微服务转型：
 | **测试简单** | 集成测试在一个进程内 |
 | **性能更好** | 没有网络调用开销 |
 | **未来可拆分** | 当真正需要时，边界已经清晰 |
+
+<object data="/assets/images/2026-03-16-microservices-reflection-03-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 真实案例：Shopify
 

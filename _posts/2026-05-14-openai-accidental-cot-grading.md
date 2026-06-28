@@ -4,7 +4,7 @@ title: "\"OpenAI 意外发现：RL 训练中 Chain-of-Thought 被 grading 的后
 date: 2026-05-14T00:00:00+08:00
 tags: [AI安全, AI对齐, Chain-of-Thought, RL训练, OpenAI]
 author: "@postcodeeng"
-series: AI-Native软件工程系列
+series: AI-Native Engineering
 ---
 
 > **TL;DR**
@@ -147,7 +147,7 @@ OpenAI 在固定内部生产 RL pipeline 中进行了一系列代表性实验。
 
 ---
 
-## 结尾：对 AI 安全的启示
+## 三个持久风险
 
 > 💡 **Key Insight**
 >
@@ -185,5 +185,5 @@ OpenAI 的结论：
 
 ---
 
-*AI-Native软件工程系列 #63*
+*AI-Native Engineering #63*
 *深度阅读时间：约 10 分钟*

@@ -44,6 +44,8 @@ Reddit 用户 Red_Egnival 启动了一个新的训练任务。模型结构没问
 
 ML 工程有一个独特的挑战：**很多问题在训练期间不会报错。**
 
+> **Key Insight**: ML 训练不像传统软件——它可以"成功"运行但产出垃圾模型。标签泄露、NaN 污染、类别不平衡这些问题不会触发任何异常，只会悄悄浪费你三天时间。
+
 ### 标签泄露 (Label Leakage)
 
 训练特征包含了目标变量的信息。
@@ -71,6 +73,8 @@ ReLU 的"死亡"问题，或者梯度消失。
 Red_Egnival 在经历这次痛苦后，创建了 preflight。它的设计哲学很简单：
 
 > **"在训练开始前发现问题，而不是在三天后。"**
+
+> **Key Insight**: preflight 的核心洞察是——ML 问题分为两类：会报错的和不会报错的。"沉默的杀手"属于后者，而预防它们的唯一方法是在训练前主动检查，而不是被动等待三天后的坏结果。
 
 ### 核心原则
 
@@ -129,11 +133,41 @@ preflight 目前包含 10 项检查：
 
 ### 基本使用
 
+```python
+from preflight import Preflight
+
+checker = Preflight(dataloader=train_loader)
+results = checker.run()
+```
+
 ### Python API
+
+```python
+# 单独运行某项检查
+from preflight.checks import LabelLeakageCheck
+
+check = LabelLeakageCheck()
+result = check.run(dataloader=train_loader)
+```
 
 ### GitHub Actions 集成
 
+```yaml
+- name: Run preflight validation
+  run: |
+    python -m preflight --dataloader train_loader
+```
+
 ### 配置示例
+
+```python
+from preflight import PreflightConfig
+
+config = PreflightConfig(
+    level="warn",  # 包含 warn 及以上
+    exclude=["nan_check"],  # 跳过特定检查
+)
+```
 
 ---
 

@@ -22,21 +22,6 @@ series: AI-Native Engineering
 
 ---
 
-## 目录
-
-1. [Harness Engineering 的本质](#harness-engineering-的本质)
-2. [Harness 的四大支柱](#harness-的四大支柱)
-3. [Eval Harness：把 AI 行为变成可测试对象](#eval-harness把-ai-行为变成可测试对象)
-4. [Rules Engine：系统化约束（不是建议）](#rules-engine系统化约束不是建议)
-5. [Hooks & Automation：无人值守的执行层](#hooks--automation无人值守的执行层)
-6. [Continuous Learning：经验如何变成机制](#continuous-learning经验如何变成机制)
-7. [Agent OS：Harness 的载体与实现](#agent-osharness-的载体与实现)
-8. [真实场景推演：CRM 标签推荐系统](#真实场景推演crm-标签推荐系统)
-9. [为什么必须 Harness？AI 的不可控性](#为什么必须-harnessai-的不可控性)
-10. [从 Prompt 工程到 Harness 工程](#从-prompt-工程到-harness-工程)
-11. [总结：Harness 是新的工程范式](#总结harness-是新的工程范式)
-
----
 
 ## Harness Engineering 的本质
 
@@ -99,6 +84,10 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 - 产品必须有质量标准
 - 标准必须可测试
 
+> 💡 **Key Insight**
+> 
+> Eval Harness 的本质是将 AI 行为转化为可量化、可复现的测试对象。没有度量就没有改进——你无法优化一个无法测量的系统。
+
 ### 支柱 2：Rules Engine（约束层）
 
 **核心问题**：如何防止 AI 做错？
@@ -160,6 +149,8 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### 执行流程
 
+Eval Harness 的执行流程分为三个层次：
+
 #### 2. Regression Eval（回归评估）
 
 **问题**：新功能是否破坏了旧功能？
@@ -182,11 +173,15 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### Eval Harness 在 everything-claude-code 中的实现
 
+Eval Harness 在 everything-claude-code 中通过 `eval-harness` Skill 实现自动化。开发者通过简单的命令触发完整的评估流程，无需手动运行测试。
+
 ### 触发方式
+
+通过 `/eval` 命令触发评估流程，系统自动运行所有已注册的测试用例并生成报告。
 
 ### 输出示例
 
----
+评估完成后，系统输出详细的测试报告，包括通过率、失败案例和性能指标。
 
 ## Rules Engine：系统化约束（不是建议）
 
@@ -201,7 +196,15 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### 示例对比
 
+Rules 和 Prompt 的核心差异在于约束力。Prompt 是一种请求，AI 可以选择忽略或偏离；而 Rule 是一种硬性约束，系统会强制执行，不满足则拒绝。
+
 ### Rules 的分类
+
+Rules Engine 中的规则分为三类，分别应对不同的约束场景：
+
+> 💡 **Key Insight**
+> 
+> Rules Engine 的核心价值在于将"建议"转化为"强制"。当约束被系统化执行，质量保障就不再依赖人的自觉性。
 
 #### 1. 硬约束（Hard Constraints）
 
@@ -223,15 +226,21 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 ### Rules Engine 的实现
 
+Rules Engine 的核心是一个基于 YAML 规则文件的执行引擎。每个规则文件定义具体的约束条件，系统在 AI 输出时自动检查是否满足。Reviewer Agent 读取规则文件，对照检查输出，违规时触发相应的处理逻辑。
+
 ### Reviewer Agent 的工作流程
+
+Reviewer Agent 是 Rules Engine 的执行者。它接收 AI 的输出，与规则库逐一比对，检查安全边界、代码风格、流程合规性等多个维度。任何违规项都会生成详细的报告，供开发者后续处理。
 
 ### Rule 文件的演进
 
-**V1: 静态规则**
+Rules 不是一成不变的，它们随着项目发展不断演进：
 
-**V2: 参数化规则**
+**V1: 静态规则** — 硬编码的规则集合，适合单一场景。
 
-**V3: 自适应规则**
+**V2: 参数化规则** — 规则支持参数配置，适应不同环境。
+
+**V3: 自适应规则** — 根据历史数据自动调整规则权重和阈值，实现持续优化。
 
 ---
 
@@ -254,7 +263,7 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 | `pre-commit` | 用户尝试提交前 | 运行 full eval | 质量门禁 |
 | `post-commit` | 提交成功后 | 更新 metrics | 数据追踪 |
 
-**示例**（.claude/hooks.yaml）：
+**示例**（.claude/hooks.yaml）展示了完整的 Hook 配置，包括触发时机、动作和执行条件。
 
 #### 2. 会话生命周期 Hooks
 
@@ -267,9 +276,15 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 #### 3. 条件触发 Hooks
 
-### 基于状态的条件触发
+基于状态的条件触发机制允许 Hook 根据系统当前状态自动决定是否执行。例如，当错误率超过阈值时自动触发回归测试，当检测到性能下降时自动触发优化流程。
 
 ### Automation 的价值
+
+Automation 将 Harness 从手动触发转变为自动执行，确保每个环节都不会因为人为遗漏而失效。
+
+> 💡 **Key Insight**
+> 
+> Hooks 是 Harness 的"神经系统"——它们将各个组件连接成自动化流水线。没有 Hooks，Eval 和 Rules 只能靠人工触发，无法形成真正的系统。
 
 ### Harness 自动化方式
 **关键差异**：
@@ -290,13 +305,17 @@ everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 #### 学习流程
 
+Continuous Learning 的学习流程是一个自动化的闭环系统，每次会话结束后自动运行，将人工经验转化为系统能力。
+
 #### 实现细节
 
-**Step 1: 评估有效性**
+Continuous Learning 的实现分为三个步骤：
 
-**Step 2: 模式提取**
+**Step 1: 评估有效性** — 系统评估本次会话中的纠正是否真正解决了问题，筛选出有价值的经验。
 
-**Step 3: 生成 Skill**
+**Step 2: 模式提取** — 从有效的纠正中提取重复模式，判断是否可以泛化到其他场景。
+
+**Step 3: 生成 Skill** — 将提取的模式封装为可复用的 Skill，供后续会话使用。
 
   ### 正确模式
   ### 检查清单
@@ -391,6 +410,10 @@ MCP 流程：
 
 我们用完整的 everything-claude-code 系统来开发一个真实功能。
 
+> 💡 **Key Insight**
+> 
+> 真实场景推演展示了 Harness 四大支柱如何协同工作：Eval 提供度量、Rules 提供约束、Hooks 提供自动化、Continuous Learning 提供进化。
+
 ### 需求
 
 > 开发一个 SaaS CRM 的「客户标签推荐系统」
@@ -410,15 +433,32 @@ MCP 流程：
 
 ### 阶段 2：TDD 开发（/tdd）
 
+开发者输入 `/tdd` 命令启动 TDD 开发流程。系统内部进入一个循环执行模式，由 TDD Skill 驱动整个红-绿-重构周期。
+
 ### 用户输入
+
+TDD 开发流程包含以下阶段：
+
 ### 系统内部执行循环
+
+系统内部执行循环是 TDD 的核心，它强制开发者先写测试，再写实现，最后重构。
 
 #### 🔴 RED（先写测试）
 
+TDD Skill 触发后，首先编写一个会失败的测试用例，明确功能预期。
+
 ### TDD Skill 触发
+
+TDD Skill 自动加载 TDD 流程规范，确保每个步骤都遵循红-绿-重构的节奏。
+
 #### 🟢 GREEN（实现功能）
 
+Coder Agent 编写最简单可行的代码让测试通过，不做多余优化。
+
 ### Coder Agent 编写代码
+
+Coder Agent 接收设计文档和测试用例，按规范实现功能代码。
+
 #### 🔵 REFACTOR（优化）
 
 **重构代码结构**：
@@ -429,6 +469,9 @@ MCP 流程：
 #### ✅ VERIFY
 
 ### 运行测试
+
+开发者在 TDD 循环的每个阶段都可以运行测试验证当前状态。
+
 **边界检查**：
 - 空客户资料处理
 - 大量标签性能
@@ -436,14 +479,21 @@ MCP 流程：
 
 ### 阶段 3：实时评估（eval-harness）
 
+开发者输入 `/eval` 命令启动实时评估，系统调用 eval-harness Skill 执行完整的测试套件。
+
 ### 用户输入
+
 **eval-harness Skill 执行**：
 
 **核心价值**：AI 开发的"单元测试系统"
 
 ### 阶段 4：代码审查（/review）
 
+开发者输入 `/review` 命令触发代码审查流程。Reviewer Agent 根据 Rules Engine 中的规则逐项检查代码。
+
 ### Reviewer Agent 检查清单
+
+Reviewer Agent 的检查清单包括代码风格、安全性、性能和可维护性等多个维度。
 
 ### 阶段 5：系统验证（/verify）
 
@@ -464,7 +514,11 @@ MCP 流程：
 
 ### 阶段 6：Checkpoint（关键设计冻结）
 
+在关键节点保存系统状态，确保重要的设计决策和上下文不会丢失。
+
 ### 保存关键状态
+
+在 Checkpoint 阶段，系统执行以下保存操作：
 
 **系统保存**：
 - 当前架构设计

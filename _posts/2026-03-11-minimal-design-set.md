@@ -9,6 +9,8 @@ redirect_from:
   - /minimal-design-set.html
 ---
 
+> **TL;DR** 最小设计集合只有 4 个文件（`intent.md`、`domain.md`、`api.yaml`、`constraints.md`），足以驱动代码生成、测试生成和 PR review。
+
 # 4个文件搞定详细设计：最小上下文集合实践
 
 很多人在设计 AI-Native SDLC artifacts 时犯一个典型错误：**把传统软件工程的所有设计文档"AI化"**。
@@ -34,6 +36,8 @@ redirect_from:
 <object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%"></object>
 
 ## 为什么只需要 4 个？
+
+> 💡 **Key Insight** 这四个 artifacts 足够驱动：代码生成、测试生成、PR review。它们覆盖了 AI 软件工程最核心的上下文需求。
 
 ### 1. Intent（必须）
 
@@ -86,7 +90,7 @@ AI 会自动生成：Controller、Client、测试用例。
 
 ## 哪些可以删掉？
 
-很多传统设计 artifact 其实完全可以删除。
+> 💡 **Key Insight** 很多传统设计 artifact 其实完全可以删除。AI 更容易理解具体例子和结构化定义，而非抽象描述和图形。
 
 ### 1. Sequence Diagram（可以删）
 
@@ -138,7 +142,7 @@ AI **最不喜欢**的：
 
 ## 真正的 AI-Native 设计原则
 
-未来设计遵循三个原则：
+> 💡 **Key Insight** 未来设计遵循三个原则：Context Density（上下文密度）、Machine Readability（机器可读性）、Drift Resistance（抗漂移）。简单是终极的复杂。
 
 ### 1. Context Density（上下文密度）
 

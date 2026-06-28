@@ -35,8 +35,10 @@ series: AI-Native Engineering
 Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to depend on methods they do not use."**
 
 **传统软件中的胖接口问题：**
+一个典型的例子是 Java 的 `java.io.FileInputStream`——它同时继承了 `InputStream`、`Closeable`、`AutoCloseable`，但调用者往往只需要读取字节，却被迫背负了关闭、超时等不相关职责。一旦 `Closeable` 接口增加了 `close()` 以外的默认方法，所有实现者都被迫更新。
 
 **瘦接口拆分：**
+将上述接口拆分为 `Readable`（只读）、`Closeable`（只关闭）、`Flushable`（只刷新），调用者按需实现——这是接口隔离原则的核心应用。
 
 ### 1.2 为什么瘦接口更好
 
@@ -55,7 +57,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 {% endfigure %}
 
 {% figure center %}
-<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.png" type="image/svg+xml" width="100%"></object>
+<img src="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.png" alt="Human-AI Contract Architecture" style="width:100%;height:auto;">
 *图 2：Human-AI 契约设计的三层接口——Intent（我想要什么）、Context（我给了什么）、Prompt（怎么表达），构成 AI 可执行的清晰契约。*
 {% endfigure %}
 
@@ -73,14 +75,23 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 问题：什么问题？风格问题？逻辑问题？性能问题？安全问题？
 
 **Intent 接口的规范化：**
+通过预定义的 Intent 类型和参数结构，将"帮我优化这个函数"这类模糊请求转化为 `Intent { type: "REFACTOR_CODE", target: "function_name", constraints: ["performance", "readability"] }`，让 AI 明确知道要做什么、做到什么程度。
 
 **使用示例：**
+```
+Intent { type: "REVIEW_CODE", target: "src/auth.py", focus: ["security", "error_handling"] }
+→ 返回安全性审查报告和具体修复建议
+```
 
 ### 2.2 Context 接口：上下文的边界
 
 **定义：** Context 接口规定了 AI 能"看到"什么、不能"看到"什么。
 
 **Context 的组成：**
+- **任务背景**：项目类型、技术栈、约束条件
+- **相关文件**：直接相关的代码、文档、配置
+- **历史上下文**：之前的决策、已知的失败模式
+- **成功标准**：如何判断任务完成
 
 **💡 关键洞察：** 好的 Context 接口不是"给 AI 越多信息越好"，而是"给 AI 刚好足够的信息"。信息过载会导致注意力分散，信息不足会导致猜测和幻觉。
 
@@ -89,7 +100,13 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 **定义：** Prompt 接口是将人类意图转化为 AI 可理解指令的模板化机制。
 
 **非结构化的 Prompt（容易出错）：**
+"帮我看看这个代码有什么问题"——这类 Prompt 依赖 AI 的主观判断，不同时间、不同模型可能给出完全不同的答案。
+
 **结构化的 Prompt 接口：**
+```
+{ "intent": "CODE_REVIEW", "target": "src/auth.py", "check": ["security", "performance"], "output_format": "structured" }
+```
+结构化确保每次调用的一致性和可验证性。
 
 **Prompt 接口的优势：**
 1. **可重复** —— 相同输入产生一致输出
@@ -106,18 +123,37 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 ### 3.1 清晰的边界
 
 **边界定义了什么属于"这个任务"、什么不属于。**
+清晰的边界通过明确的输入输出约定来实现。例如，一个代码审查 Intent 应明确声明：只读指定文件、不修改任何代码、不访问项目外部资源——这样 AI 的行为就可预测、可审计。
 
 ### 3.2 明确的输入输出
 
 **使用类型系统定义契约：**
+```
+Intent {
+  type: "CODE_GENERATION",
+  input: { spec: MarkdownSpec, language: ProgrammingLanguage },
+  output: { files: File[], tests: TestSpec[] },
+  errors: { INCOMPLETE_SPEC: "缺少必填字段" }
+}
+```
+强类型契约在编译期就能发现参数错误，而不是等到运行时。
 
 ### 3.3 错误处理约定
 
 **错误处理契约模板：**
+```
+{ "error": "AMBIGUOUS_INTENT", "detail": "缺少 target 字段", "suggestion": "请指定要操作的目标" }
+```
+契约应明确定义错误分类：AMBIGUOUS_INTENT、INVALID_INPUT、BOUNDARY_VIOLATION、TIMEOUT 等，让调用者能针对性处理。
 
 ### 3.4 版本与演化策略
 
 **接口版本化示例：**
+```
+Intent_v1 { type, ... }      // 初始版本
+Intent_v2 { type, context }  // 新增 context 字段（可选）
+```
+通过主版本号标识不兼容变更，副版本号标识向后兼容的新增功能。
 
 ---
 
@@ -126,22 +162,34 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 ### 4.1 粒度设计：多细才算合适？
 
 **粒度太粗的问题：**
+`Intent { type: "DO_EVERYTHING" }` —— 这种 Intent 过于抽象，AI 无法准确判断具体要做什么，输出结果高度依赖模型的"猜测"。
 
 **粒度太细的问题：**
+每个字段都单独作为 Intent：`Intent { set_variable_x }`、`Intent { set_variable_y }` —— 过度碎片化导致调用成本激增，组装复杂工作流时调用链过长。
 
 **恰到好处的粒度：**
+一个 Intent 对应一个完整的最小工作单元：`Intent { type: "CODE_REVIEW", target: "path/to/file", focus: [...] }` —— 足够具体以避免歧义，又足够独立以支持单独调用和组合。
 
 ### 4.2 一致性设计：降低认知负荷
 
 **命名一致性：**
+同类 Intent 使用统一的命名空间：`CODE_REVIEW`、`CODE_GENERATE`、`CODE_TEST`——保持一致的动词+名词模式，降低学习成本。
 
 **结构一致性：**
+所有 Intent 共享相同的顶层字段：`{ type, target, constraints, output_format }`——统一结构让调用方只需实现一次解析逻辑。
 
 ### 4.3 可组合性设计
 
 **乐高积木式的接口设计：**
+将 Intent 拆分为原子级别的小单元——`FETCH_CONTEXT`、`ANALYZE_CODE`、`GENERATE_DIFF`、`VALIDATE_OUTPUT`——每个单元职责单一、可独立测试，可按需组合成复杂工作流。
 
 **实战示例：复杂工作流：**
+```
+[FETCH_CONTEXT] → [ANALYZE_CODE] → [GENERATE_DIFF] → [VALIDATE_OUTPUT]
+     ↑                                        ↓
+     ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ←
+```
+通过管道组合多个原子 Intent，每个步骤的输出作为下一个步骤的输入，全程可追踪、可中断、可重试。
 
 ---
 
@@ -150,18 +198,25 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 ### 5.1 向后兼容的策略
 
 **策略 1：添加而非修改**
+新增字段始终作为可选字段引入，现有调用方不受影响。例如 `Intent_v1` 的 `type` 字段在 `Intent_v2` 中仍然支持，同时新增 `context` 字段供调用方选择性使用。
 
 **策略 2：使用可选参数**
+必填字段变更为可选字段是向后兼容的，反之则不兼容。设计时将"未来可能变化"的字段标记为可选，避免破坏性变更。
 
 **策略 3：版本协商**
+调用方在请求中声明支持的版本：`{ "intent_version": "1.2", ... }`，被调用方返回其支持的最高兼容版本，双方在重叠版本范围内执行。
 
 ### 5.2 弃用策略
 
 **渐进式弃用流程：**
+1. 在弃用版本中标记为 `deprecated: true`，返回警告但不阻断
+2. 在下一个主版本中移除支持，AI 返回 `UNSUPPORTED_INTENT_VERSION` 错误
+3. 提供迁移指南和自动化检测工具
 
 ### 5.3 迁移路径
 
 **自动化迁移工具：**
+提供 `migrate-intent --from v1 --to v2` 命令，自动将旧版本 Intent 转换为新版本格式，对不兼容字段抛出明确错误而非静默降级。
 
 ---
 
@@ -192,10 +247,18 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 ### 7.1 契约定义工具
 
 **JSON Schema 定义契约：**
+```json
+{ "type": "object", "properties": { "type": { "enum": ["CODE_REVIEW", "CODE_GENERATE"] }, "target": { "type": "string" } }, "required": ["type"] }
+```
+使用 JSON Schema 可以自动验证 Intent 格式是否合规，在运行时捕获无效请求。
 
 ### 7.2 契约验证工具
 
-### 7.3 最佳实践清单
+使用 JSON Schema 验证器（如 `ajv`）在调用前校验 Intent 格式：
+```bash
+ajv validate --spec=draft7 --schema=intent-schema.json intent.json
+```
+验证失败的请求应直接返回错误，而不是发送给 AI 处理，避免无效调用消耗资源。
 
 **设计阶段：**
 - [ ] 明确定义契约的边界（什么做、什么不做）
@@ -223,7 +286,25 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 ### 7.4 契约模板
 
----
+```json
+{
+  "intent": {
+    "type": "INTENT_TYPE",
+    "version": "1.0",
+    "target": "resource identifier",
+    "constraints": {},
+    "context": {}
+  },
+  "output": {
+    "format": "structured",
+    "schema": {}
+  },
+  "errors": [
+    { "code": "ERROR_CODE", "message": "Human readable message", "suggestion": "Recovery action" }
+  ]
+}
+```
+使用统一模板确保所有 Intent 具备完整的可操作性。
 
 ## 结语
 
@@ -236,6 +317,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 3. **支持演化** —— 清晰的边界让变更变得可控
 
 **记住这个公式：**
+> 有效协作 = 清晰的边界 + 明确的契约 + 可预测的错误处理
 
 在 AI-Native 的开发范式中，花时间在契约设计上，是最值得的投资。因为一旦契约确定，AI 就能成为真正可靠的协作者，而不是一个需要你不断纠正方向的实习生。
 

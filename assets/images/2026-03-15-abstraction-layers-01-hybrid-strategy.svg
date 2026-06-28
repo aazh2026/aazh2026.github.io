@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 515.0 328.0" width="100%" role="img" aria-label="Hybrid Abstraction Strategy">
 <rect width="515.0" height="328.0" fill="#FAF9F5"/>
 <rect x="0" y="0" width="515.0" height="328.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
-<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────┐</text>
-<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  前端 (React/Vue)                    │ ← 高抽象，声明式UI</text>
+<text x="20" y="33.5" font-family="ui-serif,Georgia,serif" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────┐</text>
+<text x="20" y="51.5" font-family="ui-serif,Georgia,serif" font-size="13.5" fill="#141413" xml:space="preserve">│  前端 (React/Vue)                    │ ← 高抽象，声明式UI</text>
 <text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  &quot;显示用户列表&quot;                       │</text>
 <text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────┤</text>
 <text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  API层 (Python/FastAPI)              │ ← 中抽象，业务逻辑</text>

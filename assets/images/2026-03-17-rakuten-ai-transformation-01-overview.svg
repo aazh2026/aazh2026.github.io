@@ -6,7 +6,7 @@
     .bg { fill: #FAF9F5; }
     .border { stroke: #D1CFC5; stroke-width: 1.5; fill: #FAF9F5; }
     .header-bg { fill: #D97757; }
-    .header-text { fill: #FAF9F5; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; font-weight: 600; }
+    .header-text { fill: #FAF9F5; font-family: ui-serif, Georgia, serif; font-size: 13px; font-weight: 600; }
     .layer-bg { fill: #E3DACC; }
     .label { fill: #141413; font-family: system-ui, -apple-system, sans-serif; font-size: 12px; font-weight: 600; }
     .item { fill: #141413; font-family: system-ui, -apple-system, sans-serif; font-size: 11.5px; }

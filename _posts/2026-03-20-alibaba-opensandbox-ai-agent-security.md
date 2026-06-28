@@ -50,9 +50,15 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2026-03-20-alibaba-opensandbox-ai-agent-security-02-security-layers.svg" type="image/svg+xml" width="100%"></object>
 
+> 💡 **Key Insight**
+> 
+> OpenSandbox 的三层安全模型将隔离、监控与策略相结合，实现了从被动防御到主动防护的升级。这种设计与企业级云原生安全理念高度契合。
+
 ### 第一层：运行时隔离
 
 ### 容器化沙箱
+
+基于传统容器安全机制，针对 AI Agent 场景做了强化配置。
 
 **技术实现**：
 - **Namespace 隔离**：PID、Network、Mount、IPC、UTS
@@ -63,6 +69,8 @@ series: AI-Native Engineering
 ### 第二层：行为监控
 
 ### 实时审计系统
+
+通过系统级埋点实时采集 Agent 行为，支持多维度监控与响应。
 
 **监控维度**：
 
@@ -76,6 +84,8 @@ series: AI-Native Engineering
 ### 第三层：策略编排
 
 ### 声明式安全策略
+
+通过声明式配置定义安全策略，实现策略即代码，便于版本管理与审计追溯。
 
 ---
 
@@ -108,17 +118,31 @@ series: AI-Native Engineering
 
 ## 技术实现：容器化隔离
 
+> 💡 **Key Insight**
+> 
+> 容器化是 AI Agent 沙箱的主流选择，但标准容器隔离不足。OpenSandbox 在此基础上叠加了多层加固，并支持 gVisor 可选 VM 级隔离，兼顾安全与性能。
+
 ### Docker 沙箱
 
 ### 基础镜像
 
+采用最小化基础镜像，仅包含必要组件，减少攻击面。
+
 ### 运行时安全
+
+启用 Seccomp、AppArmor/SELinux 等内核安全机制，限制系统调用与资源访问。
 
 ### Kubernetes 集成
 
+通过 Operator 或 admission webhook 与 K8s 集群深度集成，实现声明式管理。
+
 ### Pod 安全策略
 
+利用 K8s Pod Security Policy 或 Pod Security Standards 实现租户级隔离。
+
 ### gVisor 集成（可选 VM 级隔离）
+
+gVisor 提供用户态内核，替代宿主内核处理系统调用，进一步压缩攻击面。
 
 ---
 
@@ -202,7 +226,10 @@ series: AI-Native Engineering
 
 **1. 生产就绪**
 
-不同于研究性质的实验，OpenSandbox 面向真实企业场景：
+> 💡 **Key Insight**
+> 
+> 不同于研究性质的实验，OpenSandbox 面向真实企业场景设计，强调生产级别的可靠性与可观测性。
+
 - 与 Kubernetes 原生集成
 - 支持大规模部署
 - 完整的监控和审计
@@ -226,6 +253,8 @@ series: AI-Native Engineering
 | **平台集成** | Chrome/Edge AI | 消费者产品 |
 
 ### 未来的 AI 基础设施
+
+随着 AI Agent 在企业场景的普及，安全沙箱将成为基础设施的标准组件，而非可选项。
 
 ### 最后的思考
 

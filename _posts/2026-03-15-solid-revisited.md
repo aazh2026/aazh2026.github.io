@@ -14,37 +14,37 @@ series: ai-native-dev-guide
 
 ---
 
-## 3. SOLID 原则回顾
+## SOLID 原则回顾
 
 在重构之前，让我们快速回顾 Robert C. Martin 在 2000 年提出的 SOLID 原则：
 
-### 3.1 单一职责原则 (Single Responsibility Principle)
+### 单一职责原则 (Single Responsibility Principle)
 
 > **一个类应该只有一个引起它变化的原因。**
 
-### 3.2 开闭原则 (Open/Closed Principle)
+### 开闭原则 (Open/Closed Principle)
 
 > **对扩展开放，对修改关闭。**
 
-### 3.3 里氏替换原则 (Liskov Substitution Principle)
+### 里氏替换原则 (Liskov Substitution Principle)
 
 > **子类型必须能够替换其基类型而不改变程序正确性。**
 
-### 3.4 接口隔离原则 (Interface Segregation Principle)
+### 接口隔离原则 (Interface Segregation Principle)
 
 > **客户端不应该被迫依赖它们不使用的接口。**
 
-### 3.5 依赖倒置原则 (Dependency Inversion Principle)
+### 依赖倒置原则 (Dependency Inversion Principle)
 
 > **高层模块不应该依赖低层模块，两者都应该依赖抽象。**
 
 ---
 
-## 4. 面向对象时代的 SOLID 局限
+## 面向对象时代的 SOLID 局限
 
 SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在 AI-Native 时代，它们的局限性日益明显：
 
-### 4.1 局限一：假设了确定性的执行模型
+### 局限一：假设了确定性的执行模型
 
 传统 SOLID 假设：
 - 方法调用是**同步**且**确定**的
@@ -56,20 +56,20 @@ SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在
 - 执行时间不确定
 - 可能调用外部工具产生不可预测副作用
 
-### 4.2 局限二：忽视了上下文和状态管理
+### 局限二：忽视了上下文和状态管理
 
 传统设计将状态封装在对象内部，但 Agent 需要：
 - **上下文窗口管理**：有限的 token 预算
 - **长期记忆**：跨会话的信息保持
 - **工作记忆**：当前任务的临时状态
 
-### 4.3 局限三：无法处理涌现行为
+### 局限三：无法处理涌现行为
 
 传统设计追求**可预测性**，但 Agent 系统的一个重要特性是**涌现**——整体行为不等于部分之和。
 
 当多个 Agent 协作时，会产生设计者未明确编程的行为。SOLID 原则无法指导这种涌现系统的设计。
 
-### 4.4 局限四：接口定义过于静态
+### 局限四：接口定义过于静态
 
 传统接口是编译时契约：
 
@@ -78,7 +78,7 @@ SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在
 - 工具调用列表可以动态扩展
 - 不同模型版本能力差异巨大
 
-### 4.5 局限五：忽视了反馈和学习循环
+### 局限五：忽视了反馈和学习循环
 
 传统软件是"编写一次，运行多次"，但 AI 系统需要：
 - 从反馈中学习
@@ -95,11 +95,11 @@ SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在
 
 ---
 
-## 5. AI-Native 时代的 SOLID 重构
+## AI-Native 时代的 SOLID 重构
 
 面对上述局限，我们需要一套新的设计原则。这不是对 SOLID 的否定，而是在更高抽象层次上的重构。
 
-### 5.1 从 Class 到 Agent：抽象层次的跃迁
+### 从 Class 到 Agent：抽象层次的跃迁
 
 关键区别：
 
@@ -111,23 +111,23 @@ SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在
 | 能力扩展 | 继承/组合 | Prompt 调整 + Tool 注册 |
 | 交互模式 | Request/Response | 多轮对话 + 自主决策 |
 
-### 5.2 从 Interface 到 Intent：契约形式的转变
+### 从 Interface 到 Intent：契约形式的转变
 
 传统接口定义"能做什么"：
 
 Intent 定义"意图和期望结果"：
 
-### 5.3 核心转变总结
+### 核心转变总结
 
 <object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
 
 ---
 
-## 6. 新 SOLID：适用于 Agent 协作的设计原则
+## 新 SOLID：适用于 Agent 协作的设计原则
 
 基于上述分析，我提出适用于 AI-Native 开发的**新 SOLID 原则**：
 
-### 6.1 S - Single Capability Principle (单一能力原则)
+### S - Single Capability Principle (单一能力原则)
 
 > **一个 Agent 应该只负责一种核心能力，并通过清晰的 Capability Contract 定义其边界。**
 
@@ -145,7 +145,7 @@ Intent 定义"意图和期望结果"：
 | 通过类拆分实现 | 通过 Agent 专业化 + Contract 定义 |
 | 编译时检查 | 运行时 Capability 匹配 |
 
-### 6.2 O - Open for Extension, Closed for Modification via Prompting (提示工程开闭原则)
+### O - Open for Extension, Closed for Modification via Prompting (提示工程开闭原则)
 
 > **Agent 的核心行为应该通过 Prompt 模板扩展，而非修改代码。**
 
@@ -154,7 +154,7 @@ Intent 定义"意图和期望结果"：
 - 通过 Prompt 变量和模板继承实现扩展
 - 支持 A/B 测试和动态行为切换
 
-### 6.3 L - Literal Adherence Principle (忠实表达原则)
+### L - Literal Adherence Principle (忠实表达原则)
 
 > **Agent 的输出应该忠实反映其内部推理过程，而非隐藏或伪造。**
 
@@ -172,7 +172,7 @@ Intent 定义"意图和期望结果"：
 | 编译时类型检查 | 运行时推理链验证 |
 | 防止继承误用 | 防止"幻觉"和不可信输出 |
 
-### 6.4 I - Intent Segregation Principle (意图隔离原则)
+### I - Intent Segregation Principle (意图隔离原则)
 
 > **复杂的用户请求应该被分解为独立的 Intent，每个 Intent 由专门的 Agent 或 Tool 处理。**
 
@@ -181,7 +181,7 @@ Intent 定义"意图和期望结果"：
 - 每个 Intent 对应单一、明确的目标
 - 避免强迫一个 Agent 处理它不擅长的任务
 
-### 6.5 D - Dependency Inversion via Abstraction Layer (抽象层依赖倒置)
+### D - Dependency Inversion via Abstraction Layer (抽象层依赖倒置)
 
 > **Agent 不应该直接依赖具体的 LLM 或工具实现，而应该依赖抽象的 Capability Interface。**
 
@@ -192,11 +192,11 @@ Intent 定义"意图和期望结果"：
 
 ---
 
-## 7. 实战：应用新 SOLID 设计 Agent 系统
+## 实战：应用新 SOLID 设计 Agent 系统
 
 让我们通过一个完整的实例来演示如何应用新 SOLID 原则设计一个多 Agent 系统。
 
-### 7.1 场景：智能客服系统
+### 场景：智能客服系统
 
 我们需要设计一个能够处理多种客户请求的智能客服系统：
 - 订单查询
@@ -204,13 +204,106 @@ Intent 定义"意图和期望结果"：
 - 技术支持
 - 产品推荐
 
-### 7.2 系统设计
+### 系统设计
 
 <object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%"></object>
 
-### 7.3 完整代码实现
+### 完整代码实现
 
-### 7.4 新 SOLID 原则应用总结
+以下代码展示了一个简化但完整的多 Agent 客服系统实现，涵盖 Intent 路由、Agent 专业化分工和 Capability 抽象接口。
+
+**Capability 接口定义**：
+
+```python
+from abc import ABC, abstractmethod
+from dataclasses import dataclass
+from typing import List, Optional
+
+@dataclass
+class Capability:
+    name: str
+    description: str
+    input_types: List[str]
+    output_type: str
+
+class CapabilityContract(ABC):
+    @abstractmethod
+    def get_capabilities(self) -> List[Capability]:
+        pass
+
+    @abstractmethod
+    def can_handle(self, intent: str) -> bool:
+        pass
+```
+
+**OrderQueryAgent 实现**：
+
+```python
+class OrderQueryAgent(CapabilityContract):
+    def get_capabilities(self) -> List[Capability]:
+        return [
+            Capability(
+                name="order_query",
+                description="根据订单号或用户信息查询订单状态",
+                input_types=["order_id", "user_id"],
+                output_type="OrderInfo"
+            )
+        ]
+
+    def can_handle(self, intent: str) -> bool:
+        return intent in ["query_order", "check_status"]
+
+    async def execute(self, context: dict) -> dict:
+        order_id = context.get("order_id")
+        # 查询逻辑
+        return {"status": "shipped", "eta": "2-3 days"}
+```
+
+**Intent Router**：
+
+```python
+class IntentRouter:
+    def __init__(self, agents: List[CapabilityContract]):
+        self.agents = agents
+
+    def route(self, user_input: str) -> tuple[str, CapabilityContract]:
+        intent = self.classify_intent(user_input)
+        for agent in self.agents:
+            if agent.can_handle(intent):
+                return intent, agent
+        raise ValueError(f"No agent can handle intent: {intent}")
+
+    def classify_intent(self, text: str) -> str:
+        # 简化的意图分类逻辑
+        keywords = {"order": "query_order", "refund": "process_refund"}
+        for key, intent in keywords.items():
+            if key in text.lower():
+                return intent
+        return "general_inquiry"
+```
+
+**LLM 抽象层 (DIP 实现)**：
+
+```python
+class LLMProvider(ABC):
+    @abstractmethod
+    async def complete(self, prompt: str, context: dict) -> str:
+        pass
+
+class OpenAIProvider(LLMProvider):
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+
+    async def complete(self, prompt: str, context: dict) -> str:
+        # OpenAI API 调用实现
+        response = await openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[{"role": "user", "content": prompt}]
+        )
+        return response.choices[0].message.content
+```
+
+### 新 SOLID 原则应用总结
 
 在这个实战示例中，我们应用了新 SOLID 原则：
 
@@ -224,49 +317,59 @@ Intent 定义"意图和期望结果"：
 
 ---
 
-## 8. 反直觉洞察
+## 反直觉洞察
 
 在实践新 SOLID 原则的过程中，有一些反直觉的洞察值得分享：
 
-### 8.1 洞察一："确定性"是一种奢望，拥抱概率性
+### 洞察一："确定性"是一种奢望，拥抱概率性
 
-传统思维追求 100% 确定性，但 AI 系统天然是概率性的。
+> 💡 **Key Insight**
+>
+> 传统思维追求 100% 确定性，但 AI 系统天然是概率性的。
 
 **反直觉做法**：
 - 不要试图用复杂规则消除不确定性
 - 而是设计"不确定性友好"的架构
 - 让系统能够表达"我不确定"并优雅降级
 
-### 8.2 洞察二：Prompt 是比代码更重要的"代码"
+### 洞察二：Prompt 是比代码更重要的"代码"
 
-Prompt 工程不是临时技巧，而是核心工程实践。
+> 💡 **Key Insight**
+>
+> Prompt 工程不是临时技巧，而是核心工程实践。
 
 **反直觉做法**：
 - 像对待代码一样对待 Prompt：版本控制、测试、Code Review
 - Prompt 模板化、参数化、继承化
 - 建立 Prompt 设计规范
 
-### 8.3 洞察三：Agent 越"笨"，系统越聪明
+### 洞察三：Agent 越"笨"，系统越聪明
 
-试图让一个 Agent 做所有事情会导致"上帝 Agent"反模式。
+> 💡 **Key Insight**
+>
+> 试图让一个 Agent 做所有事情会导致"上帝 Agent"反模式。
 
 **反直觉做法**：
 - 让每个 Agent 尽可能"笨"和专注
 - 复杂性来自协作，而非单个 Agent 的能力
 - 像设计生态系统一样设计 Agent 系统
 
-### 8.4 洞察四：上下文管理比算法更重要
+### 洞察四：上下文管理比算法更重要
 
-在 AI-Native 系统中，如何管理上下文（context window）往往比算法选择更重要。
+> 💡 **Key Insight**
+>
+> 在 AI-Native 系统中，如何管理上下文（context window）往往比算法选择更重要。
 
 **反直觉做法**：
 - 投入大量精力优化上下文压缩和选择
 - 建立记忆层次结构（工作记忆/短期记忆/长期记忆）
 - 主动遗忘和总结是必要的能力
 
-### 8.5 洞察五：测试 AI 系统需要新范式
+### 洞察五：测试 AI 系统需要新范式
 
-传统单元测试假设确定性，但 AI 系统需要新的测试范式。
+> 💡 **Key Insight**
+>
+> 传统单元测试假设确定性，但 AI 系统需要新的测试范式。
 
 **反直觉做法**：
 - 使用"属性测试"而非"值测试"
@@ -275,9 +378,9 @@ Prompt 工程不是临时技巧，而是核心工程实践。
 
 ---
 
-## 9. 工具链与最佳实践
+## 工具链与最佳实践
 
-### 9.1 推荐工具链
+### 推荐工具链
 
 | 类别 | 工具 | 用途 |
 |------|------|------|
@@ -288,7 +391,7 @@ Prompt 工程不是临时技巧，而是核心工程实践。
 | **监控** | Langfuse, Weights & Biases | 生产监控和调试 |
 | **记忆** | Chroma, Pinecone, Weaviate | 向量存储 |
 
-### 9.2 最佳实践清单
+### 最佳实践清单
 
 #### SCP - 单一能力原则
 - [ ] 每个 Agent 有明确的 Capability Contract
@@ -315,7 +418,7 @@ Prompt 工程不是临时技巧，而是核心工程实践。
 - [ ] 支持运行时切换实现
 - [ ] 建立清晰的 capability 注册机制
 
-### 9.3 设计审查清单
+### 设计审查清单
 
 在部署 Agent 系统前，问自己这些问题：
 
@@ -336,7 +439,7 @@ Prompt 工程不是临时技巧，而是核心工程实践。
 
 ---
 
-## 10. 结语
+## 结语
 
 ### 从 SOLID 到新 SOLID：一场范式转移
 
