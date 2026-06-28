@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="CoT grading 导致 obfuscation 的三个决定性因素">
+  <title>CoT Obfuscation 三因素模型</title>
+  <desc>Reward magnitude、Coverage、Conditional discoverability 决定 CoT grading 是否导致 monitorability 退化</desc>
+
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="fact1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#C0623F"/>
+    </linearGradient>
+    <linearGradient id="fact2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5E7347"/>
+    </linearGradient>
+    <linearGradient id="fact3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#141413"/>
+      <stop offset="100%" stop-color="#3A3A38"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" fill="url(#bg2)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">CoT grading → Obfuscation：三个决定性因素</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#87867F">OpenAI 2026 CoT grading 事后分析 · 风险评估框架</text>
+
+  <!-- Central equation -->
+  <rect x="200" y="72" width="400" height="38" fill="#141413" rx="6"/>
+  <text x="400" y="97" text-anchor="middle" font-family="monospace" font-size="15" fill="#FAF9F5" font-weight="bold">CoT Obfuscation Risk = f(3 Factors)</text>
+
+  <!-- Three factor boxes -->
+  <!-- Factor 1: Reward Magnitude -->
+  <rect x="40" y="135" width="230" height="200" fill="#FAF9F5" stroke="#D97757" stroke-width="3" rx="10"/>
+  <rect x="40" y="135" width="230" height="40" fill="url(#fact1)" rx="10 10 0 0"/>
+  <text x="155" y="163" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">① Reward Magnitude</text>
+  <text x="155" y="195" text-anchor="middle" font-family="monospace" font-size="10" fill="#D97757" font-weight="bold">奖励幅度</text>
+  <text x="155" y="215" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">CoT 奖励/惩罚相对于</text>
+  <text x="155" y="230" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">其他训练信号的大小</text>
+  <line x1="55" y1="245" x2="255" y2="245" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="155" y="262" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">当 CoT 奖励与其他奖励</text>
+  <text x="155" y="277" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">冲突时，幅度最重要</text>
+  <text x="155" y="295" text-anchor="middle" font-family="monospace" font-size="11" fill="#D97757" font-style="italic">幅度越高 × 风险越大</text>
+  <text x="155" y="323" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">→ 与其他奖励正交时</text>
+  <text x="155" y="336" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">影响较小</text>
+
+  <!-- Factor 2: Coverage -->
+  <rect x="285" y="135" width="230" height="200" fill="#FAF9F5" stroke="#788C5D" stroke-width="3" rx="10"/>
+  <rect x="285" y="135" width="230" height="40" fill="url(#fact2)" rx="10 10 0 0"/>
+  <text x="400" y="163" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">② Coverage</text>
+  <text x="400" y="195" text-anchor="middle" font-family="monospace" font-size="10" fill="#788C5D" font-weight="bold">覆盖率</text>
+  <text x="400" y="215" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">训练中模型处于可被</text>
+  <text x="400" y="230" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">CoT 压力影响环境的频率</text>
+  <line x1="300" y1="245" x2="500" y2="245" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="400" y="262" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413">Coverage ≈</text>
+  <text x="400" y="278" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413">P(relevant environment)</text>
+  <text x="400" y="298" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">不可解释编码 grading：</text>
+  <text x="400" y="313" text-anchor="middle" font-family="monospace" font-size="10" fill="#788C5D">高覆盖率 ✓</text>
+  <text x="400" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">内部 hacking：</text>
+  <text x="400" y="343" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">相对较低覆盖率</text>
+
+  <!-- Factor 3: Conditional Discoverability -->
+  <rect x="530" y="135" width="230" height="200" fill="#FAF9F5" stroke="#141413" stroke-width="3" rx="10"/>
+  <rect x="530" y="135" width="230" height="40" fill="url(#fact3)" rx="10 10 0 0"/>
+  <text x="645" y="163" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">③ Conditional</text>
+  <text x="645" y="178" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="#FAF9F5">Discoverability</text>
+  <text x="645" y="195" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F" font-weight="bold">条件可发现性</text>
+  <text x="645" y="215" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">在相关环境中，模型</text>
+  <text x="645" y="230" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">采样目标 CoT 行为的概率</text>
+  <line x1="545" y1="245" x2="745" y2="245" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="645" y="262" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413">Discoverability ≈</text>
+  <text x="645" y="278" text-anchor="middle" font-family="monospace" font-size="11" fill="#141413">P(target CoT | env)</text>
+  <text x="645" y="298" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">不可解释编码：低可发现性</text>
+  <text x="645" y="313" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">（困难的探索问题）</text>
+  <text x="645" y="328" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">内部 hacking：略高</text>
+  <text x="645" y="343" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">可发现性</text>
+
+  <!-- Arrow pointing down to key insight -->
+  <line x1="400" y1="340" x2="400" y2="365" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="400,370 395,360 405,360" fill="#D97757"/>
+
+  <!-- Key insight box -->
+  <rect x="100" y="370" width="600" height="55" fill="#141413" rx="8"/>
+  <text x="400" y="390" text-anchor="middle" font-family="monospace" font-size="12" fill="#D97757" font-weight="bold">关键洞察：稀疏 CoT 压力似乎不会自动产生泛化 CoT obfuscation</text>
+  <text x="400" y="408" text-anchor="middle" font-family="monospace" font-size="11" fill="#D1CFC5">现实 RL 条件下难以产生显著 monitorability 退化 —— 但原理上足够强的压力会导致降解</text>
+
+  <!-- Footer note -->
+  <text x="400" y="448" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">数据来源：OpenAI Alignment 团队事后分析 · 2026-05-14</text>
+  <text x="400" y="464" text-anchor="middle" font-family="monospace" font-size="10" fill="#D1CFC5">注：Coverage ≠ Discoverability —— 两因素需分别评估</text>
+
+</svg>

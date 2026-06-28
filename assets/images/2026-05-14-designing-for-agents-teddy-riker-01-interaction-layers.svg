@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Agent 交互模式演进">
+  <title>为 Agent 设计：交互模式演进</title>
+  <desc>从 User→Interface→Database 到 User→User's Agent→Software's Agent→Database 的双 LLM 协作新模式</desc>
+
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F5"/>
+      <stop offset="100%" stop-color="#E3DACC"/>
+    </linearGradient>
+    <linearGradient id="user" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="100%" stop-color="#B85A3F"/>
+    </linearGradient>
+    <linearGradient id="agent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#788C5D"/>
+      <stop offset="100%" stop-color="#5E7347"/>
+    </linearGradient>
+    <linearGradient id="soft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#141413"/>
+      <stop offset="100%" stop-color="#2E2E2C"/>
+    </linearGradient>
+    <linearGradient id="db" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#87867F"/>
+      <stop offset="100%" stop-color="#6A6860"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    </marker>
+    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg3)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">为 Agent 设计：交互模式的演进</text>
+  <text x="400" y="56" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#87867F">Ramp 产品负责人 Teddy Riker · 双 LLM 协作驱动结果</text>
+
+  <!-- Era 1 -->
+  <text x="70" y="95" font-family="monospace" font-size="11" font-weight="bold" fill="#87867F">ERA 1</text>
+  <text x="70" y="112" font-family="monospace" font-size="14" font-weight="bold" fill="#141413">传统模式（2000s-2023）</text>
+  <text x="70" y="128" font-family="monospace" font-size="10" fill="#87867F">界面就是体验</text>
+
+  <!-- Nodes -->
+  <rect x="70" y="145" width="90" height="42" fill="url(#user)" rx="6"/>
+  <text x="115" y="162" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">User</text>
+  <text x="115" y="176" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">用户</text>
+
+  <line x1="160" y1="166" x2="228" y2="166" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="194" y="159" text-anchor="middle" font-family="monospace" font-size="9" fill="#87867F">点击/操作</text>
+
+  <rect x="230" y="145" width="90" height="42" fill="url(#db)" rx="6"/>
+  <text x="275" y="162" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">Interface</text>
+  <text x="275" y="176" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">界面</text>
+
+  <line x1="320" y1="166" x2="388" y2="166" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="354" y="159" text-anchor="middle" font-family="monospace" font-size="9" fill="#87867F">查询/写入</text>
+
+  <rect x="390" y="145" width="90" height="42" fill="url(#db)" rx="6"/>
+  <text x="435" y="162" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">Database</text>
+  <text x="435" y="176" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">数据库</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="205" x2="740" y2="205" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Era 2 -->
+  <text x="70" y="228" font-family="monospace" font-size="11" font-weight="bold" fill="#87867F">ERA 2</text>
+  <text x="70" y="245" font-family="monospace" font-size="14" font-weight="bold" fill="#141413">单 Agent 模式（2023-2025）</text>
+  <text x="70" y="261" font-family="monospace" font-size="10" fill="#87867F">界面消失，Agent 直接对话</text>
+
+  <rect x="70" y="275" width="90" height="42" fill="url(#user)" rx="6"/>
+  <text x="115" y="292" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">User</text>
+  <text x="115" y="306" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">用户</text>
+
+  <line x1="160" y1="296" x2="228" y2="296" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="194" y="289" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">意图</text>
+
+  <rect x="230" y="275" width="100" height="42" fill="url(#agent)" rx="6"/>
+  <text x="280" y="292" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">User's Agent</text>
+  <text x="280" y="306" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">Claude / ChatGPT</text>
+
+  <line x1="330" y1="296" x2="388" y2="296" stroke="#788C5D" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="359" y="289" text-anchor="middle" font-family="monospace" font-size="9" fill="#788C5D">MCP/API</text>
+
+  <rect x="390" y="275" width="90" height="42" fill="url(#db)" rx="6"/>
+  <text x="435" y="292" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">Database</text>
+  <text x="435" y="306" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">数据库</text>
+
+  <!-- Divider 2 -->
+  <line x1="60" y1="335" x2="740" y2="335" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Era 3 -->
+  <text x="70" y="358" font-family="monospace" font-size="11" font-weight="bold" fill="#D97757">ERA 3</text>
+  <text x="70" y="375" font-family="monospace" font-size="14" font-weight="bold" fill="#D97757">双 Agent 协作（2025+）</text>
+  <text x="70" y="391" font-family="monospace" font-size="10" fill="#141413">新 80% 交互模式</text>
+
+  <!-- New pattern nodes -->
+  <rect x="30" y="405" width="85" height="42" fill="url(#user)" rx="6"/>
+  <text x="72" y="422" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">User</text>
+  <text x="72" y="436" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">用户</text>
+
+  <line x1="115" y1="426" x2="165" y2="426" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <text x="140" y="418" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">意图</text>
+
+  <rect x="167" y="405" width="120" height="42" fill="url(#agent)" rx="6"/>
+  <text x="227" y="420" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">User's Agent</text>
+  <text x="227" y="434" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">Claude chief of staff</text>
+
+  <line x1="287" y1="426" x2="337" y2="426" stroke="#788C5D" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="312" y="418" text-anchor="middle" font-family="monospace" font-size="9" fill="#788C5D">MCP</text>
+
+  <rect x="339" y="405" width="120" height="42" fill="url(#soft)" rx="6"/>
+  <text x="399" y="420" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">Software's Agent</text>
+  <text x="399" y="434" text-anchor="middle" font-family="monospace" font-size="9" fill="#D1CFC5">Ramp / Notion MCP</text>
+
+  <line x1="459" y1="426" x2="509" y2="426" stroke="#87867F" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="484" y="418" text-anchor="middle" font-family="monospace" font-size="9" fill="#87867F">查询</text>
+
+  <rect x="511" y="405" width="85" height="42" fill="url(#db)" rx="6"/>
+  <text x="553" y="422" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#FAF9F5">Database</text>
+  <text x="553" y="436" text-anchor="middle" font-family="monospace" font-size="9" fill="#FAF9F5">DB</text>
+
+  <!-- Right panel: Key insights -->
+  <rect x="620" y="95" width="165" height="370" fill="#141413" rx="8"/>
+  <text x="702" y="118" text-anchor="middle" font-family="monospace" font-size="11" font-weight="bold" fill="#D97757">设计原则</text>
+  <line x1="632" y1="128" x2="772" y2="128" stroke="#3A3A38" stroke-width="1"/>
+
+  <text x="632" y="148" font-family="monospace" font-size="10" fill="#FAF9F5" font-weight="bold">① 直接给到 spec</text>
+  <text x="632" y="164" font-family="monospace" font-size="9" fill="#D1CFC5">把文档 spec 在需要</text>
+  <text x="632" y="178" font-family="monospace" font-size="9" fill="#D1CFC5">时刻直接交给 Agent</text>
+  <text x="632" y="192" font-family="monospace" font-size="9" fill="#87867F">不要让它猜</text>
+
+  <line x1="632" y1="204" x2="772" y2="204" stroke="#3A3A38" stroke-width="1"/>
+
+  <text x="632" y="224" font-family="monospace" font-size="10" fill="#FAF9F5" font-weight="bold">② 反馈循环</text>
+  <text x="632" y="240" font-family="monospace" font-size="9" fill="#D1CFC5">rationale 参数</text>
+  <text x="632" y="254" font-family="monospace" font-size="9" fill="#D1CFC5">feedback tool</text>
+  <text x="632" y="268" font-family="monospace" font-size="9" fill="#D1CFC5">tool-specific seeds</text>
+
+  <line x1="632" y1="280" x2="772" y2="280" stroke="#3A3A38" stroke-width="1"/>
+
+  <text x="632" y="300" font-family="monospace" font-size="10" fill="#FAF9F5" font-weight="bold">③ 承认 Context Gap</text>
+  <text x="632" y="316" font-family="monospace" font-size="9" fill="#D1CFC5">你的系统有 Agent</text>
+  <text x="632" y="330" font-family="monospace" font-size="9" fill="#D1CFC5">没有的 context</text>
+  <text x="632" y="344" font-family="monospace" font-size="9" fill="#D1CFC5">设计时要承认</text>
+  <text x="632" y="358" font-family="monospace" font-size="9" fill="#D1CFC5">这一点</text>
+
+  <line x1="632" y1="370" x2="772" y2="370" stroke="#3A3A38" stroke-width="1"/>
+
+  <text x="632" y="390" font-family="monospace" font-size="10" fill="#D97757" font-weight="bold">80/20 已翻转</text>
+  <text x="632" y="406" font-family="monospace" font-size="9" fill="#D1CFC5">新 80% 交互</text>
+  <text x="632" y="420" font-family="monospace" font-size="9" fill="#D1CFC5">通过 Agent 完成</text>
+  <text x="632" y="438" font-family="monospace" font-size="9" fill="#87867F">Salesforce:</text>
+  <text x="632" y="452" font-family="monospace" font-size="9" fill="#87867F">Headless 360</text>
+
+  <!-- Footer -->
+  <text x="400" y="498" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">数据来源：Teddy Riker (Ramp) · X / @teddy_riker · 751K views</text>
+
+</svg>

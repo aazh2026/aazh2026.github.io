@@ -22,8 +22,6 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" type="image/svg+xml" width="100%"></object>
-
 ## 📋 本文结构
 
 1. [从TDD到IDD的范式转移](#从tdd到idd的范式转移)

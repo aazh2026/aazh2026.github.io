@@ -17,8 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-<object data="/assets/images/assets/images/2026-05-13-harness-engineering-addy-osmani-01-arch.svg" type="image/svg+xml" width="100%"></object>
-
 ## 📋 本文结构
 
 1. [Agent = Model + Harness](#agent--model--harness) — 核心等式

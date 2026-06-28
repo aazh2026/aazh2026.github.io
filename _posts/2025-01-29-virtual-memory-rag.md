@@ -9,8 +9,6 @@ redirect_from:
 
 # 上下文窗口的"虚拟内存"化：当RAG成为分页机制
 
-<object data="/assets/images/assets/images/2025-01-29-virtual-memory-rag-01-mapping.svg" type="image/svg+xml" width="100%"></object>
-
 ## 引言：128K上下文是个陷阱
 
 OpenAI说GPT-4支持128K上下文，Claude说200K。

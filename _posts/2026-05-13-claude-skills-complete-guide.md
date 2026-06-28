@@ -17,8 +17,6 @@ series: AI-Native软件工程系列
 
 ---
 
-<object data="/assets/images/assets/images/2026-05-13-claude-skills-complete-guide-01-lifecycle.svg" type="image/svg+xml" width="100%"></object>
-
 ## 📋 本文结构
 
 1. [Saved Prompt vs Skill：质的区别](#saved-prompt-vs-skill质的区别) — 不是起点 vs 工具，是实习生 vs 训练有素的专业人士

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%">
+  <defs>
+    <linearGradient id="spectrumGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97757"/>
+      <stop offset="50%" stop-color="#D1CFC5"/>
+      <stop offset="100%" stop-color="#788C5D"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FAF9F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="40" y="40" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">编程已解决的光谱</text>
+  <text x="40" y="60" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">Coding Is Solved — 代码库类型与 AI 能力覆盖率</text>
+
+  <!-- Main spectrum bar -->
+  <rect x="40" y="90" width="720" height="24" rx="12" fill="url(#spectrumGrad)" filter="url(#shadow)"/>
+
+  <!-- Spectrum labels -->
+  <text x="40" y="82" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#D97757">未解决 0%</text>
+  <text x="400" y="82" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#87867F" text-anchor="middle">混合地带</text>
+  <text x="760" y="82" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#788C5D" text-anchor="end">已解决 100%</text>
+
+  <!-- Tick marks -->
+  <line x1="40" y1="90" x2="40" y2="100" stroke="#141413" stroke-width="2"/>
+  <line x1="220" y1="90" x2="220" y2="98" stroke="#141413" stroke-width="1.5"/>
+  <line x1="400" y1="90" x2="400" y2="100" stroke="#141413" stroke-width="2"/>
+  <line x1="580" y1="90" x2="580" y2="98" stroke="#141413" stroke-width="1.5"/>
+  <line x1="760" y1="90" x2="760" y2="100" stroke="#141413" stroke-width="2"/>
+
+  <!-- Codebase markers -->
+  <!-- SAP ABAP - leftmost -->
+  <circle cx="80" cy="102" r="10" fill="#D97757" stroke="#FAF9F5" stroke-width="3"/>
+  <text x="80" y="130" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#D97757" text-anchor="middle">SAP / ABAP</text>
+  <text x="80" y="146" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">~10%</text>
+
+  <!-- Game Engine C++ -->
+  <circle cx="170" cy="102" r="9" fill="#C47B52" stroke="#FAF9F5" stroke-width="3"/>
+  <text x="170" y="130" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#C47B52" text-anchor="middle">游戏引擎 C++</text>
+  <text x="170" y="146" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">~25%</text>
+
+  <!-- Legacy Systems -->
+  <circle cx="280" cy="102" r="9" fill="#B08A6A" stroke="#FAF9F5" stroke-width="3"/>
+  <text x="280" y="130" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#B08A6A" text-anchor="middle">遗留系统</text>
+  <text x="280" y="146" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">~40%</text>
+
+  <!-- TypeScript + React - rightmost -->
+  <circle cx="700" cy="102" r="12" fill="#788C5D" stroke="#FAF9F5" stroke-width="4"/>
+  <text x="700" y="130" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#788C5D" text-anchor="middle">TypeScript + React</text>
+  <text x="700" y="146" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">~100%</text>
+  <text x="700" y="162" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#788C5D" text-anchor="middle">(Boris Cherny)</text>
+
+  <!-- Annotations connecting to factors -->
+  <line x1="40" y1="175" x2="40" y2="190" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="760" y1="175" x2="760" y2="190" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Factor boxes -->
+  <rect x="40" y="195" width="165" height="100" rx="8" fill="#D97757" fill-opacity="0.1" stroke="#D97757" stroke-width="1.5"/>
+  <text x="122" y="215" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#D97757" text-anchor="middle">阻碍 AI 解决的因素</text>
+  <text x="122" y="232" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 小众语言（C++, ABAP）</text>
+  <text x="122" y="247" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 三十年技术债务</text>
+  <text x="122" y="262" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 业务逻辑高度复杂</text>
+  <text x="122" y="277" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 高合规要求</text>
+  <text x="122" y="292" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">等下一代模型</text>
+
+  <rect x="222" y="195" width="356" height="100" rx="8" fill="#87867F" fill-opacity="0.08" stroke="#87867F" stroke-width="1.5"/>
+  <text x="400" y="215" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#87867F" text-anchor="middle">中间地带：取决于具体栈</text>
+  <text x="400" y="232" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">Python / Django, Java Spring, Go, Rust — 模型训练数据充足，但业务复杂度因项目而异</text>
+  <text x="400" y="252" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">决定因素：① 栈的主流程度 ② 代码库老化程度 ③ 是否用内部专用模型</text>
+  <text x="400" y="272" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="middle">Anthropic 内部 Mythos 模型 SWB-bench 93.9%</text>
+
+  <rect x="595" y="195" width="165" height="100" rx="8" fill="#788C5D" fill-opacity="0.1" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="677" y="215" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D" text-anchor="middle">AI 已解决的类型</text>
+  <text x="677" y="232" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• TypeScript + React</text>
+  <text x="677" y="247" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• Python 数据处理</text>
+  <text x="677" y="262" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 主流 Web 框架</text>
+  <text x="677" y="277" font-family="system-ui, sans-serif" font-size="10" fill="#141413" text-anchor="middle">• 标准 CRUD 应用</text>
+  <text x="677" y="292" font-family="system-ui, sans-serif" font-size="10" fill="#788C5D" text-anchor="middle">等模型，而不是等奇迹</text>
+
+  <!-- Key quote -->
+  <rect x="40" y="315" width="720" height="50" rx="8" fill="#141413"/>
+  <text x="60" y="337" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">"编程已被解决" 的结构性偏差：</text>
+  <text x="60" y="355" font-family="system-ui, sans-serif" font-size="11" fill="#D1CFC5">Boris 用的是 TS+React（模型最熟的栈）+ Anthropic 内部 Mythos 模型 + 成熟代码库</text>
+  <text x="740" y="355" font-family="system-ui, sans-serif" font-size="11" fill="#D1CFC5" text-anchor="end">→ 结论不普世</text>
+
+  <!-- Legend -->
+  <circle cx="50" cy="390" r="6" fill="#D97757"/>
+  <text x="62" y="394" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">低 AI 覆盖率</text>
+  <circle cx="165" cy="390" r="6" fill="#788C5D"/>
+  <text x="177" y="394" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">高 AI 覆盖率</text>
+  <circle cx="285" cy="390" r="6" fill="#87867F"/>
+  <text x="297" y="394" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Boris Cherny 自评</text>
+
+  <!-- Scale note -->
+  <text x="760" y="394" font-family="system-ui, sans-serif" font-size="10" fill="#87867F" text-anchor="end">来源：Sequoia AI Ascent 2026</text>
+</svg>
