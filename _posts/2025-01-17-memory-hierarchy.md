@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "为什么AI需要像人类一样「分心」"
+title: "\"为什么AI需要像人类一样「分心」\""
 date: 2025-01-17T00:30:00+08:00
 tags: [AI架构, 记忆系统, 类脑计算, 深度思考]
 author: "@postcodeeng"

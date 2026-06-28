@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI-Native 详细设计：从文档到可执行上下文"
+title: "\"AI-Native 详细设计：从文档到可执行上下文\""
 date: 2026-03-11T08:00:00+08:00
 tags: [AI-Native, SDLC, 软件工程, 详细设计]
 author: "@postcodeeng"

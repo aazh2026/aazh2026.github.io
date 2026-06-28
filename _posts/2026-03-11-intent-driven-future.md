@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "详细设计会消失吗？Intent-Driven 开发的未来"
+title: "\"详细设计会消失吗？Intent-Driven 开发的未来\""
 date: 2026-03-11T09:30:00+08:00
 tags: [AI-Native, SDLC, Intent-Driven, 未来趋势]
 author: "@postcodeeng"

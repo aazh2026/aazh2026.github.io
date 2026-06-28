@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenAI 意外发现：RL 训练中 Chain-of-Thought 被 grading 的后果"
+title: "\"OpenAI 意外发现：RL 训练中 Chain-of-Thought 被 grading 的后果\""
 date: 2026-05-14T00:00:00+08:00
 tags: [AI安全, AI对齐, Chain-of-Thought, RL训练, OpenAI]
 author: "@postcodeeng"

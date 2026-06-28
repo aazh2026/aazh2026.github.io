@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "User Story Pack：用户故事的自动化"
+title: "\"User Story Pack：用户故事的自动化\""
 date: 2025-04-28T00:00:00+08:00
 tags: [User Story, AI-Native, 需求工程, 自动化测试, BDD, Gherkin]
 author: "@postcodeeng"

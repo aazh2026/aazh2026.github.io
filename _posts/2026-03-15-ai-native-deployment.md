@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI-Native 部署与发布：智能交付流水线"
+title: "\"AI-Native 部署与发布：智能交付流水线\""
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, CI/CD, 部署策略, 金丝雀发布, MLOps]
 author: "@postcodeeng"

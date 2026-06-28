@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Karpathy's 4 Rules → 12 Rules：30 代码库 × 6 周的 CLAUDE.md 实战数据"
+title: "\"Karpathy's 4 Rules → 12 Rules：30 代码库 × 6 周的 CLAUDE.md 实战数据\""
 date: 2026-05-12T06:00:00+08:00
 tags: [AI-Native软件工程, CLAUDE.md, 提示词工程, 测试]
 author: "@postcodeeng"

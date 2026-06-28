@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "知识必须入库：Harness 工程的社会学维度"
+title: "\"知识必须入库：Harness 工程的社会学维度\""
 date: 2026-03-15T15:30:00+08:00
 tags: [AI-Native, Harness Engineering, Knowledge Management, Organization, Team Culture]
 author: "@postcodeeng"

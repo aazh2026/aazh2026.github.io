@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训"
+title: "\"开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训\""
 date: 2026-05-28T16:00:00+08:00
 tags: [开源, AI Agent, 软件工程, 社区困境]
 author: "@postcodeeng"

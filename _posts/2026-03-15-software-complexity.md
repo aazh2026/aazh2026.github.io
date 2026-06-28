@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "软件复杂性的本质：与 AI 共舞"
+title: "\"软件复杂性的本质：与 AI 共舞\""
 date: 2026-03-15
 tags: [软件工程, AI, 复杂性, 人月神话, 系统思考]
 series: AI-Native Engineering

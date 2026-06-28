@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "上下文膨胀定律：为什么你的 Agent 比想象中贵 10 倍"
+title: "\"上下文膨胀定律：为什么你的 Agent 比想象中贵 10 倍\""
 date: 2026-05-06T00:00:00+08:00
 tags: [AI-Native软件工程, Cost-Model, Context-Engineering, Agent, Architecture]
 author: Aaron

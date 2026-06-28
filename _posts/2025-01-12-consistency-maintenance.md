@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: 跨会话一致性：如何让Agent不变成"精神分裂"
+title: "跨会话一致性：如何让Agent不变成\"精神分裂\""
 date: 2025-01-12T01:35:00+08:00
 tags: [Agent设计, 一致性, 记忆管理, 长期交互]
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AISE框架：AI-Native软件工程理论体系"
+title: "\"AISE框架：AI-Native软件工程理论体系\""
 date: 2025-05-12T08:00:00+08:00
 tags: [AI-Native软件工程, AISE框架, 理论体系, 方法论]
 author: "@postcodeeng"

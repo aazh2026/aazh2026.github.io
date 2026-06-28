@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "执行已死，判断力永生：AI Agent 时代的工程组织重构"
+title: "\"执行已死，判断力永生：AI Agent 时代的工程组织重构\""
 date: 2026-05-11T00:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Multi-Agent, 判断力, 工程组织]
 author: "@postcodeeng"

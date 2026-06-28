@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenAI 如何监控内部编程 Agent：千万次交互中的不对齐行为捕捉"
+title: "\"OpenAI 如何监控内部编程 Agent：千万次交互中的不对齐行为捕捉\""
 date: 2026-03-21T01:00:00+08:00
 permalink: /openai-monitoring-coding-agents-misalignment/
 tags: [AI-Native, OpenAI, Safety, Misalignment, Monitoring]

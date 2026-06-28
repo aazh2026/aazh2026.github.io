@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "训练AI只是5%的工作，MLOps才是决定成败的95%"
+title: "\"训练AI只是5%的工作，MLOps才是决定成败的95%\""
 date: 2025-03-10T12:30:00+08:00
 tags: [MLOps, LLM, 私有模型, 代码生成, 持续训练]
 author: "@postcodeeng"

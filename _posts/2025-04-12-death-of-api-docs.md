@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "API文档已死，自解释系统当立？"
+title: "\"API文档已死，自解释系统当立？\""
 date: 2025-04-12T11:15:00+08:00
 tags: [AI-Native软件工程, API设计, 文档工程]
 author: "@postcodeeng"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "漏洞变便宜了，修漏洞没有"
+title: "\"漏洞变便宜了，修漏洞没有\""
 date: 2026-05-28T08:00:00+08:00
 tags: [AI安全, 开源经济, 结构性矛盾, Jevons悖论]
 author: "@postcodeeng"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gstack vs Claude Code Skills：AI编程的两种哲学"
+title: "\"gstack vs Claude Code Skills：AI编程的两种哲学\""
 date: 2026-03-21T10:00:00+08:00
 permalink: /gstack-vs-claude-code-skills/
 tags: [AI-Native, Claude-Code, gstack, Skills, YC, Anthropic]

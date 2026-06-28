@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: 语义缓存的经济学：如何用记忆节省90%的API成本
+title: "语义缓存的经济学：如何用记忆节省90%的API成本"
 date: 2025-01-25T01:55:00+08:00
 tags: [成本优化, 语义缓存, RAG, 向量检索]
 

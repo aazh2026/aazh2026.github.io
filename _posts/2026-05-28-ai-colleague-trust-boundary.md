@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "「AI 同事」的问题不是智能，是信任边界"
+title: "\"「AI 同事」的问题不是智能，是信任边界\""
 date: 2026-05-28T09:00:00+08:00
 tags: [AI Agent, 安全设计, 信任架构, 哲学]
 author: "@postcodeeng"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "为什么你的AI助手越用越笨？"
+title: "\"为什么你的AI助手越用越笨？\""
 date: 2025-04-10T10:10:00+08:00
 tags: [AI-Native软件工程, Context管理, 知识衰减]
 author: "@postcodeeng"

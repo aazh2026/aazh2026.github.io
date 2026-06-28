@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "自我改进的 Tax AI：OpenAI 的实践与三个关键设计"
+title: "\"自我改进的 Tax AI：OpenAI 的实践与三个关键设计\""
 date: 2026-05-28T15:00:00+08:00
 tags: [AI Agent, 自我改进系统, 工程实践, 评估驱动开发]
 author: "@postcodeeng"

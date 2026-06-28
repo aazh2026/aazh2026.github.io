@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: 知识图谱与向量检索：为什么1+1>3
+title: "知识图谱与向量检索：为什么1+1>3"
 date: 2025-01-15T01:30:00+08:00
 tags: [知识图谱, 向量检索, RAG, 混合架构]
 

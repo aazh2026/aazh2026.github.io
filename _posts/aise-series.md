@@ -1,7 +1,7 @@
 ---
 layout: page
 author: "@postcodeeng"
-title: "AI-Native软件工程系列"
+title: "\"AI-Native软件工程系列\""
 permalink: /aise-series/
 
 redirect_from:

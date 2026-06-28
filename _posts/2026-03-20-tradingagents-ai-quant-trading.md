@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "TradingAgents：当 AI 开始炒股——多 Agent 量化交易的风险与机遇"
+title: "\"TradingAgents：当 AI 开始炒股——多 Agent 量化交易的风险与机遇\""
 date: 2026-03-20T20:00:00+08:00
 permalink: /tradingagents-ai-quant-trading/
 tags: [AI-Native, FinTech, Trading, Quant, Multi-Agent, Risk]

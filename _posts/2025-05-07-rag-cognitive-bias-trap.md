@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "RAG系统的认知偏差陷阱：当AI开始确认偏误"
+title: "\"RAG系统的认知偏差陷阱：当AI开始确认偏误\""
 date: 2025-05-07T22:00:00+08:00
 tags: [AI-Native软件工程, RAG, 认知偏差, 信息茧房]
 author: "@postcodeeng"

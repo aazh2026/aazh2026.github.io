@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Anthropic Claude Code 创始人 Boris Cherny：写代码已解决，剩下的是组织"
+title: "\"Anthropic Claude Code 创始人 Boris Cherny：写代码已解决，剩下的是组织\""
 date: 2026-05-14T08:00:00+08:00
 tags: [AI-Native软件工程, Claude Code, Anthropic, Boris Cherny, Agent]
 author: "@postcodeeng"

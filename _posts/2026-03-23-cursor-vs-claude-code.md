@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Cursor vs Claude Code 2026：终极对比评测与选择指南"
+title: "\"Cursor vs Claude Code 2026：终极对比评测与选择指南\""
 date: 2026-03-23T14:00:00+08:00
 permalink: /cursor-vs-claude-code-2026/
 tags: [AI-Native, Cursor, Claude-Code, IDE, Review]

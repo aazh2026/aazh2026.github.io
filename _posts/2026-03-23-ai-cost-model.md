@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI系统成本模型：从线性思维到结构性优化"
+title: "\"AI系统成本模型：从线性思维到结构性优化\""
 date: 2026-03-23T20:00:00+08:00
 permalink: /ai-system-cost-model/
 tags: [AI-Native, Cost-Model, System-Design, Optimization]

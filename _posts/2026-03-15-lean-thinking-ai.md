@@ -1,8 +1,8 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "精益思想的 AI 增强：从消除浪费到自动化改进"
-date: 2026-03-15 10:00:00 +0800
+title: "\"精益思想的 AI 增强：从消除浪费到自动化改进\""
+date: 2026-03-15T10:00:00+08:00
 categories: [AI-Native, 工程实践, 精益]
 tags: [lean, ai, waste-elimination, continuous-improvement, value-stream]
 series: AI-Native软件工程

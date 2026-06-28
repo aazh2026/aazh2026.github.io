@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Harness Engineering：AI Agent 时代真正的工程竞争在 scaffold 层"
+title: "\"Harness Engineering：AI Agent 时代真正的工程竞争在 scaffold 层\""
 date: 2026-05-13T00:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Harness Engineering, 架构]
 author: "@postcodeeng"

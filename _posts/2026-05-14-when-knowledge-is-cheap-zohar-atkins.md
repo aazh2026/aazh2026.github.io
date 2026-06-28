@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "知识便宜了，但你的问题变贵了"
+title: "\"知识便宜了，但你的问题变贵了\""
 date: 2026-05-14T08:00:00+08:00
 tags: [AI哲学, Jevons悖论, 知识管理]
 author: "@postcodeeng"

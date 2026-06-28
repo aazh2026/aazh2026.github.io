@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CDD：上下文工程即核心竞争力"
+title: "\"CDD：上下文工程即核心竞争力\""
 date: 2025-06-08T00:00:00+08:00
 tags: [AI-Native软件工程, CDD, 上下文工程, Context管理, AI协作]
 author: "@postcodeeng"

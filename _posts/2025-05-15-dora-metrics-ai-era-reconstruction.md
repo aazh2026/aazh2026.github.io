@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DORA指标在AI时代的重构：4大指标的新解释与基准线"
+title: "\"DORA指标在AI时代的重构：4大指标的新解释与基准线\""
 date: 2025-05-15T20:00:00+08:00
 tags: [AI-Native软件工程, DORA, 效能度量, 基准线]
 author: "@postcodeeng"

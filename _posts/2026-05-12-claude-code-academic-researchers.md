@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "从 ChatGPT 到 Claude Code：学术研究者的 AI 原生工作流"
+title: "\"从 ChatGPT 到 Claude Code：学术研究者的 AI 原生工作流\""
 date: 2026-05-12T14:00:00+08:00
 tags: [AI-Native软件工程, Claude Code, 学术研究, AI工具]
 author: "@postcodeeng"

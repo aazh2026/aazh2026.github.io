@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "增量需求不再头疼：Delta Specification 工作流"
+title: "\"增量需求不再头疼：Delta Specification 工作流\""
 date: 2026-03-11T09:00:00+08:00
 tags: [AI-Native, SDLC, 增量开发, 需求管理]
 author: "@postcodeeng"

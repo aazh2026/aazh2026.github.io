@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "组合优于继承：Agent 协作中的设计智慧"
+title: "\"组合优于继承：Agent 协作中的设计智慧\""
 date: 2026-03-15T10:00:00+08:00
 tags: [AI, Agent, Design-Patterns, Software-Architecture, Technical]
 author: "@postcodeeng"

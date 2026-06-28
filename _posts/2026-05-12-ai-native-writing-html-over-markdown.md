@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AI 原生写作：为什么我放弃 Markdown，改用 HTML"
+title: "\"AI 原生写作：为什么我放弃 Markdown，改用 HTML\""
 date: 2026-05-12T00:00:00+08:00
 tags: [AI-Native软件工程, Claude Code, 写作工具, 信息交互]
 author: "@postcodeeng"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "领域术语的统一治理：业务术语表与代码命名规范的AI辅助对齐"
+title: "\"领域术语的统一治理：业务术语表与代码命名规范的AI辅助对齐\""
 date: 2025-05-14T18:00:00+08:00
 tags: [AI-Native软件工程, 领域术语, 知识治理, 代码规范]
 author: "@postcodeeng"

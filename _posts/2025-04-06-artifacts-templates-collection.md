@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "交付件模板大全：开箱即用的 AI-Native SDLC 规格"
+title: "\"交付件模板大全：开箱即用的 AI-Native SDLC 规格\""
 date: 2025-04-06T00:00:00+08:00
 permalink: /posts/artifacts-templates-collection//
 tags: [Templates, AI-Native, SDLC, 交付件, 规范, 工具包]

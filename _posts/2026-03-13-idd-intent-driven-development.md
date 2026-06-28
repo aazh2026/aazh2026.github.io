@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "IDD：Intent-Driven Development——开发者能力迁移模型"
+title: "\"IDD：Intent-Driven Development——开发者能力迁移模型\""
 date: 2026-03-13T14:00:00+08:00
 tags: [AI-Native软件工程, IDD, 方法论重构, 开发者能力]
 author: "@postcodeeng"

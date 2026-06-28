@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "从Copilot到Agent：GitHub的AI战略全景图"
+title: "\"从Copilot到Agent：GitHub的AI战略全景图\""
 date: 2026-03-23T16:00:00+08:00
 permalink: /github-ai-strategy-2026/
 tags: [AI-Native, GitHub, Copilot, Agent, Strategy]

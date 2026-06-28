@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: 记忆的版本控制：当知识过时时怎么办
+title: "记忆的版本控制：当知识过时时怎么办"
 date: 2025-01-18T01:50:00+08:00
 tags: [版本控制, 知识更新, Schema迁移, 一致性]
 

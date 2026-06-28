@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prompt Engineering梯队建设：初中高级开发者的分层培养"
+title: "\"Prompt Engineering梯队建设：初中高级开发者的分层培养\""
 date: 2025-05-26T14:00:00+08:00
 tags: [AI-Native软件工程, 人才培养, Prompt工程, 组织能力]
 author: "@postcodeeng"

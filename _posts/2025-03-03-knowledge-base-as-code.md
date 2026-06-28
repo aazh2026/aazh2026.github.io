@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "知识库即代码：把架构决策装进Git的时光机"
+title: "\"知识库即代码：把架构决策装进Git的时光机\""
 date: 2025-03-03T22:00:00+08:00
 tags: [KBaaC, 知识管理, ADR, Git, 架构决策, 文档工程]
 author: "@postcodeeng"

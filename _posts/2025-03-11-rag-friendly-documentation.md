@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "写给AI看的文档：RAG时代的写作新范式"
+title: "\"写给AI看的文档：RAG时代的写作新范式\""
 date: 2025-03-11T20:00:00+08:00
 tags: [RAG, 文档工程, 知识管理, LLM, 写作范式]
 author: "@postcodeeng"
