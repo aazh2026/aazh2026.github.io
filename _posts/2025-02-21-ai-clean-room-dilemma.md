@@ -31,6 +31,8 @@ antirez的质疑戳中了一个更深层的痛点：**当我们把AI放入Clean 
 
 ## 第一部分：Clean Room方法论的历史与本质
 
+<object data="/assets/images/2025-02-21-ai-clean-room-01-clean-room-comparison.svg" type="image/svg+xml" width="100%"></object>
+
 要理解AI Clean Room的困境，我们必须先回到Clean Room的起源。
 
 ### 1982年的Compaq传奇

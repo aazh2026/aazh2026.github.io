@@ -187,7 +187,6 @@ def get_order_history(user_id: str, pagination: Pagination):
 将上述四个支柱简化，就是**CCC模型**（Triple-C Model）：
 
 <object data="/assets/images/2025-02-16-prd-ccc-model.svg" type="image/svg+xml" width="100%"></object>
-```
 
 CCC模型是一个**思维框架**，不强制特定格式。你可以用YAML、JSON、TOML、甚至纯文本（带结构化标记）来实现。关键是**思考方式**的转变：从"描述功能"到"定义规格"。
 

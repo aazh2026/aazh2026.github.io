@@ -165,6 +165,8 @@ class UserProfile:
 - 中层：过去20个会话的合并摘要
 - 顶层：历史总摘要
 
+![会话摘要金字塔结构](/assets/images/2025-01-12-consistency-maintenance-01-pyramid.png)
+
 **检索时：**
 - 优先加载底层（细节准确）
 - 补充中层（近期上下文）

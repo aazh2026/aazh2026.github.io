@@ -47,6 +47,10 @@ agency-agents的核心架构理念可以用一个词概括：**组织化**。它
 
 **可替换性**。如果前端专家Agent表现不佳，可以替换为另一个前端Agent，而不影响整个系统的其他部分。这种可替换性是模块化架构的核心价值。
 
+### 核心架构图：角色编排 vs 流程编排
+
+<object data="/assets/images/2025-02-11-agency-agents-01-role-architecture.svg" type="image/svg+xml" width="100%"></object>
+
 ### 与CrewAI的对比：两种编排哲学
 
 提到多Agent框架，不能不提CrewAI。这两个项目代表了多Agent编排的两种不同哲学。

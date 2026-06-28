@@ -1,0 +1,124 @@
+<svg viewBox="0 0 820 500" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#D97757"/>
+    </marker>
+    <marker id="arr2" markerWidth="7" markerHeight="7" refX="0" refY="3" orient="auto">
+      <path d="M6,0 L0,3 L6,6 Z" fill="#788C5D"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="820" height="500" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="410" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">AI时代 Clean Room 困境：传统 vs AI实现对比</text>
+  <text x="410" y="50" text-anchor="middle" font-size="12" fill="#87867F">信息隔离 · 独立实现 · 可追溯性 — 三个核心要素的差异</text>
+
+  <!-- ======================= -->
+  <!-- LEFT: Traditional Clean Room -->
+  <!-- ======================= -->
+  <rect x="20" y="68" width="380" height="390" rx="10" fill="#E3DACC" stroke="#788C5D" stroke-width="2.5"/>
+
+  <!-- Header -->
+  <rect x="20" y="68" width="380" height="36" rx="10" fill="#788C5D"/>
+  <rect x="20" y="90" width="380" height="14" fill="#788C5D"/>
+  <text x="210" y="91" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">传统 Clean Room（1982年 Compaq案例）</text>
+
+  <!-- Step 1: Team A reads code -->
+  <rect x="36" y="118" width="348" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="36" y="118" width="26" height="52" rx="6" fill="#788C5D"/>
+  <text x="49" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">A</text>
+  <text x="54" y="136" font-size="10" font-weight="700" fill="#141413">团队A（解剖组）</text>
+  <text x="54" y="150" font-size="9" fill="#87867F">仔细阅读原始代码 → 写出功能规格说明（不含代码）</text>
+
+  <!-- Arrow down -->
+  <path d="M210,174 L210,188" stroke="#788C5D" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Information Barrier -->
+  <rect x="36" y="192" width="348" height="42" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="210" y="211" text-anchor="middle" font-size="10" font-weight="700" fill="#D97757">🧱 信息隔离墙 — 团队A与B完全隔离，不能交流</text>
+  <text x="210" y="226" text-anchor="middle" font-size="9" fill="#87867F">物理/逻辑严格隔离 · 无任何直接信息传递</text>
+
+  <!-- Arrow down -->
+  <path d="M210,238 L210,252" stroke="#788C5D" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Team B implements -->
+  <rect x="36" y="256" width="348" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="36" y="256" width="26" height="52" rx="6" fill="#788C5D"/>
+  <text x="49" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">B</text>
+  <text x="54" y="274" font-size="10" font-weight="700" fill="#141413">团队B（实现组）</text>
+  <text x="54" y="288" font-size="9" fill="#87867F">只根据规格说明，从头编写代码 — 从未接触原始代码</text>
+
+  <!-- Arrow down -->
+  <path d="M210,312 L210,326" stroke="#788C5D" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Result -->
+  <rect x="36" y="330" width="348" height="52" rx="6" fill="#788C5D" opacity="0.15" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="210" y="352" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">✓ 法律合规的功能兼容实现</text>
+  <text x="210" y="368" text-anchor="middle" font-size="9" fill="#87867F">代码完全不同，不侵犯版权 · 可用新许可证发布</text>
+
+  <!-- Three pillars -->
+  <text x="210" y="400" text-anchor="middle" font-size="9" font-weight="700" fill="#788C5D">三个核心要素</text>
+  <text x="72" y="420" text-anchor="middle" font-size="9" fill="#141413">1. 信息隔离 ✓</text>
+  <text x="210" y="420" text-anchor="middle" font-size="9" fill="#141413">2. 独立实现 ✓</text>
+  <text x="348" y="420" text-anchor="middle" font-size="9" fill="#141413">3. 可追溯文档 ✓</text>
+
+  <!-- ======================= -->
+  <!-- RIGHT: AI Clean Room -->
+  <!-- ======================= -->
+  <rect x="420" y="68" width="380" height="390" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2.5"/>
+
+  <!-- Header -->
+  <rect x="420" y="68" width="380" height="36" rx="10" fill="#D97757"/>
+  <rect x="420" y="90" width="380" height="14" fill="#D97757"/>
+  <text x="610" y="91" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">AI Clean Room（2026 Anthropic实验）</text>
+
+  <!-- Step 1: AI trained on code -->
+  <rect x="436" y="118" width="348" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="436" y="118" width="26" height="52" rx="6" fill="#D97757"/>
+  <text x="449" y="150" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">🤖</text>
+  <text x="454" y="136" font-size="10" font-weight="700" fill="#141413">AI（LLM）</text>
+  <text x="454" y="150" font-size="9" fill="#87867F">训练数据包含海量开源代码（GPL/MIT/专有）</text>
+
+  <!-- Arrow down -->
+  <path d="M610,174 L610,188" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Prompt barrier (problem!) -->
+  <rect x="436" y="192" width="348" height="42" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="610" y="211" text-anchor="middle" font-size="10" font-weight="700" fill="#D97757">❓ Prompt隔离墙 — "不要参考任何现有实现"</text>
+  <text x="610" y="226" text-anchor="middle" font-size="9" fill="#87867F">无法证明AI没有从训练记忆中提取代码结构</text>
+
+  <!-- Arrow down -->
+  <path d="M610,238 L610,252" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Step 3: AI generates code -->
+  <rect x="436" y="256" width="348" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <rect x="436" y="256" width="26" height="52" rx="6" fill="#D97757"/>
+  <text x="449" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">🤖</text>
+  <text x="454" y="274" font-size="10" font-weight="700" fill="#141413">AI 生成代码</text>
+  <text x="454" y="288" font-size="9" fill="#87867F">根据Prompt描述生成 — 实质是训练记忆的重组，而非独立创作</text>
+
+  <!-- Arrow down -->
+  <path d="M610,312 L610,326" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Result -->
+  <rect x="436" y="330" width="348" height="52" rx="6" fill="#D97757" opacity="0.15" stroke="#D97757" stroke-width="1.5"/>
+  <text x="610" y="352" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">⚠ 法律灰色地带</text>
+  <text x="610" y="368" text-anchor="middle" font-size="9" fill="#87867F">AI输出是否继承训练数据许可证？无明确判例</text>
+
+  <!-- Three pillars with question marks -->
+  <text x="610" y="400" text-anchor="middle" font-size="9" font-weight="700" fill="#D97757">三个核心要素</text>
+  <text x="472" y="420" text-anchor="middle" font-size="9" fill="#87867F">1. 信息隔离 ❓</text>
+  <text x="610" y="420" text-anchor="middle" font-size="9" fill="#87867F">2. 独立实现 ❓</text>
+  <text x="748" y="420" text-anchor="middle" font-size="9" fill="#87867F">3. 可追溯文档 ❓</text>
+
+  <!-- VS divider -->
+  <circle cx="410" cy="270" r="20" fill="#141413"/>
+  <text x="410" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">VS</text>
+  <text x="410" y="278" text-anchor="middle" font-size="8" fill="#D1CFC5">对比</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="466" width="780" height="1" fill="#D1CFC5"/>
+  <text x="410" y="484" text-anchor="middle" font-size="10" fill="#87867F">核心问题：AI没有"接触"代码的概念 — 它从训练数据中学习，但无法证明"没有参考"特定代码</text>
+</svg>

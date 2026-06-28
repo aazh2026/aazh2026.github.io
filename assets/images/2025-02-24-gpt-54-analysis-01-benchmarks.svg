@@ -1,0 +1,117 @@
+<svg viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #FAF9F5; }
+      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
+      .text-sub { fill: #87867F; font-family: system-ui, sans-serif; }
+      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; font-weight: 600; }
+      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
+      .axis-line { stroke: #D1CFC5; stroke-width: 1; }
+      .grid-line { stroke: #E3DACC; stroke-width: 1; stroke-dasharray: 4,4; }
+      .gpt54-fill { fill: #D97757; }
+      .gpt53-fill { fill: #D1CFC5; }
+      .claude-fill { fill: #788C5D; }
+      .bar-label { font-family: system-ui, sans-serif; font-size: 11; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="540" class="bg"/>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" class="text-main" font-size="17" font-weight="700">GPT-5.4 基准测试性能对比</text>
+  <text x="450" y="56" text-anchor="middle" class="text-sub" font-size="12">Benchmark Performance — GPT-5.4 vs GPT-5.3-Codex vs Claude 4</text>
+
+  <!-- Y-axis labels -->
+  <text x="85" y="98" text-anchor="end" class="text-sub" font-size="11">HumanEval</text>
+  <text x="85" y="158" text-anchor="end" class="text-sub" font-size="11">MBPP</text>
+  <text x="85" y="218" text-anchor="end" class="text-sub" font-size="11">SWE-bench</text>
+  <text x="85" y="278" text-anchor="end" class="text-sub" font-size="11">DS-1000</text>
+
+  <!-- Y-axis lines -->
+  <line x1="90" y1="90" x2="90" y2="310" class="axis-line"/>
+  <line x1="90" y1="310" x2="820" y2="310" class="axis-line"/>
+
+  <!-- Horizontal grid lines at 25, 50, 75, 100 -->
+  <line x1="90" y1="240" x2="820" y2="240" class="grid-line"/>
+  <line x1="90" y1="170" x2="820" y2="170" class="grid-line"/>
+  <line x1="90" y1="100" x2="820" y2="100" class="grid-line"/>
+
+  <!-- Y-axis scale labels -->
+  <text x="85" y="100" text-anchor="end" class="text-sub" font-size="10">100%</text>
+  <text x="85" y="170" text-anchor="end" class="text-sub" font-size="10">75%</text>
+  <text x="85" y="240" text-anchor="end" class="text-sub" font-size="10">50%</text>
+  <text x="85" y="310" text-anchor="end" class="text-sub" font-size="10">25%</text>
+  <text x="85" y="340" text-anchor="end" class="text-sub" font-size="10">0%</text>
+
+  <!-- X-axis labels -->
+  <text x="455" y="335" text-anchor="middle" class="text-sub" font-size="10">HumanEval</text>
+  <text x="455" y="355" text-anchor="middle" class="text-sub" font-size="10">87.2%</text>
+
+  <!-- HumanEval bars -->
+  <!-- GPT-5.3-Codex: 87.2% -> y = 310 - (87.2/100*220) = 118.2 -->
+  <rect x="150" y="118" width="55" height="192" rx="3" fill="#D1CFC5"/>
+  <text x="177" y="112" text-anchor="middle" class="bar-label" fill="#87867F">87.2%</text>
+  <text x="177" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.3</text>
+
+  <!-- GPT-5.4: 91.5% -> y = 310 - (91.5/100*220) = 108.7 -->
+  <rect x="210" y="109" width="55" height="201" rx="3" fill="#D97757"/>
+  <text x="237" y="103" text-anchor="middle" class="bar-label" fill="#D97757" font-weight="600">91.5%</text>
+  <text x="237" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.4</text>
+
+  <!-- Claude 4: ~88% -->
+  <rect x="270" y="116" width="55" height="194" rx="3" fill="#788C5D"/>
+  <text x="297" y="110" text-anchor="middle" class="bar-label" fill="#788C5D">88.0%</text>
+  <text x="297" y="370" text-anchor="middle" class="text-sub" font-size="10">Claude 4</text>
+
+  <!-- SWE-bench bars (second group) -->
+  <!-- GPT-5.3-Codex: 48.3% -> y = 310 - (48.3/100*220) = 203.7 -->
+  <rect x="380" y="204" width="55" height="106" rx="3" fill="#D1CFC5"/>
+  <text x="407" y="198" text-anchor="middle" class="bar-label" fill="#87867F">48.3%</text>
+  <text x="407" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.3</text>
+
+  <!-- GPT-5.4: 55.7% -> y = 310 - (55.7/100*220) = 187.5 -->
+  <rect x="440" y="188" width="55" height="122" rx="3" fill="#D97757"/>
+  <text x="467" y="182" text-anchor="middle" class="bar-label" fill="#D97757" font-weight="600">55.7%</text>
+  <text x="467" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.4</text>
+
+  <!-- Claude 4: ~50% -->
+  <rect x="500" y="200" width="55" height="110" rx="3" fill="#788C5D"/>
+  <text x="527" y="194" text-anchor="middle" class="bar-label" fill="#788C5D">50.1%</text>
+  <text x="527" y="370" text-anchor="middle" class="text-sub" font-size="10">Claude 4</text>
+
+  <!-- DS-1000 bars (third group) -->
+  <!-- GPT-5.3-Codex: 76.5% -> y = 310 - (76.5/100*220) = 141.7 -->
+  <rect x="610" y="142" width="55" height="168" rx="3" fill="#D1CFC5"/>
+  <text x="637" y="136" text-anchor="middle" class="bar-label" fill="#87867F">76.5%</text>
+  <text x="637" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.3</text>
+
+  <!-- GPT-5.4: 81.2% -> y = 310 - (81.2/100*220) = 131.4 -->
+  <rect x="670" y="131" width="55" height="179" rx="3" fill="#D97757"/>
+  <text x="697" y="125" text-anchor="middle" class="bar-label" fill="#D97757" font-weight="600">81.2%</text>
+  <text x="697" y="370" text-anchor="middle" class="text-sub" font-size="10">GPT-5.4</text>
+
+  <!-- Claude 4: ~78% -->
+  <rect x="730" y="138" width="55" height="172" rx="3" fill="#788C5D"/>
+  <text x="757" y="132" text-anchor="middle" class="bar-label" fill="#788C5D">78.3%</text>
+  <text x="757" y="370" text-anchor="middle" class="text-sub" font-size="10">Claude 4</text>
+
+  <!-- SWE-bench section label -->
+  <rect x="380" y="390" width="180" height="22" rx="4" fill="#FEF3F0" stroke="#D97757" stroke-width="1"/>
+  <text x="470" y="405" text-anchor="middle" class="text-accent" font-size="11" font-weight="600">↑ 最大提升 +7.4% (SWE-bench)</text>
+
+  <!-- Key insight box -->
+  <rect x="30" y="430" width="840" height="75" rx="8" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="50" y="452" class="text-main" font-size="12" font-weight="700">核心洞察</text>
+  <text x="50" y="472" class="text-sub" font-size="11">• GPT-5.4 在SWE-bench（真实软件工程任务）提升最大：+7.4%</text>
+  <text x="50" y="488" class="text-sub" font-size="11">• 通用知识对编码有显著加成：理解业务意图、跨领域推理、更长的上下文窗口</text>
+  <text x="50" y="504" class="text-main" font-size="11">• 272k tokens分界线覆盖90%代码库，定价策略精心设计</text>
+
+  <!-- Legend -->
+  <rect x="640" y="450" width="12" height="12" rx="2" fill="#D97757"/>
+  <text x="658" y="460" class="text-sub" font-size="10">GPT-5.4</text>
+  <rect x="720" y="450" width="12" height="12" rx="2" fill="#D1CFC5"/>
+  <text x="738" y="460" class="text-sub" font-size="10">GPT-5.3-Codex</text>
+  <rect x="640" y="470" width="12" height="12" rx="2" fill="#788C5D"/>
+  <text x="658" y="480" class="text-sub" font-size="10">Claude 4</text>
+</svg>
