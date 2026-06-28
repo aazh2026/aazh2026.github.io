@@ -919,22 +919,7 @@ tdd-process.md     → 流程约束
 - Harness 是**理论框架**
 - Agent OS 是**实现载体**
 - everything-claude-code 是**具体实现**
-│  Layer 3: 控制层 (Rules)                                 │
-│  ├── coding-style.md: 编码规范                           │
-│  ├── security.md: 安全规则                               │
-│  └── testing.md: 测试要求                                │
-├─────────────────────────────────────────────────────────┤
-│  Layer 2: 执行层 (Commands)                              │
-│  ├── /plan: 规划模式                                     │
-│  ├── /tdd: TDD 开发模式                                  │
-│  ├── /verify: 验证模式                                   │
-│  └── /review: 审查模式                                   │
-├─────────────────────────────────────────────────────────┤
-│  Layer 1: 工具层 (MCP)                                   │
-│  ├── GitHub MCP: 代码仓库操作                            │
-│  ├── Supabase MCP: 数据库操作                            │
-│  └── API MCP: 外部服务集成                               │
-└─────────────────────────────────────────────────────────┘
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 ```
 
 ### Layer 5: 角色层 — 多 Agent 分裂

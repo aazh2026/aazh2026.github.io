@@ -183,19 +183,8 @@ v2.0.0 - 重构了Prompt结构（不兼容变更）
 ```
 
 **审查流程**：
-```
-开发者提交新Prompt
-        ↓
-自动化检查（格式、安全扫描）
-        ↓
-同行审查（Prompt工程师）
-        ↓
-效果测试（A/B测试）
-        ↓
-合并到主分支
-        ↓
-发布到Prompt库
-```
+
+<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-02-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### CI/CD for Prompts
 
