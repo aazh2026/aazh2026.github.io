@@ -284,7 +284,7 @@ AI时代的思维转变体现在四个层面：从"写得多快"到"改得多快
 
 ### 度量仪表盘
 
-<img src="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.jpg" alt="度量仪表盘" width="100%">
+<img src="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.jpg" alt="度量仪表盘" width="100%" loading="lazy" decoding="async">
 
 ---
 

@@ -1,0 +1,90 @@
+name: Link Check
+
+# Catches broken internal links and missing asset references before they
+# reach production. Triggers on PR + push to main.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Don't run on markdown-only changes — saves CI minutes.
+# Run when posts, includes, layouts, or assets change.
+  push:
+    paths:
+      - '_posts/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'assets/**'
+      - '.github/workflows/link-check.yml'
+  pull_request:
+    paths:
+      - '_posts/**'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'assets/**'
+      - '.github/workflows/link-check.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "link-check"
+  cancel-in-progress: true
+
+jobs:
+  link-check:
+    name: Check internal links and asset references
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 0
+
+      - name: Build site
+        run: bundle exec jekyll build --baseurl ""
+        env:
+          JEKYLL_ENV: production
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --offline
+            --no-progress
+            --exclude-loopback
+            --exclude-mail
+            --exclude 'https://github.com/.*/issues/new'
+            --exclude 'https://x.com/.*'
+            --exclude 'https://twitter.com/.*'
+            --exclude 'https://.*\.gstatic\.com/.*'
+            --exclude 'https://fonts\..*\.com/.*'
+            --format compact
+            --max-concurrency 8
+            --timeout 10
+            --retry-wait-time 2
+            --accept '200,301,302,303,304,307,308'
+            './_site/**/*.html'
+            './_posts/**/*.md'
+            './_includes/**/*.html'
+            './_layouts/**/*.html'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Print summary
+        if: always()
+        run: |
+          echo "## Link check results" >> $GITHUB_STEP_SUMMARY
+          echo "See lychee logs above for broken links." >> $GITHUB_STEP_SUMMARY
