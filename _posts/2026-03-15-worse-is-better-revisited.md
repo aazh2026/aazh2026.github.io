@@ -88,15 +88,15 @@ Worse is Better 真正的洞见在于：
 
 **Worse is Better 的智慧**：快速获得一个可用的版本，在真实世界中学习，然后迭代。
 
-{% figure center %}
+<figure style="text-align:center">
 <img src="/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.png" alt="Fitness Landscape: Worse is Better vs The Right Thing" style="width:100%;height:auto;">
 *图 1：Fitness Landscape——Worse is Better 接受局部最优，快速迭代；The Right Thing 追求全局最优，但路径更长、风险更高。*
-{% endfigure %}
+</figure>
 
-{% figure center %}
+<figure style="text-align:center">
 <img src="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.png" alt="Iteration Flywheel" style="width:100%;height:auto;">
 *图 2：Worse is Better 迭代飞轮——快速发布 → 获取反馈 → AI 迭代 → 持续进化，代码生成成本趋近于零使快速试错成为主动策略。*
-{% endfigure %}
+</figure>
 
 ### 复利效应
 
