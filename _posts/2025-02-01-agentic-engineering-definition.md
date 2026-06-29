@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **Software 3.0的工程化** — 智能体编排是意图驱动、可验证、通过工程方法管理的，需要建立新的核心不变量
 > 4. **工程本质永存** — 可验证性、模块化、人类在关键节点的不可替代性，穿越技术代际而保持不变
 
-# Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移
+## Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移
 
 > *当Andrej Karpathy在2024年底写下"The hottest new programming language is English"时，他或许没有意识到，这句话将在一年后成为需要被超越的历史注脚。从"氛围编码"到"工程化智能体开发"，我们正见证软件工程本质的位移——这不是工具的迭代，而是思维方式的跃迁。*
 

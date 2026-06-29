@@ -8,18 +8,6 @@
 
 ## 📚 内容概览
 
-### 📡 Daily Signal | 每日信号
-
-每日情报简报，从信息洪流中提取有价值的信号：
-
-- 🔥 **Reddit 热点** — 开发者社区的真实声音
-- ⭐ **GitHub Trending** — 开源世界的技术风向标
-- 📈 **市场动向** — 科技投资与商业战略信号
-
-**[→ 查看今日情报](https://aazh2026.github.io/daily-signal/)**
-
----
-
 ### 🦞 Agent OS 系列（10篇，已完结）
 
 从 SaaS 到 Agent OS 的完整迁移指南。
@@ -42,7 +30,7 @@
 
 ---
 
-### 🧠 AISE 系列（27篇）
+### 🧠 AISE 系列（50+篇）
 
 AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
@@ -52,6 +40,14 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 - Context 管理是核心竞争力
 
 **[→ 阅读 AISE 系列](https://aazh2026.github.io/aise-series/)**
+
+---
+
+### 🔒 Memory Engineering 系列（10篇）
+
+从 Cold Start 到 Graceful Degradation：构建 AI 记忆系统的完整工程。
+
+**[→ 阅读 Memory Engineering 系列](https://aazh2026.github.io/memory-engineering-series/)**
 
 ---
 
@@ -84,23 +80,44 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 📝 最新文章
 
-- [Daily Signal | 2026-03-10](https://aazh2026.github.io/reddit-digest/)
-- [Agent OS：SaaS 之后的下一个软件形态](https://aazh2026.github.io/agent-os-future-of-software/)
-- [Agent OS 的五层架构模型](https://aazh2026.github.io/agent-os-five-layer-architecture/)
-- [CRM 的 Agent 化重构](https://aazh2026.github.io/crm-agent-reconstruction/)
-- [Agent Economy](https://aazh2026.github.io/agent-economy/)
+- [AI 编程代理的工程纪律：agent-skills 的反直觉设计](https://aazh2026.github.io/agent-skills/)
+- [Loop Engineering：把你从流程里抽出来](https://aazh2026.github.io/loop-engineering/)
+- [提示词是输入，循环是过程](https://aazh2026.github.io/loop-engineering/)
+- [当 AI 编程走向确定性：Dynamic Workflows 与 Agent Harness 的殊途同归](https://aazh2026.github.io/deterministic-ai-programming/)
+- [开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训](https://aazh2026.github.io/open-source-ai-slop/)
 
-**[→ 查看全部文章](https://aazh2026.github.io/archive)**
+**[→ 查看全部 205 篇文章](https://aazh2026.github.io/archive)**
 
 ---
 
 ## 🔧 技术栈
 
-- **框架**：Jekyll + Minima
-- **部署**：GitHub Pages
-- **搜索**：Algolia / 本地搜索
-- **评论**：Giscus
-- **主题**：支持深色/浅色模式
+- **框架**：Jekyll 4.3 + Minima 主题
+- **部署**：GitHub Pages (4 套 CI workflow)
+- **SEO**：jekyll-seo-tag + 每篇独立 OG 图
+- **a11y**：520 个 `<object>` 全部带 `aria-label` + skip-to-content
+- **评论**：Giscus (GitHub Discussions 桥接)
+- **主题**：浅色 / 深色 / 自动跟随系统
+- **PWA**：webmanifest + OpenSearch
+
+### 构建产物
+
+- 205 篇文章
+- 546 SVG（最大 36 KB，SVGO 压缩 17.4%）
+- 204 张独立 OG 社交分享图（1200×630）
+- 5 套 CI workflow + 1 个 pre-commit hook
+- 3 个本地脚本（frontmatter / link-check / OG 生成 / 颜色对比）
+
+---
+
+## 🛡️ 质量保证
+
+每个 PR 自动跑：
+1. **YAML frontmatter 验证**（Python yaml.safe_load）
+2. **内部 link 检查**（Node，178 个链接全检）
+3. **markdownlint**（post 写作规范）
+4. **颜色对比度**（WCAG AA）
+5. **lychee**（构建后外链审计）
 
 ---
 
@@ -108,7 +125,7 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 - **博客**：https://aazh2026.github.io
 - **RSS**：https://aazh2026.github.io/feed.xml
-- **邮箱**：sophi@example.com
+- **Sitemap**：https://aazh2026.github.io/sitemap.xml
 - **GitHub**：[@aazh2026](https://github.com/aazh2026)
 
 ---
@@ -121,4 +138,4 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ---
 
-*Built with ❤️ and AI*
+*Built with Jekyll + ❤️ + AI assistance*

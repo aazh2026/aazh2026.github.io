@@ -18,7 +18,7 @@ series: AI-Native Engineering
 > 3. **三条融合路径** — 向量为主图谱验证、动态权重路由、图谱为主向量补充，各适其场
 > 4. **陷阱在于维护** — 实体歧义、覆盖度不足、一致性维护是三个主要挑战
 
-# 知识图谱与向量检索：为什么1+1>3
+## 知识图谱与向量检索：为什么1+1>3
 
 ## 引言：向量检索的"幻觉"问题
 
@@ -166,7 +166,7 @@ from langchain.graphs import NetworkxEntityGraph
 from langchain.chains import RetrievalQA
 from langchain.agents import initialize_agent, Tool
 
-# 1. 向量检索器（Chroma）
+## 1. 向量检索器（Chroma）
 vectorstore = Chroma.from_documents(docs, embeddings)
 vector_retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 

@@ -1,0 +1,16 @@
+# Security headers for GitHub Pages
+# https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page
+# Note: GitHub Pages does NOT serve these by default. This file is here for documentation
+# and would only take effect if served via Cloudflare Pages or Netlify.
+# For GH Pages, the security headers are set automatically:
+#   - Strict-Transport-Security
+#   - X-Content-Type-Options: nosniff
+#   - X-Frame-Options: DENY
+#   - Referrer-Policy: no-referrer-when-downgrade
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://giscus.app https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https: https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src https://giscus.app
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()

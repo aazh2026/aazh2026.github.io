@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **知识热点流失** — 当王工离职时，他带走了87%的支付网关知识，真正的解决方案是文化而不是工具
 > 4. **AI是放大镜** — CodeArchaeologist帮助理解"为什么"，但人的判断才是考古的核心
 
-# 新员工的第一周：在百万行遗留代码中考古
+## 新员工的第一周：在百万行遗留代码中考古
 
 > *" archaeology is not about digging up things, it's about digging up people. "*
 >

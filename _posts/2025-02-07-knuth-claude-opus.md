@@ -9,7 +9,7 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-# 当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话
+## 当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话
 
 > **TL;DR**
 >

@@ -27,6 +27,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-last-modified-at
+  - jekyll-minifier
+
+# Minifier config
+minifier:
+  type: html
+  preserve: 'pre,code,script,style'
 
 # last_modified_at 配置
 last_modified_at:

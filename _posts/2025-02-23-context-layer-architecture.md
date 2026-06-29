@@ -19,7 +19,7 @@ series: AI-Native Engineering
 > 3. **标准化架构** — Context Layer通过Query Interface、Aggregation Engine、Caching Layer和数据源连接器为AI提供标准化的上下文获取框架
 > 4. **基础设施定位** — Context Layer不是可选的附加组件，而是企业级AI系统的基础设施，与PRD结构化共同构成AI的"需求+背景"双支柱
 
-# Context Layer架构：企业级AI系统的上下文分层设计与实现
+## Context Layer架构：企业级AI系统的上下文分层设计与实现
 
 > *在上一篇文章中，我们讨论了PRD的结构化转型——将需求从自然语言文档转变为机器可读的语义规格。但这只是第一步。当AI系统需要处理这些规格、理解业务逻辑、生成代码时，它面临一个根本问题：上下文在哪里？Context Layer架构就是为了解决这个问题而生——它为企业级AI系统提供了一个标准化的上下文分层框架。*
 

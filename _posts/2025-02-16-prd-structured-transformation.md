@@ -9,7 +9,7 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-# PRD的结构化转型：从Word到可执行的语义规格说明
+## PRD的结构化转型：从Word到可执行的语义规格说明
 
 > **TL;DR**
 >

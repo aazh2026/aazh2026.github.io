@@ -100,6 +100,35 @@
   }
 }
 </script>
+
+<!-- BreadcrumbList (for posts in a series) -->
+{%- if page.series -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ site.url }}/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "{{ page.series }}",
+      "item": "{{ site.url }}{%- if page.series == 'Agent OS' -%}/agent-os-series/{%- elsif page.series == 'AI-Native Engineering' or page.series contains 'AISE' or page.series contains 'AI-Native' -%}/aise-series/{%- elsif page.series contains 'Memory' -%}/memory-engineering-series/{%- else -%}/archive/{%- endif -%}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ page_title }}"
+    }
+  ]
+}
+</script>
+{%- endif -%}
 {% else %}
 <script type="application/ld+json">
 {

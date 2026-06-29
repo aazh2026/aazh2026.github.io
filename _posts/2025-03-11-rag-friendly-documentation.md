@@ -9,7 +9,7 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-# 写给AI看的文档：RAG时代的写作新范式
+## 写给AI看的文档：RAG时代的写作新范式
 
 > **TL;DR**
 >
