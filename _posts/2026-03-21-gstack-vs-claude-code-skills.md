@@ -4,6 +4,7 @@ title: "\"gstack vs Claude Code Skills：AI编程的两种哲学\""
 date: 2026-03-21T10:00:00+08:00
 permalink: /gstack-vs-claude-code-skills/
 tags: [AI-Native, Claude-Code, gstack, Skills, YC, Anthropic]
+description: "gstack与Skills不是两种对立的哲学，而是不同层次的协作——Skills是底层能力扩展机制，gstack是基于该机制构建的开发流程工具。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

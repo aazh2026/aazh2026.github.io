@@ -3,6 +3,7 @@ layout: post
 title: "\"AI-Native 架构决策记录：从 ADR 到 AIDR\""
 date: 2026-03-14T10:00:00+08:00
 tags: [AI-Native软件工程, 架构, ADR, AIDR, 决策记录]
+description: "AIDR将架构决策从静态文档升级为可执行规范，决策即代码、规则即执行、版本即历史——没有自动验证的架构规范只是墙上标语。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #53
 

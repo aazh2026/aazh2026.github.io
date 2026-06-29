@@ -5,6 +5,7 @@ date: 2026-05-13T12:00:00+08:00
 tags: [AI-Native软件工程, Claude Skills, 工作流自动化, 提示词工程]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Saved prompt 是对话起点，Skill 是训练有素的员工——质的区别，不是量的。十个 Skills 每周各节省 30 分钟，等于每年 6.5 个完整工作周，复利效应是积累可执行的工作流资产。"
 ---
 
 > **TL;DR**

@@ -5,6 +5,7 @@ date: 2025-04-18T12:00:00+08:00
 tags: [AI治理, 微服务, 大规模团队, 工程实践, 组织管理]
 author: "@postcodeeng"
 series: AI-Native软件工程
+description: "200人微服务团队如何系统化治理AI使用，通过工具标准化、Prompt规范化、代码溯源三大支柱和自动化审查流水线实现规模化管理。"
 
 redirect_from:
   - /large-scale-ai-governance/

@@ -5,6 +5,7 @@ date: 2025-04-19T10:35:00+08:00
 tags: [AI-Native软件工程, 遗留系统, 技术债务]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "AI无法拯救遗留系统，因为真正的债务是认知债务（占80%），而非技术债务。渐进式绞杀者模式优于彻底重写，AI的角色是辅助迁移而非主导重写。"
 ---
 
 > **TL;DR**

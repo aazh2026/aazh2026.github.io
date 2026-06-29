@@ -3,6 +3,7 @@ layout: post
 title: '"Loop Engineering：把"你"从流程里抽出来"'
 date: 2026-06-27T10:00:00+08:00
 tags: [AI-Native软件工程, Loop Engineering, Agent, 工程效能]
+description: "Loop Engineering让人从"操作AI"转变为"设计AI运行的循环"，AI负责运转，人为后果负责——这是AI编程范式的权力结构重塑。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

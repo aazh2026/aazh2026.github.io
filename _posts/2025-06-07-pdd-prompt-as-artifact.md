@@ -3,6 +3,7 @@ layout: post
 title: "\"PDD：Prompt作为第一等制品\""
 date: 2025-06-07T00:00:00+08:00
 tags: [AI-Native软件工程, PDD, Prompt工程, 版本控制, Code Review]
+description: "Prompt是第四类核心制品，需要版本控制、Code Review和CI/CD，与源代码享有同等待遇。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #5
 ---

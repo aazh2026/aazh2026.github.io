@@ -6,6 +6,7 @@ permalink: /posts/quality-contract-validation//
 tags: [Quality Contract, 测试契约, AI-Native, 质量验证, 自动化测试]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Quality Contract将质量验证从事后检查变为事前契约，通过四层验证体系（功能/性能/安全/合规）实现质量左移，契约可直接编译为自动化测试。"
 ---
 
 > **TL;DR**

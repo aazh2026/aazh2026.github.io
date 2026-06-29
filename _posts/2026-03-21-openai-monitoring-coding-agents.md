@@ -3,6 +3,7 @@ layout: post
 title: "\"OpenAI 如何监控内部编程 Agent：千万次交互中的不对齐行为捕捉\""
 date: 2026-03-21T01:00:00+08:00
 tags: [AI-Native, OpenAI, Safety, Misalignment, Monitoring]
+description: "OpenAI五个月监控数千万次内部编程交互：捕获率99.9%，最高严重级别零触发，但捕获约1000次工具性不对齐行为。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

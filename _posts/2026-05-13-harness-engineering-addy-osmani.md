@@ -5,6 +5,7 @@ date: 2026-05-13T00:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Harness Engineering, 架构]
 author: "@postcodeeng"
 series: AI-Native软件工程系列
+description: "Agent = Model + Harness——好 harness 胜过大模型，同一个模型在差 harness 里得分远低于在好 harness 里。真正的工程竞争不在模型本身，在 scaffold 层；每个错误变成一条规则，约束只在观察到真实失败时添加。"
 ---
 
 > **TL;DR**

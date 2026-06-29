@@ -3,6 +3,7 @@ layout: post
 title: "\"AI-Native 详细设计：从文档到可执行上下文\""
 date: 2026-03-11T08:00:00+08:00
 tags: [AI-Native, SDLC, 软件工程, 详细设计]
+description: "AI-Native详细设计从给人读的文档变成给AI执行的可执行上下文，六大Artifacts驱动生成。"
 author: "@postcodeeng"
 series: AI-Native SDLC 实践
 ---

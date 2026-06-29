@@ -5,6 +5,7 @@ date: 2026-05-14T08:00:00+08:00
 tags: [AI哲学, Jevons悖论, 知识管理]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Jevons 悖论在知识领域的应用：效率产生需求，知识变便宜导致对洞察的需求爆炸。瓶颈从可及性迁移到 Chiddush（真正的洞见）——AI 是新的磨坊，但吃生小麦的人尝不到面包；问题从\"我能找到吗\"变成\"我看到了什么\"。"
 ---
 
 > **TL;DR**

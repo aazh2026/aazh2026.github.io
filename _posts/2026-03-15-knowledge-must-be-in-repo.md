@@ -3,6 +3,7 @@ layout: post
 title: "\"知识必须入库：Harness 工程的社会学维度\""
 date: 2026-03-15T15:30:00+08:00
 tags: [AI-Native, Harness Engineering, Knowledge Management, Organization, Team Culture]
+description: "Legible Knowledge = 仓库本地 + 版本化 + 结构化。Harness 工程的"无手写代码"约束强制知识显性化，让 AI Agent 与人类新员工站在同一起跑线——本质是组织知识的机构化重构。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

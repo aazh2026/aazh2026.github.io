@@ -3,6 +3,7 @@ layout: post
 title: "\"Agentic Engineering的定义重构：从Vibe Coding到智能体编排的范式转移\""
 date: 2025-02-01T20:00:00+08:00
 tags: [Agentic Engineering, Vibe Coding, 范式转移, 软件工程, Karpathy, AI原生开发]
+description: "从Karpathy的Vibe Coding到Agentic Engineering的范式转移，揭示从自然语言写代码到自然语言编排智能体的核心转变，以及Software 3.0的工程化路径。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

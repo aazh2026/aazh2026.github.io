@@ -3,6 +3,7 @@ layout: post
 title: "\"OpenClaw：当AI Agent开始像创业公司一样思考\""
 date: 2025-02-25T12:30:00+08:00
 tags: [OpenClaw, AI Agent, 开源, Agent编排, Swarm共识, 去中心化]
+description: "OpenClaw的网状共识架构代表AI Agent从"听话的助手"向"自驱的参与者"转变，模糊意图解析与经济激励机制重新定义人机协作边界。"
 author: "@postcodeeng"
 
 redirect_from:

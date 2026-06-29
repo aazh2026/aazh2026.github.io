@@ -3,6 +3,7 @@ layout: post
 title: "\"Agent OS 的五层架构模型\""
 date: 2026-03-31T10:00:00+08:00
 tags: [AI, Agent, Architecture, System-Design, Technical]
+description: "Agent OS的五层架构框架：Tools → Memory → Runtime → Orchestration → Interface，每层职责边界清晰，使系统可维护、可扩展、可测试、可独立升级。"
 author: "@postcodeeng"
 series: "Agent-OS-Series"
 ---

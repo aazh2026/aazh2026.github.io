@@ -4,6 +4,7 @@ title: "\"Harness Engineering 实战：Everything Claude Code 的系统化约束
 date: 2026-03-19T16:00:00+08:00
 permalink: /everything-claude-code-harness-engineering/
 tags: [AI-Native, Harness-Engineering, Claude-Code, System-Design]
+description: "通过 everything-claude-code 项目完整解析 Harness Engineering 四大支柱：Eval Harness、Rules Engine、Hooks 自动化与持续学习机制。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

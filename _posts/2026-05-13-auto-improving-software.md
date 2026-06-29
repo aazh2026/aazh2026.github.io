@@ -5,6 +5,7 @@ date: 2026-05-13T12:00:00+08:00
 tags: [AI-Native软件工程, AI-Agent, Self-Improvement, Claude-Code, Platform-Engineering]
 author: Aaron
 series: AI-Native Engineering
+description: "Agent 开发平台是第一个可以自我改进的软件类别——action、data、iteration tool 全都集中在一处，让 coding agent 可以端到端测试、修改、再测试，直到能力边界往外扩一点。"
 ---
 
 > **TL;DR**

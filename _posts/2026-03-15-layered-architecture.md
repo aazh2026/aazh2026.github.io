@@ -5,6 +5,7 @@ title: "\"分层的艺术：从 OSI 七层到 Agent OS 五层\""
 date: 2026-03-15T10:00:00+08:00
 categories: [Architecture, AI]
 tags: [agent-os, layered-architecture, system-design, mental-models]
+description: "分层架构是人类应对复杂性的终极武器——从 OSI 七层到 TCP/IP 四层再到 Agent OS 五层，分层的本质是将混沌切割为有意义的逻辑边界，层间通信成本决定架构成败。"
 series: "Agent OS"
 series_order: 3
 slug: layered-architecture

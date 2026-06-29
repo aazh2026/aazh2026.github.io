@@ -3,6 +3,7 @@ layout: post
 title: "\"从 ChatGPT 到 Claude Code：学术研究者的 AI 原生工作流\""
 date: 2026-05-12T14:00:00+08:00
 tags: [AI-Native软件工程, Claude Code, 学术研究, AI工具]
+description: "学术研究者应从\"上传文件给AI\"转为\"带AI进文件夹\"的工作流范式，CLAUDE.md可从Role/Standards/Writing/Critique四个维度定制研究助手。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列
 ---

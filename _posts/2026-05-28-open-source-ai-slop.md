@@ -5,6 +5,7 @@ date: 2026-05-28T16:00:00+08:00
 tags: [开源, AI Agent, 软件工程, 社区困境]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "AI没有增加需要软件的人，也没有增加能够review代码的维护者——它只增加了代码量和争夺注意力的项目数量，slop begets slop正在让开源维护成本不可持续。"
 ---
 
 > **TL;DR**

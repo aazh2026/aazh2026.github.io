@@ -3,6 +3,7 @@ layout: post
 title: '"安全左移的AI实现：需求分析阶段的隐私合规风险识别"'
 date: 2025-06-01T08:00:00+08:00
 tags: [AI-Native软件工程, 隐私合规, GDPR, 安全左移]
+description: "AI在需求阶段自动分析隐私合规风险，将合规成本从上线后的百万美元级降至需求阶段的千美元级。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

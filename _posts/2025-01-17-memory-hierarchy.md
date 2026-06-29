@@ -3,6 +3,7 @@ layout: post
 title: "\"为什么AI需要像人类一样「分心」\""
 date: 2025-01-17T00:30:00+08:00
 tags: [AI架构, 记忆系统, 类脑计算, 深度思考]
+description: "人类记忆分工作/情节/语义三层，AI对应上下文窗口、向量数据库、知识图谱——分层不是技术妥协，而是信息在不同存储层的高效分配，跨层级检索融合实现智能路由。"
 author: "@postcodeeng"
 
 series: AI-Native Engineering

@@ -3,6 +3,7 @@ layout: post
 title: "\"OpenClaw 使用场景深度洞察报告：从个人效率到企业智能\""
 date: 2025-01-22T15:00:00+08:00
 tags: [OpenClaw, AI智能体, 深度报告, 效率提升, 自动化]
+description: "OpenClaw定位是「数字员工」管理平台而非工具——六大场景验证「AI参与度递减、人工把关递增」的放大器模式，个人用户ROI达10-20倍。"
 author: "@postcodeeng"
 
 redirect_from:

@@ -3,6 +3,7 @@ layout: post
 title: "\"Prompt逆向工程的技术本质：从输出推断系统的完整方法论\""
 date: 2025-03-22T23:00:00+08:00
 tags: [AI安全, Prompt工程, 逆向工程, 技术深度, 方法论]
+description: "RPE四层方法论——行为分析层、Prompt提取层、工具模式推断层、工作流重建层——提供系统性逆向AI系统的工程框架。"
 author: "@postcodeeng"
 series: AI安全洞察
 ---

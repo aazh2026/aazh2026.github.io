@@ -5,6 +5,7 @@ title: "\"单一职责的升维：从类到 Agent\""
 date: 2026-03-15T09:00:00+08:00
 categories: [Agent Design, Software Architecture]
 tags: [SRP, Agent Architecture, Design Patterns, Modular AI]
+description: "单一职责原则从类升维到 Agent：一个混乱的 Agent 比混乱的类更难维护。CUBE 原则（Context、User、Business、Error）定义 Agent 边界，四种协作模式（管道、主从、黑板、服务网格）实现职责分离。"
 series: agent-os
 ---
 

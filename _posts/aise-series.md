@@ -8,6 +8,7 @@ redirect_from:
   - ////aise-series.html
 
 series: AI-Native Engineering
+description: "AI正在从根本上改变软件工程的本质。这个系列从理论基础到实践框架，构建完整的AI-Native软件工程（AISE）知识体系，探索AI时代的软件工程是什么。"
 ---
 
 # AI-Native软件工程系列

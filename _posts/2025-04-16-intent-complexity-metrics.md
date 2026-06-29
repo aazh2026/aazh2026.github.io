@@ -5,6 +5,7 @@ date: 2025-04-16T00:00:00+08:00
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "探讨AI时代软件度量范式转移，从LOC等传统指标转向Intent Complexity，建立价值交付效率与AI辅助效能双维度指标体系。"
 ---
 
 > **TL;DR**

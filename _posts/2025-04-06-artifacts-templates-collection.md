@@ -3,6 +3,7 @@ layout: post
 title: '"交付件模板大全：开箱即用的 AI-Native SDLC 规格"'
 date: 2025-04-06T00:00:00+08:00
 tags: [Templates, AI-Native, SDLC, 交付件, 规范, 工具包]
+description: "提供Product Intent、User Story Pack、Architecture Spec等八大交付件模板，将AI-Native开发全流程标准化为可验证、可执行的接口协议。"
 author: "@postcodeeng"
 series: AI-Native SDLC 交付件体系
 ---

@@ -3,6 +3,7 @@ layout: post
 title: "\"API网关的智能编排：自然语言生成BFF聚合逻辑\""
 date: 2025-06-05T08:00:00+08:00
 tags: [AI-Native软件工程, API网关, BFF, 智能编排]
+description: "自然语言描述数据需求，AI自动生成BFF聚合逻辑，包括并行优化、智能缓存和故障降级。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #53
 

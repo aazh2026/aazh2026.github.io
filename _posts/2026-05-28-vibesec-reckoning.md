@@ -5,6 +5,7 @@ date: 2026-05-28T14:00:00+08:00
 tags: [AI安全, Vibe Coding, 开发实践, Agent架构]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "告诉AI「要安全」不等于强制它安全——2026年25%的AI生成代码含已确认漏洞，解决之道是从「建议」到「门控」的转换，把安全规则编码为不可绕过的检查。"
 ---
 
 > **TL;DR**
