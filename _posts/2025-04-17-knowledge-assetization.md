@@ -5,6 +5,7 @@ date: 2025-04-17T09:50:00+08:00
 tags: [AI-Native软件工程, 知识资产化, 架构演进]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "代码在AI时代正从资产变为负债，真正的资产是知识。提出四层知识资产模型，代码库需要向可被AI理解的活知识转化。"
 ---
 
 > **TL;DR**

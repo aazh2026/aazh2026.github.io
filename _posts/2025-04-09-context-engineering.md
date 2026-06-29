@@ -3,6 +3,7 @@ layout: post
 title: "\"为什么Context Engineering比Prompt Engineering更重要\""
 date: 2025-04-09T02:00:00+08:00
 tags: [Context Engineering, Prompt Engineering, AI工程, 软件架构]
+description: "Context Engineering解决的是AI'基于什么回答'的问题——系统化地构建、管理、供给上下文信息，才是企业AI项目的真正瓶颈。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #01
 permalink: /posts/context-engineering//

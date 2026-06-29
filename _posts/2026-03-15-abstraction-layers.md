@@ -4,6 +4,7 @@ title: "\"抽象层级的艺术：从机器码到自然语言\""
 date: 2026-03-15T10:00:00+08:00
 categories: [编程, 架构, AI]
 tags: [abstraction, programming-languages, ai, software-engineering]
+description: "从机器码到自然语言是一部不断攀升抽象层级的历史，理解何时上浮、何时下沉，比记忆语法细节更有价值。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

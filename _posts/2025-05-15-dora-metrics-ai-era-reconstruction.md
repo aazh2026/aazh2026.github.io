@@ -3,6 +3,7 @@ layout: post
 title: "\"DORA指标在AI时代的重构：4大指标的新解释与基准线\""
 date: 2025-05-15T20:00:00+08:00
 tags: [AI-Native软件工程, DORA, 效能度量, 基准线]
+description: "深入探讨AI时代DORA指标的重新定义，提出意图交付频率、意图交付周期、意图恢复时间、意图偏离率四大新指标，核心洞察是度量意图而非代码。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

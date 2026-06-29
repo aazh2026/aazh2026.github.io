@@ -5,6 +5,7 @@ date: 2026-05-13T16:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Perplexity, Skills, 提示词工程]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Python 的 Zen 在 Skill 写作里大多反向适用——简单 > 复杂（错）、显式 > 隐式（错）。Skill 是目录不是文件，gotchas 才是最高价值内容。早期研究表明：模型不能可靠地编写自己受益的 procedular knowledge。"
 ---
 
 > **TL;DR**

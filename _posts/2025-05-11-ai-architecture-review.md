@@ -3,6 +3,7 @@ layout: post
 title: "\"AI架构评审：当AI参与架构决策时的审查机制\""
 date: 2025-05-11T10:00:00+08:00
 tags: [AI-Native软件工程, 架构评审, AI治理, 技术决策]
+description: "AI参与架构设计时传统评审机制失效，提出\"机查加人工\"双层结构，扩展可解释性、公平性、鲁棒性、可控性四个AI特性维度，架构师从设计者进化为治理者。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

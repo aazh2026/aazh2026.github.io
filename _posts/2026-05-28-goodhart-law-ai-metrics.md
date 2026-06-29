@@ -5,6 +5,7 @@ date: 2026-05-28T10:00:00+08:00
 tags: [AI工程管理, 生产力度量, Goodhart定律, 知识工作]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "AI让代码行数从糟糕指标变成竞争性指标——真正的产出无法被低成本衡量，而最容易衡量的活动往往最没价值，Goodhart定律在AI时代换了张面具。"
 ---
 
 > **TL;DR**

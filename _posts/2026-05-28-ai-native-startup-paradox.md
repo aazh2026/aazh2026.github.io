@@ -5,6 +5,7 @@ title: "AI-Native Startup 的本质矛盾：工具消除了复杂度，却放大
 date: 2026-05-28
 tags: [AI, 创业, Paul Graham, 判断力, Brooks]
 series: AI-Native Engineering
+description: "AI消除偶发复杂度后，本质复杂度转移到判断力——执行变成商品，判断才是真正的护城河，且密度比以前高出数个数量级。"
 ---
 
 > **TL;DR**

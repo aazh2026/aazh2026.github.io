@@ -5,6 +5,7 @@ title: "\"AI 的优化周期正在从月变成小时\""
 date: 2026-05-28T00:00:00+08:00
 tags: [AI Agent, Self-optimization, Brooks Framework]
 series: AI-Native Engineering
+description: "AI优化对象从模型权重转移到markdown Skill文件，进化成本从月变成小时——但本质复杂度只是换了形式，判断什么值得优化依然需要人。"
 ---
 
 > **TL;DR**

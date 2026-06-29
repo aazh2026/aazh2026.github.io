@@ -4,7 +4,7 @@ author: "@postcodeeng"
 title: "跨会话一致性：如何让Agent不变成\"精神分裂\""
 date: 2025-01-12T01:35:00+08:00
 tags: [Agent设计, 一致性, 记忆管理, 长期交互]
-
+description: "跨会话一致性面临身份、知识、上下文三层挑战，时间旅行问题需要分层摘要+时间感知索引，冲突不隐藏而是主动标记或询问。"
 series: AI-Native Engineering
 ---
 

@@ -3,6 +3,7 @@ layout: post
 title: "\"GPT-5.4发布：当通用模型开始超越专用模型，编码能力的范式正在转移\""
 date: 2025-02-24T13:30:00+08:00
 tags: [GPT-5.4, OpenAI, 编码能力, AI模型, 上下文窗口, 产品分析]
+description: "GPT-5.4用通用知识加成在编码基准上超越专用模型，272k定价阈值覆盖90%代码库——通用与专用模型的边界正在模糊。"
 author: "@postcodeeng"
 
 series: AI-Native Engineering

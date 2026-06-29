@@ -3,6 +3,7 @@ layout: post
 title: "\"Agent 的记忆系统设计：从短期到长期\""
 date: 2025-07-07T10:00:00+08:00
 tags: [AI, Agent, Memory-System, Vector-DB, Knowledge-Graph]
+description: "Agent记忆系统分为工作/短期/长期三层，Vector DB与Knowledge Graph共同支撑智能检索。"
 author: "@postcodeeng"
 series: "Agent-OS-Series"
 series_title: "从 SaaS 到 Agent OS"

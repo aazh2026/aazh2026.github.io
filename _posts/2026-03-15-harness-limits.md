@@ -3,6 +3,7 @@ layout: post
 title: "\"「无手写代码」的极限：Harness 工程的边界探索\""
 date: 2026-03-15T16:00:00+08:00
 tags: [AI-Native, Harness Engineering, Limits, Agent, Reality Check]
+description: "Harness工程的边界：上下文窗口污染、时间盲症、自我毁灭风险；创造性设计、长期架构演进、跨系统协调是Agent的根本局限。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

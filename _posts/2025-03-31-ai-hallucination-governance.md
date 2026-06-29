@@ -3,6 +3,7 @@ layout: post
 title: '"生产环境幻觉治理：当AI开始''胡说八道''"'
 date: 2025-03-31T11:05:00+08:00
 tags: [AI-Native软件工程, AI幻觉, 生产安全]
+description: "AI幻觉是概率生成模型的本质特性，无法消除只能共处；通过预防-检测-恢复三层防御体系与风险分级策略实现韧性治理。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

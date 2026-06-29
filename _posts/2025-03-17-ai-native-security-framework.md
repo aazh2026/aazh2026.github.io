@@ -3,6 +3,7 @@ layout: post
 title: "Clinejection之后：AI-Native安全框架的范式转移"
 date: 2025-03-17T10:00:00+08:00
 tags: [AI安全, Clinejection, DevSecOps, 安全框架]
+description: "Clinejection攻击不穿透防线，而是让AI'自愿'执行恶意操作——传统安全模型在AI-Native攻击面前完全失效。安全从'访问控制'转向'意图验证'。AI-Native安全框架有五项原则：意图隔离、权限动态化、执行可观测、人类在环、持续验证。"
 author: "@postcodeeng"
 series: AI安全洞察
 ---

@@ -3,6 +3,7 @@ layout: post
 title: "\"服务间集成的契约测试自动化：Pact与AI生成测试桩\""
 date: 2025-06-12T00:00:00+08:00
 tags: [AI-Native软件工程, 契约测试, Pact, 服务集成, 测试自动化]
+description: "契约测试从昂贵手工活变成自动化基础设施，AI生成契约并实现语义级验证。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #9
 ---

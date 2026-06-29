@@ -3,6 +3,7 @@ layout: post
 title: "\"并行 Agent 的协调机制：去中心化协作的工程挑战\""
 date: 2026-03-15T15:00:00+08:00
 tags: [AI-Native, Harness Engineering, Multi-Agent, Distributed Systems, Coordination]
+description: "16 个 Claude Agent 7 个月交付可编译 Linux 内核的 C 编译器——没有项目经理，只有 git 同步和文件锁。极简协调机制证明：清晰的目标可以替代复杂的指令，有效的协调可以从去中心化涌现。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

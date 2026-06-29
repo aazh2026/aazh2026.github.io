@@ -4,6 +4,7 @@ title: "\"AI-Native 安全：为什么 Codex 抛弃了 SAST 报告\""
 date: 2026-03-17T16:00:00+08:00
 permalink: /codex-security-ai-vs-sast/
 tags: [AI-Native, Security, SAST, Codex, OpenAI]
+description: "Codex Security 用约束推理引擎加动态验证替代 SAST 模式匹配，将误报率从 80-90% 降至 10% 以下，让安全扫描从负担变为可信助手。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

@@ -5,6 +5,7 @@ date: 2026-05-28T12:00:00+08:00
 tags: [AI安全, Agent架构, Containment, 信任边界]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Anthropic的93%批准率数据证明human-in-the-loop假设从未成立——model层防御永远不够，唯一有效的是环境级别的硬边界，且当用户本身是攻击者时所有防御失效。"
 ---
 
 > **TL;DR**

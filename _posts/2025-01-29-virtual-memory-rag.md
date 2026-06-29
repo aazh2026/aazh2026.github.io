@@ -4,6 +4,7 @@ author: "@postcodeeng"
 title: "上下文窗口的\"虚拟内存\"化：当RAG成为分页机制"
 date: 2025-01-29T00:35:00+08:00
 tags: [RAG, 上下文窗口, 内存管理, LLM优化]
+description: "将操作系统虚拟内存思想引入LLM应用，以上下文窗口为RAM、向量库为磁盘，通过分页机制、LRU置换和工作集跟踪实现无限知识的可扩展管理。"
 series: Memory Engineering
 ---
 

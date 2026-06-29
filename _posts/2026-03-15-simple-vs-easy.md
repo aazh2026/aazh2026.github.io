@@ -5,6 +5,7 @@ title: "\"简单 vs 容易：AI 时代的权衡艺术\""
 date: 2026-03-15T08:00:00+08:00
 categories: [哲学, AI, 软件工程]
 tags: [简单性, Rich Hickey, Clojure, AI编程, 认知负载]
+description: "容易是近，简单是远。AI 让'容易'触手可及，却系统性破坏'简单'——认知债务当下省下的理解成本，未来要连本带息偿还。简单性是对抗不确定性的最佳防御。"
 series: AI-Native Engineering
 ---
 

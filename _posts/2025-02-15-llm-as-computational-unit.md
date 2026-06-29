@@ -3,6 +3,7 @@ layout: post
 title: "\"LLM作为通用计算单元的可行性：神经网络权重正在变成新的机器码？\""
 date: 2025-02-15T10:30:00+08:00
 tags: [LLM, 神经网络, 计算单元, Software 3.0, 机器码, 编程范式, Agentic Engineering]
+description: "神经网络权重正在成为新的机器码？Software 3.0通过验证层与工具契约让概率性计算具备工程化的确定性。"
 author: "@postcodeeng"
 
 redirect_from:

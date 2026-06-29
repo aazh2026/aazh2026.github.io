@@ -3,6 +3,7 @@ layout: post
 title: "\"为什么代码评审正在死亡？\""
 date: 2025-04-13T10:00:00+08:00
 tags: [AI-Native软件工程, 代码评审, 开发流程]
+description: "人类评审员因认知天花板严重bug遗漏率高达57%。代码评审不会消失，而是重生成三种AI-Native形态：事前预防、事中协作、事后学习。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

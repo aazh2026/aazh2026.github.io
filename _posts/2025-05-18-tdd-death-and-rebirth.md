@@ -3,6 +3,7 @@ layout: post
 title: "\"TDD的死亡与重生：AI时代测试先行的本质转变\""
 date: 2025-05-18T00:00:00+08:00
 tags: [AI-Native软件工程, TDD, 测试策略, AI-DD]
+description: "论证AI时代测试的本质转变——从验证工具演化为契约语言，Prompt取代JUnit成为新的开发驱动方式，Intent-Driven Development是TDD的延续而非终结。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #1
 ---

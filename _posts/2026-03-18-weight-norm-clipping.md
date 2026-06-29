@@ -4,6 +4,7 @@ title: "\"Weight Norm Clipping：Grokking 加速 18-66 倍的秘密\""
 date: 2026-03-18T16:00:00+08:00
 permalink: /weight-norm-clipping-grokking-acceleration/
 tags: [Machine Learning, Grokking, Optimization, Training, Research]
+description: "仅需 5 行代码的 Weight Norm Clipping 技巧可将 Grokking 现象加速 18-66 倍，300 随机种子全部成功泛化，零失败率的秘密。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

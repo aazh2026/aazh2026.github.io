@@ -4,7 +4,7 @@ author: "@postcodeeng"
 title: "敏感记忆的保险箱：当Agent记住你的秘密"
 date: 2025-01-24T01:45:00+08:00
 tags: [安全, 隐私, 机密计算, 数据隔离]
-
+description: "提出敏感记忆的四层分类体系与三道检测关卡，探讨客户端加密、HSM、分片存储等工程方案，构建Agent记忆的安全分层防线。"
 series: AI-Native Engineering
 ---
 

@@ -5,6 +5,7 @@ date: 2026-05-14T12:00:00+08:00
 tags: [AI-Native软件工程, MCP, Agent设计, 产品设计, Ramp]
 author: "@postcodeeng"
 series: AI-Native Engineering
+description: "Ramp 产品负责人分享 Agent 设计原则：80/20 已翻转，Agent 对 Agent 交互成主流。"
 ---
 
 > **TL;DR**

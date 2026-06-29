@@ -3,6 +3,7 @@ layout: post
 title: "\"AI-Native 测试策略：测试金字塔的重构\""
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 测试策略, 测试金字塔, AI生成测试, Agent协作]
+description: "测试金字塔重构为三层模型：AI生成单元测试、Agent协作集成测试、自然语言驱动E2E，测试从验证代码转向验证意图。"
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #17
 

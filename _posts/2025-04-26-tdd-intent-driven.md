@@ -5,6 +5,7 @@ date: 2025-04-26T00:00:00+08:00
 tags: [TDD, Intent-Driven Development, AI开发, 软件方法论]
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #02
+description: "TDD在AI时代面临天花板，测试代码量是业务代码的3-5倍。Intent-Driven Development通过结构化SID文档和AI生成实现4倍效率提升，核心是验证意图正确性而非代码行为。"
 
 redirect_from:
   - /tdd-intent-driven.html

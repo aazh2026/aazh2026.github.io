@@ -4,6 +4,7 @@ title: "\"从模型到 Agent：OpenAI 的 Runtime 架构揭秘\""
 date: 2026-03-17T17:00:00+08:00
 permalink: /openai-agent-runtime-architecture/
 tags: [AI-Native, Agent, Runtime, OpenAI, Architecture]
+description: "OpenAI 公开 Agent Runtime 三层架构：Responses API 做决策、Shell Tool 做执行接口、Hosted Containers 做隔离环境——LLM 能生成与能运行之间的鸿沟被弥合。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

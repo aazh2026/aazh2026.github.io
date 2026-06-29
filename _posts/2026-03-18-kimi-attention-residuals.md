@@ -4,6 +4,7 @@ title: "\"Kimi 团队的 Attention Residuals：挑战 Transformer 残差连接\"
 date: 2026-03-18T17:00:00+08:00
 permalink: /kimi-attention-residuals-transformer/
 tags: [Machine Learning, Transformer, Attention, Architecture, Kimi]
+description: "Kimi 团队提出 Attention Residuals，用可学习动态聚合替代固定残差连接，Block AttnRes 在接近标准 Transformer 内存开销下实现显著效果提升。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

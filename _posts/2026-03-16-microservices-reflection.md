@@ -4,6 +4,7 @@ title: "\"微服务反思：从'两个披萨'回到'一个仓库'\""
 date: 2026-03-16T15:00:00+08:00
 permalink: /microservices-monolith-reconsideration/
 tags: [Architecture, Microservices, Monolith, Team Structure, Engineering]
+description: "重新审视微服务架构：模块边界优于服务边界，两个披萨规则说的是团队规模而非部署形式，被遗忘的模块化单体才是大多数团队的最佳选择。"
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

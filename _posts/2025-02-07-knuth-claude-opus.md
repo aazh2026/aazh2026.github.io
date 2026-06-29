@@ -3,6 +3,7 @@ layout: post
 title: "\"当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话\""
 date: 2025-02-07T20:00:00+08:00
 tags: [AI突破, Donald Knuth, Claude Opus, 算法, 数学证明, 深度思考]
+description: "图灵奖得主Donald Knuth宣布Claude Opus 4.6解决了他提出的开放性问题，标志着AI从效率工具向协作者的质变，人机协作进入新阶段。"
 author: "@postcodeeng"
 
 series: AI-Native Engineering

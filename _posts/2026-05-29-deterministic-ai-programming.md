@@ -10,6 +10,7 @@ tags:
   - Claude
   - 工程思想
 series: AI-Native Engineering
+description: "Dynamic Workflows和iii agent harness同天发布，表面两种路线实则同一问题的两个解法——都在把编排从「实时判断」变成「静态资产」，用确定性换可预测性。"
 ---
 
 > **TL;DR**
