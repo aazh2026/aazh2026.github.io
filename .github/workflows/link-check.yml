@@ -2,32 +2,37 @@ name: Link Check
 
 # Catches broken internal links and missing asset references before they
 # reach production. Triggers on PR + push to main.
+#
+# Two stages:
+# 1. Pre-build: scan source HTML/MD for broken internal links (fast, no jekyll)
+# 2. Post-build: run lychee against _site/ to catch external link rot
 
 on:
   push:
     branches: [main]
+    paths:
+      - '_posts/**'
+      - '*.html'
+      - '*.md'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'assets/**'
+      - 'scripts/check-internal-links.js'
+      - '.github/workflows/link-check.yml'
   pull_request:
     branches: [main]
+    paths:
+      - '_posts/**'
+      - '*.html'
+      - '*.md'
+      - '_includes/**'
+      - '_layouts/**'
+      - '_config.yml'
+      - 'assets/**'
+      - 'scripts/check-internal-links.js'
+      - '.github/workflows/link-check.yml'
   workflow_dispatch:
-
-# Don't run on markdown-only changes — saves CI minutes.
-# Run when posts, includes, layouts, or assets change.
-  push:
-    paths:
-      - '_posts/**'
-      - '_includes/**'
-      - '_layouts/**'
-      - '_config.yml'
-      - 'assets/**'
-      - '.github/workflows/link-check.yml'
-  pull_request:
-    paths:
-      - '_posts/**'
-      - '_includes/**'
-      - '_layouts/**'
-      - '_config.yml'
-      - 'assets/**'
-      - '.github/workflows/link-check.yml'
 
 permissions:
   contents: read
@@ -43,6 +48,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: "Pre-build: internal link check"
+        run: node scripts/check-internal-links.js
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
