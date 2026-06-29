@@ -1,0 +1,43 @@
+<script>
+// IntersectionObserver-based lazy loader for <object> elements.
+// Native loading="lazy" doesn't work on <object>, so we polyfill.
+(function() {
+  if (!('IntersectionObserver' in window)) {
+    // No IO support — show all immediately
+    document.querySelectorAll('object[data-src]').forEach(function(obj) {
+      obj.setAttribute('data', obj.getAttribute('data-src'));
+      obj.removeAttribute('data-src');
+    });
+    return;
+  }
+
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var obj = entry.target;
+        var src = obj.getAttribute('data-src');
+        if (src) {
+          obj.setAttribute('data', src);
+          obj.removeAttribute('data-src');
+        }
+        observer.unobserve(obj);
+      }
+    });
+  }, { rootMargin: '200px 0px' });
+
+  // Find objects that need lazy loading
+  document.querySelectorAll('object').forEach(function(obj) {
+    // Get bounding rect — only defer if off-screen
+    var rect = obj.getBoundingClientRect();
+    if (rect.top > window.innerHeight + 200) {
+      // Off-screen — convert data= to data-src= for lazy load
+      var src = obj.getAttribute('data');
+      if (src) {
+        obj.setAttribute('data-src', src);
+        obj.removeAttribute('data');
+        observer.observe(obj);
+      }
+    }
+  });
+})();
+</script>

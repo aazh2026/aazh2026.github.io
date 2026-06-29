@@ -20,7 +20,7 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
 
-# 跨会话一致性：如何让Agent不变成"精神分裂"
+## 跨会话一致性：如何让Agent不变成"精神分裂"
 
 ## 引言：每次重启都重新认识我？
 

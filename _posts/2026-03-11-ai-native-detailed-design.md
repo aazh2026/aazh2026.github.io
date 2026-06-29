@@ -8,7 +8,7 @@ author: "@postcodeeng"
 series: AI-Native SDLC 实践
 ---
 
-# AI-Native 详细设计：从文档到可执行上下文
+## AI-Native 详细设计：从文档到可执行上下文
 
 > **TL;DR**
 >

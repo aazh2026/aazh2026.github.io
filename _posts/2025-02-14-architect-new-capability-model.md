@@ -18,7 +18,7 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2025-02-14-architect-new-capability-model-01-pi-model.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
-# AI时代架构师的新能力模型：从画图决策到设计Context
+## AI时代架构师的新能力模型：从画图决策到设计Context
 
 > *当AI可以在几秒钟内生成架构图、写出技术方案、甚至部署基础设施时，架构师的价值在哪里？这不是关于AI是否会取代架构师的问题，而是关于架构师角色如何进化的必然转型。未来的架构师不再是"画架构图的人"，而是"设计Context的人"——为AI和人类团队定义约束、边界和协作规则的设计师。*
 

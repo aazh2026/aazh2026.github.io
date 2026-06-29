@@ -145,3 +145,6 @@ layout: default
   document.documentElement.setAttribute('data-theme', theme);
 })();
 </script>
+
+<!-- Object lazy loading (native loading="lazy" not supported on <object>) -->
+{%- include lazy-object.html -%}

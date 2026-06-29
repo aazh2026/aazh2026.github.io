@@ -17,7 +17,7 @@ series: AI-Native Engineering
 > - 市场正在分化：Luxury Cognition（安全优先）vs Gig Cognition（效率优先），两个极端之间的中间地带正在消失
 > - 启示：AI-Native 开发需要重新思考"增强人类"vs"替代人类"的边界，去中心化架构带来技术债务，经济激励是协调 Agent 行为的关键机制
 
-# OpenClaw：当AI Agent开始像创业公司一样思考
+## OpenClaw：当AI Agent开始像创业公司一样思考
 
 > *在OpenClaw发布72小时内获得18,000个GitHub Star，一段47秒的Agent协商视频获得420万观看。这不是又一个开源项目的热闹，而是一个信号：AI Agent的范式正在从"听话的助手"转向"自驱的参与者"。OpenClaw的"swarm consensus"架构，可能定义了下一代AI Agent的协作标准。*
 

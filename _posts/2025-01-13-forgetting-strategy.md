@@ -9,7 +9,7 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-# 你的Agent不是记忆力差，而是不会「遗忘」
+## 你的Agent不是记忆力差，而是不会「遗忘」
 
 > **TL;DR**
 >

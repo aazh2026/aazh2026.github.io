@@ -19,7 +19,7 @@ series: AI安全洞察
 
 <object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%" aria-label="Prompt 逆向工程攻击链" role="img"></object>
 
-# 你的Prompt正在被反向工程——AI系统的提示词泄露与防御
+## 你的Prompt正在被反向工程——AI系统的提示词泄露与防御
 
 > *「2025年底，一家SaaS公司的核心AI功能被竞争对手复制。不是代码被盗，不是数据泄露——是他们的Prompt被'套取'了。那些花了三个月打磨的提示词，在一个周末就被逆向工程还原。」*
 

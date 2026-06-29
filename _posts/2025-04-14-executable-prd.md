@@ -17,7 +17,7 @@ series: AI-Native软件工程
 > 3. **实际效果** — 将需求定义周期从 5-6 周压缩到 1-2 天，AI 生成的代码不再是框架，而是可直接运行的业务逻辑
 > 4. **当前局限** — 学习曲线、复杂度管理和 AI 编译器成熟度是主要挑战，混合模式是短期最优解
 
-# AI时代PRD长什么样？——从文档到Executable Specification
+## AI时代PRD长什么样？——从文档到Executable Specification
 
 > *「2025年，产品经理Alice的PRD被AI直接编译成了可运行的代码。不是生成代码框架，是真正的业务逻辑、数据库Schema、API接口、前端页面。她的PRD不再是'给工程师看的文档'，是'产品的源代码'。这就是Executable Specification的时代。」*
 

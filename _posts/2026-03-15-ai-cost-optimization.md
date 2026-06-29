@@ -12,7 +12,7 @@ redirect_from:
   - /ai-cost-optimization/
 ---
 
-# AI成本优化方法论：从粗放使用到精打细算
+## AI成本优化方法论：从粗放使用到精打细算
 
 > **TL;DR**
 >

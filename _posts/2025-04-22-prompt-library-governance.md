@@ -8,7 +8,7 @@ series: AI-Native软件工程
 description: "当企业拥有1000个Prompt时，没有治理的Prompt库会从效率工具变成债务来源。通过组织架构、分类体系、生命周期、质量管理、平台工具五大维度实现系统化治理。"
 ---
 
-# Prompt Library治理：当企业拥有1000个Prompt时该怎么办
+## Prompt Library治理：当企业拥有1000个Prompt时该怎么办
 
 > **TL;DR**
 >

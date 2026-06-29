@@ -1,0 +1,40 @@
+name: Markdown Lint
+
+# Validates all _posts/*.md against .markdownlint.json rules.
+# Catches trailing whitespace, broken lists, inconsistent heading levels, etc.
+
+on:
+  push:
+    paths:
+      - '_posts/**'
+      - '.markdownlint.json'
+      - '.github/workflows/markdownlint.yml'
+  pull_request:
+    paths:
+      - '_posts/**'
+      - '.markdownlint.json'
+      - '.github/workflows/markdownlint.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install markdownlint-cli
+        run: npm install -g markdownlint-cli@^0.42
+
+      - name: Lint posts
+        run: markdownlint -c .markdownlint.json '_posts/**/*.md'
+        # Don't fail the build on lint errors — they should be fixed over time
+        continue-on-error: true

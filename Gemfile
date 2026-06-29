@@ -7,6 +7,7 @@ gem "jekyll-sitemap", "~> 1.4"
 gem "jekyll-seo-tag", "~> 2.8"
 gem "jekyll-redirect-from", "~> 0.16"
 gem "jekyll-last-modified-at", "~> 3.0"
+gem "jekyll-minifier", "~> 0.1.6"
 gem "webrick", "~> 1.8"
 
 # Windows and JRuby does not include zoneinfo files

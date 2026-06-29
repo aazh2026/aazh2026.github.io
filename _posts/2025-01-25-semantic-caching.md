@@ -18,7 +18,7 @@ series: AI-Native Engineering
 > 3. **置信度过滤** — 只缓存高置信度答案（GPT-4 > GPT-3.5），避免低质量答案污染缓存
 > 4. **模板与预热策略** — 答案模板化和主动预热可将有效缓存利用率再提升20-30%
 
-# 语义缓存的经济学：如何用记忆节省90%的API成本
+## 语义缓存的经济学：如何用记忆节省90%的API成本
 
 ## 引言：那个烧钱的夜晚
 
@@ -130,7 +130,7 @@ series: AI-Native Engineering
 Q: {{language}}的创始人是谁？
 A: {{language}}的创始人是{{founder}}。
 
-# 查询"Python的创始人是谁"时：
+## 查询"Python的创始人是谁"时：
 # {{language}} → Python
 # {{founder}} → Guido van Rossum
 ```

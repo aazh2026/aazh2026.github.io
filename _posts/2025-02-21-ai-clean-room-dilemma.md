@@ -19,7 +19,7 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2025-02-21-ai-clean-room-dilemma-01-architecture.svg" type="image/svg+xml" width="100%" aria-label="Traditional vs AI Clean Room Architecture" role="img"></object>
 
-# AI时代的Clean Room困境：从技术实验到许可证的灰色地带
+## AI时代的Clean Room困境：从技术实验到许可证的灰色地带
 
 > *当Anthropic让Claude在Clean Room环境下用Rust写C编译器，当开发者用AI重构开源库并声称这是"独立实现"——我们不得不面对一个根本问题：AI生成的代码，还是Clean Room意义上的"独立创作"吗？*
 

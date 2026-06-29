@@ -8,7 +8,7 @@ description: "每段记忆都应有来源、时间、推理链三个归因维度
 series: AI-Native Engineering
 ---
 
-# 可解释的记忆：Agent如何解释"我为什么记得这个"
+## 可解释的记忆：Agent如何解释"我为什么记得这个"
 
 > **TL;DR**
 >

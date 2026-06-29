@@ -49,8 +49,18 @@
   <!-- 自定义样式 - 覆盖 minima 主题 -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
   
+  <!-- Preconnect to external origins (DNS + TCP + TLS 提前) -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://giscus.app" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://x.com">
+  <link rel="dns-prefetch" href="https://www.linkedin.com">
+
   <!-- Mermaid.js 图表支持 -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
   <script>
     (function() {
       // 等待页面完全加载

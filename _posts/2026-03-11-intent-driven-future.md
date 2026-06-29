@@ -18,7 +18,7 @@ redirect_from:
 > 3. **核心能力转向** — 工程师从"如何实现"转向"想要什么"，从"写代码"转向"定义问题和边界"，从"详细设计文档"转向"高质量示例"。
 > 4. **三层分层选择** — Layer 1（Intent-Driven，80%）、Layer 2（Structured Design，15%）、Layer 3（Detailed Design，5%），按需选择而非一刀切。
 
-# 详细设计会消失吗？Intent-Driven 开发的未来
+## 详细设计会消失吗？Intent-Driven 开发的未来
 
 前面三篇讲了 AI-Native 详细设计的变革、最小实践、增量工作流。
 

@@ -16,7 +16,7 @@ series: AI-Native SDLC 实践
 > 3. **信息密度 > 文档数量** — 4 个文件、200 行结构化定义，比 20 页自然语言设计文档更有价值。机器可读性是 AI-Native 设计的第一原则。
 > 4. **简单是终极的复杂** — 删除 Sequence Diagram、Behavior Spec、Architecture Doc，只保留 AI 必须依赖的最小上下文集合。
 
-# 4个文件搞定详细设计：最小上下文集合实践
+## 4个文件搞定详细设计：最小上下文集合实践
 
 很多人在设计 AI-Native SDLC artifacts 时犯一个典型错误：**把传统软件工程的所有设计文档"AI化"**。
 

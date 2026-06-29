@@ -11,7 +11,7 @@ redirect_from:
 series: AI-Native Engineering
 ---
 
-# 接口隔离：人类与 AI 的契约设计
+## 接口隔离：人类与 AI 的契约设计
 
 > **TL;DR**
 >

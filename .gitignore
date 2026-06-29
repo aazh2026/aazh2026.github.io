@@ -19,3 +19,18 @@ __pycache__/
 
 # Node
 node_modules/
+
+# Working files (not needed in repo)
+_scratch/finish-args.json
+_scratch/desc-items.json
+_scratch/desc-batches.json
+_scratch/og-manifest.json
+_scratch/refine-*.js
+_scratch/refine-full.js
+_scratch/refine-workflow.js
+_scratch/pilot.json
+_scratch/posts.json
+_scratch/posts.txt
+_scratch/posts-dated.txt
+_scratch/svg-coverage.pl
+_scratch/cleanup_sample_code.py
