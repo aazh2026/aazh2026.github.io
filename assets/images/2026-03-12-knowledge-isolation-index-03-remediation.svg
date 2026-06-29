@@ -1,0 +1,66 @@
+<svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>重建集体理解四策略</title>
+  <desc>知识孤岛修复四策略：强制文档化、代码讲解会、Prompt共享、高KII代码重构</desc>
+
+  <rect width="720" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" font-size="15" font-weight="500" fill="#141413">重建集体理解四策略</text>
+  <text x="360" y="46" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">知识孤岛指数 (KII) · 2026/03/12</text>
+
+  <!-- Card dimensions -->
+  <!-- Card 1: top-left -->
+  <rect x="30" y="68" width="295" height="100" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="30" y="68" width="295" height="8" rx="4" fill="#788C5D"/>
+  <text x="50" y="92" font-size="13" fill="#141413" font-weight="600">策略1：强制文档化</text>
+  <text x="50" y="110" font-size="10" fill="#87867F">AI代码必须附带业务逻辑、设计决策说明</text>
+  <text x="50" y="128" font-size="10" fill="#87867F">CI门禁：PR无解释文档则拒绝合入</text>
+  <text x="50" y="152" font-size="11" fill="#788C5D" font-weight="600">Target: KII &lt; 0.3</text>
+
+  <!-- Card 2: top-right -->
+  <rect x="345" y="68" width="295" height="100" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="345" y="68" width="295" height="8" rx="4" fill="#788C5D"/>
+  <text x="365" y="92" font-size="13" fill="#141413" font-weight="600">策略2：代码讲解会</text>
+  <text x="365" y="110" font-size="10" fill="#87867F">每周walkthrough，重点讲解AI生成模块</text>
+  <text x="365" y="128" font-size="10" fill="#87867F">录屏存档供新人学习，索引可检索</text>
+  <text x="365" y="152" font-size="11" fill="#788C5D" font-weight="600">Target: KII &lt; 0.3</text>
+
+  <!-- Card 3: bottom-left -->
+  <rect x="30" y="190" width="295" height="100" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="30" y="190" width="295" height="8" rx="4" fill="#D97757"/>
+  <text x="50" y="214" font-size="13" fill="#141413" font-weight="600">策略3：Prompt共享</text>
+  <text x="50" y="232" font-size="10" fill="#87867F">团队共享生成代码的Prompt及版本变更</text>
+  <text x="50" y="250" font-size="10" fill="#87867F">理解Prompt即理解代码意图</text>
+  <text x="50" y="274" font-size="11" fill="#D97757" font-weight="600">Target: KII &lt; 0.4</text>
+
+  <!-- Card 4: bottom-right -->
+  <rect x="345" y="190" width="295" height="100" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="345" y="190" width="295" height="8" rx="4" fill="#D97757"/>
+  <text x="365" y="214" font-size="13" fill="#141413" font-weight="600">策略4：高KII代码重构</text>
+  <text x="365" y="232" font-size="10" fill="#87867F">KII &gt; 0.6 的代码必须强制重构</text>
+  <text x="365" y="250" font-size="10" fill="#87867F">重构目标：集体可理解，KII &lt; 0.3</text>
+  <text x="365" y="274" font-size="11" fill="#D97757" font-weight="600">Target: KII &lt; 0.3</text>
+
+  <!-- Arrows between cards: 1→2, 2→4, 4→3, 3→1 (circular flow) -->
+  <!-- 1→2 horizontal arrow -->
+  <line x1="325" y1="118" x2="343" y2="118" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- 2→4 vertical arrow -->
+  <line x1="492" y1="168" x2="492" y2="188" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- 4→3 horizontal arrow -->
+  <line x1="345" y1="240" x2="327" y2="240" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- 3→1 vertical arrow -->
+  <line x1="177" y1="190" x2="177" y2="170" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+
+  <!-- Workflow label -->
+  <text x="360" y="318" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">文档化 → 讲解会 → Prompt库 → 重构 → (循环)</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowGray" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+</svg>

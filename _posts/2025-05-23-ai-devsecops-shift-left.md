@@ -59,8 +59,6 @@ series: AI-Native Engineering
 
 ---
 
----
-
 ## AI驱动的安全左移
 
 <object data="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" type="image/svg+xml" width="100%"></object>
@@ -373,6 +371,8 @@ YAML 策略文件到 AI Prompt 的转化分为四步：
 
 一个具体的转换示例：策略文件里 `sql_injection_prevention.enforcement: "strict"` 这条约束，经过转换管道后进入 Prompt 时变成"【强制】所有数据库查询必须使用参数化查询（`?` 占位符），禁止使用字符串拼接、`f-string` 或 `format()` 构造 SQL 语句，违者视为高危漏洞"。当模型在生成代码时遇到需要查询数据库的场景，这条约束会直接阻止 `cursor.execute(f"SELECT * FROM users WHERE name='{name}'")` 这类写法。
 
+实际应用中，这套管道是增量式的：每当安全团队发现新的攻击向量，就在 YAML 策略里加一条约束，Policy Parser 自动识别新字段，Constraint Extractor 生成对应的拒绝指令，System Prompt 在下一次生成时立即生效。整个过程不需要改动模型的任何参数，只需要维护一份结构化的策略文件。
+
 ---
 
 ## 实施路线图
@@ -428,6 +428,10 @@ YAML 策略文件到 AI Prompt 的转化分为四步：
 | 修复成本高 | 预防成本低 |
 | 被动响应 | 主动预防 |
 | 需要安全专家 | AI内置安全知识 |
+
+> 💡 **Key Insight**
+>
+> 最好的安全是"不发生安全问题"，而不是"发现后修复"——AI 终极左移把安全的重心从检测拉回到了预防。
 
 ### 核心洞察
 

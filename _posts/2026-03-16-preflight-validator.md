@@ -8,7 +8,13 @@ author: "@postcodeeng"
 series: AI-Native Engineering
 ---
 
-> **TL;DR**> > 一位 ML 工程师在花了 3 天时间 debug 标签泄露后，创建了 preflight——一个 PyTorch 训练前验证工具。它能在训练开始前捕获 NaN、标签泄露、类别不平衡等"沉默杀手"。本文介绍这个工具的设计哲学，以及为什么"预防胜于治疗"在 ML 工程中尤为重要。
+> **TL;DR**
+>
+> 本文核心观点：
+> 1. **三天换一个教训** — Reddit 用户 Red_Egnival 花 3 天 debug 标签泄露后，创建了 preflight——一个 PyTorch 训练前验证工具。
+> 2. **沉默的杀手** — 标签泄露、NaN、类别不平衡这些问题不会触发任何异常，只会悄悄浪费你三天时间。
+> 3. **左移防御** — preflight 在训练开始前捕获问题，把"三天后才发现"变成"三分钟前预防"。
+> 4. **零配置安全层** — 不替代 PyTorch 的灵活性，而是在灵活性之上添加可选的安全网。
 
 ---
 
@@ -38,6 +44,10 @@ Reddit 用户 Red_Egnival 启动了一个新的训练任务。模型结构没问
 
 **没有错误，没有崩溃，只是一个什么都没学到的模型。三天后他才找到原因。**
 
+> 💡 **Key Insight**
+>
+> 标签泄露的特殊之处在于：它让模型在训练集上表现优异，却对真实任务毫无帮助。这不是 bug，而是评估方法本身的缺陷。
+
 ---
 
 ## 沉默的杀手：训练前的问题
@@ -58,9 +68,19 @@ ML 工程有一个独特的挑战：**很多问题在训练期间不会报错。
 
 ### 类别不平衡
 
+当数据中不同类别的样本数量相差一个数量级以上时，模型会表现出一种特殊的行为：它学会了对多数类做"总是预测"，而对少数类的预测几乎随机。这种现象在欺诈检测、医疗诊断、异常分析等场景中尤为常见——而这些场景往往是最不能承受错误的地方。
+
+preflight 的类别不平衡检查会计算各类别的样本比例，当比例超过预设阈值（如 99:1）时发出 warn 级别警告。警告信息会同时标注具体的比例数字和建议的采样策略。它不会告诉你"比例不对"然后让你自己去算——而是直接给出问题有多严重，以及可能的解决方向。
+
+这解决了一个实际问题：很多数据集在构建时看起来"够用"，但训练起来才发现模型根本没有学到少数类的特征。准确率 95% 不是因为模型做对了，而是因为它只是在预测多数类。
+
 ### 死梯度 (Dead Gradients)
 
-ReLU 的"死亡"问题，或者梯度消失。
+ReLU 是深度学习最常用的激活函数之一，但它的梯度为零时会让神经元"死亡"——一旦输出为零，梯度流经时也为零，这个神经元在后续训练中永远不会再更新。这种情况在以下场景中很常见：大学习率导致初始阶段大量神经元同时进入负区间、网络过深时浅层的梯度逐渐消失、以及使用 batch normalization 但统计数据不稳定时。
+
+preflight 的死梯度风险检查通过分析激活值分布来评估这个问题：它会扫描网络各层的输出，找出激活值长期处于负区间的神经元比例，如果超过阈值（如 5%）就发出 warn 警告。这个检查不会修改模型，只是告诉你"这个架构在当前配置下存在梯度流动障碍"。
+
+在 LSTM 和 GRU 等循环网络中，梯度消失和梯度爆炸的问题更加隐蔽——它们不会直接表现为训练失败，而是让模型无法学习长距离依赖关系。preflight 在这些场景下的检查重点是：权重矩阵的奇异值分布、遗忘门的激活统计、以及时间步之间的梯度方差。这是一个 warn 级别的检查，因为架构层面的问题往往比数据层面的问题更难修复。
 
 ### 通道顺序错误
 
@@ -133,41 +153,146 @@ preflight 目前包含 10 项检查：
 
 ### 基本使用
 
+preflight 的使用只需要一个 dataloader 对象。以下是完整的基本用法示例，承接 Reddit 故事里 Reddit 用户 Red_Egnival 遇到的问题：
+
 ```python
 from preflight import Preflight
 
+# 用你现有的 dataloader 初始化
 checker = Preflight(dataloader=train_loader)
+
+# 运行所有检查
 results = checker.run()
+
+# 打印摘要
+print(results.summary())
 ```
+
+`results.summary()` 会输出分级别的汇总：
+
+```
+[FATAL] Label Leakage: 训练集和验证集存在 12% 重叠
+[FATAL] NaN detected: 特征 "user_age" 中发现 847 个 NaN
+[WARN]  类别不平衡: 正负样本比例 98:2
+[INFO]  VRAM 估算: 当前配置需要约 4.2 GB
+```
+
+fatal 级别的任何一项都会导致 `results.exit_code = 1`，可以直接接在 CI 脚本里做 gate。warn 级别不会阻断训练，但会写入日志供后续 review。info 级别是纯粹的参考信息，不产生任何警告。
 
 ### Python API
 
-```python
-# 单独运行某项检查
-from preflight.checks import LabelLeakageCheck
+如果只需要运行某一项检查，而不是全部跑一遍，可以直接调用具体的 Check 类：
 
-check = LabelLeakageCheck()
-result = check.run(dataloader=train_loader)
+```python
+from preflight.checks import LabelLeakageCheck, NaNCheck
+
+# 单独运行标签泄露检查
+leak_check = LabelLeakageCheck()
+leak_result = leak_check.run(dataloader=train_loader)
+
+if not leak_result.passed:
+    print(f"标签泄露: {leak_result.message}")
+    print(f"重叠样本数: {leak_result.overlap_count}")
 ```
+
+对于更细粒度的控制，preflight 提供了 `validate()` 方法：
+
+```python
+from preflight import preflight
+
+# 只检查指定项目，fatal 级别
+result = preflight.validate(
+    dataloader=train_loader,
+    checks=['nan', 'leakage', 'inf'],
+    level='fatal'
+)
+
+# 查看各维度结果
+print(result.passed)    # True/False
+print(result.warnings)   # [<WarningItem>, ...]
+print(result.details)    # 所有检查的完整返回
+```
+
+`result.details` 是一个字典，键是检查项名称，值是具体的检查结果对象。设置 `return_all=True` 可以拿到所有检查项的详细返回，而不仅仅是汇总。
 
 ### GitHub Actions 集成
 
+把 preflight 接入 CI 流程只需要几步。以下是一个完整的 GitHub Actions workflow，在每次训练任务启动前自动做一次检查：
+
 ```yaml
-- name: Run preflight validation
-  run: |
-    python -m preflight --dataloader train_loader
+name: ML Training with Preflight Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install torch torchvision
+          pip install preflight-ml
+
+      - name: Run preflight validation
+        run: |
+          python -m preflight --dataloader train_loader
+        continue-on-error: false
+
+      - name: Report warnings
+        if: always()
+        run: |
+          python -c "
+          from preflight import Preflight
+          r = Preflight(dataloader=train_loader).run()
+          print(r.summary())
+          "
 ```
+
+`continue-on-error: false` 确保任何 fatal 级别的检查都会让 CI 流程失败并阻断后续的训练任务。如果只想记录 warn 而不阻断，可以去掉这一行或者设为 `true`。preflight 的 exit code 设计符合 Unix 惯例：0 表示全部通过，非零表示至少有一项 fatal 失败。
 
 ### 配置示例
 
-```python
-from preflight import PreflightConfig
+preflight 默认不需要任何配置就能工作，但通过配置文件可以定制检查项和阈值。以下是一个 `preflight.toml` 配置示例：
 
-config = PreflightConfig(
-    level="warn",  # 包含 warn 及以上
-    exclude=["nan_check"],  # 跳过特定检查
-)
+```toml
+[checks]
+
+# 设置 fatal 阈值的默认值
+nan_policy = "fatal"        # 发现 NaN 即为 fatal
+inf_policy = "fatal"        # 发现 Inf 即为 fatal
+leakage_threshold = 0.05   # 超过 5% 重叠率为 fatal
+
+# Warn 级别配置
+class_imbalance_ratio = 50  # 超过 50:1 发出 warn
+dead_neuron_ratio = 0.05    # 超过 5% 死神经元发出 warn
+
+# 跳过某些检查
+exclude = ["nan_check"]     # 完全跳过 NaN 检查
 ```
+
+对应的 Python 调用方式：
+
+```python
+from preflight import Preflight
+
+checker = Preflight(
+    dataloader=train_loader,
+    config='preflight.toml'  # 加载上述配置文件
+)
+results = checker.run()
+```
+
+在 CI 环境中，配置文件通常和代码一起提交到仓库，这样可以保证每次运行的检查规则一致，也方便在 code review 时讨论检查策略的变更。
 
 ---
 
@@ -191,12 +316,20 @@ PyTorch 的设计哲学是：
 
 这在研究环境中很棒，但在生产 ML 工程中，我们需要更多的安全检查。
 
+> 💡 **Key Insight**
+>
+> PyTorch 的灵活性不是银弹——它把"数据有没有问题"的判断权完全交给了开发者。preflight 的存在并不是在挑战这种灵活性，而是在它旁边放一面镜子：你想自由地跑，我帮你确认自由没有代价。
+
 ### 填补生态空白
 
 preflight 不是要替代 PyTorch 的灵活性，而是：
 - 在灵活性之上添加可选的安全层
 - 让"快速失败"成为默认行为
 - 把隐性问题变成显式检查
+
+> 💡 **Key Insight**
+>
+> 一个工具的价值不取决于它能做什么，而取决于它在哪一步介入。preflight 的价值在于：在模型开始学习之前，就把"学习方法是否有问题"这个问题回答了。
 
 ---
 
@@ -215,6 +348,10 @@ preflight 不是要替代 PyTorch 的灵活性，而是：
 3. **领域特定检查缺失**
    - CV、NLP、推荐系统各有特殊需求
    - 需要社区贡献领域特定检查
+
+> 💡 **Key Insight**
+>
+> preflight 的局限性也是所有静态检查工具的局限性：它能检查数据的形状，但无法检查数据的语义；能验证格式的正确性，但无法验证标签的含义。这些空缺最终还是要靠人工 review 和评估设计来填补。
 
 ### 未来方向
 
@@ -242,7 +379,15 @@ preflight 不是要替代 PyTorch 的灵活性，而是：
 ML 工程需要同样的转变。
 
 传统 ML 流程：
-左移后的流程：
+
+数据准备好了就开始训练。开发者不知道 dataloader 是否有问题、特征和标签之间是否有隐秘关联、数据分布是否严重偏斜——这些问题只有在训练跑了一段时间、观察到异常指标后才会暴露。然后是漫长的 debug 循环：改代码、重新训练、等结果、发现新的问题、再改代码。一个标签泄露的问题从发现到定位到修复，往往需要几天时间，因为它的症状（验证准确率低）并不是它的原因（数据泄露）本身。
+
+左移后流程：
+
+在正式训练前，先跑一遍 preflight。三分钟内，它会检查 dataloader 的各项数据质量问题——如果有 fatal 级别的问题，训练不会开始，直接报错退出；如果只有 warn，报告写清楚，开发者可以先处理再训练，也可以选择带着警告继续。整个反馈循环从"几天后发现问题"缩短到"三分钟前预防问题"。
+
+<object data="/assets/images/2026-03-16-preflight-validator-02-shift-left.svg" type="image/svg+xml" width="100%"></object>
+
 Red_Egnival 的 3 天痛苦经历本可以用 3 分钟避免。
 
 > **"Every ML engineer should have a tool like this. We spend too much time debugging after training instead of preventing before training."**

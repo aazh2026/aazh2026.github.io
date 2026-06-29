@@ -1,0 +1,91 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">复杂性守恒定律：AI 时代的转型</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">软件复杂性是守恒的 — 只能转化，不能消除</text>
+
+  <!-- Three transformation rows -->
+
+  <!-- Row 1: 写代码 → 验证代码 -->
+  <rect x="20" y="64" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="110" y="88" text-anchor="middle" font-size="12" fill="#141413">写代码的复杂性</text>
+  <text x="110" y="106" text-anchor="middle" font-size="10" fill="#87867F">AI code generation</text>
+
+  <!-- Arrow 1 -->
+  <line x1="200" y1="92" x2="238" y2="92" stroke="#D97757" stroke-width="2.5"/>
+  <polygon points="248,92 236,86 236,98" fill="#D97757"/>
+  <text x="224" y="84" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">AI</text>
+
+  <rect x="252" y="64" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="342" y="88" text-anchor="middle" font-size="12" fill="#141413">验证代码的复杂性</text>
+  <text x="342" y="106" text-anchor="middle" font-size="10" fill="#87867F">每行 AI 代码都需审查</text>
+
+  <!-- Label: 守恒 -->
+  <rect x="434" y="76" width="80" height="28" rx="14" fill="#E3DACC" stroke="#D97757" stroke-width="1"/>
+  <text x="474" y="95" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">守恒</text>
+
+  <!-- Row 2: 记忆 → 理解 -->
+  <rect x="20" y="136" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="110" y="160" text-anchor="middle" font-size="12" fill="#141413">记忆的复杂性</text>
+  <text x="110" y="178" text-anchor="middle" font-size="10" fill="#87867F">API 细节、语法规则</text>
+
+  <!-- Arrow 2 -->
+  <line x1="200" y1="164" x2="238" y2="164" stroke="#D97757" stroke-width="2.5"/>
+  <polygon points="248,164 236,158 236,170" fill="#D97757"/>
+  <text x="224" y="156" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">AI</text>
+
+  <rect x="252" y="136" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="342" y="160" text-anchor="middle" font-size="12" fill="#141413">理解的复杂性</text>
+  <text x="342" y="178" text-anchor="middle" font-size="10" fill="#87867F">认知分裂校准成本</text>
+
+  <!-- Label: 守恒 -->
+  <rect x="434" y="148" width="80" height="28" rx="14" fill="#E3DACC" stroke="#D97757" stroke-width="1"/>
+  <text x="474" y="167" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">守恒</text>
+
+  <!-- Row 3: 手动实现 → 认知协调 -->
+  <rect x="20" y="208" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="110" y="232" text-anchor="middle" font-size="12" fill="#141413">手动实现的复杂性</text>
+  <text x="110" y="250" text-anchor="middle" font-size="10" fill="#87867F">手工编码、调试</text>
+
+  <!-- Arrow 3 -->
+  <line x1="200" y1="236" x2="238" y2="236" stroke="#D97757" stroke-width="2.5"/>
+  <polygon points="248,236 236,230 236,242" fill="#D97757"/>
+  <text x="224" y="228" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">AI</text>
+
+  <rect x="252" y="208" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="342" y="232" text-anchor="middle" font-size="12" fill="#141413">认知协调的复杂性</text>
+  <text x="342" y="250" text-anchor="middle" font-size="10" fill="#87867F">信任校准、验证负担</text>
+
+  <!-- Label: 守恒 -->
+  <rect x="434" y="220" width="80" height="28" rx="14" fill="#E3DACC" stroke="#D97757" stroke-width="1"/>
+  <text x="474" y="239" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">守恒</text>
+
+  <!-- Right side: Summary box -->
+  <rect x="540" y="64" width="120" height="200" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="600" y="92" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">总复杂性</text>
+  <text x="600" y="92" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace" dy="0">总复杂性</text>
+
+  <!-- Divider line -->
+  <line x1="548" y1="104" x2="652" y2="104" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="600" y="126" text-anchor="middle" font-size="28" font-weight="700" fill="#D97757">≈</text>
+  <text x="600" y="126" text-anchor="middle" font-size="11" fill="#87867F">不变</text>
+
+  <line x1="548" y1="142" x2="652" y2="142" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="600" y="164" text-anchor="middle" font-size="10" fill="#141413">分布改变</text>
+  <text x="600" y="180" text-anchor="middle" font-size="10" fill="#141413">形式转化</text>
+  <text x="600" y="196" text-anchor="middle" font-size="10" fill="#141413">责任转移</text>
+
+  <line x1="548" y1="208" x2="652" y2="208" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="600" y="228" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">AI 没有消除</text>
+  <text x="600" y="244" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">复杂性总量</text>
+
+  <!-- Footer note -->
+  <text x="340" y="296" text-anchor="middle" font-size="9.5" fill="#87867F" font-style="italic">工具改变了复杂性的分布，但没有减少复杂性的总量</text>
+</svg>

@@ -10,31 +10,33 @@ series: ai-native-dev-guide
 
 > **TL;DR**
 >
-> 传统SOLID原则诞生于面向对象编程时代，旨在解决类级别设计的耦合问题。在AI-Native时代，软件系统的核心单元已从类(Class)演变为Agent——具有自主决策能力、上下文感知和工具调用能力的智能实体。本文提出新SOLID原则，将设计哲学从"对象协作"升维到"Agent协作"。核心洞察：Agent不是更好的类，而是完全不同的抽象层次，需要一套全新的设计原则来驾驭这种转变。
-
----
+> 本文核心观点：
+> 1. **设计原则的演进** — 传统 SOLID 原则诞生于面向对象时代，旨在解决类级别设计的耦合问题；在 AI-Native 时代，软件系统的核心单元已从类演变为 Agent，需要全新的设计原则。
+> 2. **抽象层次的跃迁** — SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在 AI-Native 时代，Agent 不是更好的类，而是完全不同的抽象层次，其局限性日益明显。
+> 3. **新 SOLID 原则** — 本文提出新 SOLID 原则（SCP/OCP-P/LAP/ISP/DIP），将设计哲学从"对象协作"升维到"Agent 协作"，通过 Capability Contract、Intent Router 和抽象层依赖倒置驾驭这种转变。
+> 4. **核心洞察** — 一个 Agent 应该只负责一种核心能力，Agent 的输出应该忠实反映其内部推理过程，复杂性来自协作而非单个 Agent 的能力。
 
 ## SOLID 原则回顾
 
 在重构之前，让我们快速回顾 Robert C. Martin 在 2000 年提出的 SOLID 原则：
 
-### 单一职责原则 (Single Responsibility Principle)
+### 单一职责原则 (SRP)
 
 > **一个类应该只有一个引起它变化的原因。**
 
-### 开闭原则 (Open/Closed Principle)
+### 开闭原则 (OCP)
 
 > **对扩展开放，对修改关闭。**
 
-### 里氏替换原则 (Liskov Substitution Principle)
+### 里氏替换原则 (LSP)
 
 > **子类型必须能够替换其基类型而不改变程序正确性。**
 
-### 接口隔离原则 (Interface Segregation Principle)
+### 接口隔离原则 (ISP)
 
 > **客户端不应该被迫依赖它们不使用的接口。**
 
-### 依赖倒置原则 (Dependency Inversion Principle)
+### 依赖倒置原则 (DIP)
 
 > **高层模块不应该依赖低层模块，两者都应该依赖抽象。**
 
@@ -43,6 +45,10 @@ series: ai-native-dev-guide
 ## 面向对象时代的 SOLID 局限
 
 SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在 AI-Native 时代，它们的局限性日益明显：
+
+> 💡 **Key Insight**
+>
+> 传统思维追求 100% 确定性，但 AI 系统天然是概率性的——这一根本差异渗透到从执行模型到状态管理的每一个设计维度。
 
 ### 局限一：假设了确定性的执行模型
 
@@ -99,6 +105,10 @@ SOLID 原则在 2000-2020 年间指导了数以百万计的软件设计，但在
 
 面对上述局限，我们需要一套新的设计原则。这不是对 SOLID 的否定，而是在更高抽象层次上的重构。
 
+> 💡 **Key Insight**
+>
+> Agent 不是更好的类，而是完全不同的抽象层次——这一认知转变是理解新 SOLID 原则的前提。
+
 ### 从 Class 到 Agent：抽象层次的跃迁
 
 关键区别：
@@ -127,7 +137,11 @@ Intent 定义"意图和期望结果"：
 
 基于上述分析，我提出适用于 AI-Native 开发的**新 SOLID 原则**：
 
-### S - Single Capability Principle (单一能力原则)
+> 💡 **Key Insight**
+>
+> 一个 Agent 应该只负责一种核心能力，并通过清晰的 Capability Contract 定义其边界——这是避免"上帝 Agent"反模式的关键。
+
+### S - 单一能力原则 (SCP)
 
 > **一个 Agent 应该只负责一种核心能力，并通过清晰的 Capability Contract 定义其边界。**
 
@@ -145,7 +159,7 @@ Intent 定义"意图和期望结果"：
 | 通过类拆分实现 | 通过 Agent 专业化 + Contract 定义 |
 | 编译时检查 | 运行时 Capability 匹配 |
 
-### O - Open for Extension, Closed for Modification via Prompting (提示工程开闭原则)
+### O - 提示工程开闭原则 (OCP-P)
 
 > **Agent 的核心行为应该通过 Prompt 模板扩展，而非修改代码。**
 
@@ -154,7 +168,7 @@ Intent 定义"意图和期望结果"：
 - 通过 Prompt 变量和模板继承实现扩展
 - 支持 A/B 测试和动态行为切换
 
-### L - Literal Adherence Principle (忠实表达原则)
+### L - 忠实表达原则 (LAP)
 
 > **Agent 的输出应该忠实反映其内部推理过程，而非隐藏或伪造。**
 
@@ -172,7 +186,7 @@ Intent 定义"意图和期望结果"：
 | 编译时类型检查 | 运行时推理链验证 |
 | 防止继承误用 | 防止"幻觉"和不可信输出 |
 
-### I - Intent Segregation Principle (意图隔离原则)
+### I - 意图隔离原则 (ISP)
 
 > **复杂的用户请求应该被分解为独立的 Intent，每个 Intent 由专门的 Agent 或 Tool 处理。**
 
@@ -181,7 +195,7 @@ Intent 定义"意图和期望结果"：
 - 每个 Intent 对应单一、明确的目标
 - 避免强迫一个 Agent 处理它不擅长的任务
 
-### D - Dependency Inversion via Abstraction Layer (抽象层依赖倒置)
+### D - 抽象层依赖倒置 (DIP)
 
 > **Agent 不应该直接依赖具体的 LLM 或工具实现，而应该依赖抽象的 Capability Interface。**
 
@@ -321,6 +335,10 @@ class OpenAIProvider(LLMProvider):
 
 在实践新 SOLID 原则的过程中，有一些反直觉的洞察值得分享：
 
+> 💡 **Key Insight**
+>
+> AI 系统天然是概率性的，试图消除不确定性反而会设计出脆弱的系统——拥抱概率性，才是设计 AI-Native 系统的正确姿态。
+
 ### 洞察一："确定性"是一种奢望，拥抱概率性
 
 > 💡 **Key Insight**
@@ -444,6 +462,10 @@ class OpenAIProvider(LLMProvider):
 ### 从 SOLID 到新 SOLID：一场范式转移
 
 Robert C. Martin 在 2000 年提出 SOLID 原则时，软件世界正从过程式编程向面向对象编程转变。那些原则帮助数以百万计的开发者写出了更好的代码。
+
+> 💡 **Key Insight**
+>
+> 设计原则是手段，不是目的——原则是为了解决特定问题，而非教条；在 AI-Native 时代，接受概率性、拥抱涌现性，比固守确定性思维更能设计出健壮的系统。
 
 今天，我们站在另一个范式转移的门槛上：从面向对象到 AI-Native。
 

@@ -1,0 +1,69 @@
+<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, text #141413, border #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Harness Engineering 三层架构</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Based on Martin Fowler · OpenAI Harness Engineering · 2025/03</text>
+
+  <!-- Three column cards -->
+  <!-- Layer 1: Context Engineering -->
+  <rect x="24" y="60" width="168" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="24" y="60" width="6" height="220" rx="3" fill="#D97757"/>
+  <text x="40" y="84" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 1</text>
+  <text x="40" y="104" font-size="13" fill="#141413">Context Engineering</text>
+  <text x="40" y="124" font-size="10.5" fill="#87867F">上下文工程</text>
+  <line x1="40" y1="136" x2="150" y2="136" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="40" y="156" font-size="10" fill="#141413">知识库</text>
+  <text x="40" y="170" font-size="9.5" fill="#87867F">CONTEXT.md / ARCHITECTURE.md</text>
+  <text x="40" y="188" font-size="10" fill="#141413">动态上下文</text>
+  <text x="40" y="202" font-size="9.5" fill="#87867F">错误日志 + 性能指标</text>
+  <text x="40" y="220" font-size="10" fill="#141413">实时信息</text>
+  <text x="40" y="234" font-size="9.5" fill="#87867F">Playwright + Browser</text>
+  <text x="40" y="254" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">Context is King</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="192" y1="170" x2="210" y2="170" stroke="#D97757" stroke-width="2"/>
+  <polygon points="210,166 218,170 210,174" fill="#D97757"/>
+
+  <!-- Layer 2: Architectural Constraints -->
+  <rect x="216" y="60" width="168" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="216" y="60" width="6" height="220" rx="3" fill="#D97757"/>
+  <text x="232" y="84" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 2</text>
+  <text x="232" y="104" font-size="13" fill="#141413">Architectural Constraints</text>
+  <text x="232" y="124" font-size="10.5" fill="#87867F">架构约束</text>
+  <line x1="232" y1="136" x2="342" y2="136" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="232" y="156" font-size="10" fill="#141413">确定性约束</text>
+  <text x="232" y="170" font-size="9.5" fill="#87867F">ESLint · TypeScript · ArchTest</text>
+  <text x="232" y="188" font-size="10" fill="#141413">LLM 约束</text>
+  <text x="232" y="202" font-size="9.5" fill="#87867F">Agent 自检架构合规性</text>
+  <text x="232" y="220" font-size="10" fill="#141413">Cursor Rules</text>
+  <text x="232" y="234" font-size="9.5" fill="#87867F">.cursorrules 项目规范</text>
+  <text x="232" y="254" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">Deterministic &gt; LLM</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="384" y1="170" x2="402" y2="170" stroke="#D97757" stroke-width="2"/>
+  <polygon points="402,166 410,170 402,174" fill="#D97757"/>
+
+  <!-- Layer 3: Garbage Collection -->
+  <rect x="408" y="60" width="168" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="408" y="60" width="6" height="220" rx="3" fill="#D97757"/>
+  <text x="424" y="84" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 3</text>
+  <text x="424" y="104" font-size="13" fill="#141413">Garbage Collection</text>
+  <text x="424" y="124" font-size="10.5" fill="#87867F">垃圾回收</text>
+  <line x1="424" y1="136" x2="534" y2="136" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="424" y="156" font-size="10" fill="#141413">定期运行 Agent</text>
+  <text x="424" y="170" font-size="9.5" fill="#87867F">每日一次 / 每周一次</text>
+  <text x="424" y="188" font-size="10" fill="#141413">检测范围</text>
+  <text x="424" y="202" font-size="9.5" fill="#87867F">死代码 · 架构违规 · 文档过时</text>
+  <text x="424" y="220" font-size="10" fill="#141413">自动修复 PR</text>
+  <text x="424" y="234" font-size="9.5" fill="#87867F">GitHub Action + LLM</text>
+  <text x="424" y="254" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">自动化 &gt; 人工</text>
+
+  <!-- Bottom note -->
+  <text x="300" y="316" text-anchor="middle" font-size="10" fill="#87867F">Harness = Context Engineering + Architectural Constraints + Garbage Collection</text>
+  <line x1="160" y1="328" x2="440" y2="328" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="300" y="346" text-anchor="middle" font-size="9" fill="#B5B3AB" font-family="ui-monospace, monospace">5 months · 1M+ lines · zero manually typed code · OpenAI Codex Agent</text>
+</svg>

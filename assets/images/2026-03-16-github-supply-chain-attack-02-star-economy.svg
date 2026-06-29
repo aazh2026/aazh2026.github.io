@@ -1,0 +1,67 @@
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Background -->
+  <rect width="680" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">虚假 star 经济：信任的商品化</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">攻击者视角 vs 受害者视角</text>
+
+  <!-- Left Panel: Attacker / Buyer -->
+  <rect x="30" y="60" width="290" height="230" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="175" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">攻击者/买家视角</text>
+
+  <!-- Price Tier 1 -->
+  <rect x="50" y="95" width="250" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="50" y="95" width="78" height="52" rx="6" fill="#D97757" opacity="0.15"/>
+  <text x="89" y="120" text-anchor="middle" font-size="20" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">$50</text>
+  <text x="230" y="115" font-size="12" fill="#141413">500 stars</text>
+  <text x="230" y="130" font-size="10" fill="#87867F">基础套餐</text>
+
+  <!-- Price Tier 2 -->
+  <rect x="50" y="153" width="250" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="50" y="153" width="78" height="52" rx="6" fill="#D97757" opacity="0.15"/>
+  <text x="89" y="178" text-anchor="middle" font-size="20" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">$100</text>
+  <text x="230" y="173" font-size="12" fill="#141413">1200 stars + 假评论</text>
+  <text x="230" y="188" font-size="10" fill="#87867F">进阶套餐</text>
+
+  <!-- Price Tier 3 -->
+  <rect x="50" y="211" width="250" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <rect x="50" y="211" width="78" height="52" rx="6" fill="#D97757" opacity="0.15"/>
+  <text x="89" y="236" text-anchor="middle" font-size="20" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">$500</text>
+  <text x="230" y="231" font-size="12" fill="#141413">Premium: 伪造 contributor</text>
+  <text x="230" y="246" font-size="10" fill="#87867F">活动 + 提交历史</text>
+
+  <!-- Right Panel: Victim / Trust Signals -->
+  <rect x="360" y="60" width="290" height="230" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="505" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">受害者/信任信号</text>
+
+  <!-- Trust Bar 1: 100 stars -->
+  <text x="380" y="115" font-size="11" fill="#141413">100 stars</text>
+  <rect x="380" y="120" width="100" height="16" rx="4" fill="#E8EDE3" stroke="#788C5D" stroke-width="1"/>
+  <rect x="380" y="120" width="100" height="16" rx="4" fill="#788C5D" opacity="0.4"/>
+  <text x="490" y="132" font-size="9" fill="#788C5D">有人用过</text>
+
+  <!-- Trust Bar 2: 1000 stars -->
+  <text x="380" y="165" font-size="11" fill="#141413">1000 stars</text>
+  <rect x="380" y="170" width="200" height="16" rx="4" fill="#E8EDE3" stroke="#788C5D" stroke-width="1"/>
+  <rect x="380" y="170" width="200" height="16" rx="4" fill="#788C5D" opacity="0.5"/>
+  <text x="590" y="182" text-anchor="end" font-size="9" fill="#788C5D">社区认可</text>
+
+  <!-- Trust Bar 3: 10000 stars -->
+  <text x="380" y="215" font-size="11" fill="#141413">10000 stars</text>
+  <rect x="380" y="220" width="250" height="16" rx="4" fill="#E8EDE3" stroke="#788C5D" stroke-width="1"/>
+  <rect x="380" y="220" width="250" height="16" rx="4" fill="#788C5D" opacity="0.6"/>
+  <text x="640" y="232" text-anchor="end" font-size="9" fill="#788C5D">行业标准</text>
+
+  <!-- Trust breakdown note -->
+  <text x="380" y="262" font-size="9.5" fill="#87867F">但这些信号都可以被购买——</text>
+  <text x="380" y="276" font-size="9.5" fill="#D97757" font-weight="500">信任已被商品化</text>
+
+  <!-- Center Arrow -->
+  <path d="M 320 175 C 340 175, 340 175, 360 175" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <polygon points="358,171 368,175 358,179" fill="#D1CFC5"/>
+  <text x="340" y="165" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">信任商品化</text>
+
+  <!-- Source -->
+  <text x="340" y="320" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Fiverr / 刷量网站 · 2026</text>
+</svg>

@@ -1,0 +1,80 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">从文档驱动到上下文驱动的流程演变</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native SDLC · 2026/03/11</text>
+
+  <!-- LEFT PANEL: Traditional Flow -->
+  <rect x="30" y="60" width="280" height="230" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="170" y="86" text-anchor="middle" font-size="13" font-weight="600" fill="#87867F">传统流程</text>
+
+  <!-- Design Doc node -->
+  <rect x="60" y="104" width="220" height="38" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="127" text-anchor="middle" font-size="12" fill="#141413">Design Doc</text>
+  <text x="170" y="139" text-anchor="middle" font-size="9.5" fill="#87867F">自然语言描述</text>
+
+  <!-- Arrow 1 (dashed, gray) -->
+  <line x1="170" y1="142" x2="170" y2="158" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="170,162 166,154 174,154" fill="#D1CFC5"/>
+  <text x="170" y="175" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">人读/理解</text>
+
+  <!-- Developer node -->
+  <rect x="60" y="180" width="220" height="38" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="203" text-anchor="middle" font-size="12" fill="#141413">Developer</text>
+  <text x="170" y="215" text-anchor="middle" font-size="9.5" fill="#87867F">重新理解文档</text>
+
+  <!-- Arrow 2 (dashed, gray) -->
+  <line x1="170" y1="218" x2="170" y2="234" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="170,238 166,230 174,230" fill="#D1CFC5"/>
+  <text x="170" y="251" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">信息损耗</text>
+
+  <!-- Code node (final) -->
+  <rect x="60" y="256" width="220" height="28" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="275" text-anchor="middle" font-size="11" fill="#141413">Code（失真的）</text>
+
+  <!-- Loss label -->
+  <text x="285" y="275" text-anchor="end" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">❌</text>
+
+  <!-- CENTER DIVIDER -->
+  <line x1="340" y1="80" x2="340" y2="280" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="340" y="75" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">→ 范式转移 →</text>
+
+  <!-- RIGHT PANEL: AI-Native Flow -->
+  <rect x="370" y="60" width="280" height="230" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="510" y="86" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757">AI-Native 流程</text>
+
+  <!-- Artifacts stack -->
+  <rect x="390" y="104" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1.2"/>
+  <text x="510" y="121" text-anchor="middle" font-size="10.5" fill="#141413">Intent（业务目标）</text>
+
+  <rect x="390" y="131" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="510" y="148" text-anchor="middle" font-size="10.5" fill="#141413">Domain Model（领域模型）</text>
+
+  <rect x="390" y="158" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="510" y="175" text-anchor="middle" font-size="10.5" fill="#141413">API Contract（契约）</text>
+
+  <rect x="390" y="185" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="510" y="202" text-anchor="middle" font-size="10.5" fill="#141413">Behavior Spec（行为规格）</text>
+
+  <rect x="390" y="212" width="240" height="24" rx="4" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="510" y="229" text-anchor="middle" font-size="10.5" fill="#141413">Constraints + Eval Spec</text>
+
+  <!-- Arrow down (solid clay) -->
+  <line x1="510" y1="236" x2="510" y2="252" stroke="#D97757" stroke-width="2"/>
+  <polygon points="510,256 506,248 514,248" fill="#D97757"/>
+  <text x="510" y="269" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">AI 执行</text>
+
+  <!-- Code + Eval nodes -->
+  <rect x="420" y="262" width="80" height="22" rx="4" fill="#D97757"/>
+  <text x="460" y="277" text-anchor="middle" font-size="10" fill="#FFFFFF">Code</text>
+
+  <rect x="520" y="262" width="80" height="22" rx="4" fill="#788C5D"/>
+  <text x="560" y="277" text-anchor="middle" font-size="10" fill="#FFFFFF">Eval</text>
+
+  <!-- Checkmark -->
+  <text x="645" y="275" text-anchor="end" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">✓</text>
+</svg>

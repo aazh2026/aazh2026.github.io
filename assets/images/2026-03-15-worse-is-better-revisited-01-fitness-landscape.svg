@@ -1,0 +1,88 @@
+<svg viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>Fitness Landscape: Worse is Better vs The Right Thing</title>
+  <desc>适应度景观对比图：The Right Thing 追求全局最优但路径更长、风险更高；Worse is Better 接受局部最优，快速迭代抵达可用的峰顶。</desc>
+
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="380" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Fitness Landscape 适应度景观</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Richard Gabriel · 1989 · worseisbetter</text>
+
+  <!-- Y axis label -->
+  <text x="18" y="200" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace" transform="rotate(-90,18,200)">适应度 →</text>
+
+  <!-- X axis label -->
+  <text x="340" y="368" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">设计空间 →</text>
+
+  <!-- Grid lines (subtle) -->
+  <line x1="60" y1="60" x2="60" y2="340" stroke="#D1CFC5" stroke-width="0.8" stroke-dasharray="4,4"/>
+  <line x1="620" y1="60" x2="620" y2="340" stroke="#D1CFC5" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- Left peak: The Right Thing (tall, narrow, harder to reach) -->
+  <!-- Peak base -->
+  <path d="M 100 340 Q 130 320, 160 200 Q 180 100, 200 70 Q 220 100, 240 200 Q 270 320, 300 340" fill="#E8E4DC" stroke="#D1CFC5" stroke-width="1"/>
+  <!-- Peak highlight -->
+  <path d="M 160 200 Q 180 100, 200 70 Q 220 100, 240 200" fill="none" stroke="#D97757" stroke-width="2" opacity="0.3"/>
+  <!-- Peak marker -->
+  <circle cx="200" cy="70" r="5" fill="#D97757"/>
+  <text x="200" y="56" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757">The Right Thing</text>
+  <text x="200" y="345" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">全局最优峰</text>
+
+  <!-- Right peak: Worse is Better (lower but reachable) -->
+  <!-- Peak base -->
+  <path d="M 380 340 Q 420 300, 460 180 Q 490 120, 520 100 Q 550 120, 580 180 Q 620 300, 660 340" fill="#E8EDDE" stroke="#D1CFC5" stroke-width="1"/>
+  <!-- Peak highlight -->
+  <path d="M 460 180 Q 490 120, 520 100 Q 550 120, 580 180" fill="none" stroke="#788C5D" stroke-width="2" opacity="0.3"/>
+  <!-- Peak marker -->
+  <circle cx="520" cy="100" r="5" fill="#788C5D"/>
+  <text x="520" y="86" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D">Worse is Better</text>
+  <text x="520" y="345" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">局部最优峰（可达）</text>
+
+  <!-- Climbing path to The Right Thing (long, uncertain) -->
+  <path d="M 80 340 Q 120 300, 150 250 Q 170 180, 200 70" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="6,4" opacity="0.6"/>
+  <text x="130" y="240" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" opacity="0.8">需要太多</text>
+  <text x="130" y="253" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" opacity="0.8">前置信息</text>
+  <!-- Dots along path -->
+  <circle cx="120" cy="290" r="3" fill="#D97757" opacity="0.6"/>
+  <circle cx="150" cy="250" r="3" fill="#D97757" opacity="0.6"/>
+  <circle cx="170" cy="180" r="3" fill="#D97757" opacity="0.6"/>
+  <circle cx="190" cy="120" r="3" fill="#D97757" opacity="0.6"/>
+
+  <!-- Climbing path to Worse is Better (quick, iterative) -->
+  <path d="M 660 340 Q 600 300, 560 240 Q 540 180, 520 100" fill="none" stroke="#788C5D" stroke-width="2.5"/>
+  <!-- Dots showing iteration steps -->
+  <circle cx="640" cy="310" r="4" fill="#788C5D"/>
+  <circle cx="600" cy="280" r="4" fill="#788C5D"/>
+  <circle cx="570" cy="240" r="4" fill="#788C5D"/>
+  <circle cx="550" cy="190" r="4" fill="#788C5D"/>
+  <circle cx="530" cy="140" r="4" fill="#788C5D"/>
+  <!-- Iteration arrows -->
+  <path d="M 638 306 Q 618 292, 602 278" fill="none" stroke="#788C5D" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <path d="M 598 276 Q 582 262, 572 238" fill="none" stroke="#788C5D" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <path d="M 568 236 Q 558 212, 552 188" fill="none" stroke="#788C5D" stroke-width="1" marker-end="url(#arrowhead)"/>
+  <path d="M 548 186 Q 538 162, 532 142" fill="none" stroke="#788C5D" stroke-width="1" marker-end="url(#arrowhead)"/>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="#788C5D"/>
+    </marker>
+  </defs>
+
+  <!-- Annotation for iteration path -->
+  <text x="600" y="315" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">快速迭代</text>
+  <text x="600" y="328" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">真实学习</text>
+
+  <!-- Divider line -->
+  <line x1="340" y1="60" x2="340" y2="340" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="8,4" opacity="0.5"/>
+  <text x="340" y="58" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">两条路径</text>
+
+  <!-- Legend -->
+  <rect x="40" y="358" width="14" height="14" rx="2" fill="#D97757" opacity="0.6"/>
+  <text x="60" y="369" font-size="10" fill="#141413">The Right Thing（追求完美路径）</text>
+  <rect x="280" y="358" width="14" height="14" rx="2" fill="#788C5D"/>
+  <text x="300" y="369" font-size="10" fill="#141413">Worse is Better（接受局部最优）</text>
+</svg>

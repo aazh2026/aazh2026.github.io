@@ -1,0 +1,151 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">CI/CD AI 注入点全景图：12个卡点的全流程分布</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">从提交到部署 · AI-Native 软件工程系列 #7</text>
+
+  <!-- Pipeline stages (bottom row) -->
+  <!-- Stage 1: Commit -->
+  <rect x="30" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="75" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">01</text>
+  <text x="75" y="330" text-anchor="middle" font-size="10" fill="#141413">Commit</text>
+  <text x="75" y="342" text-anchor="middle" font-size="9" fill="#87867F">提交</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="122" y1="317" x2="136" y2="317" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="138,317 132,313 132,321" fill="#D1CFC5"/>
+
+  <!-- Stage 2: Build -->
+  <rect x="140" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="185" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">02</text>
+  <text x="185" y="330" text-anchor="middle" font-size="10" fill="#141413">Build</text>
+  <text x="185" y="342" text-anchor="middle" font-size="9" fill="#87867F">构建</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="232" y1="317" x2="246" y2="317" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="248,317 242,313 242,321" fill="#D1CFC5"/>
+
+  <!-- Stage 3: Test -->
+  <rect x="250" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="295" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">03</text>
+  <text x="295" y="330" text-anchor="middle" font-size="10" fill="#141413">Test</text>
+  <text x="295" y="342" text-anchor="middle" font-size="9" fill="#87867F">测试</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="342" y1="317" x2="356" y2="317" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="358,317 352,313 352,321" fill="#D1CFC5"/>
+
+  <!-- Stage 4: Integration -->
+  <rect x="360" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="405" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">04</text>
+  <text x="405" y="330" text-anchor="middle" font-size="10" fill="#141413">Integration</text>
+  <text x="405" y="342" text-anchor="middle" font-size="9" fill="#87867F">集成</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="452" y1="317" x2="466" y2="317" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="468,317 462,313 462,321" fill="#D1CFC5"/>
+
+  <!-- Stage 5: Review -->
+  <rect x="470" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="515" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">05</text>
+  <text x="515" y="330" text-anchor="middle" font-size="10" fill="#141413">Review</text>
+  <text x="515" y="342" text-anchor="middle" font-size="9" fill="#87867F">审查</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="562" y1="317" x2="576" y2="317" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="578,317 572,313 572,321" fill="#D1CFC5"/>
+
+  <!-- Stage 6: Deploy -->
+  <rect x="560" y="295" width="90" height="44" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="605" y="314" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">06</text>
+  <text x="605" y="330" text-anchor="middle" font-size="10" fill="#141413">Deploy</text>
+  <text x="605" y="342" text-anchor="middle" font-size="9" fill="#87867F">部署</text>
+
+  <!-- Row 1 injection point badges (01-06) -->
+  <!-- Leader lines from row 1 to stages -->
+  <!-- 01 提交信息验证 → Commit -->
+  <line x1="75" y1="195" x2="75" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="30" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="75" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">01 提交信息验证</text>
+
+  <!-- 02 意图匹配 → Commit -->
+  <line x1="185" y1="195" x2="185" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="140" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="185" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">02 意图匹配</text>
+
+  <!-- 03 代码语义审查 → Build -->
+  <line x1="295" y1="195" x2="295" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="250" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="295" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">03 代码语义审查</text>
+
+  <!-- 04 安全扫描 → Test -->
+  <line x1="405" y1="195" x2="405" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="360" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="405" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">04 安全扫描</text>
+
+  <!-- 05 复杂度预警 → Integration -->
+  <line x1="515" y1="195" x2="515" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="470" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="515" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">05 复杂度预警</text>
+
+  <!-- 06 依赖风险 → Review -->
+  <line x1="605" y1="195" x2="605" y2="293" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="560" y="158" width="90" height="35" rx="5" fill="#D97757"/>
+  <text x="605" y="175" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">06 依赖风险</text>
+
+  <!-- Row 2 injection point badges (07-12) -->
+  <!-- 07 配置合理性 → Build -->
+  <line x1="75" y1="118" x2="185" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="30" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="75" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">07 配置合理性</text>
+
+  <!-- 08 测试质量 → Test -->
+  <line x1="185" y1="118" x2="295" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="140" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="185" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">08 测试质量</text>
+
+  <!-- 09 覆盖率盲区 → Integration -->
+  <line x1="295" y1="118" x2="405" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="250" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="295" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">09 覆盖率盲区</text>
+
+  <!-- 10 PR摘要 → Review -->
+  <line x1="405" y1="118" x2="515" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="360" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="405" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">10 PR摘要</text>
+
+  <!-- 11 审查优先级 → Review -->
+  <line x1="515" y1="118" x2="605" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="470" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="515" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">11 审查优先级</text>
+
+  <!-- 12 部署风险 → Deploy -->
+  <line x1="605" y1="118" x2="605" y2="158" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2" opacity="0.5"/>
+  <rect x="560" y="85" width="90" height="35" rx="5" fill="#788C5D"/>
+  <text x="605" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">12 部署风险</text>
+
+  <!-- Layer labels (left side) -->
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb">Pre-commit</text>
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb" transform="translate(0,42)">On-commit</text>
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb" transform="translate(0,84)">Pre-build</text>
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb" transform="translate(0,126)">Post-build</text>
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb" transform="translate(0,168)">Pre-review</text>
+  <text x="12" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" writing-mode="tb" transform="translate(0,210)">Pre-deploy</text>
+
+  <!-- Legend -->
+  <rect x="30" y="56" width="12" height="12" rx="2" fill="#D97757"/>
+  <text x="46" y="66" font-size="9" fill="#141413" font-family="ui-monospace, monospace">分层防御卡点</text>
+  <rect x="160" y="56" width="12" height="12" rx="2" fill="#788C5D"/>
+  <text x="176" y="66" font-size="9" fill="#141413" font-family="ui-monospace, monospace">质量/审查卡点</text>
+
+  <!-- Cost multiplier annotation -->
+  <text x="664" y="174" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" text-anchor="end">修复成本</text>
+  <text x="664" y="188" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" text-anchor="end">1x → 10x → 100x</text>
+
+  <title>CI/CD AI 注入点全景图</title>
+  <desc>12个AI验证卡点从代码提交到部署上线的全流程分布图，展示6个阶段与12个卡点的映射关系及防御层次</desc>
+</svg>

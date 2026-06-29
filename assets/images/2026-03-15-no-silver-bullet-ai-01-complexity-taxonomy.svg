@@ -1,0 +1,69 @@
+<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, border #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="420" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">两种复杂度的分类</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Brooks, 1986 · No Silver Bullet</text>
+
+  <!-- Left column: Essential Complexity -->
+  <rect x="40" y="62" width="260" height="280" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="170" y="88" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">本质复杂度</text>
+  <text x="170" y="104" text-anchor="middle" font-size="10" fill="#87867F">Essential Complexity</text>
+
+  <!-- Essential nodes -->
+  <rect x="56" y="120" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="140" text-anchor="middle" font-size="11" fill="#141413">需求模糊且易变</text>
+
+  <rect x="56" y="160" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="180" text-anchor="middle" font-size="11" fill="#141413">约束条件相互冲突</text>
+
+  <rect x="56" y="200" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="220" text-anchor="middle" font-size="11" fill="#141413">边界情况爆炸</text>
+
+  <rect x="56" y="240" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="170" y="260" text-anchor="middle" font-size="11" fill="#141413">系统涌现行为</text>
+
+  <!-- Accidental column: Right -->
+  <rect x="380" y="62" width="260" height="280" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="510" y="88" text-anchor="middle" font-size="13" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">偶然复杂度</text>
+  <text x="510" y="104" text-anchor="middle" font-size="10" fill="#87867F">Accidental Complexity</text>
+
+  <!-- Accidental nodes -->
+  <rect x="396" y="120" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="510" y="140" text-anchor="middle" font-size="11" fill="#141413">语法和样板代码</text>
+
+  <rect x="396" y="160" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="510" y="180" text-anchor="middle" font-size="11" fill="#141413">API 记忆负担</text>
+
+  <rect x="396" y="200" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="510" y="220" text-anchor="middle" font-size="11" fill="#141413">环境配置</text>
+
+  <rect x="396" y="240" width="228" height="32" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="510" y="260" text-anchor="middle" font-size="11" fill="#141413">工具链摩擦</text>
+
+  <!-- Center divider with Brooks 1986 label -->
+  <line x1="340" y1="80" x2="340" y2="340" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
+  <rect x="282" y="180" width="116" height="22" rx="11" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="195" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Brooks 1986</text>
+
+  <!-- Bottom: AI impact arrows -->
+  <rect x="40" y="358" width="200" height="44" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="140" y="378" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">AI 已大幅削减</text>
+  <text x="140" y="394" text-anchor="middle" font-size="10" fill="#87867F">偶然复杂度</text>
+
+  <line x1="240" y1="380" x2="270" y2="380" stroke="#788C5D" stroke-width="2"/>
+  <polygon points="274,380 266,374 266,386" fill="#788C5D"/>
+
+  <line x1="410" y1="380" x2="440" y2="380" stroke="#D97757" stroke-width="2"/>
+  <polygon points="444,380 436,374 436,386" fill="#D97757"/>
+
+  <rect x="440" y="358" width="200" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="540" y="378" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">AI 难以触及</text>
+  <text x="540" y="394" text-anchor="middle" font-size="10" fill="#87867F">本质复杂度</text>
+
+  <title>两种复杂度的分类</title>
+  <desc>Brooks 1986 框架：本质复杂度（需求模糊、约束冲突、边界爆炸、涌现行为）与偶然复杂度（语法样板、API记忆、环境配置、工具链摩擦）的对比，以及 AI 对两者的不同影响。</desc>
+</svg>

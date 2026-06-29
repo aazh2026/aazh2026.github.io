@@ -1,0 +1,187 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>AI代码溯源四维度检测</title>
+  <desc>Four-panel grid showing AST比对、控制流分析、N-gram匹配、Token序列四种代码溯源检测维度</desc>
+
+  <!-- Background -->
+  <rect width="800" height="460" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="400" y="26" text-anchor="middle" font-size="15" font-weight="600" fill="#141413" letter-spacing="-0.02em">AI 代码溯源：四维度检测体系</text>
+  <text x="400" y="44" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">AST 结构 · 控制流语义 · N-gram 文本 · Token 序列</text>
+
+  <!-- ===== Panel 1: AST比对 (top-left) ===== -->
+  <rect x="40" y="60" width="350" height="170" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="40" y="60" width="350" height="30" rx="10" fill="#D97757"/>
+  <rect x="40" y="80" width="350" height="10" fill="#D97757"/>
+  <text x="215" y="81" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">AST 比对</text>
+
+  <!-- AST tree diagram -->
+  <g transform="translate(65, 110)">
+    <!-- Root node -->
+    <rect x="0" y="0" width="60" height="24" rx="4" fill="#D97757"/>
+    <text x="30" y="16" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">FunctionDecl</text>
+
+    <!-- Arrow to body -->
+    <line x1="30" y1="24" x2="30" y2="38" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="30,42 26,36 34,36" fill="#D1CFC5"/>
+
+    <!-- Body block -->
+    <rect x="0" y="42" width="60" height="24" rx="4" fill="#E3DACC"/>
+    <rect x="0" y="42" width="60" height="24" rx="4" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="30" y="58" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">BlockStmt</text>
+
+    <!-- Child nodes -->
+    <line x1="30" y1="66" x2="30" y2="78" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect x="0" y="78" width="80" height="22" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="40" y="93" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">VarDecl (x, y)</text>
+  </g>
+
+  <!-- Similar AST -->
+  <g transform="translate(200, 110)">
+    <rect x="0" y="0" width="60" height="24" rx="4" fill="#D97757"/>
+    <text x="30" y="16" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">FunctionDecl</text>
+    <line x1="30" y1="24" x2="30" y2="38" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="30,42 26,36 34,36" fill="#D1CFC5"/>
+    <rect x="0" y="42" width="60" height="24" rx="4" fill="#E3DACC"/>
+    <rect x="0" y="42" width="60" height="24" rx="4" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="30" y="58" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">BlockStmt</text>
+    <line x1="30" y1="66" x2="30" y2="78" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect x="0" y="78" width="80" height="22" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="40" y="93" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">VarDecl (a, b)</text>
+  </g>
+
+  <!-- Match label -->
+  <rect x="80" y="215" width="80" height="20" rx="10" fill="#788C5D"/>
+  <text x="120" y="229" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">结构匹配 ✓</text>
+
+  <text x="215" y="248" text-anchor="middle" font-size="10" fill="#87867F">忽略变量名 (x→a, y→b)，比对语法树结构</text>
+
+  <!-- ===== Panel 2: 控制流分析 (top-right) ===== -->
+  <rect x="410" y="60" width="350" height="170" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <rect x="410" y="60" width="350" height="30" rx="10" fill="#87867F"/>
+  <rect x="410" y="80" width="350" height="10" fill="#87867F"/>
+  <text x="585" y="81" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">控制流分析</text>
+
+  <!-- CFG diagram -->
+  <g transform="translate(445, 105)">
+    <!-- Start -->
+    <ellipse cx="50" cy="12" rx="30" ry="14" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <text x="50" y="17" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">Start</text>
+
+    <line x1="50" y1="26" x2="50" y2="42" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="50,46 46,40 54,40" fill="#D1CFC5"/>
+
+    <!-- Decision diamond -->
+    <polygon points="50,46 80,70 50,94 20,70" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+    <text x="50" y="74" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">if (x&gt;0)</text>
+
+    <!-- Left branch: true -->
+    <line x1="20" y1="70" x2="-10" y2="70" stroke="#D1CFC5" stroke-width="1.5"/>
+    <line x1="-10" y1="70" x2="-10" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="-10,114 -14,108 -6,108" fill="#D1CFC5"/>
+    <rect x="-40" y="114" width="60" height="22" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="-10" y="129" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">doX()</text>
+
+    <!-- Right branch: false -->
+    <line x1="80" y1="70" x2="110" y2="70" stroke="#D1CFC5" stroke-width="1.5"/>
+    <line x1="110" y1="70" x2="110" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="110,114 106,108 114,108" fill="#D1CFC5"/>
+    <rect x="80" y="114" width="60" height="22" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="110" y="129" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">doY()</text>
+
+    <!-- Merge -->
+    <line x1="-10" y1="136" x2="-10" y2="152" stroke="#D1CFC5" stroke-width="1.5"/>
+    <line x1="110" y1="136" x2="110" y2="152" stroke="#D1CFC5" stroke-width="1.5"/>
+    <line x1="-10" y1="152" x2="50" y2="152" stroke="#D1CFC5" stroke-width="1.5"/>
+    <line x1="110" y1="152" x2="50" y2="152" stroke="#D1CFC5" stroke-width="1.5"/>
+    <polygon points="50,156 46,150 54,150" fill="#D1CFC5"/>
+  </g>
+
+  <text x="585" y="248" text-anchor="middle" font-size="10" fill="#87867F">比对控制流图结构，检测算法逻辑相似性</text>
+
+  <!-- ===== Panel 3: N-gram 匹配 (bottom-left) ===== -->
+  <rect x="40" y="264" width="350" height="170" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <rect x="40" y="264" width="350" height="30" rx="10" fill="#87867F"/>
+  <rect x="40" y="284" width="350" height="10" fill="#87867F"/>
+  <text x="215" y="285" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">N-gram 匹配</text>
+
+  <!-- N-gram bars -->
+  <g transform="translate(60, 310)">
+    <text x="0" y="0" font-size="10" fill="#141413" font-family="ui-monospace, monospace">代码片段 A：</text>
+    <rect x="0" y="8" width="30" height="16" rx="3" fill="#D97757"/>
+    <text x="15" y="20" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">if</text>
+    <rect x="34" y="8" width="30" height="16" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="49" y="20" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">(x&gt;0)</text>
+    <rect x="68" y="8" width="30" height="16" rx="3" fill="#D97757"/>
+    <text x="83" y="20" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">doX()</text>
+    <rect x="102" y="8" width="30" height="16" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="117" y="20" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">else</text>
+
+    <!-- Match highlights -->
+    <rect x="0" y="32" width="100" height="14" rx="3" fill="#788C5D" opacity="0.25"/>
+    <rect x="34" y="32" width="36" height="14" rx="3" fill="#788C5D" opacity="0.25"/>
+
+    <text x="0" y="62" font-size="10" fill="#141413" font-family="ui-monospace, monospace">代码片段 B：</text>
+    <rect x="0" y="70" width="30" height="16" rx="3" fill="#D97757"/>
+    <text x="15" y="82" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">if</text>
+    <rect x="34" y="70" width="30" height="16" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="49" y="82" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">(a&gt;0)</text>
+    <rect x="68" y="70" width="30" height="16" rx="3" fill="#D97757"/>
+    <text x="83" y="82" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">doX()</text>
+    <rect x="102" y="70" width="30" height="16" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+    <text x="117" y="82" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">else</text>
+  </g>
+
+  <rect x="70" y="420" width="80" height="20" rx="10" fill="#788C5D"/>
+  <text x="110" y="434" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">72% 匹配</text>
+
+  <text x="215" y="424" text-anchor="middle" font-size="10" fill="#87867F">滑动窗口检测代码片段复制，忽略空格和注释</text>
+
+  <!-- ===== Panel 4: Token 序列 (bottom-right) ===== -->
+  <rect x="410" y="264" width="350" height="170" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
+  <rect x="410" y="264" width="350" height="30" rx="10" fill="#87867F"/>
+  <rect x="410" y="284" width="350" height="10" fill="#87867F"/>
+  <text x="585" y="285" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">标准化 Token 比对</text>
+
+  <!-- Token streams -->
+  <g transform="translate(430, 308)">
+    <!-- Original tokens -->
+    <text x="0" y="0" font-size="10" fill="#141413" font-family="ui-monospace, monospace">原始代码：</text>
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="18" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">INT</text>
+      <rect x="40" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="58" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">ID:x</text>
+      <rect x="80" y="0" width="36" height="18" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="98" y="13" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">SEMI</text>
+      <rect x="120" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="138" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">INT</text>
+      <rect x="160" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="178" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">ID:y</text>
+    </g>
+
+    <!-- Normalized tokens -->
+    <text x="0" y="52" font-size="10" fill="#141413" font-family="ui-monospace, monospace">AI 生成：</text>
+    <g transform="translate(0, 62)">
+      <rect x="0" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="18" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">INT</text>
+      <rect x="40" y="0" width="36" height="18" rx="3" fill="#788C5D"/>
+      <text x="58" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">ID:a</text>
+      <rect x="80" y="0" width="36" height="18" rx="3" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+      <text x="98" y="13" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">SEMI</text>
+      <rect x="120" y="0" width="36" height="18" rx="3" fill="#D97757"/>
+      <text x="138" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">INT</text>
+      <rect x="160" y="0" width="36" height="18" rx="3" fill="#788C5D"/>
+      <text x="178" y="13" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">ID:b</text>
+    </g>
+
+    <!-- Mapping lines -->
+    <line x1="58" y1="28" x2="58" y2="62" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2"/>
+    <line x1="178" y1="28" x2="178" y2="62" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2"/>
+  </g>
+
+  <rect x="460" y="420" width="80" height="20" rx="10" fill="#788C5D"/>
+  <text x="500" y="434" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">ID 映射 ✓</text>
+
+  <text x="585" y="424" text-anchor="middle" font-size="10" fill="#87867F">将变量名标准化后再比对，过滤命名干扰</text>
+</svg>

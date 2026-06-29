@@ -2,7 +2,7 @@
   <defs>
     <style>
       .bg { fill: #FAF9F5; }
-      .title { fill: #141413; font-size: 20px; font-weight: 700; }
+      .title { fill: #141413; font-size: 20px; font-weight: 700; font-family: 'ui-serif, Georgia, serif'; }
       .subtitle { fill: #87867F; font-size: 12px; }
       .label { fill: #141413; font-size: 13px; font-weight: 600; }
       .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }

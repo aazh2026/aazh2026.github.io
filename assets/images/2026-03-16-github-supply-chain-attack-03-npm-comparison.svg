@@ -1,0 +1,84 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">GitHub vs npm：供应链危险等级对比</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">GitHub 危险 · npm 相对安全</text>
+
+  <!-- Column Headers -->
+  <text x="200" y="68" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">GitHub（危险）</text>
+  <text x="480" y="68" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">npm（相对安全）</text>
+
+  <!-- Row 1: Package Management -->
+  <rect x="30" y="80" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="110" y="100" text-anchor="middle" font-size="10" fill="#D97757" font-weight="500">包管理</text>
+  <text x="110" y="116" text-anchor="middle" font-size="9" fill="#141413">无统一注册表</text>
+  <text x="110" y="128" text-anchor="middle" font-size="8" fill="#87867F">任意仓库可发布</text>
+
+  <rect x="310" y="80" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="390" y="100" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="500">包管理</text>
+  <text x="390" y="116" text-anchor="middle" font-size="9" fill="#141413">中央统一 curation</text>
+  <text x="390" y="128" text-anchor="middle" font-size="8" fill="#87867F">npm registry 审核</text>
+
+  <!-- Row 2: Code Execution -->
+  <rect x="30" y="140" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="110" y="160" text-anchor="middle" font-size="10" fill="#D97757" font-weight="500">代码执行</text>
+  <text x="110" y="176" text-anchor="middle" font-size="9" fill="#141413">setup.py / install.sh</text>
+  <text x="110" y="188" text-anchor="middle" font-size="8" fill="#87867F">直接执行任意代码</text>
+
+  <rect x="310" y="140" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="390" y="160" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="500">代码执行</text>
+  <text x="390" y="176" text-anchor="middle" font-size="9" fill="#141413">隔离的构建沙箱</text>
+  <text x="390" y="188" text-anchor="middle" font-size="8" fill="#87867F">npm install 限制权限</text>
+
+  <!-- Row 3: Trust Signals -->
+  <rect x="30" y="200" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="110" y="220" text-anchor="middle" font-size="10" fill="#D97757" font-weight="500">信任信号</text>
+  <text x="110" y="236" text-anchor="middle" font-size="9" fill="#141413">Star 可购买</text>
+  <text x="110" y="248" text-anchor="middle" font-size="8" fill="#87867F">$50 = 500 stars</text>
+
+  <rect x="310" y="200" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="390" y="220" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="500">信任信号</text>
+  <text x="390" y="236" text-anchor="middle" font-size="9" fill="#141413">下载量 + 验证发布者</text>
+  <text x="390" y="248" text-anchor="middle" font-size="8" fill="#87867F">下载计数不可伪造</text>
+
+  <!-- Row 4: Detection Difficulty -->
+  <rect x="30" y="260" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="110" y="280" text-anchor="middle" font-size="10" fill="#D97757" font-weight="500">检测难度</text>
+  <text x="110" y="296" text-anchor="middle" font-size="9" fill="#141413">隐藏于 build/test</text>
+  <text x="110" y="308" text-anchor="middle" font-size="8" fill="#87867F">无中央日志</text>
+
+  <rect x="310" y="260" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="390" y="280" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="500">检测难度</text>
+  <text x="390" y="296" text-anchor="middle" font-size="9" fill="#141413">自动化安全扫描</text>
+  <text x="390" y="308" text-anchor="middle" font-size="8" fill="#87867F">aggregate 统计可用</text>
+
+  <!-- Right side: vertical summary bar -->
+  <rect x="520" y="80" width="130" height="230" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="585" y="105" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">关键差异</text>
+  <line x1="530" y1="115" x2="640" y2="115" stroke="#D1CFC5" stroke-width="1"/>
+
+  <text x="530" y="138" font-size="9.5" fill="#141413" font-weight="500">攻击门槛</text>
+  <rect x="530" y="143" width="120" height="10" rx="3" fill="#D97757" opacity="0.3"/>
+  <rect x="530" y="143" width="110" height="10" rx="3" fill="#D97757" opacity="0.6"/>
+  <text x="530" y="165" font-size="8" fill="#87867F">极低 · 任意账号</text>
+
+  <text x="530" y="188" font-size="9.5" fill="#141413" font-weight="500">检测难度</text>
+  <rect x="530" y="193" width="120" height="10" rx="3" fill="#D97757" opacity="0.3"/>
+  <rect x="530" y="193" width="105" height="10" rx="3" fill="#D97757" opacity="0.6"/>
+  <text x="530" y="215" font-size="8" fill="#87867F">高 · 无中央监控</text>
+
+  <text x="530" y="238" font-size="9.5" fill="#141413" font-weight="500">影响范围</text>
+  <rect x="530" y="243" width="120" height="10" rx="3" fill="#D97757" opacity="0.3"/>
+  <rect x="530" y="243" width="95" height="10" rx="3" fill="#D97757" opacity="0.6"/>
+  <text x="530" y="265" font-size="8" fill="#87867F">CI/CD + 开发者</text>
+
+  <text x="530" y="288" font-size="9.5" fill="#141413" font-weight="500">防御成本</text>
+  <rect x="530" y="293" width="120" height="10" rx="3" fill="#D97757" opacity="0.3"/>
+  <rect x="530" y="293" width="85" height="10" rx="3" fill="#D97757" opacity="0.5"/>
+  <text x="530" y="305" font-size="8" fill="#87867F">高 · 需纵深防御</text>
+
+  <!-- Source -->
+  <text x="340" y="345" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">GitHub vs npm 供应链安全对比 · 2026</text>
+</svg>

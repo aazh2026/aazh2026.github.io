@@ -9,12 +9,12 @@ series: AI-Native Engineering
 ---
 
 > **TL;DR**
-> 
+>
 > OpenAI 团队发布了一项内部工程实验：5 个月时间、零手写代码，生成了超过 100 万行代码。他们的关键实践是 "Harness"——一套约束 AI Agent 的工具和方法。Martin Fowler 对此进行了深度解读，提出 Harness Engineering 的核心思想：通过上下文工程、架构约束和"垃圾回收"机制，让 AI 生成的代码可维护、可信赖。
-> 
+>
 > ⚠️ **声明**：本文是对 Martin Fowler 解读文章的再解读，包含我的个人观点和延伸思考，而非经过独立验证的技术报告。
 
----
+<object data="/assets/images/2026-03-18-harness-engineering-03-hero-overview.svg" type="image/svg+xml" width="100%"></object>
 
 ## 什么是 Harness？
 
@@ -100,6 +100,10 @@ OpenAI 团队构建了一套系统来：
 > 
 > —— *Martin Fowler 的总结*
 
+> 💡 **Key Insight**
+>
+> Context is King. 给 Agent 10 条具体规则 + 3 个代码示例，比给 Agent 100 页架构文档效果更好。上下文质量比数量更重要。
+
 ### Layer 2: 架构约束
 
 **核心问题**：如何防止 Agent 生成混乱的代码？
@@ -107,6 +111,10 @@ OpenAI 团队构建了一套系统来：
 **混合方法**：
 - **确定性约束**：自定义 Linter、结构测试（不可绕过）
 - **LLM 约束**：让 Agent 自己检查架构合规性
+
+**约束示例（概念性说明）**
+
+在实际代码库中，OpenAI 的 Harness 约束体现为具体的工程规则。确定性约束是不可绕过的硬性规则：所有 API endpoints 必须有类型签名，禁止 raw SQL 字符串，测试覆盖率必须超过 80%，依赖图必须无环。这些规则由 ESLint、TypeScript 编译器、CI/CD pipeline 强制执行，Agent 无法绕过。LLM 约束则是让 Agent 自己检查架构合规性——让 Agent 在生成代码后对照 ARCHITECTURE.md 验证是否遵守了分层规则。这两种约束形成互补：确定性约束提供底线保障，LLM 约束处理需要上下文的复杂判断。架构护栏（architectural guardrails）的核心思想是：不是告诉 Agent"要做什么"，而是告诉 Agent"不能做什么"——通过排除法将解空间压缩到可维护的范围。
 
 **混合约束示例**：
 
@@ -126,6 +134,10 @@ OpenAI 团队构建了一套系统来：
 
 自定义 Linter 强制执行架构边界，Agent 无法绕过。
 
+> 💡 **Key Insight**
+>
+> Deterministic > LLM-based. 用 ESLint 强制约束，Agent 会在报错后调整；而让 Agent "自己检查是否符合架构" 效果很差。
+
 ### Layer 3: 垃圾回收
 
 **核心问题**：如何对抗代码腐烂？
@@ -140,6 +152,10 @@ OpenAI 团队构建了一套系统来：
 - 自动生成修复 PR
 
 **类比**：就像垃圾回收器自动管理内存，Harness 自动维护代码健康——将"代码质量维护"从人工任务变为系统化的自动流程。
+
+> 💡 **Key Insight**
+>
+> Harness 的"垃圾回收"将代码质量维护从人工任务变为系统化的自动流程——每天运行一次 Agent 扫描死代码、架构违规、文档过时，自动生成修复 PR。
 
 ---
 
@@ -210,6 +226,10 @@ OpenAI 的实验表明：
 > 
 > —— *Martin Fowler 的预测*
 
+> 💡 **Key Insight**
+>
+> 开发者可能不再仔细选择每个库和框架，而是选择适合目标应用拓扑的 Harness。
+
 **工作流程**：
 1. 选择 Harness 模板（如"电商后端 Harness"）
 2. 根据具体需求调整
@@ -222,7 +242,9 @@ OpenAI 的实验表明：
 - 团队 B 也想用这些改进
 - 但团队 B 已经做了很多定制
 
-> 💡 **我的观点**：这个"分叉与同步"问题在今天的基础设施即代码（IaC）和 Golden Path 实践中已经存在。Harness 并没有 magically 解决这个问题，只是把它转移到了新的抽象层。
+> 💡 **Key Insight**
+>
+> 这个"分叉与同步"问题在今天的基础设施即代码（IaC）和 Golden Path 实践中已经存在。Harness 并没有 magically 解决这个问题，只是把它转移到了新的抽象层。
 
 ---
 
@@ -242,7 +264,9 @@ OpenAI 的实验表明：
 | Harness 质量 > 个人喜好 | 历史上，技术栈选择从来不是纯技术决策，而是政治、生态、惯性的产物 |
 | 小效率不重要了 | 当 Agent 生成有问题的代码时，人类开发者仍需介入调试，底层复杂度不会消失 |
 
-> 💡 **我的观点**：技术栈收敛的预测过于乐观。更可能的结果是**分层收敛**——底层基础设施（如容器编排）可能收敛，但应用层技术栈会继续保持多样化。Harness 会成为新的抽象层，但不会消除技术栈的复杂性，只是把它隐藏起来。
+> 💡 **Key Insight**
+>
+> 技术栈收敛的预测过于乐观。更可能的结果是**分层收敛**——底层基础设施可能收敛，但应用层技术栈会继续保持多样化。
 
 ---
 
@@ -270,7 +294,7 @@ OpenAI 的实验表明：
 - 使用 TypeScript 严格模式
 ```
 
-在项目根目录放置 `.cursorrules` 文件，Cursor Agent 会自动读取并在生成代码时遵循这些约束。
+在项目根目录放置 `.cursorrules` 文件，Cursor Agent 会自动读取并在生成代码时遵循这些约束。关键在于"Context is King"——`.cursorrules` 里的每条规则都应该是具体可执行的判断（"禁止跨层导入"），而不是模糊的原则（"保持代码整洁"）。
 
 ### Layer 2: 架构约束（可用方案）
 
@@ -306,7 +330,7 @@ module.exports = {
 };
 ```
 
-通过自定义 ESLint 插件，可以在代码层面强制执行架构约束，AI 生成违规代码时会立即被 Linter 捕获。
+通过自定义 ESLint 插件，可以在代码层面强制执行架构约束，AI 生成违规代码时会立即被 Linter 捕获。这里的关键是"Deterministic > LLM-based"——用确定性的 ESLint 规则强制执行，比让 Agent 自己检查架构合规性要可靠得多。Agent 往往会"放过"自己写的代码，但不会放过 ESLint 的报错。
 
 ### Layer 3: 垃圾回收（可用方案）
 
@@ -320,6 +344,40 @@ module.exports = {
 | 代码质量 | SonarQube / Code Climate | 持续监控代码健康度 |
 
 **GitHub Action 示例**（文档同步检查）：
+
+以下是一个最小可用的文档同步检查 GitHub Action，每周一运行，用 LLM 对比代码变更与文档差异，发现过时文档时自动创建 PR 更新：
+
+```yaml
+name: Docs Sync Check
+on:
+  schedule:
+    - cron: '0 2 * * 1'  # 每周一凌晨运行
+  workflow_dispatch:
+
+jobs:
+  docs-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Get changed files
+        id: diff
+        run: |
+          CHANGED=$(git diff --name-only origin/main -- '*.md' '!README.md')
+          echo "changed=$CHANGED" >> $GITHUB_OUTPUT
+      - name: LLM review
+        if: steps.diff.outputs.changed != ''
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          # 对比代码变更与文档，检测过时内容
+          echo "${{ steps.diff.outputs.changed }}" | xargs -I{} \
+          gh run --openai-api-key $OPENAI_API_KEY \
+            --prompt "Compare this doc with recent code changes. Does it still match?"
+```
+
+这个 Workflow 利用"垃圾回收"思想：用自动化替代人工文档审查，确保代码演进后文档不会被遗忘。结合 Layer 1 的 Knowledge Base 工具，可以建立代码-文档双向同步机制。
+
 ---
 
 ## 我的尝试与踩坑
@@ -360,6 +418,22 @@ module.exports = {
 
 ### 一个实用的最小 Harness
 
+基于我在 Cursor + ESLint 项目中的实践经验，一个"最小可用"的 Harness 包含以下四个组件，每个组件对应一个 OpenAI 实验中发现的具体问题：
+
+**1. `.cursorrules` — Context is King**
+项目根目录放置 `.cursorrules` 文件，定义分层架构（UI 层 → Service 层 → Repository 层）、命名规范、禁止的 pattern。Cursor Agent 会自动读取，使生成代码自带上下文约束。注意：Agent 模式下 `.cursorrules` 有时不生效，需要在 prompt 中显式引用。
+
+**2. ESLint 导入规则 — 确定性约束**
+禁止跨层导入的 ESLint 规则是不可绕过的硬性约束。当 Agent 生成违规代码时，ESLint 报错，Agent 调整，循环往复。这解决了"Agent 生成的代码可能违反架构"的问题。注意：Agent 有时会试图 `// eslint-disable-next-line`，需要配合 pre-commit hook。
+
+**3. `knip` — 死代码检测**
+运行 `knip` 定期扫描未使用的导出、孤儿文件、缺失依赖。自动清理死代码，使代码库保持健康。这是 Harness"垃圾回收"机制的最小化实现。
+
+**4. 每日 GC Agent — 文档与架构维护**
+配置一个每日运行的 Agent（可用 GitHub Action + LLM），扫描最近代码变更，对比 ARCHITECTURE.md 和 README，发现过时文档时自动创建 PR 更新。这将"代码质量维护"从人工任务变为系统化的自动流程。
+
+这四个组件覆盖了 OpenAI 实验中发现的四个核心问题：上下文不足（.cursorrules）、架构违规（ESLint）、代码腐烂（knip）、文档过时（GC Agent）。加上逃生舱口（`// harness-ignore` 注释或 `// eslint-disable-line`），避免过度约束导致的死循环。
+
 ---
 
 ## 结尾：可控的 AI 自主
@@ -367,6 +441,10 @@ module.exports = {
 Harness Engineering 提供了一种思考框架：
 
 **不是让 AI 完全自主，而是让 AI 在精心设计的约束下自主。**
+
+> 💡 **Key Insight**
+>
+> Harness Engineering 提供了一种思考框架：不是让 AI 完全自主，而是让 AI 在精心设计的约束下自主。
 
 ### 核心原则
 
@@ -396,7 +474,9 @@ Harness Engineering 提供了一种思考框架：
 
 OpenAI 的实验提供了一个**思考起点**，而非**操作手册**。
 
-> 💡 **我的观点**：Harness 的核心价值不在于它让你能用 AI 写 100 万行代码，而在于它迫使你回答一个基本问题——**什么样的约束能让 AI 生成的代码可维护？**
+> 💡 **Key Insight**
+>
+> OpenAI 的实验提供了一个思考起点，而非操作手册。
 
 这个问题没有标准答案，但提出这个问题本身，就比盲目追求"AI 写更多代码"更有价值。
 
