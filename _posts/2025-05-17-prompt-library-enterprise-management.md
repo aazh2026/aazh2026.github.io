@@ -69,6 +69,8 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 
 所有Prompt都存储在Git仓库中，使用与代码相同的提交、分支和Pull Request工作流。每次修改都有完整的变更历史可追溯。提交信息应包含修改原因，而不只是"更新Prompt"。这使得回滚到任意历史版本成为可能，也方便在出问题时进行根因分析。
 
+<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-01-three-levels.svg" type="image/svg+xml" width="100%"></object>
+
 <object data="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 **原则2：语义化版本**
@@ -80,6 +82,8 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 ### 审查清单
 
 **审查流程**：所有Prompt在提交到共享库之前，必须经过至少一名团队成员的审查。审查重点包括：Prompt是否清晰无歧义、是否包含必要的上下文信息、输出格式是否符合预期、是否存在安全风险或偏见问题。审查通过后，Prompt方可合并到主分支并对其他团队成员可见。
+
+<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-02-prompt-lifecycle.svg" type="image/svg+xml" width="100%"></object>
 
 <object data="/assets/images/2025-05-17-prompt-library-enterprise-management-02-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 

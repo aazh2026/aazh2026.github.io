@@ -79,6 +79,10 @@ series: AI-Native软件工程系列 #4
 
 ### 转换Pipeline
 
+<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg"
+
+<object data="/assets/images/2025-06-06-bdd-formal-specification-02-toolchain.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
+
 <object data="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
 Scenario: 并发订单不超卖
   Given 商品A库存为10

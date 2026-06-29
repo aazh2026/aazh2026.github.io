@@ -14,6 +14,8 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants-hero.svg" type="image/svg+xml" width="100%"></object>
 
+<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" type="image/svg+xml" width="100%"></object>
+
 ---
 
 ## 价格下降，成本反升

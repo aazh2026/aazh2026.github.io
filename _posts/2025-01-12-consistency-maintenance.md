@@ -16,7 +16,9 @@ series: AI-Native Engineering
 > 3. **分层摘要 + 冲突显式化** — 热数据（近期会话详细摘要）优先加载，冷数据（历史总摘要）作为背景；矛盾不隐藏，主动标记或询问
 > 4. **最好的Agent不是记忆力最强的，而是让用户感觉"它懂我"的**
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg"
+
+<object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
 
 # 跨会话一致性：如何让Agent不变成"精神分裂"
 
@@ -142,7 +144,9 @@ Agent需要：
 
 不存储完整对话，存储**分层摘要**：
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg"
+
+<object data="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
 
 形成**金字塔结构**：
 - 底层：最近5个会话的详细摘要

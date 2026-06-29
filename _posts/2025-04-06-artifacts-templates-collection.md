@@ -25,6 +25,8 @@ series: AI-Native SDLC 交付件体系
 
 ## 模板设计理念
 
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-template-ecosystem.svg" type="image/svg+xml" width="100%"></object>
+
 <object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%"></object>
 
 ### 设计原则

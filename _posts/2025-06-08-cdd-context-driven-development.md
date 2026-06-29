@@ -55,6 +55,8 @@ series: AI-Native软件工程系列 #6
 
 ### 上下文的生命周期
 
+<object data="/assets/images/2025-06-08-cdd-01-lifecycle.svg" type="image/svg+xml" width="100%"></object>
+
 <object data="/assets/images/2025-06-08-cdd-01-cycle.svg" type="image/svg+xml" width="100%"></object>
 
 ---

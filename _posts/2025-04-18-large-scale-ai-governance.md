@@ -57,7 +57,9 @@ redirect_from:
 
 <object data="/assets/images/2025-04-18-governance-01-pillars.svg" type="image/svg+xml" width="100%"></object>
 
-<object data="/assets/images/2025-04-18-large-scale-ai-governance-02-framework.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-18-large-scale-ai-governance-02-framework.svg"
+
+<object data="/assets/images/2025-04-18-governance-02-hierarchy.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
 
 > 💡 **Key Insight**
 >

@@ -58,6 +58,8 @@ series: "Agent-OS-Series"
 
 ## 五层架构全景图
 
+<object data="/assets/images/2026-03-31-agent-os-01-stack.svg" type="image/svg+xml" width="100%"></object>
+
 <object data="/assets/images/2026-03-31-agent-os-five-layer-01-arch.svg" type="image/svg+xml" width="100%"></object>
 
 **数据流向：**

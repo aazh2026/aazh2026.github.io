@@ -67,11 +67,15 @@ series: AI-Native Engineering
 
 ---
 
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" type="image/svg+xml" width="100%"></object>
+
 ## Harness 的四大支柱
 
 everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
 <object data="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" type="image/svg+xml" width="100%"></object>
+
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 支柱 1：Eval Harness（测试层）
 

@@ -17,6 +17,8 @@ series: AI-Native软件工程系列 #2
 
 ---
 
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%"></object>
+
 ## 用户故事的局限
 
 > 💡 **Key Insight**

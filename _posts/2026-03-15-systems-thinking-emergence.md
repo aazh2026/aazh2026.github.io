@@ -132,6 +132,8 @@ Craig Reynolds 的 Boids 模型只用三条规则就模拟了逼真的鸟群：
 
 ---
 
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-03-safe-space.svg" type="image/svg+xml" width="100%"></object>
+
 ## Multi-Agent 系统中的涌现行为
 
 ### 常见的涌现现象
@@ -159,6 +161,8 @@ Agent 之间的知识传递也会涌现特定结构：
 <object data="/assets/images/2026-03-15-systems-thinking-emergence-06-arch.svg" type="image/svg+xml" width="100%"></object>
 
 **关键洞察**：知识共享网络的拓扑结构直接影响系统性能——中心化的知识分发容易成为单点故障，而去中心化的共享则可能带来一致性问题。
+
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-04-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 反模式
 
@@ -252,6 +256,8 @@ Agent 之间的知识传递也会涌现特定结构：
 4. **失败是系统的一部分**
    
    在涌现系统中，局部失败是常态，也是系统演化的动力。设计让系统能够从失败中学习的机制，而不是试图预防所有失败。
+
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-05-arch.svg" type="image/svg+xml" width="100%"></object>
 
 ### 最后的思考
 
