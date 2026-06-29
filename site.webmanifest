@@ -1,0 +1,20 @@
+{
+  "name": "Post-Code Engineering",
+  "short_name": "PCE",
+  "description": "AI-Native 软件工程实验室 — 从代码到意图",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAF9F5",
+  "theme_color": "#D97757",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

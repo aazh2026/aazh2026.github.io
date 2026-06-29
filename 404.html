@@ -4,56 +4,37 @@ permalink: /404.html
 title: "页面未找到"
 ---
 
-<div style="text-align: center; padding: 4rem 2rem;">
-  <div style="font-size: 6rem; margin-bottom: 1rem;">🔍</div>
-  
-  <h1 style="font-size: 3rem; margin-bottom: 1rem; color: #667eea;">404</h1>
-  
-  <h2 style="margin-bottom: 1.5rem;">页面未找到</h2>
-  
-  <p style="color: #666; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+<div class="page-404">
+  <div class="emoji">🔍</div>
+  <h1 class="code-404">404</h1>
+  <h2>页面未找到</h2>
+  <p class="lead">
     抱歉，你访问的页面不存在或已被移动。
     <br>
     试试搜索或浏览以下推荐内容？
   </p>
 
   <!-- 快速搜索 -->
-  <div style="max-width: 400px; margin: 0 auto 2rem;">
-    <input type="text" 
-           id="search-404" 
-           placeholder="搜索文章..." 
-           style="width: 100%; padding: 0.75rem; border: 2px solid #667eea; border-radius: 8px; font-size: 1rem;"
+  <div class="search-404">
+    <input type="text"
+           id="search-404"
+           placeholder="搜索文章..."
+           autocomplete="off"
     >
-    <div id="search-404-results" 
-         style="display: none; margin-top: 0.5rem; text-align: left; background: #f8f9fa; border-radius: 8px; overflow: hidden;"
-    ></div>
+    <div id="search-404-results"></div>
   </div>
 
   <!-- 快捷导航 -->
-  <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
-    <a href="/" 
-       style="background: #667eea; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
-    >
-      🏠 返回首页
-    </a>
-    
-    <a href="/aise-series/" 
-       style="background: #f0f0f0; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
-    >
-      📚 浏览AISE系列
-    </a>
-    
-    <a href="/archive" 
-       style="background: #f0f0f0; color: #333; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;"
-    >
-      🗂️ 文章归档
-    </a>
-  </div>
+  <nav class="quick-nav">
+    <a href="/" class="btn btn-primary">🏠 返回首页</a>
+    <a href="/aise-series/" class="btn btn-secondary">📚 浏览AISE系列</a>
+    <a href="/archive" class="btn btn-secondary">🗂️ 文章归档</a>
+  </nav>
 
   <!-- 推荐阅读 -->
-  <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 8px; max-width: 600px; margin: 0 auto;">
-    <h3 style="margin-top: 0;">🔥 热门文章</h3>
-    <ul style="text-align: left;">
+  <div class="recommend">
+    <h3>🔥 热门文章</h3>
+    <ul>
       <li><a href="/aise-manifesto/">AI-Native软件工程宣言</a></li>
       <li><a href="/posts/context-engineering/">Context Engineering: 五层架构模型</a></li>
       <li><a href="/knowledge-assetization/">为什么你的代码正在变成负债？</a></li>
@@ -67,7 +48,7 @@ title: "页面未找到"
 (function() {
   var searchInput = document.getElementById('search-404');
   var searchResults = document.getElementById('search-404-results');
-  
+
   // 文章数据（简化版）
   var posts = [
     { title: "Context Engineering: 五层架构模型", url: "/posts/context-engineering/" },
@@ -77,41 +58,38 @@ title: "页面未找到"
     { title: "S-curve Adoption: 三层演化模型", url: "/ai-adoption-s-curve/" },
     { title: "大规模AI治理", url: "/large-scale-ai-governance/" },
     { title: "全链路可追溯性", url: "/traceability-auto-tracking/" },
-    { title: "人-AI SLA: 协作契约框架", url: "/2026/03/08/human-ai-sla.html" },
-    { title: "为什么你的代码正在变成负债？", url: "/knowledge-assetization/" },
-    { title: "为什么代码评审正在死亡？", url: "/death-of-code-reviews/" },
     { title: "AI-Native软件工程宣言", url: "/aise-manifesto/" },
-    { title: "AISE系列导航", url: "/aise-series/" }
+    { title: "AISE系列导航", url: "/aise-series/" },
+    { title: "为什么你的代码正在变成负债？", url: "/knowledge-assetization/" },
+    { title: "为什么代码评审正在死亡？", url: "/death-of-code-reviews/" }
   ];
-  
+
   searchInput.addEventListener('input', function(e) {
     var query = e.target.value.toLowerCase().trim();
-    
+
     if (query.length < 2) {
       searchResults.style.display = 'none';
       return;
     }
-    
+
     var results = posts.filter(function(post) {
       return post.title.toLowerCase().includes(query);
     }).slice(0, 5);
-    
+
     if (results.length === 0) {
-      searchResults.innerHTML = '<div style="padding: 1rem; color: #666;">没有找到相关文章</div>';
+      searchResults.innerHTML = '<div class="empty">没有找到相关文章</div>';
     } else {
       searchResults.innerHTML = results.map(function(post) {
-        return '<a href="' + post.url + '" style="display: block; padding: 0.75rem; border-bottom: 1px solid #eee; text-decoration: none; color: #333;">' +
-          post.title +
-        '</a>';
+        return '<a href="' + post.url + '">' + post.title + '</a>';
       }).join('');
     }
-    
+
     searchResults.style.display = 'block';
   });
-  
+
   // 点击外部关闭搜索结果
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('#search-404')) {
+    if (!e.target.closest('.search-404')) {
       searchResults.style.display = 'none';
     }
   });

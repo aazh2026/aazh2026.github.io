@@ -1,6 +1,6 @@
 title: "Post-Code Engineering"
 description: "AI-Native软件工程 | 从代码到意图 | 探索后代码时代的工程范式"
-url: "https://postcodeengineering.com"
+url: "https://aazh2026.github.io"
 baseurl: ""
 author: "@postcodeeng"
 # email removed: was a placeholder "sophi@example.com"; re-add real address when ready
@@ -26,10 +26,12 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
+  - jekyll-last-modified-at
 
-# 分页
-paginate: 10
-paginate_path: "/page:num/"
+# last_modified_at 配置
+last_modified_at:
+  time: full
+  format: "%Y-%m-%d"
 
 # 显示未来日期的文章
 future: true

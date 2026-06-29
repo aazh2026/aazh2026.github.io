@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>Post-Code Engineering</ShortName>
+  <Description>AI-Native 软件工程 — 搜索文章</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Url type="text/html" template="https://aazh2026.github.io/archive/?q={searchTerms}"/>
+</OpenSearchDescription>
