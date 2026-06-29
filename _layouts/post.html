@@ -35,6 +35,15 @@ layout: default
     {{ content }}
   </div>
 
+  <!-- 最后更新时间 -->
+  {%- include last-updated.html -%}
+
+  <!-- 相关文章 -->
+  {%- include related-posts.html -%}
+
+  <!-- 评论 (Giscus) -->
+  {%- include comments-giscus.html -%}
+
   <!-- 文章底部 -->
   <footer class="post-footer">
     <a href="{{ '/' | relative_url }}">← 查看更多文章</a>

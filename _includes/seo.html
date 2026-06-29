@@ -2,7 +2,24 @@
 {% assign page_title = page.title | default: site.title %}
 {% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 %}
 {% assign page_url = page.url | absolute_url %}
-{% assign page_image = page.image | default: '/assets/images/og-default.png' | absolute_url %}
+{%- comment -%}
+  Auto-derive per-post OG image: derive slug from the post filename.
+  Format is YYYY-MM-DD-slug.md -> /assets/images/og/slug.jpg
+  Falls back to /assets/images/og-default.png if the derived file doesn't exist.
+  Allows override via front matter `image:` field.
+{%- endcomment -%}
+{%- if page.image -%}
+  {% assign page_image = page.image | absolute_url %}
+{%- elsif page.path -%}
+  {%- assign _fname = page.path | split: '/' | last | replace: '.md', '' -%}
+  {%- assign _date_prefix = page.date | date: '%Y-%m-%d' -%}
+  {%- assign _slug = _fname | replace: _date_prefix, '' | replace_first: '-', '' -%}
+  {%- assign _og_path = '/assets/images/og/' | append: _slug | append: '.jpg' -%}
+  {%- assign _site_root = site.url | default: '' -%}
+  {% assign page_image = _og_path | absolute_url %}
+{%- else -%}
+  {% assign page_image = '/assets/images/og-default.png' | absolute_url %}
+{%- endif -%}
 
 <!-- 基础 OG 标签 -->
 <meta property="og:title" content="{{ page_title }}">

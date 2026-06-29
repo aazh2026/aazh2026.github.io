@@ -1,0 +1,19 @@
+/* TEAM */
+Author: @postcodeeng
+Site: https://aazh2026.github.io
+Twitter: @postcodeeng
+
+/* SITE */
+Last update: 2026/06/30
+Standards: HTML5, CSS3, Jekyll
+Components: jekyll-seo-tag, jekyll-sitemap, jekyll-feed, jekyll-redirect-from, jekyll-last-modified-at
+Language: zh-CN
+Doctype: HTML5
+IDE: VS Code, Claude Code
+Generator: scripts/generate-og-images.py (Pillow)
+
+/* THANKS */
+- Jekyll community
+- Claude (Anthropic) — used for batch content refinement
+- The Minima theme
+- Pillow library for OG image generation
