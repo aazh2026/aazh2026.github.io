@@ -1,0 +1,76 @@
+<svg viewBox="0 0 600 440" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="440" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent OS 五层架构</text>
+  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Interface · Orchestration · Cognition · Memory · Execution</text>
+
+  <!-- Layer 5: Interface (clay accent) -->
+  <rect x="40" y="60" width="520" height="60" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="52" y="73" width="44" height="18" rx="9" fill="#D97757"/>
+  <text x="74" y="86" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">L5</text>
+  <text x="108" y="83" font-size="13" fill="#141413">接口层</text>
+  <text x="160" y="83" font-size="12" fill="#87867F" font-style="italic">Interface Layer</text>
+  <text x="108" y="100" font-size="10" fill="#87867F">与外部世界对话的窗口</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="120" x2="300" y2="132" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="300,136 296,128 304,128" fill="#D1CFC5"/>
+  <text x="310" y="130" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">↓ data</text>
+
+  <!-- Layer 4: Orchestration -->
+  <rect x="40" y="140" width="520" height="60" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="52" y="153" width="44" height="18" rx="9" fill="#D1CFC5"/>
+  <text x="74" y="166" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">L4</text>
+  <text x="108" y="163" font-size="13" fill="#141413">编排层</text>
+  <text x="160" y="163" font-size="12" fill="#87867F" font-style="italic">Orchestration Layer</text>
+  <text x="108" y="180" font-size="10" fill="#87867F">任务调度与流控制</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="200" x2="300" y2="212" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="300,216 296,208 304,208" fill="#D1CFC5"/>
+  <text x="310" y="210" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">↓ result</text>
+
+  <!-- Layer 3: Cognition -->
+  <rect x="40" y="220" width="520" height="60" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="52" y="233" width="44" height="18" rx="9" fill="#D1CFC5"/>
+  <text x="74" y="246" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">L3</text>
+  <text x="108" y="243" font-size="13" fill="#141413">认知层</text>
+  <text x="160" y="243" font-size="12" fill="#87867F" font-style="italic">Cognition Layer</text>
+  <text x="108" y="260" font-size="10" fill="#87867F">推理、规划与决策</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="280" x2="300" y2="292" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="300,296 296,288 304,288" fill="#D1CFC5"/>
+  <text x="310" y="290" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">↓ decision</text>
+
+  <!-- Layer 2: Memory -->
+  <rect x="40" y="300" width="520" height="60" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="52" y="313" width="44" height="18" rx="9" fill="#D1CFC5"/>
+  <text x="74" y="326" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">L2</text>
+  <text x="108" y="323" font-size="13" fill="#141413">记忆层</text>
+  <text x="160" y="323" font-size="12" fill="#87867F" font-style="italic">Memory Layer</text>
+  <text x="108" y="340" font-size="10" fill="#87867F">知识的存储与检索</text>
+
+  <!-- Arrow down -->
+  <line x1="300" y1="360" x2="300" y2="372" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="300,376 296,368 304,368" fill="#D1CFC5"/>
+
+  <!-- Layer 1: Execution (muted) -->
+  <rect x="40" y="380" width="520" height="50" rx="8" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="52" y="393" width="44" height="18" rx="9" fill="#D1CFC5"/>
+  <text x="74" y="406" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">L1</text>
+  <text x="108" y="403" font-size="13" fill="#141413">执行层</text>
+  <text x="160" y="403" font-size="12" fill="#87867F" font-style="italic">Execution Layer</text>
+  <text x="108" y="420" font-size="10" fill="#87867F">真实世界的行动</text>
+
+  <!-- Side annotation: Context object flows down -->
+  <text x="580" y="240" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" text-anchor="end" transform="rotate(-90,580,240)">Context ↓</text>
+
+  <!-- Title + Desc for accessibility -->
+  <title>Agent OS 五层架构</title>
+  <desc>Agent OS 的五层架构垂直堆叠图：接口层(L5)、编排层(L4)、认知层(L3)、记忆层(L2)、执行层(L1)，带层间数据流向标注</desc>
+</svg>

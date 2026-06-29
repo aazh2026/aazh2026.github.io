@@ -1,0 +1,84 @@
+<svg viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="640" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="26" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Multi-Agent 系统中的涌现行为</text>
+  <text x="320" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">三种常见涌现类型</text>
+
+  <!-- Central node -->
+  <rect x="235" y="54" width="170" height="32" rx="8" fill="#D97757"/>
+  <text x="320" y="74" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">涌现行为</text>
+
+  <!-- Connecting lines from center -->
+  <line x1="280" y1="86" x2="180" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="320" y1="86" x2="320" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="360" y1="86" x2="460" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- TYPE 1: 协作模式涌现 -->
+  <rect x="44" y="124" width="272" height="170" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="180" y="146" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">协作模式涌现</text>
+  <text x="180" y="163" text-anchor="middle" font-size="9.5" fill="#87867F">spontaneous pipeline formation</text>
+
+  <!-- Visual: 3 agents forming a pipeline -->
+  <rect x="72" y="172" width="64" height="36" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="104" y="185" text-anchor="middle" font-size="8.5" fill="#141413" font-family="ui-monospace, monospace">Agent A</text>
+  <text x="104" y="198" text-anchor="middle" font-size="7.5" fill="#87867F">预处理</text>
+
+  <line x1="136" y1="190" x2="160" y2="190" stroke="#D97757" stroke-width="2"/>
+  <polygon points="160,190 152,186 152,194" fill="#D97757"/>
+
+  <rect x="164" y="172" width="64" height="36" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="196" y="185" text-anchor="middle" font-size="8.5" fill="#141413" font-family="ui-monospace, monospace">Agent B</text>
+  <text x="196" y="198" text-anchor="middle" font-size="7.5" fill="#87867F">分析</text>
+
+  <line x1="228" y1="190" x2="252" y2="190" stroke="#D97757" stroke-width="2"/>
+  <polygon points="252,190 244,186 244,194" fill="#D97757"/>
+
+  <rect x="256" y="172" width="48" height="36" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+  <text x="280" y="185" text-anchor="middle" font-size="8.5" fill="#141413" font-family="ui-monospace, monospace">Agent C</text>
+  <text x="280" y="198" text-anchor="middle" font-size="7.5" fill="#87867F">输出</text>
+
+  <text x="180" y="244" text-anchor="middle" font-size="9" fill="#141413">无中央调度，流水线自发形成</text>
+  <text x="180" y="260" text-anchor="middle" font-size="8.5" fill="#87867F">反馈驱动 · 局部交互</text>
+
+  <!-- TYPE 2: 任务分工涌现 -->
+  <rect x="324" y="124" width="292" height="80" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="470" y="146" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">任务分工涌现</text>
+  <text x="470" y="163" text-anchor="middle" font-size="9.5" fill="#87867F">agents specialize without explicit programming</text>
+
+  <!-- Three specialized agents -->
+  <rect x="340" y="170" width="76" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="378" y="186" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">Agent 1 · 技术</text>
+
+  <rect x="428" y="170" width="76" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="466" y="186" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">Agent 2 · 账单</text>
+
+  <rect x="516" y="170" width="84" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="558" y="186" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">Agent 3 · 路由</text>
+
+  <text x="470" y="210" text-anchor="middle" font-size="9" fill="#141413">职能分化是系统运行中自然产生的</text>
+
+  <!-- TYPE 3: 知识共享网络 -->
+  <rect x="324" y="214" width="292" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="470" y="236" text-anchor="middle" font-size="11" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">知识共享网络</text>
+  <text x="470" y="253" text-anchor="middle" font-size="9.5" fill="#87867F">emergent knowledge topology</text>
+
+  <!-- Network nodes -->
+  <circle cx="358" cy="274" r="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <circle cx="400" cy="262" r="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <circle cx="440" cy="276" r="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <circle cx="480" cy="264" r="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <circle cx="520" cy="274" r="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <circle cx="560" cy="262" r="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+
+  <!-- Network edges -->
+  <line x1="366" y1="268" x2="392" y2="264" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="408" y1="266" x2="432" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="448" y1="274" x2="472" y2="266" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="488" y1="266" x2="512" y2="272" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="528" y1="272" x2="552" y2="264" stroke="#D1CFC5" stroke-width="1"/>
+  <line x1="400" y1="262" x2="480" y2="264" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>

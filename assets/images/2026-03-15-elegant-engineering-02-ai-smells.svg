@@ -1,0 +1,73 @@
+<svg viewBox="0 0 620 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Background -->
+  <rect width="620" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="310" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 代码的「气味」：机器 vs 人类</text>
+  <text x="310" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">左：LLM 生成的「合理」代码 · 右：人类书写的优雅代码</text>
+
+  <!-- Divider -->
+  <line x1="310" y1="58" x2="310" y2="340" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- LEFT PANEL: AI Smells -->
+  <rect x="20" y="58" width="270" height="282" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="155" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">LLM 生成的代码</text>
+  <text x="155" y="96" text-anchor="middle" font-size="10" fill="#87867F">总是合理，很少优雅</text>
+
+  <!-- AI smell items -->
+  <rect x="36" y="110" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="127" font-size="10.5" fill="#141413">① 过度注释 # Initialize counter to 0</text>
+
+  <rect x="36" y="142" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="159" font-size="10.5" fill="#141413">② 命名不一致 get_user / fetchUser</text>
+
+  <rect x="36" y="174" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="191" font-size="10.5" fill="#141413">③ 参数膨胀 10+ 参数的函数</text>
+
+  <rect x="36" y="206" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="223" font-size="10.5" fill="#141413">④ 嵌套地狱 5 层 if/for 嵌套</text>
+
+  <rect x="36" y="238" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="255" font-size="10.5" fill="#141413">⑤ 重复代码 copy-paste 逻辑</text>
+
+  <rect x="36" y="270" width="238" height="26" rx="5" fill="#FDF5F3" stroke="#D97757" stroke-width="1" opacity="0.8"/>
+  <text x="46" y="287" font-size="10.5" fill="#141413">⑥ 异常滥用 用异常处理正常流程</text>
+
+  <!-- Flag icon left panel -->
+  <polygon points="268,116 268,132 280,124" fill="#D97757" opacity="0.7"/>
+  <polygon points="268,148 268,164 280,156" fill="#D97757" opacity="0.7"/>
+  <polygon points="268,180 268,196 280,188" fill="#D97757" opacity="0.7"/>
+  <polygon points="268,212 268,228 280,220" fill="#D97757" opacity="0.7"/>
+  <polygon points="268,244 268,260 280,252" fill="#D97757" opacity="0.7"/>
+  <polygon points="268,276 268,292 280,284" fill="#D97757" opacity="0.7"/>
+
+  <!-- RIGHT PANEL: Human Elegant -->
+  <rect x="330" y="58" width="270" height="282" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="465" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">人类书写的代码</text>
+  <text x="465" y="96" text-anchor="middle" font-size="10" fill="#87867F">约束前置，信任类型系统</text>
+
+  <!-- Code card -->
+  <rect x="346" y="116" width="238" height="120" rx="6" fill="#F7F9F4" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="358" y="138" font-size="11" font-family="ui-monospace, monospace" fill="#141413">def get_user(uid: str) -&gt; User:</text>
+  <text x="358" y="154" font-size="11" font-family="ui-monospace, monospace" fill="#141413">    """Fetch user by ID."""</text>
+  <text x="358" y="170" font-size="11" font-family="ui-monospace, monospace" fill="#141413">    return db.query(User).filter(</text>
+  <text x="358" y="186" font-size="11" font-family="ui-monospace, monospace" fill="#141413">        User.id == uid).first()</text>
+  <text x="358" y="202" font-size="11" font-family="ui-monospace, monospace" fill="#87867F">    # 边界处验证</text>
+  <text x="358" y="218" font-size="11" font-family="ui-monospace, monospace" fill="#141413">    or raise NotFoundError(uid)</text>
+
+  <!-- Arrow pointing to human code -->
+  <line x1="465" y1="248" x2="465" y2="260" stroke="#788C5D" stroke-width="1.5"/>
+  <polygon points="465,264 461,256 469,256" fill="#788C5D"/>
+
+  <!-- Elegant label -->
+  <rect x="396" y="270" width="138" height="28" rx="14" fill="#788C5D"/>
+  <text x="465" y="289" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">清晰 · 克制 · 意图明确</text>
+
+  <!-- Checkmark icons right panel -->
+  <circle cx="352" cy="306" r="8" fill="#788C5D" opacity="0.8"/>
+  <text x="352" y="310" text-anchor="middle" font-size="9" fill="#FFFFFF">✓</text>
+  <circle cx="406" cy="306" r="8" fill="#788C5D" opacity="0.8"/>
+  <text x="406" y="310" text-anchor="middle" font-size="9" fill="#FFFFFF">✓</text>
+  <circle cx="460" cy="306" r="8" fill="#788C5D" opacity="0.8"/>
+  <text x="460" y="310" text-anchor="middle" font-size="9" fill="#FFFFFF">✓</text>
+</svg>

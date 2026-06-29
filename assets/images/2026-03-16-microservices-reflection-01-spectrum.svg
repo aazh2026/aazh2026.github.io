@@ -1,0 +1,76 @@
+<svg viewBox="0 0 600 340" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="600" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">架构演进光谱</text>
+  <text x="300" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">团队规模 · 独立需求 · 扩展差异</text>
+
+  <!-- Main spectrum bar -->
+  <rect x="60" y="100" width="480" height="12" rx="6" fill="#D1CFC5"/>
+
+  <!-- Monolith node (left) -->
+  <rect x="60" y="80" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="120" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">单体架构</text>
+  <text x="120" y="117" text-anchor="middle" font-size="10" fill="#141413">Monolith</text>
+
+  <!-- Modular Monolith node (middle) -->
+  <rect x="240" y="80" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
+  <text x="300" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">模块化单体</text>
+  <text x="300" y="117" text-anchor="middle" font-size="10" fill="#141413">Modular Monolith</text>
+
+  <!-- Microservices node (right) -->
+  <rect x="420" y="80" width="120" height="52" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="480" y="100" text-anchor="middle" font-size="12" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">微服务架构</text>
+  <text x="480" y="117" text-anchor="middle" font-size="10" fill="#141413">Microservices</text>
+
+  <!-- Arrow on spectrum indicating direction -->
+  <polygon points="540,106 528,100 528,112" fill="#D1CFC5"/>
+
+  <!-- Milestone markers below spectrum -->
+  <!-- Milestone 1 -->
+  <rect x="90" y="160" width="8" height="8" rx="4" fill="#D97757"/>
+  <line x1="94" y1="168" x2="94" y2="185" stroke="#D97757" stroke-width="1.5"/>
+  <text x="60" y="200" font-size="11" font-weight="600" fill="#141413">信号 1</text>
+  <text x="60" y="215" font-size="10" fill="#141413">团队规模</text>
+  <text x="60" y="228" font-size="10" fill="#87867F">&lt; 150 人</text>
+
+  <!-- Milestone 2 -->
+  <rect x="296" y="160" width="8" height="8" rx="4" fill="#D97757"/>
+  <line x1="300" y1="168" x2="300" y2="185" stroke="#D97757" stroke-width="1.5"/>
+  <text x="266" y="200" font-size="11" font-weight="600" fill="#141413">信号 2</text>
+  <text x="266" y="215" font-size="10" fill="#141413">真正的</text>
+  <text x="266" y="228" font-size="10" fill="#141413">团队独立性</text>
+
+  <!-- Milestone 3 -->
+  <rect x="502" y="160" width="8" height="8" rx="4" fill="#D97757"/>
+  <line x1="506" y1="168" x2="506" y2="185" stroke="#D97757" stroke-width="1.5"/>
+  <text x="472" y="200" font-size="11" font-weight="600" fill="#141413">信号 3</text>
+  <text x="472" y="215" font-size="10" fill="#141413">截然不同的</text>
+  <text x="472" y="228" font-size="10" fill="#141413">扩展需求</text>
+
+  <!-- Connector line -->
+  <line x1="94" y1="185" x2="506" y2="185" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <!-- Decision flow below milestones -->
+  <!-- Left path: stay monolith -->
+  <rect x="60" y="255" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="140" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">单体 / 模块化单体</text>
+  <text x="140" y="292" text-anchor="middle" font-size="10" fill="#87867F">大多数团队的最佳起点</text>
+
+  <!-- Arrow down -->
+  <line x1="140" y1="305" x2="140" y2="318" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="140,322 136,314 144,314" fill="#D1CFC5"/>
+
+  <!-- Right path: consider microservices -->
+  <rect x="380" y="255" width="160" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="460" y="275" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">微服务</text>
+  <text x="460" y="292" text-anchor="middle" font-size="10" fill="#87867F">仅在上述三个信号都满足时</text>
+
+  <!-- Arrow down -->
+  <line x1="460" y1="305" x2="460" y2="318" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="460,322 456,314 464,314" fill="#D1CFC5"/>
+
+</svg>

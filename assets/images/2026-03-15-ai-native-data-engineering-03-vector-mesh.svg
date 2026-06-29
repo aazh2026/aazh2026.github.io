@@ -1,0 +1,76 @@
+<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>向量数据网格架构</title>
+  <desc>向量数据网格的三层结构：Embedding 模型层、Vector Mesh Layer、存储与应用层</desc>
+
+  <!-- Background -->
+  <rect width="680" height="320" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">向量数据网格架构</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">postcodeeng · 2026/03/15</text>
+
+  <!-- Tier 1: Embedding Model Layer -->
+  <rect x="40" y="58" width="600" height="76" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="60" y="78" font-size="10" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">Tier 1 — Embedding Models</text>
+
+  <!-- Model nodes -->
+  <rect x="80" y="92" width="120" height="30" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="140" y="112" text-anchor="middle" font-size="10.5" fill="#141413">Text Embedding</text>
+
+  <rect x="220" y="92" width="120" height="30" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="280" y="112" text-anchor="middle" font-size="10.5" fill="#141413">Image Embedding</text>
+
+  <rect x="360" y="92" width="120" height="30" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="420" y="112" text-anchor="middle" font-size="10.5" fill="#141413">Audio Embedding</text>
+
+  <rect x="500" y="92" width="120" height="30" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="560" y="112" text-anchor="middle" font-size="10.5" fill="#141413">Code Embedding</text>
+
+  <!-- Tier 2: Vector Mesh Layer (central hub - clay accent) -->
+  <rect x="160" y="152" width="360" height="80" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="340" y="176" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757">Vector Mesh Layer</text>
+  <text x="340" y="194" text-anchor="middle" font-size="10.5" fill="#87867F">统一 Embedding 服务 · 向量版本管理 · 语义路由</text>
+  <rect x="240" y="206" width="200" height="18" rx="9" fill="#D97757"/>
+  <text x="340" y="219" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">Hub · Model-Agnostic</text>
+
+  <!-- Connecting lines from Tier 1 to Hub -->
+  <line x1="140" y1="134" x2="340" y2="152" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="280" y1="134" x2="340" y2="152" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="420" y1="134" x2="340" y2="152" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="560" y1="134" x2="340" y2="152" stroke="#D1CFC5" stroke-width="1.2"/>
+
+  <!-- Tier 3: Storage + Application Nodes -->
+  <rect x="40" y="250" width="600" height="56" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="60" y="270" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Tier 3 — Storage &amp; Applications</text>
+
+  <!-- Store nodes -->
+  <rect x="80" y="276" width="90" height="22" rx="6" fill="#F0EEE6" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="125" y="291" text-anchor="middle" font-size="9.5" fill="#141413">Vector DB 1</text>
+
+  <rect x="190" y="276" width="90" height="22" rx="6" fill="#F0EEE6" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="235" y="291" text-anchor="middle" font-size="9.5" fill="#141413">Vector DB 2</text>
+
+  <rect x="300" y="276" width="90" height="22" rx="6" fill="#F0EEE6" stroke="#788C5D" stroke-width="1.2"/>
+  <text x="345" y="291" text-anchor="middle" font-size="9.5" fill="#141413">Vector DB N</text>
+
+  <!-- Application nodes -->
+  <rect x="420" y="276" width="90" height="22" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="465" y="291" text-anchor="middle" font-size="9.5" fill="#141413">Semantic Search</text>
+
+  <rect x="530" y="276" width="90" height="22" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
+  <text x="575" y="291" text-anchor="middle" font-size="9.5" fill="#141413">Recommendation</text>
+
+  <!-- Connecting lines from Hub to Tier 3 -->
+  <line x1="340" y1="232" x2="340" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="340" y1="232" x2="125" y2="250" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="340" y1="232" x2="235" y2="250" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="340" y1="232" x2="465" y2="250" stroke="#D1CFC5" stroke-width="1.2"/>
+  <line x1="340" y1="232" x2="575" y2="250" stroke="#D1CFC5" stroke-width="1.2"/>
+
+  <!-- Arrows pointing down into Tier 3 -->
+  <polygon points="125,250 121,242 129,242" fill="#D1CFC5"/>
+  <polygon points="235,250 231,242 239,242" fill="#D1CFC5"/>
+  <polygon points="340,250 336,242 344,242" fill="#D97757"/>
+  <polygon points="465,250 461,242 469,242" fill="#D1CFC5"/>
+  <polygon points="575,250 571,242 579,242" fill="#D1CFC5"/>
+</svg>

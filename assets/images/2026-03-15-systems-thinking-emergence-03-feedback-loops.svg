@@ -1,0 +1,72 @@
+<svg viewBox="0 0 640 280" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="640" height="280" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="320" y="26" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">反馈回路：系统的"神经系统"</text>
+  <text x="320" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">增强回路 vs 平衡回路</text>
+
+  <!-- LEFT: Positive Feedback (增强回路) -->
+  <rect x="24" y="56" width="286" height="196" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="167" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">正反馈回路 · 增强回路</text>
+
+  <!-- Positive loop circle -->
+  <circle cx="167" cy="160" r="62" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+  <polygon points="167,98 161,112 173,112" fill="#D97757" opacity="0.7"/>
+
+  <!-- Nodes for positive loop -->
+  <rect x="130" y="82" width="74" height="24" rx="5" fill="#D97757"/>
+  <text x="167" y="98" text-anchor="middle" font-size="9.5" fill="#FFFFFF" font-family="ui-monospace, monospace">Agent 加入</text>
+
+  <rect x="200" y="120" width="78" height="24" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="239" y="136" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">系统能力增强</text>
+
+  <rect x="130" y="204" width="74" height="24" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="167" y="220" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">吸引更多 Agent</text>
+
+  <rect x="58" y="120" width="74" height="24" rx="5" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
+  <text x="95" y="136" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">数据质量↑</text>
+
+  <!-- Arrows for positive loop -->
+  <path d="M 167 106 L 167 118" stroke="#D97757" stroke-width="1.5" fill="none"/>
+  <polygon points="167,120 163,112 171,112" fill="#D97757"/>
+  <path d="M 239 146 L 248 150 Q 252 155 248 160 L 204 200" stroke="#D97757" stroke-width="1.5" fill="none"/>
+  <path d="M 204 204 L 200 198 Q 195 195 190 200 L 168 204" stroke="#D97757" stroke-width="1.5" fill="none"/>
+  <path d="M 130 204 L 122 200 Q 115 195 115 188 L 115 146" stroke="#D97757" stroke-width="1.5" fill="none"/>
+  <path d="M 115 144 L 122 150 Q 127 155 132 150 L 168 120" stroke="#D97757" stroke-width="1.5" fill="none"/>
+
+  <!-- RIGHT: Negative Feedback (平衡回路) -->
+  <rect x="330" y="56" width="286" height="196" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="473" y="78" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">负反馈回路 · 平衡回路</text>
+
+  <!-- Negative loop: equilibrium symbol -->
+  <line x1="473" y1="100" x2="473" y2="218" stroke="#788C5D" stroke-width="1.5" opacity="0.4"/>
+  <line x1="390" y1="160" x2="556" y2="160" stroke="#788C5D" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Nodes for negative loop -->
+  <rect x="405" y="96" width="60" height="24" rx="5" fill="#788C5D"/>
+  <text x="435" y="112" text-anchor="middle" font-size="9.5" fill="#FFFFFF" font-family="ui-monospace, monospace">负载升高</text>
+
+  <rect x="510" y="136" width="68" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="544" y="152" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">触发负载均衡</text>
+
+  <rect x="405" y="196" width="60" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="435" y="212" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">负载降低</text>
+
+  <rect x="310" y="136" width="68" height="24" rx="5" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
+  <text x="344" y="152" text-anchor="middle" font-size="9.5" fill="#141413" font-family="ui-monospace, monospace">恢复平衡</text>
+
+  <!-- Equilibrium label -->
+  <text x="473" y="164" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">均衡点</text>
+  <circle cx="473" cy="160" r="4" fill="#788C5D"/>
+
+  <!-- Arrows for negative loop -->
+  <path d="M 435 122 L 438 128 Q 440 132 445 132 L 508 138" stroke="#788C5D" stroke-width="1.5" fill="none"/>
+  <polygon points="510,140 502,136 506,144" fill="#788C5D"/>
+  <path d="M 544 162 L 550 168 Q 552 175 548 180 L 435 198" stroke="#788C5D" stroke-width="1.5" fill="none"/>
+  <polygon points="433,196 441,200 437,192" fill="#788C5D"/>
+  <path d="M 405 198 L 398 192 Q 392 185 392 178 L 392 160 L 380 152" stroke="#788C5D" stroke-width="1.5" fill="none"/>
+  <path d="M 378 150 L 386 144 Q 394 138 400 142 L 433 120" stroke="#788C5D" stroke-width="1.5" fill="none"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
+
+  <!-- Background -->
+  <rect width="680" height="400" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">SDD 2.0 三元组模型</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Context + Constraints + Acceptance Criteria</text>
+
+  <!-- The three boxes arranged in a triangular/cyclic layout -->
+  <!-- Context box (top-left) -->
+  <rect x="60" y="72" width="180" height="110" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <rect x="60" y="72" width="180" height="28" rx="8" fill="#D97757"/>
+  <rect x="60" y="92" width="180" height="8" fill="#D97757"/>
+  <text x="150" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Context</text>
+  <text x="76" y="120" font-size="10.5" fill="#141413">actor: 顾客</text>
+  <text x="76" y="136" font-size="10.5" fill="#141413">state: 已登录，持有优惠券</text>
+  <text x="76" y="152" font-size="10.5" fill="#141413">goal: 领取一张兑换券</text>
+  <text x="76" y="172" font-size="9.5" fill="#87867F">谁？当前状态？目标？</text>
+
+  <!-- Constraints box (top-right) -->
+  <rect x="440" y="72" width="180" height="110" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <rect x="440" y="72" width="180" height="28" rx="8" fill="#788C5D"/>
+  <rect x="440" y="92" width="180" height="8" fill="#788C5D"/>
+  <text x="530" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Constraints</text>
+  <text x="456" y="120" font-size="10.5" fill="#141413">功能: 每人限领1张</text>
+  <text x="456" y="136" font-size="10.5" fill="#141413">性能: 3秒内响应</text>
+  <text x="456" y="152" font-size="10.5" fill="#141413">合规: 同IP不超10次</text>
+  <text x="456" y="172" font-size="9.5" fill="#87867F">怎么做？做到什么程度？</text>
+
+  <!-- Acceptance Criteria box (bottom-center) -->
+  <rect x="220" y="220" width="240" height="110" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.8"/>
+  <rect x="220" y="220" width="240" height="28" rx="8" fill="#141413"/>
+  <rect x="220" y="240" width="240" height="8" fill="#141413"/>
+  <text x="340" y="238" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Acceptance Criteria</text>
+  <text x="236" y="268" font-size="10.5" fill="#141413">Given: 已登录，优惠券有库存</text>
+  <text x="236" y="284" font-size="10.5" fill="#141413">When: 点击领取按钮</text>
+  <text x="236" y="300" font-size="10.5" fill="#141413">Then: 跳转卡包，显示"领取成功"</text>
+  <text x="236" y="320" font-size="9.5" fill="#87867F">如何验证？</text>
+
+  <!-- Arrows forming the cycle -->
+  <!-- Arrow: Context -> Constraints -->
+  <path d="M 240 120 C 300 100, 380 100, 440 100" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrow1)"/>
+  <!-- Arrow: Constraints -> AC -->
+  <path d="M 530 182 C 480 195, 400 200, 360 210" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrow1)"/>
+  <!-- Arrow: AC -> Context -->
+  <path d="M 220 275 C 160 260, 100 210, 80 182" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrow1)"/>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    </marker>
+  </defs>
+
+  <!-- Concrete example card below -->
+  <line x1="60" y1="355" x2="620" y2="355" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="340" y="372" text-anchor="middle" font-size="11" font-weight="500" fill="#141413">实例：搜索订单历史</text>
+
+  <rect x="60" y="382" width="560" height="14" rx="4" fill="#E3DACC"/>
+  <text x="76" y="393" font-size="9" fill="#141413" font-family="ui-monospace, monospace">context: actor=会员, state=已登录, goal=查询近2年订单</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>AI-Native 数据工程三层架构</title>
+  <desc>AI-Native 数据工程的三层架构：数据意图层、智能管道层、向量数据网格</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native 数据工程三层架构</text>
+  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">postcodeeng · 2026/03/15</text>
+
+  <!-- Layer 1: Data Intent Layer (clay accent) -->
+  <rect x="40" y="62" width="600" height="72" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
+  <text x="60" y="86" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 1</text>
+  <text x="60" y="106" font-size="14" fill="#141413">数据意图层</text>
+  <text x="60" y="122" font-size="10.5" fill="#87867F">数据主动感知业务意图，自动发现、推荐与服务</text>
+  <rect x="510" y="78" width="112" height="20" rx="10" fill="#D97757"/>
+  <text x="566" y="92" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">主动感知</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="340" y1="134" x2="340" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,154 334,146 346,146" fill="#D1CFC5"/>
+
+  <!-- Layer 2: Intelligent Pipeline Layer (neutral) -->
+  <rect x="40" y="158" width="600" height="72" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="60" y="182" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Layer 2</text>
+  <text x="60" y="202" font-size="14" fill="#141413">智能管道层</text>
+  <text x="60" y="218" font-size="10.5" fill="#87867F">自愈 · 自适应 · 自优化 — AI 驱动的数据质量监控与自动修复</text>
+
+  <!-- Three mini pills for pipeline features -->
+  <rect x="420" y="172" width="58" height="18" rx="9" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="449" y="184" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">自愈</text>
+  <rect x="484" y="172" width="58" height="18" rx="9" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="513" y="184" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">自适应</text>
+  <rect x="548" y="172" width="74" height="18" rx="9" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="585" y="184" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">自优化</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="340" y1="230" x2="340" y2="246" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="340,250 334,242 346,242" fill="#D1CFC5"/>
+
+  <!-- Layer 3: Vector Data Mesh (olive accent) -->
+  <rect x="40" y="254" width="600" height="72" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
+  <text x="60" y="278" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Layer 3</text>
+  <text x="60" y="298" font-size="14" fill="#141413">向量数据网格</text>
+  <text x="60" y="314" font-size="10.5" fill="#87867F">统一 Embedding 服务 · 分布式向量存储 · 语义检索</text>
+  <rect x="510" y="270" width="112" height="20" rx="10" fill="#788C5D"/>
+  <text x="566" y="284" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">语义服务</text>
+
+  <!-- Feedback arrow: Layer 1 → Layer 3 (right side) -->
+  <path d="M 640 88 C 662 88, 662 310, 640 306" stroke="#D97757" stroke-width="2" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
+  <polygon points="640,306 634,298 646,298" fill="#D97757" opacity="0.5"/>
+  <text x="654" y="200" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">反馈闭环</text>
+</svg>

@@ -11,6 +11,19 @@
 - **100 new SVG files** added (391 → 491 total)
 - ~15.7M tokens consumed over 690 agent calls (3h47m wall clock)
 
+## Follow-up Sweep (2026-06-29)
+
+**Result**: 80/80 follow-up posts fully refined. **100% corpus coverage achieved.**
+
+- Workflow: `_scratch/refine-finish.js` (skip-Analyze-via-journal variant)
+- 80 _posts/*.md files refined
+- **58 new SVG files** added (491 → 549 total)
+- 17 posts needed a fix-up pass (Verify round 1 failed → Fix-up round 2 passed all)
+- 1 corrupted Key Insight block cleaned up in `2025-06-12-contract-testing-automation.md` (YAML multi-line parse artifact)
+- 5.26M tokens consumed over 177 agent calls (1h26m wall clock)
+- Cached Analyze plans from `wf_9b7f996a-c2a/journal.jsonl` were reused, saving ~80 Analyze calls
+- Final state: 205 posts, 549 SVGs, **0 posts without an `<object>` SVG embed**
+
 ## What worked
 
 - All 204 posts analyzed successfully; 148 marked `needs_full_work`, 55 `needs_minor_polish`, 1 `already_refined`.

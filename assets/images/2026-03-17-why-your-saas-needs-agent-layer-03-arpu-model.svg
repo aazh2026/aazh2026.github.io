@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" font-family="ui-serif, Georgia, serif">
+  <title>定价模式演进与 ARPU 增长</title>
+  <desc>从 SaaS 1.0 到 Agent-enabled 的定价模式演进，展示 ARPU 从 $50-100 增长到 $300-1000 的路径</desc>
+
+  <rect width="680" height="340" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="600" fill="#141413">定价模式演进：从工具到结果</text>
+  <text x="340" y="46" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">ARPU 增长轨迹</text>
+
+  <!-- Tier 1: SaaS 1.0 -->
+  <rect x="40" y="70" width="170" height="150" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
+  <rect x="40" y="70" width="170" height="32" rx="10" fill="#788C5D"/>
+  <rect x="40" y="90" width="170" height="12" fill="#788C5D"/>
+  <text x="125" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">SaaS 1.0</text>
+  <text x="125" y="122" text-anchor="middle" font-size="11" fill="#141413">$/user/month</text>
+  <text x="125" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#788C5D">$50-100</text>
+  <text x="125" y="162" text-anchor="middle" font-size="10" fill="#87867F">ARPU</text>
+  <text x="125" y="182" text-anchor="middle" font-size="10" fill="#87867F">按座位收费</text>
+
+  <!-- Arrow 1->2 -->
+  <line x1="215" y1="145" x2="245" y2="145" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="245,140 255,145 245,150" fill="#D1CFC5"/>
+
+  <!-- Tier 2: SaaS 2.0 -->
+  <rect x="255" y="70" width="170" height="150" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <rect x="255" y="70" width="170" height="32" rx="10" fill="#D97757"/>
+  <rect x="255" y="90" width="170" height="12" fill="#D97757"/>
+  <text x="340" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">SaaS 2.0</text>
+  <text x="340" y="122" text-anchor="middle" font-size="11" fill="#141413">$/usage</text>
+  <text x="340" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#D97757">$100-300</text>
+  <text x="340" y="162" text-anchor="middle" font-size="10" fill="#87867F">ARPU</text>
+  <text x="340" y="182" text-anchor="middle" font-size="10" fill="#87867F">按使用量收费</text>
+
+  <!-- Arrow 2->3 -->
+  <line x1="430" y1="145" x2="460" y2="145" stroke="#D1CFC5" stroke-width="2"/>
+  <polygon points="460,140 470,145 460,150" fill="#D1CFC5"/>
+
+  <!-- Tier 3: Agent-enabled -->
+  <rect x="470" y="70" width="170" height="150" rx="10" fill="#FFFFFF" stroke="#141413" stroke-width="2"/>
+  <rect x="470" y="70" width="170" height="32" rx="10" fill="#141413"/>
+  <rect x="470" y="90" width="170" height="12" fill="#141413"/>
+  <text x="555" y="90" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">Agent-enabled</text>
+  <text x="555" y="122" text-anchor="middle" font-size="11" fill="#141413">$/outcome</text>
+  <text x="555" y="142" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">$300-1000</text>
+  <text x="555" y="162" text-anchor="middle" font-size="10" fill="#87867F">ARPU</text>
+  <text x="555" y="182" text-anchor="middle" font-size="10" fill="#87867F">按效果/工作量收费</text>
+
+  <!-- Right side upward arrow -->
+  <line x1="640" y1="220" x2="640" y2="130" stroke="#D97757" stroke-width="2.5"/>
+  <polygon points="635,130 640,118 645,130" fill="#D97757"/>
+  <text x="658" y="175" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">ARPU</text>
+  <text x="658" y="188" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">增长</text>
+
+  <!-- Callout box -->
+  <rect x="180" y="248" width="320" height="40" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
+  <text x="340" y="273" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">卖结果，不是卖工具。</text>
+
+  <!-- Bottom insight -->
+  <text x="340" y="315" text-anchor="middle" font-size="11" fill="#87867F">因为你卖的不是软件，而是结果。客户愿意为结果付更多钱。</text>
+</svg>

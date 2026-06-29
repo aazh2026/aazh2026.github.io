@@ -10,7 +10,11 @@ series: AI-Native Engineering
 
 > **TL;DR**
 >
-> "You don't need microservices. You need better module boundaries." 这篇文章质疑了微服务的普遍适用性，主张在团队真正独立、规模需求截然不同、或员工数超过 150 人之前，保持单体架构。微服务不是技术解决方案，而是组织结构的映射。
+> 本文核心观点：
+> 1. **模块边界优于微服务** — "You don't need microservices. You need better module boundaries." 微服务不是技术解决方案，而是组织结构的映射。
+> 2. **两个披萨规则说的是团队规模** — 关键是团队内部的协调成本，不是代码部署形式。亚马逊和 Netflix 的成功有赖于 500+ 工程师和专属工具团队。
+> 3. **微服务的隐藏成本在本地开发、调试、测试、API 变更四处** — 分布式追踪、契约测试、多服务协调是单体里不存在的负担。
+> 4. **模块化单体是被遗忘的第三条路** — 如果前四个拆分信号都不满足，先做好模块化单体——边界清晰，拆分成本最低。
 
 ---
 
@@ -30,7 +34,7 @@ Reddit 上最近有一篇文章的标题很吸睛：
 
 ---
 
-## 微服务的起源神话
+## 亚马逊与 Netflix：神话拆解
 
 微服务架构的流行通常归功于亚马逊和 Netflix 的成功案例。
 
@@ -55,6 +59,8 @@ Reddit 上最近有一篇文章的标题很吸睛：
 
 **微服务是亚马逊解决其组织结构问题的方案（一个团队只能吃两个披萨），不是技术解决方案。**
 
+<object data="/assets/images/2026-03-16-microservices-reflection-01-spectrum.svg" type="image/svg+xml" width="100%"></object>
+
 ### Netflix 的情况
 
 Netflix 的微服务转型：
@@ -64,7 +70,7 @@ Netflix 的微服务转型：
 
 ---
 
-## 两个披萨规则的误读
+## 两个披萨规则的真正含义
 
 亚马逊 CTO Werner Vogels 提出的"两个披萨规则"经常被误读。
 
@@ -83,9 +89,13 @@ Netflix 的微服务转型：
 
 关键是**团队内部的协调成本**，不是代码部署形式。
 
+> 💡 **Key Insight**
+>
+> 两个披萨规则说的是团队规模，不是服务边界。关键是团队内部的协调成本，不是代码部署形式。
+
 ---
 
-## 微服务的真实成本
+## 微服务的隐藏成本
 
 微服务架构有隐藏的成本，往往在决定采用后才显现出来。
 
@@ -127,13 +137,19 @@ Netflix 的微服务转型：
 7. 检查服务发现配置
 8. 发现问题在服务 C 的依赖版本
 
+> 💡 **Key Insight**
+>
+> 微服务中的 bug 需要查看入口服务日志、逐层追踪调用链，20 分钟后才发现是网络超时——这才是分布式系统的真正代价。
+
+<object data="/assets/images/2026-03-16-microservices-reflection-02-cost-table.svg" type="image/svg+xml" width="100%"></object>
+
 一位 Reddit 用户的经历：
 
 > "I was working in a place that had a monolithic web app in C# (around 2015). Not really a problem... New CTO comes in and mandates that we switch to a microservice architecture... Split the monolith up into like 5 microservices... It quite literally killed the product. We basically rewrote the whole thing for no gain, more work, and made it harder to make changes."
 
 ---
 
-## 何时拆分，何时保持
+## 何时拆分，何时坚守
 
 ### ✅ 应该考虑拆分的信号
 
@@ -242,6 +258,10 @@ Shopify 是一个成功的模块化单体案例：
 - [ ] 单体内部已经有清晰的模块边界吗？
 
 如果前四个都是"否"，而最后一个是"否"——**先做好模块化单体**。
+
+> 💡 **Key Insight**
+>
+> 如果前四个都是"否"，而最后一个是"否"——先做好模块化单体。
 
 正如 Reddit 上的共识：
 

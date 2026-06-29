@@ -12,10 +12,12 @@ redirect_from:
 # 增量需求不再头疼：Delta Specification 工作流
 
 > **TL;DR**
-> - 增量需求的核心是 **Delta Specification**，而非完整 PRD；AI 只需要理解变化部分
-> - 用 `changes/` 目录管理所有变更，类似 Git commit 和 Database Migration
-> - 必须声明 **Compatibility Rules**，防止 AI 过度重构破坏已有逻辑
-> - 定期将 delta merge 回 base spec，避免 spec 碎片化
+>
+> 本文核心观点：
+> 1. **增量需求的核心是 Delta Specification** — AI 只需要理解变化部分，而非完整 PRD
+> 2. **用 `changes/` 目录管理所有变更** — 类似 Git commit 和 Database Migration
+> 3. **必须声明 Compatibility Rules** — 防止 AI 过度重构破坏已有逻辑
+> 4. **定期将 delta merge 回 base spec** — 避免 spec 碎片化
 
 在 AI-Native SDLC 里，增量需求最大的挑战不是"写需求"，而是：
 
@@ -87,6 +89,8 @@ AI 读取顺序：
 
 非常稳定。
 
+<object data="/assets/images/2026-03-11-delta-specification-02-execution-flow.svg" type="image/svg+xml" width="100%"></object>
+
 > 💡 **Key Insight**
 > Delta 模式天然支持**幂等变更**：相同的 delta 重复执行不会累积副作用，这与 Database Migration 的幂等性保证如出一辙。
 
@@ -97,11 +101,25 @@ AI 读取顺序：
 
 ### 当前系统
 
-假设已有订单管理系统，支持创建订单和查询订单状态。
+假设已有订单管理系统，支持创建订单和查询订单状态。现有系统包含以下组件：
+
+**Domain 层**：Order 实体，字段包括 `id`、`customerId`、`items`、`totalAmount`、`status`（当前仅支持 `PENDING` 和 `COMPLETED`）、`createdAt`。OrderService 提供 `createOrder()` 和 `getOrder()` 方法。
+
+**API 层**：现有两个 endpoint——`POST /orders`（创建订单）和 `GET /orders/{id}`（查询订单）。返回格式为 JSON，遵循统一的错误码规范。
+
+**数据库层**：orders 表主键为 `id`，索引包括 `customerId` 和 `status`。订单记录创建后不允许修改金额和商品明细。
+
+**Compatibility Rules（已有约束）**：API 保持向后兼容，不对外暴露内部字段 ID，不允许跨订单的操作原子性（这是已有设计决策，AI 不可改变）。
 
 ### 新需求：支持订单取消
 
-**change.md:**
+业务方要求新增"取消订单"功能：用户在下单后、商家发货前，可以主动取消订单。取消操作需要记录原因和时间戳，已发货的订单不可取消。
+
+**Domain 增量（domain.delta.md）**：Order 实体新增 `status` 取值 `CANCELLED`；新增 `cancelledAt` 字段（DateTime，nullable）；OrderService 新增 `cancelOrder(id)` 方法，业务规则：只有 `status == PENDING` 的订单可以取消，已发货（`SHIPPED`）或已完成（`COMPLETED`）的订单返回错误。
+
+**API 增量（api.delta.yaml）**：新增 `POST /orders/{id}/cancel`，成功返回 200，订单状态变为 `CANCELLED`；若订单已发货返回 400 错误。
+
+**Compatibility Rules（关键约束）**：`GET /orders/{id}` 必须继续正常工作，返回订单当前状态（包含 `CANCELLED`）；已存在的 `POST /orders` 不受影响；数据库 orders 表只允许追加字段，不允许修改已有记录结构。
 
 ```markdown
 ## 变更概述
@@ -117,7 +135,7 @@ AI 读取顺序：
 - 取消操作不删除订单记录，改为标记 status=CANCELLED
 ```
 
-**domain.delta.md:**
+**完整 domain.delta.md 示例：**
 
 ```markdown
 ## Order 实体变更
@@ -129,7 +147,7 @@ AI 读取顺序：
 - cancel(): void — 将 status 设为 CANCELLED，cancelledAt 设为当前时间
 ```
 
-**api.delta.yaml:**
+**完整 api.delta.yaml 示例：**
 
 ```yaml
 paths:
@@ -179,11 +197,31 @@ AI 理解：
 
 ## 增量需求 10 行模板
 
-如果你追求极致极简，用这个模板：
+如果你追求极致极简，用这个 10 行模板就够了——它足够表达一个完整的增量需求，又不会让 AI 在读约束上消耗太多注意力。
 
-**示例：**
+```markdown
+## [功能名称]
+支持订单取消
 
-很多团队已经在这么用，对 AI 执行效果极好。
+## [影响范围]
+- domain/OrderService：新增 cancelOrder 方法
+- api/OrderController：新增 POST /orders/{id}/cancel
+- tests：新增 cancel 场景测试
+
+## [兼容性约束]
+- GET /orders/{id} 保持兼容
+- 已发货/已完成订单不可取消
+- orders 表只追加字段，不修改已有记录
+
+## [Domain 增量]
+Order.status 新增 CANCELLED
+Order 新增 cancelledAt: DateTime (nullable)
+
+## [API 增量]
+POST /orders/{id}/cancel → 200 / 400
+```
+
+这个模板的设计逻辑：**前 3 行说清楚要做什么和影响范围，中间 2 行声明 AI 不能动的边界，最后 2 行分别给 Domain 和 API 的具体变更**。10 行刚好覆盖完整，又没有一行是废话。很多团队已经在这么用，对 AI 执行效果极好。
 
 ## 总结
 

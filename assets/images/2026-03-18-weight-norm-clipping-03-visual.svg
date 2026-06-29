@@ -1,0 +1,113 @@
+<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <!-- Color palette: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5, g500 #87867F -->
+
+  <title>Weight Norm Clipping 可视化：记忆阶段 vs 泛化阶段</title>
+  <desc>两张折线图对比展示权重范数在有无裁剪情况下的变化轨迹</desc>
+
+  <!-- Background -->
+  <rect width="680" height="360" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Weight Norm Clipping：记忆阶段 vs 泛化阶段</text>
+  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">权重范数变化轨迹对比</text>
+
+  <!-- Left panel: No Clipping -->
+  <rect x="40" y="60" width="280" height="230" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <text x="180" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">无裁剪（记忆阶段）</text>
+
+  <!-- Y-axis left -->
+  <line x1="70" y1="100" x2="70" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="58" y="175" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" transform="rotate(-90,58,175)">权重范数</text>
+
+  <!-- X-axis left -->
+  <line x1="70" y1="250" x2="290" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="180" y="268" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">训练步数</text>
+
+  <!-- Y tick labels left -->
+  <text x="62" y="108" text-anchor="end" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">高</text>
+  <text x="62" y="250" text-anchor="end" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">低</text>
+
+  <!-- X tick labels left -->
+  <text x="70" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">0</text>
+  <text x="180" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">50K</text>
+  <text x="290" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">100K</text>
+
+  <!-- Rising curve (no clipping) — memorization phase, growing unbounded -->
+  <polyline
+    points="70,248 95,235 120,218 145,195 170,165 195,135 220,108 245,90 270,78 290,72"
+    fill="none"
+    stroke="#D97757"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Annotation: memorization -->
+  <text x="240" y="62" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">记忆阶段</text>
+  <text x="240" y="73" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">权重范数持续攀升</text>
+
+  <!-- Arrow pointing to the upward curve -->
+  <line x1="258" y1="90" x2="238" y2="95" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="238,95 244,91 246,99" fill="#D97757"/>
+
+  <!-- Right panel: With Clipping -->
+  <rect x="360" y="60" width="280" height="230" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <text x="500" y="82" text-anchor="middle" font-size="12" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">有裁剪（泛化阶段）</text>
+
+  <!-- Y-axis right -->
+  <line x1="390" y1="100" x2="390" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="378" y="175" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" transform="rotate(-90,378,175)">权重范数</text>
+
+  <!-- X-axis right -->
+  <line x1="390" y1="250" x2="610" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+  <text x="500" y="268" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">训练步数</text>
+
+  <!-- Y tick labels right -->
+  <text x="382" y="108" text-anchor="end" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">高</text>
+  <text x="382" y="250" text-anchor="end" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">低</text>
+
+  <!-- X tick labels right -->
+  <text x="390" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">0</text>
+  <text x="500" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">50K</text>
+  <text x="610" y="260" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">100K</text>
+
+  <!-- Clipping threshold line (dashed) -->
+  <line x1="390" y1="165" x2="610" y2="165" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="616" y="168" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">max_norm</text>
+
+  <!-- Clipped curve — rises then hits ceiling and stabilizes -->
+  <polyline
+    points="390,248 415,228 440,198 465,168 465,168 490,167 515,166 540,166 565,165 590,165 610,165"
+    fill="none"
+    stroke="#788C5D"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Flat segment indicator -->
+  <rect x="460" y="158" width="130" height="16" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
+  <text x="525" y="169" text-anchor="middle" font-size="8" fill="#141413" font-family="ui-monospace, monospace">稳定在阈值以下</text>
+
+  <!-- Annotation: generalization -->
+  <text x="500" y="62" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">泛化阶段</text>
+  <text x="500" y="73" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">权重范数受限于 max_norm</text>
+
+  <!-- Arrow pointing to the flat segment -->
+  <line x1="530" y1="155" x2="530" y2="148" stroke="#788C5D" stroke-width="1" stroke-dasharray="3,2"/>
+  <polygon points="526,148 530,142 534,148" fill="#788C5D"/>
+
+  <!-- Arrow between panels -->
+  <line x1="320" y1="175" x2="355" y2="175" stroke="#D1CFC5" stroke-width="1.5"/>
+  <polygon points="355,171 348,175 355,179" fill="#D1CFC5"/>
+  <text x="338" y="168" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">+ WNC</text>
+
+  <!-- Legend card bottom -->
+  <rect x="40" y="305" width="600" height="38" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
+  <rect x="56" y="318" width="10" height="10" rx="2" fill="#D97757"/>
+  <text x="72" y="328" font-size="9" fill="#141413" font-family="ui-monospace, monospace">无裁剪：权重范数无界增长</text>
+  <rect x="260" y="318" width="10" height="10" rx="2" fill="#788C5D"/>
+  <text x="276" y="328" font-size="9" fill="#141413" font-family="ui-monospace, monospace">有裁剪：稳定在 max_norm 阈值</text>
+  <line x1="420" y1="318" x2="436" y2="318" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="442" y="328" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">max_norm 裁剪边界</text>
+</svg>

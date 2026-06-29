@@ -26,7 +26,7 @@
   <rect width="800" height="420" fill="url(#bg4)" rx="16"/>
 
   <!-- Title -->
-  <text x="400" y="38" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" text-anchor="middle">Grokking 训练阶段与 Weight Norm Clipping</text>
+  <text x="400" y="38" font-family="ui-serif, Georgia, serif" font-size="20" font-weight="700" fill="#141413" text-anchor="middle">Grokking 训练阶段与 Weight Norm Clipping</text>
   <text x="400" y="60" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F" text-anchor="middle">从记忆到泛化的突然转变 — AI 将 100K 步压缩到 1.5K 步</text>
 
   <!-- Chart area -->

@@ -20,7 +20,7 @@
   <rect width="900" height="560" fill="url(#ivory)" rx="12"/>
 
   <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">语义验证 vs 结构验证</text>
+  <text x="450" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#141413" font-family="'ui-serif, Georgia, serif'">语义验证 vs 结构验证</text>
   <text x="450" y="56" text-anchor="middle" font-size="12" fill="#87867F">契约测试中，结构匹配 ≠ 语义正确</text>
 
   <!-- LEFT: Structural Match (PASS but wrong) -->
