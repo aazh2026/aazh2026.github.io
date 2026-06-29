@@ -1,20 +1,40 @@
 name: Validate Frontmatter
 
+# Parses every _posts/*.md frontmatter as YAML and verifies required fields
+# (layout, title, date). Catches unescaped inner quotes, malformed scalars,
+# and missing/empty fields — the kind of bug that broke 16 posts in
+# commit 069d9ca.
+
 on:
   push:
     paths:
       - '_posts/**'
+      - 'scripts/validate-frontmatter.py'
+      - '.github/workflows/validate-frontmatter.yml'
   pull_request:
     paths:
       - '_posts/**'
+      - 'scripts/validate-frontmatter.py'
+      - '.github/workflows/validate-frontmatter.yml'
+
+permissions:
+  contents: read
 
 jobs:
   validate:
+    name: YAML frontmatter check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
-      - name: Validate Frontmatter
-        run: |
-          chmod +x validate-frontmatter.sh
-          ./validate-frontmatter.sh
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Run validator
+        run: python3 scripts/validate-frontmatter.py

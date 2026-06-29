@@ -1,0 +1,36 @@
+#!/bin/sh
+# Pre-commit hook: validate YAML frontmatter of any _posts/*.md being committed.
+# Bypass with: git commit --no-verify
+#
+# Enable: git config core.hooksPath .githooks
+
+set -e
+
+# Check if any _posts/*.md is being changed
+CHANGED_POSTS=$(git diff --cached --name-only --diff-filter=ACMR | grep '^_posts/.*\.md$' || true)
+
+if [ -z "$CHANGED_POSTS" ]; then
+  exit 0
+fi
+
+# Check if python3 + pyyaml are available
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "⚠️  python3 not found — skipping frontmatter validation"
+  exit 0
+fi
+
+if ! python3 -c "import yaml" 2>/dev/null; then
+  echo "⚠️  PyYAML not installed (pip install pyyaml) — skipping frontmatter validation"
+  exit 0
+fi
+
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+VALIDATOR="$SCRIPT_DIR/../scripts/validate-frontmatter.py"
+
+if [ ! -f "$VALIDATOR" ]; then
+  echo "⚠️  validator not found at $VALIDATOR — skipping"
+  exit 0
+fi
+
+echo "→ Validating frontmatter of changed posts..."
+python3 "$VALIDATOR"
