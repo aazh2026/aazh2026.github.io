@@ -1,118 +1,84 @@
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 360">
   <title>Context Layer工作流程</title>
-  <desc>水平流程图展示6个步骤：AI请求 → 上下文分析 → 并行获取 → 整合缓存 → 注入Prompt → 生成代码</desc>
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Context Layer 工作流程</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">六阶段上下文获取与注入</text>
-
-  <!-- Step 1: AI Request -->
-  <rect x="20" y="80" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <circle cx="62" cy="108" r="14" fill="#D97757"/>
-  <text x="62" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
-  <text x="62" y="136" text-anchor="middle" font-size="10" fill="#141413">AI</text>
-  <text x="62" y="150" text-anchor="middle" font-size="10" fill="#141413">Request</text>
-  <text x="62" y="162" text-anchor="middle" font-size="8" fill="#87867F">发起请求</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="105" y1="122" x2="125" y2="122" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="125,117 135,122 125,127" fill="#D1CFC5"/>
-
-  <!-- Step 2: Context Analysis -->
-  <rect x="135" y="80" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
-  <circle cx="177" cy="108" r="14" fill="#D97757"/>
-  <text x="177" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
-  <text x="177" y="136" text-anchor="middle" font-size="10" fill="#141413">Context</text>
-  <text x="177" y="150" text-anchor="middle" font-size="10" fill="#141413">Analysis</text>
-  <text x="177" y="162" text-anchor="middle" font-size="8" fill="#87867F">分析需求</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="220" y1="122" x2="240" y2="122" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="240,117 250,122 240,127" fill="#D1CFC5"/>
-
-  <!-- Step 3: Parallel Fetch -->
-  <rect x="250" y="80" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
-  <circle cx="292" cy="108" r="14" fill="#D97757"/>
-  <text x="292" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
-  <text x="292" y="136" text-anchor="middle" font-size="10" fill="#141413">Parallel</text>
-  <text x="292" y="150" text-anchor="middle" font-size="10" fill="#141413">Fetch</text>
-  <text x="292" y="162" text-anchor="middle" font-size="8" fill="#87867F">并行获取</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="335" y1="122" x2="355" y2="122" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="355,117 365,122 355,127" fill="#D1CFC5"/>
-
-  <!-- Step 4: Integration & Cache -->
-  <rect x="365" y="80" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
-  <circle cx="407" cy="108" r="14" fill="#D97757"/>
-  <text x="407" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
-  <text x="407" y="136" text-anchor="middle" font-size="10" fill="#141413">Integration</text>
-  <text x="407" y="150" text-anchor="middle" font-size="10" fill="#141413">&amp; Cache</text>
-  <text x="407" y="162" text-anchor="middle" font-size="8" fill="#87867F">整合缓存</text>
-
-  <!-- Arrow 4→5 (olive transition) -->
-  <line x1="450" y1="122" x2="470" y2="122" stroke="#788C5D" stroke-width="2"/>
-  <polygon points="470,117 480,122 470,127" fill="#788C5D"/>
-
-  <!-- Step 5: Inject to Prompt (olive highlight) -->
-  <rect x="480" y="80" width="85" height="85" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
-  <circle cx="522" cy="108" r="14" fill="#788C5D"/>
-  <text x="522" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">5</text>
-  <text x="522" y="136" text-anchor="middle" font-size="10" fill="#141413">Inject to</text>
-  <text x="522" y="150" text-anchor="middle" font-size="10" fill="#141413">Prompt</text>
-  <text x="522" y="162" text-anchor="middle" font-size="8" fill="#87867F">注入Prompt</text>
-
-  <!-- Arrow 5→6 -->
-  <line x1="565" y1="122" x2="585" y2="122" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="585,117 595,122 585,127" fill="#D1CFC5"/>
-
-  <!-- Step 6: Generate Code -->
-  <rect x="595" y="80" width="65" height="85" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.8"/>
-  <circle cx="627" cy="108" r="14" fill="#D97757"/>
-  <text x="627" y="113" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace">6</text>
-  <text x="627" y="136" text-anchor="middle" font-size="10" fill="#141413">Generate</text>
-  <text x="627" y="150" text-anchor="middle" font-size="10" fill="#141413">Code</text>
-  <text x="627" y="162" text-anchor="middle" font-size="8" fill="#87867F">生成代码</text>
-
-  <!-- Connector labels below -->
-  <rect x="20" y="195" width="640" height="130" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Data sources row -->
-  <text x="40" y="218" font-size="10" fill="#141413" font-weight="500">数据源</text>
-  <rect x="40" y="226" width="70" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="75" y="241" text-anchor="middle" font-size="9" fill="#141413">GitHub</text>
-  <rect x="116" y="226" width="70" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="151" y="241" text-anchor="middle" font-size="9" fill="#141413">Confluence</text>
-  <rect x="192" y="226" width="70" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="227" y="241" text-anchor="middle" font-size="9" fill="#141413">ADR</text>
-  <rect x="268" y="226" width="70" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="303" y="241" text-anchor="middle" font-size="9" fill="#141413">Notion</text>
-  <rect x="344" y="226" width="70" height="22" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="379" y="241" text-anchor="middle" font-size="9" fill="#141413">Slack</text>
-
-  <!-- Caching strategy row -->
-  <text x="40" y="272" font-size="10" fill="#141413" font-weight="500">缓存策略</text>
-  <rect x="40" y="280" width="100" height="28" rx="4" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.2"/>
-  <text x="90" y="294" text-anchor="middle" font-size="9" fill="#141413">TTL 短期缓存</text>
-  <text x="90" y="304" text-anchor="middle" font-size="8" fill="#87867F">技术栈/架构决策</text>
-
-  <rect x="150" y="280" width="100" height="28" rx="4" fill="#FFFFFF" stroke="#D97757" stroke-width="1.2"/>
-  <text x="200" y="294" text-anchor="middle" font-size="9" fill="#141413">长期缓存</text>
-  <text x="200" y="304" text-anchor="middle" font-size="8" fill="#87867F">领域模型/术语表</text>
-
-  <rect x="260" y="280" width="100" height="28" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="310" y="294" text-anchor="middle" font-size="9" fill="#141413">不缓存</text>
-  <text x="310" y="304" text-anchor="middle" font-size="8" fill="#87867F">项目状态/成员</text>
-
-  <!-- Legend -->
-  <text x="420" y="218" font-size="10" fill="#141413" font-weight="500">图例</text>
-  <rect x="420" y="226" width="10" height="10" rx="2" fill="#D97757"/>
-  <text x="436" y="235" font-size="9" fill="#87867F">步骤编号</text>
-  <rect x="420" y="244" width="10" height="10" rx="2" fill="#788C5D"/>
-  <text x="436" y="253" font-size="9" fill="#87867F">关键转换</text>
-  <rect x="420" y="262" width="10" height="10" rx="2" fill="#D1CFC5"/>
-  <text x="436" y="271" font-size="9" fill="#87867F">数据/连接</text>
+  <desc>
+    水平流程图展示6个步骤：AI请求 → 上下文分析 → 并行获取 → 整合缓存 → 注入Prompt → 生成代码
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <text x="340" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Context Layer 工作流程</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">六阶段上下文获取与注入</text>
+  <rect width="85" height="85" x="20" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <circle cx="62" cy="108" r="14" fill="#d97757"/>
+  <text x="62" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">1</text>
+  <text x="62" y="136" fill="#141413" font-size="10" text-anchor="middle">AI</text>
+  <text x="62" y="150" fill="#141413" font-size="10" text-anchor="middle">Request</text>
+  <text x="62" y="162" fill="#87867f" font-size="8" text-anchor="middle">发起请求</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M105 122h20"/>
+  <path fill="#d1cfc5" d="m125 117 10 5-10 5z"/>
+  <rect width="85" height="85" x="135" y="80" fill="#fff" stroke="#d1cfc5" stroke-width="1.8" rx="8"/>
+  <circle cx="177" cy="108" r="14" fill="#d97757"/>
+  <text x="177" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">2</text>
+  <text x="177" y="136" fill="#141413" font-size="10" text-anchor="middle">Context</text>
+  <text x="177" y="150" fill="#141413" font-size="10" text-anchor="middle">Analysis</text>
+  <text x="177" y="162" fill="#87867f" font-size="8" text-anchor="middle">分析需求</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M220 122h20"/>
+  <path fill="#d1cfc5" d="m240 117 10 5-10 5z"/>
+  <rect width="85" height="85" x="250" y="80" fill="#fff" stroke="#d1cfc5" stroke-width="1.8" rx="8"/>
+  <circle cx="292" cy="108" r="14" fill="#d97757"/>
+  <text x="292" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">3</text>
+  <text x="292" y="136" fill="#141413" font-size="10" text-anchor="middle">Parallel</text>
+  <text x="292" y="150" fill="#141413" font-size="10" text-anchor="middle">Fetch</text>
+  <text x="292" y="162" fill="#87867f" font-size="8" text-anchor="middle">并行获取</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M335 122h20"/>
+  <path fill="#d1cfc5" d="m355 117 10 5-10 5z"/>
+  <rect width="85" height="85" x="365" y="80" fill="#fff" stroke="#d1cfc5" stroke-width="1.8" rx="8"/>
+  <circle cx="407" cy="108" r="14" fill="#d97757"/>
+  <text x="407" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">4</text>
+  <text x="407" y="136" fill="#141413" font-size="10" text-anchor="middle">Integration</text>
+  <text x="407" y="150" fill="#141413" font-size="10" text-anchor="middle">&amp; Cache</text>
+  <text x="407" y="162" fill="#87867f" font-size="8" text-anchor="middle">整合缓存</text>
+  <path stroke="#788c5d" stroke-width="2" d="M450 122h20"/>
+  <path fill="#788c5d" d="m470 117 10 5-10 5z"/>
+  <rect width="85" height="85" x="480" y="80" fill="#fff" stroke="#788c5d" stroke-width="2" rx="8"/>
+  <circle cx="522" cy="108" r="14" fill="#788c5d"/>
+  <text x="522" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">5</text>
+  <text x="522" y="136" fill="#141413" font-size="10" text-anchor="middle">Inject to</text>
+  <text x="522" y="150" fill="#141413" font-size="10" text-anchor="middle">Prompt</text>
+  <text x="522" y="162" fill="#87867f" font-size="8" text-anchor="middle">注入Prompt</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M565 122h20"/>
+  <path fill="#d1cfc5" d="m585 117 10 5-10 5z"/>
+  <rect width="65" height="85" x="595" y="80" fill="#fff" stroke="#d1cfc5" stroke-width="1.8" rx="8"/>
+  <circle cx="627" cy="108" r="14" fill="#d97757"/>
+  <text x="627" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">6</text>
+  <text x="627" y="136" fill="#141413" font-size="10" text-anchor="middle">Generate</text>
+  <text x="627" y="150" fill="#141413" font-size="10" text-anchor="middle">Code</text>
+  <text x="627" y="162" fill="#87867f" font-size="8" text-anchor="middle">生成代码</text>
+  <rect width="640" height="130" x="20" y="195" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <text x="40" y="218" fill="#141413" font-size="10" font-weight="500">数据源</text>
+  <rect width="70" height="22" x="40" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="75" y="241" fill="#141413" font-size="9" text-anchor="middle">GitHub</text>
+  <rect width="70" height="22" x="116" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="151" y="241" fill="#141413" font-size="9" text-anchor="middle">Confluence</text>
+  <rect width="70" height="22" x="192" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="227" y="241" fill="#141413" font-size="9" text-anchor="middle">ADR</text>
+  <rect width="70" height="22" x="268" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="303" y="241" fill="#141413" font-size="9" text-anchor="middle">Notion</text>
+  <rect width="70" height="22" x="344" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="379" y="241" fill="#141413" font-size="9" text-anchor="middle">Slack</text>
+  <text x="40" y="272" fill="#141413" font-size="10" font-weight="500">缓存策略</text>
+  <rect width="100" height="28" x="40" y="280" fill="#fff" stroke="#788c5d" stroke-width="1.2" rx="4"/>
+  <text x="90" y="294" fill="#141413" font-size="9" text-anchor="middle">TTL 短期缓存</text>
+  <text x="90" y="304" fill="#87867f" font-size="8" text-anchor="middle">技术栈/架构决策</text>
+  <rect width="100" height="28" x="150" y="280" fill="#fff" stroke="#d97757" stroke-width="1.2" rx="4"/>
+  <text x="200" y="294" fill="#141413" font-size="9" text-anchor="middle">长期缓存</text>
+  <text x="200" y="304" fill="#87867f" font-size="8" text-anchor="middle">领域模型/术语表</text>
+  <rect width="100" height="28" x="260" y="280" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="310" y="294" fill="#141413" font-size="9" text-anchor="middle">不缓存</text>
+  <text x="310" y="304" fill="#87867f" font-size="8" text-anchor="middle">项目状态/成员</text>
+  <text x="420" y="218" fill="#141413" font-size="10" font-weight="500">图例</text>
+  <rect width="10" height="10" x="420" y="226" fill="#d97757" rx="2"/>
+  <text x="436" y="235" fill="#87867f" font-size="9">步骤编号</text>
+  <rect width="10" height="10" x="420" y="244" fill="#788c5d" rx="2"/>
+  <text x="436" y="253" fill="#87867f" font-size="9">关键转换</text>
+  <rect width="10" height="10" x="420" y="262" fill="#d1cfc5" rx="2"/>
+  <text x="436" y="271" fill="#87867f" font-size="9">数据/连接</text>
 </svg>

@@ -1,187 +1,142 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-label="Epic → Story → Task → Subtask 四层拆解">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Epic → Story → Task → Subtask 四层拆解" viewBox="0 0 900 480">
   <title>四层任务拆解结构</title>
-  <desc>展示从 Epic 到 Subtask 的层次化工作分解结构（WBS），以及每层的关键特征</desc>
-
+  <desc>
+    展示从 Epic 到 Subtask 的层次化工作分解结构（WBS），以及每层的关键特征
+  </desc>
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
-    </filter>
-    <linearGradient id="epicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#788C5D"/>
+    <linearGradient id="epicGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#788c5d"/>
       <stop offset="100%" stop-color="#5a7045"/>
     </linearGradient>
-    <linearGradient id="storyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D97757"/>
+    <linearGradient id="storyGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d97757"/>
       <stop offset="100%" stop-color="#c4613f"/>
     </linearGradient>
-    <linearGradient id="taskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#87867F"/>
+    <linearGradient id="taskGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#87867f"/>
       <stop offset="100%" stop-color="#6e6c65"/>
     </linearGradient>
-    <linearGradient id="subtaskGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#D1CFC5"/>
+    <linearGradient id="subtaskGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#d1cfc5"/>
       <stop offset="100%" stop-color="#bbb8ae"/>
     </linearGradient>
-    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
+    <marker id="arrowhead" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#d1cfc5" d="m0 0 8 3-8 3z"/>
     </marker>
+    <filter id="shadow" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".12" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="480" fill="#FAF9F5"/>
-
-  <!-- Epic Layer -->
+  <path fill="#faf9f5" d="M0 0h900v480H0z"/>
   <g filter="url(#shadow)">
-    <rect x="30" y="30" width="200" height="90" rx="8" fill="url(#epicGrad)"/>
-    <text x="130" y="58" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle" opacity="0.85">LEVEL 1</text>
-    <text x="130" y="80" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FAF9F5" text-anchor="middle">Epic</text>
-    <text x="130" y="102" font-family="system-ui,sans-serif" font-size="12" fill="#FAF9F5" text-anchor="middle" opacity="0.8">史诗级任务</text>
+    <rect width="200" height="90" x="30" y="30" fill="url(#epicGrad)" rx="8"/>
+    <text x="130" y="58" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="11" font-weight="700" opacity=".85" text-anchor="middle">LEVEL 1</text>
+    <text x="130" y="80" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Epic</text>
+    <text x="130" y="102" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" opacity=".8" text-anchor="middle">史诗级任务</text>
   </g>
-
-  <!-- Epic Card -->
   <g filter="url(#shadow)">
-    <rect x="30" y="135" width="200" height="110" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="30" y="135" width="4" height="110" rx="2" fill="#788C5D"/>
-    <text x="48" y="158" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#141413">订单管理模块</text>
-    <text x="48" y="175" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">ID: EP-001</text>
-    <text x="48" y="192" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">价值: 提升转化率 10%</text>
-    <text x="48" y="209" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">周期: 4 weeks</text>
-    <text x="48" y="226" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">优先级: High</text>
+    <rect width="200" height="110" x="30" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="4" height="110" x="30" y="135" fill="#788c5d" rx="2"/>
+    <text x="48" y="158" fill="#141413" font-family="system-ui,sans-serif" font-size="12" font-weight="600">订单管理模块</text>
+    <text x="48" y="175" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">ID: EP-001</text>
+    <text x="48" y="192" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">价值: 提升转化率 10%</text>
+    <text x="48" y="209" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">周期: 4 weeks</text>
+    <text x="48" y="226" fill="#d97757" font-family="system-ui,sans-serif" font-size="10">优先级: High</text>
   </g>
-
-  <!-- Arrow Epic → Story -->
-  <line x1="130" y1="120" x2="130" y2="135" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Story Layer -->
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowhead)" d="M130 120v15"/>
   <g filter="url(#shadow)">
-    <rect x="295" y="30" width="200" height="90" rx="8" fill="url(#storyGrad)"/>
-    <text x="395" y="58" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle" opacity="0.85">LEVEL 2</text>
-    <text x="395" y="80" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FAF9F5" text-anchor="middle">Story</text>
-    <text x="395" y="102" font-family="system-ui,sans-serif" font-size="12" fill="#FAF9F5" text-anchor="middle" opacity="0.8">用户故事</text>
+    <rect width="200" height="90" x="295" y="30" fill="url(#storyGrad)" rx="8"/>
+    <text x="395" y="58" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="11" font-weight="700" opacity=".85" text-anchor="middle">LEVEL 2</text>
+    <text x="395" y="80" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Story</text>
+    <text x="395" y="102" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" opacity=".8" text-anchor="middle">用户故事</text>
   </g>
-
-  <!-- Story Cards -->
   <g filter="url(#shadow)">
-    <rect x="295" y="135" width="88" height="110" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="295" y="135" width="4" height="110" rx="2" fill="#D97757"/>
-    <text x="303" y="155" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">创建订单</text>
-    <text x="303" y="170" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">ST-001</text>
-    <text x="303" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Points: 13</text>
-    <text x="303" y="200" font-family="system-ui,sans-serif" font-size="9" fill="#D97757">5 tasks</text>
+    <rect width="88" height="110" x="295" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <rect width="4" height="110" x="295" y="135" fill="#d97757" rx="2"/>
+    <text x="303" y="155" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">创建订单</text>
+    <text x="303" y="170" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">ST-001</text>
+    <text x="303" y="187" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Points: 13</text>
+    <text x="303" y="200" fill="#d97757" font-family="system-ui,sans-serif" font-size="9">5 tasks</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="392" y="135" width="88" height="110" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="392" y="135" width="4" height="110" rx="2" fill="#D97757"/>
-    <text x="400" y="155" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">优惠券</text>
-    <text x="400" y="170" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">ST-002</text>
-    <text x="400" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Points: 8</text>
-    <text x="400" y="200" font-family="system-ui,sans-serif" font-size="9" fill="#D97757">3 tasks</text>
+    <rect width="88" height="110" x="392" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <rect width="4" height="110" x="392" y="135" fill="#d97757" rx="2"/>
+    <text x="400" y="155" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">优惠券</text>
+    <text x="400" y="170" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">ST-002</text>
+    <text x="400" y="187" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Points: 8</text>
+    <text x="400" y="200" fill="#d97757" font-family="system-ui,sans-serif" font-size="9">3 tasks</text>
   </g>
-
-  <line x1="339" y1="120" x2="339" y2="135" stroke="#D1CFC5" stroke-width="2"/>
-  <line x1="436" y1="120" x2="436" y2="135" stroke="#D1CFC5" stroke-width="2"/>
-
-  <!-- Task Layer -->
+  <path stroke="#d1cfc5" stroke-width="2" d="M339 120v15m97-15v15"/>
   <g filter="url(#shadow)">
-    <rect x="560" y="30" width="200" height="90" rx="8" fill="url(#taskGrad)"/>
-    <text x="660" y="58" font-family="system-ui,sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle" opacity="0.85">LEVEL 3</text>
-    <text x="660" y="80" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#FAF9F5" text-anchor="middle">Task</text>
-    <text x="660" y="102" font-family="system-ui,sans-serif" font-size="12" fill="#FAF9F5" text-anchor="middle" opacity="0.8">技术任务</text>
+    <rect width="200" height="90" x="560" y="30" fill="url(#taskGrad)" rx="8"/>
+    <text x="660" y="58" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="11" font-weight="700" opacity=".85" text-anchor="middle">LEVEL 3</text>
+    <text x="660" y="80" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="18" font-weight="700" text-anchor="middle">Task</text>
+    <text x="660" y="102" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" opacity=".8" text-anchor="middle">技术任务</text>
   </g>
-
-  <!-- Task Cards -->
   <g filter="url(#shadow)">
-    <rect x="560" y="135" width="88" height="52" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="560" y="135" width="4" height="52" rx="2" fill="#87867F"/>
-    <text x="568" y="153" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413">Order Model</text>
-    <text x="568" y="167" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">TK-001 · 8h</text>
-    <text x="568" y="179" font-family="system-ui,sans-serif" font-size="9" fill="#D97757">SK-001~004</text>
+    <rect width="88" height="52" x="560" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <rect width="4" height="52" x="560" y="135" fill="#87867f" rx="2"/>
+    <text x="568" y="153" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="600">Order Model</text>
+    <text x="568" y="167" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">TK-001 · 8h</text>
+    <text x="568" y="179" fill="#d97757" font-family="system-ui,sans-serif" font-size="9">SK-001~004</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="657" y="135" width="88" height="52" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="657" y="135" width="4" height="52" rx="2" fill="#87867F"/>
-    <text x="665" y="153" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413">Order API</text>
-    <text x="665" y="167" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">TK-002 · 12h</text>
-    <text x="665" y="179" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">dep: TK-001</text>
+    <rect width="88" height="52" x="657" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <rect width="4" height="52" x="657" y="135" fill="#87867f" rx="2"/>
+    <text x="665" y="153" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="600">Order API</text>
+    <text x="665" y="167" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">TK-002 · 12h</text>
+    <text x="665" y="179" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">dep: TK-001</text>
   </g>
-
-  <line x1="604" y1="120" x2="604" y2="135" stroke="#D1CFC5" stroke-width="2"/>
-  <line x1="701" y1="120" x2="701" y2="135" stroke="#D1CFC5" stroke-width="2"/>
-
-  <!-- Subtask Layer -->
+  <path stroke="#d1cfc5" stroke-width="2" d="M604 120v15m97-15v15"/>
   <g filter="url(#shadow)">
-    <rect x="825" y="30" width="65" height="90" rx="8" fill="url(#subtaskGrad)"/>
-    <text x="857" y="58" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle" opacity="0.85">L4</text>
-    <text x="857" y="78" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">Sub</text>
-    <text x="857" y="94" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">task</text>
+    <rect width="65" height="90" x="825" y="30" fill="url(#subtaskGrad)" rx="8"/>
+    <text x="857" y="58" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" opacity=".85" text-anchor="middle">L4</text>
+    <text x="857" y="78" fill="#141413" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Sub</text>
+    <text x="857" y="94" fill="#141413" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">task</text>
   </g>
-
-  <!-- Subtask cards -->
   <g filter="url(#shadow)">
-    <rect x="825" y="135" width="65" height="36" rx="5" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.2"/>
-    <rect x="825" y="135" width="3" height="36" rx="1.5" fill="#D1CFC5"/>
-    <text x="831" y="150" font-family="system-ui,sans-serif" font-size="8" font-weight="600" fill="#141413">SK-001</text>
-    <text x="831" y="162" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">2h</text>
+    <rect width="65" height="36" x="825" y="135" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.2" rx="5"/>
+    <rect width="3" height="36" x="825" y="135" fill="#d1cfc5" rx="1.5"/>
+    <text x="831" y="150" fill="#141413" font-family="system-ui,sans-serif" font-size="8" font-weight="600">SK-001</text>
+    <text x="831" y="162" fill="#87867f" font-family="system-ui,sans-serif" font-size="8">2h</text>
   </g>
-
   <g filter="url(#shadow)">
-    <rect x="825" y="176" width="65" height="36" rx="5" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.2"/>
-    <rect x="825" y="176" width="3" height="36" rx="1.5" fill="#D1CFC5"/>
-    <text x="831" y="191" font-family="system-ui,sans-serif" font-size="8" font-weight="600" fill="#141413">SK-002</text>
-    <text x="831" y="203" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">3h</text>
+    <rect width="65" height="36" x="825" y="176" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.2" rx="5"/>
+    <rect width="3" height="36" x="825" y="176" fill="#d1cfc5" rx="1.5"/>
+    <text x="831" y="191" fill="#141413" font-family="system-ui,sans-serif" font-size="8" font-weight="600">SK-002</text>
+    <text x="831" y="203" fill="#87867f" font-family="system-ui,sans-serif" font-size="8">3h</text>
   </g>
-
-  <!-- Horizontal flow arrows between layers -->
-  <line x1="230" y1="75" x2="295" y2="75" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="495" y1="75" x2="560" y2="75" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="760" y1="75" x2="825" y2="75" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowhead)"/>
-
-  <!-- Divider lines -->
-  <line x1="280" y1="15" x2="280" y2="265" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="545" y1="15" x2="545" y2="265" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-  <line x1="810" y1="15" x2="810" y2="265" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- Key features at bottom -->
-  <rect x="30" y="270" width="840" height="2" fill="#E3DACC"/>
-  <text x="30" y="292" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">关键特征</text>
-
-  <g>
-    <rect x="30" y="302" width="8" height="8" rx="2" fill="#788C5D"/>
-    <text x="45" y="311" font-family="system-ui,sans-serif" font-size="9" fill="#141413">可独立交付的业务价值单元</text>
-    <rect x="200" y="302" width="8" height="8" rx="2" fill="#D97757"/>
-    <text x="215" y="311" font-family="system-ui,sans-serif" font-size="9" fill="#141413">用户可感知的功能点</text>
-    <rect x="370" y="302" width="8" height="8" rx="2" fill="#87867F"/>
-    <text x="385" y="311" font-family="system-ui,sans-serif" font-size="9" fill="#141413">技术实现单元</text>
-    <rect x="540" y="302" width="8" height="8" rx="2" fill="#D1CFC5"/>
-    <text x="555" y="311" font-family="system-ui,sans-serif" font-size="9" fill="#141413">最小执行单元</text>
-  </g>
-
-  <!-- Value delivery flow -->
-  <text x="30" y="345" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">价值流: </text>
-  <text x="85" y="345" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Epic (4 wks)</text>
-  <text x="160" y="345" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">→ Story (1-2 wks)</text>
-  <text x="265" y="345" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">→ Task (days)</text>
-  <text x="345" y="345" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">→ Subtask (hours)</text>
-
-  <!-- Dependency hint -->
-  <text x="30" y="370" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">依赖管理: </text>
-  <text x="100" y="370" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">finish_to_start | 关键路径分析 | WIP 限制</text>
-
-  <!-- Estimation -->
-  <text x="30" y="395" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">估算方法: </text>
-  <text x="100" y="395" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">历史数据 + 复杂度因子 + 风险调整 → 置信区间估算</text>
-
-  <!-- Legend colors -->
-  <g transform="translate(30, 420)">
-    <rect width="12" height="12" rx="3" fill="#788C5D"/>
-    <text x="18" y="11" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Epic</text>
-    <rect x="65" width="12" height="12" rx="3" fill="#D97757"/>
-    <text x="83" y="11" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Story</text>
-    <rect x="125" width="12" height="12" rx="3" fill="#87867F"/>
-    <text x="143" y="11" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Task</text>
-    <rect x="185" width="12" height="12" rx="3" fill="#D1CFC5"/>
-    <text x="203" y="11" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Subtask</text>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowhead)" d="M230 75h65"/>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowhead)" d="M495 75h65"/>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowhead)" d="M760 75h65"/>
+  <path stroke="#e3dacc" stroke-dasharray="4,4" d="M280 15v250M545 15v250M810 15v250"/>
+  <path fill="#e3dacc" d="M30 270h840v2H30z"/>
+  <text x="30" y="292" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">关键特征</text>
+  <rect width="8" height="8" x="30" y="302" fill="#788c5d" rx="2"/>
+  <text x="45" y="311" fill="#141413" font-family="system-ui,sans-serif" font-size="9">可独立交付的业务价值单元</text>
+  <rect width="8" height="8" x="200" y="302" fill="#d97757" rx="2"/>
+  <text x="215" y="311" fill="#141413" font-family="system-ui,sans-serif" font-size="9">用户可感知的功能点</text>
+  <rect width="8" height="8" x="370" y="302" fill="#87867f" rx="2"/>
+  <text x="385" y="311" fill="#141413" font-family="system-ui,sans-serif" font-size="9">技术实现单元</text>
+  <rect width="8" height="8" x="540" y="302" fill="#d1cfc5" rx="2"/>
+  <text x="555" y="311" fill="#141413" font-family="system-ui,sans-serif" font-size="9">最小执行单元</text>
+  <text x="30" y="345" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">价值流: </text>
+  <text x="85" y="345" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">Epic (4 wks)</text>
+  <text x="160" y="345" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">→ Story (1-2 wks)</text>
+  <text x="265" y="345" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">→ Task (days)</text>
+  <text x="345" y="345" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">→ Subtask (hours)</text>
+  <text x="30" y="370" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">依赖管理: </text>
+  <text x="100" y="370" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">finish_to_start | 关键路径分析 | WIP 限制</text>
+  <text x="30" y="395" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">估算方法: </text>
+  <text x="100" y="395" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">历史数据 + 复杂度因子 + 风险调整 → 置信区间估算</text>
+  <g transform="translate(30 420)">
+    <rect width="12" height="12" fill="#788c5d" rx="3"/>
+    <text x="18" y="11" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Epic</text>
+    <rect width="12" height="12" x="65" fill="#d97757" rx="3"/>
+    <text x="83" y="11" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Story</text>
+    <rect width="12" height="12" x="125" fill="#87867f" rx="3"/>
+    <text x="143" y="11" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Task</text>
+    <rect width="12" height="12" x="185" fill="#d1cfc5" rx="3"/>
+    <text x="203" y="11" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Subtask</text>
   </g>
 </svg>

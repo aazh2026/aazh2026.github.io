@@ -1,72 +1,50 @@
-<svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 240">
   <title>KII 风险等级图</title>
-  <desc>知识孤岛指数 (KII) 五级风险等级：低风险、中低风险、中风险、高风险、极高风险，对应颜色绿黄橙红黑</desc>
-
-  <rect width="680" height="240" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">KII 风险等级</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">知识孤岛指数 (KII) · 2026/03/12</text>
-
-  <!-- Row 1: KII range label -->
-  <!-- Col 1: 0-0.2 -->
-  <rect x="30" y="68" width="110" height="44" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="85" y="94" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">0 – 0.2</text>
-  <text x="85" y="110" text-anchor="middle" font-size="10" fill="#87867F">KII 范围</text>
-
-  <!-- Col 2: 0.2-0.4 -->
-  <rect x="165" y="68" width="110" height="44" rx="8" fill="#FFFFFF" stroke="#B8A860" stroke-width="1.5"/>
-  <text x="220" y="94" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">0.2 – 0.4</text>
-  <text x="220" y="110" text-anchor="middle" font-size="10" fill="#87867F">KII 范围</text>
-
-  <!-- Col 3: 0.4-0.6 -->
-  <rect x="300" y="68" width="110" height="44" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="355" y="94" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">0.4 – 0.6</text>
-  <text x="355" y="110" text-anchor="middle" font-size="10" fill="#87867F">KII 范围</text>
-
-  <!-- Col 4: 0.6-0.8 -->
-  <rect x="435" y="68" width="110" height="44" rx="8" fill="#FFFFFF" stroke="#C0533A" stroke-width="1.5"/>
-  <text x="490" y="94" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">0.6 – 0.8</text>
-  <text x="490" y="110" text-anchor="middle" font-size="10" fill="#87867F">KII 范围</text>
-
-  <!-- Col 5: 0.8-1.0 -->
-  <rect x="570" y="68" width="80" height="44" rx="8" fill="#FFFFFF" stroke="#1a1a1a" stroke-width="1.5"/>
-  <text x="610" y="94" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">0.8 – 1.0</text>
-  <text x="610" y="110" text-anchor="middle" font-size="10" fill="#87867F">KII 范围</text>
-
-  <!-- Row 2: Level labels -->
-  <rect x="30" y="120" width="110" height="44" rx="8" fill="#788C5D"/>
-  <text x="85" y="145" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">低风险</text>
-  <text x="85" y="161" text-anchor="middle" font-size="10" fill="#FFFFFF">KII &lt; 0.3</text>
-
-  <rect x="165" y="120" width="110" height="44" rx="8" fill="#B8A860"/>
-  <text x="220" y="145" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">中低风险</text>
-  <text x="220" y="161" text-anchor="middle" font-size="10" fill="#FFFFFF">KII 0.3–0.4</text>
-
-  <rect x="300" y="120" width="110" height="44" rx="8" fill="#D97757"/>
-  <text x="355" y="145" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">中风险</text>
-  <text x="355" y="161" text-anchor="middle" font-size="10" fill="#FFFFFF">KII 0.4–0.6</text>
-
-  <rect x="435" y="120" width="110" height="44" rx="8" fill="#C0533A"/>
-  <text x="490" y="145" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">高风险</text>
-  <text x="490" y="161" text-anchor="middle" font-size="10" fill="#FFFFFF">KII &gt; 0.6</text>
-
-  <rect x="570" y="120" width="80" height="44" rx="8" fill="#1a1a1a"/>
-  <text x="610" y="145" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">极高风险</text>
-  <text x="610" y="161" text-anchor="middle" font-size="10" fill="#FFFFFF">KII &gt; 0.8</text>
-
-  <!-- Row 3: Action items -->
-  <text x="85" y="200" text-anchor="middle" font-size="10" fill="#141413">保持现状</text>
-  <text x="220" y="200" text-anchor="middle" font-size="10" fill="#141413">增加文档</text>
-  <text x="355" y="200" text-anchor="middle" font-size="10" fill="#141413">组织代码讲解</text>
-  <text x="490" y="200" text-anchor="middle" font-size="10" fill="#141413">必须重构或重写</text>
-  <text x="610" y="200" text-anchor="middle" font-size="10" fill="#141413">立即处理</text>
-
-  <!-- Progress bar at bottom -->
-  <rect x="30" y="218" width="620" height="6" rx="3" fill="#D1CFC5"/>
-  <rect x="30" y="218" width="124" height="6" rx="3" fill="#788C5D"/>
-  <rect x="154" y="218" width="124" height="6" rx="0" fill="#B8A860"/>
-  <rect x="278" y="218" width="124" height="6" rx="0" fill="#D97757"/>
-  <rect x="402" y="218" width="124" height="6" rx="0" fill="#C0533A"/>
-  <rect x="526" y="218" width="124" height="6" rx="0" fill="#1a1a1a"/>
+  <desc>
+    知识孤岛指数 (KII) 五级风险等级：低风险、中低风险、中风险、高风险、极高风险，对应颜色绿黄橙红黑
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v240H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" text-anchor="middle">KII 风险等级</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">知识孤岛指数 (KII) · 2026/03/12</text>
+  <rect width="110" height="44" x="30" y="68" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="85" y="94" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">0 – 0.2</text>
+  <text x="85" y="110" fill="#87867f" font-size="10" text-anchor="middle">KII 范围</text>
+  <rect width="110" height="44" x="165" y="68" fill="#fff" stroke="#b8a860" stroke-width="1.5" rx="8"/>
+  <text x="220" y="94" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">0.2 – 0.4</text>
+  <text x="220" y="110" fill="#87867f" font-size="10" text-anchor="middle">KII 范围</text>
+  <rect width="110" height="44" x="300" y="68" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="355" y="94" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">0.4 – 0.6</text>
+  <text x="355" y="110" fill="#87867f" font-size="10" text-anchor="middle">KII 范围</text>
+  <rect width="110" height="44" x="435" y="68" fill="#fff" stroke="#c0533a" stroke-width="1.5" rx="8"/>
+  <text x="490" y="94" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">0.6 – 0.8</text>
+  <text x="490" y="110" fill="#87867f" font-size="10" text-anchor="middle">KII 范围</text>
+  <rect width="80" height="44" x="570" y="68" fill="#fff" stroke="#1a1a1a" stroke-width="1.5" rx="8"/>
+  <text x="610" y="94" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">0.8 – 1.0</text>
+  <text x="610" y="110" fill="#87867f" font-size="10" text-anchor="middle">KII 范围</text>
+  <rect width="110" height="44" x="30" y="120" fill="#788c5d" rx="8"/>
+  <text x="85" y="145" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">低风险</text>
+  <text x="85" y="161" fill="#fff" font-size="10" text-anchor="middle">KII &lt; 0.3</text>
+  <rect width="110" height="44" x="165" y="120" fill="#b8a860" rx="8"/>
+  <text x="220" y="145" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">中低风险</text>
+  <text x="220" y="161" fill="#fff" font-size="10" text-anchor="middle">KII 0.3–0.4</text>
+  <rect width="110" height="44" x="300" y="120" fill="#d97757" rx="8"/>
+  <text x="355" y="145" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">中风险</text>
+  <text x="355" y="161" fill="#fff" font-size="10" text-anchor="middle">KII 0.4–0.6</text>
+  <rect width="110" height="44" x="435" y="120" fill="#c0533a" rx="8"/>
+  <text x="490" y="145" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">高风险</text>
+  <text x="490" y="161" fill="#fff" font-size="10" text-anchor="middle">KII &gt; 0.6</text>
+  <rect width="80" height="44" x="570" y="120" fill="#1a1a1a" rx="8"/>
+  <text x="610" y="145" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">极高风险</text>
+  <text x="610" y="161" fill="#fff" font-size="10" text-anchor="middle">KII &gt; 0.8</text>
+  <text x="85" y="200" fill="#141413" font-size="10" text-anchor="middle">保持现状</text>
+  <text x="220" y="200" fill="#141413" font-size="10" text-anchor="middle">增加文档</text>
+  <text x="355" y="200" fill="#141413" font-size="10" text-anchor="middle">组织代码讲解</text>
+  <text x="490" y="200" fill="#141413" font-size="10" text-anchor="middle">必须重构或重写</text>
+  <text x="610" y="200" fill="#141413" font-size="10" text-anchor="middle">立即处理</text>
+  <rect width="620" height="6" x="30" y="218" fill="#d1cfc5" rx="3"/>
+  <rect width="124" height="6" x="30" y="218" fill="#788c5d" rx="3"/>
+  <rect width="124" height="6" x="154" y="218" fill="#b8a860" rx="0"/>
+  <rect width="124" height="6" x="278" y="218" fill="#d97757" rx="0"/>
+  <rect width="124" height="6" x="402" y="218" fill="#c0533a" rx="0"/>
+  <rect width="124" height="6" x="526" y="218" fill="#1a1a1a" rx="0"/>
 </svg>

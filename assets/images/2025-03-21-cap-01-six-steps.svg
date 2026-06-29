@@ -1,85 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
   <defs>
-    <marker id="arr8" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    <marker id="arr8" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 10 3.5L0 7z"/>
     </marker>
-    <filter id="shadow8" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#D1CFC5" flood-opacity="0.5"/>
+    <filter id="shadow8" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#d1cfc5" flood-opacity=".5" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <rect width="760" height="400" fill="#FAF9F5" rx="8"/>
-
-  <!-- Title -->
-  <text x="380" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">代码考古六步法</text>
-
-  <!-- Subgraph border -->
-  <rect x="10" y="36" width="740" height="340" rx="10" fill="none" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
-
-  <!-- S1: 遗址勘探 -->
-  <g transform="translate(110,90)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="2" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#D97757">Step 1: 遗址勘探</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Site Survey</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：建立系统整体认知</text>
+  <rect width="760" height="400" fill="#faf9f5" rx="8"/>
+  <text x="380" y="22" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle">代码考古六步法</text>
+  <rect width="740" height="340" x="10" y="36" fill="none" stroke="#d1cfc5" stroke-dasharray="6,3" stroke-width="1.5" rx="10"/>
+  <g transform="translate(110 90)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#e3dacc" stroke="#d97757" stroke-width="2" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#d97757" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 1: 遗址勘探</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Site Survey</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：建立系统整体认知</text>
   </g>
-
-  <!-- Arrow S1 → S2 -->
-  <path d="M 205,90 L 280,90" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr8)"/>
-
-  <!-- S2: 地层分析 -->
-  <g transform="translate(330,90)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="2" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#141413">Step 2: 地层分析</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Stratigraphy</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：理解代码演化历史</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr8)" d="M205 90h75"/>
+  <g transform="translate(330 90)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#e3dacc" stroke="#87867f" stroke-width="2" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 2: 地层分析</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Stratigraphy</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：理解代码演化历史</text>
   </g>
-
-  <!-- Arrow S2 → S3 -->
-  <path d="M 425,90 L 500,90" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr8)"/>
-
-  <!-- S3: 文物识别 -->
-  <g transform="translate(550,90)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#141413">Step 3: 文物识别</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Artifact Identification</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：定位关键模块和逻辑</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr8)" d="M425 90h75"/>
+  <g transform="translate(550 90)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#d1cfc5" stroke="#87867f" stroke-width="1.5" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 3: 文物识别</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Artifact Identification</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：定位关键模块和逻辑</text>
   </g>
-
-  <!-- Arrow S3 → S4 (down) -->
-  <path d="M 620,150 L 620,195" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr8)"/>
-
-  <!-- S4: 挖掘验证 -->
-  <g transform="translate(620,255)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#D1CFC5" stroke="#141413" stroke-width="1.5" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#141413">Step 4: 挖掘验证</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Excavation &amp; Validation</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：深度理解核心流程</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr8)" d="M620 150v45"/>
+  <g transform="translate(620 255)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#d1cfc5" stroke="#141413" stroke-width="1.5" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 4: 挖掘验证</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Excavation &amp; Validation</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：深度理解核心流程</text>
   </g>
-
-  <!-- Arrow S4 → S5 (left) -->
-  <path d="M 525,255 L 450,255" fill="none" stroke="#141413" stroke-width="1.5" marker-end="url(#arr8)"/>
-
-  <!-- S5: 重建模型 -->
-  <g transform="translate(400,255)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#788C5D">Step 5: 重建模型</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Model Reconstruction</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：构建系统心智模型</text>
+  <path fill="none" stroke="#141413" stroke-width="1.5" marker-end="url(#arr8)" d="M525 255h-75"/>
+  <g transform="translate(400 255)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#e3dacc" stroke="#788c5d" stroke-width="2" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 5: 重建模型</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Model Reconstruction</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：构建系统心智模型</text>
   </g>
-
-  <!-- Arrow S5 → S6 (left) -->
-  <path d="M 305,255 L 230,255" fill="none" stroke="#788C5D" stroke-width="2" marker-end="url(#arr8)"/>
-
-  <!-- S6: 知识沉淀 -->
-  <g transform="translate(180,255)">
-    <rect x="-95" y="-30" width="190" height="60" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow8)"/>
-    <text x="0" y="-10" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#788C5D">Step 6: 知识沉淀</text>
-    <text x="0" y="8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">Knowledge Documentation</text>
-    <text x="0" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#87867F">目标：转化为组织知识</text>
+  <path fill="none" stroke="#788c5d" stroke-width="2" marker-end="url(#arr8)" d="M305 255h-75"/>
+  <g transform="translate(180 255)">
+    <rect width="190" height="60" x="-95" y="-30" fill="#e3dacc" stroke="#788c5d" stroke-width="2" filter="url(#shadow8)" rx="8"/>
+    <text y="-10" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Step 6: 知识沉淀</text>
+    <text y="8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" text-anchor="middle">Knowledge Documentation</text>
+    <text y="22" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">目标：转化为组织知识</text>
   </g>
-
-  <!-- Arrow S6 → loops back to S1 (curved) -->
-  <path d="M 85,210 C 60,180 60,60 15,60 L 15,90" fill="none" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="55" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#788C5D">持续迭代</text>
+  <path fill="none" stroke="#788c5d" stroke-dasharray="5,3" stroke-width="1.5" d="M85 210C60 180 60 60 15 60v30"/>
+  <text x="55" y="55" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="9" text-anchor="middle">持续迭代</text>
 </svg>

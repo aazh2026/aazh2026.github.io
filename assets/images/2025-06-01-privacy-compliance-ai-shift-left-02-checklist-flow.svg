@@ -1,132 +1,90 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif" viewBox="0 0 800 440">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .title { fill: #141413; font-size: 20px; font-weight: 700; }
-      .subtitle { fill: #87867F; font-size: 12px; }
-      .label { fill: #141413; font-size: 13px; font-weight: 600; }
-      .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }
-      .desc { fill: #87867F; font-size: 11px; }
-      .desc-white { fill: rgba(255,255,255,0.85); font-size: 11px; }
-      .white { fill: #ffffff; }
-      .accent-clay { fill: #D97757; }
-      .accent-olive { fill: #788C5D; }
-      .accent-g300 { fill: #D1CFC5; }
-      .accent-g500 { fill: #87867F; }
-      .accent-oat { fill: #E3DACC; }
+      .label-sm{fill:#141413;font-size:11px;font-weight:500}.desc{fill:#87867f;font-size:11px}.desc-white{fill:rgba(255,255,255,.85);font-size:11px}.white{fill:#fff}.accent-clay{fill:#d97757}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="440" class="bg"/>
-
-  <!-- Title -->
-  <text x="40" y="38" class="title">GDPR / 个保法 Checklist 自动化流程</text>
-  <text x="40" y="58" class="subtitle">AI 分析需求文档，自动匹配适用法规条款，生成合规检查清单</text>
-
-  <!-- ===== FLOW: PRD → AI Analysis → Checklist → Verification ===== -->
-
-  <!-- Step 1: PRD Input -->
-  <rect x="40" y="90" width="160" height="120" rx="10" fill="#E3DACC"/>
-  <rect x="40" y="90" width="160" height="120" rx="10" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
+  <path d="M0 0h800v440H0z" style="fill:#faf9f5"/>
+  <text x="40" y="38" style="fill:#141413;font-size:20px;font-weight:700">GDPR / 个保法 Checklist 自动化流程</text>
+  <text x="40" y="58" style="fill:#87867f;font-size:12px">AI 分析需求文档，自动匹配适用法规条款，生成合规检查清单</text>
+  <rect width="160" height="120" x="40" y="90" fill="#e3dacc" rx="10"/>
+  <rect width="160" height="120" x="40" y="90" fill="none" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
   <circle cx="62" cy="116" r="14" fill="#141413"/>
-  <text x="62" y="121" text-anchor="middle" class="label-sm white">1</text>
+  <text x="62" y="121" class="label-sm white" text-anchor="middle">1</text>
   <text x="76" y="120" class="label-sm">PRD 输入</text>
   <text x="52" y="138" class="desc">产品需求文档</text>
   <text x="52" y="154" class="desc">包含：</text>
   <text x="52" y="170" class="desc">• 用户注册功能</text>
   <text x="52" y="186" class="desc">• 收集身份证、手机号</text>
   <text x="52" y="202" class="desc">• 存储于 AWS 美国区</text>
-
-  <line x1="200" y1="150" x2="225" y2="150" stroke="#D97757" stroke-width="2" marker-end="url(#arrowRed)"/>
-
-  <!-- Step 2: AI Analysis -->
-  <rect x="235" y="90" width="160" height="120" rx="10" fill="#D97757"/>
-  <circle cx="257" cy="116" r="14" fill="#FAF9F5"/>
-  <text x="257" y="121" text-anchor="middle" class="label-sm accent-clay">2</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrowRed)" d="M200 150h25"/>
+  <rect width="160" height="120" x="235" y="90" fill="#d97757" rx="10"/>
+  <circle cx="257" cy="116" r="14" fill="#faf9f5"/>
+  <text x="257" y="121" class="label-sm accent-clay" text-anchor="middle">2</text>
   <text x="271" y="120" class="label-sm white">AI 分析</text>
   <text x="247" y="138" class="desc-white">数据收集点提取</text>
   <text x="247" y="154" class="desc-white">数据处理活动分析</text>
   <text x="247" y="170" class="desc-white">数据分享场景识别</text>
   <text x="247" y="186" class="desc-white">适用法规匹配</text>
   <text x="247" y="202" class="desc-white">GDPR · 个保法 · CCPA</text>
-
-  <line x1="395" y1="150" x2="420" y2="150" stroke="#D97757" stroke-width="2"/>
-
-  <!-- Step 3: Automated Checklist -->
-  <rect x="430" y="90" width="160" height="120" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <circle cx="452" cy="116" r="14" fill="#788C5D"/>
-  <text x="452" y="121" text-anchor="middle" class="label-sm white">3</text>
+  <path stroke="#d97757" stroke-width="2" d="M395 150h25"/>
+  <rect width="160" height="120" x="430" y="90" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <circle cx="452" cy="116" r="14" fill="#788c5d"/>
+  <text x="452" y="121" class="label-sm white" text-anchor="middle">3</text>
   <text x="466" y="120" class="label-sm">自动化 Checklist</text>
   <text x="442" y="138" class="desc">☑ GDPR-001 明确同意</text>
   <text x="442" y="154" class="desc">☑ PIPL-001 单独同意</text>
   <text x="442" y="170" class="desc">☑ PIPL-003 数据境内存储</text>
   <text x="442" y="186" class="desc accent-clay">☐ PIPL-002 影响评估</text>
   <text x="442" y="202" class="desc">待处理项：1</text>
-
-  <line x1="590" y1="150" x2="615" y2="150" stroke="#D97757" stroke-width="2"/>
-
-  <!-- Step 4: Compliance Report -->
-  <rect x="625" y="90" width="140" height="120" rx="10" fill="#141413"/>
-  <circle cx="647" cy="116" r="14" fill="#D97757"/>
-  <text x="647" y="121" text-anchor="middle" class="label-sm white">4</text>
+  <path stroke="#d97757" stroke-width="2" d="M590 150h25"/>
+  <rect width="140" height="120" x="625" y="90" fill="#141413" rx="10"/>
+  <circle cx="647" cy="116" r="14" fill="#d97757"/>
+  <text x="647" y="121" class="label-sm white" text-anchor="middle">4</text>
   <text x="661" y="120" class="label-sm white">合规报告</text>
   <text x="637" y="138" class="desc-white">风险：HIGH × 1</text>
   <text x="637" y="154" class="desc-white">风险：CRITICAL × 1</text>
   <text x="637" y="170" class="desc-white">风险：MEDIUM × 1</text>
   <text x="637" y="186" class="desc-white">合规建议：已生成</text>
   <text x="637" y="202" class="desc-white">→ PbD 方案</text>
-
-  <!-- ===== BOTTOM: Regulations Comparison Table ===== -->
-  <text x="40" y="244" class="label">GDPR 与个保法关键条款对照</text>
-
-  <!-- Table header -->
-  <rect x="40" y="258" width="720" height="28" rx="6" fill="#141413"/>
+  <text x="40" y="244" style="fill:#141413;font-size:13px;font-weight:600">GDPR 与个保法关键条款对照</text>
+  <rect width="720" height="28" x="40" y="258" fill="#141413" rx="6"/>
   <text x="56" y="276" class="label-sm white">维度</text>
   <text x="170" y="276" class="label-sm white">GDPR（欧盟）</text>
   <text x="420" y="276" class="label-sm white">个保法（中国）</text>
   <text x="630" y="276" class="label-sm white">差异</text>
-
-  <!-- Row 1: Consent -->
-  <rect x="40" y="290" width="720" height="42" rx="0" fill="#E3DACC"/>
-  <rect x="40" y="290" width="720" height="42" rx="6" fill="#E3DACC"/>
-  <rect x="40" y="290" width="720" height="42" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="720" height="42" x="40" y="290" fill="#e3dacc" rx="0"/>
+  <rect width="720" height="42" x="40" y="290" fill="#e3dacc" rx="6"/>
+  <path fill="none" stroke="#d1cfc5" d="M40 290h720v42H40z"/>
   <text x="56" y="314" class="label-sm">同意机制</text>
   <text x="170" y="310" class="desc">明确同意（Opt-in）</text>
   <text x="170" y="326" class="desc">单独同意（敏感信息）</text>
   <text x="420" y="310" class="desc">告知-同意原则</text>
   <text x="420" y="326" class="desc">敏感信息需单独同意</text>
-  <rect x="630" y="296" width="120" height="30" rx="4" fill="#788C5D"/>
-  <text x="690" y="314" text-anchor="middle" class="label-sm white">相似 ✓</text>
-
-  <!-- Row 2: Data Transfer -->
-  <rect x="40" y="334" width="720" height="42" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="120" height="30" x="630" y="296" fill="#788c5d" rx="4"/>
+  <text x="690" y="314" class="label-sm white" text-anchor="middle">相似 ✓</text>
+  <rect width="720" height="42" x="40" y="334" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
   <text x="56" y="358" class="label-sm">跨境传输</text>
   <text x="170" y="354" class="desc">充分性认定 / SCC</text>
   <text x="170" y="370" class="desc">Chapter V 完整规范</text>
   <text x="420" y="354" class="desc">安全评估 / 标准合同</text>
   <text x="420" y="370" class="desc">个保法第 38 条</text>
-  <rect x="630" y="340" width="120" height="30" rx="4" fill="#D97757"/>
-  <text x="690" y="358" text-anchor="middle" class="label-sm white">需衔接</text>
-
-  <!-- Row 3: Sensitive Data -->
-  <rect x="40" y="378" width="720" height="42" rx="6" fill="#E3DACC"/>
-  <rect x="40" y="378" width="720" height="42" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="120" height="30" x="630" y="340" fill="#d97757" rx="4"/>
+  <text x="690" y="358" class="label-sm white" text-anchor="middle">需衔接</text>
+  <rect width="720" height="42" x="40" y="378" fill="#e3dacc" rx="6"/>
+  <rect width="720" height="42" x="40" y="378" fill="#e3dacc" stroke="#d1cfc5" rx="6"/>
   <text x="56" y="402" class="label-sm">特殊类型数据</text>
   <text x="170" y="398" class="desc">特殊类别数据</text>
   <text x="170" y="414" class="desc">Art. 9 明示禁止</text>
   <text x="420" y="398" class="desc">敏感个人信息</text>
   <text x="420" y="414" class="desc">第 28 条高标准保护</text>
-  <rect x="630" y="384" width="120" height="30" rx="4" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="690" y="402" text-anchor="middle" class="label-sm">范围略有不同</text>
-
-  <!-- Footer -->
+  <rect width="120" height="30" x="630" y="384" fill="#e3dacc" stroke="#d1cfc5" rx="4"/>
+  <text x="690" y="402" class="label-sm" text-anchor="middle">范围略有不同</text>
   <text x="40" y="432" class="desc">AI 自动识别需求中涉及的法规条款，生成检查清单并标记需人工审批的项目</text>
   <text x="700" y="432" class="desc">AI-Native 软件工程系列 #47</text>
-
   <defs>
-    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    <marker id="arrowRed" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#d97757" d="M0 0v6l8-3z"/>
     </marker>
   </defs>
 </svg>

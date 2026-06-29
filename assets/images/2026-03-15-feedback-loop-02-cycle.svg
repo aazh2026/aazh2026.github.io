@@ -1,56 +1,38 @@
-<svg viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Feedback Loop: Action → Outcome → Sense → Feedback → Action -->
-  <rect width="480" height="120" fill="#FAF9F5"/>
-
-  <text x="240" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">反馈循环</text>
-  <text x="240" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
-
-  <!-- Action -->
-  <rect x="30" y="50" width="72" height="44" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="30" y="50" width="72" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="66" y="63" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Action</text>
-  <text x="66" y="80" text-anchor="middle" font-size="9" fill="#141413">行动</text>
-  <rect x="94" y="66" width="12" height="12" rx="6" fill="#2563EB"/>
-  <text x="100" y="75" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">A</text>
-
-  <!-- Arrow A→O -->
-  <line x1="102" y1="72" x2="120" y2="72" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="120,68 128,72 120,76" fill="#D1CFC5"/>
-
-  <!-- Outcome -->
-  <rect x="128" y="50" width="72" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="128" y="50" width="72" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="164" y="63" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Outcome</text>
-  <text x="164" y="80" text-anchor="middle" font-size="9" fill="#141413">结果</text>
-  <rect x="192" y="66" width="12" height="12" rx="6" fill="#D97757"/>
-  <text x="198" y="75" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">O</text>
-
-  <!-- Arrow O→S -->
-  <line x1="200" y1="72" x2="218" y2="72" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="218,68 226,72 218,76" fill="#D1CFC5"/>
-
-  <!-- Sense -->
-  <rect x="226" y="50" width="72" height="44" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="226" y="50" width="72" height="16" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="262" y="63" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Sense</text>
-  <text x="262" y="80" text-anchor="middle" font-size="9" fill="#141413">感知</text>
-  <rect x="290" y="66" width="12" height="12" rx="6" fill="#059669"/>
-  <text x="296" y="75" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">S</text>
-
-  <!-- Arrow S→F -->
-  <line x1="298" y1="72" x2="316" y2="72" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="316,68 324,72 316,76" fill="#D1CFC5"/>
-
-  <!-- Feedback -->
-  <rect x="324" y="50" width="72" height="44" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="324" y="50" width="72" height="16" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="360" y="63" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Feedback</text>
-  <text x="360" y="80" text-anchor="middle" font-size="9" fill="#141413">反馈</text>
-  <rect x="388" y="66" width="12" height="12" rx="6" fill="#EA580C"/>
-  <text x="394" y="75" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">F</text>
-
-  <!-- Arrow F→A (loop back) -->
-  <path d="M 360 94 Q 240 110 102 94" stroke="#D1CFC5" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
-  <polygon points="102,94 108,90 108,98" fill="#D1CFC5"/>
-  <text x="240" y="116" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">反馈循环速度决定系统适应环境的速度</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 480 120">
+  <path fill="#faf9f5" d="M0 0h480v120H0z"/>
+  <text x="240" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">反馈循环</text>
+  <text x="240" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2026/03/15</text>
+  <rect width="72" height="44" x="30" y="50" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="72" height="16" x="30" y="50" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="66" y="63" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Action</text>
+  <text x="66" y="80" fill="#141413" font-size="9" text-anchor="middle">行动</text>
+  <rect width="12" height="12" x="94" y="66" fill="#2563eb" rx="6"/>
+  <text x="100" y="75" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">A</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M102 72h18"/>
+  <path fill="#d1cfc5" d="m120 68 8 4-8 4z"/>
+  <rect width="72" height="44" x="128" y="50" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="72" height="16" x="128" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="164" y="63" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Outcome</text>
+  <text x="164" y="80" fill="#141413" font-size="9" text-anchor="middle">结果</text>
+  <rect width="12" height="12" x="192" y="66" fill="#d97757" rx="6"/>
+  <text x="198" y="75" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">O</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M200 72h18"/>
+  <path fill="#d1cfc5" d="m218 68 8 4-8 4z"/>
+  <rect width="72" height="44" x="226" y="50" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="72" height="16" x="226" y="50" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="262" y="63" fill="#059669" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Sense</text>
+  <text x="262" y="80" fill="#141413" font-size="9" text-anchor="middle">感知</text>
+  <rect width="12" height="12" x="290" y="66" fill="#059669" rx="6"/>
+  <text x="296" y="75" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">S</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M298 72h18"/>
+  <path fill="#d1cfc5" d="m316 68 8 4-8 4z"/>
+  <rect width="72" height="44" x="324" y="50" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="6"/>
+  <rect width="72" height="16" x="324" y="50" fill="#fed7aa" stroke="#ea580c" rx="6"/>
+  <text x="360" y="63" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Feedback</text>
+  <text x="360" y="80" fill="#141413" font-size="9" text-anchor="middle">反馈</text>
+  <rect width="12" height="12" x="388" y="66" fill="#ea580c" rx="6"/>
+  <text x="394" y="75" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">F</text>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M360 94q-120 16-258 0"/>
+  <path fill="#d1cfc5" d="m102 94 6-4v8z"/>
+  <text x="240" y="116" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">反馈循环速度决定系统适应环境的速度</text>
 </svg>

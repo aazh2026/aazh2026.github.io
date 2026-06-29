@@ -1,76 +1,49 @@
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="320" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Gherkin → 形式化规格 → 可验证代码</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">BDD 语义化升级流程</text>
-
-  <!-- Step 1: Gherkin Scenario -->
-  <rect x="20" y="70" width="120" height="160" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="80" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">Gherkin Scenario</text>
-  <rect x="32" y="100" width="96" height="22" rx="4" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="1"/>
-  <text x="80" y="115" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">Given / When / Then</text>
-  <rect x="32" y="128" width="96" height="22" rx="4" fill="#D97757" fill-opacity="0.12" stroke="#D97757" stroke-width="1"/>
-  <text x="80" y="143" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">自然语言歧义</text>
-  <rect x="32" y="156" width="96" height="22" rx="4" fill="#141413" fill-opacity="0.06" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="80" y="171" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">不可自动验证</text>
-  <text x="80" y="218" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Step 1</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="140" y1="150" x2="188" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="188,146 180,146 188,154" fill="#D97757"/>
-  <text x="164" y="142" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">AI 转换</text>
-
-  <!-- Step 2: AI Bridge -->
-  <rect x="200" y="100" width="100" height="100" rx="50" fill="#D97757"/>
-  <text x="250" y="142" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">AI</text>
-  <text x="250" y="158" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">LLM 翻译</text>
-  <text x="250" y="218" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Step 2</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="300" y1="150" x2="348" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="348,146 340,146 348,154" fill="#D97757"/>
-  <text x="324" y="142" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">形式化</text>
-
-  <!-- Step 3: Formal Specification -->
-  <rect x="360" y="70" width="130" height="160" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="425" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">形式化规格</text>
-  <text x="425" y="112" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">∀x (P(x) → Q(x))</text>
-  <text x="425" y="130" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">◇(A ∧ ○B)</text>
-  <text x="425" y="148" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">State × Event → State</text>
-  <rect x="375" y="162" width="100" height="22" rx="4" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="1"/>
-  <text x="425" y="177" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">数学精确描述</text>
-  <text x="425" y="218" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Step 3</text>
-
-  <!-- Arrow 3→4a (down to Code) -->
-  <line x1="425" y1="230" x2="425" y2="255" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="425,260 421,252 429,252" fill="#D97757"/>
-  <text x="440" y="248" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">代码</text>
-
-  <!-- Step 4a: Code -->
-  <rect x="360" y="265" width="130" height="40" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="425" y="281" text-anchor="middle" font-size="10" fill="#141413">可执行代码</text>
-  <text x="425" y="295" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Step 4a</text>
-
-  <!-- Arrow 3→4b (down to Model Checker) -->
-  <line x1="425" y1="230" x2="540" y2="180" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="540,180 533,178 537,186" fill="#D97757"/>
-  <text x="498" y="198" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">验证</text>
-
-  <!-- Step 4b: Model Checker -->
-  <rect x="530" y="100" width="130" height="70" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="595" y="120" text-anchor="middle" font-size="10" fill="#141413">TLC 模型检查</text>
-  <text x="595" y="136" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">死锁 / 不变式</text>
-  <text x="595" y="152" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">Step 4b</text>
-
-  <!-- Feedback loop arrow: Model Checker → Gherkin (right side, going around) -->
-  <path d="M 660 135 C 660 50, 80 50, 80 70" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.6"/>
-  <polygon points="80,70 74,64 86,64" fill="#D97757" opacity="0.6"/>
-  <text x="370" y="56" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">偏差报告 → 反馈给规格</text>
-
-  <!-- Source line -->
-  <text x="340" y="312" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · BDD Formal Specification · 2025/06</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 320">
+  <path fill="#faf9f5" d="M0 0h680v320H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Gherkin → 形式化规格 → 可验证代码</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">BDD 语义化升级流程</text>
+  <rect width="120" height="160" x="20" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="80" y="90" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">Gherkin Scenario</text>
+  <rect width="96" height="22" x="32" y="100" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" rx="4"/>
+  <text x="80" y="115" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">Given / When / Then</text>
+  <rect width="96" height="22" x="32" y="128" fill="#d97757" fill-opacity=".12" stroke="#d97757" rx="4"/>
+  <text x="80" y="143" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">自然语言歧义</text>
+  <rect width="96" height="22" x="32" y="156" fill="#141413" fill-opacity=".06" stroke="#d1cfc5" rx="4"/>
+  <text x="80" y="171" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">不可自动验证</text>
+  <text x="80" y="218" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Step 1</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M140 150h48"/>
+  <path fill="#d97757" d="M188 146h-8l8 8z"/>
+  <text x="164" y="142" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">AI 转换</text>
+  <rect width="100" height="100" x="200" y="100" fill="#d97757" rx="50"/>
+  <text x="250" y="142" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">AI</text>
+  <text x="250" y="158" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">LLM 翻译</text>
+  <text x="250" y="218" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Step 2</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 150h48"/>
+  <path fill="#d97757" d="M348 146h-8l8 8z"/>
+  <text x="324" y="142" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">形式化</text>
+  <rect width="130" height="160" x="360" y="70" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="425" y="90" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">形式化规格</text>
+  <text x="425" y="112" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">∀x (P(x) → Q(x))</text>
+  <text x="425" y="130" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">◇(A ∧ ○B)</text>
+  <text x="425" y="148" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">State × Event → State</text>
+  <rect width="100" height="22" x="375" y="162" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" rx="4"/>
+  <text x="425" y="177" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">数学精确描述</text>
+  <text x="425" y="218" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Step 3</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M425 230v25"/>
+  <path fill="#d97757" d="m425 260-4-8h8z"/>
+  <text x="440" y="248" fill="#d97757" font-family="ui-monospace, monospace" font-size="8">代码</text>
+  <rect width="130" height="40" x="360" y="265" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="6"/>
+  <text x="425" y="281" fill="#141413" font-size="10" text-anchor="middle">可执行代码</text>
+  <text x="425" y="295" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Step 4a</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="m425 230 115-50"/>
+  <path fill="#d97757" d="m540 180-7-2 4 8z"/>
+  <text x="498" y="198" fill="#d97757" font-family="ui-monospace, monospace" font-size="8">验证</text>
+  <rect width="130" height="70" x="530" y="100" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="6"/>
+  <text x="595" y="120" fill="#141413" font-size="10" text-anchor="middle">TLC 模型检查</text>
+  <text x="595" y="136" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">死锁 / 不变式</text>
+  <text x="595" y="152" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Step 4b</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" d="M660 135c0-85-580-85-580-65" opacity=".6"/>
+  <path fill="#d97757" d="m80 70-6-6h12z" opacity=".6"/>
+  <text x="370" y="56" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">偏差报告 → 反馈给规格</text>
+  <text x="340" y="312" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">AI-Native Engineering · BDD Formal Specification · 2025/06</text>
 </svg>

@@ -1,50 +1,31 @@
-<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Knowledge Asset Stack 四层模型 -->
-  <rect width="560" height="240" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="280" y="18" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">知识资产化四层模型</text>
-  <text x="280" y="34" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/17</text>
-
-  <!-- Layer 4: Context Patterns (top) -->
-  <rect x="40" y="50" width="480" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="60" y="64" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L4 · Context Patterns</text>
-  <text x="60" y="80" font-size="10" fill="#141413">项目结构、领域术语、约束条件 → AI 加载时自动应用</text>
-  <rect x="490" y="58" width="18" height="18" rx="9" fill="#D97757"/>
-  <text x="499" y="71" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L4</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="94" x2="280" y2="104" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,104 280,112 284,94" fill="#D1CFC5"/>
-
-  <!-- Layer 3: Intent Templates -->
-  <rect x="40" y="112" width="480" height="36" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="112" width="480" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="60" y="126" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L3 · Intent Templates</text>
-  <text x="60" y="142" font-size="10" fill="#141413">PRD 模板、User Story、验收标准 → AI 生成代码的输入规范</text>
-  <rect x="490" y="120" width="18" height="14" rx="9" fill="#2563EB"/>
-  <text x="499" y="131" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="148" x2="280" y2="158" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,158 280,166 284,158" fill="#D1CFC5"/>
-
-  <!-- Layer 2: Verification Heuristics -->
-  <rect x="40" y="166" width="480" height="34" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="40" y="166" width="480" height="14" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="60" y="179" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L2 · Verification Heuristics</text>
-  <text x="60" y="194" font-size="10" fill="#141413">测试策略、质量门禁、边界检查 → AI 自检和人工审查依据</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="200" x2="280" y2="210" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,210 280,218 284,210" fill="#D1CFC5"/>
-
-  <!-- Layer 1: Failure Modes (bottom, negative list) -->
-  <rect x="40" y="218" width="480" height="18" rx="5" fill="#F0EEE6" stroke="#87867F" stroke-width="1.5"/>
-  <text x="60" y="230" font-size="10" fill="#87867F" font-family="ui-monospace, monospace" font-weight="600">L1 · Failure Modes</text>
-  <text x="170" y="230" font-size="10" fill="#87867F">已知陷阱、常见错误、故障案例 → AI 生成时的「负面清单」</text>
-
-  <!-- Note -->
-  <text x="280" y="236" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">L4→L3→L2→L1：上层给 AI 提供正面引导，L1 提供反面约束</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 240">
+  <path fill="#faf9f5" d="M0 0h560v240H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">知识资产化四层模型</text>
+  <text x="280" y="34" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2025/04/17</text>
+  <rect width="480" height="44" x="40" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="480" height="18" x="40" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="60" y="64" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L4 · Context Patterns</text>
+  <text x="60" y="80" fill="#141413" font-size="10">项目结构、领域术语、约束条件 → AI 加载时自动应用</text>
+  <rect width="18" height="18" x="490" y="58" fill="#d97757" rx="9"/>
+  <text x="499" y="71" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L4</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 94v10"/>
+  <path fill="#d1cfc5" d="m276 104 4 8 4-18z"/>
+  <rect width="480" height="36" x="40" y="112" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="16" x="40" y="112" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="60" y="126" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L3 · Intent Templates</text>
+  <text x="60" y="142" fill="#141413" font-size="10">PRD 模板、User Story、验收标准 → AI 生成代码的输入规范</text>
+  <rect width="18" height="14" x="490" y="120" fill="#2563eb" rx="9"/>
+  <text x="499" y="131" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L3</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 148v10"/>
+  <path fill="#d1cfc5" d="m276 158 4 8 4-8z"/>
+  <rect width="480" height="34" x="40" y="166" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="14" x="40" y="166" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="60" y="179" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L2 · Verification Heuristics</text>
+  <text x="60" y="194" fill="#141413" font-size="10">测试策略、质量门禁、边界检查 → AI 自检和人工审查依据</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 200v10"/>
+  <path fill="#d1cfc5" d="m276 210 4 8 4-8z"/>
+  <rect width="480" height="18" x="40" y="218" fill="#f0eee6" stroke="#87867f" stroke-width="1.5" rx="5"/>
+  <text x="60" y="230" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L1 · Failure Modes</text>
+  <text x="170" y="230" fill="#87867f" font-size="10">已知陷阱、常见错误、故障案例 → AI 生成时的「负面清单」</text>
+  <text x="280" y="236" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">L4→L3→L2→L1：上层给 AI 提供正面引导，L1 提供反面约束</text>
 </svg>

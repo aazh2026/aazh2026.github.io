@@ -1,57 +1,44 @@
-<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- AI-Native Code Review 三种形态 -->
-  <rect width="560" height="220" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native Code Review：三种形态</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/13</text>
-
-  <!-- Form 1: Pre-commit (left) -->
-  <rect x="20" y="54" width="160" height="148" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="20" y="54" width="160" height="28" rx="8" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
-  <text x="100" y="73" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">形态一</text>
-  <text x="100" y="100" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">Pre-commit AI 审查</text>
-  <text x="100" y="116" text-anchor="middle" font-size="10" fill="#87867F">事前预防</text>
-  <line x1="40" y1="130" x2="160" y2="130" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
-  <text x="100" y="146" text-anchor="middle" font-size="9.5" fill="#141413">AI 在代码提交前审查</text>
-  <text x="100" y="160" text-anchor="middle" font-size="9.5" fill="#141413">拦截低质量 PR</text>
-  <text x="100" y="174" text-anchor="middle" font-size="9" fill="#87867F">自动化 gate</text>
-  <rect x="50" y="180" width="100" height="16" rx="8" fill="#FEF3C7"/>
-  <text x="100" y="191" text-anchor="middle" font-size="8.5" fill="#D97757" font-family="ui-monospace, monospace">错误 → 零成本</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="185" y1="128" x2="215" y2="128" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="215,124 209,128 215,132" fill="#D1CFC5"/>
-  <text x="200" y="122" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">时序</text>
-
-  <!-- Form 2: Real-time (center) -->
-  <rect x="220" y="54" width="160" height="148" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.8"/>
-  <rect x="220" y="54" width="160" height="28" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="300" y="73" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">形态二</text>
-  <text x="300" y="100" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">Real-time AI 协作</text>
-  <text x="300" y="116" text-anchor="middle" font-size="10" fill="#87867F">事中增强</text>
-  <line x1="240" y1="130" x2="360" y2="130" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
-  <text x="300" y="146" text-anchor="middle" font-size="9.5" fill="#141413">AI 嵌入 IDE 实时审查</text>
-  <text x="300" y="160" text-anchor="middle" font-size="9.5" fill="#141413">边写边审</text>
-  <text x="300" y="174" text-anchor="middle" font-size="9" fill="#87867F">开发者上下文新鲜</text>
-  <rect x="250" y="180" width="100" height="16" rx="8" fill="#DBEAFE"/>
-  <text x="300" y="191" text-anchor="middle" font-size="8.5" fill="#2563EB" font-family="ui-monospace, monospace">认知负载转移</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="385" y1="128" x2="415" y2="128" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="415,124 409,128 415,132" fill="#D1CFC5"/>
-  <text x="400" y="122" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">时序</text>
-
-  <!-- Form 3: Post-merge (right) -->
-  <rect x="420" y="54" width="120" height="148" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
-  <rect x="420" y="54" width="120" height="28" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-  <text x="480" y="73" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">形态三</text>
-  <text x="480" y="100" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">Post-merge</text>
-  <text x="480" y="116" text-anchor="middle" font-size="10" fill="#87867F">事后学习</text>
-  <line x1="440" y1="130" x2="520" y2="130" stroke="#D1CFC5" stroke-width="0.5" stroke-dasharray="2,2"/>
-  <text x="480" y="146" text-anchor="middle" font-size="9.5" fill="#141413">知识萃取</text>
-  <text x="480" y="160" text-anchor="middle" font-size="9.5" fill="#141413">模式识别</text>
-  <text x="480" y="174" text-anchor="middle" font-size="9" fill="#87867F">反哺前置审查</text>
-  <rect x="450" y="180" width="60" height="16" rx="8" fill="#D1FAE5"/>
-  <text x="480" y="191" text-anchor="middle" font-size="8.5" fill="#059669" font-family="ui-monospace, monospace">知识积累</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 220">
+  <path fill="#faf9f5" d="M0 0h560v220H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI-Native Code Review：三种形态</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2025/04/13</text>
+  <rect width="160" height="148" x="20" y="54" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="160" height="28" x="20" y="54" fill="#fef3c7" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="100" y="73" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">形态一</text>
+  <text x="100" y="100" fill="#141413" font-size="12" font-weight="600" text-anchor="middle">Pre-commit AI 审查</text>
+  <text x="100" y="116" fill="#87867f" font-size="10" text-anchor="middle">事前预防</text>
+  <path stroke="#d1cfc5" stroke-dasharray="2,2" stroke-width=".5" d="M40 130h120"/>
+  <text x="100" y="146" fill="#141413" font-size="9.5" text-anchor="middle">AI 在代码提交前审查</text>
+  <text x="100" y="160" fill="#141413" font-size="9.5" text-anchor="middle">拦截低质量 PR</text>
+  <text x="100" y="174" fill="#87867f" font-size="9" text-anchor="middle">自动化 gate</text>
+  <rect width="100" height="16" x="50" y="180" fill="#fef3c7" rx="8"/>
+  <text x="100" y="191" fill="#d97757" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">错误 → 零成本</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M185 128h30"/>
+  <path fill="#d1cfc5" d="m215 124-6 4 6 4z"/>
+  <text x="200" y="122" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">时序</text>
+  <rect width="160" height="148" x="220" y="54" fill="#fff" stroke="#2563eb" stroke-width="1.8" rx="8"/>
+  <rect width="160" height="28" x="220" y="54" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="8"/>
+  <text x="300" y="73" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">形态二</text>
+  <text x="300" y="100" fill="#141413" font-size="12" font-weight="600" text-anchor="middle">Real-time AI 协作</text>
+  <text x="300" y="116" fill="#87867f" font-size="10" text-anchor="middle">事中增强</text>
+  <path stroke="#d1cfc5" stroke-dasharray="2,2" stroke-width=".5" d="M240 130h120"/>
+  <text x="300" y="146" fill="#141413" font-size="9.5" text-anchor="middle">AI 嵌入 IDE 实时审查</text>
+  <text x="300" y="160" fill="#141413" font-size="9.5" text-anchor="middle">边写边审</text>
+  <text x="300" y="174" fill="#87867f" font-size="9" text-anchor="middle">开发者上下文新鲜</text>
+  <rect width="100" height="16" x="250" y="180" fill="#dbeafe" rx="8"/>
+  <text x="300" y="191" fill="#2563eb" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">认知负载转移</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M385 128h30"/>
+  <path fill="#d1cfc5" d="m415 124-6 4 6 4z"/>
+  <text x="400" y="122" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">时序</text>
+  <rect width="120" height="148" x="420" y="54" fill="#fff" stroke="#059669" stroke-width="1.8" rx="8"/>
+  <rect width="120" height="28" x="420" y="54" fill="#d1fae5" stroke="#059669" stroke-width="1.5" rx="8"/>
+  <text x="480" y="73" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">形态三</text>
+  <text x="480" y="100" fill="#141413" font-size="12" font-weight="600" text-anchor="middle">Post-merge</text>
+  <text x="480" y="116" fill="#87867f" font-size="10" text-anchor="middle">事后学习</text>
+  <path stroke="#d1cfc5" stroke-dasharray="2,2" stroke-width=".5" d="M440 130h80"/>
+  <text x="480" y="146" fill="#141413" font-size="9.5" text-anchor="middle">知识萃取</text>
+  <text x="480" y="160" fill="#141413" font-size="9.5" text-anchor="middle">模式识别</text>
+  <text x="480" y="174" fill="#87867f" font-size="9" text-anchor="middle">反哺前置审查</text>
+  <rect width="60" height="16" x="450" y="180" fill="#d1fae5" rx="8"/>
+  <text x="480" y="191" fill="#059669" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">知识积累</text>
 </svg>

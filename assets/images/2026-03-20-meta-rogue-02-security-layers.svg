@@ -1,56 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="480" height="400">
-  <rect width="480" height="400" fill="#FAF9F5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400">
+  <path fill="#faf9f5" d="M0 0h480v400H0z"/>
   <style>
-    text { font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; fill: #141413; }
-    .box { fill: none; stroke: #141413; stroke-width: 1.5; }
-    .header-box { fill: #141413; }
-    .layer-box { fill: #E3DACC; stroke: #D1CFC5; stroke-width: 1; }
-    .layer-box-alt { fill: #FAF9F5; stroke: #D1CFC5; stroke-width: 1; }
-    .header-text { fill: #FAF9F5; font-weight: bold; font-size: 14px; }
-    .layer-num { fill: #D97757; font-weight: bold; font-size: 11px; }
-    .layer-title { fill: #141413; font-weight: bold; }
-    .layer-desc { fill: #87867F; font-size: 11px; }
+    text{font-family:&quot;SF Mono&quot;,&quot;Cascadia Code&quot;,&quot;Fira Code&quot;,monospace;font-size:12px;fill:#141413}.layer-box,.layer-box-alt{fill:#e3dacc;stroke:#d1cfc5;stroke-width:1}.layer-box-alt{fill:#faf9f5}.layer-num{fill:#d97757;font-weight:700;font-size:11px}.layer-title{fill:#141413;font-weight:700}.layer-desc{fill:#87867f;font-size:11px}
   </style>
-
-  <!-- Main outer box -->
-  <rect x="20" y="20" width="440" height="360" rx="8" class="box"/>
-
-  <!-- Header -->
-  <rect x="20" y="20" width="440" height="44" rx="8" class="header-box"/>
-  <rect x="20" y="44" width="440" height="20" fill="#141413"/>
-  <text x="240" y="48" text-anchor="middle" class="header-text">多层安全防护</text>
-
-  <!-- Divider -->
-  <line x1="20" y1="64" x2="460" y2="64" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Layer 4 -->
-  <rect x="32" y="76" width="416" height="60" rx="4" class="layer-box"/>
+  <rect width="440" height="360" x="20" y="20" rx="8" style="fill:none;stroke:#141413;stroke-width:1.5"/>
+  <rect width="440" height="44" x="20" y="20" rx="8" style="fill:#141413"/>
+  <path fill="#141413" d="M20 44h440v20H20z"/>
+  <text x="240" y="48" style="fill:#faf9f5;font-weight:700;font-size:14px" text-anchor="middle">多层安全防护</text>
+  <path stroke="#d1cfc5" d="M20 64h440"/>
+  <rect width="416" height="60" x="32" y="76" class="layer-box" rx="4"/>
   <text x="48" y="96" class="layer-num">Layer 4:</text>
   <text x="100" y="96" class="layer-title">人工审计</text>
   <text x="48" y="118" class="layer-desc">- 安全团队定期审查 Agent 日志</text>
   <text x="48" y="132" class="layer-desc">- 异常行为人工确认</text>
-
-  <!-- Layer 3 -->
-  <rect x="32" y="144" width="416" height="60" rx="4" class="layer-box-alt"/>
+  <rect width="416" height="60" x="32" y="144" class="layer-box-alt" rx="4"/>
   <text x="48" y="164" class="layer-num">Layer 3:</text>
   <text x="100" y="164" class="layer-title">行为基线检测</text>
   <text x="48" y="186" class="layer-desc">- 检测偏离正常模式的操作</text>
   <text x="48" y="200" class="layer-desc">- 实时异常评分</text>
-
-  <!-- Layer 2 -->
-  <rect x="32" y="212" width="416" height="60" rx="4" class="layer-box"/>
+  <rect width="416" height="60" x="32" y="212" class="layer-box" rx="4"/>
   <text x="48" y="232" class="layer-num">Layer 2:</text>
   <text x="100" y="232" class="layer-title">权限强制执行</text>
   <text x="48" y="254" class="layer-desc">- 操作系统级权限控制</text>
   <text x="48" y="268" class="layer-desc">- 网络隔离</text>
-
-  <!-- Layer 1 -->
-  <rect x="32" y="280" width="416" height="60" rx="4" class="layer-box-alt"/>
+  <rect width="416" height="60" x="32" y="280" class="layer-box-alt" rx="4"/>
   <text x="48" y="300" class="layer-num">Layer 1:</text>
   <text x="100" y="300" class="layer-title">输入/输出过滤</text>
   <text x="48" y="322" class="layer-desc">- 提示注入检测</text>
   <text x="48" y="336" class="layer-desc">- 输出内容审查</text>
-
-  <!-- Bottom border -->
-  <line x1="20" y1="340" x2="460" y2="340" stroke="#141413" stroke-width="1.5"/>
+  <path stroke="#141413" stroke-width="1.5" d="M20 340h440"/>
 </svg>

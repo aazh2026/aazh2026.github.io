@@ -1,46 +1,29 @@
-<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Agent-DD Platform 架构 -->
-  <rect width="560" height="220" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent-DD Platform 平台架构</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/05/28</text>
-
-  <!-- Registry (top-left) -->
-  <rect x="30" y="50" width="150" height="55" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="30" y="50" width="150" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="105" y="64" text-anchor="middle" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Agent Registry</text>
-  <text x="105" y="84" text-anchor="middle" font-size="8.5" fill="#141413">Architect · Developer</text>
-  <text x="105" y="97" text-anchor="middle" font-size="8.5" fill="#141413">Tester · Reviewer</text>
-
-  <!-- Queue (top-right) -->
-  <rect x="380" y="50" width="150" height="55" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="380" y="50" width="150" height="18" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="455" y="64" text-anchor="middle" font-size="9.5" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">Task Queue</text>
-  <text x="455" y="84" text-anchor="middle" font-size="8.5" fill="#141413">Pending · Running</text>
-  <text x="455" y="97" text-anchor="middle" font-size="8.5" fill="#141413">Completed · Failed</text>
-
-  <!-- State (center) -->
-  <rect x="180" y="115" width="200" height="55" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="180" y="115" width="200" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="129" text-anchor="middle" font-size="9.5" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Shared State</text>
-  <text x="280" y="149" text-anchor="middle" font-size="8.5" fill="#141413">Code · Design · Issues</text>
-  <text x="280" y="162" text-anchor="middle" font-size="8.5" fill="#141413">Metrics</text>
-
-  <!-- Comm (bottom-left) -->
-  <rect x="30" y="180" width="150" height="38" rx="5" fill="#FFFFFF" stroke="#3B82F6" stroke-width="1.5"/>
-  <rect x="30" y="180" width="150" height="16" rx="5" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1"/>
-  <text x="105" y="193" text-anchor="middle" font-size="9.5" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">Communication Bus</text>
-  <text x="105" y="208" text-anchor="middle" font-size="8.5" fill="#141413">Msg Queue · Event Stream</text>
-
-  <!-- Monitor (bottom-right) -->
-  <rect x="380" y="180" width="150" height="38" rx="5" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="380" y="180" width="150" height="16" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="455" y="193" text-anchor="middle" font-size="9.5" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Monitoring</text>
-  <text x="455" y="208" text-anchor="middle" font-size="8.5" fill="#141413">Perf · Quality · Conflicts</text>
-
-  <!-- Connecting lines -->
-  <line x1="180" y1="77" x2="380" y2="77" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="105" y1="105" x2="280" y2="115" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="455" y1="105" x2="280" y2="115" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="105" y1="170" x2="280" y2="170" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="455" y1="170" x2="280" y2="170" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 220">
+  <path fill="#faf9f5" d="M0 0h560v220H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent-DD Platform 平台架构</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2025/05/28</text>
+  <rect width="150" height="55" x="30" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="150" height="18" x="30" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="105" y="64" fill="#d97757" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Agent Registry</text>
+  <text x="105" y="84" fill="#141413" font-size="8.5" text-anchor="middle">Architect · Developer</text>
+  <text x="105" y="97" fill="#141413" font-size="8.5" text-anchor="middle">Tester · Reviewer</text>
+  <rect width="150" height="55" x="380" y="50" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="6"/>
+  <rect width="150" height="18" x="380" y="50" fill="#fed7aa" stroke="#ea580c" rx="6"/>
+  <text x="455" y="64" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Task Queue</text>
+  <text x="455" y="84" fill="#141413" font-size="8.5" text-anchor="middle">Pending · Running</text>
+  <text x="455" y="97" fill="#141413" font-size="8.5" text-anchor="middle">Completed · Failed</text>
+  <rect width="200" height="55" x="180" y="115" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="200" height="18" x="180" y="115" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="280" y="129" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Shared State</text>
+  <text x="280" y="149" fill="#141413" font-size="8.5" text-anchor="middle">Code · Design · Issues</text>
+  <text x="280" y="162" fill="#141413" font-size="8.5" text-anchor="middle">Metrics</text>
+  <rect width="150" height="38" x="30" y="180" fill="#fff" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <rect width="150" height="16" x="30" y="180" fill="#bfdbfe" stroke="#3b82f6" rx="5"/>
+  <text x="105" y="193" fill="#3b82f6" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Communication Bus</text>
+  <text x="105" y="208" fill="#141413" font-size="8.5" text-anchor="middle">Msg Queue · Event Stream</text>
+  <rect width="150" height="38" x="380" y="180" fill="#fff" stroke="#059669" stroke-width="1.5" rx="5"/>
+  <rect width="150" height="16" x="380" y="180" fill="#d1fae5" stroke="#059669" rx="5"/>
+  <text x="455" y="193" fill="#059669" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Monitoring</text>
+  <text x="455" y="208" fill="#141413" font-size="8.5" text-anchor="middle">Perf · Quality · Conflicts</text>
+  <path stroke="#d1cfc5" stroke-dasharray="3,2" d="M180 77h200m-275 28 175 10m175-10-175 10m-175 55h175m175 0H280"/>
 </svg>

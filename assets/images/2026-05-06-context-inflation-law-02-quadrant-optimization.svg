@@ -1,93 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="四象限优化框架">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="四象限优化框架" viewBox="0 0 800 560">
   <title>四象限成本优化框架</title>
-  <desc>高频/低频 × 高价值/低价值的四象限成本优化策略图</desc>
-
+  <desc>
+    高频/低频 × 高价值/低价值的四象限成本优化策略图
+  </desc>
   <defs>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
-    </filter>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#F0EFE9"/>
+    <linearGradient id="bgGrad" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#f0efe9"/>
     </linearGradient>
+    <filter id="shadow" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="560" fill="url(#bgGrad)"/>
-
-  <!-- Title -->
-  <text x="400" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">四象限成本优化框架</text>
-  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F">Context Cost Optimization Matrix</text>
-
-  <!-- Grid lines -->
-  <!-- Vertical center -->
-  <line x1="400" y1="95" x2="400" y2="510" stroke="#D1CFC5" stroke-width="1.5"/>
-  <!-- Horizontal center -->
-  <line x1="60" y1="302" x2="740" y2="302" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Axis labels -->
-  <text x="50" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F" transform="rotate(-90,50,200)">低频</text>
-  <text x="750" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F" transform="rotate(90,750,200)">高频</text>
-  <text x="400" y="530" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F">低价值 → 高价值</text>
-
-  <!-- Arrows at ends of axes -->
-  <polygon points="400,93 393,105 407,105" fill="#D1CFC5"/>
-  <polygon points="742,302 730,295 730,309" fill="#D1CFC5"/>
-
-  <!-- Quadrant 1: Top-Left (低频低价值 → 精简层) -->
+  <path fill="url(#bgGrad)" d="M0 0h800v560H0z"/>
+  <text x="400" y="42" fill="#141413" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">四象限成本优化框架</text>
+  <text x="400" y="66" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">Context Cost Optimization Matrix</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M400 95v415M60 302h680"/>
+  <text x="50" y="200" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" transform="rotate(-90 50 200)">低频</text>
+  <text x="750" y="200" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" transform="rotate(90 750 200)">高频</text>
+  <text x="400" y="530" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">低价值 → 高价值</text>
+  <path fill="#d1cfc5" d="m400 93-7 12h14zm342 209-12-7v14z"/>
   <g filter="url(#shadow)">
-    <rect x="68" y="103" width="322" height="190" rx="10" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect width="322" height="190" x="68" y="103" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="68" y="103" width="322" height="36" rx="10" fill="#E3DACC"/>
-  <rect x="68" y="121" width="322" height="18" fill="#E3DACC"/>
-  <text x="229" y="127" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">精简层 Batch Processor</text>
-  <text x="229" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#D97757" font-weight="600">低频 × 低价值</text>
-  <text x="229" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">批量聚合 · 异步处理</text>
-  <text x="229" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">边缘计算 · 降低优先级</text>
-  <text x="229" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#788C5D">成本↓ 60-80%</text>
-  <text x="229" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">延迟增加但可接受</text>
-
-  <!-- Quadrant 2: Top-Right (高频低价值 → 压缩层) -->
+  <rect width="322" height="36" x="68" y="103" fill="#e3dacc" rx="10"/>
+  <path fill="#e3dacc" d="M68 121h322v18H68z"/>
+  <text x="229" y="127" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">精简层 Batch Processor</text>
+  <text x="229" y="160" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">低频 × 低价值</text>
+  <text x="229" y="182" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">批量聚合 · 异步处理</text>
+  <text x="229" y="200" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">边缘计算 · 降低优先级</text>
+  <text x="229" y="225" fill="#788c5d" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">成本↓ 60-80%</text>
+  <text x="229" y="243" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">延迟增加但可接受</text>
   <g filter="url(#shadow)">
-    <rect x="410" y="103" width="322" height="190" rx="10" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect width="322" height="190" x="410" y="103" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="410" y="103" width="322" height="36" rx="10" fill="#E3DACC"/>
-  <rect x="410" y="121" width="322" height="18" fill="#E3DACC"/>
-  <text x="571" y="127" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">压缩层 Context Compressor</text>
-  <text x="571" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#D97757" font-weight="600">高频 × 低价值</text>
-  <text x="571" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">Top-K 检索 · 历史压缩</text>
-  <text x="571" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">动态窗口 · 按需注入</text>
-  <text x="571" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#788C5D">成本↓ 30-50%</text>
-  <text x="571" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">质量影响 &lt; 5%</text>
-
-  <!-- Quadrant 3: Bottom-Left (低频高价值 → 路由层) -->
+  <rect width="322" height="36" x="410" y="103" fill="#e3dacc" rx="10"/>
+  <path fill="#e3dacc" d="M410 121h322v18H410z"/>
+  <text x="571" y="127" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">压缩层 Context Compressor</text>
+  <text x="571" y="160" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">高频 × 低价值</text>
+  <text x="571" y="182" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">Top-K 检索 · 历史压缩</text>
+  <text x="571" y="200" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">动态窗口 · 按需注入</text>
+  <text x="571" y="225" fill="#788c5d" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">成本↓ 30-50%</text>
+  <text x="571" y="243" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">质量影响 &lt; 5%</text>
   <g filter="url(#shadow)">
-    <rect x="68" y="313" width="322" height="190" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="322" height="190" x="68" y="313" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="68" y="313" width="322" height="36" rx="10" fill="#D1CFC5"/>
-  <rect x="68" y="331" width="322" height="18" fill="#D1CFC5"/>
-  <text x="229" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">路由层 Smart Router</text>
-  <text x="229" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#D97757" font-weight="600">低频 × 高价值</text>
-  <text x="229" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">复杂度分类 · 模型路由</text>
-  <text x="229" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">人机协作 · 精准匹配</text>
-  <text x="229" y="435" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#788C5D">成本↓ 50-70%</text>
-  <text x="229" y="453" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">质量不降</text>
-
-  <!-- Quadrant 4: Bottom-Right (高频高价值 → 缓存层) -->
+  <rect width="322" height="36" x="68" y="313" fill="#d1cfc5" rx="10"/>
+  <path fill="#d1cfc5" d="M68 331h322v18H68z"/>
+  <text x="229" y="337" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">路由层 Smart Router</text>
+  <text x="229" y="370" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">低频 × 高价值</text>
+  <text x="229" y="392" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">复杂度分类 · 模型路由</text>
+  <text x="229" y="410" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">人机协作 · 精准匹配</text>
+  <text x="229" y="435" fill="#788c5d" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">成本↓ 50-70%</text>
+  <text x="229" y="453" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">质量不降</text>
   <g filter="url(#shadow)">
-    <rect x="410" y="313" width="322" height="190" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="322" height="190" x="410" y="313" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="410" y="313" width="322" height="36" rx="10" fill="#788C5D"/>
-  <rect x="410" y="331" width="322" height="18" fill="#788C5D"/>
-  <text x="571" y="337" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">缓存层 Semantic Cache</text>
-  <text x="571" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#D97757" font-weight="600">高频 × 高价值</text>
-  <text x="571" y="392" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">语义相似度匹配</text>
-  <text x="571" y="410" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">预热缓存 · 结果复用</text>
-  <text x="571" y="435" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="600" fill="#788C5D">成本↓ 40-60%</text>
-  <text x="571" y="453" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">延迟↓ 50%</text>
-
-  <!-- Center label -->
+  <rect width="322" height="36" x="410" y="313" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M410 331h322v18H410z"/>
+  <text x="571" y="337" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">缓存层 Semantic Cache</text>
+  <text x="571" y="370" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">高频 × 高价值</text>
+  <text x="571" y="392" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">语义相似度匹配</text>
+  <text x="571" y="410" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">预热缓存 · 结果复用</text>
+  <text x="571" y="435" fill="#788c5d" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">成本↓ 40-60%</text>
+  <text x="571" y="453" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">延迟↓ 50%</text>
   <circle cx="400" cy="302" r="28" fill="#141413"/>
-  <text x="400" y="297" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" font-weight="600">架构</text>
-  <text x="400" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FAF9F5" font-weight="600">效率</text>
+  <text x="400" y="297" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">架构</text>
+  <text x="400" y="310" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">效率</text>
 </svg>

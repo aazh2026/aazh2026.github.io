@@ -1,70 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" width="900" height="580">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580">
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <linearGradient id="def1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D97757"/><stop offset="100%" stop-color="#b85a3d"/></linearGradient>
-    <linearGradient id="def2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#788C5D"/><stop offset="100%" stop-color="#4f6b3a"/></linearGradient>
-    <linearGradient id="def3" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87867F"/><stop offset="100%" stop-color="#5a5852"/></linearGradient>
-    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141413" flood-opacity="0.12"/>
+    <linearGradient id="def1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d97757"/>
+      <stop offset="100%" stop-color="#b85a3d"/>
+    </linearGradient>
+    <linearGradient id="def2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#788c5d"/>
+      <stop offset="100%" stop-color="#4f6b3a"/>
+    </linearGradient>
+    <linearGradient id="def3" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#87867f"/>
+      <stop offset="100%" stop-color="#5a5852"/>
+    </linearGradient>
+    <filter id="shadow2" width="120%" height="130%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="4" flood-color="#141413" flood-opacity=".12" stdDeviation="6"/>
     </filter>
   </defs>
-
   <rect width="900" height="580" fill="url(#bg2)" rx="16"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" fill="#141413">纵深防御：五道防线抵御 Clinejection 攻击</text>
-  <text x="450" y="64" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#87867F">Defense-in-Depth: Five Layers Against Prompt Injection Attacks</text>
-
-  <!-- Attack arrow (top) -->
-  <rect x="380" y="84" width="140" height="28" rx="14" fill="#D97757" opacity="0.9"/>
-  <text x="450" y="103" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">🚨 攻击者提交恶意 Issue</text>
-
-  <!-- Defense layers -->
-  <!-- Layer 1: Input Validation -->
-  <rect x="50" y="128" width="800" height="72" rx="10" fill="url(#def1)" filter="url(#shadow2)"/>
-  <text x="76" y="154" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">防线 1：输入验证与清理</text>
-  <text x="76" y="174" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">检测并过滤危险关键词 (disregard, ignore, DEBUG MODE)</text>
-  <text x="600" y="165" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">✅ 阻止注入指令进入 prompt</text>
-
-  <!-- Arrow -->
-  <path d="M450 200 L450 214" stroke="#D1CFC5" stroke-width="2.5"/>
-
-  <!-- Layer 2: Least Privilege -->
-  <rect x="50" y="218" width="800" height="72" rx="10" fill="url(#def2)" filter="url(#shadow2)"/>
-  <text x="76" y="244" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">防线 2：最小权限原则</text>
-  <text x="76" y="264" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">禁用 Bash/Write 权限，仅允许 Read 或空权限</text>
-  <text x="600" y="255" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">✅ AI 无法执行命令或写文件</text>
-
-  <!-- Arrow -->
-  <path d="M450 290 L450 304" stroke="#D1CFC5" stroke-width="2.5"/>
-
-  <!-- Layer 3: Sandbox -->
-  <rect x="50" y="308" width="800" height="72" rx="10" fill="url(#def3)" filter="url(#shadow2)"/>
-  <text x="76" y="334" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">防线 3：沙箱隔离</text>
-  <text x="76" y="354" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">只读文件系统 · 禁止网络访问 · 最小化容器 · 无特权模式</text>
-  <text x="600" y="345" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">✅ 即使被突破也无法修改代码</text>
-
-  <!-- Arrow -->
-  <path d="M450 380 L450 394" stroke="#D1CFC5" stroke-width="2.5"/>
-
-  <!-- Layer 4: Human-in-the-Loop -->
-  <rect x="50" y="398" width="800" height="72" rx="10" fill="url(#def2)" filter="url(#shadow2)"/>
-  <text x="76" y="424" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">防线 4：人机协作审核</text>
-  <text x="76" y="444" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">写操作需人工确认 · 标签分类可自动执行 · 异常行为必须人工审核</text>
-  <text x="600" y="435" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">✅ 关键决策由人类掌控</text>
-
-  <!-- Arrow -->
-  <path d="M450 470 L450 484" stroke="#D1CFC5" stroke-width="2.5"/>
-
-  <!-- Layer 5: Audit -->
-  <rect x="50" y="488" width="800" height="72" rx="10" fill="url(#def1)" filter="url(#shadow2)"/>
-  <text x="76" y="514" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">防线 5：审计与监控</text>
-  <text x="76" y="534" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">AI 创建 workflow → 告警 · 修改 CI/CD 配置 → 告警 · 访问敏感文件 → 告警</text>
-  <text x="600" y="525" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">✅ 异常行为可追溯、可中断</text>
-
-  <!-- Footer note -->
-  <text x="450" y="570" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#87867F">纵深防御：任一防线失效，其他防线仍可阻止攻击</text>
+  <text x="450" y="42" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" text-anchor="middle">纵深防御：五道防线抵御 Clinejection 攻击</text>
+  <text x="450" y="64" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" text-anchor="middle">Defense-in-Depth: Five Layers Against Prompt Injection Attacks</text>
+  <rect width="140" height="28" x="380" y="84" fill="#d97757" opacity=".9" rx="14"/>
+  <text x="450" y="103" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="700" text-anchor="middle">🚨 攻击者提交恶意 Issue</text>
+  <rect width="800" height="72" x="50" y="128" fill="url(#def1)" filter="url(#shadow2)" rx="10"/>
+  <text x="76" y="154" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">防线 1：输入验证与清理</text>
+  <text x="76" y="174" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">检测并过滤危险关键词 (disregard, ignore, DEBUG MODE)</text>
+  <text x="600" y="165" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">✅ 阻止注入指令进入 prompt</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" d="M450 200v14"/>
+  <rect width="800" height="72" x="50" y="218" fill="url(#def2)" filter="url(#shadow2)" rx="10"/>
+  <text x="76" y="244" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">防线 2：最小权限原则</text>
+  <text x="76" y="264" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">禁用 Bash/Write 权限，仅允许 Read 或空权限</text>
+  <text x="600" y="255" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">✅ AI 无法执行命令或写文件</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" d="M450 290v14"/>
+  <rect width="800" height="72" x="50" y="308" fill="url(#def3)" filter="url(#shadow2)" rx="10"/>
+  <text x="76" y="334" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">防线 3：沙箱隔离</text>
+  <text x="76" y="354" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">只读文件系统 · 禁止网络访问 · 最小化容器 · 无特权模式</text>
+  <text x="600" y="345" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">✅ 即使被突破也无法修改代码</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" d="M450 380v14"/>
+  <rect width="800" height="72" x="50" y="398" fill="url(#def2)" filter="url(#shadow2)" rx="10"/>
+  <text x="76" y="424" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">防线 4：人机协作审核</text>
+  <text x="76" y="444" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">写操作需人工确认 · 标签分类可自动执行 · 异常行为必须人工审核</text>
+  <text x="600" y="435" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">✅ 关键决策由人类掌控</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" d="M450 470v14"/>
+  <rect width="800" height="72" x="50" y="488" fill="url(#def1)" filter="url(#shadow2)" rx="10"/>
+  <text x="76" y="514" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">防线 5：审计与监控</text>
+  <text x="76" y="534" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">AI 创建 workflow → 告警 · 修改 CI/CD 配置 → 告警 · 访问敏感文件 → 告警</text>
+  <text x="600" y="525" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">✅ 异常行为可追溯、可中断</text>
+  <text x="450" y="570" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" text-anchor="middle">纵深防御：任一防线失效，其他防线仍可阻止攻击</text>
 </svg>

@@ -1,85 +1,54 @@
-<svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 240">
   <title>Prompt生命周期管理流程</title>
-  <desc>Prompt从提交到持续优化的完整生命周期：提交 → 自动化检查 → 同行审查 → 效果测试 → 合并 → 发布 → 迭代优化</desc>
-
-  <!-- Background -->
-  <rect width="680" height="240" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Prompt生命周期管理流程</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">提交 → 自动化检查 → 同行审查 → 效果测试 → 合并 → 发布 → 迭代优化</text>
-
-  <!-- Node dimensions -->
-  <!-- Node 1: 提交 -->
-  <rect x="16" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="55" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">1 提交</text>
-  <text x="55" y="102" text-anchor="middle" font-size="9" fill="#87867F">Prompt Author</text>
-  <text x="55" y="114" text-anchor="middle" font-size="8" fill="#D1CFC5" font-family="ui-monospace, monospace">Git PR</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="94" y1="96" x2="108" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="108,96 102,92 102,100" fill="#D1CFC5"/>
-
-  <!-- Node 2: 自动化检查 (clay highlight) -->
-  <rect x="112" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="112" y="70" width="78" height="52" rx="6" fill="#D97757" fill-opacity="0.06"/>
-  <text x="151" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">2 自动化检查</text>
-  <text x="151" y="102" text-anchor="middle" font-size="9" fill="#87867F">lint · format</text>
-  <text x="151" y="114" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">CI/CD</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="190" y1="96" x2="204" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="204,96 198,92 198,100" fill="#D1CFC5"/>
-
-  <!-- Node 3: 同行审查 -->
-  <rect x="208" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="247" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">3 同行审查</text>
-  <text x="247" y="102" text-anchor="middle" font-size="9" fill="#87867F">Prompt Engineer</text>
-  <text x="247" y="114" text-anchor="middle" font-size="8" fill="#D1CFC5" font-family="ui-monospace, monospace">review</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="286" y1="96" x2="300" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,96 294,92 294,100" fill="#D1CFC5"/>
-
-  <!-- Node 4: 效果测试 -->
-  <rect x="304" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="343" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">4 效果测试</text>
-  <text x="343" y="102" text-anchor="middle" font-size="9" fill="#87867F">A/B · 质量评估</text>
-  <text x="343" y="114" text-anchor="middle" font-size="8" fill="#D1CFC5" font-family="ui-monospace, monospace">eval</text>
-
-  <!-- Arrow 4→5 -->
-  <line x1="382" y1="96" x2="396" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="396,96 390,92 390,100" fill="#D1CFC5"/>
-
-  <!-- Node 5: 合并 -->
-  <rect x="400" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="439" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">5 合并</text>
-  <text x="439" y="102" text-anchor="middle" font-size="9" fill="#87867F">Maintainer</text>
-  <text x="439" y="114" text-anchor="middle" font-size="8" fill="#D1CFC5" font-family="ui-monospace, monospace">approve</text>
-
-  <!-- Arrow 5→6 -->
-  <line x1="478" y1="96" x2="492" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="492,96 486,92 486,100" fill="#D1CFC5"/>
-
-  <!-- Node 6: 发布 (olive highlight) -->
-  <rect x="496" y="70" width="78" height="52" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
-  <rect x="496" y="70" width="78" height="52" rx="6" fill="#788C5D" fill-opacity="0.06"/>
-  <text x="535" y="88" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">6 发布</text>
-  <text x="535" y="102" text-anchor="middle" font-size="9" fill="#87867F">Prompt Registry</text>
-  <text x="535" y="114" text-anchor="middle" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">published</text>
-
-  <!-- Arrow 6→7 (curved, feedback loop) -->
-  <path d="M 574 122 C 574 160, 340 170, 55 160" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
-  <polygon points="55,160 61,154 49,154" fill="#D97757" opacity="0.7"/>
-  <text x="310" y="178" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">7 迭代优化 · 持续改进</text>
-
-  <!-- Legend -->
-  <rect x="16" y="188" width="10" height="10" rx="2" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="1"/>
-  <text x="32" y="197" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">质量卡点</text>
-
-  <rect x="120" y="188" width="10" height="10" rx="2" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="1"/>
-  <text x="136" y="197" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">发布里程碑</text>
-
-  <rect x="248" y="188" width="10" height="10" rx="2" fill="#D97757" fill-opacity="0.7" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="2,2"/>
-  <text x="264" y="197" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">反馈闭环</text>
+  <desc>
+    Prompt从提交到持续优化的完整生命周期：提交 → 自动化检查 → 同行审查 → 效果测试 → 合并 → 发布 → 迭代优化
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v240H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Prompt生命周期管理流程</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">提交 → 自动化检查 → 同行审查 → 效果测试 → 合并 → 发布 → 迭代优化</text>
+  <rect width="78" height="52" x="16" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="55" y="88" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">1 提交</text>
+  <text x="55" y="102" fill="#87867f" font-size="9" text-anchor="middle">Prompt Author</text>
+  <text x="55" y="114" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Git PR</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M94 96h14"/>
+  <path fill="#d1cfc5" d="m108 96-6-4v8z"/>
+  <rect width="78" height="52" x="112" y="70" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <rect width="78" height="52" x="112" y="70" fill="#d97757" fill-opacity=".06" rx="6"/>
+  <text x="151" y="88" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">2 自动化检查</text>
+  <text x="151" y="102" fill="#87867f" font-size="9" text-anchor="middle">lint · format</text>
+  <text x="151" y="114" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">CI/CD</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M190 96h14"/>
+  <path fill="#d1cfc5" d="m204 96-6-4v8z"/>
+  <rect width="78" height="52" x="208" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="247" y="88" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">3 同行审查</text>
+  <text x="247" y="102" fill="#87867f" font-size="9" text-anchor="middle">Prompt Engineer</text>
+  <text x="247" y="114" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">review</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M286 96h14"/>
+  <path fill="#d1cfc5" d="m300 96-6-4v8z"/>
+  <rect width="78" height="52" x="304" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="343" y="88" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">4 效果测试</text>
+  <text x="343" y="102" fill="#87867f" font-size="9" text-anchor="middle">A/B · 质量评估</text>
+  <text x="343" y="114" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">eval</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M382 96h14"/>
+  <path fill="#d1cfc5" d="m396 96-6-4v8z"/>
+  <rect width="78" height="52" x="400" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="439" y="88" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">5 合并</text>
+  <text x="439" y="102" fill="#87867f" font-size="9" text-anchor="middle">Maintainer</text>
+  <text x="439" y="114" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">approve</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M478 96h14"/>
+  <path fill="#d1cfc5" d="m492 96-6-4v8z"/>
+  <rect width="78" height="52" x="496" y="70" fill="#fff" stroke="#788c5d" stroke-width="2" rx="6"/>
+  <rect width="78" height="52" x="496" y="70" fill="#788c5d" fill-opacity=".06" rx="6"/>
+  <text x="535" y="88" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">6 发布</text>
+  <text x="535" y="102" fill="#87867f" font-size="9" text-anchor="middle">Prompt Registry</text>
+  <text x="535" y="114" fill="#788c5d" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">published</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" d="M574 122c0 38-234 48-519 38" opacity=".7"/>
+  <path fill="#d97757" d="m55 160 6-6H49z" opacity=".7"/>
+  <text x="310" y="178" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">7 迭代优化 · 持续改进</text>
+  <rect width="10" height="10" x="16" y="188" fill="#d97757" fill-opacity=".15" stroke="#d97757" rx="2"/>
+  <text x="32" y="197" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">质量卡点</text>
+  <rect width="10" height="10" x="120" y="188" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" rx="2"/>
+  <text x="136" y="197" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">发布里程碑</text>
+  <rect width="10" height="10" x="248" y="188" fill="#d97757" fill-opacity=".7" stroke="#d1cfc5" stroke-dasharray="2,2" rx="2"/>
+  <text x="264" y="197" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">反馈闭环</text>
 </svg>

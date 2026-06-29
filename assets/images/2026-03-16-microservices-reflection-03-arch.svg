@@ -1,43 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 300" font-family="'Courier New', Courier, monospace" font-size="12">
-  <rect width="380" height="300" fill="#FAF9F5"/>
-  <!-- Background -->
-  <rect x="10" y="10" width="360" height="280" fill="none" stroke="#141413" stroke-width="2" rx="2"/>
-
-  <!-- myapp/ -->
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', Courier, monospace" font-size="12" viewBox="0 0 380 300">
+  <path fill="#faf9f5" d="M0 0h380v300H0z"/>
+  <rect width="360" height="280" x="10" y="10" fill="none" stroke="#141413" stroke-width="2" rx="2"/>
   <text x="30" y="38" fill="#141413" font-weight="bold">myapp/</text>
-  <text x="100" y="38" fill="#788C5D"># 应用根目录</text>
-
-  <!-- ├── modules/ -->
-  <line x1="30" y1="48" x2="30" y2="250" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="100" y="38" fill="#788c5d"># 应用根目录</text>
+  <path stroke="#d1cfc5" stroke-dasharray="3,3" d="M30 48v202"/>
   <text x="30" y="64" fill="#141413">├── modules/</text>
-  <text x="110" y="64" fill="#87867F"># 模块根目录</text>
-
-  <!-- │   ├── user/ -->
+  <text x="110" y="64" fill="#87867f"># 模块根目录</text>
   <text x="30" y="88" fill="#141413">│   ├── user/</text>
-  <text x="110" y="88" fill="#D97757"># 用户模块</text>
-  <!-- user files -->
+  <text x="110" y="88" fill="#d97757"># 用户模块</text>
   <text x="50" y="108" fill="#141413">│   │   ├── api.py</text>
-  <text x="200" y="108" fill="#87867F"># 内部 API</text>
+  <text x="200" y="108" fill="#87867f"># 内部 API</text>
   <text x="50" y="124" fill="#141413">│   │   ├── models.py</text>
-  <text x="200" y="124" fill="#87867F"># 数据模型</text>
+  <text x="200" y="124" fill="#87867f"># 数据模型</text>
   <text x="50" y="140" fill="#141413">│   │   └── service.py</text>
-  <text x="200" y="140" fill="#87867F"># 业务逻辑</text>
-
-  <!-- │   ├── order/ -->
+  <text x="200" y="140" fill="#87867f"># 业务逻辑</text>
   <text x="30" y="162" fill="#141413">│   ├── order/</text>
-  <text x="110" y="162" fill="#D97757"># 订单模块</text>
+  <text x="110" y="162" fill="#d97757"># 订单模块</text>
   <text x="50" y="178" fill="#141413">│   │   ├── api.py</text>
   <text x="50" y="194" fill="#141413">│   │   ├── models.py</text>
   <text x="50" y="210" fill="#141413">│   │   └── service.py</text>
-
-  <!-- │   └── payment/ -->
   <text x="30" y="232" fill="#141413">│   └── payment/</text>
-  <text x="110" y="232" fill="#D97757"># 支付模块</text>
+  <text x="110" y="232" fill="#d97757"># 支付模块</text>
   <text x="50" y="248" fill="#141413">│       ├── api.py</text>
   <text x="50" y="264" fill="#141413">│       ├── models.py</text>
   <text x="50" y="280" fill="#141413">│       └── service.py</text>
-
-  <!-- └── shared/ -->
   <text x="30" y="296" fill="#141413">└── shared/</text>
-  <text x="100" y="296" fill="#788C5D"># 共享组件</text>
+  <text x="100" y="296" fill="#788c5d"># 共享组件</text>
 </svg>

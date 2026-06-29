@@ -1,79 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="'Helvetica Neue', Arial, sans-serif">
-  <defs>
-    <style>
-      .bg { fill: #FAF9F5; }
-      .text-primary { fill: #141413; font-size: 13px; font-weight: 600; }
-      .text-secondary { fill: #87867F; font-size: 11px; }
-    </style>
-  </defs>
-  <rect width="800" height="440" class="bg"/>
-
-  <!-- Title -->
-  <text x="40" y="36" class="text-primary" font-size="15px">信息记录演化史：从泥板到自解释代码</text>
-  <text x="40" y="52" class="text-secondary">Information Recording Evolution: From Clay Tablets to Self-Explanatory Code</text>
-
-  <!-- Timeline bar -->
-  <line x1="60" y1="220" x2="760" y2="220" stroke="#D1CFC5" stroke-width="2"/>
-  <polygon points="760,220 748,215 748,225" fill="#D1CFC5"/>
-
-  <!-- 5 era nodes -->
-  <!-- Era 1: Clay tablets -->
-  <circle cx="100" cy="220" r="12" fill="#D97757" stroke="#141413" stroke-width="2"/>
-  <rect x="50" y="240" width="100" height="130" rx="10" fill="#141413"/>
-  <text x="100" y="262" fill="#FAF9F5" font-size="11px" font-weight="700" text-anchor="middle">公元前3000年</text>
-  <text x="100" y="278" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">泥板记录</text>
-  <line x1="100" y1="292" x2="100" y2="300" stroke="#87867F" stroke-width="0.8"/>
-  <text x="100" y="316" fill="#87867F" font-size="10px" text-anchor="middle">信息保存</text>
-  <text x="100" y="332" fill="#87867F" font-size="10px" text-anchor="middle">检索极困难</text>
-  <text x="100" y="348" fill="#87867F" font-size="10px" text-anchor="middle">需物理查找</text>
-  <text x="100" y="364" fill="#E3DACC" font-size="9px" font-weight="600" text-anchor="middle">载体：物理泥板</text>
-
-  <!-- Era 2: Manuscript -->
-  <circle cx="250" cy="220" r="12" fill="#87867F" stroke="#D1CFC5" stroke-width="2"/>
-  <rect x="200" y="240" width="100" height="130" rx="10" fill="#141413"/>
-  <text x="250" y="262" fill="#FAF9F5" font-size="11px" font-weight="700" text-anchor="middle">中世纪</text>
-  <text x="250" y="278" fill="#87867F" font-size="11px" font-weight="600" text-anchor="middle">手抄本</text>
-  <line x1="250" y1="292" x2="250" y2="300" stroke="#87867F" stroke-width="0.8"/>
-  <text x="250" y="316" fill="#87867F" font-size="10px" text-anchor="middle">知识系统化</text>
-  <text x="250" y="332" fill="#87867F" font-size="10px" text-anchor="middle">更新成本高</text>
-  <text x="250" y="348" fill="#87867F" font-size="10px" text-anchor="middle">错误永久存在</text>
-  <text x="250" y="364" fill="#E3DACC" font-size="9px" font-weight="600" text-anchor="middle">载体：羊皮纸</text>
-
-  <!-- Era 3: Printing -->
-  <circle cx="400" cy="220" r="12" fill="#87867F" stroke="#D1CFC5" stroke-width="2"/>
-  <rect x="350" y="240" width="100" height="130" rx="10" fill="#141413"/>
-  <text x="400" y="262" fill="#FAF9F5" font-size="11px" font-weight="700" text-anchor="middle">印刷时代</text>
-  <text x="400" y="278" fill="#87867F" font-size="11px" font-weight="600" text-anchor="middle">书籍</text>
-  <line x1="400" y1="292" x2="400" y2="300" stroke="#87867F" stroke-width="0.8"/>
-  <text x="400" y="316" fill="#87867F" font-size="10px" text-anchor="middle">大规模传播</text>
-  <text x="400" y="332" fill="#87867F" font-size="10px" text-anchor="middle">更新仍困难</text>
-  <text x="400" y="348" fill="#87867F" font-size="10px" text-anchor="middle">内容"冻结"</text>
-  <text x="400" y="364" fill="#E3DACC" font-size="9px" font-weight="600" text-anchor="middle">载体：纸张</text>
-
-  <!-- Era 4: Internet -->
-  <circle cx="550" cy="220" r="12" fill="#788C5D" stroke="#D1CFC5" stroke-width="2"/>
-  <rect x="500" y="240" width="100" height="130" rx="10" fill="#141413"/>
-  <text x="550" y="262" fill="#FAF9F5" font-size="11px" font-weight="700" text-anchor="middle">互联网时代</text>
-  <text x="550" y="278" fill="#788C5D" font-size="11px" font-weight="600" text-anchor="middle">电子文档</text>
-  <line x1="550" y1="292" x2="550" y2="300" stroke="#87867F" stroke-width="0.8"/>
-  <text x="550" y="316" fill="#87867F" font-size="10px" text-anchor="middle">实时更新</text>
-  <text x="550" y="332" fill="#87867F" font-size="10px" text-anchor="middle">搜索检索</text>
-  <text x="550" y="348" fill="#87867F" font-size="10px" text-anchor="middle">代码与文档分离</text>
-  <text x="550" y="364" fill="#E3DACC" font-size="9px" font-weight="600" text-anchor="middle">载体：数字文档</text>
-
-  <!-- Era 5: AI-Native -->
-  <circle cx="700" cy="220" r="14" fill="#D97757" stroke="#141413" stroke-width="2"/>
-  <rect x="650" y="80" width="100" height="130" rx="10" fill="#D97757"/>
-  <text x="700" y="102" fill="#FAF9F5" font-size="11px" font-weight="700" text-anchor="middle">AI时代</text>
-  <text x="700" y="118" fill="#FAF9F5" font-size="11px" font-weight="600" text-anchor="middle">自解释系统</text>
-  <line x1="700" y1="133" x2="700" y2="143" stroke="#FAF9F5" stroke-width="0.8" opacity="0.5"/>
-  <text x="700" y="158" fill="#141413" font-size="10px" text-anchor="middle">代码即文档</text>
-  <text x="700" y="174" fill="#141413" font-size="10px" text-anchor="middle">AI实时理解</text>
-  <text x="700" y="190" fill="#141413" font-size="10px" font-weight="600" text-anchor="middle">回答任何问题</text>
-  <line x1="700" y1="210" x2="700" y2="206" stroke="#D97757" stroke-width="1.5"/>
-
-  <!-- Bottom insight -->
-  <rect x="40" y="390" width="720" height="30" rx="6" fill="#E3DACC"/>
-  <text x="60" y="410" fill="#141413" font-size="11px">历史在押韵：每一次信息技术跃迁都重新定义了"什么是最好的知识载体"</text>
-  <text x="560" y="410" fill="#D97757" font-size="11px" font-weight="600">AI时代：代码本身成为最好的知识载体</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif" viewBox="0 0 800 440">
+  <path d="M0 0h800v440H0z" style="fill:#faf9f5"/>
+  <text x="40" y="36" style="fill:#141413;font-size:13px;font-weight:600">信息记录演化史：从泥板到自解释代码</text>
+  <text x="40" y="52" style="fill:#87867f;font-size:11px">Information Recording Evolution: From Clay Tablets to Self-Explanatory Code</text>
+  <path stroke="#d1cfc5" stroke-width="2" d="M60 220h700"/>
+  <path fill="#d1cfc5" d="m760 220-12-5v10z"/>
+  <circle cx="100" cy="220" r="12" fill="#d97757" stroke="#141413" stroke-width="2"/>
+  <rect width="100" height="130" x="50" y="240" fill="#141413" rx="10"/>
+  <text x="100" y="262" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">公元前3000年</text>
+  <text x="100" y="278" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">泥板记录</text>
+  <path stroke="#87867f" stroke-width=".8" d="M100 292v8"/>
+  <text x="100" y="316" fill="#87867f" font-size="10" text-anchor="middle">信息保存</text>
+  <text x="100" y="332" fill="#87867f" font-size="10" text-anchor="middle">检索极困难</text>
+  <text x="100" y="348" fill="#87867f" font-size="10" text-anchor="middle">需物理查找</text>
+  <text x="100" y="364" fill="#e3dacc" font-size="9" font-weight="600" text-anchor="middle">载体：物理泥板</text>
+  <circle cx="250" cy="220" r="12" fill="#87867f" stroke="#d1cfc5" stroke-width="2"/>
+  <rect width="100" height="130" x="200" y="240" fill="#141413" rx="10"/>
+  <text x="250" y="262" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">中世纪</text>
+  <text x="250" y="278" fill="#87867f" font-size="11" font-weight="600" text-anchor="middle">手抄本</text>
+  <path stroke="#87867f" stroke-width=".8" d="M250 292v8"/>
+  <text x="250" y="316" fill="#87867f" font-size="10" text-anchor="middle">知识系统化</text>
+  <text x="250" y="332" fill="#87867f" font-size="10" text-anchor="middle">更新成本高</text>
+  <text x="250" y="348" fill="#87867f" font-size="10" text-anchor="middle">错误永久存在</text>
+  <text x="250" y="364" fill="#e3dacc" font-size="9" font-weight="600" text-anchor="middle">载体：羊皮纸</text>
+  <circle cx="400" cy="220" r="12" fill="#87867f" stroke="#d1cfc5" stroke-width="2"/>
+  <rect width="100" height="130" x="350" y="240" fill="#141413" rx="10"/>
+  <text x="400" y="262" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">印刷时代</text>
+  <text x="400" y="278" fill="#87867f" font-size="11" font-weight="600" text-anchor="middle">书籍</text>
+  <path stroke="#87867f" stroke-width=".8" d="M400 292v8"/>
+  <text x="400" y="316" fill="#87867f" font-size="10" text-anchor="middle">大规模传播</text>
+  <text x="400" y="332" fill="#87867f" font-size="10" text-anchor="middle">更新仍困难</text>
+  <text x="400" y="348" fill="#87867f" font-size="10" text-anchor="middle">内容&quot;冻结&quot;</text>
+  <text x="400" y="364" fill="#e3dacc" font-size="9" font-weight="600" text-anchor="middle">载体：纸张</text>
+  <circle cx="550" cy="220" r="12" fill="#788c5d" stroke="#d1cfc5" stroke-width="2"/>
+  <rect width="100" height="130" x="500" y="240" fill="#141413" rx="10"/>
+  <text x="550" y="262" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">互联网时代</text>
+  <text x="550" y="278" fill="#788c5d" font-size="11" font-weight="600" text-anchor="middle">电子文档</text>
+  <path stroke="#87867f" stroke-width=".8" d="M550 292v8"/>
+  <text x="550" y="316" fill="#87867f" font-size="10" text-anchor="middle">实时更新</text>
+  <text x="550" y="332" fill="#87867f" font-size="10" text-anchor="middle">搜索检索</text>
+  <text x="550" y="348" fill="#87867f" font-size="10" text-anchor="middle">代码与文档分离</text>
+  <text x="550" y="364" fill="#e3dacc" font-size="9" font-weight="600" text-anchor="middle">载体：数字文档</text>
+  <circle cx="700" cy="220" r="14" fill="#d97757" stroke="#141413" stroke-width="2"/>
+  <rect width="100" height="130" x="650" y="80" fill="#d97757" rx="10"/>
+  <text x="700" y="102" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">AI时代</text>
+  <text x="700" y="118" fill="#faf9f5" font-size="11" font-weight="600" text-anchor="middle">自解释系统</text>
+  <path stroke="#faf9f5" stroke-width=".8" d="M700 133v10" opacity=".5"/>
+  <text x="700" y="158" fill="#141413" font-size="10" text-anchor="middle">代码即文档</text>
+  <text x="700" y="174" fill="#141413" font-size="10" text-anchor="middle">AI实时理解</text>
+  <text x="700" y="190" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">回答任何问题</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M700 210v-4"/>
+  <rect width="720" height="30" x="40" y="390" fill="#e3dacc" rx="6"/>
+  <text x="60" y="410" fill="#141413" font-size="11">历史在押韵：每一次信息技术跃迁都重新定义了&quot;什么是最好的知识载体&quot;</text>
+  <text x="560" y="410" fill="#d97757" font-size="11" font-weight="600">AI时代：代码本身成为最好的知识载体</text>
 </svg>

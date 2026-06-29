@@ -1,257 +1,200 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 342" width="424" height="342" style="font-family: 'Courier New', Courier, monospace; background: #FAF9F5;">
-  <rect width="424" height="342" fill="#FAF9F5"/>
-<text x="212.0" y="18" text-anchor="middle" font-size="12px" font-weight="bold" fill="#141413">知识库目录结构</text>
-  <g>
-    <line x1="24.8" y1="75.5" x2="39.2" y2="75.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="92.5" x2="39.2" y2="92.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="92.5" x2="24.8" y2="118.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="101.0" x2="24.8" y2="135.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="118.0" x2="24.8" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="135.0" x2="24.8" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="152.0" x2="24.8" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="169.0" x2="24.8" y2="203.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="186.0" x2="24.8" y2="220.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="203.0" x2="24.8" y2="237.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="220.0" x2="24.8" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="237.0" x2="24.8" y2="271.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="254.0" x2="24.8" y2="288.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="279.5" x2="39.2" y2="279.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="24.8" y1="279.5" x2="24.8" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="29.6" y1="80.3" x2="48.8" y2="80.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="29.6" y1="97.3" x2="48.8" y2="97.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="29.6" y1="284.3" x2="48.8" y2="284.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="109.5" x2="77.6" y2="109.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="109.5" x2="63.2" y2="135.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="118.0" x2="63.2" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="143.5" x2="77.6" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="143.5" x2="63.2" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="143.5" x2="63.2" y2="118.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="152.0" x2="63.2" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="177.5" x2="77.6" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="177.5" x2="63.2" y2="203.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="177.5" x2="63.2" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="186.0" x2="63.2" y2="220.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="211.5" x2="77.6" y2="211.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="211.5" x2="63.2" y2="237.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="211.5" x2="63.2" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="220.0" x2="63.2" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="237.0" x2="63.2" y2="271.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="262.5" x2="77.6" y2="262.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="262.5" x2="63.2" y2="237.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="296.5" x2="77.6" y2="296.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="114.3" x2="87.2" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="148.3" x2="87.2" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="182.3" x2="87.2" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="216.3" x2="87.2" y2="216.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="267.3" x2="87.2" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="301.3" x2="87.2" y2="301.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="126.5" x2="116.0" y2="126.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="160.5" x2="116.0" y2="160.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="194.5" x2="116.0" y2="194.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="228.5" x2="116.0" y2="228.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="228.5" x2="101.6" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="101.6" y1="245.5" x2="116.0" y2="245.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="131.3" x2="125.6" y2="131.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="165.3" x2="125.6" y2="165.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="199.3" x2="125.6" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="233.3" x2="125.6" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="250.3" x2="125.6" y2="250.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-  </g>
-  <g>
-    <text x="24.8" y="63.3" font-size="13px" fill="#141413">r</text>
-<text x="24.8" y="318.3" font-size="13px" fill="#141413">`</text>
-<text x="34.4" y="63.3" font-size="13px" fill="#141413">e</text>
-<text x="34.4" y="318.3" font-size="13px" fill="#141413">`</text>
-<text x="44.0" y="63.3" font-size="13px" fill="#141413">p</text>
-<text x="44.0" y="80.3" font-size="13px" fill="#141413">─</text>
-<text x="44.0" y="97.3" font-size="13px" fill="#141413">─</text>
-<text x="44.0" y="284.3" font-size="13px" fill="#141413">─</text>
-<text x="44.0" y="318.3" font-size="13px" fill="#141413">`</text>
-<text x="53.6" y="63.3" font-size="13px" fill="#141413">o</text>
-<text x="63.2" y="63.3" font-size="13px" fill="#141413">s</text>
-<text x="63.2" y="80.3" font-size="13px" fill="#141413">A</text>
-<text x="63.2" y="97.3" font-size="13px" fill="#141413">d</text>
-<text x="63.2" y="284.3" font-size="13px" fill="#141413">.</text>
-<text x="72.8" y="63.3" font-size="13px" fill="#141413">i</text>
-<text x="72.8" y="80.3" font-size="13px" fill="#141413">G</text>
-<text x="72.8" y="97.3" font-size="13px" fill="#141413">o</text>
-<text x="72.8" y="284.3" font-size="13px" fill="#141413">c</text>
-<text x="82.4" y="63.3" font-size="13px" fill="#141413">t</text>
-<text x="82.4" y="80.3" font-size="13px" fill="#141413">E</text>
-<text x="82.4" y="97.3" font-size="13px" fill="#141413">c</text>
-<text x="82.4" y="114.3" font-size="13px" fill="#141413">─</text>
-<text x="82.4" y="148.3" font-size="13px" fill="#141413">─</text>
-<text x="82.4" y="182.3" font-size="13px" fill="#141413">─</text>
-<text x="82.4" y="216.3" font-size="13px" fill="#141413">─</text>
-<text x="82.4" y="267.3" font-size="13px" fill="#141413">─</text>
-<text x="82.4" y="284.3" font-size="13px" fill="#141413">i</text>
-<text x="82.4" y="301.3" font-size="13px" fill="#141413">─</text>
-<text x="92.0" y="63.3" font-size="13px" fill="#141413">o</text>
-<text x="92.0" y="80.3" font-size="13px" fill="#141413">N</text>
-<text x="92.0" y="97.3" font-size="13px" fill="#141413">s</text>
-<text x="92.0" y="284.3" font-size="13px" fill="#141413">/</text>
-<text x="101.6" y="63.3" font-size="13px" fill="#141413">r</text>
-<text x="101.6" y="80.3" font-size="13px" fill="#141413">T</text>
-<text x="101.6" y="97.3" font-size="13px" fill="#141413">/</text>
-<text x="101.6" y="114.3" font-size="13px" fill="#141413">b</text>
-<text x="101.6" y="148.3" font-size="13px" fill="#141413">a</text>
-<text x="101.6" y="182.3" font-size="13px" fill="#141413">q</text>
-<text x="101.6" y="216.3" font-size="13px" fill="#141413">p</text>
-<text x="101.6" y="267.3" font-size="13px" fill="#141413">d</text>
-<text x="101.6" y="301.3" font-size="13px" fill="#141413">k</text>
-<text x="111.2" y="63.3" font-size="13px" fill="#141413">y</text>
-<text x="111.2" y="80.3" font-size="13px" fill="#141413">S</text>
-<text x="111.2" y="114.3" font-size="13px" fill="#141413">e</text>
-<text x="111.2" y="148.3" font-size="13px" fill="#141413">r</text>
-<text x="111.2" y="182.3" font-size="13px" fill="#141413">u</text>
-<text x="111.2" y="216.3" font-size="13px" fill="#141413">l</text>
-<text x="111.2" y="267.3" font-size="13px" fill="#141413">e</text>
-<text x="111.2" y="301.3" font-size="13px" fill="#141413">n</text>
-<text x="120.8" y="63.3" font-size="13px" fill="#141413">/</text>
-<text x="120.8" y="80.3" font-size="13px" fill="#141413">.</text>
-<text x="120.8" y="114.3" font-size="13px" fill="#141413">l</text>
-<text x="120.8" y="131.3" font-size="13px" fill="#141413">─</text>
-<text x="120.8" y="148.3" font-size="13px" fill="#141413">c</text>
-<text x="120.8" y="165.3" font-size="13px" fill="#141413">─</text>
-<text x="120.8" y="182.3" font-size="13px" fill="#141413">a</text>
-<text x="120.8" y="199.3" font-size="13px" fill="#141413">─</text>
-<text x="120.8" y="216.3" font-size="13px" fill="#141413">a</text>
-<text x="120.8" y="233.3" font-size="13px" fill="#141413">─</text>
-<text x="120.8" y="250.3" font-size="13px" fill="#141413">─</text>
-<text x="120.8" y="267.3" font-size="13px" fill="#141413">b</text>
-<text x="120.8" y="301.3" font-size="13px" fill="#141413">o</text>
-<text x="130.4" y="80.3" font-size="13px" fill="#141413">m</text>
-<text x="130.4" y="114.3" font-size="13px" fill="#141413">i</text>
-<text x="130.4" y="148.3" font-size="13px" fill="#141413">h</text>
-<text x="130.4" y="182.3" font-size="13px" fill="#141413">l</text>
-<text x="130.4" y="216.3" font-size="13px" fill="#141413">n</text>
-<text x="130.4" y="267.3" font-size="13px" fill="#141413">t</text>
-<text x="130.4" y="301.3" font-size="13px" fill="#141413">w</text>
-<text x="140.0" y="80.3" font-size="13px" fill="#141413">d</text>
-<text x="140.0" y="114.3" font-size="13px" fill="#141413">e</text>
-<text x="140.0" y="131.3" font-size="13px" fill="#141413">验</text>
-<text x="140.0" y="148.3" font-size="13px" fill="#141413">i</text>
-<text x="140.0" y="165.3" font-size="13px" fill="#141413">领</text>
-<text x="140.0" y="182.3" font-size="13px" fill="#141413">i</text>
-<text x="140.0" y="199.3" font-size="13px" fill="#141413">各</text>
-<text x="140.0" y="216.3" font-size="13px" fill="#141413">s</text>
-<text x="140.0" y="233.3" font-size="13px" fill="#141413">a</text>
-<text x="140.0" y="250.3" font-size="13px" fill="#141413">c</text>
-<text x="140.0" y="267.3" font-size="13px" fill="#141413">/</text>
-<text x="140.0" y="301.3" font-size="13px" fill="#141413">l</text>
-<text x="149.6" y="114.3" font-size="13px" fill="#141413">f</text>
-<text x="149.6" y="131.3" font-size="13px" fill="#141413">证</text>
-<text x="149.6" y="148.3" font-size="13px" fill="#141413">t</text>
-<text x="149.6" y="165.3" font-size="13px" fill="#141413">域</text>
-<text x="149.6" y="182.3" font-size="13px" fill="#141413">t</text>
-<text x="149.6" y="199.3" font-size="13px" fill="#141413">领</text>
-<text x="149.6" y="216.3" font-size="13px" fill="#141413">/</text>
-<text x="149.6" y="233.3" font-size="13px" fill="#141413">c</text>
-<text x="149.6" y="250.3" font-size="13px" fill="#141413">o</text>
-<text x="149.6" y="301.3" font-size="13px" fill="#141413">e</text>
-<text x="159.2" y="114.3" font-size="13px" fill="#141413">s</text>
-<text x="159.2" y="131.3" font-size="13px" fill="#141413">状</text>
-<text x="159.2" y="148.3" font-size="13px" fill="#141413">e</text>
-<text x="159.2" y="165.3" font-size="13px" fill="#141413">与</text>
-<text x="159.2" y="182.3" font-size="13px" fill="#141413">y</text>
-<text x="159.2" y="199.3" font-size="13px" fill="#141413">域</text>
-<text x="159.2" y="233.3" font-size="13px" fill="#141413">t</text>
-<text x="159.2" y="250.3" font-size="13px" fill="#141413">m</text>
-<text x="159.2" y="301.3" font-size="13px" fill="#141413">d</text>
-<text x="168.8" y="114.3" font-size="13px" fill="#141413">/</text>
-<text x="168.8" y="131.3" font-size="13px" fill="#141413">态</text>
-<text x="168.8" y="148.3" font-size="13px" fill="#141413">c</text>
-<text x="168.8" y="165.3" font-size="13px" fill="#141413">包</text>
-<text x="168.8" y="182.3" font-size="13px" fill="#141413">/</text>
-<text x="168.8" y="199.3" font-size="13px" fill="#141413">健</text>
-<text x="168.8" y="233.3" font-size="13px" fill="#141413">i</text>
-<text x="168.8" y="250.3" font-size="13px" fill="#141413">p</text>
-<text x="168.8" y="301.3" font-size="13px" fill="#141413">g</text>
-<text x="178.4" y="131.3" font-size="13px" fill="#141413">追</text>
-<text x="178.4" y="148.3" font-size="13px" fill="#141413">t</text>
-<text x="178.4" y="165.3" font-size="13px" fill="#141413">分</text>
-<text x="178.4" y="199.3" font-size="13px" fill="#141413">康</text>
-<text x="178.4" y="233.3" font-size="13px" fill="#141413">v</text>
-<text x="178.4" y="250.3" font-size="13px" fill="#141413">l</text>
-<text x="178.4" y="301.3" font-size="13px" fill="#141413">e</text>
-<text x="188.0" y="131.3" font-size="13px" fill="#141413">踪</text>
-<text x="188.0" y="148.3" font-size="13px" fill="#141413">u</text>
-<text x="188.0" y="165.3" font-size="13px" fill="#141413">层</text>
-<text x="188.0" y="199.3" font-size="13px" fill="#141413">度</text>
-<text x="188.0" y="233.3" font-size="13px" fill="#141413">e</text>
-<text x="188.0" y="250.3" font-size="13px" fill="#141413">e</text>
-<text x="188.0" y="301.3" font-size="13px" fill="#141413">-</text>
-<text x="197.6" y="148.3" font-size="13px" fill="#141413">r</text>
-<text x="197.6" y="233.3" font-size="13px" fill="#141413">/</text>
-<text x="197.6" y="250.3" font-size="13px" fill="#141413">t</text>
-<text x="197.6" y="301.3" font-size="13px" fill="#141413">l</text>
-<text x="207.2" y="148.3" font-size="13px" fill="#141413">e</text>
-<text x="207.2" y="250.3" font-size="13px" fill="#141413">e</text>
-<text x="207.2" y="301.3" font-size="13px" fill="#141413">i</text>
-<text x="216.8" y="148.3" font-size="13px" fill="#141413">/</text>
-<text x="216.8" y="250.3" font-size="13px" fill="#141413">d</text>
-<text x="216.8" y="301.3" font-size="13px" fill="#141413">n</text>
-<text x="226.4" y="250.3" font-size="13px" fill="#141413">/</text>
-<text x="226.4" y="301.3" font-size="13px" fill="#141413">t</text>
-<text x="236.0" y="301.3" font-size="13px" fill="#141413">e</text>
-<text x="245.6" y="301.3" font-size="13px" fill="#141413">r</text>
-<text x="255.2" y="301.3" font-size="13px" fill="#141413">/</text>
-<text x="274.4" y="114.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="148.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="182.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="216.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="233.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="250.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="267.3" font-size="11px" fill="#87867F">#</text>
-<text x="274.4" y="301.3" font-size="11px" fill="#87867F">#</text>
-<text x="284.0" y="80.3" font-size="11px" fill="#87867F">#</text>
-<text x="293.6" y="114.3" font-size="13px" fill="#141413">核</text>
-<text x="293.6" y="148.3" font-size="13px" fill="#141413">架</text>
-<text x="293.6" y="182.3" font-size="13px" fill="#141413">质</text>
-<text x="293.6" y="216.3" font-size="13px" fill="#141413">执</text>
-<text x="293.6" y="233.3" font-size="13px" fill="#141413">进</text>
-<text x="293.6" y="250.3" font-size="13px" fill="#141413">已</text>
-<text x="293.6" y="267.3" font-size="13px" fill="#141413">已</text>
-<text x="293.6" y="301.3" font-size="13px" fill="#141413">知</text>
-<text x="303.2" y="80.3" font-size="13px" fill="#141413">入</text>
-<text x="303.2" y="114.3" font-size="13px" fill="#141413">心</text>
-<text x="303.2" y="148.3" font-size="13px" fill="#141413">构</text>
-<text x="303.2" y="182.3" font-size="13px" fill="#141413">量</text>
-<text x="303.2" y="216.3" font-size="13px" fill="#141413">行</text>
-<text x="303.2" y="233.3" font-size="13px" fill="#141413">行</text>
-<text x="303.2" y="250.3" font-size="13px" fill="#141413">完</text>
-<text x="303.2" y="267.3" font-size="13px" fill="#141413">知</text>
-<text x="303.2" y="301.3" font-size="13px" fill="#141413">识</text>
-<text x="312.8" y="80.3" font-size="13px" fill="#141413">口</text>
-<text x="312.8" y="114.3" font-size="13px" fill="#141413">信</text>
-<text x="312.8" y="148.3" font-size="13px" fill="#141413">地</text>
-<text x="312.8" y="182.3" font-size="13px" fill="#141413">评</text>
-<text x="312.8" y="216.3" font-size="13px" fill="#141413">计</text>
-<text x="312.8" y="233.3" font-size="13px" fill="#141413">中</text>
-<text x="312.8" y="250.3" font-size="13px" fill="#141413">成</text>
-<text x="312.8" y="267.3" font-size="13px" fill="#141413">技</text>
-<text x="312.8" y="301.3" font-size="13px" fill="#141413">库</text>
-<text x="322.4" y="80.3" font-size="13px" fill="#141413">点</text>
-<text x="322.4" y="114.3" font-size="13px" fill="#141413">念</text>
-<text x="322.4" y="148.3" font-size="13px" fill="#141413">图</text>
-<text x="322.4" y="182.3" font-size="13px" fill="#141413">估</text>
-<text x="322.4" y="216.3" font-size="13px" fill="#141413">划</text>
-<text x="322.4" y="267.3" font-size="13px" fill="#141413">术</text>
-<text x="322.4" y="301.3" font-size="13px" fill="#141413">验</text>
-<text x="332.0" y="114.3" font-size="13px" fill="#141413">与</text>
-<text x="332.0" y="267.3" font-size="13px" fill="#141413">债</text>
-<text x="332.0" y="301.3" font-size="13px" fill="#141413">证</text>
-<text x="341.6" y="80.3" font-size="13px" fill="#141413">(</text>
-<text x="341.6" y="114.3" font-size="13px" fill="#141413">原</text>
-<text x="341.6" y="267.3" font-size="13px" fill="#141413">务</text>
-<text x="341.6" y="301.3" font-size="13px" fill="#141413">工</text>
-<text x="351.2" y="80.3" font-size="13px" fill="#141413">~</text>
-<text x="351.2" y="114.3" font-size="13px" fill="#141413">则</text>
-<text x="351.2" y="301.3" font-size="13px" fill="#141413">具</text>
-<text x="360.8" y="80.3" font-size="13px" fill="#141413">1</text>
-<text x="370.4" y="80.3" font-size="13px" fill="#141413">0</text>
-<text x="380.0" y="80.3" font-size="13px" fill="#141413">0</text>
-<text x="389.6" y="80.3" font-size="13px" fill="#141413">行</text>
-<text x="399.2" y="80.3" font-size="13px" fill="#141413">)</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" style="font-family:&quot;Courier New&quot;,Courier,monospace;background:#faf9f5" viewBox="0 0 424 342">
+  <path fill="#faf9f5" d="M0 0h424v342H0z"/>
+  <text x="212" y="18" fill="#141413" font-size="12" font-weight="bold" text-anchor="middle">知识库目录结构</text>
+  <path stroke="#d1cfc5" stroke-linecap="round" stroke-width="1.5" d="M24.8 75.5h14.4m-14.4 17h14.4m-14.4 0V118m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-17v34m0-8.5h14.4m-14.4 0V254m4.8-173.7h19.2m-19.2 17h19.2m-19.2 187h19.2m14.4-174.8h14.4m-14.4 0V135m0-17v34m0-8.5h14.4m-14.4 0V169m0-25.5V118m0 34v34m0-8.5h14.4m-14.4 0V203m0-25.5V152m0 34v34m0-8.5h14.4m-14.4 0V237m0-25.5V186m0 34v34m0-17v34m0-8.5h14.4m-14.4 0V237m0 59.5h14.4M68 114.3h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 51h19.2m-19.2 34h19.2m14.4-174.8H116m-14.4 34H116m-14.4 34H116m-14.4 34H116m-14.4 0V254m0-8.5H116m-9.6-114.2h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2"/>
+  <text x="24.8" y="63.3" fill="#141413" font-size="13">r</text>
+  <text x="24.8" y="318.3" fill="#141413" font-size="13">`</text>
+  <text x="34.4" y="63.3" fill="#141413" font-size="13">e</text>
+  <text x="34.4" y="318.3" fill="#141413" font-size="13">`</text>
+  <text x="44" y="63.3" fill="#141413" font-size="13">p</text>
+  <text x="44" y="80.3" fill="#141413" font-size="13">─</text>
+  <text x="44" y="97.3" fill="#141413" font-size="13">─</text>
+  <text x="44" y="284.3" fill="#141413" font-size="13">─</text>
+  <text x="44" y="318.3" fill="#141413" font-size="13">`</text>
+  <text x="53.6" y="63.3" fill="#141413" font-size="13">o</text>
+  <text x="63.2" y="63.3" fill="#141413" font-size="13">s</text>
+  <text x="63.2" y="80.3" fill="#141413" font-size="13">A</text>
+  <text x="63.2" y="97.3" fill="#141413" font-size="13">d</text>
+  <text x="63.2" y="284.3" fill="#141413" font-size="13">.</text>
+  <text x="72.8" y="63.3" fill="#141413" font-size="13">i</text>
+  <text x="72.8" y="80.3" fill="#141413" font-size="13">G</text>
+  <text x="72.8" y="97.3" fill="#141413" font-size="13">o</text>
+  <text x="72.8" y="284.3" fill="#141413" font-size="13">c</text>
+  <text x="82.4" y="63.3" fill="#141413" font-size="13">t</text>
+  <text x="82.4" y="80.3" fill="#141413" font-size="13">E</text>
+  <text x="82.4" y="97.3" fill="#141413" font-size="13">c</text>
+  <text x="82.4" y="114.3" fill="#141413" font-size="13">─</text>
+  <text x="82.4" y="148.3" fill="#141413" font-size="13">─</text>
+  <text x="82.4" y="182.3" fill="#141413" font-size="13">─</text>
+  <text x="82.4" y="216.3" fill="#141413" font-size="13">─</text>
+  <text x="82.4" y="267.3" fill="#141413" font-size="13">─</text>
+  <text x="82.4" y="284.3" fill="#141413" font-size="13">i</text>
+  <text x="82.4" y="301.3" fill="#141413" font-size="13">─</text>
+  <text x="92" y="63.3" fill="#141413" font-size="13">o</text>
+  <text x="92" y="80.3" fill="#141413" font-size="13">N</text>
+  <text x="92" y="97.3" fill="#141413" font-size="13">s</text>
+  <text x="92" y="284.3" fill="#141413" font-size="13">/</text>
+  <text x="101.6" y="63.3" fill="#141413" font-size="13">r</text>
+  <text x="101.6" y="80.3" fill="#141413" font-size="13">T</text>
+  <text x="101.6" y="97.3" fill="#141413" font-size="13">/</text>
+  <text x="101.6" y="114.3" fill="#141413" font-size="13">b</text>
+  <text x="101.6" y="148.3" fill="#141413" font-size="13">a</text>
+  <text x="101.6" y="182.3" fill="#141413" font-size="13">q</text>
+  <text x="101.6" y="216.3" fill="#141413" font-size="13">p</text>
+  <text x="101.6" y="267.3" fill="#141413" font-size="13">d</text>
+  <text x="101.6" y="301.3" fill="#141413" font-size="13">k</text>
+  <text x="111.2" y="63.3" fill="#141413" font-size="13">y</text>
+  <text x="111.2" y="80.3" fill="#141413" font-size="13">S</text>
+  <text x="111.2" y="114.3" fill="#141413" font-size="13">e</text>
+  <text x="111.2" y="148.3" fill="#141413" font-size="13">r</text>
+  <text x="111.2" y="182.3" fill="#141413" font-size="13">u</text>
+  <text x="111.2" y="216.3" fill="#141413" font-size="13">l</text>
+  <text x="111.2" y="267.3" fill="#141413" font-size="13">e</text>
+  <text x="111.2" y="301.3" fill="#141413" font-size="13">n</text>
+  <text x="120.8" y="63.3" fill="#141413" font-size="13">/</text>
+  <text x="120.8" y="80.3" fill="#141413" font-size="13">.</text>
+  <text x="120.8" y="114.3" fill="#141413" font-size="13">l</text>
+  <text x="120.8" y="131.3" fill="#141413" font-size="13">─</text>
+  <text x="120.8" y="148.3" fill="#141413" font-size="13">c</text>
+  <text x="120.8" y="165.3" fill="#141413" font-size="13">─</text>
+  <text x="120.8" y="182.3" fill="#141413" font-size="13">a</text>
+  <text x="120.8" y="199.3" fill="#141413" font-size="13">─</text>
+  <text x="120.8" y="216.3" fill="#141413" font-size="13">a</text>
+  <text x="120.8" y="233.3" fill="#141413" font-size="13">─</text>
+  <text x="120.8" y="250.3" fill="#141413" font-size="13">─</text>
+  <text x="120.8" y="267.3" fill="#141413" font-size="13">b</text>
+  <text x="120.8" y="301.3" fill="#141413" font-size="13">o</text>
+  <text x="130.4" y="80.3" fill="#141413" font-size="13">m</text>
+  <text x="130.4" y="114.3" fill="#141413" font-size="13">i</text>
+  <text x="130.4" y="148.3" fill="#141413" font-size="13">h</text>
+  <text x="130.4" y="182.3" fill="#141413" font-size="13">l</text>
+  <text x="130.4" y="216.3" fill="#141413" font-size="13">n</text>
+  <text x="130.4" y="267.3" fill="#141413" font-size="13">t</text>
+  <text x="130.4" y="301.3" fill="#141413" font-size="13">w</text>
+  <text x="140" y="80.3" fill="#141413" font-size="13">d</text>
+  <text x="140" y="114.3" fill="#141413" font-size="13">e</text>
+  <text x="140" y="131.3" fill="#141413" font-size="13">验</text>
+  <text x="140" y="148.3" fill="#141413" font-size="13">i</text>
+  <text x="140" y="165.3" fill="#141413" font-size="13">领</text>
+  <text x="140" y="182.3" fill="#141413" font-size="13">i</text>
+  <text x="140" y="199.3" fill="#141413" font-size="13">各</text>
+  <text x="140" y="216.3" fill="#141413" font-size="13">s</text>
+  <text x="140" y="233.3" fill="#141413" font-size="13">a</text>
+  <text x="140" y="250.3" fill="#141413" font-size="13">c</text>
+  <text x="140" y="267.3" fill="#141413" font-size="13">/</text>
+  <text x="140" y="301.3" fill="#141413" font-size="13">l</text>
+  <text x="149.6" y="114.3" fill="#141413" font-size="13">f</text>
+  <text x="149.6" y="131.3" fill="#141413" font-size="13">证</text>
+  <text x="149.6" y="148.3" fill="#141413" font-size="13">t</text>
+  <text x="149.6" y="165.3" fill="#141413" font-size="13">域</text>
+  <text x="149.6" y="182.3" fill="#141413" font-size="13">t</text>
+  <text x="149.6" y="199.3" fill="#141413" font-size="13">领</text>
+  <text x="149.6" y="216.3" fill="#141413" font-size="13">/</text>
+  <text x="149.6" y="233.3" fill="#141413" font-size="13">c</text>
+  <text x="149.6" y="250.3" fill="#141413" font-size="13">o</text>
+  <text x="149.6" y="301.3" fill="#141413" font-size="13">e</text>
+  <text x="159.2" y="114.3" fill="#141413" font-size="13">s</text>
+  <text x="159.2" y="131.3" fill="#141413" font-size="13">状</text>
+  <text x="159.2" y="148.3" fill="#141413" font-size="13">e</text>
+  <text x="159.2" y="165.3" fill="#141413" font-size="13">与</text>
+  <text x="159.2" y="182.3" fill="#141413" font-size="13">y</text>
+  <text x="159.2" y="199.3" fill="#141413" font-size="13">域</text>
+  <text x="159.2" y="233.3" fill="#141413" font-size="13">t</text>
+  <text x="159.2" y="250.3" fill="#141413" font-size="13">m</text>
+  <text x="159.2" y="301.3" fill="#141413" font-size="13">d</text>
+  <text x="168.8" y="114.3" fill="#141413" font-size="13">/</text>
+  <text x="168.8" y="131.3" fill="#141413" font-size="13">态</text>
+  <text x="168.8" y="148.3" fill="#141413" font-size="13">c</text>
+  <text x="168.8" y="165.3" fill="#141413" font-size="13">包</text>
+  <text x="168.8" y="182.3" fill="#141413" font-size="13">/</text>
+  <text x="168.8" y="199.3" fill="#141413" font-size="13">健</text>
+  <text x="168.8" y="233.3" fill="#141413" font-size="13">i</text>
+  <text x="168.8" y="250.3" fill="#141413" font-size="13">p</text>
+  <text x="168.8" y="301.3" fill="#141413" font-size="13">g</text>
+  <text x="178.4" y="131.3" fill="#141413" font-size="13">追</text>
+  <text x="178.4" y="148.3" fill="#141413" font-size="13">t</text>
+  <text x="178.4" y="165.3" fill="#141413" font-size="13">分</text>
+  <text x="178.4" y="199.3" fill="#141413" font-size="13">康</text>
+  <text x="178.4" y="233.3" fill="#141413" font-size="13">v</text>
+  <text x="178.4" y="250.3" fill="#141413" font-size="13">l</text>
+  <text x="178.4" y="301.3" fill="#141413" font-size="13">e</text>
+  <text x="188" y="131.3" fill="#141413" font-size="13">踪</text>
+  <text x="188" y="148.3" fill="#141413" font-size="13">u</text>
+  <text x="188" y="165.3" fill="#141413" font-size="13">层</text>
+  <text x="188" y="199.3" fill="#141413" font-size="13">度</text>
+  <text x="188" y="233.3" fill="#141413" font-size="13">e</text>
+  <text x="188" y="250.3" fill="#141413" font-size="13">e</text>
+  <text x="188" y="301.3" fill="#141413" font-size="13">-</text>
+  <text x="197.6" y="148.3" fill="#141413" font-size="13">r</text>
+  <text x="197.6" y="233.3" fill="#141413" font-size="13">/</text>
+  <text x="197.6" y="250.3" fill="#141413" font-size="13">t</text>
+  <text x="197.6" y="301.3" fill="#141413" font-size="13">l</text>
+  <text x="207.2" y="148.3" fill="#141413" font-size="13">e</text>
+  <text x="207.2" y="250.3" fill="#141413" font-size="13">e</text>
+  <text x="207.2" y="301.3" fill="#141413" font-size="13">i</text>
+  <text x="216.8" y="148.3" fill="#141413" font-size="13">/</text>
+  <text x="216.8" y="250.3" fill="#141413" font-size="13">d</text>
+  <text x="216.8" y="301.3" fill="#141413" font-size="13">n</text>
+  <text x="226.4" y="250.3" fill="#141413" font-size="13">/</text>
+  <text x="226.4" y="301.3" fill="#141413" font-size="13">t</text>
+  <text x="236" y="301.3" fill="#141413" font-size="13">e</text>
+  <text x="245.6" y="301.3" fill="#141413" font-size="13">r</text>
+  <text x="255.2" y="301.3" fill="#141413" font-size="13">/</text>
+  <text x="274.4" y="114.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="148.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="182.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="216.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="233.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="250.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="267.3" fill="#87867f" font-size="11">#</text>
+  <text x="274.4" y="301.3" fill="#87867f" font-size="11">#</text>
+  <text x="284" y="80.3" fill="#87867f" font-size="11">#</text>
+  <text x="293.6" y="114.3" fill="#141413" font-size="13">核</text>
+  <text x="293.6" y="148.3" fill="#141413" font-size="13">架</text>
+  <text x="293.6" y="182.3" fill="#141413" font-size="13">质</text>
+  <text x="293.6" y="216.3" fill="#141413" font-size="13">执</text>
+  <text x="293.6" y="233.3" fill="#141413" font-size="13">进</text>
+  <text x="293.6" y="250.3" fill="#141413" font-size="13">已</text>
+  <text x="293.6" y="267.3" fill="#141413" font-size="13">已</text>
+  <text x="293.6" y="301.3" fill="#141413" font-size="13">知</text>
+  <text x="303.2" y="80.3" fill="#141413" font-size="13">入</text>
+  <text x="303.2" y="114.3" fill="#141413" font-size="13">心</text>
+  <text x="303.2" y="148.3" fill="#141413" font-size="13">构</text>
+  <text x="303.2" y="182.3" fill="#141413" font-size="13">量</text>
+  <text x="303.2" y="216.3" fill="#141413" font-size="13">行</text>
+  <text x="303.2" y="233.3" fill="#141413" font-size="13">行</text>
+  <text x="303.2" y="250.3" fill="#141413" font-size="13">完</text>
+  <text x="303.2" y="267.3" fill="#141413" font-size="13">知</text>
+  <text x="303.2" y="301.3" fill="#141413" font-size="13">识</text>
+  <text x="312.8" y="80.3" fill="#141413" font-size="13">口</text>
+  <text x="312.8" y="114.3" fill="#141413" font-size="13">信</text>
+  <text x="312.8" y="148.3" fill="#141413" font-size="13">地</text>
+  <text x="312.8" y="182.3" fill="#141413" font-size="13">评</text>
+  <text x="312.8" y="216.3" fill="#141413" font-size="13">计</text>
+  <text x="312.8" y="233.3" fill="#141413" font-size="13">中</text>
+  <text x="312.8" y="250.3" fill="#141413" font-size="13">成</text>
+  <text x="312.8" y="267.3" fill="#141413" font-size="13">技</text>
+  <text x="312.8" y="301.3" fill="#141413" font-size="13">库</text>
+  <text x="322.4" y="80.3" fill="#141413" font-size="13">点</text>
+  <text x="322.4" y="114.3" fill="#141413" font-size="13">念</text>
+  <text x="322.4" y="148.3" fill="#141413" font-size="13">图</text>
+  <text x="322.4" y="182.3" fill="#141413" font-size="13">估</text>
+  <text x="322.4" y="216.3" fill="#141413" font-size="13">划</text>
+  <text x="322.4" y="267.3" fill="#141413" font-size="13">术</text>
+  <text x="322.4" y="301.3" fill="#141413" font-size="13">验</text>
+  <text x="332" y="114.3" fill="#141413" font-size="13">与</text>
+  <text x="332" y="267.3" fill="#141413" font-size="13">债</text>
+  <text x="332" y="301.3" fill="#141413" font-size="13">证</text>
+  <text x="341.6" y="80.3" fill="#141413" font-size="13">(</text>
+  <text x="341.6" y="114.3" fill="#141413" font-size="13">原</text>
+  <text x="341.6" y="267.3" fill="#141413" font-size="13">务</text>
+  <text x="341.6" y="301.3" fill="#141413" font-size="13">工</text>
+  <text x="351.2" y="80.3" fill="#141413" font-size="13">~</text>
+  <text x="351.2" y="114.3" fill="#141413" font-size="13">则</text>
+  <text x="351.2" y="301.3" fill="#141413" font-size="13">具</text>
+  <text x="360.8" y="80.3" fill="#141413" font-size="13">1</text>
+  <text x="370.4" y="80.3" fill="#141413" font-size="13">0</text>
+  <text x="380" y="80.3" fill="#141413" font-size="13">0</text>
+  <text x="389.6" y="80.3" fill="#141413" font-size="13">行</text>
+  <text x="399.2" y="80.3" fill="#141413" font-size="13">)</text>
 </svg>

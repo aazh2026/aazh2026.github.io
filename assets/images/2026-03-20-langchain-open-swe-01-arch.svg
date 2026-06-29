@@ -1,56 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="'Courier New', monospace" font-size="15">
-  <rect width="640" height="300" fill="#FAF9F5"/>
-  <!-- Title bar -->
-  <rect x="0" y="0" width="640" height="36" fill="#141413"/>
-  <rect x="1" y="1" width="638" height="34" fill="#141413"/>
-  <text x="320" y="24" text-anchor="middle" fill="#FAF9F5" font-size="16" font-weight="bold" letter-spacing="4">open-swe 核心特性</text>
-
-  <!-- Header row -->
-  <rect x="0" y="36" width="640" height="30" fill="#D97757"/>
-  <rect x="1" y="37" width="638" height="28" fill="#D97757"/>
-  <rect x="321" y="36" width="1" height="30" fill="#141413"/>
-  <text x="162" y="56" text-anchor="middle" fill="#FAF9F5" font-size="14" font-weight="bold">特性</text>
-  <text x="480" y="56" text-anchor="middle" fill="#FAF9F5" font-size="14" font-weight="bold">说明</text>
-
-  <!-- Row 1 -->
-  <rect x="0" y="66" width="640" height="36" fill="#E3DACC"/>
-  <rect x="1" y="67" width="638" height="34" fill="#E3DACC"/>
-  <rect x="321" y="66" width="1" height="36" fill="#D1CFC5"/>
-  <text x="18" y="89" fill="#788C5D" font-size="14" font-weight="bold">✅ 异步执行</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace" font-size="15" viewBox="0 0 640 300">
+  <path fill="#faf9f5" d="M0 0h640v300H0z"/>
+  <path fill="#141413" d="M0 0h640v36H0z"/>
+  <path fill="#141413" d="M1 1h638v34H1z"/>
+  <text x="320" y="24" fill="#faf9f5" font-size="16" font-weight="bold" letter-spacing="4" text-anchor="middle">open-swe 核心特性</text>
+  <path fill="#d97757" d="M0 36h640v30H0z"/>
+  <path fill="#d97757" d="M1 37h638v28H1z"/>
+  <path fill="#141413" d="M321 36h1v30h-1z"/>
+  <text x="162" y="56" fill="#faf9f5" font-size="14" font-weight="bold" text-anchor="middle">特性</text>
+  <text x="480" y="56" fill="#faf9f5" font-size="14" font-weight="bold" text-anchor="middle">说明</text>
+  <path fill="#e3dacc" d="M0 66h640v36H0z"/>
+  <path fill="#e3dacc" d="M1 67h638v34H1z"/>
+  <path fill="#d1cfc5" d="M321 66h1v36h-1z"/>
+  <text x="18" y="89" fill="#788c5d" font-size="14" font-weight="bold">✅ 异步执行</text>
   <text x="337" y="89" fill="#141413" font-size="14">非阻塞 I/O，高并发</text>
-
-  <!-- Row 2 -->
-  <rect x="0" y="102" width="640" height="36" fill="#FAF9F5"/>
-  <rect x="1" y="103" width="638" height="34" fill="#FAF9F5"/>
-  <rect x="321" y="102" width="1" height="36" fill="#D1CFC5"/>
-  <text x="18" y="125" fill="#788C5D" font-size="14" font-weight="bold">✅ 代码生成</text>
+  <path fill="#faf9f5" d="M0 102h640v36H0z"/>
+  <path fill="#faf9f5" d="M1 103h638v34H1z"/>
+  <path fill="#d1cfc5" d="M321 102h1v36h-1z"/>
+  <text x="18" y="125" fill="#788c5d" font-size="14" font-weight="bold">✅ 代码生成</text>
   <text x="337" y="125" fill="#141413" font-size="14">多语言支持，上下文感知</text>
-
-  <!-- Row 3 -->
-  <rect x="0" y="138" width="640" height="36" fill="#E3DACC"/>
-  <rect x="1" y="139" width="638" height="34" fill="#E3DACC"/>
-  <rect x="321" y="138" width="1" height="36" fill="#D1CFC5"/>
-  <text x="18" y="161" fill="#788C5D" font-size="14" font-weight="bold">✅ 文件协调</text>
+  <path fill="#e3dacc" d="M0 138h640v36H0z"/>
+  <path fill="#e3dacc" d="M1 139h638v34H1z"/>
+  <path fill="#d1cfc5" d="M321 138h1v36h-1z"/>
+  <text x="18" y="161" fill="#788c5d" font-size="14" font-weight="bold">✅ 文件协调</text>
   <text x="337" y="161" fill="#141413" font-size="14">跨文件依赖分析</text>
-
-  <!-- Row 4 -->
-  <rect x="0" y="174" width="640" height="36" fill="#FAF9F5"/>
-  <rect x="1" y="175" width="638" height="34" fill="#FAF9F5"/>
-  <rect x="321" y="174" width="1" height="36" fill="#D1CFC5"/>
-  <text x="18" y="197" fill="#788C5D" font-size="14" font-weight="bold">✅ CI/CD 集成</text>
+  <path fill="#faf9f5" d="M0 174h640v36H0z"/>
+  <path fill="#faf9f5" d="M1 175h638v34H1z"/>
+  <path fill="#d1cfc5" d="M321 174h1v36h-1z"/>
+  <text x="18" y="197" fill="#788c5d" font-size="14" font-weight="bold">✅ CI/CD 集成</text>
   <text x="337" y="197" fill="#141413" font-size="14">自动化流水线</text>
-
-  <!-- Row 5 -->
-  <rect x="0" y="210" width="640" height="36" fill="#E3DACC"/>
-  <rect x="1" y="211" width="638" height="34" fill="#E3DACC"/>
-  <rect x="321" y="210" width="1" height="36" fill="#D1CFC5"/>
-  <text x="18" y="233" fill="#788C5D" font-size="14" font-weight="bold">✅ 可扩展</text>
+  <path fill="#e3dacc" d="M0 210h640v36H0z"/>
+  <path fill="#e3dacc" d="M1 211h638v34H1z"/>
+  <path fill="#d1cfc5" d="M321 210h1v36h-1z"/>
+  <text x="18" y="233" fill="#788c5d" font-size="14" font-weight="bold">✅ 可扩展</text>
   <text x="337" y="233" fill="#141413" font-size="14">插件化架构</text>
-
-  <!-- Border lines -->
-  <line x1="0" y1="36" x2="640" y2="36" stroke="#141413" stroke-width="2"/>
-  <line x1="321" y1="36" x2="321" y2="246" stroke="#141413" stroke-width="2"/>
-  <line x1="0" y1="246" x2="640" y2="246" stroke="#141413" stroke-width="2"/>
-  <line x1="1" y1="36" x2="1" y2="246" stroke="#141413" stroke-width="2"/>
-  <line x1="639" y1="36" x2="639" y2="246" stroke="#141413" stroke-width="2"/>
+  <path stroke="#141413" stroke-width="2" d="M0 36h640m-319 0v210M0 246h640M1 36v210M639 36v210"/>
 </svg>

@@ -1,135 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="依赖关系与关键路径">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="依赖关系与关键路径" viewBox="0 0 900 420">
   <title>Execution Plan 依赖管理与关键路径</title>
-  <desc>展示任务间的依赖关系、关键路径分析以及动态计划调整的流程</desc>
-
+  <desc>
+    展示任务间的依赖关系、关键路径分析以及动态计划调整的流程
+  </desc>
   <defs>
-    <filter id="shadow2" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+    <marker id="arr" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#d97757" d="m0 0 8 3-8 3z"/>
+    </marker>
+    <marker id="arrGray" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#d1cfc5" d="m0 0 8 3-8 3z"/>
+    </marker>
+    <filter id="shadow2" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".1" stdDeviation="3"/>
     </filter>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
-    </marker>
-    <marker id="arrGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
-    </marker>
   </defs>
-
-  <rect width="900" height="420" fill="#FAF9F5"/>
-
-  <!-- Title area -->
-  <text x="30" y="32" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413">依赖关系图</text>
-  <text x="30" y="50" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Finish-to-Start 依赖 · 红色箭头 = 关键路径</text>
-
-  <!-- Task boxes - row 1 -->
+  <path fill="#faf9f5" d="M0 0h900v420H0z"/>
+  <text x="30" y="32" fill="#141413" font-family="system-ui,sans-serif" font-size="14" font-weight="700">依赖关系图</text>
+  <text x="30" y="50" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">Finish-to-Start 依赖 · 红色箭头 = 关键路径</text>
   <g filter="url(#shadow2)">
-    <rect x="30" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <text x="90" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-001</text>
-    <text x="90" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Order Model</text>
-    <text x="90" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D" text-anchor="middle">Day 1-2 · 8h</text>
+    <rect width="120" height="55" x="30" y="65" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="6"/>
+    <text x="90" y="83" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle">TK-001</text>
+    <text x="90" y="98" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Order Model</text>
+    <text x="90" y="111" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Day 1-2 · 8h</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="195" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
-    <text x="255" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-002 ★</text>
-    <text x="255" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Order API</text>
-    <text x="255" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 2-4 · 12h</text>
+    <rect width="120" height="55" x="195" y="65" fill="#faf9f5" stroke="#d97757" stroke-width="2.5" rx="6"/>
+    <text x="255" y="83" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle">TK-002 ★</text>
+    <text x="255" y="98" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Order API</text>
+    <text x="255" y="111" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Day 2-4 · 12h</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="360" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <text x="420" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-003</text>
-    <text x="420" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Inventory</text>
-    <text x="420" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Day 2-3 · 8h</text>
+    <rect width="120" height="55" x="360" y="65" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+    <text x="420" y="83" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle">TK-003</text>
+    <text x="420" y="98" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Inventory</text>
+    <text x="420" y="111" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Day 2-3 · 8h</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="525" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
-    <text x="585" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-004 ★</text>
-    <text x="585" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Frontend</text>
-    <text x="585" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 4-6 · 16h</text>
+    <rect width="120" height="55" x="525" y="65" fill="#faf9f5" stroke="#d97757" stroke-width="2.5" rx="6"/>
+    <text x="585" y="83" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle">TK-004 ★</text>
+    <text x="585" y="98" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Frontend</text>
+    <text x="585" y="111" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Day 4-6 · 16h</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="690" y="65" width="120" height="55" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="2.5"/>
-    <text x="750" y="83" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#141413" text-anchor="middle">TK-005 ★</text>
-    <text x="750" y="98" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Integration</text>
-    <text x="750" y="111" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" text-anchor="middle">Day 6-7 · 8h</text>
+    <rect width="120" height="55" x="690" y="65" fill="#faf9f5" stroke="#d97757" stroke-width="2.5" rx="6"/>
+    <text x="750" y="83" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle">TK-005 ★</text>
+    <text x="750" y="98" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Integration</text>
+    <text x="750" y="111" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Day 6-7 · 8h</text>
   </g>
-
-  <!-- Arrows row 1 -->
-  <!-- TK-001 → TK-002 -->
-  <path d="M150 92 L195 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
-  <!-- TK-001 → TK-003 -->
-  <path d="M150 100 Q172 120 195 120 Q218 120 255 100" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrGray)"/>
-  <!-- TK-002 → TK-004 -->
-  <path d="M315 92 L360 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
-  <!-- TK-003 → TK-005 -->
-  <path d="M480 100 Q510 120 585 100" stroke="#D1CFC5" stroke-width="1.5" fill="none" marker-end="url(#arrGray)"/>
-  <!-- TK-004 → TK-005 -->
-  <path d="M645 92 L690 92" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr)"/>
-
-  <!-- Float tasks section label -->
-  <text x="30" y="148" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">浮时任务（可在关键路径延期时压缩）</text>
-
-  <!-- Float task boxes -->
+  <path stroke="#d97757" stroke-width="2.5" marker-end="url(#arr)" d="M150 92h45"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="1.5" marker-end="url(#arrGray)" d="M150 100q22 20 45 20t60-20"/>
+  <path stroke="#d97757" stroke-width="2.5" marker-end="url(#arr)" d="M315 92h45"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="1.5" marker-end="url(#arrGray)" d="M480 100q30 20 105 0"/>
+  <path stroke="#d97757" stroke-width="2.5" marker-end="url(#arr)" d="M645 92h45"/>
+  <text x="30" y="148" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">浮时任务（可在关键路径延期时压缩）</text>
   <g filter="url(#shadow2)">
-    <rect x="30" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
-    <text x="80" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-006</text>
-    <text x="80" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Coupon Logic</text>
-    <text x="80" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 2 days</text>
+    <rect width="100" height="45" x="30" y="158" fill="#faf9f5" stroke="#d1cfc5" stroke-dasharray="4,2" stroke-width="1.5" rx="6"/>
+    <text x="80" y="174" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="600" text-anchor="middle">TK-006</text>
+    <text x="80" y="187" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Coupon Logic</text>
+    <text x="80" y="198" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Float: 2 days</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="140" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
-    <text x="190" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-007</text>
-    <text x="190" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Discount Calc</text>
-    <text x="190" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 1.5 days</text>
+    <rect width="100" height="45" x="140" y="158" fill="#faf9f5" stroke="#d1cfc5" stroke-dasharray="4,2" stroke-width="1.5" rx="6"/>
+    <text x="190" y="174" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="600" text-anchor="middle">TK-007</text>
+    <text x="190" y="187" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Discount Calc</text>
+    <text x="190" y="198" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Float: 1.5 days</text>
   </g>
-
   <g filter="url(#shadow2)">
-    <rect x="250" y="158" width="100" height="45" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,2"/>
-    <text x="300" y="174" font-family="system-ui,sans-serif" font-size="9" font-weight="600" fill="#141413" text-anchor="middle">TK-008</text>
-    <text x="300" y="187" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Coupon UI</text>
-    <text x="300" y="198" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">Float: 1 day</text>
+    <rect width="100" height="45" x="250" y="158" fill="#faf9f5" stroke="#d1cfc5" stroke-dasharray="4,2" stroke-width="1.5" rx="6"/>
+    <text x="300" y="174" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="600" text-anchor="middle">TK-008</text>
+    <text x="300" y="187" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Coupon UI</text>
+    <text x="300" y="198" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Float: 1 day</text>
   </g>
-
-  <!-- Divider -->
-  <rect x="30" y="220" width="840" height="1" fill="#E3DACC"/>
-
-  <!-- Critical Path Summary -->
-  <text x="30" y="240" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413">关键路径分析</text>
-
+  <path fill="#e3dacc" d="M30 220h840v1H30z"/>
+  <text x="30" y="240" fill="#141413" font-family="system-ui,sans-serif" font-size="14" font-weight="700">关键路径分析</text>
   <g filter="url(#shadow2)">
-    <rect x="30" y="255" width="500" height="100" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="50" y="276" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">关键路径</text>
-    <text x="50" y="295" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">TK-001 → TK-002 → TK-004 → TK-005</text>
-    <text x="50" y="315" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Day 1 → Day 7</text>
-    <text x="50" y="335" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#D97757">总工期: 7 working days</text>
-
-    <!-- Mini timeline -->
-    <rect x="250" y="275" width="260" height="8" rx="4" fill="#E3DACC"/>
-    <rect x="250" y="275" width="250" height="8" rx="4" fill="#D97757"/>
-    <text x="250" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 1</text>
-    <text x="390" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 4</text>
-    <text x="500" y="298" font-family="system-ui,sans-serif" font-size="8" fill="#87867F">Day 7</text>
+    <rect width="500" height="100" x="30" y="255" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <text x="50" y="276" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">关键路径</text>
+    <text x="50" y="295" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">TK-001 → TK-002 → TK-004 → TK-005</text>
+    <text x="50" y="315" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">Day 1 → Day 7</text>
+    <text x="50" y="335" fill="#d97757" font-family="system-ui,sans-serif" font-size="12" font-weight="700">总工期: 7 working days</text>
+    <rect width="260" height="8" x="250" y="275" fill="#e3dacc" rx="4"/>
+    <rect width="250" height="8" x="250" y="275" fill="#d97757" rx="4"/>
+    <text x="250" y="298" fill="#87867f" font-family="system-ui,sans-serif" font-size="8">Day 1</text>
+    <text x="390" y="298" fill="#87867f" font-family="system-ui,sans-serif" font-size="8">Day 4</text>
+    <text x="500" y="298" fill="#87867f" font-family="system-ui,sans-serif" font-size="8">Day 7</text>
   </g>
-
-  <!-- Risk summary -->
   <g filter="url(#shadow2)">
-    <rect x="545" y="255" width="325" height="100" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="565" y="276" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">风险评估</text>
-
-    <circle cx="565" cy="295" r="5" fill="#D97757"/>
-    <text x="578" y="299" font-family="system-ui,sans-serif" font-size="9" fill="#141413">Inventory API 延期 (P:30%, Impact: High)</text>
-
-    <circle cx="565" cy="315" r="5" fill="#788C5D"/>
-    <text x="578" y="319" font-family="system-ui,sans-serif" font-size="9" fill="#141413">前端资源紧张 (P:20%, Impact: Medium)</text>
-
-    <circle cx="565" cy="335" r="5" fill="#87867F"/>
-    <text x="578" y="339" font-family="system-ui,sans-serif" font-size="9" fill="#141413">优惠券复杂度超预期 (P:40%, Impact: Medium)</text>
+    <rect width="325" height="100" x="545" y="255" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <text x="565" y="276" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">风险评估</text>
+    <circle cx="565" cy="295" r="5" fill="#d97757"/>
+    <text x="578" y="299" fill="#141413" font-family="system-ui,sans-serif" font-size="9">Inventory API 延期 (P:30%, Impact: High)</text>
+    <circle cx="565" cy="315" r="5" fill="#788c5d"/>
+    <text x="578" y="319" fill="#141413" font-family="system-ui,sans-serif" font-size="9">前端资源紧张 (P:20%, Impact: Medium)</text>
+    <circle cx="565" cy="335" r="5" fill="#87867f"/>
+    <text x="578" y="339" fill="#141413" font-family="system-ui,sans-serif" font-size="9">优惠券复杂度超预期 (P:40%, Impact: Medium)</text>
   </g>
-
-  <!-- Dynamic adjustment section -->
-  <rect x="30" y="370" width="840" height="1" fill="#E3DACC"/>
-  <text x="30" y="390" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">动态计划调整</text>
-  <text x="195" y="390" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">延期检测 → 影响分析 → 调整建议 → 自动更新
+  <path fill="#e3dacc" d="M30 370h840v1H30z"/>
+  <text x="30" y="390" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">动态计划调整</text>
+  <text x="195" y="390" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">延期检测 → 影响分析 → 调整建议 → 自动更新</text>
+</svg>

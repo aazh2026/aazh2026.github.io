@@ -1,109 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="编程三层次演进">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="编程三层次演进" viewBox="0 0 800 560">
   <title>编程的三个层次：从语法到意图</title>
-  <desc>传统编程 vs 自然语言编程的层次对比，展示人类与AI职责的转移</desc>
-
+  <desc>
+    传统编程 vs 自然语言编程的层次对比，展示人类与AI职责的转移
+  </desc>
   <defs>
-    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
-    </filter>
-    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#F0EFE9"/>
+    <linearGradient id="bgGrad2" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#f0efe9"/>
     </linearGradient>
-    <marker id="arrowHead" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    <marker id="arrowHead" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#d1cfc5" d="M0 0v6l8-3z"/>
     </marker>
+    <filter id="shadow2" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <rect width="800" height="560" fill="url(#bgGrad2)"/>
-
-  <!-- Title -->
-  <text x="400" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">编程的三个层次</text>
-  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F">From Syntax to Intent — The Paradigm Shift</text>
-
-  <!-- Three level cards -->
-  <!-- Level 1: 语法 -->
+  <path fill="url(#bgGrad2)" d="M0 0h800v560H0z"/>
+  <text x="400" y="42" fill="#141413" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">编程的三个层次</text>
+  <text x="400" y="66" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">From Syntax to Intent — The Paradigm Shift</text>
   <g filter="url(#shadow2)">
-    <rect x="60" y="100" width="220" height="180" rx="10" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect width="220" height="180" x="60" y="100" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="60" y="100" width="220" height="44" rx="10" fill="#D97757"/>
-  <rect x="60" y="126" width="220" height="18" fill="#D97757"/>
-  <text x="170" y="128" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Level 1</text>
-  <text x="170" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FAF9F5">语法 Syntax</text>
-  <text x="170" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">括号匹配</text>
-  <text x="170" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">变量命名</text>
-  <text x="170" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">类型使用</text>
-  <text x="170" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#788C5D">✅ AI 处理</text>
-  <text x="170" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">完全自动化</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="280" y1="190" x2="325" y2="190" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowHead)"/>
-
-  <!-- Level 2: 语义 -->
+  <rect width="220" height="44" x="60" y="100" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M60 126h220v18H60z"/>
+  <text x="170" y="128" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Level 1</text>
+  <text x="170" y="130" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">语法 Syntax</text>
+  <text x="170" y="162" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">括号匹配</text>
+  <text x="170" y="180" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">变量命名</text>
+  <text x="170" y="198" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">类型使用</text>
+  <text x="170" y="226" fill="#788c5d" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">✅ AI 处理</text>
+  <text x="170" y="244" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">完全自动化</text>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowHead)" d="M280 190h45"/>
   <g filter="url(#shadow2)">
-    <rect x="330" y="100" width="220" height="180" rx="10" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
+    <rect width="220" height="180" x="330" y="100" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="330" y="100" width="220" height="44" rx="10" fill="#D97757"/>
-  <rect x="330" y="126" width="220" height="18" fill="#D97757"/>
-  <text x="440" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FAF9F5">语义 Semantics</text>
-  <text x="440" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">逻辑正确性</text>
-  <text x="440" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">算法效率</text>
-  <text x="440" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">边界条件</text>
-  <text x="440" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#788C5D">✅ AI 处理</text>
-  <text x="440" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">大部分自动化</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="550" y1="190" x2="595" y2="190" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrowHead)"/>
-
-  <!-- Level 3: 意图 -->
+  <rect width="220" height="44" x="330" y="100" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M330 126h220v18H330z"/>
+  <text x="440" y="130" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">语义 Semantics</text>
+  <text x="440" y="162" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">逻辑正确性</text>
+  <text x="440" y="180" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">算法效率</text>
+  <text x="440" y="198" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">边界条件</text>
+  <text x="440" y="226" fill="#788c5d" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">✅ AI 处理</text>
+  <text x="440" y="244" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">大部分自动化</text>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrowHead)" d="M550 190h45"/>
   <g filter="url(#shadow2)">
-    <rect x="600" y="100" width="140" height="180" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="140" height="180" x="600" y="100" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
   </g>
-  <rect x="600" y="100" width="140" height="44" rx="10" fill="#141413"/>
-  <rect x="600" y="126" width="140" height="18" fill="#141413"/>
-  <text x="670" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#FAF9F5">意图 Intent</text>
-  <text x="670" y="162" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">解决什么问题</text>
-  <text x="670" y="180" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">为何如此解决</text>
-  <text x="670" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#141413">业务目标</text>
-  <text x="670" y="226" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#D97757">👤 人类专注</text>
-  <text x="670" y="244" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">核心价值所在</text>
-
-  <!-- Transition arrow label -->
-  <text x="670" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">关注点</text>
-
-  <!-- Paradigm shift section -->
-  <line x1="60" y1="310" x2="740" y2="310" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="6,4"/>
-
-  <!-- Traditional paradigm -->
-  <text x="170" y="338" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">传统编程</text>
+  <rect width="140" height="44" x="600" y="100" fill="#141413" rx="10"/>
+  <path fill="#141413" d="M600 126h140v18H600z"/>
+  <text x="670" y="130" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">意图 Intent</text>
+  <text x="670" y="162" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">解决什么问题</text>
+  <text x="670" y="180" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">为何如此解决</text>
+  <text x="670" y="198" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">业务目标</text>
+  <text x="670" y="226" fill="#d97757" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">👤 人类专注</text>
+  <text x="670" y="244" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">核心价值所在</text>
+  <text x="670" y="170" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">关注点</text>
+  <path stroke="#d1cfc5" stroke-dasharray="6,4" d="M60 310h680"/>
+  <text x="170" y="338" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">传统编程</text>
   <g filter="url(#shadow2)">
-    <rect x="70" y="350" width="200" height="80" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="200" height="80" x="70" y="350" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
   </g>
-  <text x="170" y="378" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">人类思维</text>
-  <text x="170" y="394" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">  ↓ 高成本翻译</text>
-  <text x="170" y="410" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">机器执行</text>
-
-  <!-- Arrow -->
-  <line x1="270" y1="390" x2="325" y2="390" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arrowHead)"/>
-
-  <!-- Post-code paradigm -->
-  <text x="530" y="338" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">后代码时代</text>
+  <text x="170" y="378" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">人类思维</text>
+  <text x="170" y="394" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">  ↓ 高成本翻译</text>
+  <text x="170" y="410" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">机器执行</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="2" marker-end="url(#arrowHead)" d="M270 390h55"/>
+  <text x="530" y="338" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">后代码时代</text>
   <g filter="url(#shadow2)">
-    <rect x="370" y="350" width="410" height="80" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="410" height="80" x="370" y="350" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
   </g>
-  <text x="480" y="374" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">人类意图</text>
-  <text x="480" y="390" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">  ↓ 直接表达</text>
-  <text x="560" y="374" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">AI 翻译</text>
-  <text x="560" y="390" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">  ↓ 自动化</text>
-  <text x="650" y="374" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">代码生成</text>
-  <text x="650" y="390" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">  ↓</text>
-  <text x="730" y="374" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">机器执行</text>
-  <text x="730" y="390" text-anchor="middle" font-family="monospace" font-size="11" fill="#87867F">  ↓</text>
-
-  <!-- Human role callout -->
+  <text x="480" y="374" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">人类意图</text>
+  <text x="480" y="390" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">  ↓ 直接表达</text>
+  <text x="560" y="374" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">AI 翻译</text>
+  <text x="560" y="390" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">  ↓ 自动化</text>
+  <text x="650" y="374" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">代码生成</text>
+  <text x="650" y="390" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">  ↓</text>
+  <text x="730" y="374" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">机器执行</text>
+  <text x="730" y="390" fill="#87867f" font-family="monospace" font-size="11" text-anchor="middle">  ↓</text>
   <g filter="url(#shadow2)">
-    <rect x="60" y="460" width="680" height="70" rx="8" fill="#E3DACC"/>
+    <rect width="680" height="70" x="60" y="460" fill="#e3dacc" rx="8"/>
   </g>
-  <text x="400" y="490" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#141413">👤 人类的新角色：意图架构师 Intent Architect</text>
-  <text x="400" y="512" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">清晰表达意图 · 验证 AI 结果 · 设计系统架构 · 把控业务目标</text>
+  <text x="400" y="490" fill="#141413" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">👤 人类的新角色：意图架构师 Intent Architect</text>
+  <text x="400" y="512" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">清晰表达意图 · 验证 AI 结果 · 设计系统架构 · 把控业务目标</text>
 </svg>

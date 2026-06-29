@@ -1,83 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" width="480" height="460">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .border { fill: none; stroke: #D97757; stroke-width: 2.5; }
-      .border-inner { fill: none; stroke: #D1CFC5; stroke-width: 1; }
-      .title-bg { fill: #D97757; }
-      .layer-bg-1 { fill: #E3DACC; }
-      .layer-bg-2 { fill: #FAF9F5; }
-      .layer-bg-3 { fill: #E3DACC; }
-      .title-text { fill: #FAF9F5; font-family: 'Courier New', monospace; font-size: 15px; font-weight: bold; }
-      .layer-title { fill: #141413; font-family: 'Courier New', monospace; font-size: 13px; font-weight: bold; }
-      .layer-bullet { fill: #87867F; font-family: 'Courier New', monospace; font-size: 11.5px; }
-      .header-line { fill: #87867F; font-family: 'Courier New', monospace; font-size: 10px; }
-      .corner { fill: #D97757; }
+      .border{fill:none;stroke:#d97757;stroke-width:2.5}.border-inner{fill:none;stroke:#d1cfc5;stroke-width:1}.layer-bullet,.layer-title{font-family:&quot;Courier New&quot;,monospace}.layer-title{fill:#141413;font-size:13px;font-weight:700}.layer-bullet{fill:#87867f;font-size:11.5px}.corner{fill:#d97757}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="480" height="460" class="bg"/>
-
-  <!-- Outer frame corners (simulating box-drawing characters) -->
-  <!-- Top-left corner -->
-  <rect x="14" y="14" width="8" height="8" rx="0" class="corner"/>
-  <!-- Top-right corner -->
-  <rect x="458" y="14" width="8" height="8" rx="0" class="corner"/>
-  <!-- Bottom-left corner -->
-  <rect x="14" y="438" width="8" height="8" rx="0" class="corner"/>
-  <!-- Bottom-right corner -->
-  <rect x="458" y="438" width="8" height="8" rx="0" class="corner"/>
-
-  <!-- Title box -->
-  <rect x="14" y="22" width="452" height="42" rx="3" class="title-bg"/>
-  <text x="240" y="50" text-anchor="middle" class="title-text">Codex Security 架构</text>
-
-  <!-- Separator 1 (after title) -->
-  <line x1="14" y1="68" x2="466" y2="68" class="border"/>
-
-  <!-- Layer 1 background -->
-  <rect x="14" y="72" width="452" height="108" rx="0" class="layer-bg-1"/>
-
-  <!-- Layer 1 title -->
+  <path d="M0 0h480v460H0z" style="fill:#faf9f5"/>
+  <rect width="8" height="8" x="14" y="14" class="corner" rx="0"/>
+  <rect width="8" height="8" x="458" y="14" class="corner" rx="0"/>
+  <rect width="8" height="8" x="14" y="438" class="corner" rx="0"/>
+  <rect width="8" height="8" x="458" y="438" class="corner" rx="0"/>
+  <rect width="452" height="42" x="14" y="22" rx="3" style="fill:#d97757"/>
+  <text x="240" y="50" style="fill:#faf9f5;font-family:&quot;Courier New&quot;,monospace;font-size:15px;font-weight:700" text-anchor="middle">Codex Security 架构</text>
+  <path d="M14 68h452" class="border"/>
+  <rect width="452" height="108" x="14" y="72" rx="0" style="fill:#e3dacc"/>
   <text x="30" y="96" class="layer-title">第一层：数据流分析（静态）</text>
-
-  <!-- Layer 1 bullets -->
   <text x="42" y="118" class="layer-bullet">- 追踪用户输入到危险操作的完整路径</text>
   <text x="42" y="136" class="layer-bullet">- 识别潜在的污染数据流</text>
-
-  <!-- Separator 2 -->
-  <line x1="14" y1="184" x2="466" y2="184" class="border-inner"/>
-
-  <!-- Layer 2 background -->
-  <rect x="14" y="188" width="452" height="108" rx="0" class="layer-bg-2"/>
-
-  <!-- Layer 2 title -->
+  <path d="M14 184h452" class="border-inner"/>
+  <rect width="452" height="108" x="14" y="188" rx="0" style="fill:#faf9f5"/>
   <text x="30" y="212" class="layer-title">第二层：约束推理（AI）</text>
-
-  <!-- Layer 2 bullets -->
   <text x="42" y="234" class="layer-bullet">- 理解代码语义和意图</text>
   <text x="42" y="252" class="layer-bullet">- 判断数据流是否真正危险</text>
-
-  <!-- Separator 3 -->
-  <line x1="14" y1="300" x2="466" y2="300" class="border-inner"/>
-
-  <!-- Layer 3 background -->
-  <rect x="14" y="304" width="452" height="108" rx="0" class="layer-bg-3"/>
-
-  <!-- Layer 3 title -->
+  <path d="M14 300h452" class="border-inner"/>
+  <rect width="452" height="108" x="14" y="304" rx="0" style="fill:#e3dacc"/>
   <text x="30" y="328" class="layer-title">第三层：动态验证（执行）</text>
-
-  <!-- Layer 3 bullets -->
   <text x="42" y="350" class="layer-bullet">- 验证漏洞是否真实可利用</text>
   <text x="42" y="368" class="layer-bullet">- 生成 PoC 证明可行性</text>
-
-  <!-- Bottom border -->
-  <line x1="14" y1="416" x2="466" y2="416" class="border"/>
-
-  <!-- Outer frame lines (thin) -->
-  <line x1="22" y1="14" x2="458" y2="14" stroke="#D97757" stroke-width="2.5"/>
-  <line x1="22" y1="438" x2="458" y2="438" stroke="#D97757" stroke-width="2.5"/>
-  <line x1="14" y1="22" x2="14" y2="416" stroke="#D97757" stroke-width="2.5"/>
-  <line x1="466" y1="22" x2="466" y2="416" stroke="#D97757" stroke-width="2.5"/>
+  <path d="M14 416h452" class="border"/>
+  <path stroke="#d97757" stroke-width="2.5" d="M22 14h436M22 438h436M14 22v394M466 22v394"/>
 </svg>

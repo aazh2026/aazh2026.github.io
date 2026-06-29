@@ -1,145 +1,91 @@
-<svg viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 900 420">
   <title>AI-Native UX/UI 工作流 vs 传统工作流对比</title>
-  <desc>左侧展示传统 UX/UI 工作流的线性流程：像素→布局→规格→代码→QA，右侧展示 AI-Native 意图驱动工作流，以及两者之间的转变</desc>
-
-  <!-- Background -->
-  <rect width="900" height="420" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="450" y="26" text-anchor="middle" font-size="15" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native UX/UI 设计工作流</text>
-  <text x="450" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">意图驱动 vs 像素驱动</text>
-
-  <!-- Divider: center arrow -->
-  <line x1="448" y1="80" x2="452" y2="80" stroke="#D97757" stroke-width="2"/>
-  <text x="450" y="96" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">意图驱动</text>
-
-  <!-- Left Panel: 传统 UX/UI 工作流 -->
-  <rect x="30" y="72" width="400" height="300" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <text x="230" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">传统 UX/UI 工作流</text>
-
-  <!-- Traditional pipeline nodes -->
-  <rect x="55" y="120" width="80" height="44" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="95" y="138" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">像素调整</text>
-  <text x="95" y="154" text-anchor="middle" font-size="11" fill="#141413">像素→布局</text>
-
-  <line x1="135" y1="142" x2="148" y2="142" stroke="#D1CFC5" stroke-width="1.5" marker-end="url(#arrow)"/>
-
-  <rect x="155" y="120" width="80" height="44" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="195" y="138" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">布局设计</text>
-  <text x="195" y="154" text-anchor="middle" font-size="11" fill="#141413">出设计稿</text>
-
-  <line x1="235" y1="142" x2="248" y2="142" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="255" y="120" width="80" height="44" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="295" y="138" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">标注说明</text>
-  <text x="295" y="154" text-anchor="middle" font-size="11" fill="#141413">写设计规范</text>
-
-  <line x1="335" y1="142" x2="348" y2="142" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="355" y="120" width="60" height="44" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="385" y="138" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">开发</text>
-  <text x="385" y="154" text-anchor="middle" font-size="11" fill="#141413">实现</text>
-
-  <!-- Human icons (stick figures) in traditional workflow -->
-  <g transform="translate(55, 178)">
-    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="18" x2="15" y2="38" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="5" y1="26" x2="25" y2="26" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="5" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="25" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <text x="15" y="68" text-anchor="middle" font-size="8" fill="#87867F">设计师</text>
+  <desc>
+    左侧展示传统 UX/UI 工作流的线性流程：像素→布局→规格→代码→QA，右侧展示 AI-Native 意图驱动工作流，以及两者之间的转变
+  </desc>
+  <path fill="#faf9f5" d="M0 0h900v420H0z"/>
+  <text x="450" y="26" fill="#141413" font-size="15" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI-Native UX/UI 设计工作流</text>
+  <text x="450" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">意图驱动 vs 像素驱动</text>
+  <path stroke="#d97757" stroke-width="2" d="M448 80h4"/>
+  <text x="450" y="96" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">意图驱动</text>
+  <rect width="400" height="300" x="30" y="72" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <text x="230" y="100" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">传统 UX/UI 工作流</text>
+  <rect width="80" height="44" x="55" y="120" fill="#f5f3ee" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="95" y="138" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">像素调整</text>
+  <text x="95" y="154" fill="#141413" font-size="11" text-anchor="middle">像素→布局</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" marker-end="url(#arrow)" d="M135 142h13"/>
+  <rect width="80" height="44" x="155" y="120" fill="#f5f3ee" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="195" y="138" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">布局设计</text>
+  <text x="195" y="154" fill="#141413" font-size="11" text-anchor="middle">出设计稿</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M235 142h13"/>
+  <rect width="80" height="44" x="255" y="120" fill="#f5f3ee" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="295" y="138" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">标注说明</text>
+  <text x="295" y="154" fill="#141413" font-size="11" text-anchor="middle">写设计规范</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M335 142h13"/>
+  <rect width="60" height="44" x="355" y="120" fill="#f5f3ee" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="385" y="138" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">开发</text>
+  <text x="385" y="154" fill="#141413" font-size="11" text-anchor="middle">实现</text>
+  <g transform="translate(55 178)">
+    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867f" stroke-width="1.5"/>
+    <path stroke="#87867f" stroke-width="1.5" d="M15 18v20M5 26h20M15 38 5 55m10-17 10 17"/>
+    <text x="15" y="68" fill="#87867f" font-size="8" text-anchor="middle">设计师</text>
   </g>
-
-  <g transform="translate(195, 178)">
-    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="18" x2="15" y2="38" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="5" y1="26" x2="25" y2="26" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="5" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="25" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <text x="15" y="68" text-anchor="middle" font-size="8" fill="#87867F">设计师</text>
+  <g transform="translate(195 178)">
+    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867f" stroke-width="1.5"/>
+    <path stroke="#87867f" stroke-width="1.5" d="M15 18v20M5 26h20M15 38 5 55m10-17 10 17"/>
+    <text x="15" y="68" fill="#87867f" font-size="8" text-anchor="middle">设计师</text>
   </g>
-
-  <g transform="translate(295, 178)">
-    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="18" x2="15" y2="38" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="5" y1="26" x2="25" y2="26" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="5" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <line x1="15" y1="38" x2="25" y2="55" stroke="#87867F" stroke-width="1.5"/>
-    <text x="15" y="68" text-anchor="middle" font-size="8" fill="#87867F">开发者</text>
+  <g transform="translate(295 178)">
+    <circle cx="15" cy="10" r="8" fill="none" stroke="#87867f" stroke-width="1.5"/>
+    <path stroke="#87867f" stroke-width="1.5" d="M15 18v20M5 26h20M15 38 5 55m10-17 10 17"/>
+    <text x="15" y="68" fill="#87867f" font-size="8" text-anchor="middle">开发者</text>
   </g>
-
-  <!-- QA note under traditional -->
-  <text x="230" y="300" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">↑ 手动同步 · 版本迭代 · 沟通损耗</text>
-
-  <!-- Time breakdown -->
-  <rect x="55" y="312" width="360" height="50" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="100" y="330" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">60%</text>
-  <text x="100" y="344" text-anchor="middle" font-size="8" fill="#87867F">重复操作</text>
-  <text x="220" y="330" text-anchor="middle" font-size="10" fill="#141413" font-family="ui-monospace, monospace">25%</text>
-  <text x="220" y="344" text-anchor="middle" font-size="8" fill="#87867F">版本同步</text>
-  <text x="340" y="330" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">15%</text>
-  <text x="340" y="344" text-anchor="middle" font-size="8" fill="#87867F">创造性思考</text>
-
-  <!-- Right Panel: AI-Native UX/UI 工作流 -->
-  <rect x="470" y="72" width="400" height="300" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
-
-  <text x="670" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">AI-Native UX/UI 工作流</text>
-
-  <!-- AI-Native pipeline nodes -->
-  <rect x="495" y="118" width="90" height="50" rx="8" fill="#D97757" fill-opacity="0.12" stroke="#D97757" stroke-width="1.8"/>
-  <text x="540" y="138" text-anchor="middle" font-size="11" fill="#141413">意图描述</text>
-  <text x="540" y="154" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Intent Input</text>
-
-  <line x1="585" y1="143" x2="598" y2="143" stroke="#D97757" stroke-width="2"/>
-
-  <rect x="605" y="118" width="90" height="50" rx="8" fill="#D97757" fill-opacity="0.12" stroke="#D97757" stroke-width="1.8"/>
-  <text x="650" y="138" text-anchor="middle" font-size="11" fill="#141413">AI 生成</text>
-  <text x="650" y="154" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">多方案输出</text>
-
-  <line x1="695" y1="143" x2="708" y2="143" stroke="#788C5D" stroke-width="2"/>
-
-  <rect x="715" y="118" width="90" height="50" rx="8" fill="#788C5D" fill-opacity="0.12" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="760" y="138" text-anchor="middle" font-size="11" fill="#141413">评估筛选</text>
-  <text x="760" y="154" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">A/B 建议</text>
-
-  <line x1="805" y1="143" x2="818" y2="143" stroke="#788C5D" stroke-width="2"/>
-
-  <rect x="825" y="118" width="45" height="50" rx="8" fill="#788C5D" fill-opacity="0.12" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="847" y="138" text-anchor="middle" font-size="11" fill="#141413">发布</text>
-  <text x="847" y="154" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">Ship</text>
-
-  <!-- Human overseer icon (smaller, above) -->
-  <g transform="translate(670, 180)">
-    <circle cx="15" cy="10" r="7" fill="none" stroke="#D97757" stroke-width="1.5"/>
-    <line x1="15" y1="17" x2="15" y2="34" stroke="#D97757" stroke-width="1.5"/>
-    <line x1="7" y1="24" x2="23" y2="24" stroke="#D97757" stroke-width="1.5"/>
-    <line x1="15" y1="34" x2="8" y2="48" stroke="#D97757" stroke-width="1.5"/>
-    <line x1="15" y1="34" x2="22" y2="48" stroke="#D97757" stroke-width="1.5"/>
-    <text x="15" y="62" text-anchor="middle" font-size="8" fill="#D97757">设计师=审核者</text>
+  <text x="230" y="300" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">↑ 手动同步 · 版本迭代 · 沟通损耗</text>
+  <rect width="360" height="50" x="55" y="312" fill="#f5f3ee" stroke="#d1cfc5" rx="6"/>
+  <text x="100" y="330" fill="#141413" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">60%</text>
+  <text x="100" y="344" fill="#87867f" font-size="8" text-anchor="middle">重复操作</text>
+  <text x="220" y="330" fill="#141413" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">25%</text>
+  <text x="220" y="344" fill="#87867f" font-size="8" text-anchor="middle">版本同步</text>
+  <text x="340" y="330" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">15%</text>
+  <text x="340" y="344" fill="#87867f" font-size="8" text-anchor="middle">创造性思考</text>
+  <rect width="400" height="300" x="470" y="72" fill="#fff" stroke="#788c5d" stroke-width="2" rx="10"/>
+  <text x="670" y="100" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">AI-Native UX/UI 工作流</text>
+  <rect width="90" height="50" x="495" y="118" fill="#d97757" fill-opacity=".12" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="540" y="138" fill="#141413" font-size="11" text-anchor="middle">意图描述</text>
+  <text x="540" y="154" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">Intent Input</text>
+  <path stroke="#d97757" stroke-width="2" d="M585 143h13"/>
+  <rect width="90" height="50" x="605" y="118" fill="#d97757" fill-opacity=".12" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="650" y="138" fill="#141413" font-size="11" text-anchor="middle">AI 生成</text>
+  <text x="650" y="154" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">多方案输出</text>
+  <path stroke="#788c5d" stroke-width="2" d="M695 143h13"/>
+  <rect width="90" height="50" x="715" y="118" fill="#788c5d" fill-opacity=".12" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="760" y="138" fill="#141413" font-size="11" text-anchor="middle">评估筛选</text>
+  <text x="760" y="154" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">A/B 建议</text>
+  <path stroke="#788c5d" stroke-width="2" d="M805 143h13"/>
+  <rect width="45" height="50" x="825" y="118" fill="#788c5d" fill-opacity=".12" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="847" y="138" fill="#141413" font-size="11" text-anchor="middle">发布</text>
+  <text x="847" y="154" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">Ship</text>
+  <g transform="translate(670 180)">
+    <circle cx="15" cy="10" r="7" fill="none" stroke="#d97757" stroke-width="1.5"/>
+    <path stroke="#d97757" stroke-width="1.5" d="M15 17v17M7 24h16m-8 10L8 48m7-14 7 14"/>
+    <text x="15" y="62" fill="#d97757" font-size="8" text-anchor="middle">设计师=审核者</text>
   </g>
-
-  <!-- AI badge -->
-  <rect x="700" y="252" width="80" height="28" rx="14" fill="#D97757"/>
-  <text x="740" y="271" text-anchor="middle" font-size="13" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="700">21×</text>
-  <text x="740" y="286" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">速度提升</text>
-
-  <text x="670" y="312" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">意图驱动 · AI 执行细节 · 设计师专注决策</text>
-
-  <!-- Legend -->
-  <rect x="495" y="330" width="360" height="34" rx="6" fill="#F5F3EE" stroke="#D1CFC5" stroke-width="1"/>
-  <circle cx="518" cy="347" r="5" fill="#D97757"/>
-  <text x="530" y="351" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">人类主导</text>
-  <circle cx="610" cy="347" r="5" fill="#788C5D"/>
-  <text x="622" y="351" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI 执行</text>
-  <circle cx="700" cy="347" r="5" fill="#D1CFC5" stroke="#87867F" stroke-width="1"/>
-  <text x="712" y="351" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">自动流程</text>
-  <line x1="770" y1="347" x2="790" y2="347" stroke="#D97757" stroke-width="2"/>
-  <text x="798" y="351" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">核心转变</text>
-
+  <rect width="80" height="28" x="700" y="252" fill="#d97757" rx="14"/>
+  <text x="740" y="271" fill="#fff" font-family="ui-monospace, monospace" font-size="13" font-weight="700" text-anchor="middle">21×</text>
+  <text x="740" y="286" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">速度提升</text>
+  <text x="670" y="312" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">意图驱动 · AI 执行细节 · 设计师专注决策</text>
+  <rect width="360" height="34" x="495" y="330" fill="#f5f3ee" stroke="#d1cfc5" rx="6"/>
+  <circle cx="518" cy="347" r="5" fill="#d97757"/>
+  <text x="530" y="351" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">人类主导</text>
+  <circle cx="610" cy="347" r="5" fill="#788c5d"/>
+  <text x="622" y="351" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">AI 执行</text>
+  <circle cx="700" cy="347" r="5" fill="#d1cfc5" stroke="#87867f"/>
+  <text x="712" y="351" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">自动流程</text>
+  <path stroke="#d97757" stroke-width="2" d="M770 347h20"/>
+  <text x="798" y="351" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">核心转变</text>
   <defs>
-    <marker id="arrow" markerWidth="6" markerHeight="6" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6" fill="#D1CFC5"/>
+    <marker id="arrow" markerHeight="6" markerWidth="6" orient="auto" refX="6" refY="3">
+      <path fill="#d1cfc5" d="m0 0 6 3-6 3"/>
     </marker>
   </defs>
 </svg>

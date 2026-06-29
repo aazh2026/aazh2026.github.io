@@ -1,122 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" role="img" aria-label="技术债务 vs 认知债务">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="技术债务 vs 认知债务" viewBox="0 0 800 480">
   <title>认知债务：AI时代的代码理解危机</title>
-  <desc>技术债务是代码的问题，认知债务是你的问题——两者在AI时代的对比</desc>
-
+  <desc>
+    技术债务是代码的问题，认知债务是你的问题——两者在AI时代的对比
+  </desc>
   <defs>
-    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC" stop-opacity="0.4"/>
+    <linearGradient id="bg2" x1="0" x2="1" y1="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc" stop-opacity=".4"/>
     </linearGradient>
-    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.1"/>
+    <filter id="shadow2" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".1" stdDeviation="5"/>
     </filter>
   </defs>
-
   <rect width="800" height="480" fill="url(#bg2)" rx="16"/>
-
-  <!-- Title -->
-  <text x="400" y="36" font-family="Georgia, serif" font-size="14" fill="#141413" text-anchor="middle" font-weight="bold" letter-spacing="1">技术债务 vs 认知债务</text>
-  <line x1="200" y1="50" x2="600" y2="50" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- ========== LEFT CARD: 技术债务 ========== -->
+  <text x="400" y="36" fill="#141413" font-family="Georgia, serif" font-size="14" font-weight="bold" letter-spacing="1" text-anchor="middle">技术债务 vs 认知债务</text>
+  <path stroke="#d1cfc5" d="M200 50h400"/>
   <g filter="url(#shadow2)">
-    <rect x="32" y="68" width="348" height="360" rx="14" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="348" height="360" x="32" y="68" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="14"/>
   </g>
-
-  <!-- Header -->
-  <rect x="32" y="68" width="348" height="52" rx="14" fill="#87867F"/>
-  <rect x="32" y="100" width="348" height="20" fill="#87867F"/>
-  <text x="206" y="98" font-family="Georgia, serif" font-size="17" fill="#FAF9F5" text-anchor="middle" font-weight="bold">技术债务</text>
-  <text x="206" y="114" font-family="system-ui, sans-serif" font-size="10" fill="#e0e0dc" text-anchor="middle">Technical Debt · 代码质量差、设计糟糕</text>
-
-  <!-- Visual: tangled code -->
-  <g transform="translate(206, 195)">
-    <rect x="-80" y="-50" width="160" height="100" rx="8" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="1"/>
-    <!-- messy code lines -->
-    <line x1="-64" y1="-30" x2="20" y2="-30" stroke="#D97757" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-    <line x1="-64" y1="-20" x2="50" y2="-20" stroke="#87867F" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-    <line x1="-64" y1="-10" x2="35" y2="-10" stroke="#D97757" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-    <line x1="-64" y1="0"  x2="-10" y2="0"  stroke="#D97757" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
-    <line x1="-64" y1="10" x2="55" y2="10"  stroke="#87867F" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
-    <line x1="-64" y1="20" x2="25" y2="20"  stroke="#D97757" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
-    <line x1="-64" y1="30" x2="60" y2="30"  stroke="#D97757" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
-    <!-- warning icon -->
-    <polygon points="0,-58 14,-38 -14,-38" fill="none" stroke="#D97757" stroke-width="1.5" stroke-linejoin="round"/>
-    <text x="0" y="-42" font-family="system-ui, sans-serif" font-size="13" fill="#D97757" text-anchor="middle" font-weight="bold">!</text>
+  <rect width="348" height="52" x="32" y="68" fill="#87867f" rx="14"/>
+  <path fill="#87867f" d="M32 100h348v20H32z"/>
+  <text x="206" y="98" fill="#faf9f5" font-family="Georgia, serif" font-size="17" font-weight="bold" text-anchor="middle">技术债务</text>
+  <text x="206" y="114" fill="#e0e0dc" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Technical Debt · 代码质量差、设计糟糕</text>
+  <g transform="translate(206 195)">
+    <rect width="160" height="100" x="-80" y="-50" fill="#f5f4f0" stroke="#d1cfc5" rx="8"/>
+    <path stroke="#d97757" stroke-linecap="round" stroke-width="2.5" d="M-64-30h84" opacity=".7"/>
+    <path stroke="#87867f" stroke-linecap="round" stroke-width="2" d="M-64-20H50" opacity=".5"/>
+    <path stroke="#d97757" stroke-linecap="round" stroke-width="2" d="M-64-10h99" opacity=".6"/>
+    <path stroke="#d97757" stroke-linecap="round" stroke-width="2.5" d="M-64 0h54" opacity=".8"/>
+    <path stroke="#87867f" stroke-linecap="round" stroke-width="2" d="M-64 10H55" opacity=".5"/>
+    <path stroke="#d97757" stroke-linecap="round" stroke-width="2" d="M-64 20h89" opacity=".6"/>
+    <path stroke="#d97757" stroke-linecap="round" stroke-width="2.5" d="M-64 30H60" opacity=".7"/>
+    <path fill="none" stroke="#d97757" stroke-linejoin="round" stroke-width="1.5" d="m0-58 14 20h-28z"/>
+    <text y="-42" fill="#d97757" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">!</text>
   </g>
-
-  <!-- Characteristics table -->
-  <g font-family="system-ui, sans-serif" font-size="12.5" fill="#141413">
-    <rect x="50" y="268" width="8" height="8" rx="2" fill="#87867F"/>
+  <g fill="#141413" font-family="system-ui, sans-serif" font-size="12.5">
+    <rect width="8" height="8" x="50" y="268" fill="#87867f" rx="2"/>
     <text x="66" y="277">本质：代码的问题</text>
-
-    <rect x="50" y="292" width="8" height="8" rx="2" fill="#87867F"/>
+    <rect width="8" height="8" x="50" y="292" fill="#87867f" rx="2"/>
     <text x="66" y="301">解决：重构、重写</text>
-
-    <rect x="50" y="316" width="8" height="8" rx="2" fill="#87867F"/>
+    <rect width="8" height="8" x="50" y="316" fill="#87867f" rx="2"/>
     <text x="66" y="325">检测：工具可发现</text>
-
-    <rect x="50" y="340" width="8" height="8" rx="2" fill="#87867F"/>
+    <rect width="8" height="8" x="50" y="340" fill="#87867f" rx="2"/>
     <text x="66" y="349">影响：拖慢开发速度</text>
-
-    <rect x="50" y="364" width="8" height="8" rx="2" fill="#87867F"/>
+    <rect width="8" height="8" x="50" y="364" fill="#87867f" rx="2"/>
     <text x="66" y="373">偿还：可规划、可计量</text>
   </g>
-
-  <!-- ========== CENTER DIVIDER ========== -->
-  <line x1="400" y1="88" x2="400" y2="408" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="400" y="248" font-family="Georgia, serif" font-size="11" fill="#87867F" text-anchor="middle" transform="rotate(-90,400,248)">VS</text>
-
-  <!-- ========== RIGHT CARD: 认知债务 ========== -->
+  <path stroke="#d1cfc5" stroke-dasharray="6,4" stroke-width="1.5" d="M400 88v320"/>
+  <text x="400" y="248" fill="#87867f" font-family="Georgia, serif" font-size="11" text-anchor="middle" transform="rotate(-90 400 248)">VS</text>
   <g filter="url(#shadow2)">
-    <rect x="420" y="68" width="348" height="360" rx="14" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
+    <rect width="348" height="360" x="420" y="68" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="14"/>
   </g>
-
-  <!-- Header -->
-  <rect x="420" y="68" width="348" height="52" rx="14" fill="#D97757"/>
-  <rect x="420" y="100" width="348" height="20" fill="#D97757"/>
-  <text x="594" y="98" font-family="Georgia, serif" font-size="17" fill="#FAF9F5" text-anchor="middle" font-weight="bold">认知债务</text>
-  <text x="594" y="114" font-family="system-ui, sans-serif" font-size="10" fill="#fde8e0" text-anchor="middle">Cognitive Debt · 代码看起来 OK，但不知道它怎么工作</text>
-
-  <!-- Visual: clean code but hidden question marks -->
-  <g transform="translate(594, 195)">
-    <rect x="-80" y="-50" width="160" height="100" rx="8" fill="#F5F4F0" stroke="#D1CFC5" stroke-width="1"/>
-    <!-- clean code lines -->
-    <line x1="-64" y1="-30" x2="55" y2="-30" stroke="#788C5D" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="-64" y1="-20" x2="50" y2="-20" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
-    <line x1="-64" y1="-10" x2="35" y2="-10" stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
-    <line x1="-64" y1="0"  x2="60" y2="0"  stroke="#788C5D" stroke-width="2.5" stroke-linecap="round"/>
-    <line x1="-64" y1="10" x2="55" y2="10"  stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
-    <line x1="-64" y1="20" x2="25" y2="20"  stroke="#788C5D" stroke-width="2" stroke-linecap="round"/>
-    <line x1="-64" y1="30" x2="60" y2="30"  stroke="#788C5D" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- question marks floating -->
-    <text x="-50" y="-55" font-family="Georgia, serif" font-size="18" fill="#D97757" opacity="0.6">?</text>
-    <text x="40"  y="-40" font-family="Georgia, serif" font-size="14" fill="#D97757" opacity="0.5">?</text>
-    <text x="-20" y="50"  font-family="Georgia, serif" font-size="16" fill="#D97757" opacity="0.6">?</text>
+  <rect width="348" height="52" x="420" y="68" fill="#d97757" rx="14"/>
+  <path fill="#d97757" d="M420 100h348v20H420z"/>
+  <text x="594" y="98" fill="#faf9f5" font-family="Georgia, serif" font-size="17" font-weight="bold" text-anchor="middle">认知债务</text>
+  <text x="594" y="114" fill="#fde8e0" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Cognitive Debt · 代码看起来 OK，但不知道它怎么工作</text>
+  <g transform="translate(594 195)">
+    <rect width="160" height="100" x="-80" y="-50" fill="#f5f4f0" stroke="#d1cfc5" rx="8"/>
+    <path stroke="#788c5d" stroke-linecap="round" stroke-width="2.5" d="M-64-30H55"/>
+    <path stroke="#788c5d" stroke-linecap="round" stroke-width="2" d="M-64-20H50M-64-10h99"/>
+    <path stroke="#788c5d" stroke-linecap="round" stroke-width="2.5" d="M-64 0H60"/>
+    <path stroke="#788c5d" stroke-linecap="round" stroke-width="2" d="M-64 10H55M-64 20h89"/>
+    <path stroke="#788c5d" stroke-linecap="round" stroke-width="2.5" d="M-64 30H60"/>
+    <text x="-50" y="-55" fill="#d97757" font-family="Georgia, serif" font-size="18" opacity=".6">?</text>
+    <text x="40" y="-40" fill="#d97757" font-family="Georgia, serif" font-size="14" opacity=".5">?</text>
+    <text x="-20" y="50" fill="#d97757" font-family="Georgia, serif" font-size="16" opacity=".6">?</text>
   </g>
-
-  <!-- Characteristics -->
-  <g font-family="system-ui, sans-serif" font-size="12.5" fill="#141413">
-    <rect x="438" y="268" width="8" height="8" rx="2" fill="#D97757"/>
+  <g fill="#141413" font-family="system-ui, sans-serif" font-size="12.5">
+    <rect width="8" height="8" x="438" y="268" fill="#d97757" rx="2"/>
     <text x="454" y="277">本质：*你*的问题</text>
-
-    <rect x="438" y="292" width="8" height="8" rx="2" fill="#D97757"/>
+    <rect width="8" height="8" x="438" y="292" fill="#d97757" rx="2"/>
     <text x="454" y="301">解决：重新学习、理解</text>
-
-    <rect x="438" y="316" width="8" height="8" rx="2" fill="#D97757"/>
+    <rect width="8" height="8" x="438" y="316" fill="#d97757" rx="2"/>
     <text x="454" y="325">检测：只能用时间偿还</text>
-
-    <rect x="438" y="340" width="8" height="8" rx="2" fill="#D97757"/>
+    <rect width="8" height="8" x="438" y="340" fill="#d97757" rx="2"/>
     <text x="454" y="349">影响：拖慢*思考*速度</text>
-
-    <rect x="438" y="364" width="8" height="8" rx="2" fill="#D97757"/>
+    <rect width="8" height="8" x="438" y="364" fill="#d97757" rx="2"/>
     <text x="454" y="373">偿还：无法规划、难以计量</text>
   </g>
-
-  <!-- Key insight box -->
-  <rect x="420" y="392" width="348" height="28" rx="6" fill="#E3DACC"/>
-  <text x="594" y="410" font-family="Georgia, serif" font-size="11" fill="#141413" text-anchor="middle" font-style="italic">"技术债务是代码的问题，认知债务是你的问题"</text>
-
-  <!-- Footer note -->
-  <text x="400" y="452" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">Simon Willison《Agentic Engineering Patterns》| 认知债务 = 当 AI 替你思考，你就不再思考</text>
+  <rect width="348" height="28" x="420" y="392" fill="#e3dacc" rx="6"/>
+  <text x="594" y="410" fill="#141413" font-family="Georgia, serif" font-size="11" font-style="italic" text-anchor="middle">&quot;技术债务是代码的问题，认知债务是你的问题&quot;</text>
+  <text x="400" y="452" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Simon Willison《Agentic Engineering Patterns》| 认知债务 = 当 AI 替你思考，你就不再思考</text>
 </svg>

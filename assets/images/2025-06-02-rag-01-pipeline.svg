@@ -1,97 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="RAG-DD流水线">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="RAG-DD流水线" viewBox="0 0 800 400">
   <title>RAG-DD 实时融合流水线</title>
-  <desc>RAG-DD的五个阶段：意图解析→知识检索→上下文融合→代码生成→合规验证</desc>
+  <desc>
+    RAG-DD的五个阶段：意图解析→知识检索→上下文融合→代码生成→合规验证
+  </desc>
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg3" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#D97757"/>
+    <marker id="arrow" markerHeight="10" markerWidth="10" orient="auto" refX="9" refY="3">
+      <path fill="#d97757" d="M0 0v6l9-3z"/>
     </marker>
   </defs>
-  <rect width="800" height="400" fill="url(#bg3)"/>
-
-  <!-- Title -->
-  <text x="400" y="32" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#141413" letter-spacing="1">RAG-DD 实时融合流水线</text>
-  <line x1="180" y1="44" x2="620" y2="44" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Step 1: Intent Parser -->
-  <rect x="40" y="65" width="130" height="130" rx="10" fill="#788C5D" opacity="0.15" stroke="#788C5D" stroke-width="2"/>
-  <rect x="55" y="80" width="100" height="30" rx="6" fill="#788C5D"/>
-  <text x="105" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#FAF9F5" font-weight="bold">意图解析器</text>
-  <text x="105" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#141413">Intent Parser</text>
-  <text x="105" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">提取领域</text>
-  <text x="105" y="163" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">操作 · 实体</text>
-  <text x="105" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">约束 · 上下文</text>
-
-  <!-- Arrow -->
-  <line x1="172" y1="130" x2="200" y2="130" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Step 2: Knowledge Retrieval -->
-  <rect x="204" y="65" width="130" height="130" rx="10" fill="#D97757" opacity="0.15" stroke="#D97757" stroke-width="2"/>
-  <rect x="219" y="80" width="100" height="30" rx="6" fill="#D97757"/>
-  <text x="269" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#FAF9F5" font-weight="bold">知识检索</text>
-  <text x="269" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#141413">Knowledge Retrieval</text>
-  <text x="269" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">编码规范</text>
-  <text x="269" y="163" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">架构模式</text>
-  <text x="269" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">业务规则</text>
-
-  <!-- Arrow -->
-  <line x1="336" y1="130" x2="364" y2="130" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Step 3: Context Fusion -->
-  <rect x="368" y="65" width="130" height="130" rx="10" fill="#87867F" opacity="0.15" stroke="#87867F" stroke-width="2"/>
-  <rect x="383" y="80" width="100" height="30" rx="6" fill="#87867F"/>
-  <text x="433" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#FAF9F5" font-weight="bold">上下文融合</text>
-  <text x="433" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#141413">Context Fusion</text>
-  <text x="433" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">意图 + 知识</text>
-  <text x="433" y="163" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">组装Prompt</text>
-  <text x="433" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">精确Context</text>
-
-  <!-- Arrow -->
-  <line x1="500" y1="130" x2="528" y2="130" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Step 4: Code Generation -->
-  <rect x="532" y="65" width="130" height="130" rx="10" fill="#141413" opacity="0.15" stroke="#141413" stroke-width="2"/>
-  <rect x="547" y="80" width="100" height="30" rx="6" fill="#141413"/>
-  <text x="597" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#FAF9F5" font-weight="bold">代码生成</text>
-  <text x="597" y="130" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#141413">Code Generation</text>
-  <text x="597" y="150" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">LLM推理</text>
-  <text x="597" y="163" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">生成企业代码</text>
-  <text x="597" y="176" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">符合规范</text>
-
-  <!-- Arrow -->
-  <line x1="664" y1="130" x2="692" y2="130" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Step 5: Compliance Check -->
-  <rect x="696" y="65" width="70" height="130" rx="10" fill="#D97757" opacity="0.9"/>
-  <text x="731" y="100" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#FAF9F5" font-weight="bold">合规</text>
-  <text x="731" y="115" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#FAF9F5" font-weight="bold">验证</text>
-  <text x="731" y="140" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#E3DACC">规范</text>
-  <text x="731" y="153" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#E3DACC">检查</text>
-  <text x="731" y="166" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#E3DACC">通过</text>
-
-  <!-- Output arrow down -->
-  <line x1="731" y1="197" x2="731" y2="225" stroke="#D97757" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Output box -->
-  <rect x="626" y="228" width="210" height="80" rx="8" fill="#788C5D" opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="731" y="252" text-anchor="middle" font-family="Georgia, serif" font-size="12" fill="#141413" font-weight="bold">企业级代码输出</text>
-  <text x="731" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">✓ 符合编码规范</text>
-  <text x="731" y="285" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">✓ 遵循架构模式</text>
-  <text x="731" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">✓ 自动应用业务规则</text>
-
-  <!-- Knowledge base on left -->
-  <rect x="40" y="228" width="140" height="110" rx="8" fill="#D1CFC5" opacity="0.4" stroke="#87867F" stroke-width="1"/>
-  <text x="110" y="250" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#141413" font-weight="bold">企业知识库</text>
-  <text x="110" y="270" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">编码规范 YAML</text>
-  <text x="110" y="284" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">架构模式库</text>
-  <text x="110" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">业务规则集</text>
-  <text x="110" y="312" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">历史代码示例</text>
-  <line x1="110" y1="318" x2="110" y2="335" stroke="#D97757" stroke-width="1.5" stroke-dasharray="3,3"/>
-  <text x="110" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="8" fill="#D97757">向量检索引擎</text>
-
-  <!-- Footer -->
-  <text x="400" y="378" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">不是让AI"学习"企业知识，而是让AI"查阅"企业知识 — 检索成本低，实时融合</text>
+  <path fill="url(#bg3)" d="M0 0h800v400H0z"/>
+  <text x="400" y="32" fill="#141413" font-family="Georgia, serif" font-size="17" letter-spacing="1" text-anchor="middle">RAG-DD 实时融合流水线</text>
+  <path stroke="#d1cfc5" d="M180 44h440"/>
+  <rect width="130" height="130" x="40" y="65" fill="#788c5d" stroke="#788c5d" stroke-width="2" opacity=".15" rx="10"/>
+  <rect width="100" height="30" x="55" y="80" fill="#788c5d" rx="6"/>
+  <text x="105" y="100" fill="#faf9f5" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">意图解析器</text>
+  <text x="105" y="130" fill="#141413" font-family="Georgia, serif" font-size="10" text-anchor="middle">Intent Parser</text>
+  <text x="105" y="150" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">提取领域</text>
+  <text x="105" y="163" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">操作 · 实体</text>
+  <text x="105" y="176" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">约束 · 上下文</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow)" d="M172 130h28"/>
+  <rect width="130" height="130" x="204" y="65" fill="#d97757" stroke="#d97757" stroke-width="2" opacity=".15" rx="10"/>
+  <rect width="100" height="30" x="219" y="80" fill="#d97757" rx="6"/>
+  <text x="269" y="100" fill="#faf9f5" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">知识检索</text>
+  <text x="269" y="130" fill="#141413" font-family="Georgia, serif" font-size="10" text-anchor="middle">Knowledge Retrieval</text>
+  <text x="269" y="150" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">编码规范</text>
+  <text x="269" y="163" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">架构模式</text>
+  <text x="269" y="176" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">业务规则</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow)" d="M336 130h28"/>
+  <rect width="130" height="130" x="368" y="65" fill="#87867f" stroke="#87867f" stroke-width="2" opacity=".15" rx="10"/>
+  <rect width="100" height="30" x="383" y="80" fill="#87867f" rx="6"/>
+  <text x="433" y="100" fill="#faf9f5" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">上下文融合</text>
+  <text x="433" y="130" fill="#141413" font-family="Georgia, serif" font-size="10" text-anchor="middle">Context Fusion</text>
+  <text x="433" y="150" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">意图 + 知识</text>
+  <text x="433" y="163" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">组装Prompt</text>
+  <text x="433" y="176" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">精确Context</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow)" d="M500 130h28"/>
+  <rect width="130" height="130" x="532" y="65" fill="#141413" stroke="#141413" stroke-width="2" opacity=".15" rx="10"/>
+  <rect width="100" height="30" x="547" y="80" fill="#141413" rx="6"/>
+  <text x="597" y="100" fill="#faf9f5" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">代码生成</text>
+  <text x="597" y="130" fill="#141413" font-family="Georgia, serif" font-size="10" text-anchor="middle">Code Generation</text>
+  <text x="597" y="150" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">LLM推理</text>
+  <text x="597" y="163" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">生成企业代码</text>
+  <text x="597" y="176" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">符合规范</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow)" d="M664 130h28"/>
+  <rect width="70" height="130" x="696" y="65" fill="#d97757" opacity=".9" rx="10"/>
+  <text x="731" y="100" fill="#faf9f5" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle">合规</text>
+  <text x="731" y="115" fill="#faf9f5" font-family="Georgia, serif" font-size="10" font-weight="bold" text-anchor="middle">验证</text>
+  <text x="731" y="140" fill="#e3dacc" font-family="Georgia, serif" font-size="9" text-anchor="middle">规范</text>
+  <text x="731" y="153" fill="#e3dacc" font-family="Georgia, serif" font-size="9" text-anchor="middle">检查</text>
+  <text x="731" y="166" fill="#e3dacc" font-family="Georgia, serif" font-size="9" text-anchor="middle">通过</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow)" d="M731 197v28"/>
+  <rect width="210" height="80" x="626" y="228" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".2" rx="8"/>
+  <text x="731" y="252" fill="#141413" font-family="Georgia, serif" font-size="12" font-weight="bold" text-anchor="middle">企业级代码输出</text>
+  <text x="731" y="270" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">✓ 符合编码规范</text>
+  <text x="731" y="285" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">✓ 遵循架构模式</text>
+  <text x="731" y="300" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">✓ 自动应用业务规则</text>
+  <rect width="140" height="110" x="40" y="228" fill="#d1cfc5" stroke="#87867f" opacity=".4" rx="8"/>
+  <text x="110" y="250" fill="#141413" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">企业知识库</text>
+  <text x="110" y="270" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">编码规范 YAML</text>
+  <text x="110" y="284" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">架构模式库</text>
+  <text x="110" y="298" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">业务规则集</text>
+  <text x="110" y="312" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">历史代码示例</text>
+  <path stroke="#d97757" stroke-dasharray="3,3" stroke-width="1.5" d="M110 318v17"/>
+  <text x="110" y="330" fill="#d97757" font-family="Georgia, serif" font-size="8" text-anchor="middle">向量检索引擎</text>
+  <text x="400" y="378" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">不是让AI&quot;学习&quot;企业知识，而是让AI&quot;查阅&quot;企业知识 — 检索成本低，实时融合</text>
 </svg>

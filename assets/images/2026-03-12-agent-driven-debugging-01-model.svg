@@ -1,107 +1,60 @@
-<svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, text #141413, border #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="720" height="400" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="360" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent-Driven Debugging 三层模型</text>
-  <text x="360" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">重新定义人机协作的调试边界</text>
-
-  <!-- 75/25 Split Bar -->
-  <!-- Bar background track -->
-  <rect x="80" y="56" width="560" height="28" rx="14" fill="#E8E6DF"/>
-  <!-- 75% clay fill (Agent) -->
-  <rect x="80" y="56" width="420" height="28" rx="14" fill="#D97757"/>
-  <!-- 25% olive fill (Human) - only left half has rounded corners -->
-  <rect x="480" y="56" width="160" height="28" rx="14" fill="#788C5D"/>
-  <rect x="480" y="56" width="80" height="28" fill="#788C5D"/>
-  <!-- Labels inside bar -->
-  <text x="220" y="74" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="600">信息处理交给 Agent</text>
-  <text x="560" y="74" text-anchor="middle" font-size="11" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="600">人类决策</text>
-  <!-- Percentage labels -->
-  <text x="360" y="74" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace" opacity="0.7">75%</text>
-  <text x="640" y="74" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace" opacity="0.85">25%</text>
-
-  <!-- Vertical connecting lines from bar to cards -->
-  <line x1="180" y1="84" x2="180" y2="116" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="360" y1="84" x2="360" y2="116" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="540" y1="84" x2="540" y2="116" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <!-- Three Cards -->
-  <!-- Card 1: Personal Diagnostic Agent -->
-  <rect x="40" y="116" width="200" height="200" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <!-- Layer badge -->
-  <rect x="56" y="130" width="80" height="18" rx="9" fill="#D97757"/>
-  <text x="96" y="143" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="600">第一层</text>
-  <!-- Card title -->
-  <text x="140" y="172" text-anchor="middle" font-size="13" fill="#141413" font-weight="600">个人诊断助手</text>
-  <text x="140" y="188" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Personal Diagnostic Agent</text>
-  <!-- Divider -->
-  <line x1="60" y1="200" x2="220" y2="200" stroke="#D1CFC5" stroke-width="1"/>
-  <!-- Capabilities list -->
-  <text x="60" y="218" font-size="10.5" fill="#141413">日志分析</text>
-  <text x="60" y="234" font-size="10.5" fill="#141413">代码理解</text>
-  <text x="60" y="250" font-size="10.5" fill="#141413">知识检索</text>
-  <text x="60" y="266" font-size="10.5" fill="#141413">假设生成</text>
-  <!-- Role tag -->
-  <rect x="56" y="280" width="168" height="22" rx="4" fill="#F5F3EC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="140" y="295" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">75% AI / 25% Human</text>
-
-  <!-- Card 2: Team Diagnostic Center (emphasized) -->
-  <rect x="260" y="116" width="200" height="200" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <!-- Layer badge -->
-  <rect x="276" y="130" width="80" height="18" rx="9" fill="#D97757"/>
-  <text x="316" y="143" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="600">第二层</text>
-  <!-- Card title -->
-  <text x="360" y="172" text-anchor="middle" font-size="13" fill="#141413" font-weight="600">团队诊断中心</text>
-  <text x="360" y="188" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Team Diagnostic Center</text>
-  <!-- Divider -->
-  <line x1="280" y1="200" x2="440" y2="200" stroke="#D97757" stroke-width="1"/>
-  <!-- Capabilities list -->
-  <text x="280" y="218" font-size="10.5" fill="#141413">跨服务关联分析</text>
-  <text x="280" y="234" font-size="10.5" fill="#141413">根因定位与归因</text>
-  <text x="280" y="250" font-size="10.5" fill="#141413">团队知识沉淀</text>
-  <text x="280" y="266" font-size="10.5" fill="#141413">协作验证流程</text>
-  <!-- Role tag -->
-  <rect x="276" y="280" width="168" height="22" rx="4" fill="#F5F3EC" stroke="#D97757" stroke-width="1"/>
-  <text x="360" y="295" text-anchor="middle" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Multi-Agent 协作</text>
-
-  <!-- Card 3: Organizational Diagnostic Intelligence -->
-  <rect x="480" y="116" width="200" height="200" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <!-- Layer badge -->
-  <rect x="496" y="130" width="80" height="18" rx="9" fill="#788C5D"/>
-  <text x="536" y="143" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace" font-weight="600">第三层</text>
-  <!-- Card title -->
-  <text x="580" y="172" text-anchor="middle" font-size="13" fill="#141413" font-weight="600">组织诊断智能</text>
-  <text x="580" y="188" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Org Diagnostic Intelligence</text>
-  <!-- Divider -->
-  <line x1="500" y1="200" x2="660" y2="200" stroke="#D1CFC5" stroke-width="1"/>
-  <!-- Capabilities list -->
-  <text x="500" y="218" font-size="10.5" fill="#141413">系统健康度监测</text>
-  <text x="500" y="234" font-size="10.5" fill="#141413">预测性诊断</text>
-  <text x="500" y="250" font-size="10.5" fill="#141413">知识图谱构建</text>
-  <text x="500" y="266" font-size="10.5" fill="#141413">效能优化闭环</text>
-  <!-- Role tag -->
-  <rect x="496" y="280" width="168" height="22" rx="4" fill="#F5F3EC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="580" y="295" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">持续改进</text>
-
-  <!-- Arrow: 角色转变 from 猎人 to 驯兽师 -->
-  <!-- Horizontal line with arrow -->
-  <line x1="140" y1="360" x2="580" y2="360" stroke="#D1CFC5" stroke-width="1.5"/>
-  <!-- Arrow head -->
-  <polygon points="580,360 570,354 570,366" fill="#D1CFC5"/>
-  <!-- From label -->
-  <rect x="60" y="344" width="80" height="32" rx="4" fill="#E8E6DF" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="100" y="357" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">猎人</text>
-  <text x="100" y="370" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">传统调试</text>
-  <!-- Arrow label -->
-  <text x="360" y="356" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">角色转变</text>
-  <!-- To label -->
-  <rect x="500" y="344" width="80" height="32" rx="4" fill="#D97757" stroke="#D97757" stroke-width="1"/>
-  <text x="540" y="357" text-anchor="middle" font-size="10" fill="#FFFFFF" font-family="ui-monospace, monospace">驯兽师</text>
-  <text x="540" y="370" text-anchor="middle" font-size="8.5" fill="#F5C9BC" font-family="ui-monospace, monospace">Agent-Driven</text>
-
-  <!-- Subtle footnote -->
-  <text x="360" y="392" text-anchor="middle" font-size="9" fill="#B5B2A8" font-family="ui-monospace, monospace">三层模型对应认知分工重构，而非技术架构划分</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 720 400">
+  <path fill="#faf9f5" d="M0 0h720v400H0z"/>
+  <text x="360" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent-Driven Debugging 三层模型</text>
+  <text x="360" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">重新定义人机协作的调试边界</text>
+  <rect width="560" height="28" x="80" y="56" fill="#e8e6df" rx="14"/>
+  <rect width="420" height="28" x="80" y="56" fill="#d97757" rx="14"/>
+  <rect width="160" height="28" x="480" y="56" fill="#788c5d" rx="14"/>
+  <path fill="#788c5d" d="M480 56h80v28h-80z"/>
+  <text x="220" y="74" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">信息处理交给 Agent</text>
+  <text x="560" y="74" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">人类决策</text>
+  <text x="360" y="74" fill="#fff" font-family="ui-monospace, monospace" font-size="10" opacity=".7" text-anchor="middle">75%</text>
+  <text x="640" y="74" fill="#fff" font-family="ui-monospace, monospace" font-size="10" opacity=".85" text-anchor="middle">25%</text>
+  <path stroke="#d1cfc5" stroke-dasharray="3,2" d="M180 84v32m180-32v32m180-32v32"/>
+  <rect width="200" height="200" x="40" y="116" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <rect width="80" height="18" x="56" y="130" fill="#d97757" rx="9"/>
+  <text x="96" y="143" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">第一层</text>
+  <text x="140" y="172" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">个人诊断助手</text>
+  <text x="140" y="188" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Personal Diagnostic Agent</text>
+  <path stroke="#d1cfc5" d="M60 200h160"/>
+  <text x="60" y="218" fill="#141413" font-size="10.5">日志分析</text>
+  <text x="60" y="234" fill="#141413" font-size="10.5">代码理解</text>
+  <text x="60" y="250" fill="#141413" font-size="10.5">知识检索</text>
+  <text x="60" y="266" fill="#141413" font-size="10.5">假设生成</text>
+  <rect width="168" height="22" x="56" y="280" fill="#f5f3ec" stroke="#d1cfc5" rx="4"/>
+  <text x="140" y="295" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">75% AI / 25% Human</text>
+  <rect width="200" height="200" x="260" y="116" fill="#fff" stroke="#d97757" stroke-width="2" rx="8"/>
+  <rect width="80" height="18" x="276" y="130" fill="#d97757" rx="9"/>
+  <text x="316" y="143" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">第二层</text>
+  <text x="360" y="172" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">团队诊断中心</text>
+  <text x="360" y="188" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Team Diagnostic Center</text>
+  <path stroke="#d97757" d="M280 200h160"/>
+  <text x="280" y="218" fill="#141413" font-size="10.5">跨服务关联分析</text>
+  <text x="280" y="234" fill="#141413" font-size="10.5">根因定位与归因</text>
+  <text x="280" y="250" fill="#141413" font-size="10.5">团队知识沉淀</text>
+  <text x="280" y="266" fill="#141413" font-size="10.5">协作验证流程</text>
+  <rect width="168" height="22" x="276" y="280" fill="#f5f3ec" stroke="#d97757" rx="4"/>
+  <text x="360" y="295" fill="#d97757" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600" text-anchor="middle">Multi-Agent 协作</text>
+  <rect width="200" height="200" x="480" y="116" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <rect width="80" height="18" x="496" y="130" fill="#788c5d" rx="9"/>
+  <text x="536" y="143" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">第三层</text>
+  <text x="580" y="172" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">组织诊断智能</text>
+  <text x="580" y="188" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Org Diagnostic Intelligence</text>
+  <path stroke="#d1cfc5" d="M500 200h160"/>
+  <text x="500" y="218" fill="#141413" font-size="10.5">系统健康度监测</text>
+  <text x="500" y="234" fill="#141413" font-size="10.5">预测性诊断</text>
+  <text x="500" y="250" fill="#141413" font-size="10.5">知识图谱构建</text>
+  <text x="500" y="266" fill="#141413" font-size="10.5">效能优化闭环</text>
+  <rect width="168" height="22" x="496" y="280" fill="#f5f3ec" stroke="#d1cfc5" rx="4"/>
+  <text x="580" y="295" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">持续改进</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M140 360h440"/>
+  <path fill="#d1cfc5" d="m580 360-10-6v12z"/>
+  <rect width="80" height="32" x="60" y="344" fill="#e8e6df" stroke="#d1cfc5" rx="4"/>
+  <text x="100" y="357" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">猎人</text>
+  <text x="100" y="370" fill="#87867f" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">传统调试</text>
+  <text x="360" y="356" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">角色转变</text>
+  <rect width="80" height="32" x="500" y="344" fill="#d97757" stroke="#d97757" rx="4"/>
+  <text x="540" y="357" fill="#fff" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">驯兽师</text>
+  <text x="540" y="370" fill="#f5c9bc" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">Agent-Driven</text>
+  <text x="360" y="392" fill="#b5b2a8" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">三层模型对应认知分工重构，而非技术架构划分</text>
 </svg>

@@ -1,73 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 360" role="img" aria-label="AI成本结构图">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="AI成本结构图" viewBox="0 0 680 360">
   <title>AI成本结构分析</title>
-  <desc>AI应用成本的四大组成部分：Token成本、存储成本、推理成本和其他成本</desc>
-
+  <desc>
+    AI应用成本的四大组成部分：Token成本、存储成本、推理成本和其他成本
+  </desc>
   <defs>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.08"/>
+    <filter id="shadow" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- 总成本 -->
-  <rect x="20" y="20" width="160" height="60" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="100" y="44" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#92400e">总成本</text>
-  <text x="100" y="64" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#d97706">$10,000</text>
-
-  <!-- ========== Token成本 (70%) ========== -->
-  <rect x="200" y="20" width="200" height="100" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
-  <text x="300" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#991b1b">Token成本</text>
-  <text x="300" y="62" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#dc2626">$7,000</text>
-  <text x="300" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#b91c1c">70%</text>
-  <line x1="210" y1="88" x2="390" y2="88" stroke="#fca5a5" stroke-width="1"/>
-  <text x="220" y="103" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#991b1b">输入: $2,000</text>
-  <text x="310" y="103" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#991b1b">输出: $5,000</text>
-
-  <!-- ========== 存储成本 (15%) ========== -->
-  <rect x="420" y="20" width="200" height="100" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
-  <text x="520" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#1e40af">存储成本</text>
-  <text x="520" y="62" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#2563eb">$1,500</text>
-  <text x="520" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1e3a8a">15%</text>
-  <line x1="430" y1="88" x2="610" y2="88" stroke="#93c5fd" stroke-width="1"/>
-  <text x="440" y="103" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#1e3a8a">向量DB: $800</text>
-  <text x="545" y="103" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#1e3a8a">对话历史: $700</text>
-
-  <!-- ========== 其他成本 (15%) ========== -->
-  <rect x="200" y="140" width="200" height="100" rx="10" fill="#d1fae5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
-  <text x="300" y="162" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#065f46">其他成本</text>
-  <text x="300" y="182" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#059669">$1,500</text>
-  <text x="300" y="200" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#047857">15%</text>
-  <line x1="210" y1="208" x2="390" y2="208" stroke="#6ee7b7" stroke-width="1"/>
-  <text x="220" y="223" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#047857">推理托管: $1,000</text>
-  <text x="330" y="223" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#047857">日志监控: $500</text>
-
-  <!-- 连接线 -->
-  <path d="M180,50 L200,50" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-  <path d="M180,70 L200,70" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-  <path d="M180,90 L200,90" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-  <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/></marker></defs>
-
-  <!-- 连接: 总成本 -> 其他成本 -->
-  <path d="M100,80 L100,140" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arr2)"/>
-  <defs><marker id="arr2" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/></marker></defs>
-
-  <!-- 饼图占比 -->
-  <circle cx="640" cy="60" r="40" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <path d="M640,60 L640,20 A40,40 0 1,1 600,60 Z" fill="#dc2626" opacity="0.8"/>
-  <path d="M640,60 L600,60 A40,40 0 0,1 640,20 Z" fill="#2563eb" opacity="0.8"/>
-  <path d="M640,60 L600,60 A40,40 0 0,1 680,60 Z" fill="#059669" opacity="0.8"/>
-  <text x="640" y="120" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="9" fill="#87867F">成本分布</text>
-
-  <!-- 优化优先级提示 -->
-  <rect x="200" y="265" width="460" height="75" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="430" y="288" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#141413">优化优先级</text>
-  <line x1="220" y1="298" x2="640" y2="298" stroke="#D1CFC5" stroke-width="1"/>
-  <rect x="220" y="308" width="12" height="12" rx="2" fill="#dc2626"/>
-  <text x="238" y="319" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#991b1b">Token成本 (最重要)</text>
-  <rect x="360" y="308" width="12" height="12" rx="2" fill="#2563eb"/>
-  <text x="378" y="319" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#1e40af">存储成本</text>
-  <rect x="480" y="308" width="12" height="12" rx="2" fill="#059669"/>
-  <text x="498" y="319" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#065f46">推理成本</text>
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <rect width="160" height="60" x="20" y="20" fill="#fef3c7" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)" rx="10"/>
+  <text x="100" y="44" fill="#92400e" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">总成本</text>
+  <text x="100" y="64" fill="#d97706" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">$10,000</text>
+  <rect width="200" height="100" x="200" y="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2" filter="url(#shadow)" rx="10"/>
+  <text x="300" y="42" fill="#991b1b" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Token成本</text>
+  <text x="300" y="62" fill="#dc2626" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">$7,000</text>
+  <text x="300" y="80" fill="#b91c1c" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">70%</text>
+  <path stroke="#fca5a5" d="M210 88h180"/>
+  <text x="220" y="103" fill="#991b1b" font-family="system-ui,-apple-system,sans-serif" font-size="10">输入: $2,000</text>
+  <text x="310" y="103" fill="#991b1b" font-family="system-ui,-apple-system,sans-serif" font-size="10">输出: $5,000</text>
+  <rect width="200" height="100" x="420" y="20" fill="#dbeafe" stroke="#2563eb" stroke-width="2" filter="url(#shadow)" rx="10"/>
+  <text x="520" y="42" fill="#1e40af" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">存储成本</text>
+  <text x="520" y="62" fill="#2563eb" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">$1,500</text>
+  <text x="520" y="80" fill="#1e3a8a" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">15%</text>
+  <path stroke="#93c5fd" d="M430 88h180"/>
+  <text x="440" y="103" fill="#1e3a8a" font-family="system-ui,-apple-system,sans-serif" font-size="10">向量DB: $800</text>
+  <text x="545" y="103" fill="#1e3a8a" font-family="system-ui,-apple-system,sans-serif" font-size="10">对话历史: $700</text>
+  <rect width="200" height="100" x="200" y="140" fill="#d1fae5" stroke="#059669" stroke-width="2" filter="url(#shadow)" rx="10"/>
+  <text x="300" y="162" fill="#065f46" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">其他成本</text>
+  <text x="300" y="182" fill="#059669" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">$1,500</text>
+  <text x="300" y="200" fill="#047857" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">15%</text>
+  <path stroke="#6ee7b7" d="M210 208h180"/>
+  <text x="220" y="223" fill="#047857" font-family="system-ui,-apple-system,sans-serif" font-size="10">推理托管: $1,000</text>
+  <text x="330" y="223" fill="#047857" font-family="system-ui,-apple-system,sans-serif" font-size="10">日志监控: $500</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arr)" d="M180 50h20"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arr)" d="M180 70h20"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arr)" d="M180 90h20"/>
+  <defs>
+    <marker id="arr" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
+    </marker>
+  </defs>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arr2)" d="M100 80v60"/>
+  <defs>
+    <marker id="arr2" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="6">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
+    </marker>
+  </defs>
+  <circle cx="640" cy="60" r="40" fill="none" stroke="#d1cfc5"/>
+  <path fill="#dc2626" d="M640 60V20a40 40 0 1 1-40 40Z" opacity=".8"/>
+  <path fill="#2563eb" d="M640 60h-40a40 40 0 0 1 40-40Z" opacity=".8"/>
+  <path fill="#059669" d="M640 60h-40a40 40 0 0 1 80 0Z" opacity=".8"/>
+  <text x="640" y="120" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="9" text-anchor="middle">成本分布</text>
+  <rect width="460" height="75" x="200" y="265" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="430" y="288" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">优化优先级</text>
+  <path stroke="#d1cfc5" d="M220 298h420"/>
+  <rect width="12" height="12" x="220" y="308" fill="#dc2626" rx="2"/>
+  <text x="238" y="319" fill="#991b1b" font-family="system-ui,-apple-system,sans-serif" font-size="11">Token成本 (最重要)</text>
+  <rect width="12" height="12" x="360" y="308" fill="#2563eb" rx="2"/>
+  <text x="378" y="319" fill="#1e40af" font-family="system-ui,-apple-system,sans-serif" font-size="11">存储成本</text>
+  <rect width="12" height="12" x="480" y="308" fill="#059669" rx="2"/>
+  <text x="498" y="319" fill="#065f46" font-family="system-ui,-apple-system,sans-serif" font-size="11">推理成本</text>
 </svg>

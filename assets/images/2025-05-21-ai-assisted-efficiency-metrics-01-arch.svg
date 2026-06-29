@@ -1,84 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 700" width="680" height="700">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 700">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
-      .sep { stroke: #D1CFC5; stroke-width: 1; }
-      .title-text { font-family: 'Courier New', Courier, monospace; font-size: 15px; font-weight: bold; fill: #141413; }
-      .section-title { font-family: 'Courier New', Courier, monospace; font-size: 14px; font-weight: bold; fill: #141413; }
-      .row-text { font-family: 'Courier New', Courier, monospace; font-size: 13.5px; fill: #141413; }
-      .dim-text { font-family: 'Courier New', Courier, monospace; font-size: 13px; fill: #87867F; }
-      .accent { fill: #D97757; }
-      .success { fill: #788C5D; }
-      .cell-bg { fill: #E3DACC; }
+      .border,.sep{stroke:#d1cfc5}.border{stroke-width:1.5;fill:none}.sep{stroke-width:1}.row-text,.section-title{font-family:&quot;Courier New&quot;,Courier,monospace;fill:#141413}.section-title{font-size:14px;font-weight:700}.row-text{font-size:13.5px}.accent{fill:#d97757}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="680" height="700" class="bg"/>
-
-  <!-- Outer border -->
-  <rect x="12" y="12" width="656" height="676" rx="4" class="border"/>
-
-  <!-- Header row: AI效能度量仪表盘 -->
-  <rect x="12" y="12" width="656" height="44" rx="4" class="cell-bg"/>
-  <rect x="12" y="52" width="656" height="4" fill="#D97757"/>
-  <text x="340" y="40" text-anchor="middle" class="title-text">AI效能度量仪表盘</text>
-
-  <!-- Separator 1 -->
-  <line x1="12" y1="100" x2="668" y2="100" class="sep"/>
-
-  <!-- Section title: 团队效能指标 -->
+  <path d="M0 0h680v700H0z" style="fill:#faf9f5"/>
+  <rect width="656" height="676" x="12" y="12" class="border" rx="4"/>
+  <rect width="656" height="44" x="12" y="12" rx="4" style="fill:#e3dacc"/>
+  <path fill="#d97757" d="M12 52h656v4H12z"/>
+  <text x="340" y="40" style="font-family:&quot;Courier New&quot;,Courier,monospace;font-size:15px;font-weight:700;fill:#141413" text-anchor="middle">AI效能度量仪表盘</text>
+  <path d="M12 100h656" class="sep"/>
   <text x="32" y="132" class="section-title">团队效能指标</text>
-
-  <!-- Row 1: 意图修改率 -->
   <text x="48" y="168" class="row-text">├── 意图修改率：18%（目标：&lt;15%）</text>
-  <text x="568" y="168" text-anchor="middle" class="accent">⚠️</text>
-
-  <!-- Row 2: 知识半衰期 -->
+  <text x="568" y="168" class="accent" text-anchor="middle">⚠️</text>
   <text x="48" y="208" class="row-text">├── 知识半衰期：45天（良好）</text>
-
-  <!-- Row 3: 平均重构成本 -->
   <text x="48" y="248" class="row-text">├── 平均重构成本：2.5小时（下降20%）</text>
-  <text x="568" y="248" text-anchor="middle" class="success">✅</text>
-
-  <!-- Row 4: 可维护性指数 -->
+  <text x="568" y="248" style="fill:#788c5d" text-anchor="middle">✅</text>
   <text x="48" y="288" class="row-text">└── 可维护性指数：68（目标：&gt;70）</text>
-  <text x="568" y="288" text-anchor="middle" class="accent">⚠️</text>
-
-  <!-- Separator 2 -->
-  <line x1="12" y1="320" x2="668" y2="320" class="sep"/>
-
-  <!-- Section title: 代码库健康度 -->
+  <text x="568" y="288" class="accent" text-anchor="middle">⚠️</text>
+  <path d="M12 320h656" class="sep"/>
   <text x="32" y="352" class="section-title">代码库健康度</text>
-
-  <!-- Row 5: 高可维护性模块 -->
   <text x="48" y="388" class="row-text">├── 高可维护性模块：65%</text>
-
-  <!-- Row 6: 需要关注模块 -->
   <text x="48" y="428" class="row-text">├── 需要关注模块：25%</text>
-
-  <!-- Row 7: 优先重构模块 -->
   <text x="48" y="468" class="row-text">└── 优先重构模块：10%</text>
-
-  <!-- Separator 3 -->
-  <line x1="12" y1="500" x2="668" y2="500" class="sep"/>
-
-  <!-- Section title: 改进建议（AI生成） -->
+  <path d="M12 500h656" class="sep"/>
   <text x="32" y="532" class="section-title">改进建议（AI生成）</text>
-
-  <!-- Row 8: Suggestion 1 -->
   <text x="48" y="568" class="row-text">1. order_service.py 耦合度过高，建议拆分</text>
-
-  <!-- Row 9: Suggestion 2 -->
   <text x="48" y="608" class="row-text">2. payment模块缺少测试，建议增加覆盖率到80%</text>
-
-  <!-- Row 10: Suggestion 3 -->
   <text x="48" y="648" class="row-text">3. user模块知识半衰期短，建议改进命名和注释</text>
-
-  <!-- Bottom border line -->
-  <line x1="12" y1="676" x2="668" y2="676" class="sep"/>
-  <line x1="12" y1="12" x2="12" y2="676" class="border"/>
-  <line x1="668" y1="12" x2="668" y2="676" class="border"/>
-  <line x1="12" y1="688" x2="668" y2="688" class="border"/>
+  <path d="M12 676h656" class="sep"/>
+  <path d="M12 12v664M668 12v664M12 688h656" class="border"/>
 </svg>

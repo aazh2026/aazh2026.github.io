@@ -1,113 +1,82 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480">
   <defs>
-    <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <marker id="arr7" markerHeight="8" markerWidth="8" orient="auto" refX="5" refY="4">
+      <path fill="#87867f" d="M0 0v8l8-4z"/>
+    </marker>
+    <marker id="arr8" markerHeight="8" markerWidth="8" orient="auto" refX="5" refY="4">
+      <path fill="#788c5d" d="M0 0v8l8-4z"/>
+    </marker>
+    <linearGradient id="bg7" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <filter id="shadow7" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.10"/>
+    <filter id="shadow7" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".1" stdDeviation="5"/>
     </filter>
-    <marker id="arr7" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#87867F"/>
-    </marker>
-    <marker id="arr8" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#788C5D"/>
-    </marker>
   </defs>
-
   <rect width="900" height="480" fill="url(#bg7)" rx="16"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">验证器经济学：Generate vs Verify</text>
-  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- OLD PARADIGM -->
-  <rect x="40" y="76" width="395" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow7)"/>
-  <rect x="40" y="76" width="395" height="44" rx="14" fill="#D97757"/>
-  <rect x="40" y="104" width="395" height="16" fill="#D97757"/>
-  <text x="237" y="102" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">旧范式：直接生成</text>
-
-  <g transform="translate(60,135)">
-    <rect x="0" y="0" width="130" height="65" rx="10" fill="#D97757" opacity="0.08"/>
-    <text x="65" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">Problem</text>
-    <text x="65" y="46" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">数学题 / 编码任务</text>
-
-    <path d="M138,32 L162,32" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)" opacity="0.6"/>
-
-    <rect x="170" y="0" width="130" height="65" rx="10" fill="#D97757" opacity="0.15"/>
-    <text x="235" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#D97757">Agent Generate</text>
-    <text x="235" y="46" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757">直接生成答案</text>
-
-    <path d="M308,32 L332,32" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)" opacity="0.6"/>
-
-    <rect x="340" y="0" width="50" height="65" rx="10" fill="#D97757" opacity="0.25"/>
-    <text x="365" y="38" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#D97757">50%</text>
+  <text x="450" y="42" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" letter-spacing="-.3" text-anchor="middle">验证器经济学：Generate vs Verify</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M200 56h500"/>
+  <rect width="395" height="175" x="40" y="76" fill="#faf9f5" filter="url(#shadow7)" rx="14"/>
+  <rect width="395" height="44" x="40" y="76" fill="#d97757" rx="14"/>
+  <path fill="#d97757" d="M40 104h395v16H40z"/>
+  <text x="237" y="102" fill="#faf9f5" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" text-anchor="middle">旧范式：直接生成</text>
+  <g transform="translate(60 135)">
+    <rect width="130" height="65" fill="#d97757" opacity=".08" rx="10"/>
+    <text x="65" y="28" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Problem</text>
+    <text x="65" y="46" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">数学题 / 编码任务</text>
+    <path stroke="#87867f" stroke-width="2" marker-end="url(#arr7)" d="M138 32h24" opacity=".6"/>
+    <rect width="130" height="65" x="170" fill="#d97757" opacity=".15" rx="10"/>
+    <text x="235" y="28" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Agent Generate</text>
+    <text x="235" y="46" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">直接生成答案</text>
+    <path stroke="#87867f" stroke-width="2" marker-end="url(#arr7)" d="M308 32h24" opacity=".6"/>
+    <rect width="50" height="65" x="340" fill="#d97757" opacity=".25" rx="10"/>
+    <text x="365" y="38" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">50%</text>
   </g>
-
-  <text x="237" y="228" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#D97757" font-weight="600">线性增长，快速饱和</text>
-
-  <!-- NEW PARADIGM -->
-  <rect x="465" y="76" width="395" height="175" rx="14" fill="#FAF9F5" filter="url(#shadow7)"/>
-  <rect x="465" y="76" width="395" height="44" rx="14" fill="#788C5D"/>
-  <rect x="465" y="104" width="395" height="16" fill="#788C5D"/>
-  <text x="662" y="102" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">新范式：生成多个 → 验证器筛选</text>
-
-  <g transform="translate(485,135)">
-    <rect x="0" y="0" width="90" height="65" rx="10" fill="#788C5D" opacity="0.08"/>
-    <text x="45" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#141413">Problem</text>
-    <text x="45" y="46" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">题目</text>
-
-    <path d="M98,32 L118,32" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)" opacity="0.6"/>
-
-    <rect x="126" y="0" width="100" height="65" rx="10" fill="#788C5D" opacity="0.08"/>
-    <text x="176" y="22" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#141413">Agent Generate</text>
-    <text x="176" y="40" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D" font-weight="600">× 100 个</text>
-    <text x="176" y="56" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">发散多样</text>
-
-    <path d="M234,32 L254,32" stroke="#87867F" stroke-width="2" marker-end="url(#arr7)" opacity="0.6"/>
-
-    <rect x="262" y="0" width="100" height="65" rx="10" fill="#788C5D" opacity="0.15"/>
-    <text x="312" y="22" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#788C5D">Verifier</text>
-    <text x="312" y="40" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">评判每个答案</text>
-    <text x="312" y="56" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="10" fill="#87867F">打分类</text>
-
-    <path d="M370,32 L390,32" stroke="#788C5D" stroke-width="2" marker-end="url(#arr8)" opacity="0.6"/>
-
-    <rect x="398" y="0" width="55" height="65" rx="10" fill="#788C5D" opacity="0.25"/>
-    <text x="425" y="38" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#788C5D">70%</text>
+  <text x="237" y="228" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">线性增长，快速饱和</text>
+  <rect width="395" height="175" x="465" y="76" fill="#faf9f5" filter="url(#shadow7)" rx="14"/>
+  <rect width="395" height="44" x="465" y="76" fill="#788c5d" rx="14"/>
+  <path fill="#788c5d" d="M465 104h395v16H465z"/>
+  <text x="662" y="102" fill="#faf9f5" font-family="system-ui,-apple-system,sans-serif" font-size="15" font-weight="700" text-anchor="middle">新范式：生成多个 → 验证器筛选</text>
+  <g transform="translate(485 135)">
+    <rect width="90" height="65" fill="#788c5d" opacity=".08" rx="10"/>
+    <text x="45" y="28" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" text-anchor="middle">Problem</text>
+    <text x="45" y="46" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">题目</text>
+    <path stroke="#87867f" stroke-width="2" marker-end="url(#arr7)" d="M98 32h20" opacity=".6"/>
+    <rect width="100" height="65" x="126" fill="#788c5d" opacity=".08" rx="10"/>
+    <text x="176" y="22" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Agent Generate</text>
+    <text x="176" y="40" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">× 100 个</text>
+    <text x="176" y="56" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="10" text-anchor="middle">发散多样</text>
+    <path stroke="#87867f" stroke-width="2" marker-end="url(#arr7)" d="M234 32h20" opacity=".6"/>
+    <rect width="100" height="65" x="262" fill="#788c5d" opacity=".15" rx="10"/>
+    <text x="312" y="22" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Verifier</text>
+    <text x="312" y="40" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">评判每个答案</text>
+    <text x="312" y="56" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="10" text-anchor="middle">打分类</text>
+    <path stroke="#788c5d" stroke-width="2" marker-end="url(#arr8)" d="M370 32h20" opacity=".6"/>
+    <rect width="55" height="65" x="398" fill="#788c5d" opacity=".25" rx="10"/>
+    <text x="425" y="38" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" text-anchor="middle">70%</text>
   </g>
-
-  <text x="662" y="228" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D" font-weight="600">超线性增长，扩展性好</text>
-
-  <!-- Principles section -->
-  <rect x="40" y="248" width="820" height="195" rx="14" fill="#FAF9F5" filter="url(#shadow7)"/>
-  <text x="60" y="276" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#141413">验证器设计原则</text>
-
-  <!-- Card 1 -->
-  <rect x="60" y="290" width="235" height="132" rx="10" fill="#788C5D" opacity="0.08"/>
-  <text x="177" y="316" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">原则 1</text>
-  <text x="177" y="338" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#141413">为 Agent 而非为自己设计</text>
-  <text x="177" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">最少量输出 · 标准错误格式</text>
-  <text x="177" y="378" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">预计算摘要 · 便于 grep</text>
-  <text x="177" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">避免 5000 行日志淹没 Agent</text>
-
-  <!-- Card 2 -->
-  <rect x="312" y="290" width="235" height="132" rx="10" fill="#788C5D" opacity="0.08"/>
-  <text x="429" y="316" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">原则 2</text>
-  <text x="429" y="338" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#141413">验证器的验证器</text>
-  <text x="429" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">观察 Claude 犯错的模式</text>
-  <text x="429" y="378" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">设计针对性的新测试</text>
-  <text x="429" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">持续迭代测试套件</text>
-
-  <!-- Card 3 -->
-  <rect x="564" y="290" width="235" height="132" rx="10" fill="#788C5D" opacity="0.08"/>
-  <text x="681" y="316" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#788C5D">原则 3</text>
-  <text x="681" y="338" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" fill="#141413">从生成到筛选的范式转移</text>
-  <text x="681" y="360" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">不要试图一次性生成正确答案</text>
-  <text x="681" y="378" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">生成 100 个候选，验证器选最佳</text>
-  <text x="681" y="396" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">OpenAI: 50% → 70%</text>
-
-  <!-- Bottom -->
-  <rect x="40" y="455" width="820" height="20" rx="10" fill="#141413" opacity="0.04"/>
-  <text x="450" y="469" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">"瓶颈很快从代码生成转移到了人类 QA 容量。" — OpenAI Harness</text>
+  <text x="662" y="228" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">超线性增长，扩展性好</text>
+  <rect width="820" height="195" x="40" y="248" fill="#faf9f5" filter="url(#shadow7)" rx="14"/>
+  <text x="60" y="276" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700">验证器设计原则</text>
+  <rect width="235" height="132" x="60" y="290" fill="#788c5d" opacity=".08" rx="10"/>
+  <text x="177" y="316" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">原则 1</text>
+  <text x="177" y="338" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">为 Agent 而非为自己设计</text>
+  <text x="177" y="360" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">最少量输出 · 标准错误格式</text>
+  <text x="177" y="378" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">预计算摘要 · 便于 grep</text>
+  <text x="177" y="396" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">避免 5000 行日志淹没 Agent</text>
+  <rect width="235" height="132" x="312" y="290" fill="#788c5d" opacity=".08" rx="10"/>
+  <text x="429" y="316" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">原则 2</text>
+  <text x="429" y="338" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">验证器的验证器</text>
+  <text x="429" y="360" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">观察 Claude 犯错的模式</text>
+  <text x="429" y="378" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">设计针对性的新测试</text>
+  <text x="429" y="396" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">持续迭代测试套件</text>
+  <rect width="235" height="132" x="564" y="290" fill="#788c5d" opacity=".08" rx="10"/>
+  <text x="681" y="316" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">原则 3</text>
+  <text x="681" y="338" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" text-anchor="middle">从生成到筛选的范式转移</text>
+  <text x="681" y="360" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">不要试图一次性生成正确答案</text>
+  <text x="681" y="378" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">生成 100 个候选，验证器选最佳</text>
+  <text x="681" y="396" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">OpenAI: 50% → 70%</text>
+  <rect width="820" height="20" x="40" y="455" fill="#141413" opacity=".04" rx="10"/>
+  <text x="450" y="469" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">&quot;瓶颈很快从代码生成转移到了人类 QA 容量。&quot; — OpenAI Harness</text>
 </svg>

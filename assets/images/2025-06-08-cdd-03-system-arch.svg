@@ -1,51 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
   <defs>
-    <marker id="arr3" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    <marker id="arr3" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 10 3.5L0 7z"/>
     </marker>
-    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D1CFC5" flood-opacity="0.5"/>
+    <filter id="shadow3" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#d1cfc5" flood-opacity=".5" stdDeviation="4"/>
     </filter>
   </defs>
-
-  <rect width="700" height="400" fill="#FAF9F5" rx="8"/>
-
-  <!-- Title -->
-  <text x="350" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">上下文管理系统架构</text>
-
-  <!-- L1: 开发者工具层 -->
-  <g transform="translate(350,80)">
-    <rect x="-290" y="-36" width="580" height="72" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2.5" filter="url(#shadow3)"/>
-    <text x="-265" y="-10" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#D97757">开发者工具层 Developer Tools Layer</text>
-    <text x="-265" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#141413">IDE插件  ·  CLI工具  ·  Web界面</text>
+  <rect width="700" height="400" fill="#faf9f5" rx="8"/>
+  <text x="350" y="26" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle">上下文管理系统架构</text>
+  <g transform="translate(350 80)">
+    <rect width="580" height="72" x="-290" y="-36" fill="#e3dacc" stroke="#d97757" stroke-width="2.5" filter="url(#shadow3)" rx="10"/>
+    <text x="-265" y="-10" fill="#d97757" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">开发者工具层 Developer Tools Layer</text>
+    <text x="-265" y="14" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="12">IDE插件  ·  CLI工具  ·  Web界面</text>
   </g>
-
-  <!-- Arrow L1 → L2 -->
-  <path d="M 350,116 L 350,152" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#arr3)"/>
-
-  <!-- L2: API网关层 -->
-  <g transform="translate(350,200)">
-    <rect x="-290" y="-36" width="580" height="72" rx="10" fill="#E3DACC" stroke="#87867F" stroke-width="2" filter="url(#shadow3)"/>
-    <text x="-265" y="-10" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#141413">API网关层 API Gateway Layer</text>
-    <text x="-265" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#141413">认证  ·  限流  ·  路由  ·  缓存</text>
+  <path fill="none" stroke="#d97757" stroke-width="2.5" marker-end="url(#arr3)" d="M350 116v36"/>
+  <g transform="translate(350 200)">
+    <rect width="580" height="72" x="-290" y="-36" fill="#e3dacc" stroke="#87867f" stroke-width="2" filter="url(#shadow3)" rx="10"/>
+    <text x="-265" y="-10" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">API网关层 API Gateway Layer</text>
+    <text x="-265" y="14" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="12">认证  ·  限流  ·  路由  ·  缓存</text>
   </g>
-
-  <!-- Arrow L2 → L3 -->
-  <path d="M 350,236 L 350,272" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr3)"/>
-
-  <!-- L3: 上下文服务层 -->
-  <g transform="translate(350,320)">
-    <rect x="-290" y="-36" width="580" height="72" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="2" filter="url(#shadow3)"/>
-    <text x="-265" y="-10" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#141413">上下文服务层 Context Service Layer</text>
-    <text x="-265" y="14" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#141413">组装引擎  ·  版本管理  ·  索引搜索  ·  依赖解析</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr3)" d="M350 236v36"/>
+  <g transform="translate(350 320)">
+    <rect width="580" height="72" x="-290" y="-36" fill="#d1cfc5" stroke="#87867f" stroke-width="2" filter="url(#shadow3)" rx="10"/>
+    <text x="-265" y="-10" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">上下文服务层 Context Service Layer</text>
+    <text x="-265" y="14" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="12">组装引擎  ·  版本管理  ·  索引搜索  ·  依赖解析</text>
   </g>
-
-  <!-- Arrow L3 → L4 -->
-  <path d="M 350,356 L 350,376" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr3)"/>
-
-  <!-- L4: 存储层 -->
-  <g transform="translate(350,395)">
-    <rect x="-290" y="-14" width="580" height="40" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow3)"/>
-    <text x="0" y="6" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#788C5D">存储层 Storage:  Git仓库  ·  向量数据库  ·  缓存 (Redis)</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr3)" d="M350 356v20"/>
+  <g transform="translate(350 395)">
+    <rect width="580" height="40" x="-290" y="-14" fill="#e3dacc" stroke="#788c5d" stroke-width="2" filter="url(#shadow3)" rx="8"/>
+    <text y="6" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="12" text-anchor="middle">存储层 Storage:  Git仓库  ·  向量数据库  ·  缓存 (Redis)</text>
   </g>
 </svg>

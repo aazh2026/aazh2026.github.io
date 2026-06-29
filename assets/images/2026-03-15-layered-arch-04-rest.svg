@@ -1,33 +1,23 @@
-<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- 表示层对比：Web UI / Mobile UI / REST API -->
-  <rect width="560" height="140" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">表示层：Web UI / Mobile UI / REST API</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
-
-  <!-- Web UI -->
-  <rect x="30" y="50" width="160" height="60" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="30" y="50" width="160" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="110" y="63" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Web UI</text>
-  <text x="110" y="83" text-anchor="middle" font-size="9" fill="#141413">浏览器渲染</text>
-  <text x="110" y="98" text-anchor="middle" font-size="9" fill="#87867F">HTML · CSS · JavaScript</text>
-
-  <!-- REST API -->
-  <rect x="200" y="50" width="160" height="60" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="200" y="50" width="160" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="63" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">REST API</text>
-  <text x="280" y="83" text-anchor="middle" font-size="9" fill="#141413">JSON over HTTP</text>
-  <text x="280" y="98" text-anchor="middle" font-size="9" fill="#87867F">GET · POST · PUT · DELETE</text>
-
-  <!-- Mobile UI -->
-  <rect x="370" y="50" width="160" height="60" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="370" y="50" width="160" height="16" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="450" y="63" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Mobile UI</text>
-  <text x="450" y="83" text-anchor="middle" font-size="9" fill="#141413">原生应用渲染</text>
-  <text x="450" y="98" text-anchor="middle" font-size="9" fill="#87867F">Swift · Kotlin · React Native</text>
-
-  <!-- Common business logic arrow -->
-  <line x1="110" y1="110" x2="280" y2="110" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <line x1="280" y1="110" x2="450" y2="110" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="280" y="120" text-anchor="middle" font-size="9" fill="#87867F">共同的业务服务层</text>
-  <text x="280" y="132" text-anchor="middle" font-size="8.5" fill="#87867F">同一套 Domain Model</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 140">
+  <path fill="#faf9f5" d="M0 0h560v140H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">表示层：Web UI / Mobile UI / REST API</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2026/03/15</text>
+  <rect width="160" height="60" x="30" y="50" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="160" height="16" x="30" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="110" y="63" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Web UI</text>
+  <text x="110" y="83" fill="#141413" font-size="9" text-anchor="middle">浏览器渲染</text>
+  <text x="110" y="98" fill="#87867f" font-size="9" text-anchor="middle">HTML · CSS · JavaScript</text>
+  <rect width="160" height="60" x="200" y="50" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="160" height="16" x="200" y="50" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="280" y="63" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">REST API</text>
+  <text x="280" y="83" fill="#141413" font-size="9" text-anchor="middle">JSON over HTTP</text>
+  <text x="280" y="98" fill="#87867f" font-size="9" text-anchor="middle">GET · POST · PUT · DELETE</text>
+  <rect width="160" height="60" x="370" y="50" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="160" height="16" x="370" y="50" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="450" y="63" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Mobile UI</text>
+  <text x="450" y="83" fill="#141413" font-size="9" text-anchor="middle">原生应用渲染</text>
+  <text x="450" y="98" fill="#87867f" font-size="9" text-anchor="middle">Swift · Kotlin · React Native</text>
+  <path stroke="#d1cfc5" stroke-dasharray="3,2" d="M110 110h170m0 0h170"/>
+  <text x="280" y="120" fill="#87867f" font-size="9" text-anchor="middle">共同的业务服务层</text>
+  <text x="280" y="132" fill="#87867f" font-size="8.5" text-anchor="middle">同一套 Domain Model</text>
 </svg>

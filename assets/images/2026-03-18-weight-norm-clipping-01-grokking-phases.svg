@@ -1,98 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Grokking Training Phases">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Grokking Training Phases" viewBox="0 0 800 420">
   <title>Grokking 训练阶段与 Weight Norm Clipping 效果</title>
-  <desc>神经网络从记忆到泛化的三个阶段：记忆期、平台期、Grokking，以及 Weight Norm Clipping 的加速效果</desc>
-
+  <desc>
+    神经网络从记忆到泛化的三个阶段：记忆期、平台期、Grokking，以及 Weight Norm Clipping 的加速效果
+  </desc>
   <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg4" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <linearGradient id="clay4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#D97757"/>
-      <stop offset="100%" stop-color="#E8937A"/>
-    </linearGradient>
-    <linearGradient id="olive4" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#788C5D"/>
-      <stop offset="100%" stop-color="#8FA870"/>
-    </linearGradient>
-    <marker id="arr4" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
+    <marker id="arr4" markerHeight="6" markerWidth="8" orient="auto" refX="7" refY="3">
+      <path fill="#87867f" d="m0 0 8 3-8 3z"/>
     </marker>
-    <filter id="sh4" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    <filter id="sh4" width="120%" height="130%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
     </filter>
   </defs>
-
   <rect width="800" height="420" fill="url(#bg4)" rx="16"/>
-
-  <!-- Title -->
-  <text x="400" y="38" font-family="ui-serif, Georgia, serif" font-size="20" font-weight="700" fill="#141413" text-anchor="middle">Grokking 训练阶段与 Weight Norm Clipping</text>
-  <text x="400" y="60" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F" text-anchor="middle">从记忆到泛化的突然转变 — AI 将 100K 步压缩到 1.5K 步</text>
-
-  <!-- Chart area -->
-  <g transform="translate(60, 85)">
-    <!-- Y-axis -->
-    <line x1="0" y1="0" x2="0" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
-    <text x="-10" y="5" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="end">100%</text>
-    <text x="-10" y="130" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="end">50%</text>
-    <text x="-10" y="255" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="end">0%</text>
-
-    <!-- X-axis -->
-    <line x1="0" y1="250" x2="680" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
-    <text x="0" y="270" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">0</text>
-    <text x="170" y="270" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">25K</text>
-    <text x="340" y="270" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">50K</text>
-    <text x="510" y="270" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">75K</text>
-    <text x="680" y="270" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">100K</text>
-    <text x="340" y="288" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">训练步数 (Training Steps)</text>
-
-    <!-- Grid lines -->
-    <line x1="0" y1="125" x2="680" y2="125" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-    <line x1="170" y1="0" x2="170" y2="250" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-    <line x1="340" y1="0" x2="340" y2="250" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-    <line x1="510" y1="0" x2="510" y2="250" stroke="#E3DACC" stroke-width="1" stroke-dasharray="4,4"/>
-
-    <!-- Training accuracy (always 100%) -->
-    <polyline points="0,5 680,5" stroke="#5B8DB8" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
-    <text x="690" y="8" font-family="system-ui,sans-serif" font-size="10" fill="#5B8DB8">训练准确率</text>
-
-    <!-- Baseline validation (platform then jump) -->
-    <polyline points="0,250 80,250 80,240 220,240 220,230 300,230 300,180 340,120 340,5 680,5" stroke="#D1CFC5" stroke-width="2.5" fill="none"/>
-    <text x="350" y="180" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">基线</text>
-
-    <!-- With WNC validation (fast grokking) -->
-    <polyline points="0,250 20,250 20,235 40,235 40,200 55,100 55,5 680,5" stroke="#D97757" stroke-width="3" fill="none"/>
-    <text x="30" y="155" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" font-weight="600">+WNC</text>
-
-    <!-- Grokking moment baseline -->
-    <line x1="340" y1="5" x2="340" y2="250" stroke="#87867F" stroke-width="1.5" stroke-dasharray="6,4"/>
-    <text x="340" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">~100K步</text>
-
-    <!-- Grokking moment with WNC -->
-    <line x1="55" y1="5" x2="55" y2="250" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4"/>
-    <text x="55" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" font-weight="600" text-anchor="middle">~1.5K步</text>
-    <text x="55" y="27" font-family="system-ui,sans-serif" font-size="9" fill="#D97757" font-weight="600" text-anchor="middle">66×</text>
-
-    <!-- Arrow showing acceleration -->
-    <path d="M 140 260 Q 200 280 280 260" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arr4)"/>
-    <text x="210" y="295" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" text-anchor="middle">加速 18-66×</text>
-  </g>
-
-  <!-- Legend cards -->
-  <g transform="translate(60, 360)">
-    <rect x="0" y="0" width="220" height="50" fill="#FFFFFF" rx="8" filter="url(#sh4)"/>
-    <rect x="0" y="0" width="6" height="50" fill="#5B8DB8" rx="3"/>
-    <text x="20" y="20" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">训练准确率</text>
-    <text x="20" y="38" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">始终 100%（记忆数据）</text>
-
-    <rect x="240" y="0" width="220" height="50" fill="#FFFFFF" rx="8" filter="url(#sh4)"/>
-    <rect x="240" y="0" width="6" height="50" fill="#D1CFC5" rx="3"/>
-    <text x="260" y="20" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">验证准确率（基线）</text>
-    <text x="260" y="38" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">平台期后突然泛化 ~100K步</text>
-
-    <rect x="480" y="0" width="240" height="50" fill="#FFFFFF" rx="8" filter="url(#sh4)"/>
-    <rect x="480" y="0" width="6" height="50" fill="#D97757" rx="3"/>
-    <text x="500" y="20" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#141413">验证准确率（+WNC）</text>
-    <text x="500" y="38" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">快速泛化 ~1.5K步，零失败</text>
+  <text x="400" y="38" fill="#141413" font-family="ui-serif, Georgia, serif" font-size="20" font-weight="700" text-anchor="middle">Grokking 训练阶段与 Weight Norm Clipping</text>
+  <text x="400" y="60" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">从记忆到泛化的突然转变 — AI 将 100K 步压缩到 1.5K 步</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M60 85v250"/>
+  <text x="-10" y="5" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="end" transform="translate(60 85)">100%</text>
+  <text x="-10" y="130" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="end" transform="translate(60 85)">50%</text>
+  <text x="-10" y="255" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="end" transform="translate(60 85)">0%</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M60 335h680"/>
+  <text y="270" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">0</text>
+  <text x="170" y="270" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">25K</text>
+  <text x="340" y="270" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">50K</text>
+  <text x="510" y="270" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">75K</text>
+  <text x="680" y="270" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">100K</text>
+  <text x="340" y="288" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle" transform="translate(60 85)">训练步数 (Training Steps)</text>
+  <path stroke="#e3dacc" stroke-dasharray="4,4" d="M60 210h680M230 85v250M400 85v250M570 85v250"/>
+  <path fill="none" stroke="#5b8db8" stroke-dasharray="8,4" stroke-width="3" d="M60 90h680"/>
+  <text x="690" y="8" fill="#5b8db8" font-family="system-ui,sans-serif" font-size="10" transform="translate(60 85)">训练准确率</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2.5" d="M60 335h80v-10h140v-10h80v-50l40-60V90h340"/>
+  <text x="350" y="180" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" transform="translate(60 85)">基线</text>
+  <path fill="none" stroke="#d97757" stroke-width="3" d="M60 335h20v-15h20v-35l15-100V90h625"/>
+  <text x="30" y="155" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="600" transform="translate(60 85)">+WNC</text>
+  <path stroke="#87867f" stroke-dasharray="6,4" stroke-width="1.5" d="M400 90v245"/>
+  <text x="340" y="15" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle" transform="translate(60 85)">~100K步</text>
+  <path stroke="#d97757" stroke-dasharray="6,4" stroke-width="1.5" d="M115 90v245"/>
+  <text x="55" y="15" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" font-weight="600" text-anchor="middle" transform="translate(60 85)">~1.5K步</text>
+  <text x="55" y="27" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" font-weight="600" text-anchor="middle" transform="translate(60 85)">66×</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr4)" d="M140 260q60 20 140 0" transform="translate(60 85)"/>
+  <text x="210" y="295" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(60 85)">加速 18-66×</text>
+  <g transform="translate(60 360)">
+    <rect width="220" height="50" fill="#fff" filter="url(#sh4)" rx="8"/>
+    <rect width="6" height="50" fill="#5b8db8" rx="3"/>
+    <text x="20" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">训练准确率</text>
+    <text x="20" y="38" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">始终 100%（记忆数据）</text>
+    <rect width="220" height="50" x="240" fill="#fff" filter="url(#sh4)" rx="8"/>
+    <rect width="6" height="50" x="240" fill="#d1cfc5" rx="3"/>
+    <text x="260" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">验证准确率（基线）</text>
+    <text x="260" y="38" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">平台期后突然泛化 ~100K步</text>
+    <rect width="240" height="50" x="480" fill="#fff" filter="url(#sh4)" rx="8"/>
+    <rect width="6" height="50" x="480" fill="#d97757" rx="3"/>
+    <text x="500" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="11" font-weight="600">验证准确率（+WNC）</text>
+    <text x="500" y="38" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">快速泛化 ~1.5K步，零失败</text>
   </g>
 </svg>

@@ -1,66 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400">
   <defs>
-    <marker id="arr10" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 9 3.5, 0 7" fill="#D97757"/>
+    <marker id="arr10" markerHeight="7" markerWidth="9" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 9 3.5L0 7z"/>
     </marker>
-    <filter id="shadow10" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#D1CFC5" flood-opacity="0.5"/>
+    <filter id="shadow10" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#d1cfc5" flood-opacity=".5" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <rect width="760" height="400" fill="#FAF9F5" rx="8"/>
-
-  <!-- Title -->
-  <text x="380" y="22" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">AI-Native 安全框架五层架构</text>
-
-  <!-- Subgraph border -->
-  <rect x="10" y="36" width="740" height="340" rx="10" fill="none" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="6,3"/>
-
-  <!-- L1: 意图隔离层 -->
-  <g transform="translate(380,75)">
-    <rect x="-300" y="-30" width="600" height="60" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="2.5" filter="url(#shadow10)"/>
-    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#D97757">L1 意图隔离层 Intent Isolation</text>
-    <text x="-275" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">输入沙箱 → 意图解析 → 指令验证</text>
+  <rect width="760" height="400" fill="#faf9f5" rx="8"/>
+  <text x="380" y="22" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle">AI-Native 安全框架五层架构</text>
+  <rect width="740" height="340" x="10" y="36" fill="none" stroke="#d1cfc5" stroke-dasharray="6,3" stroke-width="1.5" rx="10"/>
+  <g transform="translate(380 75)">
+    <rect width="600" height="60" x="-300" y="-30" fill="#e3dacc" stroke="#d97757" stroke-width="2.5" filter="url(#shadow10)" rx="8"/>
+    <text x="-275" y="-8" fill="#d97757" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">L1 意图隔离层 Intent Isolation</text>
+    <text x="-275" y="12" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10">输入沙箱 → 意图解析 → 指令验证</text>
   </g>
-
-  <!-- Arrow L1 → L2 -->
-  <path d="M 380,105 L 380,138" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr10)"/>
-
-  <!-- L2: 权限动态层 -->
-  <g transform="translate(380,180)">
-    <rect x="-300" y="-30" width="600" height="60" rx="8" fill="#E3DACC" stroke="#87867F" stroke-width="2" filter="url(#shadow10)"/>
-    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#141413">L2 权限动态层 Dynamic Privilege</text>
-    <text x="-275" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">最小权限 → 能力令牌 → 时效控制</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr10)" d="M380 105v33"/>
+  <g transform="translate(380 180)">
+    <rect width="600" height="60" x="-300" y="-30" fill="#e3dacc" stroke="#87867f" stroke-width="2" filter="url(#shadow10)" rx="8"/>
+    <text x="-275" y="-8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">L2 权限动态层 Dynamic Privilege</text>
+    <text x="-275" y="12" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10">最小权限 → 能力令牌 → 时效控制</text>
   </g>
-
-  <!-- Arrow L2 → L3 -->
-  <path d="M 380,210 L 380,243" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr10)"/>
-
-  <!-- L3: 执行可观测 -->
-  <g transform="translate(380,285)">
-    <rect x="-300" y="-30" width="600" height="60" rx="8" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5" filter="url(#shadow10)"/>
-    <text x="-275" y="-8" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#141413">L3 执行可观测 Execution Observability</text>
-    <text x="-275" y="12" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#141413">决策日志 → 执行回放 → 快速回滚</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr10)" d="M380 210v33"/>
+  <g transform="translate(380 285)">
+    <rect width="600" height="60" x="-300" y="-30" fill="#d1cfc5" stroke="#87867f" stroke-width="1.5" filter="url(#shadow10)" rx="8"/>
+    <text x="-275" y="-8" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="700">L3 执行可观测 Execution Observability</text>
+    <text x="-275" y="12" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10">决策日志 → 执行回放 → 快速回滚</text>
   </g>
-
-  <!-- Arrow L3 → L4 -->
-  <path d="M 380,315 L 380,348" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr10)"/>
-
-  <!-- L4 + L5 row -->
-  <!-- L4: 人类在环 -->
-  <g transform="translate(230,380)">
-    <rect x="-200" y="-22" width="400" height="44" rx="8" fill="#D1CFC5" stroke="#141413" stroke-width="1.5" filter="url(#shadow10)"/>
-    <text x="-180" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#141413">L4 人类在环 Human-in-the-Loop</text>
-    <text x="-180" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#141413">分级审批 · 影子模式 · 紧急制动</text>
+  <path fill="none" stroke="#87867f" stroke-width="1.5" marker-end="url(#arr10)" d="M380 315v33"/>
+  <g transform="translate(230 380)">
+    <rect width="400" height="44" x="-200" y="-22" fill="#d1cfc5" stroke="#141413" stroke-width="1.5" filter="url(#shadow10)" rx="8"/>
+    <text x="-180" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">L4 人类在环 Human-in-the-Loop</text>
+    <text x="-180" y="16" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="9">分级审批 · 影子模式 · 紧急制动</text>
   </g>
-
-  <!-- Arrow L3 → L5 -->
-  <path d="M 380,345 L 530,360 L 530,358" fill="none" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr10)"/>
-
-  <!-- L5: 持续验证 -->
-  <g transform="translate(600,380)">
-    <rect x="-130" y="-22" width="260" height="44" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow10)"/>
-    <text x="-110" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700" fill="#788C5D">L5 持续验证</text>
-    <text x="-110" y="16" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#141413">行为基线 · 对抗测试 · 红队演练</text>
+  <path fill="none" stroke="#87867f" stroke-width="1.5" marker-end="url(#arr10)" d="m380 345 150 15v-2"/>
+  <g transform="translate(600 380)">
+    <rect width="260" height="44" x="-130" y="-22" fill="#e3dacc" stroke="#788c5d" stroke-width="2" filter="url(#shadow10)" rx="8"/>
+    <text x="-110" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="700">L5 持续验证</text>
+    <text x="-110" y="16" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="9">行为基线 · 对抗测试 · 红队演练</text>
   </g>
 </svg>

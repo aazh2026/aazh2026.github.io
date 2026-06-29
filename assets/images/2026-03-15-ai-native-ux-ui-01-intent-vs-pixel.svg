@@ -1,96 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-label="意图驱动设计 vs 像素驱动设计">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="意图驱动设计 vs 像素驱动设计" viewBox="0 0 900 420">
   <title>AI-Native UX/UI 设计范式转变</title>
-  <desc>对比传统像素驱动设计与AI-Native意图驱动设计的核心差异，以及设计师角色演变</desc>
-
+  <desc>
+    对比传统像素驱动设计与AI-Native意图驱动设计的核心差异，以及设计师角色演变
+  </desc>
   <defs>
-    <filter id="sf4" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+    <marker id="rtArr" markerHeight="8" markerWidth="8" orient="auto" refX="8" refY="4">
+      <path fill="#d97757" d="m0 0 8 4-8 4z"/>
+    </marker>
+    <filter id="sf4" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".1" stdDeviation="3"/>
     </filter>
-    <marker id="rtArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#D97757"/>
-    </marker>
-    <marker id="grArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#788C5D"/>
-    </marker>
   </defs>
-
-  <rect width="900" height="420" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="30" y="32" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#141413">设计范式的根本转变</text>
-  <text x="30" y="50" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">从"怎么做"（像素）到"要什么"（意图）</text>
-
-  <!-- LEFT: Pixel-Driven -->
+  <path fill="#faf9f5" d="M0 0h900v420H0z"/>
+  <text x="30" y="32" fill="#141413" font-family="system-ui,sans-serif" font-size="15" font-weight="700">设计范式的根本转变</text>
+  <text x="30" y="50" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">从&quot;怎么做&quot;（像素）到&quot;要什么&quot;（意图）</text>
   <g filter="url(#sf4)">
-    <rect x="30" y="65" width="390" height="300" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
-    <rect x="30" y="65" width="390" height="40" rx="10" fill="#D97757"/>
-    <rect x="30" y="95" width="390" height="10" fill="#D97757"/>
-    <text x="225" y="90" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">❌ 传统设计 (Pixel-Driven)</text>
-
-    <text x="50" y="125" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#D97757">思维模式</text>
-    <text x="50" y="142" font-family="system-ui,sans-serif" font-size="9" fill="#141413">"这个按钮需要 48px 高，蓝色渐变，阴影 2px"</text>
-    <text x="50" y="157" font-family="system-ui,sans-serif" font-size="9" fill="#141413">"圆角是 4px 还是 6px？"</text>
-
-    <text x="50" y="180" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#D97757">决策层次</text>
-    <text x="50" y="197" font-family="system-ui,sans-serif" font-size="9" fill="#141413">微观 — 单个像素、颜色值、间距</text>
-
-    <text x="50" y="220" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#D97757">工作方式</text>
-    <text x="50" y="237" font-family="system-ui,sans-serif" font-size="9" fill="#141413">手动调整每个元素的属性</text>
-
-    <text x="50" y="260" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#D97757">痛点</text>
-    <text x="50" y="277" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">• 60% 时间花在重复性操作</text>
-    <text x="50" y="290" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">• 25% 时间花在版本同步</text>
-    <text x="50" y="303" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">• 仅 15% 时间用于创造性思考</text>
-    <text x="50" y="320" font-family="system-ui,sans-serif" font-size="9" fill="#D97757">• 设计师成为"人肉样式计算器"</text>
-
-    <text x="50" y="350" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#D97757">产出物</text>
-    <text x="50" y="367" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">静态设计稿 + 标注文档</text>
+    <rect width="390" height="300" x="30" y="65" fill="#faf9f5" stroke="#d97757" stroke-width="2" rx="10"/>
+    <rect width="390" height="40" x="30" y="65" fill="#d97757" rx="10"/>
+    <path fill="#d97757" d="M30 95h390v10H30z"/>
+    <text x="225" y="90" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">❌ 传统设计 (Pixel-Driven)</text>
+    <text x="50" y="125" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="700">思维模式</text>
+    <text x="50" y="142" fill="#141413" font-family="system-ui,sans-serif" font-size="9">&quot;这个按钮需要 48px 高，蓝色渐变，阴影 2px&quot;</text>
+    <text x="50" y="157" fill="#141413" font-family="system-ui,sans-serif" font-size="9">&quot;圆角是 4px 还是 6px？&quot;</text>
+    <text x="50" y="180" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="700">决策层次</text>
+    <text x="50" y="197" fill="#141413" font-family="system-ui,sans-serif" font-size="9">微观 — 单个像素、颜色值、间距</text>
+    <text x="50" y="220" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="700">工作方式</text>
+    <text x="50" y="237" fill="#141413" font-family="system-ui,sans-serif" font-size="9">手动调整每个元素的属性</text>
+    <text x="50" y="260" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="700">痛点</text>
+    <text x="50" y="277" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">• 60% 时间花在重复性操作</text>
+    <text x="50" y="290" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">• 25% 时间花在版本同步</text>
+    <text x="50" y="303" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">• 仅 15% 时间用于创造性思考</text>
+    <text x="50" y="320" fill="#d97757" font-family="system-ui,sans-serif" font-size="9">• 设计师成为&quot;人肉样式计算器&quot;</text>
+    <text x="50" y="350" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="700">产出物</text>
+    <text x="50" y="367" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">静态设计稿 + 标注文档</text>
   </g>
-
-  <!-- CENTER: Arrow -->
-  <line x1="420" y1="215" x2="480" y2="215" stroke="#D1CFC5" stroke-width="3" marker-end="url(#rtArr)"/>
-  <text x="450" y="205" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">AI 辅助</text>
-  <text x="450" y="240" font-family="system-ui,sans-serif" font-size="9" fill="#87867F" text-anchor="middle">转变</text>
-
-  <!-- RIGHT: Intent-Driven -->
+  <path stroke="#d1cfc5" stroke-width="3" marker-end="url(#rtArr)" d="M420 215h60"/>
+  <text x="450" y="205" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">AI 辅助</text>
+  <text x="450" y="240" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">转变</text>
   <g filter="url(#sf4)">
-    <rect x="480" y="65" width="390" height="300" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <rect x="480" y="65" width="390" height="40" rx="10" fill="#788C5D"/>
-    <rect x="480" y="95" width="390" height="10" fill="#788C5D"/>
-    <text x="675" y="90" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5" text-anchor="middle">✓ AI-Native 设计 (Intent-Driven)</text>
-
-    <text x="500" y="125" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#788C5D">思维模式</text>
-    <text x="500" y="142" font-family="system-ui,sans-serif" font-size="9" fill="#141413">"这个按钮需要突出显示，适合主要操作"</text>
-    <text x="500" y="157" font-family="system-ui,sans-serif" font-size="9" fill="#141413">"最大化转化率，同时建立品牌信任"</text>
-
-    <text x="500" y="180" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#788C5D">决策层次</text>
-    <text x="500" y="197" font-family="system-ui,sans-serif" font-size="9" fill="#141413">宏观 — 用户体验目标、品牌调性、业务意图</text>
-
-    <text x="500" y="220" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#788C5D">工作方式</text>
-    <text x="500" y="237" font-family="system-ui,sans-serif" font-size="9" fill="#141413">描述意图，AI 生成多套实现方案</text>
-
-    <text x="500" y="260" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#788C5D">优势</text>
-    <text x="500" y="277" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">• 设计师专注战略决策</text>
-    <text x="500" y="290" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">• 10x 快速探索多方案</text>
-    <text x="500" y="303" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">• 自动响应式适配</text>
-    <text x="500" y="316" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">• 自动生成交互说明</text>
-
-    <text x="500" y="350" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#788C5D">产出物</text>
-    <text x="500" y="367" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">可执行设计意图 + 多版本方案 + 代码</text>
+    <rect width="390" height="300" x="480" y="65" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="10"/>
+    <rect width="390" height="40" x="480" y="65" fill="#788c5d" rx="10"/>
+    <path fill="#788c5d" d="M480 95h390v10H480z"/>
+    <text x="675" y="90" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">✓ AI-Native 设计 (Intent-Driven)</text>
+    <text x="500" y="125" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="700">思维模式</text>
+    <text x="500" y="142" fill="#141413" font-family="system-ui,sans-serif" font-size="9">&quot;这个按钮需要突出显示，适合主要操作&quot;</text>
+    <text x="500" y="157" fill="#141413" font-family="system-ui,sans-serif" font-size="9">&quot;最大化转化率，同时建立品牌信任&quot;</text>
+    <text x="500" y="180" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="700">决策层次</text>
+    <text x="500" y="197" fill="#141413" font-family="system-ui,sans-serif" font-size="9">宏观 — 用户体验目标、品牌调性、业务意图</text>
+    <text x="500" y="220" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="700">工作方式</text>
+    <text x="500" y="237" fill="#141413" font-family="system-ui,sans-serif" font-size="9">描述意图，AI 生成多套实现方案</text>
+    <text x="500" y="260" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="700">优势</text>
+    <text x="500" y="277" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9">• 设计师专注战略决策</text>
+    <text x="500" y="290" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9">• 10x 快速探索多方案</text>
+    <text x="500" y="303" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9">• 自动响应式适配</text>
+    <text x="500" y="316" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9">• 自动生成交互说明</text>
+    <text x="500" y="350" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="700">产出物</text>
+    <text x="500" y="367" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9">可执行设计意图 + 多版本方案 + 代码</text>
   </g>
-
-  <!-- Speed improvement indicator -->
-  <g filter="url(#sf4)">
-    <rect x="480" y="375" width="390" height="35" rx="6" fill="#788C5D" fill-opacity="0.1" stroke="#788C5D" stroke-width="1.5"/>
-    <text x="675" y="398" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#788C5D" text-anchor="middle">速度提升: 16 小时 → 45 分钟 (21x)</text>
+  <g fill="#788c5d" filter="url(#sf4)">
+    <rect width="390" height="35" x="480" y="375" fill-opacity=".1" stroke="#788c5d" stroke-width="1.5" rx="6"/>
+    <text x="675" y="398" font-family="system-ui,sans-serif" font-size="13" font-weight="700" text-anchor="middle">速度提升: 16 小时 → 45 分钟 (21x)</text>
   </g>
-
-  <!-- Designer evolution at bottom -->
-  <rect x="30" y="415" width="840" height="1" fill="#E3DACC"/>
-  <text x="30" y="432" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#141413">设计师角色演变:</text>
-  <text x="155" y="432" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">像素守护者</text>
-  <text x="250" y="432" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">→</text>
-  <text x="270" y="432" font-family="system-ui,sans-serif" font-size="10" fill="#141413">意图传达者</text>
-  <text x="370" y="432" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">→</text>
-  <text x="390" y="432" font-family="system-ui,sans-serif" font-size="10" fill="#788C5D">体验架构师</text>
+  <path fill="#e3dacc" d="M30 415h840v1H30z"/>
+  <text x="30" y="432" fill="#141413" font-family="system-ui,sans-serif" font-size="10" font-weight="600">设计师角色演变:</text>
+  <text x="155" y="432" fill="#d97757" font-family="system-ui,sans-serif" font-size="10">像素守护者</text>
+  <text x="250" y="432" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">→</text>
+  <text x="270" y="432" fill="#141413" font-family="system-ui,sans-serif" font-size="10">意图传达者</text>
+  <text x="370" y="432" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">→</text>
+  <text x="390" y="432" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10">体验架构师</text>
 </svg>

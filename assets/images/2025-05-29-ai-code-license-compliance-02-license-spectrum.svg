@@ -1,79 +1,59 @@
-<svg viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 800 300">
   <title>AI代码License风险光谱</title>
-  <desc>horizontal risk heatmap showing 5 license tiers from low risk (MIT/Apache/BSD, green) to critical risk (AGPL, red)</desc>
-
-  <!-- Background -->
-  <rect width="800" height="300" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="400" y="28" text-anchor="middle" font-size="15" font-weight="600" fill="#141413" letter-spacing="-0.02em">AI 生成代码的 License 风险光谱</text>
-  <text x="400" y="46" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">从宽松到强传染，风险随 Copyleft 强度递增</text>
-
-  <!-- Gradient bar background -->
+  <desc>
+    horizontal risk heatmap showing 5 license tiers from low risk (MIT/Apache/BSD, green) to critical risk (AGPL, red)
+  </desc>
+  <path fill="#faf9f5" d="M0 0h800v300H0z"/>
+  <text x="400" y="28" fill="#141413" font-size="15" font-weight="600" letter-spacing="-.02em" text-anchor="middle">AI 生成代码的 License 风险光谱</text>
+  <text x="400" y="46" fill="#87867f" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">从宽松到强传染，风险随 Copyleft 强度递增</text>
   <defs>
-    <linearGradient id="riskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#788C5D"/>
-      <stop offset="25%" stop-color="#9EAD7E"/>
-      <stop offset="50%" stop-color="#D4A03A"/>
-      <stop offset="75%" stop-color="#D97757"/>
-      <stop offset="100%" stop-color="#B5401F"/>
+    <linearGradient id="riskGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#788c5d"/>
+      <stop offset="25%" stop-color="#9ead7e"/>
+      <stop offset="50%" stop-color="#d4a03a"/>
+      <stop offset="75%" stop-color="#d97757"/>
+      <stop offset="100%" stop-color="#b5401f"/>
     </linearGradient>
   </defs>
-  <rect x="60" y="62" width="680" height="12" rx="6" fill="url(#riskGrad)"/>
-
-  <!-- Risk labels under bar -->
-  <text x="60" y="88" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">低风险</text>
-  <text x="400" y="88" text-anchor="middle" font-size="9" fill="#D4A03A" font-family="ui-monospace, monospace">中风险</text>
-  <text x="740" y="88" text-anchor="end" font-size="9" fill="#B5401F" font-family="ui-monospace, monospace">极高风险</text>
-
-  <!-- Card 1: MIT / Apache / BSD -->
-  <rect x="60" y="104" width="200" height="100" rx="10" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <rect x="60" y="104" width="200" height="28" rx="10" fill="#788C5D"/>
-  <rect x="60" y="124" width="200" height="8" fill="#788C5D"/>
-  <text x="160" y="123" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">MIT · Apache 2.0 · BSD</text>
-  <text x="76" y="152" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">宽松 License</text>
-  <text x="76" y="172" font-size="22" fill="#788C5D">🟢</text>
-  <text x="100" y="174" font-size="12" font-weight="600" fill="#788C5D">低风险</text>
-  <text x="76" y="194" font-size="10" fill="#87867F">保留版权声明即可</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="260" y1="154" x2="296" y2="154" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="296,150 302,154 296,158" fill="#D1CFC5"/>
-
-  <!-- Card 2: LGPL -->
-  <rect x="306" y="104" width="180" height="100" rx="10" fill="#FFFFFF" stroke="#D4A03A" stroke-width="1.8"/>
-  <rect x="306" y="104" width="180" height="28" rx="10" fill="#D4A03A"/>
-  <rect x="306" y="124" width="180" height="8" fill="#D4A03A"/>
-  <text x="396" y="123" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">LGPL</text>
-  <text x="322" y="152" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">弱 Copyleft</text>
+  <rect width="680" height="12" x="60" y="62" fill="url(#riskGrad)" rx="6"/>
+  <text x="60" y="88" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9">低风险</text>
+  <text x="400" y="88" fill="#d4a03a" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">中风险</text>
+  <text x="740" y="88" fill="#b5401f" font-family="ui-monospace, monospace" font-size="9" text-anchor="end">极高风险</text>
+  <rect width="200" height="100" x="60" y="104" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="10"/>
+  <rect width="200" height="28" x="60" y="104" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M60 124h200v8H60z"/>
+  <text x="160" y="123" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">MIT · Apache 2.0 · BSD</text>
+  <text x="76" y="152" fill="#87867f" font-family="ui-monospace, monospace" font-size="11">宽松 License</text>
+  <text x="76" y="172" fill="#788c5d" font-size="22">🟢</text>
+  <text x="100" y="174" fill="#788c5d" font-size="12" font-weight="600">低风险</text>
+  <text x="76" y="194" fill="#87867f" font-size="10">保留版权声明即可</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M260 154h36"/>
+  <path fill="#d1cfc5" d="m296 150 6 4-6 4z"/>
+  <rect width="180" height="100" x="306" y="104" fill="#fff" stroke="#d4a03a" stroke-width="1.8" rx="10"/>
+  <rect width="180" height="28" x="306" y="104" fill="#d4a03a" rx="10"/>
+  <path fill="#d4a03a" d="M306 124h180v8H306z"/>
+  <text x="396" y="123" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">LGPL</text>
+  <text x="322" y="152" fill="#87867f" font-family="ui-monospace, monospace" font-size="11">弱 Copyleft</text>
   <text x="322" y="172" font-size="22">🟡</text>
-  <text x="346" y="174" font-size="12" font-weight="600" fill="#D4A03A">中风险</text>
-  <text x="322" y="194" font-size="10" fill="#87867F">修改需开源</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="486" y1="154" x2="522" y2="154" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="522,150 528,154 522,158" fill="#D1CFC5"/>
-
-  <!-- Card 3: GPL v2/v3 -->
-  <rect x="532" y="104" width="200" height="100" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="532" y="104" width="200" height="28" rx="10" fill="#D97757"/>
-  <rect x="532" y="124" width="200" height="8" fill="#D97757"/>
-  <text x="632" y="123" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">GPL v2 / v3</text>
-  <text x="548" y="152" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">强 Copyleft</text>
+  <text x="346" y="174" fill="#d4a03a" font-size="12" font-weight="600">中风险</text>
+  <text x="322" y="194" fill="#87867f" font-size="10">修改需开源</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M486 154h36"/>
+  <path fill="#d1cfc5" d="m522 150 6 4-6 4z"/>
+  <rect width="200" height="100" x="532" y="104" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="10"/>
+  <rect width="200" height="28" x="532" y="104" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M532 124h200v8H532z"/>
+  <text x="632" y="123" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">GPL v2 / v3</text>
+  <text x="548" y="152" fill="#87867f" font-family="ui-monospace, monospace" font-size="11">强 Copyleft</text>
   <text x="548" y="172" font-size="22">🔴</text>
-  <text x="572" y="174" font-size="12" font-weight="600" fill="#D97757">高风险</text>
-  <text x="548" y="194" font-size="10" fill="#87867F">衍生作品必须开源</text>
-
-  <!-- Bottom row: AGPL -->
-  <rect x="306" y="218" width="426" height="64" rx="10" fill="#FFFFFF" stroke="#B5401F" stroke-width="2"/>
-  <rect x="306" y="218" width="426" height="24" rx="10" fill="#B5401F"/>
-  <rect x="306" y="234" width="426" height="8" fill="#B5401F"/>
-  <text x="519" y="234" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">AGPL — 超强 Copyleft</text>
-  <text x="548" y="260" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">网络使用也需开源</text>
+  <text x="572" y="174" fill="#d97757" font-size="12" font-weight="600">高风险</text>
+  <text x="548" y="194" fill="#87867f" font-size="10">衍生作品必须开源</text>
+  <rect width="426" height="64" x="306" y="218" fill="#fff" stroke="#b5401f" stroke-width="2" rx="10"/>
+  <rect width="426" height="24" x="306" y="218" fill="#b5401f" rx="10"/>
+  <path fill="#b5401f" d="M306 234h426v8H306z"/>
+  <text x="519" y="234" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">AGPL — 超强 Copyleft</text>
+  <text x="548" y="260" fill="#87867f" font-family="ui-monospace, monospace" font-size="11">网络使用也需开源</text>
   <text x="548" y="276" font-size="18">🔴</text>
-  <text x="572" y="278" font-size="13" font-weight="700" fill="#B5401F">极高风险</text>
-  <text x="680" y="270" font-size="10" fill="#87867F">触发 CI 阻断 + 法律风险</text>
-
-  <!-- Footer -->
-  <text x="60" y="278" font-size="10" fill="#87867F">AI 生成的代码可能携带开源代码的 License 基因</text>
+  <text x="572" y="278" fill="#b5401f" font-size="13" font-weight="700">极高风险</text>
+  <text x="680" y="270" fill="#87867f" font-size="10">触发 CI 阻断 + 法律风险</text>
+  <text x="60" y="278" fill="#87867f" font-size="10">AI 生成的代码可能携带开源代码的 License 基因</text>
 </svg>

@@ -1,72 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-label="DORA新旧对比">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="DORA新旧对比" viewBox="0 0 800 440">
   <title>传统DORA vs AI时代DORA指标对比</title>
-  <desc>对比传统DORA四大指标与AI时代重构后的新指标</desc>
+  <desc>
+    对比传统DORA四大指标与AI时代重构后的新指标
+  </desc>
   <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg4" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#D97757"/>
+    <marker id="arrow2" markerHeight="8" markerWidth="8" orient="auto" refX="7" refY="4">
+      <path fill="#d97757" d="M0 0v8l8-4z"/>
     </marker>
   </defs>
-  <rect width="800" height="440" fill="url(#bg4)"/>
-
-  <text x="400" y="30" text-anchor="middle" font-family="Georgia, serif" font-size="17" fill="#141413" letter-spacing="1">传统DORA → AI时代DORA</text>
-  <line x1="150" y1="42" x2="650" y2="42" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Left header -->
-  <rect x="50" y="55" width="300" height="36" rx="6" fill="#87867F"/>
-  <text x="200" y="77" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-weight="bold">传统DORA（代码视角）</text>
-
-  <!-- Right header -->
-  <rect x="450" y="55" width="300" height="36" rx="6" fill="#788C5D"/>
-  <text x="600" y="77" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-weight="bold">AI时代DORA（意图视角）</text>
-
-  <!-- Row 1 -->
-  <rect x="50" y="102" width="300" height="68" rx="8" fill="#D1CFC5" opacity="0.3" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="200" y="125" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#87867F" font-weight="bold">部署频率</text>
-  <text x="200" y="142" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">代码部署到生产的次数</text>
-  <text x="200" y="158" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Deployment Frequency</text>
-  <line x1="355" y1="136" x2="445" y2="136" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
-  <rect x="450" y="102" width="300" height="68" rx="8" fill="#788C5D" opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="600" y="125" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#788C5D" font-weight="bold">意图交付频率</text>
-  <text x="600" y="142" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">单位时间成功交付的意图变更</text>
-  <text x="600" y="158" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Intent Delivery Frequency</text>
-
-  <!-- Row 2 -->
-  <rect x="50" y="180" width="300" height="68" rx="8" fill="#D1CFC5" opacity="0.3" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="200" y="203" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#87867F" font-weight="bold">变更前置时间</text>
-  <text x="200" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">代码提交到上线的时间</text>
-  <text x="200" y="236" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Lead Time for Changes</text>
-  <line x1="355" y1="214" x2="445" y2="214" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
-  <rect x="450" y="180" width="300" height="68" rx="8" fill="#788C5D" opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="600" y="203" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#788C5D" font-weight="bold">意图交付周期</text>
-  <text x="600" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">意图定义到成功交付的时间</text>
-  <text x="600" y="236" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Intent Delivery Lead Time</text>
-
-  <!-- Row 3 -->
-  <rect x="50" y="258" width="300" height="68" rx="8" fill="#D1CFC5" opacity="0.3" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="200" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#87867F" font-weight="bold">恢复服务时间</text>
-  <text x="200" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">修复生产故障的时间</text>
-  <text x="200" y="314" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Time to Restore Service</text>
-  <line x1="355" y1="292" x2="445" y2="292" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
-  <rect x="450" y="258" width="300" height="68" rx="8" fill="#788C5D" opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="600" y="281" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#788C5D" font-weight="bold">意图恢复时间</text>
-  <text x="600" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">发现意图偏离到恢复正常</text>
-  <text x="600" y="314" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Intent Recovery Time</text>
-
-  <!-- Row 4 -->
-  <rect x="50" y="336" width="300" height="68" rx="8" fill="#D1CFC5" opacity="0.3" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="200" y="359" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#87867F" font-weight="bold">变更失败率</text>
-  <text x="200" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">导致故障的部署比例</text>
-  <text x="200" y="392" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Change Failure Rate</text>
-  <line x1="355" y1="370" x2="445" y2="370" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
-  <rect x="450" y="336" width="300" height="68" rx="8" fill="#788C5D" opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="600" y="359" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#788C5D" font-weight="bold">意图偏离率</text>
-  <text x="600" y="376" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#141413">导致返工的意图变更比例</text>
-  <text x="600" y="392" text-anchor="middle" font-family="Georgia, serif" font-size="9" fill="#87867F">Intent Deviation Rate</text>
-
-  <!-- Footer -->
-  <text x="400" y="425" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">AI时代，度量的是"意图流动"的效率，而非"代码流动"</text>
+  <path fill="url(#bg4)" d="M0 0h800v440H0z"/>
+  <text x="400" y="30" fill="#141413" font-family="Georgia, serif" font-size="17" letter-spacing="1" text-anchor="middle">传统DORA → AI时代DORA</text>
+  <path stroke="#d1cfc5" d="M150 42h500"/>
+  <rect width="300" height="36" x="50" y="55" fill="#87867f" rx="6"/>
+  <text x="200" y="77" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle">传统DORA（代码视角）</text>
+  <rect width="300" height="36" x="450" y="55" fill="#788c5d" rx="6"/>
+  <text x="600" y="77" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-weight="bold" text-anchor="middle">AI时代DORA（意图视角）</text>
+  <rect width="300" height="68" x="50" y="102" fill="#d1cfc5" stroke="#d1cfc5" stroke-width="1.5" opacity=".3" rx="8"/>
+  <text x="200" y="125" fill="#87867f" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">部署频率</text>
+  <text x="200" y="142" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">代码部署到生产的次数</text>
+  <text x="200" y="158" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Deployment Frequency</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow2)" d="M355 136h90"/>
+  <rect width="300" height="68" x="450" y="102" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".2" rx="8"/>
+  <text x="600" y="125" fill="#788c5d" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">意图交付频率</text>
+  <text x="600" y="142" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">单位时间成功交付的意图变更</text>
+  <text x="600" y="158" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Intent Delivery Frequency</text>
+  <rect width="300" height="68" x="50" y="180" fill="#d1cfc5" stroke="#d1cfc5" stroke-width="1.5" opacity=".3" rx="8"/>
+  <text x="200" y="203" fill="#87867f" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">变更前置时间</text>
+  <text x="200" y="220" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">代码提交到上线的时间</text>
+  <text x="200" y="236" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Lead Time for Changes</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow2)" d="M355 214h90"/>
+  <rect width="300" height="68" x="450" y="180" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".2" rx="8"/>
+  <text x="600" y="203" fill="#788c5d" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">意图交付周期</text>
+  <text x="600" y="220" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">意图定义到成功交付的时间</text>
+  <text x="600" y="236" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Intent Delivery Lead Time</text>
+  <rect width="300" height="68" x="50" y="258" fill="#d1cfc5" stroke="#d1cfc5" stroke-width="1.5" opacity=".3" rx="8"/>
+  <text x="200" y="281" fill="#87867f" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">恢复服务时间</text>
+  <text x="200" y="298" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">修复生产故障的时间</text>
+  <text x="200" y="314" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Time to Restore Service</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow2)" d="M355 292h90"/>
+  <rect width="300" height="68" x="450" y="258" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".2" rx="8"/>
+  <text x="600" y="281" fill="#788c5d" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">意图恢复时间</text>
+  <text x="600" y="298" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">发现意图偏离到恢复正常</text>
+  <text x="600" y="314" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Intent Recovery Time</text>
+  <rect width="300" height="68" x="50" y="336" fill="#d1cfc5" stroke="#d1cfc5" stroke-width="1.5" opacity=".3" rx="8"/>
+  <text x="200" y="359" fill="#87867f" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">变更失败率</text>
+  <text x="200" y="376" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">导致故障的部署比例</text>
+  <text x="200" y="392" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Change Failure Rate</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow2)" d="M355 370h90"/>
+  <rect width="300" height="68" x="450" y="336" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".2" rx="8"/>
+  <text x="600" y="359" fill="#788c5d" font-family="Georgia, serif" font-size="11" font-weight="bold" text-anchor="middle">意图偏离率</text>
+  <text x="600" y="376" fill="#141413" font-family="Georgia, serif" font-size="9" text-anchor="middle">导致返工的意图变更比例</text>
+  <text x="600" y="392" fill="#87867f" font-family="Georgia, serif" font-size="9" text-anchor="middle">Intent Deviation Rate</text>
+  <text x="400" y="425" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">AI时代，度量的是&quot;意图流动&quot;的效率，而非&quot;代码流动&quot;</text>
 </svg>

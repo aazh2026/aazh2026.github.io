@@ -1,82 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380">
   <title>新测试金字塔</title>
-  <desc>AI时代的三层融合测试模型金字塔</desc>
-
+  <desc>
+    AI时代的三层融合测试模型金字塔
+  </desc>
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
-      .text-secondary { fill: #87867F; font-family: system-ui, sans-serif; }
-      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; }
-      .layer-1 { fill: #788C5D; opacity: 0.2; stroke: #788C5D; stroke-width: 2; }
-      .layer-2 { fill: #D97757; opacity: 0.15; stroke: #D97757; stroke-width: 2; }
-      .layer-3 { fill: #87867F; opacity: 0.15; stroke: #87867F; stroke-width: 2; }
-      .layer-4 { fill: #141413; opacity: 0.08; stroke: #141413; stroke-width: 2; }
+      .text-main,.text-secondary{fill:#141413;font-family:system-ui,sans-serif}.text-secondary{fill:#87867f}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="500" height="380" class="bg"/>
-
-  <!-- Title -->
-  <text x="250" y="30" text-anchor="middle" class="text-main" font-size="18" font-weight="600">新测试金字塔：三层融合模型</text>
-
-  <!-- Old pyramid (left side, faded) -->
-  <g transform="translate(80, 0)" opacity="0.4">
-    <text x="60" y="70" text-anchor="middle" class="text-secondary" font-size="12">传统金字塔</text>
-    <polygon points="60,90 110,140 10,140" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-    <polygon points="30,140 140,140 115,200 55,200" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-    <polygon points="10,200 160,200 130,270 40,270" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-    <text x="85" y="120" text-anchor="middle" class="text-secondary" font-size="9">E2E（少）</text>
-    <text x="85" y="175" text-anchor="middle" class="text-secondary" font-size="9">集成（中）</text>
-    <text x="85" y="240" text-anchor="middle" class="text-secondary" font-size="9">单元（多）</text>
+  <path d="M0 0h500v380H0z" style="fill:#faf9f5"/>
+  <text x="250" y="30" class="text-main" font-size="18" font-weight="600" text-anchor="middle">新测试金字塔：三层融合模型</text>
+  <g opacity=".4">
+    <text x="60" y="70" class="text-secondary" font-size="12" text-anchor="middle" transform="translate(80)">传统金字塔</text>
+    <path fill="#e3dacc" stroke="#d1cfc5" d="m140 90 50 50H90zm-30 50h110l-25 60h-60zm-20 60h150l-30 70h-90z"/>
+    <text x="85" y="120" class="text-secondary" font-size="9" text-anchor="middle" transform="translate(80)">E2E（少）</text>
+    <text x="85" y="175" class="text-secondary" font-size="9" text-anchor="middle" transform="translate(80)">集成（中）</text>
+    <text x="85" y="240" class="text-secondary" font-size="9" text-anchor="middle" transform="translate(80)">单元（多）</text>
   </g>
-
-  <!-- New pyramid (right side) -->
-  <g transform="translate(280, 0)">
-    <text x="85" y="70" text-anchor="middle" class="text-accent" font-size="12" font-weight="600">新金字塔</text>
-
-    <!-- Layer 1: 运行时验证 (top) -->
-    <polygon points="85,90 120,130 50,130" class="layer-1"/>
-    <text x="85" y="118" text-anchor="middle" class="text-main" font-size="10" font-weight="500">运行时验证</text>
-
-    <!-- Layer 2: 属性测试 -->
-    <polygon points="50,130 120,130 140,190 30,190" class="layer-2"/>
-    <text x="85" y="165" text-anchor="middle" class="text-main" font-size="10" font-weight="500">属性测试</text>
-    <text x="85" y="178" text-anchor="middle" class="text-secondary" font-size="8">关键属性</text>
-
-    <!-- Layer 3: AI生成测试 -->
-    <polygon points="30,190 140,190 155,260 15,260" class="layer-3"/>
-    <text x="85" y="230" text-anchor="middle" class="text-main" font-size="10" font-weight="500">AI生成测试</text>
-    <text x="85" y="243" text-anchor="middle" class="text-secondary" font-size="8">自动化</text>
-
-    <!-- Layer 4: 手工测试 (base) -->
-    <polygon points="15,260 155,260 170,330 0,330" class="layer-4"/>
-    <text x="85" y="300" text-anchor="middle" class="text-main" font-size="10" font-weight="500">手工测试</text>
-    <text x="85" y="313" text-anchor="middle" class="text-secondary" font-size="8">极少，核心逻辑</text>
-  </g>
-
-  <!-- Legend -->
-  <g transform="translate(20, 350)">
-    <rect width="12" height="12" fill="#788C5D" opacity="0.3"/>
-    <text x="18" y="10" class="text-secondary" font-size="10">持续运行</text>
-
-    <rect x="80" width="12" height="12" fill="#D97757" opacity="0.3"/>
-    <text x="98" y="10" class="text-secondary" font-size="10">关键路径</text>
-
-    <rect x="155" width="12" height="12" fill="#87867F" opacity="0.3"/>
-    <text x="173" y="10" class="text-secondary" font-size="10">日常变更</text>
-
-    <rect x="230" width="12" height="12" fill="#141413" opacity="0.2"/>
-    <text x="248" y="10" class="text-secondary" font-size="10">核心逻辑</text>
-  </g>
-
-  <!-- Arrow between pyramids -->
-  <g transform="translate(175, 200)">
-    <line x1="0" y1="0" x2="25" y2="0" stroke="#D97757" stroke-width="2" marker-end="url(#arrow2)"/>
+  <text x="85" y="70" font-size="12" font-weight="600" style="fill:#d97757;font-family:system-ui,sans-serif" text-anchor="middle" transform="translate(280)">新金字塔</text>
+  <path d="m85 90 35 40H50z" style="fill:#788c5d;opacity:.2;stroke:#788c5d;stroke-width:2" transform="translate(280)"/>
+  <text x="85" y="118" class="text-main" font-size="10" font-weight="500" text-anchor="middle" transform="translate(280)">运行时验证</text>
+  <path d="M50 130h70l20 60H30z" style="fill:#d97757;opacity:.15;stroke:#d97757;stroke-width:2" transform="translate(280)"/>
+  <text x="85" y="165" class="text-main" font-size="10" font-weight="500" text-anchor="middle" transform="translate(280)">属性测试</text>
+  <text x="85" y="178" class="text-secondary" font-size="8" text-anchor="middle" transform="translate(280)">关键属性</text>
+  <path d="M30 190h110l15 70H15z" style="fill:#87867f;opacity:.15;stroke:#87867f;stroke-width:2" transform="translate(280)"/>
+  <text x="85" y="230" class="text-main" font-size="10" font-weight="500" text-anchor="middle" transform="translate(280)">AI生成测试</text>
+  <text x="85" y="243" class="text-secondary" font-size="8" text-anchor="middle" transform="translate(280)">自动化</text>
+  <path d="M15 260h140l15 70H0z" style="fill:#141413;opacity:.08;stroke:#141413;stroke-width:2" transform="translate(280)"/>
+  <text x="85" y="300" class="text-main" font-size="10" font-weight="500" text-anchor="middle" transform="translate(280)">手工测试</text>
+  <text x="85" y="313" class="text-secondary" font-size="8" text-anchor="middle" transform="translate(280)">极少，核心逻辑</text>
+  <path fill="#788c5d" d="M20 350h12v12H20z" opacity=".3"/>
+  <text x="18" y="10" class="text-secondary" font-size="10" transform="translate(20 350)">持续运行</text>
+  <path fill="#d97757" d="M100 350h12v12h-12z" opacity=".3"/>
+  <text x="98" y="10" class="text-secondary" font-size="10" transform="translate(20 350)">关键路径</text>
+  <path fill="#87867f" d="M175 350h12v12h-12z" opacity=".3"/>
+  <text x="173" y="10" class="text-secondary" font-size="10" transform="translate(20 350)">日常变更</text>
+  <path fill="#141413" d="M250 350h12v12h-12z" opacity=".2"/>
+  <text x="248" y="10" class="text-secondary" font-size="10" transform="translate(20 350)">核心逻辑</text>
+  <g transform="translate(175 200)">
+    <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow2)" d="M0 0h25"/>
     <defs>
-      <marker id="arrow2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-        <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+      <marker id="arrow2" markerHeight="6" markerWidth="8" orient="auto" refX="7" refY="3">
+        <path fill="#d97757" d="m0 0 8 3-8 3z"/>
       </marker>
     </defs>
   </g>

@@ -1,41 +1,27 @@
-<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Agent Memory System: WM → STM → LTM -->
-  <rect width="560" height="200" fill="#FAF9F5"/>
-
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 记忆系统：三层记忆架构</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/07/07</text>
-
-  <!-- WM: Working Memory (top, smallest, fastest) -->
-  <rect x="40" y="50" width="480" height="48" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Working Memory · 工作记忆</text>
-  <text x="280" y="65" text-anchor="middle" font-size="12" fill="#141413" font-weight="600">当前对话上下文 · 活跃任务状态 · 临时变量</text>
-  <text x="60" y="84" font-size="10" fill="#87867F">容量：最小 · 速度：最快 · 持久性：会话级</text>
-  <rect x="490" y="60" width="18" height="18" rx="9" fill="#D97757"/>
-  <text x="499" y="73" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">WM</text>
-
-  <!-- Arrow WM→STM -->
-  <line x1="280" y1="98" x2="280" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,108 280,116 284,98" fill="#D1CFC5"/>
-
-  <!-- STM: Short-term Memory (middle) -->
-  <rect x="40" y="116" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="116" width="480" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="60" y="131" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Short-term Memory · 短期记忆</text>
-  <text x="60" y="146" font-size="10" fill="#87867F">近期对话历史 · 最近执行的任务 · 临时知识</text>
-  <rect x="490" y="126" width="18" height="14" rx="9" fill="#2563EB"/>
-  <text x="499" y="137" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">STM</text>
-
-  <!-- Arrow STM→LTM -->
-  <line x1="280" y1="154" x2="280" y2="164" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,164 280,172 284,154" fill="#D1CFC5"/>
-
-  <!-- LTM: Long-term Memory (bottom, largest, slowest) -->
-  <rect x="40" y="172" width="480" height="20" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-  <text x="60" y="186" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Long-term Memory · 长期记忆</text>
-  <text x="240" y="186" font-size="10" fill="#141413">用户画像 · 业务规则 · 成功案例 · 偏好设置</text>
-  <text x="440" y="186" font-size="9" fill="#87867F">容量：无限 · 持久性：永久</text>
-
-  <!-- Note -->
-  <text x="280" y="200" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">WM → STM：信息压缩 · STM → LTM：知识沉淀 · 三层协同构成完整记忆系统</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 200">
+  <path fill="#faf9f5" d="M0 0h560v200H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent 记忆系统：三层记忆架构</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2025/07/07</text>
+  <rect width="480" height="48" x="40" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="480" height="18" x="40" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="60" y="65" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Working Memory · 工作记忆</text>
+  <text x="280" y="65" fill="#141413" font-size="12" font-weight="600" text-anchor="middle">当前对话上下文 · 活跃任务状态 · 临时变量</text>
+  <text x="60" y="84" fill="#87867f" font-size="10">容量：最小 · 速度：最快 · 持久性：会话级</text>
+  <rect width="18" height="18" x="490" y="60" fill="#d97757" rx="9"/>
+  <text x="499" y="73" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">WM</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 98v10"/>
+  <path fill="#d1cfc5" d="m276 108 4 8 4-18z"/>
+  <rect width="480" height="38" x="40" y="116" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="18" x="40" y="116" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="60" y="131" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Short-term Memory · 短期记忆</text>
+  <text x="60" y="146" fill="#87867f" font-size="10">近期对话历史 · 最近执行的任务 · 临时知识</text>
+  <rect width="18" height="14" x="490" y="126" fill="#2563eb" rx="9"/>
+  <text x="499" y="137" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">STM</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 154v10"/>
+  <path fill="#d1cfc5" d="m276 164 4 8 4-18z"/>
+  <rect width="480" height="20" x="40" y="172" fill="#d1fae5" stroke="#059669" stroke-width="1.5" rx="5"/>
+  <text x="60" y="186" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Long-term Memory · 长期记忆</text>
+  <text x="240" y="186" fill="#141413" font-size="10">用户画像 · 业务规则 · 成功案例 · 偏好设置</text>
+  <text x="440" y="186" fill="#87867f" font-size="9">容量：无限 · 持久性：永久</text>
+  <text x="280" y="200" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">WM → STM：信息压缩 · STM → LTM：知识沉淀 · 三层协同构成完整记忆系统</text>
 </svg>

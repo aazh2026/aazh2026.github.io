@@ -1,439 +1,434 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 616 495" width="616" height="495" style="font-family: 'Courier New', Courier, monospace; background: #FAF9F5;">
-  <rect width="616" height="495" fill="#FAF9F5"/>
-<text x="308.0" y="18" text-anchor="middle" font-size="12px" font-weight="bold" fill="#141413">AI 增强 BDD 工具链</text>
-  <g>
-    
-  </g>
-  <g>
-    <text x="178.4" y="114.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">→</text>
-<text x="255.2" y="114.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">→</text>
-<text x="24.8" y="63.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="80.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="97.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="114.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="131.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="148.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="165.3" font-size="13px" fill="#141413">|</text>
-<text x="24.8" y="199.3" font-size="13px" fill="#141413">B</text>
-<text x="24.8" y="233.3" font-size="13px" fill="#141413">A</text>
-<text x="24.8" y="267.3" font-size="13px" fill="#141413">&gt;</text>
-<text x="24.8" y="301.3" font-size="13px" fill="#141413">-</text>
-<text x="24.8" y="335.3" font-size="11px" fill="#87867F">#</text>
-<text x="24.8" y="369.3" font-size="13px" fill="#141413">*</text>
-<text x="24.8" y="386.3" font-size="13px" fill="#141413">-</text>
-<text x="24.8" y="403.3" font-size="13px" fill="#141413">-</text>
-<text x="24.8" y="437.3" font-size="13px" fill="#141413">*</text>
-<text x="24.8" y="454.3" font-size="13px" fill="#141413">-</text>
-<text x="24.8" y="471.3" font-size="13px" fill="#141413">-</text>
-<text x="34.4" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="34.4" y="199.3" font-size="13px" fill="#141413">D</text>
-<text x="34.4" y="233.3" font-size="13px" fill="#141413">I</text>
-<text x="34.4" y="301.3" font-size="13px" fill="#141413">-</text>
-<text x="34.4" y="335.3" font-size="11px" fill="#87867F">#</text>
-<text x="34.4" y="369.3" font-size="13px" fill="#141413">*</text>
-<text x="34.4" y="437.3" font-size="13px" fill="#141413">*</text>
-<text x="44.0" y="63.3" font-size="13px" fill="#141413">传</text>
-<text x="44.0" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="44.0" y="97.3" font-size="13px" fill="#141413">G</text>
-<text x="44.0" y="114.3" font-size="13px" fill="#141413">自</text>
-<text x="44.0" y="131.3" font-size="13px" fill="#141413">人</text>
-<text x="44.0" y="148.3" font-size="13px" fill="#141413">测</text>
-<text x="44.0" y="165.3" font-size="13px" fill="#141413">歧</text>
-<text x="44.0" y="199.3" font-size="13px" fill="#141413">D</text>
-<text x="44.0" y="233.3" font-size="13px" fill="#141413">不</text>
-<text x="44.0" y="267.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="44.0" y="301.3" font-size="13px" fill="#141413">-</text>
-<text x="44.0" y="369.3" font-size="13px" fill="#141413">经</text>
-<text x="44.0" y="386.3" font-size="13px" fill="#141413">A</text>
-<text x="44.0" y="403.3" font-size="13px" fill="#141413">M</text>
-<text x="44.0" y="437.3" font-size="13px" fill="#141413">本</text>
-<text x="44.0" y="454.3" font-size="13px" fill="#141413">[</text>
-<text x="44.0" y="471.3" font-size="13px" fill="#141413">[</text>
-<text x="53.6" y="63.3" font-size="13px" fill="#141413">统</text>
-<text x="53.6" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="53.6" y="97.3" font-size="13px" fill="#141413">h</text>
-<text x="53.6" y="114.3" font-size="13px" fill="#141413">然</text>
-<text x="53.6" y="131.3" font-size="13px" fill="#141413">工</text>
-<text x="53.6" y="148.3" font-size="13px" fill="#141413">试</text>
-<text x="53.6" y="165.3" font-size="13px" fill="#141413">义</text>
-<text x="53.6" y="199.3" font-size="13px" fill="#141413">的</text>
-<text x="53.6" y="233.3" font-size="13px" fill="#141413">是</text>
-<text x="53.6" y="267.3" font-size="13px" fill="#141413">规</text>
-<text x="53.6" y="335.3" font-size="13px" fill="#141413">📚</text>
-<text x="53.6" y="369.3" font-size="13px" fill="#141413">典</text>
-<text x="53.6" y="386.3" font-size="13px" fill="#141413">W</text>
-<text x="53.6" y="403.3" font-size="13px" fill="#141413">i</text>
-<text x="53.6" y="437.3" font-size="13px" fill="#141413">系</text>
-<text x="53.6" y="454.3" font-size="13px" fill="#141413">T</text>
-<text x="53.6" y="471.3" font-size="13px" fill="#141413">S</text>
-<text x="63.2" y="63.3" font-size="13px" fill="#141413">B</text>
-<text x="63.2" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="63.2" y="97.3" font-size="13px" fill="#141413">e</text>
-<text x="63.2" y="114.3" font-size="13px" fill="#141413">语</text>
-<text x="63.2" y="131.3" font-size="13px" fill="#141413">验</text>
-<text x="63.2" y="148.3" font-size="13px" fill="#141413">与</text>
-<text x="63.2" y="165.3" font-size="13px" fill="#141413">靠</text>
-<text x="63.2" y="199.3" font-size="13px" fill="#141413">初</text>
-<text x="63.2" y="233.3" font-size="13px" fill="#141413">取</text>
-<text x="63.2" y="267.3" font-size="13px" fill="#141413">格</text>
-<text x="63.2" y="369.3" font-size="13px" fill="#141413">案</text>
-<text x="63.2" y="386.3" font-size="13px" fill="#141413">S</text>
-<text x="63.2" y="403.3" font-size="13px" fill="#141413">c</text>
-<text x="63.2" y="437.3" font-size="13px" fill="#141413">列</text>
-<text x="63.2" y="454.3" font-size="13px" fill="#141413">D</text>
-<text x="63.2" y="471.3" font-size="13px" fill="#141413">D</text>
-<text x="72.8" y="63.3" font-size="13px" fill="#141413">D</text>
-<text x="72.8" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="72.8" y="97.3" font-size="13px" fill="#141413">r</text>
-<text x="72.8" y="114.3" font-size="13px" fill="#141413">言</text>
-<text x="72.8" y="131.3" font-size="13px" fill="#141413">证</text>
-<text x="72.8" y="148.3" font-size="13px" fill="#141413">规</text>
-<text x="72.8" y="165.3" font-size="13px" fill="#141413">沟</text>
-<text x="72.8" y="199.3" font-size="13px" fill="#141413">衷</text>
-<text x="72.8" y="233.3" font-size="13px" fill="#141413">代</text>
-<text x="72.8" y="267.3" font-size="13px" fill="#141413">越</text>
-<text x="72.8" y="335.3" font-size="13px" fill="#141413">延</text>
-<text x="72.8" y="369.3" font-size="13px" fill="#141413">例</text>
-<text x="72.8" y="386.3" font-size="13px" fill="#141413">使</text>
-<text x="72.8" y="403.3" font-size="13px" fill="#141413">r</text>
-<text x="72.8" y="437.3" font-size="13px" fill="#141413">相</text>
-<text x="72.8" y="454.3" font-size="13px" fill="#141413">D</text>
-<text x="72.8" y="471.3" font-size="13px" fill="#141413">D</text>
-<text x="82.4" y="63.3" font-size="13px" fill="#141413">D</text>
-<text x="82.4" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="82.4" y="97.3" font-size="13px" fill="#141413">k</text>
-<text x="82.4" y="114.3" font-size="13px" fill="#141413">描</text>
-<text x="82.4" y="148.3" font-size="13px" fill="#141413">格</text>
-<text x="82.4" y="165.3" font-size="13px" fill="#141413">通</text>
-<text x="82.4" y="199.3" font-size="13px" fill="#141413">是</text>
-<text x="82.4" y="233.3" font-size="13px" fill="#141413">B</text>
-<text x="82.4" y="267.3" font-size="13px" fill="#141413">精</text>
-<text x="82.4" y="335.3" font-size="13px" fill="#141413">伸</text>
-<text x="82.4" y="369.3" font-size="13px" fill="#141413">*</text>
-<text x="82.4" y="386.3" font-size="13px" fill="#141413">用</text>
-<text x="82.4" y="403.3" font-size="13px" fill="#141413">o</text>
-<text x="82.4" y="437.3" font-size="13px" fill="#141413">关</text>
-<text x="82.4" y="454.3" font-size="13px" fill="#141413">的</text>
-<text x="92.0" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="92.0" y="97.3" font-size="13px" fill="#141413">i</text>
-<text x="92.0" y="114.3" font-size="13px" fill="#141413">述</text>
-<text x="92.0" y="131.3" font-size="13px" fill="#141413">|</text>
-<text x="92.0" y="148.3" font-size="13px" fill="#141413">分</text>
-<text x="92.0" y="165.3" font-size="13px" fill="#141413">解</text>
-<text x="92.0" y="199.3" font-size="13px" fill="#141413">让</text>
-<text x="92.0" y="233.3" font-size="13px" fill="#141413">D</text>
-<text x="92.0" y="267.3" font-size="13px" fill="#141413">确</text>
-<text x="92.0" y="335.3" font-size="13px" fill="#141413">阅</text>
-<text x="92.0" y="369.3" font-size="13px" fill="#141413">*</text>
-<text x="92.0" y="386.3" font-size="13px" fill="#141413">T</text>
-<text x="92.0" y="403.3" font-size="13px" fill="#141413">s</text>
-<text x="92.0" y="437.3" font-size="13px" fill="#141413">*</text>
-<text x="92.0" y="454.3" font-size="13px" fill="#141413">死</text>
-<text x="92.0" y="471.3" font-size="13px" fill="#141413">2</text>
-<text x="101.6" y="63.3" font-size="13px" fill="#141413">|</text>
-<text x="101.6" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="101.6" y="97.3" font-size="13px" fill="#141413">n</text>
-<text x="101.6" y="148.3" font-size="13px" fill="#141413">离</text>
-<text x="101.6" y="165.3" font-size="13px" fill="#141413">决</text>
-<text x="101.6" y="199.3" font-size="13px" fill="#141413">业</text>
-<text x="101.6" y="233.3" font-size="13px" fill="#141413">D</text>
-<text x="101.6" y="267.3" font-size="13px" fill="#141413">，</text>
-<text x="101.6" y="335.3" font-size="13px" fill="#141413">读</text>
-<text x="101.6" y="386.3" font-size="13px" fill="#141413">L</text>
-<text x="101.6" y="403.3" font-size="13px" fill="#141413">o</text>
-<text x="101.6" y="437.3" font-size="13px" fill="#141413">*</text>
-<text x="101.6" y="454.3" font-size="13px" fill="#141413">亡</text>
-<text x="101.6" y="471.3" font-size="13px" fill="#141413">.</text>
-<text x="111.2" y="80.3" font-size="13px" fill="#141413">|</text>
-<text x="111.2" y="97.3" font-size="13px" fill="#141413">是</text>
-<text x="111.2" y="114.3" font-size="13px" fill="#141413">|</text>
-<text x="111.2" y="131.3" font-size="13px" fill="#141413">自</text>
-<text x="111.2" y="199.3" font-size="13px" fill="#141413">务</text>
-<text x="111.2" y="233.3" font-size="13px" fill="#141413">，</text>
-<text x="111.2" y="267.3" font-size="13px" fill="#141413">实</text>
-<text x="111.2" y="386.3" font-size="13px" fill="#141413">A</text>
-<text x="111.2" y="403.3" font-size="13px" fill="#141413">f</text>
-<text x="111.2" y="454.3" font-size="13px" fill="#141413">与</text>
-<text x="111.2" y="471.3" font-size="13px" fill="#141413">0</text>
-<text x="120.8" y="63.3" font-size="13px" fill="#141413">A</text>
-<text x="120.8" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="120.8" y="97.3" font-size="13px" fill="#141413">终</text>
-<text x="120.8" y="131.3" font-size="13px" fill="#141413">动</text>
-<text x="120.8" y="148.3" font-size="13px" fill="#141413">|</text>
-<text x="120.8" y="165.3" font-size="13px" fill="#141413">|</text>
-<text x="120.8" y="199.3" font-size="13px" fill="#141413">、</text>
-<text x="120.8" y="233.3" font-size="13px" fill="#141413">而</text>
-<text x="120.8" y="267.3" font-size="13px" fill="#141413">现</text>
-<text x="120.8" y="386.3" font-size="13px" fill="#141413">+</text>
-<text x="120.8" y="403.3" font-size="13px" fill="#141413">t</text>
-<text x="120.8" y="454.3" font-size="13px" fill="#141413">重</text>
-<text x="120.8" y="471.3" font-size="13px" fill="#141413">：</text>
-<text x="130.4" y="63.3" font-size="13px" fill="#141413">I</text>
-<text x="130.4" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="130.4" y="97.3" font-size="13px" fill="#141413">点</text>
-<text x="130.4" y="114.3" font-size="13px" fill="#141413">自</text>
-<text x="130.4" y="131.3" font-size="13px" fill="#141413">模</text>
-<text x="130.4" y="199.3" font-size="13px" fill="#141413">开</text>
-<text x="130.4" y="233.3" font-size="13px" fill="#141413">是</text>
-<text x="130.4" y="267.3" font-size="13px" fill="#141413">越</text>
-<text x="130.4" y="386.3" font-size="13px" fill="#141413">验</text>
-<text x="130.4" y="403.3" font-size="13px" fill="#141413">的</text>
-<text x="130.4" y="454.3" font-size="13px" fill="#141413">生</text>
-<text x="130.4" y="471.3" font-size="13px" fill="#141413">用</text>
-<text x="140.0" y="63.3" font-size="13px" fill="#141413">增</text>
-<text x="140.0" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="140.0" y="114.3" font-size="13px" fill="#141413">然</text>
-<text x="140.0" y="131.3" font-size="13px" fill="#141413">型</text>
-<text x="140.0" y="148.3" font-size="13px" fill="#141413">规</text>
-<text x="140.0" y="165.3" font-size="13px" fill="#141413">歧</text>
-<text x="140.0" y="199.3" font-size="13px" fill="#141413">发</text>
-<text x="140.0" y="233.3" font-size="13px" fill="#141413">让</text>
-<text x="140.0" y="267.3" font-size="13px" fill="#141413">自</text>
-<text x="140.0" y="386.3" font-size="13px" fill="#141413">证</text>
-<text x="140.0" y="403.3" font-size="13px" fill="#141413">D</text>
-<text x="140.0" y="454.3" font-size="13px" fill="#141413">]</text>
-<text x="140.0" y="471.3" font-size="13px" fill="#141413">户</text>
-<text x="149.6" y="63.3" font-size="13px" fill="#141413">强</text>
-<text x="149.6" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="149.6" y="97.3" font-size="13px" fill="#141413">|</text>
-<text x="149.6" y="114.3" font-size="13px" fill="#141413">语</text>
-<text x="149.6" y="131.3" font-size="13px" fill="#141413">检</text>
-<text x="149.6" y="148.3" font-size="13px" fill="#141413">格</text>
-<text x="149.6" y="165.3" font-size="13px" fill="#141413">义</text>
-<text x="149.6" y="199.3" font-size="13px" fill="#141413">、</text>
-<text x="149.6" y="233.3" font-size="13px" fill="#141413">B</text>
-<text x="149.6" y="267.3" font-size="13px" fill="#141413">由</text>
-<text x="149.6" y="386.3" font-size="13px" fill="#141413">S</text>
-<text x="149.6" y="403.3" font-size="13px" fill="#141413">a</text>
-<text x="149.6" y="454.3" font-size="13px" fill="#141413">(</text>
-<text x="149.6" y="471.3" font-size="13px" fill="#141413">故</text>
-<text x="159.2" y="63.3" font-size="13px" fill="#141413">B</text>
-<text x="159.2" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="159.2" y="114.3" font-size="13px" fill="#141413">言</text>
-<text x="159.2" y="131.3" font-size="13px" fill="#141413">查</text>
-<text x="159.2" y="148.3" font-size="13px" fill="#141413">即</text>
-<text x="159.2" y="165.3" font-size="13px" fill="#141413">靠</text>
-<text x="159.2" y="199.3" font-size="13px" fill="#141413">测</text>
-<text x="159.2" y="233.3" font-size="13px" fill="#141413">D</text>
-<text x="159.2" y="267.3" font-size="13px" fill="#141413">。</text>
-<text x="159.2" y="386.3" font-size="13px" fill="#141413">3</text>
-<text x="159.2" y="403.3" font-size="13px" fill="#141413">f</text>
-<text x="159.2" y="454.3" font-size="11px" fill="#87867F">#</text>
-<text x="159.2" y="471.3" font-size="13px" fill="#141413">事</text>
-<text x="168.8" y="63.3" font-size="13px" fill="#141413">D</text>
-<text x="168.8" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="168.8" y="97.3" font-size="13px" fill="#141413">G</text>
-<text x="168.8" y="131.3" font-size="13px" fill="#141413">+</text>
-<text x="168.8" y="148.3" font-size="13px" fill="#141413">测</text>
-<text x="168.8" y="165.3" font-size="13px" fill="#141413">形</text>
-<text x="168.8" y="199.3" font-size="13px" fill="#141413">试</text>
-<text x="168.8" y="233.3" font-size="13px" fill="#141413">D</text>
-<text x="168.8" y="267.3" font-size="13px" fill="#141413">形</text>
-<text x="168.8" y="386.3" font-size="13px" fill="#141413">和</text>
-<text x="168.8" y="403.3" font-size="13px" fill="#141413">n</text>
-<text x="168.8" y="454.3" font-size="13px" fill="#141413">)</text>
-<text x="168.8" y="471.3" font-size="13px" fill="#141413">的</text>
-<text x="178.4" y="63.3" font-size="13px" fill="#141413">D</text>
-<text x="178.4" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="178.4" y="97.3" font-size="13px" fill="#141413">h</text>
-<text x="178.4" y="131.3" font-size="13px" fill="#141413">运</text>
-<text x="178.4" y="148.3" font-size="13px" fill="#141413">试</text>
-<text x="178.4" y="165.3" font-size="13px" fill="#141413">式</text>
-<text x="178.4" y="199.3" font-size="13px" fill="#141413">三</text>
-<text x="178.4" y="233.3" font-size="13px" fill="#141413">从</text>
-<text x="178.4" y="267.3" font-size="13px" fill="#141413">式</text>
-<text x="178.4" y="386.3" font-size="13px" fill="#141413">D</text>
-<text x="178.4" y="403.3" font-size="13px" fill="#141413">y</text>
-<text x="178.4" y="471.3" font-size="13px" fill="#141413">P</text>
-<text x="188.0" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="188.0" y="97.3" font-size="13px" fill="#141413">e</text>
-<text x="188.0" y="131.3" font-size="13px" fill="#141413">行</text>
-<text x="188.0" y="148.3" font-size="13px" fill="#141413">，</text>
-<text x="188.0" y="165.3" font-size="13px" fill="#141413">化</text>
-<text x="188.0" y="199.3" font-size="13px" fill="#141413">方</text>
-<text x="188.0" y="233.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="188.0" y="267.3" font-size="13px" fill="#141413">化</text>
-<text x="188.0" y="386.3" font-size="13px" fill="#141413">y</text>
-<text x="188.0" y="403.3" font-size="13px" fill="#141413">项</text>
-<text x="188.0" y="454.3" font-size="13px" fill="#141413">(</text>
-<text x="188.0" y="471.3" font-size="13px" fill="#141413">r</text>
-<text x="197.6" y="63.3" font-size="13px" fill="#141413">|</text>
-<text x="197.6" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="197.6" y="97.3" font-size="13px" fill="#141413">r</text>
-<text x="197.6" y="114.3" font-size="13px" fill="#141413">形</text>
-<text x="197.6" y="131.3" font-size="13px" fill="#141413">时</text>
-<text x="197.6" y="148.3" font-size="13px" fill="#141413">测</text>
-<text x="197.6" y="165.3" font-size="13px" fill="#141413">消</text>
-<text x="197.6" y="199.3" font-size="13px" fill="#141413">对</text>
-<text x="197.6" y="233.3" font-size="13px" fill="#141413">行</text>
-<text x="197.6" y="267.3" font-size="13px" fill="#141413">不</text>
-<text x="197.6" y="386.3" font-size="13px" fill="#141413">n</text>
-<text x="197.6" y="403.3" font-size="13px" fill="#141413">目</text>
-<text x="197.6" y="454.3" font-size="13px" fill="#141413">第</text>
-<text x="197.6" y="471.3" font-size="13px" fill="#141413">o</text>
-<text x="207.2" y="80.3" font-size="13px" fill="#141413">-</text>
-<text x="207.2" y="97.3" font-size="13px" fill="#141413">k</text>
-<text x="207.2" y="114.3" font-size="13px" fill="#141413">式</text>
-<text x="207.2" y="131.3" font-size="13px" fill="#141413">验</text>
-<text x="207.2" y="148.3" font-size="13px" fill="#141413">试</text>
-<text x="207.2" y="165.3" font-size="13px" fill="#141413">除</text>
-<text x="207.2" y="199.3" font-size="13px" fill="#141413">齐</text>
-<text x="207.2" y="233.3" font-size="13px" fill="#141413">为</text>
-<text x="207.2" y="267.3" font-size="13px" fill="#141413">是</text>
-<text x="207.2" y="386.3" font-size="13px" fill="#141413">a</text>
-<text x="207.2" y="403.3" font-size="13px" fill="#141413">：</text>
-<text x="207.2" y="454.3" font-size="13px" fill="#141413">1</text>
-<text x="207.2" y="471.3" font-size="13px" fill="#141413">m</text>
-<text x="216.8" y="80.3" font-size="13px" fill="#141413">|</text>
-<text x="216.8" y="97.3" font-size="13px" fill="#141413">i</text>
-<text x="216.8" y="114.3" font-size="13px" fill="#141413">化</text>
-<text x="216.8" y="131.3" font-size="13px" fill="#141413">证</text>
-<text x="216.8" y="148.3" font-size="13px" fill="#141413">即</text>
-<text x="216.8" y="199.3" font-size="13px" fill="#141413">。</text>
-<text x="216.8" y="233.3" font-size="13px" fill="#141413">驱</text>
-<text x="216.8" y="267.3" font-size="13px" fill="#141413">束</text>
-<text x="216.8" y="386.3" font-size="13px" fill="#141413">m</text>
-<text x="216.8" y="403.3" font-size="13px" fill="#141413">合</text>
-<text x="216.8" y="454.3" font-size="13px" fill="#141413">篇</text>
-<text x="216.8" y="471.3" font-size="13px" fill="#141413">p</text>
-<text x="226.4" y="97.3" font-size="13px" fill="#141413">n</text>
-<text x="226.4" y="114.3" font-size="13px" fill="#141413">规</text>
-<text x="226.4" y="148.3" font-size="13px" fill="#141413">规</text>
-<text x="226.4" y="165.3" font-size="13px" fill="#141413">|</text>
-<text x="226.4" y="199.3" font-size="13px" fill="#141413">形</text>
-<text x="226.4" y="233.3" font-size="13px" fill="#141413">动</text>
-<text x="226.4" y="267.3" font-size="13px" fill="#141413">缚</text>
-<text x="226.4" y="386.3" font-size="13px" fill="#141413">o</text>
-<text x="226.4" y="403.3" font-size="13px" fill="#141413">约</text>
-<text x="226.4" y="454.3" font-size="13px" fill="#141413">)</text>
-<text x="226.4" y="471.3" font-size="13px" fill="#141413">t</text>
-<text x="236.0" y="97.3" font-size="13px" fill="#141413">是</text>
-<text x="236.0" y="114.3" font-size="13px" fill="#141413">格</text>
-<text x="236.0" y="131.3" font-size="13px" fill="#141413">|</text>
-<text x="236.0" y="148.3" font-size="13px" fill="#141413">格</text>
-<text x="236.0" y="199.3" font-size="13px" fill="#141413">式</text>
-<text x="236.0" y="233.3" font-size="13px" fill="#141413">开</text>
-<text x="236.0" y="267.3" font-size="13px" fill="#141413">，</text>
-<text x="236.0" y="386.3" font-size="13px" fill="#141413">D</text>
-<text x="236.0" y="403.3" font-size="13px" fill="#141413">式</text>
-<text x="236.0" y="471.3" font-size="13px" fill="#141413">工</text>
-<text x="245.6" y="97.3" font-size="13px" fill="#141413">起</text>
-<text x="245.6" y="199.3" font-size="13px" fill="#141413">化</text>
-<text x="245.6" y="233.3" font-size="13px" fill="#141413">发</text>
-<text x="245.6" y="267.3" font-size="13px" fill="#141413">而</text>
-<text x="245.6" y="386.3" font-size="13px" fill="#141413">B</text>
-<text x="245.6" y="403.3" font-size="13px" fill="#141413">编</text>
-<text x="245.6" y="471.3" font-size="13px" fill="#141413">程</text>
-<text x="255.2" y="97.3" font-size="13px" fill="#141413">点</text>
-<text x="255.2" y="148.3" font-size="13px" fill="#141413">|</text>
-<text x="255.2" y="199.3" font-size="13px" fill="#141413">规</text>
-<text x="255.2" y="233.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="255.2" y="267.3" font-size="13px" fill="#141413">是</text>
-<text x="255.2" y="386.3" font-size="13px" fill="#141413">核</text>
-<text x="255.2" y="403.3" font-size="13px" fill="#141413">程</text>
-<text x="255.2" y="471.3" font-size="13px" fill="#141413">化</text>
-<text x="264.8" y="199.3" font-size="13px" fill="#141413">格</text>
-<text x="264.8" y="233.3" font-size="13px" fill="#141413">进</text>
-<text x="264.8" y="267.3" font-size="13px" fill="#141413">给</text>
-<text x="264.8" y="386.3" font-size="13px" fill="#141413">心</text>
-<text x="264.8" y="403.3" font-size="13px" fill="#141413">的</text>
-<text x="264.8" y="471.3" font-size="13px" fill="#141413">]</text>
-<text x="274.4" y="97.3" font-size="13px" fill="#141413">|</text>
-<text x="274.4" y="114.3" font-size="13px" fill="#141413">代</text>
-<text x="274.4" y="199.3" font-size="13px" fill="#141413">让</text>
-<text x="274.4" y="233.3" font-size="13px" fill="#141413">化</text>
-<text x="274.4" y="267.3" font-size="13px" fill="#141413">创</text>
-<text x="274.4" y="386.3" font-size="13px" fill="#141413">算</text>
-<text x="274.4" y="403.3" font-size="13px" fill="#141413">生</text>
-<text x="274.4" y="471.3" font-size="13px" fill="#141413">(</text>
-<text x="284.0" y="114.3" font-size="13px" fill="#141413">码</text>
-<text x="284.0" y="199.3" font-size="13px" fill="#141413">这</text>
-<text x="284.0" y="233.3" font-size="13px" fill="#141413">为</text>
-<text x="284.0" y="267.3" font-size="13px" fill="#141413">造</text>
-<text x="284.0" y="386.3" font-size="13px" fill="#141413">法</text>
-<text x="284.0" y="403.3" font-size="13px" fill="#141413">产</text>
-<text x="284.0" y="471.3" font-size="11px" fill="#87867F">#</text>
-<text x="293.6" y="199.3" font-size="13px" fill="#141413">种</text>
-<text x="293.6" y="233.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="293.6" y="267.3" font-size="13px" fill="#141413">力</text>
-<text x="293.6" y="386.3" font-size="13px" fill="#141413">：</text>
-<text x="293.6" y="403.3" font-size="13px" fill="#141413">环</text>
-<text x="293.6" y="471.3" font-size="13px" fill="#141413">)</text>
-<text x="303.2" y="114.3" font-size="13px" fill="#141413">|</text>
-<text x="303.2" y="199.3" font-size="13px" fill="#141413">对</text>
-<text x="303.2" y="233.3" font-size="13px" fill="#141413">*</text>
-<text x="303.2" y="267.3" font-size="13px" fill="#141413">明</text>
-<text x="303.2" y="386.3" font-size="13px" fill="#141413">形</text>
-<text x="303.2" y="403.3" font-size="13px" fill="#141413">境</text>
-<text x="312.8" y="199.3" font-size="13px" fill="#141413">齐</text>
-<text x="312.8" y="233.3" font-size="13px" fill="#141413">*</text>
-<text x="312.8" y="267.3" font-size="13px" fill="#141413">确</text>
-<text x="312.8" y="386.3" font-size="13px" fill="#141413">式</text>
-<text x="312.8" y="403.3" font-size="13px" fill="#141413">应</text>
-<text x="312.8" y="471.3" font-size="13px" fill="#141413">(</text>
-<text x="322.4" y="199.3" font-size="13px" fill="#141413">*</text>
-<text x="322.4" y="233.3" font-size="13px" fill="#141413">行</text>
-<text x="322.4" y="267.3" font-size="13px" fill="#141413">的</text>
-<text x="322.4" y="386.3" font-size="13px" fill="#141413">化</text>
-<text x="322.4" y="403.3" font-size="13px" fill="#141413">用</text>
-<text x="322.4" y="471.3" font-size="13px" fill="#141413">第</text>
-<text x="332.0" y="199.3" font-size="13px" fill="#141413">*</text>
-<text x="332.0" y="233.3" font-size="13px" fill="#141413">为</text>
-<text x="332.0" y="267.3" font-size="13px" fill="#141413">边</text>
-<text x="332.0" y="386.3" font-size="13px" fill="#141413">方</text>
-<text x="332.0" y="471.3" font-size="13px" fill="#141413">2</text>
-<text x="341.6" y="199.3" font-size="13px" fill="#141413">可</text>
-<text x="341.6" y="233.3" font-size="13px" fill="#141413">驱</text>
-<text x="341.6" y="267.3" font-size="13px" fill="#141413">界</text>
-<text x="341.6" y="386.3" font-size="13px" fill="#141413">法</text>
-<text x="341.6" y="471.3" font-size="13px" fill="#141413">篇</text>
-<text x="351.2" y="199.3" font-size="13px" fill="#141413">验</text>
-<text x="351.2" y="233.3" font-size="13px" fill="#141413">动</text>
-<text x="351.2" y="267.3" font-size="13px" fill="#141413">。</text>
-<text x="351.2" y="386.3" font-size="13px" fill="#141413">在</text>
-<text x="351.2" y="471.3" font-size="13px" fill="#141413">)</text>
-<text x="360.8" y="199.3" font-size="13px" fill="#141413">证</text>
-<text x="360.8" y="233.3" font-size="13px" fill="#141413">工</text>
-<text x="360.8" y="267.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="360.8" y="386.3" font-size="13px" fill="#141413">大</text>
-<text x="370.4" y="199.3" font-size="13px" fill="#141413">、</text>
-<text x="370.4" y="233.3" font-size="13px" fill="#141413">程</text>
-<text x="370.4" y="386.3" font-size="13px" fill="#141413">规</text>
-<text x="380.0" y="199.3" font-size="13px" fill="#141413">可</text>
-<text x="380.0" y="233.3" font-size="13px" fill="#141413">*</text>
-<text x="380.0" y="386.3" font-size="13px" fill="#141413">模</text>
-<text x="389.6" y="199.3" font-size="13px" fill="#141413">自</text>
-<text x="389.6" y="233.3" font-size="13px" fill="#141413">*</text>
-<text x="389.6" y="386.3" font-size="13px" fill="#141413">系</text>
-<text x="399.2" y="199.3" font-size="13px" fill="#141413">动</text>
-<text x="399.2" y="233.3" font-size="13px" fill="#141413">&quot;</text>
-<text x="399.2" y="386.3" font-size="13px" fill="#141413">统</text>
-<text x="408.8" y="199.3" font-size="13px" fill="#141413">化</text>
-<text x="408.8" y="233.3" font-size="13px" fill="#141413">—</text>
-<text x="408.8" y="386.3" font-size="13px" fill="#141413">的</text>
-<text x="418.4" y="199.3" font-size="13px" fill="#141413">*</text>
-<text x="418.4" y="233.3" font-size="13px" fill="#141413">—</text>
-<text x="418.4" y="386.3" font-size="13px" fill="#141413">实</text>
-<text x="428.0" y="199.3" font-size="13px" fill="#141413">*</text>
-<text x="428.0" y="233.3" font-size="13px" fill="#141413">从</text>
-<text x="428.0" y="386.3" font-size="13px" fill="#141413">践</text>
-<text x="437.6" y="199.3" font-size="13px" fill="#141413">。</text>
-<text x="437.6" y="233.3" font-size="13px" fill="#141413">想</text>
-<text x="447.2" y="233.3" font-size="13px" fill="#141413">法</text>
-<text x="456.8" y="233.3" font-size="13px" fill="#141413">到</text>
-<text x="466.4" y="233.3" font-size="13px" fill="#141413">可</text>
-<text x="476.0" y="233.3" font-size="13px" fill="#141413">验</text>
-<text x="485.6" y="233.3" font-size="13px" fill="#141413">证</text>
-<text x="495.2" y="233.3" font-size="13px" fill="#141413">的</text>
-<text x="504.8" y="233.3" font-size="13px" fill="#141413">实</text>
-<text x="514.4" y="233.3" font-size="13px" fill="#141413">现</text>
-<text x="524.0" y="233.3" font-size="13px" fill="#141413">，</text>
-<text x="533.6" y="233.3" font-size="13px" fill="#141413">端</text>
-<text x="543.2" y="233.3" font-size="13px" fill="#141413">到</text>
-<text x="552.8" y="233.3" font-size="13px" fill="#141413">端</text>
-<text x="562.4" y="233.3" font-size="13px" fill="#141413">自</text>
-<text x="572.0" y="233.3" font-size="13px" fill="#141413">动</text>
-<text x="581.6" y="233.3" font-size="13px" fill="#141413">化</text>
-<text x="591.2" y="233.3" font-size="13px" fill="#141413">。</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" style="font-family:&quot;Courier New&quot;,Courier,monospace;background:#faf9f5" viewBox="0 0 616 495">
+  <path fill="#faf9f5" d="M0 0h616v495H0z"/>
+  <text x="308" y="18" fill="#141413" font-size="12" font-weight="bold" text-anchor="middle">AI 增强 BDD 工具链</text>
+  <text x="178.4" y="114.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">→</text>
+  <text x="255.2" y="114.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">→</text>
+  <text x="24.8" y="63.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="80.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="97.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="114.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="131.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="148.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="165.3" fill="#141413" font-size="13">|</text>
+  <text x="24.8" y="199.3" fill="#141413" font-size="13">B</text>
+  <text x="24.8" y="233.3" fill="#141413" font-size="13">A</text>
+  <text x="24.8" y="267.3" fill="#141413" font-size="13">&gt;</text>
+  <text x="24.8" y="301.3" fill="#141413" font-size="13">-</text>
+  <text x="24.8" y="335.3" fill="#87867f" font-size="11">#</text>
+  <text x="24.8" y="369.3" fill="#141413" font-size="13">*</text>
+  <text x="24.8" y="386.3" fill="#141413" font-size="13">-</text>
+  <text x="24.8" y="403.3" fill="#141413" font-size="13">-</text>
+  <text x="24.8" y="437.3" fill="#141413" font-size="13">*</text>
+  <text x="24.8" y="454.3" fill="#141413" font-size="13">-</text>
+  <text x="24.8" y="471.3" fill="#141413" font-size="13">-</text>
+  <text x="34.4" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="34.4" y="199.3" fill="#141413" font-size="13">D</text>
+  <text x="34.4" y="233.3" fill="#141413" font-size="13">I</text>
+  <text x="34.4" y="301.3" fill="#141413" font-size="13">-</text>
+  <text x="34.4" y="335.3" fill="#87867f" font-size="11">#</text>
+  <text x="34.4" y="369.3" fill="#141413" font-size="13">*</text>
+  <text x="34.4" y="437.3" fill="#141413" font-size="13">*</text>
+  <text x="44" y="63.3" fill="#141413" font-size="13">传</text>
+  <text x="44" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="44" y="97.3" fill="#141413" font-size="13">G</text>
+  <text x="44" y="114.3" fill="#141413" font-size="13">自</text>
+  <text x="44" y="131.3" fill="#141413" font-size="13">人</text>
+  <text x="44" y="148.3" fill="#141413" font-size="13">测</text>
+  <text x="44" y="165.3" fill="#141413" font-size="13">歧</text>
+  <text x="44" y="199.3" fill="#141413" font-size="13">D</text>
+  <text x="44" y="233.3" fill="#141413" font-size="13">不</text>
+  <text x="44" y="267.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="44" y="301.3" fill="#141413" font-size="13">-</text>
+  <text x="44" y="369.3" fill="#141413" font-size="13">经</text>
+  <text x="44" y="386.3" fill="#141413" font-size="13">A</text>
+  <text x="44" y="403.3" fill="#141413" font-size="13">M</text>
+  <text x="44" y="437.3" fill="#141413" font-size="13">本</text>
+  <text x="44" y="454.3" fill="#141413" font-size="13">[</text>
+  <text x="44" y="471.3" fill="#141413" font-size="13">[</text>
+  <text x="53.6" y="63.3" fill="#141413" font-size="13">统</text>
+  <text x="53.6" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="53.6" y="97.3" fill="#141413" font-size="13">h</text>
+  <text x="53.6" y="114.3" fill="#141413" font-size="13">然</text>
+  <text x="53.6" y="131.3" fill="#141413" font-size="13">工</text>
+  <text x="53.6" y="148.3" fill="#141413" font-size="13">试</text>
+  <text x="53.6" y="165.3" fill="#141413" font-size="13">义</text>
+  <text x="53.6" y="199.3" fill="#141413" font-size="13">的</text>
+  <text x="53.6" y="233.3" fill="#141413" font-size="13">是</text>
+  <text x="53.6" y="267.3" fill="#141413" font-size="13">规</text>
+  <text x="53.6" y="335.3" fill="#141413" font-size="13">📚</text>
+  <text x="53.6" y="369.3" fill="#141413" font-size="13">典</text>
+  <text x="53.6" y="386.3" fill="#141413" font-size="13">W</text>
+  <text x="53.6" y="403.3" fill="#141413" font-size="13">i</text>
+  <text x="53.6" y="437.3" fill="#141413" font-size="13">系</text>
+  <text x="53.6" y="454.3" fill="#141413" font-size="13">T</text>
+  <text x="53.6" y="471.3" fill="#141413" font-size="13">S</text>
+  <text x="63.2" y="63.3" fill="#141413" font-size="13">B</text>
+  <text x="63.2" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="63.2" y="97.3" fill="#141413" font-size="13">e</text>
+  <text x="63.2" y="114.3" fill="#141413" font-size="13">语</text>
+  <text x="63.2" y="131.3" fill="#141413" font-size="13">验</text>
+  <text x="63.2" y="148.3" fill="#141413" font-size="13">与</text>
+  <text x="63.2" y="165.3" fill="#141413" font-size="13">靠</text>
+  <text x="63.2" y="199.3" fill="#141413" font-size="13">初</text>
+  <text x="63.2" y="233.3" fill="#141413" font-size="13">取</text>
+  <text x="63.2" y="267.3" fill="#141413" font-size="13">格</text>
+  <text x="63.2" y="369.3" fill="#141413" font-size="13">案</text>
+  <text x="63.2" y="386.3" fill="#141413" font-size="13">S</text>
+  <text x="63.2" y="403.3" fill="#141413" font-size="13">c</text>
+  <text x="63.2" y="437.3" fill="#141413" font-size="13">列</text>
+  <text x="63.2" y="454.3" fill="#141413" font-size="13">D</text>
+  <text x="63.2" y="471.3" fill="#141413" font-size="13">D</text>
+  <text x="72.8" y="63.3" fill="#141413" font-size="13">D</text>
+  <text x="72.8" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="72.8" y="97.3" fill="#141413" font-size="13">r</text>
+  <text x="72.8" y="114.3" fill="#141413" font-size="13">言</text>
+  <text x="72.8" y="131.3" fill="#141413" font-size="13">证</text>
+  <text x="72.8" y="148.3" fill="#141413" font-size="13">规</text>
+  <text x="72.8" y="165.3" fill="#141413" font-size="13">沟</text>
+  <text x="72.8" y="199.3" fill="#141413" font-size="13">衷</text>
+  <text x="72.8" y="233.3" fill="#141413" font-size="13">代</text>
+  <text x="72.8" y="267.3" fill="#141413" font-size="13">越</text>
+  <text x="72.8" y="335.3" fill="#141413" font-size="13">延</text>
+  <text x="72.8" y="369.3" fill="#141413" font-size="13">例</text>
+  <text x="72.8" y="386.3" fill="#141413" font-size="13">使</text>
+  <text x="72.8" y="403.3" fill="#141413" font-size="13">r</text>
+  <text x="72.8" y="437.3" fill="#141413" font-size="13">相</text>
+  <text x="72.8" y="454.3" fill="#141413" font-size="13">D</text>
+  <text x="72.8" y="471.3" fill="#141413" font-size="13">D</text>
+  <text x="82.4" y="63.3" fill="#141413" font-size="13">D</text>
+  <text x="82.4" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="82.4" y="97.3" fill="#141413" font-size="13">k</text>
+  <text x="82.4" y="114.3" fill="#141413" font-size="13">描</text>
+  <text x="82.4" y="148.3" fill="#141413" font-size="13">格</text>
+  <text x="82.4" y="165.3" fill="#141413" font-size="13">通</text>
+  <text x="82.4" y="199.3" fill="#141413" font-size="13">是</text>
+  <text x="82.4" y="233.3" fill="#141413" font-size="13">B</text>
+  <text x="82.4" y="267.3" fill="#141413" font-size="13">精</text>
+  <text x="82.4" y="335.3" fill="#141413" font-size="13">伸</text>
+  <text x="82.4" y="369.3" fill="#141413" font-size="13">*</text>
+  <text x="82.4" y="386.3" fill="#141413" font-size="13">用</text>
+  <text x="82.4" y="403.3" fill="#141413" font-size="13">o</text>
+  <text x="82.4" y="437.3" fill="#141413" font-size="13">关</text>
+  <text x="82.4" y="454.3" fill="#141413" font-size="13">的</text>
+  <text x="92" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="92" y="97.3" fill="#141413" font-size="13">i</text>
+  <text x="92" y="114.3" fill="#141413" font-size="13">述</text>
+  <text x="92" y="131.3" fill="#141413" font-size="13">|</text>
+  <text x="92" y="148.3" fill="#141413" font-size="13">分</text>
+  <text x="92" y="165.3" fill="#141413" font-size="13">解</text>
+  <text x="92" y="199.3" fill="#141413" font-size="13">让</text>
+  <text x="92" y="233.3" fill="#141413" font-size="13">D</text>
+  <text x="92" y="267.3" fill="#141413" font-size="13">确</text>
+  <text x="92" y="335.3" fill="#141413" font-size="13">阅</text>
+  <text x="92" y="369.3" fill="#141413" font-size="13">*</text>
+  <text x="92" y="386.3" fill="#141413" font-size="13">T</text>
+  <text x="92" y="403.3" fill="#141413" font-size="13">s</text>
+  <text x="92" y="437.3" fill="#141413" font-size="13">*</text>
+  <text x="92" y="454.3" fill="#141413" font-size="13">死</text>
+  <text x="92" y="471.3" fill="#141413" font-size="13">2</text>
+  <text x="101.6" y="63.3" fill="#141413" font-size="13">|</text>
+  <text x="101.6" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="101.6" y="97.3" fill="#141413" font-size="13">n</text>
+  <text x="101.6" y="148.3" fill="#141413" font-size="13">离</text>
+  <text x="101.6" y="165.3" fill="#141413" font-size="13">决</text>
+  <text x="101.6" y="199.3" fill="#141413" font-size="13">业</text>
+  <text x="101.6" y="233.3" fill="#141413" font-size="13">D</text>
+  <text x="101.6" y="267.3" fill="#141413" font-size="13">，</text>
+  <text x="101.6" y="335.3" fill="#141413" font-size="13">读</text>
+  <text x="101.6" y="386.3" fill="#141413" font-size="13">L</text>
+  <text x="101.6" y="403.3" fill="#141413" font-size="13">o</text>
+  <text x="101.6" y="437.3" fill="#141413" font-size="13">*</text>
+  <text x="101.6" y="454.3" fill="#141413" font-size="13">亡</text>
+  <text x="101.6" y="471.3" fill="#141413" font-size="13">.</text>
+  <text x="111.2" y="80.3" fill="#141413" font-size="13">|</text>
+  <text x="111.2" y="97.3" fill="#141413" font-size="13">是</text>
+  <text x="111.2" y="114.3" fill="#141413" font-size="13">|</text>
+  <text x="111.2" y="131.3" fill="#141413" font-size="13">自</text>
+  <text x="111.2" y="199.3" fill="#141413" font-size="13">务</text>
+  <text x="111.2" y="233.3" fill="#141413" font-size="13">，</text>
+  <text x="111.2" y="267.3" fill="#141413" font-size="13">实</text>
+  <text x="111.2" y="386.3" fill="#141413" font-size="13">A</text>
+  <text x="111.2" y="403.3" fill="#141413" font-size="13">f</text>
+  <text x="111.2" y="454.3" fill="#141413" font-size="13">与</text>
+  <text x="111.2" y="471.3" fill="#141413" font-size="13">0</text>
+  <text x="120.8" y="63.3" fill="#141413" font-size="13">A</text>
+  <text x="120.8" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="120.8" y="97.3" fill="#141413" font-size="13">终</text>
+  <text x="120.8" y="131.3" fill="#141413" font-size="13">动</text>
+  <text x="120.8" y="148.3" fill="#141413" font-size="13">|</text>
+  <text x="120.8" y="165.3" fill="#141413" font-size="13">|</text>
+  <text x="120.8" y="199.3" fill="#141413" font-size="13">、</text>
+  <text x="120.8" y="233.3" fill="#141413" font-size="13">而</text>
+  <text x="120.8" y="267.3" fill="#141413" font-size="13">现</text>
+  <text x="120.8" y="386.3" fill="#141413" font-size="13">+</text>
+  <text x="120.8" y="403.3" fill="#141413" font-size="13">t</text>
+  <text x="120.8" y="454.3" fill="#141413" font-size="13">重</text>
+  <text x="120.8" y="471.3" fill="#141413" font-size="13">：</text>
+  <text x="130.4" y="63.3" fill="#141413" font-size="13">I</text>
+  <text x="130.4" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="130.4" y="97.3" fill="#141413" font-size="13">点</text>
+  <text x="130.4" y="114.3" fill="#141413" font-size="13">自</text>
+  <text x="130.4" y="131.3" fill="#141413" font-size="13">模</text>
+  <text x="130.4" y="199.3" fill="#141413" font-size="13">开</text>
+  <text x="130.4" y="233.3" fill="#141413" font-size="13">是</text>
+  <text x="130.4" y="267.3" fill="#141413" font-size="13">越</text>
+  <text x="130.4" y="386.3" fill="#141413" font-size="13">验</text>
+  <text x="130.4" y="403.3" fill="#141413" font-size="13">的</text>
+  <text x="130.4" y="454.3" fill="#141413" font-size="13">生</text>
+  <text x="130.4" y="471.3" fill="#141413" font-size="13">用</text>
+  <text x="140" y="63.3" fill="#141413" font-size="13">增</text>
+  <text x="140" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="140" y="114.3" fill="#141413" font-size="13">然</text>
+  <text x="140" y="131.3" fill="#141413" font-size="13">型</text>
+  <text x="140" y="148.3" fill="#141413" font-size="13">规</text>
+  <text x="140" y="165.3" fill="#141413" font-size="13">歧</text>
+  <text x="140" y="199.3" fill="#141413" font-size="13">发</text>
+  <text x="140" y="233.3" fill="#141413" font-size="13">让</text>
+  <text x="140" y="267.3" fill="#141413" font-size="13">自</text>
+  <text x="140" y="386.3" fill="#141413" font-size="13">证</text>
+  <text x="140" y="403.3" fill="#141413" font-size="13">D</text>
+  <text x="140" y="454.3" fill="#141413" font-size="13">]</text>
+  <text x="140" y="471.3" fill="#141413" font-size="13">户</text>
+  <text x="149.6" y="63.3" fill="#141413" font-size="13">强</text>
+  <text x="149.6" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="149.6" y="97.3" fill="#141413" font-size="13">|</text>
+  <text x="149.6" y="114.3" fill="#141413" font-size="13">语</text>
+  <text x="149.6" y="131.3" fill="#141413" font-size="13">检</text>
+  <text x="149.6" y="148.3" fill="#141413" font-size="13">格</text>
+  <text x="149.6" y="165.3" fill="#141413" font-size="13">义</text>
+  <text x="149.6" y="199.3" fill="#141413" font-size="13">、</text>
+  <text x="149.6" y="233.3" fill="#141413" font-size="13">B</text>
+  <text x="149.6" y="267.3" fill="#141413" font-size="13">由</text>
+  <text x="149.6" y="386.3" fill="#141413" font-size="13">S</text>
+  <text x="149.6" y="403.3" fill="#141413" font-size="13">a</text>
+  <text x="149.6" y="454.3" fill="#141413" font-size="13">(</text>
+  <text x="149.6" y="471.3" fill="#141413" font-size="13">故</text>
+  <text x="159.2" y="63.3" fill="#141413" font-size="13">B</text>
+  <text x="159.2" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="159.2" y="114.3" fill="#141413" font-size="13">言</text>
+  <text x="159.2" y="131.3" fill="#141413" font-size="13">查</text>
+  <text x="159.2" y="148.3" fill="#141413" font-size="13">即</text>
+  <text x="159.2" y="165.3" fill="#141413" font-size="13">靠</text>
+  <text x="159.2" y="199.3" fill="#141413" font-size="13">测</text>
+  <text x="159.2" y="233.3" fill="#141413" font-size="13">D</text>
+  <text x="159.2" y="267.3" fill="#141413" font-size="13">。</text>
+  <text x="159.2" y="386.3" fill="#141413" font-size="13">3</text>
+  <text x="159.2" y="403.3" fill="#141413" font-size="13">f</text>
+  <text x="159.2" y="454.3" fill="#87867f" font-size="11">#</text>
+  <text x="159.2" y="471.3" fill="#141413" font-size="13">事</text>
+  <text x="168.8" y="63.3" fill="#141413" font-size="13">D</text>
+  <text x="168.8" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="168.8" y="97.3" fill="#141413" font-size="13">G</text>
+  <text x="168.8" y="131.3" fill="#141413" font-size="13">+</text>
+  <text x="168.8" y="148.3" fill="#141413" font-size="13">测</text>
+  <text x="168.8" y="165.3" fill="#141413" font-size="13">形</text>
+  <text x="168.8" y="199.3" fill="#141413" font-size="13">试</text>
+  <text x="168.8" y="233.3" fill="#141413" font-size="13">D</text>
+  <text x="168.8" y="267.3" fill="#141413" font-size="13">形</text>
+  <text x="168.8" y="386.3" fill="#141413" font-size="13">和</text>
+  <text x="168.8" y="403.3" fill="#141413" font-size="13">n</text>
+  <text x="168.8" y="454.3" fill="#141413" font-size="13">)</text>
+  <text x="168.8" y="471.3" fill="#141413" font-size="13">的</text>
+  <text x="178.4" y="63.3" fill="#141413" font-size="13">D</text>
+  <text x="178.4" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="178.4" y="97.3" fill="#141413" font-size="13">h</text>
+  <text x="178.4" y="131.3" fill="#141413" font-size="13">运</text>
+  <text x="178.4" y="148.3" fill="#141413" font-size="13">试</text>
+  <text x="178.4" y="165.3" fill="#141413" font-size="13">式</text>
+  <text x="178.4" y="199.3" fill="#141413" font-size="13">三</text>
+  <text x="178.4" y="233.3" fill="#141413" font-size="13">从</text>
+  <text x="178.4" y="267.3" fill="#141413" font-size="13">式</text>
+  <text x="178.4" y="386.3" fill="#141413" font-size="13">D</text>
+  <text x="178.4" y="403.3" fill="#141413" font-size="13">y</text>
+  <text x="178.4" y="471.3" fill="#141413" font-size="13">P</text>
+  <text x="188" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="188" y="97.3" fill="#141413" font-size="13">e</text>
+  <text x="188" y="131.3" fill="#141413" font-size="13">行</text>
+  <text x="188" y="148.3" fill="#141413" font-size="13">，</text>
+  <text x="188" y="165.3" fill="#141413" font-size="13">化</text>
+  <text x="188" y="199.3" fill="#141413" font-size="13">方</text>
+  <text x="188" y="233.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="188" y="267.3" fill="#141413" font-size="13">化</text>
+  <text x="188" y="386.3" fill="#141413" font-size="13">y</text>
+  <text x="188" y="403.3" fill="#141413" font-size="13">项</text>
+  <text x="188" y="454.3" fill="#141413" font-size="13">(</text>
+  <text x="188" y="471.3" fill="#141413" font-size="13">r</text>
+  <text x="197.6" y="63.3" fill="#141413" font-size="13">|</text>
+  <text x="197.6" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="197.6" y="97.3" fill="#141413" font-size="13">r</text>
+  <text x="197.6" y="114.3" fill="#141413" font-size="13">形</text>
+  <text x="197.6" y="131.3" fill="#141413" font-size="13">时</text>
+  <text x="197.6" y="148.3" fill="#141413" font-size="13">测</text>
+  <text x="197.6" y="165.3" fill="#141413" font-size="13">消</text>
+  <text x="197.6" y="199.3" fill="#141413" font-size="13">对</text>
+  <text x="197.6" y="233.3" fill="#141413" font-size="13">行</text>
+  <text x="197.6" y="267.3" fill="#141413" font-size="13">不</text>
+  <text x="197.6" y="386.3" fill="#141413" font-size="13">n</text>
+  <text x="197.6" y="403.3" fill="#141413" font-size="13">目</text>
+  <text x="197.6" y="454.3" fill="#141413" font-size="13">第</text>
+  <text x="197.6" y="471.3" fill="#141413" font-size="13">o</text>
+  <text x="207.2" y="80.3" fill="#141413" font-size="13">-</text>
+  <text x="207.2" y="97.3" fill="#141413" font-size="13">k</text>
+  <text x="207.2" y="114.3" fill="#141413" font-size="13">式</text>
+  <text x="207.2" y="131.3" fill="#141413" font-size="13">验</text>
+  <text x="207.2" y="148.3" fill="#141413" font-size="13">试</text>
+  <text x="207.2" y="165.3" fill="#141413" font-size="13">除</text>
+  <text x="207.2" y="199.3" fill="#141413" font-size="13">齐</text>
+  <text x="207.2" y="233.3" fill="#141413" font-size="13">为</text>
+  <text x="207.2" y="267.3" fill="#141413" font-size="13">是</text>
+  <text x="207.2" y="386.3" fill="#141413" font-size="13">a</text>
+  <text x="207.2" y="403.3" fill="#141413" font-size="13">：</text>
+  <text x="207.2" y="454.3" fill="#141413" font-size="13">1</text>
+  <text x="207.2" y="471.3" fill="#141413" font-size="13">m</text>
+  <text x="216.8" y="80.3" fill="#141413" font-size="13">|</text>
+  <text x="216.8" y="97.3" fill="#141413" font-size="13">i</text>
+  <text x="216.8" y="114.3" fill="#141413" font-size="13">化</text>
+  <text x="216.8" y="131.3" fill="#141413" font-size="13">证</text>
+  <text x="216.8" y="148.3" fill="#141413" font-size="13">即</text>
+  <text x="216.8" y="199.3" fill="#141413" font-size="13">。</text>
+  <text x="216.8" y="233.3" fill="#141413" font-size="13">驱</text>
+  <text x="216.8" y="267.3" fill="#141413" font-size="13">束</text>
+  <text x="216.8" y="386.3" fill="#141413" font-size="13">m</text>
+  <text x="216.8" y="403.3" fill="#141413" font-size="13">合</text>
+  <text x="216.8" y="454.3" fill="#141413" font-size="13">篇</text>
+  <text x="216.8" y="471.3" fill="#141413" font-size="13">p</text>
+  <text x="226.4" y="97.3" fill="#141413" font-size="13">n</text>
+  <text x="226.4" y="114.3" fill="#141413" font-size="13">规</text>
+  <text x="226.4" y="148.3" fill="#141413" font-size="13">规</text>
+  <text x="226.4" y="165.3" fill="#141413" font-size="13">|</text>
+  <text x="226.4" y="199.3" fill="#141413" font-size="13">形</text>
+  <text x="226.4" y="233.3" fill="#141413" font-size="13">动</text>
+  <text x="226.4" y="267.3" fill="#141413" font-size="13">缚</text>
+  <text x="226.4" y="386.3" fill="#141413" font-size="13">o</text>
+  <text x="226.4" y="403.3" fill="#141413" font-size="13">约</text>
+  <text x="226.4" y="454.3" fill="#141413" font-size="13">)</text>
+  <text x="226.4" y="471.3" fill="#141413" font-size="13">t</text>
+  <text x="236" y="97.3" fill="#141413" font-size="13">是</text>
+  <text x="236" y="114.3" fill="#141413" font-size="13">格</text>
+  <text x="236" y="131.3" fill="#141413" font-size="13">|</text>
+  <text x="236" y="148.3" fill="#141413" font-size="13">格</text>
+  <text x="236" y="199.3" fill="#141413" font-size="13">式</text>
+  <text x="236" y="233.3" fill="#141413" font-size="13">开</text>
+  <text x="236" y="267.3" fill="#141413" font-size="13">，</text>
+  <text x="236" y="386.3" fill="#141413" font-size="13">D</text>
+  <text x="236" y="403.3" fill="#141413" font-size="13">式</text>
+  <text x="236" y="471.3" fill="#141413" font-size="13">工</text>
+  <text x="245.6" y="97.3" fill="#141413" font-size="13">起</text>
+  <text x="245.6" y="199.3" fill="#141413" font-size="13">化</text>
+  <text x="245.6" y="233.3" fill="#141413" font-size="13">发</text>
+  <text x="245.6" y="267.3" fill="#141413" font-size="13">而</text>
+  <text x="245.6" y="386.3" fill="#141413" font-size="13">B</text>
+  <text x="245.6" y="403.3" fill="#141413" font-size="13">编</text>
+  <text x="245.6" y="471.3" fill="#141413" font-size="13">程</text>
+  <text x="255.2" y="97.3" fill="#141413" font-size="13">点</text>
+  <text x="255.2" y="148.3" fill="#141413" font-size="13">|</text>
+  <text x="255.2" y="199.3" fill="#141413" font-size="13">规</text>
+  <text x="255.2" y="233.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="255.2" y="267.3" fill="#141413" font-size="13">是</text>
+  <text x="255.2" y="386.3" fill="#141413" font-size="13">核</text>
+  <text x="255.2" y="403.3" fill="#141413" font-size="13">程</text>
+  <text x="255.2" y="471.3" fill="#141413" font-size="13">化</text>
+  <text x="264.8" y="199.3" fill="#141413" font-size="13">格</text>
+  <text x="264.8" y="233.3" fill="#141413" font-size="13">进</text>
+  <text x="264.8" y="267.3" fill="#141413" font-size="13">给</text>
+  <text x="264.8" y="386.3" fill="#141413" font-size="13">心</text>
+  <text x="264.8" y="403.3" fill="#141413" font-size="13">的</text>
+  <text x="264.8" y="471.3" fill="#141413" font-size="13">]</text>
+  <text x="274.4" y="97.3" fill="#141413" font-size="13">|</text>
+  <text x="274.4" y="114.3" fill="#141413" font-size="13">代</text>
+  <text x="274.4" y="199.3" fill="#141413" font-size="13">让</text>
+  <text x="274.4" y="233.3" fill="#141413" font-size="13">化</text>
+  <text x="274.4" y="267.3" fill="#141413" font-size="13">创</text>
+  <text x="274.4" y="386.3" fill="#141413" font-size="13">算</text>
+  <text x="274.4" y="403.3" fill="#141413" font-size="13">生</text>
+  <text x="274.4" y="471.3" fill="#141413" font-size="13">(</text>
+  <text x="284" y="114.3" fill="#141413" font-size="13">码</text>
+  <text x="284" y="199.3" fill="#141413" font-size="13">这</text>
+  <text x="284" y="233.3" fill="#141413" font-size="13">为</text>
+  <text x="284" y="267.3" fill="#141413" font-size="13">造</text>
+  <text x="284" y="386.3" fill="#141413" font-size="13">法</text>
+  <text x="284" y="403.3" fill="#141413" font-size="13">产</text>
+  <text x="284" y="471.3" fill="#87867f" font-size="11">#</text>
+  <text x="293.6" y="199.3" fill="#141413" font-size="13">种</text>
+  <text x="293.6" y="233.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="293.6" y="267.3" fill="#141413" font-size="13">力</text>
+  <text x="293.6" y="386.3" fill="#141413" font-size="13">：</text>
+  <text x="293.6" y="403.3" fill="#141413" font-size="13">环</text>
+  <text x="293.6" y="471.3" fill="#141413" font-size="13">)</text>
+  <text x="303.2" y="114.3" fill="#141413" font-size="13">|</text>
+  <text x="303.2" y="199.3" fill="#141413" font-size="13">对</text>
+  <text x="303.2" y="233.3" fill="#141413" font-size="13">*</text>
+  <text x="303.2" y="267.3" fill="#141413" font-size="13">明</text>
+  <text x="303.2" y="386.3" fill="#141413" font-size="13">形</text>
+  <text x="303.2" y="403.3" fill="#141413" font-size="13">境</text>
+  <text x="312.8" y="199.3" fill="#141413" font-size="13">齐</text>
+  <text x="312.8" y="233.3" fill="#141413" font-size="13">*</text>
+  <text x="312.8" y="267.3" fill="#141413" font-size="13">确</text>
+  <text x="312.8" y="386.3" fill="#141413" font-size="13">式</text>
+  <text x="312.8" y="403.3" fill="#141413" font-size="13">应</text>
+  <text x="312.8" y="471.3" fill="#141413" font-size="13">(</text>
+  <text x="322.4" y="199.3" fill="#141413" font-size="13">*</text>
+  <text x="322.4" y="233.3" fill="#141413" font-size="13">行</text>
+  <text x="322.4" y="267.3" fill="#141413" font-size="13">的</text>
+  <text x="322.4" y="386.3" fill="#141413" font-size="13">化</text>
+  <text x="322.4" y="403.3" fill="#141413" font-size="13">用</text>
+  <text x="322.4" y="471.3" fill="#141413" font-size="13">第</text>
+  <text x="332" y="199.3" fill="#141413" font-size="13">*</text>
+  <text x="332" y="233.3" fill="#141413" font-size="13">为</text>
+  <text x="332" y="267.3" fill="#141413" font-size="13">边</text>
+  <text x="332" y="386.3" fill="#141413" font-size="13">方</text>
+  <text x="332" y="471.3" fill="#141413" font-size="13">2</text>
+  <text x="341.6" y="199.3" fill="#141413" font-size="13">可</text>
+  <text x="341.6" y="233.3" fill="#141413" font-size="13">驱</text>
+  <text x="341.6" y="267.3" fill="#141413" font-size="13">界</text>
+  <text x="341.6" y="386.3" fill="#141413" font-size="13">法</text>
+  <text x="341.6" y="471.3" fill="#141413" font-size="13">篇</text>
+  <text x="351.2" y="199.3" fill="#141413" font-size="13">验</text>
+  <text x="351.2" y="233.3" fill="#141413" font-size="13">动</text>
+  <text x="351.2" y="267.3" fill="#141413" font-size="13">。</text>
+  <text x="351.2" y="386.3" fill="#141413" font-size="13">在</text>
+  <text x="351.2" y="471.3" fill="#141413" font-size="13">)</text>
+  <text x="360.8" y="199.3" fill="#141413" font-size="13">证</text>
+  <text x="360.8" y="233.3" fill="#141413" font-size="13">工</text>
+  <text x="360.8" y="267.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="360.8" y="386.3" fill="#141413" font-size="13">大</text>
+  <text x="370.4" y="199.3" fill="#141413" font-size="13">、</text>
+  <text x="370.4" y="233.3" fill="#141413" font-size="13">程</text>
+  <text x="370.4" y="386.3" fill="#141413" font-size="13">规</text>
+  <text x="380" y="199.3" fill="#141413" font-size="13">可</text>
+  <text x="380" y="233.3" fill="#141413" font-size="13">*</text>
+  <text x="380" y="386.3" fill="#141413" font-size="13">模</text>
+  <text x="389.6" y="199.3" fill="#141413" font-size="13">自</text>
+  <text x="389.6" y="233.3" fill="#141413" font-size="13">*</text>
+  <text x="389.6" y="386.3" fill="#141413" font-size="13">系</text>
+  <text x="399.2" y="199.3" fill="#141413" font-size="13">动</text>
+  <text x="399.2" y="233.3" fill="#141413" font-size="13">&quot;</text>
+  <text x="399.2" y="386.3" fill="#141413" font-size="13">统</text>
+  <text x="408.8" y="199.3" fill="#141413" font-size="13">化</text>
+  <text x="408.8" y="233.3" fill="#141413" font-size="13">—</text>
+  <text x="408.8" y="386.3" fill="#141413" font-size="13">的</text>
+  <text x="418.4" y="199.3" fill="#141413" font-size="13">*</text>
+  <text x="418.4" y="233.3" fill="#141413" font-size="13">—</text>
+  <text x="418.4" y="386.3" fill="#141413" font-size="13">实</text>
+  <text x="428" y="199.3" fill="#141413" font-size="13">*</text>
+  <text x="428" y="233.3" fill="#141413" font-size="13">从</text>
+  <text x="428" y="386.3" fill="#141413" font-size="13">践</text>
+  <text x="437.6" y="199.3" fill="#141413" font-size="13">。</text>
+  <text x="437.6" y="233.3" fill="#141413" font-size="13">想</text>
+  <text x="447.2" y="233.3" fill="#141413" font-size="13">法</text>
+  <text x="456.8" y="233.3" fill="#141413" font-size="13">到</text>
+  <text x="466.4" y="233.3" fill="#141413" font-size="13">可</text>
+  <text x="476" y="233.3" fill="#141413" font-size="13">验</text>
+  <text x="485.6" y="233.3" fill="#141413" font-size="13">证</text>
+  <text x="495.2" y="233.3" fill="#141413" font-size="13">的</text>
+  <text x="504.8" y="233.3" fill="#141413" font-size="13">实</text>
+  <text x="514.4" y="233.3" fill="#141413" font-size="13">现</text>
+  <text x="524" y="233.3" fill="#141413" font-size="13">，</text>
+  <text x="533.6" y="233.3" fill="#141413" font-size="13">端</text>
+  <text x="543.2" y="233.3" fill="#141413" font-size="13">到</text>
+  <text x="552.8" y="233.3" fill="#141413" font-size="13">端</text>
+  <text x="562.4" y="233.3" fill="#141413" font-size="13">自</text>
+  <text x="572" y="233.3" fill="#141413" font-size="13">动</text>
+  <text x="581.6" y="233.3" fill="#141413" font-size="13">化</text>
+  <text x="591.2" y="233.3" fill="#141413" font-size="13">。</text>
 </svg>

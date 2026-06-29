@@ -1,219 +1,152 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 500">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .slate-text { fill: #141413; font-family: system-ui, sans-serif; }
-      .clay { fill: #D97757; }
-      .olive { fill: #788C5D; }
-      .oat { fill: #E3DACC; }
-      .g300 { fill: #D1CFC5; }
-      .g500 { fill: #87867F; }
-      .section-label { fill: #87867F; font-family: system-ui, sans-serif; font-size: 11px; }
-      .artifact-name { fill: #141413; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
-      .artifact-desc { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; }
-      .delta-label { fill: #D97757; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; }
-      .green-label { fill: #788C5D; font-family: system-ui, sans-serif; font-size: 10px; font-weight: 600; }
-      .code-text { fill: #141413; font-family: monospace; font-size: 11px; }
-      .white-text { fill: white; font-family: system-ui, sans-serif; }
+      .section-label{fill:#87867f;font-size:11px}.artifact-desc,.artifact-name,.section-label{font-family:system-ui,sans-serif}.artifact-name{fill:#141413;font-size:13px;font-weight:600}.artifact-desc{fill:#87867f;font-size:10px}.delta-label{fill:#d97757;font-size:11px;font-weight:600}.delta-label,.green-label,.white-text{font-family:system-ui,sans-serif}.green-label{fill:#788c5d;font-size:10px;font-weight:600}.white-text{fill:#fff}
     </style>
   </defs>
-
-  <rect width="720" height="500" class="bg"/>
-
-  <!-- Title -->
-  <text x="24" y="32" class="slate-text" font-size="16" font-weight="700">知识孤岛指数（KII）：衡量团队集体理解度</text>
-  <line x1="24" y1="42" x2="696" y2="42" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- KII Formula (top left) -->
-  <g transform="translate(24, 56)">
-    <text x="0" y="0" class="section-label">KII 公式</text>
-    <rect x="0" y="12" width="320" height="100" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
+  <path d="M0 0h720v500H0z" style="fill:#faf9f5"/>
+  <text x="24" y="32" font-size="16" font-weight="700" style="fill:#141413;font-family:system-ui,sans-serif">知识孤岛指数（KII）：衡量团队集体理解度</text>
+  <path stroke="#d1cfc5" d="M24 42h672"/>
+  <g transform="translate(24 56)">
+    <text class="section-label">KII 公式</text>
+    <rect width="320" height="100" y="12" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
     <text x="24" y="38" class="artifact-name" font-size="13">Knowledge Isolation Index</text>
-
-    <!-- Formula -->
-    <rect x="24" y="50" width="272" height="28" rx="4" fill="#E3DACC"/>
-    <text x="160" y="69" text-anchor="middle" class="code-text" font-size="13">
+    <rect width="272" height="28" x="24" y="50" fill="#e3dacc" rx="4"/>
+    <text x="160" y="69" style="fill:#141413;font-family:monospace;font-size:11px" text-anchor="middle">
       KII = 1 − (理解人数 / 团队总人数)
     </text>
-
-    <!-- Range labels -->
     <text x="24" y="92" class="artifact-desc">KII = 0：</text>
     <text x="70" y="92" class="green-label">所有人都理解（理想）</text>
     <text x="200" y="92" class="artifact-desc">KII = 1：</text>
     <text x="246" y="92" class="delta-label">只有作者理解</text>
   </g>
-
-  <!-- KII Risk Tiers (top right) -->
-  <g transform="translate(364, 56)">
-    <text x="0" y="0" class="section-label">KII 风险等级</text>
-    <rect x="0" y="12" width="332" height="100" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-    <!-- Tiers as horizontal bars -->
-    <g transform="translate(12, 28)">
-      <rect width="60" height="12" rx="2" fill="#788C5D"/>
+  <g transform="translate(364 56)">
+    <text class="section-label">KII 风险等级</text>
+    <rect width="332" height="100" y="12" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <g transform="translate(12 28)">
+      <rect width="60" height="12" fill="#788c5d" rx="2"/>
       <text x="76" y="11" class="artifact-desc">0–0.2</text>
       <text x="120" y="11" class="green-label">低风险 · 保持现状</text>
     </g>
-
-    <g transform="translate(12, 46)">
-      <rect width="60" height="12" rx="2" fill="#C4A35A"/>
+    <g transform="translate(12 46)">
+      <rect width="60" height="12" fill="#c4a35a" rx="2"/>
       <text x="76" y="11" class="artifact-desc">0.2–0.4</text>
-      <text x="120" y="11" fill="#9E8634" font-family="system-ui" font-size="10">中低风险 · 增加文档</text>
+      <text x="120" y="11" fill="#9e8634" font-family="system-ui" font-size="10">中低风险 · 增加文档</text>
     </g>
-
-    <g transform="translate(12, 64)">
-      <rect width="60" height="12" rx="2" fill="#D97757"/>
+    <g transform="translate(12 64)">
+      <rect width="60" height="12" fill="#d97757" rx="2"/>
       <text x="76" y="11" class="artifact-desc">0.4–0.6</text>
       <text x="120" y="11" class="delta-label">中风险 · 组织代码讲解</text>
     </g>
-
-    <g transform="translate(12, 82)">
-      <rect width="60" height="12" rx="2" fill="#C0392B"/>
+    <g transform="translate(12 82)">
+      <rect width="60" height="12" fill="#c0392b" rx="2"/>
       <text x="76" y="11" class="artifact-desc">0.6–0.8</text>
-      <text x="120" y="11" fill="#C0392B" font-family="system-ui" font-size="10" font-weight="600">高风险 · 必须重构或重写</text>
+      <text x="120" y="11" fill="#c0392b" font-family="system-ui" font-size="10" font-weight="600">高风险 · 必须重构或重写</text>
     </g>
   </g>
-
-  <!-- KII Factors (middle left) -->
-  <g transform="translate(24, 180)">
-    <text x="0" y="0" class="section-label">KII 影响因素</text>
-    <rect x="0" y="12" width="340" height="148" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-    <!-- Factor rows with weight bars -->
-    <g transform="translate(16, 28)">
-      <text x="0" y="0" class="artifact-name" font-size="11">代码复杂度</text>
-      <text x="100" y="0" class="artifact-desc">30%</text>
-      <rect x="0" y="6" width="300" height="8" rx="4" fill="#D1CFC5"/>
-      <rect x="0" y="6" width="90" height="8" rx="4" fill="#D97757"/>
+  <g transform="translate(24 180)">
+    <text class="section-label">KII 影响因素</text>
+    <rect width="340" height="148" y="12" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <g transform="translate(16 28)">
+      <text class="artifact-name" font-size="11">代码复杂度</text>
+      <text x="100" class="artifact-desc">30%</text>
+      <rect width="300" height="8" y="6" fill="#d1cfc5" rx="4"/>
+      <rect width="90" height="8" y="6" fill="#d97757" rx="4"/>
     </g>
-
-    <g transform="translate(16, 56)">
-      <text x="0" y="0" class="artifact-name" font-size="11">文档完整度</text>
-      <text x="100" y="0" class="artifact-desc">25%</text>
-      <rect x="0" y="6" width="300" height="8" rx="4" fill="#D1CFC5"/>
-      <rect x="0" y="6" width="75" height="8" rx="4" fill="#D97757"/>
+    <g transform="translate(16 56)">
+      <text class="artifact-name" font-size="11">文档完整度</text>
+      <text x="100" class="artifact-desc">25%</text>
+      <rect width="300" height="8" y="6" fill="#d1cfc5" rx="4"/>
+      <rect width="75" height="8" y="6" fill="#d97757" rx="4"/>
     </g>
-
-    <g transform="translate(16, 84)">
-      <text x="0" y="0" class="artifact-name" font-size="11">代码审查参与度</text>
-      <text x="120" y="0" class="artifact-desc">20%</text>
-      <rect x="0" y="6" width="300" height="8" rx="4" fill="#D1CFC5"/>
-      <rect x="0" y="6" width="60" height="8" rx="4" fill="#D97757"/>
+    <g transform="translate(16 84)">
+      <text class="artifact-name" font-size="11">代码审查参与度</text>
+      <text x="120" class="artifact-desc">20%</text>
+      <rect width="300" height="8" y="6" fill="#d1cfc5" rx="4"/>
+      <rect width="60" height="8" y="6" fill="#d97757" rx="4"/>
     </g>
-
-    <g transform="translate(16, 112)">
-      <text x="0" y="0" class="artifact-name" font-size="11">知识分享活动</text>
-      <text x="100" y="0" class="artifact-desc">15%</text>
-      <rect x="0" y="6" width="300" height="8" rx="4" fill="#D1CFC5"/>
-      <rect x="0" y="6" width="45" height="8" rx="4" fill="#D97757"/>
+    <g transform="translate(16 112)">
+      <text class="artifact-name" font-size="11">知识分享活动</text>
+      <text x="100" class="artifact-desc">15%</text>
+      <rect width="300" height="8" y="6" fill="#d1cfc5" rx="4"/>
+      <rect width="45" height="8" y="6" fill="#d97757" rx="4"/>
     </g>
-
-    <g transform="translate(16, 140)">
-      <text x="0" y="0" class="artifact-name" font-size="11">作者可接触性</text>
-      <text x="100" y="0" class="artifact-desc">10%</text>
-      <rect x="0" y="6" width="300" height="8" rx="4" fill="#D1CFC5"/>
-      <rect x="0" y="6" width="30" height="8" rx="4" fill="#D97757"/>
+    <g transform="translate(16 140)">
+      <text class="artifact-name" font-size="11">作者可接触性</text>
+      <text x="100" class="artifact-desc">10%</text>
+      <rect width="300" height="8" y="6" fill="#d1cfc5" rx="4"/>
+      <rect width="30" height="8" y="6" fill="#d97757" rx="4"/>
     </g>
   </g>
-
-  <!-- Knowledge Flow: Normal vs Blocked (middle right) -->
-  <g transform="translate(384, 180)">
-    <text x="0" y="0" class="section-label">知识传染：正常 vs 阻断</text>
-
-    <!-- Normal flow -->
-    <g transform="translate(0, 16)">
-      <rect width="312" height="64" rx="6" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-      <text x="12" y="18" class="green-label">正常传染</text>
-
-      <g transform="translate(12, 28)">
-        <rect width="72" height="24" rx="4" fill="#788C5D"/>
-        <text x="36" y="17" text-anchor="middle" class="white-text" font-size="10">专家开发者</text>
-      </g>
-      <path d="M92,40 L114,40 L109,34 L124,40 L109,46 Z" fill="#87867F"/>
-      <rect x="132" y="28" width="72" height="24" rx="4" fill="#D1CFC5"/>
-      <text x="168" y="44" text-anchor="middle" class="artifact-desc" font-size="9">中级开发者</text>
-      <path d="M212,40 L234,40 L229,34 L244,40 L229,46 Z" fill="#87867F"/>
-      <rect x="252" y="28" width="48" height="24" rx="4" fill="#E3DACC"/>
-      <text x="276" y="44" text-anchor="middle" class="artifact-desc" font-size="9">初级</text>
-      </g>
+  <text class="section-label" transform="translate(384 180)">知识传染：正常 vs 阻断</text>
+  <g transform="translate(384 196)">
+    <rect width="312" height="64" fill="#faf9f5" stroke="#788c5d" stroke-width="1.5" rx="6"/>
+    <text x="12" y="18" class="green-label">正常传染</text>
+    <g transform="translate(12 28)">
+      <rect width="72" height="24" fill="#788c5d" rx="4"/>
+      <text x="36" y="17" class="white-text" font-size="10" text-anchor="middle">专家开发者</text>
     </g>
-
-    <!-- Blocked flow -->
-    <g transform="translate(0, 96)">
-      <rect width="312" height="64" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
-      <text x="12" y="18" class="delta-label">AI 时代阻断</text>
-
-      <g transform="translate(12, 28)">
-        <rect width="72" height="24" rx="4" fill="#D97757"/>
-        <text x="36" y="17" text-anchor="middle" class="white-text" font-size="10">AI + 个人Prompt</text>
-      </g>
-      <path d="M92,40 L114,40 L109,34 L124,40 L109,46 Z" fill="#87867F"/>
-      <rect x="132" y="28" width="72" height="24" rx="4" fill="#D1CFC5"/>
-      <text x="168" y="44" text-anchor="middle" class="artifact-desc" font-size="9">个人理解</text>
-
-      <!-- X mark for break -->
-      <path d="M212,32 L244,64 M244,32 L212,64" stroke="#C0392B" stroke-width="2.5" fill="none"/>
-
-      <text x="276" y="44" text-anchor="middle" class="delta-label" font-size="9">? 传播中断</text>
-      </g>
-    </g>
+    <path fill="#87867f" d="M92 40h22l-5-6 15 6-15 6Z"/>
+    <rect width="72" height="24" x="132" y="28" fill="#d1cfc5" rx="4"/>
+    <text x="168" y="44" class="artifact-desc" font-size="9" text-anchor="middle">中级开发者</text>
+    <path fill="#87867f" d="M212 40h22l-5-6 15 6-15 6Z"/>
+    <rect width="48" height="24" x="252" y="28" fill="#e3dacc" rx="4"/>
+    <text x="276" y="44" class="artifact-desc" font-size="9" text-anchor="middle">初级</text>
   </g>
-
-  <!-- Bottom: Blocked types + Solutions -->
-  <g transform="translate(24, 356)">
-    <text x="0" y="0" class="section-label">知识阻断类型</text>
-
-    <g transform="translate(0, 14)">
-      <rect width="200" height="56" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-      <rect x="8" y="8" width="16" height="16" rx="3" fill="#D97757"/>
-      <text x="32" y="20" class="artifact-name" font-size="11">无解释生成</text>
-      <text x="12" y="38" class="artifact-desc">AI 生成，无注释</text>
-      <text x="12" y="50" class="artifact-desc">复杂逻辑无说明</text>
+  <g transform="translate(384 276)">
+    <rect width="312" height="64" fill="#faf9f5" stroke="#d97757" stroke-width="1.5" rx="6"/>
+    <text x="12" y="18" class="delta-label">AI 时代阻断</text>
+    <g transform="translate(12 28)">
+      <rect width="72" height="24" fill="#d97757" rx="4"/>
+      <text x="36" y="17" class="white-text" font-size="10" text-anchor="middle">AI + 个人Prompt</text>
     </g>
-
-    <g transform="translate(212, 14)">
-      <rect width="200" height="56" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-      <rect x="8" y="8" width="16" height="16" rx="3" fill="#D97757"/>
-      <text x="32" y="20" class="artifact-name" font-size="11">个人化抽象</text>
-      <text x="12" y="38" class="artifact-desc">只有作者理解的命名</text>
-      <text x="12" y="50" class="artifact-desc">无法推断意图</text>
-    </g>
-
-    <g transform="translate(424, 14)">
-      <rect width="272" height="56" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-      <rect x="8" y="8" width="16" height="16" rx="3" fill="#D97757"/>
-      <text x="32" y="20" class="artifact-name" font-size="11">审查失效</text>
-      <text x="12" y="38" class="artifact-desc">AI 代码"看起来正确"</text>
-      <text x="12" y="50" class="artifact-desc">审查者无法判断业务意图</text>
-    </g>
+    <path fill="#87867f" d="M92 40h22l-5-6 15 6-15 6Z"/>
+    <rect width="72" height="24" x="132" y="28" fill="#d1cfc5" rx="4"/>
+    <text x="168" y="44" class="artifact-desc" font-size="9" text-anchor="middle">个人理解</text>
+    <path fill="none" stroke="#c0392b" stroke-width="2.5" d="m212 32 32 32m0-32-32 32"/>
+    <text x="276" y="44" class="delta-label" font-size="9" text-anchor="middle">? 传播中断</text>
   </g>
-
-  <g transform="translate(24, 430)">
-    <text x="0" y="0" class="section-label">重建集体理解策略</text>
-
-    <g transform="translate(0, 14)">
-      <rect width="160" height="48" rx="6" fill="#788C5D"/>
-      <text x="80" y="20" text-anchor="middle" class="white-text" font-size="11" font-weight="600">策略1：强制文档化</text>
-      <text x="80" y="36" text-anchor="middle" class="white-text" font-size="9">AI 代码必须带解释</text>
-    </g>
-
-    <g transform="translate(168, 14)">
-      <rect width="160" height="48" rx="6" fill="#788C5D"/>
-      <text x="80" y="20" text-anchor="middle" class="white-text" font-size="11" font-weight="600">策略2：代码讲解会</text>
-      <text x="80" y="36" text-anchor="middle" class="white-text" font-size="9">AI 生成复杂模块 walkthrough</text>
-    </g>
-
-    <g transform="translate(336, 14)">
-      <rect width="160" height="48" rx="6" fill="#788C5D"/>
-      <text x="80" y="20" text-anchor="middle" class="white-text" font-size="11" font-weight="600">策略3：Prompt 共享</text>
-      <text x="80" y="36" text-anchor="middle" class="white-text" font-size="9">理解 Prompt → 理解代码意图</text>
-    </g>
-
-    <g transform="translate(504, 14)">
-      <rect width="192" height="48" rx="6" fill="#D97757"/>
-      <text x="96" y="20" text-anchor="middle" class="white-text" font-size="11" font-weight="600">策略4：重构高 KII 代码</text>
-      <text x="96" y="36" text-anchor="middle" class="white-text" font-size="9">KII &gt; 0.6 → 必须重构至 KII &lt; 0.3</text>
-    </g>
+  <text class="section-label" transform="translate(24 356)">知识阻断类型</text>
+  <g transform="translate(24 370)">
+    <rect width="200" height="56" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+    <rect width="16" height="16" x="8" y="8" fill="#d97757" rx="3"/>
+    <text x="32" y="20" class="artifact-name" font-size="11">无解释生成</text>
+    <text x="12" y="38" class="artifact-desc">AI 生成，无注释</text>
+    <text x="12" y="50" class="artifact-desc">复杂逻辑无说明</text>
+  </g>
+  <g transform="translate(236 370)">
+    <rect width="200" height="56" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+    <rect width="16" height="16" x="8" y="8" fill="#d97757" rx="3"/>
+    <text x="32" y="20" class="artifact-name" font-size="11">个人化抽象</text>
+    <text x="12" y="38" class="artifact-desc">只有作者理解的命名</text>
+    <text x="12" y="50" class="artifact-desc">无法推断意图</text>
+  </g>
+  <g transform="translate(448 370)">
+    <rect width="272" height="56" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+    <rect width="16" height="16" x="8" y="8" fill="#d97757" rx="3"/>
+    <text x="32" y="20" class="artifact-name" font-size="11">审查失效</text>
+    <text x="12" y="38" class="artifact-desc">AI 代码&quot;看起来正确&quot;</text>
+    <text x="12" y="50" class="artifact-desc">审查者无法判断业务意图</text>
+  </g>
+  <text class="section-label" transform="translate(24 430)">重建集体理解策略</text>
+  <g transform="translate(24 444)">
+    <rect width="160" height="48" fill="#788c5d" rx="6"/>
+    <text x="80" y="20" class="white-text" font-size="11" font-weight="600" text-anchor="middle">策略1：强制文档化</text>
+    <text x="80" y="36" class="white-text" font-size="9" text-anchor="middle">AI 代码必须带解释</text>
+  </g>
+  <g transform="translate(192 444)">
+    <rect width="160" height="48" fill="#788c5d" rx="6"/>
+    <text x="80" y="20" class="white-text" font-size="11" font-weight="600" text-anchor="middle">策略2：代码讲解会</text>
+    <text x="80" y="36" class="white-text" font-size="9" text-anchor="middle">AI 生成复杂模块 walkthrough</text>
+  </g>
+  <g transform="translate(360 444)">
+    <rect width="160" height="48" fill="#788c5d" rx="6"/>
+    <text x="80" y="20" class="white-text" font-size="11" font-weight="600" text-anchor="middle">策略3：Prompt 共享</text>
+    <text x="80" y="36" class="white-text" font-size="9" text-anchor="middle">理解 Prompt → 理解代码意图</text>
+  </g>
+  <g transform="translate(528 444)">
+    <rect width="192" height="48" fill="#d97757" rx="6"/>
+    <text x="96" y="20" class="white-text" font-size="11" font-weight="600" text-anchor="middle">策略4：重构高 KII 代码</text>
+    <text x="96" y="36" class="white-text" font-size="9" text-anchor="middle">KII &gt; 0.6 → 必须重构至 KII &lt; 0.3</text>
   </g>
 </svg>

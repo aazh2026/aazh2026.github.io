@@ -1,80 +1,55 @@
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 360">
   <title>9 种 Skill 类型</title>
-  <desc>3x3 网格图，展示 Claude Code Skills 的 9 种类型：Library &amp; API Reference、Product Verification、Data Fetching &amp; Analysis、Business Process Automation、Code Scaffolding、Code Quality &amp; Review、CI/CD &amp; Deployment、Runbooks、Infrastructure Operations</desc>
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">9 种 Skill 类型</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/21</text>
-
-  <!-- Row 1 -->
-  <!-- Card 1: Library & API Reference -->
-  <rect x="20" y="62" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="35" y="82" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Library &amp; API Reference</text>
-  <text x="35" y="98" font-size="9" fill="#87867F">库和 API 参考</text>
-  <text x="35" y="114" font-size="8" fill="#141413" font-family="ui-monospace, monospace">billing-lib</text>
-  <text x="35" y="126" font-size="8" fill="#141413" font-family="ui-monospace, monospace">internal-platform-cli</text>
-
-  <!-- Card 2: Product Verification -->
-  <rect x="240" y="62" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="255" y="82" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Product Verification</text>
-  <text x="255" y="98" font-size="9" fill="#87867F">产品验证测试</text>
-  <text x="255" y="114" font-size="8" fill="#141413" font-family="ui-monospace, monospace">signup-flow-driver</text>
-  <text x="255" y="126" font-size="8" fill="#141413" font-family="ui-monospace, monospace">checkout-verifier</text>
-
-  <!-- Card 3: Data Fetching & Analysis -->
-  <rect x="460" y="62" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="475" y="82" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Data Fetching &amp; Analysis</text>
-  <text x="475" y="98" font-size="9" fill="#87867F">数据获取与分析</text>
-  <text x="475" y="114" font-size="8" fill="#141413" font-family="ui-monospace, monospace">funnel-query</text>
-  <text x="475" y="126" font-size="8" fill="#141413" font-family="ui-monospace, monospace">grafana</text>
-
-  <!-- Row 2 -->
-  <!-- Card 4: Business Process Automation -->
-  <rect x="20" y="152" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="35" y="172" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Business Process Automation</text>
-  <text x="35" y="188" font-size="9" fill="#87867F">业务流程自动化</text>
-  <text x="35" y="204" font-size="8" fill="#141413" font-family="ui-monospace, monospace">standup-post</text>
-  <text x="35" y="216" font-size="8" fill="#141413" font-family="ui-monospace, monospace">create-ticket</text>
-
-  <!-- Card 5: Code Scaffolding -->
-  <rect x="240" y="152" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="255" y="172" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Code Scaffolding</text>
-  <text x="255" y="188" font-size="9" fill="#87867F">代码脚手架</text>
-  <text x="255" y="204" font-size="8" fill="#141413" font-family="ui-monospace, monospace">new-service</text>
-  <text x="255" y="216" font-size="8" fill="#141413" font-family="ui-monospace, monospace">new-migration</text>
-
-  <!-- Card 6: Code Quality & Review -->
-  <rect x="460" y="152" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="475" y="172" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Code Quality &amp; Review</text>
-  <text x="475" y="188" font-size="9" fill="#87867F">代码质量审查</text>
-  <text x="475" y="204" font-size="8" fill="#141413" font-family="ui-monospace, monospace">adversarial-review</text>
-  <text x="475" y="216" font-size="8" fill="#141413" font-family="ui-monospace, monospace">code-style</text>
-
-  <!-- Row 3 -->
-  <!-- Card 7: CI/CD & Deployment -->
-  <rect x="20" y="242" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="35" y="262" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">CI/CD &amp; Deployment</text>
-  <text x="35" y="278" font-size="9" fill="#87867F">CI/CD 与部署</text>
-  <text x="35" y="294" font-size="8" fill="#141413" font-family="ui-monospace, monospace">babysit-pr</text>
-  <text x="35" y="306" font-size="8" fill="#141413" font-family="ui-monospace, monospace">deploy-service</text>
-
-  <!-- Card 8: Runbooks -->
-  <rect x="240" y="242" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="255" y="262" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">Runbooks</text>
-  <text x="255" y="278" font-size="9" fill="#87867F">运维手册</text>
-  <text x="255" y="294" font-size="8" fill="#141413" font-family="ui-monospace, monospace">service-debugging</text>
-  <text x="255" y="306" font-size="8" fill="#141413" font-family="ui-monospace, monospace">oncall-runner</text>
-
-  <!-- Card 9: Infrastructure Operations -->
-  <rect x="460" y="242" width="210" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="475" y="262" font-size="10" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">Infrastructure Operations</text>
-  <text x="475" y="278" font-size="9" fill="#87867F">基础设施操作</text>
-  <text x="475" y="294" font-size="8" fill="#141413" font-family="ui-monospace, monospace">resource-orphans</text>
-  <text x="475" y="306" font-size="8" fill="#141413" font-family="ui-monospace, monospace">cost-investigation</text>
-
-  <!-- Source line -->
-  <text x="340" y="344" text-anchor="middle" font-size="9" fill="#D1CFC5" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/21</text>
+  <desc>
+    3x3 网格图，展示 Claude Code Skills 的 9 种类型：Library &amp; API Reference、Product Verification、Data Fetching &amp; Analysis、Business Process Automation、Code Scaffolding、Code Quality &amp; Review、CI/CD &amp; Deployment、Runbooks、Infrastructure Operations
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">9 种 Skill 类型</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">postcodeengineering.com · 2026/03/21</text>
+  <rect width="210" height="80" x="20" y="62" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="35" y="82" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Library &amp; API Reference</text>
+  <text x="35" y="98" fill="#87867f" font-size="9">库和 API 参考</text>
+  <text x="35" y="114" fill="#141413" font-family="ui-monospace, monospace" font-size="8">billing-lib</text>
+  <text x="35" y="126" fill="#141413" font-family="ui-monospace, monospace" font-size="8">internal-platform-cli</text>
+  <rect width="210" height="80" x="240" y="62" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="255" y="82" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Product Verification</text>
+  <text x="255" y="98" fill="#87867f" font-size="9">产品验证测试</text>
+  <text x="255" y="114" fill="#141413" font-family="ui-monospace, monospace" font-size="8">signup-flow-driver</text>
+  <text x="255" y="126" fill="#141413" font-family="ui-monospace, monospace" font-size="8">checkout-verifier</text>
+  <rect width="210" height="80" x="460" y="62" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="475" y="82" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Data Fetching &amp; Analysis</text>
+  <text x="475" y="98" fill="#87867f" font-size="9">数据获取与分析</text>
+  <text x="475" y="114" fill="#141413" font-family="ui-monospace, monospace" font-size="8">funnel-query</text>
+  <text x="475" y="126" fill="#141413" font-family="ui-monospace, monospace" font-size="8">grafana</text>
+  <rect width="210" height="80" x="20" y="152" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="35" y="172" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Business Process Automation</text>
+  <text x="35" y="188" fill="#87867f" font-size="9">业务流程自动化</text>
+  <text x="35" y="204" fill="#141413" font-family="ui-monospace, monospace" font-size="8">standup-post</text>
+  <text x="35" y="216" fill="#141413" font-family="ui-monospace, monospace" font-size="8">create-ticket</text>
+  <rect width="210" height="80" x="240" y="152" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="255" y="172" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Code Scaffolding</text>
+  <text x="255" y="188" fill="#87867f" font-size="9">代码脚手架</text>
+  <text x="255" y="204" fill="#141413" font-family="ui-monospace, monospace" font-size="8">new-service</text>
+  <text x="255" y="216" fill="#141413" font-family="ui-monospace, monospace" font-size="8">new-migration</text>
+  <rect width="210" height="80" x="460" y="152" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="475" y="172" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Code Quality &amp; Review</text>
+  <text x="475" y="188" fill="#87867f" font-size="9">代码质量审查</text>
+  <text x="475" y="204" fill="#141413" font-family="ui-monospace, monospace" font-size="8">adversarial-review</text>
+  <text x="475" y="216" fill="#141413" font-family="ui-monospace, monospace" font-size="8">code-style</text>
+  <rect width="210" height="80" x="20" y="242" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="35" y="262" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600">CI/CD &amp; Deployment</text>
+  <text x="35" y="278" fill="#87867f" font-size="9">CI/CD 与部署</text>
+  <text x="35" y="294" fill="#141413" font-family="ui-monospace, monospace" font-size="8">babysit-pr</text>
+  <text x="35" y="306" fill="#141413" font-family="ui-monospace, monospace" font-size="8">deploy-service</text>
+  <rect width="210" height="80" x="240" y="242" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="255" y="262" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Runbooks</text>
+  <text x="255" y="278" fill="#87867f" font-size="9">运维手册</text>
+  <text x="255" y="294" fill="#141413" font-family="ui-monospace, monospace" font-size="8">service-debugging</text>
+  <text x="255" y="306" fill="#141413" font-family="ui-monospace, monospace" font-size="8">oncall-runner</text>
+  <rect width="210" height="80" x="460" y="242" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="475" y="262" fill="#141413" font-family="ui-monospace, monospace" font-size="10" font-weight="600">Infrastructure Operations</text>
+  <text x="475" y="278" fill="#87867f" font-size="9">基础设施操作</text>
+  <text x="475" y="294" fill="#141413" font-family="ui-monospace, monospace" font-size="8">resource-orphans</text>
+  <text x="475" y="306" fill="#141413" font-family="ui-monospace, monospace" font-size="8">cost-investigation</text>
+  <text x="340" y="344" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2026/03/21</text>
 </svg>

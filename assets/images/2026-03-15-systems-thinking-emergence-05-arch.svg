@@ -1,49 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300" width="460" height="300">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 300">
   <style>
-    .bg { fill: #FAF9F5; }
-    .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
-    .border-dark { stroke: #87867F; stroke-width: 1.5; fill: none; }
-    .box-planner { fill: #D97757; }
-    .box-executor { fill: #E3DACC; }
-    .box-critic { fill: #E3DACC; }
-    .box-memory { fill: #E3DACC; }
-    .box-tool { fill: #788C5D; }
-    .box-generic { fill: #E3DACC; }
-    .text-white { fill: #FAF9F5; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
-    .text-dark { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
-    .text-label { fill: #87867F; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 11px; }
-    .text-dark-small { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 500; }
-    .text-heading { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 700; }
-    .text-clay { fill: #D97757; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 13px; font-weight: 600; }
-    .arrow { stroke: #D1CFC5; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
-    .arrow-dark { stroke: #87867F; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead-dark); }
-    .arrow-clay { stroke: #D97757; stroke-width: 1.5; fill: none; marker-end: url(#arrowhead-clay); }
-    .divider { stroke: #D1CFC5; stroke-width: 1; }
-    .cell-label { fill: #87867F; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 10px; }
-    .cell-value { fill: #141413; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 600; }
-    .cell-value-clay { fill: #D97757; font-family: 'SF Mono', 'Cascadia Code', 'Fira Code', monospace; font-size: 12px; font-weight: 600; }
+    .text-label{fill:#87867f;font-family:&quot;SF Mono&quot;,&quot;Cascadia Code&quot;,&quot;Fira Code&quot;,monospace;font-size:11px}
   </style>
   <defs>
-    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D1CFC5"/>
+    <marker id="arrowhead" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#d1cfc5" d="m0 0 8 3-8 3z"/>
     </marker>
-    <marker id="arrowhead-dark" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
+    <marker id="arrowhead-dark" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#87867f" d="m0 0 8 3-8 3z"/>
     </marker>
-    <marker id="arrowhead-clay" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    <marker id="arrowhead-clay" markerHeight="6" markerWidth="8" orient="auto" refX="8" refY="3">
+      <path fill="#d97757" d="m0 0 8 3-8 3z"/>
     </marker>
   </defs>
-  <rect class="bg" width="460" height="300" rx="8"/>
-
-  <text x="230" y="35" text-anchor="middle" class="text-heading">策略三：安全试错空间</text>
-  <rect x="40" y="55" width="380" height="220" class="border" rx="4"/>
-  <text x="230" y="80" text-anchor="middle" class="text-label">安全操作空间</text>
-  <rect x="65" y="90" width="330" height="145" fill="#E3DACC" rx="4"/>
-  <text x="230" y="125" text-anchor="middle" class="text-label" style="font-size:12px">允许探索和失败的区域</text>
-  <text x="230" y="155" text-anchor="middle" class="text-dark-small">在这里，涌现性可以发生</text>
-  <circle cx="95" cy="205" r="4" fill="#D97757" opacity="0.5"/>
-  <circle cx="365" cy="130" r="4" fill="#788C5D" opacity="0.5"/>
-  <circle cx="230" cy="205" r="3" fill="#87867F" opacity="0.4"/>
-  <text x="230" y="255" text-anchor="middle" class="text-label">硬边界：成本、安全、合规性</text>
+  <rect width="460" height="300" rx="8" style="fill:#faf9f5"/>
+  <text x="230" y="35" style="fill:#141413;font-family:&quot;SF Mono&quot;,&quot;Cascadia Code&quot;,&quot;Fira Code&quot;,monospace;font-size:12px;font-weight:700" text-anchor="middle">策略三：安全试错空间</text>
+  <rect width="380" height="220" x="40" y="55" rx="4" style="stroke:#d1cfc5;stroke-width:1.5;fill:none"/>
+  <text x="230" y="80" class="text-label" text-anchor="middle">安全操作空间</text>
+  <rect width="330" height="145" x="65" y="90" fill="#e3dacc" rx="4"/>
+  <text x="230" y="125" class="text-label" style="font-size:12px" text-anchor="middle">允许探索和失败的区域</text>
+  <text x="230" y="155" style="fill:#141413;font-family:&quot;SF Mono&quot;,&quot;Cascadia Code&quot;,&quot;Fira Code&quot;,monospace;font-size:12px;font-weight:500" text-anchor="middle">在这里，涌现性可以发生</text>
+  <circle cx="95" cy="205" r="4" fill="#d97757" opacity=".5"/>
+  <circle cx="365" cy="130" r="4" fill="#788c5d" opacity=".5"/>
+  <circle cx="230" cy="205" r="3" fill="#87867f" opacity=".4"/>
+  <text x="230" y="255" class="text-label" text-anchor="middle">硬边界：成本、安全、合规性</text>
 </svg>

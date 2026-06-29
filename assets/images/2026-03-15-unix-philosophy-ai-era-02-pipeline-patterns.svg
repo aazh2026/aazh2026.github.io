@@ -1,259 +1,188 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif" viewBox="0 0 900 500">
   <defs>
-    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg4" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <filter id="shadow4" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    <filter id="shadow4" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
     </filter>
   </defs>
-
-  <rect width="900" height="500" rx="12" fill="url(#bg4)"/>
-
-  <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">Intent Pipeline Patterns</text>
-  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#87867F">Unix pipe operators translated to Agent orchestration — conditional, parallel, and reduce patterns</text>
-
-  <!-- Pattern 1: Sequential Pipeline (|) -->
-  <g transform="translate(40, 80)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <rect width="260" height="26" rx="8" fill="#788C5D"/>
-    <rect y="16" width="260" height="10" fill="#788C5D"/>
-    <text x="130" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="white">Sequential Pipeline  ( | )</text>
-
-    <!-- Flow: A → B → C -->
-    <g transform="translate(20, 40)">
-      <rect width="50" height="36" rx="6" fill="#141413"/>
-      <text x="25" y="16" text-anchor="middle" font-size="10" font-weight="600" fill="white">Planner</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#D1CFC5">Agent</text>
+  <rect width="900" height="500" fill="url(#bg4)" rx="12"/>
+  <text x="450" y="38" fill="#141413" font-size="18" font-weight="700" text-anchor="middle">Intent Pipeline Patterns</text>
+  <text x="450" y="58" fill="#87867f" font-size="12" text-anchor="middle">Unix pipe operators translated to Agent orchestration — conditional, parallel, and reduce patterns</text>
+  <g filter="url(#shadow4)" transform="translate(40 80)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <rect width="260" height="26" fill="#788c5d" rx="8"/>
+    <path fill="#788c5d" d="M0 16h260v10H0z"/>
+    <text x="130" y="17" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Sequential Pipeline  ( | )</text>
+    <g transform="translate(20 40)">
+      <rect width="50" height="36" fill="#141413" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">Planner</text>
+      <text x="25" y="28" fill="#d1cfc5" font-size="8" text-anchor="middle">Agent</text>
     </g>
-    <line x1="70" y1="58" x2="95" y2="58" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="90,54 102,58 90,62" fill="#D1CFC5"/>
-    <text x="85" y="50" text-anchor="middle" font-size="8" fill="#87867F">plan</text>
-
-    <g transform="translate(105, 40)">
-      <rect width="50" height="36" rx="6" fill="#D97757"/>
-      <text x="25" y="16" text-anchor="middle" font-size="10" font-weight="600" fill="white">Executor</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#FAF9F5">Agent</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M70 58h25"/>
+    <path fill="#d1cfc5" d="m90 54 12 4-12 4z"/>
+    <text x="85" y="50" fill="#87867f" font-size="8" text-anchor="middle">plan</text>
+    <g transform="translate(105 40)">
+      <rect width="50" height="36" fill="#d97757" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">Executor</text>
+      <text x="25" y="28" fill="#faf9f5" font-size="8" text-anchor="middle">Agent</text>
     </g>
-    <line x1="155" y1="58" x2="180" y2="58" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="175,54 187,58 175,62" fill="#D1CFC5"/>
-    <text x="170" y="50" text-anchor="middle" font-size="8" fill="#87867F">exec</text>
-
-    <g transform="translate(190, 40)">
-      <rect width="50" height="36" rx="6" fill="#788C5D"/>
-      <text x="25" y="16" text-anchor="middle" font-size="10" font-weight="600" fill="white">Validator</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="white">Agent</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M155 58h25"/>
+    <path fill="#d1cfc5" d="m175 54 12 4-12 4z"/>
+    <text x="170" y="50" fill="#87867f" font-size="8" text-anchor="middle">exec</text>
+    <g transform="translate(190 40)">
+      <rect width="50" height="36" fill="#788c5d" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">Validator</text>
+      <text x="25" y="28" fill="#fff" font-size="8" text-anchor="middle">Agent</text>
     </g>
-
-    <text x="130" y="96" text-anchor="middle" font-size="10" fill="#87867F">result = task | planner | executor | validator</text>
-    <text x="130" y="112" text-anchor="middle" font-size="9" fill="#87867F">Each step feeds into the next sequentially</text>
+    <text x="130" y="96" fill="#87867f" font-size="10" text-anchor="middle">result = task | planner | executor | validator</text>
+    <text x="130" y="112" fill="#87867f" font-size="9" text-anchor="middle">Each step feeds into the next sequentially</text>
   </g>
-
-  <!-- Pattern 2: Conditional Branch (if) -->
-  <g transform="translate(320, 80)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <rect width="260" height="26" rx="8" fill="#D97757"/>
-    <rect y="16" width="260" height="10" fill="#D97757"/>
-    <text x="130" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="white">Conditional Branch  ( if/when )</text>
-
-    <!-- Router -->
-    <g transform="translate(20, 40)">
-      <rect width="50" height="36" rx="6" fill="#87867F"/>
-      <text x="25" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="white">Router</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#E3DACC">Agent</text>
+  <g filter="url(#shadow4)" transform="translate(320 80)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <rect width="260" height="26" fill="#d97757" rx="8"/>
+    <path fill="#d97757" d="M0 16h260v10H0z"/>
+    <text x="130" y="17" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Conditional Branch  ( if/when )</text>
+    <g transform="translate(20 40)">
+      <rect width="50" height="36" fill="#87867f" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Router</text>
+      <text x="25" y="28" fill="#e3dacc" font-size="8" text-anchor="middle">Agent</text>
     </g>
-    <line x1="70" y1="58" x2="90" y2="58" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="85,54 97,58 85,62" fill="#D1CFC5"/>
-
-    <!-- Branch node -->
-    <g transform="translate(100, 40)">
-      <polygon points="25,0 50,18 25,36 0,18" fill="#141413"/>
-      <text x="25" y="22" text-anchor="middle" font-size="9" font-weight="600" fill="white">?</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M70 58h20"/>
+    <path fill="#d1cfc5" d="m85 54 12 4-12 4z"/>
+    <path fill="#141413" d="m125 40 25 18-25 18-25-18z"/>
+    <text x="25" y="22" fill="#fff" font-size="9" font-weight="600" text-anchor="middle" transform="translate(100 40)">?</text>
+    <path stroke="#d1cfc5" stroke-width="1.5" d="M125 40V22m0 0h30m-30 36h30m-30 18v18m0 0h30"/>
+    <g transform="translate(155 4)">
+      <rect width="50" height="36" fill="#788c5d" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Technical</text>
+      <text x="25" y="28" fill="#fff" font-size="8" text-anchor="middle">Agent</text>
     </g>
-
-    <!-- Three branches -->
-    <line x1="125" y1="40" x2="125" y2="22" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="125" y1="22" x2="155" y2="22" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="125" y1="58" x2="155" y2="58" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="125" y1="76" x2="125" y2="94" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="125" y1="94" x2="155" y2="94" stroke="#D1CFC5" stroke-width="1.5"/>
-
-    <g transform="translate(155, 4)">
-      <rect width="50" height="36" rx="6" fill="#788C5D"/>
-      <text x="25" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="white">Technical</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="white">Agent</text>
+    <g transform="translate(155 40)">
+      <rect width="50" height="36" fill="#d97757" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Business</text>
+      <text x="25" y="28" fill="#faf9f5" font-size="8" text-anchor="middle">Agent</text>
     </g>
-    <g transform="translate(155, 40)">
-      <rect width="50" height="36" rx="6" fill="#D97757"/>
-      <text x="25" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="white">Business</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#FAF9F5">Agent</text>
+    <g transform="translate(155 76)">
+      <rect width="50" height="36" fill="#141413" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Creative</text>
+      <text x="25" y="28" fill="#d1cfc5" font-size="8" text-anchor="middle">Agent</text>
     </g>
-    <g transform="translate(155, 76)">
-      <rect width="50" height="36" rx="6" fill="#141413"/>
-      <text x="25" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="white">Creative</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#D1CFC5">Agent</text>
-    </g>
-
-    <!-- Labels -->
-    <text x="190" y="18" font-size="8" fill="#788C5D">technical</text>
-    <text x="190" y="54" font-size="8" fill="#D97757">business</text>
-    <text x="190" y="90" font-size="8" fill="#141413">creative</text>
-
-    <text x="130" y="112" text-anchor="middle" font-size="9" fill="#87867F">Route based on task type or intent classification</text>
+    <text x="190" y="18" fill="#788c5d" font-size="8">technical</text>
+    <text x="190" y="54" fill="#d97757" font-size="8">business</text>
+    <text x="190" y="90" fill="#141413" font-size="8">creative</text>
+    <text x="130" y="112" fill="#87867f" font-size="9" text-anchor="middle">Route based on task type or intent classification</text>
   </g>
-
-  <!-- Pattern 3: Parallel (xargs -P) -->
-  <g transform="translate(600, 80)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <rect width="260" height="26" rx="8" fill="#141413"/>
-    <rect y="16" width="260" height="10" fill="#141413"/>
-    <text x="130" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="white">Parallel Execution  ( xargs -P )</text>
-
-    <!-- Input fan-out -->
-    <g transform="translate(20, 40)">
-      <rect width="50" height="36" rx="6" fill="#87867F"/>
-      <text x="25" y="16" text-anchor="middle" font-size="9" font-weight="600" fill="white">Input</text>
-      <text x="25" y="28" text-anchor="middle" font-size="8" fill="#E3DACC">10 items</text>
+  <g filter="url(#shadow4)" transform="translate(600 80)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <rect width="260" height="26" fill="#141413" rx="8"/>
+    <path fill="#141413" d="M0 16h260v10H0z"/>
+    <text x="130" y="17" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Parallel Execution  ( xargs -P )</text>
+    <g transform="translate(20 40)">
+      <rect width="50" height="36" fill="#87867f" rx="6"/>
+      <text x="25" y="16" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Input</text>
+      <text x="25" y="28" fill="#e3dacc" font-size="8" text-anchor="middle">10 items</text>
     </g>
-    <line x1="70" y1="58" x2="90" y2="58" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="85,54 97,58 85,62" fill="#D1CFC5"/>
-
-    <!-- Fan out lines -->
-    <line x1="100" y1="58" x2="120" y2="38" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="100" y1="58" x2="120" y2="58" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="100" y1="58" x2="120" y2="78" stroke="#D1CFC5" stroke-width="1.5"/>
-
-    <!-- Parallel agents -->
-    <g transform="translate(120, 14)">
-      <rect width="50" height="30" rx="5" fill="#788C5D"/>
-      <text x="25" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">Agent #1</text>
-      <text x="25" y="24" text-anchor="middle" font-size="8" fill="white">Worker</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M70 58h20"/>
+    <path fill="#d1cfc5" d="m85 54 12 4-12 4z"/>
+    <path stroke="#d1cfc5" stroke-width="1.5" d="m100 58 20-20m-20 20h20m-20 0 20 20"/>
+    <g transform="translate(120 14)">
+      <rect width="50" height="30" fill="#788c5d" rx="5"/>
+      <text x="25" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Agent #1</text>
+      <text x="25" y="24" fill="#fff" font-size="8" text-anchor="middle">Worker</text>
     </g>
-    <g transform="translate(120, 43)">
-      <rect width="50" height="30" rx="5" fill="#788C5D"/>
-      <text x="25" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">Agent #2</text>
-      <text x="25" y="24" text-anchor="middle" font-size="8" fill="white">Worker</text>
+    <g transform="translate(120 43)">
+      <rect width="50" height="30" fill="#788c5d" rx="5"/>
+      <text x="25" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Agent #2</text>
+      <text x="25" y="24" fill="#fff" font-size="8" text-anchor="middle">Worker</text>
     </g>
-    <g transform="translate(120, 72)">
-      <rect width="50" height="30" rx="5" fill="#788C5D"/>
-      <text x="25" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">...</text>
-      <text x="25" y="24" text-anchor="middle" font-size="8" fill="white">Worker</text>
+    <g transform="translate(120 72)">
+      <rect width="50" height="30" fill="#788c5d" rx="5"/>
+      <text x="25" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">...</text>
+      <text x="25" y="24" fill="#fff" font-size="8" text-anchor="middle">Worker</text>
     </g>
-
-    <!-- Fan in -->
-    <line x1="170" y1="29" x2="195" y2="29" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="170" y1="58" x2="195" y2="58" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="170" y1="87" x2="195" y2="87" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="182" y1="29" x2="182" y2="87" stroke="#D1CFC5" stroke-width="1.5"/>
-    <line x1="182" y1="58" x2="195" y2="58" stroke="#D1CFC5" stroke-width="1.5"/>
-
-    <g transform="translate(195, 43)">
-      <rect width="45" height="30" rx="5" fill="#D97757"/>
-      <text x="22" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">gather</text>
-      <text x="22" y="24" text-anchor="middle" font-size="8" fill="#FAF9F5">results</text>
+    <path stroke="#d1cfc5" stroke-width="1.5" d="M170 29h25m-25 29h25m-25 29h25m-13-58v58m0-29h13"/>
+    <g transform="translate(195 43)">
+      <rect width="45" height="30" fill="#d97757" rx="5"/>
+      <text x="22" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">gather</text>
+      <text x="22" y="24" fill="#faf9f5" font-size="8" text-anchor="middle">results</text>
     </g>
-
-    <text x="130" y="112" text-anchor="middle" font-size="9" fill="#87867F">Concurrent execution with ThreadPoolExecutor</text>
+    <text x="130" y="112" fill="#87867f" font-size="9" text-anchor="middle">Concurrent execution with ThreadPoolExecutor</text>
   </g>
-
-  <!-- Pattern 4: Map-Reduce (aggregating) -->
-  <g transform="translate(40, 230)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <rect width="260" height="26" rx="8" fill="#87867F"/>
-    <rect y="16" width="260" height="10" fill="#87867F"/>
-    <text x="130" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="white">Map-Reduce Pattern  ( aggregate )</text>
-
-    <!-- Map phase -->
-    <g transform="translate(20, 40)">
-      <rect width="70" height="30" rx="5" fill="#E3DACC"/>
-      <text x="35" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="#141413">Documents</text>
-      <text x="35" y="24" text-anchor="middle" font-size="8" fill="#87867F">100 files</text>
+  <g filter="url(#shadow4)" transform="translate(40 230)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <rect width="260" height="26" fill="#87867f" rx="8"/>
+    <path fill="#87867f" d="M0 16h260v10H0z"/>
+    <text x="130" y="17" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Map-Reduce Pattern  ( aggregate )</text>
+    <g transform="translate(20 40)">
+      <rect width="70" height="30" fill="#e3dacc" rx="5"/>
+      <text x="35" y="14" fill="#141413" font-size="9" font-weight="600" text-anchor="middle">Documents</text>
+      <text x="35" y="24" fill="#87867f" font-size="8" text-anchor="middle">100 files</text>
     </g>
-    <line x1="90" y1="55" x2="110" y2="55" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="105,51 117,55 105,59" fill="#D1CFC5"/>
-
-    <!-- Map agents (3 parallel) -->
-    <g transform="translate(120, 40)">
-      <rect width="50" height="30" rx="5" fill="#788C5D"/>
-      <text x="25" y="14" text-anchor="middle" font-size="8" font-weight="600" fill="white">Summarize</text>
-      <text x="25" y="24" text-anchor="middle" font-size="8" fill="white">Agent ×N</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M90 55h20"/>
+    <path fill="#d1cfc5" d="m105 51 12 4-12 4z"/>
+    <g transform="translate(120 40)">
+      <rect width="50" height="30" fill="#788c5d" rx="5"/>
+      <text x="25" y="14" fill="#fff" font-size="8" font-weight="600" text-anchor="middle">Summarize</text>
+      <text x="25" y="24" fill="#fff" font-size="8" text-anchor="middle">Agent ×N</text>
     </g>
-
-    <line x1="170" y1="55" x2="190" y2="55" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="185,51 197,55 185,59" fill="#D1CFC5"/>
-
-    <!-- Intermediate results -->
-    <text x="215" y="52" text-anchor="middle" font-size="9" fill="#87867F">N summaries</text>
-    <line x1="200" y1="62" x2="200" y2="80" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="240" y1="62" x2="240" y2="80" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-
-    <!-- Reduce phase -->
-    <line x1="200" y1="80" x2="240" y2="80" stroke="#D1CFC5" stroke-width="1.5"/>
-    <g transform="translate(210, 80)">
-      <rect width="60" height="30" rx="5" fill="#D97757"/>
-      <text x="30" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">Merge</text>
-      <text x="30" y="24" text-anchor="middle" font-size="8" fill="#FAF9F5">Agent</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M170 55h20"/>
+    <path fill="#d1cfc5" d="m185 51 12 4-12 4z"/>
+    <text x="215" y="52" fill="#87867f" font-size="9" text-anchor="middle">N summaries</text>
+    <path stroke="#d1cfc5" stroke-dasharray="3,2" d="M200 62v18m40-18v18"/>
+    <path stroke="#d1cfc5" stroke-width="1.5" d="M200 80h40"/>
+    <g transform="translate(210 80)">
+      <rect width="60" height="30" fill="#d97757" rx="5"/>
+      <text x="30" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Merge</text>
+      <text x="30" y="24" fill="#faf9f5" font-size="8" text-anchor="middle">Agent</text>
     </g>
-
-    <line x1="270" y1="95" x2="295" y2="95" stroke="#D1CFC5" stroke-width="2"/>
-    <polygon points="290,91 302,95 290,99" fill="#D1CFC5"/>
-
-    <g transform="translate(295, 80)">
-      <rect width="50" height="30" rx="5" fill="#141413"/>
-      <text x="25" y="14" text-anchor="middle" font-size="9" font-weight="600" fill="white">Final</text>
-      <text x="25" y="24" text-anchor="middle" font-size="8" fill="#D1CFC5">Report</text>
+    <path stroke="#d1cfc5" stroke-width="2" d="M270 95h25"/>
+    <path fill="#d1cfc5" d="m290 91 12 4-12 4z"/>
+    <g transform="translate(295 80)">
+      <rect width="50" height="30" fill="#141413" rx="5"/>
+      <text x="25" y="14" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">Final</text>
+      <text x="25" y="24" fill="#d1cfc5" font-size="8" text-anchor="middle">Report</text>
     </g>
-
-    <text x="130" y="112" text-anchor="middle" font-size="9" fill="#87867F">Parallel map → aggregate → synthesize</text>
+    <text x="130" y="112" fill="#87867f" font-size="9" text-anchor="middle">Parallel map → aggregate → synthesize</text>
   </g>
-
-  <!-- Intent Message Format -->
-  <g transform="translate(320, 230)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-    <rect width="260" height="26" rx="8" fill="#141413"/>
-    <rect y="16" width="260" height="10" fill="#141413"/>
-    <text x="130" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="white">Intent Message Format</text>
-
-    <g transform="translate(15, 40)">
-      <rect width="230" height="80" rx="4" fill="#E3DACC"/>
-      <text x="10" y="14" font-size="9" fill="#141413" font-weight="600">Intent {</text>
-      <text x="20" y="28" font-size="9" fill="#141413">  action: "analyze"</text>
-      <text x="20" y="40" font-size="9" fill="#141413">  target: "user_data.csv"</text>
-      <text x="20" y="52" font-size="9" fill="#141413">  parameters: {</text>
-      <text x="30" y="64" font-size="9" fill="#141413">    output: "report"</text>
-      <text x="30" y="76" font-size="9" fill="#141413">  }</text>
-      <text x="10" y="88" font-size="9" fill="#141413">}</text>
+  <g filter="url(#shadow4)" transform="translate(320 230)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+    <rect width="260" height="26" fill="#141413" rx="8"/>
+    <path fill="#141413" d="M0 16h260v10H0z"/>
+    <text x="130" y="17" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">Intent Message Format</text>
+    <g transform="translate(15 40)">
+      <rect width="230" height="80" fill="#e3dacc" rx="4"/>
+      <text x="10" y="14" fill="#141413" font-size="9" font-weight="600">Intent {</text>
+      <text x="20" y="28" fill="#141413" font-size="9">  action: &quot;analyze&quot;</text>
+      <text x="20" y="40" fill="#141413" font-size="9">  target: &quot;user_data.csv&quot;</text>
+      <text x="20" y="52" fill="#141413" font-size="9">  parameters: {</text>
+      <text x="30" y="64" fill="#141413" font-size="9">    output: &quot;report&quot;</text>
+      <text x="30" y="76" fill="#141413" font-size="9">  }</text>
+      <text x="10" y="88" fill="#141413" font-size="9">}</text>
     </g>
-
-    <text x="130" y="112" text-anchor="middle" font-size="9" fill="#87867F">Structured "universal interface" — like Unix text streams</text>
+    <text x="130" y="112" fill="#87867f" font-size="9" text-anchor="middle">Structured &quot;universal interface&quot; — like Unix text streams</text>
   </g>
-
-  <!-- Benefits Summary -->
-  <g transform="translate(600, 230)" filter="url(#shadow4)">
-    <rect width="260" height="130" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <text x="130" y="20" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">Why These Patterns Matter</text>
-    <line x1="20" y1="32" x2="240" y2="32" stroke="#E3DACC" stroke-width="1"/>
-
-    <text x="15" y="50" font-size="10" fill="#141413">✓  Loose coupling — agents independent</text>
-    <text x="15" y="66" font-size="10" fill="#141413">✓  Composable — mix patterns freely</text>
-    <text x="15" y="82" font-size="10" fill="#141413">✓  Testable — each agent isolated</text>
-    <text x="15" y="98" font-size="10" fill="#141413">✓  Scalable — parallel execution</text>
-    <text x="15" y="114" font-size="10" fill="#141413">✓  Debuggable — trace each step</text>
+  <g filter="url(#shadow4)" transform="translate(600 230)">
+    <rect width="260" height="130" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="8"/>
+    <text x="130" y="20" fill="#788c5d" font-size="11" font-weight="700" text-anchor="middle">Why These Patterns Matter</text>
+    <path stroke="#e3dacc" d="M20 32h220"/>
+    <text x="15" y="50" fill="#141413" font-size="10">✓  Loose coupling — agents independent</text>
+    <text x="15" y="66" fill="#141413" font-size="10">✓  Composable — mix patterns freely</text>
+    <text x="15" y="82" fill="#141413" font-size="10">✓  Testable — each agent isolated</text>
+    <text x="15" y="98" fill="#141413" font-size="10">✓  Scalable — parallel execution</text>
+    <text x="15" y="114" fill="#141413" font-size="10">✓  Debuggable — trace each step</text>
   </g>
-
-  <!-- Bottom: Code example -->
-  <g transform="translate(40, 385)" filter="url(#shadow4)">
-    <rect width="820" height="95" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-    <text x="430" y="18" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Implementation Pattern</text>
-    <line x1="20" y1="28" x2="800" y2="28" stroke="#D1CFC5" stroke-width="1"/>
-
-    <g transform="translate(20, 38)">
-      <rect width="780" height="50" rx="4" fill="#E3DACC"/>
-      <text x="15" y="16" font-size="10" fill="#141413">pipeline = (AgentPipeline()</text>
-      <text x="15" y="30" font-size="10" fill="#141413">  .pipe(PlannerAgent())      # |  Sequential</text>
-      <text x="15" y="44" font-size="10" fill="#141413">  .pipe(ConditionalBranch({'technical': TechAgent, 'business': BizAgent}))  # if/when</text>
+  <g filter="url(#shadow4)" transform="translate(40 385)">
+    <rect width="820" height="95" fill="#faf9f5" stroke="#d1cfc5" rx="8"/>
+    <text x="430" y="18" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">Implementation Pattern</text>
+    <path stroke="#d1cfc5" d="M20 28h780"/>
+    <g transform="translate(20 38)">
+      <rect width="780" height="50" fill="#e3dacc" rx="4"/>
+      <text x="15" y="16" fill="#141413" font-size="10">pipeline = (AgentPipeline()</text>
+      <text x="15" y="30" fill="#141413" font-size="10">  .pipe(PlannerAgent())      # |  Sequential</text>
+      <text x="15" y="44" fill="#141413" font-size="10">  .pipe(ConditionalBranch({&apos;technical&apos;: TechAgent, &apos;business&apos;: BizAgent}))  # if/when</text>
     </g>
   </g>
 </svg>

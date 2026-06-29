@@ -1,94 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FAF9F5"/>
-      <stop offset="100%" style="stop-color:#E3DACC"/>
+    <linearGradient id="bg3" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf9f5"/>
+      <stop offset="100%" style="stop-color:#e3dacc"/>
     </linearGradient>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#141413"/>
+    <marker id="arr" markerHeight="6" markerWidth="8" orient="auto" refX="7" refY="3">
+      <path fill="#141413" d="m0 0 8 3-8 3z"/>
     </marker>
   </defs>
-  <rect width="800" height="400" fill="url(#bg3)"/>
-
-  <!-- Title -->
-  <text x="400" y="32" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#141413">Preflight 检查流程：在训练前捕获"沉默杀手"</text>
-
-  <!-- Input: Dataloader + Model -->
-  <rect x="30" y="65" width="140" height="80" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2"/>
-  <text x="100" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#141413">DataLoader</text>
-  <text x="100" y="110" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">train_dataloader</text>
-  <text x="100" y="126" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">val_dataloader</text>
-
-  <rect x="30" y="155" width="140" height="60" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2"/>
-  <text x="100" y="180" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#141413">Model</text>
-  <text x="100" y="198" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">my_model</text>
-
-  <!-- Arrow to preflight -->
-  <line x1="175" y1="105" x2="220" y2="105" stroke="#141413" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Preflight Validator Box -->
-  <rect x="225" y="65" width="180" height="150" rx="12" fill="#788C5D" filter="url(#shadow)"/>
-  <text x="315" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">Preflight</text>
-  <text x="315" y="108" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#E3DACC">Validator</text>
-
-  <!-- Check items inside -->
-  <rect x="240" y="120" width="150" height="20" rx="4" fill="#D97757"/>
-  <text x="315" y="134" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#FAF9F5">🔴 NaN / Inf 检测</text>
-
-  <rect x="240" y="145" width="150" height="20" rx="4" fill="#D97757"/>
-  <text x="315" y="159" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#FAF9F5">🔴 标签泄露检测</text>
-
-  <rect x="240" y="170" width="150" height="20" rx="4" fill="#E3DACC"/>
-  <text x="315" y="184" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#141413">🟡 类别不平衡</text>
-
-  <rect x="240" y="195" width="150" height="20" rx="4" fill="#E3DACC"/>
-  <text x="315" y="209" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#141413">🟡 通道顺序检查</text>
-
-  <!-- Arrow to results -->
-  <line x1="410" y1="105" x2="455" y2="105" stroke="#141413" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Results -->
-  <rect x="460" y="65" width="150" height="150" rx="12" fill="#FAF9F5" stroke="#141413" stroke-width="2"/>
-  <text x="535" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#141413">检查结果</text>
-
-  <text x="475" y="118" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● Fatal: 2 项</text>
-  <text x="475" y="134" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">  NaN in batch[42]</text>
-  <text x="475" y="148" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">  Label leakage: 0.97</text>
-
-  <text x="475" y="172" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● Warn: 1 项</text>
-  <text x="475" y="186" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">  Class imbalance 99:1</text>
-
-  <text x="475" y="206" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● Info: 2 项</text>
-  <text x="475" y="220" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">  VRAM: ~8GB needed</text>
-
-  <!-- Exit code -->
-  <rect x="460" y="225" width="150" height="35" rx="6" fill="#D97757"/>
-  <text x="535" y="248" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">Exit Code: 1</text>
-
-  <!-- Decision branches -->
-  <line x1="535" y1="265" x2="535" y2="295" stroke="#141413" stroke-width="2"/>
-
-  <!-- Pass path -->
-  <path d="M535 295 L 535 330 L 635 330" stroke="#788C5D" stroke-width="2"/>
-  <polygon points="630,325 640,330 630,335" fill="#788C5D"/>
-  <rect x="640" y="305" width="130" height="50" rx="8" fill="#788C5D"/>
-  <text x="705" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">开始训练 ✅</text>
-  <text x="705" y="344" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#E3DACC">3天 vs 3分钟</text>
-
-  <!-- Fail path -->
-  <path d="M535 295 L 535 330 L 305 330" stroke="#D97757" stroke-width="2"/>
-  <polygon points="310,325 300,330 310,335" fill="#D97757"/>
-  <rect x="175" y="305" width="130" height="50" rx="8" fill="#D97757"/>
-  <text x="240" y="328" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">阻断训练 ❌</text>
-  <text x="240" y="344" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#FAF9F5">CI/CD 失败</text>
-
-  <!-- Key insight -->
-  <rect x="175" y="365" width="450" height="28" rx="6" fill="#E3DACC"/>
-  <text x="400" y="384" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#141413">"快速失败" 而不是 "三天后才发现"</text>
-
+  <path fill="url(#bg3)" d="M0 0h800v400H0z"/>
+  <text x="400" y="32" fill="#141413" font-family="system-ui,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Preflight 检查流程：在训练前捕获&quot;沉默杀手&quot;</text>
+  <rect width="140" height="80" x="30" y="65" fill="#faf9f5" stroke="#141413" stroke-width="2" rx="10"/>
+  <text x="100" y="92" fill="#141413" font-family="system-ui,sans-serif" font-size="12" font-weight="600" text-anchor="middle">DataLoader</text>
+  <text x="100" y="110" fill="#87867f" font-family="monospace" font-size="10" text-anchor="middle">train_dataloader</text>
+  <text x="100" y="126" fill="#87867f" font-family="monospace" font-size="10" text-anchor="middle">val_dataloader</text>
+  <rect width="140" height="60" x="30" y="155" fill="#faf9f5" stroke="#141413" stroke-width="2" rx="10"/>
+  <text x="100" y="180" fill="#141413" font-family="system-ui,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Model</text>
+  <text x="100" y="198" fill="#87867f" font-family="monospace" font-size="10" text-anchor="middle">my_model</text>
+  <path stroke="#141413" stroke-width="2" marker-end="url(#arr)" d="M175 105h45"/>
+  <rect width="180" height="150" x="225" y="65" fill="#788c5d" filter="url(#shadow)" rx="12"/>
+  <text x="315" y="92" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Preflight</text>
+  <text x="315" y="108" fill="#e3dacc" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">Validator</text>
+  <rect width="150" height="20" x="240" y="120" fill="#d97757" rx="4"/>
+  <text x="315" y="134" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">🔴 NaN / Inf 检测</text>
+  <rect width="150" height="20" x="240" y="145" fill="#d97757" rx="4"/>
+  <text x="315" y="159" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">🔴 标签泄露检测</text>
+  <rect width="150" height="20" x="240" y="170" fill="#e3dacc" rx="4"/>
+  <text x="315" y="184" fill="#141413" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">🟡 类别不平衡</text>
+  <rect width="150" height="20" x="240" y="195" fill="#e3dacc" rx="4"/>
+  <text x="315" y="209" fill="#141413" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">🟡 通道顺序检查</text>
+  <path stroke="#141413" stroke-width="2" marker-end="url(#arr)" d="M410 105h45"/>
+  <rect width="150" height="150" x="460" y="65" fill="#faf9f5" stroke="#141413" stroke-width="2" rx="12"/>
+  <text x="535" y="92" fill="#141413" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle">检查结果</text>
+  <text x="475" y="118" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● Fatal: 2 项</text>
+  <text x="475" y="134" fill="#d97757" font-family="system-ui,sans-serif" font-size="10">  NaN in batch[42]</text>
+  <text x="475" y="148" fill="#d97757" font-family="system-ui,sans-serif" font-size="10">  Label leakage: 0.97</text>
+  <text x="475" y="172" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● Warn: 1 项</text>
+  <text x="475" y="186" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">  Class imbalance 99:1</text>
+  <text x="475" y="206" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● Info: 2 项</text>
+  <text x="475" y="220" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">  VRAM: ~8GB needed</text>
+  <rect width="150" height="35" x="460" y="225" fill="#d97757" rx="6"/>
+  <text x="535" y="248" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" font-weight="600" text-anchor="middle">Exit Code: 1</text>
+  <path stroke="#141413" stroke-width="2" d="M535 265v30"/>
+  <path stroke="#788c5d" stroke-width="2" d="M535 295v35h100"/>
+  <path fill="#788c5d" d="m630 325 10 5-10 5z"/>
+  <rect width="130" height="50" x="640" y="305" fill="#788c5d" rx="8"/>
+  <text x="705" y="328" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="11" font-weight="600" text-anchor="middle">开始训练 ✅</text>
+  <text x="705" y="344" fill="#e3dacc" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">3天 vs 3分钟</text>
+  <path stroke="#d97757" stroke-width="2" d="M535 295v35H305"/>
+  <path fill="#d97757" d="m310 325-10 5 10 5z"/>
+  <rect width="130" height="50" x="175" y="305" fill="#d97757" rx="8"/>
+  <text x="240" y="328" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="11" font-weight="600" text-anchor="middle">阻断训练 ❌</text>
+  <text x="240" y="344" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">CI/CD 失败</text>
+  <rect width="450" height="28" x="175" y="365" fill="#e3dacc" rx="6"/>
+  <text x="400" y="384" fill="#141413" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">&quot;快速失败&quot; 而不是 &quot;三天后才发现&quot;</text>
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="shadow" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="2" dy="2" flood-color="#141413" flood-opacity=".12" stdDeviation="3"/>
     </filter>
   </defs>
 </svg>

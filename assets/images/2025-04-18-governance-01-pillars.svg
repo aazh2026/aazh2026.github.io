@@ -1,34 +1,25 @@
-<svg viewBox="0 0 560 140" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- AI治理三大支柱 -->
-  <rect width="560" height="140" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 工程治理三大支柱</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/18</text>
-
-  <!-- S1: Standardization -->
-  <rect x="30" y="50" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="30" y="50" width="160" height="20" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="110" y="64" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">S1 · 标准化</text>
-  <text x="110" y="82" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Standardization</text>
-  <text x="110" y="100" text-anchor="middle" font-size="8.5" fill="#87867F">工具标准</text>
-  <text x="110" y="112" text-anchor="middle" font-size="8.5" fill="#87867F">Prompt 标准</text>
-
-  <!-- S2: Traceability -->
-  <rect x="200" y="50" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="200" y="50" width="160" height="20" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="64" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">S2 · 可追溯</text>
-  <text x="280" y="82" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Traceability</text>
-  <text x="280" y="100" text-anchor="middle" font-size="8.5" fill="#87867F">代码溯源 · 决策记录</text>
-  <text x="280" y="112" text-anchor="middle" font-size="8.5" fill="#87867F">变更追踪</text>
-
-  <!-- S3: Automation -->
-  <rect x="370" y="50" width="160" height="70" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="370" y="50" width="160" height="20" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="450" y="64" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">S3 · 自动化</text>
-  <text x="450" y="82" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">Automation</text>
-  <text x="450" y="100" text-anchor="middle" font-size="8.5" fill="#87867F">自动审查</text>
-  <text x="450" y="112" text-anchor="middle" font-size="8.5" fill="#87867F">自动验证 · 自动文档</text>
-
-  <!-- Baseline -->
-  <line x1="30" y1="126" x2="530" y2="126" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="280" y="136" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">标准化是基础，可追溯是保障，自动化是目标</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 140">
+  <path fill="#faf9f5" d="M0 0h560v140H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI 工程治理三大支柱</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2025/04/18</text>
+  <rect width="160" height="70" x="30" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="160" height="20" x="30" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="110" y="64" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">S1 · 标准化</text>
+  <text x="110" y="82" fill="#141413" font-size="9" font-weight="600" text-anchor="middle">Standardization</text>
+  <text x="110" y="100" fill="#87867f" font-size="8.5" text-anchor="middle">工具标准</text>
+  <text x="110" y="112" fill="#87867f" font-size="8.5" text-anchor="middle">Prompt 标准</text>
+  <rect width="160" height="70" x="200" y="50" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="160" height="20" x="200" y="50" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="280" y="64" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">S2 · 可追溯</text>
+  <text x="280" y="82" fill="#141413" font-size="9" font-weight="600" text-anchor="middle">Traceability</text>
+  <text x="280" y="100" fill="#87867f" font-size="8.5" text-anchor="middle">代码溯源 · 决策记录</text>
+  <text x="280" y="112" fill="#87867f" font-size="8.5" text-anchor="middle">变更追踪</text>
+  <rect width="160" height="70" x="370" y="50" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="160" height="20" x="370" y="50" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="450" y="64" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">S3 · 自动化</text>
+  <text x="450" y="82" fill="#141413" font-size="9" font-weight="600" text-anchor="middle">Automation</text>
+  <text x="450" y="100" fill="#87867f" font-size="8.5" text-anchor="middle">自动审查</text>
+  <text x="450" y="112" fill="#87867f" font-size="8.5" text-anchor="middle">自动验证 · 自动文档</text>
+  <path stroke="#d1cfc5" d="M30 126h500"/>
+  <text x="280" y="136" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">标准化是基础，可追溯是保障，自动化是目标</text>
 </svg>

@@ -1,83 +1,43 @@
-<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="420" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">没有银弹：两类复杂度</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Fred Brooks · IEEE Computer · 1986</text>
-
-  <!-- Left card: Essential Complexity -->
-  <rect x="40" y="68" width="270" height="210" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <!-- Left card header -->
-  <rect x="40" y="68" width="270" height="38" rx="10" fill="#D97757"/>
-  <rect x="40" y="92" width="270" height="14" fill="#D97757"/>
-  <text x="175" y="91" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">本质复杂度</text>
-  <text x="175" y="108" text-anchor="middle" font-size="10" fill="#F5C4B8" font-family="ui-monospace, monospace">Essential Complexity</text>
-
-  <!-- Left card content -->
-  <text x="60" y="140" font-size="12" fill="#141413">问题定义</text>
-  <text x="60" y="160" font-size="12" fill="#141413">架构分层</text>
-  <text x="60" y="180" font-size="12" fill="#141413">模块边界</text>
-  <text x="60" y="200" font-size="12" fill="#141413">抽象层次</text>
-  <text x="60" y="220" font-size="12" fill="#141413">依赖关系</text>
-
-  <!-- Bullet dots for left -->
-  <circle cx="50" cy="137" r="4" fill="#D97757"/>
-  <circle cx="50" cy="157" r="4" fill="#D97757"/>
-  <circle cx="50" cy="177" r="4" fill="#D97757"/>
-  <circle cx="50" cy="197" r="4" fill="#D97757"/>
-  <circle cx="50" cy="217" r="4" fill="#D97757"/>
-
-  <!-- Left card footer note -->
-  <text x="175" y="262" text-anchor="middle" font-size="10" fill="#87867F" font-style="italic">无法消除，只能转移形式</text>
-
-  <!-- Center divider arrow: AI eliminates accidental -->
-  <line x1="310" y1="190" x2="370" y2="190" stroke="#788C5D" stroke-width="2" stroke-dasharray="5,3"/>
-  <polygon points="370,190 362,185 362,195" fill="#788C5D"/>
-  <text x="340" y="182" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">AI</text>
-  <text x="340" y="208" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">消除</text>
-
-  <!-- Right card: Accidental Complexity (crossed out) -->
-  <rect x="370" y="68" width="270" height="210" rx="10" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <!-- Right card header -->
-  <rect x="370" y="68" width="270" height="38" rx="10" fill="#D1CFC5"/>
-  <rect x="370" y="92" width="270" height="14" fill="#D1CFC5"/>
-  <text x="505" y="91" text-anchor="middle" font-size="13" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">偶发复杂度</text>
-  <text x="505" y="108" text-anchor="middle" font-size="10" fill="#B0ADA5" font-family="ui-monospace, monospace">Accidental Complexity</text>
-
-  <!-- Right card content (strikethrough) -->
-  <text x="390" y="140" font-size="12" fill="#B0ADA5" text-decoration="line-through">调试</text>
-  <text x="390" y="160" font-size="12" fill="#B0ADA5" text-decoration="line-through">编译</text>
-  <text x="390" y="180" font-size="12" fill="#B0ADA5" text-decoration="line-through">边界情况</text>
-  <text x="390" y="200" font-size="12" fill="#B0ADA5" text-decoration="line-through">记忆 API</text>
-  <text x="390" y="220" font-size="12" fill="#B0ADA5" text-decoration="line-through">手动版本管理</text>
-
-  <!-- Strikethrough X marks -->
-  <g stroke="#D97757" stroke-width="1.5" opacity="0.6">
-    <line x1="382" y1="135" x2="388" y2="142"/>
-    <line x1="388" y1="135" x2="382" y2="142"/>
-    <line x1="382" y1="155" x2="388" y2="162"/>
-    <line x1="388" y1="155" x2="382" y2="162"/>
-    <line x1="382" y1="175" x2="388" y2="182"/>
-    <line x1="388" y1="175" x2="382" y2="182"/>
-    <line x1="382" y1="195" x2="388" y2="202"/>
-    <line x1="388" y1="195" x2="382" y2="202"/>
-    <line x1="382" y1="215" x2="388" y2="222"/>
-    <line x1="388" y1="215" x2="382" y2="222"/>
-  </g>
-
-  <!-- Right card footer note -->
-  <text x="505" y="262" text-anchor="middle" font-size="10" fill="#B0ADA5" font-style="italic">工具进步可消除</text>
-
-  <!-- Bottom quote -->
-  <rect x="40" y="295" width="600" height="60" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="340" y="318" text-anchor="middle" font-size="11" fill="#141413" font-style="italic">"软件工程的基本困难不在于建立过程和工具，而在于理解要解决的问题。"</text>
-  <text x="340" y="340" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">— Fred Brooks, "No Silver Bullet", IFIP 1986 / IEEE Computer 1987</text>
-
-  <!-- Arrow showing Brooks' core argument -->
-  <path d="M 175 355 C 175 370, 505 370, 505 355" stroke="#D1CFC5" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
-  <text x="340" y="380" text-anchor="middle" font-size="10" fill="#87867F">偶发复杂度随工具进步被消除</text>
-  <text x="340" y="396" text-anchor="middle" font-size="10" fill="#D97757">本质复杂度不会消失，只转移形式</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 420">
+  <path fill="#faf9f5" d="M0 0h680v420H0z"/>
+  <text x="340" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">没有银弹：两类复杂度</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Fred Brooks · IEEE Computer · 1986</text>
+  <rect width="270" height="210" x="40" y="68" fill="#fff" stroke="#d97757" stroke-width="2" rx="10"/>
+  <rect width="270" height="38" x="40" y="68" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M40 92h270v14H40z"/>
+  <text x="175" y="91" fill="#fff" font-family="ui-monospace, monospace" font-size="13" font-weight="600" text-anchor="middle">本质复杂度</text>
+  <text x="175" y="108" fill="#f5c4b8" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Essential Complexity</text>
+  <text x="60" y="140" fill="#141413" font-size="12">问题定义</text>
+  <text x="60" y="160" fill="#141413" font-size="12">架构分层</text>
+  <text x="60" y="180" fill="#141413" font-size="12">模块边界</text>
+  <text x="60" y="200" fill="#141413" font-size="12">抽象层次</text>
+  <text x="60" y="220" fill="#141413" font-size="12">依赖关系</text>
+  <circle cx="50" cy="137" r="4" fill="#d97757"/>
+  <circle cx="50" cy="157" r="4" fill="#d97757"/>
+  <circle cx="50" cy="177" r="4" fill="#d97757"/>
+  <circle cx="50" cy="197" r="4" fill="#d97757"/>
+  <circle cx="50" cy="217" r="4" fill="#d97757"/>
+  <text x="175" y="262" fill="#87867f" font-size="10" font-style="italic" text-anchor="middle">无法消除，只能转移形式</text>
+  <path stroke="#788c5d" stroke-dasharray="5,3" stroke-width="2" d="M310 190h60"/>
+  <path fill="#788c5d" d="m370 190-8-5v10z"/>
+  <text x="340" y="182" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">AI</text>
+  <text x="340" y="208" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">消除</text>
+  <rect width="270" height="210" x="370" y="68" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <rect width="270" height="38" x="370" y="68" fill="#d1cfc5" rx="10"/>
+  <path fill="#d1cfc5" d="M370 92h270v14H370z"/>
+  <text x="505" y="91" fill="#87867f" font-family="ui-monospace, monospace" font-size="13" font-weight="600" text-anchor="middle">偶发复杂度</text>
+  <text x="505" y="108" fill="#b0ada5" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Accidental Complexity</text>
+  <text x="390" y="140" fill="#b0ada5" font-size="12" text-decoration="line-through">调试</text>
+  <text x="390" y="160" fill="#b0ada5" font-size="12" text-decoration="line-through">编译</text>
+  <text x="390" y="180" fill="#b0ada5" font-size="12" text-decoration="line-through">边界情况</text>
+  <text x="390" y="200" fill="#b0ada5" font-size="12" text-decoration="line-through">记忆 API</text>
+  <text x="390" y="220" fill="#b0ada5" font-size="12" text-decoration="line-through">手动版本管理</text>
+  <path stroke="#d97757" stroke-width="1.5" d="m382 135 6 7m0-7-6 7m0 13 6 7m0-7-6 7m0 13 6 7m0-7-6 7m0 13 6 7m0-7-6 7m0 13 6 7m0-7-6 7" opacity=".6"/>
+  <text x="505" y="262" fill="#b0ada5" font-size="10" font-style="italic" text-anchor="middle">工具进步可消除</text>
+  <rect width="600" height="60" x="40" y="295" fill="#f0eee6" stroke="#d1cfc5" rx="8"/>
+  <text x="340" y="318" fill="#141413" font-size="11" font-style="italic" text-anchor="middle">&quot;软件工程的基本困难不在于建立过程和工具，而在于理解要解决的问题。&quot;</text>
+  <text x="340" y="340" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">— Fred Brooks, &quot;No Silver Bullet&quot;, IFIP 1986 / IEEE Computer 1987</text>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M175 355c0 15 330 15 330 0"/>
+  <text x="340" y="380" fill="#87867f" font-size="10" text-anchor="middle">偶发复杂度随工具进步被消除</text>
+  <text x="340" y="396" fill="#d97757" font-size="10" text-anchor="middle">本质复杂度不会消失，只转移形式</text>
 </svg>

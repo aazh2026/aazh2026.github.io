@@ -1,95 +1,59 @@
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Color palette from blog: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5, g500 #87867F -->
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Loop Engineering · 五阶段循环</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Addy Osmani · addyosmani.com · 2026/06/07</text>
-
-  <!-- Five stages, arranged in a pentagon-ish layout -->
-
-  <!-- Stage 1: Discover (top-left) -->
-  <rect x="40" y="68" width="130" height="88" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="105" y="92" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Stage 1</text>
-  <text x="105" y="112" text-anchor="middle" font-size="15" fill="#141413" font-weight="600">Discover</text>
-  <text x="105" y="130" text-anchor="middle" font-size="9.5" fill="#87867F">识别问题</text>
-  <text x="105" y="144" text-anchor="middle" font-size="9" fill="#87867F">确定目标</text>
-
-  <!-- Stage 2: Plan (top-center) -->
-  <rect x="275" y="68" width="130" height="88" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="340" y="92" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Stage 2</text>
-  <text x="340" y="112" text-anchor="middle" font-size="15" fill="#141413" font-weight="600">Plan</text>
-  <text x="340" y="130" text-anchor="middle" font-size="9.5" fill="#87867F">拆解任务</text>
-  <text x="340" y="144" text-anchor="middle" font-size="9" fill="#87867F">设定验收标准</text>
-
-  <!-- Stage 3: Execute (top-right) -->
-  <rect x="510" y="68" width="130" height="88" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="575" y="92" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Stage 3</text>
-  <text x="575" y="112" text-anchor="middle" font-size="15" fill="#141413" font-weight="600">Execute</text>
-  <text x="575" y="130" text-anchor="middle" font-size="9.5" fill="#87867F">实现代码</text>
-  <text x="575" y="144" text-anchor="middle" font-size="9" fill="#87867F">调用工具</text>
-
-  <!-- Stage 4: Verify (bottom-right) -->
-  <rect x="510" y="196" width="130" height="88" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="575" y="220" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Stage 4</text>
-  <text x="575" y="240" text-anchor="middle" font-size="15" fill="#141413" font-weight="600">Verify</text>
-  <text x="575" y="258" text-anchor="middle" font-size="9.5" fill="#87867F">Grader 打分</text>
-  <text x="575" y="272" text-anchor="middle" font-size="9" fill="#87867F">test pass / lint clean</text>
-
-  <!-- Stage 5: Iterate (bottom-left) -->
-  <rect x="40" y="196" width="130" height="88" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="105" y="220" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Stage 5</text>
-  <text x="105" y="240" text-anchor="middle" font-size="15" fill="#141413" font-weight="600">Iterate</text>
-  <text x="105" y="258" text-anchor="middle" font-size="9.5" fill="#87867F">失败则带反馈重试</text>
-  <text x="105" y="272" text-anchor="middle" font-size="9" fill="#87867F">成功则提交</text>
-
-  <!-- Arrows: 1→2→3→4→5, with 5→1 loop back -->
-  <!-- 1→2 arrow -->
-  <line x1="170" y1="105" x2="265" y2="105" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="265,101 258,105 265,109" fill="#D97757"/>
-  <text x="217" y="99" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">→</text>
-
-  <!-- 2→3 arrow -->
-  <line x1="405" y1="105" x2="500" y2="105" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="500,101 493,105 500,109" fill="#D1CFC5"/>
-  <text x="452" y="99" text-anchor="middle" font-size="8" fill="#D1CFC5" font-family="ui-monospace, monospace">→</text>
-
-  <!-- 3→4 arrow (down) -->
-  <line x1="575" y1="156" x2="575" y2="186" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="571,186 575,193 579,186" fill="#D1CFC5"/>
-
-  <!-- 4→5 arrow (left) -->
-  <line x1="500" y1="233" x2="170" y2="233" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="170,229 163,233 170,237" fill="#D1CFC5"/>
-
-  <!-- 5→1 arrow (up + loop) -->
-  <line x1="105" y1="196" x2="105" y2="155" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="101,155 105,148 109,155" fill="#D97757"/>
-
-  <!-- Loop label on left side -->
-  <text x="50" y="155" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">Loop</text>
-  <text x="50" y="166" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">重试</text>
-
-  <!-- Middle panel: key insight -->
-  <rect x="220" y="196" width="240" height="88" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="340" y="222" text-anchor="middle" font-size="11" fill="#141413" font-weight="600">Stop Condition</text>
-  <text x="340" y="242" text-anchor="middle" font-size="10" fill="#87867F">可验证的成功标准</text>
-  <text x="340" y="258" text-anchor="middle" font-size="10" fill="#87867F">test pass + reviewer sign-off</text>
-  <text x="340" y="274" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">"seems right" ≠ 完成</text>
-
-  <!-- Key quote bottom -->
-  <rect x="220" y="296" width="240" height="40" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="340" y="314" text-anchor="middle" font-size="9" fill="#141413" font-style="italic">"AI agents default to the shortest path —</text>
-  <text x="340" y="328" text-anchor="middle" font-size="9" fill="#141413" font-style="italic">skills force them not to."</text>
-  <text x="340" y="340" text-anchor="middle" font-size="8.5" fill="#87867F" font-family="ui-monospace, monospace">— Addy Osmani</text>
-
-  <!-- Legend -->
-  <rect x="40" y="312" width="8" height="8" rx="2" fill="#D97757"/>
-  <text x="54" y="320" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">核心循环</text>
-  <rect x="40" y="328" width="8" height="8" rx="2" fill="#D1CFC5"/>
-  <text x="54" y="336" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">执行阶段</text>
-  <rect x="40" y="344" width="8" height="8" rx="2" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="54" y="352" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">停止条件 + 引用</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 360">
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Loop Engineering · 五阶段循环</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Addy Osmani · addyosmani.com · 2026/06/07</text>
+  <rect width="130" height="88" x="40" y="68" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="105" y="92" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Stage 1</text>
+  <text x="105" y="112" fill="#141413" font-size="15" font-weight="600" text-anchor="middle">Discover</text>
+  <text x="105" y="130" fill="#87867f" font-size="9.5" text-anchor="middle">识别问题</text>
+  <text x="105" y="144" fill="#87867f" font-size="9" text-anchor="middle">确定目标</text>
+  <rect width="130" height="88" x="275" y="68" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="92" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Stage 2</text>
+  <text x="340" y="112" fill="#141413" font-size="15" font-weight="600" text-anchor="middle">Plan</text>
+  <text x="340" y="130" fill="#87867f" font-size="9.5" text-anchor="middle">拆解任务</text>
+  <text x="340" y="144" fill="#87867f" font-size="9" text-anchor="middle">设定验收标准</text>
+  <rect width="130" height="88" x="510" y="68" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="575" y="92" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Stage 3</text>
+  <text x="575" y="112" fill="#141413" font-size="15" font-weight="600" text-anchor="middle">Execute</text>
+  <text x="575" y="130" fill="#87867f" font-size="9.5" text-anchor="middle">实现代码</text>
+  <text x="575" y="144" fill="#87867f" font-size="9" text-anchor="middle">调用工具</text>
+  <rect width="130" height="88" x="510" y="196" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="575" y="220" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Stage 4</text>
+  <text x="575" y="240" fill="#141413" font-size="15" font-weight="600" text-anchor="middle">Verify</text>
+  <text x="575" y="258" fill="#87867f" font-size="9.5" text-anchor="middle">Grader 打分</text>
+  <text x="575" y="272" fill="#87867f" font-size="9" text-anchor="middle">test pass / lint clean</text>
+  <rect width="130" height="88" x="40" y="196" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="105" y="220" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Stage 5</text>
+  <text x="105" y="240" fill="#141413" font-size="15" font-weight="600" text-anchor="middle">Iterate</text>
+  <text x="105" y="258" fill="#87867f" font-size="9.5" text-anchor="middle">失败则带反馈重试</text>
+  <text x="105" y="272" fill="#87867f" font-size="9" text-anchor="middle">成功则提交</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M170 105h95"/>
+  <path fill="#d97757" d="m265 101-7 4 7 4z"/>
+  <text x="217" y="99" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">→</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M405 105h95"/>
+  <path fill="#d1cfc5" d="m500 101-7 4 7 4z"/>
+  <text x="452" y="99" fill="#d1cfc5" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">→</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M575 156v30"/>
+  <path fill="#d1cfc5" d="m571 186 4 7 4-7z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M500 233H170"/>
+  <path fill="#d1cfc5" d="m170 229-7 4 7 4z"/>
+  <path stroke="#d97757" stroke-width="1.5" d="M105 196v-41"/>
+  <path fill="#d97757" d="m101 155 4-7 4 7z"/>
+  <text x="50" y="155" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">Loop</text>
+  <text x="50" y="166" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">重试</text>
+  <rect width="240" height="88" x="220" y="196" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="340" y="222" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">Stop Condition</text>
+  <text x="340" y="242" fill="#87867f" font-size="10" text-anchor="middle">可验证的成功标准</text>
+  <text x="340" y="258" fill="#87867f" font-size="10" text-anchor="middle">test pass + reviewer sign-off</text>
+  <text x="340" y="274" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">&quot;seems right&quot; ≠ 完成</text>
+  <rect width="240" height="40" x="220" y="296" fill="#fff" stroke="#d97757" stroke-dasharray="4,3" rx="6"/>
+  <text x="340" y="314" fill="#141413" font-size="9" font-style="italic" text-anchor="middle">&quot;AI agents default to the shortest path —</text>
+  <text x="340" y="328" fill="#141413" font-size="9" font-style="italic" text-anchor="middle">skills force them not to.&quot;</text>
+  <text x="340" y="340" fill="#87867f" font-family="ui-monospace, monospace" font-size="8.5" text-anchor="middle">— Addy Osmani</text>
+  <rect width="8" height="8" x="40" y="312" fill="#d97757" rx="2"/>
+  <text x="54" y="320" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">核心循环</text>
+  <rect width="8" height="8" x="40" y="328" fill="#d1cfc5" rx="2"/>
+  <text x="54" y="336" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">执行阶段</text>
+  <rect width="8" height="8" x="40" y="344" fill="#f0eee6" stroke="#d1cfc5" rx="2"/>
+  <text x="54" y="352" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">停止条件 + 引用</text>
 </svg>

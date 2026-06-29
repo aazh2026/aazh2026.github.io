@@ -1,55 +1,40 @@
-<svg viewBox="0 0 580 365" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 365">
   <defs>
     <style>
-      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; }
+      text{font-family:-apple-system,BlinkMacSystemFont,&quot;Segoe UI&quot;,Helvetica,Arial,sans-serif}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="580" height="365" fill="#FAF9F5"/>
-
-  <!-- Outer border -->
-  <rect x="10" y="10" width="560" height="345" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="4"/>
-
-  <!-- Title bar -->
-  <rect x="10" y="10" width="560" height="36" fill="#141413" rx="4"/>
-  <rect x="10" y="26" width="560" height="20" fill="#141413"/>
-  <text x="290" y="33" text-anchor="middle" fill="#FAF9F5" font-size="15" font-weight="700" letter-spacing="0.5">Agent 安全防护架构</text>
-
-  <!-- Layer 4 -->
-  <rect x="10" y="46" width="560" height="74" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" rx="0" style="stroke-width:1.5"/>
-  <rect x="10" y="46" width="120" height="74" fill="#D97757"/>
-  <text x="70" y="68" text-anchor="middle" fill="#FAF9F5" font-size="12" font-weight="700">Layer 4</text>
-  <text x="70" y="82" text-anchor="middle" fill="#FAF9F5" font-size="11">输出审计层</text>
+  <path fill="#faf9f5" d="M0 0h580v365H0z"/>
+  <rect width="560" height="345" x="10" y="10" fill="none" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <rect width="560" height="36" x="10" y="10" fill="#141413" rx="4"/>
+  <path fill="#141413" d="M10 26h560v20H10z"/>
+  <text x="290" y="33" fill="#faf9f5" font-size="15" font-weight="700" letter-spacing=".5" text-anchor="middle">Agent 安全防护架构</text>
+  <rect width="560" height="74" x="10" y="46" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="0" style="stroke-width:1.5"/>
+  <path fill="#d97757" d="M10 46h120v74H10z"/>
+  <text x="70" y="68" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">Layer 4</text>
+  <text x="70" y="82" fill="#faf9f5" font-size="11" text-anchor="middle">输出审计层</text>
   <text x="142" y="67" fill="#141413" font-size="11">响应内容检查</text>
   <text x="142" y="81" fill="#141413" font-size="11">敏感信息脱敏</text>
   <text x="142" y="95" fill="#141413" font-size="11">异常行为标记</text>
-
-  <!-- Layer 3 -->
-  <rect x="10" y="120" width="560" height="74" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" rx="0"/>
-  <rect x="10" y="120" width="120" height="74" fill="#788C5D"/>
-  <text x="70" y="142" text-anchor="middle" fill="#FAF9F5" font-size="12" font-weight="700">Layer 3</text>
-  <text x="70" y="156" text-anchor="middle" fill="#FAF9F5" font-size="11">行为约束层</text>
+  <rect width="560" height="74" x="10" y="120" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="0"/>
+  <path fill="#788c5d" d="M10 120h120v74H10z"/>
+  <text x="70" y="142" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">Layer 3</text>
+  <text x="70" y="156" fill="#faf9f5" font-size="11" text-anchor="middle">行为约束层</text>
   <text x="142" y="141" fill="#141413" font-size="11">危险操作白名单</text>
   <text x="142" y="155" fill="#141413" font-size="11">权限沙箱</text>
   <text x="142" y="169" fill="#141413" font-size="11">操作审计日志</text>
-
-  <!-- Layer 2 -->
-  <rect x="10" y="194" width="560" height="74" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" rx="0"/>
-  <rect x="10" y="194" width="120" height="74" fill="#E3DACC" stroke="#D1CFC5"/>
-  <text x="70" y="216" text-anchor="middle" fill="#141413" font-size="12" font-weight="700">Layer 2</text>
-  <text x="70" y="230" text-anchor="middle" fill="#141413" font-size="11">数据分类层</text>
+  <rect width="560" height="74" x="10" y="194" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="0"/>
+  <path fill="#e3dacc" stroke="#d1cfc5" d="M10 194h120v74H10z"/>
+  <text x="70" y="216" fill="#141413" font-size="12" font-weight="700" text-anchor="middle">Layer 2</text>
+  <text x="70" y="230" fill="#141413" font-size="11" text-anchor="middle">数据分类层</text>
   <text x="142" y="215" fill="#141413" font-size="11">敏感数据识别</text>
   <text x="142" y="229" fill="#141413" font-size="11">访问控制策略</text>
   <text x="142" y="243" fill="#141413" font-size="11">数据脱敏规则</text>
-
-  <!-- Layer 1 -->
-  <rect x="10" y="268" width="560" height="87" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5" rx="0"/>
-  <rect x="10" y="268" width="120" height="87" fill="#87867F"/>
-  <text x="70" y="290" text-anchor="middle" fill="#FAF9F5" font-size="12" font-weight="700">Layer 1</text>
-  <text x="70" y="304" text-anchor="middle" fill="#FAF9F5" font-size="11">输入过滤层</text>
+  <rect width="560" height="87" x="10" y="268" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="0"/>
+  <path fill="#87867f" d="M10 268h120v87H10z"/>
+  <text x="70" y="290" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">Layer 1</text>
+  <text x="70" y="304" fill="#faf9f5" font-size="11" text-anchor="middle">输入过滤层</text>
   <text x="142" y="289" fill="#141413" font-size="11">Prompt 注入检测</text>
   <text x="142" y="303" fill="#141413" font-size="11">恶意模式识别</text>
   <text x="142" y="317" fill="#141413" font-size="11">指令隔离</text>
-
 </svg>

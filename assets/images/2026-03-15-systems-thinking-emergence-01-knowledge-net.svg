@@ -1,205 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 424 308" width="424" height="308" style="font-family: 'Courier New', Courier, monospace; background: #FAF9F5;">
-  <rect width="424" height="308" fill="#FAF9F5"/>
-<text x="212.0" y="18" text-anchor="middle" font-size="12px" font-weight="bold" fill="#141413">知识共享网络</text>
-  <g>
-    <line x1="63.2" y1="143.5" x2="77.6" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="143.5" x2="63.2" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="152.0" x2="63.2" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="177.5" x2="77.6" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="63.2" y1="177.5" x2="63.2" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="148.3" x2="87.2" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="68.0" y1="182.3" x2="87.2" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="77.6" y1="148.3" x2="96.8" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="77.6" y1="182.3" x2="96.8" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="109.5" x2="106.4" y2="109.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="87.2" y1="148.3" x2="106.4" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="177.5" x2="106.4" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="177.5" x2="77.6" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="177.5" x2="92.0" y2="203.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="194.5" x2="106.4" y2="194.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="92.0" y1="194.5" x2="92.0" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="96.8" y1="114.3" x2="116.0" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="96.8" y1="148.3" x2="116.0" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="96.8" y1="182.3" x2="116.0" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="96.8" y1="199.3" x2="116.0" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="114.3" x2="125.6" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="148.3" x2="125.6" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="182.3" x2="125.6" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="106.4" y1="199.3" x2="125.6" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="116.0" y1="114.3" x2="135.2" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="120.8" y1="143.5" x2="106.4" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="120.8" y1="143.5" x2="120.8" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="120.8" y1="152.0" x2="120.8" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="120.8" y1="177.5" x2="106.4" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="120.8" y1="177.5" x2="120.8" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="116.0" y1="199.3" x2="135.2" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="125.6" y1="114.3" x2="144.8" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="125.6" y1="199.3" x2="144.8" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="58.5" x2="154.4" y2="58.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="58.5" x2="140.0" y2="84.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="67.0" x2="140.0" y2="101.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="92.5" x2="154.4" y2="92.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="92.5" x2="140.0" y2="67.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="135.2" y1="114.3" x2="154.4" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="143.5" x2="154.4" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="143.5" x2="140.0" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="152.0" x2="140.0" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="177.5" x2="154.4" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="177.5" x2="140.0" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="135.2" y1="199.3" x2="154.4" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="228.5" x2="154.4" y2="228.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="228.5" x2="140.0" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="237.0" x2="140.0" y2="271.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="262.5" x2="154.4" y2="262.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="140.0" y1="262.5" x2="140.0" y2="237.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="63.3" x2="164.0" y2="63.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="97.3" x2="164.0" y2="97.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="114.3" x2="164.0" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="148.3" x2="164.0" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="182.3" x2="164.0" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="199.3" x2="164.0" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="233.3" x2="164.0" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="144.8" y1="267.3" x2="164.0" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="63.3" x2="173.6" y2="63.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="97.3" x2="173.6" y2="97.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="114.3" x2="173.6" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="148.3" x2="173.6" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="182.3" x2="173.6" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="199.3" x2="173.6" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="233.3" x2="173.6" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="154.4" y1="267.3" x2="173.6" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="164.0" y1="63.3" x2="183.2" y2="63.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="92.5" x2="183.2" y2="92.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="92.5" x2="154.4" y2="92.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="92.5" x2="168.8" y2="118.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="109.5" x2="183.2" y2="109.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="109.5" x2="154.4" y2="109.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="109.5" x2="168.8" y2="84.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="164.0" y1="148.3" x2="183.2" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="177.5" x2="183.2" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="177.5" x2="154.4" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="177.5" x2="168.8" y2="203.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="194.5" x2="183.2" y2="194.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="194.5" x2="154.4" y2="194.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="168.8" y1="194.5" x2="168.8" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="164.0" y1="233.3" x2="183.2" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="164.0" y1="267.3" x2="183.2" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="63.3" x2="192.8" y2="63.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="97.3" x2="192.8" y2="97.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="114.3" x2="192.8" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="148.3" x2="192.8" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="182.3" x2="192.8" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="199.3" x2="192.8" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="233.3" x2="192.8" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="173.6" y1="267.3" x2="192.8" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="63.3" x2="202.4" y2="63.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="97.3" x2="202.4" y2="97.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="114.3" x2="202.4" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="148.3" x2="202.4" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="182.3" x2="202.4" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="199.3" x2="202.4" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="233.3" x2="202.4" y2="233.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="183.2" y1="267.3" x2="202.4" y2="267.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="58.5" x2="183.2" y2="58.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="58.5" x2="197.6" y2="84.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="67.0" x2="197.6" y2="101.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="92.5" x2="183.2" y2="92.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="92.5" x2="197.6" y2="67.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="192.8" y1="114.3" x2="212.0" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="143.5" x2="183.2" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="143.5" x2="197.6" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="152.0" x2="197.6" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="177.5" x2="183.2" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="177.5" x2="197.6" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="192.8" y1="199.3" x2="212.0" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="228.5" x2="183.2" y2="228.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="228.5" x2="197.6" y2="254.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="237.0" x2="197.6" y2="271.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="262.5" x2="183.2" y2="262.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="197.6" y1="262.5" x2="197.6" y2="237.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="202.4" y1="114.3" x2="221.6" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="202.4" y1="199.3" x2="221.6" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="212.0" y1="114.3" x2="231.2" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="216.8" y1="143.5" x2="231.2" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="216.8" y1="143.5" x2="216.8" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="216.8" y1="152.0" x2="216.8" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="216.8" y1="177.5" x2="231.2" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="216.8" y1="177.5" x2="216.8" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="212.0" y1="199.3" x2="231.2" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="221.6" y1="114.3" x2="240.8" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="221.6" y1="148.3" x2="240.8" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="221.6" y1="182.3" x2="240.8" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="221.6" y1="199.3" x2="240.8" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="231.2" y1="114.3" x2="250.4" y2="114.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="231.2" y1="148.3" x2="250.4" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="231.2" y1="182.3" x2="250.4" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="231.2" y1="199.3" x2="250.4" y2="199.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="109.5" x2="231.2" y2="109.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="240.8" y1="148.3" x2="260.0" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="177.5" x2="260.0" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="177.5" x2="231.2" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="177.5" x2="245.6" y2="203.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="194.5" x2="231.2" y2="194.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="245.6" y1="194.5" x2="245.6" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="250.4" y1="148.3" x2="269.6" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="250.4" y1="182.3" x2="269.6" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="260.0" y1="148.3" x2="279.2" y2="148.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="260.0" y1="182.3" x2="279.2" y2="182.3" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="274.4" y1="143.5" x2="260.0" y2="143.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="274.4" y1="143.5" x2="274.4" y2="169.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="274.4" y1="152.0" x2="274.4" y2="186.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="274.4" y1="177.5" x2="260.0" y2="177.5" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-<line x1="274.4" y1="177.5" x2="274.4" y2="152.0" stroke="#D1CFC5" stroke-width="1.5" stroke-linecap="round"/>
-  </g>
-  <g>
-    <text x="92.0" y="131.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">↓</text>
-<text x="168.8" y="131.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">↓</text>
-<text x="168.8" y="216.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">↓</text>
-<text x="216.8" y="80.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">←</text>
-<text x="216.8" y="250.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">←</text>
-<text x="245.6" y="131.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">↓</text>
-<text x="293.6" y="165.3" text-anchor="middle" font-size="14px" fill="#D97757" font-weight="bold">←</text>
-<text x="24.8" y="284.3" font-size="13px" fill="#141413">`</text>
-<text x="34.4" y="284.3" font-size="13px" fill="#141413">`</text>
-<text x="44.0" y="284.3" font-size="13px" fill="#141413">`</text>
-<text x="82.4" y="165.3" font-size="13px" fill="#141413">A</text>
-<text x="92.0" y="165.3" font-size="13px" fill="#141413">-</text>
-<text x="101.6" y="165.3" font-size="13px" fill="#141413">1</text>
-<text x="149.6" y="80.3" font-size="13px" fill="#141413">H</text>
-<text x="149.6" y="250.3" font-size="13px" fill="#141413">H</text>
-<text x="159.2" y="80.3" font-size="13px" fill="#141413">u</text>
-<text x="159.2" y="165.3" font-size="13px" fill="#141413">A</text>
-<text x="159.2" y="250.3" font-size="13px" fill="#141413">u</text>
-<text x="168.8" y="80.3" font-size="13px" fill="#141413">b</text>
-<text x="168.8" y="165.3" font-size="13px" fill="#141413">-</text>
-<text x="168.8" y="250.3" font-size="13px" fill="#141413">b</text>
-<text x="178.4" y="165.3" font-size="13px" fill="#141413">2</text>
-<text x="188.0" y="80.3" font-size="13px" fill="#141413">A</text>
-<text x="188.0" y="250.3" font-size="13px" fill="#141413">B</text>
-<text x="236.0" y="80.3" font-size="13px" fill="#141413">知</text>
-<text x="236.0" y="165.3" font-size="13px" fill="#141413">A</text>
-<text x="236.0" y="250.3" font-size="13px" fill="#141413">另</text>
-<text x="245.6" y="80.3" font-size="13px" fill="#141413">识</text>
-<text x="245.6" y="165.3" font-size="13px" fill="#141413">-</text>
-<text x="245.6" y="250.3" font-size="13px" fill="#141413">一</text>
-<text x="255.2" y="80.3" font-size="13px" fill="#141413">汇</text>
-<text x="255.2" y="165.3" font-size="13px" fill="#141413">3</text>
-<text x="255.2" y="250.3" font-size="13px" fill="#141413">个</text>
-<text x="264.8" y="80.3" font-size="13px" fill="#141413">聚</text>
-<text x="264.8" y="250.3" font-size="13px" fill="#141413">知</text>
-<text x="274.4" y="80.3" font-size="13px" fill="#141413">中</text>
-<text x="274.4" y="250.3" font-size="13px" fill="#141413">识</text>
-<text x="284.0" y="80.3" font-size="13px" fill="#141413">心</text>
-<text x="284.0" y="250.3" font-size="13px" fill="#141413">中</text>
-<text x="293.6" y="250.3" font-size="13px" fill="#141413">心</text>
-<text x="312.8" y="165.3" font-size="13px" fill="#141413">专</text>
-<text x="322.4" y="165.3" font-size="13px" fill="#141413">业</text>
-<text x="332.0" y="165.3" font-size="13px" fill="#141413">领</text>
-<text x="341.6" y="165.3" font-size="13px" fill="#141413">域</text>
-<text x="360.8" y="165.3" font-size="13px" fill="#141413">A</text>
-<text x="370.4" y="165.3" font-size="13px" fill="#141413">g</text>
-<text x="380.0" y="165.3" font-size="13px" fill="#141413">e</text>
-<text x="389.6" y="165.3" font-size="13px" fill="#141413">n</text>
-<text x="399.2" y="165.3" font-size="13px" fill="#141413">t</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" style="font-family:&quot;Courier New&quot;,Courier,monospace;background:#faf9f5" viewBox="0 0 424 308">
+  <path fill="#faf9f5" d="M0 0h424v308H0z"/>
+  <text x="212" y="18" fill="#141413" font-size="12" font-weight="bold" text-anchor="middle">知识共享网络</text>
+  <path stroke="#d1cfc5" stroke-linecap="round" stroke-width="1.5" d="M63.2 143.5h14.4m-14.4 0V169m0-17v34m0-8.5h14.4m-14.4 0V152m4.8-3.7h19.2m-19.2 34h19.2m-9.6-34h19.2m-19.2 34h19.2M92 109.5h14.4m-19.2 38.8h19.2M92 177.5h14.4m-14.4 0H77.6m14.4 0V203m0-8.5h14.4m-14.4 0V169m4.8-54.7H116m-19.2 34H116m-19.2 34H116m-19.2 17H116m-9.6-85h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-9.6-85h19.2m-14.4 29.2h-14.4m14.4 0V169m0-17v34m0-8.5h-14.4m14.4 0V152m-4.8 47.3h19.2m-9.6-85h19.2m-19.2 85h19.2M140 58.5h14.4m-14.4 0V84m0-17v34m0-8.5h14.4m-14.4 0V67m-4.8 47.3h19.2M140 143.5h14.4m-14.4 0V169m0-17v34m0-8.5h14.4m-14.4 0V152m-4.8 47.3h19.2M140 228.5h14.4m-14.4 0V254m0-17v34m0-8.5h14.4m-14.4 0V237m4.8-173.7H164m-19.2 34H164m-19.2 17H164m-19.2 34H164m-19.2 34H164m-19.2 17H164m-19.2 34H164m-19.2 34H164m-9.6-204h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-9.6-204h19.2m-14.4 29.2h14.4m-14.4 0h-14.4m14.4 0V118m0-8.5h14.4m-14.4 0h-14.4m14.4 0V84m-4.8 64.3h19.2m-14.4 29.2h14.4m-14.4 0h-14.4m14.4 0V203m0-8.5h14.4m-14.4 0h-14.4m14.4 0V169m-4.8 64.3h19.2m-19.2 34h19.2m-9.6-204h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-9.6-204h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-19.2 34h19.2m-19.2 34h19.2m-4.8-208.8h-14.4m14.4 0V84m0-17v34m0-8.5h-14.4m14.4 0V67m-4.8 47.3H212m-14.4 29.2h-14.4m14.4 0V169m0-17v34m0-8.5h-14.4m14.4 0V152m-4.8 47.3H212m-14.4 29.2h-14.4m14.4 0V254m0-17v34m0-8.5h-14.4m14.4 0V237m4.8-122.7h19.2m-19.2 85h19.2m-9.6-85h19.2m-14.4 29.2h14.4m-14.4 0V169m0-17v34m0-8.5h14.4m-14.4 0V152m-4.8 47.3h19.2m-9.6-85h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-9.6-85h19.2m-19.2 34h19.2m-19.2 34h19.2m-19.2 17h19.2m-4.8-89.8h-14.4m9.6 38.8H260m-14.4 29.2H260m-14.4 0h-14.4m14.4 0V203m0-8.5h-14.4m14.4 0V169m4.8-20.7h19.2m-19.2 34h19.2m-9.6-34h19.2m-19.2 34h19.2m-4.8-38.8H260m14.4 0V169m0-17v34m0-8.5H260m14.4 0V152"/>
+  <text x="92" y="131.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">↓</text>
+  <text x="168.8" y="131.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">↓</text>
+  <text x="168.8" y="216.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">↓</text>
+  <text x="216.8" y="80.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">←</text>
+  <text x="216.8" y="250.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">←</text>
+  <text x="245.6" y="131.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">↓</text>
+  <text x="293.6" y="165.3" fill="#d97757" font-size="14" font-weight="bold" text-anchor="middle">←</text>
+  <text x="24.8" y="284.3" fill="#141413" font-size="13">`</text>
+  <text x="34.4" y="284.3" fill="#141413" font-size="13">`</text>
+  <text x="44" y="284.3" fill="#141413" font-size="13">`</text>
+  <text x="82.4" y="165.3" fill="#141413" font-size="13">A</text>
+  <text x="92" y="165.3" fill="#141413" font-size="13">-</text>
+  <text x="101.6" y="165.3" fill="#141413" font-size="13">1</text>
+  <text x="149.6" y="80.3" fill="#141413" font-size="13">H</text>
+  <text x="149.6" y="250.3" fill="#141413" font-size="13">H</text>
+  <text x="159.2" y="80.3" fill="#141413" font-size="13">u</text>
+  <text x="159.2" y="165.3" fill="#141413" font-size="13">A</text>
+  <text x="159.2" y="250.3" fill="#141413" font-size="13">u</text>
+  <text x="168.8" y="80.3" fill="#141413" font-size="13">b</text>
+  <text x="168.8" y="165.3" fill="#141413" font-size="13">-</text>
+  <text x="168.8" y="250.3" fill="#141413" font-size="13">b</text>
+  <text x="178.4" y="165.3" fill="#141413" font-size="13">2</text>
+  <text x="188" y="80.3" fill="#141413" font-size="13">A</text>
+  <text x="188" y="250.3" fill="#141413" font-size="13">B</text>
+  <text x="236" y="80.3" fill="#141413" font-size="13">知</text>
+  <text x="236" y="165.3" fill="#141413" font-size="13">A</text>
+  <text x="236" y="250.3" fill="#141413" font-size="13">另</text>
+  <text x="245.6" y="80.3" fill="#141413" font-size="13">识</text>
+  <text x="245.6" y="165.3" fill="#141413" font-size="13">-</text>
+  <text x="245.6" y="250.3" fill="#141413" font-size="13">一</text>
+  <text x="255.2" y="80.3" fill="#141413" font-size="13">汇</text>
+  <text x="255.2" y="165.3" fill="#141413" font-size="13">3</text>
+  <text x="255.2" y="250.3" fill="#141413" font-size="13">个</text>
+  <text x="264.8" y="80.3" fill="#141413" font-size="13">聚</text>
+  <text x="264.8" y="250.3" fill="#141413" font-size="13">知</text>
+  <text x="274.4" y="80.3" fill="#141413" font-size="13">中</text>
+  <text x="274.4" y="250.3" fill="#141413" font-size="13">识</text>
+  <text x="284" y="80.3" fill="#141413" font-size="13">心</text>
+  <text x="284" y="250.3" fill="#141413" font-size="13">中</text>
+  <text x="293.6" y="250.3" fill="#141413" font-size="13">心</text>
+  <text x="312.8" y="165.3" fill="#141413" font-size="13">专</text>
+  <text x="322.4" y="165.3" fill="#141413" font-size="13">业</text>
+  <text x="332" y="165.3" fill="#141413" font-size="13">领</text>
+  <text x="341.6" y="165.3" fill="#141413" font-size="13">域</text>
+  <text x="360.8" y="165.3" fill="#141413" font-size="13">A</text>
+  <text x="370.4" y="165.3" fill="#141413" font-size="13">g</text>
+  <text x="380" y="165.3" fill="#141413" font-size="13">e</text>
+  <text x="389.6" y="165.3" fill="#141413" font-size="13">n</text>
+  <text x="399.2" y="165.3" fill="#141413" font-size="13">t</text>
 </svg>

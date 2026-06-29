@@ -1,114 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="system-ui,sans-serif">
-  <rect width="800" height="450" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#141413" letter-spacing="1">三环协同工作流</text>
-  <text x="400" y="48" text-anchor="middle" font-size="11" fill="#87867F">感知 → 决策 → 执行，纵深防御体系</text>
-
-  <!-- Step 1: 感知监测层 -->
-  <g transform="translate(130, 230)">
-    <rect x="-105" y="-95" width="210" height="190" rx="16" fill="none" stroke="#D97757" stroke-width="3"/>
-    <rect x="-105" y="-95" width="210" height="34" rx="16" fill="#D97757"/>
-    <rect x="-105" y="-69" width="210" height="8" fill="#D97757"/>
-    <text x="0" y="-74" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">第一环：感知监测</text>
-
-    <!-- Sub-components -->
-    <rect x="-90" y="-50" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="-30" font-size="11" font-weight="600" fill="#141413">语义风险评分</text>
-
-    <rect x="-90" y="-14" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="6" font-size="11" font-weight="600" fill="#141413">上下文完整性检查</text>
-
-    <rect x="-90" y="22" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="42" font-size="11" font-weight="600" fill="#141413">多维度输入指纹</text>
-
-    <!-- Risk levels -->
-    <text x="0" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">输出：风险评分</text>
-    <text x="0" y="90" text-anchor="middle" font-size="10" fill="#87867F">低/中/高风险信号</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" viewBox="0 0 800 450">
+  <path fill="#faf9f5" d="M0 0h800v450H0z"/>
+  <text x="400" y="30" fill="#141413" font-size="16" font-weight="700" letter-spacing="1" text-anchor="middle">三环协同工作流</text>
+  <text x="400" y="48" fill="#87867f" font-size="11" text-anchor="middle">感知 → 决策 → 执行，纵深防御体系</text>
+  <g transform="translate(130 230)">
+    <rect width="210" height="190" x="-105" y="-95" fill="none" stroke="#d97757" stroke-width="3" rx="16"/>
+    <rect width="210" height="34" x="-105" y="-95" fill="#d97757" rx="16"/>
+    <path fill="#d97757" d="M-105-69h210v8h-210z"/>
+    <text y="-74" fill="#faf9f5" font-size="13" font-weight="700" text-anchor="middle">第一环：感知监测</text>
+    <rect width="190" height="30" x="-90" y="-50" fill="#e3dacc" rx="6"/>
+    <text x="5" y="-30" fill="#141413" font-size="11" font-weight="600">语义风险评分</text>
+    <rect width="190" height="30" x="-90" y="-14" fill="#e3dacc" rx="6"/>
+    <text x="5" y="6" fill="#141413" font-size="11" font-weight="600">上下文完整性检查</text>
+    <rect width="190" height="30" x="-90" y="22" fill="#e3dacc" rx="6"/>
+    <text x="5" y="42" fill="#141413" font-size="11" font-weight="600">多维度输入指纹</text>
+    <text y="76" fill="#d97757" font-size="11" font-weight="700" text-anchor="middle">输出：风险评分</text>
+    <text y="90" fill="#87867f" font-size="10" text-anchor="middle">低/中/高风险信号</text>
   </g>
-
-  <!-- Arrow 1→2 -->
-  <g transform="translate(255, 230)">
-    <path d="M 0 -15 L 50 0 L 0 15" fill="none" stroke="#141413" stroke-width="2.5" stroke-linejoin="round"/>
-    <text x="25" y="-20" text-anchor="middle" font-size="9" fill="#141413" font-weight="600">风险信号</text>
-    <text x="25" y="32" text-anchor="middle" font-size="9" fill="#87867F">决策依据</text>
+  <path fill="none" stroke="#141413" stroke-linejoin="round" stroke-width="2.5" d="m255 215 50 15-50 15"/>
+  <text x="25" y="-20" fill="#141413" font-size="9" font-weight="600" text-anchor="middle" transform="translate(255 230)">风险信号</text>
+  <text x="25" y="32" fill="#87867f" font-size="9" text-anchor="middle" transform="translate(255 230)">决策依据</text>
+  <g transform="translate(400 230)">
+    <rect width="210" height="190" x="-105" y="-95" fill="none" stroke="#141413" stroke-width="3" rx="16"/>
+    <rect width="210" height="34" x="-105" y="-95" fill="#141413" rx="16"/>
+    <path fill="#141413" d="M-105-69h210v8h-210z"/>
+    <text y="-74" fill="#faf9f5" font-size="13" font-weight="700" text-anchor="middle">第二环：决策控制</text>
+    <rect width="190" height="30" x="-90" y="-50" fill="#d1cfc5" rx="6"/>
+    <text x="5" y="-30" fill="#141413" font-size="11" font-weight="600">意图解构与验证</text>
+    <rect width="190" height="30" x="-90" y="-14" fill="#d1cfc5" rx="6"/>
+    <text x="5" y="6" fill="#141413" font-size="11" font-weight="600">渐进式权限模型</text>
+    <rect width="190" height="30" x="-90" y="22" fill="#d1cfc5" rx="6"/>
+    <text x="5" y="42" fill="#141413" font-size="11" font-weight="600">对抗性测试触发</text>
+    <text y="76" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">输出：操作决策</text>
+    <text y="90" fill="#87867f" font-size="10" text-anchor="middle">通过/确认/人工审批</text>
   </g>
-
-  <!-- Step 2: 决策控制层 -->
-  <g transform="translate(400, 230)">
-    <rect x="-105" y="-95" width="210" height="190" rx="16" fill="none" stroke="#141413" stroke-width="3"/>
-    <rect x="-105" y="-95" width="210" height="34" rx="16" fill="#141413"/>
-    <rect x="-105" y="-69" width="210" height="8" fill="#141413"/>
-    <text x="0" y="-74" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">第二环：决策控制</text>
-
-    <rect x="-90" y="-50" width="190" height="30" rx="6" fill="#D1CFC5"/>
-    <text x="5" y="-30" font-size="11" font-weight="600" fill="#141413">意图解构与验证</text>
-
-    <rect x="-90" y="-14" width="190" height="30" rx="6" fill="#D1CFC5"/>
-    <text x="5" y="6" font-size="11" font-weight="600" fill="#141413">渐进式权限模型</text>
-
-    <rect x="-90" y="22" width="190" height="30" rx="6" fill="#D1CFC5"/>
-    <text x="5" y="42" font-size="11" font-weight="600" fill="#141413">对抗性测试触发</text>
-
-    <text x="0" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">输出：操作决策</text>
-    <text x="0" y="90" text-anchor="middle" font-size="10" fill="#87867F">通过/确认/人工审批</text>
+  <path fill="none" stroke="#788c5d" stroke-linejoin="round" stroke-width="2.5" d="m525 215 50 15-50 15"/>
+  <text x="25" y="-20" fill="#788c5d" font-size="9" font-weight="600" text-anchor="middle" transform="translate(525 230)">操作决策</text>
+  <text x="25" y="32" fill="#87867f" font-size="9" text-anchor="middle" transform="translate(525 230)">执行指令</text>
+  <g transform="translate(670 230)">
+    <rect width="210" height="190" x="-105" y="-95" fill="none" stroke="#788c5d" stroke-width="3" rx="16"/>
+    <rect width="210" height="34" x="-105" y="-95" fill="#788c5d" rx="16"/>
+    <path fill="#788c5d" d="M-105-69h210v8h-210z"/>
+    <text y="-74" fill="#faf9f5" font-size="13" font-weight="700" text-anchor="middle">第三环：执行验证</text>
+    <rect width="190" height="30" x="-90" y="-50" fill="#e3dacc" rx="6"/>
+    <text x="5" y="-30" fill="#141413" font-size="11" font-weight="600">行为沙箱</text>
+    <rect width="190" height="30" x="-90" y="-14" fill="#e3dacc" rx="6"/>
+    <text x="5" y="6" fill="#141413" font-size="11" font-weight="600">实时行为监控</text>
+    <rect width="190" height="30" x="-90" y="22" fill="#e3dacc" rx="6"/>
+    <text x="5" y="42" fill="#141413" font-size="11" font-weight="600">影响回滚机制</text>
+    <text y="76" fill="#788c5d" font-size="11" font-weight="700" text-anchor="middle">输出：执行结果</text>
+    <text y="90" fill="#87867f" font-size="10" text-anchor="middle">正常/异常/回滚</text>
   </g>
-
-  <!-- Arrow 2→3 -->
-  <g transform="translate(525, 230)">
-    <path d="M 0 -15 L 50 0 L 0 15" fill="none" stroke="#788C5D" stroke-width="2.5" stroke-linejoin="round"/>
-    <text x="25" y="-20" text-anchor="middle" font-size="9" fill="#788C5D" font-weight="600">操作决策</text>
-    <text x="25" y="32" text-anchor="middle" font-size="9" fill="#87867F">执行指令</text>
+  <rect width="200" height="38" x="300" y="68" fill="#d1cfc5" rx="8"/>
+  <text x="400" y="82" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">用户输入</text>
+  <text x="400" y="96" fill="#87867f" font-size="10" text-anchor="middle">自然语言请求</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arrow)" d="M400 106v24"/>
+  <text x="400" y="122" fill="#87867f" font-size="9" text-anchor="middle">输入分析</text>
+  <rect width="400" height="40" x="200" y="395" fill="#e3dacc" opacity=".5" rx="8"/>
+  <text x="400" y="410" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">📋 审计日志：全流程记录，偏差即告警</text>
+  <text x="400" y="425" fill="#87867f" font-size="10" text-anchor="middle">任何环节异常 → 触发人工干预</text>
+  <g transform="translate(20 68)">
+    <rect width="80" height="38" fill="#788c5d" rx="6"/>
+    <text x="40" y="17" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">低风险</text>
+    <text x="40" y="30" fill="#e3dacc" font-size="9" text-anchor="middle">自动执行</text>
   </g>
-
-  <!-- Step 3: 执行验证层 -->
-  <g transform="translate(670, 230)">
-    <rect x="-105" y="-95" width="210" height="190" rx="16" fill="none" stroke="#788C5D" stroke-width="3"/>
-    <rect x="-105" y="-95" width="210" height="34" rx="16" fill="#788C5D"/>
-    <rect x="-105" y="-69" width="210" height="8" fill="#788C5D"/>
-    <text x="0" y="-74" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">第三环：执行验证</text>
-
-    <rect x="-90" y="-50" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="-30" font-size="11" font-weight="600" fill="#141413">行为沙箱</text>
-
-    <rect x="-90" y="-14" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="6" font-size="11" font-weight="600" fill="#141413">实时行为监控</text>
-
-    <rect x="-90" y="22" width="190" height="30" rx="6" fill="#E3DACC"/>
-    <text x="5" y="42" font-size="11" font-weight="600" fill="#141413">影响回滚机制</text>
-
-    <text x="0" y="76" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">输出：执行结果</text>
-    <text x="0" y="90" text-anchor="middle" font-size="10" fill="#87867F">正常/异常/回滚</text>
+  <g transform="translate(20 112)">
+    <rect width="80" height="38" fill="#d97757" rx="6"/>
+    <text x="40" y="17" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">中风险</text>
+    <text x="40" y="30" fill="#e3dacc" font-size="9" text-anchor="middle">需确认</text>
   </g>
-
-  <!-- User input at top -->
-  <rect x="300" y="68" width="200" height="38" rx="8" fill="#D1CFC5"/>
-  <text x="400" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">用户输入</text>
-  <text x="400" y="96" text-anchor="middle" font-size="10" fill="#87867F">自然语言请求</text>
-
-  <!-- Arrow to step 1 -->
-  <path d="M 400 106 L 400 130" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="400" y="122" text-anchor="middle" font-size="9" fill="#87867F">输入分析</text>
-
-  <!-- Audit log at bottom -->
-  <rect x="200" y="395" width="400" height="40" rx="8" fill="#E3DACC" opacity="0.5"/>
-  <text x="400" y="410" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">📋 审计日志：全流程记录，偏差即告警</text>
-  <text x="400" y="425" text-anchor="middle" font-size="10" fill="#87867F">任何环节异常 → 触发人工干预</text>
-
-  <!-- Risk level legend -->
-  <g transform="translate(20, 68)">
-    <rect width="80" height="38" rx="6" fill="#788C5D"/>
-    <text x="40" y="17" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">低风险</text>
-    <text x="40" y="30" text-anchor="middle" font-size="9" fill="#E3DACC">自动执行</text>
-  </g>
-  <g transform="translate(20, 112)">
-    <rect width="80" height="38" rx="6" fill="#D97757"/>
-    <text x="40" y="17" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">中风险</text>
-    <text x="40" y="30" text-anchor="middle" font-size="9" fill="#E3DACC">需确认</text>
-  </g>
-  <g transform="translate(20, 156)">
-    <rect width="80" height="38" rx="6" fill="#141413"/>
-    <text x="40" y="17" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">高风险</text>
-    <text x="40" y="30" text-anchor="middle" font-size="9" fill="#D1CFC5">人工审批</text>
+  <g transform="translate(20 156)">
+    <rect width="80" height="38" fill="#141413" rx="6"/>
+    <text x="40" y="17" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">高风险</text>
+    <text x="40" y="30" fill="#d1cfc5" font-size="9" text-anchor="middle">人工审批</text>
   </g>
 </svg>

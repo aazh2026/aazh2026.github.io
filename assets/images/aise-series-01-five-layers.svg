@@ -1,83 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="system-ui,-apple-system,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif" viewBox="0 0 800 520">
   <defs>
-    <filter id="sh4" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="sh4" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".12" stdDeviation="3"/>
     </filter>
   </defs>
-  <rect width="800" height="520" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="400" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#141413">AI-Native 软件工程知识体系</text>
-  <text x="400" y="56" text-anchor="middle" font-size="11" fill="#87867F">AISE Series | 25篇 | 约300分钟深度阅读</text>
-
-  <!-- Five layer columns -->
-  <!-- Layer 1: Theory (top) -->
-  <rect x="40" y="76" width="720" height="68" rx="10" fill="#141413" filter="url(#sh4)"/>
-  <rect x="40" y="76" width="720" height="8" rx="5" fill="#D97757"/>
-  <text x="60" y="102" font-size="12" font-weight="700" fill="#FAF9F5">理论基础层</text>
-  <text x="60" y="118" font-size="9" fill="#87867F">Context Engineering · TDD vs Intent-Driven · Intent Complexity · AISE Manifesto</text>
-  <circle cx="700" cy="110" r="16" fill="#D97757"/>
-  <text x="700" y="106" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="700">4</text>
-  <text x="700" y="117" text-anchor="middle" font-size="7" fill="#FAF9F5">篇</text>
-
-  <!-- Layer 2: Requirements & Design -->
-  <rect x="40" y="152" width="720" height="68" rx="10" fill="#E3DACC" filter="url(#sh4)"/>
-  <rect x="40" y="152" width="720" height="8" rx="5" fill="#D97757"/>
-  <text x="60" y="178" font-size="12" font-weight="700" fill="#141413">需求与设计层</text>
-  <text x="60" y="194" font-size="9" fill="#87867F">Executable PRD · S-curve Adoption</text>
-  <circle cx="700" cy="186" r="16" fill="#D97757"/>
-  <text x="700" y="182" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="700">2</text>
-  <text x="700" y="193" text-anchor="middle" font-size="7" fill="#FAF9F5">篇</text>
-
-  <!-- Layer 3: Development Practice -->
-  <rect x="40" y="228" width="720" height="68" rx="10" fill="#141413" filter="url(#sh4)"/>
-  <rect x="40" y="228" width="720" height="8" rx="5" fill="#788C5D"/>
-  <text x="60" y="254" font-size="12" font-weight="700" fill="#FAF9F5">开发实践层</text>
-  <text x="60" y="270" font-size="9" fill="#87867F">Code Review 死亡 · Semantic Diff · Agent Swarm · 停止写单元测试</text>
-  <circle cx="700" cy="262" r="16" fill="#788C5D"/>
-  <text x="700" y="258" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="700">4</text>
-  <text x="700" y="269" text-anchor="middle" font-size="7" fill="#FAF9F5">篇</text>
-
-  <!-- Layer 4: Code & Knowledge -->
-  <rect x="40" y="304" width="720" height="68" rx="10" fill="#E3DACC" filter="url(#sh4)"/>
-  <rect x="40" y="304" width="720" height="8" rx="5" fill="#788C5D"/>
-  <text x="60" y="330" font-size="12" font-weight="700" fill="#141413">代码与知识层</text>
-  <text x="60" y="346" font-size="9" fill="#87867F">知识资产化 · Context 衰减 · Code Archaeology</text>
-  <circle cx="700" cy="338" r="16" fill="#788C5D"/>
-  <text x="700" y="334" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="700">3</text>
-  <text x="700" y="345" text-anchor="middle" font-size="7" fill="#FAF9F5">篇</text>
-
-  <!-- Layer 5: Team & Org -->
-  <rect x="40" y="380" width="720" height="68" rx="10" fill="#141413" filter="url(#sh4)"/>
-  <rect x="40" y="380" width="720" height="8" rx="5" fill="#D97757"/>
-  <text x="60" y="406" font-size="12" font-weight="700" fill="#FAF9F5">团队与组织层</text>
-  <text x="60" y="422" font-size="9" fill="#87867F">AI-Native 团队重组 · Intent 架构师</text>
-  <circle cx="700" cy="414" r="16" fill="#D97757"/>
-  <text x="700" y="410" text-anchor="middle" font-size="8" fill="#FAF9F5" font-weight="700">1</text>
-  <text x="700" y="421" text-anchor="middle" font-size="7" fill="#FAF9F5">篇</text>
-
-  <!-- Connecting vertical line (flow) -->
-  <line x1="400" y1="152" x2="400" y2="380" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,3"/>
-  <polygon points="400,380 395,368 405,368" fill="#D1CFC5"/>
-
-  <!-- Core question -->
-  <rect x="40" y="460" width="720" height="46" rx="8" fill="#141413" filter="url(#sh4)"/>
-  <text x="400" y="480" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">核心问题：当 AI 可以写代码时，软件工程还剩下什么？</text>
-  <text x="400" y="497" text-anchor="middle" font-size="9" fill="#87867F">Context Engineering · Intent-Driven · 治理框架 · 成本控制 · 开发者体验</text>
-
-  <!-- More layers listed as smaller items below main chart (right side stack) -->
-  <!-- Governance -->
-  <rect x="540" y="152" width="0" height="0"/>
-  <!-- Architecture -->
-  <rect x="540" y="228" width="0" height="0"/>
-  <!-- Cost & Ops -->
-  <rect x="540" y="304" width="0" height="0"/>
-  <!-- Data & Experience -->
-  <rect x="540" y="380" width="0" height="0"/>
-
-  <!-- Legend on right edge -->
-  <text x="775" y="90" text-anchor="end" font-size="8" fill="#87867F">治理与质量层</text>
-  <text x="775" y="104" text-anchor="end" font-size="8" fill="#87867F">架构与系统层</text>
-  <text x="775" y="118" text-anchor="end" font-size="8" fill="#87867F">成本与运营层</text>
-  <text x="775" y="132" text-anchor="end" font-size="8" fill="#87867F">数据与体验层</text>
+  <path fill="#faf9f5" d="M0 0h800v520H0z"/>
+  <text x="400" y="36" fill="#141413" font-size="18" font-weight="700" text-anchor="middle">AI-Native 软件工程知识体系</text>
+  <text x="400" y="56" fill="#87867f" font-size="11" text-anchor="middle">AISE Series | 25篇 | 约300分钟深度阅读</text>
+  <rect width="720" height="68" x="40" y="76" fill="#141413" filter="url(#sh4)" rx="10"/>
+  <rect width="720" height="8" x="40" y="76" fill="#d97757" rx="5"/>
+  <text x="60" y="102" fill="#faf9f5" font-size="12" font-weight="700">理论基础层</text>
+  <text x="60" y="118" fill="#87867f" font-size="9">Context Engineering · TDD vs Intent-Driven · Intent Complexity · AISE Manifesto</text>
+  <circle cx="700" cy="110" r="16" fill="#d97757"/>
+  <text x="700" y="106" fill="#faf9f5" font-size="8" font-weight="700" text-anchor="middle">4</text>
+  <text x="700" y="117" fill="#faf9f5" font-size="7" text-anchor="middle">篇</text>
+  <rect width="720" height="68" x="40" y="152" fill="#e3dacc" filter="url(#sh4)" rx="10"/>
+  <rect width="720" height="8" x="40" y="152" fill="#d97757" rx="5"/>
+  <text x="60" y="178" fill="#141413" font-size="12" font-weight="700">需求与设计层</text>
+  <text x="60" y="194" fill="#87867f" font-size="9">Executable PRD · S-curve Adoption</text>
+  <circle cx="700" cy="186" r="16" fill="#d97757"/>
+  <text x="700" y="182" fill="#faf9f5" font-size="8" font-weight="700" text-anchor="middle">2</text>
+  <text x="700" y="193" fill="#faf9f5" font-size="7" text-anchor="middle">篇</text>
+  <rect width="720" height="68" x="40" y="228" fill="#141413" filter="url(#sh4)" rx="10"/>
+  <rect width="720" height="8" x="40" y="228" fill="#788c5d" rx="5"/>
+  <text x="60" y="254" fill="#faf9f5" font-size="12" font-weight="700">开发实践层</text>
+  <text x="60" y="270" fill="#87867f" font-size="9">Code Review 死亡 · Semantic Diff · Agent Swarm · 停止写单元测试</text>
+  <circle cx="700" cy="262" r="16" fill="#788c5d"/>
+  <text x="700" y="258" fill="#faf9f5" font-size="8" font-weight="700" text-anchor="middle">4</text>
+  <text x="700" y="269" fill="#faf9f5" font-size="7" text-anchor="middle">篇</text>
+  <rect width="720" height="68" x="40" y="304" fill="#e3dacc" filter="url(#sh4)" rx="10"/>
+  <rect width="720" height="8" x="40" y="304" fill="#788c5d" rx="5"/>
+  <text x="60" y="330" fill="#141413" font-size="12" font-weight="700">代码与知识层</text>
+  <text x="60" y="346" fill="#87867f" font-size="9">知识资产化 · Context 衰减 · Code Archaeology</text>
+  <circle cx="700" cy="338" r="16" fill="#788c5d"/>
+  <text x="700" y="334" fill="#faf9f5" font-size="8" font-weight="700" text-anchor="middle">3</text>
+  <text x="700" y="345" fill="#faf9f5" font-size="7" text-anchor="middle">篇</text>
+  <rect width="720" height="68" x="40" y="380" fill="#141413" filter="url(#sh4)" rx="10"/>
+  <rect width="720" height="8" x="40" y="380" fill="#d97757" rx="5"/>
+  <text x="60" y="406" fill="#faf9f5" font-size="12" font-weight="700">团队与组织层</text>
+  <text x="60" y="422" fill="#87867f" font-size="9">AI-Native 团队重组 · Intent 架构师</text>
+  <circle cx="700" cy="414" r="16" fill="#d97757"/>
+  <text x="700" y="410" fill="#faf9f5" font-size="8" font-weight="700" text-anchor="middle">1</text>
+  <text x="700" y="421" fill="#faf9f5" font-size="7" text-anchor="middle">篇</text>
+  <path stroke="#d1cfc5" stroke-dasharray="6,3" stroke-width="2" d="M400 152v228"/>
+  <path fill="#d1cfc5" d="m400 380-5-12h10z"/>
+  <rect width="720" height="46" x="40" y="460" fill="#141413" filter="url(#sh4)" rx="8"/>
+  <text x="400" y="480" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">核心问题：当 AI 可以写代码时，软件工程还剩下什么？</text>
+  <text x="400" y="497" fill="#87867f" font-size="9" text-anchor="middle">Context Engineering · Intent-Driven · 治理框架 · 成本控制 · 开发者体验</text>
+  <text x="775" y="90" fill="#87867f" font-size="8" text-anchor="end">治理与质量层</text>
+  <text x="775" y="104" fill="#87867f" font-size="8" text-anchor="end">架构与系统层</text>
+  <text x="775" y="118" fill="#87867f" font-size="8" text-anchor="end">成本与运营层</text>
+  <text x="775" y="132" fill="#87867f" font-size="8" text-anchor="end">数据与体验层</text>
 </svg>

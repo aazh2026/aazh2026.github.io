@@ -1,143 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" font-family="Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif" viewBox="0 0 960 540">
   <defs>
-    <linearGradient id="ivory-bg3" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#F0EDE4"/>
+    <linearGradient id="ivory-bg3" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#f0ede4"/>
     </linearGradient>
-    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
-    </filter>
-    <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#87867F"/>
+    <marker id="arrow3" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#87867f" d="M0 0v6l8-3z"/>
     </marker>
+    <filter id="shadow3" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".12" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <rect width="960" height="540" fill="url(#ivory-bg3)"/>
-
-  <!-- Title -->
-  <text x="480" y="38" text-anchor="middle" font-size="20" fill="#141413" font-weight="bold">智能编排引擎 / Intelligent Orchestration Engine</text>
-  <line x1="180" y1="50" x2="780" y2="50" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Natural Language Input -->
-  <rect x="30" y="65" width="200" height="110" rx="10" fill="white" filter="url(#shadow3)"/>
-  <rect x="30" y="65" width="200" height="30" rx="10" fill="#141413"/>
-  <rect x="30" y="83" width="200" height="12" fill="#141413"/>
-  <text x="130" y="85" text-anchor="middle" font-size="11" fill="white" font-weight="bold">自然语言需求输入</text>
-  <text x="42" y="108" font-size="10" fill="#87867F">获取用户个人中心数据</text>
-  <text x="42" y="122" font-size="10" fill="#87867F">包括：用户信息、最近5个</text>
-  <text x="42" y="136" font-size="10" fill="#87867F">订单、商品详情、会员积分</text>
-  <text x="42" y="156" font-size="10" fill="#D97757" font-style="italic">"响应时间 &lt; 200ms"</text>
-
-  <!-- Arrow from NL to orchestrator -->
-  <line x1="230" y1="120" x2="270" y2="120" stroke="#D97757" stroke-width="2" marker-end="url(#arrow3)"/>
-  <text x="250" y="110" text-anchor="middle" font-size="9" fill="#D97757">LLM</text>
-
-  <!-- Orchestrator Box -->
-  <rect x="270" y="65" width="280" height="420" rx="10" fill="white" filter="url(#shadow3)"/>
-  <rect x="270" y="65" width="280" height="36" rx="10" fill="#788C5D"/>
-  <rect x="270" y="89" width="280" height="12" fill="#788C5D"/>
-  <text x="410" y="87" text-anchor="middle" font-size="13" fill="white" font-weight="bold">🎯 智能编排引擎</text>
-
-  <!-- Step 1 -->
-  <g transform="translate(285, 115)">
-    <rect width="250" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="10" y="18" font-size="11" fill="#141413" font-weight="bold">① 依赖分析与并行化</text>
-    <text x="10" y="34" font-size="10" fill="#87867F">构建依赖图 → 拓扑排序 → 并行批次</text>
-    <text x="10" y="46" font-size="10" fill="#788C5D">→ 最大化并行度</text>
+  <path fill="url(#ivory-bg3)" d="M0 0h960v540H0z"/>
+  <text x="480" y="38" fill="#141413" font-size="20" font-weight="bold" text-anchor="middle">智能编排引擎 / Intelligent Orchestration Engine</text>
+  <path stroke="#d1cfc5" d="M180 50h600"/>
+  <rect width="200" height="110" x="30" y="65" fill="#fff" filter="url(#shadow3)" rx="10"/>
+  <rect width="200" height="30" x="30" y="65" fill="#141413" rx="10"/>
+  <path fill="#141413" d="M30 83h200v12H30z"/>
+  <text x="130" y="85" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">自然语言需求输入</text>
+  <text x="42" y="108" fill="#87867f" font-size="10">获取用户个人中心数据</text>
+  <text x="42" y="122" fill="#87867f" font-size="10">包括：用户信息、最近5个</text>
+  <text x="42" y="136" fill="#87867f" font-size="10">订单、商品详情、会员积分</text>
+  <text x="42" y="156" fill="#d97757" font-size="10" font-style="italic">&quot;响应时间 &lt; 200ms&quot;</text>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow3)" d="M230 120h40"/>
+  <text x="250" y="110" fill="#d97757" font-size="9" text-anchor="middle">LLM</text>
+  <rect width="280" height="420" x="270" y="65" fill="#fff" filter="url(#shadow3)" rx="10"/>
+  <rect width="280" height="36" x="270" y="65" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M270 89h280v12H270z"/>
+  <text x="410" y="87" fill="#fff" font-size="13" font-weight="bold" text-anchor="middle">🎯 智能编排引擎</text>
+  <g transform="translate(285 115)">
+    <rect width="250" height="50" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <text x="10" y="18" fill="#141413" font-size="11" font-weight="bold">① 依赖分析与并行化</text>
+    <text x="10" y="34" fill="#87867f" font-size="10">构建依赖图 → 拓扑排序 → 并行批次</text>
+    <text x="10" y="46" fill="#788c5d" font-size="10">→ 最大化并行度</text>
   </g>
-
-  <!-- Step 2 -->
-  <g transform="translate(285, 175)">
-    <rect width="250" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="10" y="18" font-size="11" fill="#141413" font-weight="bold">② 智能缓存策略</text>
-    <text x="10" y="34" font-size="10" fill="#87867F">低频变化: TTL=3600s</text>
-    <text x="10" y="46" font-size="10" fill="#87867F">高频变化: TTL=60s / 不缓存</text>
+  <g transform="translate(285 175)">
+    <rect width="250" height="50" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <text x="10" y="18" fill="#141413" font-size="11" font-weight="bold">② 智能缓存策略</text>
+    <text x="10" y="34" fill="#87867f" font-size="10">低频变化: TTL=3600s</text>
+    <text x="10" y="46" fill="#87867f" font-size="10">高频变化: TTL=60s / 不缓存</text>
   </g>
-
-  <!-- Step 3 -->
-  <g transform="translate(285, 235)">
-    <rect width="250" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="10" y="18" font-size="11" fill="#141413" font-weight="bold">③ 故障降级策略</text>
-    <text x="10" y="34" font-size="10" fill="#87867F">服务不可用 → 缓存降级</text>
-    <text x="10" y="46" font-size="10" fill="#87867F">→ 默认值兜底</text>
+  <g transform="translate(285 235)">
+    <rect width="250" height="50" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <text x="10" y="18" fill="#141413" font-size="11" font-weight="bold">③ 故障降级策略</text>
+    <text x="10" y="34" fill="#87867f" font-size="10">服务不可用 → 缓存降级</text>
+    <text x="10" y="46" fill="#87867f" font-size="10">→ 默认值兜底</text>
   </g>
-
-  <!-- Step 4 -->
-  <g transform="translate(285, 295)">
-    <rect width="250" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="10" y="18" font-size="11" fill="#141413" font-weight="bold">④ 运行时动态优化</text>
-    <text x="10" y="34" font-size="10" fill="#87867F">基于历史性能数据</text>
-    <text x="10" y="46" font-size="10" fill="#87867F">自动调整超时、缓存、并行度</text>
+  <g transform="translate(285 295)">
+    <rect width="250" height="50" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <text x="10" y="18" fill="#141413" font-size="11" font-weight="bold">④ 运行时动态优化</text>
+    <text x="10" y="34" fill="#87867f" font-size="10">基于历史性能数据</text>
+    <text x="10" y="46" fill="#87867f" font-size="10">自动调整超时、缓存、并行度</text>
   </g>
-
-  <!-- Step 5 -->
-  <g transform="translate(285, 355)">
-    <rect width="250" height="50" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <text x="10" y="18" font-size="11" fill="#141413" font-weight="bold">⑤ 前端字段裁剪</text>
-    <text x="10" y="34" font-size="10" fill="#87867F">Web: 完整字段 / Mobile: 精简字段</text>
-    <text x="10" y="46" font-size="10" fill="#87867F">Admin: 额外管理字段</text>
+  <g transform="translate(285 355)">
+    <rect width="250" height="50" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="6"/>
+    <text x="10" y="18" fill="#141413" font-size="11" font-weight="bold">⑤ 前端字段裁剪</text>
+    <text x="10" y="34" fill="#87867f" font-size="10">Web: 完整字段 / Mobile: 精简字段</text>
+    <text x="10" y="46" fill="#87867f" font-size="10">Admin: 额外管理字段</text>
   </g>
-
-  <!-- Generated code -->
-  <g transform="translate(565, 65)">
-    <rect width="365" height="195" rx="10" fill="#141413" filter="url(#shadow3)"/>
-    <rect width="365" height="28" rx="10" fill="#1e1e1e"/>
-    <rect y="16" width="365" height="12" fill="#1e1e1e"/>
-    <text x="182" y="16" text-anchor="middle" font-size="11" fill="#D1CFC5" font-weight="bold">Generated BFF Code</text>
-    <text x="12" y="46" font-size="10" fill="#E3DACC" font-family="monospace">@cache(ttl=300)</text>
-    <text x="12" y="62" font-size="10" fill="#E3DACC" font-family="monospace">def get_user_center(user_id):</text>
-    <text x="12" y="80" font-size="10" fill="#D97757" font-family="monospace">  # 并行获取独立数据</text>
-    <text x="12" y="96" font-size="10" fill="#E3DACC" font-family="monospace">  with ThreadPoolExecutor() as ex:</text>
-    <text x="24" y="112" font-size="10" fill="#E3DACC" font-family="monospace">user_f = ex.submit(user_svc.get, uid)</text>
-    <text x="24" y="128" font-size="10" fill="#E3DACC" font-family="monospace">member_f = ex.submit(member_svc.get, uid)</text>
-    <text x="12" y="146" font-size="10" fill="#E3DACC" font-family="monospace">  orders = order_svc.get_recent(uid, 5)</text>
-    <text x="12" y="162" font-size="10" fill="#E3DACC" font-family="monospace">  products = product_svc.get_batch([...])</text>
-    <text x="12" y="180" font-size="10" fill="#E3DACC" font-family="monospace">  return aggregate(user_f, member_f, ...)</text>
+  <g transform="translate(565 65)">
+    <rect width="365" height="195" fill="#141413" filter="url(#shadow3)" rx="10"/>
+    <rect width="365" height="28" fill="#1e1e1e" rx="10"/>
+    <path fill="#1e1e1e" d="M0 16h365v12H0z"/>
+    <text x="182" y="16" fill="#d1cfc5" font-size="11" font-weight="bold" text-anchor="middle">Generated BFF Code</text>
+    <text x="12" y="46" fill="#e3dacc" font-family="monospace" font-size="10">@cache(ttl=300)</text>
+    <text x="12" y="62" fill="#e3dacc" font-family="monospace" font-size="10">def get_user_center(user_id):</text>
+    <text x="12" y="80" fill="#d97757" font-family="monospace" font-size="10">  # 并行获取独立数据</text>
+    <text x="12" y="96" fill="#e3dacc" font-family="monospace" font-size="10">  with ThreadPoolExecutor() as ex:</text>
+    <text x="24" y="112" fill="#e3dacc" font-family="monospace" font-size="10">user_f = ex.submit(user_svc.get, uid)</text>
+    <text x="24" y="128" fill="#e3dacc" font-family="monospace" font-size="10">member_f = ex.submit(member_svc.get, uid)</text>
+    <text x="12" y="146" fill="#e3dacc" font-family="monospace" font-size="10">  orders = order_svc.get_recent(uid, 5)</text>
+    <text x="12" y="162" fill="#e3dacc" font-family="monospace" font-size="10">  products = product_svc.get_batch([...])</text>
+    <text x="12" y="180" fill="#e3dacc" font-family="monospace" font-size="10">  return aggregate(user_f, member_f, ...)</text>
   </g>
-
-  <!-- Parallel service calls -->
-  <g transform="translate(565, 270)">
-    <rect width="365" height="215" rx="10" fill="white" filter="url(#shadow3)"/>
-    <rect width="365" height="28" rx="10" fill="#D97757"/>
-    <rect y="16" width="365" height="12" fill="#D97757"/>
-    <text x="182" y="16" text-anchor="middle" font-size="11" fill="white" font-weight="bold">并行服务调用 / Parallel Execution</text>
-
-    <!-- Timeline visualization -->
-    <g transform="translate(15, 52)">
-      <!-- Time axis -->
-      <line x1="0" y1="120" x2="340" y2="120" stroke="#D1CFC5" stroke-width="1"/>
-      <text x="340" y="115" font-size="9" fill="#87867F">时间 →</text>
-
-      <!-- Batch 1: parallel -->
-      <text x="0" y="15" font-size="10" fill="#141413" font-weight="bold">Batch 1 (并行)</text>
-      <rect x="0" y="22" width="60" height="22" rx="4" fill="#788C5D" fill-opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-      <text x="30" y="37" text-anchor="middle" font-size="9" fill="#141413">User Svc</text>
-      <text x="30" y="50" text-anchor="middle" font-size="8" fill="#87867F">~100ms</text>
-
-      <rect x="65" y="22" width="60" height="22" rx="4" fill="#788C5D" fill-opacity="0.2" stroke="#788C5D" stroke-width="1.5"/>
-      <text x="95" y="37" text-anchor="middle" font-size="9" fill="#141413">Member Svc</text>
-      <text x="95" y="50" text-anchor="middle" font-size="8" fill="#87867F">~80ms</text>
-
-      <!-- Batch 2: sequential after batch 1 -->
-      <text x="0" y="80" font-size="10" fill="#141413" font-weight="bold">Batch 2 (顺序)</text>
-      <rect x="130" y="87" width="80" height="22" rx="4" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1.5"/>
-      <text x="170" y="102" text-anchor="middle" font-size="9" fill="#141413">Order Svc</text>
-      <text x="170" y="115" text-anchor="middle" font-size="8" fill="#87867F">~150ms</text>
-
-      <rect x="215" y="87" width="80" height="22" rx="4" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1.5"/>
-      <text x="255" y="102" text-anchor="middle" font-size="9" fill="#141413">Product Svc</text>
-      <text x="255" y="115" text-anchor="middle" font-size="8" fill="#87867F">~120ms</text>
-
-      <!-- Total time -->
-      <text x="0" y="145" font-size="11" fill="#788C5D" font-weight="bold">总耗时: ~270ms (目标 200ms)</text>
-      <text x="0" y="162" font-size="10" fill="#87867F">→ 并行节省了 ~180ms</text>
-
-      <!-- Arrow showing flow -->
-      <line x1="140" y1="33" x2="140" y2="98" stroke="#D97757" stroke-width="1" stroke-dasharray="3,2"/>
-      <text x="143" y="70" font-size="8" fill="#D97757">等待</text>
+  <g transform="translate(565 270)">
+    <rect width="365" height="215" fill="#fff" filter="url(#shadow3)" rx="10"/>
+    <rect width="365" height="28" fill="#d97757" rx="10"/>
+    <path fill="#d97757" d="M0 16h365v12H0z"/>
+    <text x="182" y="16" fill="#fff" font-size="11" font-weight="bold" text-anchor="middle">并行服务调用 / Parallel Execution</text>
+    <g transform="translate(15 52)">
+      <path stroke="#d1cfc5" d="M0 120h340"/>
+      <text x="340" y="115" fill="#87867f" font-size="9">时间 →</text>
+      <text y="15" fill="#141413" font-size="10" font-weight="bold">Batch 1 (并行)</text>
+      <rect width="60" height="22" y="22" fill="#788c5d" fill-opacity=".2" stroke="#788c5d" stroke-width="1.5" rx="4"/>
+      <text x="30" y="37" fill="#141413" font-size="9" text-anchor="middle">User Svc</text>
+      <text x="30" y="50" fill="#87867f" font-size="8" text-anchor="middle">~100ms</text>
+      <rect width="60" height="22" x="65" y="22" fill="#788c5d" fill-opacity=".2" stroke="#788c5d" stroke-width="1.5" rx="4"/>
+      <text x="95" y="37" fill="#141413" font-size="9" text-anchor="middle">Member Svc</text>
+      <text x="95" y="50" fill="#87867f" font-size="8" text-anchor="middle">~80ms</text>
+      <text y="80" fill="#141413" font-size="10" font-weight="bold">Batch 2 (顺序)</text>
+      <rect width="80" height="22" x="130" y="87" fill="#d97757" fill-opacity=".2" stroke="#d97757" stroke-width="1.5" rx="4"/>
+      <text x="170" y="102" fill="#141413" font-size="9" text-anchor="middle">Order Svc</text>
+      <text x="170" y="115" fill="#87867f" font-size="8" text-anchor="middle">~150ms</text>
+      <rect width="80" height="22" x="215" y="87" fill="#d97757" fill-opacity=".2" stroke="#d97757" stroke-width="1.5" rx="4"/>
+      <text x="255" y="102" fill="#141413" font-size="9" text-anchor="middle">Product Svc</text>
+      <text x="255" y="115" fill="#87867f" font-size="8" text-anchor="middle">~120ms</text>
+      <text y="145" fill="#788c5d" font-size="11" font-weight="bold">总耗时: ~270ms (目标 200ms)</text>
+      <text y="162" fill="#87867f" font-size="10">→ 并行节省了 ~180ms</text>
+      <path stroke="#d97757" stroke-dasharray="3,2" d="M140 33v65"/>
+      <text x="143" y="70" fill="#d97757" font-size="8">等待</text>
     </g>
   </g>
-
-  <!-- Arrow from orchestrator to result -->
-  <line x1="550" y1="270" x2="555" y2="270" stroke="#D97757" stroke-width="2" marker-end="url(#arrow3)"/>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arrow3)" d="M550 270h5"/>
 </svg>

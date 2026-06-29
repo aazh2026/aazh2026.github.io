@@ -1,120 +1,80 @@
-<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="400" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">高风险AI系统技术要求（Article 9–15）</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">EU AI Act · 技术合规框架</text>
-
-  <!-- Column headers: lifecycle phases -->
-  <rect x="150" y="60" width="105" height="28" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="202" y="78" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">设计</text>
-
-  <rect x="265" y="60" width="105" height="28" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="317" y="78" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">开发</text>
-
-  <rect x="380" y="60" width="105" height="28" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="432" y="78" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">部署</text>
-
-  <rect x="495" y="60" width="105" height="28" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="547" y="78" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">运营</text>
-
-  <!-- Row 1: Article 9 - Risk Management -->
-  <rect x="30" y="98" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="30" y="98" width="110" height="20" rx="6" fill="#D97757"/>
-  <rect x="30" y="108" width="110" height="10" fill="#D97757"/>
-  <text x="85" y="113" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">Art. 9</text>
-  <text x="85" y="130" text-anchor="middle" font-size="10" fill="#141413">风险管理系统</text>
-  <text x="85" y="144" text-anchor="middle" font-size="9" fill="#87867F">Risk Management</text>
-
-  <!-- Art 9 cells -->
-  <rect x="150" y="98" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="202" y="124" text-anchor="middle" font-size="9.5" fill="#141413">风险评估流程</text>
-
-  <rect x="265" y="98" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="317" y="124" text-anchor="middle" font-size="9.5" fill="#141413">风险缓解措施</text>
-
-  <rect x="380" y="98" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="432" y="124" text-anchor="middle" font-size="9.5" fill="#141413">定期审查更新</text>
-
-  <rect x="495" y="98" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="547" y="124" text-anchor="middle" font-size="9.5" fill="#141413">持续监控</text>
-
-  <!-- Row 2: Article 10 - Data Governance -->
-  <rect x="30" y="160" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="30" y="160" width="110" height="20" rx="6" fill="#D97757"/>
-  <rect x="30" y="170" width="110" height="10" fill="#D97757"/>
-  <text x="85" y="175" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">Art. 10</text>
-  <text x="85" y="192" text-anchor="middle" font-size="10" fill="#141413">数据治理</text>
-  <text x="85" y="206" text-anchor="middle" font-size="9" fill="#87867F">Data Governance</text>
-
-  <!-- Art 10 cells -->
-  <rect x="150" y="160" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="202" y="186" text-anchor="middle" font-size="9.5" fill="#141413">GDPR合规审查</text>
-
-  <rect x="265" y="160" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="317" y="186" text-anchor="middle" font-size="9.5" fill="#141413">偏见检测消除</text>
-
-  <rect x="380" y="160" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="432" y="186" text-anchor="middle" font-size="9.5" fill="#141413">数据溯源记录</text>
-
-  <rect x="495" y="160" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="547" y="186" text-anchor="middle" font-size="9.5" fill="#141413">数据质量监控</text>
-
-  <!-- Row 3: Article 11 - Technical Documentation -->
-  <rect x="30" y="222" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="30" y="222" width="110" height="20" rx="6" fill="#D97757"/>
-  <rect x="30" y="232" width="110" height="10" fill="#D97757"/>
-  <text x="85" y="237" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">Art. 11</text>
-  <text x="85" y="254" text-anchor="middle" font-size="10" fill="#141413">技术文档</text>
-  <text x="85" y="268" text-anchor="middle" font-size="9" fill="#87867F">Tech Docs</text>
-
-  <!-- Art 11 cells -->
-  <rect x="150" y="222" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="202" y="248" text-anchor="middle" font-size="9.5" fill="#141413">系统描述文档</text>
-
-  <rect x="265" y="222" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="317" y="248" text-anchor="middle" font-size="9.5" fill="#141413">架构图/数据流</text>
-
-  <rect x="380" y="222" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="432" y="248" text-anchor="middle" font-size="9.5" fill="#141413">性能评估报告</text>
-
-  <rect x="495" y="222" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="547" y="248" text-anchor="middle" font-size="9.5" fill="#141413">文档同步更新</text>
-
-  <!-- Row 4: Article 12 - Record Keeping -->
-  <rect x="30" y="284" width="110" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="30" y="284" width="110" height="20" rx="6" fill="#D97757"/>
-  <rect x="30" y="294" width="110" height="10" fill="#D97757"/>
-  <text x="85" y="299" text-anchor="middle" font-size="9" font-weight="700" fill="#FFFFFF" font-family="ui-monospace, monospace">Art. 12</text>
-  <text x="85" y="316" text-anchor="middle" font-size="10" fill="#141413">记录保存</text>
-  <text x="85" y="330" text-anchor="middle" font-size="9" fill="#87867F">Record Keeping</text>
-
-  <!-- Art 12 cells -->
-  <rect x="150" y="284" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="202" y="310" text-anchor="middle" font-size="9.5" fill="#141413">日志策略设计</text>
-
-  <rect x="265" y="284" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="317" y="310" text-anchor="middle" font-size="9.5" fill="#141413">事件记录架构</text>
-
-  <rect x="380" y="284" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="432" y="310" text-anchor="middle" font-size="9.5" fill="#141413">审计日志部署</text>
-
-  <rect x="495" y="284" width="105" height="52" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="547" y="310" text-anchor="middle" font-size="9.5" fill="#141413">6年留存查询</text>
-
-  <!-- Row 5: Articles 13-15 (combined in one row with lighter styling) -->
-  <rect x="30" y="346" width="110" height="42" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="30" y="346" width="110" height="20" rx="6" fill="#E3DACC"/>
-  <rect x="30" y="356" width="110" height="10" fill="#E3DACC"/>
-  <text x="85" y="361" text-anchor="middle" font-size="9" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">Art. 13–15</text>
-  <text x="85" y="378" text-anchor="middle" font-size="10" fill="#141413">透明度/人督/安全</text>
-
-  <rect x="150" y="346" width="450" height="42" rx="4" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="375" y="372" text-anchor="middle" font-size="9.5" fill="#87867F">AI披露 · 人类监督机制 · 准确度基准 · 对抗鲁棒性测试 · 网络安全措施</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 400">
+  <path fill="#faf9f5" d="M0 0h680v400H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">高风险AI系统技术要求（Article 9–15）</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">EU AI Act · 技术合规框架</text>
+  <rect width="105" height="28" x="150" y="60" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="202" y="78" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">设计</text>
+  <rect width="105" height="28" x="265" y="60" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="317" y="78" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">开发</text>
+  <rect width="105" height="28" x="380" y="60" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="432" y="78" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">部署</text>
+  <rect width="105" height="28" x="495" y="60" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="547" y="78" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">运营</text>
+  <rect width="110" height="52" x="30" y="98" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="110" height="20" x="30" y="98" fill="#d97757" rx="6"/>
+  <path fill="#d97757" d="M30 108h110v10H30z"/>
+  <text x="85" y="113" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="700" text-anchor="middle">Art. 9</text>
+  <text x="85" y="130" fill="#141413" font-size="10" text-anchor="middle">风险管理系统</text>
+  <text x="85" y="144" fill="#87867f" font-size="9" text-anchor="middle">Risk Management</text>
+  <rect width="105" height="52" x="150" y="98" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="202" y="124" fill="#141413" font-size="9.5" text-anchor="middle">风险评估流程</text>
+  <rect width="105" height="52" x="265" y="98" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="317" y="124" fill="#141413" font-size="9.5" text-anchor="middle">风险缓解措施</text>
+  <rect width="105" height="52" x="380" y="98" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="432" y="124" fill="#141413" font-size="9.5" text-anchor="middle">定期审查更新</text>
+  <rect width="105" height="52" x="495" y="98" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="547" y="124" fill="#141413" font-size="9.5" text-anchor="middle">持续监控</text>
+  <rect width="110" height="52" x="30" y="160" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="110" height="20" x="30" y="160" fill="#d97757" rx="6"/>
+  <path fill="#d97757" d="M30 170h110v10H30z"/>
+  <text x="85" y="175" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="700" text-anchor="middle">Art. 10</text>
+  <text x="85" y="192" fill="#141413" font-size="10" text-anchor="middle">数据治理</text>
+  <text x="85" y="206" fill="#87867f" font-size="9" text-anchor="middle">Data Governance</text>
+  <rect width="105" height="52" x="150" y="160" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="202" y="186" fill="#141413" font-size="9.5" text-anchor="middle">GDPR合规审查</text>
+  <rect width="105" height="52" x="265" y="160" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="317" y="186" fill="#141413" font-size="9.5" text-anchor="middle">偏见检测消除</text>
+  <rect width="105" height="52" x="380" y="160" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="432" y="186" fill="#141413" font-size="9.5" text-anchor="middle">数据溯源记录</text>
+  <rect width="105" height="52" x="495" y="160" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="547" y="186" fill="#141413" font-size="9.5" text-anchor="middle">数据质量监控</text>
+  <rect width="110" height="52" x="30" y="222" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="110" height="20" x="30" y="222" fill="#d97757" rx="6"/>
+  <path fill="#d97757" d="M30 232h110v10H30z"/>
+  <text x="85" y="237" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="700" text-anchor="middle">Art. 11</text>
+  <text x="85" y="254" fill="#141413" font-size="10" text-anchor="middle">技术文档</text>
+  <text x="85" y="268" fill="#87867f" font-size="9" text-anchor="middle">Tech Docs</text>
+  <rect width="105" height="52" x="150" y="222" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="202" y="248" fill="#141413" font-size="9.5" text-anchor="middle">系统描述文档</text>
+  <rect width="105" height="52" x="265" y="222" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="317" y="248" fill="#141413" font-size="9.5" text-anchor="middle">架构图/数据流</text>
+  <rect width="105" height="52" x="380" y="222" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="432" y="248" fill="#141413" font-size="9.5" text-anchor="middle">性能评估报告</text>
+  <rect width="105" height="52" x="495" y="222" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="547" y="248" fill="#141413" font-size="9.5" text-anchor="middle">文档同步更新</text>
+  <rect width="110" height="52" x="30" y="284" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="110" height="20" x="30" y="284" fill="#d97757" rx="6"/>
+  <path fill="#d97757" d="M30 294h110v10H30z"/>
+  <text x="85" y="299" fill="#fff" font-family="ui-monospace, monospace" font-size="9" font-weight="700" text-anchor="middle">Art. 12</text>
+  <text x="85" y="316" fill="#141413" font-size="10" text-anchor="middle">记录保存</text>
+  <text x="85" y="330" fill="#87867f" font-size="9" text-anchor="middle">Record Keeping</text>
+  <rect width="105" height="52" x="150" y="284" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="202" y="310" fill="#141413" font-size="9.5" text-anchor="middle">日志策略设计</text>
+  <rect width="105" height="52" x="265" y="284" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="317" y="310" fill="#141413" font-size="9.5" text-anchor="middle">事件记录架构</text>
+  <rect width="105" height="52" x="380" y="284" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="432" y="310" fill="#141413" font-size="9.5" text-anchor="middle">审计日志部署</text>
+  <rect width="105" height="52" x="495" y="284" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="547" y="310" fill="#141413" font-size="9.5" text-anchor="middle">6年留存查询</text>
+  <rect width="110" height="42" x="30" y="346" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <rect width="110" height="20" x="30" y="346" fill="#e3dacc" rx="6"/>
+  <path fill="#e3dacc" d="M30 356h110v10H30z"/>
+  <text x="85" y="361" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" font-weight="700" text-anchor="middle">Art. 13–15</text>
+  <text x="85" y="378" fill="#141413" font-size="10" text-anchor="middle">透明度/人督/安全</text>
+  <rect width="450" height="42" x="150" y="346" fill="#fff" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="375" y="372" fill="#87867f" font-size="9.5" text-anchor="middle">AI披露 · 人类监督机制 · 准确度基准 · 对抗鲁棒性测试 · 网络安全措施</text>
   <title>高风险AI系统技术要求（Article 9–15）</title>
-  <desc>2x4网格图：纵轴为EU AI Act七项技术要求（Article 9-15），横轴为AI系统生命周期四阶段（设计/开发/部署/运营）</desc>
+  <desc>
+    2x4网格图：纵轴为EU AI Act七项技术要求（Article 9-15），横轴为AI系统生命周期四阶段（设计/开发/部署/运营）
+  </desc>
 </svg>

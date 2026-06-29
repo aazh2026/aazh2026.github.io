@@ -1,51 +1,33 @@
-<svg viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Root Orchestrator → Agent1/2/3 → Sub -->
-  <rect width="560" height="180" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent Swarm：Root Orchestrator 层级架构</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/02/25</text>
-
-  <!-- Root -->
-  <rect x="180" y="48" width="200" height="38" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="180" y="48" width="200" height="16" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="280" y="62" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Root Orchestrator</text>
-  <text x="280" y="77" text-anchor="middle" font-size="9" fill="#87867F">统一协调 · 安全策略 · 一致性保证</text>
-
-  <!-- Arrows Root→A1/A2/A3 -->
-  <line x1="280" y1="86" x2="100" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="280" y1="86" x2="280" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="280" y1="86" x2="460" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- A1, A2, A3 -->
-  <rect x="40" y="110" width="120" height="32" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="110" width="120" height="14" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="100" y="124" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent 1</text>
-  <rect x="152" y="120" width="12" height="12" rx="6" fill="#2563EB"/>
-  <text x="158" y="129" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
-
-  <rect x="220" y="110" width="120" height="32" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="220" y="110" width="120" height="14" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="124" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent 2</text>
-  <rect x="332" y="120" width="12" height="12" rx="6" fill="#2563EB"/>
-  <text x="338" y="129" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
-
-  <rect x="400" y="110" width="120" height="32" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="400" y="110" width="120" height="14" rx="5" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="460" y="124" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Agent 3</text>
-  <rect x="512" y="120" width="12" height="12" rx="6" fill="#2563EB"/>
-  <text x="518" y="129" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
-
-  <!-- Arrows A1/A2/A3→Sub -->
-  <line x1="100" y1="142" x2="70" y2="160" stroke="#D1CFC5" stroke-width="1"/>
-  <line x1="280" y1="142" x2="280" y2="160" stroke="#D1CFC5" stroke-width="1"/>
-  <line x1="460" y1="142" x2="490" y2="160" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Sub boxes -->
-  <rect x="20" y="160" width="100" height="16" rx="4" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
-  <text x="70" y="171" text-anchor="middle" font-size="8" fill="#059669" font-family="ui-monospace, monospace">Sub</text>
-  <rect x="230" y="160" width="100" height="16" rx="4" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
-  <text x="280" y="171" text-anchor="middle" font-size="8" fill="#059669" font-family="ui-monospace, monospace">Sub</text>
-  <rect x="440" y="160" width="100" height="16" rx="4" fill="#FFFFFF" stroke="#059669" stroke-width="1"/>
-  <text x="490" y="171" text-anchor="middle" font-size="8" fill="#059669" font-family="ui-monospace, monospace">Sub</text>
-
-  <text x="280" y="192" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">Root Orchestrator 精确控制子 Agent 行为，确保安全与一致性</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 180">
+  <path fill="#faf9f5" d="M0 0h560v180H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent Swarm：Root Orchestrator 层级架构</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2025/02/25</text>
+  <rect width="200" height="38" x="180" y="48" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <rect width="200" height="16" x="180" y="48" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="280" y="62" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Root Orchestrator</text>
+  <text x="280" y="77" fill="#87867f" font-size="9" text-anchor="middle">统一协调 · 安全策略 · 一致性保证</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="m280 86-180 24m180-24v24m0-24 180 24"/>
+  <rect width="120" height="32" x="40" y="110" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="40" y="110" fill="#dbeafe" stroke="#2563eb" rx="5"/>
+  <text x="100" y="124" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Agent 1</text>
+  <rect width="12" height="12" x="152" y="120" fill="#2563eb" rx="6"/>
+  <text x="158" y="129" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">1</text>
+  <rect width="120" height="32" x="220" y="110" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="220" y="110" fill="#dbeafe" stroke="#2563eb" rx="5"/>
+  <text x="280" y="124" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Agent 2</text>
+  <rect width="12" height="12" x="332" y="120" fill="#2563eb" rx="6"/>
+  <text x="338" y="129" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">2</text>
+  <rect width="120" height="32" x="400" y="110" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="400" y="110" fill="#dbeafe" stroke="#2563eb" rx="5"/>
+  <text x="460" y="124" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Agent 3</text>
+  <rect width="12" height="12" x="512" y="120" fill="#2563eb" rx="6"/>
+  <text x="518" y="129" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">3</text>
+  <path stroke="#d1cfc5" d="m100 142-30 18m210-18v18m180-18 30 18"/>
+  <rect width="100" height="16" x="20" y="160" fill="#fff" stroke="#059669" rx="4"/>
+  <text x="70" y="171" fill="#059669" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Sub</text>
+  <rect width="100" height="16" x="230" y="160" fill="#fff" stroke="#059669" rx="4"/>
+  <text x="280" y="171" fill="#059669" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Sub</text>
+  <rect width="100" height="16" x="440" y="160" fill="#fff" stroke="#059669" rx="4"/>
+  <text x="490" y="171" fill="#059669" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">Sub</text>
+  <text x="280" y="192" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">Root Orchestrator 精确控制子 Agent 行为，确保安全与一致性</text>
 </svg>

@@ -1,84 +1,62 @@
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">契约漂移类型分类</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native 软件工程系列 #52</text>
-
-  <!-- Type 1: Breaking Change (clay) -->
-  <rect x="30" y="68" width="190" height="160" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="30" y="68" width="190" height="28" rx="8" fill="#D97757"/>
-  <rect x="30" y="84" width="190" height="12" fill="#D97757"/>
-  <text x="125" y="87" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Breaking Change</text>
-  <text x="42" y="112" font-size="10" fill="#141413" font-family="ui-monospace, monospace">破坏性变更</text>
-  <line x1="30" y1="120" x2="220" y2="120" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="42" y="137" font-size="9.5" fill="#87867F">删除字段/端点</text>
-  <text x="42" y="152" font-size="9.5" fill="#87867F">修改字段类型</text>
-  <text x="42" y="167" font-size="9.5" fill="#87867F">新增必填字段</text>
-  <text x="42" y="182" font-size="9.5" fill="#87867F">修改URL路径</text>
-  <rect x="42" y="193" width="76" height="22" rx="4" fill="#D97757" opacity="0.12"/>
-  <text x="80" y="208" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">立即失败</text>
-
-  <!-- Type 2: Non-Breaking Change (olive) -->
-  <rect x="245" y="68" width="190" height="160" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <rect x="245" y="68" width="190" height="28" rx="8" fill="#788C5D"/>
-  <rect x="245" y="84" width="190" height="12" fill="#788C5D"/>
-  <text x="340" y="87" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Non-Breaking Change</text>
-  <text x="257" y="112" font-size="10" fill="#141413" font-family="ui-monospace, monospace">非破坏性变更</text>
-  <line x1="245" y1="120" x2="435" y2="120" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="257" y="137" font-size="9.5" fill="#87867F">新增可选字段</text>
-  <text x="257" y="152" font-size="9.5" fill="#87867F">扩展枚举值</text>
-  <text x="257" y="167" font-size="9.5" fill="#87867F">放宽验证规则</text>
-  <text x="257" y="182" font-size="9.5" fill="#87867F">新增端点</text>
-  <rect x="257" y="193" width="76" height="22" rx="4" fill="#788C5D" opacity="0.12"/>
-  <text x="295" y="208" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">可能隐性失败</text>
-
-  <!-- Type 3: Semantic Drift (slate dashed) -->
-  <rect x="460" y="68" width="190" height="160" rx="8" fill="#FFFFFF" stroke="#141413" stroke-width="1.8" stroke-dasharray="6,3"/>
-  <rect x="460" y="68" width="190" height="28" rx="8" fill="#141413"/>
-  <rect x="460" y="84" width="190" height="12" fill="#141413"/>
-  <text x="555" y="87" text-anchor="middle" font-size="11" font-weight="600" fill="#FAF9F5" font-family="ui-monospace, monospace">Semantic Drift</text>
-  <text x="472" y="112" font-size="10" fill="#141413" font-family="ui-monospace, monospace">语义漂移</text>
-  <line x1="460" y1="120" x2="650" y2="120" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="472" y="137" font-size="9.5" fill="#87867F">字段存在</text>
-  <text x="472" y="152" font-size="9.5" fill="#87867F">类型匹配</text>
-  <text x="472" y="167" font-size="9.5" fill="#87867F">但含义已变</text>
-  <text x="472" y="182" font-size="9.5" fill="#87867F">业务逻辑失效</text>
-  <rect x="472" y="193" width="76" height="22" rx="4" fill="#141413" opacity="0.08"/>
-  <text x="510" y="208" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">最难发现</text>
-
-  <!-- Arrows to Impact Cascade -->
-  <line x1="125" y1="228" x2="125" y2="248" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="125,254 121,246 129,246" fill="#D1CFC5"/>
-
-  <line x1="340" y1="228" x2="340" y2="248" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="340,254 336,246 344,246" fill="#D1CFC5"/>
-
-  <line x1="555" y1="228" x2="555" y2="248" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="555,254 551,246 559,246" fill="#D1CFC5"/>
-
-  <!-- Impact Cascade node -->
-  <rect x="200" y="258" width="280" height="72" rx="10" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <text x="340" y="280" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Impact Cascade</text>
-  <text x="340" y="296" text-anchor="middle" font-size="10" fill="#141413">级联影响</text>
-  <text x="340" y="312" text-anchor="middle" font-size="9" fill="#87867F">单一变更 → 多服务故障 → 业务中断</text>
-
-  <!-- Horizontal arrows to cascade -->
-  <line x1="220" y1="290" x2="205" y2="290" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="201,290 209,286 209,294" fill="#D97757"/>
-
-  <line x1="460" y1="290" x2="475" y2="290" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="479,290 471,286 471,294" fill="#D97757"/>
-
-  <!-- Severity indicator -->
-  <text x="30" y="350" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">severity:</text>
-  <rect x="75" y="341" width="50" height="10" rx="2" fill="#D97757" opacity="0.3"/>
-  <rect x="125" y="341" width="50" height="10" rx="2" fill="#788C5D" opacity="0.3"/>
-  <rect x="175" y="341" width="50" height="10" rx="2" fill="#141413" opacity="0.15"/>
-  <text x="80" y="349" text-anchor="middle" font-size="8" fill="#87867F">显性</text>
-  <text x="130" y="349" text-anchor="middle" font-size="8" fill="#87867F">隐性</text>
-  <text x="180" y="349" text-anchor="middle" font-size="8" fill="#87867F">最危险</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 360">
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <text x="340" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">契约漂移类型分类</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native 软件工程系列 #52</text>
+  <rect width="190" height="160" x="30" y="68" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="190" height="28" x="30" y="68" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M30 84h190v12H30z"/>
+  <text x="125" y="87" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Breaking Change</text>
+  <text x="42" y="112" fill="#141413" font-family="ui-monospace, monospace" font-size="10">破坏性变更</text>
+  <path stroke="#d1cfc5" d="M30 120h190"/>
+  <text x="42" y="137" fill="#87867f" font-size="9.5">删除字段/端点</text>
+  <text x="42" y="152" fill="#87867f" font-size="9.5">修改字段类型</text>
+  <text x="42" y="167" fill="#87867f" font-size="9.5">新增必填字段</text>
+  <text x="42" y="182" fill="#87867f" font-size="9.5">修改URL路径</text>
+  <rect width="76" height="22" x="42" y="193" fill="#d97757" opacity=".12" rx="4"/>
+  <text x="80" y="208" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">立即失败</text>
+  <rect width="190" height="160" x="245" y="68" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <rect width="190" height="28" x="245" y="68" fill="#788c5d" rx="8"/>
+  <path fill="#788c5d" d="M245 84h190v12H245z"/>
+  <text x="340" y="87" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Non-Breaking Change</text>
+  <text x="257" y="112" fill="#141413" font-family="ui-monospace, monospace" font-size="10">非破坏性变更</text>
+  <path stroke="#d1cfc5" d="M245 120h190"/>
+  <text x="257" y="137" fill="#87867f" font-size="9.5">新增可选字段</text>
+  <text x="257" y="152" fill="#87867f" font-size="9.5">扩展枚举值</text>
+  <text x="257" y="167" fill="#87867f" font-size="9.5">放宽验证规则</text>
+  <text x="257" y="182" fill="#87867f" font-size="9.5">新增端点</text>
+  <rect width="76" height="22" x="257" y="193" fill="#788c5d" opacity=".12" rx="4"/>
+  <text x="295" y="208" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">可能隐性失败</text>
+  <rect width="190" height="160" x="460" y="68" fill="#fff" stroke="#141413" stroke-dasharray="6,3" stroke-width="1.8" rx="8"/>
+  <rect width="190" height="28" x="460" y="68" fill="#141413" rx="8"/>
+  <path fill="#141413" d="M460 84h190v12H460z"/>
+  <text x="555" y="87" fill="#faf9f5" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Semantic Drift</text>
+  <text x="472" y="112" fill="#141413" font-family="ui-monospace, monospace" font-size="10">语义漂移</text>
+  <path stroke="#d1cfc5" d="M460 120h190"/>
+  <text x="472" y="137" fill="#87867f" font-size="9.5">字段存在</text>
+  <text x="472" y="152" fill="#87867f" font-size="9.5">类型匹配</text>
+  <text x="472" y="167" fill="#87867f" font-size="9.5">但含义已变</text>
+  <text x="472" y="182" fill="#87867f" font-size="9.5">业务逻辑失效</text>
+  <rect width="76" height="22" x="472" y="193" fill="#141413" opacity=".08" rx="4"/>
+  <text x="510" y="208" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">最难发现</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M125 228v20"/>
+  <path fill="#d1cfc5" d="m125 254-4-8h8z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M340 228v20"/>
+  <path fill="#d1cfc5" d="m340 254-4-8h8z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M555 228v20"/>
+  <path fill="#d1cfc5" d="m555 254-4-8h8z"/>
+  <rect width="280" height="72" x="200" y="258" fill="#fff" stroke="#d97757" stroke-width="2" rx="10"/>
+  <text x="340" y="280" fill="#d97757" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">Impact Cascade</text>
+  <text x="340" y="296" fill="#141413" font-size="10" text-anchor="middle">级联影响</text>
+  <text x="340" y="312" fill="#87867f" font-size="9" text-anchor="middle">单一变更 → 多服务故障 → 业务中断</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M220 290h-15"/>
+  <path fill="#d97757" d="m201 290 8-4v8z"/>
+  <path stroke="#d97757" stroke-width="1.5" d="M460 290h15"/>
+  <path fill="#d97757" d="m479 290-8-4v8z"/>
+  <text x="30" y="350" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">severity:</text>
+  <rect width="50" height="10" x="75" y="341" fill="#d97757" opacity=".3" rx="2"/>
+  <rect width="50" height="10" x="125" y="341" fill="#788c5d" opacity=".3" rx="2"/>
+  <rect width="50" height="10" x="175" y="341" fill="#141413" opacity=".15" rx="2"/>
+  <text x="80" y="349" fill="#87867f" font-size="8" text-anchor="middle">显性</text>
+  <text x="130" y="349" fill="#87867f" font-size="8" text-anchor="middle">隐性</text>
+  <text x="180" y="349" fill="#87867f" font-size="8" text-anchor="middle">最危险</text>
 </svg>

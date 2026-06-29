@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 410.5 220.0" width="100%" role="img" aria-label="Visual Isolation UI Layer">
-<rect width="410.5" height="220.0" fill="#FAF9F5"/>
-<rect x="0" y="0" width="410.5" height="220.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
-<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────┐</text>
-<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  🔒 System Instructions (Locked)    │</text>
-<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  你是一个安全的 AI 助手...            │</text>
-<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────┤</text>
-<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  👤 User Input                       │</text>
-<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  用户输入内容...                      │</text>
-<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────┤</text>
-<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  🤖 AI Response                      │</text>
-<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  AI 响应内容...                       │</text>
-<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">└─────────────────────────────────────┘</text>
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Visual Isolation UI Layer" viewBox="0 0 410.5 220">
+  <path fill="#faf9f5" d="M0 0h410.5v220H0z"/>
+  <rect width="410.5" height="220" fill="#d1cfc5" opacity=".15" rx="8"/>
+  <text xml:space="preserve" x="20" y="33.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">┌─────────────────────────────────────┐</text>
+  <text xml:space="preserve" x="20" y="51.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  🔒 System Instructions (Locked)    │</text>
+  <text xml:space="preserve" x="20" y="69.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  你是一个安全的 AI 助手...            │</text>
+  <text xml:space="preserve" x="20" y="87.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="105.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  👤 User Input                       │</text>
+  <text xml:space="preserve" x="20" y="123.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  用户输入内容...                      │</text>
+  <text xml:space="preserve" x="20" y="141.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="159.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  🤖 AI Response                      │</text>
+  <text xml:space="preserve" x="20" y="177.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  AI 响应内容...                       │</text>
+  <text xml:space="preserve" x="20" y="195.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">└─────────────────────────────────────┘</text>
 </svg>

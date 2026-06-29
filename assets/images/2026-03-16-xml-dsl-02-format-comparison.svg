@@ -1,84 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="XML vs 现代格式对比">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="XML vs 现代格式对比" viewBox="0 0 800 520">
   <title>XML vs JSON/YAML：场景选择指南</title>
-  <desc>展示XML作为DSL在特定场景下的优势，以及何时选择现代格式</desc>
-
+  <desc>
+    展示XML作为DSL在特定场景下的优势，以及何时选择现代格式
+  </desc>
   <defs>
-    <filter id="shadow5" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
-    </filter>
-    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#F0EFE9"/>
+    <linearGradient id="bgGrad5" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#f0efe9"/>
     </linearGradient>
-    <marker id="checkArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#788C5D"/>
-    </marker>
-    <marker id="crossArrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
-    </marker>
+    <filter id="shadow5" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <rect width="800" height="520" fill="url(#bgGrad5)"/>
-
-  <text x="400" y="42" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">XML vs 现代格式：场景选择</text>
-  <text x="400" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" fill="#87867F">When to use XML as a DSL vs JSON/YAML</text>
-
-  <!-- Left column: XML -->
+  <path fill="url(#bgGrad5)" d="M0 0h800v520H0z"/>
+  <text x="400" y="42" fill="#141413" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">XML vs 现代格式：场景选择</text>
+  <text x="400" y="66" fill="#87867f" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">When to use XML as a DSL vs JSON/YAML</text>
   <g filter="url(#shadow5)">
-    <rect x="60" y="95" width="340" height="320" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
+    <rect width="340" height="320" x="60" y="95" fill="#faf9f5" stroke="#d97757" stroke-width="2" rx="10"/>
   </g>
-  <rect x="60" y="95" width="340" height="40" rx="10" fill="#D97757"/>
-  <rect x="60" y="123" width="340" height="12" fill="#D97757"/>
-  <text x="230" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FAF9F5">XML 适合的场景</text>
-
-  <text x="80" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 严格结构验证 (XSD)</text>
-  <text x="90" y="186" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Schema 验证比 JSON Schema 更成熟</text>
-
-  <text x="80" y="214" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 层级嵌套表达</text>
-  <text x="90" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">属性 vs 元素的语义区分</text>
-
-  <text x="80" y="260" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 混合内容文档</text>
-  <text x="90" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">文本 + 标记（技术文档）</text>
-
-  <text x="80" y="306" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 成熟工具链</text>
-  <text x="90" y="324" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">XPath, XSLT, XQuery, XSD</text>
-
-  <text x="80" y="352" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 遗留系统集成</text>
-  <text x="90" y="370" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">Maven, Android, SVG, Office</text>
-
-  <text x="80" y="398" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 行业标准协议</text>
-  <text x="90" y="416" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">SOAP, WSDL (虽然复杂)</text>
-
-  <!-- Right column: JSON/YAML -->
+  <rect width="340" height="40" x="60" y="95" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M60 123h340v12H60z"/>
+  <text x="230" y="124" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">XML 适合的场景</text>
+  <text x="80" y="168" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 严格结构验证 (XSD)</text>
+  <text x="90" y="186" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">Schema 验证比 JSON Schema 更成熟</text>
+  <text x="80" y="214" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 层级嵌套表达</text>
+  <text x="90" y="232" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">属性 vs 元素的语义区分</text>
+  <text x="80" y="260" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 混合内容文档</text>
+  <text x="90" y="278" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">文本 + 标记（技术文档）</text>
+  <text x="80" y="306" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 成熟工具链</text>
+  <text x="90" y="324" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">XPath, XSLT, XQuery, XSD</text>
+  <text x="80" y="352" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 遗留系统集成</text>
+  <text x="90" y="370" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">Maven, Android, SVG, Office</text>
+  <text x="80" y="398" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 行业标准协议</text>
+  <text x="90" y="416" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">SOAP, WSDL (虽然复杂)</text>
   <g filter="url(#shadow5)">
-    <rect x="400" y="95" width="340" height="320" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
+    <rect width="340" height="320" x="400" y="95" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="10"/>
   </g>
-  <rect x="400" y="95" width="340" height="40" rx="10" fill="#788C5D"/>
-  <rect x="400" y="123" width="340" height="12" fill="#788C5D"/>
-  <text x="570" y="124" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FAF9F5">JSON/YAML 适合的场景</text>
-
-  <text x="420" y="168" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ Web API 通信</text>
-  <text x="430" y="186" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">REST API, gRPC 更现代</text>
-
-  <text x="420" y="214" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 简单配置</text>
-  <text x="430" y="232" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">键值对、少量嵌套</text>
-
-  <text x="420" y="260" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 人类手写</text>
-  <text x="430" y="278" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">YAML 空格敏感但简洁</text>
-
-  <text x="420" y="306" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 低解析开销</text>
-  <text x="430" y="324" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">JSON 解析器轻量简单</text>
-
-  <text x="420" y="352" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ 生态系统</text>
-  <text x="430" y="370" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">JavaScript 原生支持</text>
-
-  <text x="420" y="398" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">✅ NoSQL / 灵活结构</text>
-  <text x="430" y="416" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">MongoDB, Redis 友好</text>
-
-  <!-- Bottom conclusion -->
+  <rect width="340" height="40" x="400" y="95" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M400 123h340v12H400z"/>
+  <text x="570" y="124" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle">JSON/YAML 适合的场景</text>
+  <text x="420" y="168" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ Web API 通信</text>
+  <text x="430" y="186" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">REST API, gRPC 更现代</text>
+  <text x="420" y="214" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 简单配置</text>
+  <text x="430" y="232" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">键值对、少量嵌套</text>
+  <text x="420" y="260" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 人类手写</text>
+  <text x="430" y="278" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">YAML 空格敏感但简洁</text>
+  <text x="420" y="306" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 低解析开销</text>
+  <text x="430" y="324" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">JSON 解析器轻量简单</text>
+  <text x="420" y="352" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ 生态系统</text>
+  <text x="430" y="370" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">JavaScript 原生支持</text>
+  <text x="420" y="398" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600">✅ NoSQL / 灵活结构</text>
+  <text x="430" y="416" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">MongoDB, Redis 友好</text>
   <g filter="url(#shadow5)">
-    <rect x="60" y="440" width="680" height="60" rx="8" fill="#141413"/>
+    <rect width="680" height="60" x="60" y="440" fill="#141413" rx="8"/>
   </g>
-  <text x="400" y="468" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#FAF9F5">合适工具做合适的事，无论新旧</text>
-  <text x="400" y="488" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#D1CFC5">技术的价值在于解决问题，而不是追随潮流</text>
+  <text x="400" y="468" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">合适工具做合适的事，无论新旧</text>
+  <text x="400" y="488" fill="#d1cfc5" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">技术的价值在于解决问题，而不是追随潮流</text>
 </svg>

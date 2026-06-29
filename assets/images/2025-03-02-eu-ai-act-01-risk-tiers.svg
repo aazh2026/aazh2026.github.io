@@ -1,107 +1,84 @@
-<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .text-main { fill: #141413; font-family: system-ui, sans-serif; }
-      .text-sub { fill: #87867F; font-family: system-ui, sans-serif; }
-      .text-accent { fill: #D97757; font-family: system-ui, sans-serif; font-weight: 600; }
-      .text-light { fill: #FAF9F5; font-family: system-ui, sans-serif; }
+      .text-light,.text-main,.text-sub{font-family:system-ui,sans-serif}.text-main,.text-sub{fill:#141413}.text-sub{fill:#87867f}.text-light{fill:#faf9f5}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="560" class="bg"/>
-
-  <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" class="text-main" font-size="17" font-weight="700">EU AI Act 风险分级体系</text>
-  <text x="450" y="56" text-anchor="middle" class="text-sub" font-size="12">Risk Classification Framework — Four Tiers</text>
-
-  <!-- Pyramid layers -->
-  <!-- Tier 1: Unacceptable Risk (top) -->
-  <polygon points="450,75 330,165 570,165" fill="#141413"/>
-  <text x="450" y="132" text-anchor="middle" class="text-light" font-size="13" font-weight="700">不可接受风险</text>
-  <text x="450" y="148" text-anchor="middle" class="text-light" font-size="10">完全禁止</text>
-
-  <!-- Tier 2: High Risk (middle-top) -->
-  <polygon points="330,170 570,170 620,255 280,255" fill="#D97757"/>
-  <text x="450" y="202" text-anchor="middle" class="text-light" font-size="13" font-weight="700">高风险</text>
-  <text x="450" y="218" text-anchor="middle" class="text-light" font-size="10">严格合规义务</text>
-
-  <!-- Tier 3: Limited Risk (middle-bottom) -->
-  <polygon points="280,260 620,260 660,345 240,345" fill="#788C5D"/>
-  <text x="450" y="293" text-anchor="middle" class="text-light" font-size="13" font-weight="700">有限风险</text>
-  <text x="450" y="309" text-anchor="middle" class="text-light" font-size="10">透明度义务</text>
-
-  <!-- Tier 4: Minimal Risk (bottom) -->
-  <polygon points="240,350 660,350 700,435 200,435" fill="#D1CFC5"/>
-  <text x="450" y="383" text-anchor="middle" class="text-main" font-size="13" font-weight="700">最小风险</text>
-  <text x="450" y="399" text-anchor="middle" class="text-main" font-size="10">自愿准则</text>
-
-  <!-- Right side: High Risk details -->
-  <rect x="620" y="75" width="270" height="370" rx="8" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
-
-  <rect x="620" y="75" width="270" height="30" rx="8" fill="#D97757"/>
-  <rect x="620" y="90" width="270" height="15" fill="#D97757"/>
-  <text x="755" y="96" text-anchor="middle" class="text-light" font-size="12" font-weight="700">高风险AI系统判定标准</text>
-
+  <path d="M0 0h900v560H0z" style="fill:#faf9f5"/>
+  <text x="450" y="36" class="text-main" font-size="17" font-weight="700" text-anchor="middle">EU AI Act 风险分级体系</text>
+  <text x="450" y="56" class="text-sub" font-size="12" text-anchor="middle">Risk Classification Framework — Four Tiers</text>
+  <path fill="#141413" d="m450 75-120 90h240z"/>
+  <text x="450" y="132" class="text-light" font-size="13" font-weight="700" text-anchor="middle">不可接受风险</text>
+  <text x="450" y="148" class="text-light" font-size="10" text-anchor="middle">完全禁止</text>
+  <path fill="#d97757" d="M330 170h240l50 85H280z"/>
+  <text x="450" y="202" class="text-light" font-size="13" font-weight="700" text-anchor="middle">高风险</text>
+  <text x="450" y="218" class="text-light" font-size="10" text-anchor="middle">严格合规义务</text>
+  <path fill="#788c5d" d="M280 260h340l40 85H240z"/>
+  <text x="450" y="293" class="text-light" font-size="13" font-weight="700" text-anchor="middle">有限风险</text>
+  <text x="450" y="309" class="text-light" font-size="10" text-anchor="middle">透明度义务</text>
+  <path fill="#d1cfc5" d="M240 350h420l40 85H200z"/>
+  <text x="450" y="383" class="text-main" font-size="13" font-weight="700" text-anchor="middle">最小风险</text>
+  <text x="450" y="399" class="text-main" font-size="10" text-anchor="middle">自愿准则</text>
+  <rect width="270" height="370" x="620" y="75" fill="#faf9f5" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <rect width="270" height="30" x="620" y="75" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M620 90h270v15H620z"/>
+  <text x="755" y="96" class="text-light" font-size="12" font-weight="700" text-anchor="middle">高风险AI系统判定标准</text>
   <text x="635" y="125" class="text-main" font-size="11" font-weight="700">关键基础设施</text>
   <text x="635" y="142" class="text-sub" font-size="10">道路交通管理 · 供水/供气/供电</text>
-
   <text x="635" y="165" class="text-main" font-size="11" font-weight="700">教育领域</text>
   <text x="635" y="182" class="text-sub" font-size="10">入学录取决策 · 学习过程评估</text>
-
   <text x="635" y="205" class="text-main" font-size="11" font-weight="700">就业领域</text>
   <text x="635" y="222" class="text-sub" font-size="10">招聘筛选 · 晋升评估 · 绩效监控</text>
-
   <text x="635" y="245" class="text-main" font-size="11" font-weight="700">金融领域</text>
   <text x="635" y="262" class="text-sub" font-size="10">信贷评估 · 保险定价</text>
-
   <text x="635" y="285" class="text-main" font-size="11" font-weight="700">司法领域</text>
   <text x="635" y="302" class="text-sub" font-size="10">协助司法决策 · 风险评估</text>
-
   <text x="635" y="325" class="text-main" font-size="11" font-weight="700">医疗领域</text>
   <text x="635" y="342" class="text-sub" font-size="10">医疗设备AI · 健康风险评估</text>
-
-  <!-- Compliance requirements for high risk -->
-  <rect x="620" y="375" width="270" height="70" rx="6" fill="#FEF3F0" stroke="#D97757" stroke-width="1"/>
-  <text x="755" y="392" text-anchor="middle" class="text-accent" font-size="11" font-weight="700">高风险系统必须满足</text>
+  <rect width="270" height="70" x="620" y="375" fill="#fef3f0" stroke="#d97757" rx="6"/>
+  <text x="755" y="392" font-size="11" style="fill:#d97757;font-family:system-ui,sans-serif;font-weight:600" text-anchor="middle">高风险系统必须满足</text>
   <text x="635" y="410" class="text-sub" font-size="10">① 风险管理系统 ② 数据治理</text>
   <text x="635" y="426" class="text-sub" font-size="10">③ 技术文档 ④ 记录保存（≥6年）</text>
   <text x="635" y="442" class="text-sub" font-size="10">⑤ 透明度 ⑥ 人工监督 ⑦ 准确性/鲁棒性/安全</text>
-
-  <!-- Bottom: Compliance timeline -->
-  <rect x="30" y="455" width="840" height="85" rx="8" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="840" height="85" x="30" y="455" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
   <text x="50" y="477" class="text-main" font-size="12" font-weight="700">合规实施路线图</text>
-
-  <rect x="50" y="490" width="150" height="40" rx="5" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="125" y="508" text-anchor="middle" class="text-main" font-size="10" font-weight="600">阶段一</text>
-  <text x="125" y="522" text-anchor="middle" class="text-sub" font-size="9">系统分类 1-2周</text>
-
-  <line x1="200" y1="510" x2="230" y2="510" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr)"/>
-  <defs><marker id="arr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#87867F"/></marker></defs>
-
-  <rect x="230" y="490" width="150" height="40" rx="5" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="305" y="508" text-anchor="middle" class="text-main" font-size="10" font-weight="600">阶段二</text>
-  <text x="305" y="522" text-anchor="middle" class="text-sub" font-size="9">技术文档 2-4周</text>
-
-  <line x1="380" y1="510" x2="410" y2="510" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr2)"/>
-  <defs><marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#87867F"/></marker></defs>
-
-  <rect x="410" y="490" width="150" height="40" rx="5" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="485" y="508" text-anchor="middle" class="text-main" font-size="10" font-weight="600">阶段三</text>
-  <text x="485" y="522" text-anchor="middle" class="text-sub" font-size="9">技术实现 4-8周</text>
-
-  <line x1="560" y1="510" x2="590" y2="510" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr3)"/>
-  <defs><marker id="arr3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#87867F"/></marker></defs>
-
-  <rect x="590" y="490" width="150" height="40" rx="5" fill="#FAF9F5" stroke="#788C5D" stroke-width="1"/>
-  <text x="665" y="508" text-anchor="middle" class="text-main" font-size="10" font-weight="600">阶段四</text>
-  <text x="665" y="522" text-anchor="middle" class="text-sub" font-size="9">合规声明与注册 2-4周</text>
-
-  <line x1="740" y1="510" x2="770" y2="510" stroke="#87867F" stroke-width="1.5" marker-end="url(#arr4)"/>
-  <defs><marker id="arr4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><polygon points="0 0,6 3,0 6" fill="#87867F"/></marker></defs>
-
-  <rect x="770" y="490" width="90" height="40" rx="5" fill="#788C5D"/>
-  <text x="815" y="508" text-anchor="middle" class="text-light" font-size="10" font-weight="600">持续</text>
-  <text x="815" y="522" text-anchor="middle" class="text-light" font-size="9">运营监控</text>
+  <rect width="150" height="40" x="50" y="490" fill="#faf9f5" stroke="#d1cfc5" rx="5"/>
+  <text x="125" y="508" class="text-main" font-size="10" font-weight="600" text-anchor="middle">阶段一</text>
+  <text x="125" y="522" class="text-sub" font-size="9" text-anchor="middle">系统分类 1-2周</text>
+  <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arr)" d="M200 510h30"/>
+  <defs>
+    <marker id="arr" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3">
+      <path fill="#87867f" d="m0 0 6 3-6 3z"/>
+    </marker>
+  </defs>
+  <rect width="150" height="40" x="230" y="490" fill="#faf9f5" stroke="#d1cfc5" rx="5"/>
+  <text x="305" y="508" class="text-main" font-size="10" font-weight="600" text-anchor="middle">阶段二</text>
+  <text x="305" y="522" class="text-sub" font-size="9" text-anchor="middle">技术文档 2-4周</text>
+  <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arr2)" d="M380 510h30"/>
+  <defs>
+    <marker id="arr2" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3">
+      <path fill="#87867f" d="m0 0 6 3-6 3z"/>
+    </marker>
+  </defs>
+  <rect width="150" height="40" x="410" y="490" fill="#faf9f5" stroke="#d1cfc5" rx="5"/>
+  <text x="485" y="508" class="text-main" font-size="10" font-weight="600" text-anchor="middle">阶段三</text>
+  <text x="485" y="522" class="text-sub" font-size="9" text-anchor="middle">技术实现 4-8周</text>
+  <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arr3)" d="M560 510h30"/>
+  <defs>
+    <marker id="arr3" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3">
+      <path fill="#87867f" d="m0 0 6 3-6 3z"/>
+    </marker>
+  </defs>
+  <rect width="150" height="40" x="590" y="490" fill="#faf9f5" stroke="#788c5d" rx="5"/>
+  <text x="665" y="508" class="text-main" font-size="10" font-weight="600" text-anchor="middle">阶段四</text>
+  <text x="665" y="522" class="text-sub" font-size="9" text-anchor="middle">合规声明与注册 2-4周</text>
+  <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arr4)" d="M740 510h30"/>
+  <defs>
+    <marker id="arr4" markerHeight="6" markerWidth="6" orient="auto" refX="5" refY="3">
+      <path fill="#87867f" d="m0 0 6 3-6 3z"/>
+    </marker>
+  </defs>
+  <rect width="90" height="40" x="770" y="490" fill="#788c5d" rx="5"/>
+  <text x="815" y="508" class="text-light" font-size="10" font-weight="600" text-anchor="middle">持续</text>
+  <text x="815" y="522" class="text-light" font-size="9" text-anchor="middle">运营监控</text>
 </svg>

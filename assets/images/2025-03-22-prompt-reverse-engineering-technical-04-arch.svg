@@ -1,70 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" font-family="'Courier New', Courier, monospace" font-size="12">
-  <rect width="680" height="300" fill="#FAF9F5"/>
-
-  <!-- Outer border -->
-  <rect x="10" y="10" width="660" height="280" fill="none" stroke="#141413" stroke-width="2"/>
-  <!-- Header row -->
-  <rect x="10" y="10" width="660" height="30" fill="#D97757"/>
-  <text x="200" y="29" text-anchor="middle" fill="#FAF9F5" font-weight="bold">Prompt层级</text>
-  <line x1="340" y1="10" x2="340" y2="290" stroke="#141413" stroke-width="1"/>
-  <text x="460" y="29" text-anchor="middle" fill="#FAF9F5" font-weight="bold">逆向难度</text>
-  <line x1="540" y1="10" x2="540" y2="290" stroke="#141413" stroke-width="1"/>
-  <text x="610" y="29" text-anchor="middle" fill="#FAF9F5" font-weight="bold">典型方法</text>
-
-  <!-- Row 1: User Prompt -->
-  <rect x="10" y="40" width="330" height="46" fill="#E3DACC"/>
-  <rect x="10" y="40" width="330" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', Courier, monospace" font-size="12" viewBox="0 0 680 300">
+  <path fill="#faf9f5" d="M0 0h680v300H0z"/>
+  <path fill="none" stroke="#141413" stroke-width="2" d="M10 10h660v280H10z"/>
+  <path fill="#d97757" d="M10 10h660v30H10z"/>
+  <text x="200" y="29" fill="#faf9f5" font-weight="bold" text-anchor="middle">Prompt层级</text>
+  <path stroke="#141413" d="M340 10v280"/>
+  <text x="460" y="29" fill="#faf9f5" font-weight="bold" text-anchor="middle">逆向难度</text>
+  <path stroke="#141413" d="M540 10v280"/>
+  <text x="610" y="29" fill="#faf9f5" font-weight="bold" text-anchor="middle">典型方法</text>
+  <path fill="#e3dacc" d="M10 40h330v46H10z"/>
+  <path fill="none" stroke="#d1cfc5" d="M10 40h330v46H10z"/>
   <text x="25" y="58" fill="#141413">User Prompt（用户输入）</text>
-  <rect x="340" y="40" width="200" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="440" y="67" text-anchor="middle" font-size="16">⭐</text>
-  <rect x="540" y="40" width="130" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path fill="none" stroke="#d1cfc5" d="M340 40h200v46H340z"/>
+  <text x="440" y="67" font-size="16" text-anchor="middle">⭐</text>
+  <path fill="none" stroke="#d1cfc5" d="M540 40h130v46H540z"/>
   <text x="550" y="67" fill="#141413">直接观察</text>
-
-  <!-- Row 2: System Prompt -->
-  <line x1="10" y1="86" x2="670" y2="86" stroke="#141413" stroke-width="1"/>
-  <rect x="10" y="86" width="330" height="46" fill="#E3DACC"/>
-  <rect x="10" y="86" width="330" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path stroke="#141413" d="M10 86h660"/>
+  <path fill="#e3dacc" d="M10 86h330v46H10z"/>
+  <path fill="none" stroke="#d1cfc5" d="M10 86h330v46H10z"/>
   <text x="25" y="104" fill="#141413">System Prompt（系统指令）</text>
-  <rect x="340" y="86" width="200" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="440" y="113" text-anchor="middle" font-size="16">⭐⭐⭐</text>
-  <text x="440" y="128" text-anchor="middle" fill="#141413" font-size="10">中等</text>
-  <rect x="540" y="86" width="130" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path fill="none" stroke="#d1cfc5" d="M340 86h200v46H340z"/>
+  <text x="440" y="113" font-size="16" text-anchor="middle">⭐⭐⭐</text>
+  <text x="440" y="128" fill="#141413" font-size="10" text-anchor="middle">中等</text>
+  <path fill="none" stroke="#d1cfc5" d="M540 86h130v46H540z"/>
   <text x="550" y="122" fill="#141413">Layer 1-2</text>
-
-  <!-- Row 3: Tool Definition -->
-  <line x1="10" y1="132" x2="670" y2="132" stroke="#141413" stroke-width="1"/>
-  <rect x="10" y="132" width="330" height="46" fill="#E3DACC"/>
-  <rect x="10" y="132" width="330" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path stroke="#141413" d="M10 132h660"/>
+  <path fill="#e3dacc" d="M10 132h330v46H10z"/>
+  <path fill="none" stroke="#d1cfc5" d="M10 132h330v46H10z"/>
   <text x="25" y="150" fill="#141413">Tool Definition（工具定义）</text>
-  <rect x="340" y="132" width="200" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="440" y="159" text-anchor="middle" font-size="16">⭐⭐⭐⭐</text>
-  <text x="440" y="174" text-anchor="middle" fill="#141413" font-size="10">困难</text>
-  <rect x="540" y="132" width="130" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path fill="none" stroke="#d1cfc5" d="M340 132h200v46H340z"/>
+  <text x="440" y="159" font-size="16" text-anchor="middle">⭐⭐⭐⭐</text>
+  <text x="440" y="174" fill="#141413" font-size="10" text-anchor="middle">困难</text>
+  <path fill="none" stroke="#d1cfc5" d="M540 132h130v46H540z"/>
   <text x="550" y="168" fill="#141413">Layer 3</text>
-
-  <!-- Row 4: Agent Workflow -->
-  <line x1="10" y1="178" x2="670" y2="178" stroke="#141413" stroke-width="1"/>
-  <rect x="10" y="178" width="330" height="46" fill="#E3DACC"/>
-  <rect x="10" y="178" width="330" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path stroke="#141413" d="M10 178h660"/>
+  <path fill="#e3dacc" d="M10 178h330v46H10z"/>
+  <path fill="none" stroke="#d1cfc5" d="M10 178h330v46H10z"/>
   <text x="25" y="196" fill="#141413">Agent Workflow（代理工作流）</text>
-  <rect x="340" y="178" width="200" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="440" y="205" text-anchor="middle" font-size="16">⭐⭐⭐⭐⭐</text>
-  <text x="440" y="220" text-anchor="middle" fill="#141413" font-size="10">极难</text>
-  <rect x="540" y="178" width="130" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path fill="none" stroke="#d1cfc5" d="M340 178h200v46H340z"/>
+  <text x="440" y="205" font-size="16" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  <text x="440" y="220" fill="#141413" font-size="10" text-anchor="middle">极难</text>
+  <path fill="none" stroke="#d1cfc5" d="M540 178h130v46H540z"/>
   <text x="550" y="214" fill="#141413">Layer 4</text>
-
-  <!-- Row 5: State & Memory -->
-  <line x1="10" y1="224" x2="670" y2="224" stroke="#141413" stroke-width="1"/>
-  <rect x="10" y="224" width="330" height="46" fill="#E3DACC"/>
-  <rect x="10" y="224" width="330" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path stroke="#141413" d="M10 224h660"/>
+  <path fill="#e3dacc" d="M10 224h330v46H10z"/>
+  <path fill="none" stroke="#d1cfc5" d="M10 224h330v46H10z"/>
   <text x="25" y="242" fill="#141413">State &amp; Memory（状态与记忆）</text>
-  <rect x="340" y="224" width="200" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="440" y="251" text-anchor="middle" font-size="16">⭐⭐⭐⭐⭐</text>
-  <text x="440" y="266" text-anchor="middle" fill="#141413" font-size="10">极难</text>
-  <rect x="540" y="224" width="130" height="46" fill="none" stroke="#D1CFC5" stroke-width="1"/>
+  <path fill="none" stroke="#d1cfc5" d="M340 224h200v46H340z"/>
+  <text x="440" y="251" font-size="16" text-anchor="middle">⭐⭐⭐⭐⭐</text>
+  <text x="440" y="266" fill="#141413" font-size="10" text-anchor="middle">极难</text>
+  <path fill="none" stroke="#d1cfc5" d="M540 224h130v46H540z"/>
   <text x="550" y="260" fill="#141413">需要长期观察</text>
-
-  <!-- Vertical dividers -->
-  <line x1="340" y1="40" x2="340" y2="270" stroke="#141413" stroke-width="1"/>
-  <line x1="540" y1="40" x2="540" y2="270" stroke="#141413" stroke-width="1"/>
+  <path stroke="#141413" d="M340 40v230M540 40v230"/>
 </svg>

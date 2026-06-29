@@ -1,61 +1,37 @@
-<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- CEO Agent → VP → Team -->
-  <rect width="560" height="200" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">CEO Agent 分层管理模式</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/31</text>
-
-  <!-- CEO Agent (top) -->
-  <rect x="180" y="48" width="200" height="42" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="180" y="48" width="200" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="280" y="62" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">CEO Agent</text>
-  <text x="280" y="78" text-anchor="middle" font-size="9" fill="#87867F">战略决策 · 全局协调</text>
-  <rect x="372" y="56" width="14" height="14" rx="7" fill="#D97757"/>
-  <text x="379" y="67" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">C</text>
-
-  <!-- Arrows: CEO → VP1, VP2, VP3 -->
-  <line x1="280" y1="90" x2="110" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="280" y1="90" x2="280" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="280" y1="90" x2="450" y2="110" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- VP1 -->
-  <rect x="50" y="110" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="50" y="110" width="120" height="14" rx="5" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="110" y="123" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">VP 1</text>
-  <text x="110" y="138" text-anchor="middle" font-size="9" fill="#141413">工程VP</text>
-  <rect x="162" y="118" width="12" height="12" rx="6" fill="#EA580C"/>
-  <text x="168" y="127" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">V1</text>
-
-  <!-- VP2 -->
-  <rect x="220" y="110" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="220" y="110" width="120" height="14" rx="5" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="280" y="123" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">VP 2</text>
-  <text x="280" y="138" text-anchor="middle" font-size="9" fill="#141413">产品VP</text>
-  <rect x="332" y="118" width="12" height="12" rx="6" fill="#EA580C"/>
-  <text x="338" y="127" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">V2</text>
-
-  <!-- VP3 -->
-  <rect x="390" y="110" width="120" height="38" rx="5" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="390" y="110" width="120" height="14" rx="5" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="450" y="123" text-anchor="middle" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">VP 3</text>
-  <text x="450" y="138" text-anchor="middle" font-size="9" fill="#141413">运营VP</text>
-  <rect x="502" y="118" width="12" height="12" rx="6" fill="#EA580C"/>
-  <text x="508" y="127" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">V3</text>
-
-  <!-- VP1 → Team1 -->
-  <line x1="110" y1="148" x2="80" y2="170" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="110" y1="148" x2="140" y2="170" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Team1 -->
-  <rect x="30" y="170" width="150" height="22" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="105" y="186" text-anchor="middle" font-size="9" fill="#2563EB" font-weight="600">Team 1</text>
-
-  <!-- VP3 → Team2 -->
-  <line x1="450" y1="148" x2="420" y2="170" stroke="#D1CFC5" stroke-width="1.5"/>
-  <line x1="450" y1="148" x2="480" y2="170" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Team2 -->
-  <rect x="380" y="170" width="150" height="22" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="455" y="186" text-anchor="middle" font-size="9" fill="#2563EB" font-weight="600">Team 2</text>
-
-  <text x="280" y="198" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">多级决策链条，适用于大型组织</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 200">
+  <path fill="#faf9f5" d="M0 0h560v200H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">CEO Agent 分层管理模式</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2026/03/31</text>
+  <rect width="200" height="42" x="180" y="48" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <rect width="200" height="18" x="180" y="48" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="280" y="62" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">CEO Agent</text>
+  <text x="280" y="78" fill="#87867f" font-size="9" text-anchor="middle">战略决策 · 全局协调</text>
+  <rect width="14" height="14" x="372" y="56" fill="#d97757" rx="7"/>
+  <text x="379" y="67" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">C</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="m280 90-170 20m170-20v20m0-20 170 20"/>
+  <rect width="120" height="38" x="50" y="110" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="50" y="110" fill="#fed7aa" stroke="#ea580c" rx="5"/>
+  <text x="110" y="123" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">VP 1</text>
+  <text x="110" y="138" fill="#141413" font-size="9" text-anchor="middle">工程VP</text>
+  <rect width="12" height="12" x="162" y="118" fill="#ea580c" rx="6"/>
+  <text x="168" y="127" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">V1</text>
+  <rect width="120" height="38" x="220" y="110" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="220" y="110" fill="#fed7aa" stroke="#ea580c" rx="5"/>
+  <text x="280" y="123" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">VP 2</text>
+  <text x="280" y="138" fill="#141413" font-size="9" text-anchor="middle">产品VP</text>
+  <rect width="12" height="12" x="332" y="118" fill="#ea580c" rx="6"/>
+  <text x="338" y="127" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">V2</text>
+  <rect width="120" height="38" x="390" y="110" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="5"/>
+  <rect width="120" height="14" x="390" y="110" fill="#fed7aa" stroke="#ea580c" rx="5"/>
+  <text x="450" y="123" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">VP 3</text>
+  <text x="450" y="138" fill="#141413" font-size="9" text-anchor="middle">运营VP</text>
+  <rect width="12" height="12" x="502" y="118" fill="#ea580c" rx="6"/>
+  <text x="508" y="127" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">V3</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="m110 148-30 22m30-22 30 22"/>
+  <rect width="150" height="22" x="30" y="170" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="5"/>
+  <text x="105" y="186" fill="#2563eb" font-size="9" font-weight="600" text-anchor="middle">Team 1</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="m450 148-30 22m30-22 30 22"/>
+  <rect width="150" height="22" x="380" y="170" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="5"/>
+  <text x="455" y="186" fill="#2563eb" font-size="9" font-weight="600" text-anchor="middle">Team 2</text>
+  <text x="280" y="198" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">多级决策链条，适用于大型组织</text>
 </svg>

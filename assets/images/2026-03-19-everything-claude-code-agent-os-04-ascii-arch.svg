@@ -1,84 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="680" height="290" viewBox="0 0 680 290" style="background:#FAF9F5;font-family:monospace,monospace">
+<svg xmlns="http://www.w3.org/2000/svg" style="background:#faf9f5;font-family:monospace,monospace" viewBox="0 0 680 290">
   <style>
-    .lbl  { font-size:13px; font-weight:700; fill:#141413 }
-    .txt  { font-size:12px; fill:#141413 }
-    .sub  { font-size:11px; fill:#87867F }
-    .brd  { stroke:#D1CFC5; stroke-width:1.5; fill:none }
-    .sep  { stroke:#D1CFC5; stroke-width:1.5 }
-    .lay3 { fill:#E3DACC }
-    .lay2 { fill:#FAF9F5 }
-    .lay1 { fill:#FAF9F5 }
-    .lnk  { stroke:#D1CFC5; stroke-width:1.2; fill:none; stroke-dasharray:4,3 }
-    .dot  { fill:#D97757 }
-    .hd3  { fill:#D97757 }
-    .hd2  { fill:#788C5D }
-    .hd1  { fill:#87867F }
+    .lbl,.txt{fill:#141413}.lbl{font-size:13px;font-weight:700}.txt{font-size:12px}.sub{font-size:11px;fill:#87867f}.lnk{stroke:#d1cfc5;stroke-width:1.2;fill:none;stroke-dasharray:4,3}.dot{fill:#d97757}
   </style>
-
-  <!-- Outer box -->
-  <rect x="2" y="2" width="676" height="286" rx="5" class="brd"/>
-
-  <!-- Layer 3 background -->
-  <rect x="2" y="38" width="676" height="76" class="lay3" style="clip-path:inset(0 round 0 0 5px)"/>
-
-  <!-- Layer 2 background -->
-  <rect x="2" y="114" width="676" height="76" class="lay2"/>
-
-  <!-- Layer 1 background -->
-  <rect x="2" y="190" width="676" height="98" style="clip-path:inset(0 0 5px 5px round 0 0 5px 5px)"/>
-
-  <!-- Separator 3→2 -->
-  <line x1="2" y1="114" x2="678" y2="114" class="sep"/>
-
-  <!-- Separator 2→1 -->
-  <line x1="2" y1="190" x2="678" y2="190" class="sep"/>
-
-  <!-- ── Layer 3: 控制层 ── -->
-  <rect x="20" y="20" width="10" height="10" rx="5" class="hd3"/>
+  <rect width="676" height="286" x="2" y="2" rx="5" style="stroke:#d1cfc5;stroke-width:1.5;fill:none"/>
+  <path d="M2 38h676v76H2z" style="fill:#e3dacc;clip-path:inset(0 round 0 0 5px)"/>
+  <path d="M2 114h676v76H2z" style="fill:#faf9f5"/>
+  <path d="M2 190h676v98H2z" style="clip-path:inset(0 0 5px 5px round 0 0 5px 5px)"/>
+  <path d="M2 114h676M2 190h676" style="stroke:#d1cfc5;stroke-width:1.5"/>
+  <rect width="10" height="10" x="20" y="20" rx="5" style="fill:#d97757"/>
   <text x="36" y="30" class="lbl">Layer 3: 控制层 (Rules)</text>
-
-  <!-- Tree lines for Layer 3 -->
-  <line x1="44" y1="50" x2="44" y2="96" class="lnk"/>
-  <line x1="44" y1="50" x2="60" y2="50" class="lnk"/>
+  <path d="M44 50v46m0-46h16" class="lnk"/>
   <circle cx="60" cy="50" r="2.5" class="dot"/>
-  <line x1="44" y1="50" x2="60" y2="72" class="lnk"/>
+  <path d="m44 50 16 22" class="lnk"/>
   <circle cx="60" cy="72" r="2.5" class="dot"/>
-  <line x1="44" y1="50" x2="60" y2="94" class="lnk"/>
+  <path d="m44 50 16 44" class="lnk"/>
   <circle cx="60" cy="94" r="2.5" class="dot"/>
-
-  <text x="70" y="54" class="txt">coding-style.md</text><text x="200" y="54" class="sub">→ 编码规范</text>
-  <text x="70" y="76" class="txt">security.md</text><text x="200" y="76" class="sub">→ 安全规则</text>
-  <text x="70" y="98" class="txt">testing.md</text><text x="200" y="98" class="sub">→ 测试要求</text>
-
-  <!-- ── Layer 2: 执行层 ── -->
-  <rect x="20" y="96" width="10" height="10" rx="5" class="hd2"/>
+  <text x="70" y="54" class="txt">coding-style.md</text>
+  <text x="200" y="54" class="sub">→ 编码规范</text>
+  <text x="70" y="76" class="txt">security.md</text>
+  <text x="200" y="76" class="sub">→ 安全规则</text>
+  <text x="70" y="98" class="txt">testing.md</text>
+  <text x="200" y="98" class="sub">→ 测试要求</text>
+  <rect width="10" height="10" x="20" y="96" rx="5" style="fill:#788c5d"/>
   <text x="36" y="106" class="lbl">Layer 2: 执行层 (Commands)</text>
-
-  <line x1="44" y1="126" x2="44" y2="172" class="lnk"/>
-  <line x1="44" y1="126" x2="60" y2="126" class="lnk"/>
+  <path d="M44 126v46m0-46h16" class="lnk"/>
   <circle cx="60" cy="126" r="2.5" class="dot"/>
-  <line x1="44" y1="126" x2="60" y2="148" class="lnk"/>
+  <path d="m44 126 16 22" class="lnk"/>
   <circle cx="60" cy="148" r="2.5" class="dot"/>
-  <line x1="44" y1="126" x2="60" y2="170" class="lnk"/>
+  <path d="m44 126 16 44" class="lnk"/>
   <circle cx="60" cy="170" r="2.5" class="dot"/>
-
-  <text x="70" y="130" class="txt">/plan</text><text x="128" y="130" class="sub">→ 规划模式</text>
-  <text x="70" y="152" class="txt">/tdd</text><text x="128" y="152" class="sub">→ TDD 开发模式</text>
-  <text x="70" y="174" class="txt">/review</text><text x="128" y="174" class="sub">→ 审查模式</text>
-
-  <!-- ── Layer 1: 工具层 ── -->
-  <rect x="20" y="176" width="10" height="10" rx="5" class="hd1"/>
+  <text x="70" y="130" class="txt">/plan</text>
+  <text x="128" y="130" class="sub">→ 规划模式</text>
+  <text x="70" y="152" class="txt">/tdd</text>
+  <text x="128" y="152" class="sub">→ TDD 开发模式</text>
+  <text x="70" y="174" class="txt">/review</text>
+  <text x="128" y="174" class="sub">→ 审查模式</text>
+  <rect width="10" height="10" x="20" y="176" rx="5" style="fill:#87867f"/>
   <text x="36" y="186" class="lbl">Layer 1: 工具层 (MCP)</text>
-
-  <line x1="44" y1="206" x2="44" y2="252" class="lnk"/>
-  <line x1="44" y1="206" x2="60" y2="206" class="lnk"/>
+  <path d="M44 206v46m0-46h16" class="lnk"/>
   <circle cx="60" cy="206" r="2.5" class="dot"/>
-  <line x1="44" y1="206" x2="60" y2="228" class="lnk"/>
+  <path d="m44 206 16 22" class="lnk"/>
   <circle cx="60" cy="228" r="2.5" class="dot"/>
-  <line x1="44" y1="206" x2="60" y2="250" class="lnk"/>
+  <path d="m44 206 16 44" class="lnk"/>
   <circle cx="60" cy="250" r="2.5" class="dot"/>
-
-  <text x="70" y="210" class="txt">GitHub MCP</text><text x="190" y="210" class="sub">→ 代码仓库操作</text>
-  <text x="70" y="232" class="txt">Supabase MCP</text><text x="190" y="232" class="sub">→ 数据库操作</text>
-  <text x="70" y="254" class="txt">API MCP</text><text x="190" y="254" class="sub">→ 外部服务集成</text>
+  <text x="70" y="210" class="txt">GitHub MCP</text>
+  <text x="190" y="210" class="sub">→ 代码仓库操作</text>
+  <text x="70" y="232" class="txt">Supabase MCP</text>
+  <text x="190" y="232" class="sub">→ 数据库操作</text>
+  <text x="70" y="254" class="txt">API MCP</text>
+  <text x="190" y="254" class="sub">→ 外部服务集成</text>
 </svg>

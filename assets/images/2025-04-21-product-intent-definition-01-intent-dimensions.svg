@@ -1,76 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
   <defs>
-    <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg3" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="shadow3" width="120%" height="130%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="4" flood-color="#141413" flood-opacity=".12" stdDeviation="6"/>
     </filter>
   </defs>
-
   <rect width="900" height="600" fill="url(#bg3)" rx="16"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" fill="#141413">Product Intent 五维度框架</text>
-  <text x="450" y="64" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#87867F">Five Dimensions of Product Intent for AI-Native Products</text>
-
-  <!-- Center hub -->
-  <circle cx="450" cy="310" r="52" fill="#D97757" filter="url(#shadow3)"/>
-  <text x="450" y="303" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Product</text>
-  <text x="450" y="320" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">Intent</text>
-
-  <!-- Dimension 1: Business Intent (top) -->
-  <rect x="100" y="90" width="700" height="70" rx="10" fill="#D97757" filter="url(#shadow3)"/>
-  <text x="130" y="116" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">维度 1：业务意图 Business Intent</text>
-  <text x="130" y="136" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">要解决什么业务问题？成功指标是什么？</text>
-  <text x="700" y="130" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">problem · opportunity · success_metrics</text>
-  <line x1="450" y1="160" x2="450" y2="248" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,3"/>
-
-  <!-- Dimension 2: User Intent (top-left) -->
-  <rect x="60" y="210" width="260" height="100" rx="10" fill="#788C5D" filter="url(#shadow3)"/>
-  <text x="85" y="237" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">维度 2：用户意图</text>
-  <text x="85" y="255" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">用户希望获得什么价值？</text>
-  <text x="85" y="273" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">user_segments · user_scenarios</text>
-  <text x="85" y="291" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">pain_point · expectation</text>
-  <line x1="320" y1="260" x2="398" y2="282" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,3"/>
-
-  <!-- Dimension 3: Functional Intent (top-right) -->
-  <rect x="580" y="210" width="260" height="100" rx="10" fill="#87867F" filter="url(#shadow3)"/>
-  <text x="605" y="237" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#FAF9F5">维度 3：功能意图</text>
-  <text x="605" y="255" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">系统需要具备什么能力？</text>
-  <text x="605" y="273" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">core_capabilities · non_functional</text>
-  <text x="605" y="291" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">latency · availability · scalability</text>
-  <line x1="580" y1="260" x2="502" y2="282" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,3"/>
-
-  <!-- Dimension 4: Constraint Intent (bottom-left) -->
-  <rect x="60" y="400" width="260" height="100" rx="10" fill="#D1CFC5" filter="url(#shadow3)"/>
-  <text x="85" y="427" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#141413">维度 4：约束意图</text>
-  <text x="85" y="445" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#141413" opacity="0.8">系统绝对不能做什么？</text>
-  <text x="85" y="463" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#141413" opacity="0.8">hard_constraints · soft_constraints</text>
-  <text x="85" y="481" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#141413" opacity="0.8">隐私 · 公平性 · 准确性</text>
-  <line x1="320" y1="450" x2="398" y2="338" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,3"/>
-
-  <!-- Dimension 5: Evolution Intent (bottom-right) -->
-  <rect x="580" y="400" width="260" height="100" rx="10" fill="#D1CFC5" filter="url(#shadow3)"/>
-  <text x="605" y="427" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" fill="#141413">维度 5：演化意图</text>
-  <text x="605" y="445" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#141413" opacity="0.8">功能如何随时间和反馈演进？</text>
-  <text x="605" y="463" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#141413" opacity="0.8">learning_mechanism · iteration_plan</text>
-  <text x="605" y="481" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#141413" opacity="0.8">feedback_loop · sunset_criteria</text>
-  <line x1="580" y1="450" x2="502" y2="338" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="5,3"/>
-
-  <!-- Bottom: Implementation -->
-  <rect x="250" y="530" width="400" height="50" rx="25" fill="#D97757" opacity="0.85" filter="url(#shadow3)"/>
-  <text x="450" y="558" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5">→ AI 实现 → 意图验证 → 部署监控</text>
-
-  <!-- Legend -->
-  <text x="50" y="580" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">颜色说明：</text>
-  <rect x="110" y="570" width="12" height="12" rx="3" fill="#D97757"/>
-  <text x="128" y="580" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">业务/核心意图</text>
-  <rect x="230" y="570" width="12" height="12" rx="3" fill="#788C5D"/>
-  <text x="248" y="580" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">用户/AI行为</text>
-  <rect x="340" y="570" width="12" height="12" rx="3" fill="#87867F"/>
-  <text x="358" y="580" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">技术/功能</text>
-  <rect x="440" y="570" width="12" height="12" rx="3" fill="#D1CFC5"/>
-  <text x="458" y="580" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#87867F">约束/演化</text>
+  <text x="450" y="42" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Product Intent 五维度框架</text>
+  <text x="450" y="64" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" text-anchor="middle">Five Dimensions of Product Intent for AI-Native Products</text>
+  <circle cx="450" cy="310" r="52" fill="#d97757" filter="url(#shadow3)"/>
+  <text x="450" y="303" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Product</text>
+  <text x="450" y="320" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700" text-anchor="middle">Intent</text>
+  <rect width="700" height="70" x="100" y="90" fill="#d97757" filter="url(#shadow3)" rx="10"/>
+  <text x="130" y="116" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700">维度 1：业务意图 Business Intent</text>
+  <text x="130" y="136" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">要解决什么业务问题？成功指标是什么？</text>
+  <text x="700" y="130" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" text-anchor="middle">problem · opportunity · success_metrics</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="2" d="M450 160v88"/>
+  <rect width="260" height="100" x="60" y="210" fill="#788c5d" filter="url(#shadow3)" rx="10"/>
+  <text x="85" y="237" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700">维度 2：用户意图</text>
+  <text x="85" y="255" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">用户希望获得什么价值？</text>
+  <text x="85" y="273" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">user_segments · user_scenarios</text>
+  <text x="85" y="291" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">pain_point · expectation</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="2" d="m320 260 78 22"/>
+  <rect width="260" height="100" x="580" y="210" fill="#87867f" filter="url(#shadow3)" rx="10"/>
+  <text x="605" y="237" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700">维度 3：功能意图</text>
+  <text x="605" y="255" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">系统需要具备什么能力？</text>
+  <text x="605" y="273" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">core_capabilities · non_functional</text>
+  <text x="605" y="291" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">latency · availability · scalability</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="2" d="m580 260-78 22"/>
+  <rect width="260" height="100" x="60" y="400" fill="#d1cfc5" filter="url(#shadow3)" rx="10"/>
+  <text x="85" y="427" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700">维度 4：约束意图</text>
+  <text x="85" y="445" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".8">系统绝对不能做什么？</text>
+  <text x="85" y="463" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8">hard_constraints · soft_constraints</text>
+  <text x="85" y="481" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8">隐私 · 公平性 · 准确性</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="2" d="m320 450 78-112"/>
+  <rect width="260" height="100" x="580" y="400" fill="#d1cfc5" filter="url(#shadow3)" rx="10"/>
+  <text x="605" y="427" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="700">维度 5：演化意图</text>
+  <text x="605" y="445" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".8">功能如何随时间和反馈演进？</text>
+  <text x="605" y="463" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8">learning_mechanism · iteration_plan</text>
+  <text x="605" y="481" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8">feedback_loop · sunset_criteria</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="2" d="m580 450-78-112"/>
+  <rect width="400" height="50" x="250" y="530" fill="#d97757" filter="url(#shadow3)" opacity=".85" rx="25"/>
+  <text x="450" y="558" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700" text-anchor="middle">→ AI 实现 → 意图验证 → 部署监控</text>
+  <text x="50" y="580" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10">颜色说明：</text>
+  <rect width="12" height="12" x="110" y="570" fill="#d97757" rx="3"/>
+  <text x="128" y="580" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10">业务/核心意图</text>
+  <rect width="12" height="12" x="230" y="570" fill="#788c5d" rx="3"/>
+  <text x="248" y="580" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10">用户/AI行为</text>
+  <rect width="12" height="12" x="340" y="570" fill="#87867f" rx="3"/>
+  <text x="358" y="580" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10">技术/功能</text>
+  <rect width="12" height="12" x="440" y="570" fill="#d1cfc5" rx="3"/>
+  <text x="458" y="580" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10">约束/演化</text>
 </svg>

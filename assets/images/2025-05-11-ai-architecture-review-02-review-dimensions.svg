@@ -1,141 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="AI架构评审维度">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="AI架构评审维度" viewBox="0 0 800 480">
   <title>AI架构评审新维度：传统维度 + AI特性评估</title>
-  <desc>AI参与架构设计时需要扩展的评审维度，包括可解释性、公平性、鲁棒性、可控性</desc>
-
+  <desc>
+    AI参与架构设计时需要扩展的评审维度，包括可解释性、公平性、鲁棒性、可控性
+  </desc>
   <defs>
-    <linearGradient id="bg5" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg5" x1="0%" x2="0%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
   </defs>
-
-  <rect width="800" height="480" fill="url(#bg5)"/>
-
-  <!-- Title -->
-  <text x="400" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#141413">AI架构评审维度扩展</text>
-  <text x="400" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">传统架构评审 + AI特性评估（可解释性、公平性、鲁棒性、可控性）</text>
-
-  <!-- Section label: Traditional -->
-  <rect x="30" y="75" width="200" height="26" rx="13" fill="#D1CFC5"/>
-  <text x="130" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#141413">传统维度</text>
-
-  <!-- Section label: AI New -->
-  <rect x="570" y="75" width="200" height="26" rx="13" fill="#D97757" opacity="0.3"/>
-  <text x="670" y="93" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#D97757">AI 新增维度</text>
-
-  <!-- Traditional dimensions row -->
-  <g transform="translate(30, 115)">
-    <!-- Functional -->
-    <g>
-      <rect width="160" height="80" rx="8" fill="#D1CFC5" opacity="0.5"/>
-      <text x="80" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">功能性</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#87867F">
-        <text x="10" y="44">是否满足业务需求</text>
-        <text x="10" y="58">功能完整性</text>
-        <text x="10" y="72">需求覆盖率</text>
-      </g>
-    </g>
-
-    <!-- Performance -->
-    <g transform="translate(175, 0)">
-      <rect width="160" height="80" rx="8" fill="#D1CFC5" opacity="0.5"/>
-      <text x="80" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">性能</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#87867F">
-        <text x="10" y="44">响应时间</text>
-        <text x="10" y="58">吞吐量</text>
-        <text x="10" y="72">资源利用率</text>
-      </g>
-    </g>
-
-    <!-- Security -->
-    <g transform="translate(350, 0)">
-      <rect width="160" height="80" rx="8" fill="#D1CFC5" opacity="0.5"/>
-      <text x="80" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">安全性</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#87867F">
-        <text x="10" y="44">漏洞检测</text>
-        <text x="10" y="58">权限控制</text>
-        <text x="10" y="72">加密机制</text>
-      </g>
-    </g>
-
-    <!-- Reliability -->
-    <g transform="translate(525, 0)">
-      <rect width="160" height="80" rx="8" fill="#D1CFC5" opacity="0.5"/>
-      <text x="80" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">可靠性</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#87867F">
-        <text x="10" y="44">可用性</text>
-        <text x="10" y="58">容错性</text>
-        <text x="10" y="72">恢复能力</text>
-      </g>
+  <path fill="url(#bg5)" d="M0 0h800v480H0z"/>
+  <text x="400" y="36" fill="#141413" font-family="system-ui, sans-serif" font-size="20" font-weight="700" text-anchor="middle">AI架构评审维度扩展</text>
+  <text x="400" y="58" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">传统架构评审 + AI特性评估（可解释性、公平性、鲁棒性、可控性）</text>
+  <rect width="200" height="26" x="30" y="75" fill="#d1cfc5" rx="13"/>
+  <text x="130" y="93" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">传统维度</text>
+  <rect width="200" height="26" x="570" y="75" fill="#d97757" opacity=".3" rx="13"/>
+  <text x="670" y="93" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI 新增维度</text>
+  <g transform="translate(30 115)">
+    <rect width="160" height="80" fill="#d1cfc5" opacity=".5" rx="8"/>
+    <text x="80" y="24" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">功能性</text>
+    <g fill="#87867f" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="44">是否满足业务需求</text>
+      <text x="10" y="58">功能完整性</text>
+      <text x="10" y="72">需求覆盖率</text>
     </g>
   </g>
-
-  <!-- Divider -->
-  <line x1="30" y1="215" x2="770" y2="215" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,4"/>
-
-  <!-- New AI dimensions row -->
-  <g transform="translate(30, 230)">
-    <!-- Explainability -->
-    <g>
-      <rect width="170" height="100" rx="8" fill="#D97757" opacity="0.15" stroke="#D97757" stroke-width="1.5"/>
-      <text x="85" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#D97757">🔍 可解释性</text>
-      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Explainability</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#141413">
-        <text x="10" y="56">L1 黑盒AI — 无法解释</text>
-        <text x="10" y="70">L2 事后解释 — SHAP/LIME</text>
-        <text x="10" y="84">L3 内在可解释 — 决策树</text>
-        <text x="10" y="98" font-weight="600" fill="#D97757">L4 完全透明 — 完整推理链</text>
-      </g>
-    </g>
-
-    <!-- Fairness -->
-    <g transform="translate(185, 0)">
-      <rect width="170" height="100" rx="8" fill="#788C5D" opacity="0.15" stroke="#788C5D" stroke-width="1.5"/>
-      <text x="85" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D">⚖️ 公平性</text>
-      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Fairness</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#141413">
-        <text x="10" y="56">人口统计平等检测</text>
-        <text x="10" y="70">机会平等指标</text>
-        <text x="10" y="84">偏见检测与审计</text>
-        <text x="10" y="98">高风险决策人工复核</text>
-      </g>
-    </g>
-
-    <!-- Robustness -->
-    <g transform="translate(370, 0)">
-      <rect width="170" height="100" rx="8" fill="#141413" opacity="0.1" stroke="#141413" stroke-width="1.5"/>
-      <text x="85" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">🛡️ 鲁棒性</text>
-      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Robustness</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#141413">
-        <text x="10" y="56">对抗攻击抵抗测试</text>
-        <text x="10" y="70">极端输入压力测试</text>
-        <text x="10" y="84">概念漂移适应能力</text>
-        <text x="10" y="98">持续性能监控</text>
-      </g>
-    </g>
-
-    <!-- Controllability -->
-    <g transform="translate(555, 0)">
-      <rect width="170" height="100" rx="8" fill="#87867F" opacity="0.2" stroke="#87867F" stroke-width="1.5"/>
-      <text x="85" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">🎛️ 可控性</text>
-      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#87867F">Controllability</text>
-      <g font-family="system-ui, sans-serif" font-size="9" fill="#141413">
-        <text x="10" y="56">C1 完全自动 — 无需干预</text>
-        <text x="10" y="70">C2 人工监督 — 异常告警</text>
-        <text x="10" y="84">C3 人机协作 — 关键确认</text>
-        <text x="10" y="98" font-weight="600">C4 人工主导 — AI仅建议</text>
-      </g>
+  <g transform="translate(205 115)">
+    <rect width="160" height="80" fill="#d1cfc5" opacity=".5" rx="8"/>
+    <text x="80" y="24" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">性能</text>
+    <g fill="#87867f" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="44">响应时间</text>
+      <text x="10" y="58">吞吐量</text>
+      <text x="10" y="72">资源利用率</text>
     </g>
   </g>
-
-  <!-- Bottom summary -->
-  <rect x="30" y="350" width="740" height="110" rx="10" fill="#141413" opacity="0.06"/>
-  <text x="400" y="370" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#141413">为什么这些维度重要？</text>
-
-  <g font-family="system-ui, sans-serif" font-size="11" fill="#141413">
+  <g transform="translate(380 115)">
+    <rect width="160" height="80" fill="#d1cfc5" opacity=".5" rx="8"/>
+    <text x="80" y="24" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">安全性</text>
+    <g fill="#87867f" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="44">漏洞检测</text>
+      <text x="10" y="58">权限控制</text>
+      <text x="10" y="72">加密机制</text>
+    </g>
+  </g>
+  <g transform="translate(555 115)">
+    <rect width="160" height="80" fill="#d1cfc5" opacity=".5" rx="8"/>
+    <text x="80" y="24" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">可靠性</text>
+    <g fill="#87867f" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="44">可用性</text>
+      <text x="10" y="58">容错性</text>
+      <text x="10" y="72">恢复能力</text>
+    </g>
+  </g>
+  <path stroke="#d1cfc5" stroke-dasharray="4,4" d="M30 215h740"/>
+  <g transform="translate(30 230)">
+    <rect width="170" height="100" fill="#d97757" stroke="#d97757" stroke-width="1.5" opacity=".15" rx="8"/>
+    <text x="85" y="22" fill="#d97757" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🔍 可解释性</text>
+    <text x="85" y="38" fill="#87867f" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Explainability</text>
+    <g fill="#141413" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="56">L1 黑盒AI — 无法解释</text>
+      <text x="10" y="70">L2 事后解释 — SHAP/LIME</text>
+      <text x="10" y="84">L3 内在可解释 — 决策树</text>
+      <text x="10" y="98" fill="#d97757" font-weight="600">L4 完全透明 — 完整推理链</text>
+    </g>
+  </g>
+  <g transform="translate(215 230)">
+    <rect width="170" height="100" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".15" rx="8"/>
+    <text x="85" y="22" fill="#788c5d" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">⚖️ 公平性</text>
+    <text x="85" y="38" fill="#87867f" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Fairness</text>
+    <g fill="#141413" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="56">人口统计平等检测</text>
+      <text x="10" y="70">机会平等指标</text>
+      <text x="10" y="84">偏见检测与审计</text>
+      <text x="10" y="98">高风险决策人工复核</text>
+    </g>
+  </g>
+  <g transform="translate(400 230)">
+    <rect width="170" height="100" fill="#141413" stroke="#141413" stroke-width="1.5" opacity=".1" rx="8"/>
+    <text x="85" y="22" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🛡️ 鲁棒性</text>
+    <text x="85" y="38" fill="#87867f" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Robustness</text>
+    <g fill="#141413" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="56">对抗攻击抵抗测试</text>
+      <text x="10" y="70">极端输入压力测试</text>
+      <text x="10" y="84">概念漂移适应能力</text>
+      <text x="10" y="98">持续性能监控</text>
+    </g>
+  </g>
+  <g transform="translate(585 230)">
+    <rect width="170" height="100" fill="#87867f" stroke="#87867f" stroke-width="1.5" opacity=".2" rx="8"/>
+    <text x="85" y="22" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">🎛️ 可控性</text>
+    <text x="85" y="38" fill="#87867f" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">Controllability</text>
+    <g fill="#141413" font-family="system-ui, sans-serif" font-size="9">
+      <text x="10" y="56">C1 完全自动 — 无需干预</text>
+      <text x="10" y="70">C2 人工监督 — 异常告警</text>
+      <text x="10" y="84">C3 人机协作 — 关键确认</text>
+      <text x="10" y="98" font-weight="600">C4 人工主导 — AI仅建议</text>
+    </g>
+  </g>
+  <rect width="740" height="110" x="30" y="350" fill="#141413" opacity=".06" rx="10"/>
+  <text x="400" y="370" fill="#141413" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">为什么这些维度重要？</text>
+  <g fill="#141413" font-family="system-ui, sans-serif" font-size="11">
     <text x="50" y="394">• <tspan font-weight="600">可解释性</tspan>：金融/医疗等行业要求 L3+ 才能通过监管审计</text>
     <text x="50" y="414">• <tspan font-weight="600">公平性</tspan>：防止 AI 系统对不同群体产生歧视性决策</text>
     <text x="50" y="434">• <tspan font-weight="600">鲁棒性</tspan>：对抗样本和分布外数据可能导致 AI 系统失效</text>
-    <text x="50" y="454">• <tspan font-weight="600">可控性</tspan>：高风险决策必须保留"人在回路"机制</text>
+    <text x="50" y="454">• <tspan font-weight="600">可控性</tspan>：高风险决策必须保留&quot;人在回路&quot;机制</text>
   </g>
 </svg>

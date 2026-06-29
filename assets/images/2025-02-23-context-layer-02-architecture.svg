@@ -1,121 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 560" width="100%" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono', 'Fira Code', 'SF Mono', monospace" viewBox="0 0 820 560">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .text-main { fill: #141413; font-size: 13px; }
-      .text-sm { fill: #87867F; font-size: 11px; }
-      .border { stroke: #D1CFC5; stroke-width: 1.5; }
-      .border-dashed { stroke: #D1CFC5; stroke-width: 1.5; stroke-dasharray: 6 4; }
-      .accent-clay { fill: #D97757; }
-      .accent-olive { fill: #788C5D; }
-      .accent-slate { fill: #141413; }
-      .fill-app { fill: #E3DACC; }
-      .fill-api { fill: #fef3c7; }
-      .fill-cache { fill: #fed7aa; }
-      .fill-source { fill: #dbeafe; }
-      .fill-white { fill: #FFFFFF; }
+      .bg{fill:#faf9f5}.text-main{fill:#141413;font-size:13px}.text-sm{fill:#87867f;font-size:11px}.border,.border-dashed{stroke:#d1cfc5;stroke-width:1.5}.border-dashed{stroke-dasharray:6 4}.accent-slate{fill:#141413}.fill-app{fill:#e3dacc}.fill-api{fill:#fef3c7}.fill-cache{fill:#fed7aa}.fill-source{fill:#dbeafe}.fill-white{fill:#fff}
     </style>
   </defs>
-
-  <rect width="820" height="560" class="bg"/>
-
-  <!-- Title -->
-  <text x="410" y="32" text-anchor="middle" class="text-main" font-size="14" font-weight="600">Context Layer 系统架构图</text>
-
-  <!-- === AI Application box (left) === -->
-  <rect x="30" y="70" width="180" height="130" rx="8" class="fill-app border"/>
-  <text x="120" y="90" text-anchor="middle" class="text-main" font-size="12" font-weight="600">AI Application</text>
-
-  <rect x="50" y="102" width="140" height="28" rx="5" class="fill-white border"/>
-  <text x="120" y="120" text-anchor="middle" class="text-main" font-size="12">Chatbot</text>
-
-  <rect x="50" y="136" width="140" height="28" rx="5" class="fill-white border"/>
-  <text x="120" y="154" text-anchor="middle" class="text-main" font-size="12">CodeGen</text>
-
-  <rect x="50" y="170" width="140" height="28" rx="5" class="fill-white border"/>
-  <text x="120" y="188" text-anchor="middle" class="text-main" font-size="12">Analyst</text>
-
-  <!-- Arrow from App to API -->
-  <line x1="210" y1="135" x2="278" y2="135" class="border" stroke-width="2"/>
-  <polygon points="278,135 270,130 270,140" class="accent-slate"/>
-
-  <!-- === Context Layer API box === -->
-  <rect x="280" y="70" width="200" height="420" rx="8" class="fill-api border" stroke="#D97757" stroke-width="2"/>
-  <text x="380" y="90" text-anchor="middle" class="text-main" font-size="12" font-weight="600">Context Layer API</text>
-
-  <!-- Internal components -->
-  <rect x="298" y="108" width="164" height="44" rx="5" class="fill-cache border" stroke="#ea580c" stroke-width="1.5"/>
-  <text x="380" y="125" text-anchor="middle" class="text-main" font-size="11">Query Interface</text>
-  <text x="380" y="142" text-anchor="middle" class="text-sm">Get context for: order creation</text>
-
-  <rect x="298" y="162" width="164" height="44" rx="5" class="fill-cache border" stroke="#ea580c" stroke-width="1.5"/>
-  <text x="380" y="179" text-anchor="middle" class="text-main" font-size="11">Aggregation Engine</text>
-  <text x="380" y="196" text-anchor="middle" class="text-sm">Collect from multiple sources</text>
-
-  <rect x="298" y="216" width="164" height="44" rx="5" class="fill-cache border" stroke="#ea580c" stroke-width="1.5"/>
-  <text x="380" y="233" text-anchor="middle" class="text-main" font-size="11">Caching Layer</text>
-  <text x="380" y="250" text-anchor="middle" class="text-sm">Redis / Memcached</text>
-
-  <!-- Internal arrows -->
-  <line x1="380" y1="152" x2="380" y2="162" class="border" stroke-width="1.5"/>
-  <polygon points="380,162 376,154 384,154" class="accent-slate"/>
-  <line x1="380" y1="206" x2="380" y2="216" class="border" stroke-width="1.5"/>
-  <polygon points="380,216 376,208 384,208" class="accent-slate"/>
-
-  <!-- Dashed box around internal -->
-  <rect x="290" y="100" width="180" height="170" rx="6" class="border-dashed" stroke="#D97757" stroke-opacity="0.5"/>
-
-  <!-- Arrows from API to sources -->
-  <line x1="380" y1="260" x2="380" y2="290" class="border" stroke-width="1.5"/>
-  <polygon points="380,290 376,282 384,282" class="accent-slate"/>
-
-  <line x1="380" y1="330" x2="240" y2="400" class="border" stroke-width="1.5"/>
-  <polygon points="240,400 248,394 242,388" class="accent-slate"/>
-
-  <line x1="380" y1="330" x2="380" y2="400" class="border" stroke-width="1.5"/>
-  <polygon points="380,400 376,392 384,392" class="accent-slate"/>
-
-  <line x1="380" y1="330" x2="530" y2="400" class="border" stroke-width="1.5"/>
-  <polygon points="530,400 522,394 528,388" class="accent-slate"/>
-
-  <!-- Source boxes -->
-  <rect x="130" y="330" width="180" height="50" rx="6" class="fill-source border" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="220" y="352" text-anchor="middle" class="text-main" font-size="12">Source 1</text>
-  <text x="220" y="368" text-anchor="middle" class="text-sm">GitHub / Repo</text>
-
-  <rect x="290" y="330" width="180" height="50" rx="6" class="fill-source border" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="380" y="352" text-anchor="middle" class="text-main" font-size="12">Source 2</text>
-  <text x="380" y="368" text-anchor="middle" class="text-sm">Confluence</text>
-
-  <rect x="450" y="330" width="180" height="50" rx="6" class="fill-source border" stroke="#2563eb" stroke-width="1.5"/>
-  <text x="540" y="352" text-anchor="middle" class="text-main" font-size="12">Source N</text>
-  <text x="540" y="368" text-anchor="middle" class="text-sm">ADR</text>
-
-  <!-- === Legend === -->
-  <rect x="620" y="80" width="170" height="160" rx="6" class="bg border"/>
-  <text x="705" y="100" text-anchor="middle" class="text-main" font-size="11" font-weight="600">图例</text>
-
-  <rect x="632" y="112" width="14" height="14" rx="3" class="fill-app border"/>
+  <path d="M0 0h820v560H0z" class="bg"/>
+  <text x="410" y="32" class="text-main" font-size="14" font-weight="600" text-anchor="middle">Context Layer 系统架构图</text>
+  <rect width="180" height="130" x="30" y="70" class="fill-app border" rx="8"/>
+  <text x="120" y="90" class="text-main" font-size="12" font-weight="600" text-anchor="middle">AI Application</text>
+  <rect width="140" height="28" x="50" y="102" class="fill-white border" rx="5"/>
+  <text x="120" y="120" class="text-main" font-size="12" text-anchor="middle">Chatbot</text>
+  <rect width="140" height="28" x="50" y="136" class="fill-white border" rx="5"/>
+  <text x="120" y="154" class="text-main" font-size="12" text-anchor="middle">CodeGen</text>
+  <rect width="140" height="28" x="50" y="170" class="fill-white border" rx="5"/>
+  <text x="120" y="188" class="text-main" font-size="12" text-anchor="middle">Analyst</text>
+  <path stroke-width="2" d="M210 135h68" class="border"/>
+  <path d="m278 135-8-5v10z" class="accent-slate"/>
+  <rect width="200" height="420" x="280" y="70" stroke="#d97757" stroke-width="2" class="fill-api border" rx="8"/>
+  <text x="380" y="90" class="text-main" font-size="12" font-weight="600" text-anchor="middle">Context Layer API</text>
+  <rect width="164" height="44" x="298" y="108" stroke="#ea580c" stroke-width="1.5" class="fill-cache border" rx="5"/>
+  <text x="380" y="125" class="text-main" font-size="11" text-anchor="middle">Query Interface</text>
+  <text x="380" y="142" class="text-sm" text-anchor="middle">Get context for: order creation</text>
+  <rect width="164" height="44" x="298" y="162" stroke="#ea580c" stroke-width="1.5" class="fill-cache border" rx="5"/>
+  <text x="380" y="179" class="text-main" font-size="11" text-anchor="middle">Aggregation Engine</text>
+  <text x="380" y="196" class="text-sm" text-anchor="middle">Collect from multiple sources</text>
+  <rect width="164" height="44" x="298" y="216" stroke="#ea580c" stroke-width="1.5" class="fill-cache border" rx="5"/>
+  <text x="380" y="233" class="text-main" font-size="11" text-anchor="middle">Caching Layer</text>
+  <text x="380" y="250" class="text-sm" text-anchor="middle">Redis / Memcached</text>
+  <path stroke-width="1.5" d="M380 152v10" class="border"/>
+  <path d="m380 162-4-8h8z" class="accent-slate"/>
+  <path stroke-width="1.5" d="M380 206v10" class="border"/>
+  <path d="m380 216-4-8h8z" class="accent-slate"/>
+  <rect width="180" height="170" x="290" y="100" stroke="#d97757" stroke-opacity=".5" class="border-dashed" rx="6"/>
+  <path stroke-width="1.5" d="M380 260v30" class="border"/>
+  <path d="m380 290-4-8h8z" class="accent-slate"/>
+  <path stroke-width="1.5" d="m380 330-140 70" class="border"/>
+  <path d="m240 400 8-6-6-6z" class="accent-slate"/>
+  <path stroke-width="1.5" d="M380 330v70" class="border"/>
+  <path d="m380 400-4-8h8z" class="accent-slate"/>
+  <path stroke-width="1.5" d="m380 330 150 70" class="border"/>
+  <path d="m530 400-8-6 6-6z" class="accent-slate"/>
+  <rect width="180" height="50" x="130" y="330" stroke="#2563eb" stroke-width="1.5" class="fill-source border" rx="6"/>
+  <text x="220" y="352" class="text-main" font-size="12" text-anchor="middle">Source 1</text>
+  <text x="220" y="368" class="text-sm" text-anchor="middle">GitHub / Repo</text>
+  <rect width="180" height="50" x="290" y="330" stroke="#2563eb" stroke-width="1.5" class="fill-source border" rx="6"/>
+  <text x="380" y="352" class="text-main" font-size="12" text-anchor="middle">Source 2</text>
+  <text x="380" y="368" class="text-sm" text-anchor="middle">Confluence</text>
+  <rect width="180" height="50" x="450" y="330" stroke="#2563eb" stroke-width="1.5" class="fill-source border" rx="6"/>
+  <text x="540" y="352" class="text-main" font-size="12" text-anchor="middle">Source N</text>
+  <text x="540" y="368" class="text-sm" text-anchor="middle">ADR</text>
+  <rect width="170" height="160" x="620" y="80" class="bg border" rx="6"/>
+  <text x="705" y="100" class="text-main" font-size="11" font-weight="600" text-anchor="middle">图例</text>
+  <rect width="14" height="14" x="632" y="112" class="fill-app border" rx="3"/>
   <text x="654" y="124" class="text-sm">AI 应用</text>
-
-  <rect x="632" y="134" width="14" height="14" rx="3" class="fill-api border" stroke="#D97757"/>
+  <rect width="14" height="14" x="632" y="134" stroke="#d97757" class="fill-api border" rx="3"/>
   <text x="654" y="146" class="text-sm">API 层</text>
-
-  <rect x="632" y="156" width="14" height="14" rx="3" class="fill-cache border" stroke="#ea580c"/>
+  <rect width="14" height="14" x="632" y="156" stroke="#ea580c" class="fill-cache border" rx="3"/>
   <text x="654" y="168" class="text-sm">内部组件</text>
-
-  <rect x="632" y="178" width="14" height="14" rx="3" class="fill-source border" stroke="#2563eb"/>
+  <rect width="14" height="14" x="632" y="178" stroke="#2563eb" class="fill-source border" rx="3"/>
   <text x="654" y="190" class="text-sm">数据源</text>
-
-  <line x1="632" y1="200" x2="750" y2="200" class="border" stroke-width="1.5"/>
-  <polygon points="750,200 742,196 742,204" class="accent-slate"/>
+  <path stroke-width="1.5" d="M632 200h118" class="border"/>
+  <path d="m750 200-8-4v8z" class="accent-slate"/>
   <text x="654" y="204" class="text-sm">数据流向</text>
-
-  <!-- Flow labels on arrows from sources back up -->
-  <text x="180" y="320" text-anchor="middle" class="text-sm">Cache hit →</text>
-  <text x="380" y="320" text-anchor="middle" class="text-sm">Cache hit →</text>
-  <text x="590" y="320" text-anchor="middle" class="text-sm">Cache hit →</text>
-
-  <!-- Vertical line connecting sources arrow starts -->
-  <line x1="380" y1="270" x2="380" y2="330" class="border-dashed" stroke="#87867F"/>
+  <text x="180" y="320" class="text-sm" text-anchor="middle">Cache hit →</text>
+  <text x="380" y="320" class="text-sm" text-anchor="middle">Cache hit →</text>
+  <text x="590" y="320" class="text-sm" text-anchor="middle">Cache hit →</text>
+  <path stroke="#87867f" d="M380 270v60" class="border-dashed"/>
 </svg>

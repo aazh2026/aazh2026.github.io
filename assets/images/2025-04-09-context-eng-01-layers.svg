@@ -1,58 +1,42 @@
-<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Context Engineering: L1-L5 五层 -->
-  <rect width="560" height="220" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">Context Engineering 五层架构</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/09</text>
-
-  <!-- L5 -->
-  <rect x="40" y="50" width="480" height="30" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="50" width="480" height="14" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="60" y="63" font-size="9" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L5</text>
-  <text x="80" y="63" font-size="10.5" fill="#141413" font-weight="600">Organizational Context</text>
-  <text x="270" y="63" font-size="9" fill="#87867F">企业文化 · 战略目标</text>
-  <rect x="490" y="56" width="16" height="12" rx="6" fill="#D97757"/>
-  <text x="498" y="65" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L5</text>
-
-  <line x1="280" y1="80" x2="280" y2="88" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,88 280,96 284,80" fill="#D1CFC5"/>
-
-  <!-- L4 -->
-  <rect x="40" y="88" width="480" height="26" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="40" y="88" width="480" height="13" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="60" y="100" font-size="9" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">L4</text>
-  <text x="80" y="100" font-size="10" fill="#141413" font-weight="600">Domain Context</text>
-  <text x="200" y="100" font-size="9" fill="#87867F">行业知识 · 业务规则</text>
-
-  <line x1="280" y1="114" x2="280" y2="122" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,122 280,130 284,114" fill="#D1CFC5"/>
-
-  <!-- L3 -->
-  <rect x="40" y="122" width="480" height="26" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="122" width="480" height="13" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="60" y="134" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L3</text>
-  <text x="80" y="134" font-size="10" fill="#141413" font-weight="600">System Context</text>
-  <text x="220" y="134" font-size="9" fill="#87867F">数据 Schema · API 接口</text>
-
-  <line x1="280" y1="148" x2="280" y2="156" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,156 280,164 284,148" fill="#D1CFC5"/>
-
-  <!-- L2 -->
-  <rect x="40" y="156" width="480" height="26" rx="6" fill="#FFFFFF" stroke="#3B82F6" stroke-width="1.5"/>
-  <rect x="40" y="156" width="480" height="13" rx="6" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1"/>
-  <text x="60" y="168" font-size="9" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">L2</text>
-  <text x="80" y="168" font-size="10" fill="#141413" font-weight="600">Session Context</text>
-  <text x="220" y="168" font-size="9" fill="#87867F">对话历史 · 用户意图</text>
-
-  <line x1="280" y1="182" x2="280" y2="190" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,190 280,198 284,182" fill="#D1CFC5"/>
-
-  <!-- L1 -->
-  <rect x="40" y="190" width="480" height="22" rx="5" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="40" y="190" width="480" height="11" rx="5" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="60" y="202" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1</text>
-  <text x="80" y="202" font-size="10" fill="#141413" font-weight="600">Task Context</text>
-  <text x="180" y="202" font-size="9" fill="#87867F">当前任务要求</text>
-  <text x="320" y="202" font-size="9" fill="#87867F">Prompt Engineering 处理 L1</text>
-
-  <text x="280" y="218" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">Context Engineering 处理 L2-L5，需要企业全栈上下文管理</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 220">
+  <path fill="#faf9f5" d="M0 0h560v220H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Context Engineering 五层架构</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2025/04/09</text>
+  <rect width="480" height="30" x="40" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="480" height="14" x="40" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="60" y="63" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L5</text>
+  <text x="80" y="63" fill="#141413" font-size="10.5" font-weight="600">Organizational Context</text>
+  <text x="270" y="63" fill="#87867f" font-size="9">企业文化 · 战略目标</text>
+  <rect width="16" height="12" x="490" y="56" fill="#d97757" rx="6"/>
+  <text x="498" y="65" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">L5</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 80v8"/>
+  <path fill="#d1cfc5" d="m276 88 4 8 4-16z"/>
+  <rect width="480" height="26" x="40" y="88" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="13" x="40" y="88" fill="#fed7aa" stroke="#ea580c" rx="6"/>
+  <text x="60" y="100" fill="#ea580c" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L4</text>
+  <text x="80" y="100" fill="#141413" font-size="10" font-weight="600">Domain Context</text>
+  <text x="200" y="100" fill="#87867f" font-size="9">行业知识 · 业务规则</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 114v8"/>
+  <path fill="#d1cfc5" d="m276 122 4 8 4-16z"/>
+  <rect width="480" height="26" x="40" y="122" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="13" x="40" y="122" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="60" y="134" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L3</text>
+  <text x="80" y="134" fill="#141413" font-size="10" font-weight="600">System Context</text>
+  <text x="220" y="134" fill="#87867f" font-size="9">数据 Schema · API 接口</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 148v8"/>
+  <path fill="#d1cfc5" d="m276 156 4 8 4-16z"/>
+  <rect width="480" height="26" x="40" y="156" fill="#fff" stroke="#3b82f6" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="13" x="40" y="156" fill="#bfdbfe" stroke="#3b82f6" rx="6"/>
+  <text x="60" y="168" fill="#3b82f6" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L2</text>
+  <text x="80" y="168" fill="#141413" font-size="10" font-weight="600">Session Context</text>
+  <text x="220" y="168" fill="#87867f" font-size="9">对话历史 · 用户意图</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 182v8"/>
+  <path fill="#d1cfc5" d="m276 190 4 8 4-16z"/>
+  <rect width="480" height="22" x="40" y="190" fill="#fff" stroke="#059669" stroke-width="1.5" rx="5"/>
+  <rect width="480" height="11" x="40" y="190" fill="#d1fae5" stroke="#059669" rx="5"/>
+  <text x="60" y="202" fill="#059669" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L1</text>
+  <text x="80" y="202" fill="#141413" font-size="10" font-weight="600">Task Context</text>
+  <text x="180" y="202" fill="#87867f" font-size="9">当前任务要求</text>
+  <text x="320" y="202" fill="#87867f" font-size="9">Prompt Engineering 处理 L1</text>
+  <text x="280" y="218" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">Context Engineering 处理 L2-L5，需要企业全栈上下文管理</text>
 </svg>

@@ -1,100 +1,78 @@
-<svg viewBox="0 0 680 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 360">
   <title>AI架构评审的范式演进</title>
-  <desc>从传统人工评审到AI-First范式的四个发展阶段</desc>
-
-  <!-- Background -->
-  <rect width="680" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI架构评审的范式演进</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">基于 Addy Osmani 框架改编</text>
-
-  <!-- Stage 1: 传统评审 -->
-  <rect x="30" y="70" width="145" height="200" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="30" y="70" width="145" height="32" rx="8" fill="#E3DACC" stroke="none"/>
-  <rect x="30" y="94" width="145" height="8" fill="#E3DACC" stroke="none"/>
-  <text x="102" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">传统人工评审</text>
-  <text x="102" y="122" text-anchor="middle" font-size="10" fill="#87867F">评审方式</text>
-  <text x="102" y="138" text-anchor="middle" font-size="9.5" fill="#141413">人查人</text>
-  <text x="102" y="156" text-anchor="middle" font-size="10" fill="#87867F">决策依据</text>
-  <text x="102" y="172" text-anchor="middle" font-size="9.5" fill="#141413">经验与直觉</text>
-  <text x="102" y="190" text-anchor="middle" font-size="10" fill="#87867F">量化程度</text>
-  <text x="102" y="206" text-anchor="middle" font-size="9.5" fill="#141413">定性为主</text>
-  <text x="102" y="224" text-anchor="middle" font-size="10" fill="#87867F">AI角色</text>
-  <text x="102" y="240" text-anchor="middle" font-size="9.5" fill="#141413">无</text>
-  <rect x="70" y="248" width="65" height="14" rx="7" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="102" y="258" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">历史阶段</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="175" y1="170" x2="200" y2="170" stroke="#D97757" stroke-width="2"/>
-  <polygon points="200,166 192,170 192,174" fill="#D97757"/>
-  <text x="187" y="160" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">过渡</text>
-
-  <!-- Stage 2: AI辅助评审 -->
-  <rect x="205" y="70" width="145" height="200" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="205" y="70" width="145" height="32" rx="8" fill="#E3DACC" stroke="none"/>
-  <rect x="205" y="94" width="145" height="8" fill="#E3DACC" stroke="none"/>
-  <text x="277" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">AI辅助评审</text>
-  <text x="277" y="122" text-anchor="middle" font-size="10" fill="#87867F">评审方式</text>
-  <text x="277" y="138" text-anchor="middle" font-size="9.5" fill="#141413">机查 + 人查</text>
-  <text x="277" y="156" text-anchor="middle" font-size="10" fill="#87867F">决策依据</text>
-  <text x="277" y="172" text-anchor="middle" font-size="9.5" fill="#141413">数据 + 经验</text>
-  <text x="277" y="190" text-anchor="middle" font-size="10" fill="#87867F">量化程度</text>
-  <text x="277" y="206" text-anchor="middle" font-size="9.5" fill="#141413">半定量</text>
-  <text x="277" y="224" text-anchor="middle" font-size="10" fill="#87867F">AI角色</text>
-  <text x="277" y="240" text-anchor="middle" font-size="9.5" fill="#141413">预审 + 建议</text>
-  <rect x="245" y="248" width="65" height="14" rx="7" fill="#788C5D" stroke="none"/>
-  <text x="277" y="258" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">当前主流</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="350" y1="170" x2="375" y2="170" stroke="#D97757" stroke-width="2"/>
-  <polygon points="375,166 367,170 367,174" fill="#D97757"/>
-  <text x="362" y="160" text-anchor="middle" font-size="8" fill="#D97757" font-family="ui-monospace, monospace">演进</text>
-
-  <!-- Stage 3: AI-First范式 -->
-  <rect x="380" y="70" width="145" height="200" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="380" y="70" width="145" height="32" rx="8" fill="#D97757" stroke="none"/>
-  <rect x="380" y="94" width="145" height="8" fill="#D97757" stroke="none"/>
-  <text x="452" y="90" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">AI-First 范式</text>
-  <text x="452" y="122" text-anchor="middle" font-size="10" fill="#87867F">评审方式</text>
-  <text x="452" y="138" text-anchor="middle" font-size="9.5" fill="#141413">AI全流程主导</text>
-  <text x="452" y="156" text-anchor="middle" font-size="10" fill="#87867F">决策依据</text>
-  <text x="452" y="172" text-anchor="middle" font-size="9.5" fill="#141413">量化模型驱动</text>
-  <text x="452" y="190" text-anchor="middle" font-size="10" fill="#87867F">量化程度</text>
-  <text x="452" y="206" text-anchor="middle" font-size="9.5" fill="#141413">全定量</text>
-  <text x="452" y="224" text-anchor="middle" font-size="10" fill="#87867F">AI角色</text>
-  <text x="452" y="240" text-anchor="middle" font-size="9.5" fill="#141413">主导 + 人类监督</text>
-  <rect x="420" y="248" width="65" height="14" rx="7" fill="#D97757"/>
-  <text x="452" y="258" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">近期趋势</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="525" y1="170" x2="550" y2="170" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <polygon points="550,166 542,170 542,174" fill="#D1CFC5"/>
-  <text x="537" y="160" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">未来</text>
-
-  <!-- Stage 4: 自主架构系统 -->
-  <rect x="555" y="70" width="110" height="200" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.2" stroke-dasharray="6,3"/>
-  <rect x="555" y="70" width="110" height="32" rx="8" fill="#F0EEE6" stroke="none"/>
-  <rect x="555" y="94" width="110" height="8" fill="#F0EEE6" stroke="none"/>
-  <text x="610" y="90" text-anchor="middle" font-size="10" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">自主架构</text>
-  <text x="610" y="122" text-anchor="middle" font-size="10" fill="#87867F">评审方式</text>
-  <text x="610" y="138" text-anchor="middle" font-size="9" fill="#87867F">自演进系统</text>
-  <text x="610" y="156" text-anchor="middle" font-size="10" fill="#87867F">决策依据</text>
-  <text x="610" y="172" text-anchor="middle" font-size="9" fill="#87867F">实时反馈</text>
-  <text x="610" y="190" text-anchor="middle" font-size="10" fill="#87867F">量化程度</text>
-  <text x="610" y="206" text-anchor="middle" font-size="9" fill="#87867F">动态量化</text>
-  <text x="610" y="224" text-anchor="middle" font-size="10" fill="#87867F">AI角色</text>
-  <text x="610" y="240" text-anchor="middle" font-size="9" fill="#87867F">完全自主</text>
-  <rect x="587" y="248" width="46" height="14" rx="7" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="610" y="258" text-anchor="middle" font-size="8" fill="#87867F" font-family="ui-monospace, monospace">远景</text>
-
-  <!-- Bottom note -->
-  <text x="340" y="315" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">特征1：数据驱动的评审 —— 从"我觉得"到"数据显示"</text>
-
-  <!-- Timeline arrow -->
-  <line x1="30" y1="300" x2="650" y2="300" stroke="#D1CFC5" stroke-width="1.2"/>
-  <polygon points="650,296 642,300 642,304" fill="#D1CFC5"/>
-  <text x="340" y="292" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">范式演进时间线 →</text>
+  <desc>
+    从传统人工评审到AI-First范式的四个发展阶段
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v360H0z"/>
+  <text x="340" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI架构评审的范式演进</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">基于 Addy Osmani 框架改编</text>
+  <rect width="145" height="200" x="30" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="145" height="32" x="30" y="70" fill="#e3dacc" rx="8"/>
+  <path fill="#e3dacc" d="M30 94h145v8H30z"/>
+  <text x="102" y="90" fill="#141413" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">传统人工评审</text>
+  <text x="102" y="122" fill="#87867f" font-size="10" text-anchor="middle">评审方式</text>
+  <text x="102" y="138" fill="#141413" font-size="9.5" text-anchor="middle">人查人</text>
+  <text x="102" y="156" fill="#87867f" font-size="10" text-anchor="middle">决策依据</text>
+  <text x="102" y="172" fill="#141413" font-size="9.5" text-anchor="middle">经验与直觉</text>
+  <text x="102" y="190" fill="#87867f" font-size="10" text-anchor="middle">量化程度</text>
+  <text x="102" y="206" fill="#141413" font-size="9.5" text-anchor="middle">定性为主</text>
+  <text x="102" y="224" fill="#87867f" font-size="10" text-anchor="middle">AI角色</text>
+  <text x="102" y="240" fill="#141413" font-size="9.5" text-anchor="middle">无</text>
+  <rect width="65" height="14" x="70" y="248" fill="#f0eee6" stroke="#d1cfc5" rx="7"/>
+  <text x="102" y="258" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">历史阶段</text>
+  <path stroke="#d97757" stroke-width="2" d="M175 170h25"/>
+  <path fill="#d97757" d="m200 166-8 4v4z"/>
+  <text x="187" y="160" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">过渡</text>
+  <rect width="145" height="200" x="205" y="70" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="145" height="32" x="205" y="70" fill="#e3dacc" rx="8"/>
+  <path fill="#e3dacc" d="M205 94h145v8H205z"/>
+  <text x="277" y="90" fill="#141413" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">AI辅助评审</text>
+  <text x="277" y="122" fill="#87867f" font-size="10" text-anchor="middle">评审方式</text>
+  <text x="277" y="138" fill="#141413" font-size="9.5" text-anchor="middle">机查 + 人查</text>
+  <text x="277" y="156" fill="#87867f" font-size="10" text-anchor="middle">决策依据</text>
+  <text x="277" y="172" fill="#141413" font-size="9.5" text-anchor="middle">数据 + 经验</text>
+  <text x="277" y="190" fill="#87867f" font-size="10" text-anchor="middle">量化程度</text>
+  <text x="277" y="206" fill="#141413" font-size="9.5" text-anchor="middle">半定量</text>
+  <text x="277" y="224" fill="#87867f" font-size="10" text-anchor="middle">AI角色</text>
+  <text x="277" y="240" fill="#141413" font-size="9.5" text-anchor="middle">预审 + 建议</text>
+  <rect width="65" height="14" x="245" y="248" fill="#788c5d" rx="7"/>
+  <text x="277" y="258" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">当前主流</text>
+  <path stroke="#d97757" stroke-width="2" d="M350 170h25"/>
+  <path fill="#d97757" d="m375 166-8 4v4z"/>
+  <text x="362" y="160" fill="#d97757" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">演进</text>
+  <rect width="145" height="200" x="380" y="70" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="145" height="32" x="380" y="70" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M380 94h145v8H380z"/>
+  <text x="452" y="90" fill="#fff" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">AI-First 范式</text>
+  <text x="452" y="122" fill="#87867f" font-size="10" text-anchor="middle">评审方式</text>
+  <text x="452" y="138" fill="#141413" font-size="9.5" text-anchor="middle">AI全流程主导</text>
+  <text x="452" y="156" fill="#87867f" font-size="10" text-anchor="middle">决策依据</text>
+  <text x="452" y="172" fill="#141413" font-size="9.5" text-anchor="middle">量化模型驱动</text>
+  <text x="452" y="190" fill="#87867f" font-size="10" text-anchor="middle">量化程度</text>
+  <text x="452" y="206" fill="#141413" font-size="9.5" text-anchor="middle">全定量</text>
+  <text x="452" y="224" fill="#87867f" font-size="10" text-anchor="middle">AI角色</text>
+  <text x="452" y="240" fill="#141413" font-size="9.5" text-anchor="middle">主导 + 人类监督</text>
+  <rect width="65" height="14" x="420" y="248" fill="#d97757" rx="7"/>
+  <text x="452" y="258" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">近期趋势</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M525 170h25"/>
+  <path fill="#d1cfc5" d="m550 166-8 4v4z"/>
+  <text x="537" y="160" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">未来</text>
+  <rect width="110" height="200" x="555" y="70" fill="#fff" stroke="#d1cfc5" stroke-dasharray="6,3" stroke-width="1.2" rx="8"/>
+  <rect width="110" height="32" x="555" y="70" fill="#f0eee6" rx="8"/>
+  <path fill="#f0eee6" d="M555 94h110v8H555z"/>
+  <text x="610" y="90" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">自主架构</text>
+  <text x="610" y="122" fill="#87867f" font-size="10" text-anchor="middle">评审方式</text>
+  <text x="610" y="138" fill="#87867f" font-size="9" text-anchor="middle">自演进系统</text>
+  <text x="610" y="156" fill="#87867f" font-size="10" text-anchor="middle">决策依据</text>
+  <text x="610" y="172" fill="#87867f" font-size="9" text-anchor="middle">实时反馈</text>
+  <text x="610" y="190" fill="#87867f" font-size="10" text-anchor="middle">量化程度</text>
+  <text x="610" y="206" fill="#87867f" font-size="9" text-anchor="middle">动态量化</text>
+  <text x="610" y="224" fill="#87867f" font-size="10" text-anchor="middle">AI角色</text>
+  <text x="610" y="240" fill="#87867f" font-size="9" text-anchor="middle">完全自主</text>
+  <rect width="46" height="14" x="587" y="248" fill="#f0eee6" stroke="#d1cfc5" rx="7"/>
+  <text x="610" y="258" fill="#87867f" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">远景</text>
+  <text x="340" y="315" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">特征1：数据驱动的评审 —— 从&quot;我觉得&quot;到&quot;数据显示&quot;</text>
+  <path stroke="#d1cfc5" stroke-width="1.2" d="M30 300h620"/>
+  <path fill="#d1cfc5" d="m650 296-8 4v4z"/>
+  <text x="340" y="292" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">范式演进时间线 →</text>
 </svg>

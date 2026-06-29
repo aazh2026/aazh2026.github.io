@@ -1,102 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Goodhart's Law and AI judgment bottleneck">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Goodhart's Law and AI judgment bottleneck" viewBox="0 0 800 500">
   <title>Goodhart 定律与 AI 时代的判断力瓶颈</title>
-  <desc>AI 让代码生成成本趋近于零，但判断成本没有下降——判断力成为瓶颈</desc>
-
+  <desc>
+    AI 让代码生成成本趋近于零，但判断成本没有下降——判断力成为瓶颈
+  </desc>
   <defs>
-    <marker id="arrClay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
-    </marker>
-    <marker id="arrSlate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#141413"/>
-    </marker>
-    <marker id="arrOlive" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#788C5D"/>
-    </marker>
     <filter id="shadow">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+      <feDropShadow dx="2" dy="2" flood-color="#141413" flood-opacity=".1" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <rect width="800" height="500" fill="#FAF9F5"/>
-
-  <!-- Header -->
-  <text x="400" y="36" text-anchor="middle" font-family="Georgia, serif" font-size="17" font-weight="bold" fill="#141413">Goodhart 定律：AI 时代的判断力瓶颈</text>
-  <line x1="100" y1="48" x2="700" y2="48" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- LEFT: Traditional era -->
-  <rect x="40" y="65" width="330" height="200" rx="10" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="40" y="65" width="330" height="32" rx="10" fill="#87867F"/>
-  <rect x="40" y="87" width="330" height="10" fill="#87867F"/>
-  <text x="205" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FAF9F5">传统软件工程：成本均衡</text>
-
-  <!-- Bars: generation cost = judgment cost -->
-  <text x="55" y="120" font-family="Arial, sans-serif" font-size="11" fill="#141413">代码生成成本</text>
-  <rect x="160" y="108" width="120" height="20" rx="4" fill="#D97757"/>
-  <text x="220" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAF9F5">中等</text>
-
-  <text x="55" y="155" font-family="Arial, sans-serif" font-size="11" fill="#141413">代码判断成本</text>
-  <rect x="160" y="143" width="120" height="20" rx="4" fill="#788C5D"/>
-  <text x="220" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAF9F5">中等</text>
-
-  <text x="55" y="190" font-family="Arial, sans-serif" font-size="11" fill="#141413">工程师生产力</text>
-  <rect x="160" y="178" width="100" height="20" rx="4" fill="#141413"/>
-  <text x="210" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAF9F5">稳定</text>
-
-  <!-- Balance symbol -->
-  <text x="205" y="248" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#87867F">⚖</text>
-
-  <!-- CENTER: Arrow -->
-  <text x="400" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#D97757">→</text>
-  <text x="400" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#87867F">AI 时代</text>
-
-  <!-- RIGHT: AI era - imbalanced -->
-  <rect x="430" y="65" width="330" height="200" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="430" y="65" width="330" height="32" rx="10" fill="#D97757"/>
-  <rect x="430" y="87" width="330" height="10" fill="#D97757"/>
-  <text x="595" y="86" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FAF9F5">AI 时代：成本分裂</text>
-
-  <!-- Bars: generation → near zero, judgment → high -->
-  <text x="445" y="120" font-family="Arial, sans-serif" font-size="11" fill="#141413">代码生成成本</text>
-  <rect x="160" y="108" width="6" height="20" rx="3" fill="#788C5D" transform="translate(440,0)"/>
-  <text x="466" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#788C5D" font-weight="bold">≈ 0</text>
-
-  <text x="445" y="155" font-family="Arial, sans-serif" font-size="11" fill="#141413">代码判断成本</text>
-  <rect x="570" y="143" width="170" height="20" rx="4" fill="#D97757"/>
-  <text x="655" y="157" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAF9F5">大幅上升</text>
-
-  <text x="445" y="190" font-family="Arial, sans-serif" font-size="11" fill="#141413">高级工程师生产力</text>
-  <rect x="570" y="178" width="60" height="20" rx="4" fill="#141413"/>
-  <text x="600" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FAF9F5">-19%</text>
-
-  <!-- Imbalance warning -->
-  <text x="595" y="248" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#D97757">⚠</text>
-
-  <!-- Goodhart quote box -->
-  <rect x="40" y="278" width="720" height="60" rx="8" fill="#141413" filter="url(#shadow)"/>
-  <text x="400" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-style="italic">"当一个指标变成目标，它就不再是一个好指标。"</text>
-  <text x="400" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#87867F">— Charles Goodhart, 1975 | Marilyn Strathern 简化表述</text>
-
-  <!-- Bottom section: Data evidence -->
-  <rect x="40" y="355" width="720" height="130" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="400" y="377" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#141413">数据证据</text>
-  <line x1="80" y1="386" x2="720" y2="386" stroke="#D1CFC5" stroke-width="0.8"/>
-
-  <!-- Three evidence cards -->
-  <rect x="60" y="396" width="210" height="72" rx="6" fill="#E3DACC"/>
-  <text x="165" y="417" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#D97757">84%</text>
-  <text x="165" y="436" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#141413">开发者使用或计划使用 AI 工具</text>
-  <text x="165" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#87867F">Stack Overflow 2025 调查</text>
-
-  <rect x="295" y="396" width="210" height="72" rx="6" fill="#E3DACC"/>
-  <text x="400" y="417" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#D97757">-19%</text>
-  <text x="400" y="436" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#141413">高级开发者使用 AI 后实际变慢</text>
-  <text x="400" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#87867F">METR 随机对照实验</text>
-
-  <rect x="530" y="396" width="210" height="72" rx="6" fill="#E3DACC"/>
-  <text x="635" y="417" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#D97757">33%</text>
-  <text x="635" y="436" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#141413">对 AI 准确性的信任（↓42%）</text>
-  <text x="635" y="454" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#87867F">Stack Overflow 2025 调查</text>
-
-  <!-- Jevons label -->
-  <text x="760" y="36" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#87867F">Jevons 悖论</text>
+  <path fill="#faf9f5" d="M0 0h800v500H0z"/>
+  <text x="400" y="36" fill="#141413" font-family="Georgia, serif" font-size="17" font-weight="bold" text-anchor="middle">Goodhart 定律：AI 时代的判断力瓶颈</text>
+  <path stroke="#d1cfc5" d="M100 48h600"/>
+  <rect width="330" height="200" x="40" y="65" fill="#e3dacc" stroke="#d1cfc5" stroke-width="1.5" filter="url(#shadow)" rx="10"/>
+  <rect width="330" height="32" x="40" y="65" fill="#87867f" rx="10"/>
+  <path fill="#87867f" d="M40 87h330v10H40z"/>
+  <text x="205" y="86" fill="#faf9f5" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">传统软件工程：成本均衡</text>
+  <text x="55" y="120" fill="#141413" font-family="Arial, sans-serif" font-size="11">代码生成成本</text>
+  <rect width="120" height="20" x="160" y="108" fill="#d97757" rx="4"/>
+  <text x="220" y="122" fill="#faf9f5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">中等</text>
+  <text x="55" y="155" fill="#141413" font-family="Arial, sans-serif" font-size="11">代码判断成本</text>
+  <rect width="120" height="20" x="160" y="143" fill="#788c5d" rx="4"/>
+  <text x="220" y="157" fill="#faf9f5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">中等</text>
+  <text x="55" y="190" fill="#141413" font-family="Arial, sans-serif" font-size="11">工程师生产力</text>
+  <rect width="100" height="20" x="160" y="178" fill="#141413" rx="4"/>
+  <text x="210" y="192" fill="#faf9f5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">稳定</text>
+  <text x="205" y="248" fill="#87867f" font-family="Georgia, serif" font-size="28" text-anchor="middle">⚖</text>
+  <text x="400" y="160" fill="#d97757" font-family="Georgia, serif" font-size="28" text-anchor="middle">→</text>
+  <text x="400" y="180" fill="#87867f" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">AI 时代</text>
+  <rect width="330" height="200" x="430" y="65" fill="#e3dacc" stroke="#d97757" stroke-width="2" filter="url(#shadow)" rx="10"/>
+  <rect width="330" height="32" x="430" y="65" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M430 87h330v10H430z"/>
+  <text x="595" y="86" fill="#faf9f5" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">AI 时代：成本分裂</text>
+  <text x="445" y="120" fill="#141413" font-family="Arial, sans-serif" font-size="11">代码生成成本</text>
+  <rect width="6" height="20" x="160" y="108" fill="#788c5d" rx="3" transform="translate(440)"/>
+  <text x="466" y="122" fill="#788c5d" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">≈ 0</text>
+  <text x="445" y="155" fill="#141413" font-family="Arial, sans-serif" font-size="11">代码判断成本</text>
+  <rect width="170" height="20" x="570" y="143" fill="#d97757" rx="4"/>
+  <text x="655" y="157" fill="#faf9f5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">大幅上升</text>
+  <text x="445" y="190" fill="#141413" font-family="Arial, sans-serif" font-size="11">高级工程师生产力</text>
+  <rect width="60" height="20" x="570" y="178" fill="#141413" rx="4"/>
+  <text x="600" y="192" fill="#faf9f5" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">-19%</text>
+  <text x="595" y="248" fill="#d97757" font-family="Georgia, serif" font-size="28" text-anchor="middle">⚠</text>
+  <rect width="720" height="60" x="40" y="278" fill="#141413" filter="url(#shadow)" rx="8"/>
+  <text x="400" y="300" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-style="italic" text-anchor="middle">&quot;当一个指标变成目标，它就不再是一个好指标。&quot;</text>
+  <text x="400" y="320" fill="#87867f" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">— Charles Goodhart, 1975 | Marilyn Strathern 简化表述</text>
+  <rect width="720" height="130" x="40" y="355" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="400" y="377" fill="#141413" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">数据证据</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M80 386h640"/>
+  <rect width="210" height="72" x="60" y="396" fill="#e3dacc" rx="6"/>
+  <text x="165" y="417" fill="#d97757" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle">84%</text>
+  <text x="165" y="436" fill="#141413" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">开发者使用或计划使用 AI 工具</text>
+  <text x="165" y="454" fill="#87867f" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Stack Overflow 2025 调查</text>
+  <rect width="210" height="72" x="295" y="396" fill="#e3dacc" rx="6"/>
+  <text x="400" y="417" fill="#d97757" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle">-19%</text>
+  <text x="400" y="436" fill="#141413" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">高级开发者使用 AI 后实际变慢</text>
+  <text x="400" y="454" fill="#87867f" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">METR 随机对照实验</text>
+  <rect width="210" height="72" x="530" y="396" fill="#e3dacc" rx="6"/>
+  <text x="635" y="417" fill="#d97757" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle">33%</text>
+  <text x="635" y="436" fill="#141413" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">对 AI 准确性的信任（↓42%）</text>
+  <text x="635" y="454" fill="#87867f" font-family="Arial, sans-serif" font-size="9" text-anchor="middle">Stack Overflow 2025 调查</text>
+  <text x="760" y="36" fill="#87867f" font-family="Arial, sans-serif" font-size="9" text-anchor="end">Jevons 悖论</text>
 </svg>

@@ -1,45 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340">
   <defs>
-    <marker id="arr2" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    <marker id="arr2" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 10 3.5L0 7z"/>
     </marker>
-    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#D1CFC5" flood-opacity="0.6"/>
+    <filter id="shadow2" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="2" flood-color="#d1cfc5" flood-opacity=".6" stdDeviation="4"/>
     </filter>
   </defs>
-
-  <rect width="700" height="340" fill="#FAF9F5" rx="8"/>
-
-  <!-- Title -->
-  <text x="350" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#141413">三层上下文模型</text>
-
-  <!-- L3: 任务上下文 (Task Context) - top, amber/yellow -->
-  <g transform="translate(350,80)">
-    <rect x="-280" y="-38" width="560" height="76" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2.5" filter="url(#shadow2)"/>
-    <text x="-255" y="-16" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#D97757">Layer 3: 任务上下文 Task Context</text>
-    <text x="-255" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">• 当前具体任务  • 相关代码片段  • 用户当前输入  • 会话历史</text>
-    <text x="230" y="-6" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#87867F">Size: 1K–2K tokens</text>
+  <rect width="700" height="340" fill="#faf9f5" rx="8"/>
+  <text x="350" y="26" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" text-anchor="middle">三层上下文模型</text>
+  <g transform="translate(350 80)">
+    <rect width="560" height="76" x="-280" y="-38" fill="#e3dacc" stroke="#d97757" stroke-width="2.5" filter="url(#shadow2)" rx="10"/>
+    <text x="-255" y="-16" fill="#d97757" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Layer 3: 任务上下文 Task Context</text>
+    <text x="-255" y="4" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11">• 当前具体任务  • 相关代码片段  • 用户当前输入  • 会话历史</text>
+    <text x="230" y="-6" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="11">Size: 1K–2K tokens</text>
   </g>
-
-  <!-- Arrow L3 → L2 -->
-  <path d="M 350,118 L 350,148" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr2)"/>
-
-  <!-- L2: 领域上下文 (Domain Context) - middle, blue -->
-  <g transform="translate(350,195)">
-    <rect x="-280" y="-38" width="560" height="76" rx="10" fill="#D1CFC5" stroke="#87867F" stroke-width="2" filter="url(#shadow2)"/>
-    <text x="-255" y="-16" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#141413">Layer 2: 领域上下文 Domain Context</text>
-    <text x="-255" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">• 领域模型  • 业务规则  • 相关API定义  • 数据模型</text>
-    <text x="230" y="-6" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#87867F">Size: 2K–4K tokens</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr2)" d="M350 118v30"/>
+  <g transform="translate(350 195)">
+    <rect width="560" height="76" x="-280" y="-38" fill="#d1cfc5" stroke="#87867f" stroke-width="2" filter="url(#shadow2)" rx="10"/>
+    <text x="-255" y="-16" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Layer 2: 领域上下文 Domain Context</text>
+    <text x="-255" y="4" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11">• 领域模型  • 业务规则  • 相关API定义  • 数据模型</text>
+    <text x="230" y="-6" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="11">Size: 2K–4K tokens</text>
   </g>
-
-  <!-- Arrow L2 → L1 -->
-  <path d="M 350,233 L 350,263" fill="none" stroke="#87867F" stroke-width="2" marker-end="url(#arr2)"/>
-
-  <!-- L1: 系统上下文 (System Context) - bottom, green -->
-  <g transform="translate(350,310)">
-    <rect x="-280" y="-38" width="560" height="76" rx="10" fill="#E3DACC" stroke="#788C5D" stroke-width="2" filter="url(#shadow2)"/>
-    <text x="-255" y="-16" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#788C5D">Layer 1: 系统上下文 System Context</text>
-    <text x="-255" y="4" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#141413">• 架构风格  • 技术栈  • 工程规范  • 基础设施</text>
-    <text x="230" y="-6" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#87867F">Size: 1K–2K tokens</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" marker-end="url(#arr2)" d="M350 233v30"/>
+  <g transform="translate(350 310)">
+    <rect width="560" height="76" x="-280" y="-38" fill="#e3dacc" stroke="#788c5d" stroke-width="2" filter="url(#shadow2)" rx="10"/>
+    <text x="-255" y="-16" fill="#788c5d" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">Layer 1: 系统上下文 System Context</text>
+    <text x="-255" y="4" fill="#141413" font-family="system-ui, -apple-system, sans-serif" font-size="11">• 架构风格  • 技术栈  • 工程规范  • 基础设施</text>
+    <text x="230" y="-6" fill="#87867f" font-family="system-ui, -apple-system, sans-serif" font-size="11">Size: 1K–2K tokens</text>
   </g>
 </svg>

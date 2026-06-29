@@ -1,90 +1,45 @@
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="320" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">传统 ML 流程 vs 左移后流程</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Preflight · preflight-validator</text>
-
-  <!-- Left column: Traditional ML flow -->
-  <rect x="30" y="62" width="290" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="175" y="86" text-anchor="middle" font-size="13" font-weight="600" fill="#87867F" font-family="ui-monospace, monospace">传统 ML 流程</text>
-
-  <!-- Stage 1: Data prep -->
-  <rect x="50" y="100" width="90" height="38" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="95" y="124" text-anchor="middle" font-size="11" fill="#141413">数据准备</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="140" y1="119" x2="160" y2="119" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="160,119 154,115 154,123" fill="#D1CFC5"/>
-
-  <!-- Stage 2: Training (with red X - problem) -->
-  <rect x="165" y="100" width="90" height="38" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="210" y="124" text-anchor="middle" font-size="11" fill="#141413">训练</text>
-  <!-- Red X overlay -->
-  <text x="248" y="106" font-size="18" fill="#D97757" font-weight="700">✕</text>
-
-  <!-- Note: 3 days -->
-  <text x="210" y="150" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">3 天后发现问题</text>
-
-  <!-- Stage 3: Debug (arrow down) -->
-  <line x1="210" y1="156" x2="210" y2="172" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="210,172 206,166 214,166" fill="#D1CFC5"/>
-
-  <rect x="165" y="178" width="90" height="38" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="210" y="202" text-anchor="middle" font-size="11" fill="#141413">Debug 循环</text>
-
-  <!-- Repeat arrow (circular) -->
-  <path d="M 255 197 C 280 197, 280 119, 165 119" stroke="#D97757" stroke-width="1.2" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
-  <text x="268" y="160" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">重复</text>
-
-  <!-- Cost label -->
-  <text x="175" y="260" text-anchor="middle" font-size="11" fill="#87867F">发现问题代价：</text>
-  <text x="175" y="276" text-anchor="middle" font-size="16" font-weight="600" fill="#D97757">3 天</text>
-
-  <!-- Center divider -->
-  <line x1="340" y1="70" x2="340" y2="290" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="6,4"/>
-
-  <!-- Right column: Shift-left flow -->
-  <rect x="360" y="62" width="290" height="220" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="505" y="86" text-anchor="middle" font-size="13" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">左移后流程</text>
-
-  <!-- Stage 1: Data prep -->
-  <rect x="380" y="100" width="80" height="38" rx="8" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="420" y="124" text-anchor="middle" font-size="11" fill="#141413">数据准备</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="460" y1="119" x2="480" y2="119" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="480,119 474,115 474,123" fill="#D1CFC5"/>
-
-  <!-- Stage 2: Preflight (green checkmark - emphasized) -->
-  <rect x="485" y="100" width="100" height="38" rx="8" fill="#D97757" stroke="#D97757" stroke-width="1.5"/>
-  <text x="535" y="124" text-anchor="middle" font-size="12" font-weight="600" fill="#FFFFFF">preflight</text>
-  <!-- Green checkmark -->
-  <rect x="570" y="102" width="18" height="18" rx="9" fill="#788C5D"/>
-  <text x="579" y="115" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="700">✓</text>
-
-  <!-- Note: 3 minutes -->
-  <text x="535" y="150" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">3 分钟发现问题</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="535" y1="156" x2="535" y2="172" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="535,172 531,166 539,166" fill="#D1CFC5"/>
-
-  <!-- Stage 3: Training -->
-  <rect x="485" y="178" width="100" height="38" rx="8" fill="#F0EEE6" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="535" y="202" text-anchor="middle" font-size="11" fill="#141413">训练 → 上线</text>
-  <!-- Green arrow -->
-  <rect x="572" y="180" width="18" height="18" rx="9" fill="#788C5D"/>
-  <text x="581" y="193" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="700">→</text>
-
-  <!-- Dashed arrow: 3min label -->
-  <line x1="600" y1="119" x2="600" y2="197" stroke="#788C5D" stroke-width="1.2" stroke-dasharray="4,3"/>
-  <text x="614" y="160" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace" writing-mode="tb">3 分钟</text>
-
-  <!-- Cost label -->
-  <text x="505" y="260" text-anchor="middle" font-size="11" fill="#87867F">发现问题代价：</text>
-  <text x="505" y="276" text-anchor="middle" font-size="16" font-weight="600" fill="#788C5D">3 分钟</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 320">
+  <path fill="#faf9f5" d="M0 0h680v320H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">传统 ML 流程 vs 左移后流程</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Preflight · preflight-validator</text>
+  <rect width="290" height="220" x="30" y="62" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="175" y="86" fill="#87867f" font-family="ui-monospace, monospace" font-size="13" font-weight="600" text-anchor="middle">传统 ML 流程</text>
+  <rect width="90" height="38" x="50" y="100" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="95" y="124" fill="#141413" font-size="11" text-anchor="middle">数据准备</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M140 119h20"/>
+  <path fill="#d1cfc5" d="m160 119-6-4v8z"/>
+  <rect width="90" height="38" x="165" y="100" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="210" y="124" fill="#141413" font-size="11" text-anchor="middle">训练</text>
+  <text x="248" y="106" fill="#d97757" font-size="18" font-weight="700">✕</text>
+  <text x="210" y="150" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">3 天后发现问题</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M210 156v16"/>
+  <path fill="#d1cfc5" d="m210 172-4-6h8z"/>
+  <rect width="90" height="38" x="165" y="178" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="210" y="202" fill="#141413" font-size="11" text-anchor="middle">Debug 循环</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.2" d="M255 197c25 0 25-78-90-78" opacity=".7"/>
+  <text x="268" y="160" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">重复</text>
+  <text x="175" y="260" fill="#87867f" font-size="11" text-anchor="middle">发现问题代价：</text>
+  <text x="175" y="276" fill="#d97757" font-size="16" font-weight="600" text-anchor="middle">3 天</text>
+  <path stroke="#d1cfc5" stroke-dasharray="6,4" d="M340 70v220"/>
+  <rect width="290" height="220" x="360" y="62" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="505" y="86" fill="#788c5d" font-family="ui-monospace, monospace" font-size="13" font-weight="600" text-anchor="middle">左移后流程</text>
+  <rect width="80" height="38" x="380" y="100" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="420" y="124" fill="#141413" font-size="11" text-anchor="middle">数据准备</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M460 119h20"/>
+  <path fill="#d1cfc5" d="m480 119-6-4v8z"/>
+  <rect width="100" height="38" x="485" y="100" fill="#d97757" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="535" y="124" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">preflight</text>
+  <rect width="18" height="18" x="570" y="102" fill="#788c5d" rx="9"/>
+  <text x="579" y="115" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">✓</text>
+  <text x="535" y="150" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">3 分钟发现问题</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M535 156v16"/>
+  <path fill="#d1cfc5" d="m535 172-4-6h8z"/>
+  <rect width="100" height="38" x="485" y="178" fill="#f0eee6" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="535" y="202" fill="#141413" font-size="11" text-anchor="middle">训练 → 上线</text>
+  <rect width="18" height="18" x="572" y="180" fill="#788c5d" rx="9"/>
+  <text x="581" y="193" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">→</text>
+  <path stroke="#788c5d" stroke-dasharray="4,3" stroke-width="1.2" d="M600 119v78"/>
+  <text x="614" y="160" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" writing-mode="tb">3 分钟</text>
+  <text x="505" y="260" fill="#87867f" font-size="11" text-anchor="middle">发现问题代价：</text>
+  <text x="505" y="276" fill="#788c5d" font-size="16" font-weight="600" text-anchor="middle">3 分钟</text>
 </svg>
