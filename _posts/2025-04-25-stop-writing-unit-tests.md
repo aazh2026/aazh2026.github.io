@@ -5,7 +5,7 @@ date: 2025-04-25T11:00:00+08:00
 tags: [AI-Native软件工程, 测试策略, 软件质量]
 author: "@postcodeeng"
 series: AI-Native Engineering
-description: "传统单元测试的ROI在AI时代已成负数，提出三层融合测试模型（属性测试+AI生成测试+运行时验证），开发者角色从"写测试的人"变为"定义测试策略的人"。"
+description: '传统单元测试的ROI在AI时代已成负数，提出三层融合测试模型（属性测试+AI生成测试+运行时验证），开发者角色从"写测试的人"变为"定义测试策略的人"。'
 ---
 
 > **TL;DR**

@@ -5,7 +5,7 @@ date: 2025-04-24T10:40:00+08:00
 tags: [AI-Native软件工程, 代码审查, 语义分析]
 author: "@postcodeeng"
 series: AI-Native Engineering
-description: "文本级代码对比已过时——3行int→long变更可导致百万交易失败。语义Diff通过AST级对比、意图分析、影响图三层能力超越文本对比，从"比较文本"升级到"理解意义"。"
+description: '文本级代码对比已过时——3行int→long变更可导致百万交易失败。语义Diff通过AST级对比、意图分析、影响图三层能力超越文本对比，从"比较文本"升级到"理解意义"。'
 ---
 
 > **TL;DR**

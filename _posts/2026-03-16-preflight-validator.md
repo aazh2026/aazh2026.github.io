@@ -4,7 +4,7 @@ title: "\"preflight：在训练开始前发现问题，而不是在三天后\""
 date: 2026-03-16T14:00:00+08:00
 permalink: /preflight-pretraining-validator-pytorch/
 tags: [Machine Learning, PyTorch, Debugging, MLOps, Best Practices]
-description: "Preflight 在训练开始前发现标签泄露、NaN、类别不平衡等"沉默杀手"——三天才能发现的 bug，用三分钟预防。"
+description: 'Preflight 在训练开始前发现标签泄露、NaN、类别不平衡等"沉默杀手"——三天才能发现的 bug，用三分钟预防。'
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

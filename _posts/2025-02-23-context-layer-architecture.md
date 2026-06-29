@@ -3,7 +3,7 @@ layout: post
 title: "\"Context Layer架构：企业级AI系统的上下文分层设计与实现\""
 date: 2025-02-23T17:00:00+08:00
 tags: [Context Layer, AI架构, 知识工程, 企业级, RAG, 上下文管理]
-description: "企业级AI的"失忆症"需要Context Layer解决，三层上下文模型（项目/技术/业务）让AI获得完整背景知识，显著提升代码生成质量。"
+description: '企业级AI的"失忆症"需要Context Layer解决，三层上下文模型（项目/技术/业务）让AI获得完整背景知识，显著提升代码生成质量。'
 author: "@postcodeeng"
 
 redirect_from:
