@@ -27,6 +27,9 @@
 <meta property="og:url" content="{{ page_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="zh_CN">
+{%- if page.title -%}
+<meta property="og:image:alt" content="{{ page_title }} — 分享卡片">
+{%- endif -%}
 
 {% if page.date %}
   <meta property="og:type" content="article">

@@ -1056,3 +1056,51 @@ footer .k {
 [data-theme="dark"] .page-404 .search-404 input {
   background: var(--paper);
 }
+
+/* ==================== High Contrast & Forced Colors ==================== */
+/* Support Windows high-contrast mode and `prefers-contrast: more` */
+@media (prefers-contrast: more) {
+  :root {
+    --g200: #000000;
+    --g300: #333333;
+    --g500: #1a1a1a;
+    --g700: #000000;
+    --slate: #000000;
+  }
+  [data-theme="dark"] {
+    --g200: #ffffff;
+    --g300: #cccccc;
+    --g500: #f5f5f5;
+    --g700: #ffffff;
+    --slate: #ffffff;
+  }
+}
+/* Windows forced colors mode (uses system colors) */
+@media (forced-colors: active) {
+  :root, [data-theme="dark"] {
+    --clay: LinkText;
+    --olive: VisitedText;
+    --slate: CanvasText;
+    --ivory: Canvas;
+    --paper: Canvas;
+  }
+  a { color: LinkText; }
+  .skip-to-content:focus, .skip-to-content:focus-visible {
+    outline: 3px solid Highlight;
+  }
+  .card, .post-row, .giscus-wrapper, .recommend, .last-updated {
+    border: 1px solid CanvasText;
+  }
+}
+
+/* ==================== Focus Indicators ==================== */
+/* Universal focus-visible style for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--clay);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+/* Remove default outline for mouse users, keep for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+}

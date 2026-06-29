@@ -1,31 +1,68 @@
-<!-- 文章最后更新时间 -->
-{% if page.last_modified_at or page.date %}
-<div class="last-updated" style="margin-top: 2rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; font-size: 0.9rem; color: #666;">
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 0.5rem;">
-    <circle cx="12" cy="12" r="10"></circle>
-    <polyline points="12 6 12 12 16 14"></polyline>
-  </svg>
-  
-  {% if page.last_modified_at %}
-    <strong>最后更新：</strong> {{ page.last_modified_at | date: "%Y-%m-%d %H:%M" }}
-    <span style="color: #ccc; margin: 0 0.5rem;">|</span>
-    <span>首次发布：{{ page.date | date: "%Y-%m-%d" }}</span>
-  {% else %}
-    <strong>发布时间：</strong> {{ page.date | date: "%Y-%m-%d" }}
-  {% endif %}
-  
-  {% if page.history %}
-  <span style="color: #ccc; margin: 0 0.5rem;">|</span>
-  <a href="{{ page.history }}" style="color: #667eea; text-decoration: none;">
-    查看修改历史
-  </a>
-  {% endif %}
+<!-- 文章元信息：最后更新时间 + 首次发布 + 字数 + 阅读时间 -->
+{%- assign wc = page.content | strip_html | number_of_words -%}
+{%- assign reading_min = wc | divided_by: 350 -%}
+{%- if reading_min < 1 -%}{%- assign reading_min = 1 -%}{%- endif -%}
+
+<div class="post-meta-box">
+  <div class="post-meta-row">
+    <span class="post-meta-icon">📅</span>
+    {% if page.last_modified_at %}
+      <span><strong>最后更新</strong> {{ page.last_modified_at | date: "%Y-%m-%d" }}</span>
+      <span class="post-meta-sep">·</span>
+      <span>首次发布 {{ page.date | date: "%Y-%m-%d" }}</span>
+    {% else %}
+      <span><strong>发布</strong> {{ page.date | date: "%Y-%m-%d" }}</span>
+    {% endif %}
+  </div>
+  <div class="post-meta-row">
+    <span class="post-meta-icon">📊</span>
+    <span>{{ wc }} 字</span>
+    <span class="post-meta-sep">·</span>
+    <span>约 {{ reading_min }} 分钟阅读</span>
+    {% if page.series %}
+    <span class="post-meta-sep">·</span>
+    <span class="post-meta-series">{{ page.series }}</span>
+    {% endif %}
+  </div>
 </div>
 
 <style>
-  [data-theme="dark"] .last-updated {
-    background: #16213e;
-    color: #b0b0b0;
-  }
+.post-meta-box {
+  margin: 2.5rem 0 0;
+  padding: 1rem 1.25rem;
+  background: var(--g100);
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: var(--g500);
+  line-height: 1.6;
+}
+.post-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.post-meta-row + .post-meta-row {
+  margin-top: 4px;
+}
+.post-meta-icon {
+  font-size: 14px;
+  margin-right: 2px;
+}
+.post-meta-sep {
+  color: var(--g300);
+  margin: 0 0.25rem;
+}
+.post-meta-box strong {
+  color: var(--slate);
+  font-weight: 500;
+}
+.post-meta-series {
+  color: var(--clay);
+  font-weight: 500;
+}
+[data-theme="dark"] .post-meta-box {
+  background: var(--g100);
+  color: var(--g700);
+}
 </style>
-{% endif %}
