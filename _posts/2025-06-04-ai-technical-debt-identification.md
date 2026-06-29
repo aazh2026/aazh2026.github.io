@@ -180,7 +180,7 @@ AI通过静态分析与机器学习相结合的方式识别技术债务。静态
 
 ### 债务仪表盘
 
-<object data="/assets/images/2025-06-04-ai-tech-debt-01-dashboard.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-04-ai-tech-debt-01-dashboard.svg" type="image/svg+xml" width="100%" aria-label="技术债务仪表盘" role="img"></object>
 
 ### 推荐工具
 

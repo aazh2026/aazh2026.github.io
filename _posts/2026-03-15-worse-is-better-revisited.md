@@ -90,11 +90,11 @@ Worse is Better 真正的洞见在于：
 
 **Worse is Better 的智慧**：快速获得一个可用的版本，在真实世界中学习，然后迭代。
 
-<object data="/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-worse-is-better-revisited-01-fitness-landscape.svg" type="image/svg+xml" width="100%" aria-label="Fitness Landscape: Worse is Better vs The Right Thing" role="img"></object>
 
 *图 1：Fitness Landscape——Worse is Better 接受局部最优，快速迭代；The Right Thing 追求全局最优，但路径更长、风险更高。*
 
-<object data="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-worse-is-better-revisited-02-iteration-flywheel.svg" type="image/svg+xml" width="100%" aria-label="Iteration Flywheel: Worse is Better + AI" role="img"></object>
 
 *图 2：Worse is Better 迭代飞轮——快速发布 → 获取反馈 → AI 迭代 → 持续进化，代码生成成本趋近于零使快速试错成为主动策略。*
 

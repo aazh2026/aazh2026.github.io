@@ -68,7 +68,7 @@ series: AI-Native Engineering
 ## 语义缓存的工作原理
 
 ### 架构概览
-<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%" aria-label="架构概览（插图）" role="img"></object>
 
 ### 缓存键的设计
 
@@ -112,7 +112,7 @@ series: AI-Native Engineering
 - L3命中：~50ms
 - 未命中（调用API）：~500-2000ms + $0.02
 
-<object data="/assets/images/2025-01-25-semantic-caching-02-tiers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-25-semantic-caching-02-tiers.svg" type="image/svg+xml" width="100%" aria-label="多层级语义缓存架构" role="img"></object>
 
 > 💡 **Key Insight**
 >

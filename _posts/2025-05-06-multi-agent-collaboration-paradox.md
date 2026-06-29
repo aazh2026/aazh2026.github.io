@@ -270,9 +270,9 @@ redirect_from:
 
 **层次化Multi-Agent架构**：
 
-<object data="/assets/images/2025-05-06-multi-agent-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-06-multi-agent-01-stack.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践（插图）" role="img"></object>
 
-<object data="/assets/images/2025-05-06-multi-agent-02-efficiency-curve.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-06-multi-agent-02-efficiency-curve.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践（插图）" role="img"></object>
 
 **关键设计点**：
 1. **星型拓扑**：所有通信通过协调者，避免网状通信

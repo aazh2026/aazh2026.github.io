@@ -73,7 +73,7 @@ redirect_from:
 
 ## Intent-Driven Development：新范式
 
-<object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="Intent-Driven Development：新范式（插图）" role="img"></object>
 
 ### 从TDD到IDD
 
@@ -96,7 +96,7 @@ redirect_from:
 - 是否处理了所有边界条件？
 - 是否满足性能约束？
 
-<object data="/assets/images/2025-04-26-tdd-intent-driven-02-idv-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-26-tdd-intent-driven-02-idv-loop.svg" type="image/svg+xml" width="100%" aria-label="Intent Verification Loop" role="img"></object>
 
 ### IDD开发流程
 

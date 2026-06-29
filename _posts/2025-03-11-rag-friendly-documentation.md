@@ -54,7 +54,7 @@ series: AI-Native Engineering
 
 ## 人类阅读 vs AI阅读：根本差异
 
-<object data="/assets/images/2025-03-11-rag-friendly-documentation-01-rag-chunking.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-11-rag-friendly-documentation-01-rag-chunking.svg" type="image/svg+xml" width="100%" aria-label="人类阅读 vs AI阅读：根本差异（插图）" role="img"></object>
 
 ### 人类怎么读文档
 
@@ -87,7 +87,7 @@ AI阅读是**被动的、碎片的、局部最优的**。
 
 写给人看的文档，AI读不懂；写给AI看的文档，需要完全不同的写作范式。
 
-<object data="/assets/images/2025-03-11-rag-friendly-documentation-02-four-principles.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-11-rag-friendly-documentation-02-four-principles.svg" type="image/svg+xml" width="100%" aria-label="RAG-Friendly 四大原则" role="img"></object>
 
 ---
 

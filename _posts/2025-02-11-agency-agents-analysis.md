@@ -31,7 +31,7 @@ series: AI-Native Engineering
 
 我们已经看到GPT-4、Claude这样的通用Agent能够处理各种任务。但当面对复杂的企业级需求时，单Agent的局限性开始显现：上下文窗口的限制、专业深度的不足、多任务协调的困难。agency-agents的解决方案不是追求更强的单Agent，而是构建**多Agent协作的组织**。
 
-<object data="/assets/images/2025-02-11-agency-agents-02-collaboration-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-11-agency-agents-02-collaboration-flow.svg" type="image/svg+xml" width="100%" aria-label="多Agent协作的工作流" role="img"></object>
 
 项目的快速增长（单日+2,209 stars）反映了市场的强烈需求。开发者们已经意识到：Agentic Engineering的下一步不是 bigger model，而是 better orchestration。
 
@@ -63,7 +63,7 @@ agency-agents的核心架构理念可以用一个词概括：**组织化**。它
 
 ### 核心架构图：角色编排 vs 流程编排
 
-<object data="/assets/images/2025-02-11-agency-agents-01-role-architecture.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-11-agency-agents-01-role-architecture.svg" type="image/svg+xml" width="100%" aria-label="核心架构图：角色编排 vs 流程编排（插图）" role="img"></object>
 
 ### 与CrewAI的对比：两种编排哲学
 
@@ -117,7 +117,7 @@ agency-agents的另一个关键设计是**交付物的结构化**。
 
 agency-agents要求每个Agent产出**结构化的交付物**：
 
-<object data="/assets/images/2025-02-11-agency-agents-03-three-pillars.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-11-agency-agents-03-three-pillars.svg" type="image/svg+xml" width="100%" aria-label="agency-agents 三大工程机制" role="img"></object>
 - **代码**：必须是可执行的、带测试的、符合代码规范的
 - **文档**：必须包含特定章节（背景、方案、风险评估、后续行动）
 - **设计**：必须是基于设计系统的、带交互说明的

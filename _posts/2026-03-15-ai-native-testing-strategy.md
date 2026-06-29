@@ -92,7 +92,7 @@ Mike Cohn 在 2009 年提出的测试金字塔是一个伟大的模型：
 
 ## AI-Native 测试三层模型
 
-<object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 测试三层模型（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 > 
@@ -174,7 +174,7 @@ AI 生成的测试：
 2. **场景编排 Agent**：按照业务流程编排多个 Agent 的交互
 3. **断言验证 Agent**：验证整个流程的业务结果
 
-<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 方案：Multi-Agent 集成测试（插图）" role="img"></object>
 
 ### 实战案例：电商订单流程
 

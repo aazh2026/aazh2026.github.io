@@ -50,7 +50,7 @@ Sweeps the repo for drift between docs, code, and config。自动修复文档、
 
 ---
 
-<object data="/assets/images/2026-05-13-auto-improving-software-01-cycle.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-13-auto-improving-software-01-cycle.svg" type="image/svg+xml" width="100%" aria-label="Review（插图）" role="img"></object>
 
 ## 为什么 auto-improvement 现在才可能
 

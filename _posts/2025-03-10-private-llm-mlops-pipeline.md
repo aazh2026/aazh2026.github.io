@@ -65,7 +65,7 @@ series: AI-Native Engineering
 
 ## 私有代码LLM的六个Pipeline
 
-<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-01-six-pipelines.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-01-six-pipelines.svg" type="image/svg+xml" width="100%" aria-label="私有代码LLM的六个Pipeline（插图）" role="img"></object>
 
 ### 1. 数据管道（Data Pipeline）
 
@@ -81,7 +81,7 @@ series: AI-Native Engineering
 **关键洞察**：
 数据质量比数据量更重要。100万条干净代码 > 1000万条脏数据。
 
-<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-02-data-training-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-02-data-training-loop.svg" type="image/svg+xml" width="100%" aria-label="数据训练反馈循环" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -114,7 +114,7 @@ series: AI-Native Engineering
 **关键洞察**：
 自动化测试只能捕获**语法正确性**，人工评估才能判断**工程合理性**。
 
-<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-03-evaluation-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-03-evaluation-stack.svg" type="image/svg+xml" width="100%" aria-label="三层评估体系" role="img"></object>
 
 > 💡 **Key Insight**
 >

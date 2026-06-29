@@ -18,7 +18,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-05-12-complexity-ratchet-01-hero.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-12-complexity-ratchet-01-hero.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## 软件曾经是脆的
 

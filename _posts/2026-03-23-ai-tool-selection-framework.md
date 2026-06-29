@@ -90,7 +90,7 @@ series: AI-Native Engineering
 
 ### 三维模型
 
-<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%" aria-label="三维模型（插图）" role="img"></object>
 
 ### 维度1：控制轴（Control Spectrum）
 

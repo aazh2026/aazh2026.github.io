@@ -18,7 +18,7 @@ series: AI-Native Engineering
 
 <object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg"
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
 
 # 跨会话一致性：如何让Agent不变成"精神分裂"
 
@@ -82,7 +82,7 @@ series: AI-Native Engineering
 
 用户说："我上周说的那个方案，现在想改一下"
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-03-time-travel.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-12-consistency-maintenance-03-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
 
 Agent需要：
 1. 找到"上周的对话"
@@ -146,7 +146,7 @@ Agent需要：
 
 <object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg"
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" type="image/svg+xml" width="100%" aria-label="会话摘要金字塔结构" role="img"></object>
 
 形成**金字塔结构**：
 - 底层：最近5个会话的详细摘要

@@ -53,7 +53,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-05-11-execution-is-dead-judgment-lives-01-era-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-11-execution-is-dead-judgment-lives-01-era-shift.svg" type="image/svg+xml" width="100%" aria-label="执行已死，判断力永生（插图）" role="img"></object>
 
 ## 约束即注意力分配
 

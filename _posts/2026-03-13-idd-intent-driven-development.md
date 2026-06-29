@@ -61,7 +61,7 @@ series: AI-Native Engineering
 
 ## 开发者能力迁移模型
 
-<object data="/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" type="image/svg+xml" width="100%" aria-label="开发者能力迁移模型（插图）" role="img"></object>
 
 ### 传统开发者能力栈
 
@@ -87,7 +87,7 @@ series: AI-Native Engineering
 
 ## Intent工程师胜任力矩阵
 
-<object data="/assets/images/2026-03-13-idd-intent-driven-development-02-capability-migration.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-13-idd-intent-driven-development-02-capability-migration.svg" type="image/svg+xml" width="100%" aria-label="Intent工程师胜任力矩阵（插图）" role="img"></object>
 
 ### 能力维度定义
 

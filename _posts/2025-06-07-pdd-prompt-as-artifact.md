@@ -52,7 +52,7 @@ series: AI-Native软件工程系列 #5
 
 ## Prompt版本控制
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Prompt版本控制（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -223,7 +223,7 @@ prompts/
 
 ### Prompt测试金字塔
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Prompt测试金字塔（插图）" role="img"></object>
 
 ### Prompt CI Pipeline
 

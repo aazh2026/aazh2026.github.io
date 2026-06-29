@@ -43,7 +43,7 @@ Simon Willison在《Agentic Engineering Patterns》中提出了这个概念：
 
 ### 两种债务的本质区别
 
-<object data="/assets/images/2025-02-05-cognitive-debt-01-debt-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-05-cognitive-debt-01-debt-comparison.svg" type="image/svg+xml" width="100%" aria-label="认知债务：AI时代的代码理解危机" role="img"></object>
 
 | 技术债务 | 认知债务 |
 |---------|---------|

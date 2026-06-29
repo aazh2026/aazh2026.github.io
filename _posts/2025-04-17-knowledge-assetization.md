@@ -18,7 +18,7 @@ description: "代码在AI时代正从资产变为负债，真正的资产是知�
 
 ---
 
-<object data="/assets/images/2025-04-17-knowledge-assetization-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-17-knowledge-assetization-01-stack.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## GitLab的Debt Day
 
@@ -48,7 +48,7 @@ description: "代码在AI时代正从资产变为负债，真正的资产是知�
 
 > **在AI时代，代码本身正在从资产变成负债。**
 
-<object data="/assets/images/2025-04-17-knowledge-assetization-02-chain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-17-knowledge-assetization-02-chain.svg" type="image/svg+xml" width="100%" aria-label="反直觉事实（插图）" role="img"></object>
 
 这不是危言耸听，是数学：
 
@@ -142,7 +142,7 @@ AI需要更结构化的形态：
 
 ### 🏗️ Knowledge Asset Stack
 
-<object data="/assets/images/2025-04-17-knowledge-assetization-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-17-knowledge-assetization-01-stack.svg" type="image/svg+xml" width="100%" aria-label="🏗️ Knowledge Asset Stack（插图）" role="img"></object>
 
 ### 🚀 转型路线图
 

@@ -19,9 +19,9 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-02-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-24-gpt-54-analysis-02-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="GPT-5.4 通用→专用 范式转移" role="img"></object>
 
 ## 产品速览
 
@@ -50,7 +50,7 @@ series: AI-Native Engineering
 
 **272k tokens的分界线**，这是一个精心设计的数字。
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-03-pricing-tiers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-24-gpt-54-analysis-03-pricing-tiers.svg" type="image/svg+xml" width="100%" aria-label="GPT-5.4 272k 分界线定价策略" role="img"></object>
 
 ---
 

@@ -18,7 +18,7 @@ series: AI-Native Engineering
 >
 > 关键洞察：每个开发者都需要一个了解自己的AI导师。
 
-<object data="/assets/images/2025-05-22-ai-assisted-mentorship-01-profile.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-22-ai-assisted-mentorship-01-profile.svg" type="image/svg+xml" width="100%" aria-label="AI导师核心能力图" role="img"></object>
 
 ---
 
@@ -116,7 +116,7 @@ AI追踪的核心指标有三个维度：
 
 ## 从诊断到路径：个性化学习
 
-<object data="/assets/images/2025-05-22-ai-assisted-mentorship-02-path.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-22-ai-assisted-mentorship-02-path.svg" type="image/svg+xml" width="100%" aria-label="个性化学习路径生成图" role="img"></object>
 
 ### 路径生成算法
 
@@ -194,7 +194,7 @@ AI导师系统的技术架构分为四层，每一层解决一个核心问题。
 
 **安全层**。这是整个系统的基础设施。所有数据在传输过程中使用TLS加密，存储使用静态加密，访问需要OAuth认证。下一节详细说明隐私保护措施。
 
-<object data="/assets/images/2025-05-22-ai-assisted-mentorship-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-22-ai-assisted-mentorship-01-arch.svg" type="image/svg+xml" width="100%" aria-label="AI导师系统实施架构" role="img"></object>
 
 ### 隐私保护
 

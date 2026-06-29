@@ -41,7 +41,7 @@ AI 只需要理解**变化部分**。
 > 💡 **Key Insight**
 > Delta Specification 的本质是**只传递变化量**，而非重新传递整个系统上下文。AI 读取 `Base Spec + Delta` 的组合效果等同于读取完整需求文档，但信息量减少 80% 以上。
 
-<object data="/assets/images/2026-03-11-delta-specification-01-workflow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-delta-specification-01-workflow.svg" type="image/svg+xml" width="100%" aria-label="核心原则（插图）" role="img"></object>
 
 ## 推荐的工程结构
 
@@ -90,7 +90,7 @@ AI 读取顺序：
 
 非常稳定。
 
-<object data="/assets/images/2026-03-11-delta-specification-02-execution-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-delta-specification-02-execution-flow.svg" type="image/svg+xml" width="100%" aria-label="AI 执行流程（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 > Delta 模式天然支持**幂等变更**：相同的 delta 重复执行不会累积副作用，这与 Database Migration 的幂等性保证如出一辙。

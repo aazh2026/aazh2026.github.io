@@ -34,7 +34,7 @@ AI Agent的成本分为三层。**API调用**层是模型token消耗，包括pro
 
 ## 成本层级拆解
 
-<object data="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" type="image/svg+xml" width="100%" aria-label="AI Agent 部署成本层级拆解" role="img"></object>
 
 ### Level 1: $0 原型阶段
 

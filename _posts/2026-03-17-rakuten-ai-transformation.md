@@ -149,9 +149,9 @@ Rakuten 将 AI 深度集成到开发工具链，形成无缝体验。
 
 Rakuten 的工具链覆盖 IDE、代码审查、CI/CD 和运维四个层次，AI 能力贯穿每个环节。
 
-<object data="/assets/images/2026-03-17-rakuten-ai-transformation-01-overview.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-rakuten-ai-transformation-01-overview.svg" type="image/svg+xml" width="100%" aria-label="Rakuten AI 工具链集成架构" role="img"></object>
 
-<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%" aria-label="工具链集成架构（插图）" role="img"></object>
 
 ### IDE 集成：开发者的 AI 伴侣
 

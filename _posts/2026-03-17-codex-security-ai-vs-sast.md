@@ -19,7 +19,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-01-arch.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## SAST 的困境：高误报率的诅咒
 
@@ -232,7 +232,7 @@ Codex Security 的实践揭示了一个重要趋势：**AI 不是替代传统工
 
 ### 最佳实践架构
 
-<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-02-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-02-arch.svg" type="image/svg+xml" width="100%" aria-label="最佳实践架构（插图）" role="img"></object>
 
 ## 结尾：安全扫描的范式转移
 

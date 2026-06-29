@@ -21,7 +21,7 @@ redirect_from:
 > 3. **实际效果** — 需求理解偏差减少 70%，测试编写时间减少 60%，Bug 逃逸到生产减少 50%
 > 4. **延伸洞察** — 关键不是"更快的自动化"，而是人从执行链里被替换出来——你设计系统，系统替你跑腿
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ---
 
@@ -103,7 +103,7 @@ redirect_from:
 
 ### 层次结构概览
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-01-three-layer-hierarchy.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-28-user-story-pack-automation-01-three-layer-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="User Story Pack 三层结构：Story → Scenario → Example" role="img"></object>
 
 ### Story 层：用户故事的入口
 
@@ -180,7 +180,7 @@ examples:
 
 ### 验收标准即测试
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-02-story-to-test-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-28-user-story-pack-automation-02-story-to-test-flow.svg" type="image/svg+xml" width="100%" aria-label="User Story Pack → 自动化测试流程" role="img"></object>
 
 User Story Pack 的核心价值：**验收标准可以直接转化为自动化测试**。
 

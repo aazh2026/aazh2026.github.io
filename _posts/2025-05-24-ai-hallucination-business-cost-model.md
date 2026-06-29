@@ -92,7 +92,7 @@ redirect_from:
 
 **总成本 = 直接成本 + 间接成本 + 风险成本**
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="成本构成（插图）" role="img"></object>
 
 #### 直接成本（Direct Costs）
 
@@ -175,7 +175,7 @@ redirect_from:
 
 ## 风险分层与容忍度
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%" aria-label="风险分层与容忍度（插图）" role="img"></object>
 
 ### 风险分层模型
 

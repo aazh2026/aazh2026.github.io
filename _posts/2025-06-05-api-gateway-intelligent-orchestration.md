@@ -93,9 +93,9 @@ User.cart.items[].product{name, price, stock_status} + recommended_accessories{n
 
 ### 实施架构
 
-<object data="/assets/images/2025-06-05-api-gateway-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-05-api-gateway-01-arch.svg" type="image/svg+xml" width="100%" aria-label="实施架构（插图）" role="img"></object>
 
-<object data="/assets/images/2025-06-05-api-gateway-02-orchestration-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-05-api-gateway-02-orchestration-flow.svg" type="image/svg+xml" width="100%" aria-label="实施架构（插图）" role="img"></object>
 
 ### 实战案例
 

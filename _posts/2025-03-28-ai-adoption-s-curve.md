@@ -18,7 +18,7 @@ series: AI-Native Engineering
 >
 > 企业AI adoption不是项目，是旅程。
 
-<object data="/assets/images/2025-03-28-ai-adoption-s-curve-01-hero.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-28-ai-adoption-s-curve-01-hero.svg" type="image/svg+xml" width="100%" aria-label="三层嵌套 S-curve Adoption 模型" role="img"></object>
 
 ---
 
@@ -53,9 +53,9 @@ series: AI-Native Engineering
 
 企业AI adoption不是一条S-curve，是**三层嵌套的S-curve**：
 
-<object data="/assets/images/2025-03-28-ai-adoption-01-scurve.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-28-ai-adoption-01-scurve.svg" type="image/svg+xml" width="100%" aria-label="AI Adoption 三层S曲线模型" role="img"></object>
 
-<object data="/assets/images/2025-03-28-ai-adoption-s-curve-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-28-ai-adoption-s-curve-02-three-layers.svg" type="image/svg+xml" width="100%" aria-label="AI adoption的三层S-curve（插图）" role="img"></object>
 
 **关键洞察**：
 - 每层都有自己的S-curve

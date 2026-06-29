@@ -35,7 +35,7 @@ series: AI-Native Engineering
 >
 > 知识的失效不是"bug"，是系统设计的必然结果——Agent若没有版本机制，旧知识就会像沉默的bug一样持续输出错误结论。
 
-<object data="/assets/images/2025-01-18-memory-versioning-01-concept.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-18-memory-versioning-01-concept.svg" type="image/svg+xml" width="100%" aria-label="记忆版本控制流程" role="img"></object>
 
 ## 为什么需要记忆的版本控制
 
@@ -88,7 +88,7 @@ Agent的记忆同样需要这些能力。
 >
 > 数据库解决数据迁移问题的全部工具——版本化、序列化执行、可回滚、渐进式发布——都可以直接映射到Agent的知识管理，只是数据换成了事实和概念。
 
-<object data="/assets/images/2025-01-18-memory-versioning-02-schema-migration.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-18-memory-versioning-02-schema-migration.svg" type="image/svg+xml" width="100%" aria-label="记忆 Schema 迁移" role="img"></object>
 
 ## 版本控制的核心概念
 
@@ -218,7 +218,7 @@ Agent在每次响应用户前，检查记忆版本与当前时间是否匹配；
 >
 > 冲突解决的本质不是"选一个对的"，而是"选一个更可能对的，并且记录为什么选它"——每次冲突解决都应该留下决策日志，供后续审计和迭代。
 
-<object data="/assets/images/2025-01-18-memory-versioning-03-conflict-resolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-18-memory-versioning-03-conflict-resolution.svg" type="image/svg+xml" width="100%" aria-label="冲突解决策略" role="img"></object>
 
 ### 多版本共存
 

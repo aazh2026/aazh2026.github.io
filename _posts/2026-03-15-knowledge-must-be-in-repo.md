@@ -60,7 +60,7 @@ OpenAI 引入了一个关键概念：
 >
 > 知识对人类"存在"和对 Agent "存在"是两个完全不同的标准。Harness 工程迫使我们用 Agent 的视角重新审视知识的可访问性。
 
-<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-01-legible-spectrum.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-01-legible-spectrum.svg" type="image/svg+xml" width="100%" aria-label="什么是 Legible Knowledge（插图）" role="img"></object>
 
 ### 可读性的光谱
 
@@ -147,7 +147,7 @@ Harness 工程的本质是强制知识显性化：所有对系统有影响的决
 
 ## 实践：如何推动知识入库
 
-<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-02-transformation.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-02-transformation.svg" type="image/svg+xml" width="100%" aria-label="实践：如何推动知识入库（插图）" role="img"></object>
 
 ## 会议的文化转变
 

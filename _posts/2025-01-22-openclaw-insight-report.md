@@ -25,11 +25,11 @@ series: AI-Native Engineering
 
 ### 四层架构模型
 
-<object data="/assets/images/2025-01-22-openclaw-insight-report-01-architecture.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-22-openclaw-insight-report-01-architecture.svg" type="image/svg+xml" width="100%" aria-label="四层架构模型（插图）" role="img"></object>
 
 ### 渐进式自动化路径
 
-<object data="/assets/images/2025-01-22-openclaw-insight-report-02-journey.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-22-openclaw-insight-report-02-journey.svg" type="image/svg+xml" width="100%" aria-label="渐进式自动化路径（插图）" role="img"></object>
 
 ### 能力边界清晰定义
 

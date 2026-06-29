@@ -42,7 +42,7 @@ series: AI-Native SDLC 实践
 
 这四个已经足够驱动：代码生成、测试生成、PR review。
 
-<object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%" aria-label="核心结论（插图）" role="img"></object>
 
 ## 为什么是这四个？
 

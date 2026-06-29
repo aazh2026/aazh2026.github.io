@@ -61,7 +61,7 @@ AI时代的循环正在变成：
 
 **测试的新角色是"契约"**
 
-<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-02-intent-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-02-intent-loop.svg" type="image/svg+xml" width="100%" aria-label="意图契约循环" role="img"></object>
 
 不是验证代码是否正确，而是回答：
 - 这是否符合我的原始意图？
@@ -91,7 +91,7 @@ AI时代的循环正在变成：
 
 让我们对比三种表达方式：
 
-<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-01-legacy-vs-intent.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-01-legacy-vs-intent.svg" type="image/svg+xml" width="100%" aria-label="TDD 到 AI-DD：范式转移" role="img"></object>
 
 ### 传统测试（JUnit）
 
@@ -194,7 +194,7 @@ Feature: 用户登录
 
 ### 组织结构调整
 
-<object data="/assets/images/2025-05-18-tdd-idd-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-18-tdd-idd-01-stack.svg" type="image/svg+xml" width="100%" aria-label="组织结构调整（插图）" role="img"></object>
 
 ---
 

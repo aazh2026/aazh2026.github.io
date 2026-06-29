@@ -62,7 +62,7 @@ series: AI-Native Engineering
 | L3 | 错误成本 | 低 | 指数级 | 30% |
 | L4 | 维护成本 | 极低 | 隐性累积 | 15% |
 
-<object data="/assets/images/2025-03-29-ai-cost-control-02-four-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-29-ai-cost-control-02-four-layers.svg" type="image/svg+xml" width="100%" aria-label="冰山模型：四层成本结构（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -95,7 +95,7 @@ AI系统需要持续维护：
 
 这些工作不会在账单上体现，但会消耗大量工程资源。
 
-<object data="/assets/images/2025-03-29-ai-cost-control-01-iceberg.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-29-ai-cost-control-01-iceberg.svg" type="image/svg+xml" width="100%" aria-label="AI成本冰山模型" role="img"></object>
 
 ---
 
@@ -126,7 +126,7 @@ AI系统需要持续维护：
 
 AI成本失控通常经历三个阶段：
 
-<object data="/assets/images/2025-03-29-ai-cost-control-03-three-phases.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-29-ai-cost-control-03-three-phases.svg" type="image/svg+xml" width="100%" aria-label="失控三部曲（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >

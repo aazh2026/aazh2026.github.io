@@ -51,7 +51,7 @@ mmap（memory-mapped files）是 Unix 系统调用，最早出现在 1970 年代
 
 mmap **不一次性把整个文件读入内存**，而是按需将磁盘页加载到内存。操作系统负责换页，开发者像访问普通内存一样访问文件。
 
-<object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%" aria-label="Unix 的古老智慧（插图）" role="img"></object>
 
 ### 为什么被遗忘了？
 

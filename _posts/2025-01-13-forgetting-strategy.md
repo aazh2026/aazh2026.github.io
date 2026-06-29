@@ -23,9 +23,9 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
-<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## 50万条记忆的教训
 

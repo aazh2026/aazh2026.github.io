@@ -127,7 +127,7 @@ AI擅长识别「这看起来像是我见过的某个问题」，然后套用已
 >
 > 这三个能力——自动推理、创造性构造、跨领域整合——共同构成了 AI 从「工具」向「协作者」转变的技术基础。
 
-<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%" aria-label="Claude Opus 4.6 的突破（插图）" role="img"></object>
 
 ## 为什么这改变了游戏规则？
 

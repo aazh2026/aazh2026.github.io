@@ -48,7 +48,7 @@ series: AI-Native软件工程系列 #10
 
 ### 传统PR描述 vs AI增强描述
 
-<object data="/assets/images/2026-03-20-distributed-code-review-ai-01-pr-summary-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-20-distributed-code-review-ai-01-pr-summary-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统 PR 描述 vs AI 语义摘要" role="img"></object>
 
 ### AI摘要生成
 
@@ -76,7 +76,7 @@ AI摘要生成的流程分为四个阶段。首先，模型对 diff 做语义解
 
 ### AI冲突预警
 
-<object data="/assets/images/2026-03-20-distributed-code-review-ai-02-conflict-detection.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-20-distributed-code-review-ai-02-conflict-detection.svg" type="image/svg+xml" width="100%" aria-label="AI冲突预警（插图）" role="img"></object>
 
 ### 冲突预警示例
 

@@ -89,7 +89,7 @@ AI应用产生大量数据需要存储：
 
 一个典型的AI客服系统月成本构成：
 
-<object data="/assets/images/2026-03-15-ai-cost-01-structure.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-ai-cost-01-structure.svg" type="image/svg+xml" width="100%" aria-label="AI成本结构分析" role="img"></object>
 
 **优化优先级：Token成本 > 存储成本 > 推理成本**
 
@@ -101,7 +101,7 @@ AI应用产生大量数据需要存储：
 
 ### 四层成本追踪模型
 
-<object data="/assets/images/2026-03-15-ai-cost-02-monitoring.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-ai-cost-02-monitoring.svg" type="image/svg+xml" width="100%" aria-label="四层成本追踪模型" role="img"></object>
 
 ### L1：资源层监控
 

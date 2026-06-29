@@ -13,9 +13,9 @@ series: AI-Native Engineering
 >
 > AI系统的成本不是线性增长的，而是呈现"阶梯式跃迁"特征。本文提出"成本结构四象限模型"，揭示80%的成本浪费来自结构性错配。关键洞察：优化AI成本的核心不是降低单价，而是重构系统架构。
 
-<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants-hero.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants-hero.svg" type="image/svg+xml" width="100%" aria-label="成本结构四象限模型" role="img"></object>
 
-<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" type="image/svg+xml" width="100%" aria-label="AI 系统成本结构四象限模型" role="img"></object>
 
 ---
 
@@ -36,7 +36,7 @@ series: AI-Native Engineering
 >
 > 优化架构比砍价更重要，架构债务是最贵的债务。
 
-<object data="/assets/images/2026-03-23-ai-cost-model-02-transition.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-ai-cost-model-02-transition.svg" type="image/svg+xml" width="100%" aria-label="AI成本模型转变：从单价驱动到架构驱动" role="img"></object>
 
 ---
 

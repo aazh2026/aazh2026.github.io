@@ -83,7 +83,7 @@ series: AI-Native Engineering
 
 这意味着：与其让每个Agent独自学习，不如让它们共享学习的结果。
 
-<object data="/assets/images/2025-01-11-cold-start-01-three-mechanisms.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-11-cold-start-01-three-mechanisms.svg" type="image/svg+xml" width="100%" aria-label="冷启动：三种传承机制" role="img"></object>
 
 ## 三种传承机制
 

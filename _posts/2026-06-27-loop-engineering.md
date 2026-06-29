@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **ReAct 是理论祖先，2025 年成本曲线是触发条件** — 2022 年的 ReAct 证明了"思考+行动交替"在单步有效；2025 年 API 降价 1/50 才让这种循环在生产环境变得值得。
 > 4. **人最终为循环的后果负责** — Uber 的 2400 万美元账单、Satya Nadella 的"学习循环"论、Loop Engineering"人负责设计、AI 负责运转、人负责为后果负责"的答案，都指向同一个事实：这是治理问题，不是技术问题。
 
-<object data="/assets/images/2026-06-27-loop-engineering-01-stack.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-01-stack.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 2026年6月7日，Peter Steinberger（OpenClaw 创始人、OpenAI 开发者）在 X 上发了一条帖子，24小时内获得了超过五百万次浏览：
 
@@ -42,7 +42,7 @@ Osmani 的原文定义值得完整引用：
 
 Osmani 提出的通用 Loop 架构，所有编码循环——无论单 Agent 还是多 Agent——都遵循完全相同的五阶段，直到满足可验证的停止条件：
 
-<object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg" type="image/svg+xml" width="100%" aria-label="通用工作流：五阶段循环（插图）" role="img"></object>
 
 **停止条件**是整个循环的核心：必须是可验证的证据，不是"看起来对了"。test pass / build clean / reviewer sign-off——没有证据就不算完成。这条原则 Osmani 自己在项目 README 里说得最狠：**"AI coding agents default to the shortest path — which often means skipping specs, tests, security reviews, and the practices that make software reliable."** 技能的作用，就是强制代理不走那条最短路径。
 
@@ -50,7 +50,7 @@ Osmani 提出的通用 Loop 架构，所有编码循环——无论单 Agent 还
 
 Osmani 把 Loop 系统拆成五个结构性组件，外加一个跨会话记忆层：
 
-<object data="/assets/images/2026-06-27-loop-engineering-04-components.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-04-components.svg" type="image/svg+xml" width="100%" aria-label="Osmani 的六块积木（插图）" role="img"></object>
 
 **1. 自动化（Automations）——心跳**
 
@@ -129,7 +129,7 @@ Cobus Greyling 的仓库收录了 7 个完整的 Loop 模式，每个都有 toke
 
 工作循环：Thought → Action → Observation → ... → Final Answer
 
-<object data="/assets/images/2026-06-27-loop-engineering-03-react.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-03-react.svg" type="image/svg+xml" width="100%" aria-label="思想史：ReAct 的基因（插图）" role="img"></object>
 
 关键发现：在 ALFWorld 和 WebShop 两个交互式决策基准上，ReAct 优于当时的 imitation learning 和 reinforcement learning 方法，绝对值提升 **+34%** 和 **+10%**，只用了 1-2 个 in-context examples。
 

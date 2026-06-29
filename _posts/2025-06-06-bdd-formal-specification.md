@@ -16,7 +16,7 @@ series: AI-Native软件工程系列 #4
 > 3. **AI桥梁** — LLM可以将自然语言Gherkin自动转换为形式化表达
 > 4. **闭环验证** — 规格生成代码，代码反验证规格，形成自洽系统
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-01-overview.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-06-bdd-formal-specification-01-overview.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ---
 
@@ -156,11 +156,11 @@ TLC 模型检查器会穷举所有可能的状态空间，验证：
 
 ### 转换Pipeline
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline（插图）" role="img"></object>
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-02-toolchain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-06-bdd-formal-specification-02-toolchain.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline（插图）" role="img"></object>
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline（插图）" role="img"></object>
 ---
 
 ## 工具链实践

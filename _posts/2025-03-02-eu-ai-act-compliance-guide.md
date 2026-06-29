@@ -44,7 +44,7 @@ EU AI Act采用基于风险的分级监管方法，将AI系统分为四个等级
 
 ### 高风险AI系统的判定标准
 
-<object data="/assets/images/2025-03-02-eu-ai-act-compliance-guide-01-risk-classification.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-02-eu-ai-act-compliance-guide-01-risk-classification.svg" type="image/svg+xml" width="100%" aria-label="EU AI Act 风险分级体系" role="img"></object>
 
 你的AI系统可能被认定为高风险，如果它涉及以下领域：
 
@@ -83,7 +83,7 @@ EU AI Act采用基于风险的分级监管方法，将AI系统分为四个等级
 
 如果你的系统被认定为高风险，必须满足以下技术要求：
 
-<object data="/assets/images/2025-03-02-eu-ai-act-compliance-guide-02-article-map.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-02-eu-ai-act-compliance-guide-02-article-map.svg" type="image/svg+xml" width="100%" aria-label="高风险AI系统技术要求（Article 9–15）" role="img"></object>
 
 ### 风险管理系统
 

@@ -222,9 +222,9 @@ Clinejection攻击不需要：
 
 基于Clinejection攻击的分析，我提出**AI-Native安全三环防护模型**：
 
-<object data="/assets/images/2025-05-02-security-01-rings.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-02-security-01-rings.svg" type="image/svg+xml" width="100%" aria-label="框架概述（插图）" role="img"></object>
 
-<object data="/assets/images/2025-05-02-security-02-workflow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-02-security-02-workflow.svg" type="image/svg+xml" width="100%" aria-label="框架概述（插图）" role="img"></object>
 
 ### 第一环：感知监测层 (Perception Monitoring)
 

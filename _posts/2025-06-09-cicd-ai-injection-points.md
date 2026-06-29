@@ -18,7 +18,7 @@ series: AI-Native软件工程系列 #7
 
 ---
 
-<object data="/assets/images/2025-06-09-cicd-ai-injection-points-03-overview.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-09-cicd-ai-injection-points-03-overview.svg" type="image/svg+xml" width="100%" aria-label="CI/CD AI 注入点全景图" role="img"></object>
 
 ## 为什么CI/CD需要AI
 
@@ -28,9 +28,9 @@ series: AI-Native软件工程系列 #7
 
 ### 传统CI/CD的局限
 
-<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限（插图）" role="img"></object>
 
-<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限（插图）" role="img"></object>
 
 ### 传统CI/CD的核心瓶颈
 

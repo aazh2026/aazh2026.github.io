@@ -12,7 +12,7 @@ series: AI-OS
 >
 > 不做 Agent 化的 SaaS 面临三重风险：被 Agent 原生产品颠覆、客户流失到更智能的竞品、估值模型过时。做 Agent 层带来四重收益：ARPU 提升 2-3x、留存率大幅提升、进入新市场、建立更深的技术壁垒。三个切入点：Copilot 模式、Workflow Automation、Autonomous Agent。建议从高频场景开始，6-12 个月可见效果。
 
-<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-02-triple-risk.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-02-triple-risk.svg" type="image/svg+xml" width="100%" aria-label="三重风险叠加" role="img"></object>
 
 ---
 
@@ -106,7 +106,7 @@ series: AI-OS
 | SaaS 2.0 | $/usage | $100-300 | 按使用量收费 |
 | **Agent-enabled** | **$/outcome** | **$300-1000** | 按效果/工作量收费 |
 
-<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-03-arpu-model.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-03-arpu-model.svg" type="image/svg+xml" width="100%" aria-label="定价模式演进与 ARPU 增长" role="img"></object>
 
 **为什么可以收更多？**
 
@@ -166,7 +166,7 @@ Agent-enabled 产品的 Net Dollar Retention（净收入留存率）：
 
 ## Agent 层的 3 个切入点
 
-<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-01-evolution-path.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-01-evolution-path.svg" type="image/svg+xml" width="100%" aria-label="Agent 层的 3 个切入点（插图）" role="img"></object>
 
 ### Copilot 模式：用户主导，AI 辅助
 

@@ -114,7 +114,7 @@ AI快速生成功能，但可能：
 
 ### Intent Complexity的维度
 
-<object data="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" type="image/svg+xml" width="100%" aria-label="Intent Complexity的维度（插图）" role="img"></object>
 
 ---
 

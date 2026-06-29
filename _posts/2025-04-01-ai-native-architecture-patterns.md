@@ -76,7 +76,7 @@ series: AI-Native Engineering
 
 让我们看看软件架构的演化史。
 
-<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-01-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-01-evolution.svg" type="image/svg+xml" width="100%" aria-label="软件架构范式演化史" role="img"></object>
 
 **1990年代，单体架构（大教堂模式）**：精心设计的庞大系统，每个部分都有明确的位置和职责。像建造大教堂一样，需要详尽的设计和长期的规划。
 
@@ -102,7 +102,7 @@ series: AI-Native Engineering
 
 我提出六个面向AI-Native架构的战术模式：
 
-<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-02-six-patterns.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-02-six-patterns.svg" type="image/svg+xml" width="100%" aria-label="AI-Native架构六大战术模式" role="img"></object>
 
 ### Intent Router：让AI理解用户想要什么
 

@@ -20,8 +20,8 @@ series: AI-Native软件工程系列 #9
 
 ## 契约测试基础
 
-<object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2025-06-12-contract-testing-automation-02-semantic-verification.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础（插图）" role="img"></object>
+<object data="/assets/images/2025-06-12-contract-testing-automation-02-semantic-verification.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >

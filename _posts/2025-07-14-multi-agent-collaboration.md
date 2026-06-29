@@ -26,7 +26,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 - [为什么需要 Multi-Agent？](#为什么需要-multi-agent)
 - [三种协作架构模式](#三种协作架构模式)
@@ -81,7 +81,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%" aria-label="Supervisor-Workers 主管-工作者模式（插图）" role="img"></object>
 
 **适用场景：**
 - 任务可明确分解为独立子任务
@@ -96,7 +96,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%" aria-label="Peer-to-Peer 对等协作模式（插图）" role="img"></object>
 
 **适用场景：**
 - 任务需要多轮协商
@@ -111,7 +111,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%" aria-label="Hierarchical 层级组织模式（插图）" role="img"></object>
 
 **适用场景：**
 - 复杂组织模拟

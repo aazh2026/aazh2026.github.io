@@ -47,7 +47,7 @@ series: AI-Native Engineering
 
 基于业界最佳实践和AI工具的辅助，我提出**代码考古六步法**。
 
-<object data="/assets/images/2025-03-21-code-archaeology-playbook-02-mental-model.jpg" type="image/jpeg" width="100%"></object>
+<object data="/assets/images/2025-03-21-code-archaeology-playbook-02-mental-model.jpg" type="image/jpeg" width="100%" aria-label="代码考古六步法（插图）" role="img"></object>
 
 ## 遗址勘探：建立系统整体认知
 

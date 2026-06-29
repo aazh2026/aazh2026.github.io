@@ -134,7 +134,7 @@ TDD 的承诺：测试就是最好的文档
 
 ---
 
-<object data="/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="挑战 4：测试即文档的失效（插图）" role="img"></object>
 
 ## AI-First 测试范式
 
@@ -154,7 +154,7 @@ TDD 的承诺：测试就是最好的文档
 
 ### 新模式：意图 → 场景 → 验证
 
-<object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%" aria-label="新模式：意图 → 场景 → 验证（插图）" role="img"></object>
 
 ---
 
