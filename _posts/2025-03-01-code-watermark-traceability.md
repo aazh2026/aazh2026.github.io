@@ -74,7 +74,7 @@ series: AI-Native Engineering
 
 ## 代码水印的三重境界
 
-<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="代码水印的三重境界（插图）" role="img"></object>
 
 ### 第一层：文本水印（Textual Watermark）
 

@@ -91,7 +91,7 @@ series: AI-Native Engineering
 | 大模型 | Prompt工程 | 语言理解 | Prompt |
 | 数据工程 | 数据准备 | 数据质量 | 数据集 |
 
-<object data="/assets/images/2025-04-11-data-as-intent-02-era-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-11-data-as-intent-02-era-evolution.svg" type="image/svg+xml" width="100%" aria-label="穿越周期：从代码到模型到数据（插图）" role="img"></object>
 
 **历史在押韵**：每一次AI技术的跃迁，都重新定义了"什么是核心竞争力"。在AI-Native时代，核心竞争力是**准备高质量数据的能力**。
 
@@ -99,7 +99,7 @@ series: AI-Native Engineering
 
 ## 反直觉洞察：数据-模型-应用的飞轮效应
 
-<object data="/assets/images/2025-04-11-data-as-intent-01-flywheel.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-11-data-as-intent-01-flywheel.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：数据-模型-应用的飞轮效应（插图）" role="img"></object>
 
 我提出一个**数据-模型-应用的飞轮模型**：
 

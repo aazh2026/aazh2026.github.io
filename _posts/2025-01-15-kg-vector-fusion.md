@@ -82,7 +82,7 @@ series: AI-Native Engineering
 | "为什么我的Python程序卡住了？" | ✅ 找到类似案例 | ❌ 无法推理 | ✅ 案例+根因分析 |
 | "推荐类似Flask的框架" | ✅ 很好 | ❌ 无相似性概念 | ✅ 语义相似+关系推荐 |
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-02-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-15-kg-vector-fusion-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="向量记忆 vs 知识图谱对比" role="img"></object>
 
 关键洞察：**向量负责"召回候选"，图谱负责"精确校验和推理"。**
 
@@ -94,7 +94,7 @@ series: AI-Native Engineering
 
 ## 融合架构概览
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="融合架构概览（插图）" role="img"></object>
 ## 实体链接：桥梁的建设
 
 核心问题：向量检索到的文本中的"Python"，如何对应到知识图谱中的"Python_(programming_language)"节点？
@@ -116,7 +116,7 @@ series: AI-Native Engineering
 - 用图谱验证每个候选的"事实准确性"
 - 过滤掉与图谱矛盾的候选
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-03-fusion-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-15-kg-vector-fusion-03-fusion-flow.svg" type="image/svg+xml" width="100%" aria-label="混合RAG融合策略流程" role="img"></object>
 
 > 💡 **Key Insight**
 >

@@ -40,9 +40,9 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 **可视化**：
 
-<object data="/assets/images/2026-03-18-weight-norm-clipping-01-grokking-phases.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-weight-norm-clipping-01-grokking-phases.svg" type="image/svg+xml" width="100%" aria-label="Grokking 训练阶段与 Weight Norm Clipping 效果" role="img"></object>
 
-<object data="/assets/images/2026-03-18-weight-norm-clipping-02-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-weight-norm-clipping-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="经典示例：模运算（插图）" role="img"></object>
 
 ---
 
@@ -115,7 +115,7 @@ Grokking 是 2022 年由 OpenAI 研究人员发现的一个迷人现象：
 
 两张图展示了 Weight Norm Clipping 的核心机制：左图展示了没有裁剪时，权重范数在记忆阶段持续攀升，模型容量不断扩大；右图展示了启用裁剪后，权重范数被限制在 `max_norm` 阈值以下，模型被迫学习更平滑、更易泛化的函数映射。红色虚线标注了裁剪边界，右侧图例说明了两种实验条件下的行为差异。这个对比清晰地解释了为什么限制权重容量能够推动模型从"死记硬背"走向"真正理解"。
 
-<object data="/assets/images/2026-03-18-weight-norm-clipping-03-visual.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-weight-norm-clipping-03-visual.svg" type="image/svg+xml" width="100%" aria-label="Weight Norm Clipping 可视化：记忆阶段 vs 泛化阶段" role="img"></object>
 
 ## 为什么有效
 

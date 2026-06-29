@@ -15,7 +15,7 @@ series: AI-Native Engineering
 >
 > ⚠️ **声明**：本文是对 Martin Fowler 解读文章的再解读，包含我的个人观点和延伸思考，而非经过独立验证的技术报告。
 
-<object data="/assets/images/2026-03-18-harness-engineering-03-hero-overview.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-harness-engineering-03-hero-overview.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## 什么是 Harness？
 
@@ -85,8 +85,8 @@ OpenAI 团队构建了一套系统来：
 
 > 📌 *以下三层架构模型由 Martin Fowler 基于 OpenAI 的实践归纳提炼，是对原始经验的系统化整理。*
 
-<object data="/assets/images/2026-03-18-harness-engineering-01-arch.svg" type="image/svg+xml" width="100%"></object>
-<object data="/assets/images/2026-03-18-harness-engineering-02-constraints-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-harness-engineering-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Harness 架构" role="img"></object>
+<object data="/assets/images/2026-03-18-harness-engineering-02-constraints-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Harness 的三层架构（插图）" role="img"></object>
 
 ### Layer 1: 上下文工程
 

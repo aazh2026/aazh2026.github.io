@@ -25,7 +25,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/2025-05-29-ai-code-license-compliance-02-license-spectrum.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-29-ai-code-license-compliance-02-license-spectrum.svg" type="image/svg+xml" width="100%" aria-label="AI代码License风险光谱" role="img"></object>
 
 ## AI代码的License风险
 
@@ -68,7 +68,7 @@ redirect_from:
 
 ## SCA工具的现状与局限
 
-<object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%" aria-label="SCA工具的现状与局限（插图）" role="img"></object>
 
 ### 传统SCA如何工作
 
@@ -122,7 +122,7 @@ AI模型的训练数据：
 | **文本相似** | N-gram匹配 | 检测代码片段复制 |
 | **Token序列** | 标准化Token比对 | 忽略变量名差异 |
 
-<object data="/assets/images/2025-05-29-ai-code-license-compliance-03-detection-dimensions.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-29-ai-code-license-compliance-03-detection-dimensions.svg" type="image/svg+xml" width="100%" aria-label="AI代码溯源四维度检测" role="img"></object>
 
 ### 溯源报告示例
 

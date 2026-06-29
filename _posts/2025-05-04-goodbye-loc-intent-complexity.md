@@ -204,7 +204,7 @@ AI时代：
 
 **示例计算**：
 
-<object data="/assets/images/2025-05-04-goodbye-loc-intent-complexity-02-icq-radar.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-04-goodbye-loc-intent-complexity-02-icq-radar.svg" type="image/svg+xml" width="100%" aria-label="综合意图复杂度计算（插图）" role="img"></object>
 
 ---
 
@@ -298,7 +298,7 @@ AI时代：
 
 ### AI-Native效能度量金字塔
 
-<object data="/assets/images/2025-05-04-ai-native-metrics-01-pyramid.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-04-ai-native-metrics-01-pyramid.svg" type="image/svg+xml" width="100%" aria-label="AI-Native效能度量金字塔（插图）" role="img"></object>
 
 ### 指标体系对比
 

@@ -45,7 +45,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%" aria-label="幻灭时刻（插图）" role="img"></object>
 
 ## "AI 垃圾代码"的典型症状
 
@@ -146,7 +146,7 @@ AI 知道"应该使用缓存"，但不知道如何正确失效缓存。
 
 > 💡 **Key Insight**: 架构救援的 ROI 通常极高——本案例中 $80K 的投入挽回了超过 $2M 的 ARR。但更重要的价值是"停止流血"：让团队从救火模式恢复正常开发节奏。
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-02-cost-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-02-cost-comparison.svg" type="image/svg+xml" width="100%" aria-label="AI垃圾代码清理经济学" role="img"></object>
 
 ## 实战：一次架构救援的真实案例
 
@@ -217,7 +217,7 @@ AI 不会取代开发者，但会**分化**开发者市场：
 - **只会用 AI 的开发者**：被低价竞争挤压
 - **能修复 AI 代码的开发者**：稀缺，高价值
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-03-career-advice.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-03-career-advice.svg" type="image/svg+xml" width="100%" aria-label="给开发者的职业建议（插图）" role="img"></object>
 
 ### 高价值技能：AI 不擅长的那些
 
@@ -243,7 +243,7 @@ AI 不会取代开发者，但会**分化**开发者市场：
 
 ### AI 优先 ≠ 低质量优先
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-04-enterprise-warning.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-04-enterprise-warning.svg" type="image/svg+xml" width="100%" aria-label="AI 优先 ≠ 低质量优先（插图）" role="img"></object>
 
 **AI 是加速器，不是替代品。**
 

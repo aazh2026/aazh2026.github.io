@@ -42,7 +42,7 @@ AI不是在替代"写代码"这个动作，而是在重新定义"什么是软件
 
 从汇编语言到Fortran、C。程序员不再需要直接操作硬件，可以专注于问题本身。
 
-<object data="/assets/images/2025-04-04-aise-manifesto-02-three-revolutions.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-04-aise-manifesto-02-three-revolutions.svg" type="image/svg+xml" width="100%" aria-label="软件工程的三次革命" role="img"></object>
 
 **核心转变**：从"机器思维"到"人类思维"
 
@@ -96,7 +96,7 @@ AI不是在替代"写代码"这个动作，而是在重新定义"什么是软件
 
 我提出AI-Native软件工程的五层架构模型：
 
-<object data="/assets/images/2025-04-04-aise-manifesto-03-five-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-04-aise-manifesto-03-five-layers.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 软件工程五层架构" role="img"></object>
 
 ### 第一层：模型层
 基础模型（GPT-4、Claude、Gemini等）和工具链（IDE、API、SDK）。这一层由科技巨头提供，不是普通工程师的核心竞争力。

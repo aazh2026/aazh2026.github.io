@@ -37,7 +37,7 @@ series: AI-Native Engineering
 
 ## 今日发现
 
-<object data="/assets/images/2025-01-28-skill-hunter-01-two-pillars-discovery.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-28-skill-hunter-01-two-pillars-discovery.svg" type="image/svg+xml" width="100%" aria-label="技能猎手：两大发现" role="img"></object>
 
 ### 1. pgmemory — Agent 的「长期记忆」
 
@@ -97,7 +97,7 @@ ClawHub 目前的技能总数是 13,338，仍在持续增长。单看这个数�
 
 **文件是给人看的，数据库是给机器读的。**
 
-<object data="/assets/images/2025-01-28-skill-hunter-02-memory-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-28-skill-hunter-02-memory-evolution.svg" type="image/svg+xml" width="100%" aria-label="记忆进化：从文件到数据库" role="img"></object>
 
 > 💡 **Key Insight**
 >

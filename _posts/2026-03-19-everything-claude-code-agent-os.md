@@ -65,22 +65,22 @@ series: AI-Native Engineering
 
 这个项目是 Harness Engineering 的**完整实战案例**：
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-01-harness-pillars.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-01-harness-pillars.svg" type="image/svg+xml" width="100%" aria-label="everything-claude-code 的 Harness 设计（插图）" role="img"></object>
 
 **核心洞察**：
 > "不是相信 AI 会做对，而是确保 AI 必须做对。"
 
 ---
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" type="image/svg+xml" width="100%" aria-label="everything-claude-code 的 Harness 设计（插图）" role="img"></object>
 
 ## Harness 的四大支柱
 
 everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" type="image/svg+xml" width="100%" aria-label="Harness 的四大支柱（插图）" role="img"></object>
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="Harness 的四大支柱（插图）" role="img"></object>
 
 ### 支柱 1：Eval Harness（测试层）
 

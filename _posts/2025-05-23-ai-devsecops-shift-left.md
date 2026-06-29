@@ -62,7 +62,7 @@ series: AI-Native Engineering
 
 ## AI驱动的安全左移
 
-<object data="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" type="image/svg+xml" width="100%" aria-label="AI安全左移流程" role="img"></object>
 
 ### 什么是"终极左移"
 

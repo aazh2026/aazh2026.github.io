@@ -130,7 +130,7 @@ Intent 定义"意图和期望结果"：
 
 ### 核心转变总结
 
-<object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="核心转变总结（插图）" role="img"></object>
 
 ---
 
@@ -221,7 +221,7 @@ Intent 定义"意图和期望结果"：
 
 ### 系统设计
 
-<object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%" aria-label="系统设计（插图）" role="img"></object>
 
 ### 完整代码实现
 

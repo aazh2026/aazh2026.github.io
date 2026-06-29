@@ -22,7 +22,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-02-01-agentic-engineering-definition-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-01-agentic-engineering-definition-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="Agentic Engineering 范式转移：从 Vibe Coding 到智能体编排" role="img"></object>
 
 ## 那个著名的推特时刻
 

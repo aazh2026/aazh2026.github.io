@@ -59,9 +59,9 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 **💡 关键洞察：** 接口隔离的本质是**关注点分离**——让调用者只依赖他们真正需要的东西。
 
-<object data="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好（插图）" role="img"></object>
 
-<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好（插图）" role="img"></object>
 
 ---
 

@@ -19,7 +19,7 @@ series: AI-Native软件工程
 
 ### 七种浪费（Muda）
 
-<object data="/assets/images/2026-03-15-lean-thinking-ai-01-seven-wastes.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-lean-thinking-ai-01-seven-wastes.svg" type="image/svg+xml" width="100%" aria-label="软件工程中的 7 种浪费" role="img"></object>
 
 丰田生产系统定义了 7 种浪费，软件工程同样有对应的版本：
 
@@ -172,7 +172,7 @@ series: AI-Native软件工程
 
 **可视化输出**：
 
-<object data="/assets/images/2026-03-15-lean-thinking-ai-02-value-stream-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-lean-thinking-ai-02-value-stream-flow.svg" type="image/svg+xml" width="100%" aria-label="价值流瓶颈分析与优化" role="img"></object>
 
 ## 精益 + AI 的实践框架
 

@@ -46,7 +46,7 @@ series: AI-Native Engineering
 
 ### 核心组件
 
-<object data="/assets/images/2026-03-21-openai-monitoring-coding-agents-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-21-openai-monitoring-coding-agents-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心组件（插图）" role="img"></object>
 
 ### 延迟优化
 

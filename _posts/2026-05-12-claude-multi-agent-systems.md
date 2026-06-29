@@ -72,7 +72,7 @@ series: AI-Native Engineering
 - **Output**：以正确格式部署到正确平台
 - **Never does**：研究、写作或质量评估
 
-<object data="/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Agent 4：Distribution Agent（插图）" role="img"></object>
 
 ---
 

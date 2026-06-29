@@ -67,7 +67,7 @@ series: AI-Native Engineering
 
 ### 分层处理策略
 
-<object data="/assets/images/2025-01-24-secure-memory-01-sensitivity-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-24-secure-memory-01-sensitivity-layers.svg" type="image/svg+xml" width="100%" aria-label="敏感记忆分层架构" role="img"></object>
 
 ## 三道检测关卡
 
@@ -87,7 +87,7 @@ embedding -based 分类器在向量空间里做语义聚类，把语义上与已
 
 ### 用户显式标记
 
-<object data="/assets/images/2025-01-24-secure-memory-02-encryption-isolation.jpg" type="image/jpeg" width="100%"></object>
+<object data="/assets/images/2025-01-24-secure-memory-02-encryption-isolation.jpg" type="image/jpeg" width="100%" aria-label="用户显式标记（插图）" role="img"></object>
 
 用户最清楚自己的哪些信息不能被记住。Agent 每次尝试将新记忆写入向量 DB 时，可以通过一个非侵入式的确认框提示用户——"是否将以下内容记为敏感？（L3，仅本地存储）"。用户也可以主动标记，选中任意对话片段点击"敏感"按钮，Agent 自动将其加密后存入隔离区域，检索时不参与语义检索排名。标记行为本身也是一种训练信号：用户标记过的内容越多，ML 分类器的召回率就越高，形成一个正向循环。
 

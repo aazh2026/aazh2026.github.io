@@ -19,7 +19,7 @@ series: AI-Native Engineering
 > 3. **可执行语义规格** — 机器可读 + 语义明确 + 可验证 + 可追踪，从"叙述需求"进化为"定义规格"的范式转移
 > 4. **渐进迁移路径** — 模板化 → 验证化 → 自动化 → 智能化，四阶段渐进落地，无需大爆炸式重构
 
-<object data="/assets/images/2025-02-16-prd-structured-transformation-01-ccc-model.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-16-prd-structured-transformation-01-ccc-model.svg" type="image/svg+xml" width="100%" aria-label="CCC模型：Context-Constraints-Criteria" role="img"></object>
 
 ---
 
@@ -137,7 +137,7 @@ Scenario: 用户查看订单历史
 
 将上述四个支柱简化，就是**CCC模型**（Triple-C Model）：
 
-<object data="/assets/images/2025-02-16-prd-structured-transformation-01-ccc-model.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-02-16-prd-structured-transformation-01-ccc-model.svg" type="image/svg+xml" width="100%" aria-label="CCC模型：Context-Constraints-Criteria" role="img"></object>
 
 CCC模型是一个**思维框架**，不强制特定格式。你可以用YAML、JSON、TOML、甚至纯文本（带结构化标记）来实现。关键是**思考方式**的转变：从"描述功能"到"定义规格"。
 

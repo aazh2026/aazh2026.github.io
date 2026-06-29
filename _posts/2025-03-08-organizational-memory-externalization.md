@@ -27,7 +27,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-03-08-organizational-memory-externalization-01-iceberg.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-08-organizational-memory-externalization-01-iceberg.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## 三十分钟与五十万元的差距
 
@@ -129,7 +129,7 @@ series: AI-Native Engineering
 
 AI时代的新思路是：**在专家工作时自动捕获**。
 
-<object data="/assets/images/2025-03-08-organizational-memory-externalization-02-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-08-organizational-memory-externalization-02-flow.svg" type="image/svg+xml" width="100%" aria-label="AI时代的转机（插图）" role="img"></object>
 
 **核心转变**：
 - 从"结构化输入"（专家写文档）到"非结构化捕获"（系统自动记录）

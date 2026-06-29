@@ -43,7 +43,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-goldman-lehman.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-goldman-lehman.svg" type="image/svg+xml" width="100%" aria-label="2008 雷曼兄弟 vs 高盛：降级模式对比" role="img"></object>
 
 ## 生物学的启示：森林从不「宕机」
 
@@ -66,7 +66,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-01-14-graceful-degradation-deep-02-biology-analogies.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-14-graceful-degradation-deep-02-biology-analogies.svg" type="image/svg+xml" width="100%" aria-label="生物学启示：三大韧性机制" role="img"></object>
 
 ## 核心观点：失败不是 bug，是设计特性
 
@@ -173,9 +173,9 @@ Netflix 故意在生产环境「搞破坏」：
 
 ## 降级策略矩阵
 
-<object data="/assets/images/2025-01-14-graceful-degradation-deep-03-degradation-matrix.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-01-14-graceful-degradation-deep-03-degradation-matrix.svg" type="image/svg+xml" width="100%" aria-label="降级策略矩阵" role="img"></object>
 
-<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-matrix.jpg" type="image/jpeg" width="100%"></object>
+<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-matrix.jpg" type="image/jpeg" width="100%" aria-label="降级策略矩阵（插图）" role="img"></object>
 
 | 场景 | 生物类比 | 技术实现 | 恢复策略 |
 |------|---------|---------|---------|

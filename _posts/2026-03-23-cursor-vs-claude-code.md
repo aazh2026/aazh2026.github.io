@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **成本现实** — Cursor $20/月 vs Claude Code $0-100/月，差异在于学习曲线和时间成本
 > 4. **最终判断** — 两者不会互相取代，最佳选择是根据场景切换使用
 
-<object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ---
 
@@ -33,7 +33,7 @@ series: AI-Native Engineering
 | **调试能力** | ✅ 内置Debugger | ⚠️ 依赖终端 |
 | **学习曲线** | 低 | 高 |
 
-<object data="/assets/images/2026-03-23-cursor-vs-claude-code-02-decision-tree.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-cursor-vs-claude-code-02-decision-tree.svg" type="image/svg+xml" width="100%" aria-label="核心指标速览（插图）" role="img"></object>
 
 ---
 

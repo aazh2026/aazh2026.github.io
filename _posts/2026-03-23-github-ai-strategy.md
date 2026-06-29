@@ -15,7 +15,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-03-23-github-ai-strategy-02-three-layer-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-github-ai-strategy-02-three-layer-arch.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## GitHub的战略困境
 
@@ -134,7 +134,7 @@ OpenAI的GPT-4/GPT-5提供推理和生成能力，GitHub Actions提供执行环�
 >
 > GitHub提供**标准化**工作流，Claude Code提供**定制化**能力
 
-<object data="/assets/images/2026-03-23-github-ai-strategy-03-competitive-positioning.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-github-ai-strategy-03-competitive-positioning.svg" type="image/svg+xml" width="100%" aria-label="GitHub与Claude Code：标准化与定制化的取舍（插图）" role="img"></object>
 
 ---
 
@@ -158,7 +158,7 @@ GitHub拥有：
 
 ## 工作流整合：Agent的介入能力
 
-<object data="/assets/images/2026-03-23-github-ai-strategy-01-workflow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-23-github-ai-strategy-01-workflow.svg" type="image/svg+xml" width="100%" aria-label="工作流整合：Agent的介入能力（插图）" role="img"></object>
 
 GitHub Agent可以介入任何环节。
 

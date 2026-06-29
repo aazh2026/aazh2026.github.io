@@ -57,13 +57,13 @@ Hickey 用一句话点破了程序员的集体幻觉：
 
 ## 三个维度的深入对比
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-01-quadrant.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-simple-vs-easy-01-quadrant.svg" type="image/svg+xml" width="100%" aria-label="简单性 vs 容易性四象限" role="img"></object>
 
 让我们用三个维度来深入理解这个区别：
 
 ### 心智负担 (Mental Burden)
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="心智负担 (Mental Burden)（插图）" role="img"></object>
 
 | 维度 | 容易性 | 简单性 |
 |------|--------|--------|
@@ -138,7 +138,7 @@ AI 让"容易"达到了前所未有的高度：
 
 ## AI 如何系统性破坏简单性
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%" aria-label="AI 如何系统性破坏简单性（插图）" role="img"></object>
 
 这是一个反直觉的事实：AI 在让"容易"变得更容易的同时，正在系统性地让"简单"变得更难。
 

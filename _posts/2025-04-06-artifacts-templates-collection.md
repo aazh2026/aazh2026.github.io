@@ -26,9 +26,9 @@ series: AI-Native SDLC 交付件体系
 
 ## 模板设计理念
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-template-ecosystem.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-template-ecosystem.svg" type="image/svg+xml" width="100%" aria-label="AI-Native SDLC 交付件模板生态" role="img"></object>
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%" aria-label="AI-Native SDLC 交付件关系图" role="img"></object>
 
 ### 设计原则
 
@@ -658,7 +658,7 @@ Quality Contract 中的 `acceptance_tests` 和 `monitoring_metrics` 可以在 Ag
 
 ### 模板演进路径
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-02-template-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-06-artifacts-templates-collection-02-template-evolution.svg" type="image/svg+xml" width="100%" aria-label="交付件模板的演进路径" role="img"></object>
 
 ### 模板更新策略
 

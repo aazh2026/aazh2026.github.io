@@ -99,7 +99,7 @@ redirect_from:
 
 ## 反直觉洞察：Context Rot的三层危害
 
-<object data="/assets/images/2025-04-10-context-rot-01-harms.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-10-context-rot-01-harms.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：Context Rot的三层危害（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >

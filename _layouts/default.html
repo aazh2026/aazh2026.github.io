@@ -5,9 +5,11 @@
 
   <body>
 
+    {%- include skip-to-content.html -%}
+
     {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content" id="main-content" aria-label="Content">
       {{ content }}
     </main>
 

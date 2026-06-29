@@ -104,7 +104,7 @@ RAG回答的质量取决于检索质量。
 
 ### RAG确认偏误的循环
 
-<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-01-cycle.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-01-cycle.svg" type="image/svg+xml" width="100%" aria-label="RAG确认偏误循环" role="img"></object>
 
 ---
 
@@ -280,7 +280,7 @@ RAG回答的质量取决于检索质量。
 
 ## 防御策略：对抗偏见的架构设计
 
-<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-02-defense.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-02-defense.svg" type="image/svg+xml" width="100%" aria-label="防御策略：对抗偏见的架构设计（插图）" role="img"></object>
 
 ### 策略1：主动寻找反对观点
 

@@ -20,9 +20,9 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审流程" role="img"></object>
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-02-review-dimensions.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-11-ai-architecture-review-02-review-dimensions.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审新维度：传统维度 + AI特性评估" role="img"></object>
 
 ## 传统评审的四个软肋
 
@@ -64,7 +64,7 @@ series: AI-Native Engineering
 
 ### AI参与的三种方式
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-03-four-evolution-stages.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-11-ai-architecture-review-03-four-evolution-stages.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审的范式演进" role="img"></object>
 
 **方式1：架构方案生成**
 
@@ -209,7 +209,7 @@ AI提供多维度的量化评分：
 
 ### AI预审 + 人工审查的双层结构
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审流程" role="img"></object>
 
 ### 自动化检查的五大领域
 
@@ -278,7 +278,7 @@ AI提供多维度的量化评分：
 
 ### 从执行者到治理者的身份转变
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-04-architect-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-11-ai-architecture-review-04-architect-evolution.svg" type="image/svg+xml" width="100%" aria-label="架构师角色演进：从设计者到治理者" role="img"></object>
 
 **传统架构师**：
 - 设计系统架构

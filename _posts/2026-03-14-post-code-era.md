@@ -21,7 +21,7 @@ redirect_from:
 > 
 关键洞察：编程的本质从未改变——解决问题。改变的只是表达的媒介。
 
-<object data="/assets/images/2026-03-14-post-code-era-03-intent-architecture.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-14-post-code-era-03-intent-architecture.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ---
 
@@ -54,7 +54,7 @@ Python、Ruby、JavaScript... 表达力更强，语法更简洁。
 
 **规律**：每一代新语言都在提高抽象层级，让程序员更关注"解决什么问题"，而非"如何操作机器"。
 
-<object data="/assets/images/2026-03-14-post-code-era-01-paradigm-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-14-post-code-era-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="编程范式的演进：从机器语言到自然语言" role="img"></object>
 
 ### 但故事还没结束
 
@@ -162,7 +162,7 @@ Python、Ruby、JavaScript... 表达力更强，语法更简洁。
 
 ### 编程的三个层次
 
-<object data="/assets/images/2026-03-14-post-code-era-02-three-levels.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-14-post-code-era-02-three-levels.svg" type="image/svg+xml" width="100%" aria-label="编程的三个层次：从语法到意图" role="img"></object>
 
 ### 转移的本质
 

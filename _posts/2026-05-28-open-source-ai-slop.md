@@ -26,7 +26,7 @@ Pi 的 issue tracker 现在不只是存储用户报告——它也成了 AI agen
 
 问题是：**issue 描述的质量正在急剧下降**。
 
-<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%" aria-label="引言：一个维护者的困境（插图）" role="img"></object>
 
 ## Slop Issues：95% 是 AI 生成的垃圾
 

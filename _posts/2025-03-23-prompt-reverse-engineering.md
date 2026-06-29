@@ -17,7 +17,7 @@ series: AI安全洞察
 > 3. **实际威胁已发生** — Luna AI的核心Prompt被竞争对手通过社会工程学手段完整提取，三个月技术优势在一个周末化为乌有
 > 4. **多层防护框架** — 技术层（动态组装/输出过滤）、架构层（Prompt as a Service）、策略层（快速迭代/法律+差异化壁垒）可收缩攻击面，但无法根治
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%" aria-label="Prompt 逆向工程攻击链" role="img"></object>
 
 # 你的Prompt正在被反向工程——AI系统的提示词泄露与防御
 
@@ -97,7 +97,7 @@ Prompt泄露正在成为AI产品的新风险。那些被视为核心竞争力的
 
 Prompt就是AI系统的"灵魂"。而这个灵魂，正以明文形式暴露给每一个用户。
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-01-attack-chain.svg" type="image/svg+xml" width="100%" aria-label="Prompt 逆向工程攻击链" role="img"></object>
 
 ## 穿越周期：从软件逆向工程到Prompt逆向工程
 
@@ -179,7 +179,7 @@ Prompt的法律保护确实存在，但执行困难：
 
 基于对Prompt泄露机制的分析，我提出一个多层防护框架。
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-02-defense-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-02-defense-layers.svg" type="image/svg+xml" width="100%" aria-label="实战：Prompt保护的技术与策略框架（插图）" role="img"></object>
 
 ### 技术层防护
 
@@ -211,7 +211,7 @@ Prompt的法律保护确实存在，但执行困难：
 
 不要在前端或客户端暴露Prompt。将Prompt逻辑封装在后端服务中，客户端只与API交互。
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-03-paas.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-03-paas.svg" type="image/svg+xml" width="100%" aria-label="架构层防护（插图）" role="img"></object>
 
 这样攻击者只能套取后端的API响应，无法直接接触到Prompt。
 

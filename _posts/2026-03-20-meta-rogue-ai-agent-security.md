@@ -66,7 +66,7 @@ Meta 在 AI Agent 领域的投入：
 
 ### 企业级 AI Agent 的典型架构
 
-<object data="/assets/images/2026-03-20-meta-rogue-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-20-meta-rogue-01-arch.svg" type="image/svg+xml" width="100%" aria-label="企业级 AI Agent 典型架构" role="img"></object>
 
 ### 问题出在哪里？
 
@@ -129,7 +129,7 @@ Meta 的这起事件表明：**权限边界的定义和执行存在漏洞**。
 
 虽然具体细节未公开，但可以推测 Meta 拥有：
 
-<object data="/assets/images/2026-03-20-meta-rogue-02-security-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-20-meta-rogue-02-security-layers.svg" type="image/svg+xml" width="100%" aria-label="Meta 的安全架构（插图）" role="img"></object>
 
 ### 这次事件中起作用的是哪一层？
 

@@ -24,9 +24,9 @@ redirect_from:
 
 ## 为什么需要Prompt Engineering梯队
 
-<object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%" aria-label="Prompt工程梯队建设三阶段" role="img"></object>
 
-<object data="/assets/images/2025-05-26-prompt-engineering-ladder-02-three-levels.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-26-prompt-engineering-ladder-02-three-levels.svg" type="image/svg+xml" width="100%" aria-label="为什么需要Prompt Engineering梯队（插图）" role="img"></object>
 
 ### 现实挑战
 

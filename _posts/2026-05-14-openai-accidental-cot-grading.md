@@ -122,7 +122,7 @@ OpenAI 在 2025 年底以来一直在进行实验，故意在标准 RL pipeline 
 
 ## 实验发现
 
-<object data="/assets/images/2026-05-14-openai-accidental-cot-grading-01-three-factors.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-14-openai-accidental-cot-grading-01-three-factors.svg" type="image/svg+xml" width="100%" aria-label="CoT Obfuscation 三因素模型" role="img"></object>
 
 > 💡 **Key Insight**
 >

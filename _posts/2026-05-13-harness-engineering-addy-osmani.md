@@ -18,7 +18,7 @@ description: "Agent = Model + Harness——好 harness 胜过大模型，同一�
 
 ---
 
-<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-00-hero.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-00-hero.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## Agent = Model + Harness
 
@@ -42,7 +42,7 @@ Addy Osmani 是 Google Cloud AI Director，曾在 Chrome 团队。他这篇关�
 
 ## Harness 到底是什么
 
-<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Harness 到底是什么（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -129,7 +129,7 @@ Addy 的表达最精确：**约束只在你观察到真实失败时添加，只�
 
 ## 从行为倒推 harness 设计
 
-<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-02-six-pillars.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-13-harness-engineering-addy-osmani-02-six-pillars.svg" type="image/svg+xml" width="100%" aria-label="从行为倒推 harness 设计（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >

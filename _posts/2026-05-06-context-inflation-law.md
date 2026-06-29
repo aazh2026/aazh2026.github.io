@@ -80,7 +80,7 @@ reading_time: 8
 
 ## 成本结构解析
 
-<object data="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="上下文成本结构：未优化 vs 优化后" role="img"></object>
 
 ### 你的钱到底花在哪了？
 
@@ -112,7 +112,7 @@ reading_time: 8
 
 ### 优化矩阵
 
-<object data="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" type="image/svg+xml" width="100%" aria-label="四象限成本优化框架" role="img"></object>
 
 ### 象限 1：高频高价值 → 智能缓存
 

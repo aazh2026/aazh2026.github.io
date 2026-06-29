@@ -48,7 +48,7 @@ series: AI-Native Engineering
 
 ### OpenAI 的层级定义
 
-<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-01-arch.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-01-arch.svg" type="image/svg+xml" width="100%" aria-label="OpenAI 的层级定义（插图）" role="img"></object>
 
 **核心规则**：
 - 高优先级指令更可信
@@ -71,7 +71,7 @@ series: AI-Native Engineering
 2. 模型生成响应
 3. 根据是否遵循正确指令给予奖励
 
-<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-02-rl-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-02-rl-loop.svg" type="image/svg+xml" width="100%" aria-label="IH-Challenge RL 训练循环" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -149,7 +149,7 @@ IH-Challenge 采用纯客观的自动化评分机制，避免了人类判断的�
 
 **攻击向量**：恶意指令嵌入在工具输出中。
 
-<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-03-injection-defense.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-03-injection-defense.svg" type="image/svg+xml" width="100%" aria-label="提示注入攻击与 IH 防御机制" role="img"></object>
 
 > 💡 **Key Insight**
 >

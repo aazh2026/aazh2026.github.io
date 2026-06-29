@@ -17,7 +17,7 @@ series: AI-Native SDLC 实践
 > 2. **设计质量被 AI 放大** — 设计不是变少了，而是变得更重要。传统流程中设计文档与代码脱节，AI-Native 流程中设计 artifacts 直接驱动 AI，设计的质量直接决定代码质量、生成效率和幻觉概率。
 > 3. **Intent Architect 是新角色** — 设计师的核心价值从"画图"转向"定义意图"，图形产出减少，但上下文组织的责任更重，需要掌握结构化 artifacts 的组合能力。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-02-ctx-evolution.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-ai-native-detailed-design-02-ctx-evolution.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 传统软件工程里的详细设计文档正在死去。不是因为设计不重要了，而是因为它正在变成另一种东西——**可执行上下文（Executable Context）**。
 
@@ -102,7 +102,7 @@ AI 可以自动生成：Controller、Client SDK、测试用例。
 
 AI 据此生成单元测试和集成测试。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-01-artifacts.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-ai-native-detailed-design-01-artifacts.svg" type="image/svg+xml" width="100%" aria-label="Evaluation Spec（评估规格）（插图）" role="img"></object>
 
 ## 设计与代码的解耦与重绑定
 
@@ -171,7 +171,7 @@ AI-Native 时代的详细设计有五个关键变化：
 
 因为 AI-Native SDLC 正在出现新范式：**Intent-Driven Development**。很多"详细设计"会被 `intent + constraints + examples` 直接替代。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-03-intent-driven.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-ai-native-detailed-design-03-intent-driven.svg" type="image/svg+xml" width="100%" aria-label="总结（插图）" role="img"></object>
 
 这是软件工程的下一次革命。
 

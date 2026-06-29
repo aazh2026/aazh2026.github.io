@@ -131,7 +131,7 @@ class DataExporter: ...
 
 #### 太粗：一个 Agent 包揽所有
 
-<object data="/assets/images/2026-03-15-single-responsibility-01-anti.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-single-responsibility-01-anti.svg" type="image/svg+xml" width="100%" aria-label="太粗：一个 Agent 包揽所有（插图）" role="img"></object>
 
 **问题：**
 - Prompt 变得冗长复杂
@@ -152,7 +152,7 @@ class DataExporter: ...
 
 #### 正好：按业务边界划分
 
-<object data="/assets/images/2026-03-15-single-responsibility-02-specialized.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-single-responsibility-02-specialized.svg" type="image/svg+xml" width="100%" aria-label="正好：按业务边界划分（插图）" role="img"></object>
 
 ### 边界定义：CUBE 原则
 
@@ -300,7 +300,7 @@ class AgentC:
 
 ### 正确的层次结构
 
-<object data="/assets/images/2026-03-15-single-responsibility-03-orchestrator.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-single-responsibility-03-orchestrator.svg" type="image/svg+xml" width="100%" aria-label="正确的层次结构（插图）" role="img"></object>
 
 ---
 

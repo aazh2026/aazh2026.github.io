@@ -99,7 +99,7 @@ Carlini 的发现：**Claude 足够聪明，可以自己解决大部分冲突。
 - 传统思维：冲突是人类协调者的责任
 - Harness 思维：冲突是 Agent 工作流的一部分
 
-<object data="/assets/images/2026-03-15-parallel-agent-coordination-01-mechanism.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-parallel-agent-coordination-01-mechanism.svg" type="image/svg+xml" width="100%" aria-label="合并冲突？让 Agent 自己解决（插图）" role="img"></object>
 
 ---
 
@@ -158,7 +158,7 @@ Carlini 明确说明：
 
 没有绝对的好坏，只有适合的场景。
 
-<object data="/assets/images/2026-03-15-parallel-agent-coordination-02-centralized-vs-decentralized.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-15-parallel-agent-coordination-02-centralized-vs-decentralized.svg" type="image/svg+xml" width="100%" aria-label="两种模式的适用场景（插图）" role="img"></object>
 
 ---
 

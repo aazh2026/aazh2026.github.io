@@ -18,7 +18,7 @@ series: AI-Native软件工程系列 #2
 
 ---
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## 用户故事的局限
 
@@ -36,7 +36,7 @@ series: AI-Native软件工程系列 #2
 
 **但它有三个致命缺陷：**
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="用户故事的局限（插图）" role="img"></object>
 
 | 缺陷 | 说明 | 后果 |
 |------|------|------|
@@ -66,11 +66,11 @@ series: AI-Native软件工程系列 #2
 > 
 > AI需要的最小完备信息单元是三元组：上下文（Context）+ 约束（Constraints）+ 验收标准（Acceptance Criteria）。缺少任何一项，生成都可能偏离目标。
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" type="image/svg+xml" width="100%" aria-label="三元组新范式（插图）" role="img"></object>
 
 ### 结构对比
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" type="image/svg+xml" width="100%" aria-label="SDD 2.0 三元组：上下文-约束-验收标准" role="img"></object>
 
 | 维度 | 传统格式 | SDD 2.0 |
 |------|---------|---------|

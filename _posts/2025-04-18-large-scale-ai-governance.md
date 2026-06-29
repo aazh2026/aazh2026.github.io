@@ -32,7 +32,7 @@ redirect_from:
 **Month 3：溯源困难**
 **Month 4：技术债务爆炸**
 
-<object data="/assets/images/2025-04-18-large-scale-ai-governance-01-chaos-timeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-18-large-scale-ai-governance-01-chaos-timeline.svg" type="image/svg+xml" width="100%" aria-label="场景：200人微服务团队的AI灾难（插图）" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -56,11 +56,11 @@ redirect_from:
 
 ### 治理的三大支柱
 
-<object data="/assets/images/2025-04-18-governance-01-pillars.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-18-governance-01-pillars.svg" type="image/svg+xml" width="100%" aria-label="治理的三大支柱（插图）" role="img"></object>
 
 <object data="/assets/images/2025-04-18-large-scale-ai-governance-02-framework.svg"
 
-<object data="/assets/images/2025-04-18-governance-02-hierarchy.svg" type="image/svg+xml" width="100%"></object> type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-04-18-governance-02-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="治理层级：战略 / 战术 / 执行" role="img"></object>
 
 > 💡 **Key Insight**
 >

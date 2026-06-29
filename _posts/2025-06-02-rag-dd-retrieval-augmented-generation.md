@@ -23,7 +23,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/2025-06-02-rag-dd-retrieval-augmented-generation-01-core-loop.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-02-rag-dd-retrieval-augmented-generation-01-core-loop.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
 
 ## RAG-DD 的核心理念
 
@@ -104,9 +104,9 @@ redirect_from:
 
 ## 系统架构
 
-<object data="/assets/images/2025-06-02-rag-01-pipeline.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-02-rag-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="RAG-DD 实时融合流水线" role="img"></object>
 
-<object data="/assets/images/2025-06-02-rag-dd-02-knowledge-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-06-02-rag-dd-02-knowledge-layers.svg" type="image/svg+xml" width="100%" aria-label="系统架构（插图）" role="img"></object>
 
 ## 核心组件
 

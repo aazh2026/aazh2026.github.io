@@ -21,7 +21,7 @@ redirect_from:
 > 
 > 关键洞察：AI写代码，但人类必须共同理解代码。理解度下降是隐性技术债务。
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-01-framework.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-knowledge-isolation-index-01-framework.svg" type="image/svg+xml" width="100%" aria-label="知识孤岛形成双路径" role="img"></object>
 
 ## 知识孤岛现象
 
@@ -74,11 +74,11 @@ redirect_from:
 
 ### KII风险等级
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-04-kii-levels.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-knowledge-isolation-index-04-kii-levels.svg" type="image/svg+xml" width="100%" aria-label="KII 风险等级图" role="img"></object>
 
 ---
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-02-knowledge-spread.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-knowledge-isolation-index-02-knowledge-spread.svg" type="image/svg+xml" width="100%" aria-label="知识传染 vs 知识阻断" role="img"></object>
 
 ## 知识传染与阻断分析
 
@@ -138,7 +138,7 @@ AI直接输出代码而不附带任何解释，接收者无法了解背后的业
 
 ## 重建集体理解
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-03-remediation.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-12-knowledge-isolation-index-03-remediation.svg" type="image/svg+xml" width="100%" aria-label="重建集体理解四策略" role="img"></object>
 
 ### 策略1：强制文档化 + AI代码必须带解释
 

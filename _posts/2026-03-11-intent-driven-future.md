@@ -32,7 +32,7 @@ redirect_from:
 >
 > 消失的不是设计本身，而是设计的表达方式——从"规定如何实现"变成"规定要达成什么"。
 
-<object data="/assets/images/2026-03-11-intent-driven-future-03-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-intent-driven-future-03-layers.svg" type="image/svg+xml" width="100%" aria-label="详细设计分层模型" role="img"></object>
 
 ## 正在发生的范式转移
 
@@ -50,7 +50,7 @@ AI-Native SDLC 正在出现一种新范式：
 
 ## 传统 vs Intent-Driven
 
-<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统 vs Intent-Driven（插图）" role="img"></object>
 
 ### 传统详细设计
 
@@ -129,7 +129,7 @@ LLM 的本质是**模式匹配**。
 
 ## 什么场景适合 Intent-Driven？
 
-<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%" aria-label="什么场景适合 Intent-Driven？（插图）" role="img"></object>
 
 | 场景 | 适合度 | 原因 |
 |------|--------|------|

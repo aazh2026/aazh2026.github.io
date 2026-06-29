@@ -77,7 +77,7 @@ Nolan Lawson 描述了他的工作流：
 
 > "Run a Claude sub-agent, Codex, and Cursor Bugbot to find bugs in this PR ranked by critical/high/medium/low."
 
-<object data="/assets/images/2026-05-26-judgment-and-execution-02-ensemble.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-26-judgment-and-execution-02-ensemble.svg" type="image/svg+xml" width="100%" aria-label="多模型交叉审查：Ensemble 合成" role="img"></object>
 
 这不是简单的"人多力量大"。这是因为**不同模型的幻觉模式是不同的**。当三个模型都认为某处有问题，误报的概率接近于零；当只有一个模型说有问题，你需要人工复核。
 
@@ -103,7 +103,7 @@ Editing is thinking. Review is thinking more carefully.
 
 ---
 
-<object data="/assets/images/2026-05-26-judgment-and-execution-01-separation.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-05-26-judgment-and-execution-01-separation.svg" type="image/svg+xml" width="100%" aria-label="Judgment vs Execution Separation" role="img"></object>
 
 ## judgment 和 execution 分离是架构原则，不是 AI 的 bug
 

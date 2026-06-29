@@ -171,7 +171,7 @@ series: AI-Native Engineering
 
 ## 五层架构
 
-<object data="/assets/images/2025-05-12-aise-framework-01-layers.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-12-aise-framework-01-layers.svg" type="image/svg+xml" width="100%" aria-label="五层架构（插图）" role="img"></object>
 
 AISE将软件工程活动划分为五个层次：
 
@@ -509,7 +509,7 @@ AISE成熟度模型定义了五个级别，描述组织在AISE实践上的演进
 >
 > AISE成熟度模型定义了五个级别，描述组织在AISE实践上的演进路径
 
-<object data="/assets/images/2025-05-12-aise-framework-02-maturity-model.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-12-aise-framework-02-maturity-model.svg" type="image/svg+xml" width="100%" aria-label="Level 5：自主（Autonomous）（插图）" role="img"></object>
 
 ---
 
