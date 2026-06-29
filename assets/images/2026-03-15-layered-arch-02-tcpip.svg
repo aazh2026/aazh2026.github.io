@@ -1,41 +1,29 @@
-<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- TCP/IP 4层模型 vs OSI 7层 -->
-  <rect width="560" height="160" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">TCP/IP 四层模型</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/15</text>
-
-  <!-- App layer -->
-  <rect x="40" y="48" width="480" height="30" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="48" width="480" height="14" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="60" y="61" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">应用层</text>
-  <text x="140" y="61" font-size="11" fill="#141413">HTTP · FTP · DNS · SSH</text>
-  <text x="360" y="61" font-size="9" fill="#87867F">(OSI L5-L7 合并)</text>
-
-  <line x1="280" y1="78" x2="280" y2="86" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,86 280,94 284,78" fill="#D1CFC5"/>
-
-  <!-- Transport -->
-  <rect x="40" y="86" width="480" height="26" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="86" width="480" height="13" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="60" y="98" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">传输层</text>
-  <text x="140" y="98" font-size="11" fill="#141413">TCP · UDP</text>
-  <text x="240" y="98" font-size="9" fill="#87867F">(OSI L4)</text>
-
-  <line x1="280" y1="112" x2="280" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,120 280,128 284,112" fill="#D1CFC5"/>
-
-  <!-- Network -->
-  <rect x="40" y="120" width="480" height="26" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="40" y="120" width="480" height="13" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="60" y="132" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">网络层</text>
-  <text x="140" y="132" font-size="11" fill="#141413">IP · ICMP · 路由协议</text>
-
-  <line x1="280" y1="146" x2="280" y2="154" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,154 280,162 284,154" fill="#D1CFC5"/>
-
-  <!-- Link -->
-  <rect x="40" y="154" width="480" height="8" rx="4" fill="#F0EEE6" stroke="#87867F" stroke-width="1"/>
-  <text x="60" y="160" font-size="9" fill="#87867F" font-family="ui-monospace, monospace" font-weight="600">网络接口层</text>
-  <text x="180" y="160" font-size="9" fill="#141413">Ethernet · WiFi · 物理设备</text>
-  <text x="360" y="160" font-size="8" fill="#87867F">(OSI L1-L2)</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 160">
+  <path fill="#faf9f5" d="M0 0h560v160H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">TCP/IP 四层模型</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2026/03/15</text>
+  <rect width="480" height="30" x="40" y="48" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="480" height="14" x="40" y="48" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="60" y="61" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">应用层</text>
+  <text x="140" y="61" fill="#141413" font-size="11">HTTP · FTP · DNS · SSH</text>
+  <text x="360" y="61" fill="#87867f" font-size="9">(OSI L5-L7 合并)</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 78v8"/>
+  <path fill="#d1cfc5" d="m276 86 4 8 4-16z"/>
+  <rect width="480" height="26" x="40" y="86" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="13" x="40" y="86" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="60" y="98" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600">传输层</text>
+  <text x="140" y="98" fill="#141413" font-size="11">TCP · UDP</text>
+  <text x="240" y="98" fill="#87867f" font-size="9">(OSI L4)</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 112v8"/>
+  <path fill="#d1cfc5" d="m276 120 4 8 4-16z"/>
+  <rect width="480" height="26" x="40" y="120" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="13" x="40" y="120" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="60" y="132" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600">网络层</text>
+  <text x="140" y="132" fill="#141413" font-size="11">IP · ICMP · 路由协议</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 146v8"/>
+  <path fill="#d1cfc5" d="m276 154 4 8 4-8z"/>
+  <rect width="480" height="8" x="40" y="154" fill="#f0eee6" stroke="#87867f" rx="4"/>
+  <text x="60" y="160" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" font-weight="600">网络接口层</text>
+  <text x="180" y="160" fill="#141413" font-size="9">Ethernet · WiFi · 物理设备</text>
+  <text x="360" y="160" fill="#87867f" font-size="8">(OSI L1-L2)</text>
 </svg>

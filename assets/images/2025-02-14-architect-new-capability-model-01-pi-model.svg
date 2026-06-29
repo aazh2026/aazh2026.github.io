@@ -1,82 +1,44 @@
-<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="640" height="400" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="320" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI时代架构师的新能力模型</text>
-  <text x="320" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">从 T型 到 π型 能力模型</text>
-
-  <!-- Left vertical bar: 技术评估能力 -->
-  <rect x="60" y="60" width="120" height="230" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="120" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">技术评估能力</text>
-  <text x="120" y="96" text-anchor="middle" font-size="8.5" fill="#87867F">（左竖）</text>
-
-  <!-- Tags inside left bar -->
-  <rect x="76" y="112" width="88" height="20" rx="10" fill="#D97757"/>
-  <text x="120" y="126" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">架构评审</text>
-
-  <rect x="76" y="140" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="120" y="154" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">方案评估</text>
-
-  <rect x="76" y="168" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="120" y="182" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">技术选型</text>
-
-  <rect x="76" y="196" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="120" y="210" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">质量把关</text>
-
-  <rect x="76" y="224" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="120" y="238" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">根因分析</text>
-
-  <!-- Left label arrow -->
-  <line x1="56" y1="190" x2="30" y2="190" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="32,186 32,194 24,190" fill="#D97757"/>
-  <text x="28" y="183" text-anchor="end" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">执行</text>
-  <text x="28" y="202" text-anchor="end" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">↓评估</text>
-
-  <!-- Right vertical bar: Context设计能力 -->
-  <rect x="460" y="60" width="120" height="230" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="520" y="82" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Context设计能力</text>
-  <text x="520" y="96" text-anchor="middle" font-size="8.5" fill="#87867F">（右竖）</text>
-
-  <!-- Five dimensions inside right bar -->
-  <rect x="476" y="112" width="88" height="20" rx="10" fill="#D97757"/>
-  <text x="520" y="126" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">业务</text>
-
-  <rect x="476" y="140" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="520" y="154" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">系统</text>
-
-  <rect x="476" y="168" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="520" y="182" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">组织</text>
-
-  <rect x="476" y="196" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="520" y="210" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">约束</text>
-
-  <rect x="476" y="224" width="88" height="20" rx="10" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="520" y="238" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">演化</text>
-
-  <!-- Right label arrow -->
-  <line x1="584" y1="175" x2="600" y2="175" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="598,171 598,179 606,175" fill="#D97757"/>
-  <text x="598" y="163" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">新增</text>
-
-  <!-- Horizontal bar: 跨领域整合能力 -->
-  <rect x="60" y="308" width="520" height="50" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="320" y="329" text-anchor="middle" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">跨领域整合能力</text>
-  <text x="320" y="346" text-anchor="middle" font-size="9" fill="#87867F">（横杠）连接 技术 · 业务 · 组织</text>
-
-  <!-- Connecting lines: left bar to horizontal bar -->
-  <line x1="120" y1="290" x2="120" y2="308" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="200" y1="290" x2="200" y2="308" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-
-  <!-- Connecting lines: right bar to horizontal bar -->
-  <line x1="440" y1="290" x2="440" y2="308" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <line x1="520" y1="290" x2="520" y2="308" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-
-  <!-- π symbol label -->
-  <text x="320" y="148" text-anchor="middle" font-size="40" fill="#D1CFC5" font-family="Georgia, serif" opacity="0.5">π</text>
-
-  <!-- Bottom note -->
-  <text x="320" y="380" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI时代架构师的能力进化路径</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 640 400">
+  <path fill="#faf9f5" d="M0 0h640v400H0z"/>
+  <text x="320" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI时代架构师的新能力模型</text>
+  <text x="320" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">从 T型 到 π型 能力模型</text>
+  <rect width="120" height="230" x="60" y="60" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="120" y="82" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">技术评估能力</text>
+  <text x="120" y="96" fill="#87867f" font-size="8.5" text-anchor="middle">（左竖）</text>
+  <rect width="88" height="20" x="76" y="112" fill="#d97757" rx="10"/>
+  <text x="120" y="126" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">架构评审</text>
+  <rect width="88" height="20" x="76" y="140" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="120" y="154" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">方案评估</text>
+  <rect width="88" height="20" x="76" y="168" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="120" y="182" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">技术选型</text>
+  <rect width="88" height="20" x="76" y="196" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="120" y="210" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">质量把关</text>
+  <rect width="88" height="20" x="76" y="224" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="120" y="238" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">根因分析</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M56 190H30"/>
+  <path fill="#d97757" d="M32 186v8l-8-4z"/>
+  <text x="28" y="183" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="end">执行</text>
+  <text x="28" y="202" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="end">↓评估</text>
+  <rect width="120" height="230" x="460" y="60" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="520" y="82" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Context设计能力</text>
+  <text x="520" y="96" fill="#87867f" font-size="8.5" text-anchor="middle">（右竖）</text>
+  <rect width="88" height="20" x="476" y="112" fill="#d97757" rx="10"/>
+  <text x="520" y="126" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">业务</text>
+  <rect width="88" height="20" x="476" y="140" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="520" y="154" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">系统</text>
+  <rect width="88" height="20" x="476" y="168" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="520" y="182" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">组织</text>
+  <rect width="88" height="20" x="476" y="196" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="520" y="210" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">约束</text>
+  <rect width="88" height="20" x="476" y="224" fill="#f0eee6" stroke="#d1cfc5" rx="10"/>
+  <text x="520" y="238" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">演化</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M584 175h16"/>
+  <path fill="#d97757" d="M598 171v8l8-4z"/>
+  <text x="598" y="163" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">新增</text>
+  <rect width="520" height="50" x="60" y="308" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="320" y="329" fill="#788c5d" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">跨领域整合能力</text>
+  <text x="320" y="346" fill="#87867f" font-size="9" text-anchor="middle">（横杠）连接 技术 · 业务 · 组织</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M120 290v18m80-18v18m240-18v18m80-18v18"/>
+  <text x="320" y="148" fill="#d1cfc5" font-family="Georgia, serif" font-size="40" opacity=".5" text-anchor="middle">π</text>
+  <text x="320" y="380" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">AI时代架构师的能力进化路径</text>
 </svg>

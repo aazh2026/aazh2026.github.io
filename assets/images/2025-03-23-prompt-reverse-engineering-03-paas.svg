@@ -1,65 +1,38 @@
-<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Color palette: ivory #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="600" height="300" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Prompt as a Service 架构</text>
-  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">后端封装 · API 解耦 · 攻击面收缩</text>
-
-  <!-- Column 1: Client -->
-  <rect x="40" y="64" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="110" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">用户 / 攻击者</text>
-  <!-- Device icon -->
-  <rect x="86" y="100" width="48" height="36" rx="4" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="94" y="108" width="32" height="20" rx="2" fill="#E3DACC"/>
-  <text x="110" y="122" text-anchor="middle" font-size="8" fill="#87867F">LLM API</text>
-  <text x="110" y="174" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">无法接触后端</text>
-
-  <!-- Arrow: Client → API Gateway (dashed, clay) -->
-  <line x1="180" y1="124" x2="220" y2="124" stroke="#D97757" stroke-width="2" stroke-dasharray="4,3"/>
-  <polygon points="224,124 216,120 216,128" fill="#D97757"/>
-  <text x="200" y="116" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">LLM API 调用</text>
-  <text x="200" y="130" text-anchor="middle" font-size="8" fill="#87867F">（Prompt 不可见）</text>
-
-  <!-- Column 2: API Gateway (center) -->
-  <rect x="224" y="64" width="152" height="120" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="300" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">API Gateway</text>
-  <!-- Server icon -->
-  <rect x="272" y="100" width="56" height="40" rx="4" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <line x1="272" y1="110" x2="328" y2="110" stroke="#D97757" stroke-width="1"/>
-  <line x1="272" y1="118" x2="328" y2="118" stroke="#D97757" stroke-width="1"/>
-  <line x1="272" y1="126" x2="328" y2="126" stroke="#D97757" stroke-width="1"/>
-  <text x="300" y="156" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">/v1/assistant</text>
-  <text x="300" y="174" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">动态组装 Prompt</text>
-
-  <!-- Arrow: API Gateway → Prompt Service (solid, olive) -->
-  <line x1="376" y1="124" x2="416" y2="124" stroke="#788C5D" stroke-width="2"/>
-  <polygon points="420,124 412,120 412,128" fill="#788C5D"/>
-  <text x="398" y="116" text-anchor="middle" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">组装 + 调用</text>
-
-  <!-- Column 3: Prompt Service (right) -->
-  <rect x="420" y="64" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="490" y="88" text-anchor="middle" font-size="11" font-weight="700" fill="#788C5D">Prompt Service</text>
-  <!-- Backend icon with lock -->
-  <rect x="452" y="100" width="56" height="40" rx="4" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
-  <line x1="452" y1="110" x2="508" y2="110" stroke="#788C5D" stroke-width="1"/>
-  <line x1="452" y1="118" x2="508" y2="118" stroke="#788C5D" stroke-width="1"/>
-  <line x1="452" y1="126" x2="508" y2="126" stroke="#788C5D" stroke-width="1"/>
-  <!-- Lock icon -->
-  <rect x="474" y="134" width="12" height="10" rx="2" fill="#788C5D"/>
-  <path d="M477 134 L477 131 C477 128, 483 128, 483 131 L483 134" stroke="#788C5D" stroke-width="1.5" fill="none"/>
-  <text x="490" y="174" text-anchor="middle" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">后端 · 加密存储</text>
-
-  <!-- Return arrow below -->
-  <path d="M 490 184 L 300 184 L 300 200" stroke="#D1CFC5" stroke-width="1.5" fill="none"/>
-  <polygon points="300,204 296,196 304,196" fill="#D1CFC5"/>
-  <text x="395" y="196" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">加密 / 代理响应</text>
-
-  <!-- Note card at bottom right -->
-  <rect x="420" y="218" width="140" height="52" rx="6" fill="#E3DACC"/>
-  <text x="430" y="236" font-size="9" font-weight="600" fill="#141413">攻击者只能套取 API 响应</text>
-  <text x="430" y="252" font-size="9" fill="#87867F">无法接触后端 Prompt 存储</text>
-  <text x="430" y="264" font-size="9" fill="#87867F">Prompt 逻辑完全不暴露</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 600 300">
+  <path fill="#faf9f5" d="M0 0h600v300H0z"/>
+  <text x="300" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Prompt as a Service 架构</text>
+  <text x="300" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">后端封装 · API 解耦 · 攻击面收缩</text>
+  <rect width="140" height="120" x="40" y="64" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="110" y="88" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">用户 / 攻击者</text>
+  <rect width="48" height="36" x="86" y="100" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <rect width="32" height="20" x="94" y="108" fill="#e3dacc" rx="2"/>
+  <text x="110" y="122" fill="#87867f" font-size="8" text-anchor="middle">LLM API</text>
+  <text x="110" y="174" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">无法接触后端</text>
+  <path stroke="#d97757" stroke-dasharray="4,3" stroke-width="2" d="M180 124h40"/>
+  <path fill="#d97757" d="m224 124-8-4v8z"/>
+  <text x="200" y="116" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">LLM API 调用</text>
+  <text x="200" y="130" fill="#87867f" font-size="8" text-anchor="middle">（Prompt 不可见）</text>
+  <rect width="152" height="120" x="224" y="64" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="300" y="88" fill="#d97757" font-size="11" font-weight="700" text-anchor="middle">API Gateway</text>
+  <rect width="56" height="40" x="272" y="100" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="4"/>
+  <path stroke="#d97757" d="M272 110h56m-56 8h56m-56 8h56"/>
+  <text x="300" y="156" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">/v1/assistant</text>
+  <text x="300" y="174" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">动态组装 Prompt</text>
+  <path stroke="#788c5d" stroke-width="2" d="M376 124h40"/>
+  <path fill="#788c5d" d="m420 124-8-4v8z"/>
+  <text x="398" y="116" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">组装 + 调用</text>
+  <rect width="140" height="120" x="420" y="64" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="490" y="88" fill="#788c5d" font-size="11" font-weight="700" text-anchor="middle">Prompt Service</text>
+  <rect width="56" height="40" x="452" y="100" fill="#e3dacc" stroke="#788c5d" stroke-width="1.5" rx="4"/>
+  <path stroke="#788c5d" d="M452 110h56m-56 8h56m-56 8h56"/>
+  <rect width="12" height="10" x="474" y="134" fill="#788c5d" rx="2"/>
+  <path fill="none" stroke="#788c5d" stroke-width="1.5" d="M477 134v-3c0-3 6-3 6 0v3"/>
+  <text x="490" y="174" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">后端 · 加密存储</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="1.5" d="M490 184H300v16"/>
+  <path fill="#d1cfc5" d="m300 204-4-8h8z"/>
+  <text x="395" y="196" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">加密 / 代理响应</text>
+  <rect width="140" height="52" x="420" y="218" fill="#e3dacc" rx="6"/>
+  <text x="430" y="236" fill="#141413" font-size="9" font-weight="600">攻击者只能套取 API 响应</text>
+  <text x="430" y="252" fill="#87867f" font-size="9">无法接触后端 Prompt 存储</text>
+  <text x="430" y="264" fill="#87867f" font-size="9">Prompt 逻辑完全不暴露</text>
 </svg>

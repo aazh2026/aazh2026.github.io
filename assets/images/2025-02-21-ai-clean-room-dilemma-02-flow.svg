@@ -1,78 +1,47 @@
-<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="600" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI Clean Room 许可证悖论循环</text>
-  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Simon Willison · @postcodeeng · 2026/03</text>
-
-  <!-- Node 1: Functional Spec (clay outline) -->
-  <rect x="30" y="65" width="120" height="50" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <text x="90" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#D97757">Human</text>
-  <text x="90" y="101" text-anchor="middle" font-size="9.5" fill="#87867F">编写 Functional Spec</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="150" y1="90" x2="178" y2="90" stroke="#D97757" stroke-width="1.8"/>
-  <polygon points="182,90 174,84 174,96" fill="#D97757"/>
-
-  <!-- Node 2: AI receives spec -->
-  <rect x="186" y="65" width="120" height="50" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="246" y="86" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">AI</text>
-  <text x="246" y="101" text-anchor="middle" font-size="9.5" fill="#87867F">接收规格说明 via prompt</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="306" y1="90" x2="334" y2="90" stroke="#D97757" stroke-width="1.8"/>
-  <polygon points="338,90 330,84 330,96" fill="#D97757"/>
-
-  <!-- Node 3: Training data box (dashed enclosure) -->
-  <rect x="342" y="55" width="150" height="80" rx="6" fill="#FAF9F5" stroke="#87867F" stroke-width="1.2" stroke-dasharray="5,3"/>
-  <text x="417" y="75" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">Training Memory</text>
-  <text x="417" y="92" text-anchor="middle" font-size="9" fill="#87867F">训练数据包含：</text>
-  <text x="417" y="107" text-anchor="middle" font-size="8.5" fill="#87867F">GPL / MIT / 专有代码</text>
-  <text x="417" y="122" text-anchor="middle" font-size="8.5" fill="#D97757">代码结构 · 算法模式 · 表达式</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="417" y1="135" x2="417" y2="158" stroke="#D97757" stroke-width="1.8"/>
-  <polygon points="417,162 413,154 421,154" fill="#D97757"/>
-
-  <!-- Node 4: Output may contain similarities (olive warning) -->
-  <rect x="342" y="166" width="150" height="45" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
-  <text x="417" y="185" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D">Output</text>
-  <text x="417" y="200" text-anchor="middle" font-size="9" fill="#87867F">可能包含结构相似性</text>
-
-  <!-- Arrow 4→5 (branch) -->
-  <line x1="492" y1="188" x2="518" y2="188" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="522,188 514,183 514,193" fill="#D1CFC5"/>
-
-  <!-- Branch labels -->
-  <text x="507" y="178" text-anchor="middle" font-size="8" fill="#87867F">相似度</text>
-
-  <!-- Node 5: Code similarity check (diamond decision) -->
-  <polygon points="526,188 546,168 566,188 546,208" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="546" y="192" text-anchor="middle" font-size="9" font-weight="600" fill="#D97757">检查</text>
-
-  <!-- Pass branch -->
-  <line x1="546" y1="208" x2="546" y2="228" stroke="#788C5D" stroke-width="1.5"/>
-  <polygon points="546,232 542,224 550,224" fill="#788C5D"/>
-  <rect x="496" y="236" width="100" height="38" rx="6" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="546" y="252" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D">Pass</text>
-  <text x="546" y="266" text-anchor="middle" font-size="9" fill="#87867F">MIT License</text>
-
-  <!-- Fail branch (left side) -->
-  <line x1="526" y1="188" x2="494" y2="188" stroke="#D97757" stroke-width="1.5"/>
-  <line x1="494" y1="188" x2="494" y2="236" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="494,240 490,232 498,232" fill="#D97757"/>
-  <rect x="444" y="236" width="100" height="38" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="494" y="252" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757">Fail</text>
-  <text x="494" y="266" text-anchor="middle" font-size="9" fill="#87867F">法律风险</text>
-
-  <!-- Bottom note -->
-  <rect x="30" y="296" width="540" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="300" y="314" text-anchor="middle" font-size="9.5" fill="#141413">⚠ 尚无法院判例明确裁决 AI 生成代码的版权状态</text>
-  <text x="300" y="327" text-anchor="middle" font-size="8.5" fill="#87867F">No court ruling on AI-generated code copyright status</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 600 360">
+  <path fill="#faf9f5" d="M0 0h600v360H0z"/>
+  <text x="300" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI Clean Room 许可证悖论循环</text>
+  <text x="300" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Simon Willison · @postcodeeng · 2026/03</text>
+  <rect width="120" height="50" x="30" y="65" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <text x="90" y="86" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Human</text>
+  <text x="90" y="101" fill="#87867f" font-size="9.5" text-anchor="middle">编写 Functional Spec</text>
+  <path stroke="#d97757" stroke-width="1.8" d="M150 90h28"/>
+  <path fill="#d97757" d="m182 90-8-6v12z"/>
+  <rect width="120" height="50" x="186" y="65" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="246" y="86" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">AI</text>
+  <text x="246" y="101" fill="#87867f" font-size="9.5" text-anchor="middle">接收规格说明 via prompt</text>
+  <path stroke="#d97757" stroke-width="1.8" d="M306 90h28"/>
+  <path fill="#d97757" d="m338 90-8-6v12z"/>
+  <rect width="150" height="80" x="342" y="55" fill="#faf9f5" stroke="#87867f" stroke-dasharray="5,3" stroke-width="1.2" rx="6"/>
+  <text x="417" y="75" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">Training Memory</text>
+  <text x="417" y="92" fill="#87867f" font-size="9" text-anchor="middle">训练数据包含：</text>
+  <text x="417" y="107" fill="#87867f" font-size="8.5" text-anchor="middle">GPL / MIT / 专有代码</text>
+  <text x="417" y="122" fill="#d97757" font-size="8.5" text-anchor="middle">代码结构 · 算法模式 · 表达式</text>
+  <path stroke="#d97757" stroke-width="1.8" d="M417 135v23"/>
+  <path fill="#d97757" d="m417 162-4-8h8z"/>
+  <rect width="150" height="45" x="342" y="166" fill="#fff" stroke="#788c5d" stroke-width="2" rx="6"/>
+  <text x="417" y="185" fill="#788c5d" font-size="10" font-weight="600" text-anchor="middle">Output</text>
+  <text x="417" y="200" fill="#87867f" font-size="9" text-anchor="middle">可能包含结构相似性</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M492 188h26"/>
+  <path fill="#d1cfc5" d="m522 188-8-5v10z"/>
+  <text x="507" y="178" fill="#87867f" font-size="8" text-anchor="middle">相似度</text>
+  <path fill="#fff" stroke="#d97757" stroke-width="1.8" d="m526 188 20-20 20 20-20 20z"/>
+  <text x="546" y="192" fill="#d97757" font-size="9" font-weight="600" text-anchor="middle">检查</text>
+  <path stroke="#788c5d" stroke-width="1.5" d="M546 208v20"/>
+  <path fill="#788c5d" d="m546 232-4-8h8z"/>
+  <rect width="100" height="38" x="496" y="236" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="6"/>
+  <text x="546" y="252" fill="#788c5d" font-size="10" font-weight="600" text-anchor="middle">Pass</text>
+  <text x="546" y="266" fill="#87867f" font-size="9" text-anchor="middle">MIT License</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M526 188h-32m0 0v48"/>
+  <path fill="#d97757" d="m494 240-4-8h8z"/>
+  <rect width="100" height="38" x="444" y="236" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="494" y="252" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">Fail</text>
+  <text x="494" y="266" fill="#87867f" font-size="9" text-anchor="middle">法律风险</text>
+  <rect width="540" height="36" x="30" y="296" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.2" rx="4"/>
+  <text x="300" y="314" fill="#141413" font-size="9.5" text-anchor="middle">⚠ 尚无法院判例明确裁决 AI 生成代码的版权状态</text>
+  <text x="300" y="327" fill="#87867f" font-size="8.5" text-anchor="middle">No court ruling on AI-generated code copyright status</text>
   <title>AI Clean Room License Paradox Flow</title>
-  <desc>Flowchart showing the AI Clean Room license paradox cycle from Functional Spec through training data contamination to code similarity check outcomes</desc>
+  <desc>
+    Flowchart showing the AI Clean Room license paradox cycle from Functional Spec through training data contamination to code similarity check outcomes
+  </desc>
 </svg>

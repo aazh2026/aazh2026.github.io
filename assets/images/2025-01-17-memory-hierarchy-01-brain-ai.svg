@@ -1,83 +1,55 @@
-<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- 人类记忆三层 vs AI 对应物 -->
-  <rect width="560" height="260" fill="#FAF9F5"/>
-
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">人类记忆三层架构与 AI 对应物</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/01/17</text>
-
-  <!-- Layer 3: Working Memory (top) -->
-  <rect x="40" y="50" width="240" height="72" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="50" width="240" height="20" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="160" y="64" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L1 · 工作记忆 Working Memory</text>
-  <text x="60" y="84" font-size="9.5" fill="#141413">容量：7±2 信息块 · 持续：20-30秒</text>
-  <text x="60" y="98" font-size="9.5" fill="#141413">速度：毫秒级 · 即时可用</text>
-  <text x="60" y="112" font-size="9" fill="#87867F">你现在脑子里想的 → 拨完电话就消失</text>
-  <rect x="272" y="72" width="18" height="18" rx="9" fill="#D97757"/>
-  <text x="281" y="85" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
-
-  <!-- AI equivalent label -->
-  <text x="380" y="60" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI 对应物</text>
-  <line x1="280" y1="86" x2="340" y2="86" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="3,2"/>
-
-  <!-- AI L1: Context Window -->
-  <rect x="340" y="50" width="180" height="72" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <rect x="340" y="50" width="180" height="20" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="430" y="64" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">上下文窗口 Context Window</text>
-  <text x="360" y="84" font-size="9.5" fill="#141413">GPT-4: 128K tokens</text>
-  <text x="360" y="98" font-size="9.5" fill="#141413">Claude: 200K tokens</text>
-  <text x="360" y="112" font-size="9" fill="#DC2626">每次调用都在付费</text>
-
-  <!-- Arrow between L1 layers -->
-  <line x1="300" y1="86" x2="340" y2="86" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="336,82 340,86 336,90" fill="#D1CFC5"/>
-
-  <!-- Arrow down L1→L2 -->
-  <line x1="160" y1="122" x2="160" y2="132" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="156,132 160,140 164,132" fill="#D1CFC5"/>
-
-  <!-- Layer 2: Episodic Memory (middle) -->
-  <rect x="40" y="140" width="240" height="56" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="140" width="240" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="160" y="154" text-anchor="middle" font-size="11" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L2 · 情节记忆 Episodic Memory</text>
-  <text x="60" y="172" font-size="9.5" fill="#141413">带时间戳、情境、情感色彩的分布式存储</text>
-  <text x="60" y="186" font-size="9" fill="#87867F">「上周三晚上我在干嘛？」→ 个人时光机</text>
-  <rect x="272" y="156" width="18" height="14" rx="9" fill="#2563EB"/>
-  <text x="281" y="167" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
-
-  <!-- AI L2: Vector DB -->
-  <rect x="340" y="140" width="180" height="56" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <rect x="340" y="140" width="180" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="430" y="154" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">向量数据库 Vector DB</text>
-  <text x="360" y="172" font-size="9.5" fill="#141413">语义相似度检索</text>
-  <text x="360" y="186" font-size="9" fill="#DC2626">致命问题：不知道「上周三」与「上周四」的区别</text>
-
-  <!-- Arrow between L2 layers -->
-  <line x1="300" y1="168" x2="340" y2="168" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="336,164 340,168 336,172" fill="#D1CFC5"/>
-
-  <!-- Arrow down L2→L3 -->
-  <line x1="160" y1="196" x2="160" y2="206" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="156,206 160,214 164,206" fill="#D1CFC5"/>
-
-  <!-- Layer 3: Semantic Memory (bottom) -->
-  <rect x="40" y="214" width="240" height="40" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.8"/>
-  <rect x="40" y="214" width="240" height="18" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="160" y="228" text-anchor="middle" font-size="11" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L3 · 语义记忆 Semantic Memory</text>
-  <text x="60" y="244" font-size="9.5" fill="#141413">去情境化 · 结构化 · 概念网络</text>
-  <text x="200" y="244" font-size="9" fill="#87867F">「知道」而非「记得」</text>
-  <rect x="272" y="222" width="18" height="12" rx="9" fill="#059669"/>
-  <text x="281" y="231" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
-
-  <!-- AI L3: Knowledge Graph -->
-  <rect x="340" y="214" width="180" height="40" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <rect x="340" y="214" width="180" height="18" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="430" y="228" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">知识图谱 Knowledge Graph</text>
-  <text x="360" y="244" font-size="9.5" fill="#141413">火锅 → 川菜 → 中国菜 → 烹饪 → 食物</text>
-
-  <!-- Arrow between L3 layers -->
-  <line x1="300" y1="234" x2="340" y2="234" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="336,230 340,234 336,238" fill="#D1CFC5"/>
-
-  <!-- Note at bottom -->
-  <text x="280" y="258" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">容量↑ 速度↓ 成本↑ ←→ 三层各司其职，构成完整记忆系统</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 260">
+  <path fill="#faf9f5" d="M0 0h560v260H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">人类记忆三层架构与 AI 对应物</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2025/01/17</text>
+  <rect width="240" height="72" x="40" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="240" height="20" x="40" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="160" y="64" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">L1 · 工作记忆 Working Memory</text>
+  <text x="60" y="84" fill="#141413" font-size="9.5">容量：7±2 信息块 · 持续：20-30秒</text>
+  <text x="60" y="98" fill="#141413" font-size="9.5">速度：毫秒级 · 即时可用</text>
+  <text x="60" y="112" fill="#87867f" font-size="9">你现在脑子里想的 → 拨完电话就消失</text>
+  <rect width="18" height="18" x="272" y="72" fill="#d97757" rx="9"/>
+  <text x="281" y="85" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L1</text>
+  <text x="380" y="60" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">AI 对应物</text>
+  <path stroke="#d1cfc5" stroke-dasharray="3,2" d="M280 86h60"/>
+  <rect width="180" height="72" x="340" y="50" fill="#fff" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" rx="6"/>
+  <rect width="180" height="20" x="340" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="430" y="64" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">上下文窗口 Context Window</text>
+  <text x="360" y="84" fill="#141413" font-size="9.5">GPT-4: 128K tokens</text>
+  <text x="360" y="98" fill="#141413" font-size="9.5">Claude: 200K tokens</text>
+  <text x="360" y="112" fill="#dc2626" font-size="9">每次调用都在付费</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 86h40"/>
+  <path fill="#d1cfc5" d="m336 82 4 4-4 4z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M160 122v10"/>
+  <path fill="#d1cfc5" d="m156 132 4 8 4-8z"/>
+  <rect width="240" height="56" x="40" y="140" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="240" height="18" x="40" y="140" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="160" y="154" fill="#2563eb" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">L2 · 情节记忆 Episodic Memory</text>
+  <text x="60" y="172" fill="#141413" font-size="9.5">带时间戳、情境、情感色彩的分布式存储</text>
+  <text x="60" y="186" fill="#87867f" font-size="9">「上周三晚上我在干嘛？」→ 个人时光机</text>
+  <rect width="18" height="14" x="272" y="156" fill="#2563eb" rx="9"/>
+  <text x="281" y="167" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">L2</text>
+  <rect width="180" height="56" x="340" y="140" fill="#fff" stroke="#2563eb" stroke-dasharray="4,3" stroke-width="1.5" rx="6"/>
+  <rect width="180" height="18" x="340" y="140" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="430" y="154" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">向量数据库 Vector DB</text>
+  <text x="360" y="172" fill="#141413" font-size="9.5">语义相似度检索</text>
+  <text x="360" y="186" fill="#dc2626" font-size="9">致命问题：不知道「上周三」与「上周四」的区别</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 168h40"/>
+  <path fill="#d1cfc5" d="m336 164 4 4-4 4z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M160 196v10"/>
+  <path fill="#d1cfc5" d="m156 206 4 8 4-8z"/>
+  <rect width="240" height="40" x="40" y="214" fill="#fff" stroke="#059669" stroke-width="1.8" rx="6"/>
+  <rect width="240" height="18" x="40" y="214" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="160" y="228" fill="#059669" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">L3 · 语义记忆 Semantic Memory</text>
+  <text x="60" y="244" fill="#141413" font-size="9.5">去情境化 · 结构化 · 概念网络</text>
+  <text x="200" y="244" fill="#87867f" font-size="9">「知道」而非「记得」</text>
+  <rect width="18" height="12" x="272" y="222" fill="#059669" rx="9"/>
+  <text x="281" y="231" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">L3</text>
+  <rect width="180" height="40" x="340" y="214" fill="#fff" stroke="#059669" stroke-dasharray="4,3" stroke-width="1.5" rx="6"/>
+  <rect width="180" height="18" x="340" y="214" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="430" y="228" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">知识图谱 Knowledge Graph</text>
+  <text x="360" y="244" fill="#141413" font-size="9.5">火锅 → 川菜 → 中国菜 → 烹饪 → 食物</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 234h40"/>
+  <path fill="#d1cfc5" d="m336 230 4 4-4 4z"/>
+  <text x="280" y="258" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">容量↑ 速度↓ 成本↑ ←→ 三层各司其职，构成完整记忆系统</text>
 </svg>

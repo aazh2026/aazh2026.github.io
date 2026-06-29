@@ -1,90 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
   <defs>
-    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FAF9F5"/>
-      <stop offset="100%" style="stop-color:#E3DACC"/>
+    <linearGradient id="bg2" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#faf9f5"/>
+      <stop offset="100%" style="stop-color:#e3dacc"/>
     </linearGradient>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#141413"/>
+    <marker id="arrow" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#141413" d="m0 0 10 3.5L0 7z"/>
     </marker>
   </defs>
-  <rect width="800" height="420" fill="url(#bg2)"/>
-
-  <!-- Title -->
-  <text x="400" y="35" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" font-weight="700" fill="#141413">mmap  vs 传统 I/O：两种数据访问模式</text>
-
-  <!-- Traditional I/O side -->
-  <rect x="40" y="65" width="340" height="300" rx="12" fill="#FAF9F5" stroke="#87867F" stroke-width="2"/>
-  <text x="210" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="#141413">传统 I/O</text>
-  <text x="210" y="110" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">一次性加载整个文件</text>
-
-  <!-- Disk -->
-  <rect x="60" y="130" width="100" height="70" rx="8" fill="#D1CFC5"/>
-  <text x="110" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#141413">磁盘/SSD</text>
-  <text x="110" y="178" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">graph.bin</text>
-
-  <!-- Arrow down -->
-  <line x1="110" y1="205" x2="110" y2="235" stroke="#141413" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="110" y="222" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#D97757">全部读入</text>
-
-  <!-- RAM -->
-  <rect x="60" y="240" width="100" height="70" rx="8" fill="#788C5D"/>
-  <text x="110" y="272" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#FAF9F5">内存</text>
-  <text x="110" y="288" text-anchor="middle" font-family="monospace" font-size="10" fill="#E3DACC">64GB 全占用</text>
-
-  <!-- X mark on unused -->
-  <rect x="180" y="240" width="80" height="70" rx="8" fill="#D1CFC5" opacity="0.5"/>
-  <text x="220" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">其他程序</text>
-  <text x="220" y="290" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">无空间</text>
-
-  <!-- Characteristics -->
-  <text x="60" y="335" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 启动慢：需等全部加载</text>
-  <text x="60" y="352" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 内存占用：高</text>
-  <text x="60" y="369" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 图规模：受内存限制</text>
-
-  <!-- mmap side -->
-  <rect x="420" y="65" width="340" height="300" rx="12" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-  <text x="590" y="92" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="#788C5D">mmap (内存映射)</text>
-  <text x="590" y="110" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#87867F">按需加载，按页调度</text>
-
-  <!-- Disk -->
-  <rect x="440" y="130" width="100" height="70" rx="8" fill="#D1CFC5"/>
-  <text x="490" y="162" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#141413">磁盘/SSD</text>
-  <text x="490" y="178" text-anchor="middle" font-family="monospace" font-size="10" fill="#87867F">graph.bin</text>
-
-  <!-- Virtual memory box -->
-  <rect x="560" y="130" width="180" height="70" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="650" y="155" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#141413">虚拟内存空间</text>
-  <text x="650" y="172" text-anchor="middle" font-family="monospace" font-size="9" fill="#788C5D">ptr = mmap(..., file)</text>
-  <text x="650" y="188" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">按需换页</text>
-
-  <!-- Arrow to virtual memory -->
-  <path d="M500 165 L 550 165" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <text x="525" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#788C5D">映射</text>
-
-  <!-- Page fault illustration -->
-  <rect x="560" y="220" width="80" height="45" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
-  <text x="600" y="242" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">Page</text>
-  <text x="600" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#D97757">Fault!</text>
-
-  <rect x="660" y="220" width="80" height="45" rx="6" fill="#788C5D"/>
-  <text x="700" y="242" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#FAF9F5">加载</text>
-  <text x="700" y="256" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#FAF9F5">需要的页</text>
-
-  <!-- RAM only partial -->
-  <rect x="440" y="280" width="100" height="60" rx="8" fill="#788C5D"/>
-  <text x="490" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#FAF9F5">内存</text>
-  <text x="490" y="323" text-anchor="middle" font-family="monospace" font-size="10" fill="#E3DACC">按需缓存</text>
-
-  <rect x="560" y="280" width="180" height="60" rx="8" fill="#D1CFC5" opacity="0.5"/>
-  <text x="650" y="307" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#141413">其他程序</text>
-  <text x="650" y="323" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#141413">仍有空间</text>
-
-  <!-- Characteristics -->
-  <text x="440" y="365" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 首次慢：page fault 代价</text>
-  <text x="440" y="382" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 内存占用：低（按需）</text>
-  <text x="440" y="399" font-family="system-ui,sans-serif" font-size="11" fill="#141413">● 图规模：受磁盘限制</text>
-
-  <!-- VS -->
-  <text x="400" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="24" font-weight="700" fill="#D97757">VS</text>
+  <path fill="url(#bg2)" d="M0 0h800v420H0z"/>
+  <text x="400" y="35" fill="#141413" font-family="system-ui,sans-serif" font-size="20" font-weight="700" text-anchor="middle">mmap  vs 传统 I/O：两种数据访问模式</text>
+  <rect width="340" height="300" x="40" y="65" fill="#faf9f5" stroke="#87867f" stroke-width="2" rx="12"/>
+  <text x="210" y="92" fill="#141413" font-family="system-ui,sans-serif" font-size="15" font-weight="600" text-anchor="middle">传统 I/O</text>
+  <text x="210" y="110" fill="#87867f" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">一次性加载整个文件</text>
+  <rect width="100" height="70" x="60" y="130" fill="#d1cfc5" rx="8"/>
+  <text x="110" y="162" fill="#141413" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">磁盘/SSD</text>
+  <text x="110" y="178" fill="#87867f" font-family="monospace" font-size="10" text-anchor="middle">graph.bin</text>
+  <path stroke="#141413" stroke-width="2" marker-end="url(#arrow)" d="M110 205v30"/>
+  <text x="110" y="222" fill="#d97757" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">全部读入</text>
+  <rect width="100" height="70" x="60" y="240" fill="#788c5d" rx="8"/>
+  <text x="110" y="272" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">内存</text>
+  <text x="110" y="288" fill="#e3dacc" font-family="monospace" font-size="10" text-anchor="middle">64GB 全占用</text>
+  <rect width="80" height="70" x="180" y="240" fill="#d1cfc5" opacity=".5" rx="8"/>
+  <text x="220" y="275" fill="#87867f" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">其他程序</text>
+  <text x="220" y="290" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">无空间</text>
+  <text x="60" y="335" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 启动慢：需等全部加载</text>
+  <text x="60" y="352" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 内存占用：高</text>
+  <text x="60" y="369" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 图规模：受内存限制</text>
+  <rect width="340" height="300" x="420" y="65" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="12"/>
+  <text x="590" y="92" fill="#788c5d" font-family="system-ui,sans-serif" font-size="15" font-weight="600" text-anchor="middle">mmap (内存映射)</text>
+  <text x="590" y="110" fill="#87867f" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">按需加载，按页调度</text>
+  <rect width="100" height="70" x="440" y="130" fill="#d1cfc5" rx="8"/>
+  <text x="490" y="162" fill="#141413" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">磁盘/SSD</text>
+  <text x="490" y="178" fill="#87867f" font-family="monospace" font-size="10" text-anchor="middle">graph.bin</text>
+  <rect width="180" height="70" x="560" y="130" fill="#e3dacc" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="650" y="155" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">虚拟内存空间</text>
+  <text x="650" y="172" fill="#788c5d" font-family="monospace" font-size="9" text-anchor="middle">ptr = mmap(..., file)</text>
+  <text x="650" y="188" fill="#87867f" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">按需换页</text>
+  <path stroke="#788c5d" stroke-dasharray="4,3" stroke-width="1.5" d="M500 165h50"/>
+  <text x="525" y="158" fill="#788c5d" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">映射</text>
+  <rect width="80" height="45" x="560" y="220" fill="#faf9f5" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="600" y="242" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">Page</text>
+  <text x="600" y="256" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">Fault!</text>
+  <rect width="80" height="45" x="660" y="220" fill="#788c5d" rx="6"/>
+  <text x="700" y="242" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">加载</text>
+  <text x="700" y="256" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">需要的页</text>
+  <rect width="100" height="60" x="440" y="280" fill="#788c5d" rx="8"/>
+  <text x="490" y="307" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">内存</text>
+  <text x="490" y="323" fill="#e3dacc" font-family="monospace" font-size="10" text-anchor="middle">按需缓存</text>
+  <rect width="180" height="60" x="560" y="280" fill="#d1cfc5" opacity=".5" rx="8"/>
+  <text x="650" y="307" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">其他程序</text>
+  <text x="650" y="323" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">仍有空间</text>
+  <text x="440" y="365" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 首次慢：page fault 代价</text>
+  <text x="440" y="382" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 内存占用：低（按需）</text>
+  <text x="440" y="399" fill="#141413" font-family="system-ui,sans-serif" font-size="11">● 图规模：受磁盘限制</text>
+  <text x="400" y="200" fill="#d97757" font-family="system-ui,sans-serif" font-size="24" font-weight="700" text-anchor="middle">VS</text>
 </svg>

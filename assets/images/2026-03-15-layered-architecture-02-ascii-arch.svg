@@ -1,152 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" style="font-family: 'Courier New', Courier, monospace;">
+<svg xmlns="http://www.w3.org/2000/svg" style="font-family:&quot;Courier New&quot;,Courier,monospace" viewBox="0 0 800 560">
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#D97757"/>
+    <marker id="arr" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="4">
+      <path fill="#d97757" d="m0 0 8 4-8 4Z"/>
     </marker>
     <style>
-      .title { font-size: 20px; font-weight: bold; fill: #141413; }
-      .layer-num { font-size: 13px; font-weight: bold; fill: #87867F; }
-      .layer-name { font-size: 15px; font-weight: bold; fill: #141413; }
-      .tech-tag { font-size: 12px; fill: #87867F; }
-      .duty-label { font-size: 11px; fill: #D97757; }
-      .duty-text { font-size: 12px; fill: #141413; }
+      .layer-name,.layer-num{font-weight:700}.layer-num{font-size:13px;fill:#87867f}.layer-name{font-size:15px;fill:#141413}.tech-tag{font-size:12px;fill:#87867f}.duty-label{font-size:11px;fill:#d97757}.duty-text{font-size:12px;fill:#141413}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="560" fill="#FAF9F5"/>
-
-  <!-- Outer frame -->
-  <rect x="20" y="20" width="760" height="520" rx="4" fill="none" stroke="#D1CFC5" stroke-width="2"/>
-
-  <!-- Title -->
-  <text x="400" y="57" text-anchor="middle" class="title">Agent OS 架构</text>
-  <!-- Title underline -->
-  <line x1="280" y1="68" x2="520" y2="68" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Layer positions -->
-  <!-- Each layer box: y starts at 82, height 64, gap 12, arrow 12 -->
-  <!-- Layer 1 (bottom/Execution): y=400, Layer 5 (top/Interface): y=82 -->
-
-  <!-- Arrow: Layer5 → Layer4 -->
-  <line x1="400" y1="146" x2="400" y2="158" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow: Layer4 → Layer3 -->
-  <line x1="400" y1="222" x2="400" y2="234" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow: Layer3 → Layer2 -->
-  <line x1="400" y1="298" x2="400" y2="310" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- Arrow: Layer2 → Layer1 -->
-  <line x1="400" y1="374" x2="400" y2="386" stroke="#D97757" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- ─────────────────────────────────────────── -->
-  <!-- Layer 5 — Interface Layer (top)             -->
-  <!-- ─────────────────────────────────────────── -->
-  <rect x="55" y="82" width="690" height="64" rx="3" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Left accent bar -->
-  <rect x="55" y="82" width="5" height="64" rx="2" fill="#87867F"/>
-
-  <!-- Layer number badge -->
-  <rect x="72" y="90" width="54" height="20" rx="3" fill="#E3DACC"/>
-  <text x="99" y="104" text-anchor="middle" class="layer-num">第5层</text>
-
-  <!-- Divider -->
-  <line x1="136" y1="90" x2="136" y2="138" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Layer name -->
+  <path fill="#faf9f5" d="M0 0h800v560H0z"/>
+  <rect width="760" height="520" x="20" y="20" fill="none" stroke="#d1cfc5" stroke-width="2" rx="4"/>
+  <text x="400" y="57" style="font-size:20px;font-weight:700;fill:#141413" text-anchor="middle">Agent OS 架构</text>
+  <path stroke="#d1cfc5" d="M280 68h240"/>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arr)" d="M400 146v12"/>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arr)" d="M400 222v12"/>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arr)" d="M400 298v12"/>
+  <path stroke="#d97757" stroke-width="2" marker-end="url(#arr)" d="M400 374v12"/>
+  <rect width="690" height="64" x="55" y="82" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="3"/>
+  <rect width="5" height="64" x="55" y="82" fill="#87867f" rx="2"/>
+  <rect width="54" height="20" x="72" y="90" fill="#e3dacc" rx="3"/>
+  <text x="99" y="104" class="layer-num" text-anchor="middle">第5层</text>
+  <path stroke="#d1cfc5" d="M136 90v48"/>
   <text x="150" y="108" class="layer-name">接口层 (Interface Layer)</text>
-
-  <!-- Tech tags -->
   <text x="150" y="126" class="tech-tag">WebSocket, HTTP, CLI, Voice</text>
-
-  <!-- Vertical divider -->
-  <line x1="440" y1="90" x2="440" y2="138" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Duty -->
+  <path stroke="#d1cfc5" d="M440 90v48"/>
   <text x="454" y="107" class="duty-label">职责：</text>
   <text x="490" y="107" class="duty-text">协议适配、输入验证、响应格式化</text>
-
-  <!-- ─────────────────────────────────────────── -->
-  <!-- Layer 4 — Orchestration Layer              -->
-  <!-- ─────────────────────────────────────────── -->
-  <rect x="55" y="158" width="690" height="64" rx="3" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="55" y="158" width="5" height="64" rx="2" fill="#E3DACC"/>
-  <rect x="72" y="166" width="54" height="20" rx="3" fill="#E3DACC"/>
-  <text x="99" y="180" text-anchor="middle" class="layer-num">第4层</text>
-
-  <line x1="136" y1="166" x2="136" y2="214" stroke="#D1CFC5" stroke-width="1"/>
-
+  <rect width="690" height="64" x="55" y="158" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="3"/>
+  <rect width="5" height="64" x="55" y="158" fill="#e3dacc" rx="2"/>
+  <rect width="54" height="20" x="72" y="166" fill="#e3dacc" rx="3"/>
+  <text x="99" y="180" class="layer-num" text-anchor="middle">第4层</text>
+  <path stroke="#d1cfc5" d="M136 166v48"/>
   <text x="150" y="184" class="layer-name">编排层 (Orchestration Layer)</text>
   <text x="150" y="202" class="tech-tag">Task Scheduler, Flow Control</text>
-
-  <line x1="440" y1="166" x2="440" y2="214" stroke="#D1CFC5" stroke-width="1"/>
-
+  <path stroke="#d1cfc5" d="M440 166v48"/>
   <text x="454" y="183" class="duty-label">职责：</text>
   <text x="490" y="183" class="duty-text">任务分解、并发管理、错误恢复</text>
-
-  <!-- ─────────────────────────────────────────── -->
-  <!-- Layer 3 — Cognition Layer                   -->
-  <!-- ─────────────────────────────────────────── -->
-  <rect x="55" y="234" width="690" height="64" rx="3" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="55" y="234" width="5" height="64" rx="2" fill="#D97757"/>
-  <rect x="72" y="242" width="54" height="20" rx="3" fill="#E3DACC"/>
-  <text x="99" y="256" text-anchor="middle" class="layer-num">第3层</text>
-
-  <line x1="136" y1="242" x2="136" y2="290" stroke="#D1CFC5" stroke-width="1"/>
-
+  <rect width="690" height="64" x="55" y="234" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="3"/>
+  <rect width="5" height="64" x="55" y="234" fill="#d97757" rx="2"/>
+  <rect width="54" height="20" x="72" y="242" fill="#e3dacc" rx="3"/>
+  <text x="99" y="256" class="layer-num" text-anchor="middle">第3层</text>
+  <path stroke="#d1cfc5" d="M136 242v48"/>
   <text x="150" y="260" class="layer-name">认知层 (Cognition Layer)</text>
   <text x="150" y="278" class="tech-tag">LLM, Reasoning, Planning</text>
-
-  <line x1="440" y1="242" x2="440" y2="290" stroke="#D1CFC5" stroke-width="1"/>
-
+  <path stroke="#d1cfc5" d="M440 242v48"/>
   <text x="454" y="259" class="duty-label">职责：</text>
   <text x="490" y="259" class="duty-text">推理、决策、策略生成</text>
-
-  <!-- ─────────────────────────────────────────── -->
-  <!-- Layer 2 — Memory Layer                     -->
-  <!-- ─────────────────────────────────────────── -->
-  <rect x="55" y="310" width="690" height="64" rx="3" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="55" y="310" width="5" height="64" rx="2" fill="#788C5D"/>
-  <rect x="72" y="318" width="54" height="20" rx="3" fill="#E3DACC"/>
-  <text x="99" y="332" text-anchor="middle" class="layer-num">第2层</text>
-
-  <line x1="136" y1="318" x2="136" y2="366" stroke="#D1CFC5" stroke-width="1"/>
-
+  <rect width="690" height="64" x="55" y="310" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="3"/>
+  <rect width="5" height="64" x="55" y="310" fill="#788c5d" rx="2"/>
+  <rect width="54" height="20" x="72" y="318" fill="#e3dacc" rx="3"/>
+  <text x="99" y="332" class="layer-num" text-anchor="middle">第2层</text>
+  <path stroke="#d1cfc5" d="M136 318v48"/>
   <text x="150" y="336" class="layer-name">记忆层 (Memory Layer)</text>
   <text x="150" y="354" class="tech-tag">Vector DB, Graph DB, Cache</text>
-
-  <line x1="440" y1="318" x2="440" y2="366" stroke="#D1CFC5" stroke-width="1"/>
-
+  <path stroke="#d1cfc5" d="M440 318v48"/>
   <text x="454" y="335" class="duty-label">职责：</text>
   <text x="490" y="335" class="duty-text">知识存储、上下文检索、长期记忆</text>
-
-  <!-- ─────────────────────────────────────────── -->
-  <!-- Layer 1 — Execution Layer (bottom)         -->
-  <!-- ─────────────────────────────────────────── -->
-  <rect x="55" y="386" width="690" height="64" rx="3" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <rect x="55" y="386" width="5" height="64" rx="2" fill="#141413"/>
-  <rect x="72" y="394" width="54" height="20" rx="3" fill="#E3DACC"/>
-  <text x="99" y="408" text-anchor="middle" class="layer-num">第1层</text>
-
-  <line x1="136" y1="394" x2="136" y2="442" stroke="#D1CFC5" stroke-width="1"/>
-
+  <rect width="690" height="64" x="55" y="386" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="3"/>
+  <rect width="5" height="64" x="55" y="386" fill="#141413" rx="2"/>
+  <rect width="54" height="20" x="72" y="394" fill="#e3dacc" rx="3"/>
+  <text x="99" y="408" class="layer-num" text-anchor="middle">第1层</text>
+  <path stroke="#d1cfc5" d="M136 394v48"/>
   <text x="150" y="412" class="layer-name">执行层 (Execution Layer)</text>
   <text x="150" y="430" class="tech-tag">Tools, APIs, File System, Browser</text>
-
-  <line x1="440" y1="394" x2="440" y2="442" stroke="#D1CFC5" stroke-width="1"/>
-
+  <path stroke="#d1cfc5" d="M440 394v48"/>
   <text x="454" y="411" class="duty-label">职责：</text>
   <text x="490" y="411" class="duty-text">实际动作、副作用、外部交互</text>
-
-  <!-- Decorative corner marks -->
-  <path d="M20,20 L20,34 M20,20 L34,20" stroke="#D1CFC5" stroke-width="2" fill="none"/>
-  <path d="M780,20 L780,34 M780,20 L766,20" stroke="#D1CFC5" stroke-width="2" fill="none"/>
-  <path d="M20,540 L20,526 M20,540 L34,540" stroke="#D1CFC5" stroke-width="2" fill="none"/>
-  <path d="M780,540 L780,526 M780,540 L766,540" stroke="#D1CFC5" stroke-width="2" fill="none"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" d="M20 20v14m0-14h14m746 0v14m0-14h-14M20 540v-14m0 14h14m746 0v-14m0 14h-14"/>
 </svg>

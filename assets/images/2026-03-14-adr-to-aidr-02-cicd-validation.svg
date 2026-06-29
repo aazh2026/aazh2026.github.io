@@ -1,113 +1,85 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
-  <rect width="900" height="500" fill="#FAF9F5"/>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <path fill="#faf9f5" d="M0 0h900v500H0z"/>
   <defs>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
-    </filter>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D1CFC5"/>
+    <marker id="arrow" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#d1cfc5" d="M0 0v6l8-3z"/>
     </marker>
+    <filter id="shadow" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
+    </filter>
   </defs>
-
-  <!-- Title -->
-  <text x="450" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#141413">AIDR CI/CD 自动化验证流程</text>
-  <text x="450" y="57" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#87867F">AIDR Validation in CI/CD Pipeline — From Decision to Deployment</text>
-
-  <!-- Flow Steps -->
-  <!-- Step 1: AIDR Change -->
-  <g transform="translate(30, 100)">
-    <rect x="0" y="0" width="160" height="120" rx="10" fill="white" stroke="#D97757" stroke-width="2" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="160" height="36" rx="10" fill="#D97757"/>
-    <rect x="0" y="26" width="160" height="16" fill="#D97757"/>
-    <text x="80" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="white">STEP 1</text>
-    <text x="80" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">AIDR 变更</text>
-    <text x="80" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">提交新决策或修改</text>
-    <text x="80" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">触发 Pipeline</text>
-    <text x="80" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="#788C5D">git push</text>
+  <text x="450" y="35" fill="#141413" font-family="system-ui, sans-serif" font-size="18" font-weight="700" text-anchor="middle">AIDR CI/CD 自动化验证流程</text>
+  <text x="450" y="57" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">AIDR Validation in CI/CD Pipeline — From Decision to Deployment</text>
+  <g transform="translate(30 100)">
+    <rect width="160" height="120" fill="#fff" stroke="#d97757" stroke-width="2" filter="url(#shadow)" rx="10"/>
+    <rect width="160" height="36" fill="#d97757" rx="10"/>
+    <path fill="#d97757" d="M0 26h160v16H0z"/>
+    <text x="80" y="22" fill="#fff" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">STEP 1</text>
+    <text x="80" y="60" fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">AIDR 变更</text>
+    <text x="80" y="78" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">提交新决策或修改</text>
+    <text x="80" y="96" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">触发 Pipeline</text>
+    <text x="80" y="112" fill="#788c5d" font-family="monospace" font-size="9" text-anchor="middle">git push</text>
   </g>
-
-  <!-- Arrow 1→2 -->
-  <path d="M195 160 L230 160" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-
-  <!-- Step 2: Format Validation -->
-  <g transform="translate(240, 100)">
-    <rect x="0" y="0" width="160" height="120" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="160" height="36" rx="10" fill="#E3DACC"/>
-    <rect x="0" y="26" width="160" height="16" fill="#E3DACC"/>
-    <text x="80" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">STEP 2</text>
-    <text x="80" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">格式验证</text>
-    <text x="80" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Schema 检查</text>
-    <text x="80" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">YAML/JSON 解析</text>
-    <text x="80" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">aidr validate --format</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrow)" d="M195 160h35"/>
+  <g transform="translate(240 100)">
+    <rect width="160" height="120" fill="#fff" stroke="#e3dacc" stroke-width="1.5" filter="url(#shadow)" rx="10"/>
+    <rect width="160" height="36" fill="#e3dacc" rx="10"/>
+    <path fill="#e3dacc" d="M0 26h160v16H0z"/>
+    <text x="80" y="22" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">STEP 2</text>
+    <text x="80" y="60" fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">格式验证</text>
+    <text x="80" y="78" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">Schema 检查</text>
+    <text x="80" y="96" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">YAML/JSON 解析</text>
+    <text x="80" y="112" fill="#d97757" font-family="monospace" font-size="9" text-anchor="middle">aidr validate --format</text>
   </g>
-
-  <!-- Arrow 2→3 -->
-  <path d="M405 160 L440 160" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-
-  <!-- Step 3: Consistency Check -->
-  <g transform="translate(450, 100)">
-    <rect x="0" y="0" width="160" height="120" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="160" height="36" rx="10" fill="#E3DACC"/>
-    <rect x="0" y="26" width="160" height="16" fill="#E3DACC"/>
-    <text x="80" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">STEP 3</text>
-    <text x="80" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">一致性检查</text>
-    <text x="80" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">依赖关系验证</text>
-    <text x="80" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">决策冲突检测</text>
-    <text x="80" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">aidr validate --consistency</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrow)" d="M405 160h35"/>
+  <g transform="translate(450 100)">
+    <rect width="160" height="120" fill="#fff" stroke="#e3dacc" stroke-width="1.5" filter="url(#shadow)" rx="10"/>
+    <rect width="160" height="36" fill="#e3dacc" rx="10"/>
+    <path fill="#e3dacc" d="M0 26h160v16H0z"/>
+    <text x="80" y="22" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">STEP 3</text>
+    <text x="80" y="60" fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">一致性检查</text>
+    <text x="80" y="78" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">依赖关系验证</text>
+    <text x="80" y="96" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">决策冲突检测</text>
+    <text x="80" y="112" fill="#d97757" font-family="monospace" font-size="9" text-anchor="middle">aidr validate --consistency</text>
   </g>
-
-  <!-- Arrow 3→4 -->
-  <path d="M615 160 L650 160" stroke="#D1CFC5" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-
-  <!-- Step 4: Code Compliance -->
-  <g transform="translate(660, 100)">
-    <rect x="0" y="0" width="160" height="120" rx="10" fill="white" stroke="#E3DACC" stroke-width="1.5" filter="url(#shadow)"/>
-    <rect x="0" y="0" width="160" height="36" rx="10" fill="#E3DACC"/>
-    <rect x="0" y="26" width="160" height="16" fill="#E3DACC"/>
-    <text x="80" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">STEP 4</text>
-    <text x="80" y="60" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">代码合规</text>
-    <text x="80" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">ArchUnit / Semgrep</text>
-    <text x="80" y="96" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">规则自动检查</text>
-    <text x="80" y="112" text-anchor="middle" font-family="monospace" font-size="9" fill="#D97757">aidr verify --against=src/</text>
+  <path fill="none" stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrow)" d="M615 160h35"/>
+  <g transform="translate(660 100)">
+    <rect width="160" height="120" fill="#fff" stroke="#e3dacc" stroke-width="1.5" filter="url(#shadow)" rx="10"/>
+    <rect width="160" height="36" fill="#e3dacc" rx="10"/>
+    <path fill="#e3dacc" d="M0 26h160v16H0z"/>
+    <text x="80" y="22" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">STEP 4</text>
+    <text x="80" y="60" fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">代码合规</text>
+    <text x="80" y="78" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">ArchUnit / Semgrep</text>
+    <text x="80" y="96" fill="#87867f" font-family="system-ui, sans-serif" font-size="10" text-anchor="middle">规则自动检查</text>
+    <text x="80" y="112" fill="#d97757" font-family="monospace" font-size="9" text-anchor="middle">aidr verify --against=src/</text>
   </g>
-
-  <!-- Result: Compliance Report -->
-  <g transform="translate(300, 250)">
-    <rect x="0" y="0" width="300" height="80" rx="10" fill="#788C5D" fill-opacity="0.1" stroke="#788C5D" stroke-width="1.5"/>
-    <text x="150" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#788C5D">✓ 验证通过</text>
-    <text x="150" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">生成合规报告 → PR 自动评论</text>
-    <text x="150" y="68" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">aidr report --output=aidr-compliance.md</text>
+  <g transform="translate(300 250)">
+    <rect width="300" height="80" fill="#788c5d" fill-opacity=".1" stroke="#788c5d" stroke-width="1.5" rx="10"/>
+    <text x="150" y="30" fill="#788c5d" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">✓ 验证通过</text>
+    <text x="150" y="50" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">生成合规报告 → PR 自动评论</text>
+    <text x="150" y="68" fill="#141413" font-family="monospace" font-size="10" text-anchor="middle">aidr report --output=aidr-compliance.md</text>
   </g>
-
-  <!-- Result: Violations -->
-  <g transform="translate(300, 350)">
-    <rect x="0" y="0" width="300" height="80" rx="10" fill="#D97757" fill-opacity="0.1" stroke="#D97757" stroke-width="1.5"/>
-    <text x="150" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#D97757">✗ 验证失败</text>
-    <text x="150" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">列出违规详情 → 阻止合并</text>
-    <text x="150" y="68" text-anchor="middle" font-family="monospace" font-size="10" fill="#141413">CI 构建失败 · 通知作者</text>
+  <g transform="translate(300 350)">
+    <rect width="300" height="80" fill="#d97757" fill-opacity=".1" stroke="#d97757" stroke-width="1.5" rx="10"/>
+    <text x="150" y="30" fill="#d97757" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">✗ 验证失败</text>
+    <text x="150" y="50" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">列出违规详情 → 阻止合并</text>
+    <text x="150" y="68" fill="#141413" font-family="monospace" font-size="10" text-anchor="middle">CI 构建失败 · 通知作者</text>
   </g>
-
-  <!-- Violation detail card -->
-  <g transform="translate(30, 350)">
-    <rect x="0" y="0" width="250" height="80" rx="8" fill="white" stroke="#D97757" stroke-width="1.5"/>
-    <text x="125" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#D97757">违规示例</text>
-    <text x="12" y="44" font-family="monospace" font-size="9" fill="#141413">AIDR-001: 服务间调用</text>
-    <text x="12" y="58" font-family="monospace" font-size="9" fill="#141413">violation at order-service:82</text>
-    <text x="12" y="72" font-family="monospace" font-size="9" fill="#D97757">直接 HTTP 调用 → 应使用 EventBridge</text>
+  <g transform="translate(30 350)">
+    <rect width="250" height="80" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+    <text x="125" y="22" fill="#d97757" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">违规示例</text>
+    <text x="12" y="44" fill="#141413" font-family="monospace" font-size="9">AIDR-001: 服务间调用</text>
+    <text x="12" y="58" fill="#141413" font-family="monospace" font-size="9">violation at order-service:82</text>
+    <text x="12" y="72" fill="#d97757" font-family="monospace" font-size="9">直接 HTTP 调用 → 应使用 EventBridge</text>
   </g>
-
-  <!-- Success detail card -->
-  <g transform="translate(620, 350)">
-    <rect x="0" y="0" width="250" height="80" rx="8" fill="white" stroke="#788C5D" stroke-width="1.5"/>
-    <text x="125" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D">合规报告示例</text>
-    <text x="12" y="44" font-family="monospace" font-size="9" fill="#141413">✓ AIDR-001 规则检查: PASS</text>
-    <text x="12" y="58" font-family="monospace" font-size="9" fill="#141413">✓ AIDR-002 规则检查: PASS</text>
-    <text x="12" y="72" font-family="monospace" font-size="9" fill="#141413">✓ 格式验证: PASS · 0 违规</text>
+  <g transform="translate(620 350)">
+    <rect width="250" height="80" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+    <text x="125" y="22" fill="#788c5d" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">合规报告示例</text>
+    <text x="12" y="44" fill="#141413" font-family="monospace" font-size="9">✓ AIDR-001 规则检查: PASS</text>
+    <text x="12" y="58" fill="#141413" font-family="monospace" font-size="9">✓ AIDR-002 规则检查: PASS</text>
+    <text x="12" y="72" fill="#141413" font-family="monospace" font-size="9">✓ 格式验证: PASS · 0 违规</text>
   </g>
-
-  <!-- Footer -->
-  <line x1="40" y1="460" x2="860" y2="460" stroke="#E3DACC" stroke-width="1"/>
-  <text x="40" y="480" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">AIDR 验证机制：可执行的架构决策才有约束力</text>
-  <text x="860" y="480" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">违反即失败 · 自动阻止合并</text>
+  <path stroke="#e3dacc" d="M40 460h820"/>
+  <text x="40" y="480" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">AIDR 验证机制：可执行的架构决策才有约束力</text>
+  <text x="860" y="480" fill="#d97757" font-family="system-ui, sans-serif" font-size="10" text-anchor="end">违反即失败 · 自动阻止合并</text>
 </svg>

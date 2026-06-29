@@ -1,186 +1,116 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 540">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .slate { fill: #141413; }
-      .slate-text { fill: #141413; font-family: system-ui, sans-serif; }
-      .clay { fill: #D97757; }
-      .olive { fill: #788C5D; }
-      .oat { fill: #E3DACC; }
-      .g300 { fill: #D1CFC5; }
-      .g500 { fill: #87867F; }
-      .border { stroke: #D1CFC5; stroke-width: 1.5; fill: none; }
-      .artifact-box { fill: #FAF9F5; stroke: #D1CFC5; stroke-width: 1.5; }
-      .artifact-box-clay { fill: #FAF9F5; stroke: #D97757; stroke-width: 2; }
-      .flow-arrow { fill: #D97757; }
-      .section-label { fill: #87867F; font-family: system-ui, sans-serif; font-size: 11px; }
-      .artifact-name { fill: #141413; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
-      .artifact-desc { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; }
-      .code-text { fill: #141413; font-family: monospace; font-size: 11px; }
+      .artifact-box{fill:#faf9f5;stroke:#d1cfc5;stroke-width:1.5}.section-label{fill:#87867f;font-size:11px}.artifact-desc,.artifact-name,.section-label{font-family:system-ui,sans-serif}.artifact-name{fill:#141413;font-size:13px;font-weight:600}.artifact-desc{fill:#87867f;font-size:10px}.code-text{fill:#141413;font-family:monospace;font-size:11px}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="720" height="540" class="bg"/>
-
-  <!-- Title -->
-  <text x="24" y="32" class="slate-text" font-size="16" font-weight="700">AI-Native 详细设计：六种核心 Artifact</text>
-  <line x1="24" y1="42" x2="696" y2="42" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Left section: 6 artifacts in 2x3 grid -->
+  <path d="M0 0h720v540H0z" style="fill:#faf9f5"/>
+  <text x="24" y="32" font-size="16" font-weight="700" style="fill:#141413;font-family:system-ui,sans-serif">AI-Native 详细设计：六种核心 Artifact</text>
+  <path stroke="#d1cfc5" d="M24 42h672"/>
   <text x="24" y="68" class="section-label">六种核心 Artifact</text>
-
-  <!-- Artifact 1: Intent -->
-  <g transform="translate(24, 80)">
-    <rect width="200" height="64" rx="6" class="artifact-box-clay"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#D97757"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">1</text>
+  <g transform="translate(24 80)">
+    <rect width="200" height="64" rx="6" style="fill:#faf9f5;stroke:#d97757;stroke-width:2"/>
+    <rect width="32" height="32" x="8" y="8" fill="#d97757" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">1</text>
     <text x="48" y="22" class="artifact-name">Intent（意图）</text>
     <text x="48" y="38" class="artifact-desc">为什么做这个功能</text>
-    <text x="48" y="52" class="artifact-desc" fill="#D97757">北极星 · 方向指引</text>
+    <text x="48" y="52" fill="#d97757" class="artifact-desc">北极星 · 方向指引</text>
   </g>
-
-  <!-- Artifact 2: Domain Model -->
-  <g transform="translate(232, 80)">
-    <rect width="200" height="64" rx="6" class="artifact-box"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#788C5D"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">2</text>
+  <g transform="translate(232 80)">
+    <rect width="200" height="64" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#788c5d" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">2</text>
     <text x="48" y="22" class="artifact-name">Domain Model（领域模型）</text>
     <text x="48" y="38" class="artifact-desc">业务对象定义</text>
     <text x="48" y="52" class="artifact-desc">划定 AI 业务边界</text>
   </g>
-
-  <!-- Artifact 3: API Contract -->
-  <g transform="translate(440, 80)">
-    <rect width="200" height="64" rx="6" class="artifact-box"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#788C5D"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">3</text>
+  <g transform="translate(440 80)">
+    <rect width="200" height="64" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#788c5d" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">3</text>
     <text x="48" y="22" class="artifact-name">API Contract（契约）</text>
     <text x="48" y="38" class="artifact-desc">OpenAPI / JSON Schema</text>
     <text x="48" y="52" class="artifact-desc">接口规范 · 结构化</text>
   </g>
-
-  <!-- Artifact 4: Behavior Spec -->
-  <g transform="translate(24, 156)">
-    <rect width="200" height="64" rx="6" class="artifact-box"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#87867F"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">4</text>
+  <g transform="translate(24 156)">
+    <rect width="200" height="64" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#87867f" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">4</text>
     <text x="48" y="22" class="artifact-name">Behavior Spec（行为）</text>
     <text x="48" y="38" class="artifact-desc">Given / When / Then</text>
     <text x="48" y="52" class="artifact-desc">场景描述 · BDD + AI</text>
   </g>
-
-  <!-- Artifact 5: Constraint Design -->
-  <g transform="translate(232, 156)">
-    <rect width="200" height="64" rx="6" class="artifact-box"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#87867F"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">5</text>
+  <g transform="translate(232 156)">
+    <rect width="200" height="64" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#87867f" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">5</text>
     <text x="48" y="22" class="artifact-name">Constraint Design（约束）</text>
     <text x="48" y="38" class="artifact-desc">性能 · 安全 · 一致性</text>
     <text x="48" y="52" class="artifact-desc">明确 AI 必须遵守的边界</text>
   </g>
-
-  <!-- Artifact 6: Evaluation Spec -->
-  <g transform="translate(440, 156)">
-    <rect width="200" height="64" rx="6" class="artifact-box"/>
-    <rect x="8" y="8" width="32" height="32" rx="4" fill="#87867F"/>
-    <text x="24" y="30" text-anchor="middle" fill="white" font-family="system-ui" font-size="14" font-weight="700">6</text>
+  <g transform="translate(440 156)">
+    <rect width="200" height="64" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#87867f" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">6</text>
     <text x="48" y="22" class="artifact-name">Evaluation Spec（评估）</text>
     <text x="48" y="38" class="artifact-desc">验收标准 · 测试策略</text>
     <text x="48" y="52" class="artifact-desc">AI 据此生成测试</text>
   </g>
-
-  <!-- Arrow down from 6 artifacts to design context -->
-  <path d="M340,232 L340,258 L360,258 L355,264 L370,254 L355,244 L360,250 L340,250 Z" fill="#D97757"/>
+  <path fill="#d97757" d="M340 232v26h20l-5 6 15-10-15-10 5 6h-20Z"/>
   <text x="380" y="262" class="artifact-name">Executable Design Context</text>
-
-  <!-- Right section: Design → AI → Code flow -->
-  <g transform="translate(420, 280)">
-    <text x="0" y="0" class="section-label">设计流程变化</text>
-
-    <!-- Design box -->
-    <rect x="0" y="16" width="120" height="56" rx="6" class="artifact-box"/>
-    <text x="60" y="42" text-anchor="middle" class="artifact-name">Design Doc</text>
-    <text x="60" y="58" text-anchor="middle" class="artifact-desc">传统文档</text>
-
-    <!-- Arrow 1 -->
-    <path d="M128,44 L158,44 L153,38 L168,44 L153,50 Z" fill="#87867F"/>
-
-    <!-- AI box (highlighted) -->
-    <rect x="176" y="16" width="100" height="56" rx="6" fill="#D97757"/>
-    <text x="226" y="42" text-anchor="middle" fill="white" font-family="system-ui" font-size="13" font-weight="700">AI</text>
-    <text x="226" y="58" text-anchor="middle" fill="white" font-family="system-ui" font-size="10">Context Engineer</text>
-
-    <!-- Arrow 2 -->
-    <path d="M284,44 L314,44 L309,38 L324,44 L309,50 Z" fill="#87867F"/>
-
-    <!-- Code box -->
-    <rect x="332" y="16" width="120" height="56" rx="6" class="artifact-box"/>
-    <text x="392" y="42" text-anchor="middle" class="artifact-name">Code</text>
-    <text x="392" y="58" text-anchor="middle" class="artifact-desc">可执行代码</text>
+  <g transform="translate(420 280)">
+    <text class="section-label">设计流程变化</text>
+    <rect width="120" height="56" y="16" class="artifact-box" rx="6"/>
+    <text x="60" y="42" class="artifact-name" text-anchor="middle">Design Doc</text>
+    <text x="60" y="58" class="artifact-desc" text-anchor="middle">传统文档</text>
+    <path fill="#87867f" d="M128 44h30l-5-6 15 6-15 6Z"/>
+    <rect width="100" height="56" x="176" y="16" fill="#d97757" rx="6"/>
+    <text x="226" y="42" fill="#fff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">AI</text>
+    <text x="226" y="58" fill="#fff" font-family="system-ui" font-size="10" text-anchor="middle">Context Engineer</text>
+    <path fill="#87867f" d="M284 44h30l-5-6 15 6-15 6Z"/>
+    <rect width="120" height="56" x="332" y="16" class="artifact-box" rx="6"/>
+    <text x="392" y="42" class="artifact-name" text-anchor="middle">Code</text>
+    <text x="392" y="58" class="artifact-desc" text-anchor="middle">可执行代码</text>
   </g>
-
-  <!-- AI-Native flow label -->
-  <g transform="translate(24, 280)">
-    <text x="0" y="0" class="section-label">AI-Native 设计结构</text>
-
-    <rect x="0" y="12" width="360" height="160" rx="8" class="artifact-box"/>
+  <g transform="translate(24 280)">
+    <text class="section-label">AI-Native 设计结构</text>
+    <rect width="360" height="160" y="12" class="artifact-box" rx="8"/>
     <text x="16" y="34" class="artifact-name" font-size="11">spec/</text>
-
     <text x="16" y="56" class="code-text">├── intent.md        </text>
     <text x="130" y="56" class="artifact-desc">→ 意图：为什么要做</text>
-
     <text x="16" y="76" class="code-text">├── domain-model.md </text>
     <text x="130" y="76" class="artifact-desc">→ 领域模型</text>
-
     <text x="16" y="96" class="code-text">├── api-contract.yaml</text>
     <text x="130" y="96" class="artifact-desc">→ API 契约</text>
-
     <text x="16" y="116" class="code-text">├── constraints.md   </text>
     <text x="130" y="116" class="artifact-desc">→ 约束条件</text>
-
     <text x="16" y="136" class="code-text">└── evaluation.md    </text>
     <text x="130" y="136" class="artifact-desc">→ 评估标准</text>
-
-    <rect x="16" y="146" width="328" height="20" rx="4" fill="#E3DACC"/>
-    <text x="26" y="160" class="artifact-desc" fill="#788C5D">AI 可直接读取并执行的结构化 artifacts</text>
+    <rect width="328" height="20" x="16" y="146" fill="#e3dacc" rx="4"/>
+    <text x="26" y="160" fill="#788c5d" class="artifact-desc">AI 可直接读取并执行的结构化 artifacts</text>
   </g>
-
-  <!-- Bottom: 3 standards -->
-  <g transform="translate(24, 470)">
-    <text x="0" y="0" class="section-label">AI-Native 设计三标准</text>
-
-    <!-- Standard 1 -->
-    <g transform="translate(0, 12)">
-      <rect width="220" height="48" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="32" height="32" rx="4" fill="#D97757"/>
-      <text x="24" y="30" text-anchor="middle" fill="white" font-size="11" font-weight="700">AI</text>
-      <text x="48" y="24" class="artifact-name" font-size="12">可理解</text>
-      <text x="48" y="38" class="artifact-desc">结构化 · 无歧义 · 明确约束</text>
-    </g>
-
-    <!-- Arrow -->
-    <path d="M228,36 L248,36 L243,30 L258,36 L243,42 Z" fill="#87867F"/>
-
-    <!-- Standard 2 -->
-    <g transform="translate(266, 12)">
-      <rect width="220" height="48" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="32" height="32" rx="4" fill="#788C5D"/>
-      <text x="24" y="30" text-anchor="middle" fill="white" font-size="11" font-weight="700">AI</text>
-      <text x="48" y="24" class="artifact-name" font-size="12">可执行</text>
-      <text x="48" y="38" class="artifact-desc">直接驱动代码 · 测试生成</text>
-    </g>
-
-    <!-- Arrow -->
-    <path d="M494,36 L514,36 L509,30 L524,36 L509,42 Z" fill="#87867F"/>
-
-    <!-- Standard 3 -->
-    <g transform="translate(532, 12)">
-      <rect width="164" height="48" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="32" height="32" rx="4" fill="#87867F"/>
-      <text x="24" y="30" text-anchor="middle" fill="white" font-size="11" font-weight="700">AI</text>
-      <text x="48" y="24" class="artifact-name" font-size="12">可验证</text>
-      <text x="48" y="38" class="artifact-desc">包含验收标准</text>
-    </g>
+  <text class="section-label" transform="translate(24 470)">AI-Native 设计三标准</text>
+  <g transform="translate(24 482)">
+    <rect width="220" height="48" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#d97757" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">AI</text>
+    <text x="48" y="24" class="artifact-name" font-size="12">可理解</text>
+    <text x="48" y="38" class="artifact-desc">结构化 · 无歧义 · 明确约束</text>
+  </g>
+  <path fill="#87867f" d="M252 506h20l-5-6 15 6-15 6Z"/>
+  <g transform="translate(290 482)">
+    <rect width="220" height="48" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#788c5d" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">AI</text>
+    <text x="48" y="24" class="artifact-name" font-size="12">可执行</text>
+    <text x="48" y="38" class="artifact-desc">直接驱动代码 · 测试生成</text>
+  </g>
+  <path fill="#87867f" d="M518 506h20l-5-6 15 6-15 6Z"/>
+  <g transform="translate(556 482)">
+    <rect width="164" height="48" class="artifact-box" rx="6"/>
+    <rect width="32" height="32" x="8" y="8" fill="#87867f" rx="4"/>
+    <text x="24" y="30" fill="#fff" font-size="11" font-weight="700" text-anchor="middle">AI</text>
+    <text x="48" y="24" class="artifact-name" font-size="12">可验证</text>
+    <text x="48" y="38" class="artifact-desc">包含验收标准</text>
   </g>
 </svg>

@@ -1,92 +1,51 @@
-<svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Background -->
-  <rect width="600" height="480" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 陪审团审查流程</text>
-  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Code Review · 2026/03/13</text>
-
-  <!-- Stage 1: PR Entry -->
-  <rect x="220" y="58" width="160" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="300" y="78" text-anchor="middle" font-size="12" fill="#D97757" font-weight="600">PR 进入系统</text>
-  <text x="300" y="96" text-anchor="middle" font-size="10" fill="#87867F">代码变更提交</text>
-
-  <!-- Arrow 1 to fan-out -->
-  <line x1="300" y1="110" x2="300" y2="128" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,128 295,120 305,120" fill="#D1CFC5"/>
-
-  <!-- Stage 2: Fan-out node -->
-  <circle cx="300" cy="148" r="20" fill="#D97757"/>
-  <text x="300" y="152" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">并行分发</text>
-
-  <!-- Five agent boxes -->
-  <rect x="50" y="178" width="110" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="105" y="195" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">安全专家</text>
-  <text x="105" y="209" text-anchor="middle" font-size="9" fill="#87867F">Agent</text>
-
-  <rect x="175" y="178" width="110" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="230" y="195" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">性能分析师</text>
-  <text x="230" y="209" text-anchor="middle" font-size="9" fill="#87867F">Agent</text>
-
-  <rect x="300" y="178" width="110" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="355" y="195" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">规范检查员</text>
-  <text x="355" y="209" text-anchor="middle" font-size="9" fill="#87867F">Agent</text>
-
-  <rect x="425" y="178" width="110" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="480" y="195" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">业务逻辑</text>
-  <text x="480" y="209" text-anchor="middle" font-size="9" fill="#87867F">验证 Agent</text>
-
-  <rect x="50" y="238" width="110" height="44" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="105" y="255" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">架构一致性</text>
-  <text x="105" y="269" text-anchor="middle" font-size="9" fill="#87867F">Agent</text>
-
-  <!-- Arrows from fan-out to agents -->
-  <line x1="282" y1="148" x2="105" y2="178" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="290" y1="155" x2="230" y2="178" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="300" y1="168" x2="355" y2="178" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="310" y1="155" x2="480" y2="178" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="282" y1="168" x2="105" y2="238" stroke="#D1CFC5" stroke-width="1.2"/>
-
-  <!-- "80%" label near agents -->
-  <text x="105" y="295" text-anchor="middle" font-size="11" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">80%</text>
-  <text x="105" y="308" text-anchor="middle" font-size="9" fill="#87867F">标准化检查</text>
-
-  <!-- Arrows from agents down to aggregation -->
-  <line x1="105" y1="282" x2="300" y2="320" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="230" y1="222" x2="300" y2="320" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="355" y1="222" x2="300" y2="320" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="480" y1="222" x2="300" y2="320" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="105" y1="282" x2="300" y2="340" stroke="#D1CFC5" stroke-width="1.2"/>
-
-  <!-- Aggregation node -->
-  <rect x="200" y="320" width="200" height="52" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="300" y="338" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">Review Report 聚合</text>
-  <text x="300" y="356" text-anchor="middle" font-size="9" fill="#87867F">5 份报告 → 统一摘要</text>
-
-  <!-- Arrow to Human Reviewer -->
-  <line x1="300" y1="372" x2="300" y2="392" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,392 295,384 305,384" fill="#D1CFC5"/>
-
-  <!-- Human Reviewer terminal -->
-  <rect x="200" y="396" width="200" height="56" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="300" y="416" text-anchor="middle" font-size="11" fill="#141413" font-weight="500">Human Reviewer 最终判断</text>
-  <text x="300" y="434" text-anchor="middle" font-size="9" fill="#87867F">20% 架构与设计决策</text>
-
-  <!-- "20%" label -->
-  <text x="420" y="424" font-size="11" fill="#141413" font-family="ui-monospace, monospace" font-weight="600">20%</text>
-  <text x="420" y="438" font-size="9" fill="#87867F">核心价值</text>
-
-  <!-- Feedback arrow: knowledge precipitation -->
-  <path d="M 400 348 C 480 348, 480 440, 440 440" stroke="#788C5D" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
-  <polygon points="440,440 434,434 446,434" fill="#788C5D"/>
-  <text x="476" y="400" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">知识沉淀</text>
-
-  <!-- Stage labels on left -->
-  <text x="16" y="80" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">阶段 1</text>
-  <text x="16" y="160" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">阶段 2</text>
-  <text x="16" y="350" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">阶段 3</text>
-
-  <!-- Title and desc for accessibility -->
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 600 480">
+  <path fill="#faf9f5" d="M0 0h600v480H0z"/>
+  <text x="300" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent 陪审团审查流程</text>
+  <text x="300" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native Code Review · 2026/03/13</text>
+  <rect width="160" height="52" x="220" y="58" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="300" y="78" fill="#d97757" font-size="12" font-weight="600" text-anchor="middle">PR 进入系统</text>
+  <text x="300" y="96" fill="#87867f" font-size="10" text-anchor="middle">代码变更提交</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 110v18"/>
+  <path fill="#d1cfc5" d="m300 128-5-8h10z"/>
+  <circle cx="300" cy="148" r="20" fill="#d97757"/>
+  <text x="300" y="152" fill="#fff" font-size="10" font-weight="600" text-anchor="middle">并行分发</text>
+  <rect width="110" height="44" x="50" y="178" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="105" y="195" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">安全专家</text>
+  <text x="105" y="209" fill="#87867f" font-size="9" text-anchor="middle">Agent</text>
+  <rect width="110" height="44" x="175" y="178" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="230" y="195" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">性能分析师</text>
+  <text x="230" y="209" fill="#87867f" font-size="9" text-anchor="middle">Agent</text>
+  <rect width="110" height="44" x="300" y="178" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="355" y="195" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">规范检查员</text>
+  <text x="355" y="209" fill="#87867f" font-size="9" text-anchor="middle">Agent</text>
+  <rect width="110" height="44" x="425" y="178" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="480" y="195" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">业务逻辑</text>
+  <text x="480" y="209" fill="#87867f" font-size="9" text-anchor="middle">验证 Agent</text>
+  <rect width="110" height="44" x="50" y="238" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="105" y="255" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">架构一致性</text>
+  <text x="105" y="269" fill="#87867f" font-size="9" text-anchor="middle">Agent</text>
+  <path stroke="#d1cfc5" stroke-width="1.2" d="m282 148-177 30m185-23-60 23m70-10 55 10m-45-23 170 23m-198-10-177 70"/>
+  <text x="105" y="295" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">80%</text>
+  <text x="105" y="308" fill="#87867f" font-size="9" text-anchor="middle">标准化检查</text>
+  <path stroke="#d1cfc5" stroke-width="1.2" d="m105 282 195 38m-70-98 70 98m55-98-55 98m180-98-180 98m-195-38 195 58"/>
+  <rect width="200" height="52" x="200" y="320" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="300" y="338" fill="#788c5d" font-size="11" font-weight="600" text-anchor="middle">Review Report 聚合</text>
+  <text x="300" y="356" fill="#87867f" font-size="9" text-anchor="middle">5 份报告 → 统一摘要</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 372v20"/>
+  <path fill="#d1cfc5" d="m300 392-5-8h10z"/>
+  <rect width="200" height="56" x="200" y="396" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="300" y="416" fill="#141413" font-size="11" font-weight="500" text-anchor="middle">Human Reviewer 最终判断</text>
+  <text x="300" y="434" fill="#87867f" font-size="9" text-anchor="middle">20% 架构与设计决策</text>
+  <text x="420" y="424" fill="#141413" font-family="ui-monospace, monospace" font-size="11" font-weight="600">20%</text>
+  <text x="420" y="438" fill="#87867f" font-size="9">核心价值</text>
+  <path fill="none" stroke="#788c5d" stroke-dasharray="4,3" stroke-width="1.5" d="M400 348c80 0 80 92 40 92"/>
+  <path fill="#788c5d" d="m440 440-6-6h12z"/>
+  <text x="476" y="400" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9">知识沉淀</text>
+  <text x="16" y="80" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">阶段 1</text>
+  <text x="16" y="160" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">阶段 2</text>
+  <text x="16" y="350" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">阶段 3</text>
   <title>Agent 陪审团审查流程</title>
-  <desc>PR经过并行分发到5个专业Agent，汇总为Review Report后由人类审查者做最终判断，同时知识沉淀回流</desc>
+  <desc>
+    PR经过并行分发到5个专业Agent，汇总为Review Report后由人类审查者做最终判断，同时知识沉淀回流
+  </desc>
 </svg>

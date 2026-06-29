@@ -1,64 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="AI四层权力结构">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="AI四层权力结构" viewBox="0 0 800 520">
   <title>AI四层权力结构模型</title>
-  <desc>AI时代的四层权力结构：从应用层、代理运行时层、行动API层到数据与基础设施层</desc>
+  <desc>
+    AI时代的四层权力结构：从应用层、代理运行时层、行动API层到数据与基础设施层
+  </desc>
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="shadow" width="110%" height="115%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".12" stdDeviation="5"/>
     </filter>
   </defs>
-  <rect width="800" height="520" fill="url(#bg)"/>
-
-  <!-- Header -->
-  <text x="400" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#141413" letter-spacing="1">AI时代四层权力结构</text>
-  <line x1="200" y1="52" x2="600" y2="52" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Layer 4: Application Layer -->
-  <rect x="80" y="70" width="640" height="82" rx="8" fill="#788C5D" filter="url(#shadow)"/>
-  <text x="120" y="98" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-weight="bold">Layer 4</text>
-  <text x="120" y="118" font-family="Georgia, serif" font-size="15" fill="#FAF9F5" font-weight="bold">应用层 Application Layer</text>
-  <text x="120" y="138" font-family="Georgia, serif" font-size="11" fill="#E3DACC">ChatGPT · Jasper · CopyAI</text>
-  <text x="600" y="118" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#E3DACC">❌ 无护城河</text>
-
-  <!-- Arrow down -->
-  <polygon points="400,155 390,147 410,147" fill="#D1CFC5"/>
-
-  <!-- Layer 3: Agent Runtime -->
-  <rect x="80" y="160" width="640" height="82" rx="8" fill="#D97757" filter="url(#shadow)"/>
-  <text x="120" y="188" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-weight="bold">Layer 3</text>
-  <text x="120" y="208" font-family="Georgia, serif" font-size="15" fill="#FAF9F5" font-weight="bold">代理运行时层 Agent Runtime</text>
-  <text x="120" y="228" font-family="Georgia, serif" font-size="11" fill="#E3DACC">LangChain · AutoGPT · OpenClaw</text>
-  <text x="600" y="208" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#E3DACC">⚠️ 标准未定</text>
-
-  <!-- Arrow down -->
-  <polygon points="400,245 390,237 410,237" fill="#D1CFC5"/>
-
-  <!-- Layer 2: Action APIs -->
-  <rect x="80" y="250" width="640" height="82" rx="8" fill="#87867F" filter="url(#shadow)"/>
-  <text x="120" y="278" font-family="Georgia, serif" font-size="13" fill="#FAF9F5" font-weight="bold">Layer 2</text>
-  <text x="120" y="298" font-family="Georgia, serif" font-size="15" fill="#FAF9F5" font-weight="bold">行动API层 Action APIs</text>
-  <text x="120" y="318" font-family="Georgia, serif" font-size="11" fill="#E3DACC">Stripe · Twilio · Salesforce</text>
-  <text x="600" y="298" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#E3DACC">✅ 厚API = 护城河</text>
-
-  <!-- Arrow down -->
-  <polygon points="400,335 390,327 410,327" fill="#D1CFC5"/>
-
-  <!-- Layer 1: Data & Infrastructure -->
-  <rect x="80" y="340" width="640" height="82" rx="8" fill="#141413" filter="url(#shadow)"/>
-  <text x="120" y="368" font-family="Georgia, serif" font-size="13" fill="#D1CFC5" font-weight="bold">Layer 1</text>
-  <text x="120" y="388" font-family="Georgia, serif" font-size="15" fill="#FAF9F5" font-weight="bold">数据与基础设施层 Data &amp; Infrastructure</text>
-  <text x="120" y="408" font-family="Georgia, serif" font-size="11" fill="#87867F">Snowflake · Cloudflare · Databricks</text>
-  <text x="600" y="388" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#D1CFC5">✅ 终极护城河</text>
-
-  <!-- Power arrow on right side -->
-  <line x1="740" y1="90" x2="740" y2="400" stroke="#D97757" stroke-width="3" stroke-dasharray="6,4"/>
-  <polygon points="740,405 733,392 747,392" fill="#D97757"/>
-  <text x="765" y="250" font-family="Georgia, serif" font-size="11" fill="#D97757" transform="rotate(90,765,250)">权力递增</text>
-
-  <!-- Footer note -->
-  <text x="400" y="490" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">API只是入口，真正的护城河在API背后</text>
-  <text x="400" y="508" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#87867F">— 数据网络效应 · 工作流嵌入 · 合规壁垒 · 规模经济</text>
+  <path fill="url(#bg)" d="M0 0h800v520H0z"/>
+  <text x="400" y="38" fill="#141413" font-family="Georgia, serif" font-size="18" letter-spacing="1" text-anchor="middle">AI时代四层权力结构</text>
+  <path stroke="#d1cfc5" d="M200 52h400"/>
+  <rect width="640" height="82" x="80" y="70" fill="#788c5d" filter="url(#shadow)" rx="8"/>
+  <text x="120" y="98" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-weight="bold">Layer 4</text>
+  <text x="120" y="118" fill="#faf9f5" font-family="Georgia, serif" font-size="15" font-weight="bold">应用层 Application Layer</text>
+  <text x="120" y="138" fill="#e3dacc" font-family="Georgia, serif" font-size="11">ChatGPT · Jasper · CopyAI</text>
+  <text x="600" y="118" fill="#e3dacc" font-family="Georgia, serif" font-size="11" text-anchor="middle">❌ 无护城河</text>
+  <path fill="#d1cfc5" d="m400 155-10-8h20z"/>
+  <rect width="640" height="82" x="80" y="160" fill="#d97757" filter="url(#shadow)" rx="8"/>
+  <text x="120" y="188" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-weight="bold">Layer 3</text>
+  <text x="120" y="208" fill="#faf9f5" font-family="Georgia, serif" font-size="15" font-weight="bold">代理运行时层 Agent Runtime</text>
+  <text x="120" y="228" fill="#e3dacc" font-family="Georgia, serif" font-size="11">LangChain · AutoGPT · OpenClaw</text>
+  <text x="600" y="208" fill="#e3dacc" font-family="Georgia, serif" font-size="11" text-anchor="middle">⚠️ 标准未定</text>
+  <path fill="#d1cfc5" d="m400 245-10-8h20z"/>
+  <rect width="640" height="82" x="80" y="250" fill="#87867f" filter="url(#shadow)" rx="8"/>
+  <text x="120" y="278" fill="#faf9f5" font-family="Georgia, serif" font-size="13" font-weight="bold">Layer 2</text>
+  <text x="120" y="298" fill="#faf9f5" font-family="Georgia, serif" font-size="15" font-weight="bold">行动API层 Action APIs</text>
+  <text x="120" y="318" fill="#e3dacc" font-family="Georgia, serif" font-size="11">Stripe · Twilio · Salesforce</text>
+  <text x="600" y="298" fill="#e3dacc" font-family="Georgia, serif" font-size="11" text-anchor="middle">✅ 厚API = 护城河</text>
+  <path fill="#d1cfc5" d="m400 335-10-8h20z"/>
+  <rect width="640" height="82" x="80" y="340" fill="#141413" filter="url(#shadow)" rx="8"/>
+  <text x="120" y="368" fill="#d1cfc5" font-family="Georgia, serif" font-size="13" font-weight="bold">Layer 1</text>
+  <text x="120" y="388" fill="#faf9f5" font-family="Georgia, serif" font-size="15" font-weight="bold">数据与基础设施层 Data &amp; Infrastructure</text>
+  <text x="120" y="408" fill="#87867f" font-family="Georgia, serif" font-size="11">Snowflake · Cloudflare · Databricks</text>
+  <text x="600" y="388" fill="#d1cfc5" font-family="Georgia, serif" font-size="11" text-anchor="middle">✅ 终极护城河</text>
+  <path stroke="#d97757" stroke-dasharray="6,4" stroke-width="3" d="M740 90v310"/>
+  <path fill="#d97757" d="m740 405-7-13h14z"/>
+  <text x="765" y="250" fill="#d97757" font-family="Georgia, serif" font-size="11" transform="rotate(90 765 250)">权力递增</text>
+  <text x="400" y="490" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">API只是入口，真正的护城河在API背后</text>
+  <text x="400" y="508" fill="#87867f" font-family="Georgia, serif" font-size="10" text-anchor="middle">— 数据网络效应 · 工作流嵌入 · 合规壁垒 · 规模经济</text>
 </svg>

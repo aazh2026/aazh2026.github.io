@@ -1,57 +1,38 @@
-<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Hybrid Cloud AI 智能路由器架构 -->
-  <rect width="560" height="200" fill="#FAF9F5"/>
-
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">混合云 AI 智能路由器架构</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/05/16</text>
-
-  <!-- Left: IDE column -->
-  <rect x="40" y="54" width="80" height="120" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="80" y="70" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">开发者 IDE</text>
-
-  <rect x="50" y="80" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="80" y="94" text-anchor="middle" font-size="9" fill="#2563EB">代码编辑器</text>
-
-  <rect x="50" y="108" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="80" y="122" text-anchor="middle" font-size="9" fill="#2563EB">AI助手插件</text>
-
-  <rect x="50" y="136" width="60" height="22" rx="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="80" y="150" text-anchor="middle" font-size="9" fill="#2563EB">安全扫描器</text>
-
-  <!-- Arrow: IDE → Router -->
-  <line x1="120" y1="108" x2="160" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="160,104 168,108 160,112" fill="#D1CFC5"/>
-
-  <!-- Center: Router (largest) -->
-  <rect x="168" y="68" width="120" height="80" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="168" y="68" width="120" height="20" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="228" y="84" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">Router · 智能路由器</text>
-  <text x="228" y="104" text-anchor="middle" font-size="9.5" fill="#141413">敏感度分级</text>
-  <text x="228" y="118" text-anchor="middle" font-size="9.5" fill="#141413">路由决策</text>
-  <text x="228" y="132" text-anchor="middle" font-size="9.5" fill="#141413">负载均衡</text>
-  <rect x="280" y="82" width="14" height="14" rx="7" fill="#D97757"/>
-  <text x="287" y="93" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">RT</text>
-
-  <!-- Arrow: Router → Local -->
-  <line x1="288" y1="108" x2="310" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="310,104 318,108 310,112" fill="#D1CFC5"/>
-
-  <!-- Arrow: Router → Cloud -->
-  <line x1="228" y1="148" x2="228" y2="168" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="224,168 228,176 232,168" fill="#D1CFC5"/>
-
-  <!-- Right: Local AI -->
-  <rect x="318" y="68" width="100" height="80" rx="6" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <rect x="318" y="68" width="100" height="20" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="368" y="84" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Local · 本地AI服务</text>
-  <text x="368" y="102" text-anchor="middle" font-size="9" fill="#141413">本地 LLM</text>
-  <text x="368" y="115" text-anchor="middle" font-size="9" fill="#141413">代码分析器</text>
-  <text x="368" y="128" text-anchor="middle" font-size="9" fill="#141413">安全扫描器</text>
-  <rect x="410" y="82" width="14" height="14" rx="7" fill="#059669"/>
-  <text x="417" y="93" text-anchor="middle" font-size="7" fill="#FFFFFF" font-family="ui-monospace, monospace">L</text>
-
-  <!-- Bottom: Cloud AI -->
-  <rect x="168" y="176" width="200" height="18" rx="5" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.2"/>
-  <text x="268" y="188" text-anchor="middle" font-size="9" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">Cloud · 云端 AI服务</text>
-  <text x="378" y="188" text-anchor="middle" font-size="9" fill="#87867F">GPT-4 / Claude · 大规模模型 · 知识库检索</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 200">
+  <path fill="#faf9f5" d="M0 0h560v200H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">混合云 AI 智能路由器架构</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2025/05/16</text>
+  <rect width="80" height="120" x="40" y="54" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <text x="80" y="70" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">开发者 IDE</text>
+  <rect width="60" height="22" x="50" y="80" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="4"/>
+  <text x="80" y="94" fill="#2563eb" font-size="9" text-anchor="middle">代码编辑器</text>
+  <rect width="60" height="22" x="50" y="108" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="4"/>
+  <text x="80" y="122" fill="#2563eb" font-size="9" text-anchor="middle">AI助手插件</text>
+  <rect width="60" height="22" x="50" y="136" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="4"/>
+  <text x="80" y="150" fill="#2563eb" font-size="9" text-anchor="middle">安全扫描器</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M120 108h40"/>
+  <path fill="#d1cfc5" d="m160 104 8 4-8 4z"/>
+  <rect width="120" height="80" x="168" y="68" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <rect width="120" height="20" x="168" y="68" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="228" y="84" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Router · 智能路由器</text>
+  <text x="228" y="104" fill="#141413" font-size="9.5" text-anchor="middle">敏感度分级</text>
+  <text x="228" y="118" fill="#141413" font-size="9.5" text-anchor="middle">路由决策</text>
+  <text x="228" y="132" fill="#141413" font-size="9.5" text-anchor="middle">负载均衡</text>
+  <rect width="14" height="14" x="280" y="82" fill="#d97757" rx="7"/>
+  <text x="287" y="93" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">RT</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M288 108h22"/>
+  <path fill="#d1cfc5" d="m310 104 8 4-8 4z"/>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M228 148v20"/>
+  <path fill="#d1cfc5" d="m224 168 4 8 4-8z"/>
+  <rect width="100" height="80" x="318" y="68" fill="#fff" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <rect width="100" height="20" x="318" y="68" fill="#d1fae5" stroke="#059669" rx="6"/>
+  <text x="368" y="84" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Local · 本地AI服务</text>
+  <text x="368" y="102" fill="#141413" font-size="9" text-anchor="middle">本地 LLM</text>
+  <text x="368" y="115" fill="#141413" font-size="9" text-anchor="middle">代码分析器</text>
+  <text x="368" y="128" fill="#141413" font-size="9" text-anchor="middle">安全扫描器</text>
+  <rect width="14" height="14" x="410" y="82" fill="#059669" rx="7"/>
+  <text x="417" y="93" fill="#fff" font-family="ui-monospace, monospace" font-size="7" text-anchor="middle">L</text>
+  <rect width="200" height="18" x="168" y="176" fill="#fff" stroke="#2563eb" stroke-width="1.2" rx="5"/>
+  <text x="268" y="188" fill="#2563eb" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Cloud · 云端 AI服务</text>
+  <text x="378" y="188" fill="#87867f" font-size="9" text-anchor="middle">GPT-4 / Claude · 大规模模型 · 知识库检索</text>
 </svg>

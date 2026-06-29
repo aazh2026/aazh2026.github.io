@@ -1,131 +1,103 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-label="软件工程中的7种浪费">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="软件工程中的7种浪费" viewBox="0 0 900 480">
   <title>软件工程中的 7 种浪费</title>
-  <desc>精益思想在软件工程中的应用：7种浪费类型及其在软件开发中的具体表现</desc>
-
+  <desc>
+    精益思想在软件工程中的应用：7种浪费类型及其在软件开发中的具体表现
+  </desc>
   <defs>
-    <filter id="sf" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.1"/>
+    <filter id="sf" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".1" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <rect width="900" height="480" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="30" y="35" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#141413">软件工程中的 7 种浪费</text>
-  <text x="30" y="55" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">精益制造 7 大浪费 → 软件工程对应版本</text>
-
-  <!-- Wastes grid 3+3+1 -->
-  <!-- Row 1 -->
-  <!-- Waste 1: Over-engineering -->
+  <path fill="#faf9f5" d="M0 0h900v480H0z"/>
+  <text x="30" y="35" fill="#141413" font-family="system-ui,sans-serif" font-size="16" font-weight="700">软件工程中的 7 种浪费</text>
+  <text x="30" y="55" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">精益制造 7 大浪费 → 软件工程对应版本</text>
   <g filter="url(#sf)">
-    <rect x="30" y="72" width="265" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="30" y="72" width="265" height="5" rx="3" fill="#D97757"/>
-    <text x="45" y="98" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#D97757">#1 过度设计</text>
-    <text x="45" y="113" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Over-engineering</text>
-    <text x="45" y="130" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">为未来需求写代码</text>
-    <text x="45" y="145" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">抽象层 > 3层</text>
-    <text x="45" y="160" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">接口只有1个实现</text>
-    <text x="45" y="175" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: "万一日后需要..." 注释</text>
+    <rect width="265" height="115" x="30" y="72" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="265" height="5" x="30" y="72" fill="#d97757" rx="3"/>
+    <text x="45" y="98" fill="#d97757" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#1 过度设计</text>
+    <text x="45" y="113" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Over-engineering</text>
+    <text x="45" y="130" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">为未来需求写代码</text>
+    <text x="45" y="145" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">抽象层 &gt; 3层</text>
+    <text x="45" y="160" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">接口只有1个实现</text>
+    <text x="45" y="175" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: &quot;万一日后需要...&quot; 注释</text>
   </g>
-
-  <!-- Waste 2: Waiting -->
   <g filter="url(#sf)">
-    <rect x="310" y="72" width="265" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="310" y="72" width="265" height="5" rx="3" fill="#788C5D"/>
-    <text x="325" y="98" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#788C5D">#2 等待</text>
-    <text x="325" y="113" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Waiting</text>
-    <text x="325" y="130" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">PR 平均等待 > 4小时</text>
-    <text x="325" y="145" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">CI 排队 > 15分钟</text>
-    <text x="325" y="160" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">依赖服务响应 > 500ms</text>
-    <text x="325" y="175" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: Code Review 阻塞</text>
+    <rect width="265" height="115" x="310" y="72" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="265" height="5" x="310" y="72" fill="#788c5d" rx="3"/>
+    <text x="325" y="98" fill="#788c5d" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#2 等待</text>
+    <text x="325" y="113" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Waiting</text>
+    <text x="325" y="130" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">PR 平均等待 &gt; 4小时</text>
+    <text x="325" y="145" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">CI 排队 &gt; 15分钟</text>
+    <text x="325" y="160" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">依赖服务响应 &gt; 500ms</text>
+    <text x="325" y="175" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: Code Review 阻塞</text>
   </g>
-
-  <!-- Waste 3: Context Switching -->
   <g filter="url(#sf)">
-    <rect x="590" y="72" width="280" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="590" y="72" width="280" height="5" rx="3" fill="#141413"/>
-    <text x="605" y="98" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#141413">#3 上下文切换</text>
-    <text x="605" y="113" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Context Switching</text>
-    <text x="605" y="130" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">每天会议 > 3个</text>
-    <text x="605" y="145" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">WIP > 3 个任务</text>
-    <text x="605" y="160" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">无连续 90 分钟专注块</text>
-    <text x="605" y="175" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: 频繁切换标签页</text>
+    <rect width="280" height="115" x="590" y="72" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="280" height="5" x="590" y="72" fill="#141413" rx="3"/>
+    <text x="605" y="98" fill="#141413" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#3 上下文切换</text>
+    <text x="605" y="113" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Context Switching</text>
+    <text x="605" y="130" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">每天会议 &gt; 3个</text>
+    <text x="605" y="145" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">WIP &gt; 3 个任务</text>
+    <text x="605" y="160" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">无连续 90 分钟专注块</text>
+    <text x="605" y="175" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: 频繁切换标签页</text>
   </g>
-
-  <!-- Row 2 -->
-  <!-- Waste 4: Over-processing -->
   <g filter="url(#sf)">
-    <rect x="30" y="202" width="265" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="30" y="202" width="265" height="5" rx="3" fill="#87867F"/>
-    <text x="45" y="228" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#87867F">#4 镀金功能</text>
-    <text x="45" y="243" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Over-processing / Gold-plating</text>
-    <text x="45" y="260" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">用户不需要的功能</text>
-    <text x="45" y="275" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">过度优化性能</text>
-    <text x="45" y="290" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">重复造轮子</text>
-    <text x="45" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: "这个很酷但没人用"</text>
+    <rect width="265" height="115" x="30" y="202" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="265" height="5" x="30" y="202" fill="#87867f" rx="3"/>
+    <text x="45" y="228" fill="#87867f" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#4 镀金功能</text>
+    <text x="45" y="243" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Over-processing / Gold-plating</text>
+    <text x="45" y="260" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">用户不需要的功能</text>
+    <text x="45" y="275" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">过度优化性能</text>
+    <text x="45" y="290" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">重复造轮子</text>
+    <text x="45" y="305" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: &quot;这个很酷但没人用&quot;</text>
   </g>
-
-  <!-- Waste 5: Code Inventory -->
   <g filter="url(#sf)">
-    <rect x="310" y="202" width="265" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="310" y="202" width="265" height="5" rx="3" fill="#D1CFC5"/>
-    <text x="325" y="228" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#87867F">#5 代码库存</text>
-    <text x="325" y="243" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Code Inventory</text>
-    <text x="325" y="260" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">分支 > 2 周未合并</text>
-    <text x="325" y="275" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">特性开关 > 10 个未用</text>
-    <text x="325" y="290" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">长期 open 的 PR</text>
-    <text x="325" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: 技术债务累积</text>
+    <rect width="265" height="115" x="310" y="202" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="265" height="5" x="310" y="202" fill="#d1cfc5" rx="3"/>
+    <text x="325" y="228" fill="#87867f" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#5 代码库存</text>
+    <text x="325" y="243" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Code Inventory</text>
+    <text x="325" y="260" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">分支 &gt; 2 周未合并</text>
+    <text x="325" y="275" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">特性开关 &gt; 10 个未用</text>
+    <text x="325" y="290" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">长期 open 的 PR</text>
+    <text x="325" y="305" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: 技术债务累积</text>
   </g>
-
-  <!-- Waste 6: Rework -->
   <g filter="url(#sf)">
-    <rect x="590" y="202" width="280" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="590" y="202" width="280" height="5" rx="3" fill="#D97757"/>
-    <text x="605" y="228" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#D97757">#6 返工</text>
-    <text x="605" y="243" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Rework</text>
-    <text x="605" y="260" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">PR review > 2 轮</text>
-    <text x="605" y="275" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">同一文件多次修改</text>
-    <text x="605" y="290" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Bug 回归率</text>
-    <text x="605" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: review 反复要求修改</text>
+    <rect width="280" height="115" x="590" y="202" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="280" height="5" x="590" y="202" fill="#d97757" rx="3"/>
+    <text x="605" y="228" fill="#d97757" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#6 返工</text>
+    <text x="605" y="243" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Rework</text>
+    <text x="605" y="260" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">PR review &gt; 2 轮</text>
+    <text x="605" y="275" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">同一文件多次修改</text>
+    <text x="605" y="290" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Bug 回归率</text>
+    <text x="605" y="305" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: review 反复要求修改</text>
   </g>
-
-  <!-- Waste 7: Defects -->
   <g filter="url(#sf)">
-    <rect x="30" y="332" width="265" height="115" rx="8" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1.5"/>
-    <rect x="30" y="332" width="265" height="5" rx="3" fill="#D97757"/>
-    <text x="45" y="358" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#D97757">#7 缺陷逃逸</text>
-    <text x="45" y="373" font-family="system-ui,sans-serif" font-size="10" fill="#141413">Defect Escape</text>
-    <text x="45" y="390" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Bug 逃逸到生产</text>
-    <text x="45" y="405" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">线上故障</text>
-    <text x="45" y="420" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">修复成本 × 5-10x</text>
-    <text x="45" y="435" font-family="system-ui,sans-serif" font-size="9" fill="#141413">信号: 紧急热修</text>
+    <rect width="265" height="115" x="30" y="332" fill="#faf9f5" stroke="#e3dacc" stroke-width="1.5" rx="8"/>
+    <rect width="265" height="5" x="30" y="332" fill="#d97757" rx="3"/>
+    <text x="45" y="358" fill="#d97757" font-family="system-ui,sans-serif" font-size="12" font-weight="700">#7 缺陷逃逸</text>
+    <text x="45" y="373" fill="#141413" font-family="system-ui,sans-serif" font-size="10">Defect Escape</text>
+    <text x="45" y="390" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Bug 逃逸到生产</text>
+    <text x="45" y="405" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">线上故障</text>
+    <text x="45" y="420" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">修复成本 × 5-10x</text>
+    <text x="45" y="435" fill="#141413" font-family="system-ui,sans-serif" font-size="9">信号: 紧急热修</text>
   </g>
-
-  <!-- AI Detection -->
   <g filter="url(#sf)">
-    <rect x="310" y="332" width="560" height="115" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <text x="330" y="358" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#788C5D">AI 识别能力</text>
-    <text x="330" y="378" font-family="system-ui,sans-serif" font-size="10" fill="#141413">自动化浪费检测 → 实时预警 → 自动优化建议</text>
-
-    <g transform="translate(330, 390)">
-      <rect width="70" height="22" rx="4" fill="#788C5D"/>
-      <text x="35" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">AST 分析</text>
-
-      <rect x="80" width="70" height="22" rx="4" fill="#788C5D"/>
-      <text x="115" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">CI 监控</text>
-
-      <rect x="160" width="70" height="22" rx="4" fill="#788C5D"/>
-      <text x="195" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">PR 分析</text>
-
-      <rect x="240" width="70" height="22" rx="4" fill="#788C5D"/>
-      <text x="275" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">Git 挖掘</text>
-
-      <rect x="320" width="70" height="22" rx="4" fill="#D97757"/>
-      <text x="355" y="15" font-family="system-ui,sans-serif" font-size="9" fill="#FAF9F5" text-anchor="middle">Bug 预测</text>
+    <rect width="560" height="115" x="310" y="332" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="8"/>
+    <text x="330" y="358" fill="#788c5d" font-family="system-ui,sans-serif" font-size="12" font-weight="700">AI 识别能力</text>
+    <text x="330" y="378" fill="#141413" font-family="system-ui,sans-serif" font-size="10">自动化浪费检测 → 实时预警 → 自动优化建议</text>
+    <g transform="translate(330 390)">
+      <rect width="70" height="22" fill="#788c5d" rx="4"/>
+      <text x="35" y="15" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">AST 分析</text>
+      <rect width="70" height="22" x="80" fill="#788c5d" rx="4"/>
+      <text x="115" y="15" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">CI 监控</text>
+      <rect width="70" height="22" x="160" fill="#788c5d" rx="4"/>
+      <text x="195" y="15" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">PR 分析</text>
+      <rect width="70" height="22" x="240" fill="#788c5d" rx="4"/>
+      <text x="275" y="15" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Git 挖掘</text>
+      <rect width="70" height="22" x="320" fill="#d97757" rx="4"/>
+      <text x="355" y="15" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="9" text-anchor="middle">Bug 预测</text>
     </g>
   </g>
-
-  <!-- Bottom: Flow efficiency -->
-  <rect x="30" y="462" width="840" height="1" fill="#E3DACC"/>
-  <text x="30" y="478" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">典型团队流效率: 5-15% | 优秀团队: >15% | 价值增加时间 / 总周期时间</text>
+  <path fill="#e3dacc" d="M30 462h840v1H30z"/>
+  <text x="30" y="478" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">典型团队流效率: 5-15% | 优秀团队: &gt;15% | 价值增加时间 / 总周期时间</text>
 </svg>

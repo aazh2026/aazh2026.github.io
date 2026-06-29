@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.5 346.0" width="100%" role="img" aria-label="Data Classification Framework">
-<rect width="448.5" height="346.0" fill="#FAF9F5"/>
-<rect x="0" y="0" width="448.5" height="346.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
-<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────────┐</text>
-<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  公开数据 (Public)                       │</text>
-<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 无需保护                              │</text>
-<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - AI 可以自由访问                        │</text>
-<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
-<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  内部数据 (Internal)                     │</text>
-<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 公司文档                              │</text>
-<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 可以访问，但有限制                     │</text>
-<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
-<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  敏感数据 (Sensitive)                    │</text>
-<text x="20" y="213.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 客户信息                              │</text>
-<text x="20" y="231.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 需要脱敏后访问                         │</text>
-<text x="20" y="249.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
-<text x="20" y="267.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  机密数据 (Confidential)                 │</text>
-<text x="20" y="285.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 密码、密钥、财务数据                   │</text>
-<text x="20" y="303.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  - 禁止 AI 访问                           │</text>
-<text x="20" y="321.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">└─────────────────────────────────────────┘</text>
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Data Classification Framework" viewBox="0 0 448.5 346">
+  <path fill="#faf9f5" d="M0 0h448.5v346H0z"/>
+  <rect width="448.5" height="346" fill="#d1cfc5" opacity=".15" rx="8"/>
+  <text xml:space="preserve" x="20" y="33.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">┌─────────────────────────────────────────┐</text>
+  <text xml:space="preserve" x="20" y="51.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  公开数据 (Public)                       │</text>
+  <text xml:space="preserve" x="20" y="69.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 无需保护                              │</text>
+  <text xml:space="preserve" x="20" y="87.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - AI 可以自由访问                        │</text>
+  <text xml:space="preserve" x="20" y="105.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="123.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  内部数据 (Internal)                     │</text>
+  <text xml:space="preserve" x="20" y="141.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 公司文档                              │</text>
+  <text xml:space="preserve" x="20" y="159.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 可以访问，但有限制                     │</text>
+  <text xml:space="preserve" x="20" y="177.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="195.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  敏感数据 (Sensitive)                    │</text>
+  <text xml:space="preserve" x="20" y="213.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 客户信息                              │</text>
+  <text xml:space="preserve" x="20" y="231.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 需要脱敏后访问                         │</text>
+  <text xml:space="preserve" x="20" y="249.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="267.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  机密数据 (Confidential)                 │</text>
+  <text xml:space="preserve" x="20" y="285.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 密码、密钥、财务数据                   │</text>
+  <text xml:space="preserve" x="20" y="303.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  - 禁止 AI 访问                           │</text>
+  <text xml:space="preserve" x="20" y="321.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">└─────────────────────────────────────────┘</text>
 </svg>

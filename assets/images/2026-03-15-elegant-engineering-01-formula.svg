@@ -1,49 +1,27 @@
-<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Background -->
-  <rect width="600" height="320" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">优雅的三维定义</text>
-  <text x="300" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">简洁 × 清晰 × 效率 = 优雅</text>
-
-  <!-- Central node: 优雅 -->
-  <circle cx="300" cy="145" r="52" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <text x="300" y="138" text-anchor="middle" font-size="20" font-weight="700" fill="#D97757">优雅</text>
-  <text x="300" y="156" text-anchor="middle" font-size="11" fill="#87867F" font-family="ui-monospace, monospace">Elegance</text>
-
-  <!-- Multiplication symbol lines -->
-  <line x1="248" y1="145" x2="248" y2="145" stroke="none"/>
-  <text x="248" y="132" text-anchor="middle" font-size="18" fill="#D97757">×</text>
-  <text x="352" y="132" text-anchor="middle" font-size="18" fill="#D97757">×</text>
-
-  <!-- Left node: 简洁 -->
-  <circle cx="130" cy="145" r="48" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="130" y="138" text-anchor="middle" font-size="16" font-weight="600" fill="#141413">简洁</text>
-  <text x="130" y="156" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Simplicity</text>
-
-  <!-- Arrow left → center -->
-  <line x1="178" y1="145" x2="248" y2="145" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <polygon points="248,141 240,145 248,149" fill="#D1CFC5"/>
-
-  <!-- Right node: 清晰 -->
-  <circle cx="470" cy="145" r="48" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="470" y="138" text-anchor="middle" font-size="16" font-weight="600" fill="#141413">清晰</text>
-  <text x="470" y="156" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Clarity</text>
-
-  <!-- Arrow right → center -->
-  <line x1="422" y1="145" x2="352" y2="145" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <polygon points="352,141 360,145 352,149" fill="#D1CFC5"/>
-
-  <!-- Bottom node: 高效 -->
-  <circle cx="300" cy="255" r="48" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="300" y="248" text-anchor="middle" font-size="16" font-weight="600" fill="#141413">高效</text>
-  <text x="300" y="266" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Efficiency</text>
-
-  <!-- Arrow bottom → center -->
-  <line x1="300" y1="207" x2="300" y2="197" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <polygon points="300,197 296,205 304,205" fill="#D1CFC5"/>
-
-  <!-- Footnote -->
-  <line x1="180" y1="298" x2="420" y2="298" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="300" y="312" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">任意维度归零，优雅归零</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 600 320">
+  <path fill="#faf9f5" d="M0 0h600v320H0z"/>
+  <text x="300" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">优雅的三维定义</text>
+  <text x="300" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">简洁 × 清晰 × 效率 = 优雅</text>
+  <circle cx="300" cy="145" r="52" fill="#fff" stroke="#d97757" stroke-width="2"/>
+  <text x="300" y="138" fill="#d97757" font-size="20" font-weight="700" text-anchor="middle">优雅</text>
+  <text x="300" y="156" fill="#87867f" font-family="ui-monospace, monospace" font-size="11" text-anchor="middle">Elegance</text>
+  <text x="248" y="132" fill="#d97757" font-size="18" text-anchor="middle">×</text>
+  <text x="352" y="132" fill="#d97757" font-size="18" text-anchor="middle">×</text>
+  <circle cx="130" cy="145" r="48" fill="#fff" stroke="#d1cfc5" stroke-width="1.5"/>
+  <text x="130" y="138" fill="#141413" font-size="16" font-weight="600" text-anchor="middle">简洁</text>
+  <text x="130" y="156" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Simplicity</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M178 145h70"/>
+  <path fill="#d1cfc5" d="m248 141-8 4 8 4z"/>
+  <circle cx="470" cy="145" r="48" fill="#fff" stroke="#d1cfc5" stroke-width="1.5"/>
+  <text x="470" y="138" fill="#141413" font-size="16" font-weight="600" text-anchor="middle">清晰</text>
+  <text x="470" y="156" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Clarity</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M422 145h-70"/>
+  <path fill="#d1cfc5" d="m352 141 8 4-8 4z"/>
+  <circle cx="300" cy="255" r="48" fill="#fff" stroke="#d1cfc5" stroke-width="1.5"/>
+  <text x="300" y="248" fill="#141413" font-size="16" font-weight="600" text-anchor="middle">高效</text>
+  <text x="300" y="266" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Efficiency</text>
+  <path stroke="#d1cfc5" stroke-dasharray="4,3" stroke-width="1.5" d="M300 207v-10"/>
+  <path fill="#d1cfc5" d="m300 197-4 8h8z"/>
+  <path stroke="#d1cfc5" d="M180 298h240"/>
+  <text x="300" y="312" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">任意维度归零，优雅归零</text>
 </svg>

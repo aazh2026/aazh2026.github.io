@@ -1,81 +1,53 @@
-<svg viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 420">
   <title>Iteration Flywheel: Worse is Better + AI</title>
-  <desc>迭代飞轮图：快速发布 → 获取反馈 → AI 迭代 → 持续进化，代码生成成本趋近于零使快速试错成为主动策略。</desc>
-
-  <!-- Color palette: ivory bg, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="420" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="28" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Worse is Better 迭代飞轮</text>
-  <text x="340" y="44" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 代码生成成本 → 0</text>
-
-  <!-- Center hub -->
-  <circle cx="340" cy="210" r="55" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="340" y="200" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">Code Gen</text>
-  <text x="340" y="216" text-anchor="middle" font-size="11" font-weight="600" fill="#141413" font-family="ui-monospace, monospace">Cost</text>
-  <text x="340" y="234" text-anchor="middle" font-size="16" font-weight="700" fill="#D97757" font-family="ui-monospace, monospace">→ 0</text>
-
-  <!-- Flywheel stages - 4 quadrants arranged around center -->
-  <!-- Stage 1: Quick Release (top-right, clay) -->
-  <rect x="400" y="80" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="536" y="90" width="20" height="20" rx="10" fill="#D97757"/>
-  <text x="546" y="105" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">1</text>
-  <text x="480" y="112" font-size="13" font-weight="600" fill="#D97757">Quick Release</text>
-  <text x="480" y="132" font-size="10.5" fill="#141413">快速发布可用的</text>
-  <text x="480" y="148" font-size="10.5" fill="#141413">第一版本</text>
-  <text x="480" y="164" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI 生成成本 ≈ 0</text>
-
-  <!-- Stage 2: Get Feedback (bottom-right, olive) -->
-  <rect x="400" y="250" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <rect x="536" y="260" width="20" height="20" rx="10" fill="#788C5D"/>
-  <text x="546" y="275" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">2</text>
-  <text x="480" y="282" font-size="13" font-weight="600" fill="#788C5D">Get Feedback</text>
-  <text x="480" y="302" font-size="10.5" fill="#141413">在真实世界中</text>
-  <text x="480" y="318" font-size="10.5" fill="#141413">获取用户反馈</text>
-  <text x="480" y="334" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">验证方向正确性</text>
-
-  <!-- Stage 3: AI Iterate (bottom-left, clay) -->
-  <rect x="120" y="250" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="124" y="260" width="20" height="20" rx="10" fill="#D97757"/>
-  <text x="134" y="275" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">3</text>
-  <text x="200" y="282" font-size="13" font-weight="600" fill="#D97757">AI Iterate</text>
-  <text x="200" y="302" font-size="10.5" fill="#141413">用 AI 快速修复</text>
-  <text x="200" y="318" font-size="10.5" fill="#141413">问题和迭代</text>
-  <text x="200" y="334" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI 重构 + 重新设计</text>
-
-  <!-- Stage 4: Evolve (top-left, olive) -->
-  <rect x="120" y="80" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <rect x="124" y="90" width="20" height="20" rx="10" fill="#788C5D"/>
-  <text x="134" y="105" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">4</text>
-  <text x="200" y="112" font-size="13" font-weight="600" fill="#788C5D">Evolve</text>
-  <text x="200" y="132" font-size="10.5" fill="#141413">持续进化</text>
-  <text x="200" y="148" font-size="10.5" fill="#141413">系统与能力</text>
-  <text x="200" y="164" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">累积学习复利</text>
-
-  <!-- Curved arrows connecting stages (clockwise) -->
-  <!-- Arrow 1→2 (right side, going down) -->
-  <path d="M 560 175 Q 580 210, 560 250" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="560,250 556,240 564,242" fill="#D1CFC5"/>
-
-  <!-- Arrow 2→3 (bottom, going left) -->
-  <path d="M 400 295 Q 340 330, 280 295" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="280,295 288,290 290,298" fill="#D1CFC5"/>
-
-  <!-- Arrow 3→4 (left side, going up) -->
-  <path d="M 120 245 Q 100 210, 120 175" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="120,175 124,185 116,183" fill="#D1CFC5"/>
-
-  <!-- Arrow 4→1 (top, going right) -->
-  <path d="M 280 125 Q 340 90, 400 125" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6,4"/>
-  <polygon points="400,125 392,130 390,122" fill="#D1CFC5"/>
-
-  <!-- Flywheel label -->
-  <text x="340" y="390" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">飞轮一旦转动，每一圈都在加速</text>
-
-  <!-- Cost annotation -->
-  <rect x="550" y="180" width="110" height="30" rx="4" fill="#FEF9F5" stroke="#D97757" stroke-width="1"/>
-  <text x="605" y="195" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">试错成本 ↓ 90%</text>
-  <text x="605" y="207" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">迭代速度 ↑ 10x</text>
+  <desc>
+    迭代飞轮图：快速发布 → 获取反馈 → AI 迭代 → 持续进化，代码生成成本趋近于零使快速试错成为主动策略。
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v420H0z"/>
+  <text x="340" y="28" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Worse is Better 迭代飞轮</text>
+  <text x="340" y="44" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native Engineering · 代码生成成本 → 0</text>
+  <circle cx="340" cy="210" r="55" fill="#fff" stroke="#d1cfc5" stroke-width="1.5"/>
+  <text x="340" y="200" fill="#141413" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Code Gen</text>
+  <text x="340" y="216" fill="#141413" font-family="ui-monospace, monospace" font-size="11" font-weight="600" text-anchor="middle">Cost</text>
+  <text x="340" y="234" fill="#d97757" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle">→ 0</text>
+  <rect width="160" height="90" x="400" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="20" height="20" x="536" y="90" fill="#d97757" rx="10"/>
+  <text x="546" y="105" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">1</text>
+  <text x="480" y="112" fill="#d97757" font-size="13" font-weight="600">Quick Release</text>
+  <text x="480" y="132" fill="#141413" font-size="10.5">快速发布可用的</text>
+  <text x="480" y="148" fill="#141413" font-size="10.5">第一版本</text>
+  <text x="480" y="164" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">AI 生成成本 ≈ 0</text>
+  <rect width="160" height="90" x="400" y="250" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <rect width="20" height="20" x="536" y="260" fill="#788c5d" rx="10"/>
+  <text x="546" y="275" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">2</text>
+  <text x="480" y="282" fill="#788c5d" font-size="13" font-weight="600">Get Feedback</text>
+  <text x="480" y="302" fill="#141413" font-size="10.5">在真实世界中</text>
+  <text x="480" y="318" fill="#141413" font-size="10.5">获取用户反馈</text>
+  <text x="480" y="334" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">验证方向正确性</text>
+  <rect width="160" height="90" x="120" y="250" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="20" height="20" x="124" y="260" fill="#d97757" rx="10"/>
+  <text x="134" y="275" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">3</text>
+  <text x="200" y="282" fill="#d97757" font-size="13" font-weight="600">AI Iterate</text>
+  <text x="200" y="302" fill="#141413" font-size="10.5">用 AI 快速修复</text>
+  <text x="200" y="318" fill="#141413" font-size="10.5">问题和迭代</text>
+  <text x="200" y="334" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">AI 重构 + 重新设计</text>
+  <rect width="160" height="90" x="120" y="80" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <rect width="20" height="20" x="124" y="90" fill="#788c5d" rx="10"/>
+  <text x="134" y="105" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">4</text>
+  <text x="200" y="112" fill="#788c5d" font-size="13" font-weight="600">Evolve</text>
+  <text x="200" y="132" fill="#141413" font-size="10.5">持续进化</text>
+  <text x="200" y="148" fill="#141413" font-size="10.5">系统与能力</text>
+  <text x="200" y="164" fill="#87867f" font-family="ui-monospace, monospace" font-size="9">累积学习复利</text>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="6,4" stroke-width="2" d="M560 175q20 35 0 75"/>
+  <path fill="#d1cfc5" d="m560 250-4-10 8 2z"/>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="6,4" stroke-width="2" d="M400 295q-60 35-120 0"/>
+  <path fill="#d1cfc5" d="m280 295 8-5 2 8z"/>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="6,4" stroke-width="2" d="M120 245q-20-35 0-70"/>
+  <path fill="#d1cfc5" d="m120 175 4 10-8-2z"/>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="6,4" stroke-width="2" d="M280 125q60-35 120 0"/>
+  <path fill="#d1cfc5" d="m400 125-8 5-2-8z"/>
+  <text x="340" y="390" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">飞轮一旦转动，每一圈都在加速</text>
+  <rect width="110" height="30" x="550" y="180" fill="#fef9f5" stroke="#d97757" rx="4"/>
+  <text x="605" y="195" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">试错成本 ↓ 90%</text>
+  <text x="605" y="207" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">迭代速度 ↑ 10x</text>
 </svg>

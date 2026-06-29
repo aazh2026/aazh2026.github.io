@@ -1,156 +1,105 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .slate-text { fill: #141413; font-family: system-ui, sans-serif; }
-      .clay { fill: #D97757; }
-      .olive { fill: #788C5D; }
-      .oat { fill: #E3DACC; }
-      .g300 { fill: #D1CFC5; }
-      .g500 { fill: #87867F; }
-      .artifact-box { fill: #FAF9F5; stroke: #D1CFC5; stroke-width: 1.5; }
-      .artifact-box-clay { fill: #FAF9F5; stroke: #D97757; stroke-width: 2; }
-      .section-label { fill: #87867F; font-family: system-ui, sans-serif; font-size: 11px; }
-      .artifact-name { fill: #141413; font-family: system-ui, sans-serif; font-size: 13px; font-weight: 600; }
-      .artifact-desc { fill: #87867F; font-family: system-ui, sans-serif; font-size: 10px; }
-      .code-text { fill: #141413; font-family: monospace; font-size: 11px; }
-      .delta-label { fill: #D97757; font-family: system-ui, sans-serif; font-size: 11px; font-weight: 600; }
+      .artifact-box{fill:#faf9f5;stroke:#d1cfc5;stroke-width:1.5}.section-label{fill:#87867f;font-size:11px}.artifact-desc,.artifact-name,.section-label{font-family:system-ui,sans-serif}.artifact-name{fill:#141413;font-size:13px;font-weight:600}.artifact-desc{fill:#87867f;font-size:10px}.code-text,.delta-label{fill:#141413;font-family:monospace;font-size:11px}.delta-label{fill:#d97757;font-family:system-ui,sans-serif;font-weight:600}
     </style>
   </defs>
-
-  <rect width="720" height="480" class="bg"/>
-
-  <!-- Title -->
-  <text x="24" y="32" class="slate-text" font-size="16" font-weight="700">Delta Specification 工作流：Base + Delta = New System</text>
-  <line x1="24" y1="42" x2="696" y2="42" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- Core Principle (top) -->
-  <g transform="translate(24, 56)">
-    <text x="0" y="0" class="section-label">核心原则</text>
-    <rect x="0" y="12" width="672" height="72" rx="8" fill="#E3DACC"/>
-
-    <g transform="translate(16, 28)">
-      <rect width="180" height="40" rx="6" class="artifact-box"/>
-      <text x="90" y="20" text-anchor="middle" class="artifact-name" font-size="12">Existing Context</text>
-      <text x="90" y="34" text-anchor="middle" class="artifact-desc">当前系统是什么</text>
+  <path d="M0 0h720v480H0z" style="fill:#faf9f5"/>
+  <text x="24" y="32" font-size="16" font-weight="700" style="fill:#141413;font-family:system-ui,sans-serif">Delta Specification 工作流：Base + Delta = New System</text>
+  <path stroke="#d1cfc5" d="M24 42h672"/>
+  <g transform="translate(24 56)">
+    <text class="section-label">核心原则</text>
+    <rect width="672" height="72" y="12" fill="#e3dacc" rx="8"/>
+    <g transform="translate(16 28)">
+      <rect width="180" height="40" class="artifact-box" rx="6"/>
+      <text x="90" y="20" class="artifact-name" font-size="12" text-anchor="middle">Existing Context</text>
+      <text x="90" y="34" class="artifact-desc" text-anchor="middle">当前系统是什么</text>
     </g>
-
-    <text x="210" y="52" text-anchor="middle" class="delta-label" font-size="18">+</text>
-
-    <g transform="translate(240, 28)">
-      <rect width="160" height="40" rx="6" class="artifact-box-clay"/>
-      <text x="80" y="20" text-anchor="middle" class="artifact-name" font-size="12">Delta Change</text>
-      <text x="80" y="34" text-anchor="middle" class="delta-label">要改变什么</text>
+    <text x="210" y="52" class="delta-label" font-size="18" text-anchor="middle">+</text>
+    <g transform="translate(240 28)">
+      <rect width="160" height="40" rx="6" style="fill:#faf9f5;stroke:#d97757;stroke-width:2"/>
+      <text x="80" y="20" class="artifact-name" font-size="12" text-anchor="middle">Delta Change</text>
+      <text x="80" y="34" class="delta-label" text-anchor="middle">要改变什么</text>
     </g>
-
-    <text x="414" y="52" text-anchor="middle" class="delta-label" font-size="18">+</text>
-
-    <g transform="translate(444, 28)">
-      <rect width="200" height="40" rx="6" class="artifact-box"/>
-      <text x="100" y="20" text-anchor="middle" class="artifact-name" font-size="12">Compatibility Rules</text>
-      <text x="100" y="34" text-anchor="middle" class="artifact-desc">不能破坏什么</text>
+    <text x="414" y="52" class="delta-label" font-size="18" text-anchor="middle">+</text>
+    <g transform="translate(444 28)">
+      <rect width="200" height="40" class="artifact-box" rx="6"/>
+      <text x="100" y="20" class="artifact-name" font-size="12" text-anchor="middle">Compatibility Rules</text>
+      <text x="100" y="34" class="artifact-desc" text-anchor="middle">不能破坏什么</text>
     </g>
-
-    <path d="M656,48 L668,48 L663,42 L678,48 L663,54 Z" fill="#D97757"/>
-
-    <g transform="translate(600, 28)">
-      <rect width="64" height="40" rx="6" fill="#D97757"/>
-      <text x="32" y="20" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">New</text>
-      <text x="32" y="34" text-anchor="middle" fill="white" font-family="system-ui" font-size="12" font-weight="700">System</text>
+    <path fill="#d97757" d="M656 48h12l-5-6 15 6-15 6Z"/>
+    <g transform="translate(600 28)">
+      <rect width="64" height="40" fill="#d97757" rx="6"/>
+      <text x="32" y="20" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">New</text>
+      <text x="32" y="34" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">System</text>
     </g>
   </g>
-
-  <!-- Directory Structure (left) -->
-  <g transform="translate(24, 150)">
-    <text x="0" y="0" class="section-label">工程结构</text>
-    <rect x="0" y="12" width="340" height="180" rx="8" class="artifact-box"/>
-
+  <g transform="translate(24 150)">
+    <text class="section-label">工程结构</text>
+    <rect width="340" height="180" y="12" class="artifact-box" rx="8"/>
     <text x="16" y="36" class="code-text">spec/</text>
-    <text x="16" y="56" class="code-text" fill="#87867F">├── intent.md</text>
-    <text x="16" y="74" class="code-text" fill="#87867F">├── domain.md</text>
-    <text x="16" y="92" class="code-text" fill="#87867F">├── api.yaml</text>
-    <text x="16" y="110" class="code-text" fill="#87867F">├── constraints.md</text>
-
-    <line x1="16" y1="122" x2="324" y2="122" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,3"/>
-
+    <text x="16" y="56" fill="#87867f" class="code-text">├── intent.md</text>
+    <text x="16" y="74" fill="#87867f" class="code-text">├── domain.md</text>
+    <text x="16" y="92" fill="#87867f" class="code-text">├── api.yaml</text>
+    <text x="16" y="110" fill="#87867f" class="code-text">├── constraints.md</text>
+    <path stroke="#d1cfc5" stroke-dasharray="4,3" d="M16 122h308"/>
     <text x="16" y="142" class="code-text">changes/</text>
-    <text x="16" y="160" class="code-text" fill="#D97757">└── 2026-03-one-click-checkout/</text>
+    <text x="16" y="160" fill="#d97757" class="code-text">└── 2026-03-one-click-checkout/</text>
     <text x="36" y="176" class="code-text">├── change.md</text>
     <text x="36" y="192" class="code-text">├── domain.delta.md</text>
     <text x="36" y="210" class="code-text">└── api.delta.yaml</text>
-
-    <rect x="230" y="36" width="96" height="18" rx="4" fill="#E3DACC"/>
-    <text x="278" y="49" text-anchor="middle" class="artifact-desc" fill="#788C5D">Base Spec</text>
-
-    <rect x="220" y="138" width="106" height="18" rx="4" fill="#FAF9F5" stroke="#D97757"/>
-    <text x="273" y="151" text-anchor="middle" class="delta-label">Delta Spec</text>
+    <rect width="96" height="18" x="230" y="36" fill="#e3dacc" rx="4"/>
+    <text x="278" y="49" fill="#788c5d" class="artifact-desc" text-anchor="middle">Base Spec</text>
+    <rect width="106" height="18" x="220" y="138" fill="#faf9f5" stroke="#d97757" rx="4"/>
+    <text x="273" y="151" class="delta-label" text-anchor="middle">Delta Spec</text>
   </g>
-
-  <!-- AI Execution Flow (right) -->
-  <g transform="translate(384, 150)">
-    <text x="0" y="0" class="section-label">AI 执行流程</text>
-    <rect x="0" y="12" width="312" height="180" rx="8" class="artifact-box"/>
-
-    <!-- Step 1: Base Spec -->
-    <g transform="translate(16, 28)">
-      <rect width="280" height="44" rx="6" fill="#E3DACC"/>
+  <g transform="translate(384 150)">
+    <text class="section-label">AI 执行流程</text>
+    <rect width="312" height="180" y="12" class="artifact-box" rx="8"/>
+    <g transform="translate(16 28)">
+      <rect width="280" height="44" fill="#e3dacc" rx="6"/>
       <text x="12" y="18" class="delta-label">Step 1: Base Spec</text>
       <text x="12" y="34" class="artifact-desc">intent.md · domain.md · api.yaml · constraints.md</text>
     </g>
-
-    <!-- Plus -->
-    <text x="152" y="86" text-anchor="middle" class="delta-label" font-size="18">+</text>
-
-    <!-- Step 2: Change Spec -->
-    <g transform="translate(16, 94)">
-      <rect width="280" height="56" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1.5"/>
+    <text x="152" y="86" class="delta-label" font-size="18" text-anchor="middle">+</text>
+    <g transform="translate(16 94)">
+      <rect width="280" height="56" fill="#faf9f5" stroke="#d97757" stroke-width="1.5" rx="6"/>
       <text x="12" y="18" class="delta-label">Step 2: Change Spec</text>
       <text x="12" y="34" class="artifact-desc">change.md · domain.delta.md · api.delta.yaml</text>
       <text x="12" y="48" class="artifact-desc">AI 只需要理解变化部分</text>
     </g>
-
-    <!-- Arrow down -->
-    <path d="M156,158 L156,174 L162,169 L168,174 L156,174 Z" fill="#D97757"/>
-
-    <!-- Step 3: Implementation -->
-    <g transform="translate(16, 180)">
-      <rect width="280" height="36" rx="6" fill="#D97757"/>
-      <text x="140" y="24" text-anchor="middle" fill="white" font-family="system-ui" font-size="13" font-weight="700">Step 3: Generate Implementation</text>
+    <path fill="#d97757" d="M156 158v16l6-5 6 5h-12Z"/>
+    <g transform="translate(16 180)">
+      <rect width="280" height="36" fill="#d97757" rx="6"/>
+      <text x="140" y="24" fill="#fff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">Step 3: Generate Implementation</text>
     </g>
   </g>
-
-  <!-- Compatibility Rules section (bottom) -->
-  <g transform="translate(24, 360)">
-    <text x="0" y="0" class="section-label">兼容性规则（必须明确）</text>
-
-    <g transform="translate(0, 14)">
-      <rect width="220" height="80" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="20" height="20" rx="4" fill="#D97757"/>
-      <text x="18" y="23" text-anchor="middle" fill="white" font-size="10" font-weight="700">1</text>
-      <text x="36" y="22" class="artifact-name" font-size="11">API 兼容</text>
-      <text x="12" y="44" class="artifact-desc">现有 endpoint 继续工作</text>
-      <text x="12" y="58" class="artifact-desc">Response 格式不变</text>
-      <text x="12" y="72" class="artifact-desc">向后兼容</text>
-    </g>
-
-    <g transform="translate(232, 14)">
-      <rect width="220" height="80" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="20" height="20" rx="4" fill="#D97757"/>
-      <text x="18" y="23" text-anchor="middle" fill="white" font-size="10" font-weight="700">2</text>
-      <text x="36" y="22" class="artifact-name" font-size="11">逻辑兼容</text>
-      <text x="12" y="44" class="artifact-desc">现有逻辑不被修改</text>
-      <text x="12" y="58" class="artifact-desc">只增加新 code path</text>
-      <text x="12" y="72" class="artifact-desc">原流程不受影响</text>
-    </g>
-
-    <g transform="translate(464, 14)">
-      <rect width="232" height="80" rx="6" class="artifact-box"/>
-      <rect x="8" y="8" width="20" height="20" rx="4" fill="#D97757"/>
-      <text x="18" y="23" text-anchor="middle" fill="white" font-size="10" font-weight="700">3</text>
-      <text x="36" y="22" class="artifact-name" font-size="11">Schema 兼容</text>
-      <text x="12" y="44" class="artifact-desc">只新增列</text>
-      <text x="12" y="58" class="artifact-desc">不删除、不改类型</text>
-      <text x="12" y="72" class="artifact-desc">向后兼容迁移</text>
-    </g>
+  <text class="section-label" transform="translate(24 360)">兼容性规则（必须明确）</text>
+  <g transform="translate(24 374)">
+    <rect width="220" height="80" class="artifact-box" rx="6"/>
+    <rect width="20" height="20" x="8" y="8" fill="#d97757" rx="4"/>
+    <text x="18" y="23" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">1</text>
+    <text x="36" y="22" class="artifact-name" font-size="11">API 兼容</text>
+    <text x="12" y="44" class="artifact-desc">现有 endpoint 继续工作</text>
+    <text x="12" y="58" class="artifact-desc">Response 格式不变</text>
+    <text x="12" y="72" class="artifact-desc">向后兼容</text>
+  </g>
+  <g transform="translate(256 374)">
+    <rect width="220" height="80" class="artifact-box" rx="6"/>
+    <rect width="20" height="20" x="8" y="8" fill="#d97757" rx="4"/>
+    <text x="18" y="23" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">2</text>
+    <text x="36" y="22" class="artifact-name" font-size="11">逻辑兼容</text>
+    <text x="12" y="44" class="artifact-desc">现有逻辑不被修改</text>
+    <text x="12" y="58" class="artifact-desc">只增加新 code path</text>
+    <text x="12" y="72" class="artifact-desc">原流程不受影响</text>
+  </g>
+  <g transform="translate(488 374)">
+    <rect width="232" height="80" class="artifact-box" rx="6"/>
+    <rect width="20" height="20" x="8" y="8" fill="#d97757" rx="4"/>
+    <text x="18" y="23" fill="#fff" font-size="10" font-weight="700" text-anchor="middle">3</text>
+    <text x="36" y="22" class="artifact-name" font-size="11">Schema 兼容</text>
+    <text x="12" y="44" class="artifact-desc">只新增列</text>
+    <text x="12" y="58" class="artifact-desc">不删除、不改类型</text>
+    <text x="12" y="72" class="artifact-desc">向后兼容迁移</text>
   </g>
 </svg>

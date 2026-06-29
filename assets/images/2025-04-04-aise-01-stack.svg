@@ -1,62 +1,41 @@
-<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- AISE 五层架构 -->
-  <rect width="560" height="260" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native 软件工程五层架构</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">AISE Manifesto · postcodeengineering.com · 2025/04/04</text>
-
-  <!-- Layer 5: Human Workflow (top) -->
-  <rect x="40" y="50" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="50" width="480" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="60" y="65" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">L5</text>
-  <text x="84" y="65" font-size="12" fill="#141413" font-weight="600">Human Workflow · 人机协作流程设计</text>
-  <rect x="490" y="58" width="18" height="18" rx="9" fill="#D97757"/>
-  <text x="499" y="71" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L5</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="88" x2="280" y2="96" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,96 280,104 284,96" fill="#D1CFC5"/>
-
-  <!-- Layer 4: Intent Architecture -->
-  <rect x="40" y="104" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#EA580C" stroke-width="1.5"/>
-  <rect x="40" y="104" width="480" height="18" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1"/>
-  <text x="60" y="119" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">L4</text>
-  <text x="84" y="119" font-size="12" fill="#141413" font-weight="600">Intent Architecture · 意图架构与知识资产管理</text>
-  <rect x="490" y="112" width="18" height="18" rx="9" fill="#EA580C"/>
-  <text x="499" y="125" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L4</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="142" x2="280" y2="150" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,150 280,158 284,150" fill="#D1CFC5"/>
-
-  <!-- Layer 3: Agent Orchestration -->
-  <rect x="40" y="158" width="480" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="40" y="158" width="480" height="18" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="60" y="173" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">L3</text>
-  <text x="84" y="173" font-size="12" fill="#141413" font-weight="600">Agent Orchestration · 多 Agent 协作与调度</text>
-  <rect x="490" y="166" width="18" height="18" rx="9" fill="#2563EB"/>
-  <text x="499" y="179" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">L3</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="196" x2="280" y2="204" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,204 280,212 284,204" fill="#D1CFC5"/>
-
-  <!-- Layer 2: Context Engineering -->
-  <rect x="40" y="212" width="480" height="22" rx="5" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.5"/>
-  <text x="60" y="226" font-size="10" fill="#3B82F6" font-family="ui-monospace, monospace" font-weight="600">L2</text>
-  <text x="84" y="226" font-size="11" fill="#141413" font-weight="600">Context Engineering · 上下文工程</text>
-  <rect x="490" y="216" width="18" height="14" rx="7" fill="#3B82F6"/>
-  <text x="499" y="227" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L2</text>
-
-  <!-- Arrow -->
-  <line x1="280" y1="234" x2="280" y2="242" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,242 280,250 284,242" fill="#D1CFC5"/>
-
-  <!-- Layer 1: Model Layer (bottom) -->
-  <rect x="40" y="250" width="480" height="12" rx="4" fill="#D1FAE5" stroke="#059669" stroke-width="1"/>
-  <text x="60" y="260" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">L1 · Model Layer</text>
-  <text x="200" y="260" font-size="9" fill="#87867F">基础模型与工具链</text>
-  <rect x="490" y="253" width="18" height="12" rx="6" fill="#059669"/>
-  <text x="499" y="262" text-anchor="middle" font-size="8" fill="#FFFFFF" font-family="ui-monospace, monospace">L1</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 260">
+  <path fill="#faf9f5" d="M0 0h560v260H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI-Native 软件工程五层架构</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">AISE Manifesto · postcodeengineering.com · 2025/04/04</text>
+  <rect width="480" height="38" x="40" y="50" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="6"/>
+  <rect width="480" height="18" x="40" y="50" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="60" y="65" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L5</text>
+  <text x="84" y="65" fill="#141413" font-size="12" font-weight="600">Human Workflow · 人机协作流程设计</text>
+  <rect width="18" height="18" x="490" y="58" fill="#d97757" rx="9"/>
+  <text x="499" y="71" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L5</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 88v8"/>
+  <path fill="#d1cfc5" d="m276 96 4 8 4-8z"/>
+  <rect width="480" height="38" x="40" y="104" fill="#fff" stroke="#ea580c" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="18" x="40" y="104" fill="#fed7aa" stroke="#ea580c" rx="6"/>
+  <text x="60" y="119" fill="#ea580c" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L4</text>
+  <text x="84" y="119" fill="#141413" font-size="12" font-weight="600">Intent Architecture · 意图架构与知识资产管理</text>
+  <rect width="18" height="18" x="490" y="112" fill="#ea580c" rx="9"/>
+  <text x="499" y="125" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L4</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 142v8"/>
+  <path fill="#d1cfc5" d="m276 150 4 8 4-8z"/>
+  <rect width="480" height="38" x="40" y="158" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="480" height="18" x="40" y="158" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="60" y="173" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L3</text>
+  <text x="84" y="173" fill="#141413" font-size="12" font-weight="600">Agent Orchestration · 多 Agent 协作与调度</text>
+  <rect width="18" height="18" x="490" y="166" fill="#2563eb" rx="9"/>
+  <text x="499" y="179" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">L3</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 196v8"/>
+  <path fill="#d1cfc5" d="m276 204 4 8 4-8z"/>
+  <rect width="480" height="22" x="40" y="212" fill="#bfdbfe" stroke="#3b82f6" stroke-width="1.5" rx="5"/>
+  <text x="60" y="226" fill="#3b82f6" font-family="ui-monospace, monospace" font-size="10" font-weight="600">L2</text>
+  <text x="84" y="226" fill="#141413" font-size="11" font-weight="600">Context Engineering · 上下文工程</text>
+  <rect width="18" height="14" x="490" y="216" fill="#3b82f6" rx="7"/>
+  <text x="499" y="227" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">L2</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 234v8"/>
+  <path fill="#d1cfc5" d="m276 242 4 8 4-8z"/>
+  <rect width="480" height="12" x="40" y="250" fill="#d1fae5" stroke="#059669" rx="4"/>
+  <text x="60" y="260" fill="#059669" font-family="ui-monospace, monospace" font-size="9" font-weight="600">L1 · Model Layer</text>
+  <text x="200" y="260" fill="#87867f" font-size="9">基础模型与工具链</text>
+  <rect width="18" height="12" x="490" y="253" fill="#059669" rx="6"/>
+  <text x="499" y="262" fill="#fff" font-family="ui-monospace, monospace" font-size="8" text-anchor="middle">L1</text>
 </svg>

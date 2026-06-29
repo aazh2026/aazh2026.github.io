@@ -3,7 +3,7 @@ description: "AI-Native软件工程 | 从代码到意图 | 探索后代码时代
 url: "https://postcodeengineering.com"
 baseurl: ""
 author: "@postcodeeng"
-email: "sophi@example.com"
+# email removed: was a placeholder "sophi@example.com"; re-add real address when ready
 
 # Google Analytics 4
 google_analytics: G-DBLJ6HTZL5  # Stream ID: 13693046864

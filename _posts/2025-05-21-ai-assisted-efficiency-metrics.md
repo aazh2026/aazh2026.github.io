@@ -68,7 +68,7 @@ redirect_from:
 
 ## 新效能度量体系
 
-<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-shift.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-shift.svg" type="image/jpeg" width="100%"></object>
 
 AI时代的效能度量从"写了多少"转向"改起来多贵"。传统指标在AI辅助编程场景下全面失效——AI生成代码的速度是人工的数十倍，代码行数这个指标彻底失去了意义。新的度量体系围绕一个核心问题构建：**当需求变化时，你的代码需要付出多少代价才能适应？**
 
@@ -283,7 +283,7 @@ AI时代的思维转变体现在四个层面：从"写得多快"到"改得多快
 
 ### 度量仪表盘
 
-<img src="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.svg" alt="度量仪表盘" width="100%">
+<img src="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-dashboard.jpg" alt="度量仪表盘" width="100%">
 
 ---
 

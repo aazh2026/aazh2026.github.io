@@ -1,129 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <linearGradient id="systemGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#87867F"/>
+    <linearGradient id="systemGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#87867f"/>
       <stop offset="100%" stop-color="#5a5852"/>
     </linearGradient>
-    <linearGradient id="agentGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#788C5D"/>
+    <linearGradient id="agentGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#788c5d"/>
       <stop offset="100%" stop-color="#4f6b3a"/>
     </linearGradient>
-    <linearGradient id="intentGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#D97757"/>
+    <linearGradient id="intentGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#d97757"/>
       <stop offset="100%" stop-color="#b85a3d"/>
     </linearGradient>
-    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="shadow" width="120%" height="130%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="4" flood-color="#141413" flood-opacity=".12" stdDeviation="6"/>
     </filter>
   </defs>
-
-  <!-- Background -->
   <rect width="900" height="560" fill="url(#bg)" rx="16"/>
-
-  <!-- Title -->
-  <text x="450" y="46" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" fill="#141413">三层可观测性模型</text>
-  <text x="450" y="68" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" fill="#87867F">Three-Layer Observability Model for AI-Native Systems</text>
-
-  <!-- === Layer 3: Intent Layer (top) === -->
-  <rect x="50" y="90" width="800" height="120" rx="12" fill="url(#intentGrad)" filter="url(#shadow)"/>
-  <text x="75" y="118" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">意图层 Intent Layer</text>
-  <text x="75" y="138" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">AI-Native 新维度</text>
-
-  <!-- Intent Layer contents -->
-  <rect x="160" y="102" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="215" y="126" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">输入意图</text>
-  <text x="215" y="143" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">用户/系统目标</text>
-  <text x="215" y="158" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">• 推理过程</text>
-  <text x="215" y="172" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">• 决策依据</text>
-  <text x="215" y="186" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">• 上下文状态</text>
-
-  <rect x="290" y="102" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="345" y="126" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">意图追踪</text>
-  <text x="345" y="143" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">记录完整推理链</text>
-  <text x="345" y="158" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">意图清晰度</text>
-  <text x="345" y="173" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">决策归因</text>
-
-  <rect x="420" y="102" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="475" y="126" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">可解释性</text>
-  <text x="475" y="143" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">解释AI决策</text>
-  <text x="475" y="158" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">可视化推理链</text>
-  <text x="475" y="173" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">人人可理解</text>
-
-  <!-- Intent tools -->
-  <rect x="560" y="102" width="270" height="88" rx="8" fill="#FAF9F5" opacity="0.12"/>
-  <text x="580" y="122" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">工具</text>
-  <text x="580" y="142" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">意图追踪系统 / OpenTelemetry 扩展</text>
-  <text x="580" y="160" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">新兴专用平台 / 自研方案</text>
-  <text x="580" y="178" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">关键指标: 意图清晰度、推理链完整性</text>
-
-  <!-- === Layer 2: Agent Layer (middle) === -->
-  <rect x="50" y="228" width="800" height="120" rx="12" fill="url(#agentGrad)" filter="url(#shadow)"/>
-  <text x="75" y="256" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">Agent 层 Agent Layer</text>
-  <text x="75" y="276" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">AI 系统可观测性</text>
-
-  <rect x="160" y="240" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="215" y="264" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">推理时间</text>
-  <text x="215" y="281" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">Token 消耗</text>
-  <text x="215" y="296" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">模型版本</text>
-  <text x="215" y="311" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">温度参数</text>
-
-  <rect x="290" y="240" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="345" y="264" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">AI 组件行为</text>
-  <text x="345" y="281" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">工具选择</text>
-  <text x="345" y="296" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">任务分解</text>
-  <text x="345" y="311" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">信息获取</text>
-
-  <rect x="420" y="240" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="475" y="264" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">性能监控</text>
-  <text x="475" y="281" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">吞吐量</text>
-  <text x="475" y="296" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">错误率</text>
-  <text x="475" y="311" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">P99 延迟</text>
-
-  <rect x="560" y="240" width="270" height="88" rx="8" fill="#FAF9F5" opacity="0.12"/>
-  <text x="580" y="260" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">工具</text>
-  <text x="580" y="280" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Langfuse · Helicone · Weights &amp; Biases</text>
-  <text x="580" y="298" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">LLM 可观测性平台</text>
-  <text x="580" y="316" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">关注: AI 组件的行为和性能</text>
-
-  <!-- === Layer 1: System Layer (bottom) === -->
-  <rect x="50" y="366" width="800" height="120" rx="12" fill="url(#systemGrad)" filter="url(#shadow)"/>
-  <text x="75" y="394" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700" fill="#FAF9F5">系统层 System Layer</text>
-  <text x="75" y="414" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" fill="#FAF9F5" opacity="0.85">传统可观测性</text>
-
-  <rect x="160" y="378" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="215" y="402" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">CPU / 内存</text>
-  <text x="215" y="419" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">请求量</text>
-  <text x="215" y="434" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">延迟</text>
-  <text x="215" y="449" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">错误率</text>
-
-  <rect x="290" y="378" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="345" y="402" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">网络 / 服务</text>
-  <text x="345" y="419" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">服务健康</text>
-  <text x="345" y="434" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">分布式追踪</text>
-  <text x="345" y="449" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">依赖拓扑</text>
-
-  <rect x="420" y="378" width="110" height="88" rx="8" fill="#FAF9F5" opacity="0.18"/>
-  <text x="475" y="402" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#FAF9F5">指标聚合</text>
-  <text x="475" y="419" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">日志收集</text>
-  <text x="475" y="434" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">告警规则</text>
-  <text x="475" y="449" text-anchor="middle" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.8">Dashboard</text>
-
-  <rect x="560" y="378" width="270" height="88" rx="8" fill="#FAF9F5" opacity="0.12"/>
-  <text x="580" y="398" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600" fill="#FAF9F5">工具</text>
-  <text x="580" y="418" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Prometheus · Grafana · Jaeger</text>
-  <text x="580" y="436" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">Datadog · New Relic</text>
-  <text x="580" y="454" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" fill="#FAF9F5" opacity="0.85">关注: 机器资源、网络、服务健康</text>
-
-  <!-- Arrows between layers -->
-  <path d="M450 210 L450 226" stroke="#D1CFC5" stroke-width="2" marker-end="url(#arrow)"/>
-  <path d="M450 348 L450 364" stroke="#D1CFC5" stroke-width="2"/>
-
-  <!-- Key insight box -->
-  <rect x="50" y="504" width="800" height="42" rx="8" fill="#D1CFC5" opacity="0.4"/>
-  <text x="70" y="528" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" fill="#141413">💡 关键洞察：</text>
-  <text x="195" y="528" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" fill="#141413">意图层是 AI-Native 可观测性的第三维度，解决"AI 为什么这么做"的问题</text>
+  <text x="450" y="46" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="20" font-weight="700" text-anchor="middle">三层可观测性模型</text>
+  <text x="450" y="68" fill="#87867f" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" text-anchor="middle">Three-Layer Observability Model for AI-Native Systems</text>
+  <rect width="800" height="120" x="50" y="90" fill="url(#intentGrad)" filter="url(#shadow)" rx="12"/>
+  <text x="75" y="118" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">意图层 Intent Layer</text>
+  <text x="75" y="138" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">AI-Native 新维度</text>
+  <rect width="110" height="88" x="160" y="102" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="215" y="126" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">输入意图</text>
+  <text x="215" y="143" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">用户/系统目标</text>
+  <text x="215" y="158" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">• 推理过程</text>
+  <text x="215" y="172" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">• 决策依据</text>
+  <text x="215" y="186" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">• 上下文状态</text>
+  <rect width="110" height="88" x="290" y="102" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="345" y="126" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">意图追踪</text>
+  <text x="345" y="143" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">记录完整推理链</text>
+  <text x="345" y="158" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">意图清晰度</text>
+  <text x="345" y="173" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">决策归因</text>
+  <rect width="110" height="88" x="420" y="102" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="475" y="126" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">可解释性</text>
+  <text x="475" y="143" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">解释AI决策</text>
+  <text x="475" y="158" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">可视化推理链</text>
+  <text x="475" y="173" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">人人可理解</text>
+  <rect width="270" height="88" x="560" y="102" fill="#faf9f5" opacity=".12" rx="8"/>
+  <text x="580" y="122" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600">工具</text>
+  <text x="580" y="142" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">意图追踪系统 / OpenTelemetry 扩展</text>
+  <text x="580" y="160" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">新兴专用平台 / 自研方案</text>
+  <text x="580" y="178" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">关键指标: 意图清晰度、推理链完整性</text>
+  <rect width="800" height="120" x="50" y="228" fill="url(#agentGrad)" filter="url(#shadow)" rx="12"/>
+  <text x="75" y="256" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">Agent 层 Agent Layer</text>
+  <text x="75" y="276" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">AI 系统可观测性</text>
+  <rect width="110" height="88" x="160" y="240" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="215" y="264" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">推理时间</text>
+  <text x="215" y="281" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">Token 消耗</text>
+  <text x="215" y="296" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">模型版本</text>
+  <text x="215" y="311" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">温度参数</text>
+  <rect width="110" height="88" x="290" y="240" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="345" y="264" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">AI 组件行为</text>
+  <text x="345" y="281" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">工具选择</text>
+  <text x="345" y="296" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">任务分解</text>
+  <text x="345" y="311" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">信息获取</text>
+  <rect width="110" height="88" x="420" y="240" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="475" y="264" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">性能监控</text>
+  <text x="475" y="281" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">吞吐量</text>
+  <text x="475" y="296" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">错误率</text>
+  <text x="475" y="311" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">P99 延迟</text>
+  <rect width="270" height="88" x="560" y="240" fill="#faf9f5" opacity=".12" rx="8"/>
+  <text x="580" y="260" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600">工具</text>
+  <text x="580" y="280" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">Langfuse · Helicone · Weights &amp; Biases</text>
+  <text x="580" y="298" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">LLM 可观测性平台</text>
+  <text x="580" y="316" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">关注: AI 组件的行为和性能</text>
+  <rect width="800" height="120" x="50" y="366" fill="url(#systemGrad)" filter="url(#shadow)" rx="12"/>
+  <text x="75" y="394" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="15" font-weight="700">系统层 System Layer</text>
+  <text x="75" y="414" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" opacity=".85">传统可观测性</text>
+  <rect width="110" height="88" x="160" y="378" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="215" y="402" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">CPU / 内存</text>
+  <text x="215" y="419" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">请求量</text>
+  <text x="215" y="434" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">延迟</text>
+  <text x="215" y="449" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">错误率</text>
+  <rect width="110" height="88" x="290" y="378" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="345" y="402" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">网络 / 服务</text>
+  <text x="345" y="419" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">服务健康</text>
+  <text x="345" y="434" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">分布式追踪</text>
+  <text x="345" y="449" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">依赖拓扑</text>
+  <rect width="110" height="88" x="420" y="378" fill="#faf9f5" opacity=".18" rx="8"/>
+  <text x="475" y="402" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600" text-anchor="middle">指标聚合</text>
+  <text x="475" y="419" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">日志收集</text>
+  <text x="475" y="434" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">告警规则</text>
+  <text x="475" y="449" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".8" text-anchor="middle">Dashboard</text>
+  <rect width="270" height="88" x="560" y="378" fill="#faf9f5" opacity=".12" rx="8"/>
+  <text x="580" y="398" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="11" font-weight="600">工具</text>
+  <text x="580" y="418" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">Prometheus · Grafana · Jaeger</text>
+  <text x="580" y="436" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">Datadog · New Relic</text>
+  <text x="580" y="454" fill="#faf9f5" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" opacity=".85">关注: 机器资源、网络、服务健康</text>
+  <path stroke="#d1cfc5" stroke-width="2" marker-end="url(#arrow)" d="M450 210v16"/>
+  <path stroke="#d1cfc5" stroke-width="2" d="M450 348v16"/>
+  <rect width="800" height="42" x="50" y="504" fill="#d1cfc5" opacity=".4" rx="8"/>
+  <text x="70" y="528" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12" font-weight="600">💡 关键洞察：</text>
+  <text x="195" y="528" fill="#141413" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif" font-size="12">意图层是 AI-Native 可观测性的第三维度，解决&quot;AI 为什么这么做&quot;的问题</text>
 </svg>

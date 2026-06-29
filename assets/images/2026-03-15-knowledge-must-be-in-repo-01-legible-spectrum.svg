@@ -1,116 +1,89 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460">
   <defs>
-    <linearGradient id="bg8" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg8" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <filter id="shadow8" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#141413" flood-opacity="0.10"/>
-    </filter>
-    <marker id="arr9" markerWidth="8" markerHeight="8" refX="5" refY="4" orient="auto">
-      <path d="M0,0 L0,8 L8,4 z" fill="#788C5D"/>
+    <marker id="arr9" markerHeight="8" markerWidth="8" orient="auto" refX="5" refY="4">
+      <path fill="#788c5d" d="M0 0v8l8-4z"/>
     </marker>
+    <filter id="shadow8" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".1" stdDeviation="5"/>
+    </filter>
   </defs>
-
   <rect width="900" height="460" fill="url(#bg8)" rx="16"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" fill="#141413" letter-spacing="-0.3">Legible Knowledge：知识的可读性光谱</text>
-  <line x1="200" y1="56" x2="700" y2="56" stroke="#D1CFC5" stroke-width="1.5"/>
-
-  <!-- Spectrum bar -->
+  <text x="450" y="42" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="22" font-weight="700" letter-spacing="-.3" text-anchor="middle">Legible Knowledge：知识的可读性光谱</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M200 56h500"/>
   <defs>
-    <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#788C5D"/>
-      <stop offset="40%" stop-color="#D1CFC5"/>
-      <stop offset="70%" stop-color="#E3DACC"/>
-      <stop offset="100%" stop-color="#D97757"/>
+    <linearGradient id="spectrum" x1="0%" x2="100%" y1="0%" y2="0%">
+      <stop offset="0%" stop-color="#788c5d"/>
+      <stop offset="40%" stop-color="#d1cfc5"/>
+      <stop offset="70%" stop-color="#e3dacc"/>
+      <stop offset="100%" stop-color="#d97757"/>
     </linearGradient>
   </defs>
-
-  <rect x="80" y="80" width="740" height="24" rx="12" fill="url(#spectrum)"/>
-  <text x="80" y="72" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D" font-weight="600">Agent 可读写</text>
-  <text x="820" y="72" text-anchor="end" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757" font-weight="600">Agent 不可读</text>
-
-  <!-- Categories along spectrum -->
-  <!-- Code -->
-  <g transform="translate(80,120)">
-    <rect x="0" y="0" width="150" height="90" rx="12" fill="#788C5D" opacity="0.15" stroke="#788C5D" stroke-width="1.5"/>
-    <text x="75" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#788C5D">代码</text>
-    <text x="75" y="48" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">仓库本地</text>
-    <text x="75" y="64" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">版本化</text>
-    <text x="75" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">Agent 完全可读写</text>
+  <rect width="740" height="24" x="80" y="80" fill="url(#spectrum)" rx="12"/>
+  <text x="80" y="72" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600">Agent 可读写</text>
+  <text x="820" y="72" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="11" font-weight="600" text-anchor="end">Agent 不可读</text>
+  <g transform="translate(80 120)">
+    <rect width="150" height="90" fill="#788c5d" stroke="#788c5d" stroke-width="1.5" opacity=".15" rx="12"/>
+    <text x="75" y="28" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">代码</text>
+    <text x="75" y="48" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">仓库本地</text>
+    <text x="75" y="64" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">版本化</text>
+    <text x="75" y="80" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">Agent 完全可读写</text>
   </g>
-
-  <!-- ADR / Structured Docs -->
-  <g transform="translate(260,120)">
-    <rect x="0" y="0" width="150" height="90" rx="12" fill="#788C5D" opacity="0.10" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="5,3"/>
-    <text x="75" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#788C5D">结构化文档</text>
-    <text x="75" y="48" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">ADR、计划、规则</text>
-    <text x="75" y="64" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">版本化</text>
-    <text x="75" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#788C5D">Agent 可读、可验证</text>
+  <g transform="translate(260 120)">
+    <rect width="150" height="90" fill="#788c5d" stroke="#788c5d" stroke-dasharray="5,3" stroke-width="1.5" opacity=".1" rx="12"/>
+    <text x="75" y="28" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">结构化文档</text>
+    <text x="75" y="48" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">ADR、计划、规则</text>
+    <text x="75" y="64" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">版本化</text>
+    <text x="75" y="80" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">Agent 可读、可验证</text>
   </g>
-
-  <!-- Non-structured Docs -->
-  <g transform="translate(440,120)">
-    <rect x="0" y="0" width="150" height="90" rx="12" fill="#E3DACC" opacity="0.6" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,3"/>
-    <text x="75" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#87867F">非结构化文档</text>
-    <text x="75" y="48" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">Google Docs、Notion</text>
-    <text x="75" y="64" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">常过时、不版本化</text>
-    <text x="75" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#87867F">仅人类可读</text>
+  <g transform="translate(440 120)">
+    <rect width="150" height="90" fill="#e3dacc" stroke="#d1cfc5" stroke-dasharray="5,3" stroke-width="1.5" opacity=".6" rx="12"/>
+    <text x="75" y="28" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">非结构化文档</text>
+    <text x="75" y="48" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">Google Docs、Notion</text>
+    <text x="75" y="64" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">常过时、不版本化</text>
+    <text x="75" y="80" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">仅人类可读</text>
   </g>
-
-  <!-- Brain knowledge -->
-  <g transform="translate(620,120)">
-    <rect x="0" y="0" width="150" height="90" rx="12" fill="#D97757" opacity="0.10" stroke="#D97757" stroke-width="1.5" stroke-dasharray="5,3"/>
-    <text x="75" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#D97757">人脑经验</text>
-    <text x="75" y="48" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">直觉、判断、隐性知识</text>
-    <text x="75" y="64" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#141413">离职即流失</text>
-    <text x="75" y="80" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="11" fill="#D97757">Agent 完全不可见</text>
+  <g transform="translate(620 120)">
+    <rect width="150" height="90" fill="#d97757" stroke="#d97757" stroke-dasharray="5,3" stroke-width="1.5" opacity=".1" rx="12"/>
+    <text x="75" y="28" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" text-anchor="middle">人脑经验</text>
+    <text x="75" y="48" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">直觉、判断、隐性知识</text>
+    <text x="75" y="64" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">离职即流失</text>
+    <text x="75" y="80" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="11" text-anchor="middle">Agent 完全不可见</text>
   </g>
-
-  <!-- Arrows / transformation -->
-  <g transform="translate(240,225)">
-    <text x="0" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D" font-weight="600">Harness 推动：</text>
-    <path d="M0,15 L360,15" stroke="#788C5D" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr9)" opacity="0.6"/>
-    <text x="375" y="0" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D">显性化</text>
-    <text x="375" y="15" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D">制度化</text>
-    <text x="375" y="30" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#788C5D">版本化</text>
+  <text fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" font-weight="600" transform="translate(240 225)">Harness 推动：</text>
+  <path stroke="#788c5d" stroke-dasharray="6,4" stroke-width="2" marker-end="url(#arr9)" d="M0 15h360" opacity=".6" transform="translate(240 225)"/>
+  <text x="375" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" transform="translate(240 225)">显性化</text>
+  <text x="375" y="15" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" transform="translate(240 225)">制度化</text>
+  <text x="375" y="30" fill="#788c5d" font-family="system-ui,-apple-system,sans-serif" font-size="12" transform="translate(240 225)">版本化</text>
+  <rect width="820" height="165" x="40" y="265" fill="#faf9f5" filter="url(#shadow8)" rx="14"/>
+  <text x="60" y="295" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700">隐性知识的代价 — 对谁都是问题</text>
+  <g transform="translate(60 310)">
+    <rect width="240" height="100" fill="#d97757" opacity=".06" rx="10"/>
+    <text x="120" y="26" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">对 Agent</text>
+    <circle cx="18" cy="50" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="55" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">无法理解系统整体</text>
+    <circle cx="18" cy="72" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="77" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">无法做出符合全局利益的决策</text>
   </g>
-
-  <!-- Cost of illegible knowledge -->
-  <rect x="40" y="265" width="820" height="165" rx="14" fill="#FAF9F5" filter="url(#shadow8)"/>
-  <text x="60" y="295" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="700" fill="#141413">隐性知识的代价 — 对谁都是问题</text>
-
-  <!-- Three columns of cost -->
-  <g transform="translate(60,310)">
-    <rect x="0" y="0" width="240" height="100" rx="10" fill="#D97757" opacity="0.06"/>
-    <text x="120" y="26" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">对 Agent</text>
-    <circle cx="18" cy="50" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">无法理解系统整体</text>
-    <circle cx="18" cy="72" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="77" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">无法做出符合全局利益的决策</text>
+  <g transform="translate(320 310)">
+    <rect width="240" height="100" fill="#d97757" opacity=".06" rx="10"/>
+    <text x="120" y="26" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">对新员工</text>
+    <circle cx="18" cy="50" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="55" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">&quot;这个设计为什么是这样？&quot;</text>
+    <circle cx="18" cy="72" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="77" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">只能靠&quot;问问老王&quot;踩坑学习</text>
   </g>
-
-  <g transform="translate(320,310)">
-    <rect x="0" y="0" width="240" height="100" rx="10" fill="#D97757" opacity="0.06"/>
-    <text x="120" y="26" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">对新员工</text>
-    <circle cx="18" cy="50" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">"这个设计为什么是这样？"</text>
-    <circle cx="18" cy="72" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="77" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">只能靠"问问老王"踩坑学习</text>
+  <g transform="translate(580 310)">
+    <rect width="240" height="100" fill="#d97757" opacity=".06" rx="10"/>
+    <text x="120" y="26" fill="#d97757" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" text-anchor="middle">对组织</text>
+    <circle cx="18" cy="50" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="55" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">员工离职带走关键知识</text>
+    <circle cx="18" cy="72" r="4" fill="#d97757" opacity=".7"/>
+    <text x="34" y="77" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="12">新员工重复踩坑，周期 restart</text>
   </g>
-
-  <g transform="translate(580,310)">
-    <rect x="0" y="0" width="240" height="100" rx="10" fill="#D97757" opacity="0.06"/>
-    <text x="120" y="26" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="700" fill="#D97757">对组织</text>
-    <circle cx="18" cy="50" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="55" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">员工离职带走关键知识</text>
-    <circle cx="18" cy="72" r="4" fill="#D97757" opacity="0.7"/>
-    <text x="34" y="77" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#141413">新员工重复踩坑，周期 restart</text>
-  </g>
-
-  <!-- Bottom insight -->
-  <rect x="40" y="442" width="820" height="14" rx="7" fill="#141413" opacity="0.04"/>
-  <text x="450" y="455" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F">"知识必须入库" — 不是技术约束，是组织变革的催化剂。</text>
+  <rect width="820" height="14" x="40" y="442" fill="#141413" opacity=".04" rx="7"/>
+  <text x="450" y="455" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">&quot;知识必须入库&quot; — 不是技术约束，是组织变革的催化剂。</text>
 </svg>

@@ -1,99 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 500" font-family="Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif" viewBox="0 0 820 500">
   <defs>
-    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#87867F"/>
+    <marker id="arr" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#87867f" d="M0 0v6l8-3z"/>
     </marker>
-    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#788C5D"/>
+    <marker id="arr2" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#788c5d" d="M0 0v6l8-3z"/>
     </marker>
   </defs>
-
-  <!-- Background -->
-  <rect width="820" height="500" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="410" y="34" text-anchor="middle" font-size="17" font-weight="bold" fill="#141413" letter-spacing="0.5">AI 编程范式转移：从「实时判断」到「确定性执行」</text>
-  <line x1="60" y1="48" x2="760" y2="48" stroke="#D1CFC5" stroke-width="1"/>
-
-  <!-- PROBLEM statement -->
-  <rect x="180" y="58" width="460" height="46" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="410" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">核心问题：当 agent 工作规模大到需要协调数十上百个并行任务，</text>
-  <text x="410" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#D97757">纯靠模型逐轮判断已不够用——上下文窗口装不下，注意力被稀释</text>
-
-  <!-- LEFT path: Dynamic Workflows (scripting) -->
-  <rect x="30" y="130" width="280" height="270" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
-  <rect x="30" y="130" width="280" height="38" rx="10" fill="#D97757"/>
-  <rect x="30" y="152" width="280" height="16" fill="#D97757"/>
-  <text x="170" y="154" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5">Anthropic: Dynamic Workflows</text>
-  <text x="170" y="172" text-anchor="middle" font-size="11" fill="#87867F">「脚本化」路线</text>
-
-  <!-- Workflow details -->
-  <rect x="50" y="188" width="240" height="80" rx="6" fill="#141413"/>
-  <text x="65" y="208" font-size="10" fill="#E3DACC" font-weight="bold">JavaScript 脚本</text>
-  <text x="65" y="224" font-size="9" fill="#D1CFC5">循环 / 分支 / 中间结果收集</text>
-  <text x="65" y="240" font-size="9" fill="#D1CFC5">全部固化在代码里</text>
-  <text x="65" y="256" font-size="9" fill="#D1CFC5">→ 确定性运行时执行</text>
-
-  <text x="50" y="290" font-size="11" font-weight="bold" fill="#141413">工作方式</text>
-  <text x="50" y="308" font-size="10" fill="#141413">模型只在 agent() 调用时「醒来」</text>
-  <text x="50" y="326" font-size="10" fill="#141413">其他时候全程在睡觉</text>
-  <text x="50" y="344" font-size="10" fill="#141413">编排逻辑离线化、确定化</text>
-
-  <rect x="50" y="358" width="240" height="30" rx="6" fill="#E3DACC"/>
-  <text x="170" y="376" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Bun 案例：11天迁移75万行 Rust</text>
-  <text x="170" y="388" text-anchor="middle" font-size="9" fill="#788C5D">99.8% 测试通过</text>
-
-  <!-- RIGHT path: iii agent harness (bus-based) -->
-  <rect x="510" y="130" width="280" height="270" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-  <rect x="510" y="130" width="280" height="38" rx="10" fill="#788C5D"/>
-  <rect x="510" y="152" width="280" height="16" fill="#788C5D"/>
-  <text x="650" y="154" text-anchor="middle" font-size="13" font-weight="bold" fill="#FAF9F5">iii agent harness</text>
-  <text x="650" y="172" text-anchor="middle" font-size="11" fill="#87867F">「总线化」路线</text>
-
-  <!-- Harness details -->
-  <rect x="530" y="188" width="240" height="80" rx="6" fill="#141413"/>
-  <text x="545" y="208" font-size="10" fill="#E3DACC" font-weight="bold">WebSocket 总线</text>
-  <text x="545" y="224" font-size="9" fill="#D1CFC5">15 种职责拆成独立 workers</text>
-  <text x="545" y="240" font-size="9" fill="#D1CFC5">通过 iii.trigger() 通信</text>
-  <text x="545" y="256" font-size="9" fill="#D1CFC5">→ 可独立版本化、可替换</text>
-
-  <text x="530" y="290" font-size="11" font-weight="bold" fill="#141413">工作方式</text>
-  <text x="530" y="308" font-size="10" fill="#141413">框架不再是 monolith</text>
-  <text x="530" y="326" font-size="10" fill="#141413">每层可独立替换组件</text>
-  <text x="530" y="344" font-size="10" fill="#141413">thin vs thick 是可调节 slider</text>
-
-  <rect x="530" y="358" width="240" height="30" rx="6" fill="#E3DACC"/>
-  <text x="650" y="376" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">历史先例：微内核架构</text>
-  <text x="650" y="388" text-anchor="middle" font-size="9" fill="#87867F">1970s 操作系统设计</text>
-
-  <!-- CENTER: Converge -->
-  <!-- Converging arrows -->
-  <path d="M 315 265 Q 370 220 435 215" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr)"/>
-  <path d="M 505 265 Q 450 220 385 215" fill="none" stroke="#788C5D" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arr2)"/>
-
-  <!-- Converged outcome -->
-  <rect x="365" y="200" width="200" height="52" rx="10" fill="#141413"/>
-  <text x="465" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#FAF9F5">确定性执行</text>
-  <text x="465" y="242" text-anchor="middle" font-size="10" fill="#D1CFC5">把编排从「实时决策」</text>
-  <text x="465" y="258" text-anchor="middle" font-size="10" fill="#D1CFC5">变成「静态资产」</text>
-
-  <!-- Historical parallels bottom -->
-  <rect x="50" y="418" width="720" height="68" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="410" y="437" text-anchor="middle" font-size="12" font-weight="bold" fill="#141413">历史先例</text>
-
-  <rect x="70" y="445" width="170" height="34" rx="6" fill="#E3DACC"/>
-  <text x="155" y="459" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">微内核 (1970s)</text>
-  <text x="155" y="472" text-anchor="middle" font-size="9" fill="#87867F">职责拆成独立服务</text>
-
-  <rect x="260" y="445" width="170" height="34" rx="6" fill="#E3DACC"/>
-  <text x="345" y="459" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">Spring vs EJB</text>
-  <text x="345" y="472" text-anchor="middle" font-size="9" fill="#87867F">把控制权还给代码</text>
-
-  <rect x="450" y="445" width="170" height="34" rx="6" fill="#E3DACC"/>
-  <text x="535" y="459" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">《人月神话》</text>
-  <text x="535" y="472" text-anchor="middle" font-size="9" fill="#87867F">没有银弹，黑盒无效</text>
-
-  <rect x="640" y="445" width="130" height="34" rx="6" fill="#788C5D"/>
-  <text x="705" y="459" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">共同方向</text>
-  <text x="705" y="472" text-anchor="middle" font-size="9" fill="#E3DACC">确定性 > 概率性</text>
+  <path fill="#faf9f5" d="M0 0h820v500H0z"/>
+  <text x="410" y="34" fill="#141413" font-size="17" font-weight="bold" letter-spacing=".5" text-anchor="middle">AI 编程范式转移：从「实时判断」到「确定性执行」</text>
+  <path stroke="#d1cfc5" d="M60 48h700"/>
+  <rect width="460" height="46" x="180" y="58" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="410" y="78" fill="#141413" font-size="12" font-weight="bold" text-anchor="middle">核心问题：当 agent 工作规模大到需要协调数十上百个并行任务，</text>
+  <text x="410" y="95" fill="#d97757" font-size="12" font-weight="bold" text-anchor="middle">纯靠模型逐轮判断已不够用——上下文窗口装不下，注意力被稀释</text>
+  <rect width="280" height="270" x="30" y="130" fill="#faf9f5" stroke="#d97757" stroke-width="2" rx="10"/>
+  <rect width="280" height="38" x="30" y="130" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M30 152h280v16H30z"/>
+  <text x="170" y="154" fill="#faf9f5" font-size="13" font-weight="bold" text-anchor="middle">Anthropic: Dynamic Workflows</text>
+  <text x="170" y="172" fill="#87867f" font-size="11" text-anchor="middle">「脚本化」路线</text>
+  <rect width="240" height="80" x="50" y="188" fill="#141413" rx="6"/>
+  <text x="65" y="208" fill="#e3dacc" font-size="10" font-weight="bold">JavaScript 脚本</text>
+  <text x="65" y="224" fill="#d1cfc5" font-size="9">循环 / 分支 / 中间结果收集</text>
+  <text x="65" y="240" fill="#d1cfc5" font-size="9">全部固化在代码里</text>
+  <text x="65" y="256" fill="#d1cfc5" font-size="9">→ 确定性运行时执行</text>
+  <text x="50" y="290" fill="#141413" font-size="11" font-weight="bold">工作方式</text>
+  <text x="50" y="308" fill="#141413" font-size="10">模型只在 agent() 调用时「醒来」</text>
+  <text x="50" y="326" fill="#141413" font-size="10">其他时候全程在睡觉</text>
+  <text x="50" y="344" fill="#141413" font-size="10">编排逻辑离线化、确定化</text>
+  <rect width="240" height="30" x="50" y="358" fill="#e3dacc" rx="6"/>
+  <text x="170" y="376" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">Bun 案例：11天迁移75万行 Rust</text>
+  <text x="170" y="388" fill="#788c5d" font-size="9" text-anchor="middle">99.8% 测试通过</text>
+  <rect width="280" height="270" x="510" y="130" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="10"/>
+  <rect width="280" height="38" x="510" y="130" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M510 152h280v16H510z"/>
+  <text x="650" y="154" fill="#faf9f5" font-size="13" font-weight="bold" text-anchor="middle">iii agent harness</text>
+  <text x="650" y="172" fill="#87867f" font-size="11" text-anchor="middle">「总线化」路线</text>
+  <rect width="240" height="80" x="530" y="188" fill="#141413" rx="6"/>
+  <text x="545" y="208" fill="#e3dacc" font-size="10" font-weight="bold">WebSocket 总线</text>
+  <text x="545" y="224" fill="#d1cfc5" font-size="9">15 种职责拆成独立 workers</text>
+  <text x="545" y="240" fill="#d1cfc5" font-size="9">通过 iii.trigger() 通信</text>
+  <text x="545" y="256" fill="#d1cfc5" font-size="9">→ 可独立版本化、可替换</text>
+  <text x="530" y="290" fill="#141413" font-size="11" font-weight="bold">工作方式</text>
+  <text x="530" y="308" fill="#141413" font-size="10">框架不再是 monolith</text>
+  <text x="530" y="326" fill="#141413" font-size="10">每层可独立替换组件</text>
+  <text x="530" y="344" fill="#141413" font-size="10">thin vs thick 是可调节 slider</text>
+  <rect width="240" height="30" x="530" y="358" fill="#e3dacc" rx="6"/>
+  <text x="650" y="376" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">历史先例：微内核架构</text>
+  <text x="650" y="388" fill="#87867f" font-size="9" text-anchor="middle">1970s 操作系统设计</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="6,3" stroke-width="2" marker-end="url(#arr)" d="M315 265q55-45 120-50"/>
+  <path fill="none" stroke="#788c5d" stroke-dasharray="6,3" stroke-width="2" marker-end="url(#arr2)" d="M505 265q-55-45-120-50"/>
+  <rect width="200" height="52" x="365" y="200" fill="#141413" rx="10"/>
+  <text x="465" y="222" fill="#faf9f5" font-size="12" font-weight="bold" text-anchor="middle">确定性执行</text>
+  <text x="465" y="242" fill="#d1cfc5" font-size="10" text-anchor="middle">把编排从「实时决策」</text>
+  <text x="465" y="258" fill="#d1cfc5" font-size="10" text-anchor="middle">变成「静态资产」</text>
+  <rect width="720" height="68" x="50" y="418" fill="#faf9f5" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <text x="410" y="437" fill="#141413" font-size="12" font-weight="bold" text-anchor="middle">历史先例</text>
+  <rect width="170" height="34" x="70" y="445" fill="#e3dacc" rx="6"/>
+  <text x="155" y="459" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">微内核 (1970s)</text>
+  <text x="155" y="472" fill="#87867f" font-size="9" text-anchor="middle">职责拆成独立服务</text>
+  <rect width="170" height="34" x="260" y="445" fill="#e3dacc" rx="6"/>
+  <text x="345" y="459" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">Spring vs EJB</text>
+  <text x="345" y="472" fill="#87867f" font-size="9" text-anchor="middle">把控制权还给代码</text>
+  <rect width="170" height="34" x="450" y="445" fill="#e3dacc" rx="6"/>
+  <text x="535" y="459" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">《人月神话》</text>
+  <text x="535" y="472" fill="#87867f" font-size="9" text-anchor="middle">没有银弹，黑盒无效</text>
+  <rect width="130" height="34" x="640" y="445" fill="#788c5d" rx="6"/>
+  <text x="705" y="459" fill="#faf9f5" font-size="10" font-weight="bold" text-anchor="middle">共同方向</text>
+  <text x="705" y="472" fill="#e3dacc" font-size="9" text-anchor="middle">确定性 &gt; 概率性</text>
 </svg>

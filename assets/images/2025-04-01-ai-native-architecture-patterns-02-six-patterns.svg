@@ -1,80 +1,63 @@
-<svg viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 460">
   <title>AI-Native架构六大战术模式</title>
-  <desc>六个AI-Native架构战术模式：Intent Router、Context Cache、Model Gateway、Feedback Loop、A/B Agent、Human-in-the-Loop</desc>
-
-  <!-- Background -->
-  <rect width="680" height="460" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native架构六大战术模式</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Engineering · 2025/04/01</text>
-
-  <!-- Row 1: Intent Router + Context Cache -->
-  <!-- Card 1: Intent Router -->
-  <rect x="40" y="58" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="40" y="58" width="290" height="32" rx="8" fill="#D97757"/>
-  <rect x="40" y="78" width="290" height="12" fill="#D97757"/>
-  <text x="56" y="78" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">01</text>
-  <text x="78" y="78" font-size="12" font-weight="600" fill="#FFFFFF">Intent Router</text>
-  <text x="56" y="110" font-size="13" fill="#141413">意图路由器</text>
-  <text x="56" y="128" font-size="10.5" fill="#87867F">理解用户自然语言请求</text>
-  <text x="56" y="144" font-size="10.5" fill="#87867F">路由到最合适的处理单元</text>
-  <text x="56" y="160" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">Router本身也是AI</text>
-
-  <!-- Card 2: Context Cache -->
-  <rect x="350" y="58" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="350" y="58" width="290" height="32" rx="8" fill="#788C5D"/>
-  <rect x="350" y="78" width="290" height="12" fill="#788C5D"/>
-  <text x="366" y="78" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">02</text>
-  <text x="388" y="78" font-size="12" font-weight="600" fill="#FFFFFF">Context Cache</text>
-  <text x="366" y="110" font-size="13" fill="#141413">上下文缓存</text>
-  <text x="366" y="128" font-size="10.5" fill="#87867F">预加载和缓存用户Context</text>
-  <text x="366" y="144" font-size="10.5" fill="#87867F">减少每次请求的Context构建时间</text>
-  <text x="366" y="160" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">把上下文存在模型外面</text>
-
-  <!-- Row 2: Model Gateway + Feedback Loop -->
-  <!-- Card 3: Model Gateway -->
-  <rect x="40" y="192" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="40" y="192" width="290" height="32" rx="8" fill="#D97757"/>
-  <rect x="40" y="212" width="290" height="12" fill="#D97757"/>
-  <text x="56" y="212" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">03</text>
-  <text x="78" y="212" font-size="12" font-weight="600" fill="#FFFFFF">Model Gateway</text>
-  <text x="56" y="244" font-size="13" fill="#141413">模型网关</text>
-  <text x="56" y="262" font-size="10.5" fill="#87867F">根据任务复杂度、成本、延迟</text>
-  <text x="56" y="278" font-size="10.5" fill="#87867F">自动选择最合适的模型</text>
-  <text x="56" y="294" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">快弱 vs 慢强的路由</text>
-
-  <!-- Card 4: Feedback Loop -->
-  <rect x="350" y="192" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="350" y="192" width="290" height="32" rx="8" fill="#788C5D"/>
-  <rect x="350" y="212" width="290" height="12" fill="#788C5D"/>
-  <text x="366" y="212" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">04</text>
-  <text x="388" y="212" font-size="12" font-weight="600" fill="#FFFFFF">Feedback Loop</text>
-  <text x="366" y="244" font-size="13" fill="#141413">反馈循环</text>
-  <text x="366" y="262" font-size="10.5" fill="#87867F">建立从用户反馈到模型改进</text>
-  <text x="366" y="278" font-size="10.5" fill="#87867F">的闭环，让系统越用越好</text>
-  <text x="366" y="294" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">Hill Climbing Loop</text>
-
-  <!-- Row 3: A/B Agent + Human-in-the-Loop -->
-  <!-- Card 5: A/B Agent -->
-  <rect x="40" y="326" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="40" y="326" width="290" height="32" rx="8" fill="#D97757"/>
-  <rect x="40" y="346" width="290" height="12" fill="#D97757"/>
-  <text x="56" y="346" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">05</text>
-  <text x="78" y="346" font-size="12" font-weight="600" fill="#FFFFFF">A/B Agent</text>
-  <text x="56" y="378" font-size="13" fill="#141413">A/B智能体</text>
-  <text x="56" y="396" font-size="10.5" fill="#87867F">像A/B测试UI一样</text>
-  <text x="56" y="412" font-size="10.5" fill="#87867F">A/B测试AI Agent的行为</text>
-  <text x="56" y="428" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">实验驱动AI行为优化</text>
-
-  <!-- Card 6: Human-in-the-Loop -->
-  <rect x="350" y="326" width="290" height="120" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="350" y="326" width="290" height="32" rx="8" fill="#788C5D"/>
-  <rect x="350" y="346" width="290" height="12" fill="#788C5D"/>
-  <text x="366" y="346" font-size="12" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">06</text>
-  <text x="388" y="346" font-size="12" font-weight="600" fill="#FFFFFF">Human-in-the-Loop</text>
-  <text x="366" y="378" font-size="13" fill="#141413">人在回路</text>
-  <text x="366" y="396" font-size="10.5" fill="#87867F">根据AI置信度和任务关键性</text>
-  <text x="366" y="412" font-size="10.5" fill="#87867F">动态决定是否需要人类介入</text>
-  <text x="366" y="428" font-size="10" fill="#788C5D" font-family="ui-monospace, monospace">让人类判断始终可及</text>
+  <desc>
+    六个AI-Native架构战术模式：Intent Router、Context Cache、Model Gateway、Feedback Loop、A/B Agent、Human-in-the-Loop
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v460H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI-Native架构六大战术模式</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native Engineering · 2025/04/01</text>
+  <rect width="290" height="120" x="40" y="58" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="40" y="58" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M40 78h290v12H40z"/>
+  <text x="56" y="78" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">01</text>
+  <text x="78" y="78" fill="#fff" font-size="12" font-weight="600">Intent Router</text>
+  <text x="56" y="110" fill="#141413" font-size="13">意图路由器</text>
+  <text x="56" y="128" fill="#87867f" font-size="10.5">理解用户自然语言请求</text>
+  <text x="56" y="144" fill="#87867f" font-size="10.5">路由到最合适的处理单元</text>
+  <text x="56" y="160" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">Router本身也是AI</text>
+  <rect width="290" height="120" x="350" y="58" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="350" y="58" fill="#788c5d" rx="8"/>
+  <path fill="#788c5d" d="M350 78h290v12H350z"/>
+  <text x="366" y="78" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">02</text>
+  <text x="388" y="78" fill="#fff" font-size="12" font-weight="600">Context Cache</text>
+  <text x="366" y="110" fill="#141413" font-size="13">上下文缓存</text>
+  <text x="366" y="128" fill="#87867f" font-size="10.5">预加载和缓存用户Context</text>
+  <text x="366" y="144" fill="#87867f" font-size="10.5">减少每次请求的Context构建时间</text>
+  <text x="366" y="160" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">把上下文存在模型外面</text>
+  <rect width="290" height="120" x="40" y="192" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="40" y="192" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M40 212h290v12H40z"/>
+  <text x="56" y="212" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">03</text>
+  <text x="78" y="212" fill="#fff" font-size="12" font-weight="600">Model Gateway</text>
+  <text x="56" y="244" fill="#141413" font-size="13">模型网关</text>
+  <text x="56" y="262" fill="#87867f" font-size="10.5">根据任务复杂度、成本、延迟</text>
+  <text x="56" y="278" fill="#87867f" font-size="10.5">自动选择最合适的模型</text>
+  <text x="56" y="294" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">快弱 vs 慢强的路由</text>
+  <rect width="290" height="120" x="350" y="192" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="350" y="192" fill="#788c5d" rx="8"/>
+  <path fill="#788c5d" d="M350 212h290v12H350z"/>
+  <text x="366" y="212" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">04</text>
+  <text x="388" y="212" fill="#fff" font-size="12" font-weight="600">Feedback Loop</text>
+  <text x="366" y="244" fill="#141413" font-size="13">反馈循环</text>
+  <text x="366" y="262" fill="#87867f" font-size="10.5">建立从用户反馈到模型改进</text>
+  <text x="366" y="278" fill="#87867f" font-size="10.5">的闭环，让系统越用越好</text>
+  <text x="366" y="294" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">Hill Climbing Loop</text>
+  <rect width="290" height="120" x="40" y="326" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="40" y="326" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M40 346h290v12H40z"/>
+  <text x="56" y="346" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">05</text>
+  <text x="78" y="346" fill="#fff" font-size="12" font-weight="600">A/B Agent</text>
+  <text x="56" y="378" fill="#141413" font-size="13">A/B智能体</text>
+  <text x="56" y="396" fill="#87867f" font-size="10.5">像A/B测试UI一样</text>
+  <text x="56" y="412" fill="#87867f" font-size="10.5">A/B测试AI Agent的行为</text>
+  <text x="56" y="428" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">实验驱动AI行为优化</text>
+  <rect width="290" height="120" x="350" y="326" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <rect width="290" height="32" x="350" y="326" fill="#788c5d" rx="8"/>
+  <path fill="#788c5d" d="M350 346h290v12H350z"/>
+  <text x="366" y="346" fill="#fff" font-family="ui-monospace, monospace" font-size="12" font-weight="600">06</text>
+  <text x="388" y="346" fill="#fff" font-size="12" font-weight="600">Human-in-the-Loop</text>
+  <text x="366" y="378" fill="#141413" font-size="13">人在回路</text>
+  <text x="366" y="396" fill="#87867f" font-size="10.5">根据AI置信度和任务关键性</text>
+  <text x="366" y="412" fill="#87867f" font-size="10.5">动态决定是否需要人类介入</text>
+  <text x="366" y="428" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10">让人类判断始终可及</text>
 </svg>

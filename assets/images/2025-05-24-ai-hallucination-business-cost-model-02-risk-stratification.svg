@@ -1,115 +1,70 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif" viewBox="0 0 800 480">
   <defs>
     <style>
-      .bg { fill: #FAF9F5; }
-      .title { fill: #141413; font-size: 20px; font-weight: 700; }
-      .subtitle { fill: #87867F; font-size: 12px; }
-      .label { fill: #141413; font-size: 13px; font-weight: 600; }
-      .label-sm { fill: #141413; font-size: 11px; font-weight: 500; }
-      .desc { fill: #87867F; font-size: 11px; }
-      .white { fill: #ffffff; }
-      .accent-clay { fill: #D97757; }
-      .accent-olive { fill: #788C5D; }
-      .accent-g300 { fill: #D1CFC5; }
-      .accent-g500 { fill: #87867F; }
-      .accent-oat { fill: #E3DACC; }
-      .accent-slate { fill: #141413; }
+      .label,.label-sm{fill:#141413;font-size:13px;font-weight:600}.label-sm{font-size:11px;font-weight:500}.desc{fill:#87867f;font-size:11px}.white{fill:#fff}.accent-olive{fill:#788c5d}
     </style>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="480" class="bg"/>
-
-  <!-- Title -->
-  <text x="40" y="38" class="title">风险分层与保险策略矩阵</text>
-  <text x="40" y="58" class="subtitle">不同风险等级对应不同容忍度和保险机制</text>
-
-  <!-- ===== RISK PYRAMID (left side) ===== -->
+  <path d="M0 0h800v480H0z" style="fill:#faf9f5"/>
+  <text x="40" y="38" style="fill:#141413;font-size:20px;font-weight:700">风险分层与保险策略矩阵</text>
+  <text x="40" y="58" style="fill:#87867f;font-size:12px">不同风险等级对应不同容忍度和保险机制</text>
   <text x="40" y="90" class="label">风险金字塔</text>
   <text x="40" y="106" class="desc">幻觉容忍度从底部到顶部递减</text>
-
-  <!-- HIGH RISK - top -->
-  <polygon points="155,118 305,118 285,218 175,218" fill="#D97757"/>
-  <text x="230" y="158" text-anchor="middle" class="label white">高风险场景</text>
-  <text x="230" y="176" text-anchor="middle" class="desc white">容忍度 &lt; 0.1%</text>
-
-  <!-- MEDIUM RISK - middle -->
-  <polygon points="175,218 285,218 260,318 200,318" fill="#E3DACC"/>
-  <polygon points="175,218 285,218 260,318 200,318" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="230" y="260" text-anchor="middle" class="label">中风险场景</text>
-  <text x="230" y="278" text-anchor="middle" class="desc">容忍度 2-5%</text>
-
-  <!-- LOW RISK - bottom -->
-  <polygon points="200,318 260,318 220,418 180,418" fill="#788C5D"/>
-  <text x="230" y="358" text-anchor="middle" class="label white">低风险场景</text>
-  <text x="230" y="376" text-anchor="middle" class="desc white">容忍度 10-20%</text>
-
-  <!-- Examples labels -->
+  <path fill="#d97757" d="M155 118h150l-20 100H175z"/>
+  <text x="230" y="158" class="label white" text-anchor="middle">高风险场景</text>
+  <text x="230" y="176" class="desc white" text-anchor="middle">容忍度 &lt; 0.1%</text>
+  <path fill="#e3dacc" d="M175 218h110l-25 100h-60z"/>
+  <path fill="none" stroke="#d1cfc5" stroke-width="1.5" d="M175 218h110l-25 100h-60z"/>
+  <text x="230" y="260" class="label" text-anchor="middle">中风险场景</text>
+  <text x="230" y="278" class="desc" text-anchor="middle">容忍度 2-5%</text>
+  <path fill="#788c5d" d="M200 318h60l-40 100h-40z"/>
+  <text x="230" y="358" class="label white" text-anchor="middle">低风险场景</text>
+  <text x="230" y="376" class="desc white" text-anchor="middle">容忍度 10-20%</text>
   <text x="320" y="155" class="desc">金融交易、医疗诊断、法律文书</text>
   <text x="320" y="255" class="desc">客户自助服务、内容推荐、数据分析</text>
   <text x="320" y="358" class="desc">内部工具、原型开发、非关键功能</text>
-
-  <!-- Tolerance labels on pyramid sides -->
-  <text x="136" y="148" text-anchor="end" class="accent-clay" font-size="10" font-weight="700">&lt;0.1%</text>
-  <text x="136" y="268" text-anchor="end" class="accent-g500" font-size="10" font-weight="700">2-5%</text>
-  <text x="136" y="378" text-anchor="end" class="accent-olive" font-size="10" font-weight="700">10-20%</text>
-
-  <!-- ===== INSURANCE STRATEGY TABLE (right side) ===== -->
+  <text x="136" y="148" font-size="10" font-weight="700" style="fill:#d97757" text-anchor="end">&lt;0.1%</text>
+  <text x="136" y="268" font-size="10" font-weight="700" style="fill:#87867f" text-anchor="end">2-5%</text>
+  <text x="136" y="378" class="accent-olive" font-size="10" font-weight="700" text-anchor="end">10-20%</text>
   <text x="470" y="90" class="label">保险策略选择矩阵</text>
-
-  <!-- Table header -->
-  <rect x="470" y="108" width="290" height="32" rx="6" fill="#141413"/>
+  <rect width="290" height="32" x="470" y="108" fill="#141413" rx="6"/>
   <text x="490" y="128" class="label-sm white">风险等级</text>
   <text x="575" y="128" class="label-sm white">保险策略</text>
   <text x="710" y="128" class="label-sm white">成本</text>
-
-  <!-- Row 1: HIGH -->
-  <rect x="470" y="148" width="290" height="72" rx="0" fill="#D97757"/>
-  <rect x="470" y="148" width="290" height="72" rx="6" fill="#D97757"/>
-  <rect x="470" y="148" width="290" height="72" fill="none" stroke="#D97757" stroke-width="1"/>
-  <rect x="470" y="148" width="290" height="72" rx="6" fill="#D97757"/>
+  <rect width="290" height="72" x="470" y="148" fill="#d97757" rx="0"/>
+  <rect width="290" height="72" x="470" y="148" fill="#d97757" rx="6"/>
+  <path fill="none" stroke="#d97757" d="M470 148h290v72H470z"/>
+  <rect width="290" height="72" x="470" y="148" fill="#d97757" rx="6"/>
   <text x="490" y="168" class="label-sm white">高</text>
   <text x="490" y="184" class="desc white">金融 · 医疗 · 法律</text>
   <text x="575" y="170" class="label-sm white">多模型交叉验证</text>
   <text x="575" y="186" class="desc white">+ 强制人工复核</text>
   <text x="575" y="202" class="desc white">+ 金融保险</text>
   <text x="710" y="180" class="value-sm white">$$$</text>
-
-  <!-- Row 2: MEDIUM -->
-  <rect x="470" y="224" width="290" height="60" rx="0" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <rect x="470" y="224" width="290" height="60" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <rect x="470" y="224" width="290" height="60" fill="#E3DACC"/>
-  <rect x="470" y="224" width="290" height="60" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="290" height="60" x="470" y="224" fill="#faf9f5" stroke="#d1cfc5" rx="0"/>
+  <rect width="290" height="60" x="470" y="224" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <path fill="#e3dacc" d="M470 224h290v60H470z"/>
+  <rect width="290" height="60" x="470" y="224" fill="#e3dacc" stroke="#d1cfc5" rx="6"/>
   <text x="490" y="244" class="label-sm">中</text>
   <text x="490" y="260" class="desc">客户推荐 · 数据分析</text>
   <text x="575" y="250" class="label-sm">人工复核 + 回滚机制</text>
   <text x="575" y="266" class="desc">蓝绿部署 · 5分钟回滚</text>
   <text x="710" y="260" class="value-sm accent-olive">$$</text>
-
-  <!-- Row 3: LOW -->
-  <rect x="470" y="290" width="290" height="52" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <rect x="470" y="290" width="290" height="52" rx="6" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
+  <rect width="290" height="52" x="470" y="290" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <rect width="290" height="52" x="470" y="290" fill="#e3dacc" stroke="#d1cfc5" rx="6"/>
   <text x="490" y="310" class="label-sm">低</text>
   <text x="490" y="326" class="desc">内部工具 · 原型</text>
   <text x="575" y="314" class="label-sm">抽查 + 用户反馈</text>
   <text x="575" y="330" class="desc">低成本监控</text>
   <text x="710" y="318" class="value-sm accent-olive">$</text>
-
-  <!-- ===== BOTTOM INSIGHT ===== -->
-  <rect x="470" y="360" width="290" height="90" rx="8" fill="#FAF9F5" stroke="#788C5D" stroke-width="1.5"/>
-
-  <!-- Insurance mechanism icons -->
-  <circle cx="495" cy="385" r="12" fill="#D97757"/>
-  <text x="495" y="390" text-anchor="middle" class="label-sm white">1</text>
+  <rect width="290" height="90" x="470" y="360" fill="#faf9f5" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <circle cx="495" cy="385" r="12" fill="#d97757"/>
+  <text x="495" y="390" class="label-sm white" text-anchor="middle">1</text>
   <text x="512" y="382" class="label-sm">人工复核保险</text>
   <text x="512" y="396" class="desc">高风险决策强制复核</text>
-
-  <circle cx="495" cy="415" r="12" fill="#D97757"/>
-  <text x="495" y="420" text-anchor="middle" class="label-sm white">2</text>
+  <circle cx="495" cy="415" r="12" fill="#d97757"/>
+  <text x="495" y="420" class="label-sm white" text-anchor="middle">2</text>
   <text x="512" y="412" class="label-sm">回滚机制保险</text>
   <text x="512" y="426" class="desc">5分钟内可回滚</text>
-
-  <!-- Footer -->
   <text x="40" y="462" class="desc">核心原则：不追求零幻觉，在成本和风险间找到最优平衡点</text>
   <text x="700" y="462" class="desc">来源：AI-Native 软件工程系列 #42</text>
 </svg>

@@ -1,84 +1,48 @@
-<svg viewBox="0 0 680 320" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="680" height="320" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">RAG-DD 核心工作流</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">RAG-DD · 检索增强生成驱动开发</text>
-
-  <!-- Main flow: 5 nodes across -->
-  <!-- Node 1: User Query -->
-  <rect x="30" y="80" width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="75" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">用户</text>
-  <text x="75" y="117" text-anchor="middle" font-size="11" fill="#141413">自然语言</text>
-  <text x="75" y="130" text-anchor="middle" font-size="11" fill="#141413">查询</text>
-
-  <!-- Arrow 1→2 -->
-  <line x1="120" y1="108" x2="140" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="140,104 134,108 140,112" fill="#D1CFC5"/>
-
-  <!-- Node 2: Intent Parser -->
-  <rect x="150" y="80" width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="195" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">意图解析器</text>
-  <text x="195" y="117" text-anchor="middle" font-size="11" fill="#141413">Intent</text>
-  <text x="195" y="130" text-anchor="middle" font-size="11" fill="#141413">Parser</text>
-
-  <!-- Arrow 2→3 -->
-  <line x1="240" y1="108" x2="260" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="260,104 254,108 260,112" fill="#D1CFC5"/>
-
-  <!-- Node 3: Retrieval Engine -->
-  <rect x="270" y="80" width="90" height="56" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="315" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">知识检索</text>
-  <text x="315" y="117" text-anchor="middle" font-size="11" fill="#141413">Retrieval</text>
-  <text x="315" y="130" text-anchor="middle" font-size="11" fill="#141413">Engine</text>
-
-  <!-- Arrow 3→4 -->
-  <line x1="360" y1="108" x2="380" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="380,104 374,108 380,112" fill="#D1CFC5"/>
-
-  <!-- Node 4: Fusion Engine -->
-  <rect x="390" y="80" width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="435" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">上下文融合</text>
-  <text x="435" y="117" text-anchor="middle" font-size="11" fill="#141413">Fusion</text>
-  <text x="435" y="130" text-anchor="middle" font-size="11" fill="#141413">Engine</text>
-
-  <!-- Arrow 4→5 -->
-  <line x1="480" y1="108" x2="500" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="500,104 494,108 500,112" fill="#D1CFC5"/>
-
-  <!-- Node 5: Generated Code -->
-  <rect x="510" y="80" width="90" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="555" y="102" text-anchor="middle" font-size="10" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">生成代码</text>
-  <text x="555" y="117" text-anchor="middle" font-size="11" fill="#141413">Generated</text>
-  <text x="555" y="130" text-anchor="middle" font-size="11" fill="#141413">Code</text>
-
-  <!-- Feedback arrow: bottom path from Node 5 back to Node 3 -->
-  <path d="M 555 140 L 555 155 L 315 155 L 315 140" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
-  <polygon points="315,140 309,146 321,146" fill="#D97757" opacity="0.7"/>
-  <text x="435" y="164" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">反馈迭代</text>
-
-  <!-- Knowledge Base box (right side, tall) -->
-  <rect x="510" y="200" width="150" height="100" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="585" y="218" text-anchor="middle" font-size="10" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">企业知识库</text>
-
-  <!-- Knowledge layers stacked -->
-  <rect x="520" y="226" width="130" height="18" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="585" y="239" text-anchor="middle" font-size="9" fill="#141413">编码规范</text>
-
-  <rect x="520" y="248" width="130" height="18" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="585" y="261" text-anchor="middle" font-size="9" fill="#141413">架构模式</text>
-
-  <rect x="520" y="270" width="130" height="18" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="585" y="283" text-anchor="middle" font-size="9" fill="#141413">业务规则</text>
-
-  <!-- Arrow from KB to Retrieval Engine (upward) -->
-  <line x1="585" y1="200" x2="585" y2="140" stroke="#788C5D" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.6"/>
-  <polygon points="585,140 581,148 589,148" fill="#788C5D" opacity="0.6"/>
-  <text x="605" y="172" font-size="8" fill="#788C5D" font-family="ui-monospace, monospace">检索</text>
-
-  <!-- Source line -->
-  <text x="340" y="310" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">RAG-DD 核心工作流 · 向量检索 + 上下文融合</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 320">
+  <path fill="#faf9f5" d="M0 0h680v320H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">RAG-DD 核心工作流</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">RAG-DD · 检索增强生成驱动开发</text>
+  <rect width="90" height="56" x="30" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="75" y="102" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">用户</text>
+  <text x="75" y="117" fill="#141413" font-size="11" text-anchor="middle">自然语言</text>
+  <text x="75" y="130" fill="#141413" font-size="11" text-anchor="middle">查询</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M120 108h20"/>
+  <path fill="#d1cfc5" d="m140 104-6 4 6 4z"/>
+  <rect width="90" height="56" x="150" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="195" y="102" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">意图解析器</text>
+  <text x="195" y="117" fill="#141413" font-size="11" text-anchor="middle">Intent</text>
+  <text x="195" y="130" fill="#141413" font-size="11" text-anchor="middle">Parser</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M240 108h20"/>
+  <path fill="#d1cfc5" d="m260 104-6 4 6 4z"/>
+  <rect width="90" height="56" x="270" y="80" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="315" y="102" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">知识检索</text>
+  <text x="315" y="117" fill="#141413" font-size="11" text-anchor="middle">Retrieval</text>
+  <text x="315" y="130" fill="#141413" font-size="11" text-anchor="middle">Engine</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M360 108h20"/>
+  <path fill="#d1cfc5" d="m380 104-6 4 6 4z"/>
+  <rect width="90" height="56" x="390" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="435" y="102" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">上下文融合</text>
+  <text x="435" y="117" fill="#141413" font-size="11" text-anchor="middle">Fusion</text>
+  <text x="435" y="130" fill="#141413" font-size="11" text-anchor="middle">Engine</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M480 108h20"/>
+  <path fill="#d1cfc5" d="m500 104-6 4 6 4z"/>
+  <rect width="90" height="56" x="510" y="80" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="555" y="102" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">生成代码</text>
+  <text x="555" y="117" fill="#141413" font-size="11" text-anchor="middle">Generated</text>
+  <text x="555" y="130" fill="#141413" font-size="11" text-anchor="middle">Code</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" d="M555 140v15H315v-15" opacity=".7"/>
+  <path fill="#d97757" d="m315 140-6 6h12z" opacity=".7"/>
+  <text x="435" y="164" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">反馈迭代</text>
+  <rect width="150" height="100" x="510" y="200" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="585" y="218" fill="#788c5d" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">企业知识库</text>
+  <rect width="130" height="18" x="520" y="226" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="585" y="239" fill="#141413" font-size="9" text-anchor="middle">编码规范</text>
+  <rect width="130" height="18" x="520" y="248" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="585" y="261" fill="#141413" font-size="9" text-anchor="middle">架构模式</text>
+  <rect width="130" height="18" x="520" y="270" fill="#f0eee6" stroke="#d1cfc5" rx="4"/>
+  <text x="585" y="283" fill="#141413" font-size="9" text-anchor="middle">业务规则</text>
+  <path stroke="#788c5d" stroke-dasharray="3,2" stroke-width="1.5" d="M585 200v-60" opacity=".6"/>
+  <path fill="#788c5d" d="m585 140-4 8h8z" opacity=".6"/>
+  <text x="605" y="172" fill="#788c5d" font-family="ui-monospace, monospace" font-size="8">检索</text>
+  <text x="340" y="310" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">RAG-DD 核心工作流 · 向量检索 + 上下文融合</text>
 </svg>

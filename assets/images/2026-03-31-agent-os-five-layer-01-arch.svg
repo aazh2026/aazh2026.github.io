@@ -1,93 +1,65 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" role="img" aria-label="Agent OS 五层架构图">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Agent OS 五层架构图" viewBox="0 0 900 540">
   <title>Agent OS 五层架构全景图</title>
-  <desc>Agent OS 的五层架构：Tools &amp; Connectors → Memory &amp; State → Agent Runtime → Orchestration → Interface</desc>
-
+  <desc>
+    Agent OS 的五层架构：Tools &amp; Connectors → Memory &amp; State → Agent Runtime → Orchestration → Interface
+  </desc>
   <defs>
-    <!-- 圆角矩形裁剪 -->
     <clipPath id="outer-clip">
       <rect width="900" height="540" rx="14"/>
     </clipPath>
   </defs>
-
-  <!-- 背景 -->
-  <rect width="900" height="540" rx="14" fill="#FAF9F5"/>
-
-  <!-- 顶层 Layer 5: Interface (Clay #D97757) -->
-  <rect x="40" y="24" width="820" height="88" rx="10" fill="#D97757" clip-path="url(#outer-clip)"/>
-  <!-- 层编号圆 -->
-  <circle cx="76" cy="68" r="22" fill="#FAF9F5"/>
-  <text x="76" y="74" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#D97757">5</text>
-  <!-- 层名称 -->
-  <text x="112" y="60" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold" fill="#FAF9F5">Layer 5: Interface Layer</text>
-  <text x="112" y="84" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" fill="#FAF9F5" opacity="0.88">用户交互层：自然语言接口、命令行、轻量 GUI</text>
-
-  <!-- 连接箭头 5→4 -->
-  <path d="M450 116 L450 136" stroke="#D1CFC5" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect width="900" height="540" fill="#faf9f5" rx="14"/>
+  <rect width="820" height="88" x="40" y="24" fill="#d97757" clip-path="url(#outer-clip)" rx="10"/>
+  <circle cx="76" cy="68" r="22" fill="#faf9f5"/>
+  <text x="76" y="74" fill="#d97757" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">5</text>
+  <text x="112" y="60" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold">Layer 5: Interface Layer</text>
+  <text x="112" y="84" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" opacity=".88">用户交互层：自然语言接口、命令行、轻量 GUI</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" marker-end="url(#arrow)" d="M450 116v20"/>
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/>
+    <marker id="arrow" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
     </marker>
   </defs>
-
-  <!-- Layer 4: Orchestration (Olive #788C5D) -->
-  <rect x="40" y="140" width="820" height="88" rx="10" fill="#788C5D" clip-path="url(#outer-clip)"/>
-  <circle cx="76" cy="184" r="22" fill="#FAF9F5"/>
-  <text x="76" y="190" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#788C5D">4</text>
-  <text x="112" y="176" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold" fill="#FAF9F5">Layer 4: Orchestration Layer</text>
-  <text x="112" y="200" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" fill="#FAF9F5" opacity="0.88">编排层：多 Agent 协作、工作流管理、任务调度</text>
-
-  <!-- 连接箭头 4→3 -->
-  <path d="M450 232 L450 252" stroke="#D1CFC5" stroke-width="2.5" marker-end="url(#arrow2)"/>
+  <rect width="820" height="88" x="40" y="140" fill="#788c5d" clip-path="url(#outer-clip)" rx="10"/>
+  <circle cx="76" cy="184" r="22" fill="#faf9f5"/>
+  <text x="76" y="190" fill="#788c5d" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">4</text>
+  <text x="112" y="176" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold">Layer 4: Orchestration Layer</text>
+  <text x="112" y="200" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" opacity=".88">编排层：多 Agent 协作、工作流管理、任务调度</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" marker-end="url(#arrow2)" d="M450 232v20"/>
   <defs>
-    <marker id="arrow2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/>
+    <marker id="arrow2" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
     </marker>
   </defs>
-
-  <!-- Layer 3: Runtime (Slate #141413) -->
-  <rect x="40" y="256" width="820" height="88" rx="10" fill="#141413" clip-path="url(#outer-clip)"/>
-  <circle cx="76" cy="300" r="22" fill="#FAF9F5"/>
-  <text x="76" y="306" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#141413">3</text>
-  <text x="112" y="292" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold" fill="#FAF9F5">Layer 3: Agent Runtime Layer</text>
-  <text x="112" y="316" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" fill="#FAF9F5" opacity="0.88">运行时层：推理循环、工具调用、错误处理</text>
-
-  <!-- 连接箭头 3→2 -->
-  <path d="M450 348 L450 368" stroke="#D1CFC5" stroke-width="2.5" marker-end="url(#arrow3)"/>
+  <rect width="820" height="88" x="40" y="256" fill="#141413" clip-path="url(#outer-clip)" rx="10"/>
+  <circle cx="76" cy="300" r="22" fill="#faf9f5"/>
+  <text x="76" y="306" fill="#141413" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">3</text>
+  <text x="112" y="292" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold">Layer 3: Agent Runtime Layer</text>
+  <text x="112" y="316" fill="#faf9f5" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" opacity=".88">运行时层：推理循环、工具调用、错误处理</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" marker-end="url(#arrow3)" d="M450 348v20"/>
   <defs>
-    <marker id="arrow3" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/>
+    <marker id="arrow3" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
     </marker>
   </defs>
-
-  <!-- Layer 2: Memory (Oat #E3DACC text on Slate) -->
-  <rect x="40" y="372" width="820" height="88" rx="10" fill="#141413" clip-path="url(#outer-clip)"/>
-  <circle cx="76" cy="416" r="22" fill="#E3DACC"/>
-  <text x="76" y="422" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#141413">2</text>
-  <text x="112" y="408" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold" fill="#E3DACC">Layer 2: Memory &amp; State Layer</text>
-  <text x="112" y="432" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" fill="#E3DACC" opacity="0.88">记忆层：短期记忆、长期记忆、知识图谱、状态管理</text>
-
-  <!-- 连接箭头 2→1 -->
-  <path d="M450 464 L450 484" stroke="#D1CFC5" stroke-width="2.5" marker-end="url(#arrow4)"/>
+  <rect width="820" height="88" x="40" y="372" fill="#141413" clip-path="url(#outer-clip)" rx="10"/>
+  <circle cx="76" cy="416" r="22" fill="#e3dacc"/>
+  <text x="76" y="422" fill="#141413" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">2</text>
+  <text x="112" y="408" fill="#e3dacc" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="22" font-weight="bold">Layer 2: Memory &amp; State Layer</text>
+  <text x="112" y="432" fill="#e3dacc" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="14" opacity=".88">记忆层：短期记忆、长期记忆、知识图谱、状态管理</text>
+  <path stroke="#d1cfc5" stroke-width="2.5" marker-end="url(#arrow4)" d="M450 464v20"/>
   <defs>
-    <marker id="arrow4" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-      <path d="M0,0 L8,4 L0,8 Z" fill="#D1CFC5"/>
+    <marker id="arrow4" markerHeight="8" markerWidth="8" orient="auto" refX="4" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4Z"/>
     </marker>
   </defs>
-
-  <!-- Layer 1: Tools (G300 border only, not filled — bottom layer) -->
-  <rect x="40" y="488" width="820" height="36" rx="0" fill="none" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="40" y="488" width="820" height="36" rx="10" fill="#E3DACC" clip-path="url(#outer-clip)"/>
-  <!-- Bottom cap for rounded corners -->
-  <rect x="40" y="510" width="820" height="14" fill="#E3DACC"/>
-  <circle cx="76" cy="506" r="22" fill="#87867F"/>
-  <text x="76" y="512" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#FAF9F5">1</text>
-  <text x="112" y="504" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="20" font-weight="bold" fill="#141413">Layer 1: Tools &amp; Connectors Layer</text>
-  <text x="580" y="504" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="13" fill="#87867F">API 连接、数据读写、外部系统交互</text>
-
-  <!-- 右侧：双向数据流指示 -->
-  <!-- 上行虚线箭头 (请求) -->
-  <path d="M858 68 C878 68, 878 184, 858 184 C838 184, 838 300, 858 300 C878 300, 878 416, 858 416 C838 416, 838 506, 858 506"
-        stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,4" fill="none"/>
-  <text x="882" y="290" font-family="'Noto Sans SC', sans-serif" font-size="11" fill="#87867F" transform="rotate(90,882,290)">请求 ↑ / 响应 ↓</text>
-
+  <rect width="820" height="36" x="40" y="488" fill="none" stroke="#d1cfc5" stroke-width="1.5" rx="0"/>
+  <rect width="820" height="36" x="40" y="488" fill="#e3dacc" clip-path="url(#outer-clip)" rx="10"/>
+  <path fill="#e3dacc" d="M40 510h820v14H40z"/>
+  <circle cx="76" cy="506" r="22" fill="#87867f"/>
+  <text x="76" y="512" fill="#faf9f5" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">1</text>
+  <text x="112" y="504" fill="#141413" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="20" font-weight="bold">Layer 1: Tools &amp; Connectors Layer</text>
+  <text x="580" y="504" fill="#87867f" font-family="'Noto Sans SC', 'PingFang SC', sans-serif" font-size="13">API 连接、数据读写、外部系统交互</text>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="5,4" stroke-width="1.5" d="M858 68c20 0 20 116 0 116s-20 116 0 116 20 116 0 116-20 90 0 90"/>
+  <text x="882" y="290" fill="#87867f" font-family="'Noto Sans SC', sans-serif" font-size="11" transform="rotate(90 882 290)">请求 ↑ / 响应 ↓</text>
 </svg>

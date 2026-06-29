@@ -1,107 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" role="img" aria-label="User Story Pack 三层结构">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="User Story Pack 三层结构" viewBox="0 0 900 480">
   <title>User Story Pack 三层结构：Story → Scenario → Example</title>
-  <desc>展示 User Story Pack 的层次化结构：Story（用户故事）、Scenarios（场景集）、Examples（示例数据）</desc>
-
+  <desc>
+    展示 User Story Pack 的层次化结构：Story（用户故事）、Scenarios（场景集）、Examples（示例数据）
+  </desc>
   <defs>
-    <filter id="sf1" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#141413" flood-opacity="0.12"/>
+    <marker id="dArr" markerHeight="8" markerWidth="8" orient="auto" refX="8" refY="4">
+      <path fill="#d1cfc5" d="m0 0 8 4-8 4z"/>
+    </marker>
+    <filter id="sf1" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="3" flood-color="#141413" flood-opacity=".12" stdDeviation="4"/>
     </filter>
-    <marker id="dArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#D1CFC5"/>
-    </marker>
-    <marker id="oArr" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
-      <polygon points="0 0, 8 4, 0 8" fill="#D97757"/>
-    </marker>
   </defs>
-
-  <rect width="900" height="480" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="30" y="35" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#141413">User Story Pack 三层结构</text>
-  <text x="30" y="53" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">Story（用户故事） → Scenarios（场景集） → Examples（示例数据）</text>
-
-  <!-- Layer 1: Story -->
+  <path fill="#faf9f5" d="M0 0h900v480H0z"/>
+  <text x="30" y="35" fill="#141413" font-family="system-ui,sans-serif" font-size="15" font-weight="700">User Story Pack 三层结构</text>
+  <text x="30" y="53" fill="#87867f" font-family="system-ui,sans-serif" font-size="10">Story（用户故事） → Scenarios（场景集） → Examples（示例数据）</text>
   <g filter="url(#sf1)">
-    <rect x="30" y="68" width="840" height="100" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <rect x="30" y="68" width="840" height="40" rx="10" fill="#788C5D"/>
-    <rect x="30" y="98" width="840" height="10" fill="#788C5D"/>
-    <text x="450" y="93" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">Layer 1: Story（用户故事）</text>
-    <text x="450" y="130" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">一句话概述用户目标的价值和意义</text>
-    <text x="450" y="152" font-family="system-ui,sans-serif" font-size="10" fill="#87867F" text-anchor="middle">As a [角色] · I want [功能] · So that [价值]</text>
+    <rect width="840" height="100" x="30" y="68" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="10"/>
+    <rect width="840" height="40" x="30" y="68" fill="#788c5d" rx="10"/>
+    <path fill="#788c5d" d="M30 98h840v10H30z"/>
+    <text x="450" y="93" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Layer 1: Story（用户故事）</text>
+    <text x="450" y="130" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">一句话概述用户目标的价值和意义</text>
+    <text x="450" y="152" fill="#87867f" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle">As a [角色] · I want [功能] · So that [价值]</text>
   </g>
-
-  <!-- Arrow -->
-  <line x1="450" y1="168" x2="450" y2="188" stroke="#D1CFC5" stroke-width="3" marker-end="url(#dArr)"/>
-  <text x="470" y="182" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">展开</text>
-
-  <!-- Layer 2: Scenarios -->
+  <path stroke="#d1cfc5" stroke-width="3" marker-end="url(#dArr)" d="M450 168v20"/>
+  <text x="470" y="182" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">展开</text>
   <g filter="url(#sf1)">
-    <rect x="30" y="195" width="840" height="150" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
-    <rect x="30" y="195" width="840" height="40" rx="10" fill="#D97757"/>
-    <rect x="30" y="225" width="840" height="10" fill="#D97757"/>
-    <text x="450" y="220" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">Layer 2: Scenarios（场景集）</text>
-    <text x="450" y="260" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">穷尽所有可能的交互路径</text>
-
-    <!-- Scenario cards -->
-    <g transform="translate(60, 275)">
-      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <rect width="150" height="4" rx="2" fill="#788C5D"/>
-      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">正常流程</text>
-      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">happy_path</text>
-      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#788C5D" text-anchor="middle">SC-001</text>
+    <rect width="840" height="150" x="30" y="195" fill="#faf9f5" stroke="#d97757" stroke-width="2" rx="10"/>
+    <rect width="840" height="40" x="30" y="195" fill="#d97757" rx="10"/>
+    <path fill="#d97757" d="M30 225h840v10H30z"/>
+    <text x="450" y="220" fill="#faf9f5" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Layer 2: Scenarios（场景集）</text>
+    <text x="450" y="260" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">穷尽所有可能的交互路径</text>
+    <g transform="translate(60 275)">
+      <rect width="150" height="55" fill="#faf9f5" stroke="#e3dacc" rx="6"/>
+      <rect width="150" height="4" fill="#788c5d" rx="2"/>
+      <text x="75" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle">正常流程</text>
+      <text x="75" y="35" fill="#87867f" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">happy_path</text>
+      <text x="75" y="48" fill="#788c5d" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">SC-001</text>
     </g>
-
-    <g transform="translate(225, 275)">
-      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <rect width="150" height="4" rx="2" fill="#D97757"/>
-      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">边界条件</text>
-      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">boundary</text>
-      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#D97757" text-anchor="middle">SC-002</text>
+    <g transform="translate(225 275)">
+      <rect width="150" height="55" fill="#faf9f5" stroke="#e3dacc" rx="6"/>
+      <rect width="150" height="4" fill="#d97757" rx="2"/>
+      <text x="75" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle">边界条件</text>
+      <text x="75" y="35" fill="#87867f" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">boundary</text>
+      <text x="75" y="48" fill="#d97757" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">SC-002</text>
     </g>
-
-    <g transform="translate(390, 275)">
-      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <rect width="150" height="4" rx="2" fill="#D97757"/>
-      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">错误处理</text>
-      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">error_handling</text>
-      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#D97757" text-anchor="middle">SC-003</text>
+    <g transform="translate(390 275)">
+      <rect width="150" height="55" fill="#faf9f5" stroke="#e3dacc" rx="6"/>
+      <rect width="150" height="4" fill="#d97757" rx="2"/>
+      <text x="75" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle">错误处理</text>
+      <text x="75" y="35" fill="#87867f" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">error_handling</text>
+      <text x="75" y="48" fill="#d97757" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">SC-003</text>
     </g>
-
-    <g transform="translate(555, 275)">
-      <rect width="150" height="55" rx="6" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <rect width="150" height="4" rx="2" fill="#87867F"/>
-      <text x="75" y="20" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#141413" text-anchor="middle">替代路径</text>
-      <text x="75" y="35" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">alternative</text>
-      <text x="75" y="48" font-family="system-ui,sans-serif" font-size="8" fill="#87867F" text-anchor="middle">SC-004</text>
+    <g transform="translate(555 275)">
+      <rect width="150" height="55" fill="#faf9f5" stroke="#e3dacc" rx="6"/>
+      <rect width="150" height="4" fill="#87867f" rx="2"/>
+      <text x="75" y="20" fill="#141413" font-family="system-ui,sans-serif" font-size="9" font-weight="700" text-anchor="middle">替代路径</text>
+      <text x="75" y="35" fill="#87867f" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">alternative</text>
+      <text x="75" y="48" fill="#87867f" font-family="system-ui,sans-serif" font-size="8" text-anchor="middle">SC-004</text>
     </g>
-
-    <text x="720" y="305" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">Given-When-Then</text>
+    <text x="720" y="305" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">Given-When-Then</text>
   </g>
-
-  <!-- Arrow -->
-  <line x1="450" y1="345" x2="450" y2="365" stroke="#D1CFC5" stroke-width="3" marker-end="url(#dArr)"/>
-  <text x="470" y="359" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">填充数据</text>
-
-  <!-- Layer 3: Examples -->
+  <path stroke="#d1cfc5" stroke-width="3" marker-end="url(#dArr)" d="M450 345v20"/>
+  <text x="470" y="359" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">填充数据</text>
   <g filter="url(#sf1)">
-    <rect x="30" y="372" width="840" height="95" rx="10" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="2"/>
-    <rect x="30" y="372" width="840" height="40" rx="10" fill="#D1CFC5"/>
-    <rect x="30" y="402" width="840" height="10" fill="#D1CFC5"/>
-    <text x="450" y="397" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#141413" text-anchor="middle">Layer 3: Examples（示例数据）</text>
-    <text x="450" y="432" font-family="system-ui,sans-serif" font-size="11" fill="#141413" text-anchor="middle">提供具体的测试数据，消除歧义</text>
-
-    <!-- Example cards -->
-    <g transform="translate(100, 445)">
-      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">user: { id: U12345, tier: vip }</text>
+    <rect width="840" height="95" x="30" y="372" fill="#faf9f5" stroke="#d1cfc5" stroke-width="2" rx="10"/>
+    <rect width="840" height="40" x="30" y="372" fill="#d1cfc5" rx="10"/>
+    <path fill="#d1cfc5" d="M30 402h840v10H30z"/>
+    <text x="450" y="397" fill="#141413" font-family="system-ui,sans-serif" font-size="14" font-weight="700" text-anchor="middle">Layer 3: Examples（示例数据）</text>
+    <text x="450" y="432" fill="#141413" font-family="system-ui,sans-serif" font-size="11" text-anchor="middle">提供具体的测试数据，消除歧义</text>
+    <g transform="translate(100 445)">
+      <rect width="200" height="12" fill="#faf9f5" stroke="#e3dacc" rx="3"/>
+      <text x="10" y="10" fill="#141413" font-family="monospace" font-size="8">user: { id: U12345, tier: vip }</text>
     </g>
-    <g transform="translate(310, 445)">
-      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">orders: [ ORD-001, ORD-002 ]</text>
+    <g transform="translate(310 445)">
+      <rect width="200" height="12" fill="#faf9f5" stroke="#e3dacc" rx="3"/>
+      <text x="10" y="10" fill="#141413" font-family="monospace" font-size="8">orders: [ ORD-001, ORD-002 ]</text>
     </g>
-    <g transform="translate(520, 445)">
-      <rect width="200" height="12" rx="3" fill="#FAF9F5" stroke="#E3DACC" stroke-width="1"/>
-      <text x="10" y="10" font-family="monospace" font-size="8" fill="#141413">expected: { total: ¥897.00 }</text>
+    <g transform="translate(520 445)">
+      <rect width="200" height="12" fill="#faf9f5" stroke="#e3dacc" rx="3"/>
+      <text x="10" y="10" fill="#141413" font-family="monospace" font-size="8">expected: { total: ¥897.00 }</text>
     </g>
   </g>
 </svg>

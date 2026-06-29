@@ -1,84 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
-  <rect width="900" height="560" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">Skill 是目录，不是文件</text>
-  <text x="450" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#87867F">Perplexity Skills 目录结构与层级关系</text>
-
-  <!-- Main folder structure -->
-  <!-- skill-name/ root -->
-  <rect x="350" y="90" width="200" height="45" rx="6" fill="#D97757"/>
-  <text x="450" y="116" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FAF9F5">skill-name/</text>
-
-  <!-- SKILL.md - the main file -->
-  <rect x="100" y="165" width="180" height="70" rx="6" fill="#141413"/>
-  <text x="190" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FAF9F5">SKILL.md</text>
-  <text x="190" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#D1CFC5">核心指令 · frontmatter</text>
-
-  <!-- scripts/ folder -->
-  <rect x="310" y="165" width="180" height="70" rx="6" fill="#788C5D"/>
-  <text x="400" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FAF9F5">scripts/</text>
-  <text x="400" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#E3DACC">agent 运行而非重写</text>
-
-  <!-- references/ folder -->
-  <rect x="520" y="165" width="180" height="70" rx="6" fill="#D1CFC5" stroke="#87867F" stroke-width="1.5"/>
-  <text x="610" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#141413">references/</text>
-  <text x="610" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#87867F">按条件加载的重文档</text>
-
-  <!-- assets/ folder -->
-  <rect x="730" y="165" width="150" height="70" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="805" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#141413">assets/</text>
-  <text x="805" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#87867F">模板、schemas</text>
-
-  <!-- config.json -->
-  <rect x="730" y="260" width="150" height="50" rx="6" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="805" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#141413">config.json</text>
-
-  <!-- Connecting lines -->
-  <path d="M450 135 L450 165" stroke="#87867F" stroke-width="2"/>
-  <path d="M190 165 L190 155 L450 155 L450 165" stroke="#87867F" stroke-width="1.5" fill="none"/>
-  <path d="M400 165 L400 155 L450 155" stroke="#87867F" stroke-width="1.5" fill="none"/>
-  <path d="M610 165 L610 155 L450 155" stroke="#87867F" stroke-width="1.5" fill="none"/>
-  <path d="M805 165 L805 155 L450 155" stroke="#87867F" stroke-width="1.5" fill="none"/>
-  <path d="M805 260 L805 235" stroke="#87867F" stroke-width="1.5" fill="none"/>
-
-  <!-- Three context cost layers -->
-  <rect x="50" y="340" width="800" height="195" rx="12" fill="#E3DACC" fill-opacity="0.3"/>
-
-  <text x="450" y="365" text-anchor="middle" font-family="Georgia, serif" font-size="16" font-weight="bold" fill="#141413">三层 Context 成本</text>
-
-  <!-- Layer 1: Index -->
-  <rect x="80" y="385" width="220" height="130" rx="8" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2"/>
-  <text x="190" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#D97757">Index</text>
-  <text x="190" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">~100 tokens / Skill</text>
-  <rect x="95" y="445" width="190" height="22" rx="3" fill="#141413"/>
-  <text x="190" y="461" text-anchor="middle" font-family="Courier, monospace" font-size="10" fill="#FAF9F5">name: description</text>
-  <text x="190" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#87867F">每个 session · 每个用户</text>
-  <text x="190" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#D97757">始终付出</text>
-
-  <!-- Layer 2: Load -->
-  <rect x="340" y="385" width="220" height="130" rx="8" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2"/>
-  <text x="450" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#788C5D">Load</text>
-  <text x="450" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">~5,000 tokens</text>
-  <rect x="355" y="445" width="190" height="22" rx="3" fill="#141413"/>
-  <text x="450" y="461" text-anchor="middle" font-family="Courier, monospace" font-size="10" fill="#FAF9F5">SKILL.md body</text>
-  <text x="450" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#87867F">运行时加载</text>
-  <text x="450" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#788C5D">剩余对话持续付出</text>
-
-  <!-- Layer 3: Runtime -->
-  <rect x="600" y="385" width="220" height="130" rx="8" fill="#141413" fill-opacity="0.08" stroke="#141413" stroke-width="2"/>
-  <text x="710" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#141413">Runtime</text>
-  <text x="710" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">无上限</text>
-  <rect x="615" y="445" width="190" height="22" rx="3" fill="#D1CFC5"/>
-  <text x="710" y="461" text-anchor="middle" font-family="Courier, monospace" font-size="10" fill="#141413">scripts/</text>
-  <text x="710" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#87867F">仅当 agent 读取时</text>
-  <text x="710" y="512" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#788C5D">0 ~ ∞ tokens</text>
-
-  <!-- Arrows between layers -->
-  <path d="M305 450 L335 450 M325 440 L335 450 L325 460" stroke="#87867F" stroke-width="2" fill="none"/>
-  <path d="M565 450 L595 450 M585 440 L595 450 L585 460" stroke="#87867F" stroke-width="2" fill="none"/>
-
-  <!-- Key insight -->
-  <rect x="80" y="530" width="740" height="24" rx="4" fill="#D97757" fill-opacity="0.15"/>
-  <text x="450" y="546" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#141413">Index 成本最紧 —— 每个 token 都影响 system prompt</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <path fill="#faf9f5" d="M0 0h900v560H0z"/>
+  <text x="450" y="42" fill="#141413" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle">Skill 是目录，不是文件</text>
+  <text x="450" y="65" fill="#87867f" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">Perplexity Skills 目录结构与层级关系</text>
+  <rect width="200" height="45" x="350" y="90" fill="#d97757" rx="6"/>
+  <text x="450" y="116" fill="#faf9f5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">skill-name/</text>
+  <rect width="180" height="70" x="100" y="165" fill="#141413" rx="6"/>
+  <text x="190" y="195" fill="#faf9f5" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">SKILL.md</text>
+  <text x="190" y="215" fill="#d1cfc5" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">核心指令 · frontmatter</text>
+  <rect width="180" height="70" x="310" y="165" fill="#788c5d" rx="6"/>
+  <text x="400" y="195" fill="#faf9f5" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">scripts/</text>
+  <text x="400" y="215" fill="#e3dacc" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">agent 运行而非重写</text>
+  <rect width="180" height="70" x="520" y="165" fill="#d1cfc5" stroke="#87867f" stroke-width="1.5" rx="6"/>
+  <text x="610" y="195" fill="#141413" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">references/</text>
+  <text x="610" y="215" fill="#87867f" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">按条件加载的重文档</text>
+  <rect width="150" height="70" x="730" y="165" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="805" y="195" fill="#141413" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">assets/</text>
+  <text x="805" y="215" fill="#87867f" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">模板、schemas</text>
+  <rect width="150" height="50" x="730" y="260" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="805" y="290" fill="#141413" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">config.json</text>
+  <path stroke="#87867f" stroke-width="2" d="M450 135v30"/>
+  <path fill="none" stroke="#87867f" stroke-width="1.5" d="M190 165v-10h260v10"/>
+  <path fill="none" stroke="#87867f" stroke-width="1.5" d="M400 165v-10h50m160 10v-10H450"/>
+  <path fill="none" stroke="#87867f" stroke-width="1.5" d="M805 165v-10H450m355 105v-25"/>
+  <rect width="800" height="195" x="50" y="340" fill="#e3dacc" fill-opacity=".3" rx="12"/>
+  <text x="450" y="365" fill="#141413" font-family="Georgia, serif" font-size="16" font-weight="bold" text-anchor="middle">三层 Context 成本</text>
+  <rect width="220" height="130" x="80" y="385" fill="#d97757" fill-opacity=".15" stroke="#d97757" stroke-width="2" rx="8"/>
+  <text x="190" y="412" fill="#d97757" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Index</text>
+  <text x="190" y="432" fill="#141413" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">~100 tokens / Skill</text>
+  <rect width="190" height="22" x="95" y="445" fill="#141413" rx="3"/>
+  <text x="190" y="461" fill="#faf9f5" font-family="Courier, monospace" font-size="10" text-anchor="middle">name: description</text>
+  <text x="190" y="500" fill="#87867f" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">每个 session · 每个用户</text>
+  <text x="190" y="512" fill="#d97757" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">始终付出</text>
+  <rect width="220" height="130" x="340" y="385" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" stroke-width="2" rx="8"/>
+  <text x="450" y="412" fill="#788c5d" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Load</text>
+  <text x="450" y="432" fill="#141413" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">~5,000 tokens</text>
+  <rect width="190" height="22" x="355" y="445" fill="#141413" rx="3"/>
+  <text x="450" y="461" fill="#faf9f5" font-family="Courier, monospace" font-size="10" text-anchor="middle">SKILL.md body</text>
+  <text x="450" y="500" fill="#87867f" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">运行时加载</text>
+  <text x="450" y="512" fill="#788c5d" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">剩余对话持续付出</text>
+  <rect width="220" height="130" x="600" y="385" fill="#141413" fill-opacity=".08" stroke="#141413" stroke-width="2" rx="8"/>
+  <text x="710" y="412" fill="#141413" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Runtime</text>
+  <text x="710" y="432" fill="#141413" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">无上限</text>
+  <rect width="190" height="22" x="615" y="445" fill="#d1cfc5" rx="3"/>
+  <text x="710" y="461" fill="#141413" font-family="Courier, monospace" font-size="10" text-anchor="middle">scripts/</text>
+  <text x="710" y="500" fill="#87867f" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">仅当 agent 读取时</text>
+  <text x="710" y="512" fill="#788c5d" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">0 ~ ∞ tokens</text>
+  <path fill="none" stroke="#87867f" stroke-width="2" d="M305 450h30m-10-10 10 10-10 10m240-10h30m-10-10 10 10-10 10"/>
+  <rect width="740" height="24" x="80" y="530" fill="#d97757" fill-opacity=".15" rx="4"/>
+  <text x="450" y="546" fill="#141413" font-family="Georgia, serif" font-size="12" font-style="italic" text-anchor="middle">Index 成本最紧 —— 每个 token 都影响 system prompt</text>
 </svg>

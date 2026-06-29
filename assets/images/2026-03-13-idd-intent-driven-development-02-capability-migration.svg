@@ -1,111 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="system-ui,-apple-system,sans-serif">
-  <!-- Background -->
-  <rect width="860" height="400" fill="#FAF9F5" rx="12"/>
-
-  <!-- Title -->
-  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">开发者能力迁移矩阵：从编码技能到意图架构师</text>
-  <text x="30" y="56" font-size="11" fill="#87867F">传统开发者 → AI时代开发者 能力栈对比</text>
-
-  <!-- Left column: Traditional -->
-  <rect x="30" y="76" width="360" height="280" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="10"/>
-  <rect x="30" y="76" width="360" height="36" fill="#D1CFC5" rx="10"/>
-  <rect x="30" y="100" width="360" height="12" fill="#D1CFC5"/>
-  <text x="210" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#141413">传统开发者能力栈</text>
-
-  <!-- Traditional items -->
-  <rect x="50" y="126" width="100" height="22" fill="#E3DACC" rx="4"/>
-  <text x="100" y="141" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">编程语言能力</text>
-  <rect x="160" y="126" width="70" height="22" fill="#E3DACC" rx="4"/>
-  <text x="195" y="141" text-anchor="middle" font-size="9" fill="#141413">语法掌握</text>
-  <rect x="240" y="126" width="70" height="22" fill="#E3DACC" rx="4"/>
-  <text x="275" y="141" text-anchor="middle" font-size="9" fill="#141413">标准库使用</text>
-  <rect x="320" y="126" width="50" height="22" fill="#E3DACC" rx="4"/>
-  <text x="345" y="141" text-anchor="middle" font-size="9" fill="#141413">框架</text>
-
-  <rect x="50" y="156" width="150" height="22" fill="#E3DACC" rx="4"/>
-  <text x="125" y="171" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">算法与数据结构</text>
-  <rect x="210" y="156" width="80" height="22" fill="#E3DACC" rx="4"/>
-  <text x="250" y="171" text-anchor="middle" font-size="9" fill="#141413">系统设计</text>
-  <rect x="300" y="156" width="80" height="22" fill="#E3DACC" rx="4"/>
-  <text x="340" y="171" text-anchor="middle" font-size="9" fill="#141413">调试排错</text>
-
-  <rect x="50" y="186" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="215" y="201" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">工具使用（IDE / Git / CI-CD）</text>
-
-  <rect x="50" y="216" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="215" y="231" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">代码实现速度</text>
-
-  <rect x="50" y="246" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="215" y="261" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">单元测试覆盖率</text>
-
-  <rect x="50" y="276" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="215" y="291" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">API 记忆量</text>
-
-  <rect x="50" y="306" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="215" y="321" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">编码专注（低头写代码）</text>
-
-  <text x="210" y="352" text-anchor="middle" font-size="10" fill="#87867F">核心产出：代码行数 / 功能点</text>
-
-  <!-- Arrow -->
-  <line x1="400" y1="216" x2="448" y2="216" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrow)" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif" viewBox="0 0 860 400">
+  <rect width="860" height="400" fill="#faf9f5" rx="12"/>
+  <text x="30" y="38" fill="#141413" font-size="15" font-weight="700">开发者能力迁移矩阵：从编码技能到意图架构师</text>
+  <text x="30" y="56" fill="#87867f" font-size="11">传统开发者 → AI时代开发者 能力栈对比</text>
+  <rect width="360" height="280" x="30" y="76" fill="none" stroke="#d1cfc5" stroke-width="1.5" rx="10"/>
+  <rect width="360" height="36" x="30" y="76" fill="#d1cfc5" rx="10"/>
+  <path fill="#d1cfc5" d="M30 100h360v12H30z"/>
+  <text x="210" y="100" fill="#141413" font-size="13" font-weight="700" text-anchor="middle">传统开发者能力栈</text>
+  <rect width="100" height="22" x="50" y="126" fill="#e3dacc" rx="4"/>
+  <text x="100" y="141" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">编程语言能力</text>
+  <rect width="70" height="22" x="160" y="126" fill="#e3dacc" rx="4"/>
+  <text x="195" y="141" fill="#141413" font-size="9" text-anchor="middle">语法掌握</text>
+  <rect width="70" height="22" x="240" y="126" fill="#e3dacc" rx="4"/>
+  <text x="275" y="141" fill="#141413" font-size="9" text-anchor="middle">标准库使用</text>
+  <rect width="50" height="22" x="320" y="126" fill="#e3dacc" rx="4"/>
+  <text x="345" y="141" fill="#141413" font-size="9" text-anchor="middle">框架</text>
+  <rect width="150" height="22" x="50" y="156" fill="#e3dacc" rx="4"/>
+  <text x="125" y="171" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">算法与数据结构</text>
+  <rect width="80" height="22" x="210" y="156" fill="#e3dacc" rx="4"/>
+  <text x="250" y="171" fill="#141413" font-size="9" text-anchor="middle">系统设计</text>
+  <rect width="80" height="22" x="300" y="156" fill="#e3dacc" rx="4"/>
+  <text x="340" y="171" fill="#141413" font-size="9" text-anchor="middle">调试排错</text>
+  <rect width="330" height="22" x="50" y="186" fill="#e3dacc" rx="4"/>
+  <text x="215" y="201" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">工具使用（IDE / Git / CI-CD）</text>
+  <rect width="330" height="22" x="50" y="216" fill="#e3dacc" rx="4"/>
+  <text x="215" y="231" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">代码实现速度</text>
+  <rect width="330" height="22" x="50" y="246" fill="#e3dacc" rx="4"/>
+  <text x="215" y="261" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">单元测试覆盖率</text>
+  <rect width="330" height="22" x="50" y="276" fill="#e3dacc" rx="4"/>
+  <text x="215" y="291" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">API 记忆量</text>
+  <rect width="330" height="22" x="50" y="306" fill="#e3dacc" rx="4"/>
+  <text x="215" y="321" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">编码专注（低头写代码）</text>
+  <text x="210" y="352" fill="#87867f" font-size="10" text-anchor="middle">核心产出：代码行数 / 功能点</text>
+  <path fill="none" stroke="#d97757" stroke-width="2.5" marker-end="url(#arrow)" d="M400 216h48"/>
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    <marker id="arrow" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 10 3.5L0 7z"/>
     </marker>
   </defs>
-  <text x="424" y="206" text-anchor="middle" font-size="10" fill="#D97757" font-weight="700">迁移</text>
-
-  <!-- Right column: AI-Era -->
-  <rect x="460" y="76" width="370" height="280" fill="none" stroke="#788C5D" stroke-width="2" rx="10"/>
-  <rect x="460" y="76" width="370" height="36" fill="#788C5D" rx="10"/>
-  <rect x="460" y="100" width="370" height="12" fill="#788C5D"/>
-  <text x="645" y="100" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">AI时代开发者能力栈</text>
-
-  <!-- NEW skills (highlighted) -->
-  <rect x="480" y="126" width="100" height="22" fill="#D97757" rx="4"/>
-  <text x="530" y="141" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">意图表达能力</text>
-  <text x="630" y="141" text-anchor="middle" font-size="9" fill="#87867F">Prompt工程</text>
-  <rect x="700" y="126" width="60" height="22" fill="#D97757" rx="4"/>
-  <text x="730" y="141" text-anchor="middle" font-size="9" font-weight="600" fill="#FAF9F5">上下文</text>
-
-  <rect x="480" y="156" width="100" height="22" fill="#D97757" rx="4"/>
-  <text x="530" y="171" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">审查判断能力</text>
-  <rect x="590" y="156" width="90" height="22" fill="#E3DACC" rx="4"/>
-  <text x="635" y="171" text-anchor="middle" font-size="9" fill="#141413">意图匹配验证</text>
-  <rect x="690" y="156" width="90" height="22" fill="#E3DACC" rx="4"/>
-  <text x="735" y="171" text-anchor="middle" font-size="9" fill="#141413">风险识别</text>
-
-  <rect x="480" y="186" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="645" y="201" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">架构设计能力 ↑ 强化 &amp; 业务理解能力 ↑ 强化</text>
-
-  <rect x="480" y="216" width="140" height="22" fill="#D97757" rx="4"/>
-  <text x="550" y="231" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">AI协作能力 ⭐NEW</text>
-  <rect x="630" y="216" width="70" height="22" fill="#E3DACC" rx="4"/>
-  <text x="665" y="231" text-anchor="middle" font-size="9" fill="#141413">多轮对话</text>
-  <rect x="710" y="216" width="70" height="22" fill="#E3DACC" rx="4"/>
-  <text x="745" y="231" text-anchor="middle" font-size="9" fill="#141413">反馈优化</text>
-
-  <rect x="480" y="246" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="645" y="261" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">判断力 &gt; 知识（理解原理胜于记住细节）</text>
-
-  <rect x="480" y="276" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="645" y="291" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">跨域学习 &amp; 系统思考</text>
-
-  <rect x="480" y="306" width="330" height="22" fill="#E3DACC" rx="4"/>
-  <text x="645" y="321" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">验证流程 &gt; 生成速度</text>
-
-  <text x="645" y="352" text-anchor="middle" font-size="10" fill="#788C5D" font-weight="600">核心产出：意图描述 + 审查意见 + 架构设计</text>
-
-  <!-- Bottom summary row -->
-  <rect x="30" y="368" width="220" height="26" fill="#E3DACC" rx="6"/>
-  <text x="140" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">编码速度 → 意图表达速度</text>
-
-  <rect x="265" y="368" width="220" height="26" fill="#E3DACC" rx="6"/>
-  <text x="375" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">调试技能 → 审查判断技能</text>
-
-  <rect x="500" y="368" width="220" height="26" fill="#E3DACC" rx="6"/>
-  <text x="610" y="385" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">算法实现 → 算法选择</text>
-
-  <rect x="735" y="368" width="95" height="26" fill="#D97757" rx="6"/>
-  <text x="782" y="385" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">单元测试 → 意图验证</text>
+  <text x="424" y="206" fill="#d97757" font-size="10" font-weight="700" text-anchor="middle">迁移</text>
+  <rect width="370" height="280" x="460" y="76" fill="none" stroke="#788c5d" stroke-width="2" rx="10"/>
+  <rect width="370" height="36" x="460" y="76" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M460 100h370v12H460z"/>
+  <text x="645" y="100" fill="#faf9f5" font-size="13" font-weight="700" text-anchor="middle">AI时代开发者能力栈</text>
+  <rect width="100" height="22" x="480" y="126" fill="#d97757" rx="4"/>
+  <text x="530" y="141" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">意图表达能力</text>
+  <text x="630" y="141" fill="#87867f" font-size="9" text-anchor="middle">Prompt工程</text>
+  <rect width="60" height="22" x="700" y="126" fill="#d97757" rx="4"/>
+  <text x="730" y="141" fill="#faf9f5" font-size="9" font-weight="600" text-anchor="middle">上下文</text>
+  <rect width="100" height="22" x="480" y="156" fill="#d97757" rx="4"/>
+  <text x="530" y="171" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">审查判断能力</text>
+  <rect width="90" height="22" x="590" y="156" fill="#e3dacc" rx="4"/>
+  <text x="635" y="171" fill="#141413" font-size="9" text-anchor="middle">意图匹配验证</text>
+  <rect width="90" height="22" x="690" y="156" fill="#e3dacc" rx="4"/>
+  <text x="735" y="171" fill="#141413" font-size="9" text-anchor="middle">风险识别</text>
+  <rect width="330" height="22" x="480" y="186" fill="#e3dacc" rx="4"/>
+  <text x="645" y="201" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">架构设计能力 ↑ 强化 &amp; 业务理解能力 ↑ 强化</text>
+  <rect width="140" height="22" x="480" y="216" fill="#d97757" rx="4"/>
+  <text x="550" y="231" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">AI协作能力 ⭐NEW</text>
+  <rect width="70" height="22" x="630" y="216" fill="#e3dacc" rx="4"/>
+  <text x="665" y="231" fill="#141413" font-size="9" text-anchor="middle">多轮对话</text>
+  <rect width="70" height="22" x="710" y="216" fill="#e3dacc" rx="4"/>
+  <text x="745" y="231" fill="#141413" font-size="9" text-anchor="middle">反馈优化</text>
+  <rect width="330" height="22" x="480" y="246" fill="#e3dacc" rx="4"/>
+  <text x="645" y="261" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">判断力 &gt; 知识（理解原理胜于记住细节）</text>
+  <rect width="330" height="22" x="480" y="276" fill="#e3dacc" rx="4"/>
+  <text x="645" y="291" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">跨域学习 &amp; 系统思考</text>
+  <rect width="330" height="22" x="480" y="306" fill="#e3dacc" rx="4"/>
+  <text x="645" y="321" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">验证流程 &gt; 生成速度</text>
+  <text x="645" y="352" fill="#788c5d" font-size="10" font-weight="600" text-anchor="middle">核心产出：意图描述 + 审查意见 + 架构设计</text>
+  <rect width="220" height="26" x="30" y="368" fill="#e3dacc" rx="6"/>
+  <text x="140" y="385" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">编码速度 → 意图表达速度</text>
+  <rect width="220" height="26" x="265" y="368" fill="#e3dacc" rx="6"/>
+  <text x="375" y="385" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">调试技能 → 审查判断技能</text>
+  <rect width="220" height="26" x="500" y="368" fill="#e3dacc" rx="6"/>
+  <text x="610" y="385" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">算法实现 → 算法选择</text>
+  <rect width="95" height="26" x="735" y="368" fill="#d97757" rx="6"/>
+  <text x="782" y="385" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">单元测试 → 意图验证</text>
 </svg>

@@ -1,95 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Traditional vs AI PR Summary">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Traditional vs AI PR Summary" viewBox="0 0 800 520">
   <title>传统 PR 描述 vs AI 语义摘要</title>
-  <desc>对比传统 Pull Request 描述与 AI 增强语义摘要的价值差异</desc>
-
+  <desc>
+    对比传统 Pull Request 描述与 AI 增强语义摘要的价值差异
+  </desc>
   <defs>
-    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FAF9F5"/>
-      <stop offset="100%" stop-color="#E3DACC"/>
+    <linearGradient id="bg3" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#faf9f5"/>
+      <stop offset="100%" stop-color="#e3dacc"/>
     </linearGradient>
-    <marker id="arr" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#87867F"/>
-    </marker>
-    <filter id="sh3" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#141413" flood-opacity="0.08"/>
+    <filter id="sh3" width="120%" height="130%" x="-10%" y="-10%">
+      <feDropShadow dx="0" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="4"/>
     </filter>
   </defs>
-
   <rect width="800" height="520" fill="url(#bg3)" rx="16"/>
-
-  <!-- Title -->
-  <text x="400" y="38" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#141413" text-anchor="middle">PR 描述的进化</text>
-  <text x="400" y="60" font-family="system-ui,-apple-system,sans-serif" font-size="12" fill="#87867F" text-anchor="middle">从模糊变更记录到 AI 语义摘要</text>
-
-  <!-- Traditional PR -->
-  <rect x="30" y="85" width="360" height="400" fill="#FFFFFF" rx="12" filter="url(#sh3)"/>
-  <rect x="30" y="85" width="360" height="40" fill="#87867F" rx="12"/>
-  <rect x="30" y="113" width="360" height="12" fill="#87867F"/>
-  <text x="210" y="113" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" dy="12">传统 PR 描述</text>
-
-  <g transform="translate(50, 145)">
-    <rect x="0" y="0" width="320" height="200" fill="#F5F4F2" rx="8"/>
-    <text x="160" y="30" font-family="monospace" font-size="11" fill="#141413" text-anchor="middle">## 变更内容</text>
-    <text x="20" y="60" font-family="monospace" font-size="11" fill="#87867F">- 修改了OrderService</text>
-    <text x="20" y="80" font-family="monospace" font-size="11" fill="#87867F">- 更新了查询方法</text>
-    <text x="20" y="100" font-family="monospace" font-size="11" fill="#87867F">- 添加了新的字段</text>
-    <text x="20" y="130" font-family="monospace" font-size="11" fill="#141413">请审查</text>
+  <text x="400" y="38" fill="#141413" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" text-anchor="middle">PR 描述的进化</text>
+  <text x="400" y="60" fill="#87867f" font-family="system-ui,-apple-system,sans-serif" font-size="12" text-anchor="middle">从模糊变更记录到 AI 语义摘要</text>
+  <rect width="360" height="400" x="30" y="85" fill="#fff" filter="url(#sh3)" rx="12"/>
+  <rect width="360" height="40" x="30" y="85" fill="#87867f" rx="12"/>
+  <path fill="#87867f" d="M30 113h360v12H30z"/>
+  <text x="210" y="113" fill="#fff" dy="12" font-family="system-ui,sans-serif" font-size="14" font-weight="600" text-anchor="middle">传统 PR 描述</text>
+  <g transform="translate(50 145)">
+    <rect width="320" height="200" fill="#f5f4f2" rx="8"/>
+    <text x="160" y="30" fill="#141413" font-family="monospace" font-size="11" text-anchor="middle">## 变更内容</text>
+    <text x="20" y="60" fill="#87867f" font-family="monospace" font-size="11">- 修改了OrderService</text>
+    <text x="20" y="80" fill="#87867f" font-family="monospace" font-size="11">- 更新了查询方法</text>
+    <text x="20" y="100" fill="#87867f" font-family="monospace" font-size="11">- 添加了新的字段</text>
+    <text x="20" y="130" fill="#141413" font-family="monospace" font-size="11">请审查</text>
   </g>
-
-  <!-- Problems -->
-  <g transform="translate(50, 365)">
-    <text x="0" y="0" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#D97757">审查者面临的挑战：</text>
-    <text x="0" y="20" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">❌ 需要阅读全部代码才能理解意图</text>
-    <text x="0" y="36" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">❌ 无法快速判断影响范围</text>
-    <text x="0" y="52" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">❌ 不清楚应该关注哪些文件</text>
-    <text x="0" y="68" font-family="system-ui,sans-serif" font-size="10" fill="#87867F">❌ 无法预知兼容性问题</text>
+  <g font-family="system-ui,sans-serif">
+    <text fill="#d97757" font-size="11" font-weight="600" transform="translate(50 365)">审查者面临的挑战：</text>
+    <text y="20" fill="#87867f" font-size="10" transform="translate(50 365)">❌ 需要阅读全部代码才能理解意图</text>
+    <text y="36" fill="#87867f" font-size="10" transform="translate(50 365)">❌ 无法快速判断影响范围</text>
+    <text y="52" fill="#87867f" font-size="10" transform="translate(50 365)">❌ 不清楚应该关注哪些文件</text>
+    <text y="68" fill="#87867f" font-size="10" transform="translate(50 365)">❌ 无法预知兼容性问题</text>
   </g>
-
-  <!-- Arrow -->
-  <g transform="translate(390, 265)">
-    <polygon points="0,8 18,20 0,32" fill="#D97757"/>
-    <text x="9" y="55" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" text-anchor="middle">AI</text>
-    <text x="9" y="67" font-family="system-ui,sans-serif" font-size="10" fill="#D97757" text-anchor="middle">增强</text>
+  <g fill="#d97757">
+    <path d="m390 273 18 12-18 12z"/>
+    <text x="9" y="55" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(390 265)">AI</text>
+    <text x="9" y="67" font-family="system-ui,sans-serif" font-size="10" text-anchor="middle" transform="translate(390 265)">增强</text>
   </g>
-
-  <!-- AI PR Summary -->
-  <rect x="410" y="85" width="360" height="400" fill="#FFFFFF" rx="12" filter="url(#sh3)"/>
-  <rect x="410" y="85" width="360" height="40" fill="#D97757" rx="12"/>
-  <rect x="410" y="113" width="360" height="12" fill="#D97757"/>
-  <text x="590" y="113" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle" dy="12">AI 语义摘要</text>
-
-  <g transform="translate(430, 145)">
-    <!-- Intent -->
-    <rect x="0" y="0" width="320" height="48" fill="#FDF9F5" rx="6" stroke="#788C5D" stroke-width="1"/>
-    <text x="12" y="18" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#788C5D">📋 意图</text>
-    <text x="12" y="34" font-family="system-ui,sans-serif" font-size="10" fill="#141413">订单查询接口从同步改为异步，支持批量查询</text>
-
-    <!-- Impact Table -->
-    <rect x="0" y="56" width="320" height="80" fill="#FDF9F5" rx="6" stroke="#5B8DB8" stroke-width="1"/>
-    <text x="12" y="74" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#5B8DB8">📊 影响分析</text>
-    <text x="12" y="92" font-family="system-ui,sans-serif" font-size="9" fill="#141413">API协议: REST同步 → REST+WebSocket异步</text>
-    <text x="12" y="106" font-family="system-ui,sans-serif" font-size="9" fill="#141413">响应时间: 平均200ms → 50ms + 推送</text>
-    <text x="12" y="120" font-family="system-ui,sans-serif" font-size="9" fill="#141413">兼容性: ⚠️ 部分兼容（需客户端升级）</text>
-
-    <!-- Affected -->
-    <rect x="0" y="144" width="320" height="56" fill="#FDF9F5" rx="6" stroke="#D97757" stroke-width="1"/>
-    <text x="12" y="162" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#D97757">🔗 受影响组件</text>
-    <text x="12" y="178" font-family="system-ui,sans-serif" font-size="9" fill="#141413">支付服务 · APP前端 · 数据分析</text>
-    <text x="12" y="192" font-family="system-ui,sans-serif" font-size="9" fill="#87867F">@payment-team · @mobile-team · @data-team</text>
-
-    <!-- Review Focus -->
-    <rect x="0" y="208" width="320" height="60" fill="#FDF9F5" rx="6" stroke="#788C5D" stroke-width="1"/>
-    <text x="12" y="226" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#788C5D">🎯 审查重点</text>
-    <text x="12" y="242" font-family="system-ui,sans-serif" font-size="9" fill="#141413">1. 异步状态管理（WebSocket生命周期）</text>
-    <text x="12" y="256" font-family="system-ui,sans-serif" font-size="9" fill="#141413">2. 错误处理与降级策略</text>
-    <text x="12" y="270" font-family="system-ui,sans-serif" font-size="9" fill="#141413">3. 向后兼容性验证</text>
+  <rect width="360" height="400" x="410" y="85" fill="#fff" filter="url(#sh3)" rx="12"/>
+  <rect width="360" height="40" x="410" y="85" fill="#d97757" rx="12"/>
+  <path fill="#d97757" d="M410 113h360v12H410z"/>
+  <text x="590" y="113" fill="#fff" dy="12" font-family="system-ui,sans-serif" font-size="14" font-weight="600" text-anchor="middle">AI 语义摘要</text>
+  <g transform="translate(430 145)">
+    <rect width="320" height="48" fill="#fdf9f5" stroke="#788c5d" rx="6"/>
+    <text x="12" y="18" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="600">📋 意图</text>
+    <text x="12" y="34" fill="#141413" font-family="system-ui,sans-serif" font-size="10">订单查询接口从同步改为异步，支持批量查询</text>
+    <rect width="320" height="80" y="56" fill="#fdf9f5" stroke="#5b8db8" rx="6"/>
+    <text x="12" y="74" fill="#5b8db8" font-family="system-ui,sans-serif" font-size="10" font-weight="600">📊 影响分析</text>
+    <text x="12" y="92" fill="#141413" font-family="system-ui,sans-serif" font-size="9">API协议: REST同步 → REST+WebSocket异步</text>
+    <text x="12" y="106" fill="#141413" font-family="system-ui,sans-serif" font-size="9">响应时间: 平均200ms → 50ms + 推送</text>
+    <text x="12" y="120" fill="#141413" font-family="system-ui,sans-serif" font-size="9">兼容性: ⚠️ 部分兼容（需客户端升级）</text>
+    <rect width="320" height="56" y="144" fill="#fdf9f5" stroke="#d97757" rx="6"/>
+    <text x="12" y="162" fill="#d97757" font-family="system-ui,sans-serif" font-size="10" font-weight="600">🔗 受影响组件</text>
+    <text x="12" y="178" fill="#141413" font-family="system-ui,sans-serif" font-size="9">支付服务 · APP前端 · 数据分析</text>
+    <text x="12" y="192" fill="#87867f" font-family="system-ui,sans-serif" font-size="9">@payment-team · @mobile-team · @data-team</text>
+    <rect width="320" height="60" y="208" fill="#fdf9f5" stroke="#788c5d" rx="6"/>
+    <text x="12" y="226" fill="#788c5d" font-family="system-ui,sans-serif" font-size="10" font-weight="600">🎯 审查重点</text>
+    <text x="12" y="242" fill="#141413" font-family="system-ui,sans-serif" font-size="9">1. 异步状态管理（WebSocket生命周期）</text>
+    <text x="12" y="256" fill="#141413" font-family="system-ui,sans-serif" font-size="9">2. 错误处理与降级策略</text>
+    <text x="12" y="270" fill="#141413" font-family="system-ui,sans-serif" font-size="9">3. 向后兼容性验证</text>
   </g>
-
-  <!-- Benefits -->
-  <g transform="translate(430, 415)">
-    <text x="0" y="0" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#788C5D">审查者获得的帮助：</text>
-    <text x="0" y="20" font-family="system-ui,sans-serif" font-size="10" fill="#788C5D">✅ 10秒内理解变更意图与影响</text>
-    <text x="0" y="36" font-family="system-ui,sans-serif" font-size="10" fill="#788C5D">✅ 明确知道应该关注哪些文件</text>
-    <text x="0" y="52" font-family="system-ui,sans-serif" font-size="10" fill="#788C5D">✅ 预知兼容性问题，提前准备</text>
+  <g fill="#788c5d" font-family="system-ui,sans-serif">
+    <text font-size="11" font-weight="600" transform="translate(430 415)">审查者获得的帮助：</text>
+    <text y="20" font-size="10" transform="translate(430 415)">✅ 10秒内理解变更意图与影响</text>
+    <text y="36" font-size="10" transform="translate(430 415)">✅ 明确知道应该关注哪些文件</text>
+    <text y="52" font-size="10" transform="translate(430 415)">✅ 预知兼容性问题，提前准备</text>
   </g>
 </svg>

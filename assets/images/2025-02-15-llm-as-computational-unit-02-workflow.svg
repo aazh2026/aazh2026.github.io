@@ -1,75 +1,49 @@
-<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 300">
   <title>Software 3.0 验证工作流</title>
-  <desc>Software 3.0 的 Generate → Verify → 反馈循环，中心节点为 Verify（以 clay 强调色高亮），包含人在回路分支</desc>
-
-  <!-- Background -->
-  <rect width="680" height="300" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Software 3.0 验证工作流</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Software 3.0 · 验证优先原则</text>
-
-  <!-- Generate node (left) -->
-  <rect x="40" y="90" width="140" height="70" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="110" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">Generate</text>
-  <text x="110" y="134" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">LLM / 模型</text>
-  <text x="110" y="150" text-anchor="middle" font-size="10" fill="#87867F">生成输出</text>
-
-  <!-- Arrow: Generate → Verify -->
-  <line x1="180" y1="125" x2="212" y2="125" stroke="#D1CFC5" stroke-width="1.8"/>
-  <polygon points="212,121 204,125 212,129" fill="#D1CFC5"/>
-  <text x="196" y="118" text-anchor="middle" font-size="9" fill="#87867F">输出</text>
-
-  <!-- Verify node (center, clay highlight) -->
-  <rect x="220" y="80" width="160" height="90" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="220" y="80" width="160" height="24" rx="8" fill="#D97757"/>
-  <rect x="220" y="96" width="160" height="8" fill="#D97757"/>
-  <text x="300" y="97" text-anchor="middle" font-size="11" font-weight="600" fill="#FFFFFF">Verify</text>
-  <text x="300" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="#D97757">验证</text>
-  <text x="300" y="142" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">test / rubric / 形式化</text>
-  <text x="300" y="158" text-anchor="middle" font-size="10" fill="#87867F">多层次检查</text>
-
-  <!-- Arrow: Verify → Pass (down) -->
-  <line x1="300" y1="170" x2="300" y2="192" stroke="#788C5D" stroke-width="1.8"/>
-  <polygon points="300,192 296,184 304,184" fill="#788C5D"/>
-  <text x="314" y="184" font-size="9" fill="#788C5D">pass</text>
-
-  <!-- Output node (bottom center) -->
-  <rect x="230" y="200" width="140" height="50" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="300" y="223" text-anchor="middle" font-size="13" font-weight="600" fill="#141413">Output</text>
-  <text x="300" y="239" text-anchor="middle" font-size="10" fill="#87867F">可信输出</text>
-
-  <!-- Human-in-the-loop branch (from Verify, right side) -->
-  <line x1="380" y1="125" x2="420" y2="125" stroke="#D97757" stroke-width="1.5" stroke-dasharray="4,3"/>
-  <polygon points="420,121 412,125 420,129" fill="#D97757"/>
-  <text x="420" y="114" text-anchor="middle" font-size="9" fill="#D97757">人工审核</text>
-
-  <!-- Human node -->
-  <rect x="428" y="100" width="110" height="50" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="483" y="123" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757">人在回路</text>
-  <text x="483" y="139" text-anchor="middle" font-size="10" fill="#87867F">关键节点介入</text>
-
-  <!-- Arrow: Verify → Fail (left side) -->
-  <line x1="220" y1="125" x2="182" y2="125" stroke="#D97757" stroke-width="1.8"/>
-  <polygon points="182,121 190,125 182,129" fill="#D97757"/>
-  <text x="182" y="114" text-anchor="middle" font-size="9" fill="#D97757">fail</text>
-
-  <!-- Feedback loop: Fail → Generate (curved, bottom) -->
-  <path d="M 110 165 C 110,210 300,210 300,170" stroke="#D97757" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.7"/>
-  <polygon points="300,170 296,178 304,178" fill="#D97757" opacity="0.7"/>
-  <text x="200" y="205" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">反馈 → 重新生成</text>
-
-  <!-- Labels on the right side -->
-  <rect x="560" y="80" width="105" height="90" rx="6" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="572" y="100" font-size="10" font-weight="600" fill="#141413">核心原则</text>
-  <text x="572" y="116" font-size="10" fill="#87867F">验证优先</text>
-  <text x="572" y="130" font-size="10" fill="#87867F">模块化契约</text>
-  <text x="572" y="144" font-size="10" fill="#87867F">人在回路</text>
-  <text x="572" y="158" font-size="10" fill="#87867F">持续对齐</text>
-
-  <!-- Arrow: Verify → Pass indicator (top) -->
-  <text x="300" y="76" text-anchor="middle" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">核心差异化</text>
-  <line x1="300" y1="78" x2="300" y2="80" stroke="#D97757" stroke-width="1.5"/>
+  <desc>
+    Software 3.0 的 Generate → Verify → 反馈循环，中心节点为 Verify（以 clay 强调色高亮），包含人在回路分支
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v300H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Software 3.0 验证工作流</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Software 3.0 · 验证优先原则</text>
+  <rect width="140" height="70" x="40" y="90" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="110" y="118" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">Generate</text>
+  <text x="110" y="134" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">LLM / 模型</text>
+  <text x="110" y="150" fill="#87867f" font-size="10" text-anchor="middle">生成输出</text>
+  <path stroke="#d1cfc5" stroke-width="1.8" d="M180 125h32"/>
+  <path fill="#d1cfc5" d="m212 121-8 4 8 4z"/>
+  <text x="196" y="118" fill="#87867f" font-size="9" text-anchor="middle">输出</text>
+  <rect width="160" height="90" x="220" y="80" fill="#fff" stroke="#d97757" stroke-width="2" rx="8"/>
+  <rect width="160" height="24" x="220" y="80" fill="#d97757" rx="8"/>
+  <path fill="#d97757" d="M220 96h160v8H220z"/>
+  <text x="300" y="97" fill="#fff" font-size="11" font-weight="600" text-anchor="middle">Verify</text>
+  <text x="300" y="126" fill="#d97757" font-size="13" font-weight="600" text-anchor="middle">验证</text>
+  <text x="300" y="142" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">test / rubric / 形式化</text>
+  <text x="300" y="158" fill="#87867f" font-size="10" text-anchor="middle">多层次检查</text>
+  <path stroke="#788c5d" stroke-width="1.8" d="M300 170v22"/>
+  <path fill="#788c5d" d="m300 192-4-8h8z"/>
+  <text x="314" y="184" fill="#788c5d" font-size="9">pass</text>
+  <rect width="140" height="50" x="230" y="200" fill="#fff" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="300" y="223" fill="#141413" font-size="13" font-weight="600" text-anchor="middle">Output</text>
+  <text x="300" y="239" fill="#87867f" font-size="10" text-anchor="middle">可信输出</text>
+  <path stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" d="M380 125h40"/>
+  <path fill="#d97757" d="m420 121-8 4 8 4z"/>
+  <text x="420" y="114" fill="#d97757" font-size="9" text-anchor="middle">人工审核</text>
+  <rect width="110" height="50" x="428" y="100" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="483" y="123" fill="#d97757" font-size="12" font-weight="600" text-anchor="middle">人在回路</text>
+  <text x="483" y="139" fill="#87867f" font-size="10" text-anchor="middle">关键节点介入</text>
+  <path stroke="#d97757" stroke-width="1.8" d="M220 125h-38"/>
+  <path fill="#d97757" d="m182 121 8 4-8 4z"/>
+  <text x="182" y="114" fill="#d97757" font-size="9" text-anchor="middle">fail</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.5" d="M110 165c0 45 190 45 190 5" opacity=".7"/>
+  <path fill="#d97757" d="m300 170-4 8h8z" opacity=".7"/>
+  <text x="200" y="205" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">反馈 → 重新生成</text>
+  <rect width="105" height="90" x="560" y="80" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.2" rx="6"/>
+  <text x="572" y="100" fill="#141413" font-size="10" font-weight="600">核心原则</text>
+  <text x="572" y="116" fill="#87867f" font-size="10">验证优先</text>
+  <text x="572" y="130" fill="#87867f" font-size="10">模块化契约</text>
+  <text x="572" y="144" fill="#87867f" font-size="10">人在回路</text>
+  <text x="572" y="158" fill="#87867f" font-size="10">持续对齐</text>
+  <text x="300" y="76" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">核心差异化</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M300 78v2"/>
 </svg>

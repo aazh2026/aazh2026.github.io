@@ -1,98 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'Helvetica Neue', Arial, sans-serif">
-  <defs>
-    <style>
-      .bg { fill: #FAF9F5; }
-      .text-primary { fill: #141413; font-size: 13px; font-weight: 600; }
-      .text-secondary { fill: #87867F; font-size: 11px; }
-      .text-light { fill: #FAF9F5; font-size: 12px; font-weight: 600; }
-    </style>
-  </defs>
-  <rect width="800" height="520" class="bg"/>
-
-  <!-- Title -->
-  <text x="40" y="36" class="text-primary" font-size="15px">遗留系统现代化：绞杀者模式 vs 重写</text>
-  <text x="40" y="52" class="text-secondary">Strangler Fig Pattern vs Complete Rewrite: The Safe Path to Legacy Modernization</text>
-
-  <!-- LEFT SIDE: Strangler Fig Pattern (recommended) -->
-  <rect x="40" y="80" width="360" height="390" rx="12" fill="#141413"/>
-  <rect x="40" y="80" width="360" height="36" rx="12" fill="#788C5D"/>
-  <rect x="40" y="100" width="360" height="16" fill="#788C5D"/>
-  <text x="220" y="104" fill="#FAF9F5" font-size="14px" font-weight="700" text-anchor="middle">✅ 推荐：绞杀者模式 Strangler Fig</text>
-
-  <!-- Visual: Legacy system (left) being strangled by New system (right growing over it) -->
-  <!-- Legacy block (fading/being replaced) -->
-  <rect x="60" y="140" width="120" height="260" rx="8" fill="#87867F" fill-opacity="0.4" stroke="#87867F" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="120" y="165" fill="#87867F" font-size="12px" font-weight="700" text-anchor="middle">遗留系统</text>
-  <text x="120" y="182" fill="#87867F" font-size="10px" text-anchor="middle">Legacy System</text>
-  <text x="120" y="202" fill="#87867F" font-size="10px" text-anchor="middle">COBOL / 老架构</text>
-  <text x="120" y="218" fill="#87867F" font-size="10px" text-anchor="middle">2000万行代码</text>
-
-  <!-- New system block (growing) -->
-  <rect x="200" y="140" width="180" height="260" rx="8" fill="#788C5D" fill-opacity="0.8" stroke="#788C5D" stroke-width="1"/>
-  <text x="290" y="165" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">新系统</text>
-  <text x="290" y="182" fill="#E3DACC" font-size="10px" text-anchor="middle">New System</text>
-  <text x="290" y="202" fill="#FAF9F5" font-size="10px" text-anchor="middle">现代架构</text>
-  <text x="290" y="218" fill="#FAF9F5" font-size="10px" text-anchor="middle">新功能实现</text>
-
-  <!-- Strangler vine creeping over legacy -->
-  <path d="M 200,180 Q 160,220 140,280 Q 120,340 160,360" stroke="#788C5D" stroke-width="3" fill="none" stroke-dasharray="6,4"/>
-  <text x="100" y="370" fill="#788C5D" font-size="10px" text-anchor="middle">逐渐"绞杀"</text>
-
-  <!-- Adapter layer (middle) -->
-  <rect x="140" y="300" width="160" height="60" rx="8" fill="#D97757"/>
-  <text x="220" y="322" fill="#FAF9F5" font-size="12px" font-weight="700" text-anchor="middle">适配层 Adapter</text>
-  <text x="220" y="340" fill="#FAF9F5" font-size="10px" text-anchor="middle">新旧系统间的桥梁</text>
-  <text x="220" y="356" fill="#FAF9F5" font-size="10px" text-anchor="middle">数据格式转换</text>
-
-  <!-- Phase labels -->
-  <text x="60" y="430" fill="#87867F" font-size="10px">阶段：影子模式 → 金丝雀发布 → 渐进切换 → 完全切换</text>
-
-  <!-- Strangler advantages -->
-  <rect x="60" y="440" width="140" height="24" rx="5" fill="#788C5D" fill-opacity="0.3"/>
-  <text x="130" y="456" fill="#788C5D" font-size="11px" font-weight="600" text-anchor="middle">风险：中 | 成本：中</text>
-
-  <rect x="210" y="440" width="170" height="24" rx="5" fill="#788C5D" fill-opacity="0.3"/>
-  <text x="295" y="456" fill="#788C5D" font-size="11px" font-weight="600" text-anchor="middle">认知债务解决 ✅</text>
-
-  <!-- RIGHT SIDE: Complete Rewrite (dangerous) -->
-  <rect x="420" y="80" width="340" height="390" rx="12" fill="#141413"/>
-  <rect x="420" y="80" width="340" height="36" rx="12" fill="#D97757"/>
-  <rect x="420" y="100" width="340" height="16" fill="#D97757"/>
-  <text x="590" y="104" fill="#FAF9F5" font-size="14px" font-weight="700" text-anchor="middle">❌ 危险：彻底重写 Complete Rewrite</text>
-
-  <!-- Visual: Big X over rewrite -->
-  <rect x="440" y="140" width="300" height="260" rx="8" fill="#2a2a2a" stroke="#D97757" stroke-width="1.5" stroke-dasharray="6,4"/>
-  <text x="590" y="165" fill="#D97757" font-size="12px" font-weight="700" text-anchor="middle">1800万美元教训</text>
-  <text x="590" y="185" fill="#87867F" font-size="10px" text-anchor="middle">某银行核心交易系统重写案例</text>
-
-  <!-- Problems listed -->
-  <rect x="460" y="200" width="260" height="36" rx="6" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1"/>
-  <text x="590" y="220" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">折扣计算错误 → 多赔付1200万美元</text>
-
-  <rect x="460" y="244" width="260" height="36" rx="6" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1"/>
-  <text x="590" y="264" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">接口变化 → 影响200+下游系统</text>
-
-  <rect x="460" y="288" width="260" height="36" rx="6" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1"/>
-  <text x="590" y="308" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">闰年边界遗漏 → 2/29批处理全失败</text>
-
-  <rect x="460" y="332" width="260" height="36" rx="6" fill="#D97757" fill-opacity="0.2" stroke="#D97757" stroke-width="1"/>
-  <text x="590" y="352" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">业务逻辑错误率上升 300%</text>
-
-  <!-- Root cause -->
-  <text x="440" y="392" fill="#87867F" font-size="10px">根本误解：</text>
-  <text x="510" y="392" fill="#E3DACC" font-size="10px">遗留系统的复杂性不在代码里，</text>
-  <text x="440" y="408" fill="#E3DACC" font-size="10px">而在代码周围的"隐性知识"里。AI能看到代码，</text>
-  <text x="440" y="424" fill="#E3DACC" font-size="10px">但看不到隐性依赖和认知债务。</text>
-
-  <!-- Rewrite risks -->
-  <rect x="440" y="440" width="150" height="24" rx="5" fill="#D97757" fill-opacity="0.3"/>
-  <text x="515" y="456" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">风险：极高 | 成本：高</text>
-
-  <rect x="600" y="440" width="140" height="24" rx="5" fill="#D97757" fill-opacity="0.3"/>
-  <text x="670" y="456" fill="#D97757" font-size="11px" font-weight="600" text-anchor="middle">认知债务解决 ❌</text>
-
-  <!-- Bottom comparison bar -->
-  <rect x="40" y="480" width="720" height="30" rx="6" fill="#E3DACC"/>
-  <text x="60" y="498" fill="#141413" font-size="11px">历史在押韵：每一次"遗留系统"危机，最危险的策略都是"彻底重写"</text>
-  <text x="500" y="498" fill="#788C5D" font-size="11px" font-weight="600">最安全的策略都是"渐进式演进"</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif" viewBox="0 0 800 520">
+  <path d="M0 0h800v520H0z" style="fill:#faf9f5"/>
+  <text x="40" y="36" style="fill:#141413;font-size:13px;font-weight:600">遗留系统现代化：绞杀者模式 vs 重写</text>
+  <text x="40" y="52" style="fill:#87867f;font-size:11px">Strangler Fig Pattern vs Complete Rewrite: The Safe Path to Legacy Modernization</text>
+  <rect width="360" height="390" x="40" y="80" fill="#141413" rx="12"/>
+  <rect width="360" height="36" x="40" y="80" fill="#788c5d" rx="12"/>
+  <path fill="#788c5d" d="M40 100h360v16H40z"/>
+  <text x="220" y="104" fill="#faf9f5" font-size="14" font-weight="700" text-anchor="middle">✅ 推荐：绞杀者模式 Strangler Fig</text>
+  <rect width="120" height="260" x="60" y="140" fill="#87867f" fill-opacity=".4" stroke="#87867f" stroke-dasharray="4,3" rx="8"/>
+  <text x="120" y="165" fill="#87867f" font-size="12" font-weight="700" text-anchor="middle">遗留系统</text>
+  <text x="120" y="182" fill="#87867f" font-size="10" text-anchor="middle">Legacy System</text>
+  <text x="120" y="202" fill="#87867f" font-size="10" text-anchor="middle">COBOL / 老架构</text>
+  <text x="120" y="218" fill="#87867f" font-size="10" text-anchor="middle">2000万行代码</text>
+  <rect width="180" height="260" x="200" y="140" fill="#788c5d" fill-opacity=".8" stroke="#788c5d" rx="8"/>
+  <text x="290" y="165" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">新系统</text>
+  <text x="290" y="182" fill="#e3dacc" font-size="10" text-anchor="middle">New System</text>
+  <text x="290" y="202" fill="#faf9f5" font-size="10" text-anchor="middle">现代架构</text>
+  <text x="290" y="218" fill="#faf9f5" font-size="10" text-anchor="middle">新功能实现</text>
+  <path fill="none" stroke="#788c5d" stroke-dasharray="6,4" stroke-width="3" d="M200 180q-40 40-60 100t20 80"/>
+  <text x="100" y="370" fill="#788c5d" font-size="10" text-anchor="middle">逐渐&quot;绞杀&quot;</text>
+  <rect width="160" height="60" x="140" y="300" fill="#d97757" rx="8"/>
+  <text x="220" y="322" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">适配层 Adapter</text>
+  <text x="220" y="340" fill="#faf9f5" font-size="10" text-anchor="middle">新旧系统间的桥梁</text>
+  <text x="220" y="356" fill="#faf9f5" font-size="10" text-anchor="middle">数据格式转换</text>
+  <text x="60" y="430" fill="#87867f" font-size="10">阶段：影子模式 → 金丝雀发布 → 渐进切换 → 完全切换</text>
+  <rect width="140" height="24" x="60" y="440" fill="#788c5d" fill-opacity=".3" rx="5"/>
+  <text x="130" y="456" fill="#788c5d" font-size="11" font-weight="600" text-anchor="middle">风险：中 | 成本：中</text>
+  <rect width="170" height="24" x="210" y="440" fill="#788c5d" fill-opacity=".3" rx="5"/>
+  <text x="295" y="456" fill="#788c5d" font-size="11" font-weight="600" text-anchor="middle">认知债务解决 ✅</text>
+  <rect width="340" height="390" x="420" y="80" fill="#141413" rx="12"/>
+  <rect width="340" height="36" x="420" y="80" fill="#d97757" rx="12"/>
+  <path fill="#d97757" d="M420 100h340v16H420z"/>
+  <text x="590" y="104" fill="#faf9f5" font-size="14" font-weight="700" text-anchor="middle">❌ 危险：彻底重写 Complete Rewrite</text>
+  <rect width="300" height="260" x="440" y="140" fill="#2a2a2a" stroke="#d97757" stroke-dasharray="6,4" stroke-width="1.5" rx="8"/>
+  <text x="590" y="165" fill="#d97757" font-size="12" font-weight="700" text-anchor="middle">1800万美元教训</text>
+  <text x="590" y="185" fill="#87867f" font-size="10" text-anchor="middle">某银行核心交易系统重写案例</text>
+  <rect width="260" height="36" x="460" y="200" fill="#d97757" fill-opacity=".2" stroke="#d97757" rx="6"/>
+  <text x="590" y="220" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">折扣计算错误 → 多赔付1200万美元</text>
+  <rect width="260" height="36" x="460" y="244" fill="#d97757" fill-opacity=".2" stroke="#d97757" rx="6"/>
+  <text x="590" y="264" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">接口变化 → 影响200+下游系统</text>
+  <rect width="260" height="36" x="460" y="288" fill="#d97757" fill-opacity=".2" stroke="#d97757" rx="6"/>
+  <text x="590" y="308" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">闰年边界遗漏 → 2/29批处理全失败</text>
+  <rect width="260" height="36" x="460" y="332" fill="#d97757" fill-opacity=".2" stroke="#d97757" rx="6"/>
+  <text x="590" y="352" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">业务逻辑错误率上升 300%</text>
+  <text x="440" y="392" fill="#87867f" font-size="10">根本误解：</text>
+  <text x="510" y="392" fill="#e3dacc" font-size="10">遗留系统的复杂性不在代码里，</text>
+  <text x="440" y="408" fill="#e3dacc" font-size="10">而在代码周围的&quot;隐性知识&quot;里。AI能看到代码，</text>
+  <text x="440" y="424" fill="#e3dacc" font-size="10">但看不到隐性依赖和认知债务。</text>
+  <rect width="150" height="24" x="440" y="440" fill="#d97757" fill-opacity=".3" rx="5"/>
+  <text x="515" y="456" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">风险：极高 | 成本：高</text>
+  <rect width="140" height="24" x="600" y="440" fill="#d97757" fill-opacity=".3" rx="5"/>
+  <text x="670" y="456" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">认知债务解决 ❌</text>
+  <rect width="720" height="30" x="40" y="480" fill="#e3dacc" rx="6"/>
+  <text x="60" y="498" fill="#141413" font-size="11">历史在押韵：每一次&quot;遗留系统&quot;危机，最危险的策略都是&quot;彻底重写&quot;</text>
+  <text x="500" y="498" fill="#788c5d" font-size="11" font-weight="600">最安全的策略都是&quot;渐进式演进&quot;</text>
 </svg>

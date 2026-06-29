@@ -1,119 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="API经济护城河崩塌对比图">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="API经济护城河崩塌对比图" viewBox="0 0 800 480">
   <title>API经济护城河崩塌</title>
-  <desc>对比CopyAI等通用AI产品与垂直场景产品的竞争格局，展示护城河从技术优势向场景深度的转移</desc>
-
+  <desc>
+    对比CopyAI等通用AI产品与垂直场景产品的竞争格局，展示护城河从技术优势向场景深度的转移
+  </desc>
   <defs>
-    <marker id="arrowClay" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L8,3 z" fill="#D97757"/>
+    <marker id="arrowClay" markerHeight="8" markerWidth="8" orient="auto" refX="6" refY="3">
+      <path fill="#d97757" d="M0 0v6l8-3z"/>
     </marker>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.08"/>
+    <filter id="shadow" width="110%" height="110%" x="-5%" y="-5%">
+      <feDropShadow dx="2" dy="2" flood-color="#141413" flood-opacity=".08" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="800" height="480" fill="#FAF9F5"/>
-
-  <!-- Header -->
-  <rect x="0" y="0" width="800" height="52" fill="#141413"/>
-  <text x="400" y="33" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#FAF9F5" text-anchor="middle" letter-spacing="1">API 经济护城河的崩塌</text>
-
-  <!-- Left section: CopyAI style (通用) -->
-  <rect x="24" y="72" width="356" height="378" rx="10" fill="#E3DACC" filter="url(#shadow)"/>
-  <rect x="24" y="72" width="356" height="42" rx="10" fill="#D97757"/>
-  <rect x="24" y="94" width="356" height="20" fill="#D97757"/>
-  <text x="202" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">通用 AI 产品</text>
-
-  <!-- CopyAI logo placeholder -->
-  <circle cx="202" cy="155" r="28" fill="#D97757" opacity="0.15"/>
-  <text x="202" y="161" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#D97757" text-anchor="middle">COPY</text>
-
-  <text x="202" y="200" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#141413" text-anchor="middle">CopyAI / Jasper / WriteSonic</text>
-  <text x="202" y="218" font-family="system-ui, sans-serif" font-size="12" fill="#87867F" text-anchor="middle">通用 AI 写作工具</text>
-
-  <!-- Moat bars (short = weak moat) -->
-  <text x="40" y="252" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">护城河强度</text>
-
-  <rect x="40" y="260" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="40" y="260" width="55" height="18" rx="4" fill="#D97757"/>
-  <text x="228" y="273" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">技术优势</text>
-
-  <rect x="40" y="286" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="40" y="286" width="40" height="18" rx="4" fill="#D97757"/>
-  <text x="228" y="299" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">规模效应</text>
-
-  <rect x="40" y="312" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="40" y="312" width="35" height="18" rx="4" fill="#D97757"/>
-  <text x="228" y="325" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">网络效应</text>
-
-  <rect x="40" y="338" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="40" y="338" width="30" height="18" rx="4" fill="#D97757"/>
-  <text x="228" y="351" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">转换成本</text>
-
-  <!-- Market share decline -->
-  <text x="40" y="382" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">市场份额变化</text>
-  <rect x="40" y="390" width="320" height="6" rx="3" fill="#D1CFC5"/>
-  <rect x="40" y="390" width="288" height="6" rx="3" fill="#87867F" opacity="0.4"/>
-  <rect x="40" y="390" width="205" height="6" rx="3" fill="#D97757"/>
-  <text x="40" y="412" font-family="system-ui, sans-serif" font-size="10" fill="#141413">2024: 45%</text>
-  <text x="280" y="412" font-family="system-ui, sans-serif" font-size="10" fill="#141413">2025: 32%</text>
-
-  <!-- Down arrow -->
-  <path d="M320 350 L340 375 L360 350" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowClay)"/>
-
-  <!-- Arrow between sections -->
-  <path d="M395 260 L435 260" stroke="#D97757" stroke-width="2.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arrowClay)"/>
-  <text x="415" y="250" font-family="system-ui, sans-serif" font-size="11" fill="#D97757" text-anchor="middle" font-weight="600">低价</text>
-  <text x="415" y="276" font-family="system-ui, sans-serif" font-size="11" fill="#D97757" text-anchor="middle" font-weight="600">SEO</text>
-
-  <!-- Right section: Vertical products -->
-  <rect x="420" y="72" width="356" height="378" rx="10" fill="#E3DACC" filter="url(#shadow)"/>
-  <rect x="420" y="72" width="356" height="42" rx="10" fill="#788C5D"/>
-  <rect x="420" y="94" width="356" height="20" fill="#788C5D"/>
-  <text x="598" y="100" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FAF9F5" text-anchor="middle">垂直场景产品</text>
-
-  <!-- Vertical product logos -->
-  <g transform="translate(460, 140)">
-    <circle cx="0" cy="0" r="22" fill="#788C5D" opacity="0.15"/>
-    <text x="0" y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D" text-anchor="middle">LR</text>
+  <path fill="#faf9f5" d="M0 0h800v480H0z"/>
+  <path fill="#141413" d="M0 0h800v52H0z"/>
+  <text x="400" y="33" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="1" text-anchor="middle">API 经济护城河的崩塌</text>
+  <rect width="356" height="378" x="24" y="72" fill="#e3dacc" filter="url(#shadow)" rx="10"/>
+  <rect width="356" height="42" x="24" y="72" fill="#d97757" rx="10"/>
+  <path fill="#d97757" d="M24 94h356v20H24z"/>
+  <text x="202" y="100" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">通用 AI 产品</text>
+  <circle cx="202" cy="155" r="28" fill="#d97757" opacity=".15"/>
+  <text x="202" y="161" fill="#d97757" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">COPY</text>
+  <text x="202" y="200" fill="#141413" font-family="system-ui, sans-serif" font-size="15" font-weight="600" text-anchor="middle">CopyAI / Jasper / WriteSonic</text>
+  <text x="202" y="218" fill="#87867f" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">通用 AI 写作工具</text>
+  <text x="40" y="252" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">护城河强度</text>
+  <rect width="180" height="18" x="40" y="260" fill="#d1cfc5" rx="4"/>
+  <rect width="55" height="18" x="40" y="260" fill="#d97757" rx="4"/>
+  <text x="228" y="273" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">技术优势</text>
+  <rect width="180" height="18" x="40" y="286" fill="#d1cfc5" rx="4"/>
+  <rect width="40" height="18" x="40" y="286" fill="#d97757" rx="4"/>
+  <text x="228" y="299" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">规模效应</text>
+  <rect width="180" height="18" x="40" y="312" fill="#d1cfc5" rx="4"/>
+  <rect width="35" height="18" x="40" y="312" fill="#d97757" rx="4"/>
+  <text x="228" y="325" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">网络效应</text>
+  <rect width="180" height="18" x="40" y="338" fill="#d1cfc5" rx="4"/>
+  <rect width="30" height="18" x="40" y="338" fill="#d97757" rx="4"/>
+  <text x="228" y="351" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">转换成本</text>
+  <text x="40" y="382" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">市场份额变化</text>
+  <rect width="320" height="6" x="40" y="390" fill="#d1cfc5" rx="3"/>
+  <rect width="288" height="6" x="40" y="390" fill="#87867f" opacity=".4" rx="3"/>
+  <rect width="205" height="6" x="40" y="390" fill="#d97757" rx="3"/>
+  <text x="40" y="412" fill="#141413" font-family="system-ui, sans-serif" font-size="10">2024: 45%</text>
+  <text x="280" y="412" fill="#141413" font-family="system-ui, sans-serif" font-size="10">2025: 32%</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arrowClay)" d="m320 350 20 25 20-25"/>
+  <path fill="none" stroke="#d97757" stroke-dasharray="6,4" stroke-width="2.5" marker-end="url(#arrowClay)" d="M395 260h40"/>
+  <text x="415" y="250" fill="#d97757" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">低价</text>
+  <text x="415" y="276" fill="#d97757" font-family="system-ui, sans-serif" font-size="11" font-weight="600" text-anchor="middle">SEO</text>
+  <rect width="356" height="378" x="420" y="72" fill="#e3dacc" filter="url(#shadow)" rx="10"/>
+  <rect width="356" height="42" x="420" y="72" fill="#788c5d" rx="10"/>
+  <path fill="#788c5d" d="M420 94h356v20H420z"/>
+  <text x="598" y="100" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">垂直场景产品</text>
+  <g fill="#788c5d" transform="translate(460 140)">
+    <circle r="22" opacity=".15"/>
+    <text y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">LR</text>
   </g>
-  <g transform="translate(530, 140)">
-    <circle cx="0" cy="0" r="22" fill="#788C5D" opacity="0.15"/>
-    <text x="0" y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D" text-anchor="middle">CS</text>
+  <g fill="#788c5d" transform="translate(530 140)">
+    <circle r="22" opacity=".15"/>
+    <text y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">CS</text>
   </g>
-  <g transform="translate(600, 140)">
-    <circle cx="0" cy="0" r="22" fill="#788C5D" opacity="0.15"/>
-    <text x="0" y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#788C5D" text-anchor="middle">JP</text>
+  <g fill="#788c5d" transform="translate(600 140)">
+    <circle r="22" opacity=".15"/>
+    <text y="5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">JP</text>
   </g>
-
-  <text x="530" y="185" font-family="system-ui, sans-serif" font-size="12" fill="#141413" text-anchor="middle">LegalRobot · CopySmith · Jasper (垂直)</text>
-
-  <!-- Moat bars (tall = strong moat) -->
-  <text x="436" y="222" font-family="system-ui, sans-serif" font-size="11" fill="#87867F">护城河强度</text>
-
-  <rect x="436" y="230" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="436" y="230" width="160" height="18" rx="4" fill="#788C5D"/>
-  <text x="624" y="243" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">专有数据</text>
-
-  <rect x="436" y="256" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="436" y="256" width="150" height="18" rx="4" fill="#788C5D"/>
-  <text x="624" y="269" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">工作流嵌入</text>
-
-  <rect x="436" y="282" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="436" y="282" width="140" height="18" rx="4" fill="#788C5D"/>
-  <text x="624" y="295" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">领域知识</text>
-
-  <rect x="436" y="308" width="180" height="18" rx="4" fill="#D1CFC5"/>
-  <rect x="436" y="308" width="165" height="18" rx="4" fill="#788C5D"/>
-  <text x="624" y="321" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">品牌信任</text>
-
-  <!-- Insight box -->
-  <rect x="436" y="340" width="324" height="90" rx="8" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="452" y="362" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#D97757">核心洞察</text>
-  <text x="452" y="380" font-family="system-ui, sans-serif" font-size="11" fill="#141413">技术优势 → 可复制</text>
-  <text x="452" y="396" font-family="system-ui, sans-serif" font-size="11" fill="#141413">场景深度 → 难复制</text>
-  <text x="452" y="412" font-family="system-ui, sans-serif" font-size="11" fill="#141413" font-weight="600">"场景才是护城河"</text>
-
-  <!-- Bottom note -->
-  <text x="400" y="468" font-family="system-ui, sans-serif" font-size="11" fill="#87867F" text-anchor="middle">CopyAI 案例：同一 API，更低定价，更好 SEO → 护城河幻觉崩塌</text>
+  <text x="530" y="185" fill="#141413" font-family="system-ui, sans-serif" font-size="12" text-anchor="middle">LegalRobot · CopySmith · Jasper (垂直)</text>
+  <text x="436" y="222" fill="#87867f" font-family="system-ui, sans-serif" font-size="11">护城河强度</text>
+  <rect width="180" height="18" x="436" y="230" fill="#d1cfc5" rx="4"/>
+  <rect width="160" height="18" x="436" y="230" fill="#788c5d" rx="4"/>
+  <text x="624" y="243" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">专有数据</text>
+  <rect width="180" height="18" x="436" y="256" fill="#d1cfc5" rx="4"/>
+  <rect width="150" height="18" x="436" y="256" fill="#788c5d" rx="4"/>
+  <text x="624" y="269" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">工作流嵌入</text>
+  <rect width="180" height="18" x="436" y="282" fill="#d1cfc5" rx="4"/>
+  <rect width="140" height="18" x="436" y="282" fill="#788c5d" rx="4"/>
+  <text x="624" y="295" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">领域知识</text>
+  <rect width="180" height="18" x="436" y="308" fill="#d1cfc5" rx="4"/>
+  <rect width="165" height="18" x="436" y="308" fill="#788c5d" rx="4"/>
+  <text x="624" y="321" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">品牌信任</text>
+  <rect width="324" height="90" x="436" y="340" fill="#faf9f5" stroke="#d1cfc5" rx="8"/>
+  <text x="452" y="362" fill="#d97757" font-family="system-ui, sans-serif" font-size="12" font-weight="600">核心洞察</text>
+  <text x="452" y="380" fill="#141413" font-family="system-ui, sans-serif" font-size="11">技术优势 → 可复制</text>
+  <text x="452" y="396" fill="#141413" font-family="system-ui, sans-serif" font-size="11">场景深度 → 难复制</text>
+  <text x="452" y="412" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="600">&quot;场景才是护城河&quot;</text>
+  <text x="400" y="468" fill="#87867f" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">CopyAI 案例：同一 API，更低定价，更好 SEO → 护城河幻觉崩塌</text>
 </svg>

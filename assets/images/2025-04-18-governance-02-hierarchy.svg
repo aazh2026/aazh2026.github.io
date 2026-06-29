@@ -1,34 +1,21 @@
-<svg viewBox="0 0 560 160" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- AI Governance 三层架构: Board→CoE→Champions -->
-  <rect width="560" height="160" fill="#FAF9F5"/>
-  <text x="280" y="18" text-anchor="middle" font-size="12" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI 治理三层架构</text>
-  <text x="280" y="32" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2025/04/18</text>
-
-  <!-- Board (top) -->
-  <rect x="120" y="48" width="320" height="46" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <rect x="120" y="48" width="320" height="18" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1"/>
-  <text x="280" y="62" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace" font-weight="600">AI Governance Board · AI 治理委员会</text>
-  <text x="280" y="78" text-anchor="middle" font-size="9" fill="#141413">制定 AI 战略和政策 · 审批重大 AI 投资</text>
-  <text x="280" y="88" text-anchor="middle" font-size="8.5" fill="#87867F">跨部门协调</text>
-
-  <!-- Arrow Board→CoE -->
-  <line x1="280" y1="94" x2="280" y2="108" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,108 280,116 284,108" fill="#D1CFC5"/>
-
-  <!-- CoE (middle) -->
-  <rect x="120" y="108" width="320" height="38" rx="6" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <rect x="120" y="108" width="320" height="16" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1"/>
-  <text x="280" y="122" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">AI Center of Excellence · AI 卓越中心</text>
-  <text x="280" y="138" text-anchor="middle" font-size="9" fill="#141413">维护 AI 工具和标准 · 培训和支持团队</text>
-
-  <!-- Arrow CoE→Champions -->
-  <line x1="280" y1="146" x2="280" y2="156" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="276,156 280,164 284,156" fill="#D1CFC5"/>
-
-  <!-- Champions (bottom) -->
-  <rect x="120" y="156" width="320" height="0"/>
-  <text x="280" y="162" text-anchor="middle" font-size="9" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">Team AI Champions · 团队 AI 大使</text>
-  <text x="390" y="162" text-anchor="middle" font-size="9" fill="#87867F">推广 · 问题反馈 · 最佳实践</text>
-
-  <text x="280" y="180" text-anchor="middle" font-size="9" fill="#87867F" font-style="italic">三层分工：决策层 → 卓越中心 → 一线推广</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 160">
+  <path fill="#faf9f5" d="M0 0h560v160H0z"/>
+  <text x="280" y="18" fill="#141413" font-size="12" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI 治理三层架构</text>
+  <text x="280" y="32" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">postcodeengineering.com · 2025/04/18</text>
+  <rect width="320" height="46" x="120" y="48" fill="#fff" stroke="#d97757" stroke-width="2" rx="6"/>
+  <rect width="320" height="18" x="120" y="48" fill="#fef3c7" stroke="#d97757" rx="6"/>
+  <text x="280" y="62" fill="#d97757" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">AI Governance Board · AI 治理委员会</text>
+  <text x="280" y="78" fill="#141413" font-size="9" text-anchor="middle">制定 AI 战略和政策 · 审批重大 AI 投资</text>
+  <text x="280" y="88" fill="#87867f" font-size="8.5" text-anchor="middle">跨部门协调</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 94v14"/>
+  <path fill="#d1cfc5" d="m276 108 4 8 4-8z"/>
+  <rect width="320" height="38" x="120" y="108" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <rect width="320" height="16" x="120" y="108" fill="#dbeafe" stroke="#2563eb" rx="6"/>
+  <text x="280" y="122" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">AI Center of Excellence · AI 卓越中心</text>
+  <text x="280" y="138" fill="#141413" font-size="9" text-anchor="middle">维护 AI 工具和标准 · 培训和支持团队</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M280 146v10"/>
+  <path fill="#d1cfc5" d="m276 156 4 8 4-8z"/>
+  <text x="280" y="162" fill="#059669" font-family="ui-monospace, monospace" font-size="9" font-weight="600" text-anchor="middle">Team AI Champions · 团队 AI 大使</text>
+  <text x="390" y="162" fill="#87867f" font-size="9" text-anchor="middle">推广 · 问题反馈 · 最佳实践</text>
+  <text x="280" y="180" fill="#87867f" font-size="9" font-style="italic" text-anchor="middle">三层分工：决策层 → 卓越中心 → 一线推广</text>
 </svg>

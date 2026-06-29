@@ -1,77 +1,51 @@
-<svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
-  <!-- Background -->
-  <rect width="600" height="360" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI-Native 软件工程五层架构</text>
-  <text x="300" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native软件工程宣言 · 2025/04/04</text>
-
-  <!-- Layer 5 (top) -->
-  <rect x="40" y="56" width="520" height="52" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <rect x="48" y="68" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="71" y="81" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Layer 5</text>
-  <text x="112" y="76" font-size="13" fill="#141413" font-weight="600">Human Workflow 人机工作流</text>
-  <text x="112" y="93" font-size="10" fill="#87867F">组织架构 · 治理体系 · 伦理框架</text>
-  <text x="480" y="81" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">战略层</text>
-
-  <!-- Arrow 5→4 -->
-  <line x1="300" y1="108" x2="300" y2="120" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,124 296,116 304,116" fill="#D1CFC5"/>
-
-  <!-- Layer 4 -->
-  <rect x="40" y="128" width="520" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="48" y="140" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="71" y="153" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Layer 4</text>
-  <text x="112" y="148" font-size="13" fill="#141413" font-weight="600">Intent Architecture 意图架构</text>
-  <text x="112" y="165" font-size="10" fill="#87867F">意图设计与流转 · 知识资产管理 · Prompt工程</text>
-  <text x="480" y="153" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">高级技能</text>
-
-  <!-- Arrow 4→3 -->
-  <line x1="300" y1="180" x2="300" y2="192" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,196 296,188 304,188" fill="#D1CFC5"/>
-
-  <!-- Layer 3 -->
-  <rect x="40" y="200" width="520" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="48" y="212" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="71" y="225" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Layer 3</text>
-  <text x="112" y="220" font-size="13" fill="#141413" font-weight="600">Agent Orchestration Agent编排</text>
-  <text x="112" y="237" font-size="10" fill="#87867F">多Agent协作 · 任务分解 · 依赖管理</text>
-  <text x="480" y="225" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">中级技能</text>
-
-  <!-- Arrow 3→2 -->
-  <line x1="300" y1="252" x2="300" y2="264" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,268 296,260 304,260" fill="#D1CFC5"/>
-
-  <!-- Layer 2 -->
-  <rect x="40" y="272" width="520" height="52" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="48" y="284" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="71" y="297" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Layer 2</text>
-  <text x="112" y="292" font-size="13" fill="#141413" font-weight="600">Context Engineering 上下文工程</text>
-  <text x="112" y="309" font-size="10" fill="#87867F">上下文组织 · Context新鲜度 · 可复用知识沉淀</text>
-  <text x="480" y="297" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">基础技能</text>
-
-  <!-- Arrow 2→1 -->
-  <line x1="300" y1="324" x2="300" y2="336" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,340 296,332 304,332" fill="#D1CFC5"/>
-
-  <!-- Layer 1 (bottom) -->
-  <rect x="40" y="280" width="520" height="48" rx="6" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <rect x="48" y="292" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="71" y="305" text-anchor="middle" font-size="10" font-weight="600" fill="#FFFFFF" font-family="ui-monospace, monospace">Layer 1</text>
-  <text x="112" y="300" font-size="13" fill="#141413" font-weight="600">Model Layer 模型层</text>
-  <text x="112" y="317" font-size="10" fill="#87867F">基础模型（GPT-4 / Claude / Gemini）+ 工具链（IDE / API / SDK）</text>
-  <text x="480" y="305" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">基础设施</text>
-
-  <!-- Source line -->
-  <text x="300" y="352" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">AI-Native软件工程宣言 · 2025/04/04</text>
-
-  <!-- Feedback arrow: Layer 5 → Layer 1 (dashed clay, right side) -->
-  <path d="M 560 78 C 578 78, 578 278, 560 280" stroke="#D97757" stroke-width="1.8" fill="none" stroke-dasharray="4,3" opacity="0.65"/>
-  <polygon points="560,280 554,272 566,272" fill="#D97757" opacity="0.65"/>
-  <text x="572" y="180" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">持续反馈</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 600 360">
+  <path fill="#faf9f5" d="M0 0h600v360H0z"/>
+  <text x="300" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI-Native 软件工程五层架构</text>
+  <text x="300" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native软件工程宣言 · 2025/04/04</text>
+  <rect width="520" height="52" x="40" y="56" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <rect width="46" height="18" x="48" y="68" fill="#d97757" rx="9"/>
+  <text x="71" y="81" fill="#fff" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Layer 5</text>
+  <text x="112" y="76" fill="#141413" font-size="13" font-weight="600">Human Workflow 人机工作流</text>
+  <text x="112" y="93" fill="#87867f" font-size="10">组织架构 · 治理体系 · 伦理框架</text>
+  <text x="480" y="81" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">战略层</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 108v12"/>
+  <path fill="#d1cfc5" d="m300 124-4-8h8z"/>
+  <rect width="520" height="52" x="40" y="128" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <rect width="46" height="18" x="48" y="140" fill="#d97757" rx="9"/>
+  <text x="71" y="153" fill="#fff" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Layer 4</text>
+  <text x="112" y="148" fill="#141413" font-size="13" font-weight="600">Intent Architecture 意图架构</text>
+  <text x="112" y="165" fill="#87867f" font-size="10">意图设计与流转 · 知识资产管理 · Prompt工程</text>
+  <text x="480" y="153" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">高级技能</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 180v12"/>
+  <path fill="#d1cfc5" d="m300 196-4-8h8z"/>
+  <rect width="520" height="52" x="40" y="200" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <rect width="46" height="18" x="48" y="212" fill="#d97757" rx="9"/>
+  <text x="71" y="225" fill="#fff" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Layer 3</text>
+  <text x="112" y="220" fill="#141413" font-size="13" font-weight="600">Agent Orchestration Agent编排</text>
+  <text x="112" y="237" fill="#87867f" font-size="10">多Agent协作 · 任务分解 · 依赖管理</text>
+  <text x="480" y="225" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">中级技能</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 252v12"/>
+  <path fill="#d1cfc5" d="m300 268-4-8h8z"/>
+  <rect width="520" height="52" x="40" y="272" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <rect width="46" height="18" x="48" y="284" fill="#d97757" rx="9"/>
+  <text x="71" y="297" fill="#fff" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Layer 2</text>
+  <text x="112" y="292" fill="#141413" font-size="13" font-weight="600">Context Engineering 上下文工程</text>
+  <text x="112" y="309" fill="#87867f" font-size="10">上下文组织 · Context新鲜度 · 可复用知识沉淀</text>
+  <text x="480" y="297" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">基础技能</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 324v12"/>
+  <path fill="#d1cfc5" d="m300 340-4-8h8z"/>
+  <rect width="520" height="48" x="40" y="280" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="6"/>
+  <rect width="46" height="18" x="48" y="292" fill="#d97757" rx="9"/>
+  <text x="71" y="305" fill="#fff" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">Layer 1</text>
+  <text x="112" y="300" fill="#141413" font-size="13" font-weight="600">Model Layer 模型层</text>
+  <text x="112" y="317" fill="#87867f" font-size="10">基础模型（GPT-4 / Claude / Gemini）+ 工具链（IDE / API / SDK）</text>
+  <text x="480" y="305" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">基础设施</text>
+  <text x="300" y="352" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">AI-Native软件工程宣言 · 2025/04/04</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.8" d="M560 78c18 0 18 200 0 202" opacity=".65"/>
+  <path fill="#d97757" d="m560 280-6-8h12z" opacity=".65"/>
+  <text x="572" y="180" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">持续反馈</text>
   <title>AI-Native 软件工程五层架构</title>
-  <desc>五层堆叠图：Layer 1 Model Layer（基础模型+工具链）、Layer 2 Context Engineering（上下文工程）、Layer 3 Agent Orchestration（多Agent协作）、Layer 4 Intent Architecture（意图设计与流转）、Layer 5 Human Workflow（人机工作流）。右侧有虚线反馈箭头从第五层回到第一层。</desc>
+  <desc>
+    五层堆叠图：Layer 1 Model Layer（基础模型+工具链）、Layer 2 Context Engineering（上下文工程）、Layer 3 Agent Orchestration（多Agent协作）、Layer 4 Intent Architecture（意图设计与流转）、Layer 5 Human Workflow（人机工作流）。右侧有虚线反馈箭头从第五层回到第一层。
+  </desc>
 </svg>

@@ -1,82 +1,56 @@
-<svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 640 300">
   <title>Standard Residual vs Attention Residuals</title>
-  <desc>对比标准残差连接（固定权重=1.0的加法，所有层贡献均等）与 Attention Residuals（通过注意力机制动态决定各层聚合权重，实现选择性层聚合）</desc>
-
-  <!-- Background -->
-  <rect width="640" height="300" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="320" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Standard Residual vs Attention Residuals</text>
-  <text x="320" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Kimi 团队 · arXiv:2603.15031 · 2026/03</text>
-
-  <!-- LEFT: Standard Residual -->
-  <rect x="30" y="56" width="280" height="220" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="170" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Standard Residual ❌</text>
-  <text x="170" y="97" text-anchor="middle" font-size="10" fill="#87867F">output = input + SubLayer(output)</text>
-
-  <!-- Layer boxes left -->
-  <rect x="50" y="112" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="80" y="134" text-anchor="middle" font-size="10" fill="#141413">Layer 1</text>
-  <rect x="50" y="158" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="80" y="180" text-anchor="middle" font-size="10" fill="#141413">Layer 2</text>
-  <rect x="50" y="204" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="80" y="226" text-anchor="middle" font-size="10" fill="#141413">Layer 3</text>
-  <rect x="50" y="250" width="60" height="20" rx="4" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="80" y="264" text-anchor="middle" font-size="9" fill="#87867F">...</text>
-
-  <!-- Fixed weight labels left (=1.0) -->
-  <text x="120" y="130" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">=1.0</text>
-  <text x="120" y="176" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">=1.0</text>
-  <text x="120" y="222" font-size="9" fill="#D97757" font-family="ui-monospace, monospace">=1.0</text>
-
-  <!-- Add arrows left -->
-  <line x1="110" y1="130" x2="130" y2="130" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="130,130 124,126 124,134" fill="#D97757"/>
-  <line x1="110" y1="176" x2="130" y2="176" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="130,176 124,172 124,180" fill="#D97757"/>
-  <line x1="110" y1="222" x2="130" y2="222" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="130,222 124,218 124,226" fill="#D97757"/>
-
-  <!-- Equal contribution label -->
-  <rect x="140" y="170" width="100" height="26" rx="4" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="190" y="187" text-anchor="middle" font-size="10" fill="#141413">贡献均等稀释</text>
-
-  <!-- Right arrow -->
-  <line x1="250" y1="170" x2="264" y2="170" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="264,170 258,166 258,174" fill="#D1CFC5"/>
-
-  <!-- RIGHT: Attention Residuals -->
-  <rect x="330" y="56" width="280" height="220" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="470" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Attention Residuals ✓</text>
-  <text x="470" y="97" text-anchor="middle" font-size="10" fill="#87867F">y_l = Σ α_i · v^i, α = softmax(q·l·k^i)</text>
-
-  <!-- Layer boxes right -->
-  <rect x="350" y="112" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D97757" stroke-width="1.5"/>
-  <text x="380" y="134" text-anchor="middle" font-size="10" fill="#141413">Layer 1</text>
-  <rect x="350" y="158" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D97757" stroke-width="1.5"/>
-  <text x="380" y="180" text-anchor="middle" font-size="10" fill="#141413">Layer 2</text>
-  <rect x="350" y="204" width="60" height="36" rx="4" fill="#F0EEE6" stroke="#D97757" stroke-width="1.5"/>
-  <text x="380" y="226" text-anchor="middle" font-size="10" fill="#141413">Layer 3</text>
-  <rect x="350" y="250" width="60" height="20" rx="4" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="380" y="264" text-anchor="middle" font-size="9" fill="#87867F">...</text>
-
-  <!-- Variable weight arrows right (thickness indicates weight) -->
-  <line x1="410" y1="130" x2="430" y2="130" stroke="#788C5D" stroke-width="3"/>
-  <polygon points="430,130 424,125 424,135" fill="#788C5D"/>
-  <text x="440" y="126" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">α=0.8</text>
-
-  <line x1="410" y1="176" x2="430" y2="176" stroke="#788C5D" stroke-width="1.2"/>
-  <polygon points="430,176 424,172 424,180" fill="#788C5D"/>
-  <text x="440" y="172" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">α=0.15</text>
-
-  <line x1="410" y1="222" x2="430" y2="222" stroke="#788C5D" stroke-width="0.8"/>
-  <polygon points="430,222 424,218 424,226" fill="#788C5D"/>
-  <text x="440" y="218" font-size="9" fill="#788C5D" font-family="ui-monospace, monospace">α=0.05</text>
-
-  <!-- Adaptive selection label -->
-  <rect x="450" y="170" width="110" height="26" rx="4" fill="#788C5D" opacity="0.15" stroke="#788C5D" stroke-width="1"/>
-  <text x="505" y="187" text-anchor="middle" font-size="10" fill="#141413">自适应选择聚合</text>
-
-  <!-- Attention weight annotation -->
-  <text x="470" y="252" text-anchor="middle" font-size="9" fill="#87867F">softmax(q_l · k^i) 控制权重</text>
+  <desc>
+    对比标准残差连接（固定权重=1.0的加法，所有层贡献均等）与 Attention Residuals（通过注意力机制动态决定各层聚合权重，实现选择性层聚合）
+  </desc>
+  <path fill="#faf9f5" d="M0 0h640v300H0z"/>
+  <text x="320" y="24" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Standard Residual vs Attention Residuals</text>
+  <text x="320" y="40" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Kimi 团队 · arXiv:2603.15031 · 2026/03</text>
+  <rect width="280" height="220" x="30" y="56" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="170" y="80" fill="#d97757" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">Standard Residual ❌</text>
+  <text x="170" y="97" fill="#87867f" font-size="10" text-anchor="middle">output = input + SubLayer(output)</text>
+  <rect width="60" height="36" x="50" y="112" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="80" y="134" fill="#141413" font-size="10" text-anchor="middle">Layer 1</text>
+  <rect width="60" height="36" x="50" y="158" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="80" y="180" fill="#141413" font-size="10" text-anchor="middle">Layer 2</text>
+  <rect width="60" height="36" x="50" y="204" fill="#f0eee6" stroke="#d1cfc5" stroke-width="1.5" rx="4"/>
+  <text x="80" y="226" fill="#141413" font-size="10" text-anchor="middle">Layer 3</text>
+  <rect width="60" height="20" x="50" y="250" fill="#e3dacc" stroke="#d1cfc5" rx="4"/>
+  <text x="80" y="264" fill="#87867f" font-size="9" text-anchor="middle">...</text>
+  <text x="120" y="130" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">=1.0</text>
+  <text x="120" y="176" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">=1.0</text>
+  <text x="120" y="222" fill="#d97757" font-family="ui-monospace, monospace" font-size="9">=1.0</text>
+  <path stroke="#d97757" stroke-width="1.5" d="M110 130h20"/>
+  <path fill="#d97757" d="m130 130-6-4v8z"/>
+  <path stroke="#d97757" stroke-width="1.5" d="M110 176h20"/>
+  <path fill="#d97757" d="m130 176-6-4v8z"/>
+  <path stroke="#d97757" stroke-width="1.5" d="M110 222h20"/>
+  <path fill="#d97757" d="m130 222-6-4v8z"/>
+  <rect width="100" height="26" x="140" y="170" fill="#e3dacc" stroke="#d1cfc5" rx="4"/>
+  <text x="190" y="187" fill="#141413" font-size="10" text-anchor="middle">贡献均等稀释</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M250 170h14"/>
+  <path fill="#d1cfc5" d="m264 170-6-4v8z"/>
+  <rect width="280" height="220" x="330" y="56" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="470" y="80" fill="#d97757" font-family="ui-monospace, monospace" font-size="12" font-weight="600" text-anchor="middle">Attention Residuals ✓</text>
+  <text x="470" y="97" fill="#87867f" font-size="10" text-anchor="middle">y_l = Σ α_i · v^i, α = softmax(q·l·k^i)</text>
+  <rect width="60" height="36" x="350" y="112" fill="#f0eee6" stroke="#d97757" stroke-width="1.5" rx="4"/>
+  <text x="380" y="134" fill="#141413" font-size="10" text-anchor="middle">Layer 1</text>
+  <rect width="60" height="36" x="350" y="158" fill="#f0eee6" stroke="#d97757" stroke-width="1.5" rx="4"/>
+  <text x="380" y="180" fill="#141413" font-size="10" text-anchor="middle">Layer 2</text>
+  <rect width="60" height="36" x="350" y="204" fill="#f0eee6" stroke="#d97757" stroke-width="1.5" rx="4"/>
+  <text x="380" y="226" fill="#141413" font-size="10" text-anchor="middle">Layer 3</text>
+  <rect width="60" height="20" x="350" y="250" fill="#e3dacc" stroke="#d1cfc5" rx="4"/>
+  <text x="380" y="264" fill="#87867f" font-size="9" text-anchor="middle">...</text>
+  <path stroke="#788c5d" stroke-width="3" d="M410 130h20"/>
+  <path fill="#788c5d" d="m430 130-6-5v10z"/>
+  <text x="440" y="126" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9">α=0.8</text>
+  <path stroke="#788c5d" stroke-width="1.2" d="M410 176h20"/>
+  <path fill="#788c5d" d="m430 176-6-4v8z"/>
+  <text x="440" y="172" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9">α=0.15</text>
+  <path stroke="#788c5d" stroke-width=".8" d="M410 222h20"/>
+  <path fill="#788c5d" d="m430 222-6-4v8z"/>
+  <text x="440" y="218" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9">α=0.05</text>
+  <rect width="110" height="26" x="450" y="170" fill="#788c5d" stroke="#788c5d" opacity=".15" rx="4"/>
+  <text x="505" y="187" fill="#141413" font-size="10" text-anchor="middle">自适应选择聚合</text>
+  <text x="470" y="252" fill="#87867f" font-size="9" text-anchor="middle">softmax(q_l · k^i) 控制权重</text>
 </svg>

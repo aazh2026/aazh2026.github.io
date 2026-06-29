@@ -1,69 +1,45 @@
-<svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Color palette: ivory bg #FAF9F5, clay #D97757, olive #788C5D, slate #141413, g300 #D1CFC5 -->
-
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 600 380">
   <title>AI伦理治理三层框架</title>
-  <desc>数据层、模型层、应用层构成的三层AI伦理治理框架及对应的LangChain原语</desc>
-
-  <!-- Background -->
-  <rect width="600" height="380" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="300" y="24" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">AI伦理治理三层框架</text>
-  <text x="300" y="40" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Data · Model · Application</text>
-
-  <!-- ===== Level 3: 应用层 (top, olive accent) ===== -->
-  <rect x="40" y="54" width="520" height="80" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="2"/>
-  <text x="56" y="74" font-size="11" font-weight="600" fill="#788C5D" font-family="ui-monospace, monospace">Level 3 · 应用层治理</text>
-  <text x="56" y="92" font-size="12" fill="#141413">目标：防止偏见在真实场景中造成伤害</text>
-  <text x="56" y="108" font-size="10" fill="#87867F">影响评估 · 人在回路 · 持续监控</text>
-  <!-- Right side primitives -->
-  <text x="440" y="78" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Human-in-the-loop</text>
-  <text x="440" y="92" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Audit / Review</text>
-  <text x="440" y="106" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Feedback Loop</text>
-  <!-- Olive pill -->
-  <rect x="500" y="62" width="46" height="18" rx="9" fill="#788C5D"/>
-  <text x="523" y="75" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">应用</text>
-
-  <!-- Arrow 3→2 -->
-  <line x1="300" y1="134" x2="300" y2="146" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,150 296,142 304,142" fill="#D1CFC5"/>
-
-  <!-- ===== Level 2: 模型层 (middle, clay accent for Verification) ===== -->
-  <rect x="40" y="156" width="520" height="80" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
-  <text x="56" y="176" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Level 2 · 模型层治理</text>
-  <text x="56" y="194" font-size="12" fill="#141413">目标：设计公平的算法，使模型输出与敏感属性无关</text>
-  <text x="56" y="210" font-size="10" fill="#87867F">公平性约束 · 对抗去偏见 · 可解释性</text>
-  <!-- Right side primitives -->
-  <text x="440" y="180" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">Fairness Constraint</text>
-  <text x="440" y="194" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">SHAP / LIME</text>
-  <text x="440" y="208" font-size="9.5" fill="#D97757" font-family="ui-monospace, monospace">Adversarial Debiasing</text>
-  <!-- Clay pill -->
-  <rect x="500" y="164" width="46" height="18" rx="9" fill="#D97757"/>
-  <text x="523" y="177" text-anchor="middle" font-size="9" fill="#FFFFFF" font-family="ui-monospace, monospace">验证</text>
-
-  <!-- Arrow 2→1 -->
-  <line x1="300" y1="236" x2="300" y2="248" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="300,252 296,244 304,244" fill="#D1CFC5"/>
-
-  <!-- ===== Level 1: 数据层 (bottom, standard) ===== -->
-  <rect x="40" y="258" width="520" height="80" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="56" y="278" font-size="11" font-weight="600" fill="#D97757" font-family="ui-monospace, monospace">Level 1 · 数据层治理</text>
-  <text x="56" y="296" font-size="12" fill="#141413">目标：确保训练数据的公平性和代表性</text>
-  <text x="56" y="312" font-size="10" fill="#87867F">数据审计 · 数据平衡 · 历史偏见修正</text>
-  <!-- Right side primitives -->
-  <text x="440" y="282" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Data Audit</text>
-  <text x="440" y="296" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Resampling / Augmentation</text>
-  <text x="440" y="310" font-size="9.5" fill="#788C5D" font-family="ui-monospace, monospace">Causal Inference</text>
-  <!-- Standard pill -->
-  <rect x="500" y="266" width="46" height="18" rx="9" fill="#F0EEE6" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="523" y="279" text-anchor="middle" font-size="9" fill="#141413" font-family="ui-monospace, monospace">基础</text>
-
-  <!-- Feedback arrow: Level 3 → Level 1 (dashed, right side) -->
-  <path d="M 560 88 C 580 88, 580 310, 560 298" stroke="#D97757" stroke-width="1.8" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
-  <polygon points="560,298 554,290 566,290" fill="#D97757" opacity="0.5"/>
-  <text x="572" y="200" font-size="9" fill="#D97757" opacity="0.7" font-family="ui-monospace, monospace">反馈</text>
-  <text x="572" y="212" font-size="9" fill="#D97757" opacity="0.7" font-family="ui-monospace, monospace">改进</text>
-
-  <!-- Bottom caption -->
-  <text x="300" y="358" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">数据层是根本 · 模型层是关键 · 应用层是防线</text>
+  <desc>
+    数据层、模型层、应用层构成的三层AI伦理治理框架及对应的LangChain原语
+  </desc>
+  <path fill="#faf9f5" d="M0 0h600v380H0z"/>
+  <text x="300" y="24" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">AI伦理治理三层框架</text>
+  <text x="300" y="40" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Data · Model · Application</text>
+  <rect width="520" height="80" x="40" y="54" fill="#fff" stroke="#788c5d" stroke-width="2" rx="8"/>
+  <text x="56" y="74" fill="#788c5d" font-family="ui-monospace, monospace" font-size="11" font-weight="600">Level 3 · 应用层治理</text>
+  <text x="56" y="92" fill="#141413" font-size="12">目标：防止偏见在真实场景中造成伤害</text>
+  <text x="56" y="108" fill="#87867f" font-size="10">影响评估 · 人在回路 · 持续监控</text>
+  <text x="440" y="78" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Human-in-the-loop</text>
+  <text x="440" y="92" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Audit / Review</text>
+  <text x="440" y="106" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Feedback Loop</text>
+  <rect width="46" height="18" x="500" y="62" fill="#788c5d" rx="9"/>
+  <text x="523" y="75" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">应用</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 134v12"/>
+  <path fill="#d1cfc5" d="m300 150-4-8h8z"/>
+  <rect width="520" height="80" x="40" y="156" fill="#fff" stroke="#d97757" stroke-width="2" rx="8"/>
+  <text x="56" y="176" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600">Level 2 · 模型层治理</text>
+  <text x="56" y="194" fill="#141413" font-size="12">目标：设计公平的算法，使模型输出与敏感属性无关</text>
+  <text x="56" y="210" fill="#87867f" font-size="10">公平性约束 · 对抗去偏见 · 可解释性</text>
+  <text x="440" y="180" fill="#d97757" font-family="ui-monospace, monospace" font-size="9.5">Fairness Constraint</text>
+  <text x="440" y="194" fill="#d97757" font-family="ui-monospace, monospace" font-size="9.5">SHAP / LIME</text>
+  <text x="440" y="208" fill="#d97757" font-family="ui-monospace, monospace" font-size="9.5">Adversarial Debiasing</text>
+  <rect width="46" height="18" x="500" y="164" fill="#d97757" rx="9"/>
+  <text x="523" y="177" fill="#fff" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">验证</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M300 236v12"/>
+  <path fill="#d1cfc5" d="m300 252-4-8h8z"/>
+  <rect width="520" height="80" x="40" y="258" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="56" y="278" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="600">Level 1 · 数据层治理</text>
+  <text x="56" y="296" fill="#141413" font-size="12">目标：确保训练数据的公平性和代表性</text>
+  <text x="56" y="312" fill="#87867f" font-size="10">数据审计 · 数据平衡 · 历史偏见修正</text>
+  <text x="440" y="282" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Data Audit</text>
+  <text x="440" y="296" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Resampling / Augmentation</text>
+  <text x="440" y="310" fill="#788c5d" font-family="ui-monospace, monospace" font-size="9.5">Causal Inference</text>
+  <rect width="46" height="18" x="500" y="266" fill="#f0eee6" stroke="#d1cfc5" rx="9"/>
+  <text x="523" y="279" fill="#141413" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">基础</text>
+  <path fill="none" stroke="#d97757" stroke-dasharray="4,3" stroke-width="1.8" d="M560 88c20 0 20 222 0 210" opacity=".5"/>
+  <path fill="#d97757" d="m560 298-6-8h12z" opacity=".5"/>
+  <text x="572" y="200" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" opacity=".7">反馈</text>
+  <text x="572" y="212" fill="#d97757" font-family="ui-monospace, monospace" font-size="9" opacity=".7">改进</text>
+  <text x="300" y="358" fill="#87867f" font-family="ui-monospace, monospace" font-size="9" text-anchor="middle">数据层是根本 · 模型层是关键 · 应用层是防线</text>
 </svg>

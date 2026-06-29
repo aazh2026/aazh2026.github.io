@@ -1,81 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="system-ui,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" viewBox="0 0 800 450">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#141413"/>
+    <marker id="arrow" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#141413" d="m0 0 10 3.5L0 7z"/>
     </marker>
-    <marker id="arrowClay" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#D97757"/>
+    <marker id="arrowClay" markerHeight="7" markerWidth="10" orient="auto" refX="9" refY="3.5">
+      <path fill="#d97757" d="m0 0 10 3.5L0 7z"/>
     </marker>
   </defs>
-  <rect width="800" height="450" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="400" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#141413" letter-spacing="1">闭环验证系统</text>
-  <text x="400" y="50" text-anchor="middle" font-size="11" fill="#87867F">双向约束：规格生成代码，代码反验证规格</text>
-
-  <!-- Central cycle -->
-  <g transform="translate(400, 230)">
-    <!-- Outer ring -->
-    <circle r="130" fill="none" stroke="#D1CFC5" stroke-width="2" stroke-dasharray="6 4"/>
-    <!-- Inner ring -->
-    <circle r="90" fill="none" stroke="#D1CFC5" stroke-width="1"/>
-
-    <!-- Bidirectional arrows on cycle -->
-    <path d="M -128 20 A 130 130 0 0 1 -50 -120" fill="none" stroke="#D97757" stroke-width="2.5" marker-end="url(#arrowClay)"/>
-    <path d="M 128 -20 A 130 130 0 0 1 50 120" fill="none" stroke="#141413" stroke-width="2.5" marker-end="url(#arrow)"/>
-
-    <!-- Top: 自然语言需求 -->
-    <rect x="-70" y="-155" width="140" height="38" rx="8" fill="#D97757"/>
-    <text x="0" y="-132" text-anchor="middle" font-size="13" font-weight="600" fill="#FAF9F5">自然语言需求</text>
-
-    <!-- AI转换引擎 -->
-    <rect x="-80" y="-52" width="160" height="44" rx="10" fill="#141413"/>
-    <text x="0" y="-36" text-anchor="middle" font-size="13" font-weight="700" fill="#FAF9F5">SpecAI</text>
-    <text x="0" y="-20" text-anchor="middle" font-size="11" fill="#D1CFC5">LLM 转换引擎</text>
-
-    <!-- Left: 形式化规格 -->
-    <rect x="-180" y="-25" width="88" height="50" rx="8" fill="#E3DACC"/>
-    <text x="-136" y="-4" text-anchor="middle" font-size="12" font-weight="600" fill="#141413">形式化规格</text>
-    <text x="-136" y="13" text-anchor="middle" font-size="10" fill="#87867F">TLA+/Alloy</text>
-
-    <!-- Right: 可执行代码 -->
-    <rect x="92" y="-25" width="88" height="50" rx="8" fill="#788C5D"/>
-    <text x="136" y="-4" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">可执行代码</text>
-    <text x="136" y="13" text-anchor="middle" font-size="10" fill="#E3DACC">Python/Go</text>
-
-    <!-- Bottom left: 代码生成器 -->
-    <rect x="-170" y="95" width="76" height="36" rx="6" fill="#D1CFC5"/>
-    <text x="-132" y="117" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">代码生成器</text>
-
-    <!-- Bottom right: 模型检查器 -->
-    <rect x="94" y="95" width="76" height="36" rx="6" fill="#D1CFC5"/>
-    <text x="132" y="117" text-anchor="middle" font-size="11" font-weight="600" fill="#141413">模型检查器</text>
-
-    <!-- Bottom: 运行时监控 -->
-    <rect x="-60" y="158" width="120" height="36" rx="8" fill="#D97757"/>
-    <text x="0" y="180" text-anchor="middle" font-size="12" font-weight="600" fill="#FAF9F5">运行时监控</text>
-
-    <!-- Arrows connecting -->
-    <line x1="-40" y1="-8" x2="-82" y2="-8" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="40" y1="-8" x2="82" y2="-8" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="-132" y1="25" x2="-132" y2="91" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="132" y1="25" x2="132" y2="91" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="-88" y1="131" x2="-30" y2="158" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="88" y1="131" x2="30" y2="158" stroke="#87867F" stroke-width="1.5" marker-end="url(#arrow)"/>
-    <line x1="0" y1="131" x2="0" y2="155" stroke="#D97757" stroke-width="1.5" marker-end="url(#arrowClay)"/>
-
-    <!-- Feedback label -->
-    <text x="0" y="208" text-anchor="middle" font-size="10" fill="#D97757" font-weight="600">偏差报告 → 反馈规格</text>
+  <path fill="#faf9f5" d="M0 0h800v450H0z"/>
+  <text x="400" y="32" fill="#141413" font-size="16" font-weight="700" letter-spacing="1" text-anchor="middle">闭环验证系统</text>
+  <text x="400" y="50" fill="#87867f" font-size="11" text-anchor="middle">双向约束：规格生成代码，代码反验证规格</text>
+  <g transform="translate(400 230)">
+    <circle r="130" fill="none" stroke="#d1cfc5" stroke-dasharray="6 4" stroke-width="2"/>
+    <circle r="90" fill="none" stroke="#d1cfc5"/>
+    <path fill="none" stroke="#d97757" stroke-width="2.5" marker-end="url(#arrowClay)" d="M-128 20a130 130 0 0 1 78-140"/>
+    <path fill="none" stroke="#141413" stroke-width="2.5" marker-end="url(#arrow)" d="M128-20a130 130 0 0 1-78 140"/>
+    <rect width="140" height="38" x="-70" y="-155" fill="#d97757" rx="8"/>
+    <text y="-132" fill="#faf9f5" font-size="13" font-weight="600" text-anchor="middle">自然语言需求</text>
+    <rect width="160" height="44" x="-80" y="-52" fill="#141413" rx="10"/>
+    <text y="-36" fill="#faf9f5" font-size="13" font-weight="700" text-anchor="middle">SpecAI</text>
+    <text y="-20" fill="#d1cfc5" font-size="11" text-anchor="middle">LLM 转换引擎</text>
+    <rect width="88" height="50" x="-180" y="-25" fill="#e3dacc" rx="8"/>
+    <text x="-136" y="-4" fill="#141413" font-size="12" font-weight="600" text-anchor="middle">形式化规格</text>
+    <text x="-136" y="13" fill="#87867f" font-size="10" text-anchor="middle">TLA+/Alloy</text>
+    <rect width="88" height="50" x="92" y="-25" fill="#788c5d" rx="8"/>
+    <text x="136" y="-4" fill="#faf9f5" font-size="12" font-weight="600" text-anchor="middle">可执行代码</text>
+    <text x="136" y="13" fill="#e3dacc" font-size="10" text-anchor="middle">Python/Go</text>
+    <rect width="76" height="36" x="-170" y="95" fill="#d1cfc5" rx="6"/>
+    <text x="-132" y="117" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">代码生成器</text>
+    <rect width="76" height="36" x="94" y="95" fill="#d1cfc5" rx="6"/>
+    <text x="132" y="117" fill="#141413" font-size="11" font-weight="600" text-anchor="middle">模型检查器</text>
+    <rect width="120" height="36" x="-60" y="158" fill="#d97757" rx="8"/>
+    <text y="180" fill="#faf9f5" font-size="12" font-weight="600" text-anchor="middle">运行时监控</text>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="M-40-8h-42"/>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="M40-8h42"/>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="M-132 25v66"/>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="M132 25v66"/>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="m-88 131 58 27"/>
+    <path stroke="#87867f" stroke-width="1.5" marker-end="url(#arrow)" d="m88 131-58 27"/>
+    <path stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowClay)" d="M0 131v24"/>
+    <text y="208" fill="#d97757" font-size="10" font-weight="600" text-anchor="middle">偏差报告 → 反馈规格</text>
   </g>
-
-  <!-- Legend -->
-  <rect x="20" y="395" width="760" height="40" rx="6" fill="#E3DACC" opacity="0.6"/>
-  <circle cx="50" cy="415" r="6" fill="#D97757"/>
-  <text x="64" y="419" font-size="11" fill="#141413">规格 → 代码</text>
+  <rect width="760" height="40" x="20" y="395" fill="#e3dacc" opacity=".6" rx="6"/>
+  <circle cx="50" cy="415" r="6" fill="#d97757"/>
+  <text x="64" y="419" fill="#141413" font-size="11">规格 → 代码</text>
   <circle cx="180" cy="415" r="6" fill="#141413"/>
-  <text x="194" y="419" font-size="11" fill="#141413">代码验证规格</text>
-  <circle cx="330" cy="415" r="6" fill="#788C5D"/>
-  <text x="344" y="419" font-size="11" fill="#141413">运行时检测</text>
-  <circle cx="490" cy="415" r="6" fill="#D1CFC5"/>
-  <text x="504" y="419" font-size="11" fill="#141413">双向约束闭环</text>
+  <text x="194" y="419" fill="#141413" font-size="11">代码验证规格</text>
+  <circle cx="330" cy="415" r="6" fill="#788c5d"/>
+  <text x="344" y="419" fill="#141413" font-size="11">运行时检测</text>
+  <circle cx="490" cy="415" r="6" fill="#d1cfc5"/>
+  <text x="504" y="419" fill="#141413" font-size="11">双向约束闭环</text>
 </svg>

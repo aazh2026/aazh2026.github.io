@@ -1,55 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560">
-  <rect width="900" height="560" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#141413">语义冲突检测：合并前的问题发现</text>
-
-  <!-- Two PR boxes -->
-  <!-- PR #1234 -->
-  <rect x="50" y="75" width="370" height="110" rx="10" fill="#D97757" fill-opacity="0.15" stroke="#D97757" stroke-width="2"/>
-  <text x="235" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#D97757">PR #1234</text>
-  <text x="235" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">添加订单取消功能</text>
-  <rect x="70" y="135" width="330" height="35" rx="5" fill="#141413"/>
-  <text x="235" y="158" text-anchor="middle" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">新状态: CANCELLING (订单取消中)</text>
-
-  <!-- PR #1235 -->
-  <rect x="480" y="75" width="370" height="110" rx="10" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2"/>
-  <text x="665" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#788C5D">PR #1235</text>
-  <text x="665" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">优化订单状态查询性能</text>
-  <rect x="500" y="135" width="330" height="35" rx="5" fill="#141413"/>
-  <text x="665" y="158" text-anchor="middle" font-family="Courier, monospace" font-size="11" fill="#FAF9F5">假设状态: CREATED, PAID, SHIPPED, DELIVERED</text>
-
-  <!-- Conflict detection center -->
-  <rect x="350" y="205" width="200" height="55" rx="27" fill="#D97757"/>
-  <text x="450" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#FAF9F5">语义冲突检测</text>
-
-  <!-- Arrows from PRs to center -->
-  <path d="M235 185 L350 232" stroke="#D97757" stroke-width="2" fill="none"/>
-  <path d="M665 185 L550 232" stroke="#788C5D" stroke-width="2" fill="none"/>
-
-  <!-- Conflict result box -->
-  <rect x="50" y="285" width="800" height="155" rx="12" fill="#E3DACC" stroke="#D97757" stroke-width="2"/>
-
-  <text x="450" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#D97757">检测到的语义冲突</text>
-
-  <rect x="70" y="325" width="760" height="50" rx="6" fill="#FAF9F5"/>
-  <text x="450" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">PR #1235 的查询优化将</text>
-  <text x="450" y="368" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">忽略 CANCELLING 状态的订单 → 取消中的订单不可见</text>
-
-  <rect x="70" y="385" width="760" height="40" rx="6" fill="#FAF9F5"/>
-  <text x="450" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#141413">两个 PR 单独测试都通过，但合并后系统行为异常</text>
-
-  <!-- Resolution suggestion -->
-  <rect x="50" y="455" width="800" height="90" rx="12" fill="#788C5D" fill-opacity="0.15" stroke="#788C5D" stroke-width="2"/>
-  <text x="450" y="480" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#788C5D">建议解决方案</text>
-
-  <rect x="70" y="492" width="720" height="40" rx="6" fill="#FAF9F5"/>
-  <text x="430" y="518" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#141413">1. 先合并 #1234 (添加新状态) → 2. 更新 #1235 的查询逻辑包含 CANCELLING → 3. 再合并 #1235</text>
-
-  <!-- Key insight -->
-  <rect x="50" y="20" width="800" height="30" rx="4" fill="#141413"/>
-  <text x="450" y="40" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#FAF9F5">合并冲突只是表象，语义冲突才是杀手</text>
-
-  <!-- Five conflict types (bottom) -->
-  <text x="450" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#87867F">冲突类型：文本冲突 · 逻辑冲突 · 语义冲突 · 时序冲突 · 依赖冲突</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560">
+  <path fill="#faf9f5" d="M0 0h900v560H0z"/>
+  <text x="450" y="42" fill="#141413" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle">语义冲突检测：合并前的问题发现</text>
+  <rect width="370" height="110" x="50" y="75" fill="#d97757" fill-opacity=".15" stroke="#d97757" stroke-width="2" rx="10"/>
+  <text x="235" y="100" fill="#d97757" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">PR #1234</text>
+  <text x="235" y="122" fill="#141413" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">添加订单取消功能</text>
+  <rect width="330" height="35" x="70" y="135" fill="#141413" rx="5"/>
+  <text x="235" y="158" fill="#faf9f5" font-family="Courier, monospace" font-size="11" text-anchor="middle">新状态: CANCELLING (订单取消中)</text>
+  <rect width="370" height="110" x="480" y="75" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" stroke-width="2" rx="10"/>
+  <text x="665" y="100" fill="#788c5d" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">PR #1235</text>
+  <text x="665" y="122" fill="#141413" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">优化订单状态查询性能</text>
+  <rect width="330" height="35" x="500" y="135" fill="#141413" rx="5"/>
+  <text x="665" y="158" fill="#faf9f5" font-family="Courier, monospace" font-size="11" text-anchor="middle">假设状态: CREATED, PAID, SHIPPED, DELIVERED</text>
+  <rect width="200" height="55" x="350" y="205" fill="#d97757" rx="27"/>
+  <text x="450" y="235" fill="#faf9f5" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">语义冲突检测</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" d="m235 185 115 47"/>
+  <path fill="none" stroke="#788c5d" stroke-width="2" d="m665 185-115 47"/>
+  <rect width="800" height="155" x="50" y="285" fill="#e3dacc" stroke="#d97757" stroke-width="2" rx="12"/>
+  <text x="450" y="310" fill="#d97757" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">检测到的语义冲突</text>
+  <rect width="760" height="50" x="70" y="325" fill="#faf9f5" rx="6"/>
+  <text x="450" y="350" fill="#141413" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">PR #1235 的查询优化将</text>
+  <text x="450" y="368" fill="#141413" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">忽略 CANCELLING 状态的订单 → 取消中的订单不可见</text>
+  <rect width="760" height="40" x="70" y="385" fill="#faf9f5" rx="6"/>
+  <text x="450" y="410" fill="#141413" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">两个 PR 单独测试都通过，但合并后系统行为异常</text>
+  <rect width="800" height="90" x="50" y="455" fill="#788c5d" fill-opacity=".15" stroke="#788c5d" stroke-width="2" rx="12"/>
+  <text x="450" y="480" fill="#788c5d" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">建议解决方案</text>
+  <rect width="720" height="40" x="70" y="492" fill="#faf9f5" rx="6"/>
+  <text x="430" y="518" fill="#141413" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">1. 先合并 #1234 (添加新状态) → 2. 更新 #1235 的查询逻辑包含 CANCELLING → 3. 再合并 #1235</text>
+  <rect width="800" height="30" x="50" y="20" fill="#141413" rx="4"/>
+  <text x="450" y="40" fill="#faf9f5" font-family="Georgia, serif" font-size="12" font-style="italic" text-anchor="middle">合并冲突只是表象，语义冲突才是杀手</text>
+  <text x="450" y="545" fill="#87867f" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">冲突类型：文本冲突 · 逻辑冲突 · 语义冲突 · 时序冲突 · 依赖冲突</text>
 </svg>

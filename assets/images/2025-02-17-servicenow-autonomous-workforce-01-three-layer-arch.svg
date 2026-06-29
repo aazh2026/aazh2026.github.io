@@ -1,126 +1,76 @@
-<svg viewBox="0 0 820 520" xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,sans-serif" viewBox="0 0 820 520">
   <title>ServiceNow Autonomous Workforce AI控制塔三层架构</title>
-  <desc>ServiceNow Autonomous Workforce的三层架构图：顶部治理层（Governance治理、Authority权限、Auditability审计），中间协调层（工作流编排、上下文传递、异常处理），底部执行层（IT服务Agent、HR服务Agent、客户服务Agent、财务Agent等预构建专业Agent）。核心定位为"可控的自主"。</desc>
+  <desc>
+    ServiceNow Autonomous Workforce的三层架构图：顶部治理层（Governance治理、Authority权限、Auditability审计），中间协调层（工作流编排、上下文传递、异常处理），底部执行层（IT服务Agent、HR服务Agent、客户服务Agent、财务Agent等预构建专业Agent）。核心定位为&quot;可控的自主&quot;。
+  </desc>
   <defs>
-    <marker id="arr" markerWidth="7" markerHeight="7" refX="6" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 Z" fill="#D97757"/>
+    <marker id="arr" markerHeight="7" markerWidth="7" orient="auto" refX="6" refY="3">
+      <path fill="#d97757" d="m0 0 6 3-6 3Z"/>
     </marker>
   </defs>
-
-  <!-- Background -->
-  <rect width="820" height="520" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="410" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#141413">ServiceNow Autonomous Workforce：AI控制塔三层架构</text>
-  <text x="410" y="52" text-anchor="middle" font-size="12" fill="#87867F">执行层 · 协调层 · 治理层 — Governance, Authority, Auditability</text>
-
-  <!-- Control Tower label -->
-  <rect x="350" y="66" width="120" height="26" rx="13" fill="#141413"/>
-  <text x="410" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">AI 控制塔</text>
-
-  <!-- Horizontal stacking: top bar -->
-  <rect x="20" y="100" width="780" height="4" rx="2" fill="#D1CFC5"/>
-
-  <!-- ======================= -->
-  <!-- LAYER 3: GOVERNANCE (top) -->
-  <!-- ======================= -->
-  <rect x="20" y="110" width="780" height="130" rx="10" fill="#E3DACC" stroke="#788C5D" stroke-width="2"/>
-
-  <rect x="36" y="120" width="80" height="20" rx="4" fill="#788C5D"/>
-  <text x="76" y="134" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">治理层</text>
-
-  <!-- Governance items (3 columns) -->
-  <!-- Column 1: 策略驱动的治理 -->
-  <rect x="36" y="150" width="230" height="76" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="151" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Governance 治理</text>
-  <line x1="50" y1="177" x2="252" y2="177" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="46" y="192" font-size="9" fill="#141413">• 策略驱动的Agent行为边界</text>
-  <text x="46" y="205" font-size="9" fill="#141413">• 分层决策：战略（人类）vs战术（AI）</text>
-  <text x="46" y="218" font-size="9" fill="#141413">• 实时可见性 + 异常介入能力</text>
-
-  <!-- Column 2: 最小权限 -->
-  <rect x="280" y="150" width="230" height="76" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="395" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Authority 权限</text>
-  <line x1="294" y1="177" x2="506" y2="177" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="290" y="192" font-size="9" fill="#141413">• 最小权限原则（零信任）</text>
-  <text x="290" y="205" font-size="9" fill="#141413">• 动态权限（按上下文调整）</text>
-  <text x="290" y="218" font-size="9" fill="#141413">• 多因素授权 + 定期权限审计</text>
-
-  <!-- Column 3: 审计追踪 -->
-  <rect x="524" y="150" width="260" height="76" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="654" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">Auditability 审计</text>
-  <line x1="538" y1="177" x2="770" y2="177" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="534" y="192" font-size="9" fill="#141413">• 不可篡改的行为日志</text>
-  <text x="534" y="205" font-size="9" fill="#141413">• 可解释决策（Chain-of-Thought）</text>
-  <text x="534" y="218" font-size="9" fill="#141413">• 自动生成SOX/GDPR合规报告</text>
-
-  <!-- ======================= -->
-  <!-- LAYER 2: COORDINATION (middle) -->
-  <!-- ======================= -->
-  <rect x="20" y="250" width="780" height="120" rx="10" fill="#E3DACC" stroke="#D97757" stroke-width="2"/>
-
-  <rect x="36" y="260" width="80" height="20" rx="4" fill="#D97757"/>
-  <text x="76" y="274" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">协调层</text>
-
-  <!-- Coordination items (3 columns) -->
-  <!-- Column 1: 工作流编排 -->
-  <rect x="36" y="290" width="230" height="64" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="151" y="308" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">工作流编排</text>
-  <line x1="50" y1="315" x2="252" y2="315" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="46" y="330" font-size="9" fill="#141413">• 可视化跨Agent流程设计</text>
-  <text x="46" y="343" font-size="9" fill="#141413">• 多Agent串联/并联编排</text>
-
-  <!-- Column 2: 上下文传递 -->
-  <rect x="280" y="290" width="230" height="64" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="395" y="308" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">上下文传递</text>
-  <line x1="294" y1="315" x2="506" y2="315" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="290" y="330" font-size="9" fill="#141413">• 共享上下文存储</text>
-  <text x="290" y="343" font-size="9" fill="#141413">• 跨Agent信息无缝流转</text>
-
-  <!-- Column 3: 异常处理 -->
-  <rect x="524" y="290" width="260" height="64" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="654" y="308" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">异常处理</text>
-  <line x1="538" y1="315" x2="770" y2="315" stroke="#D1CFC5" stroke-width="0.8"/>
-  <text x="534" y="330" font-size="9" fill="#141413">• 熔断 · 重试 · 升级机制</text>
-  <text x="534" y="343" font-size="9" fill="#141413">• 流程健壮性保障</text>
-
-  <!-- Arrow between layer 2 and 1 -->
-  <path d="M410,378 L410,392" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arr)"/>
-
-  <!-- ======================= -->
-  <!-- LAYER 1: EXECUTION (bottom) -->
-  <!-- ======================= -->
-  <rect x="20" y="400" width="780" height="100" rx="10" fill="#E3DACC" stroke="#141413" stroke-width="2"/>
-
-  <rect x="36" y="410" width="80" height="20" rx="4" fill="#141413"/>
-  <text x="76" y="424" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">执行层</text>
-
-  <!-- Agent cards -->
-  <!-- IT Agent -->
-  <rect x="36" y="438" width="130" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="101" y="457" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">IT服务Agent</text>
-  <text x="101" y="472" text-anchor="middle" font-size="9" fill="#87867F">密码重置 · 权限申请</text>
-
-  <!-- HR Agent -->
-  <rect x="178" y="438" width="130" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="243" y="457" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">HR服务Agent</text>
-  <text x="243" y="472" text-anchor="middle" font-size="9" fill="#87867F">入职 · 福利 · 报销</text>
-
-  <!-- Customer Agent -->
-  <rect x="320" y="438" width="130" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="385" y="457" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">客户服务Agent</text>
-  <text x="385" y="472" text-anchor="middle" font-size="9" fill="#87867F">咨询 · 投诉 · 查询</text>
-
-  <!-- Finance Agent -->
-  <rect x="462" y="438" width="130" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="527" y="457" text-anchor="middle" font-size="10" font-weight="700" fill="#141413">财务Agent</text>
-  <text x="527" y="472" text-anchor="middle" font-size="9" fill="#87867F">发票 · 预算 · 合规审批</text>
-
-  <!-- More Agents indicator -->
-  <rect x="606" y="438" width="178" height="50" rx="6" fill="#FAF9F5" stroke="#D1CFC5" stroke-width="1" stroke-dasharray="4,2"/>
-  <text x="695" y="457" text-anchor="middle" font-size="10" font-weight="700" fill="#87867F">+ 更多领域Agent</text>
-  <text x="695" y="472" text-anchor="middle" font-size="9" fill="#D1CFC5">深度集成ServiceNow平台</text>
-
-  <!-- Bottom note -->
-  <text x="410" y="512" text-anchor="middle" font-size="10" fill="#87867F">核心定位：可控的自主（Controlled Autonomy）— 不是黑箱完全自主，而是可治理可审计的控制塔</text>
+  <path fill="#faf9f5" d="M0 0h820v520H0z"/>
+  <text x="410" y="32" fill="#141413" font-size="17" font-weight="700" text-anchor="middle">ServiceNow Autonomous Workforce：AI控制塔三层架构</text>
+  <text x="410" y="52" fill="#87867f" font-size="12" text-anchor="middle">执行层 · 协调层 · 治理层 — Governance, Authority, Auditability</text>
+  <rect width="120" height="26" x="350" y="66" fill="#141413" rx="13"/>
+  <text x="410" y="84" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">AI 控制塔</text>
+  <rect width="780" height="4" x="20" y="100" fill="#d1cfc5" rx="2"/>
+  <rect width="780" height="130" x="20" y="110" fill="#e3dacc" stroke="#788c5d" stroke-width="2" rx="10"/>
+  <rect width="80" height="20" x="36" y="120" fill="#788c5d" rx="4"/>
+  <text x="76" y="134" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">治理层</text>
+  <rect width="230" height="76" x="36" y="150" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="151" y="170" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">Governance 治理</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M50 177h202"/>
+  <text x="46" y="192" fill="#141413" font-size="9">• 策略驱动的Agent行为边界</text>
+  <text x="46" y="205" fill="#141413" font-size="9">• 分层决策：战略（人类）vs战术（AI）</text>
+  <text x="46" y="218" fill="#141413" font-size="9">• 实时可见性 + 异常介入能力</text>
+  <rect width="230" height="76" x="280" y="150" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="395" y="170" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">Authority 权限</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M294 177h212"/>
+  <text x="290" y="192" fill="#141413" font-size="9">• 最小权限原则（零信任）</text>
+  <text x="290" y="205" fill="#141413" font-size="9">• 动态权限（按上下文调整）</text>
+  <text x="290" y="218" fill="#141413" font-size="9">• 多因素授权 + 定期权限审计</text>
+  <rect width="260" height="76" x="524" y="150" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="654" y="170" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">Auditability 审计</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M538 177h232"/>
+  <text x="534" y="192" fill="#141413" font-size="9">• 不可篡改的行为日志</text>
+  <text x="534" y="205" fill="#141413" font-size="9">• 可解释决策（Chain-of-Thought）</text>
+  <text x="534" y="218" fill="#141413" font-size="9">• 自动生成SOX/GDPR合规报告</text>
+  <rect width="780" height="120" x="20" y="250" fill="#e3dacc" stroke="#d97757" stroke-width="2" rx="10"/>
+  <rect width="80" height="20" x="36" y="260" fill="#d97757" rx="4"/>
+  <text x="76" y="274" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">协调层</text>
+  <rect width="230" height="64" x="36" y="290" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="151" y="308" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">工作流编排</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M50 315h202"/>
+  <text x="46" y="330" fill="#141413" font-size="9">• 可视化跨Agent流程设计</text>
+  <text x="46" y="343" fill="#141413" font-size="9">• 多Agent串联/并联编排</text>
+  <rect width="230" height="64" x="280" y="290" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="395" y="308" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">上下文传递</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M294 315h212"/>
+  <text x="290" y="330" fill="#141413" font-size="9">• 共享上下文存储</text>
+  <text x="290" y="343" fill="#141413" font-size="9">• 跨Agent信息无缝流转</text>
+  <rect width="260" height="64" x="524" y="290" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="654" y="308" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">异常处理</text>
+  <path stroke="#d1cfc5" stroke-width=".8" d="M538 315h232"/>
+  <text x="534" y="330" fill="#141413" font-size="9">• 熔断 · 重试 · 升级机制</text>
+  <text x="534" y="343" fill="#141413" font-size="9">• 流程健壮性保障</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr)" d="M410 378v14"/>
+  <rect width="780" height="100" x="20" y="400" fill="#e3dacc" stroke="#141413" stroke-width="2" rx="10"/>
+  <rect width="80" height="20" x="36" y="410" fill="#141413" rx="4"/>
+  <text x="76" y="424" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">执行层</text>
+  <rect width="130" height="50" x="36" y="438" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="101" y="457" fill="#141413" font-size="10" font-weight="700" text-anchor="middle">IT服务Agent</text>
+  <text x="101" y="472" fill="#87867f" font-size="9" text-anchor="middle">密码重置 · 权限申请</text>
+  <rect width="130" height="50" x="178" y="438" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="243" y="457" fill="#141413" font-size="10" font-weight="700" text-anchor="middle">HR服务Agent</text>
+  <text x="243" y="472" fill="#87867f" font-size="9" text-anchor="middle">入职 · 福利 · 报销</text>
+  <rect width="130" height="50" x="320" y="438" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="385" y="457" fill="#141413" font-size="10" font-weight="700" text-anchor="middle">客户服务Agent</text>
+  <text x="385" y="472" fill="#87867f" font-size="9" text-anchor="middle">咨询 · 投诉 · 查询</text>
+  <rect width="130" height="50" x="462" y="438" fill="#faf9f5" stroke="#d1cfc5" rx="6"/>
+  <text x="527" y="457" fill="#141413" font-size="10" font-weight="700" text-anchor="middle">财务Agent</text>
+  <text x="527" y="472" fill="#87867f" font-size="9" text-anchor="middle">发票 · 预算 · 合规审批</text>
+  <rect width="178" height="50" x="606" y="438" fill="#faf9f5" stroke="#d1cfc5" stroke-dasharray="4,2" rx="6"/>
+  <text x="695" y="457" fill="#87867f" font-size="10" font-weight="700" text-anchor="middle">+ 更多领域Agent</text>
+  <text x="695" y="472" fill="#d1cfc5" font-size="9" text-anchor="middle">深度集成ServiceNow平台</text>
+  <text x="410" y="512" fill="#87867f" font-size="10" text-anchor="middle">核心定位：可控的自主（Controlled Autonomy）— 不是黑箱完全自主，而是可治理可审计的控制塔</text>
 </svg>

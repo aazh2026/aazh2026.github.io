@@ -1,103 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="system-ui,-apple-system,sans-serif">
-  <!-- Background -->
-  <rect width="860" height="480" fill="#FAF9F5" rx="12"/>
-
-  <!-- Title -->
-  <text x="30" y="38" font-size="15" font-weight="700" fill="#141413">Harness Engineering：Agent 的六层架构组件</text>
-  <text x="30" y="56" font-size="11" fill="#87867F">Model + Harness = Agent — Addy Osmani, Google Cloud AI Director</text>
-
-  <!-- Center equation -->
-  <rect x="280" y="68" width="300" height="40" fill="#141413" rx="8"/>
-  <text x="430" y="95" text-anchor="middle" font-size="17" font-weight="700" fill="#FAF9F5">Model + Harness = Agent</text>
-
-  <!-- Model circle -->
-  <circle cx="300" cy="88" r="28" fill="#D97757" opacity="0.9"/>
-  <text x="300" y="93" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Model</text>
-
-  <!-- Harness circle -->
-  <circle cx="560" cy="88" r="28" fill="#788C5D" opacity="0.9"/>
-  <text x="560" y="93" text-anchor="middle" font-size="12" font-weight="700" fill="#FAF9F5">Harness</text>
-
-  <!-- Plus sign -->
-  <text x="430" y="93" text-anchor="middle" font-size="20" font-weight="700" fill="#87867F">+</text>
-
-  <!-- Equals sign -->
-  <text x="430" y="93" text-anchor="middle" font-size="20" font-weight="700" fill="#D1CFC5">=</text>
-
-  <!-- Six layers stacked -->
-  <!-- Layer 6: Observability (top) -->
-  <rect x="580" y="128" width="250" height="46" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="705" y="146" font-size="11" font-weight="700" fill="#141413">6. 可观测性</text>
-  <text x="705" y="163" font-size="10" fill="#87867F">Logs · Traces · Cost &amp; Latency 计量</text>
-
-  <!-- Layer 5 -->
-  <rect x="580" y="180" width="250" height="46" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="705" y="198" font-size="11" font-weight="700" fill="#141413">5. Hooks 和中间件</text>
-  <text x="705" y="215" font-size="10" fill="#87867F">Pre-commit · Type check · Context compaction</text>
-
-  <!-- Layer 4 -->
-  <rect x="580" y="232" width="250" height="46" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="705" y="250" font-size="11" font-weight="700" fill="#141413">4. 编排逻辑</text>
-  <text x="705" y="267" font-size="10" fill="#87867F">Subagent spawning · Handoffs · Routing</text>
-
-  <!-- Layer 3 -->
-  <rect x="580" y="284" width="250" height="46" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="705" y="302" font-size="11" font-weight="700" fill="#141413">3. 基础设施</text>
-  <text x="705" y="319" font-size="10" fill="#87867F">Filesystem · Sandboxes · Headless browsers</text>
-
-  <!-- Layer 2 -->
-  <rect x="580" y="336" width="250" height="46" fill="#E3DACC" rx="8" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="705" y="354" font-size="11" font-weight="700" fill="#141413">2. 工具</text>
-  <text x="705" y="371" font-size="10" fill="#87867F">Tools · Skills · MCP servers</text>
-
-  <!-- Layer 1 -->
-  <rect x="580" y="388" width="250" height="46" fill="#D97757" rx="8" stroke="#C0614A" stroke-width="1.5"/>
-  <text x="705" y="406" font-size="11" font-weight="700" fill="#FAF9F5">1. 指令文件</text>
-  <text x="705" y="423" font-size="10" fill="#FAF9F5">System prompts · CLAUDE.md · AGENTS.md</text>
-
-  <!-- Layer numbers on left -->
-  <circle cx="555" cy="151" r="13" fill="#87867F"/>
-  <text x="555" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">6</text>
-  <circle cx="555" cy="203" r="13" fill="#87867F"/>
-  <text x="555" y="208" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">5</text>
-  <circle cx="555" cy="255" r="13" fill="#87867F"/>
-  <text x="555" y="260" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">4</text>
-  <circle cx="555" cy="307" r="13" fill="#87867F"/>
-  <text x="555" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">3</text>
-  <circle cx="555" cy="359" r="13" fill="#87867F"/>
-  <text x="555" y="364" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">2</text>
-  <circle cx="555" cy="411" r="13" fill="#D97757"/>
-  <text x="555" y="416" text-anchor="middle" font-size="11" font-weight="700" fill="#FAF9F5">1</text>
-
-  <!-- Arrow from model to harness layers -->
-  <line x1="328" y1="88" x2="558" y2="411" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5,4"/>
-  <text x="440" y="250" font-size="10" fill="#87867F" transform="rotate(-40 440 250)">Raw model → Agent</text>
-
-  <!-- Left side: concrete examples -->
-  <text x="30" y="146" font-size="12" font-weight="700" fill="#141413">Claude Code、Cursor、Codex</text>
-  <text x="30" y="164" font-size="10" fill="#87867F">本质都是 Harness</text>
-
-  <rect x="30" y="180" width="220" height="100" fill="none" stroke="#D1CFC5" stroke-width="1.5" rx="8"/>
-  <text x="140" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#141413">好 Harness 胜过大模型</text>
-  <rect x="45" y="210" width="60" height="24" fill="#788C5D" rx="5"/>
-  <text x="75" y="226" text-anchor="middle" font-size="10" font-weight="700" fill="#FAF9F5">Great Harness</text>
-  <text x="155" y="226" text-anchor="middle" font-size="10" fill="#141413">+ Decent Model</text>
-  <text x="140" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#788C5D">→ 持续打赢</text>
-  <rect x="45" y="258" width="60" height="24" fill="#D1CFC5" rx="5"/>
-  <text x="75" y="274" text-anchor="middle" font-size="10" font-weight="600" fill="#141413">Bad Harness</text>
-  <text x="155" y="274" text-anchor="middle" font-size="10" fill="#141413">+ Great Model</text>
-
-  <!-- Ratchet principle -->
-  <rect x="30" y="298" width="220" height="130" fill="none" stroke="#D97757" stroke-width="1.5" rx="8"/>
-  <text x="140" y="318" text-anchor="middle" font-size="11" font-weight="700" fill="#D97757">棘轮效应 ⭐</text>
-  <text x="140" y="338" text-anchor="middle" font-size="10" fill="#141413">每个错误变成一条规则</text>
-  <line x1="30" y1="350" x2="250" y2="350" stroke="#E3DACC" stroke-width="1"/>
-  <text x="140" y="366" text-anchor="middle" font-size="10" fill="#141413">Agent 提交 PR 被 merge</text>
-  <text x="140" y="382" text-anchor="middle" font-size="10" fill="#141413">→ 规则追加到 CLAUDE.md</text>
-  <text x="140" y="398" text-anchor="middle" font-size="10" fill="#141413">→ Skillify 规则测试</text>
-  <text x="140" y="414" text-anchor="middle" font-size="10" fill="#141413">失败是永久信号</text>
-
-  <!-- Bottom note -->
-  <rect x="30" y="448" width="800" height="26" fill="#141413" rx="6"/>
-  <text x="430" y="466" text-anchor="middle" font-size="11" fill="#FAF9F5">约束只在观察到真实失败时添加，只在模型让它冗余时移除</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="system-ui,-apple-system,sans-serif" viewBox="0 0 860 480">
+  <rect width="860" height="480" fill="#faf9f5" rx="12"/>
+  <text x="30" y="38" fill="#141413" font-size="15" font-weight="700">Harness Engineering：Agent 的六层架构组件</text>
+  <text x="30" y="56" fill="#87867f" font-size="11">Model + Harness = Agent — Addy Osmani, Google Cloud AI Director</text>
+  <rect width="300" height="40" x="280" y="68" fill="#141413" rx="8"/>
+  <text x="430" y="95" fill="#faf9f5" font-size="17" font-weight="700" text-anchor="middle">Model + Harness = Agent</text>
+  <circle cx="300" cy="88" r="28" fill="#d97757" opacity=".9"/>
+  <text x="300" y="93" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">Model</text>
+  <circle cx="560" cy="88" r="28" fill="#788c5d" opacity=".9"/>
+  <text x="560" y="93" fill="#faf9f5" font-size="12" font-weight="700" text-anchor="middle">Harness</text>
+  <text x="430" y="93" fill="#87867f" font-size="20" font-weight="700" text-anchor="middle">+</text>
+  <text x="430" y="93" fill="#d1cfc5" font-size="20" font-weight="700" text-anchor="middle">=</text>
+  <rect width="250" height="46" x="580" y="128" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
+  <text x="705" y="146" fill="#141413" font-size="11" font-weight="700">6. 可观测性</text>
+  <text x="705" y="163" fill="#87867f" font-size="10">Logs · Traces · Cost &amp; Latency 计量</text>
+  <rect width="250" height="46" x="580" y="180" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
+  <text x="705" y="198" fill="#141413" font-size="11" font-weight="700">5. Hooks 和中间件</text>
+  <text x="705" y="215" fill="#87867f" font-size="10">Pre-commit · Type check · Context compaction</text>
+  <rect width="250" height="46" x="580" y="232" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
+  <text x="705" y="250" fill="#141413" font-size="11" font-weight="700">4. 编排逻辑</text>
+  <text x="705" y="267" fill="#87867f" font-size="10">Subagent spawning · Handoffs · Routing</text>
+  <rect width="250" height="46" x="580" y="284" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
+  <text x="705" y="302" fill="#141413" font-size="11" font-weight="700">3. 基础设施</text>
+  <text x="705" y="319" fill="#87867f" font-size="10">Filesystem · Sandboxes · Headless browsers</text>
+  <rect width="250" height="46" x="580" y="336" fill="#e3dacc" stroke="#d1cfc5" rx="8"/>
+  <text x="705" y="354" fill="#141413" font-size="11" font-weight="700">2. 工具</text>
+  <text x="705" y="371" fill="#87867f" font-size="10">Tools · Skills · MCP servers</text>
+  <rect width="250" height="46" x="580" y="388" fill="#d97757" stroke="#c0614a" stroke-width="1.5" rx="8"/>
+  <text x="705" y="406" fill="#faf9f5" font-size="11" font-weight="700">1. 指令文件</text>
+  <text x="705" y="423" fill="#faf9f5" font-size="10">System prompts · CLAUDE.md · AGENTS.md</text>
+  <circle cx="555" cy="151" r="13" fill="#87867f"/>
+  <text x="555" y="156" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">6</text>
+  <circle cx="555" cy="203" r="13" fill="#87867f"/>
+  <text x="555" y="208" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">5</text>
+  <circle cx="555" cy="255" r="13" fill="#87867f"/>
+  <text x="555" y="260" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">4</text>
+  <circle cx="555" cy="307" r="13" fill="#87867f"/>
+  <text x="555" y="312" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">3</text>
+  <circle cx="555" cy="359" r="13" fill="#87867f"/>
+  <text x="555" y="364" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">2</text>
+  <circle cx="555" cy="411" r="13" fill="#d97757"/>
+  <text x="555" y="416" fill="#faf9f5" font-size="11" font-weight="700" text-anchor="middle">1</text>
+  <path stroke="#d1cfc5" stroke-dasharray="5,4" stroke-width="1.5" d="m328 88 230 323"/>
+  <text x="440" y="250" fill="#87867f" font-size="10" transform="rotate(-40 440 250)">Raw model → Agent</text>
+  <text x="30" y="146" fill="#141413" font-size="12" font-weight="700">Claude Code、Cursor、Codex</text>
+  <text x="30" y="164" fill="#87867f" font-size="10">本质都是 Harness</text>
+  <rect width="220" height="100" x="30" y="180" fill="none" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="140" y="200" fill="#141413" font-size="11" font-weight="700" text-anchor="middle">好 Harness 胜过大模型</text>
+  <rect width="60" height="24" x="45" y="210" fill="#788c5d" rx="5"/>
+  <text x="75" y="226" fill="#faf9f5" font-size="10" font-weight="700" text-anchor="middle">Great Harness</text>
+  <text x="155" y="226" fill="#141413" font-size="10" text-anchor="middle">+ Decent Model</text>
+  <text x="140" y="246" fill="#788c5d" font-size="13" font-weight="700" text-anchor="middle">→ 持续打赢</text>
+  <rect width="60" height="24" x="45" y="258" fill="#d1cfc5" rx="5"/>
+  <text x="75" y="274" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">Bad Harness</text>
+  <text x="155" y="274" fill="#141413" font-size="10" text-anchor="middle">+ Great Model</text>
+  <rect width="220" height="130" x="30" y="298" fill="none" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="140" y="318" fill="#d97757" font-size="11" font-weight="700" text-anchor="middle">棘轮效应 ⭐</text>
+  <text x="140" y="338" fill="#141413" font-size="10" text-anchor="middle">每个错误变成一条规则</text>
+  <path stroke="#e3dacc" d="M30 350h220"/>
+  <text x="140" y="366" fill="#141413" font-size="10" text-anchor="middle">Agent 提交 PR 被 merge</text>
+  <text x="140" y="382" fill="#141413" font-size="10" text-anchor="middle">→ 规则追加到 CLAUDE.md</text>
+  <text x="140" y="398" fill="#141413" font-size="10" text-anchor="middle">→ Skillify 规则测试</text>
+  <text x="140" y="414" fill="#141413" font-size="10" text-anchor="middle">失败是永久信号</text>
+  <rect width="800" height="26" x="30" y="448" fill="#141413" rx="6"/>
+  <text x="430" y="466" fill="#faf9f5" font-size="11" text-anchor="middle">约束只在观察到真实失败时添加，只在模型让它冗余时移除</text>
 </svg>

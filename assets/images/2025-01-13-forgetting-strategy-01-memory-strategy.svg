@@ -1,115 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" font-family="'Georgia', serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="'Georgia', serif" viewBox="0 0 900 500">
   <defs>
-    <marker id="arr3" markerWidth="8" marker-height="6" refX="7" refY="3" orient="auto">
-      <polygon points="0 0, 8 3, 0 6" fill="#D97757"/>
+    <marker id="arr3" markerWidth="8" orient="auto" refX="7" refY="3">
+      <path fill="#d97757" d="m0 0 8 3-8 3z"/>
     </marker>
-    <filter id="shadow3" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#141413" flood-opacity="0.12"/>
+    <filter id="shadow3" width="120%" height="120%" x="-10%" y="-10%">
+      <feDropShadow dx="2" dy="2" flood-color="#141413" flood-opacity=".12" stdDeviation="3"/>
     </filter>
   </defs>
-
-  <!-- Background -->
-  <rect width="900" height="500" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="450" y="36" text-anchor="middle" font-size="16" font-weight="bold" fill="#141413">Agent 记忆肥胖症 vs 智慧遗忘策略</text>
-  <text x="450" y="55" text-anchor="middle" font-size="11" fill="#87867F">遗忘不是记忆的失败，是记忆的智慧</text>
-
-  <!-- LEFT: Memory Obesity -->
-  <rect x="20" y="80" width="370" height="310" rx="12" fill="#E3DACC" stroke="#D97757" stroke-width="2" filter="url(#shadow3)"/>
-  <text x="205" y="104" text-anchor="middle" font-size="12" font-weight="bold" fill="#D97757">✕ 记忆一切（失败模式）</text>
-
-  <!-- 50万条记忆 illustration -->
-  <rect x="50" y="120" width="310" height="80" rx="6" fill="#141413" opacity="0.85"/>
-  <text x="205" y="148" text-anchor="middle" font-size="11" font-weight="bold" fill="#FAF9F5">向量数据库</text>
-  <text x="205" y="165" text-anchor="middle" font-size="10" fill="#E3DACC">50万条记忆碎片</text>
-  <text x="205" y="182" text-anchor="middle" font-size="9" fill="#87867F">全部混在一起，无优先级</text>
-
-  <!-- Symptoms -->
-  <text x="50" y="218" text-anchor="start" font-size="10" font-weight="bold" fill="#141413">症状：</text>
-  <text x="55" y="235" text-anchor="start" font-size="9" fill="#D97757">● 信噪比崩溃 — 99% 是噪音</text>
-  <text x="55" y="252" text-anchor="start" font-size="9" fill="#D97757">● 检索延迟指数增长 100ms → 2000ms</text>
-  <text x="55" y="269" text-anchor="start" font-size="9" fill="#D97757">● 上下文污染 — 被过时信息误导</text>
-  <text x="55" y="286" text-anchor="start" font-size="9" fill="#D97757">● 半年前的错误信息被当成事实引用</text>
-
-  <!-- Quote -->
-  <rect x="50" y="300" width="310" height="72" rx="6" fill="#FAF9F5" stroke="#D97757" stroke-width="1"/>
-  <text x="205" y="318" text-anchor="middle" font-size="9" font-style="italic" fill="#141413">"一个人试图记住这辈子</text>
-  <text x="205" y="333" text-anchor="middle" font-size="9" font-style="italic" fill="#141413">每一顿饭吃了什么——</text>
-  <text x="205" y="348" text-anchor="middle" font-size="9" font-style="italic" fill="#141413">不是记忆力强，是精神病前兆"</text>
-  <text x="205" y="364" text-anchor="middle" font-size="8" fill="#87867F">— 解决方案：手动删除 2000条旧记忆</text>
-
-  <!-- Arrow to right -->
-  <path d="M 395 235 Q 425 235 445 235" fill="none" stroke="#D97757" stroke-width="2" marker-end="url(#arr3)"/>
-  <text x="420" y="225" text-anchor="middle" font-size="9" fill="#D97757">遗忘策略</text>
-
-  <!-- RIGHT: Selective Forgetting -->
-  <rect x="450" y="80" width="430" height="310" rx="12" fill="#FAF9F5" stroke="#788C5D" stroke-width="2" filter="url(#shadow3)"/>
-  <text x="665" y="104" text-anchor="middle" font-size="12" font-weight="bold" fill="#788C5D">✓ 智慧遗忘（正确模式）</text>
-
-  <!-- 4 strategies -->
-  <!-- Strategy 1: Time Decay -->
-  <rect x="470" y="120" width="185" height="90" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="562" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">策略① 时间衰减</text>
-  <line x1="485" y1="150" x2="640" y2="150" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="562" y="166" text-anchor="middle" font-size="9" fill="#87867F">临时状态: 1小时</text>
-  <text x="562" y="180" text-anchor="middle" font-size="9" fill="#87867F">当前上下文: 1天</text>
-  <text x="562" y="194" text-anchor="middle" font-size="9" fill="#87867F">历史对话: 7天</text>
-  <text x="562" y="206" text-anchor="middle" font-size="9" fill="#788C5D">核心知识: 30天/永不</text>
-
-  <!-- Strategy 2: Use it or lose it -->
-  <rect x="665" y="120" width="185" height="90" rx="8" fill="#E3DACC" stroke="#788C5D" stroke-width="1.5"/>
-  <text x="757" y="140" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">策略② 用进废退</text>
-  <line x1="680" y1="150" x2="835" y2="150" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="757" y="166" text-anchor="middle" font-size="9" fill="#87867F">访问频率决定优先级</text>
-  <text x="757" y="180" text-anchor="middle" font-size="9" fill="#87867F">LRU 算法</text>
-  <text x="757" y="194" text-anchor="middle" font-size="9" fill="#87867F">久未访问 → 遗忘</text>
-  <text x="757" y="206" text-anchor="middle" font-size="9" fill="#788C5D">人脑的工作方式</text>
-
-  <!-- Strategy 3: Importance tagging -->
-  <rect x="470" y="222" width="185" height="90" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="562" y="242" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">策略③ 重要性分级</text>
-  <line x1="485" y1="252" x2="640" y2="252" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="562" y="268" text-anchor="middle" font-size="9" fill="#D97757">关键 → 永不遗忘</text>
-  <text x="562" y="282" text-anchor="middle" font-size="9" fill="#141413">重要 → 1年</text>
-  <text x="562" y="296" text-anchor="middle" font-size="9" fill="#87867F">普通 → 1个月</text>
-  <text x="562" y="308" text-anchor="middle" font-size="9" fill="#87867F">临时 → 1天</text>
-
-  <!-- Strategy 4: Compression -->
-  <rect x="665" y="222" width="185" height="90" rx="8" fill="#E3DACC" stroke="#D97757" stroke-width="1.5"/>
-  <text x="757" y="242" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">策略④ 渐进式压缩</text>
-  <line x1="680" y1="252" x2="835" y2="252" stroke="#D1CFC5" stroke-width="1"/>
-  <text x="757" y="268" text-anchor="middle" font-size="9" fill="#87867F">3个月未访问 → 关键句</text>
-  <text x="757" y="282" text-anchor="middle" font-size="9" fill="#87867F">6个月 → 要点</text>
-  <text x="757" y="296" text-anchor="middle" font-size="9" fill="#87867F">1年 → 主题+一句话</text>
-  <text x="757" y="308" text-anchor="middle" font-size="9" fill="#87867F">2年 → 仅存在性标记</text>
-
-  <!-- Bottom insight -->
-  <rect x="450" y="325" width="410" height="55" rx="6" fill="#141413" filter="url(#shadow3)"/>
-  <text x="655" y="345" text-anchor="middle" font-size="10" font-weight="bold" fill="#FAF9F5">遗忘创造意义</text>
-  <text x="655" y="362" text-anchor="middle" font-size="9" fill="#E3DACC">忘记具体词句，记住情感 · 忘记细节，记住教训</text>
-  <text x="655" y="377" text-anchor="middle" font-size="9" fill="#788C5D">Agent的记忆质量不取决于"记住了多少"，而取决于"忘记了多少"</text>
-
-  <!-- Bottom: Evolution arrow -->
-  <rect x="20" y="410" width="860" height="72" rx="10" fill="#E3DACC" stroke="#141413" stroke-width="1.5"/>
-  <text x="450" y="430" text-anchor="middle" font-size="10" font-weight="bold" fill="#141413">从"记忆一切"到"智慧遗忘"的认知进化</text>
-
-  <!-- Timeline -->
-  <line x1="80" y1="452" x2="820" y2="452" stroke="#D1CFC5" stroke-width="2"/>
-  <!-- 2024 -->
-  <circle cx="180" cy="452" r="8" fill="#D97757"/>
-  <text x="180" y="468" text-anchor="middle" font-size="9" fill="#141413" font-weight="bold">2024</text>
-  <text x="180" y="480" text-anchor="middle" font-size="8" fill="#87867F">记忆一切</text>
-  <!-- 2025 -->
-  <circle cx="450" cy="452" r="8" fill="#87867F"/>
-  <text x="450" y="468" text-anchor="middle" font-size="9" fill="#141413" font-weight="bold">2025</text>
-  <text x="450" y="480" text-anchor="middle" font-size="8" fill="#87867F">简单删除</text>
-  <!-- 2026 -->
-  <circle cx="720" cy="452" r="10" fill="#788C5D"/>
-  <text x="720" y="468" text-anchor="middle" font-size="9" fill="#141413" font-weight="bold">2026</text>
-  <text x="720" y="480" text-anchor="middle" font-size="8" fill="#788C5D">智慧遗忘</text>
-
-  <!-- Arrows between years -->
-  <path d="M 210 452 L 420 452" fill="none" stroke="#D1CFC5" stroke-width="1.5" stroke-dasharray="5 3"/>
-  <path d="M 480 452 L 690 452" fill="none" stroke="#788C5D" stroke-width="1.5" marker-end="url(#arr3)"/>
+  <path fill="#faf9f5" d="M0 0h900v500H0z"/>
+  <text x="450" y="36" fill="#141413" font-size="16" font-weight="bold" text-anchor="middle">Agent 记忆肥胖症 vs 智慧遗忘策略</text>
+  <text x="450" y="55" fill="#87867f" font-size="11" text-anchor="middle">遗忘不是记忆的失败，是记忆的智慧</text>
+  <rect width="370" height="310" x="20" y="80" fill="#e3dacc" stroke="#d97757" stroke-width="2" filter="url(#shadow3)" rx="12"/>
+  <text x="205" y="104" fill="#d97757" font-size="12" font-weight="bold" text-anchor="middle">✕ 记忆一切（失败模式）</text>
+  <rect width="310" height="80" x="50" y="120" fill="#141413" opacity=".85" rx="6"/>
+  <text x="205" y="148" fill="#faf9f5" font-size="11" font-weight="bold" text-anchor="middle">向量数据库</text>
+  <text x="205" y="165" fill="#e3dacc" font-size="10" text-anchor="middle">50万条记忆碎片</text>
+  <text x="205" y="182" fill="#87867f" font-size="9" text-anchor="middle">全部混在一起，无优先级</text>
+  <text x="50" y="218" fill="#141413" font-size="10" font-weight="bold">症状：</text>
+  <text x="55" y="235" fill="#d97757" font-size="9">● 信噪比崩溃 — 99% 是噪音</text>
+  <text x="55" y="252" fill="#d97757" font-size="9">● 检索延迟指数增长 100ms → 2000ms</text>
+  <text x="55" y="269" fill="#d97757" font-size="9">● 上下文污染 — 被过时信息误导</text>
+  <text x="55" y="286" fill="#d97757" font-size="9">● 半年前的错误信息被当成事实引用</text>
+  <rect width="310" height="72" x="50" y="300" fill="#faf9f5" stroke="#d97757" rx="6"/>
+  <text x="205" y="318" fill="#141413" font-size="9" font-style="italic" text-anchor="middle">&quot;一个人试图记住这辈子</text>
+  <text x="205" y="333" fill="#141413" font-size="9" font-style="italic" text-anchor="middle">每一顿饭吃了什么——</text>
+  <text x="205" y="348" fill="#141413" font-size="9" font-style="italic" text-anchor="middle">不是记忆力强，是精神病前兆&quot;</text>
+  <text x="205" y="364" fill="#87867f" font-size="8" text-anchor="middle">— 解决方案：手动删除 2000条旧记忆</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arr3)" d="M395 235h50"/>
+  <text x="420" y="225" fill="#d97757" font-size="9" text-anchor="middle">遗忘策略</text>
+  <rect width="430" height="310" x="450" y="80" fill="#faf9f5" stroke="#788c5d" stroke-width="2" filter="url(#shadow3)" rx="12"/>
+  <text x="665" y="104" fill="#788c5d" font-size="12" font-weight="bold" text-anchor="middle">✓ 智慧遗忘（正确模式）</text>
+  <rect width="185" height="90" x="470" y="120" fill="#e3dacc" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="562" y="140" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">策略① 时间衰减</text>
+  <path stroke="#d1cfc5" d="M485 150h155"/>
+  <text x="562" y="166" fill="#87867f" font-size="9" text-anchor="middle">临时状态: 1小时</text>
+  <text x="562" y="180" fill="#87867f" font-size="9" text-anchor="middle">当前上下文: 1天</text>
+  <text x="562" y="194" fill="#87867f" font-size="9" text-anchor="middle">历史对话: 7天</text>
+  <text x="562" y="206" fill="#788c5d" font-size="9" text-anchor="middle">核心知识: 30天/永不</text>
+  <rect width="185" height="90" x="665" y="120" fill="#e3dacc" stroke="#788c5d" stroke-width="1.5" rx="8"/>
+  <text x="757" y="140" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">策略② 用进废退</text>
+  <path stroke="#d1cfc5" d="M680 150h155"/>
+  <text x="757" y="166" fill="#87867f" font-size="9" text-anchor="middle">访问频率决定优先级</text>
+  <text x="757" y="180" fill="#87867f" font-size="9" text-anchor="middle">LRU 算法</text>
+  <text x="757" y="194" fill="#87867f" font-size="9" text-anchor="middle">久未访问 → 遗忘</text>
+  <text x="757" y="206" fill="#788c5d" font-size="9" text-anchor="middle">人脑的工作方式</text>
+  <rect width="185" height="90" x="470" y="222" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="562" y="242" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">策略③ 重要性分级</text>
+  <path stroke="#d1cfc5" d="M485 252h155"/>
+  <text x="562" y="268" fill="#d97757" font-size="9" text-anchor="middle">关键 → 永不遗忘</text>
+  <text x="562" y="282" fill="#141413" font-size="9" text-anchor="middle">重要 → 1年</text>
+  <text x="562" y="296" fill="#87867f" font-size="9" text-anchor="middle">普通 → 1个月</text>
+  <text x="562" y="308" fill="#87867f" font-size="9" text-anchor="middle">临时 → 1天</text>
+  <rect width="185" height="90" x="665" y="222" fill="#e3dacc" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="757" y="242" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">策略④ 渐进式压缩</text>
+  <path stroke="#d1cfc5" d="M680 252h155"/>
+  <text x="757" y="268" fill="#87867f" font-size="9" text-anchor="middle">3个月未访问 → 关键句</text>
+  <text x="757" y="282" fill="#87867f" font-size="9" text-anchor="middle">6个月 → 要点</text>
+  <text x="757" y="296" fill="#87867f" font-size="9" text-anchor="middle">1年 → 主题+一句话</text>
+  <text x="757" y="308" fill="#87867f" font-size="9" text-anchor="middle">2年 → 仅存在性标记</text>
+  <rect width="410" height="55" x="450" y="325" fill="#141413" filter="url(#shadow3)" rx="6"/>
+  <text x="655" y="345" fill="#faf9f5" font-size="10" font-weight="bold" text-anchor="middle">遗忘创造意义</text>
+  <text x="655" y="362" fill="#e3dacc" font-size="9" text-anchor="middle">忘记具体词句，记住情感 · 忘记细节，记住教训</text>
+  <text x="655" y="377" fill="#788c5d" font-size="9" text-anchor="middle">Agent的记忆质量不取决于&quot;记住了多少&quot;，而取决于&quot;忘记了多少&quot;</text>
+  <rect width="860" height="72" x="20" y="410" fill="#e3dacc" stroke="#141413" stroke-width="1.5" rx="10"/>
+  <text x="450" y="430" fill="#141413" font-size="10" font-weight="bold" text-anchor="middle">从&quot;记忆一切&quot;到&quot;智慧遗忘&quot;的认知进化</text>
+  <path stroke="#d1cfc5" stroke-width="2" d="M80 452h740"/>
+  <circle cx="180" cy="452" r="8" fill="#d97757"/>
+  <text x="180" y="468" fill="#141413" font-size="9" font-weight="bold" text-anchor="middle">2024</text>
+  <text x="180" y="480" fill="#87867f" font-size="8" text-anchor="middle">记忆一切</text>
+  <circle cx="450" cy="452" r="8" fill="#87867f"/>
+  <text x="450" y="468" fill="#141413" font-size="9" font-weight="bold" text-anchor="middle">2025</text>
+  <text x="450" y="480" fill="#87867f" font-size="8" text-anchor="middle">简单删除</text>
+  <circle cx="720" cy="452" r="10" fill="#788c5d"/>
+  <text x="720" y="468" fill="#141413" font-size="9" font-weight="bold" text-anchor="middle">2026</text>
+  <text x="720" y="480" fill="#788c5d" font-size="8" text-anchor="middle">智慧遗忘</text>
+  <path fill="none" stroke="#d1cfc5" stroke-dasharray="5 3" stroke-width="1.5" d="M210 452h210"/>
+  <path fill="none" stroke="#788c5d" stroke-width="1.5" marker-end="url(#arr3)" d="M480 452h210"/>
 </svg>

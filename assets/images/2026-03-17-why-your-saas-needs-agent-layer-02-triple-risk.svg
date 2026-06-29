@@ -1,51 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 300" font-family="ui-serif, Georgia, serif">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 680 300">
   <title>三重风险叠加</title>
-  <desc>不做 Agent 化的 SaaS 面临的三重风险：被颠覆、客户流失、估值过时</desc>
-
-  <rect width="680" height="300" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="32" text-anchor="middle" font-size="16" font-weight="600" fill="#141413">不做 Agent 化的三重风险</text>
-  <text x="340" y="50" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">2026 · SaaS 生存威胁</text>
-
-  <!-- Card 1: 被颠覆 -->
-  <rect x="40" y="75" width="190" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="40" y="75" width="8" height="130" rx="4" fill="#D97757"/>
-  <text x="65" y="100" font-size="13" font-weight="700" fill="#D97757">风险一：被颠覆</text>
-  <!-- Lightning bolt icon (SVG path, no emoji) -->
-  <path d="M100 118 L95 130 L103 130 L98 142 L108 128 L100 128 Z" fill="#D97757" opacity="0.7"/>
-  <text x="65" y="160" font-size="11" fill="#141413">Agent 原生产品</text>
-  <text x="65" y="178" font-size="11" fill="#141413">不需要人操作的竞品</text>
-  <text x="65" y="196" font-size="10" fill="#87867F">"功能更强"已不重要</text>
-
-  <!-- Card 2: 客户流失 -->
-  <rect x="245" y="75" width="190" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="245" y="75" width="8" height="130" rx="4" fill="#D97757"/>
-  <text x="270" y="100" font-size="13" font-weight="700" fill="#D97757">风险二：客户流失</text>
-  <!-- People leaving icon (simplified) -->
-  <circle cx="310" cy="128" r="8" fill="none" stroke="#D97757" stroke-width="1.5"/>
-  <path d="M300 145 Q310 138 320 145" fill="none" stroke="#D97757" stroke-width="1.5"/>
-  <path d="M340 128 L345 125 M340 128 L345 131" stroke="#D97757" stroke-width="1.2" fill="none"/>
-  <text x="270" y="160" font-size="11" fill="#141413">智能化程度正在</text>
-  <text x="270" y="178" font-size="11" fill="#141413">重塑客户决策</text>
-  <text x="270" y="196" font-size="10" fill="#87867F">切换成本 = 工作流重建</text>
-
-  <!-- Card 3: 估值过时 -->
-  <rect x="450" y="75" width="190" height="130" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <rect x="450" y="75" width="8" height="130" rx="4" fill="#D97757"/>
-  <text x="475" y="100" font-size="13" font-weight="700" fill="#D97757">风险三：估值过时</text>
-  <!-- Chart decline icon -->
-  <polyline points="505,120 520,135 535,128 550,148" fill="none" stroke="#D97757" stroke-width="2"/>
-  <circle cx="550" cy="148" r="3" fill="#D97757"/>
-  <text x="475" y="160" font-size="11" fill="#141413">资本市场重新定价</text>
-  <text x="475" y="178" font-size="11" fill="#141413">倍数差距 5-15x vs 10-25x</text>
-  <text x="475" y="196" font-size="10" fill="#87867F">传统 SaaS 估值模型失效</text>
-
-  <!-- Downward cascade arrow -->
-  <line x1="340" y1="215" x2="340" y2="235" stroke="#D1CFC5" stroke-width="2"/>
-  <polygon points="335,235 340,245 345,235" fill="#D1CFC5"/>
-
-  <!-- Summary bar -->
-  <rect x="120" y="252" width="440" height="36" rx="8" fill="#E3DACC" stroke="#D1CFC5" stroke-width="1.2"/>
-  <text x="340" y="276" text-anchor="middle" font-size="12" fill="#141413">三重风险叠加 = SaaS 生存威胁</text>
+  <desc>
+    不做 Agent 化的 SaaS 面临的三重风险：被颠覆、客户流失、估值过时
+  </desc>
+  <path fill="#faf9f5" d="M0 0h680v300H0z"/>
+  <text x="340" y="32" fill="#141413" font-size="16" font-weight="600" text-anchor="middle">不做 Agent 化的三重风险</text>
+  <text x="340" y="50" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">2026 · SaaS 生存威胁</text>
+  <rect width="190" height="130" x="40" y="75" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="8" height="130" x="40" y="75" fill="#d97757" rx="4"/>
+  <text x="65" y="100" fill="#d97757" font-size="13" font-weight="700">风险一：被颠覆</text>
+  <path fill="#d97757" d="m100 118-5 12h8l-5 12 10-14h-8Z" opacity=".7"/>
+  <text x="65" y="160" fill="#141413" font-size="11">Agent 原生产品</text>
+  <text x="65" y="178" fill="#141413" font-size="11">不需要人操作的竞品</text>
+  <text x="65" y="196" fill="#87867f" font-size="10">&quot;功能更强&quot;已不重要</text>
+  <rect width="190" height="130" x="245" y="75" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="8" height="130" x="245" y="75" fill="#d97757" rx="4"/>
+  <text x="270" y="100" fill="#d97757" font-size="13" font-weight="700">风险二：客户流失</text>
+  <circle cx="310" cy="128" r="8" fill="none" stroke="#d97757" stroke-width="1.5"/>
+  <path fill="none" stroke="#d97757" stroke-width="1.5" d="M300 145q10-7 20 0"/>
+  <path fill="none" stroke="#d97757" stroke-width="1.2" d="m340 128 5-3m-5 3 5 3"/>
+  <text x="270" y="160" fill="#141413" font-size="11">智能化程度正在</text>
+  <text x="270" y="178" fill="#141413" font-size="11">重塑客户决策</text>
+  <text x="270" y="196" fill="#87867f" font-size="10">切换成本 = 工作流重建</text>
+  <rect width="190" height="130" x="450" y="75" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <rect width="8" height="130" x="450" y="75" fill="#d97757" rx="4"/>
+  <text x="475" y="100" fill="#d97757" font-size="13" font-weight="700">风险三：估值过时</text>
+  <path fill="none" stroke="#d97757" stroke-width="2" d="m505 120 15 15 15-7 15 20"/>
+  <circle cx="550" cy="148" r="3" fill="#d97757"/>
+  <text x="475" y="160" fill="#141413" font-size="11">资本市场重新定价</text>
+  <text x="475" y="178" fill="#141413" font-size="11">倍数差距 5-15x vs 10-25x</text>
+  <text x="475" y="196" fill="#87867f" font-size="10">传统 SaaS 估值模型失效</text>
+  <path stroke="#d1cfc5" stroke-width="2" d="M340 215v20"/>
+  <path fill="#d1cfc5" d="m335 235 5 10 5-10z"/>
+  <rect width="440" height="36" x="120" y="252" fill="#e3dacc" stroke="#d1cfc5" stroke-width="1.2" rx="8"/>
+  <text x="340" y="276" fill="#141413" font-size="12" text-anchor="middle">三重风险叠加 = SaaS 生存威胁</text>
 </svg>

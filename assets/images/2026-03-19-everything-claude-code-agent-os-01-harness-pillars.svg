@@ -1,52 +1,33 @@
-<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Harness Engineering 四大支柱 -->
-  <rect width="560" height="200" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">Harness Engineering 四大支柱</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">postcodeengineering.com · 2026/03/19</text>
-
-  <!-- Eval Harness -->
-  <rect x="30" y="52" width="120" height="100" rx="6" fill="#FEF3C7" stroke="#D97706" stroke-width="1.8"/>
-  <text x="90" y="74" text-anchor="middle" font-size="10" fill="#D97706" font-family="ui-monospace, monospace" font-weight="600">1️⃣ Eval Harness</text>
-  <text x="90" y="92" text-anchor="middle" font-size="9.5" fill="#141413" font-weight="600">测试层</text>
-  <text x="90" y="110" text-anchor="middle" font-size="9" fill="#87867F">把 AI 行为变成</text>
-  <text x="90" y="124" text-anchor="middle" font-size="9" fill="#87867F">可测试对象</text>
-
-  <!-- Arrow right -->
-  <line x1="150" y1="102" x2="162" y2="102" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="158,98 166,102 158,106" fill="#D1CFC5"/>
-
-  <!-- Rules Engine -->
-  <rect x="168" y="52" width="120" height="100" rx="6" fill="#FED7AA" stroke="#EA580C" stroke-width="1.5"/>
-  <text x="228" y="74" text-anchor="middle" font-size="10" fill="#EA580C" font-family="ui-monospace, monospace" font-weight="600">2️⃣ Rules Engine</text>
-  <text x="228" y="92" text-anchor="middle" font-size="9.5" fill="#141413" font-weight="600">约束层</text>
-  <text x="228" y="110" text-anchor="middle" font-size="9" fill="#87867F">系统化强制</text>
-  <text x="228" y="124" text-anchor="middle" font-size="9" fill="#87867F">不是建议</text>
-
-  <!-- Arrow right -->
-  <line x1="288" y1="102" x2="300" y2="102" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="296,98 304,102 296,106" fill="#D1CFC5"/>
-
-  <!-- Hooks & Automation -->
-  <rect x="306" y="52" width="120" height="100" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="366" y="74" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">3️⃣ Hooks</text>
-  <text x="366" y="92" text-anchor="middle" font-size="9.5" fill="#141413" font-weight="600">执行层</text>
-  <text x="366" y="110" text-anchor="middle" font-size="9" fill="#87867F">无人值守的</text>
-  <text x="366" y="124" text-anchor="middle" font-size="9" fill="#87867F">自动化流水线</text>
-
-  <!-- Arrow right -->
-  <line x1="426" y1="102" x2="438" y2="102" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="434,98 442,102 434,106" fill="#D1CFC5"/>
-
-  <!-- Continuous Learning -->
-  <rect x="444" y="52" width="86" height="100" rx="6" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-  <text x="487" y="74" text-anchor="middle" font-size="10" fill="#059669" font-family="ui-monospace, monospace" font-weight="600">4️⃣ Learning</text>
-  <text x="487" y="92" text-anchor="middle" font-size="9.5" fill="#141413" font-weight="600">进化层</text>
-  <text x="487" y="110" text-anchor="middle" font-size="9" fill="#87867F">经验自动</text>
-  <text x="487" y="124" text-anchor="middle" font-size="9" fill="#87867F">沉淀为机制</text>
-
-  <!-- AI Behavior center label -->
-  <rect x="195" y="162" width="170" height="26" rx="6" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-  <text x="280" y="179" text-anchor="middle" font-size="10" fill="#2563EB" font-family="ui-monospace, monospace" font-weight="600">→ AI Behavior ←</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 200">
+  <path fill="#faf9f5" d="M0 0h560v200H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Harness Engineering 四大支柱</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">postcodeengineering.com · 2026/03/19</text>
+  <rect width="120" height="100" x="30" y="52" fill="#fef3c7" stroke="#d97706" stroke-width="1.8" rx="6"/>
+  <text x="90" y="74" fill="#d97706" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">1️⃣ Eval Harness</text>
+  <text x="90" y="92" fill="#141413" font-size="9.5" font-weight="600" text-anchor="middle">测试层</text>
+  <text x="90" y="110" fill="#87867f" font-size="9" text-anchor="middle">把 AI 行为变成</text>
+  <text x="90" y="124" fill="#87867f" font-size="9" text-anchor="middle">可测试对象</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M150 102h12"/>
+  <path fill="#d1cfc5" d="m158 98 8 4-8 4z"/>
+  <rect width="120" height="100" x="168" y="52" fill="#fed7aa" stroke="#ea580c" stroke-width="1.5" rx="6"/>
+  <text x="228" y="74" fill="#ea580c" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">2️⃣ Rules Engine</text>
+  <text x="228" y="92" fill="#141413" font-size="9.5" font-weight="600" text-anchor="middle">约束层</text>
+  <text x="228" y="110" fill="#87867f" font-size="9" text-anchor="middle">系统化强制</text>
+  <text x="228" y="124" fill="#87867f" font-size="9" text-anchor="middle">不是建议</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M288 102h12"/>
+  <path fill="#d1cfc5" d="m296 98 8 4-8 4z"/>
+  <rect width="120" height="100" x="306" y="52" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5" rx="6"/>
+  <text x="366" y="74" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">3️⃣ Hooks</text>
+  <text x="366" y="92" fill="#141413" font-size="9.5" font-weight="600" text-anchor="middle">执行层</text>
+  <text x="366" y="110" fill="#87867f" font-size="9" text-anchor="middle">无人值守的</text>
+  <text x="366" y="124" fill="#87867f" font-size="9" text-anchor="middle">自动化流水线</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M426 102h12"/>
+  <path fill="#d1cfc5" d="m434 98 8 4-8 4z"/>
+  <rect width="86" height="100" x="444" y="52" fill="#d1fae5" stroke="#059669" stroke-width="1.5" rx="6"/>
+  <text x="487" y="74" fill="#059669" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">4️⃣ Learning</text>
+  <text x="487" y="92" fill="#141413" font-size="9.5" font-weight="600" text-anchor="middle">进化层</text>
+  <text x="487" y="110" fill="#87867f" font-size="9" text-anchor="middle">经验自动</text>
+  <text x="487" y="124" fill="#87867f" font-size="9" text-anchor="middle">沉淀为机制</text>
+  <rect width="170" height="26" x="195" y="162" fill="#dbeafe" stroke="#2563eb" stroke-width="2" rx="6"/>
+  <text x="280" y="179" fill="#2563eb" font-family="ui-monospace, monospace" font-size="10" font-weight="600" text-anchor="middle">→ AI Behavior ←</text>
 </svg>

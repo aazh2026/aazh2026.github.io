@@ -1,94 +1,55 @@
-<svg viewBox="0 0 680 400" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif">
-  <!-- Background -->
-  <rect width="680" height="400" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="340" y="26" text-anchor="middle" font-size="14" font-weight="500" fill="#141413" letter-spacing="-0.02em">Agent 陪审团模型</text>
-  <text x="340" y="42" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">AI-Native Code Review · 2026/03/13</text>
-
-  <!-- PR Input (left) -->
-  <rect x="20" y="165" width="80" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8"/>
-  <text x="60" y="186" text-anchor="middle" font-size="11" fill="#141413" font-weight="500">PR Diff</text>
-  <text x="60" y="200" text-anchor="middle" font-size="9" fill="#87867F">代码变更</text>
-  <text x="60" y="212" text-anchor="middle" font-size="9" fill="#87867F">输入</text>
-
-  <!-- Arrow from PR to fan-out -->
-  <line x1="100" y1="193" x2="120" y2="193" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="120,193 114,189 114,197" fill="#D1CFC5"/>
-
-  <!-- Fan-out node -->
-  <circle cx="145" cy="193" r="14" fill="#D97757"/>
-  <text x="145" y="197" text-anchor="middle" font-size="9" fill="#FFFFFF" font-weight="600">分发</text>
-
-  <!-- Horizontal arrows to 5 agents -->
-  <line x1="159" y1="180" x2="195" y2="100" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="159" y1="188" x2="195" y2="143" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="159" y1="193" x2="195" y2="193" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="159" y1="198" x2="195" y2="243" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="159" y1="206" x2="195" y2="286" stroke="#D1CFC5" stroke-width="1.2"/>
-
-  <!-- Agent 1: Security -->
-  <rect x="200" y="72" width="130" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="265" y="90" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">Security Expert</text>
-  <text x="265" y="105" text-anchor="middle" font-size="10" fill="#141413">安全专家 Agent</text>
-  <text x="265" y="118" text-anchor="middle" font-size="9" fill="#87867F">漏洞模式 · OWASP</text>
-
-  <!-- Agent 2: Performance -->
-  <rect x="200" y="115" width="130" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="265" y="133" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">Performance Analyst</text>
-  <text x="265" y="148" text-anchor="middle" font-size="10" fill="#141413">性能分析师 Agent</text>
-  <text x="265" y="161" text-anchor="middle" font-size="9" fill="#87867F">复杂度 · 资源消耗</text>
-
-  <!-- Agent 3: Standards -->
-  <rect x="200" y="165" width="130" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="265" y="183" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">Standards Inspector</text>
-  <text x="265" y="198" text-anchor="middle" font-size="10" fill="#141413">规范检查员 Agent</text>
-  <text x="265" y="211" text-anchor="middle" font-size="9" fill="#87867F">ESLint · 编码规范</text>
-
-  <!-- Agent 4: Business Logic -->
-  <rect x="200" y="215" width="130" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="265" y="233" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">Business Logic</text>
-  <text x="265" y="248" text-anchor="middle" font-size="10" fill="#141413">业务逻辑验证 Agent</text>
-  <text x="265" y="261" text-anchor="middle" font-size="9" fill="#87867F">需求映射 · 领域模型</text>
-
-  <!-- Agent 5: Architecture -->
-  <rect x="200" y="265" width="130" height="56" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="265" y="283" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">Architecture Guard</text>
-  <text x="265" y="298" text-anchor="middle" font-size="10" fill="#141413">架构一致性 Agent</text>
-  <text x="265" y="311" text-anchor="middle" font-size="9" fill="#87867F">服务边界 · 依赖分析</text>
-
-  <!-- Convergence arrows -->
-  <line x1="330" y1="100" x2="360" y2="160" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="330" y1="143" x2="360" y2="170" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="330" y1="193" x2="360" y2="193" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="330" y1="243" x2="360" y2="226" stroke="#D1CFC5" stroke-width="1.2"/>
-  <line x1="330" y1="286" x2="360" y2="226" stroke="#D1CFC5" stroke-width="1.2"/>
-
-  <!-- Review Report card -->
-  <rect x="360" y="145" width="160" height="96" rx="8" fill="#FFFFFF" stroke="#788C5D" stroke-width="1.8"/>
-  <text x="440" y="163" text-anchor="middle" font-size="11" fill="#788C5D" font-weight="600">Review Report</text>
-  <text x="380" y="180" font-size="9" fill="#141413">· 安全专家 报告</text>
-  <text x="380" y="194" font-size="9" fill="#141413">· 性能分析师 报告</text>
-  <text x="380" y="208" font-size="9" fill="#141413">· 规范检查员 报告</text>
-  <text x="380" y="222" font-size="9" fill="#141413">· 业务逻辑 报告</text>
-  <text x="380" y="236" font-size="9" fill="#141413">· 架构一致性 报告</text>
-
-  <!-- Arrow to Human Reviewer -->
-  <line x1="520" y1="193" x2="548" y2="193" stroke="#D1CFC5" stroke-width="1.5"/>
-  <polygon points="548,193 542,189 542,197" fill="#D1CFC5"/>
-
-  <!-- Human Reviewer -->
-  <rect x="552" y="158" width="110" height="70" rx="8" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5"/>
-  <text x="607" y="178" text-anchor="middle" font-size="11" fill="#141413" font-weight="500">Human Reviewer</text>
-  <text x="607" y="193" text-anchor="middle" font-size="10" fill="#141413">人类审查者</text>
-  <text x="607" y="208" text-anchor="middle" font-size="9" fill="#87867F">最终设计判断</text>
-  <text x="607" y="220" text-anchor="middle" font-size="9" fill="#87867F">20% 核心价值</text>
-
-  <!-- 80/20 split label -->
-  <text x="340" y="375" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">Agent 处理 80% 标准化检查</text>
-  <text x="340" y="390" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">人类专注 20% 架构设计判断</text>
-
-  <!-- Title and desc for accessibility -->
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, 'Times New Roman', serif" viewBox="0 0 680 400">
+  <path fill="#faf9f5" d="M0 0h680v400H0z"/>
+  <text x="340" y="26" fill="#141413" font-size="14" font-weight="500" letter-spacing="-.02em" text-anchor="middle">Agent 陪审团模型</text>
+  <text x="340" y="42" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">AI-Native Code Review · 2026/03/13</text>
+  <rect width="80" height="56" x="20" y="165" fill="#fff" stroke="#d97757" stroke-width="1.8" rx="8"/>
+  <text x="60" y="186" fill="#141413" font-size="11" font-weight="500" text-anchor="middle">PR Diff</text>
+  <text x="60" y="200" fill="#87867f" font-size="9" text-anchor="middle">代码变更</text>
+  <text x="60" y="212" fill="#87867f" font-size="9" text-anchor="middle">输入</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M100 193h20"/>
+  <path fill="#d1cfc5" d="m120 193-6-4v8z"/>
+  <circle cx="145" cy="193" r="14" fill="#d97757"/>
+  <text x="145" y="197" fill="#fff" font-size="9" font-weight="600" text-anchor="middle">分发</text>
+  <path stroke="#d1cfc5" stroke-width="1.2" d="m159 180 36-80m-36 88 36-45m-36 50h36m-36 5 36 45m-36-37 36 80"/>
+  <rect width="130" height="56" x="200" y="72" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="265" y="90" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Security Expert</text>
+  <text x="265" y="105" fill="#141413" font-size="10" text-anchor="middle">安全专家 Agent</text>
+  <text x="265" y="118" fill="#87867f" font-size="9" text-anchor="middle">漏洞模式 · OWASP</text>
+  <rect width="130" height="56" x="200" y="115" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="265" y="133" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Performance Analyst</text>
+  <text x="265" y="148" fill="#141413" font-size="10" text-anchor="middle">性能分析师 Agent</text>
+  <text x="265" y="161" fill="#87867f" font-size="9" text-anchor="middle">复杂度 · 资源消耗</text>
+  <rect width="130" height="56" x="200" y="165" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="265" y="183" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Standards Inspector</text>
+  <text x="265" y="198" fill="#141413" font-size="10" text-anchor="middle">规范检查员 Agent</text>
+  <text x="265" y="211" fill="#87867f" font-size="9" text-anchor="middle">ESLint · 编码规范</text>
+  <rect width="130" height="56" x="200" y="215" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="265" y="233" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Business Logic</text>
+  <text x="265" y="248" fill="#141413" font-size="10" text-anchor="middle">业务逻辑验证 Agent</text>
+  <text x="265" y="261" fill="#87867f" font-size="9" text-anchor="middle">需求映射 · 领域模型</text>
+  <rect width="130" height="56" x="200" y="265" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="265" y="283" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">Architecture Guard</text>
+  <text x="265" y="298" fill="#141413" font-size="10" text-anchor="middle">架构一致性 Agent</text>
+  <text x="265" y="311" fill="#87867f" font-size="9" text-anchor="middle">服务边界 · 依赖分析</text>
+  <path stroke="#d1cfc5" stroke-width="1.2" d="m330 100 30 60m-30-17 30 27m-30 23h30m-30 50 30-17m-30 60 30-60"/>
+  <rect width="160" height="96" x="360" y="145" fill="#fff" stroke="#788c5d" stroke-width="1.8" rx="8"/>
+  <text x="440" y="163" fill="#788c5d" font-size="11" font-weight="600" text-anchor="middle">Review Report</text>
+  <text x="380" y="180" fill="#141413" font-size="9">· 安全专家 报告</text>
+  <text x="380" y="194" fill="#141413" font-size="9">· 性能分析师 报告</text>
+  <text x="380" y="208" fill="#141413" font-size="9">· 规范检查员 报告</text>
+  <text x="380" y="222" fill="#141413" font-size="9">· 业务逻辑 报告</text>
+  <text x="380" y="236" fill="#141413" font-size="9">· 架构一致性 报告</text>
+  <path stroke="#d1cfc5" stroke-width="1.5" d="M520 193h28"/>
+  <path fill="#d1cfc5" d="m548 193-6-4v8z"/>
+  <rect width="110" height="70" x="552" y="158" fill="#fff" stroke="#d1cfc5" stroke-width="1.5" rx="8"/>
+  <text x="607" y="178" fill="#141413" font-size="11" font-weight="500" text-anchor="middle">Human Reviewer</text>
+  <text x="607" y="193" fill="#141413" font-size="10" text-anchor="middle">人类审查者</text>
+  <text x="607" y="208" fill="#87867f" font-size="9" text-anchor="middle">最终设计判断</text>
+  <text x="607" y="220" fill="#87867f" font-size="9" text-anchor="middle">20% 核心价值</text>
+  <text x="340" y="375" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">Agent 处理 80% 标准化检查</text>
+  <text x="340" y="390" fill="#87867f" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle">人类专注 20% 架构设计判断</text>
   <title>Agent 陪审团模型</title>
-  <desc>5个专业Agent并行审查PR并汇总为Review Report，由人类审查者做最终设计判断</desc>
+  <desc>
+    5个专业Agent并行审查PR并汇总为Review Report，由人类审查者做最终设计判断
+  </desc>
 </svg>

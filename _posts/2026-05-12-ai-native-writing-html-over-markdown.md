@@ -157,9 +157,9 @@ Markdown 是对话的终结——AI 输出，你接受或拒绝。HTML 是对话
 - 示例展示：https://thariqs.github.io/html-effectiveness/
 
 **本系列相关**
-- [执行已死，判断力永生](/_posts/2026-05-11-execution-is-dead-judgment-lives.md) (本文)
-- [Harness Engineering：约束即智能](/_posts/2026-05-13-harness-engineering-addy-osmani.md) (AI-Native Engineering)
-- [Memory Engineering：从经验到系统](/_posts/2026-05-11-execution-is-dead-judgment-lives.md) (Memory Engineering 系列)
+- [执行已死，判断力永生](/execution-is-dead-judgment-lives/) (本文)
+- [Harness Engineering：约束即智能](/harness-engineering-addy-osmani/) (AI-Native Engineering)
+- [Memory Engineering：从经验到系统](/execution-is-dead-judgment-lives/) (Memory Engineering 系列)
 
 **核心工具**
 - Claude Code：Anthropic 的 AI 编程工具

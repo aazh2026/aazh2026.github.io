@@ -1,68 +1,40 @@
-<svg viewBox="0 0 560 260" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
-  <!-- Complexity Ratchet: 每轮循环三件事 -->
-  <rect width="560" height="260" fill="#FAF9F5"/>
-
-  <!-- Title -->
-  <text x="280" y="20" text-anchor="middle" font-size="13" font-weight="500" fill="#141413" letter-spacing="-0.02em">复杂度棘轮：每轮 AI 编码的三件事</text>
-  <text x="280" y="36" text-anchor="middle" font-size="9.5" fill="#87867F" font-family="ui-monospace, monospace">Garry Tan · postcodeengineering.com · 2026/05/12</text>
-
-  <!-- Central: One-way ratchet arrow -->
-  <rect x="200" y="100" width="160" height="56" rx="28" fill="#FEF3C7" stroke="#D97757" stroke-width="2"/>
-  <text x="280" y="122" text-anchor="middle" font-size="11" fill="#D97757" font-weight="700" font-family="ui-monospace, monospace">单向棘轮 ↑</text>
-  <text x="280" y="140" text-anchor="middle" font-size="9.5" fill="#87867F">只向上，不能向下</text>
-
-  <!-- Left side: what AI adds per cycle -->
-  <text x="60" y="62" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">每轮 AI 编码添加</text>
-
-  <!-- Three items in a row -->
-  <!-- Item 1: Tests -->
-  <rect x="30" y="72" width="140" height="52" rx="8" fill="#FFFFFF" stroke="#D97757" stroke-width="1.5"/>
-  <text x="100" y="92" text-anchor="middle" font-size="11" fill="#D97757" font-weight="600">测试</text>
-  <text x="100" y="108" text-anchor="middle" font-size="9.5" fill="#87867F">覆盖错误路径</text>
-  <text x="100" y="120" text-anchor="middle" font-size="9" fill="#87867F">锁定正确行为</text>
-
-  <!-- Arrow to center -->
-  <line x1="170" y1="98" x2="195" y2="128" stroke="#D97757" stroke-width="1.5"/>
-  <polygon points="170,98 165,104 176,102" fill="#D97757"/>
-
-  <!-- Item 2: Docs -->
-  <rect x="210" y="72" width="140" height="52" rx="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
-  <text x="280" y="92" text-anchor="middle" font-size="11" fill="#2563EB" font-weight="600">文档</text>
-  <text x="280" y="108" text-anchor="middle" font-size="9.5" fill="#87867F">记录决策上下文</text>
-  <text x="280" y="120" text-anchor="middle" font-size="9" fill="#87867F">可追溯性</text>
-
-  <!-- Arrow to center -->
-  <line x1="280" y1="124" x2="280" y2="100" stroke="#2563EB" stroke-width="1.5"/>
-  <polygon points="276,100 280,92 284,100" fill="#2563EB"/>
-
-  <!-- Item 3: Eval Results -->
-  <rect x="390" y="72" width="140" height="52" rx="8" fill="#FFFFFF" stroke="#059669" stroke-width="1.5"/>
-  <text x="460" y="92" text-anchor="middle" font-size="11" fill="#059669" font-weight="600">评估结果</text>
-  <text x="460" y="108" text-anchor="middle" font-size="9.5" fill="#87867F">验证系统行为</text>
-  <text x="460" y="120" text-anchor="middle" font-size="9" fill="#87867F">可量化进步</text>
-
-  <!-- Arrow from center to item 3 -->
-  <line x1="360" y1="128" x2="395" y2="98" stroke="#059669" stroke-width="1.5"/>
-  <polygon points="395,98 388,94 393,102" fill="#059669"/>
-
-  <!-- Right side: Result -->
-  <text x="500" y="62" text-anchor="middle" font-size="10" fill="#141413" font-weight="600">结果</text>
-  <rect x="430" y="72" width="110" height="52" rx="8" fill="#D1FAE5" stroke="#059669" stroke-width="1.5"/>
-  <text x="485" y="92" text-anchor="middle" font-size="10" fill="#059669" font-weight="600">覆盖率 ↑</text>
-  <text x="485" y="108" text-anchor="middle" font-size="10" fill="#059669" font-weight="600">Bug 空间 ↓</text>
-  <text x="485" y="120" text-anchor="middle" font-size="9" fill="#87867F">系统更稳定</text>
-
-  <!-- Arrow from item 3 to result -->
-  <line x1="485" y1="124" x2="485" y2="100" stroke="#059669" stroke-width="1.5"/>
-  <polygon points="481,100 485,92 489,100" fill="#059669"/>
-
-  <!-- Bottom: key insight -->
-  <rect x="40" y="172" width="480" height="36" rx="6" fill="#FFFFFF" stroke="#D97757" stroke-width="1" stroke-dasharray="4,3"/>
-  <text x="280" y="188" text-anchor="middle" font-size="10" fill="#141413" font-style="italic">棘轮是单向的：添加的测试不会消失，锁定的正确行为不会回退</text>
-  <text x="280" y="202" text-anchor="middle" font-size="9" fill="#87867F">每轮循环让系统只能变好，不能变坏 → 90% 覆盖率是相变点</text>
-
-  <!-- 90% callout -->
-  <rect x="180" y="220" width="200" height="32" rx="6" fill="#FEF3C7" stroke="#D97757" stroke-width="1.5"/>
-  <text x="280" y="238" text-anchor="middle" font-size="11" fill="#D97757" font-weight="700">90% = 相变点</text>
-  <text x="280" y="250" text-anchor="middle" font-size="9" fill="#87867F">DO-178C 航空标准验证，低于此值风险不可预测</text>
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif" viewBox="0 0 560 260">
+  <path fill="#faf9f5" d="M0 0h560v260H0z"/>
+  <text x="280" y="20" fill="#141413" font-size="13" font-weight="500" letter-spacing="-.02em" text-anchor="middle">复杂度棘轮：每轮 AI 编码的三件事</text>
+  <text x="280" y="36" fill="#87867f" font-family="ui-monospace, monospace" font-size="9.5" text-anchor="middle">Garry Tan · postcodeengineering.com · 2026/05/12</text>
+  <rect width="160" height="56" x="200" y="100" fill="#fef3c7" stroke="#d97757" stroke-width="2" rx="28"/>
+  <text x="280" y="122" fill="#d97757" font-family="ui-monospace, monospace" font-size="11" font-weight="700" text-anchor="middle">单向棘轮 ↑</text>
+  <text x="280" y="140" fill="#87867f" font-size="9.5" text-anchor="middle">只向上，不能向下</text>
+  <text x="60" y="62" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">每轮 AI 编码添加</text>
+  <rect width="140" height="52" x="30" y="72" fill="#fff" stroke="#d97757" stroke-width="1.5" rx="8"/>
+  <text x="100" y="92" fill="#d97757" font-size="11" font-weight="600" text-anchor="middle">测试</text>
+  <text x="100" y="108" fill="#87867f" font-size="9.5" text-anchor="middle">覆盖错误路径</text>
+  <text x="100" y="120" fill="#87867f" font-size="9" text-anchor="middle">锁定正确行为</text>
+  <path stroke="#d97757" stroke-width="1.5" d="m170 98 25 30"/>
+  <path fill="#d97757" d="m170 98-5 6 11-2z"/>
+  <rect width="140" height="52" x="210" y="72" fill="#fff" stroke="#2563eb" stroke-width="1.5" rx="8"/>
+  <text x="280" y="92" fill="#2563eb" font-size="11" font-weight="600" text-anchor="middle">文档</text>
+  <text x="280" y="108" fill="#87867f" font-size="9.5" text-anchor="middle">记录决策上下文</text>
+  <text x="280" y="120" fill="#87867f" font-size="9" text-anchor="middle">可追溯性</text>
+  <path stroke="#2563eb" stroke-width="1.5" d="M280 124v-24"/>
+  <path fill="#2563eb" d="m276 100 4-8 4 8z"/>
+  <rect width="140" height="52" x="390" y="72" fill="#fff" stroke="#059669" stroke-width="1.5" rx="8"/>
+  <text x="460" y="92" fill="#059669" font-size="11" font-weight="600" text-anchor="middle">评估结果</text>
+  <text x="460" y="108" fill="#87867f" font-size="9.5" text-anchor="middle">验证系统行为</text>
+  <text x="460" y="120" fill="#87867f" font-size="9" text-anchor="middle">可量化进步</text>
+  <path stroke="#059669" stroke-width="1.5" d="m360 128 35-30"/>
+  <path fill="#059669" d="m395 98-7-4 5 8z"/>
+  <text x="500" y="62" fill="#141413" font-size="10" font-weight="600" text-anchor="middle">结果</text>
+  <rect width="110" height="52" x="430" y="72" fill="#d1fae5" stroke="#059669" stroke-width="1.5" rx="8"/>
+  <text x="485" y="92" fill="#059669" font-size="10" font-weight="600" text-anchor="middle">覆盖率 ↑</text>
+  <text x="485" y="108" fill="#059669" font-size="10" font-weight="600" text-anchor="middle">Bug 空间 ↓</text>
+  <text x="485" y="120" fill="#87867f" font-size="9" text-anchor="middle">系统更稳定</text>
+  <path stroke="#059669" stroke-width="1.5" d="M485 124v-24"/>
+  <path fill="#059669" d="m481 100 4-8 4 8z"/>
+  <rect width="480" height="36" x="40" y="172" fill="#fff" stroke="#d97757" stroke-dasharray="4,3" rx="6"/>
+  <text x="280" y="188" fill="#141413" font-size="10" font-style="italic" text-anchor="middle">棘轮是单向的：添加的测试不会消失，锁定的正确行为不会回退</text>
+  <text x="280" y="202" fill="#87867f" font-size="9" text-anchor="middle">每轮循环让系统只能变好，不能变坏 → 90% 覆盖率是相变点</text>
+  <rect width="200" height="32" x="180" y="220" fill="#fef3c7" stroke="#d97757" stroke-width="1.5" rx="6"/>
+  <text x="280" y="238" fill="#d97757" font-size="11" font-weight="700" text-anchor="middle">90% = 相变点</text>
+  <text x="280" y="250" fill="#87867f" font-size="9" text-anchor="middle">DO-178C 航空标准验证，低于此值风险不可预测</text>
 </svg>

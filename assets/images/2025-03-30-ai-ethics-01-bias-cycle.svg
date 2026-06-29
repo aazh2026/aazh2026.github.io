@@ -1,174 +1,126 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" role="img" aria-label="AI 偏见治理三层框架">
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="AI 偏见治理三层框架" viewBox="0 0 800 440">
   <title>AI 偏见治理三层框架</title>
-  <desc>数据层、模型层、应用层的三层AI伦理治理框架，从历史偏见的根源到系统性解决方案</desc>
-
+  <desc>
+    数据层、模型层、应用层的三层AI伦理治理框架，从历史偏见的根源到系统性解决方案
+  </desc>
   <defs>
-    <marker id="arrowC" markerWidth="8" markerHeight="8" refX="3" refY="3" orient="auto">
-      <path d="M0,0 L6,3 L0,6 z" fill="#D97757"/>
-    </marker>
-    <marker id="arrowL" markerWidth="8" markerHeight="8" refX="1" refY="3" orient="auto">
-      <path d="M0,0 L8,0 L8,8 z" fill="#788C5D"/>
+    <marker id="arrowC" markerHeight="8" markerWidth="8" orient="auto" refX="3" refY="3">
+      <path fill="#d97757" d="m0 0 6 3-6 3z"/>
     </marker>
   </defs>
-
-  <rect width="800" height="440" fill="#FAF9F5"/>
-  <rect x="0" y="0" width="800" height="50" fill="#141413"/>
-  <text x="400" y="32" font-family="system-ui, sans-serif" font-size="15" font-weight="700" fill="#FAF9F5" text-anchor="middle" letter-spacing="1">AI 偏见治理三层框架</text>
-
-  <!-- Left: Bias cycle (how AI amplifies historical bias) -->
-  <g transform="translate(24, 62)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#D97757">🔴 偏见放大循环</text>
-    <text x="0" y="16" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">历史不公 → AI 学习 → 自动化放大 → 更深层不公</text>
-
-    <!-- Circular flow -->
-    <rect x="0" y="28" width="280" height="200" rx="10" fill="#E3DACC"/>
-
-    <!-- Cycle nodes -->
-    <g transform="translate(70, 60)">
-      <rect x="0" y="0" width="60" height="50" rx="8" fill="#FAF9F5" stroke="#87867F"/>
-      <text x="30" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#141413" text-anchor="middle" font-weight="600">历史数据</text>
-      <text x="30" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" text-anchor="middle">偏见</text>
-      <path d="M60 25 L90 25" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
+  <path fill="#faf9f5" d="M0 0h800v440H0z"/>
+  <path fill="#141413" d="M0 0h800v50H0z"/>
+  <text x="400" y="32" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="15" font-weight="700" letter-spacing="1" text-anchor="middle">AI 偏见治理三层框架</text>
+  <g transform="translate(24 62)">
+    <text fill="#d97757" font-family="system-ui, sans-serif" font-size="13" font-weight="700">🔴 偏见放大循环</text>
+    <text y="16" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">历史不公 → AI 学习 → 自动化放大 → 更深层不公</text>
+    <rect width="280" height="200" y="28" fill="#e3dacc" rx="10"/>
+    <g transform="translate(70 60)">
+      <rect width="60" height="50" fill="#faf9f5" stroke="#87867f" rx="8"/>
+      <text x="30" y="20" fill="#141413" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">历史数据</text>
+      <text x="30" y="34" fill="#d97757" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">偏见</text>
+      <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M60 25h30"/>
     </g>
-
-    <g transform="translate(170, 60)">
-      <rect x="0" y="0" width="60" height="50" rx="8" fill="#FAF9F5" stroke="#87867F"/>
-      <text x="30" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#141413" text-anchor="middle" font-weight="600">AI 模型</text>
-      <text x="30" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" text-anchor="middle">学习偏见</text>
-      <path d="M60 25 L90 25" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
+    <g transform="translate(170 60)">
+      <rect width="60" height="50" fill="#faf9f5" stroke="#87867f" rx="8"/>
+      <text x="30" y="20" fill="#141413" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">AI 模型</text>
+      <text x="30" y="34" fill="#d97757" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">学习偏见</text>
+      <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M60 25h30"/>
     </g>
-
-    <g transform="translate(70, 140)">
-      <rect x="0" y="0" width="60" height="50" rx="8" fill="#FAF9F5" stroke="#87867F"/>
-      <text x="30" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#141413" text-anchor="middle" font-weight="600">自动化</text>
-      <text x="30" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" text-anchor="middle">大规模决策</text>
-      <path d="M-90 25 L-130 25" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
+    <g transform="translate(70 140)">
+      <rect width="60" height="50" fill="#faf9f5" stroke="#87867f" rx="8"/>
+      <text x="30" y="20" fill="#141413" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">自动化</text>
+      <text x="30" y="34" fill="#d97757" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">大规模决策</text>
+      <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M-90 25h-40"/>
     </g>
-
-    <g transform="translate(170, 140)">
-      <rect x="0" y="0" width="60" height="50" rx="8" fill="#FAF9F5" stroke="#87867F"/>
-      <text x="30" y="20" font-family="system-ui, sans-serif" font-size="9" fill="#141413" text-anchor="middle" font-weight="600">强化</text>
-      <text x="30" y="34" font-family="system-ui, sans-serif" font-size="9" fill="#D97757" text-anchor="middle">历史偏见</text>
-      <path d="M-90 25 L-130 25" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
+    <g transform="translate(170 140)">
+      <rect width="60" height="50" fill="#faf9f5" stroke="#87867f" rx="8"/>
+      <text x="30" y="20" fill="#141413" font-family="system-ui, sans-serif" font-size="9" font-weight="600" text-anchor="middle">强化</text>
+      <text x="30" y="34" fill="#d97757" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">历史偏见</text>
+      <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M-90 25h-40"/>
     </g>
-
-    <!-- Arrow connecting top-right to bottom-right (down) -->
-    <path d="M235 90 L235 140" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
-    <path d="M65 90 L65 140" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arrowC)"/>
-
-    <!-- Stats below -->
-    <text x="12" y="242" font-family="system-ui, sans-serif" font-size="11" fill="#141413" font-weight="600">关键数据：</text>
-    <text x="12" y="260" font-family="system-ui, sans-serif" font-size="10" fill="#141413">78% 的 AI 系统存在某种形式的偏见</text>
-    <text x="12" y="276" font-family="system-ui, sans-serif" font-size="10" fill="#141413">偏见在 AI 中比人类更难发现</text>
-    <text x="12" y="292" font-family="system-ui, sans-serif" font-size="10" fill="#D97757">AI 偏见影响范围比人类更广泛</text>
+    <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M235 90v50"/>
+    <path fill="none" stroke="#d97757" stroke-width="1.5" marker-end="url(#arrowC)" d="M65 90v50"/>
+    <text x="12" y="242" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="600">关键数据：</text>
+    <text x="12" y="260" fill="#141413" font-family="system-ui, sans-serif" font-size="10">78% 的 AI 系统存在某种形式的偏见</text>
+    <text x="12" y="276" fill="#141413" font-family="system-ui, sans-serif" font-size="10">偏见在 AI 中比人类更难发现</text>
+    <text x="12" y="292" fill="#d97757" font-family="system-ui, sans-serif" font-size="10">AI 偏见影响范围比人类更广泛</text>
   </g>
-
-  <!-- Center: Three-layer framework -->
-  <g transform="translate(320, 62)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">三层治理框架</text>
-
-    <!-- Layer 1: Data -->
-    <rect x="0" y="12" width="220" height="96" rx="10" fill="#FAF9F5" stroke="#D97757" stroke-width="2"/>
-    <rect x="0" y="12" width="220" height="32" rx="10" fill="#D97757"/>
-    <rect x="0" y="32" width="220" height="12" fill="#D97757"/>
-    <text x="12" y="32" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">第一层：数据层治理</text>
-    <text x="12" y="58" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">目标：确保训练数据的公平性</text>
-    <text x="12" y="74" font-family="system-ui, sans-serif" font-size="10" fill="#141413">① 数据审计 — 分析统计分布</text>
-    <text x="12" y="88" font-family="system-ui, sans-serif" font-size="10" fill="#141413">② 数据平衡 — 过采样/欠采样</text>
-    <text x="12" y="102" font-family="system-ui, sans-serif" font-size="10" fill="#141413">③ 历史偏见修正 — 因果推断</text>
-
-    <!-- Arrow -->
-    <path d="M110 108 L110 122" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowC)"/>
-
-    <!-- Layer 2: Model -->
-    <rect x="0" y="126" width="220" height="88" rx="10" fill="#FAF9F5" stroke="#788C5D" stroke-width="2"/>
-    <rect x="0" y="126" width="220" height="32" rx="10" fill="#788C5D"/>
-    <rect x="0" y="146" width="220" height="12" fill="#788C5D"/>
-    <text x="12" y="146" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">第二层：模型层治理</text>
-    <text x="12" y="170" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">目标：设计公平的算法</text>
-    <text x="12" y="186" font-family="system-ui, sans-serif" font-size="10" fill="#141413">① 公平性约束 — 训练中加入约束</text>
-    <text x="12" y="200" font-family="system-ui, sans-serif" font-size="10" fill="#141413">② 对抗去偏见 — 去除敏感特征影响</text>
-    <text x="12" y="214" font-family="system-ui, sans-serif" font-size="10" fill="#141413">③ 可解释性 — SHAP / LIME</text>
-
-    <!-- Arrow -->
-    <path d="M110 214 L110 228" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arrowC)"/>
-
-    <!-- Layer 3: Application -->
-    <rect x="0" y="232" width="220" height="88" rx="10" fill="#FAF9F5" stroke="#141413" stroke-width="2"/>
-    <rect x="0" y="232" width="220" height="32" rx="10" fill="#141413"/>
-    <rect x="0" y="252" width="220" height="12" fill="#141413"/>
-    <text x="12" y="252" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FAF9F5">第三层：应用层治理</text>
-    <text x="12" y="276" font-family="system-ui, sans-serif" font-size="10" fill="#141413" font-weight="600">目标：防止偏见造成实际伤害</text>
-    <text x="12" y="292" font-family="system-ui, sans-serif" font-size="10" fill="#141413">① 影响评估 — 模拟不同群体影响</text>
-    <text x="12" y="306" font-family="system-ui, sans-serif" font-size="10" fill="#141413">② 人在回路 — 高风险决策人工审核</text>
-    <text x="12" y="320" font-family="system-ui, sans-serif" font-size="10" fill="#141413">③ 持续监控 — 反馈机制</text>
+  <g transform="translate(320 62)">
+    <text fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700">三层治理框架</text>
+    <rect width="220" height="96" y="12" fill="#faf9f5" stroke="#d97757" stroke-width="2" rx="10"/>
+    <rect width="220" height="32" y="12" fill="#d97757" rx="10"/>
+    <path fill="#d97757" d="M0 32h220v12H0z"/>
+    <text x="12" y="32" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">第一层：数据层治理</text>
+    <text x="12" y="58" fill="#141413" font-family="system-ui, sans-serif" font-size="10" font-weight="600">目标：确保训练数据的公平性</text>
+    <text x="12" y="74" fill="#141413" font-family="system-ui, sans-serif" font-size="10">① 数据审计 — 分析统计分布</text>
+    <text x="12" y="88" fill="#141413" font-family="system-ui, sans-serif" font-size="10">② 数据平衡 — 过采样/欠采样</text>
+    <text x="12" y="102" fill="#141413" font-family="system-ui, sans-serif" font-size="10">③ 历史偏见修正 — 因果推断</text>
+    <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arrowC)" d="M110 108v14"/>
+    <rect width="220" height="88" y="126" fill="#faf9f5" stroke="#788c5d" stroke-width="2" rx="10"/>
+    <rect width="220" height="32" y="126" fill="#788c5d" rx="10"/>
+    <path fill="#788c5d" d="M0 146h220v12H0z"/>
+    <text x="12" y="146" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">第二层：模型层治理</text>
+    <text x="12" y="170" fill="#141413" font-family="system-ui, sans-serif" font-size="10" font-weight="600">目标：设计公平的算法</text>
+    <text x="12" y="186" fill="#141413" font-family="system-ui, sans-serif" font-size="10">① 公平性约束 — 训练中加入约束</text>
+    <text x="12" y="200" fill="#141413" font-family="system-ui, sans-serif" font-size="10">② 对抗去偏见 — 去除敏感特征影响</text>
+    <text x="12" y="214" fill="#141413" font-family="system-ui, sans-serif" font-size="10">③ 可解释性 — SHAP / LIME</text>
+    <path fill="none" stroke="#d97757" stroke-width="2" marker-end="url(#arrowC)" d="M110 214v14"/>
+    <rect width="220" height="88" y="232" fill="#faf9f5" stroke="#141413" stroke-width="2" rx="10"/>
+    <rect width="220" height="32" y="232" fill="#141413" rx="10"/>
+    <path fill="#141413" d="M0 252h220v12H0z"/>
+    <text x="12" y="252" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="12" font-weight="700">第三层：应用层治理</text>
+    <text x="12" y="276" fill="#141413" font-family="system-ui, sans-serif" font-size="10" font-weight="600">目标：防止偏见造成实际伤害</text>
+    <text x="12" y="292" fill="#141413" font-family="system-ui, sans-serif" font-size="10">① 影响评估 — 模拟不同群体影响</text>
+    <text x="12" y="306" fill="#141413" font-family="system-ui, sans-serif" font-size="10">② 人在回路 — 高风险决策人工审核</text>
+    <text x="12" y="320" fill="#141413" font-family="system-ui, sans-serif" font-size="10">③ 持续监控 — 反馈机制</text>
   </g>
-
-  <!-- Right: Ethics review process -->
-  <g transform="translate(556, 62)">
-    <text x="0" y="0" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#141413">伦理审查四阶段</text>
-
-    <!-- Timeline -->
-    <rect x="0" y="12" width="220" height="320" rx="10" fill="#E3DACC"/>
-
-    <!-- Stage 1 -->
-    <g transform="translate(0, 20)">
-      <circle cx="16" cy="16" r="14" fill="#D97757"/>
-      <text x="16" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">1</text>
-      <text x="40" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">设计审查</text>
-      <text x="40" y="28" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Design Phase</text>
-      <text x="40" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#141413">识别潜在伦理风险</text>
-      <text x="40" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#141413">评估数据偏见可能性</text>
-      <text x="40" y="68" font-family="system-ui, sans-serif" font-size="9" fill="#141413">设计公平性指标</text>
+  <g transform="translate(556 62)">
+    <text fill="#141413" font-family="system-ui, sans-serif" font-size="13" font-weight="700">伦理审查四阶段</text>
+    <rect width="220" height="320" y="12" fill="#e3dacc" rx="10"/>
+    <g transform="translate(0 20)">
+      <circle cx="16" cy="16" r="14" fill="#d97757"/>
+      <text x="16" y="21" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">1</text>
+      <text x="40" y="14" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700">设计审查</text>
+      <text x="40" y="28" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">Design Phase</text>
+      <text x="40" y="44" fill="#141413" font-family="system-ui, sans-serif" font-size="9">识别潜在伦理风险</text>
+      <text x="40" y="56" fill="#141413" font-family="system-ui, sans-serif" font-size="9">评估数据偏见可能性</text>
+      <text x="40" y="68" fill="#141413" font-family="system-ui, sans-serif" font-size="9">设计公平性指标</text>
     </g>
-
-    <!-- Connector -->
-    <line x1="16" y1="100" x2="16" y2="116" stroke="#D97757" stroke-width="2"/>
-
-    <!-- Stage 2 -->
-    <g transform="translate(0, 112)">
-      <circle cx="16" cy="16" r="14" fill="#D97757"/>
-      <text x="16" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">2</text>
-      <text x="40" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">开发审查</text>
-      <text x="40" y="28" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Development Phase</text>
-      <text x="40" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#141413">数据审计</text>
-      <text x="40" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#141413">模型公平性测试</text>
-      <text x="40" y="68" font-family="system-ui, sans-serif" font-size="9" fill="#141413">可解释性验证</text>
+    <path stroke="#d97757" stroke-width="2" d="M16 100v16"/>
+    <g transform="translate(0 112)">
+      <circle cx="16" cy="16" r="14" fill="#d97757"/>
+      <text x="16" y="21" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">2</text>
+      <text x="40" y="14" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700">开发审查</text>
+      <text x="40" y="28" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">Development Phase</text>
+      <text x="40" y="44" fill="#141413" font-family="system-ui, sans-serif" font-size="9">数据审计</text>
+      <text x="40" y="56" fill="#141413" font-family="system-ui, sans-serif" font-size="9">模型公平性测试</text>
+      <text x="40" y="68" fill="#141413" font-family="system-ui, sans-serif" font-size="9">可解释性验证</text>
     </g>
-
-    <!-- Connector -->
-    <line x1="16" y1="192" x2="16" y2="208" stroke="#D97757" stroke-width="2"/>
-
-    <!-- Stage 3 -->
-    <g transform="translate(0, 204)">
-      <circle cx="16" cy="16" r="14" fill="#788C5D"/>
-      <text x="16" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">3</text>
-      <text x="40" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">部署审查</text>
-      <text x="40" y="28" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">Pre-Deployment</text>
-      <text x="40" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#141413">影响评估</text>
-      <text x="40" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#141413">风险缓解措施检查</text>
-      <text x="40" y="68" font-family="system-ui, sans-serif" font-size="9" fill="#141413">应急计划准备</text>
+    <path stroke="#d97757" stroke-width="2" d="M16 192v16"/>
+    <g transform="translate(0 204)">
+      <circle cx="16" cy="16" r="14" fill="#788c5d"/>
+      <text x="16" y="21" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">3</text>
+      <text x="40" y="14" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700">部署审查</text>
+      <text x="40" y="28" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">Pre-Deployment</text>
+      <text x="40" y="44" fill="#141413" font-family="system-ui, sans-serif" font-size="9">影响评估</text>
+      <text x="40" y="56" fill="#141413" font-family="system-ui, sans-serif" font-size="9">风险缓解措施检查</text>
+      <text x="40" y="68" fill="#141413" font-family="system-ui, sans-serif" font-size="9">应急计划准备</text>
     </g>
-
-    <!-- Connector -->
-    <line x1="16" y1="284" x2="16" y2="300" stroke="#D97757" stroke-width="2"/>
-
-    <!-- Stage 4 -->
-    <g transform="translate(0, 296)">
+    <path stroke="#d97757" stroke-width="2" d="M16 284v16"/>
+    <g transform="translate(0 296)">
       <circle cx="16" cy="16" r="14" fill="#141413"/>
-      <text x="16" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#FAF9F5" text-anchor="middle">4</text>
-      <text x="40" y="14" font-family="system-ui, sans-serif" font-size="11" font-weight="700" fill="#141413">运营审查</text>
-      <text x="40" y="28" font-family="system-ui, sans-serif" font-size="10" fill="#87867F">In Production</text>
-      <text x="40" y="44" font-family="system-ui, sans-serif" font-size="9" fill="#141413">持续监控偏见指标</text>
-      <text x="40" y="56" font-family="system-ui, sans-serif" font-size="9" fill="#141413">定期伦理审计</text>
-      <text x="40" y="68" font-family="system-ui, sans-serif" font-size="9" fill="#141413">社区反馈收集</text>
+      <text x="16" y="21" fill="#faf9f5" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">4</text>
+      <text x="40" y="14" fill="#141413" font-family="system-ui, sans-serif" font-size="11" font-weight="700">运营审查</text>
+      <text x="40" y="28" fill="#87867f" font-family="system-ui, sans-serif" font-size="10">In Production</text>
+      <text x="40" y="44" fill="#141413" font-family="system-ui, sans-serif" font-size="9">持续监控偏见指标</text>
+      <text x="40" y="56" fill="#141413" font-family="system-ui, sans-serif" font-size="9">定期伦理审计</text>
+      <text x="40" y="68" fill="#141413" font-family="system-ui, sans-serif" font-size="9">社区反馈收集</text>
     </g>
   </g>
-
-  <!-- Bottom insight -->
-  <rect x="24" y="400" width="752" height="28" rx="6" fill="#E3DACC"/>
-  <text x="40" y="418" font-family="system-ui, sans-serif" font-size="11" fill="#141413">
-    <tspan font-weight="600" fill="#D97757">核心洞察：</tspan>
+  <rect width="752" height="28" x="24" y="400" fill="#e3dacc" rx="6"/>
+  <text x="40" y="418" fill="#141413" font-family="system-ui, sans-serif" font-size="11">
+    <tspan fill="#d97757" font-weight="600">核心洞察：</tspan>
     <tspan>AI 偏见的主要来源不是算法，是数据。数据公平性是社会问题，不纯粹是技术问题。</tspan>
   </text>
 </svg>

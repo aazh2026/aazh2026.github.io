@@ -1,21 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.5 346.0" width="100%" role="img" aria-label="Multi-Language Pipeline">
-<rect width="448.5" height="346.0" fill="#FAF9F5"/>
-<rect x="0" y="0" width="448.5" height="346.0" fill="#D1CFC5" opacity="0.15" rx="8"/>
-<text x="20" y="33.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">┌─────────────────────────────────────────┐</text>
-<text x="20" y="51.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│      Multi-Language Pipeline            │</text>
-<text x="20" y="69.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">├─────────────────────────────────────────┤</text>
-<text x="20" y="87.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  Source (English)                       │</text>
-<text x="20" y="105.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ↓                                      │</text>
-<text x="20" y="123.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  Core Enhancement (English)             │</text>
-<text x="20" y="141.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ↓                                      │</text>
-<text x="20" y="159.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  Translation / Adaptation               │</text>
-<text x="20" y="177.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ├── German                             │</text>
-<text x="20" y="195.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ├── French                             │</text>
-<text x="20" y="213.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ├── Spanish                            │</text>
-<text x="20" y="231.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  └── ...                                │</text>
-<text x="20" y="249.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ↓                                      │</text>
-<text x="20" y="267.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  Localization Review                    │</text>
-<text x="20" y="285.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  ↓                                      │</text>
-<text x="20" y="303.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">│  Local Market Deployment                │</text>
-<text x="20" y="321.5" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5" fill="#141413" xml:space="preserve">└─────────────────────────────────────────┘</text>
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="Multi-Language Pipeline" viewBox="0 0 448.5 346">
+  <path fill="#faf9f5" d="M0 0h448.5v346H0z"/>
+  <rect width="448.5" height="346" fill="#d1cfc5" opacity=".15" rx="8"/>
+  <text xml:space="preserve" x="20" y="33.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">┌─────────────────────────────────────────┐</text>
+  <text xml:space="preserve" x="20" y="51.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│      Multi-Language Pipeline            │</text>
+  <text xml:space="preserve" x="20" y="69.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">├─────────────────────────────────────────┤</text>
+  <text xml:space="preserve" x="20" y="87.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  Source (English)                       │</text>
+  <text xml:space="preserve" x="20" y="105.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ↓                                      │</text>
+  <text xml:space="preserve" x="20" y="123.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  Core Enhancement (English)             │</text>
+  <text xml:space="preserve" x="20" y="141.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ↓                                      │</text>
+  <text xml:space="preserve" x="20" y="159.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  Translation / Adaptation               │</text>
+  <text xml:space="preserve" x="20" y="177.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ├── German                             │</text>
+  <text xml:space="preserve" x="20" y="195.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ├── French                             │</text>
+  <text xml:space="preserve" x="20" y="213.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ├── Spanish                            │</text>
+  <text xml:space="preserve" x="20" y="231.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  └── ...                                │</text>
+  <text xml:space="preserve" x="20" y="249.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ↓                                      │</text>
+  <text xml:space="preserve" x="20" y="267.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  Localization Review                    │</text>
+  <text xml:space="preserve" x="20" y="285.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  ↓                                      │</text>
+  <text xml:space="preserve" x="20" y="303.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">│  Local Market Deployment                │</text>
+  <text xml:space="preserve" x="20" y="321.5" fill="#141413" font-family="ui-monospace,SF Mono,Menlo,Monaco,Consolas,monospace" font-size="13.5">└─────────────────────────────────────────┘</text>
 </svg>
