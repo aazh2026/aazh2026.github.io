@@ -3,7 +3,7 @@ layout: post
 title: "\"ServiceNow Autonomous Workforce：企业级AI的'控制塔'模式与治理新范式\""
 date: 2025-02-17T14:30:00+08:00
 tags: [ServiceNow, AI Agent, 企业软件, 治理框架, 自动化工作流, AI控制塔]
-description: "ServiceNow将AI Agent定位为"控制塔"而非完全自主，三层架构重新定义企业级AI的治理范式，治理、权限、审计三位一体是最低可行门槛。"
+description: 'ServiceNow将AI Agent定位为"控制塔"而非完全自主，三层架构重新定义企业级AI的治理范式，治理、权限、审计三位一体是最低可行门槛。'
 author: "@postcodeeng"
 
 redirect_from:

@@ -4,7 +4,7 @@ title: "\"修复 AI 垃圾代码将成为高薪职业\""
 date: 2026-03-18T14:00:00+08:00
 permalink: /fixing-ai-slopware-high-paying-job/
 tags: [AI-Native, Career, Engineering, AI-Slopware]
-description: "揭示 AI 编程工具催生的新职业：修复"垃圾代码"的高薪 Cleanup 工程，分析技术债务清算的经济学逻辑与架构救援案例。"
+description: '揭示 AI 编程工具催生的新职业：修复"垃圾代码"的高薪 Cleanup 工程，分析技术债务清算的经济学逻辑与架构救援案例。'
 author: "@postcodeeng"
 series: AI-Native Engineering
 ---

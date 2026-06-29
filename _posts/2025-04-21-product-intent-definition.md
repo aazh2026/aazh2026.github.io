@@ -6,8 +6,7 @@ permalink: /posts/product-intent-definition//
 tags: [Product Intent, AI产品, 意图驱动, 产品定义, AI-Native]
 author: "@postcodeeng"
 series: AI-Native软件工程系列 #01
-description: "Product Intent五维框架替代传统PRD，精确描述"要解决什么"和"不能做什么"，将Level 4留给AI决定，是AI时代的产品定义方法。"
-
+description: 'Product Intent五维框架替代传统PRD，精确描述"要解决什么"和"不能做什么"，将Level 4留给AI决定，是AI时代的产品定义方法。'
 redirect_from:
   - /product-intent-definition.html
 ---
