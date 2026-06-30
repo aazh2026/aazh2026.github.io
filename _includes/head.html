@@ -13,14 +13,19 @@
     })();
   </script>
   
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics | default: 'G-XXXXXXXXXX' }}"></script>
+  <!-- Analytics: Plausible (cookieless, GDPR-friendly) - preferred -->
+  {%- if site.plausible_domain -%}
+  <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
+  {%- elsif site.google_analytics -%}
+  <!-- Fallback: Google Analytics 4 (cookies, GDPR requires consent) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics | default: 'G-XXXXXXXXXX' }}');
+    gtag('config', '{{ site.google_analytics }}');
   </script>
+  {%- endif -%}
   
   <!-- 页面标题 -->
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
@@ -96,3 +101,13 @@
     })();
   </script>
 </head>
+<!-- Service worker registration (PWA offline) -->
+<script>
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').catch(function(err) {
+      console.warn('[SW] registration failed:', err);
+    });
+  });
+}
+</script>
