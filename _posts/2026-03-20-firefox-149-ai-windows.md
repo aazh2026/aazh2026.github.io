@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Browser, Firefox, Mozilla, AI-Integration]
 description: "Firefox 149将AI做成可选模块而非核心功能，体现Mozilla在AI时代的隐私优先哲学与差异化竞争策略。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -101,7 +102,7 @@ series: aise
 
 这三条路径代表三种截然不同的哲学立场。Chrome 和 Edge 把 AI 视为浏览器的下一个定义性功能，投入重兵快速迭代；Safari 把 AI 视为系统能力延伸，用硬件优势建立护城河；Firefox 则把 AI 视为用户可选的模块之一——它存在，但不应该绑架用户。三种策略各有市场，没有绝对优劣，关键在于厂商的价值观和技术积累更适合哪条路。
 
-<object data="/assets/images/2026-03-20-firefox-149-ai-windows-02-three-paths.svg" type="image/svg+xml" width="100%" aria-label="实现方式" role="img"></object>
+<img src="/assets/images/2026-03-20-firefox-149-ai-windows-02-three-paths.svg" alt="实现方式" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -122,7 +123,7 @@ series: aise
 
 **侧边栏 AI 助手**：
 
-<object data="/assets/images/2026-03-20-firefox-149-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Firefox 侧边栏 AI 助手架构" role="img"></object>
+<img src="/assets/images/2026-03-20-firefox-149-01-arch.svg" alt="Firefox 侧边栏 AI 助手架构" width="100%" loading="lazy" decoding="async">
 
 **功能特性**：
 - **上下文感知**：自动读取当前页面内容
@@ -288,6 +289,10 @@ Firefox 149 的 AI 窗口是一个信号：
 - [Mozilla AI](https://mozilla.ai/) - Mozilla AI 项目
 - [Firefox Privacy](https://www.mozilla.org/en-US/firefox/privacy/) - Firefox 隐私政策
 
+
+---
+
+*深度阅读时间：约 12 分钟*
 ---
 
 *本文基于 Mozilla 官方公告和社区讨论撰写。*

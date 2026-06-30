@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, SDLC, Intent-Driven, 未来趋势]
 description: "Intent-Driven用intent+constraints+examples三要素替代详细设计，80%需求可大幅简化。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -30,7 +31,7 @@ series: aise
 >
 > 消失的不是设计本身，而是设计的表达方式——从"规定如何实现"变成"规定要达成什么"。
 
-<object data="/assets/images/2026-03-11-intent-driven-future-03-layers.svg" type="image/svg+xml" width="100%" aria-label="详细设计分层模型" role="img"></object>
+<img src="/assets/images/2026-03-11-intent-driven-future-03-layers.svg" alt="详细设计分层模型" width="100%" loading="lazy" decoding="async">
 
 ## 正在发生的范式转移
 
@@ -48,7 +49,7 @@ AI-Native SDLC 正在出现一种新范式：
 
 ## 传统 vs Intent-Driven
 
-<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统 vs Intent-Driven" role="img"></object>
+<img src="/assets/images/2026-03-11-intent-driven-01-comparison.svg" alt="传统 vs Intent-Driven" width="100%" loading="lazy" decoding="async">
 
 ### 传统详细设计
 
@@ -127,7 +128,7 @@ LLM 的本质是**模式匹配**。
 
 ## 什么场景适合 Intent-Driven？
 
-<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%" aria-label="什么场景适合 Intent-Driven？" role="img"></object>
+<img src="/assets/images/2026-03-11-intent-driven-02-usage.svg" alt="什么场景适合 Intent-Driven？" width="100%" loading="lazy" decoding="async">
 
 | 场景 | 适合度 | 原因 |
 |------|--------|------|
@@ -267,6 +268,10 @@ AI-Native 工程师的核心工作，从"如何实现"转向了**"想要什么"*
 
 你准备好了吗？
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 *系列完结。四篇文章覆盖了 AI-Native 详细设计的变革逻辑、最小实践、增量工作流和未来趋势。希望对你有启发。*

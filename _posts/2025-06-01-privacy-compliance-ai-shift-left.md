@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 隐私合规, GDPR, 安全左移]
 description: "AI在需求阶段自动分析隐私合规风险，把合规成本从上线后的百万美元级降到需求阶段的千美元级，自动匹配GDPR/个保法检查清单并输出PbD方案。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
@@ -67,7 +68,7 @@ series: aise
 
 > 💡 **Key Insight**：合规成本随阶段指数增长——需求阶段的$1,000修复成本，在上线后可能膨胀至$1,000,000+。这正是"左移"策略的核心价值：越早发现，成本越低。
 
-<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-01-cost-comparison.svg" type="image/svg+xml" width="100%" aria-label="合规成本分析" role="img"></object>
+<img src="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-01-cost-comparison.svg" alt="合规成本分析" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -160,7 +161,7 @@ AI基于法规知识库自动匹配风险场景：
 
 ## GDPR 与个保法的 Checklist 自动化
 
-<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-02-checklist-flow.svg" type="image/svg+xml" width="100%" aria-label="GDPR 与个保法的 Checklist 自动化" role="img"></object>
+<img src="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-02-checklist-flow.svg" alt="GDPR 与个保法的 Checklist 自动化" width="100%" loading="lazy" decoding="async">
 
 ### 法规知识库
 
@@ -332,4 +333,8 @@ AI自动执行GDPR和个保法Checklist：
 **记住**：
 > "在隐私合规上，一分的预防胜过十分的治疗。"
 
+
+---
+
+*深度阅读时间：约 16 分钟*
 ---

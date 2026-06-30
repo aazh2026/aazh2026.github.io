@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 宣言, 理论体系]
 description: "AI-Native软件工程的五大核心信条：代码是负债、Intent是新的编程语言、Context管理是核心技能、人机协作是默认模式、验证重于实现。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 *"我们正站在软件工程的第三次革命的边缘。第一次革命是高级编程语言的发明，第二次是开源运动，第三次是AI-Native软件工程。"*
@@ -40,7 +41,7 @@ AI不是在替代"写代码"这个动作，而是在重新定义"什么是软件
 
 从汇编语言到Fortran、C。程序员不再需要直接操作硬件，可以专注于问题本身。
 
-<object data="/assets/images/2025-04-04-aise-manifesto-02-three-revolutions.svg" type="image/svg+xml" width="100%" aria-label="软件工程的三次革命" role="img"></object>
+<img src="/assets/images/2025-04-04-aise-manifesto-02-three-revolutions.svg" alt="软件工程的三次革命" width="100%" loading="lazy" decoding="async">
 
 **核心转变**：从"机器思维"到"人类思维"
 
@@ -94,7 +95,7 @@ AI不是在替代"写代码"这个动作，而是在重新定义"什么是软件
 
 我提出AI-Native软件工程的五层架构模型：
 
-<object data="/assets/images/2025-04-04-aise-manifesto-03-five-layers.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 软件工程五层架构" role="img"></object>
+<img src="/assets/images/2025-04-04-aise-manifesto-03-five-layers.svg" alt="AI-Native 软件工程五层架构" width="100%" loading="lazy" decoding="async">
 
 ### 第一层：模型层
 基础模型（GPT-4、Claude、Gemini等）和工具链（IDE、API、SDK）。这一层由科技巨头提供，不是普通工程师的核心竞争力。
@@ -148,6 +149,10 @@ Human Workflow的设计原则已经清晰：人在判断点上保留决策权，
 
 **AISE不是等待被定义的未来，而是正在发生的现在。这个博客，就是我记录和分享这场探索的方式。**
 
+
+---
+
+*深度阅读时间：约 6 分钟*
 ---
 
 *AI-Native软件工程系列 - 核心理论文章*

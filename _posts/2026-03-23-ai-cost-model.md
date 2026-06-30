@@ -7,15 +7,16 @@ tags: [AI-Native软件工程, Cost-Model, System-Design, Optimization]
 description: "AI系统成本不是线性增长而是阶梯式跃迁，本文提出成本结构四象限模型：80%成本浪费来自结构性错配，优化核心是重构架构而非降单价。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
 >
 > AI系统的成本不是线性增长的，而是呈现"阶梯式跃迁"特征。本文提出"成本结构四象限模型"，揭示80%的成本浪费来自结构性错配。关键洞察：优化AI成本的核心不是降低单价，而是重构系统架构。
 
-<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants-hero.svg" type="image/svg+xml" width="100%" aria-label="成本结构四象限模型" role="img"></object>
+<img src="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants-hero.svg" alt="成本结构四象限模型" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" type="image/svg+xml" width="100%" aria-label="AI 系统成本结构四象限模型" role="img"></object>
+<img src="/assets/images/2026-03-23-ai-cost-model-01-four-quadrants.svg" alt="AI 系统成本结构四象限模型" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -36,7 +37,7 @@ series: aise
 >
 > 优化架构比砍价更重要，架构债务是最贵的债务。
 
-<object data="/assets/images/2026-03-23-ai-cost-model-02-transition.svg" type="image/svg+xml" width="100%" aria-label="AI成本模型转变：从单价驱动到架构驱动" role="img"></object>
+<img src="/assets/images/2026-03-23-ai-cost-model-02-transition.svg" alt="AI成本模型转变：从单价驱动到架构驱动" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -380,6 +381,10 @@ AI系统的成本优化不是"少调用API"，而是"重构系统让API调用更
 >
 > 最便宜的成本是本来就不需要发生的成本——80% 的 AI API 调用可以通过缓存、路由、降级完全省掉
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ## 参考与延伸阅读
 
 - [Cloud FinOps](https://www.finops.org/) - 云成本管理框架

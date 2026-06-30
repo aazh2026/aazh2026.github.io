@@ -5,6 +5,7 @@ date: 2025-04-16T00:00:00+08:00
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 description: "LOC在AI时代已死：当代码产出暴涨300%而系统稳定性反而下降，问题不是团队低效，而是指标错位。Intent Complexity用五个维度重新度量业务意图，让研发度量对齐真实价值交付。"
 ---
 
@@ -114,7 +115,7 @@ AI快速生成功能，但可能：
 
 ### Intent Complexity的维度
 
-<object data="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" type="image/svg+xml" width="100%" aria-label="Intent Complexity的维度" role="img"></object>
+<img src="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" alt="Intent Complexity的维度" width="100%" loading="lazy" decoding="async">
 
 ---
 

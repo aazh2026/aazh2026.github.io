@@ -6,6 +6,7 @@ date: 2025-01-12T01:35:00+08:00
 tags: [Agent设计, 一致性, 记忆管理, 长期交互]
 description: "跨会话一致性面临身份、知识、上下文三层挑战，时间旅行问题需要分层摘要+时间感知索引，冲突不隐藏而是主动标记或询问。"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -16,9 +17,9 @@ series: aise
 > 3. **分层摘要 + 冲突显式化** — 热数据（近期会话详细摘要）优先加载，冷数据（历史总摘要）作为背景；矛盾不隐藏，主动标记或询问
 > 4. **最好的Agent不是记忆力最强的，而是让用户感觉"它懂我"的**
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="一致性的三层架构：内容 / 时间 / 语义" role="img"></object>
+<img src="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg" alt="一致性的三层架构：内容 / 时间 / 语义" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
+<img src="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" alt="时间旅行问题的四步工作流" width="100%" loading="lazy" decoding="async">
 
 ## 跨会话一致性：如何让Agent不变成"精神分裂"
 
@@ -82,7 +83,7 @@ series: aise
 
 用户说："我上周说的那个方案，现在想改一下"
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-03-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
+<img src="/assets/images/2025-01-12-consistency-maintenance-03-time-travel.svg" alt="时间旅行问题的四步工作流" width="100%" loading="lazy" decoding="async">
 
 Agent需要：
 1. 找到"上周的对话"
@@ -144,9 +145,9 @@ Agent需要：
 
 不存储完整对话，存储**分层摘要**：
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg" type="image/svg+xml" width="100%" aria-label="会话摘要的金字塔结构：底层细节 / 中层合并 / 顶层总摘要" role="img"></object>
+<img src="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg" alt="会话摘要的金字塔结构：底层细节 / 中层合并 / 顶层总摘要" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" type="image/svg+xml" width="100%" aria-label="会话摘要金字塔结构" role="img"></object>
+<img src="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" alt="会话摘要金字塔结构" width="100%" loading="lazy" decoding="async">
 
 形成**金字塔结构**：
 - 底层：最近5个会话的详细摘要
@@ -240,6 +241,10 @@ Agent需要：
 >
 > 最好的Agent不是记忆力最强的，而是让用户感觉"它懂我"的。
 
+
+---
+
+*深度阅读时间：约 9 分钟*
 ---
 
 **延伸阅读：**

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 架构评审, AI治理, 技术决策]
 description: "AI参与架构设计时传统评审机制失效，提出\"机查加人工\"双层结构，扩展可解释性、公平性、鲁棒性、可控性四个AI特性维度，架构师从设计者进化为治理者。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -20,9 +21,9 @@ series: aise
 
 ---
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审流程" role="img"></object>
+<img src="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" alt="AI架构评审流程" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-02-review-dimensions.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审新维度：传统维度 + AI特性评估" role="img"></object>
+<img src="/assets/images/2025-05-11-ai-architecture-review-02-review-dimensions.svg" alt="AI架构评审新维度：传统维度 + AI特性评估" width="100%" loading="lazy" decoding="async">
 
 ## 传统评审的四个软肋
 
@@ -64,7 +65,7 @@ series: aise
 
 ### AI参与的三种方式
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-03-four-evolution-stages.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审的范式演进" role="img"></object>
+<img src="/assets/images/2025-05-11-ai-architecture-review-03-four-evolution-stages.svg" alt="AI架构评审的范式演进" width="100%" loading="lazy" decoding="async">
 
 **方式1：架构方案生成**
 
@@ -209,7 +210,7 @@ AI提供多维度的量化评分：
 
 ### AI预审 + 人工审查的双层结构
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" type="image/svg+xml" width="100%" aria-label="AI架构评审流程" role="img"></object>
+<img src="/assets/images/2025-05-11-ai-architecture-review-01-architecture-review-pipeline.svg" alt="AI架构评审流程" width="100%" loading="lazy" decoding="async">
 
 ### 自动化检查的五大领域
 
@@ -278,7 +279,7 @@ AI提供多维度的量化评分：
 
 ### 从执行者到治理者的身份转变
 
-<object data="/assets/images/2025-05-11-ai-architecture-review-04-architect-evolution.svg" type="image/svg+xml" width="100%" aria-label="架构师角色演进：从设计者到治理者" role="img"></object>
+<img src="/assets/images/2025-05-11-ai-architecture-review-04-architect-evolution.svg" alt="架构师角色演进：从设计者到治理者" width="100%" loading="lazy" decoding="async">
 
 **传统架构师**：
 - 设计系统架构

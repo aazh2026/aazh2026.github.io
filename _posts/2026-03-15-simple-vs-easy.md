@@ -7,6 +7,7 @@ categories: [哲学, AI, 软件工程]
 tags: [简单性, Rich Hickey, Clojure, AI编程, 认知负载]
 description: "容易是近，简单是远。AI 让'容易'触手可及，却系统性破坏'简单'——认知债务当下省下的理解成本，未来要连本带息偿还。简单性是对抗不确定性的最佳防御。"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -57,13 +58,13 @@ Hickey 用一句话点破了程序员的集体幻觉：
 
 ## 三个维度的深入对比
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-01-quadrant.svg" type="image/svg+xml" width="100%" aria-label="简单性 vs 容易性四象限" role="img"></object>
+<img src="/assets/images/2026-03-15-simple-vs-easy-01-quadrant.svg" alt="简单性 vs 容易性四象限" width="100%" loading="lazy" decoding="async">
 
 让我们用三个维度来深入理解这个区别：
 
 ### 心智负担 (Mental Burden)
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="心智负担 (Mental Burden)" role="img"></object>
+<img src="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" alt="心智负担 (Mental Burden)" width="100%" loading="lazy" decoding="async">
 
 | 维度 | 容易性 | 简单性 |
 |------|--------|--------|
@@ -138,7 +139,7 @@ AI 让"容易"达到了前所未有的高度：
 
 ## AI 如何系统性破坏简单性
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%" aria-label="AI 如何系统性破坏简单性" role="img"></object>
+<img src="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" alt="AI 如何系统性破坏简单性" width="100%" loading="lazy" decoding="async">
 
 这是一个反直觉的事实：AI 在让"容易"变得更容易的同时，正在系统性地让"简单"变得更难。
 
@@ -397,6 +398,10 @@ AI 时代给了我们前所未有的"容易"。我们可以在几分钟内搭建
 
 在这个 AI 让"容易"触手可及的时代，**追求简单，就是追求长期的竞争优势**。
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 ## 📚 延伸阅读

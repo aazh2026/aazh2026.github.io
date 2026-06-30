@@ -6,6 +6,7 @@ date: 2025-01-18T01:50:00+08:00
 tags: [版本控制, 知识更新, Schema迁移, 一致性]
 description: "知识有保质期——借鉴数据库Migration模式，给记忆加版本号和变更类型，支持渐进更新与回滚，多版本共存根据上下文路由到正确知识。"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -33,7 +34,7 @@ series: aise
 >
 > 知识的失效不是"bug"，是系统设计的必然结果——Agent若没有版本机制，旧知识就会像沉默的bug一样持续输出错误结论。
 
-<object data="/assets/images/2025-01-18-memory-versioning-01-concept.svg" type="image/svg+xml" width="100%" aria-label="记忆版本控制流程" role="img"></object>
+<img src="/assets/images/2025-01-18-memory-versioning-01-concept.svg" alt="记忆版本控制流程" width="100%" loading="lazy" decoding="async">
 
 ## 为什么需要记忆的版本控制
 
@@ -86,7 +87,7 @@ Agent的记忆同样需要这些能力。
 >
 > 数据库解决数据迁移问题的全部工具——版本化、序列化执行、可回滚、渐进式发布——都可以直接映射到Agent的知识管理，只是数据换成了事实和概念。
 
-<object data="/assets/images/2025-01-18-memory-versioning-02-schema-migration.svg" type="image/svg+xml" width="100%" aria-label="记忆 Schema 迁移" role="img"></object>
+<img src="/assets/images/2025-01-18-memory-versioning-02-schema-migration.svg" alt="记忆 Schema 迁移" width="100%" loading="lazy" decoding="async">
 
 ## 版本控制的核心概念
 
@@ -216,7 +217,7 @@ Agent在每次响应用户前，检查记忆版本与当前时间是否匹配；
 >
 > 冲突解决的本质不是"选一个对的"，而是"选一个更可能对的，并且记录为什么选它"——每次冲突解决都应该留下决策日志，供后续审计和迭代。
 
-<object data="/assets/images/2025-01-18-memory-versioning-03-conflict-resolution.svg" type="image/svg+xml" width="100%" aria-label="冲突解决策略" role="img"></object>
+<img src="/assets/images/2025-01-18-memory-versioning-03-conflict-resolution.svg" alt="冲突解决策略" width="100%" loading="lazy" decoding="async">
 
 ### 多版本共存
 
@@ -305,6 +306,10 @@ transform:
 
 Agent的记忆不应该是一潭死水，而应该是一条流动的河——带着历史，流向未来。
 
+
+---
+
+*深度阅读时间：约 12 分钟*
 ---
 
 **延伸阅读：**

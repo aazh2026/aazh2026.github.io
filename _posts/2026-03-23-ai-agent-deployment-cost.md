@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Agent, Cost, DevOps, Pricing]
 description: "AI Agent部署成本不是线性增长而是阶梯式跃迁：$0原型→$100测试→$1000生产→$10000规模，基础设施在生产阶段成为成本主体。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
@@ -34,7 +35,7 @@ AI Agent的成本分为三层。**API调用**层是模型token消耗，包括pro
 
 ## 成本层级拆解
 
-<object data="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" type="image/svg+xml" width="100%" aria-label="AI Agent 部署成本层级拆解" role="img"></object>
+<img src="/assets/images/2026-03-23-ai-agent-deployment-cost-01-cost-layers.svg" alt="AI Agent 部署成本层级拆解" width="100%" loading="lazy" decoding="async">
 
 ### Level 1: $0 原型阶段
 
@@ -230,6 +231,10 @@ Token是API账单的基本单位，每优化1%的token消耗等于直接降低1%
 - [Anthropic Pricing](https://www.anthropic.com/pricing)
 - [Vercel AI SDK Cost Tracking](https://sdk.vercel.ai/docs)
 
+
+---
+
+*深度阅读时间：约 9 分钟*
 ---
 
 *本文成本数据基于2026年3月市场价格，实际成本因使用模式而异。*

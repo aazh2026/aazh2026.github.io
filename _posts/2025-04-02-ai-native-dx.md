@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 开发者体验, DX]
 description: "AI将开发者从\"实现者\"转变为\"指导者\"；认知流、反馈环、信任度、控制感、成长路径构成AI-Native开发者体验的五维评估模型。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -90,7 +91,7 @@ series: aise
 | 云工具 | 浏览器 | 协作便利 | 延迟 |
 | AI-Native | 自然语言+代码 | 意图表达 | 意图清晰度 |
 
-<object data="/assets/images/2025-04-02-ai-native-dx-02-devtools-evolution.svg" type="image/svg+xml" width="100%" aria-label="穿越周期：从命令行到GUI到AI-Native" role="img"></object>
+<img src="/assets/images/2025-04-02-ai-native-dx-02-devtools-evolution.svg" alt="穿越周期：从命令行到GUI到AI-Native" width="100%" loading="lazy" decoding="async">
 
 **历史在押韵**：每一次工具革命都在降低"操作"的难度，但提升了"思考"的重要性。AI-Native工具让写代码变得更容易，但让"想清楚要什么"变得更重要。
 
@@ -102,7 +103,7 @@ series: aise
 
 ## 反直觉洞察：五维DX模型
 
-<object data="/assets/images/2025-04-02-ai-native-dx-01-five-dimensions.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：五维DX模型" role="img"></object>
+<img src="/assets/images/2025-04-02-ai-native-dx-01-five-dimensions.svg" alt="反直觉洞察：五维DX模型" width="100%" loading="lazy" decoding="async">
 
 我提出一个**AI-Native开发者体验的五维模型**：
 

@@ -7,6 +7,7 @@ tags: [Machine Learning, Transformer, Attention, Architecture, Kimi]
 description: "Kimi 团队提出 Attention Residuals，用可学习动态聚合替代固定残差连接，Block AttnRes 在接近标准 Transformer 内存开销下实现显著效果提升。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -85,11 +86,11 @@ Transformer 使用 PreNorm 架构：
 | **Key/Value** | 其他 tokens | 前面层输出 |
 | **目的** | 捕获序列依赖 | 选择性聚合层表征 |
 
-<object data="/assets/images/2026-03-18-kimi-attention-residuals-01-residual-comparison.svg" type="image/svg+xml" width="100%" aria-label="Standard Residual vs Attention Residuals" role="img"></object>
+<img src="/assets/images/2026-03-18-kimi-attention-residuals-01-residual-comparison.svg" alt="Standard Residual vs Attention Residuals" width="100%" loading="lazy" decoding="async">
 
 *图 1：Standard Residual（❌）使用固定权重（=1.0）的加法残差连接，所有层贡献均等；Attention Residual（✅）通过注意力机制动态决定各层的聚合权重，实现选择性层聚合。*
 
-<object data="/assets/images/2026-03-18-kimi-attention-residuals-02-layer-aggregation.svg" type="image/svg+xml" width="100%" aria-label="层聚合方式对比与 Block AttnRes" role="img"></object>
+<img src="/assets/images/2026-03-18-kimi-attention-residuals-02-layer-aggregation.svg" alt="层聚合方式对比与 Block AttnRes" width="100%" loading="lazy" decoding="async">
 
 *图 2：层聚合方式对比——标准残差连接的固定权重导致贡献稀释；Attention Residuals 通过可学习权重实现自适应层聚合，Block AttnRes 在保持内存效率的同时实现这一机制。*
 
@@ -429,6 +430,10 @@ Attention Residuals 代表了几个重要趋势：
 - [Fixup Initialization](https://arxiv.org/abs/1901.09321) - 相关残差连接研究
 - [ReZero](https://arxiv.org/abs/2003.04887) - 另一种残差连接改进
 
+
+---
+
+*深度阅读时间：约 16 分钟*
 ---
 
 *本文基于 Reddit r/MachineLearning 讨论和 arXiv 论文。*

@@ -58,7 +58,7 @@ Grammarly的AI功能，被免费替代品逐步蚕食。
 >
 > 当底层技术对所有人开放，先发优势只是暂时的——真正的护城河来自差异化，而非技术本身。
 
-<object data="/assets/images/2025-03-19-api-economy-moat-01-moat-collapse.svg" type="image/svg+xml" width="100%" aria-label="API经济护城河崩塌" role="img"></object>
+<img src="/assets/images/2025-03-19-api-economy-moat-01-moat-collapse.svg" alt="API经济护城河崩塌" width="100%" loading="lazy" decoding="async">
 
 ### CopyAI失败的根本原因
 
@@ -334,7 +334,7 @@ AI工具不是独立存在的，是嵌入用户工作流的。越深度的嵌入
 - 强调人类专家的参与和审核
 - 建立长期可靠性的声誉
 
-<object data="/assets/images/2025-03-19-api-economy-moat-02-five-steps.svg" type="image/svg+xml" width="100%" aria-label="AI产品护城河构建五步法" role="img"></object>
+<img src="/assets/images/2025-03-19-api-economy-moat-02-five-steps.svg" alt="AI产品护城河构建五步法" width="100%" loading="lazy" decoding="async">
 
 ## 写在最后：接受没有技术护城河的现实
 

@@ -24,7 +24,7 @@ series_title: "从 SaaS 到 Agent OS"
 
 ---
 
-<object data="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" type="image/svg+xml" width="100%" aria-label="2025-07-14-multi-agent-collaboration-04-taxonomy-hero 图示" role="img"></object>
+<img src="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" alt="2025-07-14-multi-agent-collaboration-04-taxonomy-hero 图示" width="100%" loading="lazy" decoding="async">
 
 - [为什么需要 Multi-Agent？](#为什么需要-multi-agent)
 - [三种协作架构模式](#三种协作架构模式)
@@ -79,7 +79,7 @@ series_title: "从 SaaS 到 Agent OS"
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%" aria-label="Supervisor-Workers 主管-工作者模式" role="img"></object>
+<img src="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" alt="Supervisor-Workers 主管-工作者模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景：**
 - 任务可明确分解为独立子任务
@@ -94,7 +94,7 @@ series_title: "从 SaaS 到 Agent OS"
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%" aria-label="Peer-to-Peer 对等协作模式" role="img"></object>
+<img src="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" alt="Peer-to-Peer 对等协作模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景：**
 - 任务需要多轮协商
@@ -109,7 +109,7 @@ series_title: "从 SaaS 到 Agent OS"
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%" aria-label="Hierarchical 层级组织模式" role="img"></object>
+<img src="/assets/images/2025-07-14-mac-03-hierarchical.svg" alt="Hierarchical 层级组织模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景：**
 - 复杂组织模拟
@@ -304,6 +304,10 @@ Pipeline 模式中，Agent 按严格的顺序阶段串联工作：Agent A 完成
 >
 > Multi-Agent 的真正价值不在于速度的叠加，而在于多个专业视角的碰撞产生了单个 Agent 无法产生的综合判断。
 
+
+---
+
+*深度阅读时间：约 14 分钟*
 ---
 
 ## 📚 延伸阅读

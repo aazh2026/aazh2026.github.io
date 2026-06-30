@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 用户故事, Prompt工程, 需求工程]
 description: "SDD 2.0用上下文-约束-验收标准三元组替代传统用户故事格式，让精心设计的Prompt成为可执行的规格说明书，实现需求工程的范式转移。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -18,7 +19,7 @@ series: aise
 
 ---
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%" aria-label="2026-03-12-sdd-20-prompt-engineering-01-intent-editor 图示" role="img"></object>
+<img src="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" alt="2026-03-12-sdd-20-prompt-engineering-01-intent-editor 图示" width="100%" loading="lazy" decoding="async">
 
 ## 用户故事的局限
 
@@ -36,7 +37,7 @@ series: aise
 
 **但它有三个致命缺陷：**
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="用户故事的局限" role="img"></object>
+<img src="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" alt="用户故事的局限" width="100%" loading="lazy" decoding="async">
 
 | 缺陷 | 说明 | 后果 |
 |------|------|------|
@@ -66,11 +67,11 @@ series: aise
 > 
 > AI需要的最小完备信息单元是三元组：上下文（Context）+ 约束（Constraints）+ 验收标准（Acceptance Criteria）。缺少任何一项，生成都可能偏离目标。
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" type="image/svg+xml" width="100%" aria-label="三元组新范式" role="img"></object>
+<img src="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" alt="三元组新范式" width="100%" loading="lazy" decoding="async">
 
 ### 结构对比
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" type="image/svg+xml" width="100%" aria-label="SDD 2.0 三元组：上下文-约束-验收标准" role="img"></object>
+<img src="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-triplet-structure.svg" alt="SDD 2.0 三元组：上下文-约束-验收标准" width="100%" loading="lazy" decoding="async">
 
 | 维度 | 传统格式 | SDD 2.0 |
 |------|---------|---------|
@@ -140,3 +141,6 @@ AI-Native需求工程的产出是一份**结构化的Prompt**（通常以YAML格
 > 💡 **Key Insight**
 >
 > 当 Prompt 成为可执行的规格说明书，需求工程师的设计者角色比任何时代都更重要。
+---
+
+*深度阅读时间：约 5 分钟*

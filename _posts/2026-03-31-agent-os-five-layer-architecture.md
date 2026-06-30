@@ -59,13 +59,13 @@ series: agent-os
 
 ## 五层架构全景图
 
-<object data="/assets/images/2026-03-31-agent-os-01-stack.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-01-stack.svg" alt="五层架构全景图" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-31-agent-os-five-layer-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Agent OS 五层架构全景图" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-five-layer-01-arch.svg" alt="Agent OS 五层架构全景图" width="100%" loading="lazy" decoding="async">
 
 **数据流向：**
 
-<object data="/assets/images/2026-03-31-agent-os-02-dataflow.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-02-dataflow.svg" alt="五层架构全景图" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -123,7 +123,7 @@ series: agent-os
 
 ### 记忆类型
 
-<object data="/assets/images/2026-03-31-agent-os-03-memory.svg" type="image/svg+xml" width="100%" aria-label="记忆类型" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-03-memory.svg" alt="记忆类型" width="100%" loading="lazy" decoding="async">
 
 ### 实现方案
 
@@ -211,7 +211,7 @@ series: agent-os
 
 **模式 1：主管-工作者（Supervisor-Workers）**
 
-<object data="/assets/images/2026-03-31-agent-os-04-supervisor.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-04-supervisor.svg" alt="多 Agent 架构模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景**：
 - 任务可以清晰分解为独立子任务
@@ -230,7 +230,7 @@ series: agent-os
 
 **模式 2：平等协作（Peer-to-Peer）**
 
-<object data="/assets/images/2026-03-31-agent-os-05-p2p.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-05-p2p.svg" alt="多 Agent 架构模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景**：
 - Agent 需要频繁协商和信息交换
@@ -249,7 +249,7 @@ series: agent-os
 
 **模式 3：层级结构（Hierarchy）**
 
-<object data="/assets/images/2026-03-31-agent-os-06-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-06-hierarchy.svg" alt="多 Agent 架构模式" width="100%" loading="lazy" decoding="async">
 
 **适用场景**：
 - 组织架构本身具有层级特性
@@ -302,7 +302,7 @@ series: agent-os
 
 **1. 对话式界面（Chat Interface）**
 
-<object data="/assets/images/2026-03-31-agent-os-five-layer-07-chat-ui.svg" type="image/svg+xml" width="100%" aria-label="界面形式" role="img"></object>
+<img src="/assets/images/2026-03-31-agent-os-five-layer-07-chat-ui.svg" alt="界面形式" width="100%" loading="lazy" decoding="async">
 
 **2. 命令式界面（Command Interface）**
 
@@ -472,6 +472,10 @@ Agent OS 的五层架构与现有框架的关系：
 > 
 > 好的 Agent OS 架构可以让你走得更远，但只有扎实的工程实现才能让你走得稳。
 
+
+---
+
+*深度阅读时间：约 11 分钟*
 ---
 
 ## 📚 延伸阅读

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, DevSecOps, 安全左移, 工具链基础设施]
 description: '提出AI驱动的安全左移终极形态，将安全策略转化为Prompt规则在代码生成阶段注入，实现"生成即安全"——最好的安全不是发现后修复，而是根本不产生安全问题。'
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -62,7 +63,7 @@ series: aise
 
 ## AI驱动的安全左移
 
-<object data="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" type="image/svg+xml" width="100%" aria-label="AI安全左移流程" role="img"></object>
+<img src="/assets/images/2025-05-23-ai-devsecops-shift-left-01-flow.svg" alt="AI安全左移流程" width="100%" loading="lazy" decoding="async">
 
 ### 什么是"终极左移"
 

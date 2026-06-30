@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 代码生成, 未来趋势, Agent]
 description: "代码生成经历三次范式转移：当前AI辅助(效率提升30-50%) → 1-2年AI协作(2-5x提升) → 3-5年AI主导，工程师从编码者进化为\"意图架构师\"。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -17,11 +18,11 @@ series: aise
 > 
 > 关键洞察：未来的工程师不是不写代码，而是写"生成代码的代码"。
 
-<object data="/assets/images/2025-05-03-future-of-code-generation-01-phases.svg" type="image/svg+xml" width="100%" aria-label="代码生成三阶段演进" role="img"></object>
+<img src="/assets/images/2025-05-03-future-of-code-generation-01-phases.svg" alt="代码生成三阶段演进" width="100%" loading="lazy" decoding="async">
 
 ---
 
-<object data="/assets/images/2025-05-03-future-of-code-generation-02-engineer-evolution.svg" type="image/svg+xml" width="100%" aria-label="工程师角色演进：从编码者到治理者" role="img"></object>
+<img src="/assets/images/2025-05-03-future-of-code-generation-02-engineer-evolution.svg" alt="工程师角色演进：从编码者到治理者" width="100%" loading="lazy" decoding="async">
 
 ## 2026年的今天：我们身在何处
 

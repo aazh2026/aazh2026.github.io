@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Enterprise, Case Study, Rakuten, Codex]
 description: "Rakuten 用 OpenAI Codex 将 MTTR 降低 50%，全栈交付从数月缩短至周级——AI 增强而非替代的渐进式转型路径。 "
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -149,9 +150,9 @@ Rakuten 将 AI 深度集成到开发工具链，形成无缝体验。
 
 Rakuten 的工具链覆盖 IDE、代码审查、CI/CD 和运维四个层次，AI 能力贯穿每个环节。
 
-<object data="/assets/images/2026-03-17-rakuten-ai-transformation-01-overview.svg" type="image/svg+xml" width="100%" aria-label="Rakuten AI 工具链集成架构" role="img"></object>
+<img src="/assets/images/2026-03-17-rakuten-ai-transformation-01-overview.svg" alt="Rakuten AI 工具链集成架构" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%" aria-label="工具链集成架构" role="img"></object>
+<img src="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" alt="工具链集成架构" width="100%" loading="lazy" decoding="async">
 
 ### IDE 集成：开发者的 AI 伴侣
 
@@ -414,6 +415,10 @@ Rakuten 已经展示了一条可行的路径。现在轮到你了。
 - [AI Adoption in Enterprise](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai) - McKinsey
 - [Team Topologies](https://teamtopologies.com/) - 组织架构设计
 
+
+---
+
+*深度阅读时间：约 16 分钟*
 ---
 
 *本文基于 OpenAI 客户案例分析。*

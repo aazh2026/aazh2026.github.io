@@ -7,6 +7,7 @@ description: 'AI时代Clean Room方法论面临根本挑战——AI没有"接触
 author: "@postcodeeng"
 
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -17,7 +18,7 @@ series: aise
 > 3. **许可证悖论尚无法律答案** — AI 重构开源代码并更换许可证的行为属于法律灰色地带，目前尚无法院判例
 > 4. **透明是最好的保护** — 在 AI 与法律边界模糊的时代，诚实地披露 AI 使用、清晰记录开发过程是当下最可行的风险管理策略
 
-<object data="/assets/images/2025-02-21-ai-clean-room-dilemma-01-architecture.svg" type="image/svg+xml" width="100%" aria-label="Traditional vs AI Clean Room Architecture" role="img"></object>
+<img src="/assets/images/2025-02-21-ai-clean-room-dilemma-01-architecture.svg" alt="Traditional vs AI Clean Room Architecture" width="100%" loading="lazy" decoding="async">
 
 ## AI时代的Clean Room困境：从技术实验到许可证的灰色地带
 
@@ -131,7 +132,7 @@ antirez的质疑是：为什么选择一种让问题更难的语言？除非...
 
 Simon Willison提出了一个更尖锐的问题：**AI Coding Agent能否通过Clean Room方式重新许可开源代码？**
 
-<object data="/assets/images/2025-02-21-ai-clean-room-dilemma-02-flow.svg" type="image/svg+xml" width="100%" aria-label="AI Clean Room License Paradox Flow" role="img"></object>
+<img src="/assets/images/2025-02-21-ai-clean-room-dilemma-02-flow.svg" alt="AI Clean Room License Paradox Flow" width="100%" loading="lazy" decoding="async">
 
 ### 场景再现
 
@@ -364,6 +365,10 @@ Clean Room方法论诞生于1982年，为的是一个明确的目标：在不侵
 - [The Legal Status of AI-Generated Code - Electronic Frontier Foundation](https://www.eff.org/pages/ai-generated-code)
 - [Open Source Initiative: AI and Open Source - Position Paper](https://opensource.org/ai)
 
+
+---
+
+*深度阅读时间：约 12 分钟*
 ---
 
 *Published on 2025-02-21 | 阅读时间：约 20 分钟*

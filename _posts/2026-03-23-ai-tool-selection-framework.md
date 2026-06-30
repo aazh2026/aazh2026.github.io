@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Decision-Framework, Methodology, Tool-Selection]
 description: "AI编程工具选择应基于控制轴×抽象轴×协作轴三维模型——工具错配是效率损失最大来源，认知匹配比功能对比更重要。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -90,7 +91,7 @@ series: aise
 
 ### 三维模型
 
-<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%" aria-label="三维模型" role="img"></object>
+<img src="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" alt="三维模型" width="100%" loading="lazy" decoding="async">
 
 ### 维度1：控制轴（Control Spectrum）
 
@@ -355,6 +356,10 @@ series: aise
 
 
 
+
+---
+
+*深度阅读时间：约 9 分钟*
 ## 参考与延伸阅读
 
 - [The Paradox of Choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice) - Barry Schwartz

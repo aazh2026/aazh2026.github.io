@@ -6,6 +6,7 @@ tags: [代码考古, 新员工 onboarding, 软件工程, AI工具, 组织知识]
 description: "系统化六步法让新员工在3-6个月内高效理解复杂系统，AI工具将代码考古效率提升3-10倍，最终目标是将个人理解转化为组织知识。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**

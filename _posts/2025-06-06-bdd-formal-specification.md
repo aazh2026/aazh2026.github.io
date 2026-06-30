@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, BDD, Gherkin, 形式化规格, 规格即代码]
 description: "Gherkin的歧义消耗团队3-4小时/模糊点，LLM将其自动转换为可数学验证的形式化规格，让规格生成代码、代码反验规格形成自洽闭环。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -16,7 +17,7 @@ series: aise
 > 3. **AI桥梁** — LLM可以将自然语言Gherkin自动转换为形式化表达
 > 4. **闭环验证** — 规格生成代码，代码反验证规格，形成自洽系统
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-01-overview.svg" type="image/svg+xml" width="100%" aria-label="2025-06-06-bdd-formal-specification-01-overview 图示" role="img"></object>
+<img src="/assets/images/2025-06-06-bdd-formal-specification-01-overview.svg" alt="2025-06-06-bdd-formal-specification-01-overview 图示" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -156,11 +157,11 @@ TLC 模型检查器会穷举所有可能的状态空间，验证：
 
 ### 转换Pipeline
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline" role="img"></object>
+<img src="/assets/images/2025-06-06-bdd-formal-specification-02-closed-loop.svg" alt="转换Pipeline" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-02-toolchain.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline" role="img"></object>
+<img src="/assets/images/2025-06-06-bdd-formal-specification-02-toolchain.svg" alt="转换Pipeline" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="转换Pipeline" role="img"></object>
+<img src="/assets/images/2025-06-06-bdd-formal-specification-01-pipeline.svg" alt="转换Pipeline" width="100%" loading="lazy" decoding="async">
 ---
 
 ## 工具链实践

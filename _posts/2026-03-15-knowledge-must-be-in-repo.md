@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Harness Engineering, Knowledge Management, Organiz
 description: 'Legible Knowledge = 仓库本地 + 版本化 + 结构化。Harness 工程的"无手写代码"约束强制知识显性化，让 AI Agent 与人类新员工站在同一起跑线——本质是组织知识的机构化重构。'
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -60,7 +61,7 @@ OpenAI 引入了一个关键概念：
 >
 > 知识对人类"存在"和对 Agent "存在"是两个完全不同的标准。Harness 工程迫使我们用 Agent 的视角重新审视知识的可访问性。
 
-<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-01-legible-spectrum.svg" type="image/svg+xml" width="100%" aria-label="什么是 Legible Knowledge" role="img"></object>
+<img src="/assets/images/2026-03-15-knowledge-must-be-in-repo-01-legible-spectrum.svg" alt="什么是 Legible Knowledge" width="100%" loading="lazy" decoding="async">
 
 ### 可读性的光谱
 
@@ -147,7 +148,7 @@ Harness 工程的本质是强制知识显性化：所有对系统有影响的决
 
 ## 实践：如何推动知识入库
 
-<object data="/assets/images/2026-03-15-knowledge-must-be-in-repo-02-transformation.svg" type="image/svg+xml" width="100%" aria-label="实践：如何推动知识入库" role="img"></object>
+<img src="/assets/images/2026-03-15-knowledge-must-be-in-repo-02-transformation.svg" alt="实践：如何推动知识入库" width="100%" loading="lazy" decoding="async">
 
 ## 会议的文化转变
 
@@ -291,6 +292,10 @@ Harness 工程的要求，意外地击中了现代软件工程的一个痛点：
 
 这才是 Harness 工程最深刻的社会学意义。
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 *参考来源：*

@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Harness Engineering, Claude-Code, System-Design]
 description: "通过 everything-claude-code 项目完整解析 Harness Engineering 四大支柱：Eval Harness、Rules Engine、Hooks 自动化与持续学习机制。"
 author: "@postcodeeng"
 series: aise
+subtopic: agents-and-multi-agent
 ---
 
 > **TL;DR**
@@ -65,22 +66,22 @@ series: aise
 
 这个项目是 Harness Engineering 的**完整实战案例**：
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-01-harness-pillars.svg" type="image/svg+xml" width="100%" aria-label="everything-claude-code 的 Harness 设计" role="img"></object>
+<img src="/assets/images/2026-03-19-everything-claude-code-agent-os-01-harness-pillars.svg" alt="everything-claude-code 的 Harness 设计" width="100%" loading="lazy" decoding="async">
 
 **核心洞察**：
 > "不是相信 AI 会做对，而是确保 AI 必须做对。"
 
 ---
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" type="image/svg+xml" width="100%" aria-label="everything-claude-code 的 Harness 设计" role="img"></object>
+<img src="/assets/images/2026-03-19-everything-claude-code-agent-os-03-harness-system.svg" alt="everything-claude-code 的 Harness 设计" width="100%" loading="lazy" decoding="async">
 
 ## Harness 的四大支柱
 
 everything-claude-code 的 Harness 体系由四个核心支柱构成：
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" type="image/svg+xml" width="100%" aria-label="Harness 的四大支柱" role="img"></object>
+<img src="/assets/images/2026-03-19-everything-claude-code-agent-os-02-agent-os-layers.svg" alt="Harness 的四大支柱" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="Harness 的四大支柱" role="img"></object>
+<img src="/assets/images/2026-03-19-everything-claude-code-agent-os-04-ascii-arch.svg" alt="Harness 的四大支柱" width="100%" loading="lazy" decoding="async">
 
 ### 支柱 1：Eval Harness（测试层）
 
@@ -742,6 +743,10 @@ everything-claude-code 展示的是另一个愿景：
 - [Harness Engineering - Martin Fowler](https://martinfowler.com/articles/exploring-gen-ai/harness-engineering.html) - 理论基础
 - [Building Effective Agents - Anthropic](https://www.anthropic.com/engineering/building-effective-agents) - Agent 设计最佳实践
 
+
+---
+
+*深度阅读时间：约 21 分钟*
 ---
 
 *本文基于 everything-claude-code 开源项目的深度架构分析。*

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, SDLC, 增量开发, 需求管理]
 description: "增量需求用Delta Specification管理变化量而非重写完整PRD，Compatibility Rules防止AI过度重构。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 ## 增量需求不再头疼：Delta Specification 工作流
@@ -39,7 +40,7 @@ AI 只需要理解**变化部分**。
 > 💡 **Key Insight**
 > Delta Specification 的本质是**只传递变化量**，而非重新传递整个系统上下文。AI 读取 `Base Spec + Delta` 的组合效果等同于读取完整需求文档，但信息量减少 80% 以上。
 
-<object data="/assets/images/2026-03-11-delta-specification-01-workflow.svg" type="image/svg+xml" width="100%" aria-label="核心原则" role="img"></object>
+<img src="/assets/images/2026-03-11-delta-specification-01-workflow.svg" alt="核心原则" width="100%" loading="lazy" decoding="async">
 
 ## 推荐的工程结构
 
@@ -88,7 +89,7 @@ AI 读取顺序：
 
 非常稳定。
 
-<object data="/assets/images/2026-03-11-delta-specification-02-execution-flow.svg" type="image/svg+xml" width="100%" aria-label="AI 执行流程" role="img"></object>
+<img src="/assets/images/2026-03-11-delta-specification-02-execution-flow.svg" alt="AI 执行流程" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 > Delta 模式天然支持**幂等变更**：相同的 delta 重复执行不会累积副作用，这与 Database Migration 的幂等性保证如出一辙。
@@ -235,6 +236,10 @@ AI-Native 增量需求的最佳实践：
 
 > AI-Native SDLC 的需求迭代，本质是 **Spec 的版本管理**，而不是文档修改。
 
+
+---
+
+*深度阅读时间：约 6 分钟*
 ---
 
 *下一篇：《详细设计会消失吗？Intent-Driven 开发的未来》*

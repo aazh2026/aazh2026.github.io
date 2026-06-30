@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Security, SAST, Codex, OpenAI]
 description: "Codex Security 用约束推理引擎加动态验证替代 SAST 模式匹配，将误报率从 80-90% 降至 10% 以下，让安全扫描从负担变为可信助手。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
@@ -19,7 +20,7 @@ series: aise
 
 ---
 
-<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-01-arch.svg" type="image/svg+xml" width="100%" aria-label="2026-03-17-codex-security-ai-vs-sast-01-arch 图示" role="img"></object>
+<img src="/assets/images/2026-03-17-codex-security-ai-vs-sast-01-arch.svg" alt="2026-03-17-codex-security-ai-vs-sast-01-arch 图示" width="100%" loading="lazy" decoding="async">
 
 ## SAST 的困境：高误报率的诅咒
 
@@ -232,7 +233,7 @@ Codex Security 的实践揭示了一个重要趋势：**AI 不是替代传统工
 
 ### 最佳实践架构
 
-<object data="/assets/images/2026-03-17-codex-security-ai-vs-sast-02-arch.svg" type="image/svg+xml" width="100%" aria-label="最佳实践架构" role="img"></object>
+<img src="/assets/images/2026-03-17-codex-security-ai-vs-sast-02-arch.svg" alt="最佳实践架构" width="100%" loading="lazy" decoding="async">
 
 ## 结尾：安全扫描的范式转移
 
@@ -275,6 +276,10 @@ Codex Security 的实践揭示了一个行业趋势：**AI 驱动的安全工具
 - [Constraint-Based Analysis](https://en.wikipedia.org/wiki/Constraint_satisfaction_problem) - Wikipedia
 - [Dynamic Application Security Testing (DAST)](https://owasp.org/www-community/Vulnerability_Scanning_Tools) - OWASP
 
+
+---
+
+*深度阅读时间：约 10 分钟*
 ---
 
 *本文基于 OpenAI Engineering 博客文章分析。*

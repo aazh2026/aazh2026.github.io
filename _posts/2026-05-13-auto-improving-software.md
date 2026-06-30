@@ -3,8 +3,9 @@ layout: post
 title: "Auto-Improving Software：coding agents 自己构建、运行、改进自己的平台"
 date: 2026-05-13T12:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Self-Improvement, Claude-Code, Platform-Engineering]
-author: Aaron
+author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 description: "Agent 开发平台是第一个可以自我改进的软件类别——action、data、iteration tool 全都集中在一处，让 coding agent 可以端到端测试、修改、再测试，直到能力边界往外扩一点。"
 ---
 
@@ -50,7 +51,7 @@ Sweeps the repo for drift between docs, code, and config。自动修复文档、
 
 ---
 
-<object data="/assets/images/2026-05-13-auto-improving-software-01-cycle.svg" type="image/svg+xml" width="100%" aria-label="Review" role="img"></object>
+<img src="/assets/images/2026-05-13-auto-improving-software-01-cycle.svg" alt="Review" width="100%" loading="lazy" decoding="async">
 
 ## 为什么 auto-improvement 现在才可能
 
@@ -126,6 +127,10 @@ Ashpreet Bedi 说了一句值得记住的话：
 
 这不是 agent 帮助人类写代码，这是 agent 在帮助人类构建一个能更高效构建 agent 的平台。第一批吃自己狗粮的 AI-native 基础设施。
 
+
+---
+
+*深度阅读时间：约 6 分钟*
 ---
 
 ## 相关链接

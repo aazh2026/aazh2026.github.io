@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, SDLC, 软件工程, 详细设计]
 description: "AI-Native详细设计从给人读的文档变成给AI执行的可执行上下文，六大Artifacts驱动生成。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 ## AI-Native 详细设计：从文档到可执行上下文
@@ -17,7 +18,7 @@ series: aise
 > 2. **设计质量被 AI 放大** — 设计不是变少了，而是变得更重要。传统流程中设计文档与代码脱节，AI-Native 流程中设计 artifacts 直接驱动 AI，设计的质量直接决定代码质量、生成效率和幻觉概率。
 > 3. **Intent Architect 是新角色** — 设计师的核心价值从"画图"转向"定义意图"，图形产出减少，但上下文组织的责任更重，需要掌握结构化 artifacts 的组合能力。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-02-ctx-evolution.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 详细设计：从文档到可执行上下文（2026-03-11-ai-native-detailed-design-02-ctx-evolution）" role="img"></object>
+<img src="/assets/images/2026-03-11-ai-native-detailed-design-02-ctx-evolution.svg" alt="AI-Native 详细设计：从文档到可执行上下文（2026-03-11-ai-native-detailed-design-02-ctx-evolution）" width="100%" loading="lazy" decoding="async">
 
 传统软件工程里的详细设计文档正在死去。不是因为设计不重要了，而是因为它正在变成另一种东西——**可执行上下文（Executable Context）**。
 
@@ -102,7 +103,7 @@ AI 可以自动生成：Controller、Client SDK、测试用例。
 
 AI 据此生成单元测试和集成测试。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-01-artifacts.svg" type="image/svg+xml" width="100%" aria-label="Evaluation Spec（评估规格）" role="img"></object>
+<img src="/assets/images/2026-03-11-ai-native-detailed-design-01-artifacts.svg" alt="Evaluation Spec（评估规格）" width="100%" loading="lazy" decoding="async">
 
 ## 设计与代码的解耦与重绑定
 
@@ -171,10 +172,14 @@ AI-Native 时代的详细设计有五个关键变化：
 
 因为 AI-Native SDLC 正在出现新范式：**Intent-Driven Development**。很多"详细设计"会被 `intent + constraints + examples` 直接替代。
 
-<object data="/assets/images/2026-03-11-ai-native-detailed-design-03-intent-driven.svg" type="image/svg+xml" width="100%" aria-label="总结" role="img"></object>
+<img src="/assets/images/2026-03-11-ai-native-detailed-design-03-intent-driven.svg" alt="总结" width="100%" loading="lazy" decoding="async">
 
 这是软件工程的下一次革命。
 
+
+---
+
+*深度阅读时间：约 6 分钟*
 ---
 
 *下一篇：《4个文件搞定详细设计：最小上下文集合实践》*

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, IDD, 方法论重构, 开发者能力]
 description: "开发者角色从代码实现者升级为意图架构师，核心技能从编码迁移到意图表达、审查判断和AI协作三维度能力矩阵。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 2026年，软件开发行业开始出现一道清晰的分水岭：会用 AI 写代码的，和不会用的。但真正的问题不是"会不会用"，而是**用 AI 做什么**。当 AI 能生成代码时，人的价值正在从"写代码"迁移到"表达意图"——这是 IDD（Intent-Driven Development，意图驱动开发）出现的背景。
@@ -61,7 +62,7 @@ series: aise
 
 ## 开发者能力迁移模型
 
-<object data="/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" type="image/svg+xml" width="100%" aria-label="开发者能力迁移模型" role="img"></object>
+<img src="/assets/images/2026-03-13-idd-intent-driven-development-01-evolution.svg" alt="开发者能力迁移模型" width="100%" loading="lazy" decoding="async">
 
 ### 传统开发者能力栈
 
@@ -87,7 +88,7 @@ series: aise
 
 ## Intent工程师胜任力矩阵
 
-<object data="/assets/images/2026-03-13-idd-intent-driven-development-02-capability-migration.svg" type="image/svg+xml" width="100%" aria-label="Intent工程师胜任力矩阵" role="img"></object>
+<img src="/assets/images/2026-03-13-idd-intent-driven-development-02-capability-migration.svg" alt="Intent工程师胜任力矩阵" width="100%" loading="lazy" decoding="async">
 
 ### 能力维度定义
 

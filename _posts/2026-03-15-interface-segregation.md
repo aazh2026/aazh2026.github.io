@@ -7,6 +7,7 @@ tags: [接口隔离, SOLID, Intent-Driven, AI-Native软件工程, 软件工程]
 description: "SOLID接口隔离原则在AI时代的延伸：Intent/Context/Prompt三层契约结构，让AI成为可靠协作者而非需要不断纠正的实习生。"
 
 series: aise
+subtopic: ai-strategy
 ---
 
 ## 接口隔离：人类与 AI 的契约设计
@@ -57,9 +58,9 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 **💡 关键洞察：** 接口隔离的本质是**关注点分离**——让调用者只依赖他们真正需要的东西。
 
-<object data="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好" role="img"></object>
+<img src="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" alt="为什么瘦接口更好" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好" role="img"></object>
+<img src="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" alt="为什么瘦接口更好" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -349,6 +350,10 @@ ajv validate --spec=draft7 --schema=intent-schema.json intent.json
 - 选择一个高频场景，设计一个清晰的 Intent 接口
 - 建立团队的 AI 契约规范
 
+
+---
+
+*深度阅读时间：约 12 分钟*
 ---
 
 *本文是 Agent OS 系列的第 4 篇。系列索引：[Agent OS: 重新思考 AI 时代的开发范式](/agent-os-intro/)*

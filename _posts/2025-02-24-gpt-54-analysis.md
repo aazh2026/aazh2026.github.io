@@ -7,6 +7,7 @@ description: "GPT-5.4用通用知识加成在编码基准上超越专用模型�
 author: "@postcodeeng"
 
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -19,9 +20,9 @@ series: aise
 
 ---
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%" aria-label="2025-02-24-gpt-54-analysis-01-benchmarks 图示" role="img"></object>
+<img src="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" alt="2025-02-24-gpt-54-analysis-01-benchmarks 图示" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-02-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="GPT-5.4 通用→专用 范式转移" role="img"></object>
+<img src="/assets/images/2025-02-24-gpt-54-analysis-02-paradigm-shift.svg" alt="GPT-5.4 通用→专用 范式转移" width="100%" loading="lazy" decoding="async">
 
 ## 产品速览
 
@@ -50,7 +51,7 @@ series: aise
 
 **272k tokens的分界线**，这是一个精心设计的数字。
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-03-pricing-tiers.svg" type="image/svg+xml" width="100%" aria-label="GPT-5.4 272k 分界线定价策略" role="img"></object>
+<img src="/assets/images/2025-02-24-gpt-54-analysis-03-pricing-tiers.svg" alt="GPT-5.4 272k 分界线定价策略" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -350,6 +351,10 @@ GPT-5.4的发布，可能不像GPT-4那样具有轰动效应，但它标志着�
 
 未来已来，只是尚未均匀分布。
 
+
+---
+
+*深度阅读时间：约 9 分钟*
 ---
 
 ## 参考与延伸阅读

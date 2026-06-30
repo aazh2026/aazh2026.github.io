@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, CI/CD, DevOps, LLM, 自动化验证]
 description: "AI作为新型验证层填补传统测试盲区，12个LLM卡点（Commit→Build→Deploy）覆盖全流程纵深防御，AI初筛模式识别与人类终判协同决策。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -18,7 +19,7 @@ series: aise
 
 ---
 
-<object data="/assets/images/2025-06-09-cicd-ai-injection-points-03-overview.svg" type="image/svg+xml" width="100%" aria-label="CI/CD AI 注入点全景图" role="img"></object>
+<img src="/assets/images/2025-06-09-cicd-ai-injection-points-03-overview.svg" alt="CI/CD AI 注入点全景图" width="100%" loading="lazy" decoding="async">
 
 ## 为什么CI/CD需要AI
 
@@ -28,9 +29,9 @@ series: aise
 
 ### 传统CI/CD的局限
 
-<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限" role="img"></object>
+<img src="/assets/images/2025-06-09-cicd-01-pipeline.svg" alt="传统CI/CD的局限" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限" role="img"></object>
+<img src="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" alt="传统CI/CD的局限" width="100%" loading="lazy" decoding="async">
 
 ### 传统CI/CD的核心瓶颈
 

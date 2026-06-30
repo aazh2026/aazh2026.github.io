@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 技术债务, 代码质量, 度量体系]
 description: "技术债务可用'本金+利息'模型量化，AI同时识别架构/代码/测试/文档/依赖/数据六大债务类型，并按利息增长率自动排序处置优先级。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -177,7 +178,7 @@ AI通过静态分析与机器学习相结合的方式识别技术债务。静态
 
 ### 债务仪表盘
 
-<object data="/assets/images/2025-06-04-ai-tech-debt-01-dashboard.svg" type="image/svg+xml" width="100%" aria-label="技术债务仪表盘" role="img"></object>
+<img src="/assets/images/2025-06-04-ai-tech-debt-01-dashboard.svg" alt="技术债务仪表盘" width="100%" loading="lazy" decoding="async">
 
 ### 推荐工具
 

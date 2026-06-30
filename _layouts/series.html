@@ -23,6 +23,21 @@ layout: default
       <a href="{{ page.feed }}">RSS</a>
       {% endif %}
     </div>
+
+    {%- comment -%}
+      Subtopic chip filter — only render when we're on the master AISE page
+      (i.e. page.series_match matches the full AISE series), not on a topic
+      index page. Topic pages filter on `post.subtopic == '...'` already.
+    {%- endcomment -%}
+    {%- if page.series_match == "post.series == 'aise'" -%}
+    <nav class="series-subtopic-chips" aria-label="按主题筛选">
+      <a class="topic-chip" href="/topic/context-engineering/">Context Engineering</a>
+      <a class="topic-chip" href="/topic/ai-native-engineering/">AI-Native Engineering</a>
+      <a class="topic-chip" href="/topic/agents-and-multi-agent/">Agents &amp; Multi-Agent</a>
+      <a class="topic-chip" href="/topic/ai-quality-and-risk/">AI Quality &amp; Risk</a>
+      <a class="topic-chip" href="/topic/ai-strategy/">AI Strategy</a>
+    </nav>
+    {%- endif -%}
   </header>
 
   {% if posts.size == 0 %}
@@ -48,9 +63,16 @@ layout: default
       {%- if page.start_here and post.url == page.start_here -%}
         {%- assign _is_start = true -%}
       {%- endif -%}
-      <li{% if _is_start %} class="series-start"{% endif %}>
+      {%- assign _is_recommended = false -%}
+      {%- if post.recommended_start == true -%}
+        {%- assign _is_recommended = true -%}
+      {%- endif -%}
+      <li{% if _is_start or _is_recommended %} class="{% if _is_start %}series-start{% endif %}{% if _is_start and _is_recommended %} {% endif %}{% if _is_recommended %}series-recommended{% endif %}"{% endif %}>
         <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {%- if _is_recommended -%}
+          <span class="recommend-badge" title="推荐起点">⭐ 推荐起点</span>
+        {%- endif -%}
         {%- if _is_start -%}
           <span class="start-badge" title="系列推荐起点">⭐ 从这里开始</span>
         {%- endif -%}

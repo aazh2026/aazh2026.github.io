@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, FinTech, Trading, Quant, Multi-Agent, Risk]
 description: "TradingAgents多Agent量化交易框架分析：Demo表现与实盘差距巨大的四大原因，以及级联故障、反馈循环、幻觉交易三大特有风险。"
 author: "@postcodeeng"
 series: aise
+subtopic: agents-and-multi-agent
 ---
 
 > **TL;DR**
@@ -35,7 +36,7 @@ series: aise
 
 ### 核心概念
 
-<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心概念" role="img"></object>
+<img src="/assets/images/2026-03-20-tradingagents-ai-quant-trading-01-arch.svg" alt="核心概念" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -142,7 +143,7 @@ if MACD_Crossover(TSLA) == True and News_Sentiment(TSLA, 24h) >= -0.3:
 
 **3. 幻觉交易（Hallucinated Trading）** — LLM 在生成交易指令时，可能产生完全不存在的事实——比如引用某条"新闻"而该新闻根本不存在，或者声称某个技术指标达到了某个值而实际计算结果并非如此。当这种幻觉输入到 Trade Executor 生成下单代码时，可能触发完全不合理的大单、错误方向的仓位、以及无法解释的风险敞口。幻觉交易的特殊之处在于：它不依赖市场波动或模型失效，而是在正常市场条件下也可能发生——LLM 的不确定性使得每一次推理都带有潜在的虚假信息风险。
 
-<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 特有的风险" role="img"></object>
+<img src="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" alt="多 Agent 特有的风险" width="100%" loading="lazy" decoding="async">
 
 ### 历史教训
 
@@ -314,6 +315,10 @@ TradingAgents 和类似工具降低了量化交易的门槛，但也可能让不
 - [microsoft/qlib](https://github.com/microsoft/qlib) - 微软量化平台
 - [SEC: Algorithmic Trading](https://www.sec.gov/) - 监管指南
 
+
+---
+
+*深度阅读时间：约 15 分钟*
 ---
 
 *本文基于 TradingAgents 开源发布和量化交易研究撰写。*

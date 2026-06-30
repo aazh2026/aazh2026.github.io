@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 微服务, 服务契约, 分布式系统]
 description: "契约漂移是微服务的隐形杀手：语义一致性检测超越语法检查，基于OpenAPI/AsyncAPI注册中心自动同步变更，AI发现并修复隐式语义漂移。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -74,11 +75,11 @@ AI生成跨服务调用代码时，容易忽略契约约束，导致隐性故障
 
 **类型3：语义漂移（Semantic Drift）** 是最隐蔽的drift：字段名和类型都没变，但业务含义已不同。例如 `order.status = "pending"` 原本表示"待付款"， Provider 改成了"待发货"，Consumer 的支付逻辑还在按前者处理——语法完全正确，运行时悄悄出错。
 
-<object data="/assets/images/2025-06-03-service-contract-semantic-consistency-01-drift-taxonomy.svg" type="image/svg+xml" width="100%" aria-label="契约漂移类型" role="img"></object>
+<img src="/assets/images/2025-06-03-service-contract-semantic-consistency-01-drift-taxonomy.svg" alt="契约漂移类型" width="100%" loading="lazy" decoding="async">
 
 ### 契约漂移的影响
 
-<object data="/assets/images/2025-06-03-service-contract-semantic-consistency-02-drift-cascade.svg" type="image/svg+xml" width="100%" aria-label="契约漂移的影响范围：级联效应" role="img"></object>
+<img src="/assets/images/2025-06-03-service-contract-semantic-consistency-02-drift-cascade.svg" alt="契约漂移的影响范围：级联效应" width="100%" loading="lazy" decoding="async">
 
 ### 影响范围分析
 
@@ -111,7 +112,7 @@ AI生成跨服务调用代码时，容易忽略契约约束，导致隐性故障
 
 语义一致性由三个层次构成。结构一致性是最基础的：字段存在、类型匹配、格式正确。行为一致性进了一层：给定相同的输入，Provider 返回的输出与 Consumer 的预期行为一致。第三层是业务一致性，也是最难验证的：字段的业务含义没有发生改变，业务规则依然按原来的逻辑执行。三要素同时满足，才是完整的语义一致。
 
-<object data="/assets/images/2025-06-03-service-contract-semantic-consistency-03-semantic-triplet.svg" type="image/svg+xml" width="100%" aria-label="语义一致性定义" role="img"></object>
+<img src="/assets/images/2025-06-03-service-contract-semantic-consistency-03-semantic-triplet.svg" alt="语义一致性定义" width="100%" loading="lazy" decoding="async">
 
 ### 语义检测方法
 

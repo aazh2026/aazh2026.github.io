@@ -7,6 +7,7 @@ categories: [AI-Native, 工程实践, 精益]
 tags: [lean, ai, waste-elimination, continuous-improvement, value-stream]
 description: "AI 将精益思想的浪费识别速度提升 10 倍，从'靠经验'变成'靠数据'——七种浪费的 AI 识别、价值流的自动可视化、持续改进飞轮的建立，构成 AI 时代的精益框架。"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -19,7 +20,7 @@ series: aise
 
 ### 七种浪费（Muda）
 
-<object data="/assets/images/2026-03-15-lean-thinking-ai-01-seven-wastes.svg" type="image/svg+xml" width="100%" aria-label="软件工程中的 7 种浪费" role="img"></object>
+<img src="/assets/images/2026-03-15-lean-thinking-ai-01-seven-wastes.svg" alt="软件工程中的 7 种浪费" width="100%" loading="lazy" decoding="async">
 
 丰田生产系统定义了 7 种浪费，软件工程同样有对应的版本：
 
@@ -172,7 +173,7 @@ series: aise
 
 **可视化输出**：
 
-<object data="/assets/images/2026-03-15-lean-thinking-ai-02-value-stream-flow.svg" type="image/svg+xml" width="100%" aria-label="价值流瓶颈分析与优化" role="img"></object>
+<img src="/assets/images/2026-03-15-lean-thinking-ai-02-value-stream-flow.svg" alt="价值流瓶颈分析与优化" width="100%" loading="lazy" decoding="async">
 
 ## 精益 + AI 的实践框架
 
@@ -438,6 +439,10 @@ pull_request_rules:
 
 > *"完美不是无可增加，而是无可减少。"* — 安托万·德·圣埃克苏佩里
 
+
+---
+
+*深度阅读时间：约 20 分钟*
 ---
 
 ## 参考资源

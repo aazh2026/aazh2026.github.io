@@ -6,6 +6,7 @@ tags: [User Story, AI-Native软件工程, 需求工程, 自动化测试, BDD, Gh
 description: "User Story Pack用Story/Scenario/Example三层结构将自然语言需求转化为机器可执行的YAML/Gherkin规格，验收标准即自动化测试，需求理解偏差减少70%。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > *「2024年，一位敏捷教练崩溃地说：'我们的用户故事写得很标准——As a... I want... So that...，但开发出来的功能总是和需求有偏差。'问题不在于格式，而在于用户故事是'给人读的'，而不是'给机器执行的'。在AI时代，用户故事需要从自然语言描述进化为可自动验证的规格说明。」*
@@ -18,7 +19,7 @@ series: aise
 > 3. **实际效果** — 业界观察反复印证：结构化需求规格可显著降低需求理解偏差、压缩测试编写时间、减少 Bug 逃逸到生产（具体百分比因团队和项目而异，非统一基准）
 > 4. **延伸洞察** — 关键不是"更快的自动化"，而是人从执行链里被替换出来——你设计系统，系统替你跑腿
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%" aria-label="2025-04-28-user-story-pack-automation-00-core-concept 图示" role="img"></object>
+<img src="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" alt="2025-04-28-user-story-pack-automation-00-core-concept 图示" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -100,7 +101,7 @@ series: aise
 
 ### 层次结构概览
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-01-three-layer-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="User Story Pack 三层结构：Story → Scenario → Example" role="img"></object>
+<img src="/assets/images/2025-04-28-user-story-pack-automation-01-three-layer-hierarchy.svg" alt="User Story Pack 三层结构：Story → Scenario → Example" width="100%" loading="lazy" decoding="async">
 
 ### Story 层：用户故事的入口
 
@@ -177,7 +178,7 @@ examples:
 
 ### 验收标准即测试
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-02-story-to-test-flow.svg" type="image/svg+xml" width="100%" aria-label="User Story Pack → 自动化测试流程" role="img"></object>
+<img src="/assets/images/2025-04-28-user-story-pack-automation-02-story-to-test-flow.svg" alt="User Story Pack → 自动化测试流程" width="100%" loading="lazy" decoding="async">
 
 User Story Pack 的核心价值：**验收标准可以直接转化为自动化测试**。
 

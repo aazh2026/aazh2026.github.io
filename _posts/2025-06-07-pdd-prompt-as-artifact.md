@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, PDD, Prompt工程, 版本控制, Code Review]
 description: "Prompt是第四类核心制品，需要版本控制、Code Review和CI/CD，与源代码享有同等待遇。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -52,7 +53,7 @@ series: aise
 
 ## Prompt版本控制
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Prompt版本控制" role="img"></object>
+<img src="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" alt="Prompt版本控制" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -223,7 +224,7 @@ prompts/
 
 ### Prompt测试金字塔
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Prompt测试金字塔" role="img"></object>
+<img src="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" alt="Prompt测试金字塔" width="100%" loading="lazy" decoding="async">
 
 ### Prompt CI Pipeline
 

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Prompt管理, 知识共享, 企业治理]
 description: "一个优秀Prompt被100人复用，效率是100人各写一份的100倍——但前提是企业把它当代码资产治理。三级架构、版本控制、CI/CD与A/B评估，把Prompt从个人笔记变成组织级能力。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -74,9 +75,9 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 
 所有Prompt都存储在Git仓库中，使用与代码相同的提交、分支和Pull Request工作流。每次修改都有完整的变更历史可追溯。提交信息应包含修改原因，而不只是"更新Prompt"。这使得回滚到任意历史版本成为可能，也方便在出问题时进行根因分析。
 
-<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-01-three-levels.svg" type="image/svg+xml" width="100%" aria-label="三级Prompt架构" role="img"></object>
+<img src="/assets/images/2025-05-17-prompt-library-enterprise-management-01-three-levels.svg" alt="三级Prompt架构" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="版本控制原则" role="img"></object>
+<img src="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" alt="版本控制原则" width="100%" loading="lazy" decoding="async">
 
 采用语义化版本号（Semantic Versioning）标记Prompt的变更程度。主版本号（v1→v2）代表可能影响AI输出结构的重大变更；次版本号（v1.0→v1.1）代表新增字段或优化说明；补丁号（v1.0.0→v1.0.1）代表格式修正或错别字修改。每次发布新版本时，更新日志应说明本次变更的内容、原因和审批人。
 
@@ -90,7 +91,7 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 
 **审查清单**：审查者需逐项确认以下要素。语义完整性方面，Prompt的目标是否明确、边界条件是否覆盖到了；安全性方面，是否存在数据泄露风险、是否有可能被恶意诱导；可维护性方面，变量和占位符命名是否清晰、是否便于后续迭代。审查意见通过GitHub Pull Request的Review功能提交，被审查者需逐一回应每条意见后方可合并。
 
-<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-02-prompt-lifecycle.svg" type="image/svg+xml" width="100%" aria-label="Prompt生命周期管理流程" role="img"></object>
+<img src="/assets/images/2025-05-17-prompt-library-enterprise-management-02-prompt-lifecycle.svg" alt="Prompt生命周期管理流程" width="100%" loading="lazy" decoding="async">
 
 ### CI/CD for Prompts
 
@@ -132,7 +133,7 @@ CI/CD流水线将Prompt的质量保证自动化，确保每一条进入共享库
 
 **Prompt市场（Internal Marketplace）**：
 
-<object data="/assets/images/2025-05-17-plem-01-prompt-marketplace.svg" type="image/svg+xml" width="100%" aria-label="共享与发现机制" role="img"></object>
+<img src="/assets/images/2025-05-17-plem-01-prompt-marketplace.svg" alt="共享与发现机制" width="100%" loading="lazy" decoding="async">
 
 ### 发现算法
 

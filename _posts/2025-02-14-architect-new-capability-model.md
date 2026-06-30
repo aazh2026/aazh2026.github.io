@@ -6,6 +6,7 @@ tags: [架构师, 职业发展, AI时代, 能力模型, Context设计, 技术领
 description: '架构师从"画架构图的人"进化为"设计Context的人"，π型能力模型重新定义AI时代技术领导力的核心竞争力。'
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -16,7 +17,7 @@ series: aise
 > 3. **Context设计五维度** — 问题定义、约束空间、协作协议、质量标准、演化路径，是AI时代架构师最核心的新增竞争力
 > 4. **从执行到评估** — 技术深度从"我能做什么"转向"我能判断什么是对的"，评估能力取代执行能力成为核心
 
-<object data="/assets/images/2025-02-14-architect-new-capability-model-01-pi-model.svg" type="image/svg+xml" width="100%" aria-label="2025-02-14-architect-new-capability-model-01-pi-model 图示" role="img"></object>
+<img src="/assets/images/2025-02-14-architect-new-capability-model-01-pi-model.svg" alt="2025-02-14-architect-new-capability-model-01-pi-model 图示" width="100%" loading="lazy" decoding="async">
 
 ## AI时代架构师的新能力模型：从画图决策到设计Context
 
@@ -86,7 +87,7 @@ series: aise
 
 Context设计（Context Design）是指：**为AI和人类团队定义工作的边界、约束和协作规则**。
 
-<object data="/assets/images/2025-02-14-architect-new-capability-model-02-context-design.svg" type="image/svg+xml" width="100%" aria-label="什么是Context设计？" role="img"></object>
+<img src="/assets/images/2025-02-14-architect-new-capability-model-02-context-design.svg" alt="什么是Context设计？" width="100%" loading="lazy" decoding="async">
 
 这不是关于技术细节的决定，而是关于：
 - **问题定义**：我们要解决什么问题？什么不在范围内？
@@ -339,6 +340,10 @@ AI时代架构师的角色转型，不是选择，而是**必然**。
 
 未来的架构师，不是那些最会画架构图的人，而是那些**最会设计Context**的人。
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 ## 参考与延伸阅读

@@ -5,6 +5,7 @@ date: 2026-05-14T00:00:00+08:00
 tags: [AI安全, AI对齐, Chain-of-Thought, RL训练, OpenAI]
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 description: "OpenAI 意外发现 RL 训练中 CoT 被 grading：现实条件下影响有限，但强压力下仍存风险。"
 ---
 
@@ -122,7 +123,7 @@ OpenAI 在 2025 年底以来一直在进行实验，故意在标准 RL pipeline 
 
 ## 实验发现
 
-<object data="/assets/images/2026-05-14-openai-accidental-cot-grading-01-three-factors.svg" type="image/svg+xml" width="100%" aria-label="CoT Obfuscation 三因素模型" role="img"></object>
+<img src="/assets/images/2026-05-14-openai-accidental-cot-grading-01-three-factors.svg" alt="CoT Obfuscation 三因素模型" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >

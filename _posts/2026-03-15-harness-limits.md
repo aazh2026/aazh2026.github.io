@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Harness Engineering, Limits, Agent, Reality Check]
 description: "Harness工程的边界：上下文窗口污染、时间盲症、自我毁灭风险；创造性设计、长期架构演进、跨系统协调是Agent的根本局限。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -89,7 +90,7 @@ Anthropic 研究员 Nicholas Carlini 的并行 Agent 实验，揭示了另一组
 
 > 📌 **来源说明**：以下案例来自 Carlini 的博客文章《Building a C compiler with a team of parallel Claudes》（2025），是真实实验的一手观察。
 
-<object data="/assets/images/2026-03-15-harness-limits-01-carlini.svg" type="image/svg+xml" width="100%" aria-label="Carlini 观察到的限制" role="img"></object>
+<img src="/assets/images/2026-03-15-harness-limits-01-carlini.svg" alt="Carlini 观察到的限制" width="100%" loading="lazy" decoding="async">
 
 ### 限制 1：上下文窗口污染
 
@@ -267,6 +268,10 @@ Harness 工程的边界，指明了未来的研究方向：
 
 如果三个问题的答案都是"是"，Harness 工程可能是个好选择。如果有一个"否"，你需要重新设计任务或环境。如果三个都是"否"，这个任务目前还不适合用 Agent。
 
+
+---
+
+*深度阅读时间：约 8 分钟*
 ---
 
 Harness 工程最宝贵的贡献，不是展示了"AI 能做什么"，而是诚实地展示了"AI 还不能做什么"。

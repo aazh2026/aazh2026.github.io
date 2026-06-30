@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, RAG, 认知偏差, 信息茧房]
 description: "RAG系统检索偏误放大用户确认偏误，构建信息茧房并产生\"有依据的幻觉\"——最危险的错误是有来源支撑的错误，需主动引入反对观点和多源交叉验证对抗认知陷阱。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -104,7 +105,7 @@ RAG回答的质量取决于检索质量。
 
 ### RAG确认偏误的循环
 
-<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-01-cycle.svg" type="image/svg+xml" width="100%" aria-label="RAG确认偏误循环" role="img"></object>
+<img src="/assets/images/2025-05-07-rag-cognitive-bias-trap-01-cycle.svg" alt="RAG确认偏误循环" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -280,7 +281,7 @@ RAG回答的质量取决于检索质量。
 
 ## 防御策略：对抗偏见的架构设计
 
-<object data="/assets/images/2025-05-07-rag-cognitive-bias-trap-02-defense.svg" type="image/svg+xml" width="100%" aria-label="防御策略：对抗偏见的架构设计" role="img"></object>
+<img src="/assets/images/2025-05-07-rag-cognitive-bias-trap-02-defense.svg" alt="防御策略：对抗偏见的架构设计" width="100%" loading="lazy" decoding="async">
 
 ### 策略1：主动寻找反对观点
 

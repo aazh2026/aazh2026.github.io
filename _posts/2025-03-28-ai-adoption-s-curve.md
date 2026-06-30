@@ -6,6 +6,7 @@ tags: [AI Adoption, S-curve, 组织变革, 企业转型, 工程实践]
 description: "企业AI adoption是三层嵌套的S-curve：个人层→团队层→组织层，每层有各自成熟周期，上层依赖下层，不能跳过任何一层。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -18,7 +19,7 @@ series: aise
 >
 > 企业AI adoption不是项目，是旅程。
 
-<object data="/assets/images/2025-03-28-ai-adoption-s-curve-01-hero.svg" type="image/svg+xml" width="100%" aria-label="三层嵌套 S-curve Adoption 模型" role="img"></object>
+<img src="/assets/images/2025-03-28-ai-adoption-s-curve-01-hero.svg" alt="三层嵌套 S-curve Adoption 模型" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -53,9 +54,9 @@ series: aise
 
 企业AI adoption不是一条S-curve，是**三层嵌套的S-curve**：
 
-<object data="/assets/images/2025-03-28-ai-adoption-01-scurve.svg" type="image/svg+xml" width="100%" aria-label="AI Adoption 三层S曲线模型" role="img"></object>
+<img src="/assets/images/2025-03-28-ai-adoption-01-scurve.svg" alt="AI Adoption 三层S曲线模型" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-03-28-ai-adoption-s-curve-02-three-layers.svg" type="image/svg+xml" width="100%" aria-label="AI adoption的三层S-curve" role="img"></object>
+<img src="/assets/images/2025-03-28-ai-adoption-s-curve-02-three-layers.svg" alt="AI adoption的三层S-curve" width="100%" loading="lazy" decoding="async">
 
 **关键洞察**：
 - 每层都有自己的S-curve

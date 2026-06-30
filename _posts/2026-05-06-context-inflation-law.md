@@ -4,8 +4,9 @@ title: "上下文膨胀定律：为什么你的 Agent 比想象中贵 10 倍"
 date: 2026-05-06T00:00:00+08:00
 tags: [AI-Native软件工程, Cost-Model, Context-Engineering, Agent, Architecture]
 description: "Agent成本的主要来源不是计算，而是上下文管理——上下文每年膨胀2-3倍，80%是噪声，四象限优化框架是2026年成本治理的核心。"
-author: Aaron
+author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 reading_time: 8
 ---
 
@@ -80,7 +81,7 @@ reading_time: 8
 
 ## 成本结构解析
 
-<object data="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="上下文成本结构：未优化 vs 优化后" role="img"></object>
+<img src="/assets/images/2026-05-06-context-inflation-law-01-cost-breakdown.svg" alt="上下文成本结构：未优化 vs 优化后" width="100%" loading="lazy" decoding="async">
 
 ### 你的钱到底花在哪了？
 
@@ -112,7 +113,7 @@ reading_time: 8
 
 ### 优化矩阵
 
-<object data="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" type="image/svg+xml" width="100%" aria-label="四象限成本优化框架" role="img"></object>
+<img src="/assets/images/2026-05-06-context-inflation-law-02-quadrant-optimization.svg" alt="四象限成本优化框架" width="100%" loading="lazy" decoding="async">
 
 ### 象限 1：高频高价值 → 智能缓存
 
@@ -235,6 +236,10 @@ reading_time: 8
 
 **能管好上下文的团队，成本是竞争对手的 1/5。不能管好上下文的团队，每天都在为噪声付钱。**
 
+
+---
+
+*深度阅读时间：约 7 分钟*
 ---
 
 > 金句：**最贵的 token 是那些本来不该存在的 token。**

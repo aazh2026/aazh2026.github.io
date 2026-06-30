@@ -131,7 +131,7 @@ class DataExporter: ...
 
 #### 太粗：一个 Agent 包揽所有
 
-<object data="/assets/images/2026-03-15-single-responsibility-01-anti.svg" type="image/svg+xml" width="100%" aria-label="太粗：一个 Agent 包揽所有" role="img"></object>
+<img src="/assets/images/2026-03-15-single-responsibility-01-anti.svg" alt="太粗：一个 Agent 包揽所有" width="100%" loading="lazy" decoding="async">
 
 **问题：**
 - Prompt 变得冗长复杂
@@ -152,7 +152,7 @@ class DataExporter: ...
 
 #### 正好：按业务边界划分
 
-<object data="/assets/images/2026-03-15-single-responsibility-02-specialized.svg" type="image/svg+xml" width="100%" aria-label="正好：按业务边界划分" role="img"></object>
+<img src="/assets/images/2026-03-15-single-responsibility-02-specialized.svg" alt="正好：按业务边界划分" width="100%" loading="lazy" decoding="async">
 
 ### 边界定义：CUBE 原则
 
@@ -300,7 +300,7 @@ class AgentC:
 
 ### 正确的层次结构
 
-<object data="/assets/images/2026-03-15-single-responsibility-03-orchestrator.svg" type="image/svg+xml" width="100%" aria-label="正确的层次结构" role="img"></object>
+<img src="/assets/images/2026-03-15-single-responsibility-03-orchestrator.svg" alt="正确的层次结构" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -571,6 +571,10 @@ result = orchestrator.handle(
 
 记住：**合并容易，拆分难。但在 Agent 世界里，一开始就保持独立比事后拆分更容易。**
 
+
+---
+
+*深度阅读时间：约 17 分钟*
 ---
 
 > *"简单是复杂的终极形态。"* —— 达芬奇

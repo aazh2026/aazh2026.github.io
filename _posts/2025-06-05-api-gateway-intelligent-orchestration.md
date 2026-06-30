@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, API网关, BFF, 智能编排]
 description: "自然语言描述数据需求，AI自动生成BFF聚合逻辑（并行调用、智能缓存、故障降级），把响应时间压到80ms、把开发效率提升5倍。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -90,9 +91,9 @@ User.cart.items[].product{name, price, stock_status} + recommended_accessories{n
 
 ### 实施架构
 
-<object data="/assets/images/2025-06-05-api-gateway-01-arch.svg" type="image/svg+xml" width="100%" aria-label="实施架构" role="img"></object>
+<img src="/assets/images/2025-06-05-api-gateway-01-arch.svg" alt="实施架构" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-06-05-api-gateway-02-orchestration-flow.svg" type="image/svg+xml" width="100%" aria-label="实施架构" role="img"></object>
+<img src="/assets/images/2025-06-05-api-gateway-02-orchestration-flow.svg" alt="实施架构" width="100%" loading="lazy" decoding="async">
 
 ### 实战案例
 

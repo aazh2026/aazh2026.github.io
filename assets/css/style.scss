@@ -1310,6 +1310,60 @@ footer .k {
   flex-shrink: 0;
 }
 
+/* Recommended-start marker — prominent visual treatment for foundational posts */
+.recommend-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #fff;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(217, 119, 87, 0.18);
+}
+.series-list li.series-recommended {
+  background: linear-gradient(90deg, rgba(245, 158, 11, 0.10), rgba(245, 158, 11, 0.02) 60%);
+  border-left: 3px solid #f59e0b;
+  padding-left: 12px;
+  margin-left: -12px;
+  border-radius: 0 4px 4px 0;
+}
+.series-list li.series-recommended a {
+  font-weight: 600;
+  color: #92400e;
+}
+
+/* Subtopic chip filter rendered above the AISE master list */
+.series-subtopic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--g200);
+}
+.topic-chip {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--g100);
+  color: var(--slate);
+  text-decoration: none;
+  border: 1px solid var(--g200);
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.topic-chip:hover {
+  background: var(--clay-d);
+  color: #fff;
+  border-color: var(--clay-d);
+}
+
 /* Year groupings on series index pages (used when a series has >2 years of posts) */
 .series-year-nav {
   display: flex;

@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 度量体系, 效能评估, 意图复杂度]
 description: "代码行数在AI时代失去意义，提出四维\"意图复杂度\"模型(语义、依赖、上下文、不确定性)衡量需求本身难度，核心指标从\"写得多快\"转向\"改得多快\"。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -201,7 +202,7 @@ AI时代：
 
 **示例计算**：
 
-<object data="/assets/images/2025-05-04-goodbye-loc-intent-complexity-02-icq-radar.svg" type="image/svg+xml" width="100%" aria-label="综合意图复杂度计算" role="img"></object>
+<img src="/assets/images/2025-05-04-goodbye-loc-intent-complexity-02-icq-radar.svg" alt="综合意图复杂度计算" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -295,7 +296,7 @@ AI时代：
 
 ### AI-Native效能度量金字塔
 
-<object data="/assets/images/2025-05-04-ai-native-metrics-01-pyramid.svg" type="image/svg+xml" width="100%" aria-label="AI-Native效能度量金字塔" role="img"></object>
+<img src="/assets/images/2025-05-04-ai-native-metrics-01-pyramid.svg" alt="AI-Native效能度量金字塔" width="100%" loading="lazy" decoding="async">
 
 ### 指标体系对比
 

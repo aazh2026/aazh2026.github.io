@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Claude-Code, 学术研究, AI工具]
 description: "学术研究者应从\"上传文件给AI\"转为\"带AI进文件夹\"的工作流范式，CLAUDE.md可从Role/Standards/Writing/Critique四个维度定制研究助手。"
 author: "@postcodeeng"
 series: aise
+subtopic: agents-and-multi-agent
 ---
 
 > **TL;DR**
@@ -36,7 +37,7 @@ Mushtaq Bilal 博士写了这篇面向零技术背景学术研究者的 Claude C
 
 ---
 
-<object data="/assets/images/2026-05-12-claude-code-academic-researchers-01-paradigm.svg" type="image/svg+xml" width="100%" aria-label="4.2M views 背后的巨大需求" role="img"></object>
+<img src="/assets/images/2026-05-12-claude-code-academic-researchers-01-paradigm.svg" alt="4.2M views 背后的巨大需求" width="100%" loading="lazy" decoding="async">
 
 ## 范式转变：从"上传文件"到"带 AI 进文件夹"
 

@@ -6,6 +6,7 @@ date: 2026-03-15T09:00:00+08:00
 tags: [AI成本, Token优化, 成本监控, 智能路由, 模型选择]
 description: "Token成本占比超70%是优化首要目标，Prompt工程性价比高于架构优化，智能路由+缓存策略可带来10倍成本差异。"
 series: aise
+subtopic: ai-quality-and-risk
 series_title: "AI-Native软件工程"
 series_order: 20
 ---
@@ -87,7 +88,7 @@ AI应用产生大量数据需要存储：
 
 一个典型的AI客服系统月成本构成：
 
-<object data="/assets/images/2026-03-15-ai-cost-01-structure.svg" type="image/svg+xml" width="100%" aria-label="AI成本结构分析" role="img"></object>
+<img src="/assets/images/2026-03-15-ai-cost-01-structure.svg" alt="AI成本结构分析" width="100%" loading="lazy" decoding="async">
 
 **优化优先级：Token成本 > 存储成本 > 推理成本**
 
@@ -99,7 +100,7 @@ AI应用产生大量数据需要存储：
 
 ### 四层成本追踪模型
 
-<object data="/assets/images/2026-03-15-ai-cost-02-monitoring.svg" type="image/svg+xml" width="100%" aria-label="四层成本追踪模型" role="img"></object>
+<img src="/assets/images/2026-03-15-ai-cost-02-monitoring.svg" alt="四层成本追踪模型" width="100%" loading="lazy" decoding="async">
 
 ### L1：资源层监控
 
@@ -381,6 +382,10 @@ AI成本优化不是一次性的项目，而是持续的能力建设。
 
 找到那个平衡点，然后建立系统持续优化。
 
+
+---
+
+*深度阅读时间：约 16 分钟*
 ---
 
 ## 系列关联阅读

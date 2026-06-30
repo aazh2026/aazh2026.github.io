@@ -6,12 +6,13 @@ tags: [AI-Native软件工程, DORA, 效能度量, 基准线]
 description: "深入探讨AI时代DORA指标的重新定义，提出意图交付频率、意图交付周期、意图恢复时间、意图偏离率四大新指标，核心洞察是度量意图而非代码。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**> 
 > DORA的4大指标在AI时代需要重新定义：> 1. **部署频率** — 从"多久部署一次"到"多久交付一次意图变更"> 2. **变更前置时间** — 从"代码提交到上线"到"意图定义到交付"> 3. **恢复服务时间** — 从"修复生产故障"到"修复意图误解"> 4. **变更失败率** — 从"导致故障的部署比例"到"意图偏离的比例"> > 关键洞察：AI时代，度量的是"意图流动"的效率，而非"代码流动"。
 
-<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-03-intent-flow.svg" type="image/svg+xml" width="100%" aria-label="意图流动 vs 代码流动" role="img"></object>
+<img src="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-03-intent-flow.svg" alt="意图流动 vs 代码流动" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -149,9 +150,9 @@ AI时代问题：
 
 ## 重构后的4大指标
 
-<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统DORA vs AI时代DORA指标对比" role="img"></object>
+<img src="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-01-comparison.svg" alt="传统DORA vs AI时代DORA指标对比" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-02-four-metrics.svg" type="image/svg+xml" width="100%" aria-label="重构后的4大指标" role="img"></object>
+<img src="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-02-four-metrics.svg" alt="重构后的4大指标" width="100%" loading="lazy" decoding="async">
 
 ### 新指标1：意图交付频率（Intent Delivery Frequency）
 
@@ -390,6 +391,10 @@ AI时代问题：
 **记住**：
 > "度量什么，就得到什么。在AI时代，度量意图而非代码，才能得到真正的效能提升。"
 
+
+---
+
+*深度阅读时间：约 10 分钟*
 ---
 
 ## 📚 延伸阅读

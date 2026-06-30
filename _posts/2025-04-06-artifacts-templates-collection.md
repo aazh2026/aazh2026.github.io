@@ -6,6 +6,7 @@ tags: [Templates, AI-Native软件工程, SDLC, 交付件, 规范, 工具包]
 description: "提供Product Intent、User Story Pack、Architecture Spec等八大交付件模板，将AI-Native开发全流程标准化为可验证、可执行的接口协议。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -26,9 +27,9 @@ series: aise
 
 ## 模板设计理念
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-template-ecosystem.svg" type="image/svg+xml" width="100%" aria-label="AI-Native SDLC 交付件模板生态" role="img"></object>
+<img src="/assets/images/2025-04-06-artifacts-templates-collection-01-template-ecosystem.svg" alt="AI-Native SDLC 交付件模板生态" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" type="image/svg+xml" width="100%" aria-label="AI-Native SDLC 交付件关系图" role="img"></object>
+<img src="/assets/images/2025-04-06-artifacts-templates-collection-01-artifacts-relation.svg" alt="AI-Native SDLC 交付件关系图" width="100%" loading="lazy" decoding="async">
 
 ### 设计原则
 
@@ -658,7 +659,7 @@ Quality Contract 中的 `acceptance_tests` 和 `monitoring_metrics` 可以在 Ag
 
 ### 模板演进路径
 
-<object data="/assets/images/2025-04-06-artifacts-templates-collection-02-template-evolution.svg" type="image/svg+xml" width="100%" aria-label="交付件模板的演进路径" role="img"></object>
+<img src="/assets/images/2025-04-06-artifacts-templates-collection-02-template-evolution.svg" alt="交付件模板的演进路径" width="100%" loading="lazy" decoding="async">
 
 ### 模板更新策略
 

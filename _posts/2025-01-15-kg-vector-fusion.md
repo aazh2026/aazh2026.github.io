@@ -6,6 +6,7 @@ date: 2025-01-15T01:30:00+08:00
 tags: [知识图谱, 向量检索, RAG, 混合架构]
 description: "向量检索擅长联想召回，知识图谱擅长精确推理——两者融合实现1+1>3，核心是分工而非竞争，实体链接是横跨两个世界的桥梁。"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -80,7 +81,7 @@ series: aise
 | "为什么我的Python程序卡住了？" | ✅ 找到类似案例 | ❌ 无法推理 | ✅ 案例+根因分析 |
 | "推荐类似Flask的框架" | ✅ 很好 | ❌ 无相似性概念 | ✅ 语义相似+关系推荐 |
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="向量记忆 vs 知识图谱对比" role="img"></object>
+<img src="/assets/images/2025-01-15-kg-vector-fusion-02-comparison.svg" alt="向量记忆 vs 知识图谱对比" width="100%" loading="lazy" decoding="async">
 
 关键洞察：**向量负责"召回候选"，图谱负责"精确校验和推理"。**
 
@@ -92,7 +93,7 @@ series: aise
 
 ## 融合架构概览
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="融合架构概览" role="img"></object>
+<img src="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" alt="融合架构概览" width="100%" loading="lazy" decoding="async">
 ## 实体链接：桥梁的建设
 
 核心问题：向量检索到的文本中的"Python"，如何对应到知识图谱中的"Python_(programming_language)"节点？
@@ -114,7 +115,7 @@ series: aise
 - 用图谱验证每个候选的"事实准确性"
 - 过滤掉与图谱矛盾的候选
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-03-fusion-flow.svg" type="image/svg+xml" width="100%" aria-label="混合RAG融合策略流程" role="img"></object>
+<img src="/assets/images/2025-01-15-kg-vector-fusion-03-fusion-flow.svg" alt="混合RAG融合策略流程" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -271,6 +272,10 @@ tools = [
 
 核心原则：**没有银弹**。向量检索和知识图谱是互补的工具，聪明地组合它们，才能构建真正强大的AI系统。
 
+
+---
+
+*深度阅读时间：约 8 分钟*
 ---
 
 **延伸阅读：**

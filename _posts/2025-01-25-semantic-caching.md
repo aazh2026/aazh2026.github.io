@@ -6,6 +6,7 @@ date: 2025-01-25T01:55:00+08:00
 tags: [成本优化, 语义缓存, RAG, 向量检索]
 description: "通过向量相似度识别语义等价问题，配合L1/L2/L3多层缓存架构与置信度过滤，实现API成本节省90%的实战方案。"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -66,7 +67,7 @@ series: aise
 ## 语义缓存的工作原理
 
 ### 架构概览
-<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%" aria-label="架构概览" role="img"></object>
+<img src="/assets/images/2025-01-25-semantic-cache-01-flow.svg" alt="架构概览" width="100%" loading="lazy" decoding="async">
 
 ### 缓存键的设计
 
@@ -110,7 +111,7 @@ series: aise
 - L3命中：~50ms
 - 未命中（调用API）：~500-2000ms + $0.02
 
-<object data="/assets/images/2025-01-25-semantic-caching-02-tiers.svg" type="image/svg+xml" width="100%" aria-label="多层级语义缓存架构" role="img"></object>
+<img src="/assets/images/2025-01-25-semantic-caching-02-tiers.svg" alt="多层级语义缓存架构" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -275,6 +276,10 @@ A: {{language}}的创始人是{{founder}}。
 
 如果你正在运营LLM应用，语义缓存应该是你的下一个优化项。
 
+
+---
+
+*深度阅读时间：约 9 分钟*
 ---
 
 **延伸阅读：**

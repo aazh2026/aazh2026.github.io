@@ -6,6 +6,7 @@ tags: [Agentic Engineering, Vibe Coding, 范式转移, 软件工程, Karpathy, A
 description: "从Karpathy的Vibe Coding到Agentic Engineering的范式转移，揭示从自然语言写代码到自然语言编排智能体的核心转变，以及Software 3.0的工程化路径。"
 author: "@postcodeeng"
 series: aise
+subtopic: agents-and-multi-agent
 ---
 
 > **TL;DR**
@@ -22,7 +23,7 @@ series: aise
 
 ---
 
-<object data="/assets/images/2025-02-01-agentic-engineering-definition-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="Agentic Engineering 范式转移：从 Vibe Coding 到智能体编排" role="img"></object>
+<img src="/assets/images/2025-02-01-agentic-engineering-definition-01-paradigm-shift.svg" alt="Agentic Engineering 范式转移：从 Vibe Coding 到智能体编排" width="100%" loading="lazy" decoding="async">
 
 ## 那个著名的推特时刻
 
@@ -193,6 +194,10 @@ Karpathy的转向——从"English is the hottest programming language"到"Agent
 - [The Rise of AI-Native Development - a16z](https://a16z.com/)
 - [HN Discussion on Agentic Engineering](https://news.ycombinator.com/)
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 *Published on 2025-02-01 | 阅读时间：约 12 分钟*

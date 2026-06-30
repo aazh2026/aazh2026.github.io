@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, AI幻觉, 成本模型, 风险评估]
 description: "建立AI幻觉的业务影响量化模型，直接成本、间接成本、风险成本三层叠加，为不同风险场景选择人工复核、回滚机制或多模型交叉验证等保险策略。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
@@ -87,7 +88,7 @@ series: aise
 
 **总成本 = 直接成本 + 间接成本 + 风险成本**
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="成本构成" role="img"></object>
+<img src="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" alt="成本构成" width="100%" loading="lazy" decoding="async">
 
 #### 直接成本（Direct Costs）
 
@@ -125,7 +126,7 @@ series: aise
 
 以**一个示意性场景**来说明公式如何应用。下面所有数字都**只是为了演示量级**——具体到某个组织、行业、代码库类型时，所有参数都需要重新测量。
 
-假设某团队将 AI 代码生成工具投入生产，前期开发成本 $500,000，AI 年均生成 2,000 次代码片段，其中约 10%（200 次）包含需要修复的幻觉。每次幻觉事件的直接成本（代码审查 + 修复）按典型行业基准估算平均 $1,600；间接成本（生产事故处理、客户补偿、技术债积累）按典型案例均摊后约 $5,000/次。**这些数字仅供示意，不是从某个特定组织复盘得出的真实案例**。因此：
+**代表场景（数字仅用于说明量级）**：假设某团队将 AI 代码生成工具投入生产，前期开发成本 $500,000，AI 年均生成 2,000 次代码片段，其中约 10%（200 次）包含需要修复的幻觉。每次幻觉事件的直接成本（代码审查 + 修复）按典型行业基准估算平均 $1,600；间接成本（生产事故处理、客户补偿、技术债积累）按典型案例均摊后约 $5,000/次。**这些数字仅供示意，不是从某个特定组织复盘得出的真实案例**。因此：
 
 | 项目 | 数值（**示意**） |
 |------|------|
@@ -172,7 +173,7 @@ series: aise
 
 ## 风险分层与容忍度
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%" aria-label="风险分层与容忍度" role="img"></object>
+<img src="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" alt="风险分层与容忍度" width="100%" loading="lazy" decoding="async">
 
 ### 风险分层模型
 

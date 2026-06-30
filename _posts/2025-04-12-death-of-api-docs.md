@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, API设计, 文档工程]
 description: "传统API文档滞后代码2-6个月，73%开发者认为文档经常过时。自解释系统通过契约化→语义化→AI集成→自动化的四层架构，让代码本身成为最好的文档。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -16,7 +17,7 @@ series: aise
 > 3. **自解释系统** — 四层架构（Contract-First → Semantic API → Intent Discovery → Auto-Integration）让代码本身成为最好的文档
 > 4. **行动路径** — 从契约化到语义化到AI集成到自动化，渐进演进；Stripe和GraphQL已是成熟范式
 
-<object data="/assets/images/2025-04-12-death-of-api-docs-01-four-layer-arch.svg" type="image/svg+xml" width="100%" aria-label="2025-04-12-death-of-api-docs-01-four-layer-arch 图示" role="img"></object>
+<img src="/assets/images/2025-04-12-death-of-api-docs-01-four-layer-arch.svg" alt="2025-04-12-death-of-api-docs-01-four-layer-arch 图示" width="100%" loading="lazy" decoding="async">
 
 "2024年，某开发者在使用一个新API时发现了一个奇怪的现象：官方文档已经一年没更新了，但API却一直在演进。更奇怪的是，他通过与AI对话，反而能获取到最新、最准确的API使用方式。"
 
@@ -88,7 +89,7 @@ series: aise
 | 互联网时代 | 电子文档 | 在线编辑 | 搜索 |
 | AI时代 | 自解释代码 | 代码即文档 | AI问答 |
 
-<object data="/assets/images/2025-04-12-death-of-api-docs-02-era-timeline.svg" type="image/svg+xml" width="100%" aria-label="穿越周期：从泥板到印刷到搜索" role="img"></object>
+<img src="/assets/images/2025-04-12-death-of-api-docs-02-era-timeline.svg" alt="穿越周期：从泥板到印刷到搜索" width="100%" loading="lazy" decoding="async">
 
 **历史在押韵**：每一次信息技术的跃迁都重新定义了"什么是最好的知识载体"。在AI时代，代码本身成为了最好的知识载体。
 
@@ -98,7 +99,7 @@ series: aise
 
 ## 反直觉洞察：自解释系统的四层架构
 
-<object data="/assets/images/2025-04-12-death-of-api-docs-01-four-layer-arch.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：自解释系统的四层架构" role="img"></object>
+<img src="/assets/images/2025-04-12-death-of-api-docs-01-four-layer-arch.svg" alt="反直觉洞察：自解释系统的四层架构" width="100%" loading="lazy" decoding="async">
 
 我提出**四层自解释架构模型**：
 

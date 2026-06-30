@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, DDD, 领域模型, Embedding, 向量空间]
 description: "Embedding空间将领域概念映射为可计算的向量距离，让限界上下文的语义边界变得可观测、可监控，并通过相似度阈值实时检测领域概念漂移。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -26,7 +27,7 @@ series: aise
 
 ### 经典DDD的挑战
 
-<object data="/assets/images/2025-05-30-ddd-meets-llm-01-domain-expert.svg" type="image/svg+xml" width="100%" aria-label="经典DDD的挑战" role="img"></object>
+<img src="/assets/images/2025-05-30-ddd-meets-llm-01-domain-expert.svg" alt="经典DDD的挑战" width="100%" loading="lazy" decoding="async">
 
 **信息丢失：**
 - "24小时"是工作日还是自然日？
@@ -87,7 +88,7 @@ LLM的优势正是处理模糊性：
 
 ### 可视化示例
 
-<object data="/assets/images/2025-05-30-ddd-meets-llm-02-embedding-space.svg" type="image/svg+xml" width="100%" aria-label="可视化示例" role="img"></object>
+<img src="/assets/images/2025-05-30-ddd-meets-llm-02-embedding-space.svg" alt="可视化示例" width="100%" loading="lazy" decoding="async">
 
 每个上下文对应向量空间中的一个聚类，相似的概念自然聚集，边界清晰的限界上下文由此变得可观测。
 
@@ -101,7 +102,7 @@ com.company.payment    # 支付上下文
 
 传统DDD中，上下文映射依赖领域专家的工作坊讨论和手工文档。Embedding空间让这个过程自动化：系统对代码库中的领域术语做Embedding，自动聚类，生成上下文边界热力图。当两个聚类出现大面积重叠时，系统提示"限界上下文边界模糊"，需要人工确认。
 
-<object data="/assets/images/2025-05-30-ddd-meets-llm-03-bc-mapping.svg" type="image/svg+xml" width="100%" aria-label="上下文映射的自动化" role="img"></object>
+<img src="/assets/images/2025-05-30-ddd-meets-llm-03-bc-mapping.svg" alt="上下文映射的自动化" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -146,7 +147,7 @@ com.company.payment    # 支付上下文
 
 ### 向量知识库架构
 
-<object data="/assets/images/2025-05-30-ddd-meets-llm-04-knowledge-base.svg" type="image/svg+xml" width="100%" aria-label="向量知识库架构" role="img"></object>
+<img src="/assets/images/2025-05-30-ddd-meets-llm-04-knowledge-base.svg" alt="向量知识库架构" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >

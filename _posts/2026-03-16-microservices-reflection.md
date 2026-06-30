@@ -7,6 +7,7 @@ tags: [Architecture, Microservices, Monolith, Team Structure, Engineering]
 description: "重新审视微服务架构：模块边界优于服务边界，两个披萨规则说的是团队规模而非部署形式，被遗忘的模块化单体才是大多数团队的最佳选择。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -60,7 +61,7 @@ Reddit 上最近有一篇文章的标题很吸睛：
 
 **微服务是亚马逊解决其组织结构问题的方案（一个团队只能吃两个披萨），不是技术解决方案。**
 
-<object data="/assets/images/2026-03-16-microservices-reflection-01-spectrum.svg" type="image/svg+xml" width="100%" aria-label="亚马逊的真实情况" role="img"></object>
+<img src="/assets/images/2026-03-16-microservices-reflection-01-spectrum.svg" alt="亚马逊的真实情况" width="100%" loading="lazy" decoding="async">
 
 ### Netflix 的情况
 
@@ -142,7 +143,7 @@ Netflix 的微服务转型：
 >
 > 微服务中的 bug 需要查看入口服务日志、逐层追踪调用链，20 分钟后才发现是网络超时——这才是分布式系统的真正代价。
 
-<object data="/assets/images/2026-03-16-microservices-reflection-02-cost-table.svg" type="image/svg+xml" width="100%" aria-label="故障排查成本" role="img"></object>
+<img src="/assets/images/2026-03-16-microservices-reflection-02-cost-table.svg" alt="故障排查成本" width="100%" loading="lazy" decoding="async">
 
 一位 Reddit 用户的经历：
 
@@ -182,7 +183,7 @@ Netflix 的微服务转型：
 
 保持单一部署单元，但在代码层面严格划分模块：
 
-<object data="/assets/images/2026-03-16-microservices-reflection-02-arch.svg" type="image/svg+xml" width="100%" aria-label="核心思想" role="img"></object>
+<img src="/assets/images/2026-03-16-microservices-reflection-02-arch.svg" alt="核心思想" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -203,7 +204,7 @@ Netflix 的微服务转型：
 | **性能更好** | 没有网络调用开销 |
 | **未来可拆分** | 当真正需要时，边界已经清晰 |
 
-<object data="/assets/images/2026-03-16-microservices-reflection-03-arch.svg" type="image/svg+xml" width="100%" aria-label="模块化单体的优势" role="img"></object>
+<img src="/assets/images/2026-03-16-microservices-reflection-03-arch.svg" alt="模块化单体的优势" width="100%" loading="lazy" decoding="async">
 
 ### 真实案例：Shopify
 
@@ -230,7 +231,7 @@ Shopify 是一个成功的模块化单体案例：
 
 ### 示例
 
-<object data="/assets/images/2026-03-16-microservices-reflection-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Strangler Fig Pattern - 渐进式演进" role="img"></object>
+<img src="/assets/images/2026-03-16-microservices-reflection-01-arch.svg" alt="Strangler Fig Pattern - 渐进式演进" width="100%" loading="lazy" decoding="async">
 
 ### 为什么不要重写
 
@@ -283,6 +284,10 @@ Shopify 是一个成功的模块化单体案例：
 - [The Strangler Fig Pattern](https://martinfowler.com/bliki/StranglerFigApplication.html) - Martin Fowler
 - [Shopify's Monolith](https://shopify.engineering/deconstructing-monolith-designing-software-maximizes-developer-productivity) - Shopify Engineering
 
+
+---
+
+*深度阅读时间：约 8 分钟*
 ---
 
 *本文灵感源自 2026-03-16 Reddit r/programming 讨论。*

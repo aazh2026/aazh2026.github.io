@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Security, Prompt-Injection, Agent, OpenAI]
 description: "Prompt 注入防御采用分层架构：指令隔离建立系统与用户边界，行为白名单约束危险操作，数据分类保护敏感信息——安全是 Agent 落地的前提。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-quality-and-risk
 ---
 
 > **TL;DR**
@@ -25,7 +26,7 @@ series: aise
 
 Prompt 注入是一种攻击技术，攻击者通过精心构造的输入，**覆盖或绕过 AI 系统的原始指令**。
 
-<object data="/assets/images/2026-03-17-prompt-injection-defense-01-threat-landscape.svg" type="image/svg+xml" width="100%" aria-label="什么是 Prompt 注入？" role="img"></object>
+<img src="/assets/images/2026-03-17-prompt-injection-defense-01-threat-landscape.svg" alt="什么是 Prompt 注入？" width="100%" loading="lazy" decoding="async">
 
 ### 经典攻击示例
 
@@ -97,7 +98,7 @@ Agent 系统面临的 Prompt 注入攻击有多种形式：
 
 OpenAI 的安全设计采用**分层防御**策略——多层防护，每层都有不同的保护重点。
 
-<object data="/assets/images/2026-03-17-prompt-injection-defense-02-defense-layers.svg" type="image/svg+xml" width="100%" aria-label="分层防御架构：从输入到输出" role="img"></object>
+<img src="/assets/images/2026-03-17-prompt-injection-defense-02-defense-layers.svg" alt="分层防御架构：从输入到输出" width="100%" loading="lazy" decoding="async">
 
 **核心原则**：即使一层被突破，还有其他层保护。
 
@@ -121,7 +122,7 @@ OpenAI 的安全设计采用**分层防御**策略——多层防护，每层都
 
 **视觉隔离（UI 层）**是第三层防线，也是用户体验层面的保障。OpenAI 的界面明确区分了系统指令展示区（不可编辑）和用户输入区，这种视觉分隔本身就是一种防御信号——它让用户清楚意识到"这是系统告诉我的"和"这是我告诉系统的"之间的本质差异。攻击者如果试图通过用户输入模拟系统指令，在界面上就会被立即识别为不匹配。
 
-<object data="/assets/images/2026-03-17-prompt-injection-defense-02-instruction-arch.svg" type="image/svg+xml" width="100%" aria-label="指令架构" role="img"></object>
+<img src="/assets/images/2026-03-17-prompt-injection-defense-02-instruction-arch.svg" alt="指令架构" width="100%" loading="lazy" decoding="async">
 
 **架构设计要点**：
 - 系统指令（System Prompt）位于独立的消息层，不与用户输入混合
@@ -138,7 +139,7 @@ OpenAI 的安全设计采用**分层防御**策略——多层防护，每层都
 
 在界面上明确区分系统指令和用户输入：
 
-<object data="/assets/images/2026-03-17-prompt-injection-defense-02-visual-isolation.svg" type="image/svg+xml" width="100%" aria-label="技术实现" role="img"></object>
+<img src="/assets/images/2026-03-17-prompt-injection-defense-02-visual-isolation.svg" alt="技术实现" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -181,7 +182,7 @@ OpenAI 的安全设计采用**分层防御**策略——多层防护，每层都
 
 ### 数据分类框架
 
-<object data="/assets/images/2026-03-17-prompt-injection-defense-03-data-classification.svg" type="image/svg+xml" width="100%" aria-label="数据分类框架" role="img"></object>
+<img src="/assets/images/2026-03-17-prompt-injection-defense-03-data-classification.svg" alt="数据分类框架" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -290,6 +291,10 @@ Agent 的能力越强，安全的责任越大。
 - [Securing LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) - OWASP
 - [AI Security Best Practices](https://ai.google/responsibility/responsible-ai-practices/) - Google AI
 
+
+---
+
+*深度阅读时间：约 13 分钟*
 ---
 
 *本文基于 OpenAI Engineering 博客文章分析。*

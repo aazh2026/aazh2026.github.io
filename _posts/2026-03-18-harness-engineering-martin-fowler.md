@@ -7,6 +7,7 @@ tags: [AI-Native软件工程, Agent, Harness, Martin-Fowler, Engineering]
 description: "深度解读 OpenAI 5 个月生成百万行代码的 Harness Engineering 实践：通过上下文工程、架构约束和垃圾回收机制驯服 AI Agent。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -15,7 +16,7 @@ series: aise
 >
 > ⚠️ **声明**：本文是对 Martin Fowler 解读文章的再解读，包含我的个人观点和延伸思考，而非经过独立验证的技术报告。
 
-<object data="/assets/images/2026-03-18-harness-engineering-03-hero-overview.svg" type="image/svg+xml" width="100%" aria-label="2026-03-18-harness-engineering-03-hero-overview 图示" role="img"></object>
+<img src="/assets/images/2026-03-18-harness-engineering-03-hero-overview.svg" alt="2026-03-18-harness-engineering-03-hero-overview 图示" width="100%" loading="lazy" decoding="async">
 
 ## 什么是 Harness？
 
@@ -85,8 +86,8 @@ OpenAI 团队构建了一套系统来：
 
 > 📌 *以下三层架构模型由 Martin Fowler 基于 OpenAI 的实践归纳提炼，是对原始经验的系统化整理。*
 
-<object data="/assets/images/2026-03-18-harness-engineering-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Harness 架构" role="img"></object>
-<object data="/assets/images/2026-03-18-harness-engineering-02-constraints-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Harness 的三层架构" role="img"></object>
+<img src="/assets/images/2026-03-18-harness-engineering-01-arch.svg" alt="Harness 架构" width="100%" loading="lazy" decoding="async">
+<img src="/assets/images/2026-03-18-harness-engineering-02-constraints-pyramid.svg" alt="Harness 的三层架构" width="100%" loading="lazy" decoding="async">
 
 ### Layer 1: 上下文工程
 
@@ -490,6 +491,10 @@ OpenAI 的实验提供了一个**思考起点**，而非**操作手册**。
 - [Mitchell Hashimoto: My AI Adoption Journey](https://mitchellh.com/writing/my-ai-adoption-journey#step-5-engineer-the-harness) - Harness 概念来源
 - [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents) - Anthropic 的 Agent 最佳实践
 
+
+---
+
+*深度阅读时间：约 15 分钟*
 ---
 
 *本文包含对 Martin Fowler 和 OpenAI 文章的解读，以及我的个人实践经验和观点。如有错误，欢迎指正。*

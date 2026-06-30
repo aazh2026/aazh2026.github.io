@@ -41,7 +41,7 @@ Reddit 上的安全研究人员最近在讨论一个令人不安的趋势：
 
 GitHub 恶意仓库的攻击手法已经形成了完整的产业链：
 
-<object data="/assets/images/2026-03-16-github-supply-chain-attack-01-typosquatting-flow.svg" type="image/svg+xml" width="100%" aria-label="攻击者的 playbook" role="img"></object>
+<img src="/assets/images/2026-03-16-github-supply-chain-attack-01-typosquatting-flow.svg" alt="攻击者的 playbook" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -73,7 +73,7 @@ GitHub star 已经变成了可以购买的商品：
 
 一个拥有 1000+ star 的仓库，即使是上周才创建的，也会看起来很"成熟"。
 
-<object data="/assets/images/2026-03-16-github-supply-chain-attack-02-star-economy.svg" type="image/svg+xml" width="100%" aria-label="虚假 star 经济" role="img"></object>
+<img src="/assets/images/2026-03-16-github-supply-chain-attack-02-star-economy.svg" alt="虚假 star 经济" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -155,7 +155,7 @@ GitHub star 本来是一种信任信号：
 
 npm 也有过供应链安全问题，但 GitHub 有几个特点让它更危险：
 
-<object data="/assets/images/2026-03-16-github-supply-chain-attack-03-npm-comparison.svg" type="image/svg+xml" width="100%" aria-label="为什么 GitHub 比 npm 更危险" role="img"></object>
+<img src="/assets/images/2026-03-16-github-supply-chain-attack-03-npm-comparison.svg" alt="为什么 GitHub 比 npm 更危险" width="100%" loading="lazy" decoding="async">
 
 > 💡 **Key Insight**
 >
@@ -296,6 +296,10 @@ GitHub 恶意仓库的崛起提醒我们：
 - [GitHub Security Lab](https://securitylab.github.com/)
 - [OpenSSF Supply Chain Security](https://openssf.org/working-groups/supply-chain-security/)
 
+
+---
+
+*深度阅读时间：约 11 分钟*
 ---
 
 *本文灵感源自 2026-03-16 Reddit r/programming 讨论。*

@@ -6,6 +6,8 @@ tags: [AI-Native软件工程, 架构模式, 设计模式]
 description: "AI-Native时代复杂性从代码转移到Context；Intent Router/Context Cache/Model Gateway/Feedback Loop/A/B Agent/Human-in-the-Loop六大战术模式重构架构设计。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
+recommended_start: true
 ---
 
 > **TL;DR**
@@ -76,7 +78,7 @@ series: aise
 
 让我们看看软件架构的演化史。
 
-<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-01-evolution.svg" type="image/svg+xml" width="100%" aria-label="软件架构范式演化史" role="img"></object>
+<img src="/assets/images/2025-04-01-ai-native-architecture-patterns-01-evolution.svg" alt="软件架构范式演化史" width="100%" loading="lazy" decoding="async">
 
 **1990年代，单体架构（大教堂模式）**：精心设计的庞大系统，每个部分都有明确的位置和职责。像建造大教堂一样，需要详尽的设计和长期的规划。
 
@@ -102,7 +104,7 @@ series: aise
 
 我提出六个面向AI-Native架构的战术模式：
 
-<object data="/assets/images/2025-04-01-ai-native-architecture-patterns-02-six-patterns.svg" type="image/svg+xml" width="100%" aria-label="AI-Native架构六大战术模式" role="img"></object>
+<img src="/assets/images/2025-04-01-ai-native-architecture-patterns-02-six-patterns.svg" alt="AI-Native架构六大战术模式" width="100%" loading="lazy" decoding="async">
 
 ### Intent Router：让AI理解用户想要什么
 

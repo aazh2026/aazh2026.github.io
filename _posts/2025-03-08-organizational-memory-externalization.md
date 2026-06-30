@@ -7,6 +7,7 @@ description: "组织最大的风险不是知识太少，而是那些无法文档
 author: "@postcodeeng"
 
 series: aise
+subtopic: context-engineering
 ---
 
 ## 当专家退休时，公司失去的不是一个人，而是一部活历史
@@ -25,7 +26,7 @@ series: aise
 
 ---
 
-<object data="/assets/images/2025-03-08-organizational-memory-externalization-01-iceberg.svg" type="image/svg+xml" width="100%" aria-label="当专家退休时，公司失去的不是一个人，而是一部活历史（2025-03-08-organizational-memory-externalization-01-iceberg）" role="img"></object>
+<img src="/assets/images/2025-03-08-organizational-memory-externalization-01-iceberg.svg" alt="当专家退休时，公司失去的不是一个人，而是一部活历史（2025-03-08-organizational-memory-externalization-01-iceberg）" width="100%" loading="lazy" decoding="async">
 
 ## 三十分钟与五十万元的差距
 
@@ -127,7 +128,7 @@ series: aise
 
 AI时代的新思路是：**在专家工作时自动捕获**。
 
-<object data="/assets/images/2025-03-08-organizational-memory-externalization-02-flow.svg" type="image/svg+xml" width="100%" aria-label="AI时代的转机" role="img"></object>
+<img src="/assets/images/2025-03-08-organizational-memory-externalization-02-flow.svg" alt="AI时代的转机" width="100%" loading="lazy" decoding="async">
 
 **核心转变**：
 - 从"结构化输入"（专家写文档）到"非结构化捕获"（系统自动记录）
@@ -276,6 +277,10 @@ AI可以处理显性知识，但无法处理隐性知识——因为隐性知识
 
 如果答案让你不安，是时候投资组织记忆了。
 
+
+---
+
+*深度阅读时间：约 10 分钟*
 ---
 
 *Published on 2025-03-08 | 阅读时间：约 12 分钟*

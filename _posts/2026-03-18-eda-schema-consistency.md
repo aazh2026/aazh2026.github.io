@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 事件驱动, EDA, Schema管理, 消息系统]
 description: "事件Schema是事实上的契约却缺乏契约治理：一次深夜故障往往源于生产者的随意变更。AI自动生成Schema与语义级兼容性检查，让跨团队一致性从人工巡检变成持续可验证。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -52,9 +53,9 @@ series: aise
 
 ### 生成路径
 
-<object data="/assets/images/2026-03-18-eda-schema-consistency-01-generation-paths.svg" type="image/svg+xml" width="100%" aria-label="事件 Schema 生成路径" role="img"></object>
+<img src="/assets/images/2026-03-18-eda-schema-consistency-01-generation-paths.svg" alt="事件 Schema 生成路径" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-18-eda-schema-consistency-02-compatibility-layers.svg" type="image/svg+xml" width="100%" aria-label="生成路径" role="img"></object>
+<img src="/assets/images/2026-03-18-eda-schema-consistency-02-compatibility-layers.svg" alt="生成路径" width="100%" loading="lazy" decoding="async">
 
 ### 实战：代码生成Schema
 

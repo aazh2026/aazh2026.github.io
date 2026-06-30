@@ -6,6 +6,7 @@ tags: [Executable PRD, 需求工程, AI-Native软件工程, 产品文档, 范式
 description: "Executable PRD用YAML/JSON Schema编写可执行规格说明，机器可直接编译为数据库Schema、API、UI组件和测试用例，将需求定义周期从5-6周压缩到1-2天。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**

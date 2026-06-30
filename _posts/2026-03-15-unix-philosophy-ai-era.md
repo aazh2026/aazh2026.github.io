@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Unix哲学, Agent设计, 系统架构]
 description: "Unix 哲学在 AI 时代获得新生命：小即是美演化为单一职责 Agent，文本流演化为结构化 Intent 流，管道演化为编排器。限制单个 Agent 能力，反而让整体系统更强大。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -389,8 +390,8 @@ AI 领域的对应：
 
 ### Unix 风格的 Agent 工具链
 
-<object data="/assets/images/2026-03-15-unix-philosophy-ai-era-01-toolchain.svg" type="image/svg+xml" width="100%" aria-label="Unix 风格的 Agent 工具链" role="img"></object>
-<object data="/assets/images/2026-03-15-unix-philosophy-ai-era-02-pipeline-patterns.svg" type="image/svg+xml" width="100%" aria-label="Unix 风格的 Agent 工具链" role="img"></object>
+<img src="/assets/images/2026-03-15-unix-philosophy-ai-era-01-toolchain.svg" alt="Unix 风格的 Agent 工具链" width="100%" loading="lazy" decoding="async">
+<img src="/assets/images/2026-03-15-unix-philosophy-ai-era-02-pipeline-patterns.svg" alt="Unix 风格的 Agent 工具链" width="100%" loading="lazy" decoding="async">
 
 ### 最佳实践清单
 
@@ -504,6 +505,10 @@ Unix 哲学诞生于 50 年前，但它的核心思想——**小即是美、组
 - [LangChain Documentation](https://python.langchain.com/docs/)
 - [AutoGPT Architecture](https://github.com/Significant-Gravitas/AutoGPT)
 
+
+---
+
+*深度阅读时间：约 24 分钟*
 ---
 
 *Published on 2026-03-15*

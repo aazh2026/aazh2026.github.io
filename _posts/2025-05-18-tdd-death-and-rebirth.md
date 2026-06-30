@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, TDD, 测试策略, AI-DD]
 description: "论证AI时代测试的本质转变——从验证工具演化为契约语言，Prompt取代JUnit成为新的开发驱动方式，Intent-Driven Development是TDD的延续而非终结。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
 ---
 
 > **TL;DR**
@@ -61,7 +62,7 @@ AI时代的循环正在变成：
 
 **测试的新角色是"契约"**
 
-<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-02-intent-loop.svg" type="image/svg+xml" width="100%" aria-label="意图契约循环" role="img"></object>
+<img src="/assets/images/2025-05-18-tdd-death-and-rebirth-02-intent-loop.svg" alt="意图契约循环" width="100%" loading="lazy" decoding="async">
 
 不是验证代码是否正确，而是回答：
 - 这是否符合我的原始意图？
@@ -91,7 +92,7 @@ AI时代的循环正在变成：
 
 让我们对比三种表达方式：
 
-<object data="/assets/images/2025-05-18-tdd-death-and-rebirth-01-legacy-vs-intent.svg" type="image/svg+xml" width="100%" aria-label="TDD 到 AI-DD：范式转移" role="img"></object>
+<img src="/assets/images/2025-05-18-tdd-death-and-rebirth-01-legacy-vs-intent.svg" alt="TDD 到 AI-DD：范式转移" width="100%" loading="lazy" decoding="async">
 
 ### 传统测试（JUnit）
 
@@ -194,7 +195,7 @@ Feature: 用户登录
 
 ### 组织结构调整
 
-<object data="/assets/images/2025-05-18-tdd-idd-01-stack.svg" type="image/svg+xml" width="100%" aria-label="组织结构调整" role="img"></object>
+<img src="/assets/images/2025-05-18-tdd-idd-01-stack.svg" alt="组织结构调整" width="100%" loading="lazy" decoding="async">
 
 ---
 

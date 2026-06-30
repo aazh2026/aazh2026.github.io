@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, Harness Engineering, Verification, P-vs-NP, Agent]
 description: "验证比生成更容易规模化——这是 P vs NP 不对称性的工程体现。当代码生成不成问题，评判能力成为稀缺资源：程序员竞争力从'写出好代码'转向'定义什么叫好代码'。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-strategy
 ---
 
 > **TL;DR**
@@ -60,9 +61,9 @@ Cobbe 等人的发现，把这个直觉**实证化**了：
 
 这不是巧合。这是某种深层规律的体现。
 
-<object data="/assets/images/2026-03-15-verifier-economics-02-verification-loop.svg" type="image/svg+xml" width="100%" aria-label="一个直观的例子" role="img"></object>
+<img src="/assets/images/2026-03-15-verifier-economics-02-verification-loop.svg" alt="一个直观的例子" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2026-03-15-verifier-economics-01-workflow.svg" type="image/svg+xml" width="100%" aria-label="一个直观的例子" role="img"></object>
+<img src="/assets/images/2026-03-15-verifier-economics-01-workflow.svg" alt="一个直观的例子" width="100%" loading="lazy" decoding="async">
 
 ---
 
@@ -247,6 +248,10 @@ Harness 工程的实践者们已经证明：当验证器被正确设计，Agent 
 
 而人类的真正价值，在于知道**什么是好的**——以及如何让机器也明白这一点。
 
+
+---
+
+*深度阅读时间：约 8 分钟*
 ---
 
 *参考来源：*

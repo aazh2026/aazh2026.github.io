@@ -6,6 +6,8 @@ tags: [AI-Native软件工程, 人才培养, Prompt工程, 组织能力]
 description: "设计Prompt Engineering能力培养体系，为初中高级开发者建立分层培养路径、评估标准和晋升通道，将Prompt能力从个人技巧转化为组织能力基础设施。"
 author: "@postcodeeng"
 series: aise
+subtopic: ai-native-engineering
+recommended_start: true
 ---
 
 > **TL;DR**
@@ -21,9 +23,9 @@ series: aise
 
 ## 为什么需要Prompt Engineering梯队
 
-<object data="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" type="image/svg+xml" width="100%" aria-label="Prompt工程梯队建设三阶段" role="img"></object>
+<img src="/assets/images/2025-05-26-prompt-ladder-01-ladder.svg" alt="Prompt工程梯队建设三阶段" width="100%" loading="lazy" decoding="async">
 
-<object data="/assets/images/2025-05-26-prompt-engineering-ladder-02-three-levels.svg" type="image/svg+xml" width="100%" aria-label="为什么需要Prompt Engineering梯队" role="img"></object>
+<img src="/assets/images/2025-05-26-prompt-engineering-ladder-02-three-levels.svg" alt="为什么需要Prompt Engineering梯队" width="100%" loading="lazy" decoding="async">
 
 ### 现实挑战
 

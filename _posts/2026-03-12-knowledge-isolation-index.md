@@ -6,6 +6,7 @@ tags: [AI-Native软件工程, 知识管理, 组织效能, 度量体系]
 description: "知识孤岛指数（KII）量化团队对AI生成代码的集体理解度，识别个人化陷阱与传播阻断节点，让隐性技术债务从不可见走向可见可治理。"
 author: "@postcodeeng"
 series: aise
+subtopic: context-engineering
 ---
 
 > **TL;DR**
@@ -18,7 +19,7 @@ series: aise
 > 
 > 关键洞察：AI写代码，但人类必须共同理解代码。理解度下降是隐性技术债务。
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-01-framework.svg" type="image/svg+xml" width="100%" aria-label="知识孤岛形成双路径" role="img"></object>
+<img src="/assets/images/2026-03-12-knowledge-isolation-index-01-framework.svg" alt="知识孤岛形成双路径" width="100%" loading="lazy" decoding="async">
 
 ## 知识孤岛现象
 
@@ -71,11 +72,11 @@ series: aise
 
 ### KII风险等级
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-04-kii-levels.svg" type="image/svg+xml" width="100%" aria-label="KII 风险等级图" role="img"></object>
+<img src="/assets/images/2026-03-12-knowledge-isolation-index-04-kii-levels.svg" alt="KII 风险等级图" width="100%" loading="lazy" decoding="async">
 
 ---
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-02-knowledge-spread.svg" type="image/svg+xml" width="100%" aria-label="知识传染 vs 知识阻断" role="img"></object>
+<img src="/assets/images/2026-03-12-knowledge-isolation-index-02-knowledge-spread.svg" alt="知识传染 vs 知识阻断" width="100%" loading="lazy" decoding="async">
 
 ## 知识传染与阻断分析
 
@@ -137,7 +138,7 @@ AI直接输出代码而不附带任何解释，接收者无法了解背后的业
 
 ## 重建集体理解
 
-<object data="/assets/images/2026-03-12-knowledge-isolation-index-03-remediation.svg" type="image/svg+xml" width="100%" aria-label="重建集体理解四策略" role="img"></object>
+<img src="/assets/images/2026-03-12-knowledge-isolation-index-03-remediation.svg" alt="重建集体理解四策略" width="100%" loading="lazy" decoding="async">
 
 ### 策略1：强制文档化 + AI代码必须带解释
 
@@ -190,6 +191,10 @@ AI直接输出代码而不附带任何解释，接收者无法了解背后的业
 **记住**：
 > "代码是写给计算机的，更是写给人看的。AI时代，后者更重要。"
 
+
+---
+
+*深度阅读时间：约 7 分钟*
 ---
 
 *最后更新: 2026-03-12*
