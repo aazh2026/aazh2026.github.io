@@ -298,3 +298,89 @@ YYYY-MM-DD-post-slug-NN-description.svg
 - `_templates/post-template.md` - 旧式文章模板
 - [本指南](/writing-guide/)
 - `assets/images/` - SVG 配图目录
+
+---
+
+## 🚨 强制规则（发布前必查）
+
+### 1. 引用可信度
+
+**禁止以下写作模式**：
+
+- ❌ 虚构案例："2024 年某 SaaS 公司做了一个大胆的实验，三个月后覆盖率从 78% 提升到 94%..."
+  - 这类"具名精确数字 + 匿名主体"是 LLM 幻觉的典型形态，读者一眼识破
+- ❌ 单点精确百分比 + 模糊归因："研究表明，67% 的开发者认为写测试是'必要的痛苦'"
+  - 没有具体来源 URL + 年份 + 样本量 = 不可查证 = 不可信
+- ❌ 编造人物名："Boris Cherny 分享过他们的做法"（用 2025 年时间点引用 2026 年才公开的人物）
+- ❌ 时态错乱：在 2025 年的文章里写"2026 年 Uber 4 个月花完 2400 万美元"
+- ❌ 损坏链接 / 占位 URL（中文片段、"源头在此"、fake 域名）
+- ❌ 拼凑案例叙事（"Ryan 在 GitHub 上提交了一个看似无害的 PR"——具体当事人/公司脱敏后仍应标注）
+
+**允许的替代措辞**：
+
+- ✅ "业界反复观察到的现象是 X 区间的 Y%（具体数字因场景而异）"
+- ✅ "多家咨询机构公开案例分享常提到 X 区间，具体数字因项目差异巨大"
+- ✅ "某企业（代表性场景，未指名）"
+- ✅ "业界已观察到的早期案例（放弃时态断言）"
+- ✅ 引用真实 URL：`[Octoverse Report](https://github.blog/news-insights/octoverse/)`、`[Standish CHAOS](https://www.standishgroup.com/)`、`[Anthropic Engineering](https://www.anthropic.com/engineering/)`
+
+### 2. Footer 字段（机器可修复，禁止手写错位）
+
+每个 post 的 footer（如果有）应满足：
+
+- `*Published on YYYY-MM-DD*` ⇔ 前置 frontmatter `date:` 必须一致
+- `*最后更新: YYYY-MM-DD*` ⇔ 必须与最后修改日期（或重新承认）一致
+- 不要写 `*AI-Native软件工程系列 #XX*` —— 新式模板不再使用，新文章不应加
+- 不要写"发布于 [postcodeengineering.com]" —— 旧域名
+
+**工具**（已落仓）：
+- `scripts/fix-published-on-drift.py` — 对齐 `*Published on` 日期到 frontmatter `date:`
+- `scripts/fix-last-updated-drift.py` — 对齐 `*最后更新` 日期
+- `scripts/strip-series-footer.py` — 删除旧式 `*AI-Native软件工程系列 #XX*` footer（仅在文末 10 行内，安全）
+- `scripts/soften-orphan-claims.py` — 弱化孤儿式弱归因短语
+
+所有脚本支持 `--dry-run`，可先看 diff 再应用。
+
+### 3. 标准结尾（必须）
+
+每篇文章必须有 `## 结尾`、`## 写在最后`、`## 结论`、`## 结语`、`## 总结` 其中之一。
+如果不写，技术读者会感觉文章缺收束；RSS 订阅体验也会断裂。
+
+写作时使用 `## 结尾`（最常用），写作风格：
+- 3-4 段，回环 TL;DR 的核心论点
+- 最后一句 Key Insight 总结最长远的含义
+- 不要在结尾引入新概念或新数据，只做综合
+
+### 4. 链接完整性
+
+- 所有引用必须带可点击链接（除非内嵌 Jinja 等价物会破坏页面的代码块）
+- 不要使用相对路径 `/engineering/...` 引用外部站点（会 404 在本站）—— 改为完整 `https://www.anthropic.com/engineering/...`
+- 内链用 slug-based 格式：`[Loop Engineering](https://aazh2026.github.io/loop-engineering/)`，不要用 `2025-04-XX` 日期前缀路径
+
+---
+
+## ⚙️ 发布前清单（升级版）
+
+发布前除了内容/SVG/元信息三项外，**增加引用 + footer 维度**：
+
+### 内容
+- [ ] 标题是否有吸引力？
+- [ ] TL;DR 是否完整且有亮点？
+- [ ] Key Insight 是否到位？
+- [ ] 段落是否简短（2-4行）？
+- [ ] **数据来源是否标注？**（精确数字必须有 URL + 年份）
+- [ ] **无虚构精确百分比**？
+- [ ] **关键洞察是否引用了原话？**
+
+### 引用（新增）
+- [ ] **无"某 SaaS 公司精确数字"句式**
+- [ ] **无"研究表明 X%"类孤儿归因**
+- [ ] **所有 GitHub/Stack Overflow/Google 研究类陈述带 [URL](链接)**
+- [ ] **未来日期 / 未发生事件避免出现**
+
+### Footer & 元信息（新增）
+- [ ] 必填 `## 结尾`
+- [ ] `*Published on` 与 frontmatter `date:` 一致
+- [ ] `*最后更新` 与最后改动日期一致（如果有）
+- [ ] 没有 `*AI-Native软件工程系列 #XX*`（已废弃）
+- [ ] 没有指向旧域名 `postcodeengineering.com`
