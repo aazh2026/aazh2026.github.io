@@ -3,7 +3,7 @@ layout: post
 title: "Worse is Better 的重新审视：AI 时代的好与坏"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 软件哲学, Worse is Better, 代码质量, 系统设计]
-description: "探讨 Worse is Better 在 AI 时代的新诠释——AI 如何将这一设计哲学从无奈之选转化为主动策略，以及迭代复利如何超越完美主义。"
+description: "Worse is Better不是妥协而是元策略：AI让生成代码足够便宜，把设计哲学从\"追求完美\"翻转为\"设计能进化的系统\"——迭代复利如何取代一次性正确，成为系统演进的新逻辑。"
 author: "@postcodeeng"
 series: aise
 ---

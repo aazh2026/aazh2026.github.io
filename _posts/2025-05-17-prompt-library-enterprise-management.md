@@ -3,7 +3,7 @@ layout: post
 title: "Prompt Library的企业级管理：部门共享与版本控制"
 date: 2025-05-17T16:00:00+08:00
 tags: [AI-Native软件工程, Prompt管理, 知识共享, 企业治理]
-description: "探讨企业级Prompt库管理实践，将Prompt视为代码资产进行版本控制和共享，建立企业-部门-项目三级架构体系实现知识沉淀与效果评估。"
+description: "一个优秀Prompt被100人复用，效率是100人各写一份的100倍——但前提是企业把它当代码资产治理。三级架构、版本控制、CI/CD与A/B评估，把Prompt从个人笔记变成组织级能力。"
 author: "@postcodeeng"
 series: aise
 ---

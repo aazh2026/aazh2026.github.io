@@ -2,7 +2,7 @@
 layout: post
 title: "Anthropic Claude Code 创始人 Boris Cherny：写代码已解决，剩下的是组织"
 date: 2026-05-14T08:00:00+08:00
-tags: [AI-Native软件工程, Claude Code, Anthropic, Boris Cherny, Agent]
+tags: [AI-Native软件工程, Claude-Code, Anthropic, Boris Cherny, Agent]
 author: "@postcodeeng"
 series: aise
 description: "Boris Cherny 的个人事实是\"写代码已解决\"——他的代码库 2025 年 10 月已过临界点，靠 Loop 调度模式单日合并 150 个 PR。但这个结论有结构性偏差：真正的领先在组织流程，不在技术；模型都能拿到，但组织改造比技术改造慢得多。"

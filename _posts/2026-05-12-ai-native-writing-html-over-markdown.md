@@ -2,7 +2,7 @@
 layout: post
 title: "AI 原生写作：为什么我放弃 Markdown，改用 HTML"
 date: 2026-05-12T00:00:00+08:00
-tags: [AI-Native软件工程, Claude Code, 写作工具, 信息交互]
+tags: [AI-Native软件工程, Claude-Code, 写作工具, 信息交互]
 description: "Markdown是AI早期时代人类写给人类的格式，HTML是AI时代AI写给人读的更好媒介——更高信息密度、双向交互、格式即思想。"
 author: "@postcodeeng"
 series: aise

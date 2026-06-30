@@ -2,7 +2,7 @@
 layout: post
 title: "为什么Context Engineering比Prompt Engineering更重要"
 date: 2025-04-09T02:00:00+08:00
-tags: [Context Engineering, Prompt Engineering, AI工程, 软件架构]
+tags: [Context-Engineering, Prompt Engineering, AI工程, 软件架构]
 description: "Context Engineering解决的是AI'基于什么回答'的问题——系统化地构建、管理、供给上下文信息，才是企业AI项目的真正瓶颈。"
 author: "@postcodeeng"
 series: aise
@@ -26,11 +26,13 @@ permalink: /posts/context-engineering//
 > 
 > Prompt Engineering解决"怎么说"的问题，Context Engineering解决"知道什么"的问题。后者才是AI工程真正的瓶颈。
 
-### 一个真实的失败案例
+### 一个代表性的失败案例（叙事性场景，未指名核实）
 
-2024年初，某零售企业投入**百万预算**，搭建AI客服系统。
+> **本节为示意性叙事**——业界关于"Prompt 优化充足但 Context 不足"的案例在 [Glean Enterprise Search 报告](https://www.glean.com/blog)、[Microsoft Work Trend Index](https://www.microsoft.com/en-us/worklab/work-trend-index/) 以及 [Andreessen Horowitz 关于 Enterprise AI 落地的研究](https://a16z.com/100-gen-ai-consumer-apps/) 中被反复观察。**"百万预算 / 数百个 Prompt 模板 / 客服场景"** 是代表性叙事框架，**没有公开可核实的具体企业数据**，请勿视为已发生的事实陈述。
 
-他们聘请了顶尖的Prompt Engineering专家，精心设计了**数百个Prompt模板**。每个Prompt都写得非常专业：
+2024 年初，某零售企业（代表性场景，未指名）投入百万级预算，搭建 AI 客服系统。
+
+他们聘请了顶尖的 Prompt Engineering 专家，精心设计了数百个 Prompt 模板。每个 Prompt 都写得非常专业：
 
 **但上线后，系统表现糟糕：**
 

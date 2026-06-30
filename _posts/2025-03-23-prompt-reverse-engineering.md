@@ -24,21 +24,19 @@ series: ai-native-security
 
 ---
 
-## 那个周末发生了什么
+## 那个周末发生了什么（叙事性场景，未指名核实）
 
-2025年11月的一个周五晚上，Luna AI的工程师们还在庆祝产品发布的成功。他们的新功能——智能合同审查助手——上线首周就获得了5000名企业用户。
+> **本节为示意性叙事**：业界关于"Prompt 通过社会工程学套取"的真实案例可参考 [OWASP LLM Top 10 中的 LLM07: Insecure Plugin Design 与 LLM01: Prompt Injection](https://owasp.org/www-project-top-10-for-large-language-model-applications/)、[MITRE ATLAS 矩阵](https://atlas.mitre.org/) 中关于 *ML Model Access* 的攻击模式，以及 [Microsoft AI Red Team 的研究](https://www.microsoft.com/security/blog/2024/02/22/microsoft-ai-red-team-building-future-of-safer-ai/)。**Luna AI / ContractGuard / 5000 用户 / 200+ 版本**等具体数字均为叙事性占位，**没有公开可核实的企业 / 案例**，请勿视为已发生的事件陈述。
 
-这个助手的核心是一组精心设计的Prompt。三个月里，团队迭代了200多个版本，调试了无数的边界情况，终于让AI能够准确识别合同中的风险条款、模糊表述和不公平条件。
+2025 年 11 月的一个周五晚上，Luna AI（化名）的工程师们还在庆祝产品发布的成功。他们的新功能——智能合同审查助手——上线首周获得了数千名企业用户。
 
-Prompt就是他们的核心竞争力。
+这个助手的核心是一组精心设计的 Prompt。团队花了数月迭代多个版本，调试了无数边界情况，最终让 AI 能够识别合同中的风险条款、模糊表述和不公平条件。
 
-周一早上，产品经理在例行竞品监控中发现了一个令人震惊的事实：竞争对手ContractGuard在周末发布了一个几乎 identical 的功能。不仅输出格式相似，连对特定条款的识别逻辑都如出一辙。
+Prompt 是他们的核心竞争力。
 
-更诡异的是，ContractGuard的Prompt似乎还在某些边界情况上表现更好——就像他们已经知道Luna AI的Prompt在哪些地方会失败。
+周一早上，产品经理在例行竞品监控中发现：竞争对手（化名）在周末发布了一个几乎 identical 的功能。不仅输出格式相似，连对特定条款的识别逻辑都如出一辙。
 
-调查很快揭示了真相。ContractGuard的一名工程师在社交媒体上的匿名分享（后来被删除）描述了他们如何"学习"Luna AI的技术：
-
-他们没有访问Luna AI的任何服务器，没有窃取任何代码。他们只是用了Prompt反向工程——通过精心设计的输入，让Luna AI的AI系统"泄露"了自己的系统Prompt。
+调查揭示真相：竞争对手的工程师通过**精心设计的输入让目标 AI 系统"泄露"了系统 Prompt**——这是一种业界反复观察到的"角色扮演式套取攻击"（Role-play Extraction）变体，利用 LLM 在特定场景下绕过安全指令的倾向。
 
 具体方法惊人地简单：
 

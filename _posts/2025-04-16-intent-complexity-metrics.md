@@ -5,7 +5,7 @@ date: 2025-04-16T00:00:00+08:00
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: "@postcodeeng"
 series: aise
-description: "探讨AI时代软件度量范式转移，从LOC等传统指标转向Intent Complexity，建立价值交付效率与AI辅助效能双维度指标体系。"
+description: "LOC在AI时代已死：当代码产出暴涨300%而系统稳定性反而下降，问题不是团队低效，而是指标错位。Intent Complexity用五个维度重新度量业务意图，让研发度量对齐真实价值交付。"
 ---
 
 > **TL;DR**

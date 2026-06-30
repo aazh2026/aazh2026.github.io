@@ -18,7 +18,7 @@ series: industry-insight
 
 ## 为什么你的AI产品注定被套壳——API经济的护城河幻觉
 
-> *「2024年，CopyAI估值11亿美元。2025年，一个叫WriteSonic的团队用同样的GPT-4 API，更好的SEO策略，更激进的定价，在18个月内抢走了30%的市场份额。CopyAI的技术优势？荡然无存。」*
+> **叙事性场景，非核实事实陈述**：「CopyAI 估值 11 亿美元 / WriteSonic 抢走 30% 市场份额 / 18 个月」等数字是**示意性叙述**，并非来自可核实的公开报告；CopyAI 与 WriteSonic 的真实市场份额、估值变化请以公司官方披露和 [Crunchbase](https://www.crunchbase.com/organization/copy-ai) 等第三方数据为准。下文作为"API 经济下应用层竞争模式"的代表性叙事展开，**不应作为个别公司的事实陈述**。
 
 ## 11亿美元护城河的崩塌
 
@@ -46,7 +46,7 @@ CopyAI的技术护城河在哪里？
 
 这不是个例。
 
-Jasper AI，曾经估值15亿美元的AI营销写作工具，2024年裁员30%，估值腰斩。他们的竞争对手用同样的模式侵蚀市场。
+Jasper AI 曾在公开报道中被引为高估值 AI 写作代表，**"估值 15 亿美元 / 2024 年裁员 30% / 估值腰斩"** 等具体数字应理解为**业界叙事中的代表性描述**，请以 Jasper 公司官方公告和 [Crunchbase](https://www.crunchbase.com/organization/jasper-ai) 的实际数据为准。
 
 Grammarly的AI功能，被免费替代品逐步蚕食。
 

@@ -27,7 +27,7 @@ series: aise
 
 ### 风险分级体系
 
-EU AI Act采用基于风险的分级监管方法，将AI系统分为四个等级：
+EU AI Act（Regulation (EU) 2024/1689）采用基于风险的分级监管方法，将AI系统分为四个等级。下表为**结构性概述**，具体边界以 [Regulation (EU) 2024/1689 原文](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) 与各实施法案（Implementing Acts）的最新版本为准：
 
 > 💡 **Key Insight**
 >
@@ -142,7 +142,7 @@ EU AI Act采用基于风险的分级监管方法，将AI系统分为四个等级
 
 **日志记录要求**：
 - 记录系统运行期间的所有事件
-- 保存时间不少于6年
+- **保存时间** — 各条文规定不一（如 Art. 12 自动日志记录通常要求不少于 6 个月，与部署语境相关；建议以最新欧盟官方 [Implementing Acts](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 为准）
 - 能够追踪系统决策过程
 - 支持审计和调查
 

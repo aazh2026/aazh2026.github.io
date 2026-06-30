@@ -3,7 +3,7 @@ layout: post
 title: "Prompt 注入防御：Agent 安全的分层架构实践"
 date: 2026-03-17T18:00:00+08:00
 permalink: /prompt-injection-defense-agent-security/
-tags: [AI-Native软件工程, Security, Prompt Injection, Agent, OpenAI]
+tags: [AI-Native软件工程, Security, Prompt-Injection, Agent, OpenAI]
 description: "Prompt 注入防御采用分层架构：指令隔离建立系统与用户边界，行为白名单约束危险操作，数据分类保护敏感信息——安全是 Agent 落地的前提。"
 author: "@postcodeeng"
 series: aise

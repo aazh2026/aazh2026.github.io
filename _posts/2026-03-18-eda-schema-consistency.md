@@ -3,7 +3,7 @@ layout: post
 title: "事件驱动架构一致性：消息Schema的AI生成与版本检查"
 date: 2026-03-18T00:00:00+08:00
 tags: [AI-Native软件工程, 事件驱动, EDA, Schema管理, 消息系统]
-description: "探讨事件 Schema 的契约治理与 AI 增强：如何通过语义级兼容性分析超越语法检查，实现跨团队全局一致性。"
+description: "事件Schema是事实上的契约却缺乏契约治理：一次深夜故障往往源于生产者的随意变更。AI自动生成Schema与语义级兼容性检查，让跨团队一致性从人工巡检变成持续可验证。"
 author: "@postcodeeng"
 series: aise
 ---
