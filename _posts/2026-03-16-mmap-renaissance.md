@@ -266,4 +266,4 @@ mmap 不是银弹。但在正确的场景下，它是一把被忽视的利器。
 
 *本文灵感源自 2026-03-16 Reddit Daily Digest 中关于 GraphZero 的讨论。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

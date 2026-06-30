@@ -247,6 +247,4 @@ TDD没有死，只是完成了它的历史使命。
 - 《Specification by Example》(Gojko Adzic): 实例化需求的思想基础
 
 ---
-
-*AI-Native软件工程系列 #1*
 *深度阅读时间：约 8 分钟*

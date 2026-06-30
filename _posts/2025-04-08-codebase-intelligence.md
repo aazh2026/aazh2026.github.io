@@ -469,7 +469,7 @@ Codebase Intelligence + AI Agent + 人类工程师 = 未来软件开发的铁三
 
 ---
 
-*Published on 2026-03-09*  
+*Published on 2025-04-08*
 *深度阅读时间：约 25 分钟*
 
 **AI工程洞察系列 #01** —— Codebase Intelligence：让代码库成为可推理的知识系统

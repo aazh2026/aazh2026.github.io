@@ -384,10 +384,10 @@ AI系统的成本优化不是"少调用API"，而是"重构系统让API调用更
 
 - [Cloud FinOps](https://www.finops.org/) - 云成本管理框架
 - [Systems Thinking](https://en.wikipedia.org/wiki/Systems_thinking) - 系统思维
-- [Cost-Aware Architecture](https://postcodeengineering.com/cost-aware-architecture/) - 本系列其他文章
+- [Cost-Aware Architecture](https://aazh2026.github.io/cost-aware-architecture/) - 本系列其他文章
 
 ---
 
 *这篇文章的成本模型可在1年后仍被引用。API价格会变，但成本结构逻辑不变。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

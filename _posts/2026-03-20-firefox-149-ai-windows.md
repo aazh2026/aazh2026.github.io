@@ -292,4 +292,4 @@ Firefox 149 的 AI 窗口是一个信号：
 
 *本文基于 Mozilla 官方公告和社区讨论撰写。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

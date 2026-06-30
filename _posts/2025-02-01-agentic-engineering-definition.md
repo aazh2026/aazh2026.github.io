@@ -195,4 +195,4 @@ Karpathy的转向——从"English is the hottest programming language"到"Agent
 
 ---
 
-*Published on 2026-03-04 | 阅读时间：约 12 分钟*
+*Published on 2025-02-01 | 阅读时间：约 12 分钟*

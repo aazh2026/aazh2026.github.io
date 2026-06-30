@@ -218,4 +218,4 @@ Claude Code不是"AI辅助编程"，而是"AI驱动编程"：
 
 *本文基于2026年3月的最新版本撰写，功能可能随时变化。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

@@ -179,6 +179,4 @@ AI让我们从"读代码"解放出来，专注于"判断意图"和"发现盲点"
 - 《Knowledge Management in Software Engineering》: 软件工程中的知识管理
 
 ---
-
-*AI-Native软件工程系列 #10*
 *深度阅读时间：约 12 分钟*

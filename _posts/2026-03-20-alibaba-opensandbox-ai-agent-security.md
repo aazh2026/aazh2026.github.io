@@ -309,4 +309,4 @@ OpenSandbox 的回答是：**会的**。
 
 *本文基于阿里 OpenSandbox 开源发布和社区讨论撰写。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

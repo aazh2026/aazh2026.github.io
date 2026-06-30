@@ -494,4 +494,4 @@ OpenAI 的实验提供了一个**思考起点**，而非**操作手册**。
 
 *本文包含对 Martin Fowler 和 OpenAI 文章的解读，以及我的个人实践经验和观点。如有错误，欢迎指正。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

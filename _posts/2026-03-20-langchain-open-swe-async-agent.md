@@ -286,4 +286,4 @@ open-swe 的出现标志着这一趋势的开始。
 
 *本文基于 open-swe 开源发布和技术文档撰写。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

@@ -287,4 +287,4 @@ Shopify 是一个成功的模块化单体案例：
 
 *本文灵感源自 2026-03-16 Reddit r/programming 讨论。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

@@ -300,4 +300,4 @@ GitHub 恶意仓库的崛起提醒我们：
 
 *本文灵感源自 2026-03-16 Reddit r/programming 讨论。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

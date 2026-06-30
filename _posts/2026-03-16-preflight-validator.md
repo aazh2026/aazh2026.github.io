@@ -409,4 +409,4 @@ Red_Egnival 的 3 天痛苦经历本可以用 3 分钟避免。
 
 *本文灵感源自 2026-03-16 Reddit r/MachineLearning 讨论。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

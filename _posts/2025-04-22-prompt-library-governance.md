@@ -357,7 +357,7 @@ Prompt Library的未来演进有几个确定的方向：从静态库到动态推
 
 ---
 
-*Published on 2026-03-09*  
+*Published on 2025-04-22*
 *深度阅读时间：约 18 分钟*
 
 **AI-Native软件工程系列 #09** —— Prompt Library治理：当企业拥有1000个Prompt时该怎么办

@@ -402,6 +402,4 @@ Python、Ruby、JavaScript... 表达力更强，语法更简洁。
 
 ---
 
-*AI-Native软件工程系列 #62*
-
 *Published on 2026-03-14*

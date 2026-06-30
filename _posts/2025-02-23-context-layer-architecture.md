@@ -425,7 +425,7 @@ Context Layer架构的核心洞见是：**AI的能力不仅取决于模型本身
 
 ---
 
-*Published on 2026-03-06 | 阅读时间：约 20 分钟*
+*Published on 2025-02-23 | 阅读时间：约 20 分钟*
 
 *本系列文章：*
 - *上篇：**[PRD的结构化转型：从Word到可执行的语义规格说明](/prd-structured-transformation/)**

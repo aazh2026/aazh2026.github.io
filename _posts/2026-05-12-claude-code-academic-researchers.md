@@ -167,6 +167,4 @@ Mushtaq 在文章结尾说的这句话，和 Garry Tan 的 skillify 哲学、和
 - CLAUDE.md 指南（Karpathy 版本）：Forrest Chang's repo
 
 ---
-
-*AI-Native软件工程系列 #57*
 *深度阅读时间：约 6 分钟*

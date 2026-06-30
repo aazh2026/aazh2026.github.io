@@ -273,4 +273,4 @@ OpenAI 已开源 **IH-Challenge 数据集**：
 
 *本文基于 OpenAI 官方博客文章深度解读。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

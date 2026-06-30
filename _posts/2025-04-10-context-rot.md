@@ -221,7 +221,7 @@ Context Rot是AI-Native开发中不可避免的代价。
 ## 延伸阅读
 
 **经典案例**
-- Google [Piper/Mixedrepo](https://源头在此，但Google未公开Context管理的具体实践): 实际上Piper的代码所有权限控制和分层设计，本身就是一套Context隔离机制
+- Google 内部 monorepo 实践（Piper / Critique 一类系统）: 单仓十亿行代码的版本控制、权限控制和分层设计本身，就是一套 Context 隔离机制（注：Google 未公开这些系统的具体技术细节）
 - Netflix [Chaos Engineering](https://Netflix.github.io/chaos-engineering/): 通过主动注入故障验证系统弹性假设，与Context验证异曲同工
 - Amazon [Two-Pizza Team](https://amazon.github.io/aws/docs/two-pizza-team): 小团队天然形成清晰的Context边界，是Context治理的组织保障
 
@@ -233,7 +233,7 @@ Context Rot是AI-Native开发中不可避免的代价。
 **学术与理论**
 - [The Social Life of Information](https://books.google.com/books?isbn=1422166448), Brown & Duguid: 信息的价值在于使用情境，情境一变，价值即衰减
 - [Working Knowledge](https://hbswk.hbs.edu/archive/1318.html), Davenport & Prusak: 组织知识的管理核心是"情境捕获"与"持续刷新"
-- [Information Theory](https://cs.cornell.edu/~又安/IT)，Shannon: 信息的度量提供了解释Context衰减的数学框架——熵增是不可避免的
+- Shannon [Information Theory](https://en.wikipedia.org/wiki/Information_theory): 信息的度量提供了解释 Context 衰减的数学框架——熵增是不可避免的
 
 ---
 

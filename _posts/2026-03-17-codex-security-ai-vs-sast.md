@@ -279,4 +279,4 @@ Codex Security 的实践揭示了一个行业趋势：**AI 驱动的安全工具
 
 *本文基于 OpenAI Engineering 博客文章分析。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

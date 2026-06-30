@@ -208,6 +208,20 @@ agent-skills 的 24 个技能分为 6 个阶段：
 | | `observability-and-instrumentation` | 结构化日志，RED 指标，OpenTelemetry 追踪 |
 | | `shipping-and-launch` | 发布前检查清单，Feature Flag 生命周期，rollback 程序 |
 
+---
+
+## 结尾
+
+agent-skills 揭示了一个反直觉但深刻的真相：**软件工程的目的不是让 AI 学会做新的事，而是强迫 AI 不做那些人类在压力下会忍不住做的事。** 这听起来像是限制，但实际上是杠杆——把工程师的隐性纪律编码进 Agent 可以执行的工作流，让凌晨三点的 Agent 不再重复人类已经付出过代价的错误。
+
+它的工程实现方式——反借口表格、never does、强制门禁、Chesterton's Fence、~100 行 PR sizing、三层渐进式披露——都可以迁移到你自己的 Agent 实践里。**真正的 SKILL 设计核心是：每一行指令都在对抗某种默认倾向**。当你写 skill 的时候，最有价值的问题不是"应该做什么"，而是"这种默认倾向如果不阻止会发生什么"。
+
+24 个技能里最被低估的是 `using-agent-skills`——meta-skill 这种小而关键的元层让"skill 的可发现性"成为系统属性而不是用户责任。这一点对任何想把 Agent 工程化的团队都很关键：**让 Agent 知道"我什么时候应该用哪个 skill"，比让 skill 直接 loading 更重要**。
+
+> 💡 **Key Insight**
+>
+> 真正的 SKILL 不是文档——是用架构强制 Agent 不做哪些事。设计 skill 的最好问题不是"应该做什么"，而是"什么倾向必须被阻止"。
+
 ## 参考来源
 
 - Addy Osmani, [*agent-skills*](https://github.com/addyosmani/agent-skills)（MIT license）, GitHub

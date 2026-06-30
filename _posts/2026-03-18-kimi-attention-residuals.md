@@ -433,4 +433,4 @@ Attention Residuals 代表了几个重要趋势：
 
 *本文基于 Reddit r/MachineLearning 讨论和 arXiv 论文。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

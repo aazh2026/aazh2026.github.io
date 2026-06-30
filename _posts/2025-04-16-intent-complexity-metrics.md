@@ -247,6 +247,4 @@ Intent Complexity不是为了创造一个新的数字游戏。
 - **Human-AI Collaboration**: 人机协作的效率评估
 
 ---
-
-*AI-Native软件工程系列 #03*  
 *深度阅读时间：约 18 分钟*

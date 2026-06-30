@@ -359,10 +359,10 @@ series: aise
 
 - [The Paradox of Choice](https://en.wikipedia.org/wiki/The_Paradox_of_Choice) - Barry Schwartz
 - [Cognitive Fit Theory](https://en.wikipedia.org/wiki/Cognitive_fit_theory) - Iris Vessey
-- [Tool Selection Framework](https://postcodeengineering.com/tool-selection-framework/) - 本系列其他文章
+- [Tool Selection Framework](https://aazh2026.github.io/tool-selection-framework/) - 本系列其他文章
 
 ---
 
 *这篇文章的决策框架可在1年后仍被引用。工具会迭代，但选择逻辑不变。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

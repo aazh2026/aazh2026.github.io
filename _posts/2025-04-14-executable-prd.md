@@ -352,7 +352,7 @@ coupon:
 
 ---
 
-*Published on 2026-03-09*  
+*Published on 2025-04-14*
 *深度阅读时间：约 18 分钟*
 
 **AI-Native软件工程系列 #04** —— 从PRD到Executable Specification的需求工程革命

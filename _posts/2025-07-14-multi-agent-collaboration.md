@@ -329,7 +329,7 @@ Pipeline 模式中，Agent 按严格的顺序阶段串联工作：Agent A 完成
 *Agent OS 系列 - 第 6 篇*
 *由 @postcodeeng 整理发布*
 
-*Published on 2026-04-14*
+*Published on 2025-07-14*
 *阅读时间：约 15 分钟*
 
 *下一篇预告：《CRM 的 Agent 化重构》*

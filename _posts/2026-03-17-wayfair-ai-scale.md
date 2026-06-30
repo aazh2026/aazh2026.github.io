@@ -358,4 +358,4 @@ Wayfair 的案例展示了企业级 AI 规模化的复杂性。
 
 *本文基于 OpenAI 客户案例分析。*
 
-*发布于 [postcodeengineering.com](/)*
+*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*

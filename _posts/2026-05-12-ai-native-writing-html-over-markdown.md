@@ -167,6 +167,4 @@ Markdown 是对话的终结——AI 输出，你接受或拒绝。HTML 是对话
 - Frontend Design Plugin：帮助 Claude 生成更好 HTML 的 MCP
 
 ---
-
-*AI-Native软件工程系列 #55*
 *深度阅读时间：约 7 分钟*

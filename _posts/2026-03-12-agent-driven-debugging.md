@@ -352,6 +352,4 @@ Agent-Driven Debugging 就像**驯兽师指挥猎犬**：你定义目标（Inten
 
 ---
 
-*AI-Native软件工程系列 #48*
-
 *Published on 2026-03-12*

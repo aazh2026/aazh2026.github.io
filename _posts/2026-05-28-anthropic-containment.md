@@ -245,6 +245,20 @@ Anthropic 的文章最后提到：
 
 ---
 
+## 结尾
+
+Anthropic 这篇文章最大的价值不是三种 containment 架构本身，而是它**第一次以 AI 实验室的官方身份承认了 human-in-the-loop 假设的破产**——93% 批准率、approval fatigue、用户自身成为 attack vector，这三个发现叠加在一起意味着，过去十年里所有依赖"用户每次都认真审查"的安全设计都需要重新被设计。
+
+这种公开承认最重要，因为它把 AI Agent 安全从"prompt engineering + classifier"的乐观叙事，拉回到"环境层硬边界 + blast radius 控制"的工程现实。AI 安全的下一个十年不是"让模型更对齐"的胜利之路，而是**"让模型即使在最坏情况下也做不了太多"**的工程之路——这意味着平台、安全、SRE、基础设施团队而不是 RLHF 团队，会成为 AI 安全的主力。
+
+Saltzer 和 Schroeder 在 1974 年写的最小权限原则，48 年后成为 AI Agent 部署的强制要求。这个时间差说明了一个更深的事实：**安全工程的真正命题不是发明新的机制，而是把已经存在的原则重新实现到新的威胁模型里**——这要求我们每个时代都重新审视"哪些原则被忽略了"。
+
+> 💡 **Key Insight**
+>
+> AI Agent 安全的真正权威不是 RLHF，是 1974 年就在那里的最小权限原则——下一个十年，安全工程师最有价值的战壕是把"blast radius"这个概念做成一门可被审计、可被验证、可被部署的工程学科。
+
+---
+
 ## 延伸阅读
 
 - Anthropic原文: https://www.anthropic.com/engineering/how-we-contain-claude

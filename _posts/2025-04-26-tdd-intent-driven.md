@@ -278,6 +278,4 @@ def apply_discount(order: Order) -> float:
 - Formal Methods（形式化方法）
 
 ---
-
-*AI-Native软件工程系列 #02*
 *深度阅读时间：约 20 分钟*

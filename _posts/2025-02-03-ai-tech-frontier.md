@@ -176,6 +176,20 @@ Simon Willison 的评价：
 
 ---
 
+## 结尾
+
+这三条线索的真正共同点不是"AI 在进步"，而是**人类的位置在被重新定义**。Knuth 案例展示的是权威专家从"亲手推导"向"调度 AI 探索 + 自己验证"的转变；Simon Willison 的"认知债务"展示的是工程重心从"如何写得快"向"如何看得懂"的转变；Claude Code 远程控制展示的是开发者工作场景从"被绑在电脑前"向"在多个设备间自由切换"的转变。
+
+每一次转变都在压缩某种传统技能的价值、放大另一种技能的价值。**AI 时代最稀缺的不是会用 AI，而是能在 AI 的输出里区分"看起来对"和"真的对"**——这是 Knuth 用了 Claude 生成的解依然要形式化、Simon Willison 反复强调"必须强迫自己理解 AI 写的东西"、Anthropic 把"危险权限不能跳过"作为远程控制硬约束的共同根源。
+
+这个原则的最大实际意义是：你今天投入时间学 TDD、写形式化证明、培养代码审查的耐心，看似不是"AI 时代的热门技能"，恰恰是 AI 越强越稀缺的能力。**所有"代码便宜了，验证不便宜"的论断，本质上都在指向同一个工程师晋升通道：从编码者升级为验证者**。
+
+> 💡 **Key Insight**
+>
+> 三条线索共同指向同一件事：AI 时代工程师的晋升通道不是"用 AI 写得更快"，而是"用 AI 写得便宜之后，承担起验证的责任"——这是认知债务唯一可控的还债方式。
+
+---
+
 *参考资料：*
 - [Claude's Cycles - Donald Knuth](https://www-cs-faculty.stanford.edu/~knuth/papers/claude-cycles.pdf)
 - [HN Discussion on Knuth](https://news.ycombinator.com/item?id=47230710)
@@ -184,4 +198,4 @@ Simon Willison 的评价：
 - [When AI Writes Software - Leo de Moura](https://leodemoura.github.io/blog/when-ai-writes-the-worlds-software/)
 
 ---
-*Published on 2026-03-04 | 阅读时间：约 5 分钟*
+*Published on 2025-02-03 | 阅读时间：约 5 分钟*
