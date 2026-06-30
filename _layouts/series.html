@@ -17,7 +17,7 @@ layout: default
     <div class="meta">
       <span>{{ posts | size }} 篇</span>
       <span>·</span>
-      <span>最后更新 {{ posts | first.date | date: "%Y-%m-%d" }}</span>
+      <span>最后更新 {{ posts.first.date | date: "%Y-%m-%d" }}</span>
       {% if page.feed %}
       <span>·</span>
       <a href="{{ page.feed }}">RSS</a>
