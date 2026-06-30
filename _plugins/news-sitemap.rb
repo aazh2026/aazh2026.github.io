@@ -22,9 +22,12 @@ module Jekyll
     end
 
     def recent_posts(site)
-      cutoff = Date.today - 30
+      # jekyll-last-modified-at populates post.date as a Time while
+      # frontmatter-only dates can be Date. Coerce to Time to avoid
+      # `ArgumentError: comparison of Time with Date failed` (Ruby 3.x).
+      cutoff = (Date.today - 30).to_time
       site.posts.docs.select do |post|
-        post.date && post.date >= cutoff
+        post.date && post.date.to_time >= cutoff
       end
     end
 
