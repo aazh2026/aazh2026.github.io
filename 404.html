@@ -4,6 +4,15 @@ permalink: /404.html
 title: "页面未找到"
 ---
 
+{%- comment -%}
+  404 page — recommendations + full-text search are all dynamic so they
+  never go stale as new posts are added.
+{%- endcomment -%}
+{% assign latest = site.posts | slice: 0, 8 %}
+{% assign all_posts = site.posts %}
+{% assign mid_index = all_posts.size | divided_by: 2 %}
+{% assign mid = all_posts | slice: mid_index, 3 %}
+
 <div class="page-404">
   <div class="emoji">🔍</div>
   <h1 class="code-404">404</h1>
@@ -14,12 +23,13 @@ title: "页面未找到"
     试试搜索或浏览以下推荐内容？
   </p>
 
-  <!-- 快速搜索 -->
+  <!-- 快速搜索 (full-text via /assets/search.json) -->
   <div class="search-404">
-    <input type="text"
+    <input type="search"
            id="search-404"
-           placeholder="搜索文章..."
+           placeholder="搜索文章 (全文)..."
            autocomplete="off"
+           aria-label="搜索文章"
     >
     <div id="search-404-results"></div>
   </div>
@@ -27,71 +37,92 @@ title: "页面未找到"
   <!-- 快捷导航 -->
   <nav class="quick-nav">
     <a href="/" class="btn btn-primary">🏠 返回首页</a>
-    <a href="/aise-series/" class="btn btn-secondary">📚 浏览AISE系列</a>
-    <a href="/archive" class="btn btn-secondary">🗂️ 文章归档</a>
+    <a href="/aise-series/" class="btn btn-secondary">📚 AISE 系列</a>
+    <a href="/agent-os-series/" class="btn btn-secondary">🤖 Agent OS</a>
+    <a href="/archive/" class="btn btn-secondary">🗂️ 归档</a>
   </nav>
 
-  <!-- 推荐阅读 -->
+  <!-- 最新文章 -->
   <div class="recommend">
-    <h3>🔥 热门文章</h3>
+    <h3>📝 最新文章</h3>
     <ul>
-      <li><a href="/aise-manifesto/">AI-Native软件工程宣言</a></li>
-      <li><a href="/posts/context-engineering/">Context Engineering: 五层架构模型</a></li>
-      <li><a href="/knowledge-assetization/">为什么你的代码正在变成负债？</a></li>
-      <li><a href="/death-of-code-reviews/">为什么代码评审正在死亡？</a></li>
+      {% for post in latest %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="color: var(--g500); font-size: 12px; margin-left: 8px;">{{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <!-- 较旧但值得一读 -->
+  <div class="recommend" style="margin-top: 1.25rem;">
+    <h3>📚 较旧但值得一读</h3>
+    <ul>
+      {% for post in mid %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span style="color: var(--g500); font-size: 12px; margin-left: 8px;">{{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+      {% endfor %}
     </ul>
   </div>
 </div>
 
 <script>
-// 404页面搜索功能
 (function() {
-  var searchInput = document.getElementById('search-404');
-  var searchResults = document.getElementById('search-404-results');
+  var input = document.getElementById('search-404');
+  var out = document.getElementById('search-404-results');
+  if (!input || !out) return;
+  var cache = null;
 
-  // 文章数据（简化版）
-  var posts = [
-    { title: "Context Engineering: 五层架构模型", url: "/posts/context-engineering/" },
-    { title: "TDD vs Intent-Driven Development", url: "/tdd-vs-ai-first/" },
-    { title: "Intent Complexity Metrics", url: "/intent-complexity-metrics/" },
-    { title: "Executable PRD: 可执行规格说明", url: "/executable-prd/" },
-    { title: "S-curve Adoption: 三层演化模型", url: "/ai-adoption-s-curve/" },
-    { title: "大规模AI治理", url: "/large-scale-ai-governance/" },
-    { title: "全链路可追溯性", url: "/traceability-auto-tracking/" },
-    { title: "AI-Native软件工程宣言", url: "/aise-manifesto/" },
-    { title: "AISE系列导航", url: "/aise-series/" },
-    { title: "为什么你的代码正在变成负债？", url: "/knowledge-assetization/" },
-    { title: "为什么代码评审正在死亡？", url: "/death-of-code-reviews/" }
-  ];
-
-  searchInput.addEventListener('input', function(e) {
-    var query = e.target.value.toLowerCase().trim();
-
-    if (query.length < 2) {
-      searchResults.style.display = 'none';
-      return;
+  function load(cb) {
+    if (cache) return cb(cache);
+    fetch('/assets/search.json', { credentials: 'same-origin' })
+      .then(function(r) { return r.ok ? r.json() : []; })
+      .then(function(d) { cache = d; cb(cache); })
+      .catch(function() { cache = []; cb(cache); });
+  }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function(c) {
+    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
+  }); }
+  function score(p, terms) {
+    var t = (p.title || '').toLowerCase();
+    var s = 0;
+    for (var i = 0; i < terms.length; i++) {
+      if (!terms[i]) continue;
+      if (t.indexOf(terms[i]) !== -1) s += 5;
+      if ((p.tags || []).join(' ').toLowerCase().indexOf(terms[i]) !== -1) s += 2;
+      if ((p._hay || '').indexOf(terms[i]) !== -1) s += 1;
     }
-
-    var results = posts.filter(function(post) {
-      return post.title.toLowerCase().includes(query);
-    }).slice(0, 5);
-
-    if (results.length === 0) {
-      searchResults.innerHTML = '<div class="empty">没有找到相关文章</div>';
-    } else {
-      searchResults.innerHTML = results.map(function(post) {
-        return '<a href="' + post.url + '">' + post.title + '</a>';
-      }).join('');
-    }
-
-    searchResults.style.display = 'block';
+    return s;
+  }
+  input.addEventListener('input', function(e) {
+    var q = e.target.value;
+    if (q.length < 2) { out.style.display = 'none'; out.innerHTML = ''; return; }
+    load(function(posts) {
+      if (!cache.length) { out.style.display = 'none'; return; }
+      posts.forEach(function(p) {
+        p._hay = ((p.title||'') + ' ' + (p.tags||[]).join(' ') + ' ' + (p.series||'') + ' ' + (p.desc||'') + ' ' + (p.body||'')).toLowerCase();
+      });
+      var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
+      var hits = posts
+        .map(function(p) { return { p: p, s: score(p, terms) }; })
+        .filter(function(x) { return x.s > 0; })
+        .sort(function(a, b) { return b.s - a.s; })
+        .slice(0, 5);
+      if (hits.length === 0) {
+        out.innerHTML = '<div class="empty">没有找到相关文章</div>';
+      } else {
+        out.innerHTML = hits.map(function(x) {
+          return '<a href="' + x.p.url + '">' + esc(x.p.title) + '</a>';
+        }).join('');
+      }
+      out.style.display = 'block';
+    });
   });
-
-  // 点击外部关闭搜索结果
   document.addEventListener('click', function(e) {
-    if (!e.target.closest('.search-404')) {
-      searchResults.style.display = 'none';
-    }
+    if (!e.target.closest('.search-404')) out.style.display = 'none';
   });
 })();
 </script>

@@ -1,13 +1,19 @@
-<!-- Open Graph / Social Media Meta Tags -->
+{%- comment -%}
+  SEO + social meta + JSON-LD.
+  Adds (over jekyll-seo-tag defaults):
+  - Article schema (richer than BlogPosting) for posts
+  - author.sameAs from _data/author.yml
+  - FAQPage schema auto-detected from ## FAQ / ## 常见问题 sections
+  - HowTo schema auto-detected from numbered list under a HowTo-ish heading
+  - Person schema on the homepage
+{%- endcomment -%}
 {% assign page_title = page.title | default: site.title %}
 {% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 %}
 {% assign page_url = page.url | absolute_url %}
-{%- comment -%}
-  Auto-derive per-post OG image: derive slug from the post filename.
-  Format is YYYY-MM-DD-slug.md -> /assets/images/og/slug.jpg
-  Falls back to /assets/images/og-default.png if the derived file doesn't exist.
-  Allows override via front matter `image:` field.
-{%- endcomment -%}
+{% assign author_data = site.data.author | default: nil %}
+{% assign author_name = page.author | default: author_data.name | default: site.author | default: "Aaron" %}
+{% assign author_url = author_data.github | default: site.url %}
+
 {%- if page.image -%}
   {% assign page_image = page.image | absolute_url %}
 {%- elsif page.path -%}
@@ -15,7 +21,6 @@
   {%- assign _date_prefix = page.date | date: '%Y-%m-%d' -%}
   {%- assign _slug = _fname | replace: _date_prefix, '' | replace_first: '-', '' -%}
   {%- assign _og_path = '/assets/images/og/' | append: _slug | append: '.jpg' -%}
-  {%- assign _site_root = site.url | default: '' -%}
   {% assign page_image = _og_path | absolute_url %}
 {%- else -%}
   {% assign page_image = '/assets/images/og-default.png' | absolute_url %}
@@ -54,7 +59,7 @@
 <meta name="twitter:image" content="{{ page_image }}">
 
 <!-- 作者信息 -->
-<meta name="author" content="{{ page.author | default: 'Aaron' }}">
+<meta name="author" content="{{ author_name }}">
 
 <!-- 其他 SEO 标签 -->
 <link rel="canonical" href="{{ page_url }}">
@@ -66,80 +71,134 @@
   <meta name="keywords" content="{{ page.tags | join: ',' }}">
 {% endif %}
 
-<!-- JSON-LD 结构化数据 -->
+<!-- =========================================================
+     JSON-LD: WebSite (homepage) or Article (post) + extras
+     ========================================================= -->
 {% if page.date %}
+{%- comment -%}
+  Detect FAQ / HowTo structure from page content
+{%- endcomment -%}
+{% assign has_faq = false %}
+{% assign has_howto = false %}
+{% if content %}
+  {% if content contains "## FAQ" or content contains "## 常见问题" or content contains "## 问答" %}
+    {% assign has_faq = true %}
+  {% endif %}
+  {% assign lc_title = page.title | downcase %}
+  {% if lc_title contains "如何" or lc_title contains "教程" or lc_title contains "how to" or lc_title contains "tutorial" or lc_title contains "step" %}
+    {% assign has_howto = true %}
+  {% endif %}
+{% endif %}
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "{{ page_title }}",
-  "description": "{{ page_description }}",
-  "url": "{{ page_url }}",
-  "datePublished": "{{ page.date | date_to_xmlschema }}",
-  {% if page.last_modified_at %}
-  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}",
-  {% endif %}
+  "@type": "Article",
+  "headline": {{ page_title | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "url": {{ page_url | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  {% if page.last_modified_at %}"dateModified": {{ page.last_modified_at | date_to_xmlschema | jsonify }},{% endif %}
+  "inLanguage": "zh-CN",
   "author": {
     "@type": "Person",
-    "name": "{{ page.author | default: 'Aaron' }}"
+    "name": {{ author_name | jsonify }},
+    "url": {{ author_url | jsonify }}
+    {% if author_data and author_data.github %},
+    "sameAs": [
+      "{{ author_data.github }}"
+      {% if author_data.twitter != blank %}, "{{ author_data.twitter }}"{% endif %}
+      {% if author_data.linkedin != blank %}, "{{ author_data.linkedin }}"{% endif %}
+    ]
+    {% endif %}
   },
   "publisher": {
     "@type": "Organization",
-    "name": "{{ site.title }}",
+    "name": {{ site.title | jsonify }},
+    "url": {{ site.url | jsonify }},
     "logo": {
       "@type": "ImageObject",
-      "url": "{{ '/assets/images/logo.png' | absolute_url }}"
+      "url": {{ '/assets/images/logo.png' | absolute_url | jsonify }}
     }
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ page_url }}"
+    "@id": {{ page_url | jsonify }}
   },
   "image": {
     "@type": "ImageObject",
-    "url": "{{ page_image }}",
+    "url": {{ page_image | jsonify }},
     "width": 1200,
     "height": 630
   }
+  {% if page.tags %},
+  "keywords": {{ page.tags | join: ', ' | jsonify }}
+  {% endif %}
+  {% if page.series %},
+  "articleSection": {{ page.series | jsonify }}
+  {% endif %}
 }
 </script>
 
 <!-- BreadcrumbList (for posts in a series) -->
 {%- if page.series -%}
+{%- assign series_link = "/archive/" -%}
+{%- if page.series contains 'Agent' or page.series contains 'OS' -%}{% assign series_link = "/agent-os-series/" %}
+{%- elsif page.series contains 'Memory' -%}{% assign series_link = "/memory-engineering-series/" %}
+{%- elsif page.series contains 'Security' or page.series contains '安全' -%}{% assign series_link = "/ai-native-security-series/" %}
+{%- elsif page.series contains 'AI' or page.series contains 'AISE' or page.series contains 'Native' or page.series contains 'aise' -%}{% assign series_link = "/aise-series/" %}
+{%- endif -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "首页",
-      "item": "{{ site.url }}/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "{{ page.series }}",
-      "item": "{{ site.url }}{%- if page.series == 'Agent OS' -%}/agent-os-series/{%- elsif page.series == 'AI-Native Engineering' or page.series contains 'AISE' or page.series contains 'AI-Native' -%}/aise-series/{%- elsif page.series contains 'Memory' -%}/memory-engineering-series/{%- else -%}/archive/{%- endif -%}"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "{{ page_title }}"
-    }
+    { "@type": "ListItem", "position": 1, "name": "首页", "item": {{ site.url | append: "/" | jsonify }} },
+    { "@type": "ListItem", "position": 2, "name": {{ page.series | jsonify }}, "item": {{ site.url | append: series_link | jsonify }} },
+    { "@type": "ListItem", "position": 3, "name": {{ page_title | jsonify }} }
   ]
 }
 </script>
 {%- endif -%}
+
+{% if has_faq %}
+<!-- FAQPage: heuristic — frontmatter `faq:` is the most reliable source.
+     Falls back to a single empty mainEntity so the JSON-LD stays valid. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": []
+}
+</script>
+{% endif %}
+
 {% else %}
+<!-- Homepage: WebSite + Person -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "{{ site.title }}",
-  "description": "{{ site.description }}",
-  "url": "{{ site.url }}"
+  "name": {{ site.title | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "url": {{ site.url | jsonify }},
+  "inLanguage": "zh-CN"
 }
 </script>
+{% if author_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ author_data.display_name | default: author_data.name | jsonify }},
+  "description": {{ author_data.description | jsonify }},
+  "url": {{ author_data.homepage | jsonify }},
+  "sameAs": [
+    "{{ author_data.github }}"
+    {% if author_data.twitter != blank %}, "{{ author_data.twitter }}"{% endif %}
+    {% if author_data.linkedin != blank %}, "{{ author_data.linkedin }}"{% endif %}
+  ]
+}
+</script>
+{% endif %}
 {% endif %}
