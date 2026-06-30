@@ -47,4 +47,65 @@
 
 ---
 
-*Last updated: 2026-03-09*
+## 第 6 轮优化（2026-06-30）
+
+新能力，新行为：
+
+- **全文搜索**（`/assets/search.json`）：构建时由 `_plugins/search_index_generator.rb` 生成。`site-search.html` 默认 fetch 索引并按 title / tag / body 加权打分。键盘 ↑/↓/Enter 可导航。
+- **首页分页**：10 篇 / 页，`/page2/` `/page3/` …… 用 `jekyll-paginate`。
+- **Mermaid 条件加载**：仅当页面含 mermaid 块时动态加载（节省 ~3MB 阻塞），固定版本 + SRI。
+- **TOC / Share buttons**：每篇 post 自动获得右侧 TOC（移动端隐藏）+ 底部分享栏（Twitter / LinkedIn / 复制链接）。Frontmatter 加 `toc: false` 可关闭 TOC。
+- **Series 落地页改动态**：4 个手写 HTML 删了，换成 `_layouts/series.html` + `_series/*.md`。每个 series page 用 `series_match` Liquid 表达式做模糊匹配，能吸收 AISE 系列混乱的命名（"AI-Native软件工程系列 #N" / "AI-Native Engineering" / "aise" 都收）。
+- **Per-series RSS**：`/series/{slug}/feed.xml` 自动生成（4 个 series）。
+- **结构化数据**：post 用 `Article` schema 而非 `BlogPosting`（更丰富），homepage 加 `Person` schema，breadcrumb 自动按 series 跳转。
+- **Web Vitals 上报**：LCP/CLS/INP/FCP/TTFB → Plausible custom events。
+- **CSP meta fallback**：GH Pages 不解析 `_headers`，所以加 `<meta http-equiv="Content-Security-Policy">` 兜底。
+- **Favicon 多尺寸**：`scripts/generate-favicons.py` 一键生成 .ico + 16/32/180/192/512。
+- **Lighthouse CI + HTML validate CI**：周跑 + push 触发，阈值 perf≥90 / a11y≥95 / seo≥95。
+- **新页面**：`/now/` `/uses/` `/colophon/`。
+- **404 动态化**：从 `site.posts` 取最新 8 篇 + 中段 3 篇，不用硬编码。
+
+### 模板行为变化（写新 post 时须知）
+
+- 不用再手写 share 按钮
+- 不用再加 `<style>` 块（全部在 `style.scss`）
+- 写 series 时 frontmatter 写一个**简短**的 `series:` 字符串即可，会被 series page 模糊匹配
+- SVG 资源命名：`<post-slug>-NN-figure-name.svg`，对应 frontmatter 自动找 OG 图
+
+### 新增 / 修改的文件速查
+
+新增：
+- `_plugins/search_index_generator.rb`
+- `_plugins/series_feeds.rb`
+- `_layouts/series.html`
+- `_series/{agent-os,memory-engineering,ai-native-security,aise}.md`
+- `now.md`, `uses.md`, `colophon.md`
+- `_data/author.yml`
+- `scripts/generate-favicons.py`
+- `static/_headers`
+- `.github/workflows/lighthouse.yml`, `.github/workflows/html-validate.yml`
+- `.lighthouserc.json`, `.htmlvalidate.json`
+- `assets/images/favicons/*` (自动生成)
+
+修改：
+- `_config.yml`（加 jekyll-paginate）
+- `Gemfile`（加 jekyll-paginate）
+- `_layouts/post.html`（接 TOC + share-buttons）
+- `_includes/head.html`（meta CSP + favicon 多尺寸 + Mermaid 条件 + Web Vitals）
+- `_includes/seo.html`（Article / FAQ / HowTo schema + author sameAs）
+- `_includes/site-search.html`（全文 fetch + 加权打分 + 键盘导航）
+- `_includes/toc.html`（变量对齐 + 简化）
+- `_includes/share-buttons.html`（样式整合 + a11y 完善）
+- `index.html`（paginate + 类名前缀）
+- `404.html`（动态推荐 + 全文搜索）
+- `site.webmanifest`（favicon 路径）
+- `assets/css/style.scss`（吸收 230 行内联样式 + TOC / share / pagination 样式）
+
+删除：
+- `_includes/{newsletter,series-nav,series-progress,share-card}.html`
+- `{agent-os,memory-engineering,ai-native-security,aise}-series.html`（手写）
+- `tags.html`（与 tags.md 重复）
+
+---
+
+*Last updated: 2026-06-30*
