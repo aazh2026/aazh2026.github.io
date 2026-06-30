@@ -1,5 +1,5 @@
 ---
-title: '当 AI 编程走向"确定性"：Dynamic Workflows 与 Agent Harness 的殊途同归'
+title: "当 AI 编程走向\"确定性\"：Dynamic Workflows 与 Agent Harness 的殊途同归"
 date: 2026-05-29T00:00:00+08:00
 layout: post
 author: "@postcodeeng"

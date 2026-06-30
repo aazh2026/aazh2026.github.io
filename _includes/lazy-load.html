@@ -49,28 +49,3 @@
   });
 })();
 </script>
-
-<style>
-  /* 图片加载前的占位样式 */
-  img[loading="lazy"] {
-    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-    background-size: 200% 100%;
-    animation: loading-shimmer 1.5s infinite;
-  }
-  
-  @keyframes loading-shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-  
-  /* 图片加载完成后移除动画 */
-  img[loading="lazy"][src]:not([src=""]) {
-    animation: none;
-    background: none;
-  }
-  
-  [data-theme="dark"] img[loading="lazy"] {
-    background: linear-gradient(90deg, #16213e 25%, #1a1a2e 50%, #16213e 75%);
-    background-size: 200% 100%;
-  }
-</style>

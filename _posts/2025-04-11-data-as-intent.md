@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '数据即Intent：当数据成为新的编程语言'
+title: "数据即Intent：当数据成为新的编程语言"
 date: 2026-03-09T10:00:00+08:00
 tags: [AI-Native软件工程, 数据工程, 数据质量]
 description: "在AI系统中，数据就是Intent——高质量数据决定高质量Intent，进而决定更好的模型行为，数据-模型-应用形成正向飞轮。"

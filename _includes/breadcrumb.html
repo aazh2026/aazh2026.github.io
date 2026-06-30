@@ -1,6 +1,6 @@
 <!-- 面包屑导航 -->
 {% if page.layout == 'post' %}
-<nav class="breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;">
+<nav class="breadcrumb" style="margin-bottom: 1.5rem; font-size: 0.9rem; color: #888;" aria-label="面包屑导航">
   <a href="/" style="color: #667eea; text-decoration: none;">首页</a>
   <span style="margin: 0 0.5rem;">></span>
   
@@ -15,15 +15,3 @@
   <span style="color: #666;">{{ page.title }}</span>
 </nav>
 {% endif %}
-
-<style>
-  [data-theme="dark"] .breadcrumb {
-    color: #888;
-  }
-  [data-theme="dark"] .breadcrumb a {
-    color: #7b8cde;
-  }
-  [data-theme="dark"] .breadcrumb span:last-child {
-    color: #b0b0b0;
-  }
-</style>

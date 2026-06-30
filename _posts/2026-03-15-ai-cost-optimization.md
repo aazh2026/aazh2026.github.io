@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: 'AI成本优化方法论：从粗放使用到精打细算'
+title: "AI成本优化方法论：从粗放使用到精打细算"
 date: 2026-03-15T09:00:00+08:00
 tags: [AI成本, Token优化, 成本监控, 智能路由, 模型选择]
 description: "Token成本占比超70%是优化首要目标，Prompt工程性价比高于架构优化，智能路由+缓存策略可带来10倍成本差异。"

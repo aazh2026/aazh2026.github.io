@@ -6,33 +6,6 @@
   <div class="reading-progress-bar" id="reading-progress"></div>
 </div>
 
-<style>
-  /* 进度条容器 */
-  .reading-progress-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: transparent;
-    z-index: 1001;
-  }
-  
-  /* 进度条 */
-  .reading-progress-bar {
-    height: 100%;
-    background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-    width: 0%;
-    transition: width 0.1s ease-out;
-    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
-  }
-  
-  /* 深色模式下发光效果 */
-  [data-theme="dark"] .reading-progress-bar {
-    box-shadow: 0 0 15px rgba(129, 140, 248, 0.6);
-  }
-</style>
-
 <script>
 (function() {
   function initReadingProgress() {

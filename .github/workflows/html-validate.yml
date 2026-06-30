@@ -36,4 +36,11 @@ jobs:
         run: npm install --no-save html-validate@8
 
       - name: Validate built HTML
-        run: npx html-validate "_site/**/*.html" --config .htmlvalidate.json
+        # jekyll-redirect-from emits bare meta-refresh stub HTML for each
+        # `redirect_from:` entry — those pages intentionally omit <head>/<body>
+        # wrappers (browsers only need the meta refresh). Skip them; the
+        # canonical post page is what gets validated.
+        run: |
+          find _site -name "*.html" \
+            -not -exec grep -l '<meta http-equiv="refresh"' {} \; \
+            | xargs npx html-validate --config .htmlvalidate.json

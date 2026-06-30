@@ -4,21 +4,26 @@ title: 标签
 permalink: /tags/
 ---
 
+{%- comment -%}
+  Liquid's `slugify` filter strips non-ASCII characters (Chinese tags all
+  collapse to ""), producing duplicate/empty IDs. Use a tag-index prefix so
+  every section has a unique id regardless of the tag name.
+{%- endcomment -%}
 <div class="tags-page">
   <h1>🏷️ 标签云</h1>
-  
+
   {% assign sorted_tags = site.tags | sort %}
-  
+
   <div class="tag-cloud-page">
     {% for tag in sorted_tags %}
-    <a href="#{{ tag[0] | slugify }}" class="tag">#{{ tag[0] }}</a>
+    <a href="#tag-{{ forloop.index }}" class="tag">#{{ tag[0] }}</a>
     {% endfor %}
   </div>
-  
+
   <hr style="margin: 48px 0; border: none; border-top: 1.5px solid var(--g200);">
-  
+
   {% for tag in sorted_tags %}
-  <section id="{{ tag[0] | slugify }}" class="tag-section" style="margin-bottom: 40px;">
+  <section id="tag-{{ forloop.index }}" class="tag-section" style="margin-bottom: 40px;">
     <h2 style="font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 16px; color: var(--clay);">#{{ tag[0] }}</h2>
     <ul class="archive-list">
       {% for post in tag[1] %}

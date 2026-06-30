@@ -17,36 +17,6 @@
                font-size: 20px; cursor: pointer; box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s;">↑</button>
 
-<style>
-  /* 深色模式样式 */
-  [data-theme="dark"] {
-    --bg-color: #1a1a2e;
-    --text-color: #eaeaea;
-    --text-secondary: #b0b0b0;
-    --code-bg: #16213e;
-    --link-color: #7b8cde;
-  }
-  [data-theme="dark"] body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  [data-theme="dark"] .post-content,
-  [data-theme="dark"] .post-header {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
-  [data-theme="dark"] a { color: var(--link-color); }
-  [data-theme="dark"] pre, [data-theme="dark"] code {
-    background-color: var(--code-bg);
-    color: #eaeaea;
-  }
-  
-  /* 按钮悬停效果 */
-  #dark-mode-toggle:hover, #back-to-top:hover {
-    transform: scale(1.1);
-  }
-</style>
-
 <script>
 (function() {
   // 深色模式

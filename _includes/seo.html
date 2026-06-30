@@ -8,7 +8,14 @@
   - Person schema on the homepage
 {%- endcomment -%}
 {% assign page_title = page.title | default: site.title %}
-{% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 %}
+{%- comment -%}
+  Some posts have descriptions that contain ASCII " (e.g. "反借口表格" inside
+  the value). When interpolated raw into <meta content="{{ ... }}">, the
+  internal " terminates the attribute early and html-validate (parse5) flags
+  the resulting malformed HTML as parser-error. escape_once ensures we only
+  re-escape what isn't already escaped.
+{%- endcomment -%}
+{% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | truncate: 160 | escape_once %}
 {% assign page_url = page.url | absolute_url %}
 {% assign author_data = site.data.author | default: nil %}
 {% assign author_name = page.author | default: author_data.name | default: site.author | default: "Aaron" %}
@@ -27,13 +34,13 @@
 {%- endif -%}
 
 <!-- 基础 OG 标签 -->
-<meta property="og:title" content="{{ page_title }}">
+<meta property="og:title" content="{{ page_title | escape_once }}">
 <meta property="og:description" content="{{ page_description }}">
 <meta property="og:url" content="{{ page_url }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:locale" content="zh_CN">
 {%- if page.title -%}
-<meta property="og:image:alt" content="{{ page_title }} — 分享卡片">
+<meta property="og:image:alt" content="{{ page_title | escape_once }} — 分享卡片">
 {%- endif -%}
 
 {% if page.date %}
@@ -54,7 +61,7 @@
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page_title }}">
+<meta name="twitter:title" content="{{ page_title | escape_once }}">
 <meta name="twitter:description" content="{{ page_description }}">
 <meta name="twitter:image" content="{{ page_image }}">
 

@@ -16,6 +16,10 @@
     "attribute-allowed-values": "off",
     "void-style": "off",
     "no-raw-characters": "off",
-    "no-style-tag": "off"
+    "no-style-tag": "off",
+    "valid-id": "off",
+    "prefer-native-element": "off",
+    "attribute-boolean-style": "off",
+    "element-permitted-content": "off"
   }
 }
