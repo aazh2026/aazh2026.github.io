@@ -11,13 +11,17 @@
 发布前必须检查：
 
 - [ ] **TL;DR** 有4点核心观点？
-- [ ] **结构导航** 有6个章节锚点？
 - [ ] **段落** 每段不超过4行？
 - [ ] **Key Insight** 每章至少1个？
-- [ ] **对比表格** 有传统 vs AI-Native？
-- [ ] **Takeaway** 结尾有对比总结？
+- [ ] **代码围栏** 都有语言标记？（`\`\`\`python` / `\`\`\`text` / `\`\`\`yaml` …）
+- [ ] **图表** `<object>` 标签都有 `aria-label`？（CI 会拦）
 
-**全勾才能发布！**
+**推荐（按文章类型）**：
+
+- 规范/方法论文章：**对比表格**（传统 vs AI-Native）+ **Takeaway**
+- 叙事/随笔文章：可省略上面两项，专注 TL;DR + Key Insight 即可
+
+**关于"## 📋 本文结构"导航**：2026-05 起改为可选。旧式模板（`_templates/post-template.md`）保留，新式模板（`_templates/article-template.md`，叙事驱动）默认不写。**全勾才能发布！**
 
 ---
 
@@ -31,8 +35,11 @@ layout: post
 title: "标题要有吸引力，带问号或数字更佳"
 date: 2026-XX-XXT00:00:00+08:00  # 注意：用00:00:00避免时间问题
 tags: [AI-Native软件工程, 标签1, 标签2]
-author: Aaron
-series: AI-Native软件工程系列 #XX
+author: "@postcodeeng"            # 统一用 @postcodeeng（GitHub handle）
+series: aise                      # 用 _data/series-slugs.yml 里的规范 slug
+description: "..."                 # 用于 SEO + PageFind 摘要
+last_modified_at: 2026-XX-XX       # 改稿时更新；为空时显示原始 date
+image: /assets/images/og/...jpg    # 显式 OG 图；不写则按命名约定推断
 ---
 
 > **TL;DR**
@@ -205,12 +212,28 @@ Step 2: ...
 | 错误 | 正确做法 |
 |------|---------|
 | 段落超过6行 | 控制在2-4行 |
-| 纯文字无表格 | 至少1个对比表格 |
+| 纯文字无表格 | 规范文章加对比表格；叙事文章不强求 |
 | 无TL;DR | 必须有4点TL;DR |
-| 无结构导航 | 6章节锚点导航 |
+| 无结构导航 | 旧式模板加 6 章节锚点；新式模板省略 |
 | 标题用过去时 | 用现在时或问句 |
 | 日期时间随意 | 统一用 `T00:00:00+08:00` |
 | 链接到外部无描述 | 简要说明链接内容 |
+| `<object>` 标签用 `aria-label="插图"` | 写具体语义（脚本自动派生：前缀用最近 `##` 标题） |
+| 裸 ```` ``` ```` 代码围栏 | 必须带语言标记：`\`\`\`python` / `\`\`\`yaml` / `\`\`\`text` … |
+| `series: "AI-Native Engineering"` 等自由字符串 | 用 `_data/series-slugs.yml` 里的规范 slug：`aise` / `agent-os` / `memory-engineering` / `ai-native-security` / `industry-insight` |
+| 作者写 `@aaron` / `Charlie` | 统一 `@postcodeeng` |
+
+### 🔧 自动修复脚本（按需）
+
+| 脚本 | 作用 |
+|------|------|
+| `node scripts/fix-aria-labels.js` | 把 `<object aria-label="插图">` 替换为基于最近 `##` 标题的语义标签 |
+| `node scripts/check-aria-labels.js` | CI 检查；占位标签会让构建失败 |
+| `node scripts/fix-code-fence-langs.js` | 给裸围栏自动加语言标记（启发式：text/bash/yaml/json/python/...） |
+| `node scripts/check-code-fence-langs.js` | CI 检查；裸围栏会让构建失败 |
+| `node scripts/fix-series.js` | 把历史 series 字符串折叠为规范 slug |
+| `node scripts/check-series.js` | CI 检查；未知 series 会让构建失败 |
+| `node scripts/check-svgo.js` | CI 检查；未压缩 SVG 会让构建失败 |
 
 ---
 
