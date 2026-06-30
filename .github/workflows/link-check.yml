@@ -53,6 +53,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm deps
+        run: npm ci
+
+      - name: "Pre-build: verify SVGs are svgo-optimized"
+        run: node scripts/check-svgo.js
 
       - name: "Pre-build: internal link check"
         run: node scripts/check-internal-links.js

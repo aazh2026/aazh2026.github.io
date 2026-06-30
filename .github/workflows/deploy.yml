@@ -21,14 +21,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
           bundler-cache: true
           cache-version: 0
-          
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install npm deps (svgo for SVG verification)
+        run: npm ci
+
+      - name: Verify SVGs are svgo-optimized
+        run: node scripts/check-svgo.js
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
