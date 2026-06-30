@@ -1310,6 +1310,54 @@ footer .k {
   flex-shrink: 0;
 }
 
+/* Year groupings on series index pages (used when a series has >2 years of posts) */
+.series-year-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 0 24px 0;
+  border-bottom: 1px solid var(--g200);
+  margin-bottom: 24px;
+}
+.series-year-link {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--g200);
+  color: var(--slate);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.series-year-link:hover {
+  border-color: var(--clay);
+  color: var(--clay);
+  background: rgba(217, 119, 87, 0.04);
+}
+.series-year {
+  margin-bottom: 32px;
+  scroll-margin-top: 80px;
+}
+.year-heading {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--slate);
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  border-bottom: 2px solid var(--clay);
+  padding-bottom: 8px;
+}
+.year-count {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--g500);
+}
+
 /* ==================== Now / Uses / Colophon ==================== */
 .note-page {
   max-width: 720px;

@@ -27,21 +27,37 @@ layout: default
 
   {% if posts.size == 0 %}
   <p style="color: var(--g500); padding: 24px 0;">该系列还没有文章。</p>
-  {% else %}
-  <ol class="series-list">
-    {% for post in posts %}
-    {%- assign _is_start = false -%}
-    {%- if page.start_here and post.url == page.start_here -%}
-      {%- assign _is_start = true -%}
-    {%- endif -%}
-    <li{% if _is_start %} class="series-start"{% endif %}>
-      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      {%- if _is_start -%}
-        <span class="start-badge" title="系列推荐起点">⭐ 从这里开始</span>
-      {%- endif -%}
-    </li>
+  {%- else -%}
+  {%- assign posts_by_year = posts | group_by: "date | date: '%Y'" | sort: "name" | reverse -%}
+  {%- assign year_count = posts_by_year | size -%}
+
+  {%- if year_count > 2 -%}
+  <nav class="series-year-nav" aria-label="按年份跳转">
+    {% for group in posts_by_year %}
+    <a href="#year-{{ group.name }}" class="series-year-link">{{ group.name }} ({{ group.items | size }})</a>
     {% endfor %}
-  </ol>
-  {% endif %}
+  </nav>
+  {%- endif -%}
+
+  {% for group in posts_by_year %}
+  <section class="series-year" id="year-{{ group.name }}" aria-labelledby="heading-{{ group.name }}">
+    <h2 class="year-heading" id="heading-{{ group.name }}">{{ group.name }}<span class="year-count">{{ group.items | size }} 篇</span></h2>
+    <ol class="series-list">
+      {% for post in group.items %}
+      {%- assign _is_start = false -%}
+      {%- if page.start_here and post.url == page.start_here -%}
+        {%- assign _is_start = true -%}
+      {%- endif -%}
+      <li{% if _is_start %} class="series-start"{% endif %}>
+        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        {%- if _is_start -%}
+          <span class="start-badge" title="系列推荐起点">⭐ 从这里开始</span>
+        {%- endif -%}
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+  {%- endif -%}
 </div>
