@@ -71,8 +71,8 @@
   <script>
     (function() {
       function pageHasMermaid() {
-        // Two syntaxes supported: <div class="mermaid">...</div> and
-        // <pre><code class="language-mermaid">...</code></pre>
+        // Two syntaxes supported: div.mermaid (kramdown) and
+        // pre > code.language-mermaid (raw markdown fence).
         if (document.querySelector('.mermaid, code.language-mermaid, code.lang-mermaid')) {
           return true;
         }
@@ -87,7 +87,7 @@
         s.referrerPolicy = 'no-referrer';
         s.integrity = 'sha384-WmdflGW9aGfoBdHc4rRyWzYuAjEmDwMdGdiPNacbwfGKxBW/SO6guzuQ76qjnSlr';
         s.onload = function() {
-          // Pre-process <pre><code class="language-mermaid"> blocks into <div class="mermaid">
+          // Normalize pre > code.language-mermaid into a div.mermaid for mermaid.render
           document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid').forEach(function(b) {
             var pre = b.parentElement;
             var div = document.createElement('div');
