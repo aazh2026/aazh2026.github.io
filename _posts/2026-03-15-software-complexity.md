@@ -5,7 +5,7 @@ title: "软件复杂性的本质：与 AI 共舞"
 date: 2026-03-15
 tags: [软件工程, AI, 复杂性, 人月神话, 系统思考]
 description: "Brooks 的框架依然有效——本质复杂度源自问题本身，偶然复杂度来自解决方案。AI 消除旧复杂度同时引入新类型（认知分裂、验证负担、信任校准），复杂性守恒仅转化形式。"
-series: AI-Native Engineering
+series: aise
 ---
 
 > *"There is no single development, in either technology or management technique, which by itself promises even one order-of-magnitude improvement within a decade in productivity, in reliability, in simplicity."*
@@ -22,9 +22,9 @@ series: AI-Native Engineering
 > 3. **复杂性是守恒的** — AI 没有消除复杂性总量，只是将它从一种形式转化为另一种形式：写代码的复杂性 → 验证代码的复杂性，记忆的复杂性 → 理解的复杂性，手动实现的复杂性 → 认知协调的复杂性。
 > 4. **理解比生成更有价值** — 在 AI 时代，最有价值的程序员不是最能写代码的人，而是最能判断该写什么、不该写什么、以及写完后如何验证的人。
 
-<object data="/assets/images/2026-03-15-software-complexity-01-ai-complexity-types.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-15-software-complexity-01-ai-complexity-types.svg" type="image/svg+xml" width="100%" aria-label="2026-03-15-software-complexity-01-ai-complexity-types 图示" role="img"></object>
 
-<object data="/assets/images/2026-03-15-software-complexity-02-complexity-taxonomy.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-15-software-complexity-02-complexity-taxonomy.svg" type="image/svg+xml" width="100%" aria-label="2026-03-15-software-complexity-02-complexity-taxonomy 图示" role="img"></object>
 
 ---
 
@@ -337,7 +337,7 @@ AI 没有消除复杂性，它只是：
 
 **工具改变了复杂性的分布，但没有减少复杂性的总量**。
 
-<object data="/assets/images/2026-03-15-software-complexity-03-complexity-transformation.svg" type="image/svg+xml" width="100%" aria-label="7.4 复杂性的守恒定律（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-software-complexity-03-complexity-transformation.svg" type="image/svg+xml" width="100%" aria-label="7.4 复杂性的守恒定律" role="img"></object>
 
 > 💡 **Key Insight**
 >

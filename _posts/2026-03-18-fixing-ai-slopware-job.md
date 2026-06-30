@@ -6,7 +6,7 @@ permalink: /fixing-ai-slopware-high-paying-job/
 tags: [AI-Native, Career, Engineering, AI-Slopware]
 description: '揭示 AI 编程工具催生的新职业：修复"垃圾代码"的高薪 Cleanup 工程，分析技术债务清算的经济学逻辑与架构救援案例。'
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -45,7 +45,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%" aria-label="幻灭时刻（插图）" role="img"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-01-symptom-types.svg" type="image/svg+xml" width="100%" aria-label="幻灭时刻" role="img"></object>
 
 ## "AI 垃圾代码"的典型症状
 
@@ -217,7 +217,7 @@ AI 不会取代开发者，但会**分化**开发者市场：
 - **只会用 AI 的开发者**：被低价竞争挤压
 - **能修复 AI 代码的开发者**：稀缺，高价值
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-03-career-advice.svg" type="image/svg+xml" width="100%" aria-label="给开发者的职业建议（插图）" role="img"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-03-career-advice.svg" type="image/svg+xml" width="100%" aria-label="给开发者的职业建议" role="img"></object>
 
 ### 高价值技能：AI 不擅长的那些
 
@@ -243,7 +243,7 @@ AI 不会取代开发者，但会**分化**开发者市场：
 
 ### AI 优先 ≠ 低质量优先
 
-<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-04-enterprise-warning.svg" type="image/svg+xml" width="100%" aria-label="AI 优先 ≠ 低质量优先（插图）" role="img"></object>
+<object data="/assets/images/2026-03-18-fixing-ai-slopware-job-04-enterprise-warning.svg" type="image/svg+xml" width="100%" aria-label="AI 优先 ≠ 低质量优先" role="img"></object>
 
 **AI 是加速器，不是替代品。**
 

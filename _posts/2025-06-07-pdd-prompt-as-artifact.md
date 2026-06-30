@@ -5,7 +5,7 @@ date: 2025-06-07T00:00:00+08:00
 tags: [AI-Native软件工程, PDD, Prompt工程, 版本控制, Code Review]
 description: "Prompt是第四类核心制品，需要版本控制、Code Review和CI/CD，与源代码享有同等待遇。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #5
+series: aise
 ---
 
 > **TL;DR**
@@ -52,7 +52,7 @@ series: AI-Native软件工程系列 #5
 
 ## Prompt版本控制
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Prompt版本控制（插图）" role="img"></object>
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Prompt版本控制" role="img"></object>
 
 > 💡 **Key Insight**
 >
@@ -90,7 +90,7 @@ series: AI-Native软件工程系列 #5
 
 Prompt 的 Git Commit Message 建议采用 Conventional Commits 的变体，格式为 `prompt(scope): description`，其中 scope 表示 Prompt 所属的业务场景或功能模块。例如：
 
-```
+```text
 prompt(code-review): 增加对安全敏感字段的检查规则
 prompt(user-onboarding): 优化新用户引导Prompt，减少幻觉输出
 prompt/bugfix: 修复PDD文档生成Prompt的格式崩塌问题
@@ -102,7 +102,7 @@ prompt/bugfix: 修复PDD文档生成Prompt的格式崩塌问题
 
 建议在仓库中建立 `prompts/` 目录，按业务域或功能模块组织，结构示例：
 
-```
+```text
 prompts/
 ├── code-review/
 │   ├── security-check.md
@@ -159,7 +159,7 @@ prompts/
 
 **提交的Prompt：**
 
-```
+```text
 你是一个代码审查助手。当用户粘贴一段代码，你需要：
 1. 检查是否有安全漏洞
 2. 检查是否符合最佳实践
@@ -180,7 +180,7 @@ prompts/
 
 **修订后的Prompt核心片段：**
 
-```
+```text
 当用户粘贴代码时，首先判断是否为有效代码（非代码内容返回"请粘贴代码段"）。若是代码，按以下顺序审查：
 
 1. 安全漏洞：重点检查 [SQL注入, XSS, 敏感信息(API密钥/密码/密钥明文), 不安全的依赖引用]
@@ -223,7 +223,7 @@ prompts/
 
 ### Prompt测试金字塔
 
-<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Prompt测试金字塔（插图）" role="img"></object>
+<object data="/assets/images/2025-06-07-pdd-prompt-as-artifact-02-test-pyramid.svg" type="image/svg+xml" width="100%" aria-label="Prompt测试金字塔" role="img"></object>
 
 ### Prompt CI Pipeline
 

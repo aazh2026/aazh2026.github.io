@@ -5,8 +5,7 @@ date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 测试策略, 测试金字塔, AI生成测试, Agent协作]
 description: "测试金字塔重构为三层模型：AI生成单元测试、Agent协作集成测试、自然语言驱动E2E，测试从验证代码转向验证意图。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #17
-
+series: aise
 redirect_from:
   - /ai-native-testing-strategy.html
 ---
@@ -92,7 +91,7 @@ Mike Cohn 在 2009 年提出的测试金字塔是一个伟大的模型：
 
 ## AI-Native 测试三层模型
 
-<object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 测试三层模型（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-ai-native-testing-01-pyramid.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 测试三层模型" role="img"></object>
 
 > 💡 **Key Insight**
 > 
@@ -174,7 +173,7 @@ AI 生成的测试：
 2. **场景编排 Agent**：按照业务流程编排多个 Agent 的交互
 3. **断言验证 Agent**：验证整个流程的业务结果
 
-<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 方案：Multi-Agent 集成测试（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-ai-native-testing-02-agent-flow.svg" type="image/svg+xml" width="100%" aria-label="AI-Native 方案：Multi-Agent 集成测试" role="img"></object>
 
 ### 实战案例：电商订单流程
 
@@ -286,7 +285,7 @@ AI-Native 测试验证的是**意图**：
 
 **意图规范（Intent Spec）**是将业务需求转化为可验证描述的 DSL：
 
-```
+```yaml
  INTENT: "用户应能够查看自己的订单历史"
  GIVEN: 用户已登录且有 3 个历史订单
  WHEN: 用户访问订单页面
@@ -308,7 +307,7 @@ AI 验证引擎负责根据意图规范自动生成和执行验证：
 
 ### 意图到测试的自动生成流程
 
-```
+```text
 业务需求 → 意图规范 → AI 解析 → 测试生成 → 智能执行 → 验证报告
 ```
 

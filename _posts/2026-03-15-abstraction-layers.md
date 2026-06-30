@@ -6,7 +6,7 @@ categories: [编程, 架构, AI]
 tags: [abstraction, programming-languages, ai, software-engineering]
 description: "从机器码到自然语言是一部不断攀升抽象层级的历史，理解何时上浮、何时下沉，比记忆语法细节更有价值。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **自然语言是终极抽象层** — 但不意味着底层知识变得不重要
 > 4. **理解抽象层级本质** — 才能在新旧范式中找到平衡，成为驾驭而非被工具驾驭的工程师
 
-<object data="/assets/images/2026-03-15-abstraction-layers-01-evolution-timeline.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-15-abstraction-layers-01-evolution-timeline.svg" type="image/svg+xml" width="100%" aria-label="2026-03-15-abstraction-layers-01-evolution-timeline 图示" role="img"></object>
 
 ---
 
@@ -256,7 +256,7 @@ Joel Spolsky 在2002年提出：
 
 现代系统通常是多抽象层级的混合体：
 
-<object data="/assets/images/2026-03-15-abstraction-layers-01-hybrid-strategy.svg" type="image/svg+xml" width="100%" aria-label="混合策略：在不同层级使用合适的工具（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-abstraction-layers-01-hybrid-strategy.svg" type="image/svg+xml" width="100%" aria-label="混合策略：在不同层级使用合适的工具" role="img"></object>
 
 **原则**：在系统的每个部分使用能平衡**开发效率**和**运行效率**的抽象层级。
 

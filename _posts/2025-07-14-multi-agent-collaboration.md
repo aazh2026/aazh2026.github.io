@@ -5,7 +5,7 @@ date: 2025-07-14T10:00:00+08:00
 tags: [AI, Agent, Multi-Agent, Collaboration, Orchestration]
 description: "Multi-Agent通过Supervisor-Workers、Peer-to-Peer、Hierarchical三种架构实现规模化智能协作。"
 author: "@postcodeeng"
-series: "Agent-OS-Series"
+series: agent-os
 series_title: "从 SaaS 到 Agent OS"
 
 redirect_from:
@@ -26,7 +26,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-07-14-multi-agent-collaboration-04-taxonomy-hero.svg" type="image/svg+xml" width="100%" aria-label="2025-07-14-multi-agent-collaboration-04-taxonomy-hero 图示" role="img"></object>
 
 - [为什么需要 Multi-Agent？](#为什么需要-multi-agent)
 - [三种协作架构模式](#三种协作架构模式)
@@ -81,7 +81,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%" aria-label="Supervisor-Workers 主管-工作者模式（插图）" role="img"></object>
+<object data="/assets/images/2025-07-14-mac-01-supervisor-workers.svg" type="image/svg+xml" width="100%" aria-label="Supervisor-Workers 主管-工作者模式" role="img"></object>
 
 **适用场景：**
 - 任务可明确分解为独立子任务
@@ -96,7 +96,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%" aria-label="Peer-to-Peer 对等协作模式（插图）" role="img"></object>
+<object data="/assets/images/2025-07-14-mac-02-peer-to-peer.svg" type="image/svg+xml" width="100%" aria-label="Peer-to-Peer 对等协作模式" role="img"></object>
 
 **适用场景：**
 - 任务需要多轮协商
@@ -111,7 +111,7 @@ redirect_from:
 
 **结构：**
 
-<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%" aria-label="Hierarchical 层级组织模式（插图）" role="img"></object>
+<object data="/assets/images/2025-07-14-mac-03-hierarchical.svg" type="image/svg+xml" width="100%" aria-label="Hierarchical 层级组织模式" role="img"></object>
 
 **适用场景：**
 - 复杂组织模拟
@@ -155,7 +155,7 @@ Message Bus 是 Multi-Agent 系统的中枢神经——所有 Agent 不直接互
 
 基于能力的分配是静态路由：每个 Agent 在注册时声明自己的能力标签（擅长领域、语言、工具熟练度），Supervisor 在任务到来时根据需求匹配最合适的 Agent。伪代码逻辑：
 
-```
+```text
 task → Supervisor.match(agent.capabilities, task.requirements)
      → 选择历史表现最好 + 当前负载最低的那个
 ```

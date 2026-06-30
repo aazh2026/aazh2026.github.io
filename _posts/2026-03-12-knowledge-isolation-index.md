@@ -5,8 +5,7 @@ date: 2026-03-12T18:00:00+08:00
 tags: [AI-Native软件工程, 知识管理, 组织效能, 度量体系]
 description: "知识孤岛指数衡量团队对AI生成代码的集体理解度，理解度下降是隐性技术债务。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #45
-
+series: aise
 redirect_from:
   - /knowledge-isolation-index.html
 ---

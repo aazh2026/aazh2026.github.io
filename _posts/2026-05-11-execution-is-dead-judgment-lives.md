@@ -5,7 +5,7 @@ date: 2026-05-11T00:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Multi-Agent, 判断力, 工程组织]
 description: "AI让执行变得充裕，人类不再需要做执行者——真正稀缺的是定义方向、设定边界、验证结果的判断力，这是人类在AI时代的最终价值所在。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -53,7 +53,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-05-11-execution-is-dead-judgment-lives-01-era-shift.svg" type="image/svg+xml" width="100%" aria-label="执行已死，判断力永生（插图）" role="img"></object>
+<object data="/assets/images/2026-05-11-execution-is-dead-judgment-lives-01-era-shift.svg" type="image/svg+xml" width="100%" aria-label="执行已死，判断力永生" role="img"></object>
 
 ## 约束即注意力分配
 

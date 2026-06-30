@@ -5,7 +5,7 @@ date: 2026-03-17T10:00:00+08:00
 tags: [AI, Agent, SaaS, Product-Strategy, Architecture]
 description: "分析 SaaS 产品不做 Agent 层面临的三重风险与四重收益，梳理 Copilot、Workflow Automation、Autonomous Agent 三种切入模式的实现路径。"
 author: "@postcodeeng"
-series: AI-OS
+series: agent-os
 ---
 
 > **TL;DR**
@@ -166,7 +166,7 @@ Agent-enabled 产品的 Net Dollar Retention（净收入留存率）：
 
 ## Agent 层的 3 个切入点
 
-<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-01-evolution-path.svg" type="image/svg+xml" width="100%" aria-label="Agent 层的 3 个切入点（插图）" role="img"></object>
+<object data="/assets/images/2026-03-17-why-your-saas-needs-agent-layer-01-evolution-path.svg" type="image/svg+xml" width="100%" aria-label="Agent 层的 3 个切入点" role="img"></object>
 
 ### Copilot 模式：用户主导，AI 辅助
 

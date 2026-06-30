@@ -5,8 +5,7 @@ date: 2025-03-19T14:00:00+08:00
 tags: [AI产品, 商业战略, 护城河, API经济]
 description: "CopyAI估值11亿美元却市场份额腰斩——WriteSonic用同样的GPT-4 API、更低的定价在18个月内抢走30%市场。API调用无法构建竞争壁垒：技术优势可复制，规模效应被API提供商捕获，网络效应和转换成本趋近于零。真正的护城河来自垂直场景的专有数据、工作流嵌入和社区信任。"
 author: "@postcodeeng"
-series: AI产品洞察
-
+series: industry-insight
 redirect_from:
   - /api-economy-moat.html
 ---

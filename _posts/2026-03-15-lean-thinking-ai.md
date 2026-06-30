@@ -6,7 +6,7 @@ date: 2026-03-15T10:00:00+08:00
 categories: [AI-Native, 工程实践, 精益]
 tags: [lean, ai, waste-elimination, continuous-improvement, value-stream]
 description: "AI 将精益思想的浪费识别速度提升 10 倍，从'靠经验'变成'靠数据'——七种浪费的 AI 识别、价值流的自动可视化、持续改进飞轮的建立，构成 AI 时代的精益框架。"
-series: AI-Native软件工程
+series: aise
 ---
 
 > **TL;DR**

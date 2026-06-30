@@ -5,7 +5,7 @@ date: 2025-04-13T10:00:00+08:00
 tags: [AI-Native软件工程, 代码评审, 开发流程]
 description: "人类评审员因认知天花板严重bug遗漏率高达57%。代码评审不会消失，而是重生成三种AI-Native形态：事前预防、事中协作、事后学习。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -107,7 +107,7 @@ series: AI-Native Engineering
 
 ## 反直觉洞察：三种AI-Native评审形态
 
-<object data="/assets/images/2025-04-13-death-of-code-reviews-01-forms.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：三种AI-Native评审形态（插图）" role="img"></object>
+<object data="/assets/images/2025-04-13-death-of-code-reviews-01-forms.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：三种AI-Native评审形态" role="img"></object>
 
 代码评审不会消失，它会**重生**——变成三种全新的形态。
 

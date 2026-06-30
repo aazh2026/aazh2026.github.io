@@ -5,7 +5,7 @@ date: 2026-05-06T00:00:00+08:00
 tags: [AI-Native软件工程, Cost-Model, Context-Engineering, Agent, Architecture]
 description: "Agent成本的主要来源不是计算，而是上下文管理——上下文每年膨胀2-3倍，80%是噪声，四象限优化框架是2026年成本治理的核心。"
 author: Aaron
-series: AI-Native Engineering
+series: aise
 reading_time: 8
 ---
 

@@ -4,7 +4,7 @@ title: "写代码和评代码必须分开：AI 编程的正确 architecture"
 date: 2026-05-26T08:00:00+08:00
 tags: [AI-Native软件工程, 代码审查, Multi-Agent, 判断力与执行力分离]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "评判能力需要距离感，执行能力需要沉浸感——这两种认知状态是互斥的，AI 无法可靠评判自己的工作，因为结构上就没有\"外部视角\"这个选项。多模型交叉审查：当三个模型都认为某处有问题，误报概率接近于零。"
 ---
 

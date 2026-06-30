@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /openclaw-agent-swarm-consensus.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -51,8 +51,8 @@ OpenClaw的病毒式传播不是偶然的。在一个AI工具泛滥的时代，�
 ### OpenAI的"树状控制"模型
 
 传统Agent框架（包括OpenAI的Operator）采用的是**层级控制**（Hierarchical Control）：
-<object data="/assets/images/2025-02-25-swarm-01-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="OpenAI的&quot;树状控制&quot;模型（插图）" role="img"></object>
-<object data="/assets/images/2025-02-25-swarm-02-p2p.svg" type="image/svg+xml" width="100%" aria-label="OpenAI的&quot;树状控制&quot;模型（插图）" role="img"></object>
+<object data="/assets/images/2025-02-25-swarm-01-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="OpenAI的&quot;树状控制&quot;模型" role="img"></object>
+<object data="/assets/images/2025-02-25-swarm-02-p2p.svg" type="image/svg+xml" width="100%" aria-label="OpenAI的&quot;树状控制&quot;模型" role="img"></object>
 **结算**：
 如果验证通过，执行者获得奖励；如果失败，抵押代币被没收。
 

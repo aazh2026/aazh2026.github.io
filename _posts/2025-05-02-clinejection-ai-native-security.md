@@ -5,8 +5,7 @@ date: 2025-05-02T12:00:00+08:00
 tags: [AI-Native软件工程, 安全, DevSecOps, Clinejection]
 description: "Clinejection攻击利用AI的语义理解能力注入恶意指令，暴露传统边界防御在AI-Native架构中的彻底失效，需转向\"感知-决策-执行\"三环防护新范式。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #28
-
+series: aise
 redirect_from:
   - /clinejection-ai-native-security.html
 ---
@@ -222,9 +221,9 @@ Clinejection攻击不需要：
 
 基于Clinejection攻击的分析，我提出**AI-Native安全三环防护模型**：
 
-<object data="/assets/images/2025-05-02-security-01-rings.svg" type="image/svg+xml" width="100%" aria-label="框架概述（插图）" role="img"></object>
+<object data="/assets/images/2025-05-02-security-01-rings.svg" type="image/svg+xml" width="100%" aria-label="框架概述" role="img"></object>
 
-<object data="/assets/images/2025-05-02-security-02-workflow.svg" type="image/svg+xml" width="100%" aria-label="框架概述（插图）" role="img"></object>
+<object data="/assets/images/2025-05-02-security-02-workflow.svg" type="image/svg+xml" width="100%" aria-label="框架概述" role="img"></object>
 
 ### 第一环：感知监测层 (Perception Monitoring)
 

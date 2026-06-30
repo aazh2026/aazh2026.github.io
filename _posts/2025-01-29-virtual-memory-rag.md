@@ -5,7 +5,7 @@ title: '上下文窗口的\"虚拟内存\"化：当RAG成为分页机制'
 date: 2025-01-29T00:35:00+08:00
 tags: [RAG, 上下文窗口, 内存管理, LLM优化]
 description: "将操作系统虚拟内存思想引入LLM应用，以上下文窗口为RAM、向量库为磁盘，通过分页机制、LRU置换和工作集跟踪实现无限知识的可扩展管理。"
-series: Memory Engineering
+series: memory-engineering
 ---
 
 > **TL;DR**
@@ -76,7 +76,7 @@ OpenAI说GPT-4支持128K上下文，Claude说200K。
 
 ## RAG作为分页机制的设计
 
-<object data="/assets/images/2025-01-29-virtual-memory-rag-01-mapping.svg" type="image/svg+xml" width="100%" aria-label="RAG作为分页机制的设计（插图）" role="img"></object>
+<object data="/assets/images/2025-01-29-virtual-memory-rag-01-mapping.svg" type="image/svg+xml" width="100%" aria-label="RAG作为分页机制的设计" role="img"></object>
 
 ## 核心组件映射
 
@@ -160,7 +160,7 @@ Context Map本身可以存储在向量库旁的关系数据库（如SQLite）中
 
 ## 混合内存管理：长上下文模型 + RAG
 
-<object data="/assets/images/2025-01-29-virtual-memory-rag-02-hybrid-arch.svg" type="image/svg+xml" width="100%" aria-label="混合内存管理：长上下文模型 + RAG（插图）" role="img"></object>
+<object data="/assets/images/2025-01-29-virtual-memory-rag-02-hybrid-arch.svg" type="image/svg+xml" width="100%" aria-label="混合内存管理：长上下文模型 + RAG" role="img"></object>
 
 ## 为什么不是二选一
 
@@ -259,7 +259,7 @@ Context Map本身可以存储在向量库旁的关系数据库（如SQLite）中
 - 高缺页率 → 增加上下文窗口或改进预取策略
 - 低缺页率 → 可以减小上下文窗口以节省成本
 
-<object data="/assets/images/2025-01-29-virtual-memory-rag-02-pagefault.svg" type="image/svg+xml" width="100%" aria-label="缺页率监控（插图）" role="img"></object>
+<object data="/assets/images/2025-01-29-virtual-memory-rag-02-pagefault.svg" type="image/svg+xml" width="100%" aria-label="缺页率监控" role="img"></object>
 
 ## 结尾
 

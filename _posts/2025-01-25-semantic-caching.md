@@ -7,7 +7,7 @@ tags: [成本优化, 语义缓存, RAG, 向量检索]
 description: "通过向量相似度识别语义等价问题，配合L1/L2/L3多层缓存架构与置信度过滤，实现API成本节省90%的实战方案。"
 redirect_from:
   - /semantic-caching.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -68,7 +68,7 @@ series: AI-Native Engineering
 ## 语义缓存的工作原理
 
 ### 架构概览
-<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%" aria-label="架构概览（插图）" role="img"></object>
+<object data="/assets/images/2025-01-25-semantic-cache-01-flow.svg" type="image/svg+xml" width="100%" aria-label="架构概览" role="img"></object>
 
 ### 缓存键的设计
 
@@ -126,7 +126,7 @@ series: AI-Native Engineering
 
 **模板缓存的思路：** 将答案结构抽象为模板，只存储一份答案骨架，用变量占位符替代具体参数。
 
-```
+```yaml
 Q: {{language}}的创始人是谁？
 A: {{language}}的创始人是{{founder}}。
 

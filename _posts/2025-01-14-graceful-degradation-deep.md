@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /graceful-degradation-deep.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -175,7 +175,7 @@ Netflix 故意在生产环境「搞破坏」：
 
 <object data="/assets/images/2025-01-14-graceful-degradation-deep-03-degradation-matrix.svg" type="image/svg+xml" width="100%" aria-label="降级策略矩阵" role="img"></object>
 
-<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-matrix.jpg" type="image/jpeg" width="100%" aria-label="降级策略矩阵（插图）" role="img"></object>
+<object data="/assets/images/2025-01-14-graceful-degradation-deep-01-matrix.jpg" type="image/jpeg" width="100%" aria-label="降级策略矩阵" role="img"></object>
 
 | 场景 | 生物类比 | 技术实现 | 恢复策略 |
 |------|---------|---------|---------|

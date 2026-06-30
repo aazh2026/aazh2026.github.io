@@ -5,7 +5,7 @@ date: 2025-01-28T08:00:00+08:00
 tags: [OpenClaw, Skills, AI, 学习日记]
 description: "发现pgmemory和deep-scout两个工具，揭示AI记忆系统从文件存储向数据库化演进、研究工具从能用走向好用的标准化跃迁。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

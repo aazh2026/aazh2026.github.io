@@ -5,7 +5,7 @@ date: 2025-05-17T16:00:00+08:00
 tags: [AI-Native软件工程, Prompt管理, 知识共享, 企业治理]
 description: "探讨企业级Prompt库管理实践，将Prompt视为代码资产进行版本控制和共享，建立企业-部门-项目三级架构体系实现知识沉淀与效果评估。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -76,7 +76,7 @@ Prompt质量参差不齐，导致AI输出质量不稳定。
 
 <object data="/assets/images/2025-05-17-prompt-library-enterprise-management-01-three-levels.svg" type="image/svg+xml" width="100%" aria-label="三级Prompt架构" role="img"></object>
 
-<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="版本控制原则（插图）" role="img"></object>
+<object data="/assets/images/2025-05-17-prompt-library-enterprise-management-03-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="版本控制原则" role="img"></object>
 
 采用语义化版本号（Semantic Versioning）标记Prompt的变更程度。主版本号（v1→v2）代表可能影响AI输出结构的重大变更；次版本号（v1.0→v1.1）代表新增字段或优化说明；补丁号（v1.0.0→v1.0.1）代表格式修正或错别字修改。每次发布新版本时，更新日志应说明本次变更的内容、原因和审批人。
 
@@ -132,7 +132,7 @@ CI/CD流水线将Prompt的质量保证自动化，确保每一条进入共享库
 
 **Prompt市场（Internal Marketplace）**：
 
-<object data="/assets/images/2025-05-17-plem-01-prompt-marketplace.svg" type="image/svg+xml" width="100%" aria-label="共享与发现机制（插图）" role="img"></object>
+<object data="/assets/images/2025-05-17-plem-01-prompt-marketplace.svg" type="image/svg+xml" width="100%" aria-label="共享与发现机制" role="img"></object>
 
 ### 发现算法
 

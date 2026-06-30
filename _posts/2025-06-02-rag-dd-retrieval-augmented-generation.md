@@ -5,8 +5,7 @@ date: 2025-06-02T16:00:00+08:00
 tags: [AI-Native软件工程, RAG-DD, 知识库, 代码生成]
 description: "RAG-DD在代码生成时实时检索企业私有知识，让AI输出从'通用代码'进化为'企业代码'。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #50
-
+series: aise
 redirect_from:
   - /rag-dd-retrieval-augmented-generation.html
 ---
@@ -23,7 +22,7 @@ redirect_from:
 
 ---
 
-<object data="/assets/images/2025-06-02-rag-dd-retrieval-augmented-generation-01-core-loop.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-06-02-rag-dd-retrieval-augmented-generation-01-core-loop.svg" type="image/svg+xml" width="100%" aria-label="2025-06-02-rag-dd-retrieval-augmented-generation-01-core-loop 图示" role="img"></object>
 
 ## RAG-DD 的核心理念
 
@@ -106,7 +105,7 @@ redirect_from:
 
 <object data="/assets/images/2025-06-02-rag-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="RAG-DD 实时融合流水线" role="img"></object>
 
-<object data="/assets/images/2025-06-02-rag-dd-02-knowledge-layers.svg" type="image/svg+xml" width="100%" aria-label="系统架构（插图）" role="img"></object>
+<object data="/assets/images/2025-06-02-rag-dd-02-knowledge-layers.svg" type="image/svg+xml" width="100%" aria-label="系统架构" role="img"></object>
 
 ## 核心组件
 

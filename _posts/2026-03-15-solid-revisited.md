@@ -6,7 +6,7 @@ date: 2026-03-15T09:00:00+08:00
 categories: [ai-native, architecture, design-patterns]
 tags: [solid, agent, ai-native, system-design, software-architecture]
 description: "SOLID 原则在 AI-Native 时代重构为新 SOLID：SCP（单一能力）、OCP-P（提示开闭）、LAP（忠实表达）、ISP（意图隔离）、DIP（抽象依赖倒置）——从对象协作升维到 Agent 协作，拥抱概率性而非追求确定性。"
-series: ai-native-dev-guide
+series: aise
 ---
 
 > **TL;DR**
@@ -130,7 +130,7 @@ Intent 定义"意图和期望结果"：
 
 ### 核心转变总结
 
-<object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="核心转变总结（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-solid-revisited-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="核心转变总结" role="img"></object>
 
 ---
 
@@ -221,7 +221,7 @@ Intent 定义"意图和期望结果"：
 
 ### 系统设计
 
-<object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%" aria-label="系统设计（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-solid-revisited-02-customer-service.svg" type="image/svg+xml" width="100%" aria-label="系统设计" role="img"></object>
 
 ### 完整代码实现
 

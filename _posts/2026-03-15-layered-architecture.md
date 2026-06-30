@@ -6,7 +6,7 @@ date: 2026-03-15T10:00:00+08:00
 categories: [Architecture, AI]
 tags: [agent-os, layered-architecture, system-design, mental-models]
 description: "分层架构是人类应对复杂性的终极武器——从 OSI 七层到 TCP/IP 四层再到 Agent OS 五层，分层的本质是将混沌切割为有意义的逻辑边界，层间通信成本决定架构成败。"
-series: "Agent OS"
+series: agent-os
 series_order: 3
 math: true
 ---
@@ -30,7 +30,7 @@ Agent OS 的五层架构：
 
 ---
 
-<object data="/assets/images/2026-03-15-layered-architecture-01-toc.svg" type="image/svg+xml" width="100%" aria-label="1. TL;DR（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-architecture-01-toc.svg" type="image/svg+xml" width="100%" aria-label="1. TL;DR" role="img"></object>
 
 ---
 
@@ -40,7 +40,7 @@ Agent OS 的五层架构：
 
 1970年代，ISO 推出了开放系统互连（OSI）参考模型，将网络通信抽象为七个层次：
 
-<object data="/assets/images/2026-03-15-layered-arch-01-layers.svg" type="image/svg+xml" width="100%" aria-label="OSI 七层模型：网络通信的圣经（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-arch-01-layers.svg" type="image/svg+xml" width="100%" aria-label="OSI 七层模型：网络通信的圣经" role="img"></object>
 
 **核心原则**：
 1. **封装**：每一层不关心其他层的实现细节
@@ -53,7 +53,7 @@ Agent OS 的五层架构：
 
 TCP/IP 协议栈用四层模型取代了 OSI 的七层：
 
-<object data="/assets/images/2026-03-15-layered-arch-02-tcpip.svg" type="image/svg+xml" width="100%" aria-label="TCP/IP 四层模型：实用主义的胜利（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-arch-02-tcpip.svg" type="image/svg+xml" width="100%" aria-label="TCP/IP 四层模型：实用主义的胜利" role="img"></object>
 
 **关键简化**：
 - 会话层和表示层被并入应用层
@@ -66,7 +66,7 @@ TCP/IP 协议栈用四层模型取代了 OSI 的七层：
 
 #### MVC（Model-View-Controller）
 
-<object data="/assets/images/2026-03-15-layered-arch-03-mvc.svg" type="image/svg+xml" width="100%" aria-label="MVC（Model-View-Controller）（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-arch-03-mvc.svg" type="image/svg+xml" width="100%" aria-label="MVC（Model-View-Controller）" role="img"></object>
 
 MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得 UI 可以独立变化而不影响业务逻辑。
 
@@ -74,13 +74,13 @@ MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得
 
 企业应用中最经典的分层：
 
-<object data="/assets/images/2026-03-15-layered-arch-04-rest.svg" type="image/svg+xml" width="100%" aria-label="三层架构（Presentation/Business/Data）（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-arch-04-rest.svg" type="image/svg+xml" width="100%" aria-label="三层架构（Presentation/Business/Data）" role="img"></object>
 
 ### 微服务的分层
 
 微服务本身也是一种分层——**按业务领域垂直分层**：
 
-<object data="/assets/images/2026-03-15-layered-arch-05-services.svg" type="image/svg+xml" width="100%" aria-label="微服务的分层（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-arch-05-services.svg" type="image/svg+xml" width="100%" aria-label="微服务的分层" role="img"></object>
 
 ---
 
@@ -121,7 +121,7 @@ MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得
 
 基于对分层架构历史的理解，我们提出了 Agent OS 的五层架构：
 
-<object data="/assets/images/2026-03-15-layered-architecture-02-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="Agent OS 的五层架构（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-architecture-02-ascii-arch.svg" type="image/svg+xml" width="100%" aria-label="Agent OS 的五层架构" role="img"></object>
 
 ### 层详解
 
@@ -176,7 +176,7 @@ MVC 的核心思想：**将数据、逻辑、呈现分离**。这种分层使得
 
 ### 层间通信的三种模式
 
-<object data="/assets/images/2026-03-15-layered-architecture-03-comm-patterns.svg" type="image/svg+xml" width="100%" aria-label="层间通信的三种模式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-architecture-03-comm-patterns.svg" type="image/svg+xml" width="100%" aria-label="层间通信的三种模式" role="img"></object>
 
 <object data="/assets/images/2026-03-15-layered-architecture-06-cross-layer-comm.svg" type="image/svg+xml" width="100%" aria-label="层间通信的三种模式" role="img"></object>
 
@@ -263,7 +263,7 @@ OSI 七层 vs TCP/IP 四层的教训：**分层数量应与问题复杂度匹配
 
 ### 架构设计
 
-<object data="/assets/images/2026-03-15-layered-architecture-04-code-review-arch.svg" type="image/svg+xml" width="100%" aria-label="架构设计（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-layered-architecture-04-code-review-arch.svg" type="image/svg+xml" width="100%" aria-label="架构设计" role="img"></object>
 
 ```python
 #!/usr/bin/env python3

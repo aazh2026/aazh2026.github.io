@@ -5,7 +5,7 @@ date: 2025-03-21T23:30:00+08:00
 tags: [代码考古, 新员工 onboarding, 软件工程, AI工具, 组织知识]
 description: "系统化六步法让新员工在3-6个月内高效理解复杂系统，AI工具将代码考古效率提升3-10倍，最终目标是将个人理解转化为组织知识。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -47,7 +47,7 @@ series: AI-Native Engineering
 
 基于业界最佳实践和AI工具的辅助，我提出**代码考古六步法**。
 
-<object data="/assets/images/2025-03-21-code-archaeology-playbook-02-mental-model.jpg" type="image/jpeg" width="100%" aria-label="代码考古六步法（插图）" role="img"></object>
+<object data="/assets/images/2025-03-21-code-archaeology-playbook-02-mental-model.jpg" type="image/jpeg" width="100%" aria-label="代码考古六步法" role="img"></object>
 
 ## 遗址勘探：建立系统整体认知
 

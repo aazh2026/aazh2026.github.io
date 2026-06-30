@@ -4,7 +4,7 @@ title: "TDD vs Intent-Driven Development"
 date: 2025-04-26T00:00:00+08:00
 tags: [TDD, Intent-Driven Development, AI开发, 软件方法论]
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #02
+series: aise
 description: "TDD在AI时代面临天花板，测试代码量是业务代码的3-5倍。Intent-Driven Development通过结构化SID文档和AI生成实现4倍效率提升，核心是验证意图正确性而非代码行为。"
 
 redirect_from:
@@ -73,7 +73,7 @@ redirect_from:
 
 ## Intent-Driven Development：新范式
 
-<object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="Intent-Driven Development：新范式（插图）" role="img"></object>
+<object data="/assets/images/2025-04-26-tdd-idd-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="Intent-Driven Development：新范式" role="img"></object>
 
 ### 从TDD到IDD
 
@@ -135,7 +135,7 @@ SID的真正威力在于作为AI prompt的上下文。将完整的SID注入promp
 
 以下是一份注入SID后的完整AI prompt示例：
 
-```
+```text
 你是一个订单折扣系统的实现者。请根据以下结构化意图文档（ SID）生成代码。
 
 【意图陈述】

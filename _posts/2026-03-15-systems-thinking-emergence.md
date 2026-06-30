@@ -5,7 +5,7 @@ date: 2026-03-15
 tags: ["系统思维", "Multi-Agent", "涌现性", "复杂系统", "系统设计"]
 author: Charlie
 description: "从系统思维的角度理解 Multi-Agent 系统，探讨涌现性的本质，以及如何设计涌现友好的智能系统"
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 系统思维与涌现性：Multi-Agent 系统的整体大于部分之和
@@ -54,7 +54,7 @@ series: AI-Native Engineering
 
 **💡 关键洞察**：大多数系统问题源于反馈回路的延迟或失效，而不是 Agent 本身的能力不足。
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-03-feedback-loops.svg" type="image/svg+xml" width="100%" aria-label="反馈回路：系统的&quot;神经系统&quot;（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-03-feedback-loops.svg" type="image/svg+xml" width="100%" aria-label="反馈回路：系统的&quot;神经系统&quot;" role="img"></object>
 
 ### 存量与流量：系统的"资产负债表"
 
@@ -136,7 +136,7 @@ Craig Reynolds 的 Boids 模型只用三条规则就模拟了逼真的鸟群：
 
 ---
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-03-safe-space.svg" type="image/svg+xml" width="100%" aria-label="🚗 城市交通拥堵（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-03-safe-space.svg" type="image/svg+xml" width="100%" aria-label="🚗 城市交通拥堵" role="img"></object>
 
 ## Multi-Agent 系统中的涌现行为
 
@@ -144,7 +144,7 @@ Craig Reynolds 的 Boids 模型只用三条规则就模拟了逼真的鸟群：
 
 在 Multi-Agent 系统中，我们经常观察到以下涌现行为：
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-04-emergence-types.svg" type="image/svg+xml" width="100%" aria-label="常见的涌现现象（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-04-emergence-types.svg" type="image/svg+xml" width="100%" aria-label="常见的涌现现象" role="img"></object>
 
 > 💡 **关键洞察**
 >
@@ -167,12 +167,12 @@ Craig Reynolds 的 Boids 模型只用三条规则就模拟了逼真的鸟群：
 
 Agent 之间的知识传递也会涌现特定结构：
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-01-knowledge-net.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络（插图）" role="img"></object>
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-06-arch.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-01-knowledge-net.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-06-arch.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络" role="img"></object>
 
 **关键洞察**：知识共享网络的拓扑结构直接影响系统性能——中心化的知识分发容易成为单点故障，而去中心化的共享则可能带来一致性问题。
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-04-arch.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-04-arch.svg" type="image/svg+xml" width="100%" aria-label="知识共享网络" role="img"></object>
 
 ### 反模式
 
@@ -189,7 +189,7 @@ Agent 之间的知识传递也会涌现特定结构：
 
 系统设计思维关注**交互规则**和**环境设计**：
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-02-two-philosophies.svg" type="image/svg+xml" width="100%" aria-label="系统设计思维（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-02-two-philosophies.svg" type="image/svg+xml" width="100%" aria-label="系统设计思维" role="img"></object>
 
 **关键洞察**：设计 Multi-Agent 系统时，把注意力从"Agent 应该做什么"转移到"Agent 之间如何交互"往往更有效。
 
@@ -212,7 +212,7 @@ Agent 之间的知识传递也会涌现特定结构：
 
 **安全试错空间**：允许系统在一定范围内探索和失败。
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-07-arch.svg" type="image/svg+xml" width="100%" aria-label="系统设计思维（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-07-arch.svg" type="image/svg+xml" width="100%" aria-label="系统设计思维" role="img"></object>
 
 **涌现行为预测**：
 1. **专业化涌现**：某些 Agent 会自发专注于特定内容类型
@@ -272,7 +272,7 @@ Agent 之间的知识传递也会涌现特定结构：
    
    在涌现系统中，局部失败是常态，也是系统演化的动力。设计让系统能够从失败中学习的机制，而不是试图预防所有失败。
 
-<object data="/assets/images/2026-03-15-systems-thinking-emergence-05-arch.svg" type="image/svg+xml" width="100%" aria-label="关键收获（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-systems-thinking-emergence-05-arch.svg" type="image/svg+xml" width="100%" aria-label="关键收获" role="img"></object>
 
 ### 最后的思考
 

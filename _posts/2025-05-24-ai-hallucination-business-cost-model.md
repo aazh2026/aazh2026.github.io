@@ -5,8 +5,7 @@ date: 2025-05-24T10:00:00+08:00
 tags: [AI-Native软件工程, AI幻觉, 成本模型, 风险评估]
 description: "建立AI幻觉的业务影响量化模型，直接成本、间接成本、风险成本三层叠加，为不同风险场景选择人工复核、回滚机制或多模型交叉验证等保险策略。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #42
-
+series: aise
 redirect_from:
   - /ai-hallucination-business-cost-model/
 ---
@@ -92,7 +91,7 @@ redirect_from:
 
 **总成本 = 直接成本 + 间接成本 + 风险成本**
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="成本构成（插图）" role="img"></object>
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-01-cost-breakdown.svg" type="image/svg+xml" width="100%" aria-label="成本构成" role="img"></object>
 
 #### 直接成本（Direct Costs）
 
@@ -175,7 +174,7 @@ redirect_from:
 
 ## 风险分层与容忍度
 
-<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%" aria-label="风险分层与容忍度（插图）" role="img"></object>
+<object data="/assets/images/2025-05-24-ai-hallucination-business-cost-model-02-risk-stratification.svg" type="image/svg+xml" width="100%" aria-label="风险分层与容忍度" role="img"></object>
 
 ### 风险分层模型
 

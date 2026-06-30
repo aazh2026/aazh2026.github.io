@@ -5,7 +5,7 @@ date: 2026-03-11T09:30:00+08:00
 tags: [AI-Native, SDLC, Intent-Driven, 未来趋势]
 description: "Intent-Driven用intent+constraints+examples三要素替代详细设计，80%需求可大幅简化。"
 author: "@postcodeeng"
-series: AI-Native SDLC 实践
+series: aise
 redirect_from:
   - /intent-driven-future.html
 ---
@@ -50,7 +50,7 @@ AI-Native SDLC 正在出现一种新范式：
 
 ## 传统 vs Intent-Driven
 
-<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统 vs Intent-Driven（插图）" role="img"></object>
+<object data="/assets/images/2026-03-11-intent-driven-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统 vs Intent-Driven" role="img"></object>
 
 ### 传统详细设计
 
@@ -129,7 +129,7 @@ LLM 的本质是**模式匹配**。
 
 ## 什么场景适合 Intent-Driven？
 
-<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%" aria-label="什么场景适合 Intent-Driven？（插图）" role="img"></object>
+<object data="/assets/images/2026-03-11-intent-driven-02-usage.svg" type="image/svg+xml" width="100%" aria-label="什么场景适合 Intent-Driven？" role="img"></object>
 
 | 场景 | 适合度 | 原因 |
 |------|--------|------|

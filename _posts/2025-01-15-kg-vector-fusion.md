@@ -7,7 +7,7 @@ tags: [知识图谱, 向量检索, RAG, 混合架构]
 description: "向量检索擅长联想召回，知识图谱擅长精确推理——两者融合实现1+1>3，核心是分工而非竞争，实体链接是横跨两个世界的桥梁。"
 redirect_from:
   - /kg-vector-fusion.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -94,7 +94,7 @@ series: AI-Native Engineering
 
 ## 融合架构概览
 
-<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="融合架构概览（插图）" role="img"></object>
+<object data="/assets/images/2025-01-15-kg-vector-fusion-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="融合架构概览" role="img"></object>
 ## 实体链接：桥梁的建设
 
 核心问题：向量检索到的文本中的"Python"，如何对应到知识图谱中的"Python_(programming_language)"节点？

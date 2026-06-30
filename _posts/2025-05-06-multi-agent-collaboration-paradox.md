@@ -5,8 +5,7 @@ date: 2025-05-06T16:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, 系统架构, 协作成本]
 description: "Multi-Agent系统存在隐藏的O(n²)协作税，30-50%计算资源消耗在协调而非任务执行，超过5个Agent后效率反而下降，大多数场景下3-5个是最优甜点区。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #30
-
+series: aise
 redirect_from:
   - /multi-agent-collaboration-paradox.html
 ---
@@ -270,9 +269,9 @@ redirect_from:
 
 **层次化Multi-Agent架构**：
 
-<object data="/assets/images/2025-05-06-multi-agent-01-stack.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践（插图）" role="img"></object>
+<object data="/assets/images/2025-05-06-multi-agent-01-stack.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践" role="img"></object>
 
-<object data="/assets/images/2025-05-06-multi-agent-02-efficiency-curve.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践（插图）" role="img"></object>
+<object data="/assets/images/2025-05-06-multi-agent-02-efficiency-curve.svg" type="image/svg+xml" width="100%" aria-label="混合架构：最佳实践" role="img"></object>
 
 **关键设计点**：
 1. **星型拓扑**：所有通信通过协调者，避免网状通信

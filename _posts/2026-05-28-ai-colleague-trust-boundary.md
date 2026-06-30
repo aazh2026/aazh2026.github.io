@@ -4,7 +4,7 @@ title: "「AI 同事」的问题不是智能，是信任边界"
 date: 2026-05-28T09:00:00+08:00
 tags: [AI Agent, 安全设计, 信任架构, 哲学]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "\"AI 同事\"这个产品概念与安全设计的最小权限原则在结构上互斥——同事需要邮箱、文件访问权、代表用户行动的权力，而这些权限在安全领域就是攻击面。Saltzer 和 Schroeder 1974 年写下的原则，48 年后我们在 AI 时代重新学习它的智慧。"
 ---
 

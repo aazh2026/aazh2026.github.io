@@ -5,7 +5,7 @@ date: 2025-03-20T12:00:00+08:00
 tags: [代码考古, 遗留系统, 入职, 知识管理, AI辅助]
 description: "两百一十四万行遗留代码，每一层都是某个时刻的决策化石——2016年的Spring 3.x、2017年的临时补丁、2019年的硬编码配置。CodeArchaeologist通过时间线视图、依赖关系图和知识人员图谱三层分析，帮助理解'为什么'——代码只有5行，但理解为什么需要这5行，花了四天。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

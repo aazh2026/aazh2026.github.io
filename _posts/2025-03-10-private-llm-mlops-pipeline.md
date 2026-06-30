@@ -5,7 +5,7 @@ date: 2025-03-10T12:30:00+08:00
 tags: [MLOps, LLM, 私有模型, 代码生成, 持续训练]
 description: "训练模型只占5%的工作量，MLOps占95%。私有代码LLM需要六条Pipeline连成闭环——数据管道、训练管道、评估管道、部署管道、监控管道、反馈闭环——才能让模型持续创造价值。在AI系统中，回滚能力比发布能力更重要。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 训练AI只是5%的工作，MLOps才是决定成败的95%
@@ -65,7 +65,7 @@ series: AI-Native Engineering
 
 ## 私有代码LLM的六个Pipeline
 
-<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-01-six-pipelines.svg" type="image/svg+xml" width="100%" aria-label="私有代码LLM的六个Pipeline（插图）" role="img"></object>
+<object data="/assets/images/2025-03-10-private-llm-mlops-pipeline-01-six-pipelines.svg" type="image/svg+xml" width="100%" aria-label="私有代码LLM的六个Pipeline" role="img"></object>
 
 ### 1. 数据管道（Data Pipeline）
 

@@ -5,8 +5,7 @@ date: 2025-04-10T10:10:00+08:00
 tags: [AI-Native软件工程, Context管理, 知识衰减]
 description: "Context不是越用越好，是会腐烂的。通过新鲜度度量、自动刷新、版本化管理与人机协作四层防线，对抗AI-Native开发中的上下文衰减。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #12
-
+series: aise
 redirect_from:
   - /context-rot.html
 ---
@@ -99,7 +98,7 @@ redirect_from:
 
 ## 反直觉洞察：Context Rot的三层危害
 
-<object data="/assets/images/2025-04-10-context-rot-01-harms.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：Context Rot的三层危害（插图）" role="img"></object>
+<object data="/assets/images/2025-04-10-context-rot-01-harms.svg" type="image/svg+xml" width="100%" aria-label="反直觉洞察：Context Rot的三层危害" role="img"></object>
 
 > 💡 **Key Insight**
 >

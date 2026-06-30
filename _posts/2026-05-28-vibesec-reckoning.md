@@ -4,7 +4,7 @@ title: "Vibe Coding 的账单来了：Thoughtworks 的教训"
 date: 2026-05-28T14:00:00+08:00
 tags: [AI安全, Vibe Coding, 开发实践, Agent架构]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "告诉AI「要安全」不等于强制它安全——2026年25%的AI生成代码含已确认漏洞，解决之道是从「建议」到「门控」的转换，把安全规则编码为不可绕过的检查。"
 ---
 
@@ -61,7 +61,7 @@ AI 建议把存储 bucket 设为公开，或者把云文件存储设为「任何
 
 ---
 
-<object data="/assets/images/2026-05-28-vibesec-reckoning-01-risk-matrix.svg" type="image/svg+xml" width="100%" aria-label="数字背后的风险（插图）" role="img"></object>
+<object data="/assets/images/2026-05-28-vibesec-reckoning-01-risk-matrix.svg" type="image/svg+xml" width="100%" aria-label="数字背后的风险" role="img"></object>
 
 ## 核心问题：Prompt 不够
 

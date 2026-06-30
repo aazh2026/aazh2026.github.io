@@ -4,7 +4,7 @@ title: "漏洞变便宜了，修漏洞没有"
 date: 2026-05-28T08:00:00+08:00
 tags: [AI安全, 开源经济, 结构性矛盾, Jevons悖论]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "Jevons悖论在安全领域重演：AI让漏洞发现成本趋近于零，但修复成本依然由唯一熟悉代码的人承担，curl项目2026年预计收到约50个CVE。"
 ---
 

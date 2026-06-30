@@ -5,8 +5,7 @@ date: 2025-05-28T18:00:00+08:00
 tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
 description: "提出Agent-DD多Agent协作编程范式，架构师、开发、测试、审查、协调五类Agent以去中心化方式协作完成复杂系统，Swarm Programming让群体智能超越个体智能。"
 author: "@postcodeeng"
-series: AI-Native Engineering
-
+series: aise
 redirect_from:
   - /agent-dd-swarm-programming/
 ---
@@ -126,7 +125,7 @@ Coordinator Agent 通过比对各Agent输出的接口契约和数据模型定义
 
 Agent-DD 平台的技术架构包含五个核心组件，它们共同支撑多Agent协作的运行。**Agent Registry（Agent注册中心）**存储所有Agent的角色定义、能力标签和状态信息，协调Agent从中读取可用Agent列表并根据任务需求匹配最合适的执行者。**Task Queue（任务队列）**管理任务的 Pending / Running / Completed / Failed 状态转换，每个子任务在队列中有明确的依赖关系，确保任务按正确顺序执行。**Shared State（共享状态）**是所有Agent读写的公共空间，存放代码片段、设计文档、接口契约和冲突日志，是Agent之间信息同步的枢纽。**Communication Bus（通信总线）**基于消息队列和事件流实现Agent之间的异步通信，支持事件驱动的触发机制，使Agent无需轮询即可响应状态变化。**Monitoring（监控面板）**实时采集性能指标、质量指标和冲突指标，为协调Agent的调度决策提供数据支持，并将异常情况通知人工介入。这五个组件相互连接：Registry 提供Agent清单，Queue 驱动任务流转，State 承载信息共享，Bus 传递事件信号，Monitoring 反馈运行状态——形成完整的闭环系统。
 
-<object data="/assets/images/2025-05-28-agent-dd-swarm-02-platform.svg" type="image/svg+xml" width="100%" aria-label="技术架构（插图）" role="img"></object>
+<object data="/assets/images/2025-05-28-agent-dd-swarm-02-platform.svg" type="image/svg+xml" width="100%" aria-label="技术架构" role="img"></object>
 
 > 💡 **Key Insight**
 >

@@ -6,7 +6,7 @@ permalink: /firefox-149-ai-windows/
 tags: [AI-Native, Browser, Firefox, Mozilla, AI-Integration]
 description: "Firefox 149将AI做成可选模块而非核心功能，体现Mozilla在AI时代的隐私优先哲学与差异化竞争策略。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -101,7 +101,7 @@ series: AI-Native Engineering
 
 这三条路径代表三种截然不同的哲学立场。Chrome 和 Edge 把 AI 视为浏览器的下一个定义性功能，投入重兵快速迭代；Safari 把 AI 视为系统能力延伸，用硬件优势建立护城河；Firefox 则把 AI 视为用户可选的模块之一——它存在，但不应该绑架用户。三种策略各有市场，没有绝对优劣，关键在于厂商的价值观和技术积累更适合哪条路。
 
-<object data="/assets/images/2026-03-20-firefox-149-ai-windows-02-three-paths.svg" type="image/svg+xml" width="100%" aria-label="实现方式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-20-firefox-149-ai-windows-02-three-paths.svg" type="image/svg+xml" width="100%" aria-label="实现方式" role="img"></object>
 
 ---
 

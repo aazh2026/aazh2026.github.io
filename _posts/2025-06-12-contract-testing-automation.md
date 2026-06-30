@@ -5,7 +5,7 @@ date: 2025-06-12T00:00:00+08:00
 tags: [AI-Native软件工程, 契约测试, Pact, 服务集成, 测试自动化]
 description: "契约测试从昂贵手工活变成自动化基础设施，AI生成契约并实现语义级验证。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #9
+series: aise
 ---
 
 > **TL;DR**
@@ -20,8 +20,8 @@ series: AI-Native软件工程系列 #9
 
 ## 契约测试基础
 
-<object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础（插图）" role="img"></object>
-<object data="/assets/images/2025-06-12-contract-testing-automation-02-semantic-verification.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础（插图）" role="img"></object>
+<object data="/assets/images/2025-06-12-contract-testing-automation-01-cdc-flow.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础" role="img"></object>
+<object data="/assets/images/2025-06-12-contract-testing-automation-02-semantic-verification.svg" type="image/svg+xml" width="100%" aria-label="契约测试基础" role="img"></object>
 
 > 💡 **Key Insight**
 >

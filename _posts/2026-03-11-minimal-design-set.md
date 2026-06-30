@@ -5,7 +5,7 @@ date: 2026-03-11T08:30:00+08:00
 tags: [AI-Native, SDLC, 软件工程, 详细设计, 实践]
 description: "AI-Native详细设计只需4个核心文件，删除Sequence Diagram等传统artifacts，追求信息密度最大化。"
 author: "@postcodeeng"
-series: AI-Native SDLC 实践
+series: aise
 ---
 
 > **TL;DR**
@@ -42,7 +42,7 @@ series: AI-Native SDLC 实践
 
 这四个已经足够驱动：代码生成、测试生成、PR review。
 
-<object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%" aria-label="核心结论（插图）" role="img"></object>
+<object data="/assets/images/2026-03-11-minimal-design-set-01-four-files.svg" type="image/svg+xml" width="100%" aria-label="核心结论" role="img"></object>
 
 ## 为什么是这四个？
 

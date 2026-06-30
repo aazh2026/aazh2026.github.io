@@ -5,7 +5,7 @@ date: 2025-04-04T12:00:00+08:00
 tags: [AI-Native软件工程, 宣言, 理论体系]
 description: "AI-Native软件工程的五大核心信条：代码是负债、Intent是新的编程语言、Context管理是核心技能、人机协作是默认模式、验证重于实现。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列
+series: aise
 redirect_from:
   - /aise-manifesto.html
 ---

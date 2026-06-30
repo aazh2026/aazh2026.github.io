@@ -4,7 +4,7 @@ title: "自我改进的 Tax AI：OpenAI 的实践与三个关键设计"
 date: 2026-05-28T15:00:00+08:00
 tags: [AI Agent, 自我改进系统, 工程实践, 评估驱动开发]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "Tax AI的核心不是让AI更聪明，而是建立生产环境持续产生结构化信号的反馈循环——每次从业者纠正都被捕获、分类、变成eval target，最终成为工程任务。"
 ---
 

@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /cold-start/
-series: AI-Native Engineering
+series: aise
 ---
 
 > **冷启动不是技术限制，是设计选择。**

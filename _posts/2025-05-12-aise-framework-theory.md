@@ -5,7 +5,7 @@ date: 2025-05-12T08:00:00+08:00
 tags: [AI-Native软件工程, AISE框架, 理论体系, 方法论]
 description: "AISE(AI-Native Software Engineering)是软件工程的根本性范式转移：从\"代码优先\"到\"意图优先\"，代码是意图的编译产物而非核心资产，五层架构四大支柱重构开发活动。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -171,7 +171,7 @@ series: AI-Native Engineering
 
 ## 五层架构
 
-<object data="/assets/images/2025-05-12-aise-framework-01-layers.svg" type="image/svg+xml" width="100%" aria-label="五层架构（插图）" role="img"></object>
+<object data="/assets/images/2025-05-12-aise-framework-01-layers.svg" type="image/svg+xml" width="100%" aria-label="五层架构" role="img"></object>
 
 AISE将软件工程活动划分为五个层次：
 
@@ -509,7 +509,7 @@ AISE成熟度模型定义了五个级别，描述组织在AISE实践上的演进
 >
 > AISE成熟度模型定义了五个级别，描述组织在AISE实践上的演进路径
 
-<object data="/assets/images/2025-05-12-aise-framework-02-maturity-model.svg" type="image/svg+xml" width="100%" aria-label="Level 5：自主（Autonomous）（插图）" role="img"></object>
+<object data="/assets/images/2025-05-12-aise-framework-02-maturity-model.svg" type="image/svg+xml" width="100%" aria-label="Level 5：自主（Autonomous）" role="img"></object>
 
 ---
 

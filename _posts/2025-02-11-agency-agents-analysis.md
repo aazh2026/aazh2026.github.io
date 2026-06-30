@@ -6,7 +6,7 @@ tags: [agency-agents, 多Agent协作, Agent编排, 角色架构, Agentic Enginee
 description: "深度解析agency-agents多Agent协作架构，角色优于流程、结构化交付物、接口契约稳定等设计原则，以及规模扩展和成本控制等未解决的工程挑战。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -63,7 +63,7 @@ agency-agents的核心架构理念可以用一个词概括：**组织化**。它
 
 ### 核心架构图：角色编排 vs 流程编排
 
-<object data="/assets/images/2025-02-11-agency-agents-01-role-architecture.svg" type="image/svg+xml" width="100%" aria-label="核心架构图：角色编排 vs 流程编排（插图）" role="img"></object>
+<object data="/assets/images/2025-02-11-agency-agents-01-role-architecture.svg" type="image/svg+xml" width="100%" aria-label="核心架构图：角色编排 vs 流程编排" role="img"></object>
 
 ### 与CrewAI的对比：两种编排哲学
 

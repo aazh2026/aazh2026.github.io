@@ -5,7 +5,7 @@ date: 2026-03-20T00:00:00+08:00
 tags: [AI-Native软件工程, Code Review, 分布式团队, PR管理, 知识传递]
 description: "AI 语义摘要压缩跨团队代码审查的理解成本，冲突预警提前发现跨团队变更的潜在语义冲突，知识图谱实现审查知识沉淀。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #10
+series: aise
 ---
 
 > **TL;DR**
@@ -76,7 +76,7 @@ AI摘要生成的流程分为四个阶段。首先，模型对 diff 做语义解
 
 ### AI冲突预警
 
-<object data="/assets/images/2026-03-20-distributed-code-review-ai-02-conflict-detection.svg" type="image/svg+xml" width="100%" aria-label="AI冲突预警（插图）" role="img"></object>
+<object data="/assets/images/2026-03-20-distributed-code-review-ai-02-conflict-detection.svg" type="image/svg+xml" width="100%" aria-label="AI冲突预警" role="img"></object>
 
 ### 冲突预警示例
 

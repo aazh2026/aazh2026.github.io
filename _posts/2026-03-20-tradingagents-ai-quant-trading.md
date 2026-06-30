@@ -6,7 +6,7 @@ permalink: /tradingagents-ai-quant-trading/
 tags: [AI-Native, FinTech, Trading, Quant, Multi-Agent, Risk]
 description: "TradingAgents多Agent量化交易框架分析：Demo表现与实盘差距巨大的四大原因，以及级联故障、反馈循环、幻觉交易三大特有风险。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -35,7 +35,7 @@ series: AI-Native Engineering
 
 ### 核心概念
 
-<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心概念（插图）" role="img"></object>
+<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心概念" role="img"></object>
 
 ---
 
@@ -89,7 +89,7 @@ series: AI-Native Engineering
 
 **LLM 生成代码** — TradingAgents 的 LLM（GPT-4 或 Claude）接收这段文字后，分三步处理：第一步，Strategy Parser 将策略拆解为结构化字段——标的代码（TSLA）、MACD 参数（金叉定义）、新闻情绪阈值、仓位上限、止损比例；第二步，Data Fetcher 根据这些字段拉取 TSLA 实时行情和近期新闻，计算 MACD 指标值，扫描新闻情感；第三步，Trade Executor 将前两步的输出组合，生成如下伪代码：
 
-```
+```text
 if MACD_Crossover(TSLA) == True and News_Sentiment(TSLA, 24h) >= -0.3:
     shares = min(Portfolio_Value * 0.10, Market_Depth(TSLA))
     Market_Buy(TSLA, shares)
@@ -142,7 +142,7 @@ if MACD_Crossover(TSLA) == True and News_Sentiment(TSLA, 24h) >= -0.3:
 
 **3. 幻觉交易（Hallucinated Trading）** — LLM 在生成交易指令时，可能产生完全不存在的事实——比如引用某条"新闻"而该新闻根本不存在，或者声称某个技术指标达到了某个值而实际计算结果并非如此。当这种幻觉输入到 Trade Executor 生成下单代码时，可能触发完全不合理的大单、错误方向的仓位、以及无法解释的风险敞口。幻觉交易的特殊之处在于：它不依赖市场波动或模型失效，而是在正常市场条件下也可能发生——LLM 的不确定性使得每一次推理都带有潜在的虚假信息风险。
 
-<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 特有的风险（插图）" role="img"></object>
+<object data="/assets/images/2026-03-20-tradingagents-ai-quant-trading-02-risk-cascade.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 特有的风险" role="img"></object>
 
 ### 历史教训
 

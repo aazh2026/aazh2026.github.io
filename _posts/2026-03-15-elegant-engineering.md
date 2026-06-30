@@ -5,8 +5,7 @@ date: 2026-03-15T15:00:00+08:00
 tags: [AI-Native软件工程, 代码美学, 软件哲学, 代码质量, 优雅工程]
 description: "AI时代代码美学成为差异化能力：简洁×清晰×效率的优雅公式，AI倾向合理但平庸的代码，审美判断是人类最后的堡垒。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #64
-
+series: aise
 redirect_from:
   - /elegant-engineering/
 ---
@@ -31,7 +30,7 @@ redirect_from:
 >
 > 优雅 = 简洁 × 清晰 × 效率——这不是加法，是乘法。任意维度归零，优雅归零。
 
-<object data="/assets/images/2026-03-15-elegant-engineering-01-formula.svg" type="image/svg+xml" width="100%" aria-label="优雅的三维定义（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-elegant-engineering-01-formula.svg" type="image/svg+xml" width="100%" aria-label="优雅的三维定义" role="img"></object>
 
 #### 简洁：Less is More
 
@@ -162,7 +161,7 @@ AI 倾向于生成「安全但冗余」的代码：
 
 **约束前置，信任类型系统，在边界处验证**——这是人类的智慧，AI 很难学会。
 
-<object data="/assets/images/2026-03-15-elegant-engineering-02-ai-smells.svg" type="image/svg+xml" width="100%" aria-label="防御性过强（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-elegant-engineering-02-ai-smells.svg" type="image/svg+xml" width="100%" aria-label="防御性过强" role="img"></object>
 
 ### AI 代码的「气味」
 
@@ -378,8 +377,8 @@ AI 加速的是第一稿，但**后续的打磨仍需人类**。
 
 ### AI 协作的优雅工作流
 
-<object data="/assets/images/2026-03-15-elegant-01-steps.svg" type="image/svg+xml" width="100%" aria-label="AI 协作的优雅工作流（插图）" role="img"></object>
-<object data="/assets/images/2026-03-15-elegant-02-quality-velocity.svg" type="image/svg+xml" width="100%" aria-label="AI 协作的优雅工作流（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-elegant-01-steps.svg" type="image/svg+xml" width="100%" aria-label="AI 协作的优雅工作流" role="img"></object>
+<object data="/assets/images/2026-03-15-elegant-02-quality-velocity.svg" type="image/svg+xml" width="100%" aria-label="AI 协作的优雅工作流" role="img"></object>
 
 ### 优雅的 Prompt 模板
 

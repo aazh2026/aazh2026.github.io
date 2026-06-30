@@ -5,7 +5,7 @@ date: 2026-03-18T00:00:00+08:00
 tags: [AI-Native软件工程, 事件驱动, EDA, Schema管理, 消息系统]
 description: "探讨事件 Schema 的契约治理与 AI 增强：如何通过语义级兼容性分析超越语法检查，实现跨团队全局一致性。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #8
+series: aise
 ---
 
 > **TL;DR**
@@ -54,7 +54,7 @@ series: AI-Native软件工程系列 #8
 
 <object data="/assets/images/2026-03-18-eda-schema-consistency-01-generation-paths.svg" type="image/svg+xml" width="100%" aria-label="事件 Schema 生成路径" role="img"></object>
 
-<object data="/assets/images/2026-03-18-eda-schema-consistency-02-compatibility-layers.svg" type="image/svg+xml" width="100%" aria-label="生成路径（插图）" role="img"></object>
+<object data="/assets/images/2026-03-18-eda-schema-consistency-02-compatibility-layers.svg" type="image/svg+xml" width="100%" aria-label="生成路径" role="img"></object>
 
 ### 实战：代码生成Schema
 

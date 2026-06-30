@@ -5,8 +5,7 @@ date: 2026-03-13T14:00:00+08:00
 tags: [AI-Native软件工程, TDD, 测试, AI-First]
 description: "TDD在AI时代进化为AI-First测试范式：人类定义意图和场景，AI生成验证代码，测试从证明正确变为建立信任。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #47
-
+series: aise
 redirect_from:
   - /tdd-vs-ai-first.html
 ---
@@ -134,7 +133,7 @@ TDD 的承诺：测试就是最好的文档
 
 ---
 
-<object data="/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="挑战 4：测试即文档的失效（插图）" role="img"></object>
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-01-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="挑战 4：测试即文档的失效" role="img"></object>
 
 ## AI-First 测试范式
 
@@ -154,7 +153,7 @@ TDD 的承诺：测试就是最好的文档
 
 ### 新模式：意图 → 场景 → 验证
 
-<object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%" aria-label="新模式：意图 → 场景 → 验证（插图）" role="img"></object>
+<object data="/assets/images/2026-03-13-tdd-vs-ai-first-02-three-layers.svg" type="image/svg+xml" width="100%" aria-label="新模式：意图 → 场景 → 验证" role="img"></object>
 
 ---
 

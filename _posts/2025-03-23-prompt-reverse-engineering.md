@@ -5,8 +5,7 @@ date: 2025-03-23T12:00:00+08:00
 tags: [AI安全, Prompt工程, 反向工程, 提示词保护]
 description: "Prompt是明文代码，AI可访问性与保密性存在根本矛盾；通过技术层、架构层、策略层的多层防护框架收缩攻击面。"
 author: "@postcodeeng"
-series: AI安全洞察
-
+series: ai-native-security
 ---
 
 > **TL;DR**
@@ -179,7 +178,7 @@ Prompt的法律保护确实存在，但执行困难：
 
 基于对Prompt泄露机制的分析，我提出一个多层防护框架。
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-02-defense-layers.svg" type="image/svg+xml" width="100%" aria-label="实战：Prompt保护的技术与策略框架（插图）" role="img"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-02-defense-layers.svg" type="image/svg+xml" width="100%" aria-label="实战：Prompt保护的技术与策略框架" role="img"></object>
 
 ### 技术层防护
 
@@ -211,7 +210,7 @@ Prompt的法律保护确实存在，但执行困难：
 
 不要在前端或客户端暴露Prompt。将Prompt逻辑封装在后端服务中，客户端只与API交互。
 
-<object data="/assets/images/2025-03-23-prompt-reverse-engineering-03-paas.svg" type="image/svg+xml" width="100%" aria-label="架构层防护（插图）" role="img"></object>
+<object data="/assets/images/2025-03-23-prompt-reverse-engineering-03-paas.svg" type="image/svg+xml" width="100%" aria-label="架构层防护" role="img"></object>
 
 这样攻击者只能套取后端的API响应，无法直接接触到Prompt。
 

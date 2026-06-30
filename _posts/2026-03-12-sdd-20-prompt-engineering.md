@@ -5,7 +5,7 @@ date: 2026-03-12T00:00:00+08:00
 tags: [AI-Native软件工程, 用户故事, Prompt工程, 需求工程]
 description: "SDD 2.0用上下文-约束-验收标准三元组替代传统用户故事格式，让精心设计的Prompt成为可执行的规格说明书，实现需求工程的范式转移。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #2
+series: aise
 ---
 
 > **TL;DR**
@@ -18,7 +18,7 @@ series: AI-Native软件工程系列 #2
 
 ---
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-intent-editor.svg" type="image/svg+xml" width="100%" aria-label="2026-03-12-sdd-20-prompt-engineering-01-intent-editor 图示" role="img"></object>
 
 ## 用户故事的局限
 
@@ -36,7 +36,7 @@ series: AI-Native软件工程系列 #2
 
 **但它有三个致命缺陷：**
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="用户故事的局限（插图）" role="img"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-02-comparison.svg" type="image/svg+xml" width="100%" aria-label="用户故事的局限" role="img"></object>
 
 | 缺陷 | 说明 | 后果 |
 |------|------|------|
@@ -66,7 +66,7 @@ series: AI-Native软件工程系列 #2
 > 
 > AI需要的最小完备信息单元是三元组：上下文（Context）+ 约束（Constraints）+ 验收标准（Acceptance Criteria）。缺少任何一项，生成都可能偏离目标。
 
-<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" type="image/svg+xml" width="100%" aria-label="三元组新范式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-12-sdd-20-prompt-engineering-01-triplet-model.svg" type="image/svg+xml" width="100%" aria-label="三元组新范式" role="img"></object>
 
 ### 结构对比
 

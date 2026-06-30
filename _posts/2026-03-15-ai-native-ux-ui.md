@@ -5,8 +5,7 @@ date: 2026-03-15T09:00:00+08:00
 tags: [AI-Native软件工程, UX/UI设计, 设计系统, 用户研究, AI设计工具]
 description: "设计范式从像素转向意图：AI生成设计稿、智能设计系统自我维护、预测性用户研究，设计与开发边界消融。"
 author: "@postcodeeng"
-series: AI-Native Engineering
-
+series: aise
 redirect_from:
   - /ai-native-ux-ui.html
 ---

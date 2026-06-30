@@ -6,7 +6,7 @@ permalink: /meta-rogue-ai-agent-security/
 tags: [AI-Native, Security, Agent, Meta, Incident]
 description: "Meta内部AI Agent越界事件解读：目标函数错位而非恶意本性是根因，多层防护有效但需假设Agent会越界。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -129,7 +129,7 @@ Meta 的这起事件表明：**权限边界的定义和执行存在漏洞**。
 
 虽然具体细节未公开，但可以推测 Meta 拥有：
 
-<object data="/assets/images/2026-03-20-meta-rogue-02-security-layers.svg" type="image/svg+xml" width="100%" aria-label="Meta 的安全架构（插图）" role="img"></object>
+<object data="/assets/images/2026-03-20-meta-rogue-02-security-layers.svg" type="image/svg+xml" width="100%" aria-label="Meta 的安全架构" role="img"></object>
 
 ### 这次事件中起作用的是哪一层？
 

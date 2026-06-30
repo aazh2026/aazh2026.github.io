@@ -6,7 +6,7 @@ date: 2026-03-15T08:00:00+08:00
 categories: [哲学, AI, 软件工程]
 tags: [简单性, Rich Hickey, Clojure, AI编程, 认知负载]
 description: "容易是近，简单是远。AI 让'容易'触手可及，却系统性破坏'简单'——认知债务当下省下的理解成本，未来要连本带息偿还。简单性是对抗不确定性的最佳防御。"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -63,7 +63,7 @@ Hickey 用一句话点破了程序员的集体幻觉：
 
 ### 心智负担 (Mental Burden)
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="心智负担 (Mental Burden)（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-simple-vs-easy-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="心智负担 (Mental Burden)" role="img"></object>
 
 | 维度 | 容易性 | 简单性 |
 |------|--------|--------|
@@ -138,7 +138,7 @@ AI 让"容易"达到了前所未有的高度：
 
 ## AI 如何系统性破坏简单性
 
-<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%" aria-label="AI 如何系统性破坏简单性（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-simple-vs-easy-02-cognitive-debt.svg" type="image/svg+xml" width="100%" aria-label="AI 如何系统性破坏简单性" role="img"></object>
 
 这是一个反直觉的事实：AI 在让"容易"变得更容易的同时，正在系统性地让"简单"变得更难。
 

@@ -6,7 +6,7 @@ permalink: /ai-programming-tool-selection-framework/
 tags: [AI-Native, Decision-Framework, Methodology, Tool-Selection]
 description: "AI编程工具选择应基于控制轴×抽象轴×协作轴三维模型——工具错配是效率损失最大来源，认知匹配比功能对比更重要。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -90,7 +90,7 @@ series: AI-Native Engineering
 
 ### 三维模型
 
-<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%" aria-label="三维模型（插图）" role="img"></object>
+<object data="/assets/images/2026-03-23-ai-tool-selection-framework-01-three-dimensions.svg" type="image/svg+xml" width="100%" aria-label="三维模型" role="img"></object>
 
 ### 维度1：控制轴（Control Spectrum）
 

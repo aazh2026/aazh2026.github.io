@@ -5,7 +5,7 @@ date: 2026-03-31T10:00:00+08:00
 tags: [AI, Agent, Architecture, System-Design, Technical]
 description: "Agent OS的五层架构框架：Tools → Memory → Runtime → Orchestration → Interface，每层职责边界清晰，使系统可维护、可扩展、可测试、可独立升级。"
 author: "@postcodeeng"
-series: "Agent-OS-Series"
+series: agent-os
 ---
 
 *"架构决定上限，工程决定下限。"
@@ -59,13 +59,13 @@ series: "Agent-OS-Series"
 
 ## 五层架构全景图
 
-<object data="/assets/images/2026-03-31-agent-os-01-stack.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-01-stack.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图" role="img"></object>
 
 <object data="/assets/images/2026-03-31-agent-os-five-layer-01-arch.svg" type="image/svg+xml" width="100%" aria-label="Agent OS 五层架构全景图" role="img"></object>
 
 **数据流向：**
 
-<object data="/assets/images/2026-03-31-agent-os-02-dataflow.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-02-dataflow.svg" type="image/svg+xml" width="100%" aria-label="五层架构全景图" role="img"></object>
 
 ---
 
@@ -123,7 +123,7 @@ series: "Agent-OS-Series"
 
 ### 记忆类型
 
-<object data="/assets/images/2026-03-31-agent-os-03-memory.svg" type="image/svg+xml" width="100%" aria-label="记忆类型（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-03-memory.svg" type="image/svg+xml" width="100%" aria-label="记忆类型" role="img"></object>
 
 ### 实现方案
 
@@ -211,7 +211,7 @@ series: "Agent-OS-Series"
 
 **模式 1：主管-工作者（Supervisor-Workers）**
 
-<object data="/assets/images/2026-03-31-agent-os-04-supervisor.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-04-supervisor.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
 
 **适用场景**：
 - 任务可以清晰分解为独立子任务
@@ -230,7 +230,7 @@ series: "Agent-OS-Series"
 
 **模式 2：平等协作（Peer-to-Peer）**
 
-<object data="/assets/images/2026-03-31-agent-os-05-p2p.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-05-p2p.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
 
 **适用场景**：
 - Agent 需要频繁协商和信息交换
@@ -249,7 +249,7 @@ series: "Agent-OS-Series"
 
 **模式 3：层级结构（Hierarchy）**
 
-<object data="/assets/images/2026-03-31-agent-os-06-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-06-hierarchy.svg" type="image/svg+xml" width="100%" aria-label="多 Agent 架构模式" role="img"></object>
 
 **适用场景**：
 - 组织架构本身具有层级特性
@@ -302,7 +302,7 @@ series: "Agent-OS-Series"
 
 **1. 对话式界面（Chat Interface）**
 
-<object data="/assets/images/2026-03-31-agent-os-five-layer-07-chat-ui.svg" type="image/svg+xml" width="100%" aria-label="界面形式（插图）" role="img"></object>
+<object data="/assets/images/2026-03-31-agent-os-five-layer-07-chat-ui.svg" type="image/svg+xml" width="100%" aria-label="界面形式" role="img"></object>
 
 **2. 命令式界面（Command Interface）**
 

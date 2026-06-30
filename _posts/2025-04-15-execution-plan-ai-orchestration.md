@@ -6,8 +6,7 @@ permalink: /posts/execution-plan-ai-orchestration//
 tags: [Execution Plan, AI编排, 工程管理, 任务拆解, 研发效能]
 description: "Execution Plan由AI基于Product Intent和Architecture Spec自动生成任务拆解，将依赖关系显式建模为可计算的图结构，支持关键路径分析和动态计划调整。"
 author: "@postcodeeng"
-series: AI-Native SDLC 交付件体系 #06
-
+series: aise
 redirect_from:
   - /execution-plan-ai-orchestration.html
 ---

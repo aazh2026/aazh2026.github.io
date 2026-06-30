@@ -5,8 +5,7 @@ date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, 反馈循环, DevOps, 实时反馈, 工程效能]
 description: "反馈循环从月级压缩至分钟级：AI将反馈时机从运行后提前到输入时，实时反馈系统需具备Intent-Driven、Context-Rich、Action-Ready三要素。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #52
-
+series: aise
 redirect_from:
   - /feedback-loop-acceleration/
 ---
@@ -30,7 +29,7 @@ redirect_from:
 
 在系统动力学中，**反馈循环 (Feedback Loop)** 是系统自我调节的核心机制。一个完整的反馈循环包含四个环节：
 
-<object data="/assets/images/2026-03-15-feedback-loop-02-cycle.svg" type="image/svg+xml" width="100%" aria-label="什么是反馈循环（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-feedback-loop-02-cycle.svg" type="image/svg+xml" width="100%" aria-label="什么是反馈循环" role="img"></object>
 
 **关键洞察**：反馈循环的速度决定了系统适应环境的速度。
 
@@ -96,7 +95,7 @@ redirect_from:
 
 ## 历史演进：从月到分钟的压缩之旅
 
-<object data="/assets/images/2026-03-15-feedback-loop-01-timeline.svg" type="image/svg+xml" width="100%" aria-label="历史演进：从月到分钟的压缩之旅（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-feedback-loop-01-timeline.svg" type="image/svg+xml" width="100%" aria-label="历史演进：从月到分钟的压缩之旅" role="img"></object>
 
 ### 瀑布时代
 

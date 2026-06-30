@@ -6,7 +6,7 @@ tags: [AI突破, Donald Knuth, Claude Opus, 算法, 数学证明, 深度思考]
 description: "图灵奖得主Donald Knuth宣布Claude Opus 4.6解决了他提出的开放性问题，标志着AI从效率工具向协作者的质变，人机协作进入新阶段。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 当图灵奖得主重新评估AI：Donald Knuth 与 Claude Opus 4.6 的对话
@@ -127,7 +127,7 @@ AI擅长识别「这看起来像是我见过的某个问题」，然后套用已
 >
 > 这三个能力——自动推理、创造性构造、跨领域整合——共同构成了 AI 从「工具」向「协作者」转变的技术基础。
 
-<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%" aria-label="Claude Opus 4.6 的突破（插图）" role="img"></object>
+<object data="/assets/images/2025-02-07-knuth-claude-opus-01-reasoning-breakthrough.svg" type="image/svg+xml" width="100%" aria-label="Claude Opus 4.6 的突破" role="img"></object>
 
 ## 为什么这改变了游戏规则？
 

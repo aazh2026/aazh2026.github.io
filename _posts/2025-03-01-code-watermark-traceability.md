@@ -5,7 +5,7 @@ date: 2025-03-01T11:00:00+08:00
 tags: [AI代码, 数字水印, 知识产权, 代码溯源, 企业合规]
 description: "AI生成代码可被嵌入不可见的数字指纹实现溯源追踪，三重水印境界与法律灰色地带揭示代码水印既是知识产权保护工具，也是潜在的监控手段。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -74,7 +74,7 @@ series: AI-Native Engineering
 
 ## 代码水印的三重境界
 
-<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="代码水印的三重境界（插图）" role="img"></object>
+<object data="/assets/images/2025-03-01-code-watermark-traceability-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="代码水印的三重境界" role="img"></object>
 
 ### 第一层：文本水印（Textual Watermark）
 

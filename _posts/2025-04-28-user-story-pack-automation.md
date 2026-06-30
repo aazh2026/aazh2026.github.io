@@ -5,8 +5,7 @@ date: 2025-04-28T00:00:00+08:00
 tags: [User Story, AI-Native, 需求工程, 自动化测试, BDD, Gherkin]
 description: "User Story Pack用Story/Scenario/Example三层结构将自然语言需求转化为机器可执行的YAML/Gherkin规格，验收标准即自动化测试，需求理解偏差减少70%。"
 author: "@postcodeeng"
-series: AI-Native SDLC 交付件体系 #04
-
+series: aise
 redirect_from:
   - /user-story-pack-automation.html
 ---
@@ -21,7 +20,7 @@ redirect_from:
 > 3. **实际效果** — 需求理解偏差减少 70%，测试编写时间减少 60%，Bug 逃逸到生产减少 50%
 > 4. **延伸洞察** — 关键不是"更快的自动化"，而是人从执行链里被替换出来——你设计系统，系统替你跑腿
 
-<object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%" aria-label="2025-04-28-user-story-pack-automation-00-core-concept 图示" role="img"></object>
 
 ---
 

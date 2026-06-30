@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /eu-ai-act-compliance-guide.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

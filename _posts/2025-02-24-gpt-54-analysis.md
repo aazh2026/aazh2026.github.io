@@ -6,7 +6,7 @@ tags: [GPT-5.4, OpenAI, 编码能力, AI模型, 上下文窗口, 产品分析]
 description: "GPT-5.4用通用知识加成在编码基准上超越专用模型，272k定价阈值覆盖90%代码库——通用与专用模型的边界正在模糊。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -19,7 +19,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-02-24-gpt-54-analysis-01-benchmarks.svg" type="image/svg+xml" width="100%" aria-label="2025-02-24-gpt-54-analysis-01-benchmarks 图示" role="img"></object>
 
 <object data="/assets/images/2025-02-24-gpt-54-analysis-02-paradigm-shift.svg" type="image/svg+xml" width="100%" aria-label="GPT-5.4 通用→专用 范式转移" role="img"></object>
 

@@ -8,7 +8,7 @@ description: "SOLID接口隔离原则在AI时代的延伸：Intent/Context/Promp
 
 redirect_from:
   - /interface-segregation.html
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 接口隔离：人类与 AI 的契约设计
@@ -59,9 +59,9 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 
 **💡 关键洞察：** 接口隔离的本质是**关注点分离**——让调用者只依赖他们真正需要的东西。
 
-<object data="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-interface-segregation-01-fat-vs-thin.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好" role="img"></object>
 
-<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好（插图）" role="img"></object>
+<object data="/assets/images/2026-03-15-interface-segregation-02-contract-architecture.svg" type="image/svg+xml" width="100%" aria-label="为什么瘦接口更好" role="img"></object>
 
 ---
 
@@ -84,7 +84,7 @@ Robert C. Martin 在 SOLID 原则中提出：**"Clients should not be forced to 
 通过预定义的 Intent 类型和参数结构，将"帮我优化这个函数"这类模糊请求转化为 `Intent { type: "REFACTOR_CODE", target: "function_name", constraints: ["performance", "readability"] }`，让 AI 明确知道要做什么、做到什么程度。
 
 **使用示例：**
-```
+```text
 Intent { type: "REVIEW_CODE", target: "src/auth.py", focus: ["security", "error_handling"] }
 → 返回安全性审查报告和具体修复建议
 ```
@@ -94,7 +94,7 @@ Intent { type: "REVIEW_CODE", target: "src/auth.py", focus: ["security", "error_
 **定义：** Context 接口规定了 AI 能"看到"什么、不能"看到"什么。
 
 **Context 的组成：**
-```
+```css
 interface Context {
   // 任务背景：项目类型、技术栈、约束条件
   project: { type: ProjectType, stack: string[], constraints: string[] };
@@ -120,7 +120,7 @@ interface Context {
 "帮我看看这个代码有什么问题"——这类 Prompt 依赖 AI 的主观判断，不同时间、不同模型可能给出完全不同的答案。
 
 **结构化的 Prompt 接口：**
-```
+```json
 { "intent": "CODE_REVIEW", "target": "src/auth.py", "check": ["security", "performance"], "output_format": "structured" }
 ```
 结构化确保每次调用的一致性和可验证性。
@@ -149,7 +149,7 @@ interface Context {
 ### 明确的输入输出
 
 **使用类型系统定义契约：**
-```
+```css
 Intent {
   type: "CODE_GENERATION",
   input: { spec: MarkdownSpec, language: ProgrammingLanguage },
@@ -162,7 +162,7 @@ Intent {
 ### 错误处理约定
 
 **错误处理契约模板：**
-```
+```json
 { "error": "AMBIGUOUS_INTENT", "detail": "缺少 target 字段", "suggestion": "请指定要操作的目标" }
 ```
 契约应明确定义错误分类：AMBIGUOUS_INTENT、INVALID_INPUT、BOUNDARY_VIOLATION、TIMEOUT 等，让调用者能针对性处理。
@@ -170,7 +170,7 @@ Intent {
 ### 版本与演化策略
 
 **接口版本化示例：**
-```
+```text
 Intent_v1 { type, ... }      // 初始版本
 Intent_v2 { type, context }  // 新增 context 字段（可选）
 ```
@@ -209,7 +209,7 @@ Intent_v2 { type, context }  // 新增 context 字段（可选）
 将 Intent 拆分为原子级别的小单元——`FETCH_CONTEXT`、`ANALYZE_CODE`、`GENERATE_DIFF`、`VALIDATE_OUTPUT`——每个单元职责单一、可独立测试，可按需组合成复杂工作流。
 
 **实战示例：复杂工作流：**
-```
+```json
 [FETCH_CONTEXT] → [ANALYZE_CODE] → [GENERATE_DIFF] → [VALIDATE_OUTPUT]
      ↑                                        ↓
      ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ← ←

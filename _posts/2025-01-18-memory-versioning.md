@@ -7,7 +7,7 @@ tags: [版本控制, 知识更新, Schema迁移, 一致性]
 description: "知识有保质期——借鉴数据库Migration模式，给记忆加版本号和变更类型，支持渐进更新与回滚，多版本共存根据上下文路由到正确知识。"
 redirect_from:
   - /memory-versioning/
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

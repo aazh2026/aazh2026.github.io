@@ -6,7 +6,7 @@ permalink: /openai-instruction-hierarchy-prompt-injection/
 tags: [AI-Native, OpenAI, Safety, Prompt-Injection, Instruction-Hierarchy]
 description: "OpenAI提出指令层级概念，通过IH-Challenge数据集训练模型正确处理多来源指令冲突：System > Developer > User > Tool。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -48,7 +48,7 @@ series: AI-Native Engineering
 
 ### OpenAI 的层级定义
 
-<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-01-arch.svg" type="image/svg+xml" width="100%" aria-label="OpenAI 的层级定义（插图）" role="img"></object>
+<object data="/assets/images/2026-03-21-openai-instruction-hierarchy-01-arch.svg" type="image/svg+xml" width="100%" aria-label="OpenAI 的层级定义" role="img"></object>
 
 **核心规则**：
 - 高优先级指令更可信

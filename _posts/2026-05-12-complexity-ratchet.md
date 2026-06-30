@@ -5,7 +5,7 @@ date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Testing, Software-Engineering, Claude-Code]
 description: "AI编码的核心不是速度而是复杂度棘轮——测试+文档+评估构成只能向上走的系统，90%测试覆盖率是相变点而非目标线。"
 author: "@aaron"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -18,7 +18,7 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2026-05-12-complexity-ratchet-01-hero.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-05-12-complexity-ratchet-01-hero.svg" type="image/svg+xml" width="100%" aria-label="2026-05-12-complexity-ratchet-01-hero 图示" role="img"></object>
 
 ## 软件曾经是脆的
 

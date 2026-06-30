@@ -5,8 +5,7 @@ date: 2026-03-12T20:00:00+08:00
 tags: [AI-Native软件工程, 调试, Agent, 故障诊断]
 description: "Agent-Driven Debugging将75%信息处理交给Agent，人类从猎人变为驯兽师，专注高价值决策。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #48
-
+series: aise
 redirect_from:
   - /agent-driven-debugging/
 ---
@@ -72,7 +71,7 @@ redirect_from:
 
 Agent-Driven Debugging 不是让 AI 替代程序员调试，而是**重新定义调试的边界**。
 
-<object data="/assets/images/2026-03-12-agent-driven-debugging-01-model.svg" type="image/svg+xml" width="100%" aria-label="范式转移：从调试到诊断（插图）" role="img"></object>
+<object data="/assets/images/2026-03-12-agent-driven-debugging-01-model.svg" type="image/svg+xml" width="100%" aria-label="范式转移：从调试到诊断" role="img"></object>
 
 ### 核心洞察：调试 ≠ 写代码
 
@@ -172,13 +171,13 @@ Agent："周末异常分析报告：
 
 ---
 
-<object data="/assets/images/2026-03-12-agent-driven-debugging-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="核心能力（插图）" role="img"></object>
+<object data="/assets/images/2026-03-12-agent-driven-debugging-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="核心能力" role="img"></object>
 
 ## 实战框架：让 Agent 成为你的调试搭档
 
 现在让我们进入实战。如何设计一个有效的 Agent-Driven Debugging 工作流？
 
-<object data="/assets/images/2026-03-12-agent-driven-debugging-02-workflow.svg" type="image/svg+xml" width="100%" aria-label="实战框架：让 Agent 成为你的调试搭档（插图）" role="img"></object>
+<object data="/assets/images/2026-03-12-agent-driven-debugging-02-workflow.svg" type="image/svg+xml" width="100%" aria-label="实战框架：让 Agent 成为你的调试搭档" role="img"></object>
 
 ### 1. 意图设计：如何与调试 Agent 对话
 

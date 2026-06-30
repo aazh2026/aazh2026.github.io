@@ -5,7 +5,7 @@ title: '跨会话一致性：如何让Agent不变成\"精神分裂\"'
 date: 2025-01-12T01:35:00+08:00
 tags: [Agent设计, 一致性, 记忆管理, 长期交互]
 description: "跨会话一致性面临身份、知识、上下文三层挑战，时间旅行问题需要分层摘要+时间感知索引，冲突不隐藏而是主动标记或询问。"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **分层摘要 + 冲突显式化** — 热数据（近期会话详细摘要）优先加载，冷数据（历史总摘要）作为背景；矛盾不隐藏，主动标记或询问
 > 4. **最好的Agent不是记忆力最强的，而是让用户感觉"它懂我"的**
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg"
+<object data="/assets/images/2025-01-12-consistency-maintenance-01-three-layers.svg" type="image/svg+xml" width="100%" aria-label="一致性的三层架构：内容 / 时间 / 语义" role="img"></object>
 
 <object data="/assets/images/2025-01-12-consistency-maintenance-02-time-travel.svg" type="image/svg+xml" width="100%" aria-label="时间旅行问题的四步工作流" role="img"></object>
 
@@ -144,7 +144,7 @@ Agent需要：
 
 不存储完整对话，存储**分层摘要**：
 
-<object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg"
+<object data="/assets/images/2025-01-12-consistency-maintenance-02-pyramid.svg" type="image/svg+xml" width="100%" aria-label="会话摘要的金字塔结构：底层细节 / 中层合并 / 顶层总摘要" role="img"></object>
 
 <object data="/assets/images/2025-01-12-consistency-maintenance-03-pyramid.svg" type="image/svg+xml" width="100%" aria-label="会话摘要金字塔结构" role="img"></object>
 

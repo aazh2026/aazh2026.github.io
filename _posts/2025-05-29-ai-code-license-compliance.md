@@ -5,8 +5,7 @@ date: 2025-05-29T10:00:00+08:00
 tags: [AI-Native软件工程, License合规, SCA, 知识产权]
 description: "AI生成的代码可能携带开源License基因，四维检测技术溯源代码指纹并自动分级标记风险。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #48
-
+series: aise
 redirect_from:
   - /ai-code-license-compliance.html
 ---
@@ -68,7 +67,7 @@ redirect_from:
 
 ## SCA工具的现状与局限
 
-<object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%" aria-label="SCA工具的现状与局限（插图）" role="img"></object>
+<object data="/assets/images/2025-05-29-ai-code-license-compliance-01-sca-pipeline.svg" type="image/svg+xml" width="100%" aria-label="SCA工具的现状与局限" role="img"></object>
 
 ### 传统SCA如何工作
 
@@ -128,7 +127,7 @@ AI模型的训练数据：
 
 一份完整的AI代码溯源报告通常包含以下结构：
 
-```
+```text
 === 代码溯源报告 ===
 文件：src/utils/auth_helper.py (第 23-67 行)
 风险等级：🔴 HIGH

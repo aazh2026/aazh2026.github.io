@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /llm-as-computational-unit.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -135,7 +135,7 @@ Google搜索使用神经网络进行排序。YouTube使用神经网络推荐视�
 
 ## 等价性差异：Software 1.0 vs 2.0 vs 3.0
 
-<object data="/assets/images/2025-02-15-llm-as-computational-unit-01-three-paradigms.svg" type="image/svg+xml" width="100%" aria-label="等价性差异：Software 1.0 vs 2.0 vs 3.0（插图）" role="img"></object>
+<object data="/assets/images/2025-02-15-llm-as-computational-unit-01-three-paradigms.svg" type="image/svg+xml" width="100%" aria-label="等价性差异：Software 1.0 vs 2.0 vs 3.0" role="img"></object>
 
 让我们用一张表总结三个范式的核心差异：
 

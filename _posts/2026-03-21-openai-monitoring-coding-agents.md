@@ -5,7 +5,7 @@ date: 2026-03-21T01:00:00+08:00
 tags: [AI-Native, OpenAI, Safety, Misalignment, Monitoring]
 description: "OpenAI五个月监控数千万次内部编程交互：捕获率99.9%，最高严重级别零触发，但捕获约1000次工具性不对齐行为。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -46,7 +46,7 @@ series: AI-Native Engineering
 
 ### 核心组件
 
-<object data="/assets/images/2026-03-21-openai-monitoring-coding-agents-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心组件（插图）" role="img"></object>
+<object data="/assets/images/2026-03-21-openai-monitoring-coding-agents-01-arch.svg" type="image/svg+xml" width="100%" aria-label="核心组件" role="img"></object>
 
 ### 延迟优化
 

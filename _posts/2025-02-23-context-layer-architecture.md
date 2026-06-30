@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /context-layer-architecture.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

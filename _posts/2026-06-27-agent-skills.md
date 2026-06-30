@@ -5,7 +5,7 @@ date: 2026-06-27T10:00:00+08:00
 tags: [AI-Native软件工程, agent-skills, 工程纪律, ADK, Skill设计]
 description: 'Google工程总监Addy Osmani的开源技能库，通过"反借口表格"将人类工程师的判断经验编码为AI代理可执行的工作流，实现软件工程纪律的自动化。'
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 "这很简单，不需要写 Spec。"
@@ -112,7 +112,7 @@ Osmani 的 agent-skills 和 Google Cloud Tech 的 Lavi Nigam、Shubham Saboo 在
 
 答案是**渐进式披露**（Progressive Disclosure），在 ADK 的 `SkillToolset` 体系里实现为三个层级：
 
-<object data="/assets/images/2026-06-27-agent-skills-01-disclosure.svg" type="image/svg+xml" width="100%" aria-label="SKILL.md 的三层渐进式披露（插图）" role="img"></object>
+<object data="/assets/images/2026-06-27-agent-skills-01-disclosure.svg" type="image/svg+xml" width="100%" aria-label="SKILL.md 的三层渐进式披露" role="img"></object>
 
 `SkillToolset` 自动给你三个工具：`list_skills`（L1）、`load_skill`（L2）、`load_skill_resource`（L3）。10 个 skill 的 agent，基线 `context window` 从"万级 token 单体 prompt"压到"千级 L1 元数据"——大约 **90% 省流**。
 
@@ -122,7 +122,7 @@ Osmani 的 agent-skills 和 Google Cloud Tech 的 Lavi Nigam、Shubham Saboo 在
 
 在 GitHub 仓库 [lavinigam-gcp/build-with-adk](https://github.com/lavinigam-gcp/build-with-adk) 里，Lavi Nigam 提供了 5 种 Skill 内容设计模式的可运行实现，每种都有完整的 `SKILL.md` 样例和 Python 代码：
 
-<object data="/assets/images/2026-06-27-agent-skills-02-patterns.svg" type="image/svg+xml" width="100%" aria-label="五种 SKILL.md 设计模式（插图）" role="img"></object>
+<object data="/assets/images/2026-06-27-agent-skills-02-patterns.svg" type="image/svg+xml" width="100%" aria-label="五种 SKILL.md 设计模式" role="img"></object>
 
 **1. Tool Wrapper——让 Agent 秒变某库领域专家**
 

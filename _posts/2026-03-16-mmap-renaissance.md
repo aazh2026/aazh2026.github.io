@@ -6,7 +6,7 @@ permalink: /mmap-renaissance-memory-constraint-engineering/
 tags: [Engineering, Performance, AI, Graph Neural Networks, mmap]
 description: "GraphZero 用 mmap 绕过 PyTorch Geometric 的内存墙，让操作系统接管换页决策——SSD 时代让这个 1970 年代的 Unix 智慧重新成为 AI 基础设施的利器。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -51,7 +51,7 @@ mmap（memory-mapped files）是 Unix 系统调用，最早出现在 1970 年代
 
 mmap **不一次性把整个文件读入内存**，而是按需将磁盘页加载到内存。操作系统负责换页，开发者像访问普通内存一样访问文件。
 
-<object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%" aria-label="Unix 的古老智慧（插图）" role="img"></object>
+<object data="/assets/images/2026-03-16-mmap-renaissance-01-io-comparison.svg" type="image/svg+xml" width="100%" aria-label="Unix 的古老智慧" role="img"></object>
 
 ### 为什么被遗忘了？
 

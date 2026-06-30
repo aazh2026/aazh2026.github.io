@@ -5,7 +5,7 @@ date: 2026-03-23T14:00:00+08:00
 tags: [AI-Native, Cursor, Claude-Code, IDE, Review]
 description: "2026年AI编程工具已分裂为IDE中心化与终端中心化两条路径，便利与控制的权衡是核心张力——Cursor适合追求开箱即用的开发者，Claude Code适合追求极致控制的高级用户。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -16,7 +16,7 @@ series: AI-Native Engineering
 > 3. **成本现实** — Cursor $20/月 vs Claude Code $0-100/月，差异在于学习曲线和时间成本
 > 4. **最终判断** — 两者不会互相取代，最佳选择是根据场景切换使用
 
-<object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison.svg" type="image/svg+xml" width="100%" aria-label="2026-03-23-cursor-vs-claude-code-01-ide-terminal-comparison 图示" role="img"></object>
 
 ---
 
@@ -33,7 +33,7 @@ series: AI-Native Engineering
 | **调试能力** | ✅ 内置Debugger | ⚠️ 依赖终端 |
 | **学习曲线** | 低 | 高 |
 
-<object data="/assets/images/2026-03-23-cursor-vs-claude-code-02-decision-tree.svg" type="image/svg+xml" width="100%" aria-label="核心指标速览（插图）" role="img"></object>
+<object data="/assets/images/2026-03-23-cursor-vs-claude-code-02-decision-tree.svg" type="image/svg+xml" width="100%" aria-label="核心指标速览" role="img"></object>
 
 ---
 

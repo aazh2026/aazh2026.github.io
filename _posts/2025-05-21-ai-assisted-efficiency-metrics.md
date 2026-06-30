@@ -5,8 +5,7 @@ date: 2025-05-21T08:00:00+08:00
 tags: [AI-Native软件工程, 效能度量, 代码可维护性, 预测模型]
 description: '阐述AI时代效能度量的范式转移，从代码产出速度转向修改成本，建立意图修改率、知识半衰期、可维护性指数等新指标体系，核心洞察是"改得快"比"写得快"更有价值。'
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #41
-
+series: aise
 redirect_from:
   - /ai-assisted-efficiency-metrics.html
 ---
@@ -69,7 +68,7 @@ redirect_from:
 
 ## 新效能度量体系
 
-<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-shift.svg" type="image/jpeg" width="100%" aria-label="新效能度量体系（插图）" role="img"></object>
+<object data="/assets/images/2025-05-21-ai-assisted-efficiency-metrics-02-metrics-shift.svg" type="image/jpeg" width="100%" aria-label="新效能度量体系" role="img"></object>
 
 AI时代的效能度量从"写了多少"转向"改起来多贵"。传统指标在AI辅助编程场景下全面失效——AI生成代码的速度是人工的数十倍，代码行数这个指标彻底失去了意义。新的度量体系围绕一个核心问题构建：**当需求变化时，你的代码需要付出多少代价才能适应？**
 

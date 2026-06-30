@@ -5,7 +5,7 @@ date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, Claude, Content-Workflow, Automation]
 description: "4-Agent是最小可行内容团队结构，覆盖intake→production→quality→distribution完整周期，专家团队永远胜过单打独斗的全能选手。"
 author: Aaron
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -72,7 +72,7 @@ series: AI-Native Engineering
 - **Output**：以正确格式部署到正确平台
 - **Never does**：研究、写作或质量评估
 
-<object data="/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Agent 4：Distribution Agent（插图）" role="img"></object>
+<object data="/assets/images/2026-05-12-claude-multi-agent-systems-01-four-agent-pipeline.svg" type="image/svg+xml" width="100%" aria-label="Agent 4：Distribution Agent" role="img"></object>
 
 ---
 
@@ -110,7 +110,7 @@ series: AI-Native Engineering
 
 项目目录的顶层结构遵循固定约定，所有 Agent 都依赖这个结构来定位输入和输出文件：
 
-```
+```text
 project/
 ├── master CLAUDE.md      # 共享契约，定义 4-Agent 系统的角色与规则
 ├── inbox/

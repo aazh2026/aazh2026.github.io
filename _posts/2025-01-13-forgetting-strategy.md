@@ -6,7 +6,7 @@ tags: [AI架构, 认知科学, 遗忘策略, 深度思考]
 description: "Agent的记忆过载是设计缺陷而非算力不足——遗忘是认知智慧，四层遗忘策略（时间衰减、用进废退、重要性分级、渐进压缩）让系统聚焦最相关信息。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 你的Agent不是记忆力差，而是不会「遗忘」
@@ -23,9 +23,9 @@ series: AI-Native Engineering
 
 ---
 
-<object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-forgetting-tiers.svg" type="image/svg+xml" width="100%" aria-label="你的Agent不是记忆力差，而是不会「遗忘」（2025-01-13-forgetting-strategy-01-forgetting-tiers）" role="img"></object>
 
-<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2025-01-13-forgetting-strategy-01-memory-strategy.svg" type="image/svg+xml" width="100%" aria-label="你的Agent不是记忆力差，而是不会「遗忘」（2025-01-13-forgetting-strategy-01-memory-strategy）" role="img"></object>
 
 ## 50万条记忆的教训
 

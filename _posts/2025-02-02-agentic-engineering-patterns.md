@@ -8,7 +8,7 @@ author: "@postcodeeng"
 
 redirect_from:
   - /agentic-engineering-patterns.html
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

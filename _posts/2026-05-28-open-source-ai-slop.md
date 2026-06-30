@@ -4,7 +4,7 @@ title: "开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训"
 date: 2026-05-28T16:00:00+08:00
 tags: [开源, AI Agent, 软件工程, 社区困境]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "AI没有增加需要软件的人，也没有增加能够review代码的维护者——它只增加了代码量和争夺注意力的项目数量，slop begets slop正在让开源维护成本不可持续。"
 ---
 
@@ -26,7 +26,7 @@ Pi 的 issue tracker 现在不只是存储用户报告——它也成了 AI agen
 
 问题是：**issue 描述的质量正在急剧下降**。
 
-<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%" aria-label="引言：一个维护者的困境（插图）" role="img"></object>
+<object data="/assets/images/2026-05-28-open-source-ai-slop-01-slop-cycle.svg" type="image/svg+xml" width="100%" aria-label="引言：一个维护者的困境" role="img"></object>
 
 ## Slop Issues：95% 是 AI 生成的垃圾
 

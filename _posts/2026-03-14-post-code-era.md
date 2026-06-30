@@ -5,8 +5,7 @@ date: 2026-03-14T20:00:00+08:00
 tags: [AI-Native软件工程, 未来趋势, 自然语言编程, 后代码时代]
 description: "自然语言成为新的编程媒介，代码从主要工作产物变为中间验证对象，工程师从代码工匠进化为意图架构师。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #62
-
+series: aise
 redirect_from:
   - /post-code-era.html
 ---
@@ -21,7 +20,7 @@ redirect_from:
 > 
 关键洞察：编程的本质从未改变——解决问题。改变的只是表达的媒介。
 
-<object data="/assets/images/2026-03-14-post-code-era-03-intent-architecture.svg" type="image/svg+xml" width="100%" aria-label="插图" role="img"></object>
+<object data="/assets/images/2026-03-14-post-code-era-03-intent-architecture.svg" type="image/svg+xml" width="100%" aria-label="2026-03-14-post-code-era-03-intent-architecture 图示" role="img"></object>
 
 ---
 

@@ -6,7 +6,7 @@ tags: [RAG, 文档工程, 知识管理, LLM, 写作范式]
 description: "人类阅读是主动的、连贯的、有上下文的；AI阅读是被动的、碎片的、局部最优的。RAG-Friendly文档需满足四大原则：自包含（每个块包含全部上下文）、显式结构（使用编号列表而非依赖排版）、术语一致性（每个概念只有一个标准名称）、问答导向（直接写出问题和答案）。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 ## 写给AI看的文档：RAG时代的写作新范式
@@ -54,7 +54,7 @@ series: AI-Native Engineering
 
 ## 人类阅读 vs AI阅读：根本差异
 
-<object data="/assets/images/2025-03-11-rag-friendly-documentation-01-rag-chunking.svg" type="image/svg+xml" width="100%" aria-label="人类阅读 vs AI阅读：根本差异（插图）" role="img"></object>
+<object data="/assets/images/2025-03-11-rag-friendly-documentation-01-rag-chunking.svg" type="image/svg+xml" width="100%" aria-label="人类阅读 vs AI阅读：根本差异" role="img"></object>
 
 ### 人类怎么读文档
 

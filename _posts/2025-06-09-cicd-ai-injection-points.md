@@ -5,7 +5,7 @@ date: 2025-06-09T00:00:00+08:00
 tags: [AI-Native软件工程, CI/CD, DevOps, LLM, 自动化验证]
 description: "AI作为新型验证层填补传统测试盲区，12个卡点覆盖从提交到部署的全流程验证。"
 author: "@postcodeeng"
-series: AI-Native软件工程系列 #7
+series: aise
 ---
 
 > **TL;DR**
@@ -28,9 +28,9 @@ series: AI-Native软件工程系列 #7
 
 ### 传统CI/CD的局限
 
-<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限（插图）" role="img"></object>
+<object data="/assets/images/2025-06-09-cicd-01-pipeline.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限" role="img"></object>
 
-<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限（插图）" role="img"></object>
+<object data="/assets/images/2025-06-09-cicd-ai-injection-02-layered-defense.svg" type="image/svg+xml" width="100%" aria-label="传统CI/CD的局限" role="img"></object>
 
 ### 传统CI/CD的核心瓶颈
 

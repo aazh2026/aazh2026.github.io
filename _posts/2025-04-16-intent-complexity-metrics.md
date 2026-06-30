@@ -4,7 +4,7 @@ title: "AI时代的软件工程指标：LOC已死，Intent Complexity当立"
 date: 2025-04-16T00:00:00+08:00
 tags: [软件度量, Intent Complexity, AI工程, 研发效能, 范式转移]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 description: "探讨AI时代软件度量范式转移，从LOC等传统指标转向Intent Complexity，建立价值交付效率与AI辅助效能双维度指标体系。"
 ---
 
@@ -114,7 +114,7 @@ AI快速生成功能，但可能：
 
 ### Intent Complexity的维度
 
-<object data="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" type="image/svg+xml" width="100%" aria-label="Intent Complexity的维度（插图）" role="img"></object>
+<object data="/assets/images/2025-04-16-intent-complexity-01-dimensions.svg" type="image/svg+xml" width="100%" aria-label="Intent Complexity的维度" role="img"></object>
 
 ---
 

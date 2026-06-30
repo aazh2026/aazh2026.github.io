@@ -5,7 +5,7 @@ date: 2025-05-15T20:00:00+08:00
 tags: [AI-Native软件工程, DORA, 效能度量, 基准线]
 description: "深入探讨AI时代DORA指标的重新定义，提出意图交付频率、意图交付周期、意图恢复时间、意图偏离率四大新指标，核心洞察是度量意图而非代码。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**> 
@@ -151,7 +151,7 @@ AI时代问题：
 
 <object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-01-comparison.svg" type="image/svg+xml" width="100%" aria-label="传统DORA vs AI时代DORA指标对比" role="img"></object>
 
-<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-02-four-metrics.svg" type="image/svg+xml" width="100%" aria-label="重构后的4大指标（插图）" role="img"></object>
+<object data="/assets/images/2025-05-15-dora-metrics-ai-era-reconstruction-02-four-metrics.svg" type="image/svg+xml" width="100%" aria-label="重构后的4大指标" role="img"></object>
 
 ### 新指标1：意图交付频率（Intent Delivery Frequency）
 

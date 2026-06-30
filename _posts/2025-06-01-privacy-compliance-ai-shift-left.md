@@ -5,7 +5,7 @@ date: 2025-06-01T08:00:00+08:00
 tags: [AI-Native软件工程, 隐私合规, GDPR, 安全左移]
 description: "AI在需求阶段自动分析隐私合规风险，将合规成本从上线后的百万美元级降至需求阶段的千美元级。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -65,7 +65,7 @@ series: AI-Native Engineering
 
 > 💡 **Key Insight**：合规成本随阶段指数增长——需求阶段的$1,000修复成本，在上线后可能膨胀至$1,000,000+。这正是"左移"策略的核心价值：越早发现，成本越低。
 
-<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-01-cost-comparison.svg" type="image/svg+xml" width="100%" aria-label="合规成本分析（插图）" role="img"></object>
+<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-01-cost-comparison.svg" type="image/svg+xml" width="100%" aria-label="合规成本分析" role="img"></object>
 
 ---
 
@@ -158,7 +158,7 @@ AI基于法规知识库自动匹配风险场景：
 
 ## GDPR 与个保法的 Checklist 自动化
 
-<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-02-checklist-flow.svg" type="image/svg+xml" width="100%" aria-label="GDPR 与个保法的 Checklist 自动化（插图）" role="img"></object>
+<object data="/assets/images/2025-06-01-privacy-compliance-ai-shift-left-02-checklist-flow.svg" type="image/svg+xml" width="100%" aria-label="GDPR 与个保法的 Checklist 自动化" role="img"></object>
 
 ### 法规知识库
 

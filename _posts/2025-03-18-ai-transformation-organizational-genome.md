@@ -5,7 +5,7 @@ date: 2025-03-18T08:00:00+08:00
 tags: [AI转型, 组织变革, 企业架构, Conway定律]
 description: "企业70%预算投入技术采购，但技术因素只占转型成功权重的10%，而占权重60%的组织适配度只获10%投入。AI转型是组织基因改造，不是工具采购。历史三次技术革命都遵循'技术先行→组织滞后→重构突破'模式，AI转型正在重演。"
 author: "@postcodeeng"
-series: 企业架构洞察
+series: industry-insight
 ---
 
 > **TL;DR**
@@ -178,7 +178,7 @@ AI转型正在重复这个模式。
 
 ## 实战：企业AI成熟度的五个阶段
 
-<object data="/assets/images/2026-03-18-ai-transformation-organizational-genome-01-maturity-stages.svg" type="image/svg+xml" width="100%" aria-label="实战：企业AI成熟度的五个阶段（插图）" role="img"></object>
+<object data="/assets/images/2026-03-18-ai-transformation-organizational-genome-01-maturity-stages.svg" type="image/svg+xml" width="100%" aria-label="实战：企业AI成熟度的五个阶段" role="img"></object>
 
 基于对数百家企业AI转型的观察和复盘，我总结了一个「企业AI成熟度模型」。这不是技术成熟度，是组织准备度。
 

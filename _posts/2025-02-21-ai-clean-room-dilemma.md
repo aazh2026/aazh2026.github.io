@@ -6,7 +6,7 @@ tags: [AI Coding, Clean Room, 许可证, Claude, 编译器, 法律风险]
 description: 'AI时代Clean Room方法论面临根本挑战——AI没有"接触"代码的概念，其"独立实现"本质上是训练记忆中的模式重组，许可证归属尚无法律答案。'
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

@@ -6,7 +6,7 @@ permalink: /ai-system-cost-model/
 tags: [AI-Native, Cost-Model, System-Design, Optimization]
 description: "AI系统成本不是线性增长而是阶梯式跃迁，本文提出成本结构四象限模型：80%成本浪费来自结构性错配，优化核心是重构架构而非降单价。"
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

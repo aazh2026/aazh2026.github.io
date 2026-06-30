@@ -6,7 +6,7 @@ tags: [PRD, 需求工程, AI-Native, 可执行规格, 结构化文档, 产品管
 description: "PRD从Word文档进化为可执行的语义规格说明，CCC模型将需求澄清从主观判断变为客观验证，显著提升AI生成代码的首次通过率。"
 author: "@postcodeeng"
 
-series: AI-Native Engineering
+series: aise
 ---
 
 ## PRD的结构化转型：从Word到可执行的语义规格说明

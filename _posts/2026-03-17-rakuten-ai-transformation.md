@@ -6,7 +6,7 @@ permalink: /rakuten-ai-transformation-mttr-50-percent/
 tags: [AI-Native, Enterprise, Case Study, Rakuten, Codex]
 description: "Rakuten 用 OpenAI Codex 将 MTTR 降低 50%，全栈交付从数月缩短至周级——AI 增强而非替代的渐进式转型路径。 "
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
@@ -151,7 +151,7 @@ Rakuten 的工具链覆盖 IDE、代码审查、CI/CD 和运维四个层次，AI
 
 <object data="/assets/images/2026-03-17-rakuten-ai-transformation-01-overview.svg" type="image/svg+xml" width="100%" aria-label="Rakuten AI 工具链集成架构" role="img"></object>
 
-<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%" aria-label="工具链集成架构（插图）" role="img"></object>
+<object data="/assets/images/2026-03-17-rakuten-ai-transformation-02-metrics.svg" type="image/svg+xml" width="100%" aria-label="工具链集成架构" role="img"></object>
 
 ### IDE 集成：开发者的 AI 伴侣
 
