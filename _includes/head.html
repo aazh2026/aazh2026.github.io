@@ -6,8 +6,17 @@
   <!-- Content-Security-Policy fallback for GH Pages (where _headers is not parsed).
        When served via Cloudflare Pages / Netlify, HTTP-level headers in /static/_headers
        take precedence; this meta is the second-best layer. -->
+  <!-- Notes on the directives:
+       * frame-src includes 'self' so <object data="/assets/.../foo.svg"> can
+         frame same-origin SVGs (those are explicitly used in posts to keep
+         them vector + interactive). Without it the browser blocks the load
+         with "Framing ... violates frame-src" because the default-src 'self'
+         was being overridden by the more restrictive frame-src.
+       * style-src and connect-src include https://giscus.app so the embed
+         can fetch its own stylesheet and call its /api/discussions endpoint.
+       * connect-src also includes plausible.io (analytics beacon). -->
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://plausible.io https://giscus.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://giscus.app">
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://plausible.io https://giscus.app; style-src 'self' 'unsafe-inline' https://giscus.app; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https://plausible.io https://giscus.app; frame-src 'self' https://giscus.app">
 
   <!-- 主题切换 - 必须在 CSS 之前加载，防止闪烁 -->
   <script>
