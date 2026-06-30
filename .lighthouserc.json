@@ -28,8 +28,7 @@
 
         "interactive": ["off"],
         "uses-long-cache-ttl": ["off"],
-        "csp-xss": ["off"],
-        "prioritize-lcp-image": ["warn", { "maxNumericValue": 0 }]
+        "csp-xss": ["off"]
       }
     },
     "upload": {

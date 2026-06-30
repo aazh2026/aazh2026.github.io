@@ -8,8 +8,9 @@
   --ivory:  #FAF9F5;
   --paper:  #FFFFFF;
   --slate:  #141413;
-  --clay:   #C46D4E  /* WCAG AA large text: 3.53:1 on ivory */;
-  --clay-d: #B85C3E;
+  --clay:   #C46D4E  /* WCAG AA large text (≥18pt / ≥14pt bold): 3.53:1 on ivory; AA non-text/borders only. Use --clay-text for small body text. */;
+  --clay-d: #B85C3E;  /* darker clay: 5.06:1 on ivory — safe for small text */
+  --clay-text: #9C4A2E;  /* WCAG AA body text: 6.6:1 on ivory, 6.9:1 on paper — use as foreground whenever --clay is the intent at <18pt */
   --oat:    #E3DACC;
   --olive:  #788C5D;
   
@@ -44,6 +45,24 @@ a {
   transition: text-decoration-color 120ms;
 }
 a:hover { text-decoration-color: var(--clay); }
+
+/* Inline paragraph links need a non-color indicator (axe-core link-in-text-block).
+   Decorative/UI links (nav, chips, buttons) already have their own background or
+   border, so we only underline links that appear inside flowing text. */
+p a,
+.post-content li a,
+.lead a,
+.intro a {
+  text-decoration: underline;
+  text-decoration-color: var(--oat);
+  text-decoration-thickness: 1px;
+}
+p a:hover,
+.post-content li a:hover,
+.lead a:hover,
+.intro a:hover {
+  text-decoration-color: var(--clay);
+}
 
 /* ==================== Layout ==================== */
 .wrap {
@@ -258,7 +277,7 @@ section {
 .sec-head .idx {
   font-family: var(--mono);
   font-size: 13px;
-  color: var(--clay);
+  color: var(--clay-text);
   font-weight: 600;
   width: 34px;
   flex-shrink: 0;
@@ -489,6 +508,7 @@ section {
   background: var(--paper);
   border: 1.5px solid var(--g300);
   border-radius: 10px;
+  color: var(--g700);  /* was #828282 — bumped to g700 (#3D3D3A, 8.7:1) for WCAG AA */
 }
 
 .post-content blockquote p {
@@ -569,7 +589,7 @@ section {
 
 /* Strong */
 .post-content strong {
-  color: var(--clay);
+  color: var(--clay-text);
   font-weight: 600;
 }
 
@@ -936,11 +956,11 @@ footer .k {
   display: inline-block;
   font-family: var(--mono);
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 2px 8px;
   border-radius: 999px;
   background: var(--paper);
-  color: var(--clay);
+  color: var(--clay-text);
   border: 1px solid var(--clay);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -1040,9 +1060,9 @@ footer .k {
   color: var(--clay);
 }
 .pagination .current {
-  background: var(--clay);
+  background: var(--clay-d);
   color: var(--paper);
-  border-color: var(--clay);
+  border-color: var(--clay-d);
 }
 .pagination .gap {
   border: none;
@@ -1275,16 +1295,16 @@ footer .k {
 }
 .series-list li.series-start a {
   font-weight: 600;
-  color: var(--clay);
+  color: var(--clay-text);
 }
 .start-badge {
   display: inline-block;
   font-family: var(--mono);
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 2px 8px;
   border-radius: 999px;
-  background: var(--clay);
+  background: var(--clay-d);
   color: #fff;
   letter-spacing: 0.02em;
   flex-shrink: 0;
@@ -1983,7 +2003,7 @@ footer .k {
   font-weight: 500;
 }
 .post-meta-series {
-  color: var(--clay);
+  color: var(--clay-text);
   font-weight: 500;
 }
 [data-theme="dark"] .post-meta-box {
@@ -2108,13 +2128,13 @@ footer .k {
   align-items: center;
   gap: 6px;
   padding: 0.625rem 1rem;
-  background: var(--clay);
+  background: var(--clay-d);
   color: var(--paper);
   border-radius: 999px;
   text-decoration: none;
   font-family: var(--mono);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
   transition: all 150ms;
 }
