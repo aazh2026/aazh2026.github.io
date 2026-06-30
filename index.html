@@ -14,14 +14,14 @@ layout: default
           AI-Native 软件工程实验室 · 记录正在发生的变化<br>
           从代码到意图，从工具到基础设施
         </p>
-        
+
         <nav class="toc">
           <a href="#series">系列专题 <span class="n">4</span></a>
           <a href="#latest">最新文章 <span class="n">8</span></a>
           <a href="#tags">标签云 <span class="n">{{ site.tags.size }}</span></a>
         </nav>
       </div>
-      
+
       <div class="hero-fig" aria-hidden="true">
         <div class="pane md">
           <span class="tag">.md</span>
@@ -42,7 +42,7 @@ layout: default
   </header>
 
   <!-- ==================== Stats ==================== -->
-  <section class="stats-row">
+  <section class="home-stats-row">
     <div class="stat-item">
       <span class="stat-num">{{ site.posts.size }}</span>
       <span class="stat-label">篇文章</span>
@@ -146,9 +146,9 @@ layout: default
       <span class="count">{{ site.posts.size }} 篇</span>
     </div>
 
-    <div class="posts-list">
-      {% for post in site.posts limit: 10 %}
-      <a href="{{ post.url | relative_url }}" class="post-row">
+    <div class="home-posts-list">
+      {% for post in paginator.posts %}
+      <a href="{{ post.url | relative_url }}" class="home-post-row">
         <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         <span class="post-info">
           <span class="post-title">{{ post.title }}</span>
@@ -161,7 +161,31 @@ layout: default
       {% endfor %}
     </div>
 
-    <div class="view-all">
+    <!-- ==================== Pagination ==================== -->
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination" aria-label="分页">
+      {% if paginator.previous_page %}
+        <a class="prev" href="{{ paginator.previous_page_path | relative_url }}">← 上一页</a>
+      {% endif %}
+
+      {% for page in paginator.page_trail %}
+        {% if page.path %}
+          {% assign trail = paginator.page_trail | slice: 0,0 %}
+          <a href="{{ page.path | relative_url }}" class="page-num">{{ page.num }}</a>
+        {% else %}
+          <span class="gap">…</span>
+        {% endif %}
+      {% endfor %}
+
+      <span class="current">第 {{ paginator.page }} / {{ paginator.total_pages }} 页</span>
+
+      {% if paginator.next_page %}
+        <a class="next" href="{{ paginator.next_page_path | relative_url }}">下一页 →</a>
+      {% endif %}
+    </nav>
+    {% endif %}
+
+    <div class="home-view-all">
       <a href="/archive/" class="btn-secondary">查看全部文章 →</a>
     </div>
   </section>
@@ -173,7 +197,7 @@ layout: default
       <h2>标签云</h2>
     </div>
 
-    <div class="tag-cloud">
+    <div class="home-tag-cloud">
       {% for tag in site.tags limit: 30 %}
       <a href="/tags/#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
       {% endfor %}
@@ -181,149 +205,3 @@ layout: default
   </section>
 
 </div>
-
-<style>
-  /* Stats Row */
-  .stats-row {
-    display: flex;
-    gap: 40px;
-    padding: 32px 0;
-    border-bottom: 1px solid var(--g200);
-    margin-bottom: 0;
-  }
-  .stat-item {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--slate);
-  }
-  .stat-label {
-    font-size: 14px;
-    color: var(--g500);
-  }
-
-  /* Posts List */
-  .posts-list {
-    margin-left: 50px;
-  }
-  @media (max-width: 640px) {
-    .posts-list { margin-left: 0; }
-  }
-
-  .post-row {
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--g200);
-    text-decoration: none;
-    color: var(--slate);
-    transition: all 120ms;
-  }
-
-  .post-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    flex: 1;
-    min-width: 0;
-  }
-
-  .post-excerpt {
-    font-size: 0.85em;
-    color: var(--g500);
-    line-height: 1.4;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .post-row:hover {
-    color: var(--clay);
-  }
-  .post-row:hover .arrow {
-    transform: translateX(3px);
-    color: var(--clay);
-  }
-  .post-row:last-child {
-    border-bottom: none;
-  }
-  .post-row .post-date {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--g500);
-    flex-shrink: 0;
-    width: 90px;
-  }
-  .post-row .post-title {
-    font-size: 15px;
-    font-weight: 500;
-    flex: 1;
-  }
-  .post-row .arrow {
-    font-family: var(--mono);
-    font-size: 12px;
-    color: var(--g300);
-    transition: transform 150ms ease, color 150ms ease;
-  }
-
-  /* View All Button */
-  .view-all {
-    margin-top: 28px;
-    margin-left: 50px;
-  }
-  @media (max-width: 640px) {
-    .view-all { margin-left: 0; }
-  }
-
-  .btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--slate);
-    background: var(--paper);
-    border: 1.5px solid var(--g300);
-    border-radius: 999px;
-    text-decoration: none;
-    transition: all 150ms;
-  }
-  .btn-secondary:hover {
-    border-color: var(--slate);
-    color: var(--slate);
-  }
-
-  /* Tag Cloud */
-  .tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-left: 50px;
-    margin-bottom: 60px;
-  }
-  @media (max-width: 640px) {
-    .tag-cloud { margin-left: 0; }
-  }
-
-  .tag-cloud .tag {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    font-size: 13px;
-    padding: 6px 14px;
-    background: var(--paper);
-    border: 1.5px solid var(--g300);
-    border-radius: 999px;
-    color: var(--g700);
-    text-decoration: none;
-    transition: all 120ms;
-  }
-  .tag-cloud .tag:hover {
-    border-color: var(--slate);
-    color: var(--slate);
-  }
-</style>

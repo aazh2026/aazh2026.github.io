@@ -7,7 +7,7 @@
 <nav class="toc-nav" id="toc-nav" aria-label="文章目录">
   <div class="toc-header">
     <span class="toc-title">📋 目录</span>
-    <button class="toc-toggle" id="toc-toggle" title="展开/收起目录">−</button>
+    <button class="toc-toggle" id="toc-toggle" title="展开/收起目录" aria-label="展开/收起目录">−</button>
   </div>
   <div class="toc-content" id="toc-content">
     <ul class="toc-list" id="toc-list">
@@ -16,167 +16,39 @@
   </div>
 </nav>
 
-<style>
-  /* 目录容器 */
-  .toc-nav {
-    position: fixed;
-    right: 2rem;
-    top: 6rem;
-    width: 240px;
-    max-height: calc(100vh - 8rem);
-    background: var(--bg-primary);
-    border: 1px solid var(--border);
-    border-radius: 0.75rem;
-    padding: 1rem;
-    overflow-y: auto;
-    z-index: 100;
-    box-shadow: var(--shadow);
-    transition: all 0.3s ease;
-  }
-  
-  /* 目录收起状态 */
-  .toc-nav.collapsed {
-    width: auto;
-    max-height: auto;
-    padding: 0.5rem;
-  }
-  
-  .toc-nav.collapsed .toc-content {
-    display: none;
-  }
-  
-  /* 目录头部 */
-  .toc-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.75rem;
-  }
-  
-  .toc-title {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: var(--text-primary);
-  }
-  
-  .toc-toggle {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border);
-    border-radius: 0.25rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1rem;
-    color: var(--text-secondary);
-    transition: all 0.2s ease;
-  }
-  
-  .toc-toggle:hover {
-    background: var(--primary);
-    color: white;
-    border-color: var(--primary);
-  }
-  
-  /* 目录列表 */
-  .toc-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .toc-list li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .toc-list a {
-    display: block;
-    padding: 0.375rem 0.5rem;
-    font-size: 0.8125rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    border-radius: 0.25rem;
-    transition: all 0.15s ease;
-    line-height: 1.4;
-  }
-  
-  .toc-list a:hover {
-    background: var(--bg-secondary);
-    color: var(--primary);
-  }
-  
-  /* 当前阅读位置高亮 */
-  .toc-list a.active {
-    background: var(--primary);
-    color: white;
-    font-weight: 500;
-  }
-  
-  /* 层级缩进 */
-  .toc-list .level-1 { padding-left: 0.5rem; }
-  .toc-list .level-2 { padding-left: 1.25rem; }
-  .toc-list .level-3 { padding-left: 2rem; }
-  
-  /* 响应式：小屏幕隐藏目录 */
-  @media (max-width: 1200px) {
-    .toc-nav {
-      display: none;
-    }
-  }
-  
-  /* 深色模式适配 */
-  [data-theme="dark"] .toc-nav {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  }
-</style>
-
 <script>
 (function() {
-  // 等待 DOM 加载完成
   function initTOC() {
     var content = document.querySelector('.post-content');
     var tocList = document.getElementById('toc-list');
     var tocNav = document.getElementById('toc-nav');
     var tocToggle = document.getElementById('toc-toggle');
-    
+
     if (!content || !tocList) return;
-    
-    // 获取所有标题
+
     var headings = content.querySelectorAll('h2, h3, h4');
     if (headings.length === 0) {
       tocNav.style.display = 'none';
       return;
     }
-    
-    // 生成目录 HTML
+
     var tocHTML = '';
     headings.forEach(function(heading, index) {
-      // 为每个标题添加 id（如果没有）
-      if (!heading.id) {
-        heading.id = 'section-' + index;
-      }
-      
-      var level = heading.tagName.toLowerCase() === 'h2' ? 1 : 
+      if (!heading.id) heading.id = 'section-' + index;
+      var level = heading.tagName.toLowerCase() === 'h2' ? 1 :
                   heading.tagName.toLowerCase() === 'h3' ? 2 : 3;
-      var text = heading.textContent.replace(/^\d+\.\s*/, ''); // 移除序号
-      
+      var text = heading.textContent.replace(/^\d+\.\s*/, '');
       tocHTML += '<li><a href="#' + heading.id + '" class="level-' + level + '" data-target="' + heading.id + '">' + text + '</a></li>';
     });
-    
     tocList.innerHTML = tocHTML;
-    
-    // 目录切换按钮
+
     if (tocToggle && tocNav) {
       tocToggle.addEventListener('click', function() {
         tocNav.classList.toggle('collapsed');
         tocToggle.textContent = tocNav.classList.contains('collapsed') ? '+' : '−';
       });
     }
-    
-    // 平滑滚动
+
     tocList.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -185,45 +57,28 @@
           var headerOffset = 80;
           var elementPosition = target.getBoundingClientRect().top;
           var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-          });
-          
-          // 更新 URL hash
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
           history.pushState(null, null, '#' + this.getAttribute('data-target'));
         }
       });
     });
-    
-    // 滚动时高亮当前阅读位置
+
     function updateActiveHeading() {
       var scrollPos = window.pageYOffset + 100;
-      
       for (var i = headings.length - 1; i >= 0; i--) {
         var heading = headings[i];
-        var offsetTop = heading.offsetTop;
-        
-        if (scrollPos >= offsetTop) {
-          tocList.querySelectorAll('a').forEach(function(link) {
-            link.classList.remove('active');
-          });
-          
+        if (scrollPos >= heading.offsetTop) {
+          tocList.querySelectorAll('a').forEach(function(link) { link.classList.remove('active'); });
           var activeLink = tocList.querySelector('a[data-target="' + heading.id + '"]');
-          if (activeLink) {
-            activeLink.classList.add('active');
-          }
+          if (activeLink) activeLink.classList.add('active');
           break;
         }
       }
     }
-    
     window.addEventListener('scroll', updateActiveHeading, { passive: true });
-    updateActiveHeading(); // 初始状态
+    updateActiveHeading();
   }
-  
-  // 页面加载完成后初始化
+
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initTOC);
   } else {
