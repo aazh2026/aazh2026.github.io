@@ -39,9 +39,14 @@ paginate: 10
 paginate_path: "/page:num/"
 
 # Minifier config
+# uglifier_args.harmony: true enables ES6/ES2015+ parsing so the
+# ES5-only default doesn't reject modern JS (sw.js, web-vitals inline,
+# etc.). jekyll-minifier 0.1.10 reads uglifier_args from this key.
 minifier:
   type: html
   preserve: 'pre,code,script,style'
+  uglifier_args:
+    harmony: true
 
 # last_modified_at 配置
 last_modified_at:
