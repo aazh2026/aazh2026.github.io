@@ -61,6 +61,12 @@ jobs:
       - name: "Pre-build: verify SVGs are svgo-optimized"
         run: node scripts/check-svgo.js
 
+      - name: "Pre-build: verify post frontmatter"
+        run: |
+          node scripts/check-aria-labels.js
+          node scripts/check-code-fence-langs.js
+          node scripts/check-series.js
+
       - name: "Pre-build: internal link check"
         run: node scripts/check-internal-links.js
 

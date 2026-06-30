@@ -10,9 +10,16 @@
     "check-svgo": "node scripts/check-svgo.js",
     "check-internal-links": "node scripts/check-internal-links.js",
     "check-color-contrast": "node scripts/check-color-contrast.js",
+    "fix-aria-labels": "node scripts/fix-aria-labels.js",
+    "check-aria-labels": "node scripts/check-aria-labels.js",
+    "fix-code-fence-langs": "node scripts/fix-code-fence-langs.js",
+    "check-code-fence-langs": "node scripts/check-code-fence-langs.js",
+    "fix-series": "node scripts/fix-series.js",
+    "check-series": "node scripts/check-series.js",
     "pagefind": "pagefind --site _site"
   },
   "devDependencies": {
+    "js-yaml": "^5.2.0",
     "pagefind": "^1.5.2",
     "svgo": "^4.0.1"
   }
