@@ -152,7 +152,7 @@
           new PerformanceObserver(function(list) {
             var last = list.getEntries().pop();
             if (last) report('INP', last.duration);
-          }).observe({ type: 'event', buffered: true, durationThreshold: 16 } as any);
+          }).observe({ type: 'event', buffered: true, durationThreshold: 16 });
         } catch (e) {}
         // TTFB
         try {
