@@ -1,3 +1,10 @@
+---
+layout: default
+title: 写作指南
+permalink: /writing-guide/
+description: 博客文章写作指南——模板、风格、SVG 规范、检查清单
+---
+
 # 博客文章写作指南
 
 ## 📋 标准模板位置
@@ -289,5 +296,5 @@ YYYY-MM-DD-post-slug-NN-description.svg
 - [HTML Effectiveness 参考](https://thariqs.github.io/html-effectiveness/)
 - `_templates/article-template.md` - 新式文章模板
 - `_templates/post-template.md` - 旧式文章模板
-- `WRITING-GUIDE.md` - 本指南
+- [本指南](/writing-guide/)
 - `assets/images/` - SVG 配图目录

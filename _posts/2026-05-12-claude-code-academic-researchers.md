@@ -158,9 +158,9 @@ Mushtaq 在文章结尾说的这句话，和 Garry Tan 的 skillify 哲学、和
 - Mushtaq Bilal 的教程（英文）：https://x.com/mushtaqbilalphd/status/2052338632426467550
 
 **本系列相关**
-- [执行已死，判断力永生](/posts/2026-05-11-execution-is-dead-judgment-lives) (AI-Native 软件工程系列)
-- [Skillify：如何让 AI Agent 不再犯同样的错误](/posts/2026-05-13-claude-skills-complete-guide) (AI-Native 软件工程系列)
-- [AI 原生写作：为什么我放弃 Markdown，改用 HTML](/posts/2026-05-12-ai-native-writing-html-over-markdown) (AI-Native 软件工程系列)
+- [执行已死，判断力永生]({% post_url 2026-05-11-execution-is-dead-judgment-lives %}) (AI-Native 软件工程系列)
+- [Skillify：如何让 AI Agent 不再犯同样的错误]({% post_url 2026-05-13-claude-skills-complete-guide %}) (AI-Native 软件工程系列)
+- [AI 原生写作：为什么我放弃 Markdown，改用 HTML]({% post_url 2026-05-12-ai-native-writing-html-over-markdown %}) (AI-Native 软件工程系列)
 
 **工具**
 - Claude Code：https://claude.com/download

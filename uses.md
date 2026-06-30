@@ -25,7 +25,7 @@ description: "本站使用的工具与软件栈"
     <li>Markdown + 自定义 frontmatter schema（<code>title, date, tags, description, author, series</code>）</li>
     <li>每篇 post 独立 1200×630 OG 图（<a href="https://github.com/aazh2026/aazh2026.github.io/blob/main/scripts/generate-og-images.py">PIL 生成</a>）</li>
     <li>500+ 张原创 SVG 信息图（<a href="https://github.com/aazh2026/aazh2026.github.io/tree/main/assets/images">assets/images/</a>）</li>
-    <li>风格：<a href="/WRITING-GUIDE.md">写作规范</a>（TL;DR + 原创图 + 💡 Key Insight + CC BY-NC-SA）</li>
+    <li>风格：<a href="/writing-guide/">写作规范</a>（TL;DR + 原创图 + 💡 Key Insight + CC BY-NC-SA）</li>
   </ul>
 
   <h2>🎨 设计</h2>

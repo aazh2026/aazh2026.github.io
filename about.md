@@ -45,7 +45,7 @@ description: Post-Code Engineering 博客作者与方法论介绍
 
   <section>
     <h2>写作约定</h2>
-    <p>每篇文章遵循 <a href="/WRITING-GUIDE.md">写作规范</a>：</p>
+    <p>每篇文章遵循 <a href="/writing-guide/">写作规范</a>：</p>
     <ul>
       <li>TL;DR 摘要</li>
       <li>原创 SVG 信息图（基于品牌色 #FAF9F5 / #D97757）</li>

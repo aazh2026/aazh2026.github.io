@@ -83,7 +83,6 @@ exclude:
   - CONTRIBUTING.md
   - DEPLOY.md
   - BLOG-SOP.md
-  - WRITING-GUIDE.md
   - BLOG_TOPICS.md
   - AI-NATIVE-WEEKLY-GUIDE.md
   - "*.gemspec"
