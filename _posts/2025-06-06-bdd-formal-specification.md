@@ -3,7 +3,7 @@ layout: post
 title: "BDD语义化升级：Gherkin到形式化规格的自动转换"
 date: 2025-06-06T00:00:00+08:00
 tags: [AI-Native软件工程, BDD, Gherkin, 形式化规格, 规格即代码]
-description: "Gherkin的歧义消耗团队3-4小时，LLM将其转换为形式化规格，实现可验证的可执行规格。"
+description: "Gherkin的歧义消耗团队3-4小时/模糊点，LLM将其自动转换为可数学验证的形式化规格，让规格生成代码、代码反验规格形成自洽闭环。"
 author: "@postcodeeng"
 series: aise
 ---

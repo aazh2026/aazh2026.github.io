@@ -48,7 +48,7 @@ DORA（DevOps Research and Assessment）提出的4个关键指标：
 ### DORA指标的价值
 
 **价值1：预测组织绩效**
-研究表明，DORA指标与组织绩效强相关：
+业界基于 DORA 报告（参见 [DORA / Google Cloud — DevOps Research and Assessment](https://dora.dev/)）的多年追踪观察，DORA 四个指标与组织绩效呈现强相关：
 - 高部署频率 → 更高的软件交付效能
 - 低变更前置时间 → 更快的市场响应
 - 快速恢复 → 更高的系统可靠性

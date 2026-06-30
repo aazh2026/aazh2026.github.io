@@ -3,7 +3,7 @@ layout: post
 title: "知识孤岛指数：衡量AI生成代码导致的集体理解度下降"
 date: 2026-03-12T18:00:00+08:00
 tags: [AI-Native软件工程, 知识管理, 组织效能, 度量体系]
-description: "知识孤岛指数衡量团队对AI生成代码的集体理解度，理解度下降是隐性技术债务。"
+description: "知识孤岛指数（KII）量化团队对AI生成代码的集体理解度，识别个人化陷阱与传播阻断节点，让隐性技术债务从不可见走向可见可治理。"
 author: "@postcodeeng"
 series: aise
 ---
