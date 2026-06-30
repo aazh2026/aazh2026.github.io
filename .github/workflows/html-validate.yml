@@ -41,6 +41,11 @@ jobs:
         # wrappers (browsers only need the meta refresh). Skip them; the
         # canonical post page is what gets validated.
         run: |
-          find _site -name "*.html" \
-            -not -exec grep -l '<meta http-equiv="refresh"' {} \; \
-            | xargs npx html-validate --config .htmlvalidate.json
+          : > /tmp/valid_html_files.txt
+          for f in $(find _site -name "*.html"); do
+            if ! grep -q '<meta http-equiv="refresh"' "$f"; then
+              echo "$f" >> /tmp/valid_html_files.txt
+            fi
+          done
+          echo "Validating $(wc -l < /tmp/valid_html_files.txt) files..."
+          xargs npx html-validate --config .htmlvalidate.json < /tmp/valid_html_files.txt
