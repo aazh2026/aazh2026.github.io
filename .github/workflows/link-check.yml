@@ -77,7 +77,6 @@ jobs:
             --offline
             --no-progress
             --exclude-loopback
-            --exclude-mail
             --exclude 'https://github.com/.*/issues/new'
             --exclude 'https://x.com/.*'
             --exclude 'https://twitter.com/.*'

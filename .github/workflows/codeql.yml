@@ -8,7 +8,9 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '17:00 UTC on Mondays'
+    # Standard 5-field cron: minute hour day-of-month month day-of-week
+    # 0 17 * * 1 = 17:00 UTC every Monday
+    - cron: '0 17 * * 1'
 
 permissions:
   contents: read
