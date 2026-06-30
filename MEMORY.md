@@ -51,7 +51,7 @@
 
 新能力，新行为：
 
-- **全文搜索**（`/assets/search.json`）：构建时由 `_plugins/search_index_generator.rb` 生成。`site-search.html` 默认 fetch 索引并按 title / tag / body 加权打分。键盘 ↑/↓/Enter 可导航。
+- **全文搜索**（PageFind）：构建后由 `npx pagefind --site _site` 生成 `_site/pagefind/`（4.5MB 索引，懒加载 + 命中后按需加载 chunk）。`site-search.html` 通过 `import("/pagefind/pagefind.js")` 调用 `pagefind.search()`，自带 BM25 排序 + `<mark>` 高亮 + excerpt。键盘 ↑/↓/Enter 可导航。404 页搜索同样接入。
 - **首页分页**：10 篇 / 页，`/page2/` `/page3/` …… 用 `jekyll-paginate`。
 - **Mermaid 条件加载**：仅当页面含 mermaid 块时动态加载（节省 ~3MB 阻塞），固定版本 + SRI。
 - **TOC / Share buttons**：每篇 post 自动获得右侧 TOC（移动端隐藏）+ 底部分享栏（Twitter / LinkedIn / 复制链接）。Frontmatter 加 `toc: false` 可关闭 TOC。
@@ -75,16 +75,19 @@
 ### 新增 / 修改的文件速查
 
 新增：
-- `_plugins/search_index_generator.rb`
 - `_plugins/series_feeds.rb`
 - `_layouts/series.html`
 - `_series/{agent-os,memory-engineering,ai-native-security,aise}.md`
 - `now.md`, `uses.md`, `colophon.md`
 - `_data/author.yml`
 - `scripts/generate-favicons.py`
+- `scripts/{check-svgo,optimize-svgo,check-internal-links,check-color-contrast}.js`
 - `static/_headers`
+- `svgo.config.mjs`
 - `.github/workflows/lighthouse.yml`, `.github/workflows/html-validate.yml`
 - `.lighthouserc.json`, `.htmlvalidate.json`
+- `package.json`, `package-lock.json`
+- `lychee-excludes.txt`
 - `assets/images/favicons/*` (自动生成)
 
 修改：
@@ -93,15 +96,16 @@
 - `_layouts/post.html`（接 TOC + share-buttons）
 - `_includes/head.html`（meta CSP + favicon 多尺寸 + Mermaid 条件 + Web Vitals）
 - `_includes/seo.html`（Article / FAQ / HowTo schema + author sameAs）
-- `_includes/site-search.html`（全文 fetch + 加权打分 + 键盘导航）
+- `_includes/site-search.html`（PageFind ESM import + 懒加载 + 键盘导航）
 - `_includes/toc.html`（变量对齐 + 简化）
 - `_includes/share-buttons.html`（样式整合 + a11y 完善）
 - `index.html`（paginate + 类名前缀）
-- `404.html`（动态推荐 + 全文搜索）
+- `404.html`（动态推荐 + PageFind 全文搜索）
 - `site.webmanifest`（favicon 路径）
 - `assets/css/style.scss`（吸收 230 行内联样式 + TOC / share / pagination 样式）
 
 删除：
+- `_plugins/search_index_generator.rb`（被 PageFind 取代）
 - `_includes/{newsletter,series-nav,series-progress,share-card}.html`
 - `{agent-os,memory-engineering,ai-native-security,aise}-series.html`（手写）
 - `tags.html`（与 tags.md 重复）

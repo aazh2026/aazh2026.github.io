@@ -23,7 +23,7 @@ title: "页面未找到"
     试试搜索或浏览以下推荐内容？
   </p>
 
-  <!-- 快速搜索 (full-text via /assets/search.json) -->
+  <!-- 快速搜索 (PageFind full-text over the built site) -->
   <div class="search-404">
     <input type="search"
            id="search-404"
@@ -31,7 +31,7 @@ title: "页面未找到"
            autocomplete="off"
            aria-label="搜索文章"
     >
-    <div id="search-404-results"></div>
+    <div id="search-404-results" role="listbox" aria-label="搜索结果"></div>
   </div>
 
   <!-- 快捷导航 -->
@@ -69,60 +69,56 @@ title: "页面未找到"
   </div>
 </div>
 
-<script>
-(function() {
-  var input = document.getElementById('search-404');
-  var out = document.getElementById('search-404-results');
+<script type="module">
+(async function() {
+  const input = document.getElementById('search-404');
+  const out = document.getElementById('search-404-results');
   if (!input || !out) return;
-  var cache = null;
 
-  function load(cb) {
-    if (cache) return cb(cache);
-    fetch('/assets/search.json', { credentials: 'same-origin' })
-      .then(function(r) { return r.ok ? r.json() : []; })
-      .then(function(d) { cache = d; cb(cache); })
-      .catch(function() { cache = []; cb(cache); });
+  // Lazy init — same pattern as _includes/site-search.html.
+  let pagefind = null;
+  async function ensurePagefind() {
+    if (pagefind) return pagefind;
+    const mod = await import(/* @vite-ignore */ "/pagefind/pagefind.js");
+    await mod.init();
+    pagefind = mod;
+    return pagefind;
   }
-  function esc(s) { return String(s).replace(/[&<>"']/g, function(c) {
-    return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
-  }); }
-  function score(p, terms) {
-    var t = (p.title || '').toLowerCase();
-    var s = 0;
-    for (var i = 0; i < terms.length; i++) {
-      if (!terms[i]) continue;
-      if (t.indexOf(terms[i]) !== -1) s += 5;
-      if ((p.tags || []).join(' ').toLowerCase().indexOf(terms[i]) !== -1) s += 2;
-      if ((p._hay || '').indexOf(terms[i]) !== -1) s += 1;
+
+  let pending = 0;
+  async function search(q) {
+    const pf = await ensurePagefind();
+    if (!q || q.length < 2) {
+      out.style.display = 'none';
+      out.innerHTML = '';
+      return;
     }
-    return s;
-  }
-  input.addEventListener('input', function(e) {
-    var q = e.target.value;
-    if (q.length < 2) { out.style.display = 'none'; out.innerHTML = ''; return; }
-    load(function(posts) {
-      if (!cache.length) { out.style.display = 'none'; return; }
-      posts.forEach(function(p) {
-        p._hay = ((p.title||'') + ' ' + (p.tags||[]).join(' ') + ' ' + (p.series||'') + ' ' + (p.desc||'') + ' ' + (p.body||'')).toLowerCase();
-      });
-      var terms = q.toLowerCase().split(/\s+/).filter(Boolean);
-      var hits = posts
-        .map(function(p) { return { p: p, s: score(p, terms) }; })
-        .filter(function(x) { return x.s > 0; })
-        .sort(function(a, b) { return b.s - a.s; })
-        .slice(0, 5);
-      if (hits.length === 0) {
-        out.innerHTML = '<div class="empty">没有找到相关文章</div>';
-      } else {
-        out.innerHTML = hits.map(function(x) {
-          return '<a href="' + x.p.url + '">' + esc(x.p.title) + '</a>';
-        }).join('');
-      }
+    const token = ++pending;
+    const response = await pf.search(q, { excerptLength: 20 });
+    if (token !== pending) return;
+
+    if (!response.results.length) {
+      out.innerHTML = '<div class="empty">没有找到相关文章</div>';
       out.style.display = 'block';
-    });
-  });
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.search-404')) out.style.display = 'none';
+      return;
+    }
+    const html = await Promise.all(
+      response.results.slice(0, 5).map(async (r) => {
+        const data = await r.data();
+        return '<a href="' + data.url + '" role="option">' + data.excerpt + '</a>';
+      })
+    );
+    if (token !== pending) return;
+    out.innerHTML = html.join('');
+    out.style.display = 'block';
+  }
+
+  input.addEventListener('input', e => search(e.target.value.trim()));
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.search-404')) {
+      out.style.display = 'none';
+      out.innerHTML = '';
+    }
   });
 })();
 </script>

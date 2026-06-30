@@ -1,4 +1,7 @@
-<!-- 站内搜索 — 客户端 fuzzy search over all posts (full-text via /assets/search.json) -->
+<!-- 站内搜索 — PageFind-powered full-text search.
+     PageFind indexes the built site post-build (`npx pagefind --site _site`)
+     and ships its index as ~50KB chunked WASM-friendly files under /pagefind/.
+     We use the modular ESM API to keep the custom search-input/dropdown UI. -->
 <div class="site-search">
   <input type="search"
          id="search-input"
@@ -12,128 +15,108 @@
   <div id="search-results" role="listbox" aria-label="搜索结果"></div>
 </div>
 
-<script>
-(function() {
-  var input = document.getElementById('search-input');
-  var results = document.getElementById('search-results');
+<script type="module">
+(async function() {
+  const input = document.getElementById("search-input");
+  const results = document.getElementById("search-results");
   if (!input || !results) return;
 
-  var posts = null;       // loaded lazily on first focus
-  var activeIdx = -1;     // keyboard nav index
-
-  function loadIndex(cb) {
-    if (posts) return cb(posts);
-    fetch('/assets/search.json', { credentials: 'same-origin' })
-      .then(function(r) { return r.ok ? r.json() : []; })
-      .then(function(data) {
-        posts = data.map(function(p) {
-          p._hay = ((p.title || '') + ' ' +
-                    (p.tags || []).join(' ') + ' ' +
-                    (p.series || '') + ' ' +
-                    (p.desc || '') + ' ' +
-                    (p.body || '')).toLowerCase();
-          return p;
-        });
-        cb(posts);
-      })
-      .catch(function() { posts = []; cb([]); });
+  // Lazy-load PageFind only when the user actually focuses the search input.
+  // PageFind's first init pulls the WASM blob + a few index chunks (~100KB),
+  // so deferring it saves a request on cold page loads.
+  let pagefind = null;
+  async function ensurePagefind() {
+    if (pagefind) return pagefind;
+    const mod = await import(/* @vite-ignore */ "/pagefind/pagefind.js");
+    await mod.init();
+    pagefind = mod;
+    return pagefind;
   }
 
-  function escapeHtml(s) {
-    return String(s).replace(/[&<>"']/g, function(c) {
-      return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c];
-    });
+  let activeIdx = -1;
+  let lastQuery = "";
+  let pending = 0;
+
+  function renderEmpty() {
+    results.style.display = "none";
+    results.innerHTML = "";
+    input.setAttribute("aria-expanded", "false");
+    activeIdx = -1;
   }
 
-  function highlight(s, q) {
-    if (!q) return escapeHtml(s);
-    var safe = escapeHtml(s);
-    var safeQ = escapeHtml(q).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return safe.replace(new RegExp('(' + safeQ + ')', 'gi'), '<mark>$1</mark>');
-  }
-
-  function score(p, terms) {
-    var t = (p.title || '').toLowerCase();
-    var tag = (p.tags || []).join(' ').toLowerCase();
-    var desc = (p.desc || '').toLowerCase();
-    var s = 0;
-    for (var i = 0; i < terms.length; i++) {
-      var term = terms[i];
-      if (!term) continue;
-      if (t.indexOf(term) !== -1) s += 10;
-      if (tag.indexOf(term) !== -1) s += 5;
-      if (desc.indexOf(term) !== -1) s += 3;
-      if (p._hay.indexOf(term) !== -1) s += 1;
+  async function search(q) {
+    const pf = await ensurePagefind();
+    if (!q || q.length < 2) {
+      renderEmpty();
+      return;
     }
-    return s;
-  }
+    if (q === lastQuery) return;
+    lastQuery = q;
 
-  function render(query) {
-    if (!query || query.length < 2) {
-      results.style.display = 'none';
-      results.innerHTML = '';
-      input.setAttribute('aria-expanded', 'false');
+    const token = ++pending;
+    const response = await pf.search(q, { excerptLength: 25 });
+    if (token !== pending) return; // a newer keystroke superseded us
+
+    if (!response.results.length) {
+      results.innerHTML = '<div class="empty">没有找到相关文章</div>';
+      results.style.display = "block";
+      input.setAttribute("aria-expanded", "true");
       activeIdx = -1;
       return;
     }
-    loadIndex(function(posts) {
-      var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
-      var hits = posts
-        .map(function(p) { return { p: p, s: score(p, terms) }; })
-        .filter(function(x) { return x.s > 0; })
-        .sort(function(a, b) { return b.s - a.s; })
-        .slice(0, 10);
 
-      if (hits.length === 0) {
-        results.innerHTML = '<div class="empty">没有找到相关文章</div>';
-      } else {
-        results.innerHTML = hits.map(function(x, i) {
-          var p = x.p;
-          return '<a href="' + p.url + '" role="option" data-i="' + i + '">' +
-                   '<span class="title">' + highlight(p.title, query) + '</span>' +
-                   '<span class="date">' + p.date + '</span>' +
-                 '</a>';
-        }).join('');
-        activeIdx = -1;
-      }
-      results.style.display = 'block';
-      input.setAttribute('aria-expanded', 'true');
-    });
+    const top = response.results.slice(0, 10);
+    const html = await Promise.all(
+      top.map(async (r, i) => {
+        const data = await r.data();
+        const title = data.meta && data.meta.title ? data.meta.title : data.url;
+        return (
+          '<a href="' + data.url + '" role="option" data-i="' + i + '">' +
+            '<span class="title">' + title + '</span>' +
+            '<span class="excerpt">' + data.excerpt + '</span>' +
+          '</a>'
+        );
+      })
+    );
+    if (token !== pending) return;
+    results.innerHTML = html.join("");
+    results.style.display = "block";
+    input.setAttribute("aria-expanded", "true");
+    activeIdx = -1;
   }
 
   function moveActive(delta) {
-    var items = results.querySelectorAll('a[role="option"]');
-    if (items.length === 0) return;
+    const items = results.querySelectorAll("a[role=option]");
+    if (!items.length) return;
     activeIdx = (activeIdx + delta + items.length) % items.length;
-    items.forEach(function(el, i) {
-      el.classList.toggle('active', i === activeIdx);
-      if (i === activeIdx) el.scrollIntoView({ block: 'nearest' });
+    items.forEach((el, i) => {
+      el.classList.toggle("active", i === activeIdx);
+      if (i === activeIdx) el.scrollIntoView({ block: "nearest" });
     });
   }
 
-  input.addEventListener('input', function(e) { render(e.target.value); });
-  input.addEventListener('focus', function() { if (input.value.length >= 2) render(input.value); });
-  input.addEventListener('keydown', function(e) {
-    if (e.key === 'ArrowDown') { e.preventDefault(); moveActive(1); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); moveActive(-1); }
-    else if (e.key === 'Enter') {
+  input.addEventListener("input", e => search(e.target.value.trim()));
+  input.addEventListener("focus", () => {
+    if (input.value.trim().length >= 2) search(input.value.trim());
+  });
+  input.addEventListener("keydown", e => {
+    if (e.key === "ArrowDown") { e.preventDefault(); moveActive(1); }
+    else if (e.key === "ArrowUp") { e.preventDefault(); moveActive(-1); }
+    else if (e.key === "Enter") {
       if (activeIdx >= 0) {
-        var items = results.querySelectorAll('a[role="option"]');
-        var target = items[activeIdx];
+        const items = results.querySelectorAll("a[role=option]");
+        const target = items[activeIdx];
         if (target) { e.preventDefault(); window.location.href = target.href; }
       }
-    } else if (e.key === 'Escape') {
-      input.value = '';
-      results.style.display = 'none';
-      input.setAttribute('aria-expanded', 'false');
+    } else if (e.key === "Escape") {
+      input.value = "";
+      lastQuery = "";
+      renderEmpty();
       input.blur();
     }
   });
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.site-search')) {
-      results.style.display = 'none';
-      input.setAttribute('aria-expanded', 'false');
-    }
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".site-search")) renderEmpty();
   });
 })();
 </script>

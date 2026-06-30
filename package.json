@@ -4,12 +4,16 @@
   "version": "1.0.0",
   "description": "Local dev tooling for the aazh2026.github.io Jekyll blog.",
   "scripts": {
+    "build": "jekyll build && pagefind --site _site",
+    "build:local": "jekyll build --baseurl '' && pagefind --site _site",
     "optimize-svgo": "node scripts/optimize-svgo.js",
     "check-svgo": "node scripts/check-svgo.js",
     "check-internal-links": "node scripts/check-internal-links.js",
-    "check-color-contrast": "node scripts/check-color-contrast.js"
+    "check-color-contrast": "node scripts/check-color-contrast.js",
+    "pagefind": "pagefind --site _site"
   },
   "devDependencies": {
+    "pagefind": "^1.5.2",
     "svgo": "^4.0.1"
   }
 }
