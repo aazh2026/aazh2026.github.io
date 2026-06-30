@@ -60,6 +60,27 @@ defaults:
       layout: "post"
       author: "@postcodeeng"
 
+# Exclude development tool directories from the build output.
+# scripts/ holds Node + Python CI helpers (e.g. check-color-contrast.js
+# uses ES6 `const`) — Jekyll 4.3 would otherwise copy them to _site/
+# as static files, and jekyll-minifier 0.1.10 would feed them to the
+# ES5-only Uglifier, failing the build.
+exclude:
+  - scripts
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md
+  - CONTRIBUTING.md
+  - DEPLOY.md
+  - BLOG-SOP.md
+  - WRITING-GUIDE.md
+  - BLOG_TOPICS.md
+  - AI-NATIVE-WEEKLY-GUIDE.md
+  - "*.gemspec"
+
 # Collections
 collections:
   series:
