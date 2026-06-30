@@ -73,6 +73,10 @@ jobs:
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
+          # Source files (posts/includes/layouts) are validated pre-build by
+          # scripts/check-internal-links.js — lychee here only audits the
+          # built output, so we point --root-dir at _site to resolve the
+          # site-rooted paths Jekyll emits (e.g. /about/, /feed.xml).
           args: >-
             --offline
             --no-progress
@@ -82,16 +86,18 @@ jobs:
             --exclude 'https://twitter.com/.*'
             --exclude 'https://.*\.gstatic\.com/.*'
             --exclude 'https://fonts\..*\.com/.*'
+            --root-dir _site
             --format compact
             --max-concurrency 8
             --timeout 10
             --retry-wait-time 2
             --accept '200,301,302,303,304,307,308'
             './_site/**/*.html'
-            './_posts/**/*.md'
-            './_includes/**/*.html'
-            './_layouts/**/*.html'
           fail: true
+          # Disable the default $GITHUB_STEP_SUMMARY write — large sites blow
+          # past the 1024 KiB summary cap. The action still writes its full
+          # report to lychee/out.md and we echo a one-line note ourselves.
+          jobSummary: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -99,4 +105,4 @@ jobs:
         if: always()
         run: |
           echo "## Link check results" >> $GITHUB_STEP_SUMMARY
-          echo "See lychee logs above for broken links." >> $GITHUB_STEP_SUMMARY
+          echo "See lychee/out.md artifact for full broken-link report." >> $GITHUB_STEP_SUMMARY
