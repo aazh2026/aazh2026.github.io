@@ -1,0 +1,14 @@
+# Default owner for everything
+*                           @aazh2026
+
+# Posts require author review
+/_posts/                    @aazh2026
+
+# CI changes need ops review
+/.github/                   @aazh2026
+/.githooks/                 @aazh2026
+/scripts/                   @aazh2026
+
+# Visual / design assets
+/assets/css/                @aazh2026
+/assets/images/             @aazh2026

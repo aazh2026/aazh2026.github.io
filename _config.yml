@@ -5,8 +5,12 @@ baseurl: ""
 author: "@postcodeeng"
 # email removed: was a placeholder "sophi@example.com"; re-add real address when ready
 
-# Google Analytics 4
-google_analytics: G-DBLJ6HTZL5  # Stream ID: 13693046864
+# Google Analytics 4 (legacy; requires cookie banner in EU)
+# google_analytics: G-DBLJ6HTZL5
+
+# Plausible Analytics (preferred — cookieless, GDPR-compliant, lighter)
+# Sign up at https://plausible.io and replace with your domain
+plausible_domain: aazh2026.github.io
 
 # 主题
 theme: minima
