@@ -3,7 +3,7 @@ layout: post
 title: "AI系统成本模型：从线性思维到结构性优化"
 date: 2026-03-23T20:00:00+08:00
 permalink: /ai-system-cost-model/
-tags: [AI-Native, Cost-Model, System-Design, Optimization]
+tags: [AI-Native软件工程, Cost-Model, System-Design, Optimization]
 description: "AI系统成本不是线性增长而是阶梯式跃迁，本文提出成本结构四象限模型：80%成本浪费来自结构性错配，优化核心是重构架构而非降单价。"
 author: "@postcodeeng"
 series: aise

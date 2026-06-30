@@ -3,7 +3,7 @@ layout: post
 title: "TradingAgents：当 AI 开始炒股——多 Agent 量化交易的风险与机遇"
 date: 2026-03-20T20:00:00+08:00
 permalink: /tradingagents-ai-quant-trading/
-tags: [AI-Native, FinTech, Trading, Quant, Multi-Agent, Risk]
+tags: [AI-Native软件工程, FinTech, Trading, Quant, Multi-Agent, Risk]
 description: "TradingAgents多Agent量化交易框架分析：Demo表现与实盘差距巨大的四大原因，以及级联故障、反馈循环、幻觉交易三大特有风险。"
 author: "@postcodeeng"
 series: aise

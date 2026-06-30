@@ -3,7 +3,7 @@ layout: post
 title: "Harness Engineering 解读：让 AI Agent 可控的工程实践"
 date: 2026-03-18T18:00:00+08:00
 permalink: /harness-engineering-martin-fowler/
-tags: [AI-Native, Agent, Harness, Martin-Fowler, Engineering]
+tags: [AI-Native软件工程, Agent, Harness, Martin-Fowler, Engineering]
 description: "深度解读 OpenAI 5 个月生成百万行代码的 Harness Engineering 实践：通过上下文工程、架构约束和垃圾回收机制驯服 AI Agent。"
 author: "@postcodeeng"
 series: aise

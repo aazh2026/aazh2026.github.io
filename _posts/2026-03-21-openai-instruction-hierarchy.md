@@ -3,7 +3,7 @@ layout: post
 title: "OpenAI 指令层级训练：如何让 LLM 抵御提示注入攻击"
 date: 2026-03-21T02:00:00+08:00
 permalink: /openai-instruction-hierarchy-prompt-injection/
-tags: [AI-Native, OpenAI, Safety, Prompt-Injection, Instruction-Hierarchy]
+tags: [AI-Native软件工程, OpenAI, Safety, Prompt-Injection, Instruction-Hierarchy]
 description: "OpenAI提出指令层级概念，通过IH-Challenge数据集训练模型正确处理多来源指令冲突：System > Developer > User > Tool。"
 author: "@postcodeeng"
 series: aise

@@ -2,7 +2,7 @@
 layout: post
 title: "Cursor vs Claude Code 2026：终极对比评测与选择指南"
 date: 2026-03-23T14:00:00+08:00
-tags: [AI-Native, Cursor, Claude-Code, IDE, Review]
+tags: [AI-Native软件工程, Cursor, Claude-Code, IDE, Review]
 description: "2026年AI编程工具已分裂为IDE中心化与终端中心化两条路径，便利与控制的权衡是核心张力——Cursor适合追求开箱即用的开发者，Claude Code适合追求极致控制的高级用户。"
 author: "@postcodeeng"
 series: aise

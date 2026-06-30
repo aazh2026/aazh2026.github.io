@@ -2,7 +2,7 @@
 layout: post
 title: "验证器经济学：为什么评判比生成更有价值"
 date: 2026-03-15T14:30:00+08:00
-tags: [AI-Native, Harness Engineering, Verification, P-vs-NP, Agent]
+tags: [AI-Native软件工程, Harness Engineering, Verification, P-vs-NP, Agent]
 description: "验证比生成更容易规模化——这是 P vs NP 不对称性的工程体现。当代码生成不成问题，评判能力成为稀缺资源：程序员竞争力从'写出好代码'转向'定义什么叫好代码'。"
 author: "@postcodeeng"
 series: aise

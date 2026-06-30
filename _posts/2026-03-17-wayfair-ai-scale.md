@@ -3,7 +3,7 @@ layout: post
 title: "千万级产品属性的 AI 增强：Wayfair 的规模化架构"
 date: 2026-03-17T20:00:00+08:00
 permalink: /wayfair-ai-scale-million-product-attributes/
-tags: [AI-Native, Enterprise, Scale, E-commerce, Wayfair]
+tags: [AI-Native软件工程, Enterprise, Scale, E-commerce, Wayfair]
 description: "解析 Wayfair 如何通过分层批处理 Pipeline 将 AI 规模化应用于 1400 万级产品数据，从 PoC 到 Production 的演进路径与成本优化策略。"
 author: "@postcodeeng"
 series: aise

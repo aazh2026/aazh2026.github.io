@@ -3,7 +3,7 @@ layout: post
 title: "Architecture Spec：架构设计的机器可读化"
 date: 2025-04-05T00:00:00+08:00
 permalink: /posts/architecture-spec-machine-readable//
-tags: [Architecture, C4 Model, AI-Native, 架构设计, 系统规范]
+tags: [Architecture, C4 Model, AI-Native软件工程, 架构设计, 系统规范]
 description: "将架构设计从静态图改为结构化、机器可读的规格说明，让AI能自动生成代码、验证架构漂移并保持实现与规格的持续对齐。"
 author: "@postcodeeng"
 series: aise

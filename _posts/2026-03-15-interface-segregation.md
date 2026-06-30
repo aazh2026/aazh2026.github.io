@@ -3,7 +3,7 @@ layout: post
 author: "@postcodeeng"
 title: "接口隔离：人类与 AI 的契约设计"
 date: 2026-03-15T10:00:00+08:00
-tags: [接口隔离, SOLID, Intent-Driven, AI-Native, 软件工程]
+tags: [接口隔离, SOLID, Intent-Driven, AI-Native软件工程, 软件工程]
 description: "SOLID接口隔离原则在AI时代的延伸：Intent/Context/Prompt三层契约结构，让AI成为可靠协作者而非需要不断纠正的实习生。"
 
 redirect_from:

@@ -3,7 +3,7 @@ layout: post
 title: "Quality Contract：质量验证的契约化"
 date: 2025-04-23T00:00:00+08:00
 permalink: /posts/quality-contract-validation//
-tags: [Quality Contract, 测试契约, AI-Native, 质量验证, 自动化测试]
+tags: [Quality Contract, 测试契约, AI-Native软件工程, 质量验证, 自动化测试]
 author: "@postcodeeng"
 series: aise
 description: "Quality Contract将质量验证从事后检查变为事前契约，通过四层验证体系（功能/性能/安全/合规）实现质量左移，契约可直接编译为自动化测试。"

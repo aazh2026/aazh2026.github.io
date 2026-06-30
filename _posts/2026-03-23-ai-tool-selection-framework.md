@@ -3,7 +3,7 @@ layout: post
 title: "AI编程工具的选择方法论：超越工具对比的决策框架"
 date: 2026-03-23T19:00:00+08:00
 permalink: /ai-programming-tool-selection-framework/
-tags: [AI-Native, Decision-Framework, Methodology, Tool-Selection]
+tags: [AI-Native软件工程, Decision-Framework, Methodology, Tool-Selection]
 description: "AI编程工具选择应基于控制轴×抽象轴×协作轴三维模型——工具错配是效率损失最大来源，认知匹配比功能对比更重要。"
 author: "@postcodeeng"
 series: aise

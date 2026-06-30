@@ -3,7 +3,7 @@ layout: post
 title: "从Copilot到Agent：GitHub的AI战略全景图"
 date: 2026-03-23T16:00:00+08:00
 permalink: /github-ai-strategy-2026/
-tags: [AI-Native, GitHub, Copilot, Agent, Strategy]
+tags: [AI-Native软件工程, GitHub, Copilot, Agent, Strategy]
 description: "GitHub正在经历从代码托管平台到AI驱动开发平台的范式转移，三层AI战略Copilot→Workspace→Agent将在12个月内成为行业标准工作流。"
 author: "@postcodeeng"
 series: aise

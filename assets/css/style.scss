@@ -2223,3 +2223,56 @@ footer .k {
     outline: 2px solid var(--clay, #D97757);
     outline-offset: 2px;
   }
+
+/* ==================== Related posts (per-post bottom card) ==================== */
+.related-posts {
+  margin: 3rem 0 1rem 0;
+  padding: 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--g200);
+  border-radius: 12px;
+}
+.related-posts h3 {
+  margin: 0 0 1rem 0;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--slate);
+}
+.related-posts-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+.related-post-card {
+  background: var(--bg);
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--g200);
+  transition: border-color 0.15s ease;
+}
+.related-post-card:hover {
+  border-color: var(--clay);
+}
+.related-post-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--g500);
+}
+.related-post-card a {
+  text-decoration: none;
+  color: var(--slate);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.related-post-card a:hover { color: var(--clay); }
+.related-post-desc {
+  margin: 0.375rem 0 0 0;
+  color: var(--g700);
+  font-size: 13px;
+  line-height: 1.5;
+}

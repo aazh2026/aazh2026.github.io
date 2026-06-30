@@ -3,7 +3,7 @@ layout: post
 title: "阿里 OpenSandbox：AI Agent 的安全沙箱化之路"
 date: 2026-03-20T17:00:00+08:00
 permalink: /alibaba-opensandbox-ai-agent-security/
-tags: [AI-Native, Security, Sandbox, Alibaba, Agent, Cloud-Native]
+tags: [AI-Native软件工程, Security, Sandbox, Alibaba, Agent, Cloud-Native]
 description: "阿里开源 OpenSandbox 平台，专为 AI Agent 设计的三层安全隔离方案，运行时隔离、行为监控与声明式策略编排的云原生实现。"
 author: "@postcodeeng"
 series: aise

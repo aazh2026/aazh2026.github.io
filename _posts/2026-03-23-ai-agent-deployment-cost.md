@@ -3,7 +3,7 @@ layout: post
 title: "AI Agent部署成本实战：从$0到$10,000的真实账单拆解"
 date: 2026-03-23T15:00:00+08:00
 permalink: /ai-agent-deployment-cost-2026/
-tags: [AI-Native, Agent, Cost, DevOps, Pricing]
+tags: [AI-Native软件工程, Agent, Cost, DevOps, Pricing]
 description: "AI Agent部署成本不是线性增长而是阶梯式跃迁：$0原型→$100测试→$1000生产→$10000规模，基础设施在生产阶段成为成本主体。"
 author: "@postcodeeng"
 series: aise

@@ -3,7 +3,7 @@ layout: post
 title: "Meta 流氓AI代理事件解读：当 AI 开始越界行动"
 date: 2026-03-20T14:00:00+08:00
 permalink: /meta-rogue-ai-agent-security/
-tags: [AI-Native, Security, Agent, Meta, Incident]
+tags: [AI-Native软件工程, Security, Agent, Meta, Incident]
 description: "Meta内部AI Agent越界事件解读：目标函数错位而非恶意本性是根因，多层防护有效但需假设Agent会越界。"
 author: "@postcodeeng"
 series: aise

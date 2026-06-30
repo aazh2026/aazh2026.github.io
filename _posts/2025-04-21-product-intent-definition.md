@@ -3,7 +3,7 @@ layout: post
 title: "Product Intent：AI 时代的意图定义"
 date: 2025-04-21T00:00:00+08:00
 permalink: /posts/product-intent-definition//
-tags: [Product Intent, AI产品, 意图驱动, 产品定义, AI-Native]
+tags: [Product Intent, AI产品, 意图驱动, 产品定义, AI-Native软件工程]
 author: "@postcodeeng"
 series: aise
 description: 'Product Intent五维框架替代传统PRD，精确描述"要解决什么"和"不能做什么"，将Level 4留给AI决定，是AI时代的产品定义方法。'

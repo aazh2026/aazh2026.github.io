@@ -40,38 +40,20 @@
 {% endif %}
 
 {% if related_posts.size > 0 %}
-<div class="related-posts" style="margin: 3rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
-  <h3 style="margin-top: 0; margin-bottom: 1rem; color: #333;">
-    📖 相关阅读
-  </h3>
-  
-  <div style="display: grid; gap: 1rem;">
+<div class="related-posts">
+  <h3>📖 相关阅读</h3>
+  <div class="related-posts-grid">
     {% for post in related_posts limit:4 %}
-    <div style="background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-        {% if post.series %}
-        <span style="font-size: 0.75rem; color: #667eea;">
-          {{ post.series }}
-        </span>
-        {% endif %}
-        
-        <span style="font-size: 0.75rem; color: #888;">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+    <div class="related-post-card">
+      <div class="related-post-meta">
+        {% if post.series %}<span>{{ post.series }}</span>{% endif %}
+        <span>{{ post.date | date: "%Y-%m-%d" }}</span>
       </div>
-      
-      <a href="{{ post.url }}" style="text-decoration: none; color: #333; font-weight: 500;">
-        {{ post.title }}
-      </a>
-      
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       {% if post.description %}
-      <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.875rem; line-height: 1.5;">
-        {{ post.description | truncate: 80 }}
-      </p>
+      <p class="related-post-desc">{{ post.description | truncate: 90 }}</p>
       {% elsif post.excerpt %}
-      <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.875rem; line-height: 1.5;">
-        {{ post.excerpt | strip_html | truncate: 80 }}
-      </p>
+      <p class="related-post-desc">{{ post.excerpt | strip_html | truncate: 90 }}</p>
       {% endif %}
     </div>
     {% endfor %}
