@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+{%- comment -%}
+  Compute the post list from `page.series_match`, a Liquid boolean expression
+  evaluated per post. Allows substring-based matching (e.g. "AI-Native" or
+  "AISE") to absorb the wide variety of `series:` strings used across posts.
+{%- endcomment -%}
+{% assign posts = site.posts | where_exp: "post", page.series_match | sort: "date" | reverse %}
+
+<div class="series-wrap">
+  <header class="series-hero">
+    <div class="eyebrow">{{ page.eyebrow | default: "Series" }}</div>
+    <h1>{{ page.title }}</h1>
+    {% if page.lead %}<p class="lead">{{ page.lead }}</p>{% endif %}
+    <div class="meta">
+      <span>{{ posts | size }} 篇</span>
+      <span>·</span>
+      <span>最后更新 {{ posts | first.date | date: "%Y-%m-%d" }}</span>
+      {% if page.feed %}
+      <span>·</span>
+      <a href="{{ page.feed }}">RSS</a>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if posts.size == 0 %}
+  <p style="color: var(--g500); padding: 24px 0;">该系列还没有文章。</p>
+  {% else %}
+  <ol class="series-list">
+    {% for post in posts %}
+    <li>
+      <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</div>

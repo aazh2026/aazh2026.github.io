@@ -26,12 +26,17 @@ permalink: /:title/
 
 # 插件
 plugins:
+  - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
   - jekyll-last-modified-at
   - jekyll-minifier
+
+# 分页
+paginate: 10
+paginate_path: "/page:num/"
 
 # Minifier config
 minifier:
@@ -54,3 +59,9 @@ defaults:
     values:
       layout: "post"
       author: "@postcodeeng"
+
+# Collections
+collections:
+  series:
+    output: true
+    permalink: /:path/
