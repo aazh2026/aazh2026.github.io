@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AI-Native Code Review：从人工审查到 Agent 陪审团\""
+title: "AI-Native Code Review：从人工审查到 Agent 陪审团"
 date: 2026-03-13T10:00:00+08:00
 tags: [AI-Native软件工程, Code Review, Agent, 代码审查]
 description: "5个专业Agent并行审查代码，汇总为统一Review Report，人类审查者专注20%架构与设计决策——从守门人转型为知识园丁。"

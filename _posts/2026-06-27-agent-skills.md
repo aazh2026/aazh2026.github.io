@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'AI 编程代理的工程纪律：agent-skills 的反直觉设计'"
+title: '''AI 编程代理的工程纪律：agent-skills 的反直觉设计'''
 date: 2026-06-27T10:00:00+08:00
 tags: [AI-Native软件工程, agent-skills, 工程纪律, ADK, Skill设计]
 description: 'Google工程总监Addy Osmani的开源技能库，通过"反借口表格"将人类工程师的判断经验编码为AI代理可执行的工作流，实现软件工程纪律的自动化。'

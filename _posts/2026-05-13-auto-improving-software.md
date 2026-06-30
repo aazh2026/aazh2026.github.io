@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Auto-Improving Software：coding agents 自己构建、运行、改进自己的平台\""
+title: "Auto-Improving Software：coding agents 自己构建、运行、改进自己的平台"
 date: 2026-05-13T12:00:00+08:00
 tags: [AI-Native软件工程, AI-Agent, Self-Improvement, Claude-Code, Platform-Engineering]
 author: Aaron

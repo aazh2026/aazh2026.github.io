@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"代码生成的未来：从Copilot到Agent到全自动\""
+title: "代码生成的未来：从Copilot到Agent到全自动"
 date: 2025-05-03T14:00:00+08:00
 tags: [AI-Native软件工程, 代码生成, 未来趋势, Agent]
 description: "代码生成经历三次范式转移：当前AI辅助(效率提升30-50%) → 1-2年AI协作(2-5x提升) → 3-5年AI主导，工程师从编码者进化为\"意图架构师\"。"

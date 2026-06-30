@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Execution Plan：工程执行的 AI 编排\""
+title: "Execution Plan：工程执行的 AI 编排"
 date: 2025-04-15T00:00:00+08:00
 permalink: /posts/execution-plan-ai-orchestration//
 tags: [Execution Plan, AI编排, 工程管理, 任务拆解, 研发效能]

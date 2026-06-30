@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AI时代PRD长什么样？——从文档到Executable Specification\""
+title: "AI时代PRD长什么样？——从文档到Executable Specification"
 date: 2025-04-14T08:00:00+08:00
 tags: [Executable PRD, 需求工程, AI-Native, 产品文档, 范式转移]
 description: "Executable PRD用YAML/JSON Schema编写可执行规格说明，机器可直接编译为数据库Schema、API、UI组件和测试用例，将需求定义周期从5-6周压缩到1-2天。"

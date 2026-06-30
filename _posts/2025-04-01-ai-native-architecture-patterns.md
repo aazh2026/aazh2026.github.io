@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"为什么传统架构模式正在失效？\""
+title: "为什么传统架构模式正在失效？"
 date: 2025-04-01T10:45:00+08:00
 tags: [AI-Native软件工程, 架构模式, 设计模式]
 description: "AI-Native时代复杂性从代码转移到Context；Intent Router/Context Cache/Model Gateway/Feedback Loop/A/B Agent/Human-in-the-Loop六大战术模式重构架构设计。"

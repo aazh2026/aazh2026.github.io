@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '"AI 技术前沿 | 2026-03-04"'
+title: 'AI 技术前沿 | 2026-03-04'
 date: 2025-02-03T10:50:00+08:00
 tags: [AI, Claude, OpenAI, Agent, 技术前沿]
 description: "Knuth与Claude Opus 4.6解决开放问题的协作战、Simon Willison的认知债务概念、Claude Code远程控制发布——三条线索共同揭示AI从工具向协作者的结构性转变。"

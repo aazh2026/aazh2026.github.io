@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "记忆的版本控制：当知识过时时怎么办"
+title: '记忆的版本控制：当知识过时时怎么办'
 date: 2025-01-18T01:50:00+08:00
 tags: [版本控制, 知识更新, Schema迁移, 一致性]
 description: "知识有保质期——借鉴数据库Migration模式，给记忆加版本号和变更类型，支持渐进更新与回滚，多版本共存根据上下文路由到正确知识。"

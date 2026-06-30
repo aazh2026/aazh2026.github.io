@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"CI/CD的AI注入点：12个LLM验证卡点设计\""
+title: "CI/CD的AI注入点：12个LLM验证卡点设计"
 date: 2025-06-09T00:00:00+08:00
 tags: [AI-Native软件工程, CI/CD, DevOps, LLM, 自动化验证]
 description: "AI作为新型验证层填补传统测试盲区，12个卡点覆盖从提交到部署的全流程验证。"

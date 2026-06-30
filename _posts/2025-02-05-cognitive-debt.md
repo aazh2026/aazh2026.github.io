@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"认知债务：AI时代的代码理解危机\""
+title: "认知债务：AI时代的代码理解危机"
 date: 2025-02-05T13:15:00+08:00
 tags: [AI, 认知债务, 代码理解, Agentic Engineering, Simon Willison]
 description: "AI代码生成速度超越人类理解速度时，认知债务开始复利积累。三种还款策略——线性遍历、交互式解释、强制解释——对抗理解塌陷的风险。"

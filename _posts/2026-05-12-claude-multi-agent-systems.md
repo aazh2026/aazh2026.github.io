@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Claude Multi-Agent 系统：从零到跑通 4-Agent 内容团队的完整指南\""
+title: "Claude Multi-Agent 系统：从零到跑通 4-Agent 内容团队的完整指南"
 date: 2026-05-12T12:00:00+08:00
 tags: [AI-Native软件工程, Multi-Agent, Claude, Content-Workflow, Automation]
 description: "4-Agent是最小可行内容团队结构，覆盖intake→production→quality→distribution完整周期，专家团队永远胜过单打独斗的全能选手。"

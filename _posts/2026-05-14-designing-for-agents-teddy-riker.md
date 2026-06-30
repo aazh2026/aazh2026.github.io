@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"为 Agent 设计：Ramp 产品负责人的实战设计原则\""
+title: "为 Agent 设计：Ramp 产品负责人的实战设计原则"
 date: 2026-05-14T12:00:00+08:00
 tags: [AI-Native软件工程, MCP, Agent设计, 产品设计, Ramp]
 author: "@postcodeeng"

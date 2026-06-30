@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "软件复杂性的本质：与 AI 共舞"
+title: '软件复杂性的本质：与 AI 共舞'
 date: 2026-03-15
 tags: [软件工程, AI, 复杂性, 人月神话, 系统思考]
 description: "Brooks 的框架依然有效——本质复杂度源自问题本身，偶然复杂度来自解决方案。AI 消除旧复杂度同时引入新类型（认知分裂、验证负担、信任校准），复杂性守恒仅转化形式。"

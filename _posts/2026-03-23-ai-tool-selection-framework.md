@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AI编程工具的选择方法论：超越工具对比的决策框架\""
+title: "AI编程工具的选择方法论：超越工具对比的决策框架"
 date: 2026-03-23T19:00:00+08:00
 permalink: /ai-programming-tool-selection-framework/
 tags: [AI-Native, Decision-Framework, Methodology, Tool-Selection]

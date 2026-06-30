@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Multi-Agent 协作：从单兵作战到智能组织\""
+title: "Multi-Agent 协作：从单兵作战到智能组织"
 date: 2025-07-14T10:00:00+08:00
 tags: [AI, Agent, Multi-Agent, Collaboration, Orchestration]
 description: "Multi-Agent通过Supervisor-Workers、Peer-to-Peer、Hierarchical三种架构实现规模化智能协作。"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"测试驱动开发已死？TDD vs AI-First 调试\""
+title: "测试驱动开发已死？TDD vs AI-First 调试"
 date: 2026-03-13T14:00:00+08:00
 tags: [AI-Native软件工程, TDD, 测试, AI-First]
 description: "TDD在AI时代进化为AI-First测试范式：人类定义意图和场景，AI生成验证代码，测试从证明正确变为建立信任。"

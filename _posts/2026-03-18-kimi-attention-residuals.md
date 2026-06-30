@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Kimi 团队的 Attention Residuals：挑战 Transformer 残差连接\""
+title: "Kimi 团队的 Attention Residuals：挑战 Transformer 残差连接"
 date: 2026-03-18T17:00:00+08:00
 permalink: /kimi-attention-residuals-transformer/
 tags: [Machine Learning, Transformer, Attention, Architecture, Kimi]

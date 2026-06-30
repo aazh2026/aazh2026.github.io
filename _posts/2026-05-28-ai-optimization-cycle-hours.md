@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "\"AI 的优化周期正在从月变成小时\""
+title: "AI 的优化周期正在从月变成小时"
 date: 2026-05-28T00:00:00+08:00
 tags: [AI Agent, Self-optimization, Brooks Framework]
 series: AI-Native Engineering

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Agent-DD：多Agent协作的Swarm Programming模式\""
+title: "Agent-DD：多Agent协作的Swarm Programming模式"
 date: 2025-05-28T18:00:00+08:00
 tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
 description: "提出Agent-DD多Agent协作编程范式，架构师、开发、测试、审查、协调五类Agent以去中心化方式协作完成复杂系统，Swarm Programming让群体智能超越个体智能。"

@@ -1,7 +1,7 @@
 ---
 layout: post
 author: "@postcodeeng"
-title: "\"单一职责的升维：从类到 Agent\""
+title: "单一职责的升维：从类到 Agent"
 date: 2026-03-15T09:00:00+08:00
 categories: [Agent Design, Software Architecture]
 tags: [SRP, Agent Architecture, Design Patterns, Modular AI]

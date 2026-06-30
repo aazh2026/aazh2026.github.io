@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"生成代码的License合规：SCA对AI代码的溯源与风险标记\""
+title: "生成代码的License合规：SCA对AI代码的溯源与风险标记"
 date: 2025-05-29T10:00:00+08:00
 tags: [AI-Native软件工程, License合规, SCA, 知识产权]
 description: "AI生成的代码可能携带开源License基因，四维检测技术溯源代码指纹并自动分级标记风险。"

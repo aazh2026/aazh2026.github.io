@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Claude Skills 完整指南：把一次性 prompt 变成可积累的工作流资产\""
+title: "Claude Skills 完整指南：把一次性 prompt 变成可积累的工作流资产"
 date: 2026-05-13T12:00:00+08:00
 tags: [AI-Native软件工程, Claude Skills, 工作流自动化, 提示词工程]
 author: "@postcodeeng"

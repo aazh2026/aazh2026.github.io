@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Perplexity 官方指南：Skill 的 Zen of Python 对比，和一个反直觉的研究结论\""
+title: "Perplexity 官方指南：Skill 的 Zen of Python 对比，和一个反直觉的研究结论"
 date: 2026-05-13T16:00:00+08:00
 tags: [AI-Native软件工程, AI Agent, Perplexity, Skills, 提示词工程]
 author: "@postcodeeng"

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "企业AI开发的S-curve Adoption：从个人到团队到组织的演化路径"
+title: '企业AI开发的S-curve Adoption：从个人到团队到组织的演化路径'
 date: 2025-03-28T10:00:00+08:00
 tags: [AI Adoption, S-curve, 组织变革, 企业转型, 工程实践]
 description: "企业AI adoption是三层嵌套的S-curve：个人层→团队层→组织层，每层有各自成熟周期，上层依赖下层，不能跳过任何一层。"

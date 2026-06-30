@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AI-Native 部署与发布：智能交付流水线\""
+title: "AI-Native 部署与发布：智能交付流水线"
 date: 2026-03-15T10:00:00+08:00
 tags: [AI-Native软件工程, CI/CD, 部署策略, 金丝雀发布, MLOps]
 description: "三层智能化架构重构AI交付范式：智能部署决策、智能风险控制、智能回滚，将MTTR从小时级压缩至分钟级。"

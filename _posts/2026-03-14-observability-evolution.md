@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AI-Native 系统的可观测性进化：从日志到意图追踪\""
+title: "AI-Native 系统的可观测性进化：从日志到意图追踪"
 date: 2026-03-14T14:00:00+08:00
 tags: [AI-Native软件工程, 可观测性, Observability, 意图追踪, 监控]
 description: "在传统metrics/logs/traces三支柱基础上增加意图层，记录AI决策的输入意图、推理过程和上下文状态，实现从监控到理解的跨越。"

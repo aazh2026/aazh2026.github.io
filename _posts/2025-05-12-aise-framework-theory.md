@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"AISE框架：AI-Native软件工程理论体系\""
+title: "AISE框架：AI-Native软件工程理论体系"
 date: 2025-05-12T08:00:00+08:00
 tags: [AI-Native软件工程, AISE框架, 理论体系, 方法论]
 description: "AISE(AI-Native Software Engineering)是软件工程的根本性范式转移：从\"代码优先\"到\"意图优先\"，代码是意图的编译产物而非核心资产，五层架构四大支柱重构开发活动。"

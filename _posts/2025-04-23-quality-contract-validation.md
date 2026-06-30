@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Quality Contract：质量验证的契约化\""
+title: "Quality Contract：质量验证的契约化"
 date: 2025-04-23T00:00:00+08:00
 permalink: /posts/quality-contract-validation//
 tags: [Quality Contract, 测试契约, AI-Native, 质量验证, 自动化测试]

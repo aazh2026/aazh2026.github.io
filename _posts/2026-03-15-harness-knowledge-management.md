@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"地图而非百科全书：Harness 工程的知识管理革命\""
+title: "地图而非百科全书：Harness 工程的知识管理革命"
 date: 2026-03-15T14:00:00+08:00
 tags: [AI-Native, Harness Engineering, Knowledge Management, Agent]
 description: 'OpenAI的Harness工程教训：1000页百科全书式文档导致Agent迷失，"地图而非百科全书"模式用100行入口文档+结构化知识库实现高效导航。'

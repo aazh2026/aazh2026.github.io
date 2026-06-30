@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"SDD 2.0：用户故事的Prompt工程化重构\""
+title: "SDD 2.0：用户故事的Prompt工程化重构"
 date: 2026-03-12T00:00:00+08:00
 tags: [AI-Native软件工程, 用户故事, Prompt工程, 需求工程]
 description: "SDD 2.0用上下文-约束-验收标准三元组替代传统用户故事格式，让精心设计的Prompt成为可执行的规格说明书，实现需求工程的范式转移。"

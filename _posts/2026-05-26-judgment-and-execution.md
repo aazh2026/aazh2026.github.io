@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"写代码和评代码必须分开：AI 编程的正确 architecture\""
+title: "写代码和评代码必须分开：AI 编程的正确 architecture"
 date: 2026-05-26T08:00:00+08:00
 tags: [AI-Native软件工程, 代码审查, Multi-Agent, 判断力与执行力分离]
 author: "@postcodeeng"

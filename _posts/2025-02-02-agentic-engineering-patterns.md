@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Agentic Engineering：与AI协作的六种工程模式\""
+title: "Agentic Engineering：与AI协作的六种工程模式"
 date: 2025-02-02T19:30:00+08:00
 tags: [AI架构, Agentic Engineering, Simon Willison, AI协作模式, 深度思考]
 description: "提出与AI协作的六种工程模式——交互式解释、囤积技能、边界探索、增量验证、意图分层、元认知监控——系统性对抗认知债务的复利积累。"
