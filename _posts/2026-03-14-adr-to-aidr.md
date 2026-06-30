@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 架构, ADR, AIDR, 决策记录]
 description: "AIDR将架构决策从静态文档升级为可执行规范，决策即代码、规则即执行、版本即历史——没有自动验证的架构规范只是墙上标语。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /adr-to-aidr.html
 ---
 
 > **TL;DR**

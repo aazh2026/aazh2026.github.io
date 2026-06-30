@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 可观测性, Observability, 意图追踪, 监控]
 description: "在传统metrics/logs/traces三支柱基础上增加意图层，记录AI决策的输入意图、推理过程和上下文状态，实现从监控到理解的跨越。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /observability-evolution.html
 ---
 
 > **TL;DR**

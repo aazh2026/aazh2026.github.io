@@ -7,8 +7,6 @@ tags: [Execution Plan, AI编排, 工程管理, 任务拆解, 研发效能]
 description: "Execution Plan由AI基于Product Intent和Architecture Spec自动生成任务拆解，将依赖关系显式建模为可计算的图结构，支持关键路径分析和动态计划调整。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /execution-plan-ai-orchestration.html
 ---
 
 > **TL;DR**
@@ -25,7 +23,7 @@ redirect_from:
 
 ### 估算偏差的规模
 
-软件项目的估算偏差远比直觉预测的要大。行业研究表明，**软件项目估算平均偏差达到 200-300%**，即实际工作量往往是初始估算的 2-4 倍。更令人警醒的是，仅有 **30%** 的功能能够按时交付，**70%** 的项目超出预算。这些数字不是个别现象，而是整个行业的系统性困境。
+软件项目的估算偏差远比直觉预测的要大。**业界观察反复印证：软件项目估算偏差常常达到数倍量级**，即实际工作量往往是初始估算的 2-4 倍（因项目复杂度、团队经验、需求稳定性等因素而异）。更令人警醒的是，传统瀑布式项目管理中按时交付的功能比例往往偏低，超出预算的项目相当普遍——这些现象不是个别案例，而是整个行业的系统性困境。可参考业界经典资料：[Standish Group CHAOS Report](https://www.standishgroup.com/) 与 [McKinsey 软件交付研究](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights)。
 
 那么，估算偏差的根因在哪里？**依赖考虑不全**是首要因素——任务之间的隐式依赖在拆解阶段未被识别，到执行时才发现前后置阻塞。**风险预估不足**次之：复杂技术实现、第三方集成、外部依赖等风险因素在初始估算中被低估。**任务粒度不一致**则让估算失去可比性——有人把一个 epic 拆成 40 小时的 story，有人拆成 2 小时的任务，两者的估算精度根本不在同一个量级。
 

@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 未来趋势, 自然语言编程, 后代码时代]
 description: "自然语言成为新的编程媒介，代码从主要工作产物变为中间验证对象，工程师从代码工匠进化为意图架构师。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /post-code-era.html
 ---
 
 > **TL;DR**

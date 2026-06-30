@@ -6,8 +6,6 @@ tags: [User Story, AI-Native软件工程, 需求工程, 自动化测试, BDD, Gh
 description: "User Story Pack用Story/Scenario/Example三层结构将自然语言需求转化为机器可执行的YAML/Gherkin规格，验收标准即自动化测试，需求理解偏差减少70%。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /user-story-pack-automation.html
 ---
 
 > *「2024年，一位敏捷教练崩溃地说：'我们的用户故事写得很标准——As a... I want... So that...，但开发出来的功能总是和需求有偏差。'问题不在于格式，而在于用户故事是'给人读的'，而不是'给机器执行的'。在AI时代，用户故事需要从自然语言描述进化为可自动验证的规格说明。」*
@@ -17,7 +15,7 @@ redirect_from:
 > 本文核心观点：
 > 1. **核心概念** — User Story Pack 用 Story/Scenario/Example 三层结构，将自然语言需求转化为机器可解析的结构化规格
 > 2. **关键机制** — Given-When-Then 格式的 Scenario 层直接映射为 Gherkin 格式，验收标准即自动化测试代码
-> 3. **实际效果** — 需求理解偏差减少 70%，测试编写时间减少 60%，Bug 逃逸到生产减少 50%
+> 3. **实际效果** — 业界观察反复印证：结构化需求规格可显著降低需求理解偏差、压缩测试编写时间、减少 Bug 逃逸到生产（具体百分比因团队和项目而异，非统一基准）
 > 4. **延伸洞察** — 关键不是"更快的自动化"，而是人从执行链里被替换出来——你设计系统，系统替你跑腿
 
 <object data="/assets/images/2025-04-28-user-story-pack-automation-00-core-concept.svg" type="image/svg+xml" width="100%" aria-label="2025-04-28-user-story-pack-automation-00-core-concept 图示" role="img"></object>
@@ -459,16 +457,16 @@ Feature: 优惠券使用
 
 ### 核心收益
 
-| 收益 | 量化 |
+| 收益 | 业界观察方向（示意区间，非统一基准） |
 |------|------|
-| 需求理解偏差 | 减少 70% |
-| 测试编写时间 | 减少 60% |
-| Bug 逃逸到生产 | 减少 50% |
-| 需求变更响应速度 | 提升 3x |
+| 需求理解偏差 | 显著降低 |
+| 测试编写时间 | 显著缩短 |
+| Bug 逃逸到生产 | 明显减少 |
+| 需求变更响应速度 | 显著提升 |
 
 > 💡 **Key Insight**
 >
-> User Story Pack 的核心收益：需求理解偏差减少 70%，测试编写时间减少 60%
+> User Story Pack 的核心收益（业界观察方向，具体数字因团队和项目而异）：需求理解偏差显著降低，测试编写时间显著缩短，Bug 逃逸到生产明显减少。可参考 BDD 与 Gherkin 实践资料：[Cucumber 官方文档](https://cucumber.io/docs/bdd/) 与 [Behave 教程](https://behave.readthedocs.io/en/latest/)。
 
 ---
 

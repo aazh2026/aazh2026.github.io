@@ -6,8 +6,6 @@ tags: [AI架构, 冷启动, 知识传承, 深度思考]
 description: "Agent冷启动不是技术限制，是架构设计选择——通过知识蒸馏、组织记忆、合成经验三条路径，让新Agent从「孤岛」走向「集体智能」。"
 author: "@postcodeeng"
 
-redirect_from:
-  - /cold-start/
 series: aise
 ---
 

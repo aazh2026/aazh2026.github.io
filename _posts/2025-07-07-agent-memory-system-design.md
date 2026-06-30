@@ -8,8 +8,6 @@ author: "@postcodeeng"
 series: agent-os
 series_title: "从 SaaS 到 Agent OS"
 
-redirect_from:
-  - /agent-memory-system-design/
 ---
 
 *"Agent 的智能不在于模型有多大，而在于它记得多少、记得多准、记得多久。"*

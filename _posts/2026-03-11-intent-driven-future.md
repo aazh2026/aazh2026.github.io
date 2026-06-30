@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, SDLC, Intent-Driven, 未来趋势]
 description: "Intent-Driven用intent+constraints+examples三要素替代详细设计，80%需求可大幅简化。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /intent-driven-future.html
 ---
 
 > **TL;DR**

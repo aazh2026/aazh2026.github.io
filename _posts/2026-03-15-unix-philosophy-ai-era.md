@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, Unix哲学, Agent设计, 系统架构]
 description: "Unix 哲学在 AI 时代获得新生命：小即是美演化为单一职责 Agent，文本流演化为结构化 Intent 流，管道演化为编排器。限制单个 Agent 能力，反而让整体系统更强大。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /unix-philosophy-ai-era.html
 ---
 
 > **TL;DR**

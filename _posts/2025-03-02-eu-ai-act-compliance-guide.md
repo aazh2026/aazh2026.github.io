@@ -6,8 +6,6 @@ tags: [EU AI Act, 合规, 监管, AI法规, 开发者指南, 技术清单]
 description: "EU AI Act将AI系统分为四层，高风险类别需满足七项技术要求——风险管理、数据治理、技术文档、记录保存、透明度、人工监督和准确性。合规不是一次性法务工作，而是贯穿AI系统全生命周期的工程实践。"
 author: "@postcodeeng"
 
-redirect_from:
-  - /eu-ai-act-compliance-guide.html
 series: aise
 ---
 

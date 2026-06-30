@@ -6,8 +6,6 @@ tags: [知识管理, 组织记忆, 隐性知识, 专家经验, AI时代]
 description: "组织最大的风险不是知识太少，而是那些无法文档化的'活历史'随专家离职而蒸发。显性知识只占10%，企业管理系统往往只管理那10%；90%的隐性知识才是组织的真正护城河。AI时代的新思路是：在专家工作时自动捕获，而非让专家写下来。"
 author: "@postcodeeng"
 
-redirect_from:
-  - /organizational-memory-externalization.html
 series: aise
 ---
 

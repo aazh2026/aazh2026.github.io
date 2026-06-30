@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, Context管理, 知识衰减]
 description: "Context不是越用越好，是会腐烂的。通过新鲜度度量、自动刷新、版本化管理与人机协作四层防线，对抗AI-Native开发中的上下文衰减。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /context-rot.html
 ---
 
 > **TL;DR**

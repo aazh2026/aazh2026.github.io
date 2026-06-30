@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, Agent-DD, Swarm Programming, Multi-Agent]
 description: "提出Agent-DD多Agent协作编程范式，架构师、开发、测试、审查、协调五类Agent以去中心化方式协作完成复杂系统，Swarm Programming让群体智能超越个体智能。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /agent-dd-swarm-programming/
 ---
 
 > **TL;DR**

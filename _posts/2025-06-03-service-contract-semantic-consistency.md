@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 微服务, 服务契约, 分布式系统]
 description: "契约漂移是微服务的隐形杀手，语义一致性检测超越语法检查，AI自动发现并修复隐式漂移。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /service-contract-semantic-consistency.html
 ---
 
 > **TL;DR**

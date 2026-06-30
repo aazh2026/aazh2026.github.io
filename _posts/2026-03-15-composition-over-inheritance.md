@@ -8,8 +8,6 @@ author: "@postcodeeng"
 series: agent-os
 series_title: "从 SaaS 到 Agent OS"
 
-redirect_from:
-  - /composition-over-inheritance.html
 ---
 
 *"在软件设计中，继承是白盒复用，组合是黑盒复用。白盒让你看到太多你不该关心的细节，黑盒让你只关注你需要的接口。"*

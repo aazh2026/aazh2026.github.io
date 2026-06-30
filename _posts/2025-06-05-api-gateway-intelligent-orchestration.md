@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, API网关, BFF, 智能编排]
 description: "自然语言描述数据需求，AI自动生成BFF聚合逻辑，包括并行优化、智能缓存和故障降级。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /api-gateway-intelligent-orchestration.html
 ---
 
 > **TL;DR**

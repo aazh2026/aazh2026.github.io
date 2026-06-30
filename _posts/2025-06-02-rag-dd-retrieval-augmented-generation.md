@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, RAG-DD, 知识库, 代码生成]
 description: "RAG-DD在代码生成时实时检索企业私有知识，让AI输出从'通用代码'进化为'企业代码'。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /rag-dd-retrieval-augmented-generation.html
 ---
 
 > **TL;DR**

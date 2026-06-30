@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 测试策略, 测试金字塔, AI生成测试, Age
 description: "测试金字塔重构为三层模型：AI生成单元测试、Agent协作集成测试、自然语言驱动E2E，测试从验证代码转向验证意图。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /ai-native-testing-strategy.html
 ---
 
 > **TL;DR**

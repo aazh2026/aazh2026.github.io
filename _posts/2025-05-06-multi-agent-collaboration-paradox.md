@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, Multi-Agent, 系统架构, 协作成本]
 description: "Multi-Agent系统存在隐藏的O(n²)协作税，30-50%计算资源消耗在协调而非任务执行，超过5个Agent后效率反而下降，大多数场景下3-5个是最优甜点区。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /multi-agent-collaboration-paradox.html
 ---
 
 > **TL;DR**

@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, AI幻觉, 成本模型, 风险评估]
 description: "建立AI幻觉的业务影响量化模型，直接成本、间接成本、风险成本三层叠加，为不同风险场景选择人工复核、回滚机制或多模型交叉验证等保险策略。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /ai-hallucination-business-cost-model/
 ---
 
 > **TL;DR**

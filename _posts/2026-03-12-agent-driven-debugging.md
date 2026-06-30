@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 调试, Agent, 故障诊断]
 description: "Agent-Driven Debugging将75%信息处理交给Agent，人类从猎人变为驯兽师，专注高价值决策。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /agent-driven-debugging/
 ---
 
 > **TL;DR**

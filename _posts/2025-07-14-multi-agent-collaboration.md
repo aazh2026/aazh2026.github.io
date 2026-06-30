@@ -8,8 +8,6 @@ author: "@postcodeeng"
 series: agent-os
 series_title: "从 SaaS 到 Agent OS"
 
-redirect_from:
-  - /multi-agent-collaboration.html
 ---
 
 *"一个人走得快，一群人走得远。Agent 也是如此。"*

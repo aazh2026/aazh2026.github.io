@@ -7,8 +7,6 @@ author: "@postcodeeng"
 series: aise
 description: "200人微服务团队如何系统化治理AI使用，通过工具标准化、Prompt规范化、代码溯源三大支柱和自动化审查流水线实现规模化管理。"
 
-redirect_from:
-  - /large-scale-ai-governance/
 ---
 
 > **TL;DR**

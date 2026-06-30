@@ -6,8 +6,6 @@ tags: [SRE, 系统设计, 韧性工程, 深度思考]
 description: "失败不是bug而是预设的生存策略——2008年高盛以降级模式运行72小时而雷曼崩溃，生物界的冗余、层级分配、自适应边界机制可移植到分布式系统。"
 author: "@postcodeeng"
 
-redirect_from:
-  - /graceful-degradation-deep.html
 series: aise
 ---
 

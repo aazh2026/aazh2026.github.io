@@ -6,8 +6,6 @@ tags: [Context Layer, AI架构, 知识工程, 企业级, RAG, 上下文管理]
 description: '企业级AI的"失忆症"需要Context Layer解决，三层上下文模型（项目/技术/业务）让AI获得完整背景知识，显著提升代码生成质量。'
 author: "@postcodeeng"
 
-redirect_from:
-  - /context-layer-architecture.html
 series: aise
 ---
 

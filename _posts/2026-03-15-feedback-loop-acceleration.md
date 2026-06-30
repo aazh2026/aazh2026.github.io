@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, 反馈循环, DevOps, 实时反馈, 工程效能]
 description: "反馈循环从月级压缩至分钟级：AI将反馈时机从运行后提前到输入时，实时反馈系统需具备Intent-Driven、Context-Rich、Action-Ready三要素。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /feedback-loop-acceleration/
 ---
 
 > **TL;DR**

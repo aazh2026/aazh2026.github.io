@@ -7,8 +7,6 @@ tags: [Architecture, C4 Model, AI-Native软件工程, 架构设计, 系统规范
 description: "将架构设计从静态图改为结构化、机器可读的规格说明，让AI能自动生成代码、验证架构漂移并保持实现与规格的持续对齐。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /architecture-spec-machine-readable.html
 ---
 
 > **TL;DR**

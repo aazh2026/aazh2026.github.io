@@ -6,8 +6,6 @@ tags: [AI-Native软件工程, SDLC, 增量开发, 需求管理]
 description: "增量需求用Delta Specification管理变化量而非重写完整PRD，Compatibility Rules防止AI过度重构。"
 author: "@postcodeeng"
 series: aise
-redirect_from:
-  - /delta-specification.html
 ---
 
 ## 增量需求不再头疼：Delta Specification 工作流
