@@ -1,6 +1,15 @@
 name: Lighthouse CI
 
+# Run on push to main, PR to main, weekly schedule, and manual dispatch.
+# Catches performance regressions before they ship — both category scores
+# (perf/a11y/best-practices/SEO) and Core Web Vitals (LCP/CLS/TBT) have
+# budgets in .lighthouserc.json.
+
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
   schedule:
     # Weekly Monday 06:00 UTC
