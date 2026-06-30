@@ -2,7 +2,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
+  <!-- Content-Security-Policy fallback for GH Pages (where _headers is not parsed).
+       When served via Cloudflare Pages / Netlify, HTTP-level headers in /static/_headers
+       take precedence; this meta is the second-best layer. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://plausible.io https://giscus.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://giscus.app">
+
   <!-- 主题切换 - 必须在 CSS 之前加载，防止闪烁 -->
   <script>
     (function() {
@@ -12,7 +18,7 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-  
+
   <!-- Analytics: Plausible (cookieless, GDPR-friendly) - preferred -->
   {%- if site.plausible_domain -%}
   <script defer data-domain="{{ site.plausible_domain }}" src="https://plausible.io/js/script.js"></script>
@@ -26,19 +32,18 @@
     gtag('config', '{{ site.google_analytics }}');
   </script>
   {%- endif -%}
-  
+
   <!-- 页面标题 -->
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  
+
   <!-- SEO 和社交分享 -->
   {% include seo.html %}
-  
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="/favicon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
 
-  <!-- PWA -->
+  <!-- Favicon (multi-size — see scripts/generate-favicons.py) -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicons/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#D97757">
 
@@ -47,67 +52,130 @@
 
   <!-- RSS Feed -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}/feed.xml">
-  
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  
+
   <!-- 自定义样式 - 覆盖 minima 主题 -->
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-  
+
   <!-- Preconnect to external origins (DNS + TCP + TLS 提前) -->
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preconnect" href="https://giscus.app" crossorigin>
-  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="https://x.com">
   <link rel="dns-prefetch" href="https://www.linkedin.com">
 
-  <!-- Mermaid.js 图表支持 -->
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"></script>
+  <!-- Mermaid.js — lazy-loaded only when the page actually contains a mermaid block.
+       3.3MB compressed; this avoids loading it on every post. -->
   <script>
     (function() {
-      // 等待页面完全加载
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initMermaid);
-      } else {
-        initMermaid();
+      function pageHasMermaid() {
+        // Two syntaxes supported: <div class="mermaid">...</div> and
+        // <pre><code class="language-mermaid">...</code></pre>
+        if (document.querySelector('.mermaid, code.language-mermaid, code.lang-mermaid')) {
+          return true;
+        }
+        // As a fallback, scan text content (cheap on already-rendered pages).
+        return /```mermaid\b/i.test(document.body.innerHTML);
       }
-      
-      function initMermaid() {
-        // 找到所有 mermaid 代码块并转换
-        var mermaidBlocks = document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid');
-        mermaidBlocks.forEach(function(block) {
-          var pre = block.parentElement;
-          var mermaidDiv = document.createElement('div');
-          mermaidDiv.className = 'mermaid';
-          mermaidDiv.textContent = block.textContent;
-          pre.parentElement.replaceChild(mermaidDiv, pre);
-        });
-        
-        // 初始化 Mermaid
-        mermaid.initialize({
-          startOnLoad: true,
-          theme: 'default',
-          securityLevel: 'loose',
-          flowchart: {
-            useMaxWidth: true,
-            htmlLabels: true,
-            curve: 'basis'
+      function init() {
+        if (!pageHasMermaid()) return;
+        var s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js';
+        s.crossOrigin = 'anonymous';
+        s.referrerPolicy = 'no-referrer';
+        s.integrity = 'sha384-WmdflGW9aGfoBdHc4rRyWzYuAjEmDwMdGdiPNacbwfGKxBW/SO6guzuQ76qjnSlr';
+        s.onload = function() {
+          // Pre-process <pre><code class="language-mermaid"> blocks into <div class="mermaid">
+          document.querySelectorAll('pre code.language-mermaid, pre code.lang-mermaid').forEach(function(b) {
+            var pre = b.parentElement;
+            var div = document.createElement('div');
+            div.className = 'mermaid';
+            div.textContent = b.textContent;
+            pre.parentElement.replaceChild(div, pre);
+          });
+          if (window.mermaid) {
+            var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+            window.mermaid.initialize({
+              startOnLoad: true,
+              theme: dark ? 'dark' : 'default',
+              securityLevel: 'loose',
+              flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+            });
           }
-        });
+        };
+        document.head.appendChild(s);
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+      } else {
+        init();
       }
     })();
   </script>
+
+  <!-- Web Vitals → Plausible custom events (LCP, CLS, INP, FCP, TTFB) -->
+  <script>
+    (function() {
+      function report(metric, value) {
+        try {
+          if (window.plausible) {
+            window.plausible('WebVitals', { props: { metric: metric, value: String(Math.round(value)) } });
+          }
+        } catch (e) {}
+      }
+      function observe() {
+        // LCP
+        try {
+          new PerformanceObserver(function(list) {
+            var last = list.getEntries().pop();
+            if (last) report('LCP', last.startTime);
+          }).observe({ type: 'largest-contentful-paint', buffered: true });
+        } catch (e) {}
+        // CLS
+        try {
+          var cls = 0;
+          new PerformanceObserver(function(list) {
+            list.getEntries().forEach(function(e) { if (!e.hadRecentInput) cls += e.value; });
+            report('CLS', cls * 1000);
+          }).observe({ type: 'layout-shift', buffered: true });
+        } catch (e) {}
+        // FCP
+        try {
+          new PerformanceObserver(function(list) {
+            list.getEntries().forEach(function(e) { if (e.name === 'first-contentful-paint') report('FCP', e.startTime); });
+          }).observe({ type: 'paint', buffered: true });
+        } catch (e) {}
+        // INP (replaces FID)
+        try {
+          new PerformanceObserver(function(list) {
+            var last = list.getEntries().pop();
+            if (last) report('INP', last.duration);
+          }).observe({ type: 'event', buffered: true, durationThreshold: 16 } as any);
+        } catch (e) {}
+        // TTFB
+        try {
+          var nav = performance.getEntriesByType('navigation')[0];
+          if (nav) report('TTFB', nav.responseStart);
+        } catch (e) {}
+      }
+      if (document.readyState === 'complete') {
+        observe();
+      } else {
+        window.addEventListener('load', observe);
+      }
+    })();
+  </script>
+
+  <!-- Service worker registration (PWA offline) -->
+  <script>
+    if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(err) {
+          console.warn('[SW] registration failed:', err);
+        });
+      });
+    }
+  </script>
 </head>
-<!-- Service worker registration (PWA offline) -->
-<script>
-if ('serviceWorker' in navigator && location.protocol !== 'file:') {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').catch(function(err) {
-      console.warn('[SW] registration failed:', err);
-    });
-  });
-}
-</script>

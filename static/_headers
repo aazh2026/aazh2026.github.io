@@ -1,0 +1,15 @@
+# Security headers for Cloudflare Pages / Netlify.
+# GitHub Pages does not parse this file — for GH Pages, the
+# meta CSP fallback in _includes/head.html applies instead.
+# To use these headers, deploy via Cloudflare Pages or Netlify
+# with the static/ directory mapped to the site root.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://plausible.io https://giscus.app; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-src https://giscus.app; base-uri 'self'; form-action 'self'
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  X-XSS-Protection: 0
+  Cross-Origin-Opener-Policy: same-origin
