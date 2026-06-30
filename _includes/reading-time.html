@@ -1,5 +1,14 @@
-{% comment %}阅读时间计算{% endcomment %}
-{% assign words = content | number_of_words %}
-{% assign minutes = words | divided_by: 200 %}
-{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
-⏱️ {{ minutes }} 分钟阅读
+{%- comment -%}
+  Reading time estimate. Pass `content=post.content` when iterating over
+  posts (so the page's own `content` doesn't leak in). Falls back to the
+  current page `content` when called without a param, so existing post-layout
+  callers keep working unchanged.
+
+  Output: <span class="reading-time">⏱️ N 分钟</span> wrapped so callers
+  can style without re-stripping emoji.
+{%- endcomment -%}
+{%- assign _c = include.content | default: content -%}
+{%- assign words = _c | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 -%}
+{%- if minutes < 1 %}{% assign minutes = 1 %}{% endif -%}
+<span class="reading-time">⏱️ {{ minutes }} 分钟</span>

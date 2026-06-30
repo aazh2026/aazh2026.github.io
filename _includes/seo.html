@@ -149,11 +149,17 @@
 
 <!-- BreadcrumbList (for posts in a series) -->
 {%- if page.series -%}
-{%- assign series_link = "/archive/" -%}
-{%- if page.series contains 'Agent' or page.series contains 'OS' -%}{% assign series_link = "/agent-os-series/" %}
-{%- elsif page.series contains 'Memory' -%}{% assign series_link = "/memory-engineering-series/" %}
-{%- elsif page.series contains 'Security' or page.series contains '安全' -%}{% assign series_link = "/ai-native-security-series/" %}
-{%- elsif page.series contains 'AI' or page.series contains 'AISE' or page.series contains 'Native' or page.series contains 'aise' -%}{% assign series_link = "/aise-series/" %}
+{%- comment -%}
+  Series slugs are canonical in _data/series-slugs.yml (and normalized by
+  scripts/check-series.js). Build the breadcrumb URL from the slug directly
+  rather than fragile `contains` matching — if a post's series is missing or
+  legacy, fall back to /archive/.
+{%- endcomment -%}
+{%- assign _valid_series = "aise,agent-os,memory-engineering,ai-native-security,industry-insight" | split: "," -%}
+{%- if _valid_series contains page.series -%}
+  {%- assign series_link = "/" | append: page.series | append: "-series/" -%}
+{%- else -%}
+  {%- assign series_link = "/archive/" -%}
 {%- endif -%}
 <script type="application/ld+json">
 {

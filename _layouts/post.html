@@ -24,7 +24,7 @@ layout: default
     {% if page.tags %}
     <div class="post-tags">
       {% for tag in page.tags %}
-      <a href="/tags/#{{ tag | slugify }}" class="tag">{{ tag }}</a>
+      <a href="/tags/#{% include tag-anchor.html name=tag %}" class="tag">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
@@ -34,6 +34,9 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
+
+  <!-- 阅读完成检测 + Plausible 'Read Complete' funnel event -->
+  {%- include reading-complete.html -%}
 
   <!-- 文章内目录 (右侧固定栏，移动端隐藏) -->
   {%- include toc.html -%}

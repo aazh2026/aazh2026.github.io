@@ -8,7 +8,7 @@ layout: default
   <header class="masthead">
     <div class="hero-grid">
       <div>
-        <div class="eyebrow">Post-Code Engineering Lab</div>
+        <div class="eyebrow">{{ site.data.author.display_name | default: site.title }} Lab</div>
         <h1>探索后代码时代<br><em>的工程范式</em></h1>
         <p class="intro">
           AI-Native 软件工程实验室 · 记录正在发生的变化<br>
@@ -153,8 +153,14 @@ layout: default
         <span class="post-info">
           <span class="post-title">{{ post.title }}</span>
           {% if post.excerpt %}
-          <span class="post-excerpt">{{ post.excerpt | strip_html | truncate: 60 }}</span>
+          <span class="post-excerpt">{{ post.excerpt | strip_html | truncate: 80 }}</span>
           {% endif %}
+          <span class="post-meta-row">
+            {% if post.series %}
+            <span class="post-series-chip">{{ post.series }}</span>
+            {% endif %}
+            {% include reading-time.html content=post.content %}
+          </span>
         </span>
         <span class="arrow">→</span>
       </a>
@@ -170,7 +176,6 @@ layout: default
 
       {% for page in paginator.page_trail %}
         {% if page.path %}
-          {% assign trail = paginator.page_trail | slice: 0,0 %}
           <a href="{{ page.path | relative_url }}" class="page-num">{{ page.num }}</a>
         {% else %}
           <span class="gap">…</span>
@@ -199,7 +204,8 @@ layout: default
 
     <div class="home-tag-cloud">
       {% for tag in site.tags limit: 30 %}
-      <a href="/tags/#{{ tag[0] | slugify }}" class="tag">{{ tag[0] }}</a>
+        {% assign _tagname = tag[0] %}
+        <a href="/tags/#{% include tag-anchor.html name=_tagname %}" class="tag">{{ tag[0] }}</a>
       {% endfor %}
     </div>
   </section>

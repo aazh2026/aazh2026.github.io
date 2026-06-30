@@ -1,0 +1,29 @@
+{%- comment -%}
+  Output the 1-based index of `name` in the same `site.tags | sort` order
+  that tags.md uses for its section IDs. Produces a matching anchor like
+  "tag-5" so links from the homepage / post layout / subscribe page land on
+  the right section on /tags/.
+
+  Why numeric instead of slugify: Liquid's slugify strips all non-ASCII
+  characters, so Chinese-only tags collapse to "" and links jump to page
+  top. Numeric IDs are stable per build (| sort is deterministic) and the
+  index.html / post layout / tags.md all compute the same number.
+
+  If the tag isn't in site.tags (e.g. hand-curated "popular tags" on the
+  subscribe page referring to a string that no post uses), output nothing
+  so the href becomes "/tags/#" — still a working link to the tags page top,
+  and avoids producing a `tag-0` anchor that doesn't exist.
+
+  Usage:
+    {% include tag-anchor.html name=tag %}
+{%- endcomment -%}
+{%- assign _sorted = site.tags | sort -%}
+{%- assign _name = include.name -%}
+{%- assign _idx = 0 -%}
+{%- for _t in _sorted -%}
+  {%- if _t[0] == _name -%}
+    {%- assign _idx = forloop.index -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if _idx > 0 -%}tag-{{ _idx }}{%- endif -%}

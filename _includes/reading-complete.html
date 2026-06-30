@@ -17,6 +17,13 @@
     // 滚动到 95% 以上视为读完
     if (scrollHeight > 0 && scrollTop / scrollHeight >= 0.95) {
       hasShown = true;
+      // 1) Fire Plausible funnel event (only once per page view, gated by hasShown)
+      try {
+        if (window.plausible) {
+          window.plausible('Read Complete', { props: { post: window.location.pathname } });
+        }
+      } catch (e) { /* analytics must never break the page */ }
+      // 2) Reveal the celebration toast
       completeEl.style.display = 'block';
       completeEl.style.opacity = '0';
       completeEl.style.transform = 'translateX(-50%) translateY(20px)';

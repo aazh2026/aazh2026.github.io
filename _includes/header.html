@@ -2,7 +2,7 @@
   <div class="header-inner">
     <a class="site-brand" href="{{ "/" | relative_url }}">
       <span class="site-brand-icon">◈</span>
-      <span class="site-brand-text">Post-Code Engineering</span>
+      <span class="site-brand-text">{{ site.data.author.display_name | default: site.title }}</span>
     </a>
     <div class="header-search">
       {%- include site-search.html -%}

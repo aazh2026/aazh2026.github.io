@@ -30,7 +30,7 @@ description: Post-Code Engineering 博客作者与方法论介绍
   <section>
     <h2>关于作者</h2>
     <p>
-      维护者：<strong>@postcodeeng</strong>
+      维护者：<strong>{{ site.data.author.name | default: site.author }}</strong>
     </p>
     <p>
       职业：软件工程师 / 技术作者<br>

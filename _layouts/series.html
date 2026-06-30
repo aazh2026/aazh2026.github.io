@@ -30,9 +30,16 @@ layout: default
   {% else %}
   <ol class="series-list">
     {% for post in posts %}
-    <li>
+    {%- assign _is_start = false -%}
+    {%- if page.start_here and post.url == page.start_here -%}
+      {%- assign _is_start = true -%}
+    {%- endif -%}
+    <li{% if _is_start %} class="series-start"{% endif %}>
       <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {%- if _is_start -%}
+        <span class="start-badge" aria-label="推荐起点">⭐ 从这里开始</span>
+      {%- endif -%}
     </li>
     {% endfor %}
   </ol>

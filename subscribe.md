@@ -15,16 +15,16 @@ permalink: /subscribe/
   <div style="text-align: left; margin-top: 48px;">
     <h2 style="font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 20px;">热门标签</h2>
     <div class="tag-cloud-page" style="justify-content: flex-start;">
-      <a href="/tags/#AI-Native软件工程" class="tag">#AI-Native软件工程</a>
-      <a href="/tags/#Agent-OS-Series" class="tag">#Agent-OS-Series</a>
-      <a href="/tags/#memory-engineering-series" class="tag">#memory-engineering-series</a>
-      <a href="/tags/#Agent" class="tag">#Agent</a>
-      <a href="/tags/#Architecture" class="tag">#Architecture</a>
+      <a href="/tags/#{% include tag-anchor.html name='AI-Native软件工程' %}" class="tag">#AI-Native软件工程</a>
+      <a href="/tags/#{% include tag-anchor.html name='AI-Native' %}" class="tag">#AI-Native</a>
+      <a href="/tags/#{% include tag-anchor.html name='Agent' %}" class="tag">#Agent</a>
+      <a href="/tags/#{% include tag-anchor.html name='Architecture' %}" class="tag">#Architecture</a>
+      <a href="/tags/#{% include tag-anchor.html name='Multi-Agent' %}" class="tag">#Multi-Agent</a>
     </div>
   </div>
   
   <div style="text-align: left; margin-top: 48px; font-size: 14px; color: var(--g500);">
-    <p>RSS: <a href="/feed.xml" style="color: var(--clay);">postcodeengineering.com/feed.xml</a></p>
-    <p>GitHub: <a href="https://github.com/aazh2026" style="color: var(--clay);">github.com/aazh2026</a></p>
+    <p>RSS: <a href="/feed.xml" style="color: var(--clay);">{{ site.url }}/feed.xml</a></p>
+    <p>GitHub: <a href="{{ site.data.author.github }}" style="color: var(--clay);">{{ site.data.author.github | replace: 'https://', '' }}</a></p>
   </div>
 </div>
