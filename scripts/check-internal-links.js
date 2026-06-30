@@ -34,47 +34,95 @@ function walk(dir, files = []) {
   return files;
 }
 
-function buildPermalinkMap() {
+// Resolve a single .md/.html source file's served permalink(s). Reads the
+// frontmatter `permalink:` if present (case-sensitive, so WRITING-GUIDE.md
+// with `permalink: /writing-guide/` resolves correctly), otherwise falls
+// back to the file's basename slug. Also picks up `redirect_from:` entries
+// (Jekyll's `jekyll-redirect-from` plugin serves these URLs as redirects,
+// so links to them are valid).
+function resolvePermalinks(filePath, slugOverride) {
+  const slug = slugOverride !== undefined
+    ? slugOverride
+    : filePath.replace(/^.*\//, '').replace(/\.(html|md)$/, '');
   const set = new Set();
-
-  // Root files
-  for (const f of fs.readdirSync(ROOT)) {
-    if (SKIP_DIRS.has(f)) continue;
-    try {
-      if ((f.endsWith('.html') || f.endsWith('.md')) && fs.statSync(f).isFile()) {
-        const base = f.replace(/\.(html|md)$/, '');
-        set.add('/' + base);
-        set.add('/' + base + '/');
-      }
-    } catch {}
-  }
-
-  // _posts
-  const postsDir = path.join(ROOT, '_posts');
-  if (fs.existsSync(postsDir)) {
-    for (const f of fs.readdirSync(postsDir)) {
-      if (!f.endsWith('.md')) continue;
-      const txt = fs.readFileSync(path.join(postsDir, f), 'utf8');
-      const fmMatch = txt.match(/^---\n([\s\S]*?)\n---/m);
-      if (!fmMatch) continue;
+  const addPath = (raw) => {
+    let p = raw.trim().replace(/^["']|["']$/g, '');
+    if (!p || p.includes('{{') || p.includes('{%')) return;
+    p = p.replace(/\/+$/, '').replace(/\/+/g, '/');
+    if (!p.startsWith('/')) p = '/' + p;
+    set.add(p);
+    set.add(p + '/');
+  };
+  try {
+    const txt = fs.readFileSync(filePath, 'utf8');
+    const fmMatch = txt.match(/^---\n([\s\S]*?)\n---/m);
+    if (fmMatch) {
       const fm = fmMatch[1];
       const permalinkMatch = fm.match(/^permalink:\s*(.+?)\s*$/m);
-      const slug = f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
       if (permalinkMatch) {
-        let p = permalinkMatch[1].trim().replace(/^["']|["']$/g, '');
-        if (p.includes('{{') || p.includes('{%')) {
-          set.add('/' + slug);
-          set.add('/' + slug + '/');
-        } else {
-          p = p.replace(/\/+$/, '').replace(/\/+/g, '/');
-          if (!p.startsWith('/')) p = '/' + p;
-          set.add(p);
-          set.add(p + '/');
-        }
+        addPath(permalinkMatch[1]);
       } else {
         set.add('/' + slug);
         set.add('/' + slug + '/');
       }
+      // redirect_from: array of URLs that this page also serves (as redirects)
+      // via the jekyll-redirect-from plugin. Treat them as valid link targets.
+      const rfMatch = fm.match(/^redirect_from:\s*\n((?:\s+-\s+.+\n?)+)/m);
+      if (rfMatch) {
+        const lines = rfMatch[1].split('\n');
+        for (const line of lines) {
+          const m = line.match(/-\s+["']?([^"']+)["']?/);
+          if (m) addPath(m[1]);
+        }
+      }
+      return set;
+    }
+  } catch {}
+  set.add('/' + slug);
+  set.add('/' + slug + '/');
+  return set;
+}
+
+function buildPermalinkMap() {
+  const set = new Set();
+
+  // Root files (about.md, WRITING-GUIDE.md, aise-series.md redirect stub, etc.)
+  for (const f of fs.readdirSync(ROOT)) {
+    if (SKIP_DIRS.has(f)) continue;
+    try {
+      if ((f.endsWith('.html') || f.endsWith('.md')) && fs.statSync(f).isFile()) {
+        for (const p of resolvePermalinks(path.join(ROOT, f))) set.add(p);
+      }
+    } catch {}
+  }
+
+  // _posts — strip YYYY-MM-DD- prefix, then resolve (frontmatter or filename)
+  const postsDir = path.join(ROOT, '_posts');
+  if (fs.existsSync(postsDir)) {
+    for (const f of fs.readdirSync(postsDir)) {
+      if (!f.endsWith('.md')) continue;
+      const slug = f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+      for (const p of resolvePermalinks(path.join(postsDir, f), slug)) set.add(p);
+    }
+  }
+
+  // _series — collection pages (AISE, Agent OS, etc.) — their `permalink:`
+  // frontmatter is the canonical URL of the series landing page.
+  const seriesDir = path.join(ROOT, '_series');
+  if (fs.existsSync(seriesDir)) {
+    for (const f of fs.readdirSync(seriesDir)) {
+      if (!f.endsWith('.md')) continue;
+      for (const p of resolvePermalinks(path.join(seriesDir, f))) set.add(p);
+    }
+  }
+
+  // _drafts (if present) — strip any date prefix same as posts
+  const draftsDir = path.join(ROOT, '_drafts');
+  if (fs.existsSync(draftsDir)) {
+    for (const f of fs.readdirSync(draftsDir)) {
+      if (!f.endsWith('.md')) continue;
+      const slug = f.replace(/^\d{4}-\d{2}-\d{2}-/, '').replace(/\.md$/, '');
+      for (const p of resolvePermalinks(path.join(draftsDir, f), slug)) set.add(p);
     }
   }
 

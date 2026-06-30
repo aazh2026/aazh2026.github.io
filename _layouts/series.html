@@ -38,7 +38,7 @@ layout: default
       <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       {%- if _is_start -%}
-        <span class="start-badge" aria-label="推荐起点">⭐ 从这里开始</span>
+        <span class="start-badge" title="系列推荐起点">⭐ 从这里开始</span>
       {%- endif -%}
     </li>
     {% endfor %}
