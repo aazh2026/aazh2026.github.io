@@ -43,3 +43,4 @@
 /series/ai-native-security/feed\.xml
 /series/aise/feed\.xml
 /series/memory-engineering/feed\.xml
+/series/industry-insight/feed\.xml

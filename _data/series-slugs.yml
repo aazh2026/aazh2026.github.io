@@ -1,0 +1,53 @@
+# Canonical series slug registry.
+#
+# All post frontmatter should reference one of these slugs in `series:`.
+# The series landing pages (_series/*.md) match against these slugs,
+# so adding a new series requires updating *both* this file and _series/.
+#
+# `match_patterns` is a regex (case-sensitive) used by scripts/check-series.js
+# to detect any legacy/variant string in committed frontmatter. When a
+# post's series: value matches a pattern here, the canonical slug is what
+# flows downstream (series feeds, breadcrumbs, related-posts).
+#
+# When adding a new series:
+#   1. Add an entry here.
+#   2. Create `_series/<slug>.md` (see _series/aise.md for the shape).
+#   3. Update `series_feeds.rb` if you want a per-series RSS feed.
+
+- slug: aise
+  title: "AI-Native 软件工程"
+  match_patterns:
+    - "^AI-Native Engineering$"
+    - "^AI-Native软件工程$"
+    - "^AI-Native软件工程系列( #\\d+)?$"
+    - "^aise$"
+    - "^ai-native-dev-guide$"
+    - "^AI-Native SDLC"
+    - "^AI-Native SDLC 交付件体系"
+
+- slug: agent-os
+  title: "Agent OS"
+  match_patterns:
+    - "^Agent-OS-Series$"
+    - "^Agent OS$"
+    - "^agent-os$"
+    - "^AI-OS(-Series)?$"
+
+- slug: memory-engineering
+  title: "Memory Engineering"
+  match_patterns:
+    - "^Memory Engineering$"
+
+- slug: ai-native-security
+  title: "AI-Native Security"
+  match_patterns:
+    - "^AI-Native Security$"
+    - "^AI安全洞察$"
+
+- slug: industry-insight
+  title: "Industry Insight"
+  match_patterns:
+    - "^AI产品洞察$"
+    - "^产业深度洞察$"
+    - "^企业架构洞察$"
+    - "^AI工程洞察$"

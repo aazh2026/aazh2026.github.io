@@ -12,38 +12,39 @@ require "time"
 require "fileutils"
 
 module SeriesFeeds
-  # Same expressions as the four _series/*.md pages. Kept in sync manually.
+  # Same expressions as the _series/*.md pages. Kept in sync manually —
+  # since frontmatter now uses canonical slugs (see _data/series-slugs.yml),
+  # the match lambdas just compare against the slug directly.
   SERIES_CONFIG = [
     {
       slug: "agent-os",
       title: "Agent OS 系列",
       link:  "/agent-os-series/",
-      match: ->(s) {
-        s.include?("Agent-OS") || s.include?("Agent OS") ||
-          s.include?("AI-OS") || s.include?("agent-os")
-      }
+      match: ->(s) { s == "agent-os" }
     },
     {
       slug: "memory-engineering",
       title: "Memory Engineering 系列",
       link:  "/memory-engineering-series/",
-      match: ->(s) { s.include?("Memory") }
+      match: ->(s) { s == "memory-engineering" }
     },
     {
       slug: "ai-native-security",
       title: "AI-Native Security 系列",
       link:  "/ai-native-security-series/",
-      match: ->(s) { s.include?("Security") || s.include?("AI安全") }
+      match: ->(s) { s == "ai-native-security" }
+    },
+    {
+      slug: "industry-insight",
+      title: "Industry Insight 系列",
+      link:  "/industry-insight-series/",
+      match: ->(s) { s == "industry-insight" }
     },
     {
       slug: "aise",
       title: "AISE 系列",
       link:  "/aise-series/",
-      match: ->(s) {
-        s.include?("AI-Native") || s.include?("AISE") || s.include?("AI产品") ||
-          s.include?("企业架构") || s.include?("AI安全") || s.include?("ai-native") ||
-          s == "aise" || s.include?("AI-Native软件工程")
-      }
+      match: ->(s) { s == "aise" }
     }
   ].freeze
 
