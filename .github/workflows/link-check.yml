@@ -104,7 +104,6 @@ jobs:
             --format compact
             --max-concurrency 8
             --timeout 10
-            --extensions html
             --retry-wait-time 2
             --accept '200,301,302,303,304,307,308'
             './_site/**/*.html'

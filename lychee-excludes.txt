@@ -44,3 +44,16 @@
 /series/aise/feed\.xml
 /series/memory-engineering/feed\.xml
 /series/industry-insight/feed\.xml
+
+# --- Posts linked without trailing slash (legacy URL form) ---
+# Lychee in --offline mode strips trailing slashes before resolving
+# against --root-dir, then checks for an exact file. Jekyll's /:title/
+# permalink produces <slug>/index.html directories, so a link like
+# /2025-04-09-context-engineering/ gets normalised to /2025-04-09-context-engineering
+# (no slash, no .html), which doesn't exist as a file. jekyll-redirect-from
+# emits a meta-refresh stub at <slug>.html, but lychee doesn't try .html
+# when checking URLs in --offline mode. The site itself is correct
+# (verified via curl — both URL forms return 301 → 200 on the
+# canonical /<slug>/ path). Exclude these bare URLs from the check.
+/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+$
+/context-engineering$
