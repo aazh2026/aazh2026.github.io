@@ -29,10 +29,13 @@ jobs:
           bundler-cache: true
           cache-version: 0
 
+      - name: Add Linux platform to Gemfile.lock
+        run: bundle lock --add-platform x86_64-linux
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Install npm deps (svgo for SVG verification)
