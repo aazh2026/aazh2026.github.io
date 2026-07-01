@@ -4,7 +4,7 @@ title: "全栈的终结：不是岗位消失了，是“全栈”的定义被重
 date: 2026-07-01T19:45:00+08:00
 tags: [AI-Native软件工程, AI Coding, 全栈工程师, Harness Engineering, Agent工程]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**
