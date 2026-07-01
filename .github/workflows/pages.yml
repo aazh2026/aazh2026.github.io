@@ -22,16 +22,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v2
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
-          bundler-cache: false
-
-      - name: Install dependencies
-        run: |
-          gem install bundler -v '4.0.9' --no-document
-          bundle config set --local frozen false
-          bundle install --jobs 4
+          ruby-version: '3.2'
+          bundler-cache: true
+          cache-version: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
