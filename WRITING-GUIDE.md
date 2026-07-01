@@ -375,7 +375,7 @@ YYYY-MM-DD-post-slug-NN-description.svg
 ### 引用（新增）
 - [ ] **无"某 SaaS 公司精确数字"句式**
 - [ ] **无"研究表明 X%"类孤儿归因**
-- [ ] **所有 GitHub/Stack Overflow/Google 研究类陈述带 [URL](链接)**
+- [ ] **所有 GitHub/Stack Overflow/Google 研究类陈述带 `<URL>`（占位文本）**
 - [ ] **未来日期 / 未发生事件避免出现**
 
 ### Footer & 元信息（新增）

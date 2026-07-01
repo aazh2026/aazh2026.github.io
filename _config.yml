@@ -92,3 +92,6 @@ collections:
   series:
     output: true
     permalink: /:path/
+  topic:
+    output: true
+    permalink: /:path/
