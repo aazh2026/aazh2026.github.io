@@ -26,13 +26,11 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: false
+          bundler-cache: true
+          cache-version: 0
 
       - name: Install dependencies
-        run: |
-          gem install bundler -v '4.0.9' --no-document
-          bundle _4.0.9_ config set --local path 'vendor/bundle'
-          bundle _4.0.9_ install --jobs 4
+        run: bundle _4.0.9_ install --jobs 4
 
       - name: Setup Node
         uses: actions/setup-node@v4
