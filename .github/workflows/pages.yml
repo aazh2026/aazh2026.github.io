@@ -28,6 +28,11 @@ jobs:
           bundler-cache: true
           cache-version: 0
 
+      - name: Fix lockfile and install
+        run: |
+          bundle config set --local frozen false
+          bundle install --jobs 4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
