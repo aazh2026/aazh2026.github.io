@@ -26,14 +26,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.1'
-          bundler-cache: true
-          cache-version: 0
+          bundler-cache: false
 
       - name: Add Linux platform and install
         run: |
-          gem install bundler -v '~> 2.0' --no-document || true
-          bundle lock --add-platform x86_64-linux
-          bundle install --jobs 4
+          gem install bundler -v '2.5.26' --no-document
+          bundle _2.5.26_ lock --add-platform x86_64-linux
+          bundle _2.5.26_ install --jobs 4
 
       - name: Setup Node
         uses: actions/setup-node@v4
