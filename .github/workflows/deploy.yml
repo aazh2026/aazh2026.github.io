@@ -28,13 +28,9 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: false
 
-      - name: Add Linux platform to Gemfile.lock
-        run: |
-          gem install bundler -v '4.0.9' --no-document
-          bundle _4.0.9_ lock --add-platform x86_64-linux
-
       - name: Install dependencies
         run: |
+          gem install bundler -v '4.0.9' --no-document
           bundle _4.0.9_ config set --local path 'vendor/bundle'
           bundle _4.0.9_ install --jobs 4
 
