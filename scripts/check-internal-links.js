@@ -116,6 +116,17 @@ function buildPermalinkMap() {
     }
   }
 
+  // _topic — topic index pages (Context Engineering, AI Strategy, etc.) —
+  // their `permalink:` frontmatter is the canonical URL of the topic page.
+  // Same shape as _series.
+  const topicDir = path.join(ROOT, '_topic');
+  if (fs.existsSync(topicDir)) {
+    for (const f of fs.readdirSync(topicDir)) {
+      if (!f.endsWith('.md')) continue;
+      for (const p of resolvePermalinks(path.join(topicDir, f))) set.add(p);
+    }
+  }
+
   // _drafts (if present) — strip any date prefix same as posts
   const draftsDir = path.join(ROOT, '_drafts');
   if (fs.existsSync(draftsDir)) {
