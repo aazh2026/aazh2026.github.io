@@ -7,6 +7,8 @@ author: "@postcodeeng"
 series: aise
 subtopic: ai-quality-and-risk
 description: "Anthropic的93%批准率数据证明human-in-the-loop假设从未成立——model层防御永远不够，唯一有效的是环境级别的硬边界，且当用户本身是攻击者时所有防御失效。"
+redirect_from:
+  - /2026-05-28-anthropic-containment
 ---
 
 > **TL;DR**

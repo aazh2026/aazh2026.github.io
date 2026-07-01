@@ -7,6 +7,8 @@ author: "@postcodeeng"
 series: aise
 subtopic: ai-native-engineering
 description: '传统单元测试的ROI在AI时代已成负数，提出三层融合测试模型（属性测试+AI生成测试+运行时验证），开发者角色从"写测试的人"变为"定义测试策略的人"。'
+redirect_from:
+  - /2025-04-25-stop-writing-unit-tests
 ---
 
 > **TL;DR**

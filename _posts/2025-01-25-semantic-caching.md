@@ -7,6 +7,8 @@ tags: [成本优化, 语义缓存, RAG, 向量检索]
 description: "通过向量相似度识别语义等价问题，配合L1/L2/L3多层缓存架构与置信度过滤，实现API成本节省90%的实战方案。"
 series: aise
 subtopic: context-engineering
+redirect_from:
+  - /2025-01-25-semantic-caching
 ---
 
 > **TL;DR**

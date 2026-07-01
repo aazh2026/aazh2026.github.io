@@ -7,6 +7,8 @@ description: "4-Agent是最小可行内容团队结构，覆盖intake→producti
 author: "@postcodeeng"
 series: aise
 subtopic: agents-and-multi-agent
+redirect_from:
+  - /2026-05-12-claude-multi-agent-systems
 ---
 
 > **TL;DR**

@@ -7,6 +7,8 @@ description: "Agent-Driven Debugging将75%信息处理交给Agent，人类从猎
 author: "@postcodeeng"
 series: aise
 subtopic: agents-and-multi-agent
+redirect_from:
+  - /2026-03-12-agent-driven-debugging
 ---
 
 > **TL;DR**

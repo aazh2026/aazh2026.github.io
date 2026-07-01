@@ -8,6 +8,8 @@ description: "gstack与Skills不是两种对立的哲学，而是不同层次的
 author: "@postcodeeng"
 series: aise
 subtopic: agents-and-multi-agent
+redirect_from:
+  - /2026-03-21-gstack-vs-claude-code-skills
 ---
 
 > **TL;DR**

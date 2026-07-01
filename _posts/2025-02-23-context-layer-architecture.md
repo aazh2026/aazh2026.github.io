@@ -8,6 +8,8 @@ author: "@postcodeeng"
 
 series: aise
 subtopic: context-engineering
+redirect_from:
+  - /2025-02-23-context-layer-architecture
 ---
 
 > **TL;DR**

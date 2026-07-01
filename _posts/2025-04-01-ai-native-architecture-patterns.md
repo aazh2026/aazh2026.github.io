@@ -8,6 +8,8 @@ author: "@postcodeeng"
 series: aise
 subtopic: ai-native-engineering
 recommended_start: true
+redirect_from:
+  - /2025-04-01-ai-native-architecture-patterns
 ---
 
 > **TL;DR**

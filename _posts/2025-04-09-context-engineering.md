@@ -10,6 +10,8 @@ subtopic: context-engineering
 recommended_start: true
 permalink: /posts/context-engineering//
 
+redirect_from:
+  - /2025-04-09-context-engineering
 ---
 
 > **TL;DR**

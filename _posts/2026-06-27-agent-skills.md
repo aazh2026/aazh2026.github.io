@@ -7,6 +7,8 @@ description: 'Google工程总监Addy Osmani的开源技能库，通过"反借口
 author: "@postcodeeng"
 series: aise
 subtopic: agents-and-multi-agent
+redirect_from:
+  - /2026-06-27-agent-skills
 ---
 
 "这很简单，不需要写 Spec。"
