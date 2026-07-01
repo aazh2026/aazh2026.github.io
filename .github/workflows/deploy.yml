@@ -28,11 +28,15 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: false
 
-      - name: Add Linux platform and install
+      - name: Add Linux platform to Gemfile.lock
         run: |
-          gem install bundler -v '2.5.26' --no-document
-          bundle _2.5.26_ lock --add-platform x86_64-linux
-          bundle _2.5.26_ install --jobs 4
+          gem install bundler -v '4.0.9' --no-document
+          bundle _4.0.9_ lock --add-platform x86_64-linux
+
+      - name: Install dependencies
+        run: |
+          bundle _4.0.9_ config set --local path 'vendor/bundle'
+          bundle _4.0.9_ install --jobs 4
 
       - name: Setup Node
         uses: actions/setup-node@v4
