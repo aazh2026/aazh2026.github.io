@@ -17,19 +17,23 @@ concurrency:
 jobs:
   # 构建任务
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v2
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.4'
-          bundler-cache: false
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
 
-      - name: Add Linux platform to Gemfile.lock
-        run: bundle lock --add-platform x86_64-linux
+      - name: Add Linux platform and install
+        run: |
+          gem install bundler -v '~> 2.0' --no-document || true
+          bundle lock --add-platform x86_64-linux
+          bundle install --jobs 4
 
       - name: Setup Node
         uses: actions/setup-node@v4
