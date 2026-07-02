@@ -38,21 +38,27 @@ series: "AI-Native Engineering"  # 可选：所属系列
 
 ### 校验脚本
 
-提交前本地跑：
+**提交前必跑**（3 层防护，强烈推荐启用 hooks）：
 
 ```bash
-# 验证 YAML frontmatter
-python3 scripts/validate-frontmatter.py
+# 启用 git hooks（一次性）
+git config core.hooksPath .githooks
 
-# 检查内部链接
-node scripts/check-internal-links.js
+# 一键跑全部 fast 检查（pre-push 自动也会跑）
+npm run check-all
 
-# 验证颜色对比度（WCAG AA）
-node scripts/check-color-contrast.js
+# 完整检查（含 jekyll build + pagefind）—— push 前手动跑
+npm run check-all:full
 
-# lint markdown
-markdownlint -c .markdownlint.json '_posts/**/*.md'
+# 单项检查
+npm run check-svgo
+npm run check-internal-links
+npm run check-aria-labels
 ```
+
+启用 hooks 后，`git commit` 会自动校验 frontmatter 和 SVG 优化，`git push` 会自动跑 fast checks。CI 只跑 GitHub 专属的（lighthouse / codeql / deploy）。
+
+**Hooks 缺失工具时降级为 warning**（不会阻断 commit/push），但 CI 仍是 source of truth。
 
 ## 🎨 SVG 视觉规范
 

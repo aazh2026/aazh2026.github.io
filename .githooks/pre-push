@@ -1,0 +1,39 @@
+#!/bin/sh
+# Pre-push hook: run fast CI checks locally before pushing to GitHub.
+# Catches the most common build failures (svgo, frontmatter, links)
+# so CI stays green on the first try.
+#
+# Enable: git config core.hooksPath .githooks
+# Bypass: git push --no-verify
+
+set -e
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+CHECK_ALL="$SCRIPT_DIR/../scripts/check-all.sh"
+
+if [ ! -f "$CHECK_ALL" ]; then
+  echo "⚠️  check-all.sh not found at $CHECK_ALL — skipping pre-push checks"
+  exit 0
+fi
+
+echo "→ Running pre-push checks (fast mode)..."
+echo
+
+if ! bash "$CHECK_ALL"; then
+  echo
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  echo "❌ Pre-push checks failed. Push aborted."
+  echo ""
+  echo "Fix the failures above, or bypass with:"
+  echo "    git push --no-verify"
+  echo ""
+  echo "Re-run only the failing check:"
+  echo "    bash scripts/check-all.sh --only <name>"
+  echo "Full check (incl. jekyll build):"
+  echo "    bash scripts/check-all.sh --full"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+  exit 1
+fi
+
+echo
+echo "✓ Pre-push checks passed."

@@ -1,36 +1,49 @@
 #!/bin/sh
-# Pre-commit hook: validate YAML frontmatter of any _posts/*.md being committed.
-# Bypass with: git commit --no-verify
+# Pre-commit hook: validate YAML frontmatter + check SVGs of staged files.
+# Catches the two most common content failures before they reach CI.
 #
 # Enable: git config core.hooksPath .githooks
+# Bypass: git commit --no-verify
 
 set -e
 
-# Check if any _posts/*.md is being changed
 CHANGED_POSTS=$(git diff --cached --name-only --diff-filter=ACMR | grep '^_posts/.*\.md$' || true)
+CHANGED_SVGS=$(git diff --cached --name-only --diff-filter=ACMR | grep '^assets/images/.*\.svg$' || true)
 
-if [ -z "$CHANGED_POSTS" ]; then
-  exit 0
+# ── Frontmatter validation ───────────────────────────────────────────
+if [ -n "$CHANGED_POSTS" ]; then
+  if ! command -v python3 >/dev/null 2>&1; then
+    echo "⚠️  python3 not found — skipping frontmatter validation"
+  elif ! python3 -c "import yaml" 2>/dev/null; then
+    echo "⚠️  PyYAML not installed (pip install pyyaml) — skipping frontmatter validation"
+  else
+    SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+    VALIDATOR="$SCRIPT_DIR/../scripts/validate-frontmatter.py"
+    if [ -f "$VALIDATOR" ]; then
+      echo "→ Validating frontmatter of changed posts..."
+      python3 "$VALIDATOR"
+    else
+      echo "⚠️  validator not found at $VALIDATOR — skipping"
+    fi
+  fi
 fi
 
-# Check if python3 + pyyaml are available
-if ! command -v python3 >/dev/null 2>&1; then
-  echo "⚠️  python3 not found — skipping frontmatter validation"
-  exit 0
+# ── SVG optimization check ───────────────────────────────────────────
+if [ -n "$CHANGED_SVGS" ]; then
+  SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+  CHECK_SVGO="$SCRIPT_DIR/../scripts/check-svgo.js"
+  if [ -f "$CHECK_SVGO" ]; then
+    echo "→ Checking SVG optimization of changed files..."
+    if ! node "$CHECK_SVGO" $CHANGED_SVGS; then
+      echo
+      echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      echo "❌ SVG(s) not svgo-optimized. Run:"
+      echo "    node scripts/optimize-svgo.js $CHANGED_SVGS"
+      echo "Or bypass with: git commit --no-verify"
+      echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      exit 1
+    fi
+  fi
 fi
 
-if ! python3 -c "import yaml" 2>/dev/null; then
-  echo "⚠️  PyYAML not installed (pip install pyyaml) — skipping frontmatter validation"
-  exit 0
-fi
-
-SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
-VALIDATOR="$SCRIPT_DIR/../scripts/validate-frontmatter.py"
-
-if [ ! -f "$VALIDATOR" ]; then
-  echo "⚠️  validator not found at $VALIDATOR — skipping"
-  exit 0
-fi
-
-echo "→ Validating frontmatter of changed posts..."
-python3 "$VALIDATOR"
+exit 0

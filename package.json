@@ -6,6 +6,8 @@
   "scripts": {
     "build": "jekyll build && pagefind --site _site",
     "build:local": "jekyll build --baseurl '' && pagefind --site _site",
+    "check-all": "bash scripts/check-all.sh",
+    "check-all:full": "bash scripts/check-all.sh --full",
     "optimize-svgo": "node scripts/optimize-svgo.js",
     "check-svgo": "node scripts/check-svgo.js",
     "check-internal-links": "node scripts/check-internal-links.js",
