@@ -4,8 +4,12 @@
  * `aria-label`. Fails the build (exit 1) if any are bare placeholders.
  *
  * "Meaningful" means: not exactly "插图", and not ending in "（插图）".
- * Authors can replace a generic label with anything else; the CI just
- * refuses to let the placeholder land in committed posts.
+ *
+ * EXCEPTION: <object type="image/svg+xml"> does NOT need aria-label.
+ * html-validate's `aria-label-misuse` rule forbids it (the embedded SVG
+ * has implicit role="img" and aria-label is not allowed there).
+ * Instead, the SVG file itself must have <title> and <desc> for a11y
+ * (enforced by visual review + the template README).
  *
  * Usage:
  *   node scripts/check-aria-labels.js             # all posts
@@ -21,6 +25,12 @@ const PLACEHOLDER_EXACT = "插图";
 const PLACEHOLDER_SUFFIX = "（插图）";
 const OBJECT_TAG = /<object\s+[^>]*?>/g;
 const LABEL_ATTR = /\baria-label="([^"]*)"/;
+const TYPE_ATTR = /\btype="([^"]*)"/;
+
+function isSvgObject(tag) {
+  const m = TYPE_ATTR.exec(tag);
+  return m && /image\/svg/i.test(m[1]);
+}
 
 function isBadLabel(s) {
   if (!s) return true;
@@ -32,9 +42,14 @@ function isBadLabel(s) {
 function checkFile(file) {
   const src = fs.readFileSync(file, "utf8");
   const offenders = [];
+  let skipped = 0;
   OBJECT_TAG.lastIndex = 0;
   let m;
   while ((m = OBJECT_TAG.exec(src))) {
+    if (isSvgObject(m[0])) {
+      skipped++;
+      continue;
+    }
     const lm = LABEL_ATTR.exec(m[0]);
     const label = lm ? lm[1] : null;
     if (isBadLabel(label)) {
@@ -45,7 +60,7 @@ function checkFile(file) {
       });
     }
   }
-  return { file, offenders };
+  return { file, offenders, skipped };
 }
 
 function main() {
@@ -57,11 +72,13 @@ function main() {
         .map((f) => path.join(ROOT, "_posts", f));
 
   let total = 0;
+  let totalSkipped = 0;
   let filesAffected = 0;
   const byFile = [];
 
   for (const file of inputs) {
     const r = checkFile(file);
+    totalSkipped += r.skipped;
     if (r.offenders.length > 0) {
       total += r.offenders.length;
       filesAffected++;
@@ -70,7 +87,7 @@ function main() {
   }
 
   console.log(
-    `[check-aria-labels] scanned ${inputs.length} file(s), ${total} placeholder label(s) found`
+    `[check-aria-labels] scanned ${inputs.length} file(s), ${totalSkipped} SVG <object> skipped (a11y via SVG <title>/<desc>), ${total} placeholder label(s) found`
   );
 
   if (total > 0) {
@@ -85,6 +102,7 @@ function main() {
     console.error("");
     console.error("Run `node scripts/fix-aria-labels.js` to replace placeholders,");
     console.error("or edit the offending file manually to add a real label.");
+    console.error("(SVG <object type=\"image/svg+xml\"> tags do NOT need aria-label.)");
     process.exit(1);
   }
 

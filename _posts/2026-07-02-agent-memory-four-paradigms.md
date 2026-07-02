@@ -20,7 +20,7 @@ subtopic: agents-and-multi-agent
 
 ---
 
-<object data="/assets/images/2026-07-02-agent-memory-four-paradigms-01-four-paradigms.svg" type="image/svg+xml" width="100%" aria-label="Agent 记忆系统四种范式：2x2 矩阵，横轴记忆压缩程度，纵轴决策权归属"></object>
+<object data="/assets/images/2026-07-02-agent-memory-four-paradigms-01-four-paradigms.svg" type="image/svg+xml" width="100%"></object>
 
 ## 写给正在选型的工程师
 

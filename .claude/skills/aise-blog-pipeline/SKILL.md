@@ -108,18 +108,27 @@ collected: N papers
 
 ### Stage 4.5 — Template（根治 a11y 和 svgo 问题）
 
-**根因预防**：上一篇 post 在 CI 暴露了两个 bug（SVG 未 svgo 优化 + `<object>` 缺 aria-label），都是手写习惯导致的。**根治方法是用模板**：
+**根因预防**：在 CI 暴露过两个 bug（SVG 未 svgo 优化 + 错误的 `<object aria-label>`），都是手写习惯导致的。**根治方法是用模板**：
 
 - **SVG 模板**：`_templates/svg-hero-template.svg`（已 svgo-clean）+ `_templates/svg-hero-template.README.md`（使用指南）
-- **`<object>` 嵌入片段**：
+- **`<object>` 嵌入片段（SVG）** —— **不带 aria-label**：
   ```html
   <object data="/assets/images/YYYY-MM-DD-slug-NN-desc.svg"
           type="image/svg+xml"
+          width="100%"></object>
+  ```
+- **`<object>` 嵌入片段（非 SVG，需 aria-label）**：
+  ```html
+  <object data="/assets/images/example.jpg"
+          type="image/jpeg"
           width="100%"
-          aria-label="[一句话描述]"></object>
+          aria-label="[描述]"
+          role="img"></object>
   ```
 
-写入时复制模板 → 替换占位符 → 嵌入时用上方片段（必含 aria-label）。**不要再从空白写 SVG 或手写 `<object>` 标签。**
+**为什么 SVG 不需要 aria-label**：html-validate 的 `aria-label-misuse` 规则禁止在 `<object type="image/svg+xml">` 上用 aria-label（SVG 内部 `<title>`/`<desc>` 已提供 a11y）。`check-aria-labels.js` 已对应更新为跳过 SVG object。
+
+写入时复制模板 → 替换占位符 → 用上方片段嵌入（**SVG 不加 aria-label**）。**不要再从空白写 SVG 或手写 `<object>` 标签。**
 
 ### Stage 4 — Write Article
 

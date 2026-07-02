@@ -128,20 +128,31 @@ redirect_from:
 
 ### 嵌入方式（强制模板）
 
-**必须使用 `<object>` 标签**，不能用 `![](path)` 或 `<img>`。**必须含 `aria-label`**，否则 check-aria-labels 会阻断 commit：
+**SVG 必须用 `<object>` 标签**，不能用 `![](path)` 或 `<img>`（失去响应式 + a11y）。
 
 ```html
 <object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg"
         type="image/svg+xml"
+        width="100%"></object>
+```
+
+**不要在 `<object type="image/svg+xml">` 上加 `aria-label`** —— html-validate 的 `aria-label-misuse` 规则会阻断（SVG 内部 `<title>`/`<desc>` 已提供 a11y）。
+
+**非 SVG 图片（jpg/png）才需要 `aria-label`**：
+
+```html
+<object data="/assets/images/example.jpg"
+        type="image/jpeg"
         width="100%"
-        aria-label="[一句话描述这张图给屏幕阅读器]"></object>
+        aria-label="图片描述"
+        role="img"></object>
 ```
 
 理由：
-- `<object>` 保留 SVG 的矢量特性和交互能力
-- 支持 `width="100%"` 响应式自适应
-- 主题色（#FAF9F5 背景）和文字色与博客一致
-- **`aria-label` 是 a11y 强制要求**（也是 `check-aria-labels.js` 的检查项）
+- `<object>` 保留矢量 + 交互能力
+- 支持 `width="100%"` 响应式
+- 主题色与博客一致
+- **SVG a11y 由内部 `<title>`/`<desc>` 提供**（不是 aria-label）
 
 ### 复制模板（推荐）
 

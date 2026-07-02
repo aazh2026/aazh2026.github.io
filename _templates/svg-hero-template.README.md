@@ -51,16 +51,17 @@ cp _templates/svg-hero-template.svg \
 | 次文字 | `#87867F` | subtext / 轴标签 |
 | 边框 | `#D1CFC5` | border / divider |
 
-## `<object>` 嵌入片段（必须复制用）
+## `<object>` 嵌入片段（SVG —— 不带 aria-label）
 
 ```html
 <object data="/assets/images/2026-MM-DD-post-slug-NN-desc.svg"
         type="image/svg+xml"
-        width="100%"
-        aria-label="[一段话描述这张图给屏幕阅读器]"></object>
+        width="100%"></object>
 ```
 
-**为什么必须含 `aria-label`**：check-aria-labels.js 会扫描所有 `<object>`，缺 label → CI 红（且阻断 pre-commit）。`aria-label` 内容应该用一句话讲清楚这张图是什么，不只是图名。
+**不要在 SVG `<object>` 上加 `aria-label`** —— html-validate 的 `aria-label-misuse` 规则会阻断（SVG 内部 `<title>`/`<desc>` 已提供 a11y）。
+
+`check-aria-labels.js` 已更新：**SVG `<object>` 自动跳过**，不要求 aria-label。非 SVG `<object>`（jpg/png）才需要 aria-label + role="img"。
 
 ## 字体（不要改）
 
@@ -78,6 +79,6 @@ cp _templates/svg-hero-template.svg \
 
 - ❌ 不要在浏览器中"格式化"后再保存（会引入空白、注释 → 破坏 svgo-optimum）
 - ❌ 不要用 `<img>` 替代 `<object>`（失去响应式 + a11y）
-- ❌ 不要省略 `aria-label`（screen reader 失效）
-- ❌ 不要省略 `<title>` 和 `<desc>`（CI 检查 a11y）
+- ❌ **不要在 SVG `<object>` 上加 `aria-label`**（html-validate 会阻断）
+- ❌ 不要省略 SVG 内部的 `<title>` 和 `<desc>`（a11y 必需）
 - ❌ 不要复制非模板 SVG 当 hero（自己写的没经过 svgo 优化）
