@@ -1,0 +1,124 @@
+<svg viewBox="0 0 720 500" xmlns="http://www.w3.org/2000/svg" font-family="ui-serif, Georgia, serif">
+  <title>Agent 记忆系统：4 种范式选择矩阵</title>
+  <desc>2x2 matrix showing 4 paradigms of Agent memory systems. X axis: memory unit (原始 chunk to 压缩 token). Y axis: decision unit (Planner explicit to 系统 implicit).</desc>
+
+  <!-- Background -->
+  <rect width="720" height="500" fill="#FAF9F5"/>
+
+  <!-- Title -->
+  <text x="360" y="30" text-anchor="middle" font-size="17" font-weight="500" fill="#141413">
+    Agent 记忆系统：4 种范式
+  </text>
+  <text x="360" y="50" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">
+    来源 · 2026 H1 论文集（EvoCF / H-EPM / E-mem / LatentMem）
+  </text>
+
+  <!-- Y-axis label -->
+  <text x="36" y="240" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace"
+        transform="rotate(-90, 36, 240)">
+    决策单元
+  </text>
+  <text x="36" y="148" text-anchor="middle" font-size="11" fill="#141413"
+        transform="rotate(-90, 36, 148)">
+    Planner 显式
+  </text>
+  <text x="36" y="350" text-anchor="middle" font-size="11" fill="#141413"
+        transform="rotate(-90, 36, 350)">
+    系统隐式
+  </text>
+
+  <!-- Matrix outer border -->
+  <rect x="100" y="80" width="540" height="340" fill="#FFFFFF" stroke="#D1CFC5" stroke-width="1.5" rx="8"/>
+
+  <!-- Cross dividers -->
+  <line x1="370" y1="80" x2="370" y2="420" stroke="#D1CFC5" stroke-width="1.5"/>
+  <line x1="100" y1="250" x2="640" y2="250" stroke="#D1CFC5" stroke-width="1.5"/>
+
+  <!-- X-axis labels -->
+  <text x="235" y="440" text-anchor="middle" font-size="11" fill="#141413">原始 chunk</text>
+  <text x="505" y="440" text-anchor="middle" font-size="11" fill="#141413">压缩 token</text>
+  <text x="370" y="463" text-anchor="middle" font-size="10" fill="#87867F" font-family="ui-monospace, monospace">
+    记忆单元
+  </text>
+
+  <!-- Quadrant 1 (Top-left): 反事实协作记忆 (Planner + 原始 chunk) -->
+  <rect x="120" y="100" width="230" height="130" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8" rx="6"/>
+  <text x="235" y="125" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">
+    反事实协作记忆
+  </text>
+  <text x="235" y="143" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">
+    EvoCF · ICML 2026
+  </text>
+  <line x1="170" y1="155" x2="300" y2="155" stroke="#D1CFC5" stroke-width="0.8"/>
+  <text x="235" y="175" text-anchor="middle" font-size="11" fill="#141413">
+    Planner 主动检索
+  </text>
+  <text x="235" y="192" text-anchor="middle" font-size="11" fill="#141413">
+    失败经验重规划
+  </text>
+  <text x="235" y="216" text-anchor="middle" font-size="10" fill="#87867F" font-style="italic">
+    「失败经验没被下次读到」
+  </text>
+
+  <!-- Quadrant 2 (Top-right): 工具图双记忆 (Planner + 压缩 token) -->
+  <rect x="390" y="100" width="230" height="130" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8" rx="6"/>
+  <text x="505" y="125" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">
+    工具图双记忆
+  </text>
+  <text x="505" y="143" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">
+    H-EPM · ICML 2026
+  </text>
+  <line x1="440" y1="155" x2="570" y2="155" stroke="#D1CFC5" stroke-width="0.8"/>
+  <text x="505" y="175" text-anchor="middle" font-size="11" fill="#141413">
+    系统自动结构化
+  </text>
+  <text x="505" y="192" text-anchor="middle" font-size="11" fill="#141413">
+    成功轨迹为工具图
+  </text>
+  <text x="505" y="216" text-anchor="middle" font-size="10" fill="#87867F" font-style="italic">
+    「图结构 &gt; 语义相似」
+  </text>
+
+  <!-- Quadrant 3 (Bottom-left): 子 Agent 路由 (系统 + 原始 chunk) -->
+  <rect x="120" y="270" width="230" height="130" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8" rx="6"/>
+  <text x="235" y="295" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">
+    不压缩子 Agent 路由
+  </text>
+  <text x="235" y="313" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">
+    E-mem · PMLR 2026
+  </text>
+  <line x1="170" y1="325" x2="300" y2="325" stroke="#D1CFC5" stroke-width="0.8"/>
+  <text x="235" y="345" text-anchor="middle" font-size="11" fill="#141413">
+    子 Agent 按相关性
+  </text>
+  <text x="235" y="362" text-anchor="middle" font-size="11" fill="#141413">
+    激活原始 chunk
+  </text>
+  <text x="235" y="386" text-anchor="middle" font-size="10" fill="#87867F" font-style="italic">
+    「压缩掉的是推理路径」
+  </text>
+
+  <!-- Quadrant 4 (Bottom-right): 隐空间极简压缩 (系统 + 压缩 token) -->
+  <rect x="390" y="270" width="230" height="130" fill="#FFFFFF" stroke="#D97757" stroke-width="1.8" rx="6"/>
+  <text x="505" y="295" text-anchor="middle" font-size="14" font-weight="500" fill="#141413">
+    隐空间极简压缩
+  </text>
+  <text x="505" y="313" text-anchor="middle" font-size="10" fill="#D97757" font-family="ui-monospace, monospace">
+    LatentMem · arXiv:2602.03036
+  </text>
+  <line x1="440" y1="325" x2="570" y2="325" stroke="#D1CFC5" stroke-width="0.8"/>
+  <text x="505" y="345" text-anchor="middle" font-size="11" fill="#141413">
+    RL 训练编码器
+  </text>
+  <text x="505" y="362" text-anchor="middle" font-size="11" fill="#141413">
+    输出约 8 tokens
+  </text>
+  <text x="505" y="386" text-anchor="middle" font-size="10" fill="#87867F" font-style="italic">
+    「8 tokens &gt; 8K tokens」
+  </text>
+
+  <!-- Footer note -->
+  <text x="360" y="488" text-anchor="middle" font-size="9" fill="#87867F" font-family="ui-monospace, monospace">
+    横轴：记忆压缩程度　·　纵轴：决策权归属
+  </text>
+</svg>
