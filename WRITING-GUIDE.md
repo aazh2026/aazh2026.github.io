@@ -126,19 +126,33 @@ redirect_from:
 
 ## 🎨 SVG 嵌入规范（重要）
 
-### 嵌入方式
+### 嵌入方式（强制模板）
 
-**必须使用 `<object>` 标签**，不能用 `![](path)` 或 `<img>`：
+**必须使用 `<object>` 标签**，不能用 `![](path)` 或 `<img>`。**必须含 `aria-label`**，否则 check-aria-labels 会阻断 commit：
 
 ```html
-<object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg" type="image/svg+xml" width="100%"></object>
+<object data="/assets/images/2026-06-27-loop-engineering-02-flow.svg"
+        type="image/svg+xml"
+        width="100%"
+        aria-label="[一句话描述这张图给屏幕阅读器]"></object>
 ```
 
 理由：
 - `<object>` 保留 SVG 的矢量特性和交互能力
 - 支持 `width="100%"` 响应式自适应
 - 主题色（#FAF9F5 背景）和文字色与博客一致
-- 不需要额外的 alt 文本（`<title>` 在 SVG 内已定义）
+- **`aria-label` 是 a11y 强制要求**（也是 `check-aria-labels.js` 的检查项）
+
+### 复制模板（推荐）
+
+**不要从空白写 SVG**。从预优化模板复制：
+
+```bash
+cp _templates/svg-hero-template.svg \
+   assets/images/YYYY-MM-DD-post-slug-NN-desc.svg
+```
+
+模板已 svgo-clean（check-svgo 通过），编辑后通常不需要再 optimize。详见 `_templates/svg-hero-template.README.md`。
 
 ### SVG 文件命名规范
 

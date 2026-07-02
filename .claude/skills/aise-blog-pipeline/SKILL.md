@@ -106,6 +106,21 @@ collected: N papers
 - 外延锚点（Jekyll permalink）
 - 风险等级（low/medium/high）
 
+### Stage 4.5 — Template（根治 a11y 和 svgo 问题）
+
+**根因预防**：上一篇 post 在 CI 暴露了两个 bug（SVG 未 svgo 优化 + `<object>` 缺 aria-label），都是手写习惯导致的。**根治方法是用模板**：
+
+- **SVG 模板**：`_templates/svg-hero-template.svg`（已 svgo-clean）+ `_templates/svg-hero-template.README.md`（使用指南）
+- **`<object>` 嵌入片段**：
+  ```html
+  <object data="/assets/images/YYYY-MM-DD-slug-NN-desc.svg"
+          type="image/svg+xml"
+          width="100%"
+          aria-label="[一句话描述]"></object>
+  ```
+
+写入时复制模板 → 替换占位符 → 嵌入时用上方片段（必含 aria-label）。**不要再从空白写 SVG 或手写 `<object>` 标签。**
+
 ### Stage 4 — Write Article
 
 **frontmatter（新式模板）**：
@@ -150,6 +165,8 @@ subtopic: <从兄弟帖继承的 subtopic>
 
 ### Stage 5 — Verify
 
+**5.1 内容校验**
+
 | 项 | 检查方式 |
 |----|---------|
 | 内链 permalink | `ls _posts/YYYY-MM-DD-slug.md` 对每个 cross-ref |
@@ -158,6 +175,26 @@ subtopic: <从兄弟帖继承的 subtopic>
 | Footer 对齐 | `*Published on` == frontmatter `date:` |
 | 视觉系统 | SVG 配色 / 字体 / viewBox |
 | Footer 死规则 | 无 `*AI-Native软件工程系列 #XX*`；无 `postcodeengineering.com` URL |
+
+**5.2 本地 CI 镜像（强制）**
+
+```bash
+npm run check-all          # fast checks（pre-push 自动跑）
+npm run check-all:full     # + jekyll build + pagefind（发布前必跑）
+```
+
+`check-all.sh` 镜像 `.github/workflows/*.yml`：
+- fast: svgo / frontmatter / internal-links / aria-labels / code-fence-langs / series
+- full（--full）: + color-contrast / markdownlint / jekyll / pagefind
+
+新增 SVG 必须先跑 `npm run optimize-svgo <path>` 再提交，否则 check-svgo 失败阻断 push。
+
+**Hook 启用**（一次性）：
+```bash
+git config core.hooksPath .githooks
+```
+
+启用后 `git commit` 自动校验 frontmatter + svgo，`git push` 自动跑 fast checks。
 
 ### Stage 6 — Commit & Push
 
