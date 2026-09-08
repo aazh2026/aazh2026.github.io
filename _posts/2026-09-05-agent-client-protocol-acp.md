@@ -1,5 +1,8 @@
-# Agent Client Protocol：让 Editor-Agent 集成走向 M+N 而非 M×N
-
+---
+layout: post
+title: "Agent Client Protocol：让 Editor-Agent 集成走向 M+N 而非 M×N"
+date: 2026-09-05
+categories: [AI, Agent, Protocol]
 ---
 
 ## LSP 的历史重演
