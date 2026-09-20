@@ -97,4 +97,4 @@ DATS 指向的是：**agent 团队的组织结构本身可以随任务动态优�
 
 ---
 
-*论文：Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation（arXiv:2609.13890）*
+**[原论文：Learning How Much to Collaborate: Difficulty-Aware Topology Selection for Multi-Agent Code Generation](https://arxiv.org/abs/2609.13890)**（arXiv:2609.13890）

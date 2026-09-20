@@ -87,4 +87,4 @@ TestExplora 指向的是更上游的能力：**在没有 bug 报告的情况下�
 
 ---
 
-*论文：TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation（arXiv:2602.10471）*
+**[原论文：TestExplora: Benchmarking LLMs for Proactive Bug Discovery via Repository-Level Test Generation](https://arxiv.org/abs/2602.10471)**（arXiv:2602.10471）

@@ -104,4 +104,4 @@ def test_is_even():
 
 ---
 
-*相关论文：Uncertainty-Calibrated Test Generation for LLM-Based Unit Synthesis（arXiv:2609.12345，占位链接，核心方法基于描述重构）*
+**[原论文](https://arxiv.org/abs/2609.12345)**（arXiv:2609.12345，占位链接，核心方法基于描述重构）

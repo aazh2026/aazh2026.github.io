@@ -103,4 +103,4 @@ HarnessFix 的框架把 **harness 本身当成需要测试、诊断、修复的�
 
 ---
 
-*论文：From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws（arXiv:2606.06324）*
+**[原论文：From Failed Trajectories to Reliable LLM Agents: Diagnosing and Repairing Harness Flaws](https://arxiv.org/abs/2606.06324)**（arXiv:2606.06324）

@@ -101,4 +101,4 @@ def parse(input_str):    <CPU:45ms> <MEM:1.2MB> <IO:na>
 
 ---
 
-*相关论文：Resource-Aware Code Models: Embedding CPU/Memory/Timing as First-Class Tokens（arXiv:2609.13177，占位链接，核心方法基于描述重构）*
+**[原论文](https://arxiv.org/abs/2609.13177)**（arXiv:2609.13177，占位链接，核心方法基于描述重构）

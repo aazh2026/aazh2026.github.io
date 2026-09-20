@@ -96,4 +96,4 @@ Software Physics 的思路是**即时局部检查**：
 
 ---
 
-*论文：Software Physics Guided Incremental Change Validation in Large-Scale Code Bases（IEEE Xplore:11655096）*
+**[原论文](https://ieeexplore.ieee.org/document/11655096)**（IEEE Xplore:11655096）

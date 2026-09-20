@@ -103,4 +103,4 @@ remark: loop was not vectorized
 
 ---
 
-*论文：AI Coding Agents Need Better Compiler Remarks（arXiv:2604.13927）*
+**[原论文：AI Coding Agents Need Better Compiler Remarks](https://arxiv.org/abs/2604.13927)**（arXiv:2604.13927）

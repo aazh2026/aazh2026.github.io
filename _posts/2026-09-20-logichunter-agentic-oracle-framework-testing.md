@@ -105,4 +105,4 @@ LogicHunter 证明：**把 Oracle 本身做成 Agent 是可行的**。不是用�
 
 ---
 
-*论文：LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle（arXiv:2607.06195）*
+**[原论文：LogicHunter: Testing LLM Agent Frameworks with an Agentic Oracle](https://arxiv.org/abs/2607.06195)**（arXiv:2607.06195）

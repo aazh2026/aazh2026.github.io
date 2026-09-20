@@ -99,4 +99,4 @@ Spec-Driven 的定位更务实：
 
 ---
 
-*论文：Grounding AI Agents in Contracts: An Empirical Evaluation of Spec-Driven Test Generation（arXiv:2608.17177v1）*
+**[原论文：Grounding AI Agents in Contracts: An Empirical Evaluation of Spec-Driven Test Generation](https://arxiv.org/abs/2608.17177)**（arXiv:2608.17177v1）
