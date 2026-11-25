@@ -51,9 +51,9 @@
       </div>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       {% if post.description %}
-      <p class="related-post-desc">{{ post.description | truncate: 90 }}</p>
+      <p class="related-post-desc">{{ post.description | strip_html | normalize_whitespace | truncate: 90 | escape_once }}</p>
       {% elsif post.excerpt %}
-      <p class="related-post-desc">{{ post.excerpt | strip_html | truncate: 90 }}</p>
+      <p class="related-post-desc">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 90 | escape_once }}</p>
       {% endif %}
     </div>
     {% endfor %}
