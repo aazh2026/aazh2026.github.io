@@ -178,10 +178,10 @@ A-RAG 的做法是把决策权交出去：给模型三个工具，它每轮自�
 
 ## 延伸阅读
 
-1. [Context 工程实战指南：5 阶段成熟度模型](/2026-07-01-context-engineering-field-guide/) — 检索在 context 工程里的位置
-2. [AI Agent 系统巡礼：4 种架构范式](/2026-07-01-agent-systems-tour/) — 范式选择的母框架
-3. [AI Agent 记忆系统巡礼：4 种范式](/2026-07-02-agent-memory-four-paradigms/) — 决策权归属的另一种划分方式
-4. [Loop Engineering：让 Agent 自我改进的四个层次](/2026-06-27-loop-engineering/) — 迭代预算与停止条件
+1. [Context 工程实战指南：5 阶段成熟度模型](/context-engineering-field-guide/) — 检索在 context 工程里的位置
+2. [AI Agent 系统巡礼：4 种架构范式](/agent-systems-tour/) — 范式选择的母框架
+3. [AI Agent 记忆系统巡礼：4 种范式](/agent-memory-four-paradigms/) — 决策权归属的另一种划分方式
+4. [Loop Engineering：让 Agent 自我改进的四个层次](/loop-engineering/) — 迭代预算与停止条件
 5. [OpenAI Agent Runtime 架构解析](/openai-agent-runtime-architecture/) — 工具调用的运行时实现
 6. [Harness Engineering：给 Agent 造一套好用的工具](/harness-engineering-martin-fowler/) — 接口设计如何影响 Agent 行为
 
