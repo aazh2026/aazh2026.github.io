@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "模型会偷懒，但是有节奏地偷懒——Budget-Aware Lazy Reasoning in Code LLMs"
 date: 2026-09-16
 tags:

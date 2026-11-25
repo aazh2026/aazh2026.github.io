@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Beyond Resolution Rates：9374条轨迹揭示的Coding Agent失败真相"
 date: 2026-09-16
 tags:

@@ -4,7 +4,7 @@ title: "DDBench：Coding Agent 的分布式调试深水区评测"
 date: 2026-08-31T16:30:00+08:00
 tags: [AI编程, Agent评测, 分布式系统, 调试上下文]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

@@ -4,7 +4,7 @@ title: "Agent 何时该停？证据携带终止协议"
 date: 2026-08-31T12:20:00+08:00
 tags: [Agent OS, Control Loop, LLM推理]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

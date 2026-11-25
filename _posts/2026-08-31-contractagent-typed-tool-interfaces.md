@@ -4,7 +4,7 @@ title: "ContractAgent：当工具接口带上类型合约"
 date: 2026-08-31T16:00:00+08:00
 tags: [Agent框架, 类型系统, 软件工程]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

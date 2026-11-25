@@ -4,7 +4,7 @@ title: "RAMP：基于提交配置的 AI 成熟度四阶模型"
 date: 2026-08-31T14:05:00+08:00
 tags: [AI编程, 软件工程, 团队成熟度, 技术债]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

@@ -1,4 +1,8 @@
-# Docless APIs：LLM 从二进制和流量里重建隐式契约
+---
+layout: post
+title: "Docless APIs：LLM 从二进制和流量里重建隐式契约"
+date: 2026-09-09
+---
 
 **论文**：[arXiv:2609.04567](https://arxiv.org/abs/2609.04567)（示例占位，对应 LLM-for-protocol-inference / binary contract recovery 方向）
 

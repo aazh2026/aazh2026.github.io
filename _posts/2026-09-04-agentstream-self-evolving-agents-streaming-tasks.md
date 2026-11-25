@@ -1,4 +1,8 @@
-# AgentStream：自进化 Agent 的流式评估，打破了"越用越聪明"的叙事
+---
+layout: post
+title: "AgentStream：自进化 Agent 的流式评估，打破了\"越用越聪明\"的叙事"
+date: 2026-09-04
+---
 
 微软与中科院联合发布的 AgentStream（arXiv:2608.00155）做了件不受欢迎的事：用系统性实验戳破了 self-evolving Agent 的叙事泡沫。
 

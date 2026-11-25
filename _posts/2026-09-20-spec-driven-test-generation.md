@@ -39,7 +39,7 @@ Spec-Driven Test Generation 要解决的就是这个：**把合约推理从隐�
 
 模型被要求对目标 API 或函数显式输出：
 
-```
+```text
 前置条件（Pre-conditions）：调用前必须满足什么？
 后置条件（Post-conditions）：调用后必须保证什么？
 未定义行为（Undefined behaviors）：哪些输入或状态会导致未定义行为？

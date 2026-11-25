@@ -4,7 +4,7 @@ title: "LoopsBench：评测尺子该换了——从 Harness 到 Loop"
 date: 2026-08-31T16:00:00+08:00
 tags: [AI编程, Agent评测, 长程执行, 软件工程]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

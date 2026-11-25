@@ -4,7 +4,7 @@ title: "SpecPath：同一个需求，换种说法就修出不同的 bug"
 date: 2026-08-31T16:35:00+08:00
 tags: [AI编程, 评测鲁棒性, 需求工程, Agent可靠性]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

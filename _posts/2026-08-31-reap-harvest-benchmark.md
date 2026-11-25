@@ -4,7 +4,7 @@ title: "REAP: 从生产流量自动构建评测基准"
 date: 2026-08-31T12:30:00+08:00
 tags: [评测基准, 软件工程, Agent评估, AI编程]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

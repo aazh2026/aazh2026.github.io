@@ -1,4 +1,8 @@
-# Docker Sandboxes：让 Agent 跑在「 trailer 」而不是「房间」里
+---
+layout: post
+title: "Docker Sandboxes：让 Agent 跑在「 trailer 」而不是「房间」里"
+date: 2026-09-04
+---
 
 ## Agent 拥有你机器的完整访问权
 

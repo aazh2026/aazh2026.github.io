@@ -1,4 +1,8 @@
-# FeatureBench：63 分悬崖——当 SWE-bench 满分选手碰上真实功能开发
+---
+layout: post
+title: "FeatureBench：63 分悬崖——当 SWE-bench 满分选手碰上真实功能开发"
+date: 2026-09-04
+---
 
 ## 基准分数通胀的问题
 

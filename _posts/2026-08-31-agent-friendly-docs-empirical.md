@@ -4,7 +4,7 @@ title: "Agent 读文档和人想的不一样：来自 557 个真实 session 的�
 date: 2026-08-31T16:10:00+08:00
 tags: [AI编程, 文档工程, Agent行为, 实证研究]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

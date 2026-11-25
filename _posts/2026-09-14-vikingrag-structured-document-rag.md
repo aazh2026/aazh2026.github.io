@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "VikingRAG：把文档结构从 Prompt 里解放出来"
 date: 2026-09-14
 categories: [AI, RAG, Enterprise AI]
@@ -39,7 +40,7 @@ categories: [AI, RAG, Enterprise AI]
 
 VikingRAG 的核心设计是把文档目录树从 Prompt 里搬出去，存成外部可寻址状态：
 
-```
+```text
 文档目录树 → URI 可寻址对象
   ├── 叶子节点 = chunk 内容
   ├── 内部节点 = 摘要（从子节点汇总生成）
@@ -82,7 +83,7 @@ VikingRAG-E 的优化：多轮检索跑完后，把"初始检索 URI → 答案�
 
 VikingRAG-E+ 加了一层证据充分性检查：
 
-```
+```text
 一轮检索 + 经验边增强
     ↓ 证据充分性检查
 通过 → 直接生成答案

@@ -4,7 +4,7 @@ title: "PROGRA：给 Agent 装上进度条——ACL 2026 多轮函数调用的�
 date: 2026-09-01T19:00:00+08:00
 tags: [AI-Native软件工程, 多轮Agent, 工具调用, 强化学习]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

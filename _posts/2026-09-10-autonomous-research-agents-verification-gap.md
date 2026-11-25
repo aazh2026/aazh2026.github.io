@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：Autonomous Research Agents — 验证鸿沟才是真正的瓶颈"
 date: 2026-09-10
 ---

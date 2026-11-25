@@ -22,7 +22,7 @@ subtopic: multi-agent
 
 大多数多 Agent 代码生成系统的工作流是**人拍脑袋定的**：
 
-```
+```text
 Planner → 写计划 → Dev → 写代码 → Reviewer → 审查
 ```
 

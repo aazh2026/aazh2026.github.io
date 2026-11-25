@@ -1,4 +1,8 @@
-# 论文笔记：EvoClaw — 代码智能体的"长跑"难题：从单点任务到持续演化
+---
+layout: post
+title: "论文笔记：EvoClaw — 代码智能体的\"长跑\"难题：从单点任务到持续演化"
+date: 2026-09-11
+---
 
 arXiv: 2603.13428 | USC, UCR, UCSD, Haven, OpenHands
 
@@ -74,7 +78,7 @@ EvoClaw 选择了"里程碑"作为任务粒度——比 commit 粗（避免噪�
 
 **评分指标**：
 
-```
+```text
 Recall_m = N_fixed,m / N_required,m    （F2P 测试通过率）
 Precision_m = (N_fixed,m + ε) / (N_fixed,m + N_broken,m + ε)  （P2P 回归率）
 Score_m = 2 × Precision × Recall / (Precision + Recall)

@@ -1,4 +1,8 @@
-# Harness Engineering 的原点：Mitchell Hashimoto 的定义
+---
+layout: post
+title: "Harness Engineering 的原点：Mitchell Hashimoto 的定义"
+date: 2026-09-05
+---
 
 ---
 

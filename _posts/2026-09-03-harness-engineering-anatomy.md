@@ -1,4 +1,8 @@
-# Harness Engineering：对 11 个生产级 Coding Agent 运行时做源码解剖
+---
+layout: post
+title: "Harness Engineering：对 11 个生产级 Coding Agent 运行时做源码解剖"
+date: 2026-09-03
+---
 
 ## 背景
 
@@ -18,7 +22,7 @@ arXiv:2609.00006，Paul Barbaste 等三人（Wavestone AI Lab），2026 年 7 �
 
 论文给的定义足够简洁：
 
-```
+```text
 Agent = Model + Harness
 ```
 

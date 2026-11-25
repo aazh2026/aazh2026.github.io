@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：Self-Improving Coding Agents — 跨会话行为规则积累"
 date: 2026-09-07
 ---
@@ -19,7 +20,7 @@ LLM 驱动的编码 Agent 有一个根本性的记忆缺陷：它没有跨会话
 
 ## 解法：行为规则库（Behavioral Rules）
 
-```
+```text
 人类反馈 → 规则抽取 → 规则库积累 → 下次编码时检索应用
 ```
 

@@ -4,7 +4,7 @@ title: "规格优先：717k 行 TS 代码库上的零人工 review 架构重构"
 date: 2026-08-31T16:05:00+08:00
 tags: [AI编程, 形式化规格, 重构, 可审计性]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

@@ -1,4 +1,8 @@
-# Cost-Aware Agent Scheduling：并行推理不是银弹
+---
+layout: post
+title: "Cost-Aware Agent Scheduling：并行推理不是银弹"
+date: 2026-09-09
+---
 
 **论文**：[arXiv:2609.07890](https://arxiv.org/abs/2609.07890)（示例占位，对应 agent scheduling / inference economics 方向）
 
@@ -24,7 +28,7 @@
 
 论文提出了一个 Cost-Aware Schedule Policy，给每个任务计算一个 κ 值：
 
-```
+```text
 κ = (耦合度 × 重算成本) / 单步推理成本
 ```
 

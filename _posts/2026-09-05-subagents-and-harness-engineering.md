@@ -1,4 +1,8 @@
-# Sub-Agents 与 Harness Engineering：AI 编码 Agent 的控制论
+---
+layout: post
+title: "Sub-Agents 与 Harness Engineering：AI 编码 Agent 的控制论"
+date: 2026-09-05
+---
 
 两条线索，同一个问题：**如何在复杂、长时间运行的代码任务里，让 AI Agent 真正可靠？**
 

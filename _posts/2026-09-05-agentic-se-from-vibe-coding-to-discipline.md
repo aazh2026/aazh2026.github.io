@@ -1,4 +1,8 @@
-# Agentic SE：从 Vibe Coding 到治理纪律
+---
+layout: post
+title: "Agentic SE：从 Vibe Coding 到治理纪律"
+date: 2026-09-05
+---
 
 ---
 

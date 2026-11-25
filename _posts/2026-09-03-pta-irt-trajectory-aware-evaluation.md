@@ -1,4 +1,8 @@
-# PTA-IRT：用历史执行轨迹给 SWE Agent 做高效打榜
+---
+layout: post
+title: "PTA-IRT：用历史执行轨迹给 SWE Agent 做高效打榜"
+date: 2026-09-03
+---
 
 ## 背景
 
@@ -47,13 +51,13 @@ PTA-IRT 的解法：把轨迹信息接进 4PL IRT 模型。
 
 **4PL response probability:**
 
-```
+```text
 pᵢⱼ = cⱼ + (dⱼ - cⱼ) · σ[aᵢⱼ(θᵢ - bᵢⱼ)]
 ```
 
 关键是引入 **trajectory-adjusted parameters**：
 
-```
+```text
 aᵢⱼ = aⱼ + mᵢⱼ · Δaᵢⱼ
 bᵢⱼ = bⱼ + mᵢⱼ · Δbᵢⱼ
 ```

@@ -4,7 +4,7 @@ title: "RACE-Bench：推理增强的代码 Agent 评测基准"
 date: 2026-08-31T14:10:00+08:00
 tags: [评测基准, Agent评估, 软件工程, 推理轨迹]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

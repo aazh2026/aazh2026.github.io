@@ -4,7 +4,7 @@ title: "AgenticOS：把 Agent 安全从 prompt 防御下沉到 OS 级强制中�
 date: 2026-08-31T15:25:00+08:00
 tags: [Agent OS, 安全, 操作系统, 权限模型]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

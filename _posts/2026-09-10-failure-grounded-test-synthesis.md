@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：Failure-Grounded Test Synthesis — 测试从「规格」走向「失败」"
 date: 2026-09-10
 ---

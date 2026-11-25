@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "CAID：多Agent异步协作的正确打开方式——+25.6% PaperBench背后的工程细节"
 date: 2026-09-16
 tags:

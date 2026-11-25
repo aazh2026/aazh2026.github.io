@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：ACID-Compliant Agent Systems — 给 Agent 执行加上事务语义"
 date: 2026-09-07
 ---

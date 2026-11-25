@@ -4,8 +4,7 @@ title: "半可执行栈：软件工程边界正在扩大"
 date: 2026-09-02T10:00:00+08:00
 tags: [AI-Native软件工程, Agentic Engineering, 栈层模型, 资产治理]
 author: Aaron
-series: AI-Native软件工程系列 #63
-
+series: aise
 redirect_from:
   - /semi-executable-stack-agentic-se/
 ---
@@ -36,7 +35,7 @@ redirect_from:
 
 Feldt 的六环模型按「可执行程度」对软件工程制品分层：
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │              六环诊断模型（按可执行程度）              │
 │                                                      │

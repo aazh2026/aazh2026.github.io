@@ -4,8 +4,7 @@ title: "DeepAgent：从预定义工具到自主发现"
 date: 2026-09-02T12:00:00+08:00
 tags: [AI Agent, 工具发现, 自主推理, 记忆架构]
 author: Aaron
-series: AI-Native软件工程系列 #65
-
+series: aise
 redirect_from:
   - /deepagent-autonomous-tool-discovery/
 ---
@@ -51,7 +50,7 @@ DeepAgent 的核心突破：从 16,000+ RapidAPI 工具库中动态检索和调�
 
 DeepAgent 采用了一个受大脑启发的三层记忆系统：
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │           脑启发式三层记忆架构                │
 │                                             │

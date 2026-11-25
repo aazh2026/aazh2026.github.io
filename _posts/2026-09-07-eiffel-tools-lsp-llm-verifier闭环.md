@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "LSP + LLM + 形式化验证器：Eiffel-tools 的可重试闭环"
 date: 2026-09-07
 ---
@@ -38,7 +39,7 @@ Eiffel-tools 要解决的就是这个问题：不是让 LLM 凭直觉写 Eiffel�
 
  Eiffel-tools 的架构可以分成四层：
 
-```
+```text
 ┌──────────────────────────────────────────────┐
 │  IDE / Editor（Client）                       │
 │  ↕ LSP                                       │

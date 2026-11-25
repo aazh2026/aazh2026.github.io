@@ -4,7 +4,7 @@ title: "架构作为能力均衡器：规约格式如何影响 Coding Agent 产�
 date: 2026-08-31T14:00:00+08:00
 tags: [Agent OS, 架构规约, LLM代码生成, 评测]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

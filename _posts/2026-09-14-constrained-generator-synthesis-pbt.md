@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "程序不是被写出来的，是被采样出来的"
 date: 2026-09-14
 categories: [AI, Software Engineering, Program Synthesis]
@@ -19,13 +20,13 @@ categories: [AI, Software Engineering, Program Synthesis]
 
 Property-based testing（PBT）的核心循环是：
 
-```
+```text
 随机生成输入 → 检查属性是否满足 → 找反例
 ```
 
 以 BST 插入为例，要测试这个属性：
 
-```
+```sql
 ∀x, t . isBST(t) ⟹ isBST(insert(x, t))
 ```
 
@@ -62,7 +63,7 @@ Palamedes 将受约束生成器综合问题重新定义为：
 
 ### 3.2 基础规则：pure 和 pick
 
-```
+```text
 pure a' : Gen (λa . a = a')           -- 生成唯一值
 
 g1 : Gen P    g2 : Gen Q
@@ -80,7 +81,7 @@ pick g1 g2 : Gen (λa . P a ∨ Q a)     -- 在两个生成器间选择
 
 BST 生成器中有一个关键依赖：先生成节点值 `x`，然后用 `x` 来约束左右子树的取值范围。
 
-```
+```text
 g : Gen P    f : (a' : α') → Gen (λa . Q a' a)
 ─────────────────────────────────────────────
 g >>= f : Gen (λa . ∃(a' : α') . P a' ∧ Q a' a)

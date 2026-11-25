@@ -1,4 +1,8 @@
-# OpenART — 通过开放式环境演化实现可扩展的 Agent 红队测试
+---
+layout: post
+title: "OpenART — 通过开放式环境演化实现可扩展的 Agent 红队测试"
+date: 2026-09-03
+---
 
 ## 背景
 
@@ -14,7 +18,7 @@ arXiv:2608.00677，2026 年 8 月。复旦大学 + 上海 AI Lab 联合出品。
 
 现实世界中，Agent 的行为是这样的循环：
 
-```
+```text
 Agent 观察环境 → 基于观察推理 → 执行动作 → 环境状态更新 → Agent 再次观察 …
 ```
 
@@ -72,7 +76,7 @@ OpenART 的一大工程贡献是 **Target-agnostic scenario representation**：�
 
 EMHA 是 OpenART 的参考攻击策略，其核心思想是将协同环境变更表示为**超图**：
 
-```
+```text
 G_t = (V_t, E_t), e = (H_e, T_e, φ_e)
 ```
 

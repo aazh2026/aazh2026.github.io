@@ -4,8 +4,7 @@ title: "MaAS：多 Agent 的动态编排"
 date: 2026-09-02T12:00:00+08:00
 tags: [AI Agent, 多Agent编排, 架构搜索, ICML 2025]
 author: Aaron
-series: AI-Native软件工程系列 #67
-
+series: aise
 redirect_from:
   - /maas-multi-agent-architecture-search/
 ---
@@ -41,7 +40,7 @@ MaAS 的核心思想来自一个领域的跨界迁移：
 
 MaAS 把这个思想迁移到多 Agent 架构：
 
-```
+```text
 ┌────────────────────────────────────────────────────┐
 │              智能体超网（Agentic Supernet）         │
 │                                                    │

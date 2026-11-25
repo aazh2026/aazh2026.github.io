@@ -40,7 +40,7 @@ subtopic: code-model-training
 
 在标准代码 token 序列中嵌入资源描述 token：
 
-```
+```python
 def parse(input_str):    <CPU:45ms> <MEM:1.2MB> <IO:na>
     # implementation
 ```
@@ -53,7 +53,7 @@ def parse(input_str):    <CPU:45ms> <MEM:1.2MB> <IO:na>
 
 用户可以用自然语言加资源约束：
 
-```
+```text
 「实现一个 CSV 解析器，要求 <CPU:50ms> <MEM:2MB>」
 ```
 

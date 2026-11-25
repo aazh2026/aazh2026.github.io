@@ -4,7 +4,7 @@ title: "MIA：让 Agent 在推理过程中实时进化——双重记忆系统�
 date: 2026-09-01T18:50:00+08:00
 tags: [AI-Native软件工程, Agent记忆系统, 测试时学习, 深度研究]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

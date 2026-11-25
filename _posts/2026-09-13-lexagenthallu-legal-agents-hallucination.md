@@ -1,4 +1,8 @@
-# 论文笔记：LexAgentHallu — 法律 Agent 的"正确答案，错误推理"陷阱
+---
+layout: post
+title: "论文笔记：LexAgentHallu — 法律 Agent 的\"正确答案，错误推理\"陷阱"
+date: 2026-09-13
+---
 
 arXiv: 2609.09754 | 2026年9月
 

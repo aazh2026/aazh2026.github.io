@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：IMACS — 多 Agent 系统的组织科学"
 date: 2026-09-10
 ---

@@ -1,4 +1,8 @@
-# BeyondSWE：当代码智能体离开单一仓库
+---
+layout: post
+title: "BeyondSWE：当代码智能体离开单一仓库"
+date: 2026-09-04
+---
 
 ## 测量了错误的东西
 

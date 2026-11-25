@@ -4,7 +4,7 @@ title: "Strat-Reasoner：让 Agent 在博弈中学会「揣摩他者」"
 date: 2026-09-01T18:55:00+08:00
 tags: [AI-Native软件工程, 多智能体博弈, 战略推理, 强化学习]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

@@ -1,4 +1,8 @@
-# Agent Plugins：插件包装标准化，但最大的玩家缺席了
+---
+layout: post
+title: "Agent Plugins：插件包装标准化，但最大的玩家缺席了"
+date: 2026-09-04
+---
 
 ## 一个真实的开发者困境
 
@@ -18,7 +22,7 @@ Agent Plugins 是由 AWS、Cursor、GitHub（微软）、OpenAI 和 Vercel 联�
 
 标准定义了一个最小可移植目录结构：
 
-```
+```text
 my-plugin/
 ├── plugin.json          ← 必须：清单文件
 ├── skills/

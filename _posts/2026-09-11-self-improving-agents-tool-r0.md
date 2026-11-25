@@ -1,4 +1,8 @@
-# 论文笔记：Tool-R0 — 自博弈 RL 训练工具调用智能体，从零数据开始
+---
+layout: post
+title: "论文笔记：Tool-R0 — 自博弈 RL 训练工具调用智能体，从零数据开始"
+date: 2026-09-11
+---
 
 arXiv: 2602.21320 | UIUC + ETH Zurich
 

@@ -4,8 +4,7 @@ title: "Agent 工程的三个隐性失败模式：多轮退化、栈层盲区、
 date: 2026-09-02T10:00:00+08:00
 tags: [AI-Native软件工程, Agentic Engineering, 评测基准, 研发效能]
 author: Aaron
-series: AI-Native软件工程系列 #61
-
+series: aise
 redirect_from:
   - /agentic-engineering-three-failure-modes/
 ---
@@ -92,7 +91,7 @@ Vibe Coding 的倡导者会说「让 Flow 持续，不要打断」。这没错�
 
 Feldt（Chalmers）在 Agentic Engineering 2026 的主旨演讲中提出了一个六环诊断模型，将软件工程制品按「可执行程度」分层：
 
-```
+```text
 ┌─────────────────────────────────────────────────────┐
 │              六环诊断模型（按可执行程度）              │
 │                                                      │
@@ -172,7 +171,7 @@ AnalysisAgent 的核心设计：分阶段（stage mixing）+ 单动作周期 + �
 
 三篇论文在表面上讨论不同问题，但深层指向完全一致：
 
-```
+```text
 生成环节 ────────→ 协调环节
 「写不出」            「改坏之前对的」
 「看不懂」            「不知道自己在哪层」

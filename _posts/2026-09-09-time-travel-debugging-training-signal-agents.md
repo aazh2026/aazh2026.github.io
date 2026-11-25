@@ -1,4 +1,8 @@
-# Time-Travel Debugging：如何用轨迹训练信号把 SWE Agent 从「试错机器」变成「可解释归因器」
+---
+layout: post
+title: "Time-Travel Debugging：如何用轨迹训练信号把 SWE Agent 从「试错机器」变成「可解释归因器」"
+date: 2026-09-09
+---
 
 **论文**：[arXiv:2609.01234](https://arxiv.org/abs/2609.01234)（示例占位，对应 Time-Travel / Replay-based Agent Training 相关工作）
 

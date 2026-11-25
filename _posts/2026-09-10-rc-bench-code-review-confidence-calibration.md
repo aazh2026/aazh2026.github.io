@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：RC-Bench — Code Review 的瓶颈不是质量，是可信度"
 date: 2026-09-10
 ---

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：Context Lease & Revocation — 上下文不是仓库，是租约"
 date: 2026-09-10
 ---

@@ -4,7 +4,7 @@ title: "Kozuchi Agent：本地 27B 权重怎么做审计友好的代码修复"
 date: 2026-08-31T16:40:00+08:00
 tags: [AI编程, 开源Agent, CI集成, 软件修复]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

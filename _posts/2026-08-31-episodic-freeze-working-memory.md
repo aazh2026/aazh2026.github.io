@@ -4,7 +4,7 @@ title: "EpisodicFreeze：工作记忆与长期存储的解耦设计"
 date: 2026-08-31T16:30:00+08:00
 tags: [Agent记忆系统, 长程Agent, 系统架构]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

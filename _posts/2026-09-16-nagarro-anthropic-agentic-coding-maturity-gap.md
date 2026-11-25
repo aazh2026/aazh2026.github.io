@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Anthropic的报告对了方向，但没算清距离——Nagarro的企业落地复盘"
 date: 2026-09-16
 tags:

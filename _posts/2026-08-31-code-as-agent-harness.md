@@ -4,7 +4,7 @@ title: "代码作为 Agent Harness：代码不再是输出，而是 Agent 的身
 date: 2026-08-31T15:30:00+08:00
 tags: [Agent OS, 代码生成, Harness Engineering, Agent架构]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

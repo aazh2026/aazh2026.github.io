@@ -4,8 +4,7 @@ title: "AnalysisAgent：LLM Agent 装配分析工具的七个陷阱"
 date: 2026-09-02T10:00:00+08:00
 tags: [AI-Native软件工程, Agent工具装配, CI/CD智能化, 静态分析]
 author: Aaron
-series: AI-Native软件工程系列 #64
-
+series: aise
 redirect_from:
   - /analysis-agent-automated-software-analysis/
 ---
@@ -58,7 +57,7 @@ ExecutionAgent 失败的地方，AnalysisAgent 成功，靠的是三个设计决
 
 不把「工具装配」和「工具执行」混在一个阶段。把任务分成清晰的阶段：
 
-```
+```text
 阶段1：环境探测 → 阶段2：工具装配 → 阶段3：工具执行 → 阶段4：报告生成
 ```
 

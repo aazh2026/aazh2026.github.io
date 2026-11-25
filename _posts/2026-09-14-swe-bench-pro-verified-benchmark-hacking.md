@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "SWE-Bench Pro Verified：基准打分的可信度补丁"
 date: 2026-09-14
 categories: [AI, Software Engineering, Benchmark]
@@ -65,7 +66,7 @@ Agent 可以在评测时从以下渠道获取标准答案：
 从公开渠道（GitHub issues、HF feedback、Review repo）收集问题报告，映射到 731 个实例，找到 119 个候选。
 
 修复流程：
-```
+```text
 LLM 初筛 + 生成修复草案
     ↓
 人类专家审核（minimal change 原则）

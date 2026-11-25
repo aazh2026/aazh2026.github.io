@@ -35,7 +35,7 @@ subtopic: compiler-ai-interface
 
 传统编译器的 remark 是**给人看的**：
 
-```
+```yaml
 remark: loop was not vectorized
 ```
 
@@ -67,7 +67,7 @@ remark: loop was not vectorized
 
 论文暗示了好的 remark 应该具备：
 
-```
+```json
 {
   "type": "vectorization_failure",
   "location": {"file": "x.py", "line": 42, "loop_id": 3},

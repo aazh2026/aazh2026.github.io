@@ -1,4 +1,8 @@
-# LoopsBench：Coding Agent 评测的范式转移——从 Harness 到 Loop
+---
+layout: post
+title: "LoopsBench：Coding Agent 评测的范式转移——从 Harness 到 Loop"
+date: 2026-09-04
+---
 
 ## 当 Agent 开始干「长活」
 
@@ -26,7 +30,7 @@ LoopsBench 的设计想清楚了**真实开发任务的两个本质特征**：
 
 不是一件事，是一串前后依赖的事。比如：
 
-```
+```json
 [实现数据库Schema] → [写CRUD接口] → [写业务逻辑] → [联调测试]
          ↑                    ↑
     [设计数据模型]      [API规范先行]

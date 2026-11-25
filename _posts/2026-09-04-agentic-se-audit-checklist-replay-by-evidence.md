@@ -1,4 +1,8 @@
-# Agentic SE Audit Checklist v1：把"完成"变成可审计的证据束
+---
+layout: post
+title: "Agentic SE Audit Checklist v1：把\"完成\"变成可审计的证据束"
+date: 2026-09-04
+---
 
 ## 问题在哪里
 

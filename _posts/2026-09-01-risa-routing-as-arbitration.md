@@ -4,7 +4,7 @@ title: "路由即裁判：Risa 如何用 MoE 内部信号做零成本仲裁"
 date: 2026-09-01T17:55:00+08:00
 tags: [AI-Native软件工程, Agent评测, MoE路由, Test-time Scaling]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

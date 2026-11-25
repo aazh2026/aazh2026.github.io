@@ -4,7 +4,7 @@ title: "规格即控制面：MAGE 如何把架构治理变成可计算的基础�
 date: 2026-09-01T17:50:00+08:00
 tags: [AI-Native软件工程, Agent治理, 软件架构, 形式化方法]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

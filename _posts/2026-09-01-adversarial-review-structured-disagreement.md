@@ -4,7 +4,7 @@ title: "对抗式少体协作：Adversarial Review 如何用结构化异议破�
 date: 2026-09-01T18:00:00+08:00
 tags: [AI-Native软件工程, Agent评测, Code Review, 多Agent协作]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

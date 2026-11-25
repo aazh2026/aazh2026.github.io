@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Agentic Coding运营全景图：Appliscale的八个杠杆实战总结"
 date: 2026-09-16
 tags:

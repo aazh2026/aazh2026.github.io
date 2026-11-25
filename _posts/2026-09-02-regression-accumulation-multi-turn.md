@@ -4,8 +4,7 @@ title: "多轮对话中的回归累积：Vibe Coding 的真实失效模式"
 date: 2026-09-02T10:00:00+08:00
 tags: [AI-Native软件工程, Agent评测, Vibe Coding, 回归测试]
 author: Aaron
-series: AI-Native软件工程系列 #62
-
+series: aise
 redirect_from:
   - /regression-accumulation-multi-turn-llm-programming/
 ---

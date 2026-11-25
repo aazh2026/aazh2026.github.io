@@ -4,7 +4,7 @@ title: "Vibe Coding：生产力证据的首次跨学科学术清算"
 date: 2026-08-31T15:20:00+08:00
 tags: [AI编程, 生产力研究, 软件工程]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

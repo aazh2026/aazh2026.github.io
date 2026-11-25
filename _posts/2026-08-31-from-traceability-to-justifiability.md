@@ -4,7 +4,7 @@ title: "从可追溯到可问责：Agentic 软件工程的责任结构"
 date: 2026-08-31T12:10:00+08:00
 tags: [Agent OS, 软件工程, AI安全, 供应链]
 author: "@postcodeeng"
-series: AI-Native Engineering
+series: aise
 ---
 
 > **TL;DR**

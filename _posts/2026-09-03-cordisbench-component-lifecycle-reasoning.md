@@ -1,4 +1,8 @@
-# CordisBench：让 LLM 推理动态 harness 里的组件生命周期
+---
+layout: post
+title: "CordisBench：让 LLM 推理动态 harness 里的组件生命周期"
+date: 2026-09-03
+---
 
 ## 背景
 

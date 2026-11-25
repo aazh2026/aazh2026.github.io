@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "论文笔记：Trajectory Assurance — 安全的边界从单点变成轨迹"
 date: 2026-09-07
 ---

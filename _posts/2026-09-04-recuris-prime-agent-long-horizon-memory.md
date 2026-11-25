@@ -1,4 +1,8 @@
-# 长程 Agent 记忆系统的两路突破：Recuris 和 Prime Agent
+---
+layout: post
+title: "长程 Agent 记忆系统的两路突破：Recuris 和 Prime Agent"
+date: 2026-09-04
+---
 
 两条路线，同一个问题：当前 Agent 在长程任务里失败率高，不是因为模型不够强，而是因为记忆系统不工作。
 
@@ -58,7 +62,6 @@ Recuris 和 Prime Agent 代表了两种不同的设计哲学：
 
 ---
 
-**参考**
+**[原论文: Recuris — Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses](https://arxiv.org/abs/2608.24876)**（arXiv:2608.24876）
 
-- Recuris：arXiv:2608.24876，GitHub: github.com/Gen-Verse/Recuris
-- Prime Agent：arXiv:2608.23552，GitHub: github.com/PrimeIntellect-ai/prime-agent
+**[原论文: Prime Agent — Synthesizing Knowledge for Long-Horizon Agentic Reasoning via Self-Improvement](https://arxiv.org/abs/2608.23552)**（arXiv:2608.23552）

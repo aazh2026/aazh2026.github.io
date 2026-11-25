@@ -1,4 +1,8 @@
-# Harness-of-Harness：让 coding agent 在多日循环中不退化
+---
+layout: post
+title: "Harness-of-Harness：让 coding agent 在多日循环中不退化"
+date: 2026-09-04
+---
 
 单轮评测已经够难，但真正的问题不是"Agent 今天能不能解决这个问题"，而是"Agent 能不能在连续 70 轮迭代里持续交付可用的软件"。
 

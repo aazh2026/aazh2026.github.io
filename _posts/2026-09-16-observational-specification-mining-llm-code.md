@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "代码不是写出来的，是被观测到的——Observational Specification Mining for LLM-Written Code"
 date: 2026-09-16
 tags:

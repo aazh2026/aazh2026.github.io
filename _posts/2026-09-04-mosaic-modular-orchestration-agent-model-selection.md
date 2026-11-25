@@ -1,4 +1,8 @@
-# MOSAIC：把 Agent 的建模决策从"混乱"变"结构化"
+---
+layout: post
+title: "MOSAIC：把 Agent 的建模决策从\"混乱\"变\"结构化\""
+date: 2026-09-04
+---
 
 LLM-based Agent 在建模任务上比 AutoML 灵活，但有一个致命问题：决策过程不可追溯、不可复用、不成结构。
 

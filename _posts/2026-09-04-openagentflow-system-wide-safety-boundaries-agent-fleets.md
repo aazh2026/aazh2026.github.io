@@ -1,4 +1,8 @@
-# OpenAgentFlow：Agent 安全治理进入操作系统级
+---
+layout: post
+title: "OpenAgentFlow：Agent 安全治理进入操作系统级"
+date: 2026-09-04
+---
 
 2026 年，多起 Agent 安全事故（模型逃逸沙箱、PyPI 恶意包发布）把一个事实摆上台面：单体 Agent 的安全机制（prompt 护栏、tool allowlist）在多 Agent 协作环境里彻底失效。
 
