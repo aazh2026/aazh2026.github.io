@@ -170,6 +170,24 @@ specgate --min 80 --fail-uncovered
 specgate --sarif-out specgate.sarif --format sarif
 ```
 
+### 没有 spec？先 init
+
+大部分人第一次用会卡在同一个地方：**我的项目没有写下来的 spec**。
+所以我加了 `specgate init`：
+
+```bash
+npx specgate init
+```
+
+它会检测你的技术栈（语言、测试框架、包管理器），生成一份结构化好的 `SPEC.md`，
+再顺手放一个 `.github/workflows/requirements.yml` 门禁到仓库里。
+
+三步就能跑起来：
+
+1. `npx specgate init` — 生成 spec 骨架和 CI 门禁
+2. 改写里面的验收标准，给每条一个 id
+3. 在测试里加一行 `// AC-1` 标记，然后 `npx specgate` 看结果
+
 GitHub Actions：
 
 ```yaml
@@ -243,7 +261,7 @@ def test_export_respects_date_range():
 
 顺便说，这工具本身也是 AI 写的（Claude + 我），符合它自己的理念——
 但它**不是**一次 LLM 生成的产物：
-- 23 个测试全绿
+- 30 个测试全绿
 - 写测试的过程中抓到两个真 bug：camelCase 分词、tag 正则在 `//` 处截断
 - 每个 bug 都补了对应的回归测试
 

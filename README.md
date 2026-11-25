@@ -103,7 +103,7 @@ specgate 解析 spec 里的验收标准，在代码中分级查找证据（显�
 
 - 确定性运行，**不调用 LLM**，无 API key、无网络依赖
 - 支持 text / JSON / SARIF 输出，可直接接入 GitHub code scanning
-- 23 个测试覆盖全部核心路径
+- 30 个测试覆盖全部核心路径
 
 ```bash
 npx specgate
