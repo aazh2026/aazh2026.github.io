@@ -158,8 +158,7 @@ score = 100 × (covered×1.0 + inferred×0.75 + untested×0.4 + uncovered×0.0) 
 ## 怎么用
 
 ```bash
-# npm 包还在排队，先用 release tarball（免 token，不需要 npm 账号）
-npx --yes --package=https://github.com/aazh2026/specgate/releases/download/v0.1.4/specgate-0.1.4.tgz specgate
+npx --yes specgate-cli
 
 # 或者指定 spec
 specgate --spec docs/SPEC.md
@@ -177,7 +176,7 @@ specgate --sarif-out specgate.sarif --format sarif
 所以我加了 `specgate init`：
 
 ```bash
-npx --yes --package=https://github.com/aazh2026/specgate/releases/download/v0.1.4/specgate-0.1.4.tgz specgate init
+npx --yes specgate-cli init
 ```
 
 它会检测你的技术栈（语言、测试框架、包管理器），生成一份结构化好的 `SPEC.md`，
@@ -185,9 +184,9 @@ npx --yes --package=https://github.com/aazh2026/specgate/releases/download/v0.1.
 
 三步就能跑起来：
 
-1. `specgate init` — 生成 spec 骨架和 CI 门禁
+1. `npx --yes specgate-cli init` — 生成 spec 骨架和 CI 门禁
 2. 改写里面的验收标准，给每条一个 id
-3. 在测试里加一行 `// AC-1` 标记，然后 `specgate` 看结果
+3. 在测试里加一行 `// AC-1` 标记，然后 `npx --yes specgate-cli` 看结果
 
 GitHub Actions：
 
@@ -202,7 +201,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - uses: aazh2026/specgate@v0.1.4
+      - uses: aazh2026/specgate@v0.1.7
         with:
           min: 80
           fail-uncovered: true

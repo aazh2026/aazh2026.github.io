@@ -106,7 +106,7 @@ specgate 解析 spec 里的验收标准，在代码中分级查找证据（显�
 - 30 个测试覆盖全部核心路径
 
 ```bash
-npx specgate
+npx --yes specgate-cli
 ```
 
 **[→ GitHub](https://github.com/aazh2026/specgate) · [博客详解](https://postcodeengineering.com/requirement-coverage/)**
