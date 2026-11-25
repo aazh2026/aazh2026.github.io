@@ -161,7 +161,7 @@ score = 100 × (covered×1.0 + inferred×0.75 + untested×0.4 + uncovered×0.0) 
 
 ```bash
 # The npm package is still queued, so use the release tarball (no token, no npm account needed)
-npx --yes --package=https://github.com/aazh2026/specgate/releases/download/v0.1.4/specgate-0.1.4.tgz specgate
+npx --yes specgate-cli
 
 # or point it at a specific spec
 specgate --spec docs/SPEC.md
@@ -179,7 +179,7 @@ Most people hit the same wall on first contact: **my project has no written spec
 So I added `specgate init`:
 
 ```bash
-npx --yes --package=https://github.com/aazh2026/specgate/releases/download/v0.1.4/specgate-0.1.4.tgz specgate init
+npx --yes specgate-cli init
 ```
 
 It detects your stack (language, test runner, package manager), generates a well-structured `SPEC.md`,
@@ -204,7 +204,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
-      - uses: aazh2026/specgate@v0.1.4
+      - uses: aazh2026/specgate@v0.1.7
         with:
           min: 80
           fail-uncovered: true
