@@ -80,6 +80,7 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 📝 最新文章
 
+- [测试覆盖率没告诉你的一件事：需求覆盖率](https://aazh2026.github.io/2026/11/25/requirement-coverage/)
 - [AI 编程代理的工程纪律：agent-skills 的反直觉设计](https://aazh2026.github.io/agent-skills/)
 - [Loop Engineering：把你从流程里抽出来](https://aazh2026.github.io/loop-engineering/)
 - [提示词是输入，循环是过程](https://aazh2026.github.io/loop-engineering/)
@@ -87,6 +88,28 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 - [开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训](https://aazh2026.github.io/open-source-ai-slop/)
 
 **[→ 查看全部 205 篇文章](https://aazh2026.github.io/archive)**
+
+---
+
+## 🛠️ 开源项目
+
+### [specgate](https://github.com/aazh2026/specgate)
+
+**需求覆盖率：像测试覆盖率一样度量验收标准。**
+
+测试覆盖率回答「这行代码跑过吗」，不回答「这个需求实现了吗」。
+specgate 解析 spec 里的验收标准，在代码中分级查找证据（显式标记 / 测试名匹配 / 仅有实现），
+输出需求覆盖率，并可在 CI 中作为门禁。
+
+- 确定性运行，**不调用 LLM**，无 API key、无网络依赖
+- 支持 text / JSON / SARIF 输出，可直接接入 GitHub code scanning
+- 23 个测试覆盖全部核心路径
+
+```bash
+npx specgate
+```
+
+**[→ GitHub](https://github.com/aazh2026/specgate) · [博客详解](https://aazh2026.github.io/2026/11/25/requirement-coverage/)**
 
 ---
 
