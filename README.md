@@ -80,7 +80,7 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 ## 📝 最新文章
 
-- [测试覆盖率没告诉你的一件事：需求覆盖率](https://aazh2026.github.io/2026/11/25/requirement-coverage/)
+- [测试覆盖率没告诉你的一件事：需求覆盖率](https://postcodeengineering.com/requirement-coverage/)
 - [AI 编程代理的工程纪律：agent-skills 的反直觉设计](https://aazh2026.github.io/agent-skills/)
 - [Loop Engineering：把你从流程里抽出来](https://aazh2026.github.io/loop-engineering/)
 - [提示词是输入，循环是过程](https://aazh2026.github.io/loop-engineering/)
@@ -109,7 +109,7 @@ specgate 解析 spec 里的验收标准，在代码中分级查找证据（显�
 npx specgate
 ```
 
-**[→ GitHub](https://github.com/aazh2026/specgate) · [博客详解](https://aazh2026.github.io/2026/11/25/requirement-coverage/)**
+**[→ GitHub](https://github.com/aazh2026/specgate) · [博客详解](https://postcodeengineering.com/requirement-coverage/)**
 
 ---
 

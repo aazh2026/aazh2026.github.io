@@ -262,5 +262,5 @@ MIT 协议，欢迎提 issue 和 PR。如果你的团队有"从 spec 反查实�
 
 ### 相关阅读
 
-- [Spec-Driven Test Generation：先写合约，再生成测试](https://aazh2026.github.io/2026/09/20/spec-driven-test-generation/) — 用 spec 生成测试，是这个问题的另一半
-- [HarnessFix 系列](https://aazh2026.github.io/) — Agent harness 的自我修复
+- [Spec-Driven Test Generation：先写合约，再生成测试](https://postcodeengineering.com/spec-driven-test-generation/) — 用 spec 生成测试，是这个问题的另一半
+- [HarnessFix 系列](https://postcodeengineering.com/) — Agent harness 的自我修复
