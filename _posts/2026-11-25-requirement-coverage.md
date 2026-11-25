@@ -78,7 +78,7 @@ spec 在 `docs/SPEC.md`，代码在 `src/`，中间靠人的记忆和 git blame 
 
 核心想法：**把 spec 里的验收标准当成代码里的"测试点"，然后像 coverage 一样去度量它。**
 
-```
+```text
   Requirement coverage: 80%  (5 criteria)
 
   ✔ covered    4
@@ -146,7 +146,7 @@ spec 在 `docs/SPEC.md`，代码在 `src/`，中间靠人的记忆和 git blame 
 
 **第四步：打分。** 分级是有权重的，因为它们可信度不同：
 
-```
+```text
 score = 100 × (covered×1.0 + inferred×0.75 + untested×0.4 + uncovered×0.0) / total
 ```
 
