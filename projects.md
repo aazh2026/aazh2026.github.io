@@ -44,6 +44,33 @@ description: Post-Code Engineering 的开源项目：把博客里的方法论变
     <a href="/requirement-coverage/">博客详解 →</a>
   </p>
 
+  <h2>📊 vlab</h2>
+
+  <p>
+    <strong>回测数字最危险的地方：它看起来太像真的了。</strong>
+  </p>
+
+  <p>
+    零依赖的资产配置回测实验室，重点不在画好看的净值曲线，
+    而在<strong>审计回测的输入假设</strong>——那些不会让程序报错、
+    却能把结论改掉的坑。
+  </p>
+
+  <ul>
+    <li><strong>双窗口口径</strong>——"可投资现实"与"指数代理长窗口"强制分开陈述，不混用</li>
+    <li><strong>未上市资产留现金</strong>——不提前入场，超额权重不归一化</li>
+    <li><strong>防未来函数护栏</strong>——策略只能看到"截至当天"的数据，读 <code>mat[c][i+1]</code> 直接抛异常</li>
+    <li><strong>有效性检验</strong>——样本内/样本外切分、参数网格（含 overfit gap 与先知基线）、滚动前推</li>
+    <li><strong>零运行时依赖</strong>——纯 Python 标准库，零 CDN，单文件面板可离线打开</li>
+    <li>77 个回归测试，每个历史缺陷一个具名用例钉死</li>
+  </ul>
+
+  <p>
+    <a href="https://github.com/aazh2026/vlab">GitHub →</a> ·
+    <a href="/backtest-validity/">博客详解 →</a> ·
+    <a href="https://postcodeengineering.com/vlab/">在线面板 →</a>
+  </p>
+
   <h2>为什么做这个</h2>
 
   <p>
