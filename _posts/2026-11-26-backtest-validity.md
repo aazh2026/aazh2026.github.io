@@ -207,8 +207,20 @@ def weights_fn(date, mat, dates, index):
 
 我这个是纯标准库。`git clone` 完 `python3 -m unittest discover -s tests` 就能跑，不需要 pip install 任何东西。
 
-**GitHub** → <https://github.com/aazh2026/vlab>
+## 如果你觉得这篇有用
+
+给仓库点一颗 star 吧 —— 这对我意味着「继续做下去」，而不是任何数字上的承诺：
+
+**GitHub** → <https://github.com/aazh2026/vlab>  ⭐
 **在线面板** → <https://postcodeengineering.com/vlab/>
+
+**适合 star 的三种人：**
+
+- 你写过自己的回测脚本 —— 这里的 77 个回归测试就是一份「常见坑清单」，可以直接拿去对照你的代码
+- 你在跟「这个回测数字能不能信」较劲 —— 护栏和样本外检验就是为了这一刻
+- 你在做资产配置 / 多资产回测 —— 零依赖、纯标准库、`git clone` 完就能跑
+
+不适合：想找「明天涨什么」的策略的人。这里不提供这个。
 
 > **⚠️ 免责声明**
 >
