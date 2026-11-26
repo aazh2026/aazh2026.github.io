@@ -111,6 +111,26 @@ npx --yes specgate-cli
 
 **[→ GitHub](https://github.com/aazh2026/specgate) · [博客详解](https://postcodeengineering.com/requirement-coverage/)**
 
+### [vlab](https://github.com/aazh2026/vlab)
+
+**回测数字最危险的地方：它看起来太像真的了。**
+
+零依赖的资产配置回测实验室。重点不在画好看的净值曲线，而在**审计回测的输入假设**——
+那些不会让程序报错、却能把结论改掉的坑。
+
+- **双窗口口径**——「可投资现实」与「指数代理长窗口」强制分开陈述，不混用
+- **未上市资产留现金**——不提前入场，超额权重不归一化
+- **防未来函数护栏**——策略只能看到「截至当天」的数据，读 `mat[c][i+1]` 直接抛异常
+- **有效性检验**——样本内/样本外切分、参数网格（含 overfit gap 与先知基线）、滚动前推
+- **零运行时依赖**——纯 Python 标准库，零 CDN，单文件面板可离线打开
+- 77 个回归测试，每个历史缺陷一个具名用例钉死
+
+```bash
+PYTHONPATH=src python3 -m vlab validate examples/momentum_rotation.py
+```
+
+**[→ GitHub](https://github.com/aazh2026/vlab) · [博客详解](https://postcodeengineering.com/backtest-validity/) · [在线面板](https://postcodeengineering.com/vlab/)**
+
 ---
 
 ## 🔧 技术栈
