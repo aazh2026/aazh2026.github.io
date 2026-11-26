@@ -85,7 +85,7 @@ author: "@postcodeeng"
 
 本页所有数字都可以用任意公共 BSC 节点复算：
 
-```
+```text
 合约地址: 0x90c8889f428f9ebb77bb8f15cad3a50a9ac680df
 国库地址: 0x7c34e9e21ee28a49ff0b84b61774119e6633359f
 事件签名: 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef  (Transfer)
