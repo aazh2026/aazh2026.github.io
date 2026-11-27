@@ -3,6 +3,7 @@ layout: post
 title: "AgentStream：自进化 Agent 的流式评估，打破了\"越用越聪明\"的叙事"
 date: 2026-09-04
 permalink: /agentstream-evolution-narrative/
+image: /assets/images/og/agentstream-evolution-narrative.jpg
 # 原 /agentstream-self-evolving-agents-streaming-tasks/ 被 2026-09-06 同名文章占用，此文此前不可访问
 ---
 

@@ -26,8 +26,9 @@ permalink: /:title/
 
 # 插件
 # RSS feed 条目数（jekyll-feed 默认仅 10 条，站内其余文章永久不可达）
+# 注意：键名是 posts_limit，不是 limit
 feed:
-  limit: 50
+  posts_limit: 50
 
 plugins:
   - jekyll-paginate
