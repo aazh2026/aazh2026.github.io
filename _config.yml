@@ -1,6 +1,6 @@
 title: "Post-Code Engineering"
 description: "AI-Native软件工程 | 从代码到意图 | 探索后代码时代的工程范式"
-url: "https://aazh2026.github.io"
+url: "https://postcodeengineering.com"
 baseurl: ""
 author: "@postcodeeng"
 # email removed: was a placeholder "sophi@example.com"; re-add real address when ready
@@ -10,7 +10,7 @@ author: "@postcodeeng"
 
 # Plausible Analytics (preferred — cookieless, GDPR-compliant, lighter)
 # Sign up at https://plausible.io and replace with your domain
-plausible_domain: aazh2026.github.io
+plausible_domain: postcodeengineering.com
 
 # 主题
 theme: minima
@@ -25,6 +25,10 @@ kramdown:
 permalink: /:title/
 
 # 插件
+# RSS feed 条目数（jekyll-feed 默认仅 10 条，站内其余文章永久不可达）
+feed:
+  limit: 50
+
 plugins:
   - jekyll-paginate
   - jekyll-feed

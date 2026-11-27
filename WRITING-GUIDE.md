@@ -380,7 +380,7 @@ YYYY-MM-DD-post-slug-NN-description.svg
 
 - 所有引用必须带可点击链接（除非内嵌 Jinja 等价物会破坏页面的代码块）
 - 不要使用相对路径 `/engineering/...` 引用外部站点（会 404 在本站）—— 改为完整 `https://www.anthropic.com/engineering/...`
-- 内链用 slug-based 格式：`[Loop Engineering](https://aazh2026.github.io/loop-engineering/)`，不要用 `2025-04-XX` 日期前缀路径
+- 内链用 slug-based 格式：`[Loop Engineering](https://postcodeengineering.com/loop-engineering/)`，不要用 `2025-04-XX` 日期前缀路径
 
 ---
 

@@ -362,7 +362,7 @@ GPT-5.4的发布，可能不像GPT-4那样具有轰动效应，但它标志着�
 - [OpenAI: Introducing GPT-5.4](https://openai.com/blog/gpt-5-4)
 - [Simon Willison: Introducing GPT-5.4 Analysis](https://simonwillison.net/2026/Mar/5/introducing-gpt54/)
 - [Benchmark Results: GPT-5.4 vs Claude 4](https://www.swebench.com/results/gpt-5-4)
-- [The Future of AI Coding: Industry Report 2026](https://aazh2026.github.io/ai-coding-future-2026)
+- [The Future of AI Coding: Industry Report 2026](https://postcodeengineering.com/ai-coding-future-2026)
 - [Context Window Expansion: Technical Challenges and Solutions](https://arxiv.org/abs/2409.09325)
 
 ---

@@ -295,4 +295,4 @@ Meta 的这起事件是一个**警示**，而不是**末日**。
 
 *本文基于公开报道和技术分析，Meta 官方未公布事件详细技术细节。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

@@ -263,4 +263,4 @@ Agent 时代的基础设施战争刚刚开始，OpenAI 已经展示了一个可�
 
 *本文基于 OpenAI Engineering 博客文章分析。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

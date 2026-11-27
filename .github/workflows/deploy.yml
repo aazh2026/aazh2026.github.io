@@ -87,15 +87,15 @@ jobs:
         
       - name: Check sitemap
         run: |
-          curl -s https://aazh2026.github.io/sitemap.xml | grep -q "urlset" && echo "✅ Sitemap OK" || echo "❌ Sitemap missing"
+          curl -s https://postcodeengineering.com/sitemap.xml | grep -q "urlset" && echo "✅ Sitemap OK" || echo "❌ Sitemap missing"
           
       - name: Check robots.txt
         run: |
-          curl -s https://aazh2026.github.io/robots.txt | grep -q "Sitemap" && echo "✅ Robots OK" || echo "❌ Robots missing"
+          curl -s https://postcodeengineering.com/robots.txt | grep -q "Sitemap" && echo "✅ Robots OK" || echo "❌ Robots missing"
           
       - name: Check feed
         run: |
-          curl -s https://aazh2026.github.io/feed.xml | grep -q "rss" && echo "✅ RSS Feed OK" || echo "❌ Feed missing"
+          curl -s https://postcodeengineering.com/feed.xml | grep -q "rss" && echo "✅ RSS Feed OK" || echo "❌ Feed missing"
 
   # 通知
   notify:
@@ -107,7 +107,7 @@ jobs:
         if: needs.deploy.result == 'success' && needs.seo-check.result == 'success'
         run: |
           echo "🎉 博客部署成功！"
-          echo "🔗 https://aazh2026.github.io"
+          echo "🔗 https://postcodeengineering.com"
           
       - name: Notify failure
         if: needs.deploy.result == 'failure' || needs.seo-check.result == 'failure'

@@ -315,4 +315,4 @@ AI 时代的软件开发，正在从"写代码"转变为"管理代码质量"。�
 
 *本文灵感源自 Reddit r/programming 讨论。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

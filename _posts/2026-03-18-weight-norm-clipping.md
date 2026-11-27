@@ -427,4 +427,4 @@ Weight Norm Clipping 不仅是一个优化技巧，它是我们理解神经网�
 
 *本文基于 Reddit r/MachineLearning 讨论和 arXiv 论文。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

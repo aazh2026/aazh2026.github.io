@@ -12,6 +12,8 @@ tags:
 series: aise
 subtopic: agents-and-multi-agent
 description: "AI编程的下一阶段不是更好的模型，而是从「写提示词」到「设计循环」——工程师从操作者变成循环的设计者，判断力比执行力更稀缺。"
+permalink: /loop-engineering-prompt-is-input/
+# 原 /loop-engineering/ 被 2026-06-27 同名文章占用，此文此前不可访问
 ---
 
 > **TL;DR**

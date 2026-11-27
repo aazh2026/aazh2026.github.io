@@ -287,4 +287,4 @@ subtopic: ai-strategy
 
 *本文基于 OpenAI 官方博客文章深度解读。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

@@ -344,4 +344,4 @@ GitHub 的三层战略（Copilot → Workspace → Agent）真正押注的，不
 
 *本文基于GitHub公开信息和行业趋势分析撰写。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

@@ -187,9 +187,9 @@ Teddy 的核心问题：
 - Teddy Riker 的原文（英文）：https://x.com/teddy_riker/status/2047312986696454584
 
 **本系列相关**
-- [Harness Engineering：AI Agent 时代真正的工程竞争在 scaffold 层](https://aazh2026.github.io/posts/loop-engineering) (AI-Native Engineering)
-- [Perplexity 官方指南：Skill 的 Zen of Python 对比，和一个反直觉的研究结论](https://aazh2026.github.io/posts/perplexity-skills) (AI-Native Engineering)
-- [Claude Skills 完整指南：把一次性 prompt 变成可积累的工作流资产](https://aazh2026.github.io/posts/claude-skills-guide) (AI-Native Engineering)
+- [Harness Engineering：AI Agent 时代真正的工程竞争在 scaffold 层](https://postcodeengineering.com/posts/loop-engineering) (AI-Native Engineering)
+- [Perplexity 官方指南：Skill 的 Zen of Python 对比，和一个反直觉的研究结论](https://postcodeengineering.com/posts/perplexity-skills) (AI-Native Engineering)
+- [Claude Skills 完整指南：把一次性 prompt 变成可积累的工作流资产](https://postcodeengineering.com/posts/claude-skills-guide) (AI-Native Engineering)
 
 ---
 

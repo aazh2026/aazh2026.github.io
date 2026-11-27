@@ -213,4 +213,4 @@ AI-Native 软件工程的完整图景，不是选择一套固定的工具，而�
 
 *本文基于 gstack 开源代码和 Anthropic 官方文档深度分析。核心发现（gstack 是 Skills 的一种实现）可通过检查 `~/.claude/skills/gstack/` 目录结构验证。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

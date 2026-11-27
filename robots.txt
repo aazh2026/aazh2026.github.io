@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aazh2026.github.io/sitemap.xml
+Sitemap: https://postcodeengineering.com/sitemap.xml
 
 # Disallow admin / build paths
 Disallow: /admin/

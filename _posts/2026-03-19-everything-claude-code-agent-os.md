@@ -751,4 +751,4 @@ everything-claude-code 展示的是另一个愿景：
 
 *本文基于 everything-claude-code 开源项目的深度架构分析。*
 
-*发布于 [aazh2026.github.io](https://aazh2026.github.io/)*
+*发布于 [postcodeengineering.com](https://postcodeengineering.com/)*

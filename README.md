@@ -2,7 +2,7 @@
 
 **AI-Native软件工程 | 从代码到意图 | 探索后代码时代的工程范式**
 
-🔗 **博客地址**：https://aazh2026.github.io
+🔗 **博客地址**：https://postcodeengineering.com
 
 ---
 
@@ -26,7 +26,7 @@
 - 代码示例：50+ 个
 - 阅读时间：10-12 小时
 
-**[→ 阅读 Agent OS 系列](https://aazh2026.github.io/agent-os-series/)**
+**[→ 阅读 Agent OS 系列](https://postcodeengineering.com/agent-os-series/)**
 
 ---
 
@@ -39,7 +39,7 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 - Intent 是新的编程语言
 - Context 管理是核心竞争力
 
-**[→ 阅读 AISE 系列](https://aazh2026.github.io/aise-series/)**
+**[→ 阅读 AISE 系列](https://postcodeengineering.com/aise-series/)**
 
 ---
 
@@ -47,7 +47,7 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 
 从 Cold Start 到 Graceful Degradation：构建 AI 记忆系统的完整工程。
 
-**[→ 阅读 Memory Engineering 系列](https://aazh2026.github.io/memory-engineering-series/)**
+**[→ 阅读 Memory Engineering 系列](https://postcodeengineering.com/memory-engineering-series/)**
 
 ---
 
@@ -81,13 +81,13 @@ AI-Native 软件工程（AISE）五层架构模型的系统性探索。
 ## 📝 最新文章
 
 - [测试覆盖率没告诉你的一件事：需求覆盖率](https://postcodeengineering.com/requirement-coverage/)
-- [AI 编程代理的工程纪律：agent-skills 的反直觉设计](https://aazh2026.github.io/agent-skills/)
-- [Loop Engineering：把你从流程里抽出来](https://aazh2026.github.io/loop-engineering/)
-- [提示词是输入，循环是过程](https://aazh2026.github.io/loop-engineering/)
-- [当 AI 编程走向确定性：Dynamic Workflows 与 Agent Harness 的殊途同归](https://aazh2026.github.io/deterministic-ai-programming/)
-- [开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训](https://aazh2026.github.io/open-source-ai-slop/)
+- [AI 编程代理的工程纪律：agent-skills 的反直觉设计](https://postcodeengineering.com/agent-skills/)
+- [Loop Engineering：把你从流程里抽出来](https://postcodeengineering.com/loop-engineering/)
+- [提示词是输入，循环是过程](https://postcodeengineering.com/loop-engineering-prompt-is-input/)
+- [当 AI 编程走向确定性：Dynamic Workflows 与 Agent Harness 的殊途同归](https://postcodeengineering.com/deterministic-ai-programming/)
+- [开源正在被 AI 垃圾淹没：Armin Ronacher 的 Pi 教训](https://postcodeengineering.com/open-source-ai-slop/)
 
-**[→ 查看全部 205 篇文章](https://aazh2026.github.io/archive)**
+**[→ 查看全部 205 篇文章](https://postcodeengineering.com/archive)**
 
 ---
 
@@ -166,9 +166,9 @@ PYTHONPATH=src python3 -m vlab validate examples/momentum_rotation.py
 
 ## 📬 订阅与联系
 
-- **博客**：https://aazh2026.github.io
-- **RSS**：https://aazh2026.github.io/feed.xml
-- **Sitemap**：https://aazh2026.github.io/sitemap.xml
+- **博客**：https://postcodeengineering.com
+- **RSS**：https://postcodeengineering.com/feed.xml
+- **Sitemap**：https://postcodeengineering.com/sitemap.xml
 - **GitHub**：[@aazh2026](https://github.com/aazh2026)
 
 ---

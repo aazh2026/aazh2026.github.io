@@ -2,12 +2,12 @@
   "ci": {
     "collect": {
       "url": [
-        "https://aazh2026.github.io/",
-        "https://aazh2026.github.io/aise-series/",
-        "https://aazh2026.github.io/archive/",
-        "https://aazh2026.github.io/loop-engineering/",
-        "https://aazh2026.github.io/claude-skills-complete-guide/",
-        "https://aazh2026.github.io/agent-os-five-layer-architecture/"
+        "https://postcodeengineering.com/",
+        "https://postcodeengineering.com/aise-series/",
+        "https://postcodeengineering.com/archive/",
+        "https://postcodeengineering.com/loop-engineering/",
+        "https://postcodeengineering.com/claude-skills-complete-guide/",
+        "https://postcodeengineering.com/agent-os-five-layer-architecture/"
       ],
       "numberOfRuns": 1,
       "settings": {
